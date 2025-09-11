@@ -7,12 +7,8 @@ export const cn = {}; return twMerge(clsx (inputs) ) ;,}
 export const cn = {};
   return twMerge(clsx (inputs) ) }
 
-<<<<<<< HEAD
 export const cn = {}; return twMerge(clsx (inputs) ) ,}
 export const cn = {}; return twMerge(clsx (inputs) ) ,}
 export const cn = {}; return twMerge(clsx (inputs) ) ,}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

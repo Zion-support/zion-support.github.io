@@ -73,7 +73,6 @@ export default /**
  * RootLayout - Function description
  */
 function RootLayout() {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
@@ -88,8 +87,6 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">
-=======
-=======
 
   return (
     <html lang="en" className="scroll-smooth">
@@ -103,7 +100,6 @@ export default function RootLayout({
       </body>;
     </html>;
   );
-=======
     </html>);
 
 }
@@ -111,10 +107,6 @@ export default function RootLayout({
 }
 ;
 
-<<<<<<< HEAD
 }
 }
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

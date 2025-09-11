@@ -1,6 +1,5 @@
 
 
-=======import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
@@ -66,12 +65,10 @@ export default function ServicesShowcase2026V3() {;
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
 
-=======
         <UltraAdvancedNavigation2026 />
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
 
-=======
 
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
@@ -102,12 +99,10 @@ export default function ServicesShowcase2026V3() {;
                 =======
 
                 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <motion.a
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >
                   <span>Email Us</span>
                 </motion.a>
@@ -258,9 +253,6 @@ function ServicesShowcase2026V3() {
               <p className='text - gray - 300 text - xl mb - 8 max - w-2xl mx - auto'>;
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}
                   while_hover={{ scale: 1.05 }}
@@ -329,17 +321,9 @@ function ServicesShowcase2026V3() {
       </div>;
     </UltraQuantumHolographicBackground>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

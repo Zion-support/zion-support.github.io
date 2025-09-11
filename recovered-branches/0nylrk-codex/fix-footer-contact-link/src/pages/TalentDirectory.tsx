@@ -31,8 +31,6 @@
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const viewProfile = (id: string) => {
@@ -40,8 +38,6 @@
     navigate(`/talent/${id}`)
   },
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -53,18 +49,13 @@
             </p>
           </div>
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">
               <FilterSidebar
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { TalentGrid } from "@/components/talent/TalentGrid",;
@@ -173,8 +164,6 @@ export default function TalentDirectory() {;
     navigate(`/talent/${id}`);
   },;
   return (;
-=======
-=======
   const handleRequestHire = (talent: TalentProfile) => {;
     setSelectedTalent(talent),;
     setIsHireModalOpen(true);
@@ -186,10 +175,8 @@ export default function TalentDirectory() {;
   };
 
   return (
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -226,7 +213,6 @@ export default function TalentDirectory() {;
             <div className="w - full lg:w - 64 shrink - 0 hidden lg:block">;
               <FilterSidebar;
                 search_term={search_term}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 setSearchTerm={setSearchTerm}
                 selected_skills={selected_skills}
                 toggle_skill={toggle_skill}
@@ -246,7 +232,6 @@ export default function TalentDirectory() {;
             </div>;
 
 
-=======            {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;              <Button
                 onClick={() => setIsMobileFilterOpen(true)}
                 variant="outline"
@@ -292,11 +277,9 @@ export default function TalentDirectory() {;
                 <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-bold text-white">Filter & Sort</h3>
-=======                    <Button
                       variant="ghost"
                       size="sm"
                       onClick={() => setIsMobileFilterOpen(false)}
-<<<<<<< HEAD
 }/> <Button variant="ghost" size="sm" onClick= {
   () => setIsMobileFilterOpen (false) 
 }className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {
@@ -340,11 +323,4 @@ export default function TalentDirectory() {;
 }
   );
 }
-;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    </AppLayout>);
-}
-
-=======
 ;

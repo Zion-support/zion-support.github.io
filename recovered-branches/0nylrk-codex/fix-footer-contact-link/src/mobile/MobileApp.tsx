@@ -9,14 +9,11 @@ import { useAuth } from "@/hooks/useAuth",
 export function MobileApp() {
   const { isAuthenticated } = useAuth(),
   
-=======
-
-
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
   return (
     <MobileThemeProvider>
       <Routes>
@@ -39,8 +36,6 @@ export function MobileApp() {
   )
 
 }
-=======
-=======import React from "react";
 import {Routes, Route, Navigate} from "react-router-dom";
 import {MobileThemeProvider} from "./theme/MobileThemeProvider";
 import {MobileOnboarding} from "./pages/MobileOnboarding";
@@ -51,10 +46,8 @@ import {MobileMessages} from "./pages/MobileMessages";
 import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
 import {MobileJobPost} from "./pages/MobileJobPost";
 import {useAuth} from "@/hooks/useAuth";
-=======
 
 
-=======
 export function MobileApp() {;
   const { isAuthenticated } = useAuth();
 
@@ -67,7 +60,6 @@ export function MobileApp() {;
           element={
             isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
           } ;
-=======
 import React from './react';
 import { Routes, Route, Navigate } from './react-router-dom';
 import { MobileThemeProvider } from './theme / MobileThemeProvider';
@@ -94,9 +86,4 @@ function MobileApp() {
       </Routes>;
     </MobileThemeProvider>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

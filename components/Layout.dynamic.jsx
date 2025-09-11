@@ -1,5 +1,4 @@
 import React from 'react';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 const Layout.dynamic = () => {
   return (
@@ -8,6 +7,3 @@ const Layout.dynamic = () => {
     </div>);
 }
 ;
-<<<<<<< HEAD
-=======
-export default Layout.dynamic;

@@ -4,8 +4,6 @@ export function getWithFallback (map: TranslationMap, preferred: string): string
   return map[preferred] || map[preferred.split ('-')[0]] || map['en'] || map['en - US'];}
 ;
 export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const res = await fetch('/api/translate', {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' },;
@@ -35,7 +33,6 @@ export function getSelectedLanguage (): string {
   return i18n.resolved_language || i18n.language || 'en';
 }
 
-=======
 
   const res = await fetch('/api/translate', {;
     method: 'POST',;
@@ -51,10 +48,5 @@ export function getSelectedLanguage(): string {;
   return i18n.resolvedLanguage || i18n.language || 'en';
 
 }
-<<<<<<< HEAD
 }
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

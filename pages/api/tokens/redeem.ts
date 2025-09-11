@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     writeJson('support/requests.json', reqs)
   }
   return res.status(200).json({ ok: true, id })
@@ -13,12 +12,8 @@
   }
   return res.status(200).json({ ok: true, id })
 }
-=======
-=======
 import { readJson, writeJson } from '../../../utils/fsDb';
-=======
   return res.status(200).json({ ok: true, id })
-=======
   return res.status(200).json({ ok: true, id });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -51,7 +46,6 @@ export default async function handler(req, res) {
   }=======
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { readJson, writeJson } from '../../../utils/fsDb';
@@ -131,15 +125,5 @@ export default async function handler(req, res) {
 
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

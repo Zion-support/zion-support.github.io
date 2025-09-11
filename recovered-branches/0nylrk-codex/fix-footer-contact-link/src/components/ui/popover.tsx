@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils"
 
-=======const Popover = PopoverPrimitive.Root
 const PopoverTrigger = PopoverPrimitive.Trigger
 const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>
@@ -8,11 +7,9 @@ const PopoverContent = React.forwardRef<
 
         &quot;z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
         "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-=======
 
         "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
-=======
         &quot;z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
         "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",        className
       )}
@@ -21,8 +18,6 @@ const PopoverContent = React.forwardRef<
   </PopoverPrimitive.Portal>;
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import * as React from &quot;react & quot;
 import * as PopoverPrimitive from &quot;@radix - ui / react - popover & quot;
 ;
@@ -30,7 +25,6 @@ import { cn } from &quot;@/lib / utils & quot;
 export { Popover, PopoverTrigger, PopoverContent }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 const Popover = PopoverPrimitive.Root;
 const PopoverTrigger = PopoverPrimitive.Trigger;
@@ -41,7 +35,6 @@ const PopoverContent = React.forward_ref<;
     <PopoverPrimitive.Content;
       ref={ref}
       align={align}
-<<<<<<< HEAD
 export { Popover, PopoverTrigger, PopoverContent }
       sideOffset={sideOffset}
       className={cn(;
@@ -50,7 +43,6 @@ export { Popover, PopoverTrigger, PopoverContent }
       )}
       {...props}
     />;
-<<<<<<< HEAD
   </PopoverPrimitive.Portal>;
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
@@ -64,20 +56,6 @@ React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>)
 }
 ;
 ;
-=======
-=======
-      side_offset={side_offset}
-      className={cn (
-        &quot;z - 50 w - 72 rounded - md border bg - popover p - 4 text - popover - foreground shadow - md outline - none data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
-        class_name)}
-      {...props}
-    />;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   </PopoverPrimitive.Portal>));
 PopoverContent.display_name = PopoverPrimitive.Content.display_name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export { Popover, PopoverTrigger, PopoverContent }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

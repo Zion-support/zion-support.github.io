@@ -1,13 +1,11 @@
 import React from 'react';
 
 
-=======
 'use client'
 import React from 'react';
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-=======const navigation = [
   { name: 'Home', href: '/' }
   { name: 'About', href: '/about' }
   { name: 'Services', href: '/services' }
@@ -33,10 +31,7 @@ export default /**
  */
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false);
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
   return (;
@@ -133,11 +128,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         </Dialog.Panel>;
       </Dialog>;
     </header>);
-<<<<<<< HEAD
 'use client'
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 import { useState } from 'react'
@@ -160,7 +151,6 @@ export default function Navigation() {
           <a href=&quot;/&quot; className=&quot;-m-1.5 p-1.5&quot;>
             <span className=&quot;sr-only&quot;>Zion Tech Group</span>
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
-=======
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (

@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 
@@ -39,7 +38,6 @@ import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
 
-=======
 
 
 
@@ -70,18 +68,13 @@ import {
     'Analytics'
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <>;
       <Head>  const filteredTools = selectedCategory === 'All' ;
     ? apiTools ;
     : apiTools && apiTools.filter(tool => tool && tool.category === selectedCategory);
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const [selected_category, setSelectedCategory] = React.useState ('All');
 ;
@@ -310,7 +303,6 @@ rating: 4.9,
     : apiTools.filter(tool => tool.category === selectedCategory);
 
   return (
-=======    <>
       <Head>
         <title>
           API Tools & Developer Services | Zion Tech Group - Powerful APIs for
@@ -331,8 +323,6 @@ rating: 4.9,
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       {/* Hero Section */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      <section className='relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]' />
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -385,7 +375,6 @@ rating: 4.9,
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -427,14 +416,12 @@ rating: 4.9,
           <div className="flex flex-wrap justify-center gap-4 mb-8">;
             {categories && categories.map((category) => (;
 
-=======
               <button
 
 
       {/* API Tools Grid */}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -455,8 +442,6 @@ rating: 4.9,
                       {tool && tool.icon}
                     </div>;
                     <div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <meta;
           name='description';
           content='Discover powerful APIs and developer tools for building modern applications. From AI - powered code generation to real - time data synchronization, we provide the building blocks you need.';
@@ -557,8 +542,6 @@ rating: 4.9,
                   <div className='flex - 1'>;
                     <div className='flex items - center justify - between mb - 3'>;
                       <h3 className='text - 2xl font - bold text - white group - hover:text - indigo - 400 transition - colors duration - 300'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                         {tool.title}
                       </h3>;
                       <div className='flex items - center space - x-2'>;
@@ -566,8 +549,6 @@ rating: 4.9,
                           <Star className='w - 4 h - 4 fill - current' />;
                           <span className='ml - 1 text - sm font - medium'>;
                             {tool.rating}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -602,7 +583,6 @@ rating: 4.9,
                           <Star className="w-4 h-4 fill-current" />
                           <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                         </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {tool.status}
                         </span>
                       </div>
@@ -640,19 +620,15 @@ rating: 4.9,
                       {tool && tool.features.slice(0, 3).map((feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
-==============                          {feature}
                         </li>;
                       ))}
 
                     </ul>;
                     <div className="flex flex-wrap gap-3">;
 
-=======
                         className="bg-indigo-600 hover:bg-indigo-700"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         Visit API
                       </Button>
@@ -671,10 +647,7 @@ rating: 4.9,
       {/* Developer Resources */}
 
 
-==============
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -768,7 +741,6 @@ rating: 4.9,
               <Button href="/sdk" variant="outline" size="sm">
                 Browse SDKs
                 <ArrowRight className="w-4 h-4 ml-2" />
-=======                        </div>;
                       </div>;
                     </div>;
                     <ul className='space - y-2 mb - 6'>;
@@ -868,53 +840,41 @@ rating: 4.9,
               Developer Resources;
             </h2>;
             <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Everything you need to get started and build amazing applications;
               with our APIs.;
             </p>;
           </div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Detailed API references, code examples, and integration guides;
                 for every service.;
               </p>;
               <Button href='/docs' variant='outline' size='sm'>;
                 Explore Docs;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Test APIs directly in your browser with our interactive testing;
                 environment.;
               </p>;
               <Button href='/playground' variant='outline' size='sm'>;
                 Try Playground;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Official SDKs and client libraries for popular programming;
                 languages and frameworks.;
               </p>;
               <Button href='/sdk' variant='outline' size='sm'>;
                 Browse SDKs;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>;
             </Card>;
           </div>;
         </div>;
       </section>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               View Documentation;
             </Button>;
           </div>;
@@ -922,22 +882,10 @@ rating: 4.9,
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
   );
-=======}
   );
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

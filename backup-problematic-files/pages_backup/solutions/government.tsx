@@ -643,8 +643,6 @@ export default function GovernmentSolutions() {;
     </>
     </>
 export default Government;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };

@@ -5,7 +5,6 @@
   }
 ;
 export const nextGenInnovations2025: NextGenInnovation2025[] = [;
-=======
 
     address: string;
   }
@@ -39,8 +38,6 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [  {
     }
   }
 ]
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "next-gen-ai-suite",
     name: "Next-Gen AI Suite",
     tagline: "Future-ready AI solutions",
@@ -75,17 +72,10 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [  {
 ];
 ],
 ];
-=======
-=======
 
 
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709";
 ],
 
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -5,8 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
-=======
-=======
 
 
 
@@ -48,7 +46,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
@@ -72,12 +69,8 @@ export function AnalyticsChart(): any ({ ;
   const colors = [;
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57';
   ];
-=======
 
-=======
 
-=======
-=======
             <Select value={chartType} onValueChange={(value: 'line' | 'bar') => setChartType(value)}>;
               <SelectTrigger className="w-24 h-8 text-xs bg-zion-blue border-zion-blue-light text-zion-slate-light">;
                 <SelectValue placeholder="Chart Type" />;
@@ -99,7 +92,6 @@ export function AnalyticsChart(): any ({ ;
                 <Legend />;
                 {dataKeys && dataKeys.map((key, index) => (;
 
-<<<<<<< HEAD=======      <CardContent className="p - 0">;
         <div className="h - 72 w - full p - 4">;
           <ResponsiveContainer width="100%" height="100%">;
             {chart_type === 'line' ? (
@@ -111,6 +103,3 @@ export function AnalyticsChart(): any ({ ;
                   angle={-30}
                   text_anchor="end";
                   height={50}
-
-=======
-;

@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +19,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState } from 'react';
 
-=======
 
 export default function Web3LoginButton() {;
 
@@ -36,30 +33,25 @@ export default function Web3LoginButton() {;
 
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-=======
     const did = data?.payload || {};
     return did.lens || did.ens || null
   } catch { return null };
 }
 export default function Web3LoginButton() {
-=======
 }
 
 
 export default function Web3LoginButton() {;
 
-=======  const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 export default function Web3LoginButton() {
-=======
   useEffect(() => {    return did.lens |did.ens |null
   } catch { return null }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [open, setOpen] = useState(false);
 
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
@@ -69,8 +61,6 @@ export default function Web3LoginButton() {
   useEffect(() => {
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
@@ -78,10 +68,8 @@ export default function Web3LoginButton() {
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
     setDisplayWeb3(pref === 'true');  }, []);
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     (async () => {    const saved = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON && JSON.parse(saved));
@@ -105,7 +93,6 @@ export default function Web3LoginButton() {
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (user) {;
     const base =;
       displayName || `${user && user.address.slice(0, 6)}…${user && user.address.slice(-4)}`;
@@ -124,8 +111,6 @@ export default function Web3LoginButton() {
     </>;
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved));
     const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
@@ -305,14 +290,5 @@ export default function Web3LoginButton() {;
 
   return (
     <>
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

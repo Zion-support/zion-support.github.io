@@ -1,7 +1,5 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
-=======import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -12,7 +10,6 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -183,12 +180,9 @@ const microSaasCategories = [
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
-=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -232,7 +226,6 @@ origin/automation-improvements-final
     ]
   }
 
-=======
 origin/main  const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -258,7 +251,6 @@ const microSaasCategories = [
     { name: "LinkedIn", href: "#", icon: Linkedin },;
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
-=======  ];
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
   { title: 'Productivity', icon: Settings, count: 12 },
@@ -282,8 +274,6 @@ origin/main
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <div className="flex items-center space-x-2 mb-6">;
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -311,10 +301,8 @@ origin/main
               </div>;
             </motion && motion.div>;
           </div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Services */}
           <div>;
             <motion&& motion.div
@@ -348,8 +336,6 @@ origin/main
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
-=======
-=======
               </ul>;
             </motion && motion.div>;
           </div>;
@@ -358,15 +344,12 @@ origin/automation-improvements-final
 
 
 
-=======
 
 
 
 
             <motion.div
             <motion.div
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
@@ -385,12 +368,8 @@ origin/automation-improvements-final
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-=======
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </motion.div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -407,7 +386,6 @@ origin/automation-improvements-final
                 ))}
               </div>
             </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* AI Service Categories */}
             <div>
               <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>
@@ -423,46 +401,13 @@ origin/automation-improvements-final
             </div>
 
 
-<<<<<<< HEAD
             
-=======origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-            
-origin/main
-=======            <div className="flex items-center space-x-6">
-              <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Sitemap
-              </Link>
-              <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Accessibility
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Cookie Policy
-              </Link>
-            </div>
-origin/automation-improvements-final
-          </div>
-        </div>
-      </div>
-    </footer>
-<<<<<<< HEAD
-=======
-=======            </motion && motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-<<<<<<< HEAD
   );
 }
 export default Footer;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default Footer;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -699,9 +644,4 @@ const Footer = () =>: any {
 }
 ;
 export default Footer;
-<<<<<<< HEAD
 ;
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

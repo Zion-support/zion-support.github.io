@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -7,10 +5,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === "GET") {
     return res.status(200).json({
 
-=======
 
 
-=======import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   if (req.method === 'GET') {
@@ -178,10 +174,6 @@ export default async function handler(req, res) {
 
 }
 }
-=======
-=======
 
 
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

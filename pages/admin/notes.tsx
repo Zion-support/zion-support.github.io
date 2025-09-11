@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
@@ -17,14 +15,11 @@ export default function AdminNotesConsole() {
   const [isAdmin, setIsAdmin] = useState(true)
   const [notes, setNotes] = useState<Note[]>([])
   const [loading, setLoading] = useState(false)
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     async function load() {
       setLoading(true)
       try {
 
-=======
   id: string,
   target_type: string,
   target_id: string,
@@ -54,7 +49,6 @@ if (return, ) {
         const data = await res.json (),
         set_notes (data.notes || []);
 
-=======
 type Note = {
   id: string;
   targetType: string;
@@ -90,7 +84,3 @@ export default function AdminNotesConsole(req, res) {
 }
     if (isAdmin) load()
   }, [isAdmin]),
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

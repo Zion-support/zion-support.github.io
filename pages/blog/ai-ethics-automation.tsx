@@ -249,16 +249,12 @@ export default function AIEthicsAutomation() {
     </>
   )
 
-=======
 
 
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
 export default function AIEthicsAutomation() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -266,11 +262,9 @@ export default /**
  * AIEthicsAutomation - Function description
  */
 function AIEthicsAutomation() {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-=======
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -285,7 +279,6 @@ function AIEthicsAutomation() {
                 ← Back to Blog;
               </Link>;
             </nav>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <article className='prose prose-invert prose-lg max-w-none'>;
               <header className='mb-12 text-center'>;
                 <div className='flex items-center gap-3 justify-center mb-4'>;
@@ -308,25 +301,19 @@ function AIEthicsAutomation() {
                   groups.;
                 </p>;
               </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - blue - 400'>;
                   Privacy and Data Protection;
                 </h2>;
                 <p className='text - white / 90 mb - 4'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   Autonomous AI systems often require access to sensitive data;
                   to function effectively. Protecting this data while;
                   maintaining system performance is a delicate balance:;
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
-=======
 
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <li>;
                     • Data minimization principles that limit data collection;
                   </li>;
@@ -337,18 +324,14 @@ function AIEthicsAutomation() {
                   <li>• Regular privacy impact assessments</li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
-=======
 
                 <p className='text - white / 90 mb - 4'>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   We also implement federated learning and differential privacy;
                   techniques to enable AI training without compromising;
                   individual privacy.;
                 </p>;
               </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - purple - 400'>;
                   Human Oversight and Control;
@@ -361,64 +344,49 @@ function AIEthicsAutomation() {
                   <li>• Human - in - the - loop mechanisms for critical decisions</li>;
                   <li>;
                     • Emergency stop capabilities for safety - critical systems;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   </li>;
                   <li>• Clear escalation paths for complex scenarios</li>;
                   <li>• Regular human review of AI system outputs</li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
-=======
 
                 <p className='text - white / 90 mb - 4'>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   This human oversight ensures that AI systems remain tools that;
                   serve human needs rather than autonomous entities that operate;
                   beyond human control.;
                 </p>;
               </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
                   Continuous Ethical Evaluation;
                 </h2>;
                 <p className='text - white / 90 mb - 4'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   Ethical considerations in AI are not static—they evolve as;
                   technology advances and societal values change. We maintain;
                   ongoing ethical evaluation through:;
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
-=======
 
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <li>• Regular ethical impact assessments</li>;
                   <li>• Stakeholder feedback and consultation</li>;
                   <li>• Industry collaboration on ethical standards</li>;
                   <li>• Continuous monitoring of societal impacts</li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
-=======
 
                 <p className='text - white / 90 mb - 4'>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   This iterative approach ensures that our AI systems remain;
                   aligned with evolving ethical standards and societal;
                   expectations.;
                 </p>;
               </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-=======
 
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-=======              <div className='mt - 12 p - 6 bg - white / 10 rounded - xl border border - white / 20'>;
                 <h3 className='text - xl font - semibold mb - 4 text - cyan - 400'>;
                   Commitment to Ethical AI;
                 </h3>;
@@ -438,7 +406,6 @@ function AIEthicsAutomation() {
                     href='/services';
                     className='px - 6 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 400 / 50 transition - all duration - 300';
                   >;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Our Services;
                   </Link>;
                 </div>;
@@ -449,7 +416,6 @@ function AIEthicsAutomation() {
       </div>;
 
 
-<<<<<<< HEAD
     </>);
 }
     </>);
@@ -927,34 +893,4 @@ export default function AIEthicsAutomation(req, res) {
                     href='/services';
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300';
                   >;
-=======
-                    Our Services;
-                  </Link>;
-                </div>;
-              </div>;
-            </article>;
-          </div>;
-        </main>;
-      </div>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
 ;
-=======
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

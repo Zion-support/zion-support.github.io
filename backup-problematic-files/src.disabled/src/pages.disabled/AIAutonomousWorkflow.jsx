@@ -9,8 +9,4 @@ const AIAutonomousWorkflow = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousWorkflow;
-=======
-export default AIAutonomousWorkflow;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

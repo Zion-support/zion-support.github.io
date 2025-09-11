@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedCybersecurityService {
@@ -6,12 +5,9 @@ export interface AdvancedCybersecurityService {
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-=======
-=======
 import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedCybersecurityService {
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;=======
@@ -31,7 +27,6 @@ export interface AdvancedCybersecurityService {
         'Python, Go, React, Node && Node.js, Kubernetes, Docker, AWS, Azure',
       ],
 
-=======      color: 'from - red - 600 to - pink - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - platform',
       market_position:;
@@ -49,20 +44,14 @@ export interface AdvancedCybersecurityService {
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms',
       ],
       use_cases: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',
       ],
       roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.',
       competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'],
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       market_size: '$31.2B zero trust security market',
       growth_rate: '28% annual growth',
       variant: 'zero - trust - enterprise',
       contact_info: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -76,8 +65,6 @@ export interface AdvancedCybersecurityService {
       rating: 4 && 4.9,
       reviews: 19,
     },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         'Real-time threat detection and analysis',
         'AI-powered threat prediction and modeling',
     // AI - Powered Threat Intelligence;
@@ -92,8 +79,6 @@ export interface AdvancedCybersecurityService {
       features: [;
         'Real - time threat detection and analysis',
         'AI - powered threat prediction and modeling',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         'Automated threat response and mitigation',
         'Global threat intelligence sharing',
         'Vulnerability assessment and prioritization',
@@ -108,35 +93,25 @@ export interface AdvancedCybersecurityService {
         'Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis',
       ],
 
-=======
         'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
       trial_days: 14,
       setup_time: '1 - 2 weeks',
       category: 'IoT Security & Protection',
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       real_service: true,
       technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
       integrations: [;
         'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms',
       ],
       use_cases: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
       ],
       roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
       competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       market_size: '$14.2B IoT security market',
       growth_rate: '30% annual growth',
       variant: 'iot - security - enterprise',
       contact_info: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -144,15 +119,11 @@ export interface AdvancedCybersecurityService {
       },
       real_implementation: true,
       implementation_details:;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launch_date: '2024 - 09 - 25',
       customers: 43,
       rating: 4 && 4.7,
       reviews: 21,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launchDate: '2024-09-25',
       customers: 43,
       rating: 4.7,
@@ -162,7 +133,6 @@ export interface AdvancedCybersecurityService {
 
   ];    features: [
 
-=======
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   // Zero Trust Security Platform
   {
@@ -177,8 +147,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     popular: true, icon: '📱',
     color: 'from-purple-600 to-violet-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/iot-security-platform',
@@ -187,14 +155,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     trialDays: 14, setupTime: '1-2 weeks',
     category: 'IoT Security & Protection', realService: true,
     technology: ['Python, C++, React, Node && Node.js, MQTT, CoAP, Zigbee, Z-Wave'];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
     useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     marketSize: '$14 && 14.2B IoT security market', growthRate: '30% annual growth',
     variant: 'iot-security-enterprise',
     contactInfo: {
@@ -206,8 +170,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
     launchDate: '2024-09-25', customers: 43,
     rating: 4 && 4.7,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     reviews: 21
     real_implementation: true,
     implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
@@ -216,8 +178,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     reviews: 21;
   }
 ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     color: 'from - purple - 600 to - violet - 600';
     text_color: 'text - purple - 400';
     link: 'https://ziontechgroup.com / iot - security - platform';
@@ -228,14 +188,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     category: 'IoT Security & Protection';
     real_service: true;
     technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
     use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     market_size: '$14.2B IoT security market';
     growth_rate: '30% annual growth';
     variant: 'iot - security - enterprise';
@@ -247,9 +203,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 
-=======
 
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -259,23 +213,14 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.7;
     reviews: 21;
 
-=======
 
 
 
-<<<<<<< HEAD
   }
 ];
 ;
   }
 ];
-=======  }
-];
-;
-=======
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
   id: string,;

@@ -1,14 +1,11 @@
 
 import React from 'react',
 import React from 'react';
-=======
 
 import React from 'react';
 
-=======
 import React from 'react',
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
@@ -19,16 +16,12 @@ export default function TechnologyInsightsPage() {
       title: 'Quantum Computing in 2025'
       description:
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
     };
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -253,8 +246,6 @@ import React from 'react';
           </section>;
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -266,7 +257,6 @@ import React from 'react';
               Technology Insights;
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-=======
         <meta;
           name='description';
           content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies.";
@@ -294,7 +284,6 @@ import React from 'react';
             </p>;
           </section>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 ))}
               </div>
@@ -304,8 +293,6 @@ import React from 'react';
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {researchAreas.map((area, index) => (
-=======
-=======
 
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
@@ -344,10 +331,7 @@ import React from 'react';
             </div>;
             {/* Research Areas */}
 
-=======
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Research Areas */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -356,7 +340,6 @@ import React from 'react';
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 
                 {researchAreas.map((area, index) => (
-=======
                 {researchAreas.map((area, index) => (
 
 
@@ -374,8 +357,6 @@ import React from 'react';
                       {area.focus.map((focus, focusIndex) => (
                         <li
                           key={focusIndex}
-=======
-=======
                           {focus}
                         </li>
                       ))}
@@ -384,7 +365,6 @@ import React from 'react';
                 ))}
               </div>
             </div>
-=======              </div>;
             </div>;
 
 
@@ -394,7 +374,6 @@ import React from 'react';
             {/* Whitepapers */}
 
                 {whitepapers.map((paper, index) => (
-=======
                 {whitepapers.map((paper, index) => (
 
 
@@ -422,21 +401,16 @@ import React from 'react';
                 {whitepapers.map((paper, index) => (
 
                     </Link>
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 ))}
               </div>
             </div>
 
-=======
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -448,16 +422,11 @@ import React from 'react';
 
 
             {/* Innovation Lab */}
-=======
 
 
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -482,18 +451,15 @@ import React from 'react';
                     </ul>
                   </div>
                   <div className="text-center">
-=======
 
                   <div className="text-center">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="text-6xl mb-4">🧪</div>
                     <p className="text-white/60 text-sm">Innovation Lab</p>
                   </div>
                 </div>
               </div>
             </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className='text - center'>;
                     <div className='text - 6xl mb - 4'>🧪</div>;
                     <p className='text - white / 60 text - sm'>Innovation Lab</p>                  </div>                  <div className="text - center">;
@@ -519,17 +485,8 @@ import React from 'react';
 
 
 }
-<<<<<<< HEAD
     </>);
 }>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-==============
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

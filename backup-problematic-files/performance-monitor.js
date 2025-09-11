@@ -3,7 +3,6 @@
       memoryUsage: 0,
       timestamp: new Date().toISOString(),
     };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   async measureBundleSize() {
     try {
@@ -22,7 +21,6 @@
   }
   generateReport() {
     const report = {
-=======const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();
 const report = monitor.generate_report ();
@@ -30,6 +28,3 @@ const report_path = path.join (process.cwd (), 'performance - report.json');
 fs.writeFileSync (report_path, JSON.stringify (report, null, 2));
 console.log ('Performance report generated:', report_path);
 ;
-<<<<<<< HEAD
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

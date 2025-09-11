@@ -9,8 +9,4 @@ const Advanced-cybersecurity-suite = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Advanced-cybersecurity-suite;
-=======
-export default Advanced-cybersecurity-suite;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

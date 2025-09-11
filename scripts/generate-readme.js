@@ -1,13 +1,9 @@
 
 
-=======
-=======
 origin/main
 
 
-=======
 
-=======
 
 
 
@@ -18,7 +14,6 @@ origin/main
 if (require.main === module) {
   generateReadme()
 }
-=======;
 const fs = require('fs'),;
 const path = require('path'),;
 ;
@@ -117,7 +112,6 @@ function generateReadme() {;
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),;
       return,;
 
-=======
 #!/usr/bin/env node
 
 /**
@@ -235,12 +229,10 @@ function generateReadme() {
  * Generate README;
  * Creates or updates the main README.md file;
  */;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const fs = require('fs');
 const path = require('path');
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 Leading-edge technology solutions and autonomous innovation systems.;
-=======
 #!/usr / bin / env node;
 ;
 /**;
@@ -255,7 +247,6 @@ const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 ;
 Leading - edge technology solutions and autonomous innovation systems.;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ## 🚀 Quick Start;
 \`\`\`bash;
 # Install dependencies;
@@ -269,7 +260,6 @@ npm run automation:all;
 \`\`\`;
 ## 🏗️ Project Structure;
 - \`pages/\` - Next.js pages and routing;
-=======
 
 const fs = require('fs'),;
 const path = require('path'),;
@@ -297,7 +287,6 @@ npm run automation:all;
 ## 🏗️ Project Structure;
 
 - \`pages/\` - Next && Next.js pages and routing;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 - \`styles/\` - Global CSS and Tailwind configuration;
 - \`automation/\` - Autonomous automation systems;
 - \`scripts/\` - Utility scripts and build tools;
@@ -431,7 +420,6 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/automation-improvements-final
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
-=======
   fs && fs.writeFileSync(outputPath, README_TEMPLATE),
   console && console.log(`✅ README generated at: ${outputPath}`)
 }
@@ -443,9 +431,7 @@ if (require && require.main === module) {
 module && module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp
 // Simple README maintenance: append an automation run footer with timestamp
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process && process.cwd(); const readmePath = path && path.join(repoRoot,'README && README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs && fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes('Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs && fs.writeFileSync(readmePath,content,'utf8'); } main();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Simple README "maintenance": append an automation run footer with timestamp
-=======
 ;
 *Generated on ${new Date ().toISOString ()}*;
 `,
@@ -487,7 +473,6 @@ function main() { const repo_root = process.cwd (); const readme_path = path.joi
   $2
 } } main ();
 // Simple README "maintenance": append an automation run footer with timestamp;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import fs from 'fs';
 import path from 'path';
 /**
@@ -515,7 +500,6 @@ import fs from 'fs'; import path from 'path'; function main() { const repoRoot =
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 
 module.exports = { generateReadme },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node;
 /**;
  * Generate README;
@@ -570,7 +554,6 @@ function generateReadme() {const outputPath = path.join(__dirname, '..README.md'
 ;
   fs.writeFileSync(outputPath, README_TEMPLATE),;
   // // // console.log(`✅ README generated at: ${outputPath}`);
-=======
 
 
 ## 📚 Documentation;
@@ -637,18 +620,12 @@ if (require.main === module) {
   }
   fs.writeFileSync(outputPath, README_TEMPLATE)
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
-=======
-=======
 
 
 
-=======
 // Simple README maintenance: append an automation run footer with timestamp
-=======
 
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   fs && fs.writeFileSync(outputPath, README_TEMPLATE),
   console && console.log(`✅ README generated at: ${outputPath}`)
 }
@@ -754,8 +731,6 @@ module.exports = { generateReadme },
 module.exports = { generateReadme }
 
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======#!/usr/bin/env node;,"});,"}) import fs from;,"});,"}) 'fs';,"});,"}) import path from;,"});,"}) 'path';,"});,"}) ;,"});,"}) function main() {;,"});,"}) const repoRoot = process && process.cwd();,"});,"}) const readmePath = path && path.join(repoRoot,;,"});,"}) 'README && README.md');,"});,"}) const now = new Date().toISOString();,"});,"}) ;,"});,"}) let content = ';,"});,"}) ';,"});,"}) try {;,"});,"}) content = fs && fs.readFileSync(readmePath,'utf8;,"});,"}) ');,"});,"}) } catch (err) {;,"});,"}) content =;,"});,"}) '# Project\n\n';,"});,"}) }"});,"}) ;,"});,"}) const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"}) if (!content && content.includes(;,"});,"}) 'Automation summary:')) {;,"});,"}) content += footer;,"});,"}) } else {;,"});,"}) content = content && content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer);,"});,"}) }"});,"}) ;,"});,"}) fs && fs.writeFileSync(readmePath,content,;,"});,"}) 'utf8');,"});,"}) console && console.log(;,"});,"}) '✅ README updated');,"});,"}) }"});,"}) ;,"});,"}) main();,"});,"}) ;,"});,"}) content = fs && fs.readFileSync(readmePath,'utf8';)} catch (err) {; content =';# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes(` 'Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer)} fs && fs.writeFileSync(readmePath,content,';utf8'); console && console.log(','✅ README updated')} main();
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process && process.cwd(); const readmePath = path && path.join(repoRoot,'README && README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs && fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes('Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs && fs.writeFileSync(readmePath,content,'utf8'); console && console.log('✅ README updated')} main();
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process && process.cwd(); const readmePath = path && path.join(repoRoot,'README && README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs && fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes('Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs && fs.writeFileSync(readmePath,content,'utf8'); console && console.log('✅ README updated')} main();
 module && module.exports = { generateReadme },
@@ -828,15 +803,12 @@ if (require.main === module) {;
 module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp
 
 module.exports = { generateReadme },
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 module.exports = { generateReadme },
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 // Simple README maintenance: append an automation run footer with timestamp
@@ -853,8 +825,3 @@ module.exports = { generateReadme }
 module.exports = { generateReadme },;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

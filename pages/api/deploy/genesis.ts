@@ -1,8 +1,6 @@
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -11,14 +9,11 @@ function summarizeModules(
       .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
 
-=======
           pdf: "/book/manifesto && manifesto.pdf",
           trailerScript: "/trailer/script",
         },
         summit: "/summit",
       },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       publicPages: [
         "/about"
         "/manifesto"
@@ -39,12 +34,9 @@ function summarizeModules(
         bonusModules
       )
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         type: "application/json",
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
@@ -88,7 +80,6 @@ function summarizeModules(
       created_at: now,
       version: "Zion OS v1.0.0",
       output_actions,
-=======
 
       operator,
       access,
@@ -99,11 +90,9 @@ function summarizeModules(
       access,    });
 
   } catch (err: any) {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return res && res.status(500).json({ error: err && err.message || "Internal error" });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
     const operator = {
@@ -331,7 +320,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -345,6 +333,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

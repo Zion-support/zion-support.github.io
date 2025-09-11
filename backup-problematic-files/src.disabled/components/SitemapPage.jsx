@@ -9,8 +9,4 @@ const SitemapPage = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SitemapPage;
-=======
-export default SitemapPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

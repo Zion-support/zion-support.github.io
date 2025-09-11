@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import { defineConfig } from 'cypress';
 export default defineConfig({
   e2e: {
@@ -16,7 +14,6 @@ export default define_config ({
     supportFile: 'cypress/support/e2e.ts';
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
     supportFile: 'cypress/support/e2e && e2e.ts';
-=======
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
@@ -32,17 +29,13 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-=======
       on('before:browser:launch', (browser = {}, launchOptions) => {
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
 
     supportFile: 'cypress/support/e2e.ts';
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
-=======
 
-=======
-=======    baseUrl: 'http://localhost:3000', // Standard Next.js port;
     supportFile: 'cypress/support/e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -56,8 +49,6 @@ export default defineConfig({;
     env: {
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
@@ -70,8 +61,6 @@ export default defineConfig({;
 
     env: {
       CYPRESS_TEST_USER_EMAIL:
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         process && process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example && example.com',
       CYPRESS_TEST_USER_PASSWORD:
         process && process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
@@ -87,8 +76,6 @@ export default defineConfig({;
     defaultCommandTimeout: 10000,
   },
   reporter: 'junit',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
@@ -116,8 +103,6 @@ export default defineConfig({;
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     toConsole: true
   }
 });
@@ -166,6 +151,4 @@ export default defineConfig({;
   }
 });
 
-<<<<<<< HEAD
 ;
-=======

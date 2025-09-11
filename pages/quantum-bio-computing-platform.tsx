@@ -46,8 +46,6 @@ export default function QuantumBioComputingPlatformPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -123,8 +121,6 @@ export default function QuantumBioComputingPlatformPage() {
       </div>
     </UltraFuturisticBackground>;
   );
-=======
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 import React from 'react',
@@ -179,8 +175,6 @@ export default function QuantumBioComputingPlatformPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
 import React from 'react';
 import Head from 'next / head';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -220,9 +214,4 @@ function QuantumBioComputingPlatformPage() {
       </div>;
     </UltraFuturisticBackground>);
 ;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

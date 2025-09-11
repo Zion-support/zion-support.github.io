@@ -1,7 +1,5 @@
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-=======
 import { ServiceVariant } from '../types/service-variants';
-==============
 import { ServiceVariant } from '../types/service-variants';
 
   id: string;
@@ -48,7 +46,6 @@ import { ServiceVariant } from '../types/service-variants';
     features: [
 
   {
-==============    color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / smart - contract - automation - platform',
     market_position:;
@@ -60,8 +57,6 @@ import { ServiceVariant } from '../types/service-variants';
     category: 'Innovative Micro SaaS & Blockchain',
     real_service: true,
     technology: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Blockchain',
       'Smart Contracts',
       'React',
@@ -71,10 +66,7 @@ import { ServiceVariant } from '../types/service-variants';
       'Ethereum',
       'Polygon',
     ],
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'QuickBooks',
       'Salesforce',
@@ -104,8 +96,6 @@ import { ServiceVariant } from '../types/service-variants';
     growth_rate: '250% annual growth',
     variant: 'blockchain - futuristic',
     contact_info: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -120,8 +110,6 @@ import { ServiceVariant } from '../types/service-variants';
     reviews: 289,
   },
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI-powered churn prediction',
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
@@ -133,8 +121,6 @@ import { ServiceVariant } from '../types/service-variants';
       'Advanced customer success platform that uses AI to predict customer churn, identify upsell opportunities, and automate customer engagement. Increases customer lifetime value by 200%.',
     features: [;
       'AI - powered churn prediction',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Automated customer engagement',
       'Upsell and cross - sell automation',
       'Customer health scoring',
@@ -147,8 +133,6 @@ import { ServiceVariant } from '../types/service-variants';
     ],
     popular: true,
     icon: '🎯',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI/ML',
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
@@ -163,8 +147,6 @@ import { ServiceVariant } from '../types/service-variants';
     real_service: true,
     technology: [;
       'AI / ML',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -173,10 +155,7 @@ import { ServiceVariant } from '../types/service-variants';
       'Python',
       'TensorFlow',
     ],
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'Salesforce',
       'HubSpot',
@@ -207,8 +186,6 @@ import { ServiceVariant } from '../types/service-variants';
     growth_rate: '200% annual growth',
     variant: 'customer - success - futuristic',
     contact_info: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -223,8 +200,6 @@ import { ServiceVariant } from '../types/service-variants';
     reviews: 423,
   },
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI-powered process analysis',
     id: 'intelligent - workflow - automation',
     name: 'Intelligent Workflow Automation',
@@ -235,8 +210,6 @@ import { ServiceVariant } from '../types/service-variants';
       'Smart workflow automation platform that uses AI to analyze business processes and automatically create optimized workflows. Reduces manual work by 80% and improves efficiency.',
     features: [;
       'AI - powered process analysis',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Automated workflow creation',
       'Intelligent task routing',
       'Process optimization suggestions',
@@ -249,8 +222,6 @@ import { ServiceVariant } from '../types/service-variants';
     ],
     popular: false,
     icon: '⚙️',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI/ML',
     color: 'from - gray - 600 to - slate - 700',
     text_color: 'text - gray - 400',
@@ -265,8 +236,6 @@ import { ServiceVariant } from '../types/service-variants';
     real_service: true,
     technology: [;
       'AI / ML',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -275,10 +244,7 @@ import { ServiceVariant } from '../types/service-variants';
       'Python',
       'TensorFlow',
     ],
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'Slack',
       'Microsoft Teams',
@@ -299,8 +265,6 @@ import { ServiceVariant } from '../types/service-variants';
     ],
     roi: 'Average business achieves 300% ROI within 3 months through process automation and efficiency improvements.',
     competitors: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Zapier',
       'Make',
       'IFTTT',
@@ -325,8 +289,6 @@ import { ServiceVariant } from '../types/service-variants';
     reviews: 678,
   },
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI-powered investment recommendations',
     id: 'ai - powered - financial - advisor',
     name: 'AI - Powered Financial Advisor',
@@ -337,8 +299,6 @@ import { ServiceVariant } from '../types/service-variants';
       'Intelligent financial advisory platform that provides personalized investment advice, portfolio optimization, and financial planning. Uses AI to analyze market trends and optimize investment strategies.',
     features: [;
       'AI - powered investment recommendations',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Personalized financial planning',
       'Portfolio optimization algorithms',
       'Risk assessment and management',
@@ -351,8 +311,6 @@ import { ServiceVariant } from '../types/service-variants';
     ],
     popular: true,
     icon: '💰',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI/ML',
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
@@ -367,8 +325,6 @@ import { ServiceVariant } from '../types/service-variants';
     real_service: true,
     technology: [;
       'AI / ML',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -399,7 +355,6 @@ import { ServiceVariant } from '../types/service-variants';
     rating: 4.8
 
 
-=======
 
     id: 'ai-powered-inventory-optimizer', name: 'AI-Powered Inventory Optimizer',
     tagline: 'Intelligent inventory management with predictive analytics', price: '$299',
@@ -425,15 +380,5 @@ import { ServiceVariant } from '../types/service-variants';
   }
 ];
 ];
-=======
-=======
 ;=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

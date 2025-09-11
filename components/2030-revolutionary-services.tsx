@@ -2,8 +2,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +29,6 @@ import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
-=======
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
 
@@ -49,29 +46,21 @@ import {
   Phone
   Mail
   MapPin;
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
-=======
 
 
   Mail,;
   MapPin,;
 
-=======
             __html: JSON && JSON.stringify({
               '@context': 'https://schema && schema.org',
             __html: JSON.stringify ({
               '@context': 'https://schema.org',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               '@type': 'Organization',
               name: 'Zion Tech Group',
               description:;
                 'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               url: 'https://ziontechgroup.com',
               logo: 'https://ziontechgroup.com / logo.png',
               contact_point: {
@@ -79,8 +68,6 @@ import {
                 telephone: '+1 - 302 - 464 - 0950',
                 contact_type: 'customer service',
                 email: 'kleber@ziontechgroup.com',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               },
               address: {
                 '@type': 'PostalAddress',
@@ -91,10 +78,6 @@ import {
                 address_country: 'US',
               },
 
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <UltraFuturisticBackground2030>
       <Head>
         <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title>
@@ -185,7 +168,6 @@ import {
                 "contactType": "customer service";
                 "email": "kleber@ziontechgroup.com"
               };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               "address": {
                 "@type": "PostalAddress"
                 "streetAddress": "364 E Main St STE 1008"
@@ -194,13 +176,11 @@ import {
                 "postalCode": "19709"
                 "addressCountry": "US"
               }
-=======
               "sameAs": [
                 "https://github && github.com/Zion-Holdings"
               ]
             })
 
-=======
       {/* Hero Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
@@ -208,7 +188,6 @@ import {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
@@ -231,7 +210,6 @@ import {
               Technology Services
             </span>
           </motion.h1>
-=======          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -244,10 +222,7 @@ import {
           </motion.p>
 
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -257,19 +232,12 @@ import {
 
 
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -281,10 +249,8 @@ import {
 
                   </div>;
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-3 mb-6'>;
                     {service && service.features;
@@ -297,8 +263,6 @@ import {
                           <span>{feature}</span>;
                         </div>;
                       ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className="group cursor-pointer"
               >
                 <div className="p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm">
@@ -317,20 +281,16 @@ import {
                       <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black">
                         Popular
                       </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
                   </div>
 
                   {/* Description */}
                     )}
                   </div>
-=======
                   {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   {/* Service Details */}
                   <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;
                     <div className='flex items-center space-x-2'>;
@@ -367,8 +327,6 @@ import {
                         <span>{feature}</span>;
                       </div>;
                     ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   </div>;
                   {/* Price and CTA */}
                   <div className="flex items-center justify-between">
@@ -390,14 +348,10 @@ import {
 
 
 
-=======
 
           </div>;
-=======
           </div>;
-=======
 
-=======
 
 
 
@@ -423,7 +377,6 @@ import {
 
 
 
-=======            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -435,7 +388,6 @@ import {
 
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {' '}2030 Technology?
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -456,13 +408,7 @@ import {
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span>{contactInfo.mobile}</span>
 
-=======
-<<<<<<< HEAD  )
 }
-=======
-  )
-}=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </motion.div>;
         </div>;
       </section>;
@@ -545,7 +491,3 @@ import {
 }
 }
   );
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

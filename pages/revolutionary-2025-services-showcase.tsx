@@ -1,7 +1,6 @@
 
 
 
-=======import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -117,7 +116,6 @@ const serviceCategories = [
     color: 'from-orange-500 to-red-500',
     services: allServices.filter(s => s.category.includes('Logistics')),
     gradient: 'from-orange-500/20 to-red-500/20'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {;
   Search, Filter, Star, Users, TrendingUp,;
@@ -233,14 +231,11 @@ const serviceCategories = [;
     return res.status(500).json({ error: "Internal server error" });
 
   }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
           <div className="container mx-auto relative z-10">
             <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}              initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -258,12 +253,8 @@ const serviceCategories = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -476,15 +467,12 @@ function Revolutionary2025ServicesShowcase() {
             </motion.div>;
           </div>;
         </section>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Search and Filter Section */}
         <section className="py - 8 px - 4 border - b border - gray - 800">;
           <div className="container mx - auto">;
             <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
               {/* Search */}
 
-=======        {/* Search and Filter Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -499,7 +487,6 @@ function Revolutionary2025ServicesShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -510,7 +497,6 @@ function Revolutionary2025ServicesShowcase() {
                 {/* Category Filter */}
 
 
-=======
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -560,7 +546,6 @@ function Revolutionary2025ServicesShowcase() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="all">All Categories</option>
@@ -821,7 +806,6 @@ function Revolutionary2025ServicesShowcase() {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
-=======                {/* Sort Filter */}
                 <div className="relative">
                   <select
                     value={sortBy}
@@ -862,18 +846,15 @@ function Revolutionary2025ServicesShowcase() {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                     </svg>
                   </button>
                   <button
-=======
         <section className="py - 16 px - 4">;
           <div className="container mx - auto">;
             {/* Results Count */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -886,18 +867,13 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">
               <p className="text-gray-400">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> revolutionary services
                 {selectedCategory !== 'all' && (
                   <> in <span className="text-white font-semibold">{serviceCategories.find(c => c.id === selectedCategory)?.title.split(' ').slice(1).join(' ')}</span></>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <AnimatePresence mode="wait">
               {viewMode === 'grid' ? (
                 <motion.div
@@ -918,7 +894,6 @@ function Revolutionary2025ServicesShowcase() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
                 >
                   {sortedServices.map((service, index) => (
@@ -1000,7 +975,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="flex space-x-3 mb-4">
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">
                             <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 text-sm">
@@ -1020,7 +994,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="grid grid-cols-1 gap-2 text-xs">
                           <div className="flex items-center gap-2 text-purple-400">
                             <Phone className="w-3 h-3" />
@@ -1097,7 +1070,6 @@ function Revolutionary2025ServicesShowcase() {
                   {sortedServices.map((service, index) => (
                     <motion.div
 
-=======
                       key={service.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -1148,8 +1120,6 @@ function Revolutionary2025ServicesShowcase() {
                                 {service.features.slice (0, 4).map ((feature, feature_index) => (
                                   <li key={feature_index} className="flex items - center text - sm text - gray - 300">;
                                     <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                                    {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1160,7 +1130,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
                               </ul>
                             </div>
@@ -1171,7 +1140,6 @@ function Revolutionary2025ServicesShowcase() {
                                   <span key={techIndex} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded">
 
                               </ul>
-=======
                             </div>
                           </div>
                         </div>
@@ -1253,12 +1221,5 @@ function Revolutionary2025ServicesShowcase() {
   }
 }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

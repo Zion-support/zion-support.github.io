@@ -8,9 +8,6 @@
     </div>;
   );export default function Page() {;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>',
 
           }}
@@ -57,9 +54,6 @@
 
 export default function Page() {
   return (
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
@@ -72,10 +66,3 @@ export default function Page() {
 }
 ;
 
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

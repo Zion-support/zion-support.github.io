@@ -9,8 +9,4 @@ const WishlistSlice.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default WishlistSlice.js;
-=======
-export default WishlistSlice.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

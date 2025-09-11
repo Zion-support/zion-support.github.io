@@ -152,11 +152,8 @@ export default function SavedTalentsPage() {;
           .select(
             `
             talent_profile (
-=======
-=======  const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-=======
 
 
 
@@ -206,7 +203,6 @@ if ( {) {
             `;
 
             talent_profile (
-=======
 
         const { data, error } = await supabase;
           .from("saved_talents");
@@ -216,7 +212,6 @@ if ( {) {
 
 
 
-==============
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
@@ -240,23 +235,17 @@ if ( {) {
             );
           `;
           );
-=======
-=======
               is_verified;
             );
           `;
 
           );
-=======
           );
 
-=======
           setSavedTalents(talentProfiles)
         }          .eq("user_id", user.id),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (error) {;
           throw error;
-=======
               is_verified);
           `);
           .eq ("user_id", user.id);
@@ -270,11 +259,8 @@ if ( {) {
 
       } catch (error) {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       } catch (error) {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         console.error ("Error fetching saved talents:", error);
         toast ({
           title: "Error",
@@ -291,7 +277,6 @@ if ( {) {
           variant: "destructive"})
       } finally {
         setIsLoading(false)
-=======
 
       } finally {
         setIsLoading (false);      }
@@ -305,8 +290,6 @@ if ( {) {
         setIsLoading (false);
       }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
 
     fetchSavedTalents()
@@ -327,7 +310,6 @@ if ( {) {
 
 
 
-==============
   const handleRequestHire = (talent: TalentProfile) => {
     console.log("Request to hire:", talent);
     toast({
@@ -336,7 +318,6 @@ if ( {) {
   }
   },
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
@@ -344,10 +325,7 @@ if ( {) {
         return
 
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
         toast({;
@@ -385,8 +363,6 @@ if ( {) {
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
         }
@@ -394,7 +370,6 @@ if ( {) {
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           .single(),
   
@@ -461,7 +436,6 @@ if ( {) {
   },
 
 
-=======
           .insert([{ user_id: user && user.id, talent_id: talentId }]),;
 
         if (error) {;
@@ -511,7 +485,6 @@ if ( {) {
       <SEO
         title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
-=======      />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>
@@ -528,7 +501,6 @@ if ( {) {
               <TalentCard
               <TalentCard
 
-=======;
         setSavedTalents(prevTalents =>;
           prevTalents.filter(talent => talent.id !== talentId);
         ),;
@@ -588,7 +560,6 @@ if ( {) {
         ) : (;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
 
-<<<<<<< HEAD
                 key={talent.id}
                 talent={talent}
         ;
@@ -601,18 +572,14 @@ if ( {) {
             {savedTalents.map((talent) => (;
               <TalentCard;
                 key={talent.id}                talent={talent}
-=======                key={talent.id}                talent={talent}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onViewProfile={handleViewProfile}
                 onRequestHire={handleRequestHire}
                 is_saved={true}
                 onToggleSave={handleToggleSave}
-=======      </div>
       <Footer />
     </>
   )
 }
       </div>;
       <Footer />;
-=======
 ;

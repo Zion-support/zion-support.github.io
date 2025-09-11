@@ -340,8 +340,4 @@ const Services-broken: React.FC<Services-brokenProps> = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Services-broken;
-=======
-export default Services-broken;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

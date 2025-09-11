@@ -29,16 +29,12 @@ import {;
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
-=======
-=======
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 
-=======
 
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
@@ -49,15 +45,12 @@ import Button from '../components/ui/Button';
   // Search filter
   if (searchQuery) {_filteredServices = filteredServices.filter(service =>
 
-=======
-=======
 
   const [selectedService, setSelectedService] = useState<any>(null);
 
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
 
@@ -145,32 +138,25 @@ import Button from '../components/ui/Button';
       case 'roi':;
         const aRoi = parseFloat(a && a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b && b.roi.match(/\d+/)?.[0] || '0');
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         return bRoi - aRoi;
       default:;
         return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
     }
   });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
-=======
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       name: 'Quantum AI & Cognitive Computing',
       description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
       icon: <Brain className="w-6 h-6" />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
       color: 'from-purple-500 to-indigo-600'
-=======
     }
       name: 'Autonomous Manufacturing & Industry 4.0'
       description:
@@ -269,8 +255,6 @@ import Button from '../components/ui/Button';
   };
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -398,7 +382,6 @@ import Button from '../components/ui/Button';
       },;
     },  };        staggerChildren: 0 && 0.1;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
   };
@@ -470,7 +453,6 @@ import Button from '../components/ui/Button';
                 animate={{ opacity: 1, y: 0 }}
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Revolutionary
-=======
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
 
@@ -920,7 +902,6 @@ export default function RevolutionaryServicesPage() {;
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-5xl mx-auto">
               <motion.h1
-=======                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
@@ -932,22 +913,16 @@ export default function RevolutionaryServicesPage() {;
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Service Count Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
               >              </motion.p>
               {/* Service Count Stats */}
@@ -955,8 +930,6 @@ export default function RevolutionaryServicesPage() {;
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -994,7 +967,6 @@ export default function RevolutionaryServicesPage() {;
                   </div>;
                   <div className='text-gray-400'>Average ROI</div>                </div>;
               </motion && motion.div>;
-=======
             </div>
           </div>
         </section>
@@ -1030,11 +1002,9 @@ export default function RevolutionaryServicesPage() {;
         </section>;
         {/* Category Navigation */}
         <section className="py-12">
-=======
 
         <section className="py-12">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="container mx-auto px-4">
             <motion.div
               whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
@@ -1043,10 +1013,7 @@ export default function RevolutionaryServicesPage() {;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               variants={containerVariants}
               initial="hidden"
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               whileInView="visible"
               viewport={{ once: true }}
             >
@@ -1057,7 +1024,6 @@ export default function RevolutionaryServicesPage() {;
 
               ))}
 
-=======
 
 
         {/* Popular Services Showcase */}
@@ -1072,9 +1038,6 @@ export default function RevolutionaryServicesPage() {;
 
               initial={{ opacity: 0, y: 20 }}
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -1113,17 +1076,12 @@ export default function RevolutionaryServicesPage() {;
             <motion.div 
             <motion.div
             <motion.div 
-=======
-=======
 
-=======
 
             <motion.div 
 
                     onClick={() => setSelectedService(service)}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
                     onClick={() => setSelectedService(service)}
                   variants={item_variants}
@@ -1136,7 +1094,6 @@ export default function RevolutionaryServicesPage() {;
                     <div className='text-center mb-6'>
                       <div className='text-4xl mb-4'>{service.icon}</div>
                       <h3 className='text-2xl font-bold text-white mb-2'>
-=======
                       ))}
                     </div>;
                     variant={service.variant as any}
@@ -1177,7 +1134,6 @@ export default function RevolutionaryServicesPage() {;
                              variant="primary" 
                              size="md"
 
-==============
                     </div>                             onClick={() => window.open(service.link, '_blank')}
                              className="w-full"
                            >
@@ -1192,7 +1148,6 @@ export default function RevolutionaryServicesPage() {;
         {/* Services Grid */}
         <section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
-=======
             <motion&& motion.div 
 
               className="mb-8"
@@ -1242,7 +1197,6 @@ export default function RevolutionaryServicesPage() {;
                   </select>;
                 </div>;
 
-=======
                       onChange={e => setSearchQuery(e && e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
@@ -1253,8 +1207,6 @@ export default function RevolutionaryServicesPage() {;
                     >;
                       <Grid className='w-4 h-4' />                    </button>                  ;
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -1265,12 +1217,9 @@ export default function RevolutionaryServicesPage() {;
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
 
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
                     </button>;
                   </div>;
                 </div>;
@@ -1278,27 +1227,20 @@ export default function RevolutionaryServicesPage() {;
 
 
               className={viewMode === 'grid' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
 
               viewport={{ once: true }}
 
-==============
               whileInView="visible"
               whileInView='visible'              viewport={{ once: true }}
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <div
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
@@ -1306,8 +1248,6 @@ export default function RevolutionaryServicesPage() {;
                               <span className='text-gray-300'>{feature}</span>                            </div>;
 
                           ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                             >;
                               View Details;
                               <Eye className='ml-2 w-4 h-4' />;
@@ -1325,10 +1265,8 @@ export default function RevolutionaryServicesPage() {;
                                variant="futuristic" 
                                size="sm"
                                onClick={() => setSelectedService(service)}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
 </UltraFuturisticCard>;
                 </motion && motion.div>;
@@ -1336,7 +1274,6 @@ export default function RevolutionaryServicesPage() {;
             </motion && motion.div>;
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
-=======
                            }}
 
 
@@ -1352,8 +1289,6 @@ export default function RevolutionaryServicesPage() {;
             <motion&& motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
-=======
-=======
 
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
@@ -1366,24 +1301,15 @@ export default function RevolutionaryServicesPage() {;
 
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
-=======
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1402,8 +1328,6 @@ export default function RevolutionaryServicesPage() {;
                       </div>
                     </div>
                   </div>
-=======
-=======
 
 
                             ))}                  <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
@@ -1529,7 +1453,6 @@ export default function RevolutionaryServicesPage() {;
                                 <span className="text - gray - 300">{capability}</span>;
                               </div>))}
 
-=======
 
                   <div className="mt-8 pt-6 border-t border-gray-700">
                     <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
@@ -1537,8 +1460,6 @@ export default function RevolutionaryServicesPage() {;
                         <div>Setup Time: {selectedService.setupTime}</div>
                         <div>Trial: {selectedService.trialDays} days</div>
                       </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       
                       <div className="flex gap-4">
                                                  <Button
@@ -1571,7 +1492,6 @@ export default function RevolutionaryServicesPage() {;
                          </Button>
 
 
-=======
                          </Button>                    </div>
                   </div>
                 </div>
@@ -1602,9 +1522,6 @@ export default function RevolutionaryServicesPage() {;
                 <Button
                   variant='primary'
                   size='lg'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </motion.div>
           </div>
@@ -1684,18 +1601,9 @@ export default function RevolutionaryServicesPage() {;
   );  );
 }
 
-=======
 );  )
 }
   );
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 import {
@@ -8,7 +6,6 @@ import {
 } from "../../utils/feedback/store";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {
   saveFeedbackFallback
   FeedbackRecord
@@ -23,7 +20,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
 
     process && process.env as Record<string, string | undefined>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }),
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -364,12 +360,8 @@ export default async function handler(req, res) {
     comment: comment || undefined,
     kind: k,
     context: context || undefined,
-=======
-==============
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default async /**
  * handler - Function description
  */
@@ -439,7 +431,3 @@ function handler() {
   }
 }
 
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

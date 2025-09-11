@@ -1,10 +1,8 @@
 
 import Head from 'next/head';
-=======
 
 import Head from 'next/head';
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import React from 'react';
 export default function CloudNativeAutomation() {
@@ -185,18 +183,13 @@ export default function CloudNativeAutomation() {
                   like: </p>
                   infrastructure, we&apos,re exploring emerging technologies
                   infrastructure, we're exploring emerging technologies
-=======
 
                   infrastructure, we're exploring emerging technologies
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   infrastructure, we&apos,re exploring emerging technologies
                   infrastructure, we're exploring emerging technologies
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
@@ -240,12 +233,9 @@ export default function CloudNativeAutomation() {
     </>
   )
 }
-=======
 
-=======
 }
 
-=======import Head from 'next / head',
 import Link from 'next / link',
 import React from 'react',
 export default /**
@@ -254,9 +244,7 @@ export default /**
 function CloudNativeAutomation() {
   return (
 
-=======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
@@ -264,7 +252,4 @@ export default function CloudNativeAutomation(req, res) {
   try {
   return (;
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

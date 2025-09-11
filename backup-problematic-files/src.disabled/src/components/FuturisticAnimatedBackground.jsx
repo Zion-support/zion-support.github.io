@@ -9,8 +9,4 @@ const FuturisticAnimatedBackground = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default FuturisticAnimatedBackground;
-=======
-export default FuturisticAnimatedBackground;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

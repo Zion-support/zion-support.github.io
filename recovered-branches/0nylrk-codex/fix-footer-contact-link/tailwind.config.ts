@@ -13,7 +13,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}"],
   safelist: ['border-border'],
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   theme: {
     container: {
       center: true;
@@ -27,7 +26,6 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-=======
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -89,7 +87,6 @@ const config: Config = {
         primary: {
 
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
-=======      keyframes: {
         "accordion-down": {
           from: { height: "0" }
           to: { height: "var(--radix-accordion-content-height)" }}
@@ -97,11 +94,8 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
-=======
-=======
         "accordion-down": "accordion-down 0.2s ease-out"
         "accordion-up": "accordion-up 0.2s ease-out"}}}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
         secondary: {
@@ -155,8 +149,6 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
@@ -221,7 +213,6 @@ const config: Config = {
     plugin (function ({ add_utilities }) {
       const new_utilities = {
         '.rtl': {
-=======
 
 
           direction: 'rtl',
@@ -234,7 +225,6 @@ const config: Config = {
 
 
           direction: 'rtl',
-=======          text_align: 'right'}
         '.ltr': {
           direction: 'ltr',
 
@@ -245,11 +235,5 @@ const config: Config = {
 
 export default config;
 ;
-<<<<<<< HEAD
 export default config;
-export default config;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
 export default config;

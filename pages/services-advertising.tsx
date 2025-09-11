@@ -729,7 +729,6 @@ export default function ServicesAdvertisingPage() {
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>New Real Micro SaaS</h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
               {[ 
-=======import React from 'react';
 import SEO from '../components/SEO';
 
 const ext = (url: string) => (
@@ -750,11 +749,9 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
 
   ],
-=======
   ],
 
 				<section className="space-y-6">
@@ -1017,7 +1014,6 @@ export default function ServicesAdvertisingPage(req, res) {
 }
   ],
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
 					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
@@ -1026,7 +1022,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</Link></li>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1049,7 +1044,6 @@ export default function ServicesAdvertisingPage(req, res) {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-=======
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
                 { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] },
@@ -1092,7 +1086,6 @@ export default function ServicesAdvertisingPage(req, res) {
                     <p className="text-gray-200">{b}</p>
                   </div>
                 </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -1103,7 +1096,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</Link></li>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -1114,7 +1106,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</Link></li>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -1125,7 +1116,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</Link></li>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
@@ -1244,7 +1234,6 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </section>
           <section>
@@ -1364,7 +1353,6 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -1389,7 +1377,6 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </section>
           <section>
@@ -1416,7 +1403,6 @@ export default function ServicesAdvertisingPage(req, res) {
                 <MapPin className="w-5 h-5 text-emerald-400" />
                 <span className="text-gray-200 text-sm">{contact.address}</span>
               </Link>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </section>
           <section>
@@ -1440,14 +1426,10 @@ export default function ServicesAdvertisingPage(req, res) {
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
-=======
 
 };
 
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import SEO from '../components / SEO',
 const ext = (url: string) =>: any (
@@ -1839,8 +1821,3 @@ return (
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

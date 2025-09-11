@@ -1,12 +1,6 @@
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 'use client';
 
 ;
@@ -48,9 +42,6 @@ interface State {;
 
 }
 
-=======
-==============
-=======
 
 interface Props {;
   children: ReactNode;
@@ -61,7 +52,6 @@ interface Props {;
 }
 
 
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -81,14 +71,11 @@ interface Props {
 }
 
 interface State {
-=======
 
 interface State {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -119,7 +106,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
   static getDerivedStateFromError(error: Error): State {
 
-=======class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
     super(props);
     this && this.state = { hasError: false };
@@ -127,7 +113,6 @@ class ErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {;
     // Update state so the next render will show the fallback UI;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return { hasError: true, error };
 
 
@@ -138,7 +123,6 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     return { hasError: true, error }
 origin/main
-=======
   static getDerivedStateFromError(error: Error): State {
     // Update state so the next render will show the fallback UI
     // Update state so the next render will show the fallback UI
@@ -146,14 +130,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     return { hasError: true, error };
     return { hasError: true, error }
->>>>>>> origin/main
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-=======
->>>>>>> origin/automation-improvements-final
     return { hasError: true, error };
     return { hasError: true, error }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 origin/automation-improvements-final
@@ -161,19 +141,16 @@ origin/automation-improvements-final
     return { hasError: true, error }
   }
 
-=======
 
 
 
 origin/automation-improvements-final
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       error,
       error_info;
     });
 
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
-==============    // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -190,8 +167,6 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({      error
@@ -208,10 +183,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
     console && console.error('Error caught by boundary:', error, errorInfo);    this && this.setState({;
       error,;
@@ -226,19 +199,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
     }
 origin/main
-=======
-=======    // Log to external service in production;
     if (process && process.env.NODE_ENV === 'production') {;
       // Here you would typically send to an error reporting service;
       console && console.error('Production error:', error, errorInfo);
 
     }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> origin/automation-improvements-final
   }
   handleReload = () => {
     window.location.reload();
@@ -249,7 +215,6 @@ origin/main
     if (this.state.hasError) {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -295,7 +260,6 @@ origin/automation-improvements-final
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
@@ -306,7 +270,6 @@ origin/automation-improvements-final
 
 
 
-=======              <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
                 </summary>
@@ -324,7 +287,6 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Log error to external service (e.g., Sentry);
     // Check condition
@@ -653,15 +615,9 @@ if ( {) {
 
     return this && this.props.children;
 
-=======
     return this.props.children;
 }
 }
 export default ErrorBoundary;=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -19,10 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       providerId: providerId as any
       level: "info"
       action: "disconnect"
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     });
   });
@@ -33,7 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 res.status (200).json ({ ok: true });
 }
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -52,10 +48,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

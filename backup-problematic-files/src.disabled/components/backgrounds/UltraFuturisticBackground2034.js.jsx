@@ -9,8 +9,4 @@ const UltraFuturisticBackground2034.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default UltraFuturisticBackground2034.js;
-=======
-export default UltraFuturisticBackground2034.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

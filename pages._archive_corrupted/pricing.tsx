@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function PricingPage() {
   const plans = [
     {
@@ -54,14 +53,11 @@ export default function PricingPage() {
         "Basic analytics",
         "Monthly reports"
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ],
       \"popular\": false
     },
     {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       \"name\": \"Professional\",
       \"description\": \"Ideal for growing businesses\",
       \"price\": \"$7,999\",
@@ -95,7 +91,6 @@ export default function PricingPage() {
         'Analytics integration',
         'Content management system'
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className=\"min-h-screen bg-gray-50 py-12\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -123,8 +118,6 @@ export default function PricingPage() {
                 </div>
                 <ul className="space-y-4 mb-8">
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center\">
                       <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />
@@ -172,7 +165,6 @@ export default function PricingPage() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
               Ready to Get Started?
             </h2>
@@ -216,11 +208,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
-<<<<<<< HEAD
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-==============
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 export default PricingPage;
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"

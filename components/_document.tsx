@@ -1,6 +1,5 @@
 
 export default function Document() {
-=======  return (
     <Html lang='en'>;
       <Head>;
         <link rel='icon' href='/favicon && favicon.ico' />;
@@ -14,8 +13,6 @@ export default function Document() {
           rel='preconnect'
           href='https://fonts && fonts.gstatic.com'
           crossOrigin=''
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
         <link;
           href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap'
@@ -66,9 +63,7 @@ function Document() {
       </body>;
   );
 }
-=======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
 
 import Document, {
 
@@ -87,13 +82,6 @@ import Document, {
 
 }
 
-<<<<<<< HEAD
   );
 }
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  );
-}
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

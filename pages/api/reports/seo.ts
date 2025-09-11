@@ -3,7 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
   if (req && req.method === 'POST') {
-=======
 const p = path.join(process.cwd(), 'data', 'reports', 'seo', 'weekly-seo.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -56,8 +55,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const data = fs.readFileSync(p, 'utf8');
       const seo = JSON.parse(data);
       return res.status(200).json(seo);
-=======
-==============
 ;
       const report = {
         keywords: keywords || [],
@@ -118,7 +115,6 @@ export default function handler(req, res) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Failed to read SEO report' });
-=======    } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -126,5 +122,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

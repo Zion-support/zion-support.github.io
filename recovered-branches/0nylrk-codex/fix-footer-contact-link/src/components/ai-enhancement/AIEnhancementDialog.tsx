@@ -7,9 +7,7 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
-==============
 
-=======import React from 'react',;
 import {;
   Dialog,;
   DialogContent,;
@@ -26,7 +24,6 @@ interface AIEnhancementDialogProps {;
   initialContent?: string;
 }
 
-=======  title: string
   isOpen: boolean
   onClose: () => void
   onApply: (content: string) => void
@@ -87,12 +84,10 @@ export function AIEnhancementDialog({;
   },;
 ;
   return (;
-=======
   }
   },
 
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
         <DialogHeader>;
@@ -104,18 +99,14 @@ export function AIEnhancementDialog({;
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <AIEnhancementPanel
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </DialogContent>;
     </Dialog>;
-=======
 
         />;
       </DialogContent>;
@@ -123,7 +114,6 @@ export function AIEnhancementDialog({;
   );
 }
 
-=======import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
 interface AIEnhancementDialogProps {
@@ -158,8 +148,6 @@ function AIEnhancementDialog() {
       </DialogContent>;
     </Dialog>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  <DialogHeader> <DialogTitle> {
   title 
@@ -178,9 +166,3 @@ function AIEnhancementDialog() {
     </Dialog>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

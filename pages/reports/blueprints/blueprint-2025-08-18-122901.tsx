@@ -10,7 +10,6 @@ const Blueprint20250818122901: React.FC = () => {
 
     id: 'blueprint-2025-08-18-122901',
 
-=======
 
 const Blueprint20250818122901: React.FC = () => {
   const blueprintDetails = {
@@ -96,7 +95,6 @@ const Blueprint20250818122901: React.FC = () => {
       description: 'AI - powered content creation engine',
       status: 'active',
       health: 'excellent';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'SEO Optimizer',
@@ -124,7 +122,6 @@ const Blueprint20250818122901: React.FC = () => {
       description: 'Advanced NLP for human-like content creation',
       benefit: 'High-quality, engaging content',
       status: 'implemented'
-=======    },
     {
       feature: 'SEO Automation',
       description: 'Intelligent keyword optimization and meta tag generation',
@@ -157,19 +154,16 @@ const Blueprint20250818122901: React.FC = () => {
       case 'warning': return 'bg-orange-500/20 text-orange-400';
       case 'critical': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400';
-=======
 
   };
 
 
-=======      } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -184,7 +178,6 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -216,7 +209,6 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>
@@ -259,7 +251,6 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
@@ -353,14 +344,12 @@ const Blueprint20250818122901: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======        {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
@@ -385,17 +374,8 @@ const Blueprint20250818122901: React.FC = () => {
     </div>
   );
 }
-=======
-=======
-=======
 ;
 
-=======
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default Blueprint20250818122901;

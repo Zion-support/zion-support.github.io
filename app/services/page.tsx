@@ -11,7 +11,6 @@ export default function ServicesOverviewPage() {
           outcomes for your business.
         </p>
       </div>
-=======
 export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">
@@ -39,7 +38,6 @@ function ServiceCard({
   description,
   bullets,
   icon,
-=======
           description="Penetration testing, security audits, and compliance"
           bullets={[
             'Security audits',
@@ -113,7 +111,6 @@ function CTA() {
         service and create a custom solution for your business needs.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
       {" "}
       <div className="text-4xl mb-4">{icon}</div>{" "}
       <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -149,19 +146,12 @@ function CTA() {
           href="tel:+13024640950"
           className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
         >
-<<<<<<< HEAD
           Call +1 302 464 0950
         </a>
-=======
-          {" "}
-          Call +1 302 464 0950{" "}
-        </a>{" "}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <a
           href="mailto:kleber@ziontechgroup.com"
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
         >
-<<<<<<< HEAD
           Email Us
         </a>
       </div>
@@ -169,12 +159,6 @@ function CTA() {
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
-=======
-          {" "}
-          Email Us{" "}
-        </a>{" "}
-      </div>{" "}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
   );
 }

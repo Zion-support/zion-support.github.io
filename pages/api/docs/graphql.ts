@@ -31,10 +31,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typetext/plain');
   res.status(200).send(toSDL())
 }
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -85,7 +81,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======export default /**
  * handler - Function description
  */
 function handler() {
@@ -120,13 +115,5 @@ export default function handler(req, res) {
   }
 }
 
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

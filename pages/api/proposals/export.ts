@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
@@ -48,10 +46,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
           current = test;
         }
       }
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -70,16 +65,12 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
       }
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39    });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
-=======
 
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (wrapped.push (current)) {
   $2
 }
@@ -95,7 +86,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
 
   try {
 
-=======
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")
@@ -109,7 +99,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!id) return res.status(400).json({ error: 'id is required' });
     const meta = getProposal(id);
     if (!meta) return res.status(404).json({ error: 'Proposal not found' });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || '');
     const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal';
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
@@ -122,7 +111,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
@@ -133,12 +121,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
-=======
 
   }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const { cid } = await ipfs.add(markdown);
 
         ipfsCid = cid.toString();
@@ -379,7 +364,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ipfsCid = cid.toString();
       } catch {}
     }
-=======    const updated = updateArtifacts(id, {
       pdfPath: pdfUrl
       signature
       ipfsCid
@@ -389,13 +373,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(500).json({ error: error?.message || "Export failed" });
       } catch {  } catch (error) {
-=======
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
 
-=======
     return res.status(500).json({ error: error?.message || "Export failed" });
-=======
       } catch {  } catch (error) {>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -429,8 +410,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: error?.message || 'Export failed' })
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     return res.status (500).json ({ error: error?.message || "Export failed" });
   }
 }
@@ -445,11 +424,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======  }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

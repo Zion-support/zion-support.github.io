@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
@@ -27,7 +26,6 @@ export default function AdminWeb3Page() {  const [users, setUsers] = useState<{ 
 
   },
 
-=======  return (
     <>
       <Head><title>Admin — Web3</title></Head>
       <div className="max-w-3xl mx-auto space-y-6">
@@ -38,19 +36,13 @@ export default function AdminWeb3Page() {  const [users, setUsers] = useState<{ 
         </div>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Users</div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -135,15 +127,11 @@ export default function AdminWeb3Page(req, res) {
   }
 }
 }
-=======
-=======                  }} />
                 </label>
               </li>
 
-=======
 }
 
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 export default /**
@@ -195,8 +183,3 @@ function AdminWeb3Page() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

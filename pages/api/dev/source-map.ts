@@ -1,7 +1,5 @@
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
@@ -39,7 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======  if (req.method === "POST") {
     const { path: repoRelativePath } = req.body |{}
     if (typeof repoRelativePath !== "string" |!repoRelativePath.startsWith("/")) {
       res.status(400).json({ error: "Invalid path" })
@@ -136,9 +133,6 @@ export default function handler(req, res) {
   }
 }
 }
-=======
-=======>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
@@ -171,5 +165,3 @@ if ( {) {
       res.status(400).json({ error: "Invalid path" }),
 
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

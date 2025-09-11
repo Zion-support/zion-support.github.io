@@ -1,19 +1,14 @@
 
   // Show loading while checking authentication
   if (isLoading) {
-=======
-=======  // Show loading while checking authentication;
   if (isLoading) {;
 
-=======
 
 
   // Show loading while checking authentication
   if (isLoading) {
 
 }
-=======
-=======
 
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
@@ -22,12 +17,8 @@
   }
   return (
 
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="min-h-screen flex flex-col bg-zion-blue">;
       <SEO
         title="Publish Your Product" 
@@ -71,8 +62,6 @@ export default function PublishProduct() {;
         title="Publish Your Product";
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.";
         keywords="publish product, sell online, digital marketplace, AI tools, tech services";
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <main className="flex-1 p-6 md:p-10">;
@@ -82,7 +71,6 @@ export default function PublishProduct() {;
             Share your products, services, or digital assets with the Zion community.;
           </p>;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;
-=======
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -132,8 +120,6 @@ if ( {) {
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </div>);
 }
@@ -155,15 +141,7 @@ if ( {) {
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -21,18 +21,13 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
-=======
 import { motion } from 'framer-motion';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 origin/main
 origin/automation-improvements-final
 
 import { motion } from 'framer-motion';
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ;
   Shield, ;
   Rocket, ;
@@ -125,7 +120,6 @@ import {
   Building,
   Globe,
   Target;
-=======} from 'lucide-react';
 import Layout from '../../components/Layout';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -282,7 +276,6 @@ export default function SolutionsPage() {;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Technology Solutions for{' '}
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -590,9 +583,7 @@ const SolutionsPage: NextPage = () => {
 </motion.div>
           </div>
         </section>
-=======
 
-=======
 
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   Every Business;
@@ -625,7 +616,6 @@ const SolutionsPage: NextPage = () => {
 
 
                 const IconComponent = solution.icon;
-=======
                 return (
 
 
@@ -644,10 +634,8 @@ const SolutionsPage: NextPage = () => {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   className="text-center p-6 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
@@ -663,10 +651,8 @@ const SolutionsPage: NextPage = () => {
                   </div>;
                 </motion && motion.div>;
               ))}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Stats Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="container mx-auto px-4">;
@@ -685,10 +671,8 @@ const SolutionsPage: NextPage = () => {
                   <div className="text-gray-300 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -721,7 +705,6 @@ const SolutionsPage: NextPage = () => {
 
 };
 export default SolutionsPage;=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <motion.div;
           description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.",
           useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"],
@@ -823,16 +806,12 @@ export default SolutionsPage;=======
                 const IconComponent = solution.icon;
                 return (
                   <motion.div
-=======
 
 
 };
 
 export default SolutionsPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <motion.div;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     key={index}
                     className="bg - white p - 8 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 group";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -930,7 +909,6 @@ export default SolutionsPage;
                     </Link>
                   </motion.div>
                 );
-=======
                       className="inline - flex items - center text - blue - 600 hover:text - blue - 700 font - semibold group - hover:text - purple - 600 transition - colors";
                     >;
                       <span > Explore {solution.title}</span>;
@@ -1032,7 +1010,6 @@ export default SolutionsPage;
 
 export default SolutionsPage;
 
-<<<<<<< HEAD
 };
 
 },
@@ -1150,7 +1127,4 @@ export default SolutionsPage,
 },;
 export default SolutionsPage;
 
-export default SolutionsPage;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export default SolutionsPage;

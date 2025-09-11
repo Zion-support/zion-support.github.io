@@ -249,21 +249,15 @@ import Referrals from "@/pages/Referrals",;
 import DeveloperPortal from "@/pages/DeveloperPortal",;
 import WalletPage from "@/pages/Wallet",;
 import ContractBuilder from "@/pages/ContractBuilder",;
-=======
 
 
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const DashboardRoutes = () => {
-=======
 const DashboardRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Routes>;
       {/* Dashboard Routes */}
@@ -408,7 +402,6 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         } ;
       />;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/developers"
         element={
@@ -434,18 +427,7 @@ const DashboardRoutes = () => {;
 
 
 export default DashboardRoutes;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======        }
-      />;
-    </Routes>);
-}
-;
-export default DashboardRoutes;
-;
-<<<<<<< HEAD
       />
       <Route
         path="/wallet"
@@ -475,8 +457,3 @@ export default DashboardRoutes;
   );
 },;
 export default DashboardRoutes;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

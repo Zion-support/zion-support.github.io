@@ -1,10 +1,7 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface TemplateManagerProps {
 
   isOpen: boolean
@@ -23,8 +20,6 @@ interface TemplateManagerProps {
   const [mode, setMode] = useState<"list" | "save">("list"),
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {useContractTemplates} from "@/hooks/useContractTemplates";
 import {ContractTemplate} from "@/types/contracts";
@@ -44,8 +39,6 @@ import {useToast} from "@/hooks/use-toast";
     if (template && template.template_data) {
       onSelectTemplate(template.template_data);
       onClose()
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 interface TemplateManagerProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -111,7 +104,6 @@ export function TemplateManager({;
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>;
-=======  }
   },
 
   const handleSaveComplete = () => {
@@ -120,31 +112,24 @@ export function TemplateManager({;
   }
   },
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>
             {mode === "list" ? "Contract Templates" : "Save Template"}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           </DialogTitle>
         </DialogHeader>
         {mode === "list" ? (
           <div className="space-y-4">
             <div className="flex justify-end">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <Button 
                 variant="outline" 
                 onClick={() => setMode("save")}
-=======
                 onClick={() => setMode("save")}
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </DialogTitle>;
         </DialogHeader>;
 ;
@@ -155,7 +140,6 @@ export function TemplateManager({;
                 variant="outline" ;
                 onClick={() => setMode("save")}
                 disabled={!currentValues}
-=======
 
           </DialogTitle>;
         </DialogHeader>;
@@ -167,7 +151,6 @@ export function TemplateManager({;
                 variant="outline" 
                 onClick={() => setMode("save")}
                 disabled={!currentValues}
-=======
 import { useState } from './react';
 import { useContractTemplates } from '@/hooks / useContractTemplates';
 import { ContractTemplate } from '@/types / contracts';
@@ -243,19 +226,5 @@ if ( {) {
               setMode("list");
               setSelectedTemplate(null);
 
-=======
-<<<<<<< HEAD=======
               setMode("list"),
               setSelectedTemplate(null)
-
-=======
-      </DialogContent>
-    </Dialog>
-  )
-}      </DialogContent>;
-    </Dialog>;
-  );
-}
-
-=======
-;

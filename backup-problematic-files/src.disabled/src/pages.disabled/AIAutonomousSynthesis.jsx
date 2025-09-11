@@ -9,8 +9,4 @@ const AIAutonomousSynthesis = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousSynthesis;
-=======
-export default AIAutonomousSynthesis;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

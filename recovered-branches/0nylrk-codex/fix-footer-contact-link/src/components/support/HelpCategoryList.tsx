@@ -1,11 +1,9 @@
 
 
-=======
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 
-=======import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
 
@@ -21,17 +19,12 @@ import {
 } from "@/components/ui/card";
 
 import { HelpCategory } from "./types";
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -61,8 +54,6 @@ export function HelpCategoryList({
   onCategorySelect,
   searchQuery,
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
@@ -71,7 +62,6 @@ export function HelpCategoryList({
         (category) =>
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
-=======
       );
     : categories;      )
     : categories,
@@ -101,12 +91,10 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
       </div>
     );
 }
-=======    : categories;
 
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
 
-=======
     );
   }  return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -184,7 +172,6 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
               {category && category.articles.length} articles;
     ),;
   }
-=======  return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
         <Card
@@ -208,7 +195,6 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
-=======interface HelpCategoryListProps {;
   categories: HelpCategory[],;
   onCategorySelect: (categoryId: string) => void,;
   searchQuery: string;
@@ -261,7 +247,6 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
             </p>;
           </CardContent>;
         </Card>;
-=======
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
         <Card
@@ -283,16 +268,12 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
           </CardContent>
         </Card>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
-=======      ))}
 
     </div>;
   );
 }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import {
   Card,
@@ -362,8 +343,6 @@ if ( {) {
         </Card>))}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface HelpCategoryListProps {
   categories: HelpCategory[];
@@ -384,9 +363,3 @@ if (filteredCategories.length === 0) {
     </div>
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

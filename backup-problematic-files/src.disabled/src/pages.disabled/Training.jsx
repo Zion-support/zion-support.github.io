@@ -9,8 +9,4 @@ const Training = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Training;
-=======
-export default Training;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

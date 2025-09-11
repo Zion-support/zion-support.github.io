@@ -1,6 +1,4 @@
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -18,7 +16,6 @@ export default async function handler(
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 
-==============
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
@@ -32,7 +29,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.setHeader('Content-Type', 'text/csv');
       res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
       return res.status(200).send(csv)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39    }
     const supabase = getServerSupabase();
     }
 
@@ -60,7 +56,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       `attachment; filename="${code}-referrals && referrals.csv"`,
     );
     return res && res.status(200).send(csv);
-=======
 
   } catch (e: any) {
 
@@ -109,12 +104,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   }
 
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -124,7 +117,6 @@ function handler() {
   const code = (req.query.code as string)?.toLowerCase ();
   if (return res.status (400).json ({ error: "Missing code" })) {
   $2
-=======
 
     }
     const supabase = getServerSupabase();
@@ -176,8 +168,6 @@ if ( {) {
     return res.status (200).send (csv);
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
 }
   } catch (error) {
@@ -196,11 +186,5 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======  }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

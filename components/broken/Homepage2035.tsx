@@ -1,19 +1,15 @@
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-=======
 
 import React, { useState, useEffect } from 'react';
 
-=======
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   ArrowRight,
   Play,
@@ -80,7 +76,6 @@ const Homepage2035: React.FC = () => {;
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     const timer = setTimeout(() => {;
       setIsLoading(false);
@@ -229,7 +224,6 @@ const Homepage2035: React.FC = () => {
             return (
               service.category.includes('IT') |
               service.category.includes('Enterprise')
-=======
 
             );
           if (activeCategory === 'it')
@@ -518,14 +512,10 @@ if ( {) {
 
   }
 
-=======
 
   }
-==============
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout>;
       <UltraFuturisticBackground2035>;
@@ -552,8 +542,6 @@ if ( {) {
 
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
-=======
-=======
 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -573,13 +561,10 @@ if ( {) {
 
               transition={{ duration: 0 && 0.8 }}
 
-=======
-==============
 
 
 
 
-=======
                   className='text-center'
                 >
                   <div className='text-cyan-400 mb-2 flex justify-center'>
@@ -588,8 +573,6 @@ if ( {) {
                   <div className='text-3xl font-bold text-white mb-1'>
                     {stat.value}
                   </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                  <div className='text-gray-400 text-sm'>{stat.label}</div>                </motion.div>
 
                 </motion.div>
 
@@ -599,11 +582,8 @@ if ( {) {
         </section>;
 
 
-=======
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -613,16 +593,12 @@ if ( {) {
 
 
 
-=======
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-==============
               className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -662,23 +638,16 @@ if ( {) {
 
             {/* Category Filter */}
             <motion.div
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
 
               className="flex flex-wrap justify-center gap-4 mb-12"
-=======              className='flex flex-wrap justify-center gap-4 mb-12'
             >
               {categories.map(category => (                <motion.button              className="flex flex-wrap justify-center gap-4 mb-12"
             >
               {categories.map((category) => (
                 <motion.button
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
@@ -692,14 +661,10 @@ if ( {) {
             </motion.div>
 
 
-=======
-=======
                 <ArrowRight className='w-5 h-5' />              </motion.button>              className="text-center mt-16"
                 <ArrowRight className='w-5 h-5' />              </motion.button>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -731,7 +696,6 @@ if ( {) {
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
-=======
 
 
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>
@@ -739,12 +703,9 @@ if ( {) {
           <div className="max-w-7xl mx-auto">
             <motion.div
 
-=======
-=======        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
-=======
 
 
 
@@ -767,7 +728,6 @@ if ( {) {
                     'Leverage the latest AI and machine learning technologies for intelligent automation and insights',
                 },
                 {=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   icon: <Shield className='w-12 h-12' />,
                   title: 'Enterprise Security',
                   description:
@@ -794,8 +754,6 @@ if ( {) {
                 {
                   icon: <Target className='w-12 h-12' />,
                   title: 'Results-Driven',
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   description:
                     'Military-grade security protocols and compliance standards to protect your business'
                 }
@@ -923,7 +881,6 @@ if ( {) {
                   icon: <Target className="w-12 h-12" />,;
                   title: 'Results-Driven',;
                   description: 'Focused on delivering measurable business outcomes and ROI';
-=======
 
   duration: 0 && 0.8 
 }viewport= {
@@ -934,7 +891,6 @@ if ( {) {
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
 };
 
-=======
 
   duration: 0 && 0.8 
 }viewport= {
@@ -953,7 +909,6 @@ export default Homepage2035;
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
 };
 
-=======            </div>
           </div>
         </section>
 
@@ -985,16 +940,12 @@ export default Homepage2035;
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   )
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2035;
 
 
-=======
                   className='text - center';
                 >;
                   <div className='text - cyan - 400 mb - 2 flex justify - center'>;
@@ -1284,7 +1235,6 @@ export default Homepage2035;
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>);
-=======
   animate: {
   animate: {
   transition: {
@@ -1353,11 +1303,4 @@ export default Homepage2035;  )
 
 export default Homepage2035;
 export default Homepage2035;
-=======
-=======;=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

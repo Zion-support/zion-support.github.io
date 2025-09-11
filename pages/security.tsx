@@ -1,13 +1,10 @@
 
-=======import React from 'react';
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
-==============
+
+
 const securityStats = [
   { number: '99.9%', label: 'Uptime Guarantee' }
   { number: '24/7', label: 'Security Monitoring' }
@@ -16,9 +13,7 @@ const securityStats = [
 ];
 export default function SecurityPage() {
 
-=======
 
-=======const securityFeatures = [;
   {;
     title: 'Data Encryption',;
     description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',;
@@ -88,8 +83,6 @@ export default function SecurityPage() {;
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
@@ -163,8 +156,6 @@ export default function Security(req, res) {
 }
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======            <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -226,10 +217,8 @@ export default function Security(req, res) {
             </motion.p>
           </div>
         </section>
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -261,7 +250,6 @@ export default function Security(req, res) {
           </div>;
         </section>;
         {/* Security Stats */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
           </div>;
@@ -456,7 +444,6 @@ function SecurityPage() {
                 </div>;
                 <h3 className="text-lg font-bold text-gray-900 mb-2">HIPAA</h3>;
                 <p className="text-gray-600 text-sm">Health Insurance Portability and Accountability Act</p>;
-=======
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -1245,27 +1232,17 @@ origin/automation-improvements-final
 </Link>
                   </div>
                 </div>
-=======
 
-=======
 </Link>>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 </Link>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </motion.div>
           </div>
         </section>
     </>
-=======
-
-=======
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Compliance Details;
                 </Link>;
@@ -1282,7 +1259,6 @@ origin/automation-improvements-final
 
   )
 
-=======  )
 }
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
@@ -1338,7 +1314,6 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   )
 }
@@ -1351,7 +1326,3 @@ origin/main
   )
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

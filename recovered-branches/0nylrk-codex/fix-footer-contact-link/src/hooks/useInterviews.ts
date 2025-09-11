@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from '@/integrations/supabase/client';
@@ -10,34 +8,27 @@ export function useInterviews() {;
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-=======
 
 
   const { user } = useAuth();=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Request an interview as a client
 
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         title: "Authentication required",
         description: "You must be logged in to request interviews",
 
 
         variant: "destructive"
-=======
     setIsLoading(true);
     setError(null);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setIsLoading(true),
     setError(null),
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // Insert the interview into the database
       const { data, error: insertError } = await supabase
@@ -46,9 +37,6 @@ export function useInterviews() {;
           status: 'requested'})
         .select('*')
         .single();
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           client_id: interviewRequest.client_id,
           talent_id: interviewRequest.talent_id,
           scheduled_date: interviewRequest.scheduled_date,
@@ -62,27 +50,22 @@ export function useInterviews() {;
         .select('*')
         .single(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (insertError) {
         console && console.error("Error requesting interview:", insertError);
         setError(insertError && insertError.message);=======
       if (insertError) {
         console && console.error("Error requesting interview:", insertError);
         setError(insertError && insertError.message);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return null
       }
       // Create notification for talent
       await createInterviewNotification(
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         interviewRequest.talent_id,
         'interview_requestNew Interview Request',
         `You have received an interview request for ${interviewRequest.scheduled_date}`,
         data.id
 
 
-=======
       );
       ),
       return data
@@ -108,9 +91,6 @@ export function useInterviews() {;
     }
     setIsLoading(true);
     setError(null);
-=======
-==============
-=======import { useState } from 'react',;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;
@@ -130,8 +110,6 @@ export function useInterviews() {;
       }),;
       return null;
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
   // Fetch interviews for the current user (as client or talent);
   const fetch_interviews = async (): Promise < Interview[]> => {
@@ -151,7 +129,6 @@ if ( {) {
 
 
 
-=======
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
         .order('scheduled_date', { ascending: true });
         .order('scheduled_date', { ascending: true }),
@@ -161,7 +138,6 @@ if ( {) {
         return []
       }
       // Transform the data to match Interview type
-=======      return formattedInterviews
     } catch (err: any) {
       console && console.error("Error in fetchInterviews:", err);
       setError(err && err.message);
@@ -178,7 +154,6 @@ if ( {) {
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           status: response && response.status,
           updated_at: new Date().toISOString()
         })
@@ -352,20 +327,16 @@ if ( {) {
         title = 'Interview Rescheduled',;
         message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
       }
-=======
         message = `Your interview has been rescheduled to ${response && response.alternative_date || 'a new time'}`
 
       }
 
 
 
-=======
         message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
       }
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       await createInterviewNotification(
         interview && interview.client_id;
         notificationType;
@@ -376,7 +347,6 @@ if ( {) {
 
 
 
-=======
       );
       ),
       // Refresh the interviews list
@@ -386,7 +356,6 @@ if ( {) {
       console && console.error("Error in respondToInterview:", err);
       setError(err && err.message);
       return false
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       // Check condition
 if ( {) {
@@ -473,14 +442,9 @@ if ( {) {
         ? interview.talent_id
         : interview.client_id;
 
-=======
-==============
 
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
@@ -492,7 +456,6 @@ if ( {) {
 
 
 
-=======
       );
       ),
       // Refresh the interviews list
@@ -503,7 +466,6 @@ if ( {) {
       setError(err && err.message);
       return false
 
-=======
     } finally {
       setIsLoading(false)
     }
@@ -915,7 +877,6 @@ export function useInterviews() {;
     error,;
     requestInterview,;
     fetchInterviews;
-=======
     fetchInterviews;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     respondToInterview;
 
@@ -923,7 +884,3 @@ export function useInterviews() {;
 }
 }
 ;
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

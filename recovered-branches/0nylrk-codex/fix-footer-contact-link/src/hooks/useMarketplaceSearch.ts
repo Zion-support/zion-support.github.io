@@ -1,5 +1,4 @@
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
@@ -32,7 +31,6 @@ export function useMarketplaceSearch() {
       // Search query filter
 
 
-=======      // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
       return matchesSearch &&
@@ -44,7 +42,6 @@ export function useMarketplaceSearch() {
   
 
 
-=======
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -188,11 +185,5 @@ filterOptions
   }
 }
 ;
-=======
-=======  }
 }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

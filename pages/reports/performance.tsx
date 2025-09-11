@@ -11,11 +11,8 @@ import Link from 'next / link';
 import Head from 'next/head';
 import Link from 'next/link';
 
-=======
-==============
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
       ]
@@ -149,7 +146,6 @@ import Link from 'next/link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -167,7 +163,6 @@ import Link from 'next/link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
@@ -214,7 +209,6 @@ import Link from 'next/link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
@@ -427,7 +421,6 @@ import Link from 'next/link';
 }
 ;
 
-=======
                           {metric.value}
                         </span>
                         <span className={`text-sm ${getTrendColor(metric.trend)}`}>
@@ -510,7 +503,6 @@ import Link from 'next/link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -521,10 +513,8 @@ import Link from 'next/link';
 
                 Our automated systems continuously monitor and optimize performance,
 
-=======
                 Our automated systems continuously monitor and optimize performance, 
                 Our automated systems continuously monitor and optimize performance,
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ensuring consistent improvement across all metrics.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -552,14 +542,12 @@ import Link from 'next/link';
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======        {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
@@ -584,17 +572,8 @@ import Link from 'next/link';
     </div>
   );
 }
-=======
-=======
-=======
 ;
 
-=======
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default PerformancePage;

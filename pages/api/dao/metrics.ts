@@ -1,16 +1,12 @@
 
 
 
-=======
-=======
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
-==============
 const configPath = path.join(process.cwd(), "data", "dao", "config.json");
 const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
 async function fetchJson(url: string) {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -46,15 +42,11 @@ const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
 async function fetchJson(url: string) {;
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return resp.json();
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 
 
@@ -75,7 +67,6 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -89,15 +80,12 @@ function writeJson(p: string, v: any) {
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
         .filter(Boolean),
     );
@@ -107,8 +95,6 @@ function writeJson(p: string, v: any) {
           Math && Math.round(
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100,
           ),
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         )
       : 0;
     const result = {
@@ -121,10 +107,8 @@ function writeJson(p: string, v: any) {
     writeJson(cachePath, result);
     return res && res.status(200).json(result);
 
-=======import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
-=======
 
   } catch (e: any) {
     return res
@@ -137,7 +121,6 @@ import path from './path';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -243,11 +226,4 @@ if ( {) {
   }
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

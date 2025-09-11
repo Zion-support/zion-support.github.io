@@ -2,7 +2,6 @@
 
 import {Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
-=======import React from 'react',;
 import SEO from '../components/SEO',;
 import { motion } from 'framer-motion',;
 import {;
@@ -15,7 +14,6 @@ import {;
     ...innovativeITServices2025ExpansionV2;
     ...innovativeAIServices2025ExpansionV2;
     ...industrySpecificSolutions2025V2;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ...emergingTechBreakthroughs2025V2
   ];
   const serviceCategories = [
@@ -278,7 +276,6 @@ function ComprehensiveServicesShowcase2025V2() {
             Our Comprehensive Service Portfolio
           </motion.h2>
           
-=======
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="grid md:grid - cols - 3 gap - 8";
@@ -443,7 +440,6 @@ function ComprehensiveServicesShowcase2025V2() {
             transition={{ duration: 0.6, delay: 0.4 }}
 
 
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text - xl text - gray - 300 mb - 8";
@@ -484,4 +480,3 @@ function ComprehensiveServicesShowcase2025V2() {
 }
     </div>);
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

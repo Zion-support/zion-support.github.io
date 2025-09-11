@@ -9,8 +9,4 @@ const TestimonialCarousel.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TestimonialCarousel.js;
-=======
-export default TestimonialCarousel.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,7 +1,6 @@
 import React from 'react';=======
 
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -90,14 +89,10 @@ import { Slider } from "@/components/ui/slider",;
 import { ProductListing, ListingView } from "@/types/listings",;
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PriceRange {;
   min: number,;
   max: number;
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface DynamicListingPageProps {;
   title: string,;
   description: string,;
@@ -150,11 +145,7 @@ export function DynamicListingPage(): any ({;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
           }
         });
@@ -166,7 +157,6 @@ export function DynamicListingPage(): any ({;
           }
         })
       }
-=======    }, 500)
   }
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -177,34 +167,26 @@ export function DynamicListingPage(): any ({;
     }, 500);
 
     }, 500);
-=======  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
             {description}
 
-=======
           </p>;
         </div>;
-=======
 
 
           </p>;
         </div>;
-=======
           </p>;
         </div>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
           <div className="lg:col-span-1">;
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">;
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">;
                 <Filter className="mr-2 h-5 w-5" /> Filters;
               </h3>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Category;
@@ -220,8 +202,6 @@ export function DynamicListingPage(): any ({;
                 </Select>;
               </div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <Slider
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
@@ -229,8 +209,6 @@ export function DynamicListingPage(): any ({;
                     step={(priceRange && priceRange.max - priceRange && priceRange.min) / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                    className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
@@ -364,17 +342,13 @@ value={selectedCategory}
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Price Range
                 </label>
-=======              </div>
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
@@ -408,13 +382,10 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     onValueChange={handleSliderChange}
                     className="mb-4";
                     className="mb-4";
-=======
 
                     className="mb-4";
-=======
                     className="mb-4";
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                   <div className="flex justify-between text-sm text-zion-slate-light">;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -422,8 +393,6 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   </div>;
                 </div>;
               </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Minimum Rating;
@@ -471,16 +440,12 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     className={`${view === "list" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
 
                     key={listing.id}
-=======
               </div>;
             ) : (;
               <div className="text-center py-20">;
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
-=======
                   />))}
               </div>) : (
               <div className="text - center py - 20">;
@@ -503,9 +468,4 @@ defaultValue={_[priceRange.min, priceRange.max]}
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

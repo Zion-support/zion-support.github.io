@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Mock data for demonstration
 
 const mockConversations = [
@@ -123,15 +120,11 @@ import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileConversationList } from "../components/messaging/MobileConversationList",;
 import { MobileChatView } from "../components/messaging/MobileChatView",;
-=======
-=======
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileConversationList} from "../components/messaging/MobileConversationList";
 import {MobileChatView} from "../components/messaging/MobileChatView";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 // Define the Message type to resolve the type error;
 interface Message {;
   id: string,;
@@ -140,8 +133,6 @@ interface Message {;
   isMe: boolean,;
   status: "read" | "sent" | "delivered";
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const mockMessages: Message[] = [;
   {;
     id: "1",;
@@ -184,7 +175,6 @@ export function MobileMessages() {;
         </>;
       )}
     </div>;
-=======        />) : (
         <>;
           <MobileHeader;
             title="Messages";
@@ -199,8 +189,6 @@ export function MobileMessages() {;
         </>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
    id: string;
 content: string;
@@ -254,7 +242,3 @@ isMe: true;
     </div>
   )
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

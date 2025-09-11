@@ -43,9 +43,6 @@ import {;
   Factory,;
   Car,;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -74,8 +71,6 @@ import {
   Bot
   Factory
   Car
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Menu,
   X,
   ChevronDown,
@@ -97,12 +92,7 @@ import {
   Bot,
   Factory,
   Car,;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
@@ -111,7 +101,6 @@ interface EnhancedNavigationProps {;
 
 
 
-=======const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -195,7 +184,6 @@ interface EnhancedNavigationProps {;
       dropdownItems: [
 
 
-=======  const contactInfo = {
     mobile: "+1 302 464 0950"
     email: "kleber@ziontechgroup.com"
     address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -267,22 +255,16 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             initial={{ opacity: 0, coordinate_x: -20 }}
             animate={{ opacity: 1, coordinate_x: 0 }}
             transition={{ duration: 0.5 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   Revolutionary Technology;
                 </div>;
               </div>;
             </Link>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       />;
                     </button>;
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
                           initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                           transition={{ duration: 0 && 0.2 }}
@@ -310,7 +292,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -342,8 +323,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
 
-=======
-==============
 
 
 
@@ -361,11 +340,9 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
           </motion && motion.button>;
         </div>;
       </div>;
-=======
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -377,7 +354,6 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
       </div>;
 
 
-=======
 
 
 
@@ -386,7 +362,6 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
         {isOpen && (
           <motion.div
 
-==============            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0 && 0.3 }}
@@ -413,14 +388,12 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
 }
 export default EnhancedNavigation;
 ;
-=======      </AnimatePresence>
     </nav>
 
 };
@@ -450,7 +423,6 @@ export default EnhancedNavigation;
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-=======
 
           </motion.div>)}
       </AnimatePresence>;
@@ -467,8 +439,6 @@ export default EnhancedNavigation;
 };
 export default EnhancedNavigation;
 
-=======export default EnhancedNavigation;
-=======
 }
 export default EnhancedNavigation;
 ;
@@ -477,17 +447,7 @@ export default EnhancedNavigation;
 
 export default EnhancedNavigation;
 
-=======);
 };
 export default EnhancedNavigation;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default EnhancedNavigation;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

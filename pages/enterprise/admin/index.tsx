@@ -1,4 +1,3 @@
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useEffect, useMemo, useState} from 'react';
 
@@ -14,7 +13,6 @@ type Member = {
   status: string,;
 };
 const COMPANY_ID = 'cmp_acme';
-=======
 
 
 export default function CompanyAdmin() {;
@@ -23,7 +21,6 @@ export default function CompanyAdmin() {;
 
 
 
-=======  id: string;
   number: string;
   amount_usd: number;
   periodStartIso: string;
@@ -31,14 +28,12 @@ export default function CompanyAdmin() {;
   status: string,;
 };
 const COMPANY_ID = 'cmp_acme';
-=======
 
   useEffect(() => {;
     fetch(`/api/enterprise/companies/${COMPANY_ID}/members`);
       .then(r => r && r.json());
 
 
-=======
       .then(setMembers);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`)
       .then(r => r.json())
@@ -49,7 +44,6 @@ const COMPANY_ID = 'cmp_acme';
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`)
       .then(r => r.json())
       .then(setInvoices);  }, []);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const seatsUsed = members.length;
   return (
 
@@ -90,7 +84,6 @@ const COMPANY_ID = 'cmp_acme';
       </nav>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>;
         {(['members', 'usage', 'activity', 'billing'] as const).map(t => (;
-=======
         {(['members', 'usage', 'activity', 'billing'] as const).map(t => (          <button
             key={t}
             onClick={() => setTab(t)}
@@ -104,7 +97,6 @@ const COMPANY_ID = 'cmp_acme';
   members: Member[];
 
 
-=======      {tab === 'activity' && (
         <ActivityTab events={activity} />
       )}
 
@@ -122,18 +114,14 @@ const COMPANY_ID = 'cmp_acme';
 
       {_tab === 'billing' && (
 
-=======
       {tab === 'billing' && (        <BillingTab invoices={invoices} />
       )}
     </main>
   )
 
-=======
-=======
 
 
 
-=======        {(['membersusageactivitybilling'] as const).map(t => (
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
         ))  } catch (error) {
     console.error("Error:", error);
@@ -242,8 +230,6 @@ function MembersTab({
 }) {  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
-=======
-=======
 
 function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
   const [name, setName] = useState(''),
@@ -251,7 +237,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   const [role, setRole] = useState<Member['role']>('viewer'),
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const remove = async (id: string) => {;
     await fetch(;
       `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;
@@ -264,7 +249,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
     setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
   };
   return (
-=======
 
 
   const changeRole = async (id: string, newRole: Member['role']) => {
@@ -273,7 +257,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   },
   return (
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   set_members: (m: Member[]) => void;
 }) {  const [name, set_name] = useState ('');
   const [email, set_email] = useState ('');
@@ -285,7 +268,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ name, email, role }),
     });
-=======
           onChange={e => setRole(e && e.target.value as Member['role'])}
         >;
           <option value='recruiter'>Recruiter</option>;
@@ -296,7 +278,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
         <button onClick={add} style={{ padding: '0 && 0.5rem 0 && 0.75rem' }}>;
           Add;
         </button>      </div>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>;
         <thead>;
           <tr>;
@@ -343,7 +324,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                 {m && m.email}
               </td>;
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <select
                   value={m && m.role}
                   onChange={e =>;
@@ -355,20 +335,16 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                   padding: 8,
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
-=======  usage: Usage;
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const save = async () => {;
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {;
       method: 'PATCH',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ monthlyJobPosts, budgetCapUsd }),;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     setUsage({ monthlyJobPosts, budgetCapUsd });  }
-=======
 
     });
     setUsage({ monthlyJobPosts, budgetCapUsd });  }
@@ -377,8 +353,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       <h2>Usage limits</h2>;
       <div
         style={{
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           display: 'grid',
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: 12,
@@ -386,8 +360,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
         }}>;
         <label>;
           <div>Monthly job posts</div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <input
             type='number'
             value={monthlyJobPosts}
@@ -405,8 +377,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       </div>;
       <div
         style={{
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           marginTop: 12,
           display: 'flex',
           alignItems: 'center',
@@ -418,8 +388,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
         <span>Seats used: {seatsUsed}</span>;
       </div>;
     </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
 function ActivityTab(): any ({ events }: { events: any[] }) {;
   return (
@@ -557,8 +525,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
             </th>
             <th
               style={{
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 textAlign: 'right'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
@@ -602,7 +568,6 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) }),
     setUsage({ monthlyJobPosts, budgetCapUsd })
   },
-=======
   )
 }
 
@@ -627,7 +592,6 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
           <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function ActivityTab({ events }: { events: any[] }) {
   return (
     <section>
@@ -825,7 +789,3 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
             <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Status</th>
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
           </tr>
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

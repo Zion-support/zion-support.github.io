@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ChatMessageProps {
 
   message: string
@@ -42,7 +39,6 @@ interface ChatMessageProps {
           isUser 
             ? "text-white/70" 
 
-=======
           "text-xs mt-1",
           isUser 
             ? "text-white/70" 
@@ -53,12 +49,6 @@ interface ChatMessageProps {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { cn } from '@/lib / utils';
@@ -75,7 +65,6 @@ export /**
 function ChatMessage() {
   const { theme } = use_theme ();
 ;
-<<<<<<< HEAD
   return (
     <div className={cn ("flex items - start gap - 3", is_user && "flex - row - reverse")}>;
       <Avatar className="h - 8 w - 8">;
@@ -127,7 +116,6 @@ function formatMessageWithLinks (message: string): string {
     '<a href="/help/$1" class="text - zion - cyan underline hover: text - zion - cyan / 80">$1</a>'),
   return formatted_message;
 }
-<<<<<<< HEAD
   ),;
 }
 ;
@@ -181,8 +169,3 @@ function formatMessageWithLinks(message: string): string {;
   return formattedMessage;
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -40,8 +40,6 @@ const service = useMemo(() => {
       }
     });
 
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -70,7 +68,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 	if (!service) {;
 		return { notFound: true }
 
-=======
 
 				<script
 					type="application/ld+json"
@@ -203,14 +200,9 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -227,7 +219,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
 								</a>
-=======
 								</a>
 
 
@@ -242,7 +233,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 
-=======
 							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
@@ -272,7 +262,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 							2
 							)}
 				/>;			</Head>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">;
             <Card className="p-8">;
@@ -296,15 +285,11 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
                 </div>;
               </div>;
             </Card>;
-=======	)
 }
-=======
 
 
-=======
 	)
 }=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;
@@ -491,11 +476,5 @@ const canonical = `https://ziontechgroup.com/${to_slug (service.id || service.na
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======}
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -2,7 +2,6 @@
 import React from "react";
 import {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Card,
   CardContent,
   CardDescription,
@@ -10,7 +9,6 @@ import {
   CardTitle,;
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {
-=======
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
@@ -30,7 +28,6 @@ export function TeamStats() {;  return (
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
 
-=======        <div className="space-y-4 pt-2">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1">
               <p className="text-xs text-muted-foreground">Active projects</p>
@@ -48,15 +45,12 @@ export function TeamStats() {;  return (
               <p className="text-xs text-muted-foreground">
                 Interviews this month
               </p>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -78,22 +72,16 @@ export function TeamStats() {
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
         
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
         </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
@@ -106,18 +94,13 @@ import { Progress } from "@/components/ui/progress",;
 ;
 export function TeamStats() {;
   return (;
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardHeader>;
         <CardTitle>Team Stats</CardTitle>;
         <CardDescription>Performance metrics for your team</CardDescription>;
       </CardHeader>;
       <CardContent className="space-y-4">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <div className="space-y-4 pt-2">;
           <div className="grid grid-cols-2 gap-4">;
             <div className="space-y-1">;
@@ -135,7 +118,6 @@ export function TeamStats() {;
             <div className="space-y-1">;
         <div className="pt-4 text-center border-t border-border mt-4">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-=======
 import React from './react';
 import {
   Card,
@@ -195,7 +177,6 @@ function TeamStats() {
     </Card>;
   );
     </Card>);
-<<<<<<< HEAD
 }
     </Card>);
 }
@@ -210,10 +191,6 @@ function TeamStats() {
   );
 }
 ;
-=======}=======
-    </Card>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

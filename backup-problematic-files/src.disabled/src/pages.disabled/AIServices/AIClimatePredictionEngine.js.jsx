@@ -9,8 +9,4 @@ const AIClimatePredictionEngine.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIClimatePredictionEngine.js;
-=======
-export default AIClimatePredictionEngine.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

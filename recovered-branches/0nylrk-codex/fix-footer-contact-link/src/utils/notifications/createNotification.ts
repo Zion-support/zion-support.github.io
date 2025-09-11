@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -17,9 +15,6 @@ export async function createNotification({;
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
-=======
-=======
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
@@ -43,13 +38,9 @@ import { CreateNotificationParams, CreateNotificationResult } from './types',
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { supabase } from "@/integrations/supabase/client",;
 import { CreateNotificationParams, CreateNotificationResult } from './types',;
 /**;
  * Creates a notification for a user and optionally sends an email notification;
@@ -80,17 +71,12 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   } catch (error) {;
 
@@ -98,17 +84,12 @@ export async function createNotification({;
     console.error('Error creating notification:', error);
 
     console && console.error('Error creating notification:', error);
-=======
   } catch (error) {
   } catch (error) {;
 
     console.error('Error creating notification:', error);
 
-=======
     console && console.error('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { supabase } from '@/integrations / supabase / client';
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**;
@@ -158,12 +139,8 @@ if ( {) {
 ;
 
 
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return { success: false, error }
   }
 }
 }
 ;
-<<<<<<< HEAD
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

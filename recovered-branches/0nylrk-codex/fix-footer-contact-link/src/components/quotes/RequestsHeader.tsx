@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { 
   Select,
@@ -10,8 +8,6 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -22,7 +18,6 @@ type RequestsHeaderProps = {
 
 
   setArchiveFilter
-=======
 import React from './react';
 import { Badge } from '@/components / ui / badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
@@ -41,9 +36,7 @@ export const RequestsHeader: React.FC < RequestsHeaderProps> = ({
   setStatusFilter;
   archive_filter,
   setArchiveFilter;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
-=======
 type RequestsHeaderProps = {;
   unreadCount: number,;
   statusFilter: QuoteStatus | 'all',;
@@ -59,11 +52,8 @@ type RequestsHeaderProps = {;
           value={archiveFilter}
         <Select 
           value={archiveFilter} 
-=======
-=======  archiveFilter,;
   setArchiveFilter;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -74,12 +64,9 @@ type RequestsHeaderProps = {;
 }
 
 };
-=======
-==============
 
 };
 
-==============
         </div>;
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
@@ -141,15 +128,12 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
           onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
         >;
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
-=======
-=======
       <div className="flex gap-3 mt-4 md:mt-0">;
         <Select
           value={statusFilter} 
           onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
         >;
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
-=======
     <div className="flex flex - col md:flex - row justify - between items - start md:items - center mb - 8">;
       <div>;
         <div className="flex items - center gap - 3">;
@@ -169,20 +153,13 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
           onValueChange={(value) => setStatusFilter (value as QuoteStatus | 'all')}
         >;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <Select;
           value={archive_filter}
           onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
         >;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
 
-=======
 
 export default RequestsHeader;
 
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

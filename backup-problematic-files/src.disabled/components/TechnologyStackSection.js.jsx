@@ -9,8 +9,4 @@ const TechnologyStackSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TechnologyStackSection.js;
-=======
-export default TechnologyStackSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

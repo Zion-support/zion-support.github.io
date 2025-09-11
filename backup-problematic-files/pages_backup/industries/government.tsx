@@ -533,8 +533,4 @@ export default function GovernmentPage() {
   );
 };
 
-<<<<<<< HEAD
 export default Government;
-=======
-export default Government;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

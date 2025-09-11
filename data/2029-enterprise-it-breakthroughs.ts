@@ -1,4 +1,3 @@
-=======import { ServiceVariant } from '../types / service - variants';
 ;
 
 export interface EnterpriseITBreakthroughService2029 {
@@ -13,20 +12,15 @@ export interface EnterpriseITBreakthroughService2029 {
   implementation_details: string;
   launch_date: string;
 import { ServiceVariant } from '../types/service-variants';
-=======
 
-=======
 import { ServiceVariant } from '../types / service - variants';
 ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface EnterpriseITBreakthroughService2029 {
 
 export interface EnterpriseITBreakthroughService2029 {;
-=======
 export interface EnterpriseITBreakthroughService2029 {;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   tagline: string;
@@ -61,7 +55,6 @@ export interface EnterpriseITBreakthroughService2029 {;
     website: string;
   }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Autonomous infrastructure management',
         'AI - powered deployment automation',
         'Self - healing systems',
@@ -75,7 +68,6 @@ export interface EnterpriseITBreakthroughService2029 {;
       ],
       popular: true,
       icon: '⚙️',
-=======      color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - devops - platform',
       market_position:;
@@ -116,7 +108,6 @@ export interface EnterpriseITBreakthroughService2029 {;
       reviews: 178,
     },
     {
-=======      color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
       market_position:;
@@ -157,7 +148,6 @@ export interface EnterpriseITBreakthroughService2029 {;
       reviews: 42,
     },
     {
-=======      id: 'ai - powered - enterprise - security',
       name: 'AI - Powered Enterprise Security',
       tagline: 'AI - driven threat detection and response automation',
       price: '$9, 999',
@@ -177,7 +167,6 @@ export interface EnterpriseITBreakthroughService2029 {;
       ],
       popular: true,
       icon: '🛡️',
-=======      color: 'from - red - 500 via - pink - 500 to - rose - 500',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / ai - powered - enterprise - security',
       market_position:;
@@ -218,7 +207,6 @@ export interface EnterpriseITBreakthroughService2029 {;
       reviews: 156,
     },
     {
-=======
       id: 'autonomous - it - operations - center',
       name: 'Autonomous IT Operations Center',
       tagline: 'Self - managing IT infrastructure with AI operations',
@@ -240,7 +228,6 @@ export interface EnterpriseITBreakthroughService2029 {;
       ],
       popular: true,
       icon: '🏢',
-=======      color: 'from - slate - 600 via - gray - 600 to - zinc - 600',
       text_color: 'text - slate - 400',
       link: 'https://ziontechgroup.com / autonomous - it - operations - center',
       market_position:;
@@ -287,7 +274,6 @@ export interface EnterpriseITBreakthroughService2029 {;
 
   ];    features: [
 
-=======  id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
   features: string[], popular: boolean,
@@ -386,7 +372,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '☁️',
 
-=======
       color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -431,7 +416,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     },
     {
 
-=======
       id: 'ai - powered - enterprise - security',
       name: 'AI - Powered Enterprise Security',
       tagline: 'AI - driven threat detection and response automation',
@@ -455,7 +439,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '🛡️',
 
-=======
       color: 'from - red - 500 via - pink - 500 to - rose - 500',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / ai - powered - enterprise - security',
@@ -500,7 +483,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     },
     {
 
-=======
       id: 'autonomous - it - operations - center',
       name: 'Autonomous IT Operations Center',
       tagline: 'Self - managing IT infrastructure with AI operations',
@@ -524,7 +506,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '🏢',
 
-=======
       color: 'from - slate - 600 via - gray - 600 to - zinc - 600',
       text_color: 'text - slate - 400',
       link: 'https://ziontechgroup.com / autonomous - it - operations - center',
@@ -563,11 +544,9 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       implementation_details:;
         'Advanced autonomous IT operations center with AI - powered management, self - healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launch_date: '2025 - 01 - 15',
-=======
 
         'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launchDate: '2025-01-15',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 180,
       rating: 4 && 4.9,
       reviews: 95,
@@ -577,7 +556,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -610,7 +588,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     description: 'Revolutionary autonomous DevOps platform that uses AI to automatically manage, optimize, and scale infrastructure, deployments, and operations without human intervention.',
     features: [
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'
   ];    features: [;
@@ -637,10 +614,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
   }
 ];
 ;
-=======
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseITBreakthroughService2029 {;
   id: string,;
@@ -682,54 +655,6 @@ export interface EnterpriseITBreakthroughService2029 {;
   rating: number,;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-;
-export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [;
-  {;
-    id: 'autonomous-devops-platform',;
-    name: 'Autonomous DevOps Platform',;
-    tagline: 'Fully autonomous DevOps with AI decision-making',;
-    price: '$6,999',;
-    period: '/month',;
-    description: 'Revolutionary autonomous DevOps platform that uses AI to automatically manage, optimize, and scale infrastructure, deployments, and operations without human intervention.',;
-    features: [;
-      'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation',;
-      'Compliance monitoringAnalytics dashboard';
-    ],;
-    popular: true,;
-    icon: '⚙️',;
-    color: 'from-blue-600 via-cyan-600 to-teal-600',;
-    textColor: 'text-blue-400',;
-    link: 'https://ziontechgroup.com/autonomous-devops-platform',;
-    marketPosition: 'First-to-market autonomous DevOps platform. Competes with traditional DevOps tools but offers true autonomy. Pricing reflects enterprise value and innovation.',;
-    targetAudience: 'Enterprise businesses, Technology companies, Cloud providers, DevOps teams, IT operations, System administrators',;
-    trialDays: 30,;
-    setupTime: '2-4 weeks',;
-    category: 'Enterprise IT & DevOps',;
-    realService: true,;
-    technology: ['AI, Machine Learning, DevOps Automation, Cloud Computing, Infrastructure as Code, Monitoring Tools'],;
-    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker, Jenkins, GitLab, Monitoring platforms'],;
-    useCases: ['Infrastructure automation, Deployment management, System monitoring, Performance optimization, Security automation, Compliance management'],;
-    roi: 'Enterprise customers see 400% ROI within 6 months through reduced operational costs and improved system reliability.',;
-    competitors: ['Traditional DevOps tools, Basic automation platforms, Manual operations'],;
-    marketSize: '$18B market',;
-    growthRate: '280% annual growth',;
-    variant: 'enterprise-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Advanced autonomous DevOps platform with AI-powered automation, self-healing systems, and comprehensive infrastructure management. Includes security automation and compliance monitoring.',;
-    launchDate: '2025-01-20',;
-    customers: 320,;
-    rating: 4.8,;
-    reviews: 178;
-  },;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {;
     id: 'quantum-cloud-infrastructure',;
     name: 'Quantum Cloud Infrastructure',;
@@ -847,7 +772,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     growthRate: '350% annual growth',;
     variant: 'enterprise-futuristic',;
     contactInfo: {;
-<<<<<<< HEAD
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709";
@@ -898,8 +822,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     growthRate: "55% annually"
     realImplementation: true;
     contactInfo: {;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;

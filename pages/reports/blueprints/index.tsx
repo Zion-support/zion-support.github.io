@@ -14,11 +14,8 @@ import Link from 'next/link';
 const BlueprintsIndexPage: React.FC = () => {
   const blueprint_categories = [;
     {
-=======
-==============
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const BlueprintsIndexPage: React.FC = () => {
   const blueprint_categories = [;
     {
@@ -277,7 +274,6 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-17'
         }
         {
-=======          id: 'ultimate-redundancy'
           name: 'Ultimate Redundancy System'
           description: 'Advanced redundancy with automated failover'
           status: 'active'
@@ -459,7 +455,6 @@ const BlueprintsIndexPage: React.FC = () => {
 
 ;
   const recent_blueprints = [;
-=======
           lastUpdated: '2025-01-09'
 
 
@@ -545,9 +540,6 @@ const BlueprintsIndexPage: React.FC = () => {
   };
 
 
-=======
-==============
-=======      } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -577,13 +569,9 @@ const BlueprintsIndexPage: React.FC = () => {
   }
 }
   };
-=======
-=======  };
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Reports
@@ -595,19 +583,13 @@ const BlueprintsIndexPage: React.FC = () => {
             Architectural patterns and deployment strategies for scalable systems
           </p>
         </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         {/* Blueprint Overview */}        {/* Blueprint Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Total Blueprints</h3>
@@ -630,19 +612,13 @@ const BlueprintsIndexPage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Conceptual phase</p>
           </div>
         </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         {/* Blueprint Categories */}        {/* Blueprint Categories */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -653,8 +629,6 @@ const BlueprintsIndexPage: React.FC = () => {
                   {category.blueprints.map((blueprint, blueprintIndex) => (
                     <div key={blueprintIndex} className="border-l-2 border-indigo-400/30 pl-4">
                       <div className="flex justify-between items-start mb-2">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - indigo - 900 to - gray - 900 text - white">;
@@ -988,7 +962,6 @@ const BlueprintsIndexPage: React.FC = () => {
                       <p className="text-gray-300 text-sm mb-2">{blueprint.description}</p>
                       <div className="flex justify-between items-center text-xs">
                         <span className={`${getStatusColor(blueprint.status)}`}>
-=======                          ● {blueprint.status}
                           ● {blueprint.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1037,14 +1010,12 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662                  </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{blueprint.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{blueprint.date}</span>
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
                   >
                     View Blueprint →
@@ -1067,7 +1038,6 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Benefits</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -1104,14 +1074,12 @@ const BlueprintsIndexPage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======        {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
@@ -1136,17 +1104,8 @@ const BlueprintsIndexPage: React.FC = () => {
     </div>
   );
 }
-=======
-=======
-=======
 ;
 
-=======
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default BlueprintsIndexPage;

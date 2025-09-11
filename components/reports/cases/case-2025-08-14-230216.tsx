@@ -7,10 +7,7 @@
       </main>;
     </div>;
   );export default function Page() {;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
 
@@ -26,7 +23,6 @@
   );export default function Page() {
   return (
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -77,7 +73,6 @@ function Page() {
       </Head>;
 }
 
-=======
       <Head>
         <title>Case Study — Trigger Homepage</title>
         <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
@@ -108,9 +103,6 @@ function Page() {
 
 export default function Page() {
   return (
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
@@ -123,10 +115,3 @@ export default function Page() {
 }
 ;
 
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

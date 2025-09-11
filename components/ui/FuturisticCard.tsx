@@ -19,11 +19,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   cta?: React && React.ReactNode;
 };
 
@@ -36,7 +32,6 @@ export default function FuturisticCard(): any ({ title, description, cta }: Prop
 
 }
 
-=======
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (    <div className="futuristic-card">
       <div className="futuristic-card-glow" />
@@ -50,7 +45,3 @@ export default function FuturisticCard({ title, description, cta }: Props) {
   );
 }
 }
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

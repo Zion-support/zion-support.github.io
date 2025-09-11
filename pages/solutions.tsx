@@ -1,8 +1,6 @@
 
 
 
-=======
-=======import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -18,7 +16,6 @@ import {
 } from 'lucide-react'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-=======
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
@@ -39,13 +36,11 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
 
 
-=======                  key={capability.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-=======                  key={capability.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -76,7 +71,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
-=======              ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -125,25 +119,18 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industrySolutions.map((solution, index) => (
                 <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                  key={solution.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   className={`relative bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
                     solution.popular;
                       ? 'border - orange - 500 shadow - lg shadow - orange - 500 / 25';
                       : 'border - gray - 700 hover:border - orange - 500';
                   }`}
                 >;
-=======
-=======
 
                   }`}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={solution.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -185,7 +172,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                     </div>)}
                   <div className="text - center mb - 6">;
                     <div className="inline - flex p - 3 bg - orange - 500 / 20 rounded - full mb - 4">;
-=======
                 >                  {solution.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -218,7 +204,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                   <a 
                     href="/contact" 
 
-=======                  </ul>
                   <a
                     href="/contact"
 
@@ -265,7 +250,3 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
           </motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

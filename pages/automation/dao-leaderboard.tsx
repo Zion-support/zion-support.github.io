@@ -1,9 +1,5 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function DaoLeaderboardPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 25)
@@ -15,7 +11,6 @@ export default function DaoLeaderboardPage() {
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
 
 
-=======
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>        <ul className="mt-6 space-y-2">
           {items.map((it, idx) => (
@@ -47,7 +42,3 @@ export default function DaoLeaderboardPage() {
       </div>
     </EnhancedLayout>
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -461,7 +461,6 @@ export default function AIPage() {
           </div>
         </div>
       </div>
-=======
     <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -724,7 +723,6 @@ function FeatureCard({ title, features, icon }: { title: string; features: strin
             <span className="text-gray-600">{feature}</span>          </li>
         ))}
       </ul>
-=======
 function AIServiceCard({ title, description, features, price, icon }: { 
   title: string; 
   description: string; 
@@ -791,7 +789,6 @@ function AIPricingPlan({ name, price, duration, features, popular }: {
     <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-purple-500' : 'border-gray-200'} relative`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-=======
 function PricingCard({ name, price, duration, features, popular }: { 
   name: string; 
   price: string; 
@@ -808,7 +805,6 @@ function PricingCard({ name, price, duration, features, popular }: {
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
       <div className="text-3xl font-bold text-purple-600 mb-1">{price}</div>
       <div className="text-gray-500 mb-6">{duration}</div>
-<<<<<<< HEAD
 function AIMetricCard({ metric, description, icon }: { metric: string; description: string; icon: string }) {
   return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 text-center">
@@ -851,95 +847,3 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-=======
-function ContactSection() {
-  return (
-    <div className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Implement AI in Your Business?</h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your AI needs and create intelligent solutions that transform your business operations.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>    </div>
-  );
-}
-=======
-function IndustryUseCase({ title, description, examples, icon }: { 
-  title: string; 
-  description: string; 
-  examples: string[]; 
-  icon: string; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="text-gray-600 space-y-2">
-        {examples.map((example) => (
-          <li key={example} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {example}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function AIBenefitCard({ title, description, icon }: { 
-  title: string; 
-  description: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Service Pricing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="AI Discovery" 
-          price="$5k–$12k" 
-          features={["2–3 weeks", "Use-case design", "Tech selection", "Roadmap", "Proof of concept"]} 
-          popular={false}
-        />
-        <Plan 
-          name="Pilot" 
-          price="$15k–$45k" 
-          features={["4–8 weeks", "RAG/agent MVP", "Evals + safety", "Dashboards", "Basic monitoring"]} 
-          popular={true}
-        />
-        <Plan 
-          name="Production" 
-          price="$50k+" 
-          features={["Hardened infra", "Monitoring", "SLAs", "Cost optimization", "24/7 support"]} 
-          popular={false}
-        />
-      </div>
-    </section>
-  );
-}

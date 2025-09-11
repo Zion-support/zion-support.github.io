@@ -16,7 +16,6 @@ export class HealthChecker {;
   constructor() {;
     this.checks = new Map();
     this.results = new Map();  }
-=======
 
 
 import fs from 'fs';
@@ -41,13 +40,11 @@ export class HealthChecker {;
 
 
     this.results = new Map();  }
-=======
   constructor() {
   addCheck(name, checkFunction) {
     this && this.checks.set(name, checkFunction);
   }
   async runAllChecks() {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr / bin / env node;
 import fs from 'fs';
 import path from 'path';
@@ -76,7 +73,6 @@ export class HealthChecker {
     }
     this && this.results = results;
 
-=======
     const results = {};
     for (const [name, checkFunction] of this.checks) {
         const result = await check ();        results[name] = { status: 'healthy', result }    for (const [name, check_function] of this.checks) {
@@ -117,7 +113,6 @@ export class ErrorTracker {
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
-<<<<<<< HEAD
 // Create accessibility improvements
 function createAccessibilityImprovements() {
   console.log('\n♿ Creating accessibility improvements...');
@@ -307,49 +302,3 @@ function main() {
     console && console.log('  - Performance optimization utilities added');
     console && console.log('  - Accessibility improvements implemented');
     console && console.log('\n🚀 Your app is now enhanced with advanced features!');
-=======
-
-  } catch (error) {
-    console && console.error('❌ Error during app improvements:', error);
-    process && process.exit(1);
-  }
-}
-main();// Run if called directly
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
-=======
-
-if (import && import.meta.url === `file://${process ;
-
-}
-
-
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
-    console.log ('Starting advanced app improvements...');
-;
-    // Create all improvement systems;
-    createAdvancedCaching ();
-    createAPIOptimization ();
-    createDatabaseOptimization ();
-;
-    console.log ('\n✅ Advanced app improvements completed successfully!');
-    console.log ('\n📋 Summary:');
-    console.log ('  - Advanced monitoring system created');
-    console.log ('  - Performance optimization utilities added');
-    console.log ('  - Accessibility improvements implemented');
-    console.log ('\n🚀 Your app is now enhanced with advanced features!');
-;
-  } catch (error) {
-    console.error ('❌ Error during app improvements:', error);
-    process.exit (1);
-  }
-}
-main ();// Run if called directly;
-// Check condition
-if ( {) {
-  $2
-}
-  main ();
-}
-}
-}
-}

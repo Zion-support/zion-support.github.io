@@ -1,10 +1,6 @@
 
 
 
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -58,7 +54,6 @@ const whitepapers = {
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -75,8 +70,6 @@ import { useRouter } from 'next/router';
       ],
       target_audience: 'Business analysts, project managers, and executives evaluating automation investments.';
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
 },
 export default /**
@@ -104,7 +97,6 @@ function WhitepaperPage() {
   return (
 
 
-=======
 }
   return (
     <>
@@ -123,7 +115,6 @@ function WhitepaperPage() {
 }
 
 
-=======
           {/* Header */}
           <header className="text-center mb-16">
             <div className="mb-6">
@@ -173,7 +164,6 @@ function WhitepaperPage() {
               <span>{whitepaper.publishDate}</span>
             </div>
           </header>
-=======
           {/* Whitepaper Content */}          {/* Whitepaper Content */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -187,7 +177,6 @@ function WhitepaperPage() {
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
             </section>
 
-=======
             {/* Download Section */}            {/* Download Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -202,7 +191,3 @@ function WhitepaperPage() {
                   Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
                 </p>
                 <button className="px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg">
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

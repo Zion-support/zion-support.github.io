@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
@@ -10,9 +8,6 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/compo
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-=======
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
@@ -23,11 +18,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
   }
   },
-=======
 
   },
 
-=======
   }
   },  {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />
@@ -36,19 +29,15 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
   }
   },
-=======
 
   },
 
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />
     title: "Resume Builder"
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   },
 
@@ -63,12 +52,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
     </section>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { Brain, Clock, Award, Zap } from './lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
@@ -121,7 +104,6 @@ export const AppFeatures: React.FC = () => {
     </section>);
 }
 ;
-<<<<<<< HEAD
   ),;
 },; const features = [ {
   icon: <Brain className="h-10 w-10 text-zion-cyan" />;
@@ -160,8 +142,3 @@ export const AppFeatures: React.FC = () => {
 };
   );
 };
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

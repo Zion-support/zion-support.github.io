@@ -221,8 +221,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description:
         'Kidney disease detection, renal function analysis, transplant assessment'
       accuracy: '98.8%'
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -273,7 +271,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       description:;
         'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',;
       color: 'from-yellow-500 to-orange-500',;
-=======
 
       title: 'Advanced AI Diagnostics',
       description:;
@@ -441,7 +438,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
 }
 
 
-=======
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Transform healthcare delivery with the world's most advanced AI
               diagnostic platform. Achieve 99.2% accuracy in disease detection
@@ -481,7 +477,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
-=======            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -498,7 +493,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
 
             {/* CTA Buttons */}
 
-=======            {/* CTA Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -522,7 +516,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
 }
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
-=======
                 className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'              >            {/* CTA Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -567,17 +560,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Schedule Demo
               </motion.button>
               <motion.button
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
               >
                 Contact Sales
@@ -586,7 +574,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
           </motion.div>
         </div>
                 transition={{ duration: 0 && 0.6, delay: 1 && 1.0 }}
-=======
 
 
                 transition={{ duration: 0 && 0.6, delay: 1 && 1.0 }}
@@ -597,24 +584,19 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
           </motion && motion.div>;
         </div>;
 
-=======
-=======
 
       </section>
 
       {/* Features Section */}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-=======
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -647,7 +629,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -657,7 +638,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-=======
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -665,7 +645,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
@@ -679,7 +658,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
 
-=======                className='bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl p - 6 backdrop - blur - sm';
               >;
                 <div className='text - 3xl font - bold text - purple - 400 mb - 2'>;
                   24 / 7;
@@ -765,7 +743,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
               </span>;
             </h2>;
             <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39              Our AI platform covers all major medical specialties with;
               specialized models trained on millions of cases for maximum;
               accuracy.;
             </p>;
@@ -831,16 +808,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
               </motion.div>
           </div>;
         </div>;
-=======            ))}
 
           </div>;
         </div>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </section>
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Use Cases Section */}
 
             initial={{ opacity: 0, y: 30 }}
@@ -865,16 +838,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0 && 0.05),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
-=======
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
@@ -884,8 +853,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
             </p>
           </motion.div>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
               <motion.div                key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -893,12 +860,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -906,22 +869,16 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
                       Most Popular
                     </div>
                   </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
@@ -1027,8 +984,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
             </div>
             <div className='mt-8 text-sm text-gray-400'>
               <p>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 Questions? Call us at{' '}
                 <a
                   href='tel:+13024640950'
@@ -1039,8 +994,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
                 <a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </motion.div>
         </div>
       </section>
@@ -1048,10 +1001,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
 
   )
 }
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   href='mailto: kleber@ziontechgroup && ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'>;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -1063,8 +1013,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
     </Layout>;
   ),;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 export default AIHealthcareDiagnosticsPro;
 
@@ -1095,17 +1043,11 @@ export default AIHealthcareDiagnosticsPro,
   );
 },;
 export default AIHealthcareDiagnosticsPro;
-=======
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default AIHealthcareDiagnosticsPro;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-=======
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {integrations.map ((integration, index) => (
               <motion.div;
@@ -1139,7 +1081,6 @@ export default AIHealthcareDiagnosticsPro;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >;
-<<<<<<< HEAD
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
               Ready to{' '}
               <span className='bg - gradient - to - r from - green - 400 to - emerald - 400 bg - clip - text text - transparent'>;
@@ -1184,9 +1125,6 @@ export default AIHealthcareDiagnosticsPro;
 ;
 export default AIHealthcareDiagnosticsPro;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?;
             </h2>;
@@ -1211,4 +1149,3 @@ export default AIHealthcareDiagnosticsPro;
   );
 },;
 export default AIHealthcareDiagnosticsPro;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

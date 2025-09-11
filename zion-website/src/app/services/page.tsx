@@ -1,6 +1,4 @@
 import {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   UserGroupIcon,
   LightBulbIcon,
   CogIcon,
@@ -61,8 +59,6 @@ const professional_services = [;
     duration: '2 - 6 weeks'}];
 const service_process = [;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     step: '05',
     title: 'Ongoing Support',
     description: 'Continuous monitoring, optimization, and support to ensure lasting success.',
@@ -72,20 +68,15 @@ const reasonsToChoose = [;
     name: 'Expert Team',
     description: 'World - class AI researchers and engineers with decades of combined experience.',
     icon: UserGroupIcon},
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     name: 'Proven Track Record'
     description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.'
     icon: ChartBarIcon}
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     name: 'Cutting - Edge Technology',
     description: 'Access to the latest AI research and technology innovations.',
     icon: LightBulbIcon},
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;bg - black & quot;>;
 
@@ -155,7 +146,6 @@ const reasonsToChoose = [;
 export default function ServicesPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 AI Services;
               </span>;
@@ -205,7 +195,6 @@ export default function ServicesPage() {;
                   </Link>;
                 </div>;
               </div>))}
-=======
     name: 'Global Support'
     description: '24/7 support and maintenance services across multiple time zones.'
     icon: GlobeAltIcon}]
@@ -279,7 +268,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
       {/* Service Process */}
 
 
-=======      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -310,9 +298,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
@@ -336,7 +322,3 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 
 export default Page;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -4,7 +4,6 @@
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
-=======    if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 #!/usr / bin / env node;
 import fs from './fs';
@@ -19,7 +18,6 @@ function fixDoubleCommas() {
     let modified = false;
 ;
     // Fix double commas in import statements;
-=======
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 #!/usr / bin / env node;
@@ -124,8 +122,6 @@ console && console.log(`Found ${files && files.length} files to check for double
 
 console && console.log(`\nFixed double commas in ${fixedCount} files.`);
 
-=======
-<<<<<<< HEAD=======  traverse (dir);
   return files;
 }
 // Main execution;

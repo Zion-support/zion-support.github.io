@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } catch {
         // ignore;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -33,7 +32,6 @@ async function fetchFromGitHub(): Promise<any[]> {
         results.push({ id: j.id |f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
       } catch {
         // ignore
-=======
 
       } catch {
         // ignore;      }
@@ -43,8 +41,6 @@ return results;
     return [];
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export default async /**
  * handler - Function description
  */
@@ -56,14 +52,11 @@ const dir = path.join (process.cwd (), 'automation_logs'),
   } catch {
     // fall through to GitHub;
   }
-=======
 
   return res.status(200).json({ logs: remote });
 
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (fs.existsSync(dir)) {
       const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse()
       if (files.length > 0) {
@@ -191,5 +184,3 @@ export default async function handler(req, res) {
   return res.status(200).json({ logs: remote });
 }
 };
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

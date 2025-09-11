@@ -33,7 +33,6 @@ export interface Innovative2026AIService {
 
   {
 
-=======  id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
   features: string[], popular: boolean,
@@ -73,7 +72,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     reviews: 950
   }
 ];
-=======
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -88,9 +86,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     reviews: 950;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -427,7 +422,6 @@ export interface Innovative2026AIService {
     realImplementation: true;
     implementationDetails: "Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access."
     launchDate: "2025-06-20"
-=======
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
@@ -464,18 +458,13 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     real_implementation: true,
     implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
     launch_date: '2025 - 06 - 20';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     customers: 1900;
     rating: 4.8,
     reviews: 950;
 
 ];
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -520,6 +509,3 @@ export interface Innovative2026AIService {;
 ;
   }
 ];
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

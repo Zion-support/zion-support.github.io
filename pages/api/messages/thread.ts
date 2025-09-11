@@ -1,8 +1,6 @@
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
@@ -18,7 +16,6 @@ import {
 
 
 } from "../../../utils/messaging/storage";
-=======
   if (req.method === "GET") {
     const { id } = req.query;
     if (!id |typeof id !== "string") return res.status($1).json({ $2 });
@@ -70,14 +67,10 @@ import { getConversationById, getMessages, sendMessage } from '../../../utils/me
     const { conversation, message } = sendMessage({
       conversationId,
 
-==============
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       body,
       link_url,
       attachmentBase64,
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       attachment_name,
       context,
     } = req.body || {}
@@ -89,9 +82,7 @@ import { getConversationById, getMessages, sendMessage } from '../../../utils/me
       conversation_id,
       sender_id: user.id,
       recipient_id,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       body,
       link_url,
       attachmentBase64,
@@ -101,7 +92,6 @@ import { getConversationById, getMessages, sendMessage } from '../../../utils/me
       context,
     });
 
-=======      context});
     res.status(200).json({ conversation, message })
   } else {
     res.status (200).json ({ conversation, message });
@@ -199,25 +189,18 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
 
 
-=======
       context});
     res.status(200).json({ conversation, message })  } else {
     res && res.status(405).json({ error: "Method not allowed" });
   }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
-=======
     res.status (200).json ({ conversation, message });
   } else {
     res.status (405).json ({ error: "Method not allowed" });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
 }
   } catch (error) {
@@ -236,11 +219,5 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======  }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

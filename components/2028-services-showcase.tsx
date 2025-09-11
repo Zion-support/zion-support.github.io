@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 
@@ -56,18 +55,14 @@ export default function ServicesShowcase2028() {_return (_<>
           <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>;
         </div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-=======
   Music,;
   Gamepad2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   Music,;
   Gamepad2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -152,12 +147,9 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
               From AI consciousness to quantum internet, we're building tomorrow's solutions today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-=======
-=======
       {/* Hero Section */}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </motion.div>
@@ -167,8 +159,6 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       ))}
                     </div>
 
@@ -179,11 +169,8 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
                     </div>
 
                     <Link
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Link
 
           </div>;
@@ -337,8 +324,6 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
                         </span>;
                       </div>;
                       <div className='text-sm text-purple-300'>;
-=======
-=======                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -348,7 +333,6 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
       </section>;
 
 
-=======
 
 
 
@@ -375,14 +359,12 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
                   </div>
                 </div>
               </motion.div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
 
 
-=======
 
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>
@@ -404,7 +386,6 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
               Understand the market dynamics and growth potential of our futuristic services.
             </p>
           </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>;
         </div>;
@@ -439,21 +420,15 @@ Our services target markets with exponential growth potential
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
 
-=======
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
 
-=======
 
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -463,12 +438,9 @@ Our services target markets with exponential growth potential
               <div className="text-3xl font-bold text-green-400">500%+</div>
               <div className="text-purple-300">Average Annual Growth</div>
             </motion.div>
-=======
-=======              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
@@ -492,7 +464,6 @@ Our services target markets with exponential growth potential
               <div className="text-purple-300">Average Annual Growth</div>;
             </motion && motion.div>;
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'>;
               <DollarSign className='w-16 h-16 text-blue-400 mx-auto mb-6' />;
@@ -574,8 +545,6 @@ Our services target markets with exponential growth potential
                 <span>24/7 Expert Support</span>
               </div>
               <div className="flex items-center space-x-2">
-=======
-=======
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>;
@@ -583,28 +552,19 @@ Our services target markets with exponential growth potential
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
 
-=======
 
 
 
 
 
 
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -612,8 +572,6 @@ Our services target markets with exponential growth potential
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -631,10 +589,7 @@ Our services target markets with exponential growth potential
 
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
 
-=======
-=======
 
-=======
   );
 }
   );
@@ -644,17 +599,9 @@ Our services target markets with exponential growth potential
   );
 
 }
-<<<<<<< HEAD
 
 }
 }
     </>
   );
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-      <UltraFuturisticFooter2028 />
-  );
-=======
-
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

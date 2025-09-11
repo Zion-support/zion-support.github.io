@@ -152,7 +152,6 @@ import React from 'react';
       savings: 'Save 45-65% vs. competitors',
     },  ];
 
-=======
 import React, { useState } from 'react';>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -436,37 +435,24 @@ import Head from 'next/head';
 
 import React from 'react';
 import Head from 'next / head';
-=======
 
 import React from 'react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from 'next/head';
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import Head from 'next/head';
 import Head from 'next/head';
 
 origin/automation-improvements-final
-=======
 
 
-=======
 
-==============
 import React from 'react';
 import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   Check
   Star
@@ -585,16 +571,12 @@ import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2'
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
     ...enhancedRealMicroSaasServices;
     ...nextGenerationAIServices;
@@ -613,8 +595,6 @@ export default function PricingPage() {
     ...nextGenerationAIServices,;
     ...cuttingEdgeITServices,;
     ...innovativeMicroSaasV2Services,  ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Enhanced service categories with pricing;
   const serviceCategories = [;
     {;
@@ -668,8 +648,6 @@ export default function PricingPage() {
       avgPrice: '$2,999/month',;
       savings: 'Save 45-65% vs. competitors',;
     },  ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Enhanced pricing tiers with more realistic and comprehensive offerings;
   const pricingTiers = [;
     {;
@@ -748,8 +726,6 @@ export default function PricingPage() {
       cta: 'Contact Sales',;
       ctaVariant: 'primary' as const,;
     },  ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Service category pricing examples;
   const serviceCategoryPricing = [;
     {;
@@ -812,8 +788,6 @@ export default function PricingPage() {
       startingPrice: '$299/month',;
       icon: <Rocket className='w-6 h-6' />,;
     },  ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Value propositions;
   const valuePropositions = [;
     {;
@@ -1072,22 +1046,16 @@ name: 'Starter'
     }
   ];
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'Innovative Micro SaaS',
       description: 'Creative and practical SaaS tools',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       metric: '<24h',
       detail: 'Setup Time',
     },
     {
       title: 'Global Reach',
       description: 'Available in 150+ countries worldwide',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       icon: <Globe className='w - 8 h - 8' />,
       metric: '150+',
       detail: 'Countries',
@@ -1099,8 +1067,6 @@ name: 'Starter'
       metric: '99.99%',
       detail: 'Uptime SLA',
     },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   ];
 ;
   return (
@@ -1110,8 +1076,6 @@ name: 'Starter'
           Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &;
           Quantum Services;
         </title>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         />;
         <meta name='author' content='Zion Tech Group' />;
         <meta name='robots' content='index, follow' />;
@@ -1138,7 +1102,6 @@ name: 'Starter'
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <Head>
 
-=======
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
       </Head>;
@@ -1150,7 +1113,6 @@ name: 'Starter'
             Transparent Pricing;
           </h1>;
           <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-=======
         <meta;
           name='description';
           content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49 / month), Professional ($149 / month), or Enterprise ($499 / month) plans with generous free trials.';
@@ -1198,18 +1160,14 @@ name: 'Starter'
             Transparent Pricing;
           </h1>;
           <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             Choose the perfect plan for your business. All plans include;
             generous free trials and access to our revolutionary AI & quantum;
             computing services.;
           </p>;
 
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               🚀 New for 2026: Revolutionary Services
             </h3>
             <p className='text-gray-300 mb-6'>
@@ -1282,15 +1240,11 @@ name: 'Starter'
             </Button>
           </div>
 {/* Billing Toggle */}
-=======
 
           {/* Billing Toggle */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
           {/* Billing Toggle */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
@@ -1298,7 +1252,6 @@ name: 'Starter'
             </span>;
             <button
 
-=======
 
           {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
@@ -1307,13 +1260,10 @@ name: 'Starter'
 }
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
-=======
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Monthly
             </span>
             <button
@@ -1341,12 +1291,9 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {pricingTiers.map((tier, index) => (
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
               <UltraFuturisticCard
                 key={tier && tier.name}
                 variant={tier && tier.variant}
@@ -1490,8 +1437,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   </ul>;
                   <Button
                     href={tier.name === "Enterprise" ? "/contact" : "/services"}
-=======
-=======
                     )}
                   </div>;
 
@@ -1508,7 +1453,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
                   <Button
 
-=======
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
                   >
                     {tier.cta}
@@ -1519,8 +1463,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 ))}
 </div>;
         </div>;
-=======
-=======
                     variant={tier.ctaVariant}
                     size="lg"
                     className="w-full"                  >
@@ -1554,7 +1496,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
         </div>
         {/* Value Propositions */}
 
-=======
 
         {/* Value Propositions */}        <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
@@ -1586,26 +1527,18 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
 
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
             ))}
 
           </div>;
         </div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className='p - 6';
               >;
                 <div className='flex items - center mb - 4'>;
                   <div className='inline - flex items - center justify - center w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 mr - 4'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {category.icon}
                   </div>;
                   <div>;
@@ -1628,7 +1561,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
                 <ul className='space-y-2 mb-4'>;
                   {category && category.services.map((service, idx) => (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li
                       key={idx}
                       className='text-sm text-gray-300 flex items-center'>;
@@ -1639,7 +1571,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
 
                 </ul>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1695,20 +1626,16 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
             Popular Services Pricing
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
-=======
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
               </UltraFuturisticCard>
 
             ))}
 
-=======
 
 
 
-=======
 
-=======            ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1716,7 +1643,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
           </div>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Popular Services Pricing */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
@@ -1724,23 +1650,15 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
 
-=======
-=======
 
         {/* Popular Services Pricing */}=======
-=======
 
         {/* Popular Services Pricing */}        <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularServices.slice(0, 6).map((service, index) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <UltraFuturisticCard
                 key={service && service.id}
                 variant={service && service.variant as any}
@@ -1792,13 +1710,10 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 to the selected services. No credit card required to start your
                 trial.
               </p>
-=======
-=======              </UltraFuturisticCard>
 
 
 
 
-=======
 
 
 
@@ -1848,8 +1763,6 @@ variant='primary'
               </UltraFuturisticCard>
 ))}
 <div className="mb-20">
-=======
-=======
         <div className="mb-20">          <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
             <UltraFuturisticCard variant="quantum" className="p-6">
@@ -1912,7 +1825,6 @@ variant='primary'
               </p>;
               <p className='mt-2'>;
                 ✓ 24/7 Support • ✓ 99 && 99.99% Uptime SLA • ✓ Global Infrastructure;
-=======            <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
   );
 
     </UltraFuturisticBackground>
@@ -1982,9 +1894,7 @@ variant='primary'
               No credit card required, instant setup, and full support included.;
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">;
-=======
 
-=======
             <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;              <Button;
                 href='/services';
                 variant='primary';
@@ -2011,9 +1921,7 @@ variant='primary'
               </p>;
               <p className='mt - 2'>;
                 ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
@@ -2022,7 +1930,6 @@ variant='primary'
 }
 
 
-=======
 }
 
 
@@ -2049,10 +1956,8 @@ variant='primary'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
     </UltraFuturisticBackground>
-=======
 
 }
 
@@ -2072,7 +1977,3 @@ origin/automation-improvements-final
   );
 }
 }
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

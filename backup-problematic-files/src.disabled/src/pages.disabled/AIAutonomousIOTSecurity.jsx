@@ -9,8 +9,4 @@ const AIAutonomousIOTSecurity = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousIOTSecurity;
-=======
-export default AIAutonomousIOTSecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

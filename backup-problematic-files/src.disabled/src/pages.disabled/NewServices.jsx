@@ -9,8 +9,4 @@ const NewServices = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default NewServices;
-=======
-export default NewServices;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

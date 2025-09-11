@@ -86,7 +86,6 @@ if (require.main === module) {}
     _console.error('Simple monitor failed to start:', error);',
     process.exit(1);,
   });
-=======
 
 }
 
@@ -99,11 +98,6 @@ module.exports = SimpleMonitor;
 module.exports = SimpleMonitor;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-<<<<<<< HEAD
 module.exports = SimpleMonitor;
 module.exports = SimpleMonitor;
 ursor/add-new-services-and-deploy-updates-0462
-=======
-module && module.exports = SimpleMonitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/pm2/simple-monitor.js
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

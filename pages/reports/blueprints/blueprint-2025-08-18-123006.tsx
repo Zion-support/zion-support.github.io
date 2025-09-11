@@ -10,7 +10,6 @@ const Blueprint20250818123006: React.FC = () => {
 
     id: 'blueprint-2025-08-18-123006',
 
-=======
 
 const Blueprint20250818123006: React.FC = () => {
   const blueprintDetails = {
@@ -91,7 +90,6 @@ const Blueprint20250818123006: React.FC = () => {
 
   const edgeNodes = [
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: 'North America',
       description: 'Primary edge node with high availability',
@@ -109,7 +107,6 @@ const Blueprint20250818123006: React.FC = () => {
 }
   ];
   const features = [
-==============    {
       feature: 'Global Load Balancing',
       description: 'Intelligent traffic routing based on location and performance',
       benefit: 'Reduced latency and improved user experience',
@@ -542,7 +539,6 @@ const Blueprint20250818123006: React.FC = () => {
   }
 }
   ];
-=======
       status: 'implemented';
     },
     {
@@ -562,41 +558,34 @@ const Blueprint20250818123006: React.FC = () => {
       case 'implemented': return 'text-green-400';
       case 'deploying': return 'text-yellow-400';
       default: return 'text-gray-400';
-=======
 
   };
 
 
-=======      } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
   const getHealthColor = (health: string) => {
-=======
 ;
   const getHealthColor = (health: string) =>: any {    switch (health) {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case 'excellent': return 'bg-green-500/20 text-green-400';
       case 'good': return 'bg-yellow-500/20 text-yellow-400';
       case 'warning': return 'bg-orange-500/20 text-orange-400';
       case 'critical': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400';
-=======
 
   };
 
 
-=======      } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -611,7 +600,6 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -643,7 +631,6 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-purple-400">Status</h3>
@@ -686,7 +673,6 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{node.description}</p>
@@ -781,14 +767,12 @@ const Blueprint20250818123006: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======        {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
@@ -813,17 +797,8 @@ const Blueprint20250818123006: React.FC = () => {
     </div>
   );
 }
-=======
-=======
-=======
 ;
 
-=======
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default Blueprint20250818123006;

@@ -9,7 +9,6 @@ const CommunityRoutes = () => {
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
       <Route path="/community/post/:postId" element={<ForumPostPage />} />
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
-=======
 
 
 const CommunityRoutes = () => {
@@ -29,22 +28,16 @@ const CommunityRoutes = () => {;
   return (;
     <Routes>;
       {/* Public routes */}
-==============
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const CommunityRoutes = () => {
-=======
 const CommunityRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Public routes */}
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Protected routes */}
       <Route
         path="/community/create"
@@ -61,12 +54,8 @@ const CommunityRoutes = () => {;
             <EditPostPage />
           </ProtectedRoute>
 
-=======
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -80,15 +69,11 @@ const CommunityRoutes = () => {;
   return (;
     <Routes>;
       {/* Public routes */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <Route path="/community" element={<CommunityPage />} />;
       <Route path="/forum" element={<CommunityPage />} />;
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />;
       <Route path="/community/post/:postId" element={<ForumPostPage />} />;
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
@@ -164,19 +149,11 @@ export default CommunityRoutes;
   );
 },;
 export default CommunityRoutes;
-=======
-=======
       />;
     </Routes>;
   );
 
-=======
 },;
 export default CommunityRoutes;
 
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

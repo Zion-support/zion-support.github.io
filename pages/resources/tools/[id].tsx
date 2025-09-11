@@ -34,24 +34,15 @@ import { useRouter } from 'next/router';
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
 
-=======
-=======
 
-=======
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export default function ToolResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -224,15 +215,11 @@ export default function ToolResourcePage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const tool = tools.find(t => t.id === id),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   ],
   const tool = tools.find(t => t.id === id),
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!tool) {
     return (
       <>
@@ -249,8 +236,6 @@ export default function ToolResourcePage(req, res) {
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -300,11 +285,9 @@ export default function ToolResourcePage(req, res) {
                     {tool.features.map((feature, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-=======
                         {feature}
                       </li>
                     ))}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const tool = tools.find(t => t.id === id);
   if (!tool) {;
@@ -410,7 +393,6 @@ export default function ToolResourcePage(req, res) {
 
 
 
-=======
       estimated_time: '15 minutes',
       full_content: `;
         <h2 > About This Tool</h2>;
@@ -665,13 +647,5 @@ if ( {) {
   }
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

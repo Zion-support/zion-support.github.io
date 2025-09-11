@@ -7,8 +7,6 @@ interface PricingSuggestionAnalytics {
   averagePriceGap: number,
   suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
   recent_suggestions: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     id: string;
     user_id: string;
     suggested_min: number;
@@ -30,7 +28,6 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[];
   isLoading: boolean
-=======
 
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
@@ -38,20 +35,16 @@ import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-=======
 
 
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
-=======
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -71,27 +64,21 @@ interface PricingSuggestionAnalytics {
   error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
-=======
 
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setAnalytics({
           ...mockData;
           isLoading: false
           error: null
         });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======        await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
         const mockData = {
@@ -121,14 +108,11 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: null
         }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
     created_at: string,
-=======
         //   .gte('created_at', `now() - interval '${days} days'`),
         
         // if (error) throw error,
@@ -140,7 +124,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 };
 
-=======        console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
           isLoading: false,
@@ -253,8 +236,6 @@ export function usePricingSuggestionAnalytics(days = 30) {;
   return analytics;
 }
 }
-=======
-=======    type: 'client' | 'talent';
   }[];
   is_loading: boolean,
   error: string | null;
@@ -339,8 +320,3 @@ if (throw error) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

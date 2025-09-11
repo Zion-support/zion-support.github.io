@@ -9,8 +9,4 @@ const EnhancedServicesOverview = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedServicesOverview;
-=======
-export default EnhancedServicesOverview;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

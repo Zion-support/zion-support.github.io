@@ -9,8 +9,4 @@ const AIAutonomousBusinessOperations = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousBusinessOperations;
-=======
-export default AIAutonomousBusinessOperations;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

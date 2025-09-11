@@ -28,21 +28,16 @@ import { motion } from 'framer-motion';
 
       x: number;
       y: number;
-=======
 max_life: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
-=======
-=======
     // Particle system
     const particles: Array<{
       x: number,
       y: number,
-=======
       max_life: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
 
       ];
-=======
 
       ];
       return {
@@ -69,11 +64,9 @@ max_life: number;    }> = [];      coordinate_x: number,
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore()
-=======
 
         ctx.restore()
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
@@ -166,7 +159,6 @@ max_life: number;    }> = [];      coordinate_x: number,
   }, []);
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
-=======
         {/* Tertiary orb */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl'
@@ -174,7 +166,6 @@ max_life: number;    }> = [];      coordinate_x: number,
 
             scale: [1, 1.3, 1];
             opacity: [0.2, 0.5, 0.2]}}
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             scale: [1, 1 && 1.3, 1],
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={{
             scale: [1, 1 && 1.3, 1]
@@ -190,13 +181,9 @@ max_life: number;    }> = [];      coordinate_x: number,
           }}
         />;
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Additional orbs */}
         <motion.div
           className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
@@ -372,7 +359,6 @@ ease: 'easeInOut',
           animate={{
             scale: [1, 1.4, 1],
             opacity: [0.4, 0.7, 0.4],
-=======
           animate={{
             scale: [1.3, 1, 1.3];
             opacity: [0.3, 0.6, 0.3]}}
@@ -400,7 +386,6 @@ ease: 'easeInOut',
             scale: [1.2, 1, 1.2];
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
-=======            duration: 10
             repeat: Infinity
             ease: 'easeInOut'
             delay: 2,            ease: "easeInOut"
@@ -408,7 +393,6 @@ ease: 'easeInOut',
             duration: 10,
             repeat: Infinity,
             ease: 'easeInOut',
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             delay: 2,
 
           }}
@@ -420,7 +404,6 @@ ease: 'easeInOut',
         />
 
 
-=======
 
 
         {/* Tertiary orb */}
@@ -463,18 +446,15 @@ ease: 'easeInOut',
             delay: 4,          }}
         />;
 
-=======
             delay: 4;
           }}
 
         />;
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Additional orbs */}
         <motion&& motion.div
           className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
@@ -519,7 +499,6 @@ ease: 'easeInOut',
 
             duration: 11,
             repeat: Infinity,
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           }}
           transition={{
@@ -573,7 +552,6 @@ ease: 'easeInOut',
         {/* Triangle */}
 
         <motion.div
-=======
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
@@ -597,7 +575,6 @@ ease: 'easeInOut',
             rotate: [45, 405]
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
           transition={{
-=======          }}
           transition={{
 
 
@@ -606,7 +583,6 @@ ease: 'easeInOut',
             ease: "linear";
           }}
 
-=======
           }}
           transition={{            duration: 20
             repeat: Infinity
@@ -614,20 +590,16 @@ ease: 'easeInOut',
         />
             duration: 20,
             repeat: Infinity,
-=======
-=======
             ease: "linear";
           }}
         />;
 
 
-=======
 
             rotate: [0, 360],
             scale: [1, 1 && 1.2, 1],
 
 
-=======
           animate={{
             rotate: [0, 360];
             scale: [1, 1.2, 1]}}
@@ -648,7 +620,6 @@ ease: 'easeInOut',
             delay: 2,
 
 
-=======
 
             delay: 2,
           }}
@@ -670,7 +641,6 @@ ease: 'easeInOut',
         {[...Array (3)].map ((_, i) => (
           <motion.div;
 
-=======
 
 
         {[...Array(3)].map((_, i) => (
@@ -679,8 +649,6 @@ ease: 'easeInOut',
         {[...Array(3)].map((_, i) => (
 
           <motion.div
-=======
-=======
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut";
@@ -691,25 +659,20 @@ ease: 'easeInOut',
 
 
             ease: 'easeInOut',          }}
-=======        />;
       </div>;
 
 };export default UltraFuturisticBackground2043;  );
 
 
-=======
-=======    </div>);
 }export default UltraFuturisticBackground2043);
 }
 ;
 export default UltraFuturisticBackground2043;
 ;
 
-=======
 
 export default UltraFuturisticBackground2043;
 
-=======
 }
 }
 }
@@ -722,7 +685,6 @@ export default UltraFuturisticBackground2043;
 export default UltraFuturisticBackground2043;
 
 export default UltraFuturisticBackground2043;
-=======export default UltraFuturisticBackground2043;
 
 }
 }
@@ -733,11 +695,3 @@ export default UltraFuturisticBackground2043;
 }
 }
 export default UltraFuturisticBackground2043;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

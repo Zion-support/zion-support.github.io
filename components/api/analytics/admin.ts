@@ -13,8 +13,6 @@ export default async function handler(
       supabase && supabase.from('quotes').select('id, status'),
       supabase && supabase.from('projects').select('id, status'),
       supabase && supabase.from('referrals').select('id, converted, source'),
-=======
-=======
 
   try {
     const supabase = createServerClient();
@@ -22,10 +20,8 @@ export default async function handler(
     // Fallback to mock if querying fails
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' }
       { id: 2, role: 'talent', country: 'IN' }
@@ -69,13 +65,10 @@ export default async function handler(
       p => p && p.status === 'active'
     ).length;
     const categoryCounts: Record<string, number> = {};
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     });
   } catch (e: any) {
 
-=======
-==============    res.status (200).json ({
       totals: {
         total_users: 4,
         total_talents: 2,
@@ -104,18 +97,6 @@ export default async function handler(
 
 }
     const geoCounts: Record<string, number> = {};
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

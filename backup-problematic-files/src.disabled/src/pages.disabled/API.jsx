@@ -9,8 +9,4 @@ const API = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default API;
-=======
-export default API;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

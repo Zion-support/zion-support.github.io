@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -56,10 +55,8 @@ function AISustainabilityPlatformPage() {
 
 }
 
-<<<<<<< HEAD
     </div>;
     </div>
   );
 }
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

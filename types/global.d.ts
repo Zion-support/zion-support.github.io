@@ -88,7 +88,6 @@ declare namespace NodeJS {
   }
 }
 
-=======
 // Global type declarations for DOM typesdeclare global {
   interface Window {
     performance: Performance;
@@ -192,34 +191,15 @@ export {};
 // Re-export DOM types that might not be available;
 
 export {};
-=======
 export {};
-=======
 
 
 
-=======
 
 
-=======
-=======
 // Re-export DOM types that might not be available
 export {}=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 // Re-export DOM types that might not be available
 export {}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 // Re - export DOM types that might not be available;
 export {}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

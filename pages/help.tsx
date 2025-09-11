@@ -16,19 +16,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 origin/automation-improvements-finalimport {
   Search
   HelpCircle
@@ -45,7 +39,6 @@ origin/automation-improvements-finalimport {
 
 import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662} from "lucide-react";
 const helpArticles = [
   {
     id: "overview"
@@ -74,11 +67,9 @@ const helpArticles = [
         type: "Technical"
       }
       {
-=======
     id: "cloud-services",
     title: "Cloud Services",
     description: "Cloud infrastructure and deployment solutions.",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
         readTime: '6 min read',
@@ -93,20 +84,16 @@ const helpArticles = [
 origin/automation-improvements-final
     icon: Cloud,
     color: "blue",
-=======
 
     icon: Cloud,
     color: "blue",
 
-=======
       {
 
 
-=======
 origin/automation-improvements-final
     icon: Cloud,
     color: "blue",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "AI Best Practices"
         description: "Tips and best practices for AI development"
         readTime: "6 min read"
@@ -123,9 +110,7 @@ origin/automation-improvements-final
 
     articles: [;
       {
-=======
 origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -143,14 +128,10 @@ const help_categories = [;
 ];
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
-=======
-=======];
 
-=======
 
 
 export default function HelpPage() {;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 import {;
   Search,;
@@ -225,8 +206,6 @@ import {;
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
 
-=======
-=======
 
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
@@ -240,14 +219,12 @@ export default function HelpPage() {;
     setExpandedCategory(expandedCategory === index ? null : index);
 
   }
-=======
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');origin/automation-improvements-final
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
   };
-=======  }
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -258,8 +235,6 @@ export default function HelpPage() {
       )
     }))
     .filter((category) => category.articles.length > 0);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  const filteredCategories = helpCategories.map(category => ({
     ...category,
     articles: category.articles.filter(article =>
       article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -270,9 +245,7 @@ export default function HelpPage() {
 
 origin/automation-improvements-final
 
-=======
 
-=======
   const filteredCategories = helpCategories;
     .map((category) => ({;
       ...category,;
@@ -283,19 +256,10 @@ origin/automation-improvements-final
       ),;
     }));
     .filter((category) => category && category.articles.length > 0);
-=======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 origin/automation-improvements-final
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <Head>;
@@ -310,14 +274,12 @@ origin/automation-improvements-final
         />;
       </Head>;
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
-=======
 
         />;
       </Head>;
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -349,10 +311,6 @@ origin/automation-improvements-final
       </div>;
     </>;
   );
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export default /**
  * HelpPage - Function description
@@ -421,8 +379,4 @@ function HelpPage() {
         </section>;
       </div>;
     </>);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

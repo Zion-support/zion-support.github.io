@@ -23,8 +23,6 @@ import {
   Lock,;
   Globe,;} from 'lucide-react';
 
-=======
-=======class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -52,14 +50,11 @@ import { motion, AnimatePresence } from 'framer-motion';
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
 interface UltraAdvancedServiceCardProps {
-=======
-=======
   ArrowRight, ExternalLink, Star, TrendingUp, ;
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   ArrowRight,;
   ExternalLink,;
@@ -85,8 +80,6 @@ interface UltraAdvancedServiceCardProps {;
   service: {;
 interface UltraAdvancedServiceCardProps {
   service: {
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: string;
     name: string;
     tagline: string;
@@ -102,7 +95,6 @@ interface UltraAdvancedServiceCardProps {
       mobile: string;
       email: string;
       address: string;
-=======
   ArrowRight, ExternalLink, Star, TrendingUp, ;
 
   Users, Zap, Shield, Clock, Check, Brain;
@@ -125,11 +117,9 @@ interface UltraAdvancedServiceCardProps {
 
     reviews: number;
   };
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   service: {
     id: string,
     name: string,
@@ -182,10 +172,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
       mobile: string
       email: string
       address: string
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       website: string
     }
     realImplementation: boolean
@@ -206,13 +193,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
     hidden: { opacity: 0, height: 0 }
     visible: {    if (category.includes('AI') |category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
-=======
 
     if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
-=======
     hidden: { opacity: 0, height: 0 }
     visible: {    if (category.includes('AI') |category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
     if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
     if (category.includes('Biotech') |category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
@@ -299,7 +283,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         ease: 'easeOut' as const,;
       },;
     },        ease: "easeOut" as const;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           isHovered ? 'opacity-100' : 'opacity-50';
         ease: 'ease_out' as const,
       },
@@ -339,12 +322,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         }`}
       <div 
 
-=======
     hidden: { opacity: 0, height: 0 },
 
-=======      <div 
 
-=======
         duration: 0.5,
         ease: 'easeOut' as const,
       },
@@ -353,17 +333,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
       <div 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>          {/* Header */}
           <div className='flex items - start justify - between mb - 4'>;
             <div className='flex items - center space - x-3'>;
@@ -448,9 +421,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
           </div>;==============
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
 
 
@@ -461,18 +431,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 </div>
 
 
-=======
 
 
                 {/* Features */}
 
 
-=======
 
 
                 {/* Features */}
 
-=======
                 <div>
                   <h4 className='text-white font-semibold mb-2'>
                     Key Features
@@ -489,7 +456,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                       <div key={index} className="flex items-center space-x-2 text-sm">
                         <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-=======
                     ))}
                   </div>
                 </div>                        <span className='text-gray-300'>{feature}</span>                      </div>
@@ -526,9 +492,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </AnimatePresence>;
 
 
-=======
 
-=======
                 <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3">
                   <h4 className="text-white font-semibold mb-2">ROI Promise</h4>
                   <p className="text-gray-300 text-sm">{service.roi}</p>
@@ -671,8 +635,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                       <span className='text - white text - xs'>;
                         {service.contact_info.address}
                       </span>                    </div>                </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 {/* Contact Info */}
                 <div className="bg - gray - 800 / 50 rounded - lg p - 3">;
                   <h4 className="text - white font - semibold mb - 2">Contact Information</h4>;
@@ -699,7 +661,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             
 
             <motion.button
-=======              whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
               onClick={() => window && window.open(service && service.link, '_blank')}
             >;
@@ -717,21 +678,18 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <ExternalLink className="w-4 h-4" />
             </motion.button>
             <motion.button
-=======
 
               <ExternalLink className="w-4 h-4" />
             </motion.button>
             
 
             <motion.button
-=======              whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
               onClick={() => window && window.open(service && service.link, '_blank')}
             >;
               <span>Learn More</span>;
               <ExternalLink className='w-4 h-4' />;
             </motion && motion.button>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <motion&& motion.button
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
@@ -1014,13 +972,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}            </motion.button>
             <motion.button
-=======
 
             <motion&& motion.button
-=======
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}            </motion.button>
             <motion.button
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
@@ -1035,17 +990,12 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               {isExpanded ? 'Show Less' : 'Details'}
             </motion.button>
           </div>
-=======
-=======
 
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
 
-=======
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -1057,8 +1007,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
-=======
-=======
 
           {/* Expand/Collapse Indicator */}
 
@@ -1069,10 +1017,6 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
           {/* Expand/Collapse Indicator */}
           <motion.div
             className='flex justify-center mt-4'
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0 && 0.3 }}
           >;
@@ -1086,10 +1030,7 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 export default UltraAdvancedServiceCard;
 
 
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
 };
@@ -1121,5 +1062,3 @@ export default UltraAdvancedServiceCard;
         </div>
       </div>
     </motion.div>
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

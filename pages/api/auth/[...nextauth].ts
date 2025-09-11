@@ -61,10 +61,7 @@ export default function handler(req, res) {
   res.status(200).json({ message: 'Auth endpoint placeholder' });
 } ;
 
-=======
     return
-=======
-=======  }
   // TODO: Implement authentication logic here
   res.status(200).json({ message: 'Auth endpoint placeholder' })
 
@@ -76,7 +73,3 @@ export default function handler(req, res) {
   // TODO: Implement authentication logic here
   res.status(200).json({ message: 'Auth endpoint placeholder' })
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

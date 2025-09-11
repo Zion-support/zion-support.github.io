@@ -7,8 +7,6 @@ export type AdminNotesPanelProps = {
 import React, { useEffect, useMemo, useState } from 'react';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Note = {
   id: string
   targetType: string
@@ -30,18 +28,14 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function fetchNotes() {;
     try {;
       setLoading(true);
@@ -49,16 +43,12 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,;
         {;
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         }
       );
       if (!res && res.ok) {;
         setNotes([]);
         return;
       }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   author_id: string;
   created_at: number;
 }
@@ -113,15 +103,12 @@ if ( {) {
       set_loading (false);    }
   }
 
-=======
     } finally {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         alert('Failed to add note');
         return;
       }
       setText('');
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
 
@@ -138,13 +125,10 @@ if ( {) {
 
     }
   }
-==============
       setAdding(false);    }
-=======
 
     }
   }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!isAdmin) {
     return (
@@ -189,17 +173,12 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
       </div>
     </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
       </div>;
     </div>;
   );
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 
@@ -234,44 +213,3 @@ if ( {) {
               <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
                 <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
                 <div>{n.text}</div>
-<<<<<<< HEAD
-=======
-=======          onChange={e => setText(e.target.value)}
-        />
-        <button
-          disabled={!text.trim() |adding}
-          onClick={addNote}
-          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
-        >
-          {adding ? 'Adding…' : 'Add Note'}
-        </button>
-      </div>
-      <div className='border-t pt-3'>
-        <div className='text-sm opacity-70 mb-2'>
-          Notes are private, time-stamped, and include author ID.
-        </div>
-        {loading ? (
-          <div className='text-sm'>Loading…</div>
-        ) : notes.length === 0 ? (
-          <div className='text-sm opacity-70'>No notes yet.</div>
-        ) : (
-          <ul className='space-y-2'>
-            {notes.map(n => (
-              <li key={n.id} className='rounded border p-2 text-sm'>
-                <div className='opacity-60 text-xs mb-1'>
-                  {new Date(n.createdAt).toLocaleString()} • {n.authorId}
-                </div>                <div>{n.text}</div>          <ul className="space-y-2">
-            {notes.map((n) => (
-              <li key={n.id} className="rounded border p-2 text-sm">
-                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
-}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,4 @@
 export default function RegisterPage() {;=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function RegisterPage() {;
@@ -15,7 +14,6 @@ export default function RegisterPage() {;
     agreeToTerms: false,;
     subscribeNewsletter: false,;
   });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [passwordRequirements, setPasswordRequirements] = useState({;
     length: false,;
     uppercase: false,;
@@ -23,7 +21,6 @@ export default function RegisterPage() {;
     number: false,;
     special: false,;
   });
-=======
 
   return (
     <Layout
@@ -35,8 +32,6 @@ export default function RegisterPage() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -49,8 +44,6 @@ export default function RegisterPage() {;
               Join Zion Tech Group and start your digital transformation journey;
             </p>;
           </motion && motion.div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,7 +71,6 @@ export default function RegisterPage() {;
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     />;
                   </div>;
                 </div>;
@@ -102,7 +94,6 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
               </div>;
@@ -131,7 +122,6 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
               </div>;
@@ -157,14 +147,12 @@ export default function RegisterPage() {;
                 />;
               </div>;
               <div>;
-=======
 
                 />;
               </div>;
 
               <div>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -241,7 +229,6 @@ export default function RegisterPage() {;
               </div>;
               <div className="space-y-4">;
                 <div className="flex items-center">;
-=======
 
               </div>;
 
@@ -268,12 +255,9 @@ export default function RegisterPage() {;
                     and{" "}
                     <Link
                       href="/privacy"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="text-blue-400 hover:text-blue-300">;
-=======
 
                       className="text-blue-400 hover:text-blue-300">;
-=======                        </span>;
                       </div>),
                   )}
                 </div>;
@@ -343,20 +327,15 @@ export default function RegisterPage() {;
                       href="/privacy";
                       className="text - blue - 400 hover:text - blue - 300";
                     >;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     className="ml-2 block text-sm text-gray-300">;
                     Subscribe to our newsletter for updates and insights;
                   </label>;
                 </div>;
               </div>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div>;
                 <button
                   type="submit"
@@ -364,41 +343,10 @@ export default function RegisterPage() {;
                   className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed">;
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">;
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />;
-<<<<<<< HEAD
-=======
-=======                <div className="flex items - center">;
-                  <input;
-                    id="subscribe_newsletter";
-                    name="subscribe_newsletter";
-                    type="checkbox";
-                    checked={form_data.subscribe_newsletter}
-                    on_change={handle_change}
-                    className="h - 4 w - 4 text - blue - 600 focus:ring - blue - 500 border - gray - 600 rounded bg - white / 10";
-                  />;
-                  <label;
-                    html_for="subscribe_newsletter";
-                    className="ml - 2 block text - sm text - gray - 300";
-                  >;
-                    Subscribe to our newsletter for updates and insights;
-                  </label>;
-                </div>;
-              </div>;
-              <div>;
-                <button;
-                  type="submit";
-                  disabled={!isFormValid}
-                  className="group relative w - full flex justify - center py - 3 px - 4 border border - transparent text - sm font - medium rounded - lg text - white bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 transition - all duration - 200 disabled:opacity - 50 disabled:cursor - not - allowed";
-                >;
-                  <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
-                    <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   </span>;
                   Create account;
                 </button>;
               </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -406,19 +354,13 @@ export default function RegisterPage() {;
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           </motion.div>;
         </div>;
       </div>;
     </Layout>);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }

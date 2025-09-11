@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -34,7 +32,6 @@ export default async function handler(
     return;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -47,7 +44,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
-=======
       res.status(400).json({ error: 'Invalid source' });
       return
     }
@@ -59,7 +55,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const store = getFraudStore();
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
@@ -71,7 +66,6 @@ import {
   GptClassificationLabel
   MonitoredSource
   StoredFraudRecord
-=======  AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
@@ -90,7 +84,6 @@ import {
     }
 
 
-=======    let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
 if (combined_label = "DANGEROUS") {
@@ -136,22 +129,16 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (e: any) {
 
 
       .json({ error: "Internal error", details: e?.message || String(e) });
 
 
-=======
-=======      status: 'PENDING'};
     const saved = await store.saveEvent(stored);
-=======
-=======
       .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
-=======
     res
       .status(500)
       .json({ error: "Internal error", details: e?.message || String(e) });=======
@@ -159,7 +146,6 @@ if ( {) {
 
     const saved = await store.saveEvent(stored);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
       const prior = await store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
@@ -168,7 +154,6 @@ if ( {) {
           body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
       }
     }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     res.status(200).json({
       id: saved.id, flagged: combinedLabel !== 'SAFE',
       label: combinedLabel, heuristic,
@@ -394,15 +379,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
-=======
 
   }
 }<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

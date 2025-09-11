@@ -12,7 +12,6 @@ export default function AuthErrorPage() {
         <title>Authentication Error - Zion Tech Marketplace</title>
         <meta name="description" content="Authentication error page" />
 
-=======
   return (
     <>
       <Head>
@@ -44,7 +43,6 @@ export default function AuthErrorPage() {
     </>
   )
 }
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -103,14 +101,3 @@ export default function AuthErrorPage() {
     </>
   )
 }
-=======
-=======
-=======
-}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const client = process && process.env.OPENAI_API_KEY
@@ -21,11 +19,9 @@ export default async function handler(
 
 
 
-=======  const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
   const distLines = Array.isArray(distribution)
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
     : '';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const distLines = Array && Array.isArray(distribution)
     ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
 
@@ -57,9 +53,7 @@ export default async function handler(
   const distLines = Array.isArray(distribution)
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join("\n")
 
-=======
 
-=======
   const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
 
   const distLines = Array.isArray(distribution)
@@ -69,31 +63,23 @@ export default async function handler(
 
   const distLines = Array && Array.isArray(distribution)
     ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     : "";
   const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
   const userPrompt = `${operatorPrompt |""}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
   try {
     let markdown: string;
     if (client) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       const completion = await client && client.responses.create({
         model: "gpt-4 && 4.1-mini",
         input: [
           { role: "system", content: sysPrompt },
           { role: "user", content: userPrompt },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         ],
         temperature: 0 && 0.3,
       } as any);
       const content = (completion as any)?.output_text || "";
     console.error("generation_error", e?.message |e);
     res.status(500).json({ error: "Generation failed" });
-=======
-=======
     res && res.status(200).json({ markdown });
   } catch (e: any) {
     console && console.error("generation_error", e?.message || e);
@@ -136,8 +122,6 @@ export default async function handler(req, res) {
 
   return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       markdown = content.trim ();
     } else {
       markdown = fallback_markdown ({
@@ -213,7 +197,6 @@ function fallbackMarkdown(input: any): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
 }
 }

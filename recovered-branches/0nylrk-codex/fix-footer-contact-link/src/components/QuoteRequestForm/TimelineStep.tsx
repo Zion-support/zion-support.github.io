@@ -2,10 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {format} from "date-fns";
 import {Calendar} from "@/components/ui/calendar";
@@ -15,10 +12,7 @@ import {CalendarIcon} from "@/components/icons";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {cn} from "@/lib/utils";
 import {QuoteFormData} from "@/types/quotes";
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -59,31 +53,24 @@ interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
     <div className="space-y-6">
       <div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
 
-=======
 
             <div 
 
 
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-=======
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">=======
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div>
                 <Label className="block mb-2 text-zion-slate-light">
                   Start Date
@@ -98,7 +85,6 @@ interface TimelineStepProps {
                 <Label className="block mb-2 text-zion-slate-light">Start Date</Label>;
                 <Popover>;
                   <PopoverTrigger asChild>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Calendar
                       mode="single"
                       selected={formData && formData.startDate}
@@ -109,7 +95,6 @@ interface TimelineStepProps {
                 </Label>
                 <Popover>
                   <PopoverTrigger asChild>
-=======                    <Button
                       variant="outline"
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark"
@@ -118,7 +103,6 @@ interface TimelineStepProps {
 
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
 
-=======                        !formData.endDate && "text-zion-slate-light"
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -133,10 +117,7 @@ interface TimelineStepProps {
                     className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light"
                     align="start"
                   >
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Calendar
                       mode="single"
                       selected={formData.endDate}
@@ -144,10 +125,7 @@ interface TimelineStepProps {
                       initialFocus
                       className="p-3 pointer-events-auto"
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
@@ -202,7 +180,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       variant="outline";
                       className={cn(;
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       initialFocus;
                       className="p-3 pointer-events-auto";
                     />;
@@ -219,7 +196,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       initialFocus;
                       className="p-3 pointer-events-auto";
                       disabled={(date) => date < (formData && formData.startDate || new Date())}
-=======
                     <Button
                       variant="outline"
                       className={cn(
@@ -238,7 +214,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       initialFocus;
                       className="p-3 pointer-events-auto";
                       disabled={(date) => date < (formData && formData.startDate || new Date())}
-=======                    >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
                       {form_data.end_date ? (
                         format (form_data.end_date, "PPP")) : (
@@ -258,13 +233,11 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       disabled={(date) =>;
                         date < (form_data.start_date || new Date ());
                       }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     />;
                   </PopoverContent>;
                 </Popover>;
               </div>;
 
-<<<<<<< HEAD
         </div>;
       </div>;
     </div>;
@@ -281,7 +254,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 
 
 }
-<<<<<<< HEAD
             </div>;
           )}
         </div>;
@@ -308,21 +280,3 @@ updateFormData: (data: Partial<QuoteFormData>) => void
       </div>
     </div>
   )
-=======
-
-  )
-
-=======
-        </div>;
-      </div>;
-    </div>;
-  );
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
-=======
-
-
-
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

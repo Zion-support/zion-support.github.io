@@ -1,14 +1,11 @@
 
 
-=======
 
 
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -16,8 +13,6 @@
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { Button } from "@/components/ui/button",;
@@ -48,12 +43,8 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -71,15 +62,11 @@ export default function Marketplace() {;
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
       return false
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    
     return true
   }),
   
   const handleFilterChange = (filterType: string, value: string) => {
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
@@ -147,20 +134,16 @@ export default function Marketplace() {;
       case 'availability':
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-=======        ),
         break
     }
   }
   },
   
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  const clearAllFilters = () => {
     setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
 
@@ -171,15 +154,10 @@ export default function Marketplace() {;
         state: { ;
           serviceType: listing && listing.category,;
           specificItem: {;
-=======            id: listing.id,;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       });
@@ -339,13 +317,9 @@ navigate("/request-quote", {state: {
   },;
 ;
   return (;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <AppLayout>;
       <main className="flex-grow container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto mb-8">;
@@ -366,14 +340,12 @@ navigate("/request-quote", {state: {
           <div className="lg:col-span-3">;
             {/* Active filters display */}
             <ActiveFiltersBar
-=======
             />;
           </div>;
           {/* Main content */}
           <div className="lg:col - span - 3">;
             {/* Active filters display */}
             <ActiveFiltersBar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               selectedProductTypes={selectedProductTypes}
               selected_locations={selected_locations}
               selected_availability={selected_availability}
@@ -461,13 +433,10 @@ navigate("/request-quote", {state: {
               </p>
             </div>
             
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               </p>
             </div>
             
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -484,7 +453,6 @@ navigate("/request-quote", {state: {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               {filteredListings && filteredListings.length > 0 ? (;
@@ -501,9 +469,4 @@ navigate("/request-quote", {state: {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">;
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.;
                   </p>;
-=======
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

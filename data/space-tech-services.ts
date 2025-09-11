@@ -94,7 +94,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 12,
   },
   {
-=======
 
 
   {
@@ -108,7 +107,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.',
     features: [;
       'Multi - satellite coordination',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -121,7 +119,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     ],
     popular: true,
     icon: '🛰️',
-=======    color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / satellite - constellation',
     market_position:;
@@ -140,7 +137,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'PostgreSQL',
       'Real - time Systems',
     ],
-=======    integrations: [;
       'Satellite networks',
       'Ground stations',
       'Internet infrastructure',
@@ -174,7 +170,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 20,
   },
   {
-=======    color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / space - debris - monitoring',
     market_position:;
@@ -193,7 +188,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'PostgreSQL',
       'Real - time Data',
     ],
-=======    integrations: [;
       'Satellite networks',
       'Tracking systems',
       'Launch providers',
@@ -227,7 +221,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 30,
   },
   {
-=======    id: 'space - weather - forecasting',
     name: 'Space Weather Forecasting & Alert System',
     tagline: 'Predict space weather events that impact satellite operations',
     price: '$1, 999',
@@ -247,7 +240,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     ],
     popular: true,
     icon: '☀️',
-=======    color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / space - weather - forecasting',
     market_position:;
@@ -266,7 +258,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'PostgreSQL',
       'Real - time Monitoring',
     ],
-=======    integrations: [;
       'Solar observatories',
       'Satellite networks',
       'Power grids',
@@ -300,7 +291,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 40,
   },
   {
-=======    id: 'orbital - launch - coordination',
     name: 'Orbital Launch Coordination Platform',
     tagline: 'Coordinate complex orbital launches with precision timing',
     price: '$4, 999',
@@ -320,7 +310,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     ],
     popular: true,
     icon: '🎯',
-=======    color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / orbital - launch - coordination',
     market_position:;
@@ -339,7 +328,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'PostgreSQL',
       'Real - time Systems',
     ],
-=======    integrations: [;
       'Launch vehicles',
       'Ground stations',
       'Tracking systems',
@@ -373,7 +361,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 18,
   },
   {
-=======    id: 'ground - station - network - management',
     name: 'Ground Station Network Management System',
     tagline: 'Manage global ground station networks for satellite operations',
     price: '$3, 499',
@@ -393,7 +380,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     ],
     popular: true,
     icon: '🌍',
-=======    color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / ground - station - management',
     market_position:;
@@ -412,7 +398,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'PostgreSQL',
       'Real - time Systems',
     ],
-=======    integrations: [;
       'Ground stations',
       'Satellite networks',
       'Telecom systems',
@@ -446,7 +431,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 25,
   },
   {
-=======    id: 'space - research - data - platform',
     name: 'Space Research Data & Analytics Platform',
     tagline: 'Access and analyze space research data with AI - powered insights',
     price: '$1, 499',
@@ -466,7 +450,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     ],
     popular: true,
     icon: '🔬',
-=======    color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / space - research - data',
     market_position:;
@@ -485,7 +468,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'PostgreSQL',
       'Machine Learning',
     ],
-=======    integrations: [;
       'Satellite networks',
       'Research databases',
       'Educational platforms',
@@ -519,7 +501,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 100,
   },
   {
-=======    id: 'space - commerce - platform',
     name: 'Space Commerce & Trading Platform',
     tagline: 'Trade space assets and services in a secure marketplace',
     price: '$2, 999',
@@ -539,7 +520,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     ],
     popular: true,
     icon: '💎',
-=======    color: 'from - violet - 600 to - purple - 700',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / space - commerce',
     market_position:;
@@ -558,7 +538,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'PostgreSQL',
       'Security',
     ],
-=======    integrations: [;
       'Payment systems',
       'Blockchain networks',
       'Space services',
@@ -592,7 +571,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 15,
   },
   {
-=======    id: 'space - education - platform',
     name: 'Space Education & Training Platform',
     tagline: 'Learn space technology and operations with interactive courses',
     price: '$299',
@@ -612,7 +590,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     ],
     popular: true,
     icon: '🎓',
-=======    color: 'from - indigo - 600 to - blue - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / space - education',
     market_position:;
@@ -631,7 +608,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'PostgreSQL',
       'Simulation Engine',
     ],
-=======    integrations: [;
       'Educational platforms',
       'VR systems',
       'Learning management',
@@ -666,7 +642,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======  id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
   features: string[], popular: boolean,
@@ -679,7 +654,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-=======
 
 
   {
@@ -708,7 +682,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     popular: true,
     icon: '🛰️',
 
-=======
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / satellite - constellation',
@@ -731,7 +704,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Real - time Systems',
     ],
 
-=======
     integrations: [;
       'Satellite networks',
       'Ground stations',
@@ -793,7 +765,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     popular: true,
     icon: '🛡️',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / space - debris - monitoring',
@@ -816,7 +787,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Real - time Data',
     ],
 
-=======
     integrations: [;
       'Satellite networks',
       'Tracking systems',
@@ -854,7 +824,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   },
   {
 
-=======
     id: 'space - weather - forecasting',
     name: 'Space Weather Forecasting & Alert System',
     tagline: 'Predict space weather events that impact satellite operations',
@@ -878,7 +847,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     popular: true,
     icon: '☀️',
 
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / space - weather - forecasting',
@@ -901,7 +869,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Real - time Monitoring',
     ],
 
-=======
     integrations: [;
       'Solar observatories',
       'Satellite networks',
@@ -939,7 +906,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   },
   {
 
-=======
     id: 'orbital - launch - coordination',
     name: 'Orbital Launch Coordination Platform',
     tagline: 'Coordinate complex orbital launches with precision timing',
@@ -963,7 +929,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     popular: true,
     icon: '🎯',
 
-=======
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / orbital - launch - coordination',
@@ -986,7 +951,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Real - time Systems',
     ],
 
-=======
     integrations: [;
       'Launch vehicles',
       'Ground stations',
@@ -1024,7 +988,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   },
   {
 
-=======
     id: 'ground - station - network - management',
     name: 'Ground Station Network Management System',
     tagline: 'Manage global ground station networks for satellite operations',
@@ -1048,7 +1011,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     popular: true,
     icon: '🌍',
 
-=======
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / ground - station - management',
@@ -1071,7 +1033,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Real - time Systems',
     ],
 
-=======
     integrations: [;
       'Ground stations',
       'Satellite networks',
@@ -1109,7 +1070,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   },
   {
 
-=======
     id: 'space - research - data - platform',
     name: 'Space Research Data & Analytics Platform',
     tagline: 'Access and analyze space research data with AI - powered insights',
@@ -1133,7 +1093,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     popular: true,
     icon: '🔬',
 
-=======
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / space - research - data',
@@ -1156,7 +1115,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Machine Learning',
     ],
 
-=======
     integrations: [;
       'Satellite networks',
       'Research databases',
@@ -1194,7 +1152,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   },
   {
 
-=======
     id: 'space - commerce - platform',
     name: 'Space Commerce & Trading Platform',
     tagline: 'Trade space assets and services in a secure marketplace',
@@ -1218,7 +1175,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     popular: true,
     icon: '💎',
 
-=======
     color: 'from - violet - 600 to - purple - 700',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / space - commerce',
@@ -1241,7 +1197,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Security',
     ],
 
-=======
     integrations: [;
       'Payment systems',
       'Blockchain networks',
@@ -1279,7 +1234,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   },
   {
 
-=======
     id: 'space - education - platform',
     name: 'Space Education & Training Platform',
     tagline: 'Learn space technology and operations with interactive courses',
@@ -1303,7 +1257,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     popular: true,
     icon: '🎓',
 
-=======
     color: 'from - indigo - 600 to - blue - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / space - education',
@@ -1326,7 +1279,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Simulation Engine',
     ],
 
-=======
     integrations: [;
       'Educational platforms',
       'VR systems',
@@ -1365,7 +1317,6 @@ export const spaceTechServices: SpaceTechService[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1418,8 +1369,6 @@ export const spaceTechServices: SpaceTechService[] = [
 
   }
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface SpaceTechService {;
 
@@ -1427,92 +1376,9 @@ export interface SpaceTechService {;
 
 ];
     reviews: 250
-<<<<<<< HEAD
   }
 ];
 export interface SpaceTechService {;
-=======
-export interface SpaceTechService {;
-=======
-=======  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-export const spaceTechServices: SpaceTechService[] = [;
-  {;
-    id: 'space-mission-management-platform',;
-    name: 'Space Mission Management Platform',;
-    tagline: 'Complete space mission planning and execution platform',;
-    price: '$5,999',;
-    period: '/month',;
-    description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',;
-    features: [;
-      'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',;
-      'Regulatory compliance toolsMulti-satellite operations';
-    ],;
-    popular: true,;
-    icon: '🚀',;
-    color: 'from-cyan-600 to-blue-700',;
-    textColor: 'text-cyan-400',;
-    link: 'https://ziontechgroup.com/space-technology',;
-    marketPosition: 'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.',;
-    targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies',;
-    trialDays: 30,;
-    setupTime: '2 weeks',;
-    category: 'Space Technology',;
-    realService: true,;
-    technology: ['Orbital MechanicsSatellite TrackingSpace WeatherReactNode.jsPostgreSQLReal-time Data'],;
-    integrations: ['Satellite networksLaunch providersGround stationsWeather servicesRegulatory databasesTracking systems'],;
-    useCases: ['Mission planningSatellite operationsLaunch coordinationSpace monitoringRegulatory compliancePerformance optimization'],;
-    roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',;
-    competitors: ['SpaceX StarlinkOneWebBasic satellite services'],;
-    marketSize: '$469B space economy',;
-    growthRate: '400% annual growth',;
-    variant: 'space-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -1865,10 +1731,5 @@ export const spaceTechServices: SpaceTechService[] = [;
     customers: 500,;
     rating: 4.9,;
     reviews: 250;
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

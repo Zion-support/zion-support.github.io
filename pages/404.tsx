@@ -1,13 +1,10 @@
 import React from 'react';
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Link>
         </main>
       </div>
     </>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
 import Head from 'next / head';
 import Link from 'next / link';
@@ -115,14 +112,10 @@ export default function Custom404(req, res) {
             Go Home;
           </Link>;
         </div>;
-=======
-=======
-=======
 
 }
 
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -146,7 +139,3 @@ const NotFoundPage: NextPage = () => {
   }
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

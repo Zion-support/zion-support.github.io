@@ -11,10 +11,6 @@ interface LabelProps {;
   htmlFor?: string;
 }
 const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <label
       htmlFor={htmlFor}

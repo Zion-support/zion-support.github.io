@@ -1,10 +1,6 @@
 
 
 
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -60,19 +56,11 @@ export default function ComprehensivePricing2029() {
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-=======
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -84,10 +72,8 @@ export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState('monthly')
   const allServices = [
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ...practicalBusinessSolutionServices2029
   ]
   const categories = [
@@ -111,10 +97,8 @@ export default function ComprehensivePricing2029() {
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     if (billingCycle === 'monthly') {
@@ -123,7 +107,6 @@ export default function ComprehensivePricing2029() {
 
     }
 
-=======
     } else {
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`
     }
@@ -201,7 +184,6 @@ export default function ComprehensivePricing2029(req, res) {
       {/* Hero Section */}
 
 
-=======
       {/* Hero Section */}      {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -209,14 +191,12 @@ export default function ComprehensivePricing2029(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
 
 
             <div className="flex items-center justify-center gap-4 mb-12">
@@ -230,9 +210,6 @@ export default function ComprehensivePricing2029(req, res) {
                 <div
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />;
               </button>;
               <span className="text - gray - 400">Annual (20% off)</span>;
@@ -254,8 +231,6 @@ export default function ComprehensivePricing2029(req, res) {
                 <span className="px - 2 py - 1 bg - gray - 700 rounded - full text - xs">;
                   {category.count}
 
-=======
-=======
                   {category.count  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -427,7 +402,6 @@ export default function ComprehensivePricing2029(req, res) {
 }
               >;
                 <div;
-=======                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${;
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1';
                   }`  } catch (error) {
     console.error("Error:", error);
@@ -447,7 +421,6 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
@@ -533,7 +506,6 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
@@ -547,13 +519,11 @@ export default function ComprehensivePricing2029(req, res) {
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 key={service.id}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 
-=======
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -591,7 +561,6 @@ export default function ComprehensivePricing2029(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
                       <Brain className="w-8 h-8 text-white" />
@@ -599,7 +568,6 @@ export default function ComprehensivePricing2029(req, res) {
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   </div>
-=======
                   {/* Pricing */}
                   <div className="text-center mb-6">
                     <div className="text-4xl font-bold text-purple-400 mb-2">
@@ -618,7 +586,6 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
-=======
                       )}
                     </div>
                   </div>
@@ -636,7 +603,6 @@ export default function ComprehensivePricing2029(req, res) {
 }
 
 
-=======
                         {cat}
                       </span>
                     ))}
@@ -667,7 +633,6 @@ export default function ComprehensivePricing2029(req, res) {
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-=======
                       ))}
                     </ul>
                   </div>
@@ -686,7 +651,6 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
-=======
                       ))}
                     </ul>
                   </div>
@@ -705,7 +669,6 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
-=======
                   {/* CTA Buttons */}                  {/* CTA Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -714,7 +677,6 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
-=======
             ))}
           </div>
         </div>
@@ -751,10 +713,8 @@ export default function ComprehensivePricing2029(req, res) {
                   Contact Sales
                 </Link>
               </div>
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Globe className="w-8 h-8 text-white" />
@@ -773,9 +733,7 @@ export default function ComprehensivePricing2029(req, res) {
           </motion.div>
         </div>
       </section>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
       {/* Contact CTA */}      {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -801,12 +759,8 @@ export default function ComprehensivePricing2029(req, res) {
   );
 };
   )
-=======
-=======
-=======
 }
 
-=======
           >;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Ready to Get Started?;
@@ -857,15 +811,5 @@ export default function ComprehensivePricing2029(req, res) {
   }
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

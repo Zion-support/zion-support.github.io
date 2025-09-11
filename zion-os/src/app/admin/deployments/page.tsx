@@ -182,7 +182,6 @@ export default function DeploymentsPage() {
               <p className='text-sm text-white/60'>Failed</p>            </div>  return (
     <div className="space-y-8">
       {/* Header Section */}
-=======
 
               <p className='text-sm text-white/60'>Failed</p>            </div>  return (
     <div className="space-y-8">;
@@ -444,7 +443,6 @@ export default function DeploymentsPage() {
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
-=======;
 // Mock data - replace with actual API calls;
 const mock_deployments: Deployment[] = [;
   {
@@ -661,7 +659,6 @@ const getVerticalIcon = (vertical: string) =>: any {
               filter === key;
                 ? 'bg-blue-600 text-white shadow-lg';
                 : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
-=======
             }`}
           >;
             {label} ({count});
@@ -675,8 +672,6 @@ const getVerticalIcon = (vertical: string) =>: any {
         {filteredDeployments && filteredDeployments.map(deployment => (;
       </div>
       {/* Deployments Grid */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
         ))}
       </div>
       {/* Deployments Grid */}
@@ -761,7 +756,6 @@ const getVerticalIcon = (vertical: string) =>: any {
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="p-6 border-b border-white/10">;
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex items-center gap-3">;
@@ -779,7 +773,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">;
                         {deployment && deployment.governanceType}
 
-=======
 ;
 // Mock data - replace with actual API calls;
 const mock_deployments: Deployment[] = [;
@@ -1124,9 +1117,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                       </span>;
                       <span className="inline - flex items - center px - 2 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
                         {deployment.governance_type}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </span>;
                     </div>;
                   </div>;
@@ -1159,13 +1150,11 @@ const getVerticalIcon = (vertical: string) =>: any {
                         .filter(Boolean)
                         .join(', ')}
                     </span>                  </div>              {/* Domain & Location */}
-=======
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
 
-=======
 
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
@@ -1179,8 +1168,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                   </div>
 
 
-=======
-=======              <div className="space-y-2">;
                 <div className="text-sm font-medium text-white/80">Active Features</div>;
                 <div className="flex flex-wrap gap-2">;
                   {deployment.features.slice(0, 4).map((feature) => (;
@@ -1192,7 +1179,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       +{deployment.features.length - 4} more;
                     </span>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662                  )}
 
                 </div>;
               </div>;
@@ -1200,14 +1186,12 @@ const getVerticalIcon = (vertical: string) =>: any {
 
               {/* Timestamps */}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4                  )}
 
                 </div>;
               </div>;
 
 
               {/* Timestamps */}
-=======
               {/* Timestamps */}
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
@@ -1227,8 +1211,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>🔄</span>
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>
                   </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======              {/* Timestamps */}
 
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
                 <div className="flex items-center gap-1">;
@@ -1240,14 +1222,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662                )}
-
-              </div>;
-            </div>;
-
-
-            {/* Action Buttons */}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4                )}
 
               </div>;
             </div>;
@@ -1255,8 +1229,13 @@ const getVerticalIcon = (vertical: string) =>: any {
 
             {/* Action Buttons */}
 
+              </div>;
+            </div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+            {/* Action Buttons */}
+
+
                 )}
                 {deployment && deployment.status === 'deploying' && (;
                   <>;
@@ -1311,13 +1290,11 @@ const getVerticalIcon = (vertical: string) =>: any {
               <Rocket className='w-4 h-4' />              Deploy First Instance;
             </a>;
           )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="p-6 pt-0">
               <div className="flex gap-2">
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
                 {deployment.status === 'pending' && (
-=======
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
                 {deployment.status === 'pending' && (
@@ -1355,7 +1332,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     ▶️ Start Deployment
                   </button>
                 )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {deployment.status === 'deploying' && (
                   <>;
                     <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - orange - 600 hover:bg - orange - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
@@ -1533,7 +1509,6 @@ const getVerticalIcon = (vertical: string) =>: any {
       </div>;
   );
 }
-==============
           </p>;
           {filter === 'all' && (;
             <a
@@ -1545,7 +1520,6 @@ const getVerticalIcon = (vertical: string) =>: any {
 
             <div className="p-6 pt-0">
               <div className="flex gap-2">
-=======              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
             >
               <Rocket className="w-4 h-4" />
               Deploy First Instance
@@ -1554,30 +1528,16 @@ const getVerticalIcon = (vertical: string) =>: any {
         </div>
       )}
     </div>
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       )}
     </div>;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;

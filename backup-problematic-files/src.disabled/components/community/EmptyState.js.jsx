@@ -9,8 +9,4 @@ const EmptyState.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EmptyState.js;
-=======
-export default EmptyState.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

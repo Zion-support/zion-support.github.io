@@ -9,8 +9,4 @@ const Docs.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Docs.js;
-=======
-export default Docs.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

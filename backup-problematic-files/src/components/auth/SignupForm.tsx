@@ -512,8 +512,4 @@ return (<form onSubmit= {;
 }<Button > {'";
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React from "react";
@@ -189,7 +188,6 @@ const values = [
 
 
 const Careers: React.FC<CareersProps> = ({ className }) => {
-=======
 
 
 const Careers: React.FC<CareersProps> = ({ className }) => {
@@ -212,7 +210,6 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
-=======
 
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6">  Users,
@@ -446,7 +443,6 @@ export default function CareersPage() {
                 </span>;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-=======
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
@@ -630,7 +626,6 @@ function CareersPage() {
                 </span>;
               </h1>;
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Be part of a team that's building the future of technology.;
                 We're looking for passionate individuals who want to make a;
                 difference.;
@@ -686,7 +681,6 @@ function CareersPage() {
                   </motion && motion.div>;
                 ))}
 
-=======
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                 <a;
                   href="#open - positions";
@@ -777,7 +771,6 @@ function CareersPage() {
                   </motion && motion.div>;
                 ))}
 
-=======
         {/* Our Values */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -819,7 +812,6 @@ function CareersPage() {
         </section>;
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Why Join Us */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -827,7 +819,6 @@ function CareersPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -844,7 +835,6 @@ function CareersPage() {
                 {benefits && benefits.map((benefit, index) => (;
                   <motion&& motion.div
                     key={benefit && benefit.title}
-=======        {/* Our Values */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
             <motion.div;
@@ -892,7 +882,6 @@ function CareersPage() {
                     </a>;
                   </motion && motion.div>;
                 ))}
-=======                      </div>;
                     </div>;
                     <div className="mb - 6">;
                       <h4 className="font - semibold text - gray - 900 mb - 2">;
@@ -938,7 +927,6 @@ function CareersPage() {
         </section>;
 
 
-=======                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Learn More About Us;
                 </a>;
               </div>;
@@ -957,7 +945,6 @@ function CareersPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
-=======
         <section id="open - positions" className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
             <motion.div;
@@ -1099,7 +1086,6 @@ function CareersPage() {
                   </motion && motion.div>;
                 ))}
 
-=======
                       </div>;
                     </div>;
                     <div className="mb - 6">;
@@ -1148,11 +1134,8 @@ function CareersPage() {
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Learn More About Us;
                 </a>;
@@ -1162,9 +1145,7 @@ function CareersPage() {
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -1175,7 +1156,6 @@ function CareersPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
               </h2>;
@@ -1202,7 +1182,6 @@ function CareersPage() {
         </section>;
       </div>;
     </MainLayout>);
-<<<<<<< HEAD
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See Your Dream Job?
@@ -1237,7 +1216,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
     </MainLayout>;
   );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

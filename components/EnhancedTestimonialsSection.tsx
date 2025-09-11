@@ -8,8 +8,6 @@ import {
   Award
   TrendingUp
   CheckCircle;
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,10 +29,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   TrendingUp,;
   CheckCircle,;
 
@@ -50,24 +45,18 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
       name: 'Dr. Sarah Chen',
       title: 'CTO',
       company: 'Quantum Dynamics Inc.',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         key={i}
         className={`w - 4 h - 4 ${
           i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';
         }`}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Stats Section */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>  }
   return (
     <section className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
@@ -84,10 +73,8 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             Discover why leading companies trust Zion Tech Group to transform their business with cutting-edge technology solutions;
           </p>;
         </div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Stats Section */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>;
           {stats && stats.map((stat, index) => (;
@@ -142,8 +129,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               {/* Content */}
               <div className="p-8">;
                 {/* Rating */}
-=======
-=======
               {/* Quote Icon */}
 
               <div className="absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300">;
@@ -214,8 +199,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               </div>;
               <div className='text - 3xl font - bold text - white mb - 2'>;
                 {stat.number}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {testimonial.avatar}
                   </div>;
                   <div className='flex - 1'>;
@@ -227,14 +210,11 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                     </div>;
                     <div className='text - xs text - blue - 400'>;
                       {testimonial.company}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-=======
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-=======                <div className="flex items-center gap-1 mb-4">
                   {renderStars(testimonial.rating)}
                 </div>
                 {/* Testimonial Text */}
@@ -256,7 +236,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}
-==============        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
 
 
@@ -335,20 +314,15 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
           ))}
         </div>
         {/* CTA Section */}
-==============        <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
               Experience the same transformative results that our clients have achieved.
               Let's discuss how Zion Tech Group can accelerate your innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>              Ready to Join Our Success Stories?;
             </h3>;
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">;
@@ -356,8 +330,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               Let's discuss how Zion Tech Group can accelerate your innovation journey.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <a
                 href="mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">;
@@ -366,8 +338,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               <a
                 href='tel:+13024640950'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -375,8 +345,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 Start Your Success Story
               </a>
               <a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
@@ -385,7 +353,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             </div>
           </div>
         </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Trust Indicators */}
         <div className='mt - 16 text - center'>;
           <div className='inline - flex items - center gap - 8 text - white / 60 text - sm'>;
@@ -409,10 +376,8 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 };
 export default EnhancedTestimonialsSection;  );
 };
-=======export default EnhancedTestimonialsSection;
 
 
-=======
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
@@ -420,11 +385,5 @@ export default EnhancedTestimonialsSection;
 };
 
 
-<<<<<<< HEAD
 export default EnhancedTestimonialsSection;
 export default EnhancedTestimonialsSection;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

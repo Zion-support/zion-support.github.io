@@ -1,12 +1,10 @@
 
-=======export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 ;
 
 export interface FraudFlag {
 
 export interface FraudFlag {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662  id: string;
   user_id: string;
   user_email?: string;
   content_type: 'signup' | 'job' | 'message' | 'quote' | 'review';
@@ -29,14 +27,10 @@ export interface FraudStats {
 export interface FraudStats {;
 
 export interface FraudStats {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export interface FraudStats {
-=======
   gpt_explanation?: string
   is_false_positive?: boolean
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
@@ -76,13 +70,6 @@ export interface FraudStats {;
   false_positives: number,
   actioned_count: number;
 
-=======
-=======
   false_positives: number,
   actioned_count: number;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

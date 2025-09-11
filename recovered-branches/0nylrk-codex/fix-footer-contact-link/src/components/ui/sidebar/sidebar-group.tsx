@@ -3,8 +3,6 @@ import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
   title?: string;
   icon?: React && React.ReactNode;
@@ -17,7 +15,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
 
 
-=======import React, { forward_ref } from './react';
 import { ChevronDown  } from './lucide-react';
 import { cn  } from '@/lib / utils';
 import { SafeRef  } from '@/types / ref - types';
@@ -166,9 +163,7 @@ ref as SafeRef<HTMLDivElement>
 SidebarGroup.displayName = "SidebarGroup";
 SidebarGroup.displayName = "SidebarGroup",
 export { SidebarGroup },
-==============        ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {...props}
       >;
 
@@ -179,7 +174,6 @@ export { SidebarGroup },
           </button>;
         )}
 SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
-=======
 
     )
   }
@@ -188,7 +182,6 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 
 
 export { SidebarGroup };
-<<<<<<< HEAD=======
         {title && (
           <button;
             type="button";
@@ -215,7 +208,3 @@ export { SidebarGroup };
 SidebarGroup.display_name = "SidebarGroup";
 export { SidebarGroup }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

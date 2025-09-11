@@ -729,7 +729,6 @@ export default function Home() {	return (
 				<title>Zion Tech Group</title>
 				<meta name="description" content="Zion Tech Group website" />
 			</Head>
-<<<<<<< HEAD:temp_backup/index.tsx
 			<Homepage2025 />
 		</Layout>
 	);

@@ -10,10 +10,6 @@ import {
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -32,8 +28,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 },
 const features = [
   {
@@ -65,8 +59,6 @@ const features = [
     icon: Shield
     title: 'Real-time Alerts'
     description: 'Get instant notifications for negative emotions requiring immediate attention'
-=======
-=======  },
   {
     icon: MessageCircle,
     title: 'Sentiment-Driven Responses',
@@ -91,9 +83,7 @@ const features = [
     icon: Shield,
     title: 'Real-time Alerts',
     description: 'Get instant notifications for negative emotions requiring immediate attention'
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const features = [
   {
@@ -117,10 +107,8 @@ const features = [
     description: 'Monitor employee emotional states to support mental health and productivity'
     icon: Heart
   }
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const pricing = [
   {
     name: 'Starter'
@@ -132,19 +120,15 @@ const pricing = [
     ]
     popular: false
     cta: 'Get Started'
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     features: [
       'Up to 10,000 emotion analyses per monthFull emotion detection (27 emotions)Priority supportAdvanced API accessCustom emotion trainingReal-time alertsAdvanced analyticsMulti-language support'
     ]
     popular: true
     cta: 'Start Free Trial'
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     features: [
       'Unlimited emotion analysesCustom emotion modelsDedicated support teamWhite-label solutionsAdvanced integrationsCustom reportingSLA guaranteesOn-premise deployment'
     ]
@@ -153,11 +137,8 @@ const pricing = [
   }
 
 
-=======
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone,;
   Zap, DollarSign, Shield, Mail, MapPin, Brain,;
@@ -206,8 +187,6 @@ const features = [;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
 }
 ],;
@@ -399,8 +378,6 @@ function AIEmotionIntelligencePlatform() {
       </Head>;
       <UltraFuturisticBackground2030>;
         <UltraFuturisticNavigation2030 />;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className="relative min - h-screen flex items - center justify - center overflow - hidden pt - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -412,7 +389,6 @@ function AIEmotionIntelligencePlatform() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
 
-=======        {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -444,13 +420,11 @@ function AIEmotionIntelligencePlatform() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
               </motion.div>
               <motion.h1
-=======
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}                initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -465,7 +439,6 @@ function AIEmotionIntelligencePlatform() {
 
 
 
-=======
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}                initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -480,7 +453,6 @@ function AIEmotionIntelligencePlatform() {
 
 
 
-=======
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}                initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -495,7 +467,6 @@ function AIEmotionIntelligencePlatform() {
 
 
 
-=======
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -518,7 +489,6 @@ function AIEmotionIntelligencePlatform() {
 
 
 
-=======
             {/* Key Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -641,7 +611,6 @@ function AIEmotionIntelligencePlatform() {
           </div>;
         </section>;
         {/* Features Section */}
-=======
         {/* Features Section */}
         <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -649,7 +618,6 @@ function AIEmotionIntelligencePlatform() {
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
@@ -661,7 +629,6 @@ function AIEmotionIntelligencePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
-=======
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -728,7 +695,6 @@ function AIEmotionIntelligencePlatform() {
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
         {/* Use Cases Section */}
-=======
               ))}
             </div>
           </div>
@@ -751,14 +717,12 @@ function AIEmotionIntelligencePlatform() {
 
         {/* Use Cases Section */}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
@@ -777,7 +741,6 @@ function AIEmotionIntelligencePlatform() {
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
@@ -788,26 +751,21 @@ function AIEmotionIntelligencePlatform() {
             </motion.div>
 
 
-=======
 
 
 
 
-=======
-
-
-=======
 
 
 
-=======                  )  } catch (error) {
+
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                       <span className="px - 4 py - 2 bg - gradient - to - r from - pink - 500 to - purple - 500 text - white text - sm font - semibold rounded - full">;
                         Most Popular;
@@ -829,7 +787,6 @@ function AIEmotionIntelligencePlatform() {
                       </li>))}
                   </ul>;
                   <Link;
-=======
                   </Link>
                 </motion.div>
               ))}
@@ -886,8 +843,6 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
-=======
 export default function AIEmotionIntelligencePlatform() {_return (_<>
       <Head>
         <title>AI Emotion Intelligence Platform - Zion Tech Group</title>
@@ -1388,10 +1343,6 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
             </div>;
           </div>;
         </section>;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Contact Section */}
         <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -1528,15 +1479,11 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
                   </span>
                 </Link>
               </div>
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
                   <span className="text-gray-300 text-sm">Call Us</span>
                   <a href={`tel:${contactInfo.mobile}`} className="text-white font-semibold hover:text-pink-400 transition-colors">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {contactInfo.mobile}
                   </a>                    {contactInfo.mobile  } catch (error) {
     console.error("Error:", error);
@@ -1544,19 +1491,13 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
   }
 }
                   </Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
                 <div className="flex flex-col items-center">
                   <Mail className="w-8 h-8 text-purple-400 mb-4" />
                   <span className="text-gray-300 text-sm">Email Us</span>
                   <a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-purple-400 transition-colors">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {contactInfo.email}
                   </a>                    {contactInfo.email  } catch (error) {
     console.error("Error:", error);
@@ -1564,19 +1505,13 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
   }
 }
                   </Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
                 <div className="flex flex-col items-center">
                   <Globe className="w-8 h-8 text-cyan-400 mb-4" />
                   <span className="text-gray-300 text-sm">Visit Us</span>
                   <a href={contactInfo.website} className="text-white font-semibold hover:text-cyan-400 transition-colors">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {contactInfo.website.replace('https://', '')}
                   </a>                    {contactInfo.website.replace('https://', '')  } catch (error) {
     console.error("Error:", error);
@@ -1584,12 +1519,8 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
   }
 }
                   </Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </div>
             </motion.div>
@@ -1601,11 +1532,8 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
   );
 };
   )
-=======
 
-=======
 }
-=======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Get Started?;
@@ -1660,8 +1588,3 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
       </UltraFuturisticBackground2030>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

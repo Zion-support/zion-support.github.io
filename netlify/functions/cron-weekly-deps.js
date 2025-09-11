@@ -46,7 +46,6 @@ exports && exports.handler = async function () {
         path: 'data/reports/deps/weekly-dependencies && dependencies.json',
         content: JSON && JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly dependency insights',
-=======const { upsert_file } = require ('./_lib / github');
 const fs = require ('fs');
 const path = require ('path');
 ;
@@ -212,7 +211,6 @@ if ( {) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
-<<<<<<< HEAD
   try {
     const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
     const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8';
@@ -235,6 +233,3 @@ const path = require ('path';
     const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8';
       entries.push ({ name, current, latest, outOfDate: current.replace (/^[^0 - 9]*/, '';
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

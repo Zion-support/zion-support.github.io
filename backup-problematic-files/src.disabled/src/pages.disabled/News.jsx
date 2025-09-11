@@ -9,8 +9,4 @@ const News = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default News;
-=======
-export default News;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

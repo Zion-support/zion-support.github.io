@@ -1,6 +1,4 @@
 
-=======
-=======
   const [params] = useSearchParams();
 
   const navigate = useNavigate();
@@ -39,9 +37,7 @@ export default function SearchPage() {;
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     navigate(`/search?q=${encodeURIComponent(query)}`);
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
@@ -50,8 +46,6 @@ export default function SearchPage() {;
     <AppLayout>
       <main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -60,7 +54,6 @@ export default function SearchPage() {;
 
 
 
-==============
           />
         </form>
 
@@ -99,11 +92,7 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -126,7 +115,6 @@ export default function SearchPage() {;
   );
 }
 
-=======import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
@@ -189,8 +177,6 @@ if ( {) {
       </main>;
     </AppLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
   loading && <p className="text-zion-slate-light">Searching...</p> 
@@ -238,9 +224,3 @@ if ( {) {
     </AppLayout>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -27,8 +27,4 @@ const ListingDetail = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ListingDetail;
-=======
-export default ListingDetail;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

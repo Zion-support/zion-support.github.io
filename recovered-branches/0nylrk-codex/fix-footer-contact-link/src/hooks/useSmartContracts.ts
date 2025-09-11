@@ -25,7 +25,6 @@ export function useSmartContracts() {
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
   
   
-=======
 
 
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');=======
@@ -43,19 +42,16 @@ export function useSmartContracts() {
       console.error ("Error generating Solidity contract:", err);
       toast.error ("Failed to generate smart contract");
       throw err;
-=======
       console.error("Error generating Solidity contract:", err),
       toast.error("Failed to generate smart contract"),
       throw err
     } finally {
       setIsLoading(false)
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
 
 
-=======
   }
   },
     const deploySmartContract = async (
@@ -71,7 +67,6 @@ export function useSmartContracts() {
       
 
       const mockSmartContractInfo: SmartContractInfo = {
-=======        id: crypto && crypto.randomUUID();
         transactionHash: mockTransactionHash;
 
         networkName: options && options.network;
@@ -397,13 +392,6 @@ deploymentStatus
   }
 }
 ;
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

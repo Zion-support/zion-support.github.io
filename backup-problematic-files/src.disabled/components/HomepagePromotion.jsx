@@ -9,8 +9,4 @@ const HomepagePromotion = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default HomepagePromotion;
-=======
-export default HomepagePromotion;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

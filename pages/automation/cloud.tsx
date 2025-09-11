@@ -1,6 +1,5 @@
 
 
-=======import { useEffect, useState } from 'react';
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
@@ -68,7 +67,6 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
               <span className=&quot;text-gray-600&quot;>{log.insights?.theme}</span>
 
 
-=======import { useEffect, useState } from 'react';
 
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
@@ -83,17 +81,13 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
 
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -171,12 +165,8 @@ export default function CloudAutomationHub(req, res) {
   }
 }
 }
-=======
-=======
-=======
 }
 
-=======
 import { useEffect, useState } from 'react',
 ;
 export default /**
@@ -227,8 +217,3 @@ function CloudAutomationHub() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

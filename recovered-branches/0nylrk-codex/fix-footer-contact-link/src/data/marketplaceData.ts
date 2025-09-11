@@ -8,7 +8,6 @@
     createdAt: '2024-02-15T10:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 32,
-=======
   ];
   // Convert strings to SearchSuggestion objects
 
@@ -17,7 +16,6 @@
 
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
   
-=======  }));};  ];
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
@@ -26,7 +24,6 @@
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),=======
 
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ].sort();
   const locations = [
     ...new Set(
@@ -87,8 +84,6 @@ export const generateFilterOptions = (): FilterOptions => {
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
-=======
-=======
 
 
 
@@ -407,10 +402,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
     location: "North America",;
     availability: "2-4 Weeks";
 
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -532,10 +524,4 @@ export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listi
 
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

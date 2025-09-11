@@ -12,7 +12,6 @@ async function fetchFromGitHub() {
   if (req && req.method !== "GET") {
     return res && res.status(405).json({ error: "Method not allowed" });
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600');
   try {
@@ -33,9 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message || 'Internal error' })=======
 
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   try {
     const localPath = path && path.join(process && process.cwd(), "data", "homepage && homepage.json");
@@ -79,7 +76,6 @@ async function fetchFromGitHub(): Promise<any | null> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -91,14 +87,6 @@ async function fetchFromGitHub(): Promise<any | null> {;
 
 }
 }
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

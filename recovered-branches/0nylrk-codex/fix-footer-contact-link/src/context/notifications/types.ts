@@ -18,8 +18,6 @@ export interface Notification extends BaseNotification {;
 export interface Notification extends BaseNotification {
 
 export interface Notification extends BaseNotification {;
-=======
-=======  | 'onboarding'
   | 'system';
 
 
@@ -35,19 +33,15 @@ export interface NotificationContextType {;
 export interface NotificationContextType {
 
 export interface NotificationContextType {;
-=======
-=======  | 'onboarding'
   | 'system';
 
 import {Notification, as, BaseNotification} from '@/types / notifications';
-=======
 
 
 export interface NotificationContextType {;
 
   fetchNotifications: () => Promise<void>
 import { Notification as BaseNotification } from '@/types/notifications',;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type NotificationType =;
   | 'message';
   | 'quote_request';
@@ -61,8 +55,6 @@ export type NotificationType =;
   fetch_notifications: () => Promise < void>;
 }
 
-=======
-<<<<<<< HEAD=======  | 'system',;
 export interface NotificationContextType {;
   notifications: Notification[],;
   filteredNotifications: Notification[],;

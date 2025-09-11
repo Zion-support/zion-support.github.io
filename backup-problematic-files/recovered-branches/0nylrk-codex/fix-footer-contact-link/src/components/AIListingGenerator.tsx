@@ -126,7 +126,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
               id="title";
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
-<<<<<<< HEAD
               placeholder="Enter your product or service title";
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
@@ -149,7 +148,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
               id="keyFeatures";
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
-<<<<<<< HEAD
               placeholder="Briefly describe the main features or benefits";
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
               disabled={isLoading}

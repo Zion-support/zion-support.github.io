@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   id: string;
   name: string;
@@ -72,7 +71,6 @@ export const extra_services: ExtraService[] = [;
     category: 'Cloud Services',
     real_implementation: true,
     contact_info: {
-=======
     address: string;
   };
 }
@@ -83,7 +81,6 @@ export const extraServices: ExtraService[] = [
   {
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -91,15 +88,12 @@ export const extraServices: ExtraService[] = [
   },
 ];      mobile: "+1 302 464 0950";
 
-=======
-=======
 
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
@@ -140,14 +134,7 @@ export const extraServices: ExtraService[] = [
     contactInfo: {
 ];
 
-=======
-<<<<<<< HEAD;
 ];
-=======
-;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
@@ -188,7 +175,6 @@ export const extraServices: ExtraService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];

@@ -1523,7 +1523,6 @@ function ITServicesPage() {
                   <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />;
                   </Head>;
       {/* Hero Section */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { 
   Server, 
   Shield, 
@@ -1579,11 +1578,9 @@ import {
   Award,
   Star,
   Zap,
-=======  Search, 
   ShoppingCart, 
   BookOpen, 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   Server
   Shield
@@ -1623,7 +1620,6 @@ import {
   Rocket
 
 
-=======
   Rocket,;>>>>>>> cursor/fix-website-loading-errors-and-merge-6662  Laptop;
 } from 'lucide-react';
 
@@ -1641,12 +1637,9 @@ import Layout from '../components/Layout'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-==============
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
@@ -1667,11 +1660,9 @@ origin/automation-improvements-final
 import Head from 'next/head';
 
 import Link from 'next/link';
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
 
@@ -1723,9 +1714,7 @@ const it_services = [{
     pricing: '$6, 000 - $30, 000 / project',
     category: 'Cloud',
     popular: true;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     title: 'Cybersecurity Solutions',
     description: 'Enterprise-grade security services to protect your digital assets and data.',
@@ -2251,7 +2240,6 @@ const supportLevels = [{
     description: 'Dedicated support team and SLA guarantees'
     features: ['Dedicated Team', 'SLA Guarantees', 'Custom Monitoring', 'Real-time Reports']
     pricing: 'Custom Pricing'
-=======
 import {;
   Server,;
   Shield,;
@@ -2814,7 +2802,6 @@ export default function ITServicesPage() {;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
                   <Head>;
                   <title>IT Services - Zion Tech Group</title>;
-=======
     pricing: '$5, 000 - $40, 000 / project',
     category: 'Security',
     popular: true;
@@ -3329,7 +3316,6 @@ function ITServicesPage() {
     <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
                   <Head>;
                   <title > IT Services - Zion Tech Group</title>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />;
                   <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />;
                   </Head>;
@@ -3427,7 +3413,6 @@ import {
   HardDrive, 
   Smartphone, 
   Building, 
-=======
 import {
   Server,
   Shield,
@@ -3450,7 +3435,6 @@ import {
   HardDrive,
   Smartphone,
   Building,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   BarChart3,
   Package,
   GraduationCap,
@@ -3463,7 +3447,6 @@ import {
   Star,
   Zap,
 
-=======
   Search, 
   ShoppingCart, 
   BookOpen, 
@@ -3509,9 +3492,7 @@ import {
 
 
 
-=======
   Rocket,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Laptop;
 } from 'lucide-react';
 
@@ -3533,7 +3514,6 @@ const itServices = [
     marketPrice: '$5,000/month'
     link: '/contact'
   }
-=======
 import Layout from '../components / Layout';
 ;
 const it_services = [;
@@ -3561,7 +3541,6 @@ origin/automation-improvements-final
     marketPrice: '$4,000/month'
 origin/main
     link: '/contact'
-=======
     pricing: '$1, 500 - $8, 000 / month',
     category: 'Security',
     popular: true,
@@ -3580,7 +3559,6 @@ origin/main
     benefits: ['Improved performance', 'Data integrity', 'Reduced downtime', 'Scalability'],
     market_price: '$2, 500 / month',
     link: '/contact';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     title: 'Database Management'
@@ -3625,7 +3603,6 @@ export default function ITServices() {;
 
 
 
-=======
 ];
 
 export default function ITServices() {;
@@ -3634,7 +3611,6 @@ export default function ITServices() {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -3917,7 +3893,6 @@ export default function ITServices() {
       ]
     }
   ];
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const filteredServices =
     selectedCategory === 'all'
@@ -4103,7 +4078,6 @@ export default function ITServices(req, res) {
     <>
       <Head>
         <title>IT Services - Zion Tech Group</title>
-=======
               </div>
             </div>
           </section>
@@ -4145,10 +4119,8 @@ export default function ITServices(req, res) {
 
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>;
@@ -4252,9 +4224,7 @@ export default function ITServices(req, res) {
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {filteredServices.map((service, index) => (
                   <div                    key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -4309,16 +4279,11 @@ export default function ITServices(req, res) {
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
 
-=======
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -4412,7 +4377,6 @@ export default function ITServices(req, res) {
                 </div>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -4509,7 +4473,6 @@ export default function ITServices(req, res) {
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
                   Call {contact && contact.phone}
                 </a>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   href={`mailto:${contact && contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
                   Email Us;
@@ -4532,8 +4495,6 @@ export default function ITServices(req, res) {
                 Comprehensive IT solutions designed to enhance your business operations and security.;
               </p>;
             </motion && motion.div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {itServices && itServices.map((service, index) => (;
@@ -4691,11 +4652,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-=======
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -4711,7 +4668,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         <meta name='robots' content='index, follow' />
         <link rel='canonical' href={`${contact.site}/it-services`} />
       </Head>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -4758,7 +4714,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
-=======                  </Link>
                   </motion.div>
             ))}
           </div>
@@ -5293,7 +5248,6 @@ function ITServices() {
           </div>
         </section>
 
-=======        {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -5358,8 +5312,6 @@ function ITServices() {
 
 }
 
-=======
-=======
           </section>
 
           {/* Category Filter */}
@@ -5702,8 +5654,6 @@ function ITServices() {
             <div className='max - w-6xl mx - auto'>;
               <div className='flex flex - wrap justify - center gap - 4 mb - 8'>;
                 {categories.map (category => (                  <button;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                    key={category.id}
                     on_click={() => setSelectedCategory (category.id)}
                     className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
                       selected_category === category.id;
@@ -5716,7 +5666,6 @@ function ITServices() {
                   {level.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-=======          <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Our Technology Stack
@@ -5816,7 +5765,6 @@ function ITServices() {
           </section>
 
           {/* Technology Stack Section */}
-=======
           </section>
         </main>
       </ErrorBoundary>
@@ -5860,8 +5808,4 @@ function ITServices() {
   );
 }
 
-=======
-=======
 }<<<<<<< HEAD>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -274,12 +274,9 @@ if (onToggleVideo) {;
   isVideoEnabled ? <Video /> : <VideoOff /> ;
 }</Button> <Button >{;
   isScreenSharing ? <ScreenShareOff /> : <ScreenShare /> ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</Button> <Button > {;
   isAudioOnly ? <VolumeX /> : <Volume2 /> ";
 }</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
 };
 '"
-<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/video/VideoCallRoom.tsx
-=======

@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -16,16 +14,13 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
     }
-=======
 
     }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const leaders = Array && Array.from(map && map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
@@ -43,7 +38,6 @@ export default async function handler(
 
 }
 
-=======
 
 
 
@@ -70,13 +64,9 @@ export default async function handler(
       });
     }
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
 
-=======
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
@@ -118,8 +108,6 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
   } catch (error) {
@@ -155,17 +143,13 @@ export default async function handler(req, res) {
   }
 }
 ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
   } catch (e: any) {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -173,8 +157,6 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
   } catch (error) {
@@ -195,12 +177,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

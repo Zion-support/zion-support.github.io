@@ -8,8 +8,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
 export default function PostJob() {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const { isAuthenticated, isLoading } = useAuth();
 
   const isMobile = useIsMobile();
@@ -18,7 +16,6 @@ export default function PostJob() {;
 
   const isMobile = useIsMobile();
 
-=======
 
 
 
@@ -36,7 +33,6 @@ export default function PostJob() {;
 
 
 
-=======import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -92,7 +88,6 @@ export default function PostJob() {;
         <Card className="border shadow-md">;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' :'3xl'} font-bold`}>Post a Job</CardTitle>;
-=======
       />;
       <Header />;      <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>;
         <Card className="border shadow-md">;
@@ -101,8 +96,6 @@ export default function PostJob() {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
       {is_mobile && <div className="h - 16"></div>}
     </>);
@@ -131,16 +124,8 @@ if (isLoading) {
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       {is_mobile && <div className="h - 16"></div>}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

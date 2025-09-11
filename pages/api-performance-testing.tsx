@@ -46,7 +46,6 @@ import {Check, ExternalLink} from 'lucide-react';
               </div>;
 
                 rel='noreferrer'>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 BlazeMeter;
               </a>;
               .;
@@ -69,7 +68,6 @@ import {Check, ExternalLink} from 'lucide-react';
     </div>;
   );
 
-=======import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage(req, res) {
@@ -136,7 +134,6 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-==============
 <div className='mt - 14 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -156,6 +153,3 @@ export default function ApiPerformanceTestingPage(req, res) {
       </section>;
     </div>);
 ;<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

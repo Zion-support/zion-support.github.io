@@ -18,7 +18,6 @@ import {Share, Users} from 'lucide-react';
   const {
     isLoading;
     referralCode;
-=======    referrals;
     rewards;
     stats;
     getReferralLink;
@@ -43,8 +42,6 @@ import { useNavigate } from 'react-router-dom',
 export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  const {
     isLoading,
     referralCode,
     referrals,
@@ -69,13 +66,9 @@ export default function ReferralsPage() {
 
 
 }
-=======
-==============
-
-=======
 
 
-=======import { useEffect } from 'react',;
+
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
 import { ReferralStats } from '@/components/referrals/ReferralStats',;
@@ -90,8 +83,6 @@ import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
 import { Share, Users } from 'lucide-react',;
 import { useNavigate } from 'react-router-dom',;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="container max-w-7xl py-10">;
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;
         <div>;
@@ -116,8 +107,6 @@ import { useNavigate } from 'react-router-dom',;
           />;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </div>);
     </div>;
@@ -157,13 +146,5 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
   );
 }
 ;
-=======}=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

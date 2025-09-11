@@ -10,8 +10,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   const allInnovativeServices = [;
     ...innovativeMicroSaasExpansionV32025,
     ...innovativeITServicesExpansion2025V3,
-=======
-=======
   ],
   const categories = [;
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from - purple - 500 to - pink - 500', count: allInnovativeServices.length },
@@ -66,8 +64,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -92,15 +88,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}            transition={{ duration: 0.8, delay: 0.4 }}
           >;
             <div className="max - w-7xl mx - auto">;
               {/* Search Bar */}
 
-=======            initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -124,13 +117,11 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
                     type="text"
                     placeholder="Search innovative services..."
-=======
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}                    value={searchTerm  } catch (error) {
     console.error("Error:", error);
@@ -156,7 +147,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                   <Search className="absolute right - 4 top - 1/2 transform -translate - y-1 / 2 w - 6 h - 6 text - gray - 400" />;
                 </div>;
               </div>;
-=======
               {/* Category Filters */}              {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -211,7 +201,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 
 
 
-=======
 
 
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
@@ -231,7 +220,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 
 
 
-=======
                       {/* Hover Overlay */}                      {/* Hover Overlay */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -242,7 +230,3 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

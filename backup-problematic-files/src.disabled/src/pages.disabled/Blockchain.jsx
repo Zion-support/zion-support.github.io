@@ -9,8 +9,4 @@ const Blockchain = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Blockchain;
-=======
-export default Blockchain;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

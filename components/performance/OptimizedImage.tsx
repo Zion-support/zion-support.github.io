@@ -22,13 +22,9 @@ import React from 'react';
 interface OptimizedImageProps {;
   src: string, alt: string,;
 
-=======
-=======
 
-=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({=======
 
-=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({  src,
   alt,
   width,
@@ -58,7 +54,6 @@ if ( {) {
     <Image;
 
 
-=======      quality={quality}
       style={style}
 
 
@@ -67,14 +62,9 @@ if ( {) {
   );
 };
 
-=======      quality={quality}
       style={style}
 
   );
 };
 
 export default OptimizedImage;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

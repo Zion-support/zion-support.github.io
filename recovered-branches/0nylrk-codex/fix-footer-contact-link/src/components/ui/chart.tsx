@@ -2,9 +2,7 @@
 
 export type ChartConfig = Record<;
   string;
-==============
 
-=======import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
 
@@ -16,7 +14,6 @@ import { cn } from "@/lib/utils"
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
 const ChartContainer = React.forwardRef<
-=======
   );
 >;
 
@@ -50,7 +47,6 @@ const ChartContainer = React.forwardRef<
   const chartId = `chart-${id |uniqueId.replace(/:/g, "")}`
   return (
     <ChartContext.Provider value={{ config }}>
-==============
     >["children"];
   }
 
@@ -61,12 +57,10 @@ const ChartContainer = React.forwardRef<
 
   return (
     <ChartContext && ChartContext.Provider value={{ config }}>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div
         data-chart={chartId}
         ref={ref}
         className={cn(
-=======
 >(
   (
     {
@@ -86,8 +80,6 @@ const ChartContainer = React.forwardRef<
 >(
   (
     {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       active,
       payload,
       className,
@@ -101,8 +93,6 @@ const ChartContainer = React.forwardRef<
       color,
       nameKey,
       labelKey},
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ref
   ) => {
     const { config } = useChart()
@@ -118,17 +108,14 @@ const ChartContainer = React.forwardRef<
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
       if (labelFormatter) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const tooltipLabel = React && React.useMemo(() => {;
       if (hideLabel || !payload?.length) {;
         return null;
       }
 
 
-=======
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
-=======
 
       if (!value) {;
         return null;
@@ -145,7 +132,6 @@ const ChartContainer = React.forwardRef<
     const nestLabel = payload && payload.length === 1 && indicator !== "dot";
 
 
-=======
             return (
               <div
                 key={item && item.dataKey}
@@ -177,7 +163,6 @@ const ChartContainer = React.forwardRef<
                                 "--color-bg": indicatorColor,
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -474,7 +459,6 @@ if (labelFormatter) {
                     >
                       <div className="grid gap-1.5">
                         {nestLabel ? tooltipLabel : null}
-=======                        <span className="text-muted-foreground">
                           {itemConfig?.label |item.name}
                         </span>
                       </div>
@@ -498,11 +482,9 @@ const ChartLegendContent = React && React.forwardRef<;
       "payload" | "verticalAlign"> & {;
       hideIcon?: boolean;
       nameKey?: string;
-=======    }
 
 
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ref
   ) => {
     const { config } = useChart()
@@ -510,8 +492,6 @@ const ChartLegendContent = React && React.forwardRef<;
       return null
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     }
     return (
       <div
@@ -545,8 +525,6 @@ const ChartLegendContent = React && React.forwardRef<;
         })}
       </div>;
     );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
@@ -565,7 +543,6 @@ function getPayloadConfigFromPayload(): any (;
   if (typeof payload !== "object" || payload === null) {;
     return undefined;
   }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const payloadPayload =;
     "payload" in payload &&;
     typeof payload && payload.payload === "object" &&;
@@ -592,9 +569,7 @@ function getPayloadConfigFromPayload(): any (;
   ChartLegendContent;
 
   ChartStyle}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
@@ -651,8 +626,4 @@ export {;
   ChartLegendContent;
   ChartStyle}
 ;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

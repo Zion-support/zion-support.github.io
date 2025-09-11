@@ -3,8 +3,6 @@ import React from 'react';
 ;
 
 interface LoadingSpinnerProps {
-=======
-=======
 interface LoadingSpinnerProps {
 interface LoadingSpinnerProps {;
 
@@ -15,23 +13,17 @@ interface LoadingSpinnerProps {;=======
 
 
 
-=======
 import React from 'react';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface LoadingSpinnerProps {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'white' | 'gray' | 'slate';
   text?: string;
   full_screen?: boolean;
   class_name?: string;
 }
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md',;
   text = 'Loading...',;
@@ -64,23 +56,15 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
     md: 'w-8 h-8',;
     md: '    lg: 'w-12 h-12', };
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className={`flex flex-col items-center justify-center ${className}}>      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 }
 export default LoadingSpinner;
 
-=======
-==============
 export default LoadingSpinner;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
   );
   } catch (error) {
@@ -90,8 +74,6 @@ export default LoadingSpinner;
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md', text,'  className = ; }) => {'  const sizeClasses = {'    sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -101,7 +83,3 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 };
 export default LoadingSpinner;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

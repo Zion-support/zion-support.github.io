@@ -11,11 +11,8 @@ import Link from 'next / link';
 import Head from 'next/head';
 import Link from 'next/link';
 
-=======
-==============
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       name: 'Quantum - Level Redundancy',
       description: 'Advanced redundancy patterns with quantum - inspired algorithms',
       status: 'active',
@@ -51,7 +48,6 @@ import Link from 'next/link';
       description: 'Post-quantum cryptography for data security',
       benefit: 'Future-proof security standards',
       status: 'implemented'
-=======
       health: 'excellent';
     },
     {
@@ -112,19 +108,16 @@ import Link from 'next/link';
       case 'medium': return 'bg-yellow-500/20 text-yellow-400';
       case 'low': return 'bg-green-500/20 text-green-400';
       default: return 'bg-gray-500/20 text-gray-400';
-=======
 
   };
 
 
-=======      } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 text-white">
       <Head>
@@ -139,7 +132,6 @@ import Link from 'next/link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -157,7 +149,6 @@ import Link from 'next/link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-red-400">Status</h3>
@@ -200,7 +191,6 @@ import Link from 'next/link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
@@ -276,14 +266,12 @@ import Link from 'next/link';
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======        {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
@@ -308,17 +296,8 @@ import Link from 'next/link';
     </div>
   );
 }
-=======
-=======
-=======
 ;
 
-=======
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default UltimateRedundancyBlueprint;

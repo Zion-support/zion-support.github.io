@@ -1,5 +1,4 @@
 
-=======;
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   // add more env variables as needed;
 }
@@ -30,8 +29,6 @@ declare let __dirname: string;
 declare let process: {env: {;
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   // add more env variables as needed;
@@ -77,15 +74,11 @@ declare let process: {;
   env: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test',;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     PORT?: string;
   }
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   // add more env variables as needed;
@@ -129,8 +122,6 @@ declare module '@/components / ChatAssistant / ChatMessage' {
 
 
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
@@ -157,15 +148,4 @@ declare module '@livekit / components - react' {
   export const VideoCall: React.FC < VideoCallProps>;
   export const LiveKitRoom: React.FC < any>;
 }
-<<<<<<< HEAD
 declare module '@livekit / components - styles' {
-=======
-;
-
-declare module '@livekit/components-styles' {;
-
-  // Empty stub for the styles;
-declare module '@livekit/components-styles' {;
-  // Empty stub for the styles;
-}
-;

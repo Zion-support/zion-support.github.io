@@ -19,9 +19,7 @@ export function MobileHome() {
   const { user } = useAuth();
 
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
-=======
   return (
-=======
 
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
 import { useAuth } from "@/hooks/useAuth",
@@ -29,8 +27,6 @@ export function MobileHome() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -38,8 +34,6 @@ export function MobileHome() {
         showNotifications
         showSettings
       />
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <main className="py-4">      
       <main className="py-4">
 import React from "react",;
@@ -63,8 +57,6 @@ export function MobileHome() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -91,8 +83,3 @@ function MobileHome() {
       <BottomNavigation />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

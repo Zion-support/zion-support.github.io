@@ -5,10 +5,7 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
-=======
-==============
 
-=======import React from 'react';
 import Head from 'next / head';
 import ServiceLanding from '../components / sections / ServiceLanding';
 export default /**
@@ -78,8 +75,6 @@ export default function QuantumCloudInfrastructurePlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <Head>;
@@ -119,8 +114,3 @@ export default function QuantumCloudInfrastructurePlatformPage() {
       />;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

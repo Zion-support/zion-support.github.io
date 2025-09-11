@@ -20,11 +20,8 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
 
     icon: "Briefcase"
   }
-=======
-=======
 
 
-=======
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
@@ -45,14 +42,11 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
   }
   },
-=======
 
   },
 
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   "announcements": {
 
     id: "announcements"
@@ -66,7 +60,6 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
 
 
-=======
 }
 },
 // Mock data for posts by category
@@ -160,20 +153,15 @@ const postsByCategory: Record < string, ForumPost[]> = {
       replyCount: 8
       isPinned: true
       isFeatured: true
-==============
     }
     {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
       content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       author_id: "user6",
       author_name: "James Wilson",
       category_id: "getting - hired",
       tags: ["portfolio", "projects", "examples"];
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: "2",
       title: "How to build an effective AI talent profile?",
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
@@ -203,15 +191,11 @@ const postsByCategory: Record < string, ForumPost[]> = {
       upvotes: 19,
       downvotes: 2,
       replyCount: 6>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       replyCount: 6
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   ];
   "project - help": [;
     {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: "3",
       title: "Looking for feedback on my automated testing approach",
@@ -227,13 +211,11 @@ const postsByCategory: Record < string, ForumPost[]> = {
       reply_count: 2;
     }
       isAnswered: true
-=======
       isAnswered: true
     }
   ];
   "ai - tools": [;
     {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: "1",
       title: "Best practices for AI model fine - tuning",
@@ -253,13 +235,11 @@ const postsByCategory: Record < string, ForumPost[]> = {
       is_featured: true;
     }
       replyCount: 9
-=======
       replyCount: 9
     }
   ];
   "feedback": [;
     {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: "4",
       title: "Feature request: Team collaboration tools",
@@ -275,7 +255,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       reply_count: 3;
     }
       replyCount: 5
-=======
       replyCount: 5
     }
   ];
@@ -458,7 +437,6 @@ const postsByCategory: Record<string, ForumPost[]> = {;
       authorName: "Zion Team",;
       authorRole: "Admin",;
       categoryId: "announcements",;
-=======
       id: "9"
       title: "Platform Update: New AI Matching Algorithm"
       content: "We're excited to announce the launch of our new and improved AI matching algorithm..."
@@ -489,7 +467,6 @@ const postsByCategory: Record<string, ForumPost[]> = {;
       replyCount: 2,;
       isPinned: true;
     }
-=======
   ]
 }      id: "9",
       title: "Platform Update: New AI Matching Algorithm",
@@ -531,11 +508,9 @@ export default function ForumCategoryPage() {;
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
 
-==============
 
   if (!categoryId || !categoriesInfo[categoryId]) {;
 
-=======
   ]
 },
 const iconMap = {
@@ -787,7 +762,6 @@ export default function ForumCategoryPage() {;
   ;
   if (!categoryId || !categoriesInfo[categoryId]) {;
     return (;
-=======
     return (      <AppLayout>;
         <div className="container py-8">;
           <h1>Category not found</h1>;
@@ -796,15 +770,11 @@ export default function ForumCategoryPage() {;
           </Button>;
         </div>;
       </AppLayout>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   const category = categoriesInfo[categoryId],
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
   const posts = postsByCategory[categoryId] || [],
   
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter posts based on search query
   const filteredPosts = searchQuery
     ? posts.filter(post =>
@@ -817,7 +787,6 @@ export default function ForumCategoryPage() {;
   // For announcements, check if user is admin
   const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
   
-=======  return (
     <AppLayout>
       <SEO
         title={`${category.name} | Community Forum | Zion AI Marketplace`}
@@ -858,27 +827,21 @@ export default function ForumCategoryPage() {;
   const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [];
 
-=======
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
-<<<<<<< HEAD=======  return (
     <AppLayout>;
       <SEO
         title={`${category && category.name} | Community Forum | Zion AI Marketplace`}
         description={category && category.description}
         keywords={`community, forum, ${category && category.id}, discussion, AI marketplace, questions, answers`}
       />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
             Forum;
           </Link>;
           <span className="text-muted-foreground">/</span>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <span className="font-medium">{category && category.name}</span>;
         </div>;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
@@ -919,5 +882,3 @@ export default function ForumCategoryPage() {;
             )}
           </div>;
         )}
-
-=======

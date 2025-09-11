@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const categories = [\'AI Services\', \'IT Services\', \'Development\', \'Security\'];
 import React from 'react';
 import Head from 'next/head';
@@ -9,11 +8,8 @@ const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
 
 
 
-<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ServicesIndex() {
   const services = [
     {
@@ -81,7 +77,6 @@ export default function ServicesIndex() {
       </Head>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
             {services.map((service, index) => (
               <div key={index} className=\"bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6\">
@@ -93,7 +88,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
@@ -219,24 +213,3 @@ export default function ServicesIndex() {;
             </p>;
             <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">;
               <Link
-<<<<<<< HEAD
-=======
-                href=\"/contact\"
-                className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\"
-              >
-                Get Free Consultation
-              </Link>
-              <Link 
-                href=\"/pricing\"
-                className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors\"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

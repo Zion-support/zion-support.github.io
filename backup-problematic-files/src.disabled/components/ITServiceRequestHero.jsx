@@ -9,8 +9,4 @@ const ITServiceRequestHero = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ITServiceRequestHero;
-=======
-export default ITServiceRequestHero;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

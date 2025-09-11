@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import { ServiceVariant } from '../types / service - variants';
 
 export interface EmergingTechBreakthrough2025 {
@@ -444,8 +442,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     growth_rate: '350%+ annual growth',
     variant: 'metaverse - futuristic',
     contact_info: {
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -511,21 +507,17 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     marketSize: '$3B+ BCI market', growthRate: '600%+ annual growth',
     variant: 'neural-revolutionary',
     contactInfo: {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
 ];=======;
-=======
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 ;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     realImplementation: true
     implementationDetails:
       'Complete quantum internet security platform with quantum cryptography, network monitoring, and compliance tools.'
@@ -841,89 +833,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     realImplementation: true
     implementationDetails:
     reviews: 18
-<<<<<<< HEAD
   }
 ];
-=======
-=======import { ServiceVariant } from '../types/service-variants',;
-export interface EmergingTechBreakthrough2025 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
-  // Brain-Computer Interface Platform;
-  {;
-    id: 'brain-computer-interface-platform',;
-    name: 'Brain-Computer Interface Platform',;
-    tagline: 'Direct neural interface for human-computer interaction',;
-    price: '$25,000',;
-    period: '/month',;
-    description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.',;
-    features: [;
-      'Non-invasive neural signal processingReal-time brain activity monitoringThought-to-text conversionBrain-controlled applicationsMedical rehabilitation toolsGaming and entertainmentProductivity enhancementAccessibility solutions',;
-      'Research and development toolsCustom application development';
-    ],;
-    popular: true,;
-    icon: '🧠',;
-    color: 'from-violet-500 to-purple-600',;
-    textColor: 'text-violet-400',;
-    link: 'https://ziontechgroup.com/brain-computer-interface-platform',;
-    marketPosition: 'Leading brain-computer interface platform with proven neural signal processing capabilities.',;
-    targetAudience: 'Medical research institutions, Gaming companies, Accessibility developers, Research labs, Healthcare providers',;
-    trialDays: 60,;
-    setupTime: '12-16 weeks',;
-    category: 'Neural Technology',;
-    realService: true,;
-    technology: ['Neural Signal Processing, Machine Learning, EEG Analysis, Python, C++, Neural Networks'],;
-    integrations: ['Medical devices, Gaming platforms, Research tools, Healthcare systems, Accessibility software'],;
-    useCases: ['Medical rehabilitation, Gaming control, Productivity tools, Accessibility solutions, Research applications'],;
-    roi: 'Medical applications show 800%+ ROI through improved patient outcomes and treatment efficiency.',;
-    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'],;
-    marketSize: '$3B+ BCI market',;
-    growthRate: '600%+ annual growth',;
-    variant: 'neural-revolutionary',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-];=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

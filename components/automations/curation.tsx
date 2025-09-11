@@ -1,6 +1,4 @@
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
@@ -10,20 +8,16 @@ type Experiment = {
   metric?: string;
   effort?: number;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   hypothesis?: string;
   metric?: string;
   effort?: number;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 impact?: number ;
 };
 type Props = {;
   updatedAt: string | null;
 items: Experiment[] };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
   return (type Experiment = {;
   title: string,;
@@ -32,7 +26,6 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
   effort?: number;
   impact?: number;
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Props = {;
   updatedAt: string | null,;
   items: Experiment[];
@@ -51,8 +44,6 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
           next run.;
         </p>;
       )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   impact?: number;
 }
 ;
@@ -78,17 +69,13 @@ function CurationPage() {
       <div className='mt - 6 space - y-4'>;
         {items.map ((exp, idx) => (
           <div;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             key={idx}
             className='rounded - xl border border - gray - 200 bg - white p - 5 shadow - sm';
           >;
             <div className='text - base font - semibold text - gray - 900'>;
               {exp.title}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='mt-6 space-y-4'>;
         {items && items.map((exp, idx) => (;
           <div
@@ -101,8 +88,6 @@ function CurationPage() {
               <div className='mt-2 text-sm text-gray-700'>;
                 {exp && exp.hypothesis && (;
                   <div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     <span className='font-medium'>Hypothesis:</span>{' '}
                     {exp && exp.hypothesis}
                   </div>;
@@ -114,16 +99,12 @@ function CurationPage() {
                 )}
               </div>;
             )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {(exp && exp.effort || exp && exp.impact) && (;
               <div className='mt-2 text-xs text-gray-500'>;
                 {exp && exp.effort ? `Effort: ${exp && exp.effort}/5` : null}
                 {exp && exp.effort && exp && exp.impact ? ' · ' : null}                {exp && exp.impact ? `Impact: ${exp && exp.impact}/5` : null}                {exp && exp.effort && exp && exp.impact ? " · " : null}
                 {exp && exp.impact ? `Impact: ${exp && exp.impact}/5` : null}
               </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             )}
           </div>;
         ))}
@@ -131,10 +112,7 @@ function CurationPage() {
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;
             Nothing to show yet.;
           </div>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
@@ -145,7 +123,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
       ) : (
         <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
       )}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mt-6 space-y-4">
         {items.map((exp, idx) => (
           <div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -203,7 +180,6 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? &quot; · &quot; : null}
 
-=======
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
             {(exp.hypothesis || exp.metric) && (
               <div className='mt - 2 text - sm text - gray - 700'>;
@@ -250,7 +226,6 @@ function getStaticProps() {
       revalidate: 300,
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export async function getStaticProps() {;
   try {;
     const filePath = path && path.join(;
@@ -292,17 +267,13 @@ export async function getStaticProps() {;
     };
   }        items: []},;
 
-=======
 
 
-=======
         updatedAt: null,
         items: []},      revalidate: 300}
 }
 
 
-=======
-=======        updatedAt: null,
         items: [],
       },
       revalidate: 300,
@@ -320,11 +291,5 @@ export async function getStaticProps() {;
       revalidate: 300}
 }
 }
-<<<<<<< HEAD
         updatedAt: null,
         updatedAt: null,
-=======
-}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

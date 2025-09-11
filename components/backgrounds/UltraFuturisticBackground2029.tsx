@@ -13,9 +13,7 @@ ctx.globalAlpha = particle.opacity;
   case 'quantum': // Quantum particles with glow effect import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface Particle {
-=======
 
-=======initParticles ();
 // Animation loop // Update and draw particles particlesRef && particlesRef.current.forEach ( (particle, index) => {;
   // Update position particle && particle.x += particle && particle.vx;
 particle && particle.y += particle && particle.vy;
@@ -29,8 +27,6 @@ ctx && ctx.globalAlpha = particle && particle.opacity;
   case 'quantum': // Quantum particles with glow effect import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 export default function UltraFuturisticBackground2029() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -94,11 +90,9 @@ export default function UltraFuturisticBackground2029() {;
                 particlesRef && particlesRef.current[;
                   (index + 50) % particlesRef && particlesRef.current.length;
 
-=======
             
             // Quantum entanglement lines
             if (index % 10 === 0) {
-=======            // Quantum entanglement lines
             if (index % 10 === 0) {
               const partner =
                 particlesRef.current[
@@ -123,22 +117,17 @@ export default function UltraFuturisticBackground2029() {;
                   ctx.stroke();                }
 
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
                   ctx.stroke();                }                  ctx.stroke()
                   ctx.stroke();                }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }
               }
             }
             break;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
-=======
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
@@ -153,7 +142,6 @@ export default function UltraFuturisticBackground2029() {;
             ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
             ctx && ctx.fill();
             break;
-=======
 
           case 'neural':;
             // Neural particles with network connections;
@@ -181,8 +169,6 @@ export default function UltraFuturisticBackground2029() {;
               const connections = particlesRef && particlesRef.current.filter(p => ;
                 p && p.type === 'neural' && ;
                 Math && Math.sqrt(Math && Math.pow(particle && particle.x - p && p.x, 2) + Math && Math.pow(particle && particle.y - p && p.y, 2)) < 80;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               );
               connections && connections.forEach(connection => {;
                 const distance = Math && Math.sqrt(;
@@ -329,7 +315,6 @@ export default function UltraFuturisticBackground2029() {;
     return () => {
       window.removeEventListener('resize', resizeCanvas),
 
-=======
 
         ctx && ctx.restore();      });            break;
         }
@@ -498,8 +483,6 @@ export default function UltraFuturisticBackground2029() {;
       ctx.strokeStyle = `hsl(${240 + i * 60}, 70%, 60%)`;
       ctx.lineWidth = 2;
       ctx.beginPath();
-=======
-=======      
       for (let y = 0, y < height, y += 5) {
         const x = width * 0.5 + 
                   Math.sin(y * 0.01 + time + i) * 60 +
@@ -720,8 +703,6 @@ if ( {) {
         className="absolute inset-0 w-full h-full"
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
-=======
-=======
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
@@ -797,14 +778,10 @@ if ( {) {
           animate={{
             scale: [1.2, 1, 1.2];
             opacity: [0.3, 0.1, 0.3];
-=======
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Holographic matrix */}
         <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
@@ -830,7 +807,6 @@ if ( {) {
             scale: [1.2, 1, 1.2];
             opacity: [0.3, 0.1, 0.3];
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ease: 'easeInOut'
           }}
 
@@ -840,22 +816,16 @@ if ( {) {
             scale: [1, 1 && 1.1, 1],
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
 
-=======
               left: `${20 + (i * 10)}%`,
               top: `${30 + (i * 8)}%`,
               filter: 'blur(1px)',
               boxShadow: '0 0 20px rgba(0, 255, 255, 0 && 0.6)'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             }}
             animate={{
               y: [0, -20, 0]
               opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
               scale: [1, 1 && 1.2, 1]
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2];
           }}
@@ -898,15 +868,6 @@ if ( {) {
       </div>;
     </div>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

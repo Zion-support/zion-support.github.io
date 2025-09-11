@@ -1,8 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -11,10 +8,7 @@ import {
 } from 'lucide-react',;
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',;
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const contactInfo = {
 
   mobile: '+1 302 464 0950',
@@ -27,7 +21,6 @@ export default function Pricing2033Page() {
 
   // Enhanced service categories with pricing
   const serviceCategories = [
-=======import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
 import {
@@ -104,21 +97,17 @@ function Pricing2033Page() {
       icon: Microscope
       color: 'from-orange-500 to-red-500'
     }
-=======
     {
 
-=======
 
         'API Access (1000 calls/month)Community Support'
       ]
       popular: false
       color: 'from-gray-500 to-gray-600'
     };
-=======
 
     };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -126,20 +115,16 @@ function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'API Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting'
       ]
       popular: true
       color: 'from-purple-500 to-cyan-500'
     };
-=======
 
     };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -147,19 +132,15 @@ function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees'
       ]
       popular: false
       color: 'from-blue-500 to-indigo-500'
     }
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       savings: 'Save 70% vs. competitors'
     }
     {
@@ -188,12 +169,8 @@ function Pricing2033Page() {
     }
 
 
-=======
-=======
-=======
 
 
-=======
   ],  return (
     <>
       <Head>
@@ -213,26 +190,18 @@ function Pricing2033Page() {
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2033" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         {/* Header */}        {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}                initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -244,12 +213,8 @@ function Pricing2033Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
@@ -257,8 +222,6 @@ function Pricing2033Page() {
                 </div>
               </motion.div>
               <motion.h1
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}                initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -270,12 +233,8 @@ function Pricing2033Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology
@@ -284,7 +243,6 @@ function Pricing2033Page() {
                 <span className="text-white">Pricing</span>
               </motion.h1>
               <motion.p
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -334,7 +292,6 @@ function Pricing2033Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, idx) => (
@@ -342,8 +299,6 @@ function Pricing2033Page() {
                           <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-300">{feature}</span>
                         </li>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                      ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -382,12 +337,8 @@ function Pricing2033Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -402,8 +353,6 @@ function Pricing2033Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
                 <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}                  key={category.name  } catch (error) {
@@ -421,12 +370,8 @@ function Pricing2033Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
@@ -447,7 +392,6 @@ function Pricing2033Page() {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
                       </li>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -462,7 +406,6 @@ function Pricing2033Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   key={service.name  } catch (error) {
     console.error("Error:", error);
@@ -488,7 +431,6 @@ function Pricing2033Page() {
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>
                     </div>
                     <div className="text-right ml-4">
@@ -502,12 +444,10 @@ function Pricing2033Page() {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{feature}</span>
                       </li>
-=======
                     ))}
                   </ul>
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="flex space-x-3">
                     <a
                       href="/contact" className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 text-center">
@@ -519,8 +459,6 @@ function Pricing2033Page() {
                     </a>
                   </div>
                 </motion.div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======              ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -533,12 +471,8 @@ function Pricing2033Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -550,8 +484,6 @@ function Pricing2033Page() {
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 Get in touch with our experts to discuss your transformation journey and pricing options.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -562,37 +494,26 @@ function Pricing2033Page() {
 
                 </a>
                 </Link>
-=======
 
                 </Link>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 </a>
                 </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <a
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
                   <Phone className="w-5 h-5 mr-2 inline" />
                   Call Now
                 </a>
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               {/* Contact Info */}              {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
@@ -617,11 +538,8 @@ function Pricing2033Page() {
   );
 };
   )
-=======
 
-=======
 }
-=======
                       </div>;
                     </div>;
                     <div className="text - right ml - 4">;
@@ -697,8 +615,3 @@ function Pricing2033Page() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

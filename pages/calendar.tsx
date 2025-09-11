@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   Calendar
   Clock
@@ -11,7 +10,6 @@ import {
   Video
   MessageSquare
   Building
-=======
 
 import {
   Calendar,
@@ -118,7 +116,6 @@ const teamMembers = [
   }
 ];
 export default function CalendarPage() {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
   { time: "9:30 AM", available: true, type: "Phone Call" },;
@@ -257,8 +254,4 @@ export default function CalendarPage() {;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0d
         </div>;
       </section>;
     </div>);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

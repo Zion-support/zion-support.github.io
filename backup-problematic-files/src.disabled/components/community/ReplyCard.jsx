@@ -9,8 +9,4 @@ const ReplyCard = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ReplyCard;
-=======
-export default ReplyCard;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

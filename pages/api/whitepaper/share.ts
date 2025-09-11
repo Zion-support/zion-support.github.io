@@ -1,4 +1,3 @@
-=======
 
 import { randomUUID } from 'crypto';
 
@@ -17,12 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export function getShared(id: string) {
   return store[id]
 }
-=======
-=======
-=======
 }
 
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -76,15 +71,5 @@ export function getShared(id: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,8 +1,6 @@
 
 
 
-=======
-=======import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import {
@@ -12,12 +10,8 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Pricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
@@ -62,7 +56,6 @@ function Pricing2025() {
   ],
   const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
 
-=======
       {/* Hero Section */}
       <section className="relative py - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -71,7 +64,6 @@ function Pricing2025() {
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
 
-=======
       {/* Hero Section */}      {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -162,7 +154,6 @@ function Pricing2025() {
                     {service.rating} ({service.reviews} reviews);
                   </span>;
                 </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Features */}
                 <div className="mb - 8">;
                   <h4 className="text - white font - semibold mb - 4 text - center">Key Features:</h4>;
@@ -387,7 +378,6 @@ function Pricing2025() {
             </div>)}
         </div>;
       </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Enterprise Solutions */}
       <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -492,7 +482,6 @@ function Pricing2025() {
           </motion.div>;
         </div>;
       </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* FAQ Section */}
       <section className="py - 20 px - 6">;
         <div className="max - w-4xl mx - auto">;
@@ -573,7 +562,6 @@ function Pricing2025() {
               {
                 question: "Can I upgrade or downgrade my plan?",
 
-=======
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
 
 
@@ -587,7 +575,6 @@ function Pricing2025() {
   );
 };
 
-=======            ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -604,11 +591,8 @@ function Pricing2025() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
 }
-=======
-=======
 }
 
-=======                className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
               >;
                 <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
                 <p className="text - white / 70 leading - relaxed">{faq.answer}</p>;
@@ -833,7 +817,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'right-1' : 'left-1'
@@ -855,7 +838,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
@@ -951,7 +933,6 @@ export default function Pricing2025(req, res) {
         </div>
       </section>
       {/* FAQ Section */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -1004,16 +985,13 @@ export default function Pricing2025(req, res) {
   );
 };
 
-=======            ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-=======
 }
 
-=======
                 className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
               >;
                 <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
@@ -1022,8 +1000,6 @@ export default function Pricing2025(req, res) {
         </div>;
       </section>;
       <EnhancedFooter />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     </div>;
   );
   } catch (error) {
@@ -1032,7 +1008,3 @@ export default function Pricing2025(req, res) {
   }
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

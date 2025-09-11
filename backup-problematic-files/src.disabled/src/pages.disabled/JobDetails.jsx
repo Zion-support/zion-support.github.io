@@ -9,8 +9,4 @@ const JobDetails = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default JobDetails;
-=======
-export default JobDetails;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

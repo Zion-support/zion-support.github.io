@@ -1676,7 +1676,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'Custom model development'
     ]
     marketAdvantage:
-=======
 };
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
@@ -1684,8 +1683,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
 
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -2206,7 +2203,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   }
 ];
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -2718,8 +2714,5 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development';
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-<<<<<<< HEAD
-=======>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ];

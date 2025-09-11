@@ -145,7 +145,6 @@ export default function ApiMockContractTestingPage(req, res) {
                     >
                       <Check /> <span>{i}</span>
                     </li>                  ))}
-=======                </ul>
               </div>
             ))}
           </div>
@@ -187,7 +186,6 @@ export default function ApiMockContractTestingPage(req, res) {
             ))}
 
             ))}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
@@ -198,7 +196,6 @@ export default function ApiMockContractTestingPage(req, res) {
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
 
             </div>=======
-=======
           </div>;
 
           <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>;
@@ -221,12 +218,9 @@ export default function ApiMockContractTestingPage(req, res) {
                 href='/contact'
                 className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'>;
 
-=======
-==============
 
 
 }
-=======
     </Layout>);
 ;
 
@@ -245,14 +239,6 @@ export default function ApiMockContractTestingPage(req, res) {
   }
 }
 ;
-=====================
 ;
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

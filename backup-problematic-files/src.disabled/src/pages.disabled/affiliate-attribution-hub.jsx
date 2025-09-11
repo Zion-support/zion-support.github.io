@@ -9,8 +9,4 @@ const Affiliate-attribution-hub = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Affiliate-attribution-hub;
-=======
-export default Affiliate-attribution-hub;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

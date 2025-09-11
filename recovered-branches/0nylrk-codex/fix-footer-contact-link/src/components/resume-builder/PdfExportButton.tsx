@@ -1,8 +1,6 @@
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
@@ -22,8 +20,6 @@ import { DropdownMenu;
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -40,28 +36,18 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfolio, setIncludePortfolio] = useState(true);
 
-=======
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
-=======
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import {;
@@ -84,8 +70,6 @@ import { Resume } from '@/types/resume',;
 import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport',;
 import { toast } from '@/hooks/use-toast',;
 import { FontFamily } from '@/utils/pdf/fontConfig',;
-=======
-=======// Use the centralized icon wrapper to avoid missing icon issues;
 import {FileText, ChevronDown, Loader2, Download} from '@/components/icons';
 import {Resume} from '@/types/resume';
 import {exportResumeToPDF, ExportOptions} from '@/utils/pdfExport';
@@ -96,10 +80,8 @@ import {FontFamily} from '@/utils/pdf/fontConfig';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
@@ -130,9 +112,6 @@ import {FontFamily} from '@/utils/pdf/fontConfig';
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (isExporting) return,
     
     setIsExporting(true),
@@ -159,8 +138,6 @@ import {FontFamily} from '@/utils/pdf/fontConfig';
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
       
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Success!"
         description: "Your resume has been downloaded as a PDF."})
@@ -185,9 +162,7 @@ import {FontFamily} from '@/utils/pdf/fontConfig';
   },
 
   return (
-=======
   return (
-=======
 
     }
   }
@@ -195,13 +170,10 @@ import {FontFamily} from '@/utils/pdf/fontConfig';
 
   return (
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
         <Button
           variant="outline" 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className="gap-2"
           disabled={isExporting}>;
           {isExporting ? (;
@@ -261,14 +233,8 @@ import {FontFamily} from '@/utils/pdf/fontConfig';
 
 
 }
-=======
-=======
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           Export PDF;
           <ChevronDown className="h-4 w-4" />;
         </Button>;
@@ -276,15 +242,11 @@ import {FontFamily} from '@/utils/pdf/fontConfig';
       <DropdownMenuContent align="end" className="w-56">;
         <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel>;
         <DropdownMenuSeparator />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>;
         <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>;
           <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>;
           <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>;
         </DropdownMenuRadioGroup>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <DropdownMenuSeparator />;
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>;
         <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>;
@@ -435,7 +397,6 @@ toast ({
 }finally {
   setIsExporting (false) 
 }
-<<<<<<< HEAD
 };
 h-4 w-4"/>) 
 }Export PDF <ChevronDown className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className=" w-56" > <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel> <DropdownMenuSeparator /> </DropdownMenuRadioGroup> <DropdownMenuSeparator /> <DropdownMenuCheckboxItem checked= {
@@ -448,6 +409,3 @@ h-4 w-4"/>)
 ;
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,14 +1,11 @@
 
 
 
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
 export default function AdminKycPage() {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [queue, setQueue] = useState<KycProfile[]>([]);
   const [reason, setReason] = useState<string>('');
   async function load() {
@@ -65,7 +62,6 @@ export default function AdminKycPage() {
   }
 
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <Head>
@@ -84,7 +80,6 @@ export default function AdminKycPage() {
             <div key={p.userId} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
                   <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
@@ -93,11 +88,9 @@ export default function AdminKycPage() {
 
                   {(p.documents |[]).map((d) => (
                   {(p.documents || []).map((d) => (
-=======
 
                   {(p.documents || []).map((d) => (
 
-=======
                   {(p.documents |[]).map((d) => (
                   {(p.documents || []).map((d) => (                    <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
@@ -115,8 +108,6 @@ export default function AdminKycPage() {
   }
 }
 }
-=======
-=======
                   ))}
                 </div>
               </div>
@@ -125,10 +116,8 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
-=======
 }
 
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 import type { KycProfile } from '../../utils / kyc',
@@ -209,8 +198,3 @@ function act() {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

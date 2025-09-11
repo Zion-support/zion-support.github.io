@@ -1,4 +1,3 @@
-=======
 
 
 import "@testing-library/jest-dom";
@@ -39,7 +38,6 @@ jest && jest.mock("next/router", () => ({
         on: jest && jest.fn(),
         off: jest && jest.fn(),
         emit: jest && jest.fn(),
-=======
         on: jest.fn(),
         off: jest.fn(),
         emit: jest.fn(),
@@ -86,7 +84,6 @@ jest.mock("next/link", () => {
     return <a href={href} {...props}>{children}</a>;
   }
 });
-=======// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
   value: jest.fn().mockImplementation(query => ({
@@ -129,7 +126,6 @@ Object.defineProperty(window, 'matchMedia', {
 });
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -140,8 +136,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Global test setup
 beforeEach(() => {
@@ -152,15 +146,11 @@ beforeEach(() => {
 
 });
 
->>>>>>> origin/automation-improvements-final
-=======
 });=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 });
 
 
 // Mock Next.js Link component
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 jest.mock('next/link', () => ({
   _esModule: true,
   default: ({ children, href, ...props }) => {
@@ -187,7 +177,6 @@ jest.mock("next/link", () => ({
 };
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
-=======    matches: false,
     media: query,
     onchange: null,
     addListener: jest.fn(), // deprecated,
@@ -214,5 +203,3 @@ beforeEach(() => {
   jest.clearAllMocks();
 ursor/fix-lint-push-and-merge-to-main-ae4e
 });
-<<<<<<< HEAD
-=======

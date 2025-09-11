@@ -7,21 +7,15 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';
 import { Card, CardContent } from '@/components / ui / card';
 import { Avatar } from '@/components / ui / avatar';
 import { Quote } from './lucide-react';
 const testimonials = [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
     author: "Sarah Chen"
     role: "CTO, DataMind Solutions";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     avatar: "https://i.pravatar.cc / 150?img = 32",
     company: "DataMind"},
   {
@@ -36,16 +30,12 @@ const testimonials = [;
     role: "Independent AI Consultant",
     avatar: "https://i.pravatar.cc / 150?img = 28",
     company: "AI Systems"},
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
 
 
-=======
-=======
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -110,7 +100,6 @@ const testimonials = [;
 ;
 export function TestimonialCarousel() {;
   return (;
-=======
 
 export function TestimonialCarousel() {;
   return (    <section className="py-20 bg-zion-blue-dark">;
@@ -122,8 +111,6 @@ export function TestimonialCarousel() {;
           </p>;
         </div>;
         <div className="max-w-5xl mx-auto px-8">;          <Carousel
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
     avatar: "https://i.pravatar.cc / 150?img = 67",
     company: "EcoTech"}],
 export /**
@@ -141,20 +128,15 @@ function TestimonialCarousel() {
         </div>;
         <div className="max - w-5xl mx - auto px - 8">;
           <Carousel;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               loop: true}}
 
 };
 
 }
 };
-=======
-=======
-=======
 
 };
 
-==============
             </CarouselContent>;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
@@ -195,16 +177,8 @@ company: "AI Systems"
 }
 ;
 ;
-=======
-=======    </section>);
 }
 
-=======
 
 
 ;
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const SOC2ComplianceAutomation = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SOC2ComplianceAutomation;
-=======
-export default SOC2ComplianceAutomation;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

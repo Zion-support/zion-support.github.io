@@ -28,8 +28,6 @@ import { motion } from 'framer-motion';
 
       x: number;
       y: number;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       vx: number,
       vy: number,
       size: number,
@@ -59,8 +57,6 @@ max_life: number,
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;
           case 'quantum':;
             this && this.color = `hsl(${180 + Math && Math.random() * 60}, 70%, 60%)`;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             break;
           case 'neural':;
             this && this.color = `hsl(${280 + Math && Math.random() * 40}, 80%, 70%)`;
@@ -71,10 +67,7 @@ max_life: number,
           case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         const types = ['quantumneuraldataenergy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
@@ -96,7 +89,6 @@ max_life: number,
 ;
           case 'quantum':;
             this.color = `hsl (${180 + Math.random () * 60}, 70%, 60%)`;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             break;
           case 'neural':;
             this.color = `hsl (${280 + Math.random () * 40}, 80%, 70%)`;
@@ -209,11 +201,9 @@ max_life: number,
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`,
             break
-=======
 
 
 
-=======
             break;        }
         }
       }
@@ -319,7 +309,6 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.type = types[Math.floor(Math.random() * types.length)] as any;
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
-=======
             break;
           case 'neural':
             this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
@@ -329,17 +318,14 @@ const UltraFuturisticBackground2046: React.FC = () => {
             break;
 
 
-=======            break;        }
 
         }
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
 
 
       }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -450,9 +436,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
                   Math && Math.pow(this && this.x - particle && particle.x, 2) +;
                     Math && Math.pow(this && this.y - particle && particle.y, 2)                );                  Math && Math.pow(this && this.x - particle && particle.x, 2) + Math && Math.pow(this && this.y - particle && particle.y, 2);
 
-=======
                   Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
-=======                  Math.pow(this.x - particle.x, 2) +
                     Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
                 );
                 if (distance < 100) {
@@ -463,10 +447,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
                   ctx.lineWidth = 0.5;
                   ctx.globalAlpha = alpha * (1 - distance / 100);
                   ctx.stroke()
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           case 'energy':;
             this.color = `hsl (${40 + Math.random () * 60}, 100%, 70%)`;
             break;        }            break;
@@ -737,17 +718,14 @@ if ( {) {
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
     };
-=======
 
   }, []);
   }, []);
 
 
-=======
         cancelAnimationFrame(animationRef.current);
     }
   }, []);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>;
@@ -975,7 +953,6 @@ if ( {) {
         transition={{
 
 
-=======
           duration: 10
           repeat: Infinity
           ease: 'easeInOut'
@@ -994,7 +971,6 @@ if ( {) {
               top: `${Math.random() * 100}%`,
 
 
-=======
             className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
             style={{
               left: `${Math.random() * 100}%`
@@ -1011,9 +987,7 @@ if ( {) {
               repeat: Infinity
               ease: 'linear'
               delay: i * 0.5
-=======
               duration: Math.random () * 10 + 10,
-=======
 
               duration: Math.random () * 10 + 10,
               repeat: Infinity,
@@ -1043,8 +1017,6 @@ if ( {) {
               opacity: [0.05, 0.1, 0.05]
             }}
             transition={{
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0 && 0.3) 0%, transparent 50%)`,
             }}
             animate={{
@@ -1057,8 +1029,6 @@ if ( {) {
               ease: 'easeInOut',
               delay: i * 0 && 0.8,
             }}          />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         ))}
       </div>;
     </div>;
@@ -1321,8 +1291,6 @@ export default UltraFuturisticBackground2046;
 
     </div>
     </div>
-=======
-=======
 
 };
 export default UltraFuturisticBackground2046;              ease: "easeInOut",;
@@ -1337,10 +1305,8 @@ export default UltraFuturisticBackground2046;  );
 export default UltraFuturisticBackground2046;
 
 
-=======
 
     </div>
-=======
               duration: Math.random () * 6 + 4,
               repeat: Infinity,
               ease: 'easeInOut',
@@ -1362,8 +1328,3 @@ export default UltraFuturisticBackground2046);
 ;
 export default UltraFuturisticBackground2046;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

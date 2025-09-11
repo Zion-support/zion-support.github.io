@@ -61,7 +61,6 @@ export function AutocompleteSuggestions({ ;
             </li>;
           ),;
         })}
-<<<<<<< HEAD
       </ul>;
     </div>;
   ),;  if (!searchTerm || searchTerm.length === 0) {

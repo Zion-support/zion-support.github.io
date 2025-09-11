@@ -911,13 +911,9 @@ export const emergingTechServices: EmergingTechService[] = [
     reviews: 15,
   },
   {
-=======
-=======
 
   {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Satellite quantum key distribution',
       'Interplanetary communication protocols',
       'Quantum encryption for space data',
@@ -930,10 +926,7 @@ export const emergingTechServices: EmergingTechService[] = [
     ],
     popular: true,
     icon: '🛰️',
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - space - communications',
@@ -946,8 +939,6 @@ export const emergingTechServices: EmergingTechService[] = [
     category: 'Quantum Space Technology',
     real_service: true,
     technology: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Quantum communication',
       'Satellite technology',
       'React',
@@ -957,10 +948,7 @@ export const emergingTechServices: EmergingTechService[] = [
       'AWS',
       'Custom quantum hardware',
     ],
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'Satellite systems',
       'Ground stations',
@@ -986,8 +974,6 @@ export const emergingTechServices: EmergingTechService[] = [
     growth_rate: '500% annual growth',
     variant: 'quantum - space',
     contact_info: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1002,8 +988,6 @@ export const emergingTechServices: EmergingTechService[] = [
     reviews: 12,
   },
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI-powered drug molecule design',
     id: 'ai - biotech - drug - discovery',
     name: 'AI Biotech Drug Discovery Platform',
@@ -1014,8 +998,6 @@ export const emergingTechServices: EmergingTechService[] = [
       'Breakthrough AI platform that accelerates drug discovery by 1000x through quantum computing, machine learning, and advanced biotechnology. Perfect for pharmaceutical companies and research institutions.',
     features: [;
       'AI - powered drug molecule design',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Quantum computing drug simulation',
       'Predictive drug efficacy modeling',
       'Automated clinical trial design',
@@ -1028,10 +1010,7 @@ export const emergingTechServices: EmergingTechService[] = [
     ],
     popular: true,
     icon: '🧬',
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - green - 600 to - blue - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - biotech - drug - discovery',
@@ -1044,8 +1023,6 @@ export const emergingTechServices: EmergingTechService[] = [
     category: 'AI & Biotech',
     real_service: true,
     technology: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI algorithms',
       'Quantum computing',
       'Machine learning',
@@ -1056,10 +1033,7 @@ export const emergingTechServices: EmergingTechService[] = [
       'AWS',
       'Biotech tools',
     ],
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'Lab equipment',
       'Research databases',
@@ -1077,20 +1051,14 @@ export const emergingTechServices: EmergingTechService[] = [
     ],
     roi: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.',
     competitors: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Traditional drug discovery',
       'Basic AI drug tools',
       'Manual research methods',
     ],
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     market_size: '$1.5T pharmaceutical market, AI segment growing 600% annually',
     growth_rate: '600% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1105,8 +1073,6 @@ export const emergingTechServices: EmergingTechService[] = [
     reviews: 6,
   },
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24/7 production with 99 && 99.99% efficiency and zero downtime.',
     features: [
     id: 'autonomous - ai - factory',
@@ -1117,8 +1083,6 @@ export const emergingTechServices: EmergingTechService[] = [
     description:;
       'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24 / 7 production with 99.99% efficiency and zero downtime.',
     features: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Fully autonomous manufacturing',
       'AI - powered quality control',
       'Predictive maintenance automation',
@@ -1132,10 +1096,7 @@ export const emergingTechServices: EmergingTechService[] = [
     ],
     popular: true,
     icon: '🏭',
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / autonomous - ai - factory',
@@ -1148,8 +1109,6 @@ export const emergingTechServices: EmergingTechService[] = [
     category: 'AI & Autonomous Manufacturing',
     real_service: true,
     technology: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'AI algorithms',
       'Robotics',
       'IoT sensors',
@@ -1160,10 +1119,7 @@ export const emergingTechServices: EmergingTechService[] = [
       'AWS',
       'Manufacturing systems',
     ],
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'ERP systems',
       'MES systems',
@@ -1190,8 +1146,6 @@ export const emergingTechServices: EmergingTechService[] = [
     growth_rate: '350% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1220,7 +1174,6 @@ export const emergingTechServices: EmergingTechService[] = [
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'quantum-internet-security-platform', name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum-secured internet infrastructure',
     price: '$12,999',
@@ -1247,7 +1200,6 @@ export const emergingTechServices: EmergingTechService[] = [
     }
   }
 
-==============
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
@@ -1259,93 +1211,9 @@ export interface EmergingTechService {;
 
 ];
     reviews: 28
-<<<<<<< HEAD
   }
 ];
 export interface EmergingTechService {;
-=======
-export interface EmergingTechService {;
-=======
-=======  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-export const emergingTechServices: EmergingTechService[] = [;
-  // Quantum Internet & Communication Services;
-  {;
-    id: 'quantum-internet-security-platform',;
-    name: 'Quantum Internet Security Platform',;
-    tagline: 'Unhackable quantum-secured internet infrastructure',;
-    price: '$12,999',;
-    period: '/month',;
-    description: 'Revolutionary quantum internet platform providing unhackable communication channels, quantum key distribution, and post-quantum cryptography. Enables secure government, military, and enterprise communications.',;
-    features: [;
-      'Quantum key distribution (QKD)Post-quantum cryptography algorithmsQuantum entanglement-based securityReal-time quantum threat detectionMulti-node quantum networkQuantum-resistant encryptionGovernment compliance (FIPS 140-3)Quantum network monitoring',;
-      'API for enterprise integration24/7 quantum security operations';
-    ],;
-    popular: true,;
-    icon: '🌐',;
-    color: 'from-indigo-600 to-purple-700',;
-    textColor: 'text-indigo-400',;
-    link: 'https://ziontechgroup.com/quantum-internet-security-platform',;
-    marketPosition: 'First-to-market quantum internet security platform. Competes with traditional cybersecurity but offers quantum-level protection.',;
-    targetAudience: 'Government agencies, Military organizations, Financial institutions, Healthcare providers, Energy companies, Defense contractors',;
-    trialDays: 7,;
-    setupTime: '2-4 weeks',;
-    category: 'Quantum Internet & Security',;
-    realService: true,;
-    technology: ['Quantum computingQKD protocolsPost-quantum cryptographyQuantum entanglementQuantum networksAWS QuantumIBM Quantum'],;
-    integrations: ['Government systemsMilitary networksFinancial platformsHealthcare systemsEnergy gridsDefense systems'],;
-    useCases: ['Secure government communicationsMilitary command systemsFinancial transactionsHealthcare data exchangeCritical infrastructure protectionDefense intelligence'],;
-    roi: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance',;
-    competitors: ['Traditional cybersecurity (Palo Alto, CrowdStrike)No direct quantum internet competitors'],;
-    marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',;
-    growthRate: '400% annual growth',;
-    variant: 'quantum-advanced',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -1791,10 +1659,5 @@ export const emergingTechServices: EmergingTechService[] = [;
     customers: 35,;
     rating: 4.8,;
     reviews: 28;
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

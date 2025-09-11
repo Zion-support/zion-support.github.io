@@ -9,8 +9,4 @@ const ApiDocsHub = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ApiDocsHub;
-=======
-export default ApiDocsHub;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

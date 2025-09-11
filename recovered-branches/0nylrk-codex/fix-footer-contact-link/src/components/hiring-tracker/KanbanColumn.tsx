@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface KanbanColumnProps {
 
   id: string
@@ -14,7 +11,6 @@ interface KanbanColumnProps {
 
   count: number
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -33,13 +29,11 @@ export function KanbanColumn(): any ({;
 
 
 
-=======
   count;
 }: KanbanColumnProps) {;
   // Add color based on column type;
   const getBadgeVariant = (columnId: string) => {;
     switch (columnId) {;
-=======import { Droppable } from './react - beautiful - dnd';
 import { JobApplication } from '@/types / jobs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -58,8 +52,6 @@ function KanbanColumn() {
   // Add color based on column type;
   const getBadgeVariant = (column_id: string) =>: any {
     switch (column_id) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       case "new": return "secondary",
       case "shortlisted":
         return "outline",
@@ -67,14 +59,11 @@ function KanbanColumn() {
         return "default",
       case "hired":
         return "success",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       case "rejected":
         return "destructive"
       default:
         return "outline"
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
 
@@ -140,12 +129,9 @@ export function KanbanColumn({;
         <Droppable droppableId={id}>;
           {(provided) => (;
             <div
-=======  }
 
   },
   
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">
         <div className="flex justify-between items-center">
@@ -158,15 +144,11 @@ export function KanbanColumn({;
         <Droppable droppableId={id}>
           {(provided) => (
             <div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               ref={provided.innerRef}
               {...provided.droppableProps}
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       case "rejected":;
         return "destructive",
       default:;
@@ -205,14 +187,10 @@ export function KanbanColumn({;
                 <CandidateCard;
 
                   key={application.id}
-=======
-==============
 
                 <CandidateCard 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={application.id}
-=======
 
               {applications.length === 0 && (
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
@@ -340,17 +318,13 @@ return (<Card className= {
               ))}
               {provided.placeholder}
               
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   application={application}
                   index={index}
 
                 />
               ))}
               {provided.placeholder}
-=======
               
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {applications.length === 0 && (
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
                   <p className="text-center text-sm text-muted-foreground">
@@ -366,9 +340,6 @@ return (<Card className= {
             </div>;
           )}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Droppable>;
       </CardContent>;
     </Card>;
@@ -388,9 +359,4 @@ return (<Card className= {
     </Card>);
 }
 
-=======
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

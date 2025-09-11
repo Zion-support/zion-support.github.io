@@ -4,7 +4,6 @@ import React from 'react';
 
 
 import {
-=======
   Code,
   Check,
   Globe,
@@ -14,7 +13,6 @@ import {
   Cpu,
   Cloud,
   XCircle,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662} from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
     {
@@ -76,7 +74,6 @@ import { motion  } from './framer-motion';import {
   Database,
   Cpu,
   Cloud,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }'`,
         },
       ],
@@ -216,7 +213,6 @@ export default function APIPage() {;
     },;
   ];
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const responseExamples = {;
     success: {;
       status: 200,;
@@ -241,10 +237,8 @@ export default function APIPage() {;
       },;
     },;
   };
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -252,15 +246,11 @@ export default function APIPage() {;
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
@@ -270,8 +260,6 @@ export default function APIPage() {;
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 API{" "}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
                   Documentation;
                 </span>;
@@ -283,10 +271,8 @@ export default function APIPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Quick Start */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -294,8 +280,6 @@ export default function APIPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -306,7 +290,6 @@ export default function APIPage() {;
                 to make your first API call.;
               </p>;
             </motion && motion.div>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="max-w-4xl mx-auto">;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
                 <motion&& motion.div
@@ -350,7 +333,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   );
-=======        {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;
             <motion.div;
@@ -386,6 +368,3 @@ origin/automation-improvements-final
         </section>;
       </div>;
     </MainLayout>);
-<<<<<<< HEAD
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}

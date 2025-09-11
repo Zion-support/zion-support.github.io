@@ -1,8 +1,6 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }};
 monitor && monitor.run().catch(error = > {; process && process.exit(1)});
-=======
 ; async analyzeFile(filePath) {; try {; const content = fs && fs.readFileSync(filePath, 'utf8'); const stats = fs && fs.statSync(filePath);
 ; const analysis = {; file: filePath, size: stats && stats.size, lines: content && content.split('\n').length,
     issues: []};
@@ -66,7 +64,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 const monitor = new CodeQualityMonitor();
 
 
-=======    };
   };
 ,
   async analyzeFile(filePath) {,
@@ -260,8 +257,6 @@ const monitor = new CodeQualityMonitor();
 
   process.exit(1)
 }),
-=======
-=======
         action: 'Run comprehensive code cleanup and establish coding standards',
       }),
     };
@@ -366,8 +361,6 @@ const monitor = new CodeQualityMonitor();
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,  process.exit(1),
 }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -484,7 +477,3 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -3,8 +3,6 @@
 export type InterviewType = 'video' | 'phone' | 'in-person';
 export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type InterviewStatus =;
   | 'requested';
   | 'confirmed';
@@ -20,8 +18,6 @@ export type MeetingPlatform = 'zoom' | 'google - meet' | 'teams' | 'other' | 'in
 
 export interface Interview {
 export interface Interview {;
-=======
-=======
   | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
 export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
@@ -29,7 +25,6 @@ export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-a
 
 export interface Interview {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   client_avatar?: string,
   talent_avatar?: string;
 
@@ -41,14 +36,10 @@ export interface InterviewRequest {
 export interface InterviewRequest {;
 
 export interface InterviewRequest {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export interface InterviewRequest {
-=======
   client_avatar?: string
   talent_avatar?: string
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -125,10 +116,7 @@ export interface InterviewResponse {;
   alternative_date?: string,
   message?: string;
 
-=======
-=======
 export interface InterviewResponse {
-=======
   interview_type: InterviewType
   title?: string
 }  interview_id: string;
@@ -137,8 +125,3 @@ export interface InterviewResponse {
   alternative_date?: string,
   message?: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

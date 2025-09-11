@@ -38,8 +38,6 @@ it('converts slug back to title', () => {;
 it('handles custom separator when unslugifying', () => {;
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title');
 });
-=======
-=======import { slugify } from '@/lib / slugify';
 import { unslugify } from '@/lib / slugify';
 it ('removes accents from strings', () => {
   expect (slugify ('Crème Brûlée')).to_be ('creme - brulee');
@@ -55,13 +53,7 @@ it ('converts slug back to title', () => {
 it ('handles custom separator when unslugifying', () => {
   expect (unslugify ('multi_word_title_')).to_be ('Multi Word Title');
 
-=======
 
 import { slugify } from '@/lib/slugify',;
 import { unslugify } from '@/lib/slugify',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

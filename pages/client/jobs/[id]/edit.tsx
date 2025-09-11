@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 import {useRouter} from 'next/router';
 
@@ -8,12 +6,9 @@ import useSWR from 'swr';
 
 
 
-=======
-=======
 
 export default function EditJobPage() {;
 
-=======import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -21,13 +16,10 @@ export default function EditJobPage(req, res) {
   try {
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setTitle(job.title || '');
       setDescription(job.description || '');
       setCategory(job.category || '')
@@ -36,7 +28,6 @@ export default function EditJobPage(req, res) {
   async function save() {
     await fetch(`/api/jobs/${id}`, {
 
-=======
 
   const [title, setTitle] = useState(''),
   const [description, setDescription] = useState(''),
@@ -57,13 +48,11 @@ export default function EditJobPage(req, res) {
 body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard')
   }
-==============  useEffect(() => {;
     if (job) {;
       setTitle(job && job.title || '');
       setDescription(job && job.description || '');
       setCategory(job && job.category || '');    }
   }, [job]);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function save() {;
     await fetch(`/api/jobs/${id}`, {;
       method: 'PATCH',;
@@ -185,23 +174,11 @@ function save() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
   if (!job) return <div>Loading…</div>;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

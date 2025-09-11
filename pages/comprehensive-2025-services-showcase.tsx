@@ -12,7 +12,6 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662export default function Comprehensive2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
@@ -53,7 +52,6 @@ import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micr
     })
   const containerVariants = {
     hidden: { opacity: 0 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
@@ -61,7 +59,6 @@ import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micr
       opacity: 1,
       coordinate_y: 0,
 
-=======import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
@@ -264,7 +261,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
           </motion.div>;
         </div>;
       </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Search and Filter Section */}
       <section className="py - 8 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
         <div className="max - w-7xl mx - auto">;
@@ -300,7 +296,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent";
               />;
             </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Category Filter */}
             <div className="flex flex - wrap gap - 2">;
               {categories.map ((category) => (
@@ -312,7 +307,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                       ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
                       : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
                   }`}
-=======
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -415,7 +409,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 }`}
               >;
                 {/* Popular Badge */}
-=======
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -537,7 +530,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 </div>;
                 {/* Description */}
                 <p className="text - white / 80 leading - relaxed mb - 6">{service.description}</p>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Key Features */}
                 <div className="mb - 6">;
                   <h4 className="text - white font - semibold mb - 3">Key Features:</h4>;
@@ -771,7 +763,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
             </div>)}
         </div>;
       </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* CTA Section */}
       <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -908,7 +899,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 AI-Powered Solutions
               </div>
               <div className=&quot;px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 rounded-full text-lg font-semibold&quot;>
-=======    visible: {
       opacity: 1
       transition: {
         staggerChildren: 0.1
@@ -925,7 +915,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     }
 
 
-=======import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
@@ -960,7 +949,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
   }
 }
 
-=======  ],;
   const filteredServices = innovative2025MicroSaasExpansionV3;
     .filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -1060,10 +1048,8 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions,
 
-=======
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions, 
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions,
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -1081,7 +1067,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         </div>
       </section>
       {/* Search and Filter Section */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -1133,7 +1118,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
               >
                 <option value="popularity">Most Popular</option>
@@ -1200,7 +1184,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662                {service.popular && (
                   <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold rounded-full">
                     POPULAR
                   </div>
@@ -1224,7 +1207,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
@@ -1237,7 +1219,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   </div>
                 </div>
                 {/* Description */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Key Features */}
                 {/* Description */  } catch (error) {
     console.error("Error:", error);
@@ -1313,7 +1294,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 <ArrowRight className="w-5 h-5" />
               </a>
               </Link>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
@@ -1326,10 +1306,8 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
       </section>
       <EnhancedFooter />
     </div>
-=======
 }
 
-=======
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
               Ready to Transform Your Business?;
@@ -1356,7 +1334,3 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

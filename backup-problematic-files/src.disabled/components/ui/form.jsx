@@ -9,8 +9,4 @@ const Form = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Form;
-=======
-export default Form;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

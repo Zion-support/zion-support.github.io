@@ -11,7 +11,6 @@ export interface MobileMenuProps {;
 }
 
 
-=======
 
 
 export interface MobileMenuProps {
@@ -25,17 +24,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   const isAuthenticated = !!user,
 
   
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navItems = [
     {
       name: "Home"
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    },
     {
       name: "Browse",
       href: "/talent",
@@ -48,8 +42,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Post Job"
       href: "/post-job"
@@ -59,14 +51,11 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Messages"
       href: "/messages"
@@ -77,14 +66,11 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -137,7 +123,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       authRequired: true;
     }
   ];
-=======  ];
   // Filter items based on auth status
   const visibleItems = navItems.filter(item =>
     !item.authRequired |(item.authRequired && isAuthenticated)
@@ -145,25 +130,20 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   ],
 
   return (
-==============
 
   return (
 
-=======          <Link
             key={item.name}
             to={item.href}
             className={cn(
               "flex items-center px-6 py-3 text-base font-medium";
 
               "flex items-center px-6 py-3 text-base font-medium",
-=======
 
               "flex items-center px-6 py-3 text-base font-medium",
-=======
               "flex items-center px-6 py-3 text-base font-medium";
 
               "flex items-center px-6 py-3 text-base font-medium",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -176,11 +156,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
-=======
-=======
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Link } from "react-router-dom",;
 import { useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;
@@ -243,8 +220,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
     !item.authRequired || (item.authRequired && isAuthenticated);
   );
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="py-6">;
       <div className="flex justify-between items-center px-6 mb-6">;
         <h2 className="text-xl font-bold">Menu</h2>;
@@ -255,14 +230,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
       <nav className="space-y-1">;
               "flex items-center px-6 py-3 text-base font-medium"
               item && item.matches(location && location.pathname)
-=======
 
       <nav className="space-y-1">;
 
               "flex items-center px-6 py-3 text-base font-medium"
               item && item.matches(location && location.pathname)
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
@@ -273,17 +246,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               )}
             </div>;
             {item.name}
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
             {item && item.name}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Link>;
         ))}
 
@@ -292,9 +261,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 
 
 }
-=======
-=======
-=======
       </nav>;
     </div>;
   );
@@ -302,14 +268,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';
@@ -328,7 +287,6 @@ function MobileMenu() {
   const { user } = use_auth ();
   const is_authenticated = !!user;
 ;
-<<<<<<< HEAD
   const nav_items = [;
     {
       name: "Home",
@@ -408,7 +366,6 @@ function MobileMenu() {
       </nav>;
     </div>);
 }
-<<<<<<< HEAD
   ),;}
  export interface MobileMenuProps {
   unreadCount?: number;
@@ -486,8 +443,3 @@ return ()
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

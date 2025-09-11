@@ -9,8 +9,4 @@ const AIContentCreationRevolution = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIContentCreationRevolution;
-=======
-export default AIContentCreationRevolution;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

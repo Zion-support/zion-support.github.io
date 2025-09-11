@@ -9,8 +9,4 @@ const AIAutonomousAudit = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousAudit;
-=======
-export default AIAutonomousAudit;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

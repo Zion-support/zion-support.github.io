@@ -13,32 +13,22 @@ function isRateLimited(ip: string): boolean {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
-=======
 
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (!limited) {
     bucket.timestamps.push(now);
   }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -49,10 +39,8 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -64,10 +52,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -99,12 +85,9 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     console.error('Operator error', err)
     return res.status(500).json({ error: 'Internal Server Error' })
 
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -180,22 +163,15 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 
 ;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
-=======    console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
 
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
-=======
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
@@ -248,15 +224,6 @@ export default async function handler(req, res) {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -3,7 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 const dataPath = path && path.join(process && process.cwd(), 'data', 'learn', 'courses && courses.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-=======
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 const dataPath = path.join(process.cwd(), 'datalearncourses.json');
 
@@ -15,7 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const raw = fs && fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON && JSON.parse(raw);
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       return true;
     });
@@ -24,7 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
 
-==============
     const filtered = courses.filter((c: any) => {
       if (category && c.category !== category) return false;
       if (level && c.level !== level) return false;
@@ -44,7 +41,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
-=======;
 const data_path = path.join (process.cwd (), 'data', 'learn', 'courses.json');
 export default /**
  * handler - Function description
@@ -135,7 +131,6 @@ export default function handler(req, res) {
 }
       return true;
     });
-=======    res.status(200).json({ courses: filtered });
   } catch (error) {
     res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
     } catch (error) {
@@ -164,15 +159,5 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

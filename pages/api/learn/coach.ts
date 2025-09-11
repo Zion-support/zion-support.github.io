@@ -17,18 +17,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         messages: [
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
 
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
           { role: 'user', content: String(prompt) }
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       return res.status(200).json({ text })
     }
     // Fallback without API key
@@ -65,17 +60,11 @@ if ( {) {
 }
   }
 }
-=======
-=======
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Coach error' });
   }
 
 }
 
-=======
 }
 ;<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

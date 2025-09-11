@@ -11,9 +11,7 @@
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Launch Sovereign</span>
-=======
   ]
-=======
 import FeatureCard from './components / FeatureCard',
 export default /**
  * HomePage - Function description
@@ -32,7 +30,6 @@ function HomePage() {
       ],
       gradient: &quot;bg - gradient - to - r from - blue - 600 to - purple - 600 & quot;
     },
-=======
 import FeatureCard from './components/FeatureCard'
 export default function HomePage() {
   const features = [
@@ -47,7 +44,6 @@ export default function HomePage() {
         &quot;Blog + Roadmap Setup&quot;
       ]
       gradient: &quot;bg-gradient-to-r from-indigo-600 to-blue-600&quot;
-=======
       icon: "🤖",
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
@@ -135,7 +131,6 @@ export default function HomePage() {
 
 
 
-=======
             <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
               for launching sovereign digital economies.
@@ -151,7 +146,6 @@ export default function HomePage() {
 
             {features.map((feature, index) => (
               <FeatureCard
-=======
       <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-7xl mx - auto text - center & quot;>;
           <div className=&quot;hero - gradient absolute inset - 0 -z - 10 & quot;></div>;
@@ -191,7 +185,6 @@ export default function HomePage() {
           <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8&quot;>;
             {features.map ((feature, index) => (
               <FeatureCard;
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -209,7 +202,6 @@ export default function HomePage() {
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
-=======
             
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
@@ -342,7 +334,6 @@ export default function HomePage() {
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
 
-=======          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <FeatureCard
                 key={index}
@@ -356,9 +347,7 @@ export default function HomePage() {
         </div>;
       </section>;
       {/* CTA Section */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
 <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
@@ -368,10 +357,6 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-6">
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Ready to Build the Future?
             </h2>
             <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
@@ -388,14 +373,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
           <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;
@@ -440,14 +417,10 @@ export default function HomePage() {
         </div>;
       </section>;
     </div>);
-<<<<<<< HEAD
 <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
             <h2 className=&quot;text-4xl font-bold mb-6&quot;>
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">

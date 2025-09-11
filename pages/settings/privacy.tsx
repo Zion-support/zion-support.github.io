@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react',
 import React, { useEffect, useState } from 'react',;
 ;
-=======
 
 
 import React, { useEffect, useState } from 'react',
-=======
 import React, { useEffect, useState } from 'react',;
 ;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from 'react',
 
 
@@ -46,13 +42,10 @@ export default function PrivacySettingsPage() {
     setLoading(false)
   }
   },
-=======
-=======
 
   },=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const save = async () => {
     if (!userId) return
     setLoading(true)
@@ -68,7 +61,6 @@ export default function PrivacySettingsPage() {
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
 
-=======
   },
   },    localStorage.setItem('user-id', userId);
 
@@ -76,7 +68,6 @@ export default function PrivacySettingsPage() {
   }
 
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -90,8 +81,6 @@ export default function PrivacySettingsPage() {
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
@@ -135,11 +124,7 @@ export default function PrivacySettingsPage() {
   }
 }
 }
-=======
-=======
-=======
 }
-=======
 import React, { useEffect, useState } from 'react',
 ;
 export default /**
@@ -214,7 +199,3 @@ if (return, ) {
     </div>);
 }          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

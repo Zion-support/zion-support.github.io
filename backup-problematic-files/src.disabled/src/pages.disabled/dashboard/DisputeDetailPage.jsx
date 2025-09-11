@@ -14,8 +14,4 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
-<<<<<<< HEAD
 export default DisputeDetailPage;
-=======
-export default DisputeDetailPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const SearchModal.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SearchModal.js;
-=======
-export default SearchModal.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

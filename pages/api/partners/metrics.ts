@@ -1,5 +1,3 @@
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -16,7 +14,6 @@ export default async function handler(
   const usingPlaceholder =
 
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-=======        total_signups: 12,
         total_visits: 180,
         total_profile_completions: 7,
         total_job_creations: 5,
@@ -33,8 +30,3 @@ export default async function handler(
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

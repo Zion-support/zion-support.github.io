@@ -12,24 +12,3 @@ import { render, screen  } from "@testing-library/react";",
     render(<AIChatAssistant />);,
     expect(screen.getByRole("main")).toBeInTheDocument()});",
   it("displays correct content", () => {;"}
-
-<<<<<<< HEAD
-=======
-
-=======  it('displays correct content', () => {;
-  it('handles user interactions', () => {;
-import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatAssistant />); it("handles user interactions"
-
-    // Add interaction tests based on component functionality})});
-  it('displays correct content', () => {;
-  it('handles user interactions', () => {;
-import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatAssistant />); it("handles user interactions"
-    // Add interaction tests based on component functionality})});
-    // Add interaction tests based on component functionality})});
-    // Add interaction tests based on component functionality})});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-  it('displays correct content', () => {;
-  it('handles user interactions', () => {;
-import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatAssistant />); it("handles user interactions"
-ursor/automate-test-improve-and-merge-code-2480

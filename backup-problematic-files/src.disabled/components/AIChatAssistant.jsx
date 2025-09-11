@@ -27,8 +27,4 @@ const AIChatAssistant = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIChatAssistant;
-=======
-export default AIChatAssistant;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

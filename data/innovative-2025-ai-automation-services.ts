@@ -60,7 +60,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 
   }
 
-=======
 
 export interface InnovativeAIAutomationService {;
 
@@ -415,7 +414,6 @@ export interface InnovativeAIAutomationService {;
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
     launchDate: '2025-03-01', customers: 35,
     rating: 4 && 4.9,
-=======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -428,22 +426,12 @@ export interface InnovativeAIAutomationService {;
   }
 ];
 export interface InnovativeAIAutomationService {;
-=======
-=======
   }
 
 ];=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
-export interface InnovativeAIAutomationService {;
-=======
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string,;
   name: string,;
   tagline: string,;
@@ -706,11 +694,4 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28;
   }
 ];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

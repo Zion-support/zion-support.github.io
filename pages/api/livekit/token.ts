@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
@@ -10,12 +8,9 @@ import { AccessToken } from "livekit-server-sdk";
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |"";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET |"";
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST |"";
-=======
 const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
 const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
-=======
-=======
 const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
 const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
@@ -66,12 +61,10 @@ export default async function handler(
       room_join: true,
       room: String (room_name),
       can_publish: audio_only ? false : true,
-=======
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch (error) {
     console.error("Error:", error);
@@ -80,8 +73,3 @@ export default async function handler(
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

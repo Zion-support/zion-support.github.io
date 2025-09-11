@@ -17,12 +17,8 @@ for (const size of sizes) {
   console && console.log('generated', out)
 }
 
-<<<<<<< HEAD
   console && console.log('generated', out)
 }
-=======
-==============
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr / bin / env node const root = new URL ('.',
 import.meta.url).pathname,
 const svg_path = resolve (root, '../assets / zion.svg'),
@@ -40,8 +36,6 @@ for (const size of sizes) {
 }
 }
 
-<<<<<<< HEAD
   console.log('generated', out)
 }
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

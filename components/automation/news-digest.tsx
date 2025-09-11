@@ -1,15 +1,11 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</div> </div>) import fs from 'fs';
-=======
 
 }</div> </div>) import fs from 'fs';
-=======import fs from 'fs';
 import path from 'path';
 
 
 </div> </div>) )
-=======
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path'; </div> </div>) ) 
@@ -45,7 +41,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
           </div>
         ))}
       </div>
-=======
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datanews-digest.json');
   let items: NewsItem[] = [];  let generatedAt = '';
@@ -58,9 +53,6 @@ export async function getServerSideProps() {;
 );
 }
 
-=======
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * NewsDigestPage - Function description
  */
@@ -108,7 +100,3 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 }
   );
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

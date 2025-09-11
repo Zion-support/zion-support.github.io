@@ -1,7 +1,5 @@
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 
 import Head from 'next/head';
@@ -15,9 +13,7 @@ import React from 'react';
 import React from 'react',
 import React from 'react';
 export default function Update202508150402() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Update202508150402() {
-=======
 import React from 'react',;
 export default function Update202508150402() {;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
@@ -39,7 +35,6 @@ export default function Update202508150402() {;>>>>>>> f8e247744ae2f2b9a6ba04231
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -51,13 +46,5 @@ export default function Update202508150402() {;>>>>>>> f8e247744ae2f2b9a6ba04231
             </p>;
           </section>;
 
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

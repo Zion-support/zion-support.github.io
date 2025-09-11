@@ -23,8 +23,6 @@ export function useTalentDirectory() {
     talents, 
     isLoading 
   } = useTalentData(),
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
@@ -98,7 +96,6 @@ function useTalentDirectory() {
 
 
 
-=======
     talents
     isLoading
 import { useFilterTalents } from "./talent/useFilterTalents",
@@ -137,7 +134,6 @@ export function useTalentDirectory() {
     toggleRegion,
     clearFilters
 
-==============
   } = useFilterTalents(talents);
   } = useFilterTalents(talents),
   // Manage UI state
@@ -193,10 +189,8 @@ export function useTalentDirectory() {
     handleToggleSave
   }
 }
-=======
 
 
-=======    // Actions
     toggleSkill;
     toggleAvailability;
     toggleRegion;
@@ -205,15 +199,12 @@ export function useTalentDirectory() {
     handleToggleSave
 
     expanded_sections;
-=======
 
 
-==============
 
 
   }
 }
-<<<<<<< HEAD
 ;
     // Auth and user state;
     is_authenticated;
@@ -228,7 +219,6 @@ export function useTalentDirectory() {
     toggle_section;
     handleToggleSave;
   }
-<<<<<<< HEAD
 }
   }
 }
@@ -236,10 +226,4 @@ export function useTalentDirectory() {
   }
 }
 ;
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

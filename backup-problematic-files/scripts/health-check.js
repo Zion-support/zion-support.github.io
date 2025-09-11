@@ -4,8 +4,4 @@ export const Health-check = () => {
   return null;
 };
 
-<<<<<<< HEAD
 export default Health-check;
-=======
-export default Health-check;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

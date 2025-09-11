@@ -22,7 +22,6 @@ class ErrorBoundary extends React.Component {
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false });
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false });
 const \"ContactPage\": React.FC = () => {;
-=======
 
 import React from 'react';
 import dynamic from 'next/dynamic';
@@ -44,7 +43,6 @@ import {
   Globe
 } from 'lucide-react';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -67,7 +65,6 @@ import {
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -124,7 +121,6 @@ import {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -226,7 +222,6 @@ import {
                 <div className="space-y-6">
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
-<<<<<<< HEAD
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
 ursor/add-new-services-and-deploy-updates-0462
@@ -236,24 +231,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
-                      <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
-                        <info.icon className=\"w-6 h-6 text-white\" />
-                      </div>
-                      <div>
-                        <h3 className=\"text-lg font-semibold text-white mb-1\">{info.title}</h3>
-                        <p className=\"text-cyan-400 font-medium mb-1\">{info.details}</p>
-                        <p className=\"text-gray-400 text-sm\">{info.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </section>
               <div className=\"space-y-8\">;
                 <div>;
@@ -314,7 +291,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     </h3>
                   </motion.div>
                 ))}
-<<<<<<< HEAD
 }
 export default ContactPage
 ursor/add-new-services-and-deploy-updates-0462
@@ -323,43 +299,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 export default ContactPage
 export default ContactPage
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
-export default ContactPage
-          </div>
-        </section>
-      </div>
-    </>
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </PageTransition>;
-    </>;
-  );
-}
-export default ContactPage;
-          </div>;
-        </section>;
-      </div>;
-    </>;
-  );
-
-=======
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-}
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -16,10 +14,7 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -82,7 +77,6 @@ const defaultContext:MessagingContextType = {;
   loadMessages:async () => {}
 },;
 ;
-=======
 import {useAuth} from '@/hooks/useAuth';
 import {MessagingContextType} from '@/types/messaging';
 import {useMessagingOperations, useMessagingRealtime} from '@/hooks/messaging';
@@ -114,7 +108,6 @@ export function useMessaging(): any (): MessagingContextType {;
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider');
-=======
 ),
 
 
@@ -139,11 +132,9 @@ export function useMessaging(): MessagingContextType {
 }
 
   const {
-=======
 
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
-=======
 
 
       setConversations([]);
@@ -154,7 +145,6 @@ export function MessagingProvider(): any ({ children }: { children: ReactNode })
   // Create context value with all the methods and states;
   const contextValue: MessagingContextType = {;
 
-=======    fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
 ;
@@ -200,7 +190,6 @@ if ( {) {
     </MessagingContext && MessagingContext.Provider>;
   );
 }
-=======
     fetchConversations,;
     loadMessages;
   };
@@ -210,11 +199,9 @@ if ( {) {
   );
 }
 
-=======    fetch_conversations,
     load_messages;
   }
 ;
-<<<<<<< HEAD
   return (
     <MessagingContext.Provider value={context_value}>;
       {children}
@@ -230,7 +217,6 @@ export function useMessaging():MessagingContextType {;
   }
   return context,;
 }
-<<<<<<< HEAD
 ;
 // Provider component;
 export function MessagingProvider({ children } { children:ReactNode }) {;
@@ -303,8 +289,3 @@ export function MessagingProvider({ children } { children:ReactNode }) {;
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

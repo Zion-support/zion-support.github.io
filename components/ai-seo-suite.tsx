@@ -29,8 +29,6 @@ import React from 'react';
 
 export default function AISeosuitePage() {
   const features = [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 export default function AISeosuitePage() {
   const features = [
     {
@@ -92,7 +90,6 @@ export default function AISeosuitePage() {
   const features = [
     {
 
-=======  ];
   const pricingPlans = [
     {
       name: 'Starter'
@@ -134,7 +131,6 @@ export default function AISeosuitePage() {
   const features = [
     {
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-==============  Search,
   TrendingUp,
   Target,
   BarChart3,
@@ -198,10 +194,8 @@ export default function AISeosuitePage() {_const _features = [
 
   const pricingPlans = [
 
-=======
     };
     {
-==============      features: [;
         'Up to 25 websites',
         'Advanced keyword research',
         'Weekly site audits',
@@ -220,18 +214,13 @@ export default function AISeosuitePage() {_const _features = [
       color: 'border - blue - 500',
       button_color: 'bg - blue - 600 hover:bg - blue - 700';
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       name: 'Enterprise',
       price: '$399',
       period: '/month',
       description: 'For large organizations and enterprises',
-=======
       features: [;=======
 
-=======
       features: [;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Unlimited websites',
         'Full SEO suite',
         'Daily site audits',
@@ -264,8 +253,6 @@ export default function AISeosuitePage() {_const _features = [
   ];
 ;
   const integrations = [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
     { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
     { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
@@ -274,10 +261,7 @@ export default function AISeosuitePage() {_const _features = [
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
     { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  ];
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const use_cases = [;
     {
@@ -634,10 +618,7 @@ export default function AISeosuitePage() {
     }
   ];
   const successMetrics = [
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       metric: 'Organic Traffic'
       value: '+150%'
@@ -795,14 +776,9 @@ export default function AISeosuitePage() {;
       category: 'Keyword Research',;
       icon: <Search className="w-6 h-6 text-blue-400" />,;
       tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords'];
-=======
-==============
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
     {;
       category: 'On-Page SEO',;
@@ -820,10 +796,8 @@ export default function AISeosuitePage() {;
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards'];
     }
   ];
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const successMetrics = [
     { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
@@ -831,21 +805,14 @@ export default function AISeosuitePage() {;
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
 
-=======
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
-=======
 
   ];
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
         />;
@@ -921,8 +888,6 @@ export default function AISeosuitePage() {;
             analytics, and intelligent optimization
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='#pricing'
               size='lg'
@@ -964,13 +929,10 @@ export default function AISeosuitePage() {;
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Everything you need to dominate search rankings and drive organic;
               traffic;
             </p>;
           </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
             {features.map ((feature, index) => (
               <Card;
@@ -982,15 +944,11 @@ export default function AISeosuitePage() {;
                   <div;
                     className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover:scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color} shadow - xl`}
                   >;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {feature.icon}
                   </div>;
                 </div>;
                 <h3 className='text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
                   {feature.title}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 </h3>
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features            </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -1019,8 +977,6 @@ export default function AISeosuitePage() {;
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
                 </p>
               </Card>
-=======
-=======
                 </p>
               </Card>>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
@@ -1031,9 +987,6 @@ export default function AISeosuitePage() {;
                 </p>
               </Card>>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1052,7 +1005,6 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
-==============        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Comprehensive SEO Tools
@@ -1083,8 +1035,6 @@ export default function AISeosuitePage() {;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {seoTools && seoTools.map((tool, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1113,10 +1063,7 @@ export default function AISeosuitePage() {;
                       {tool && tool.tools.map((toolName, toolIndex) => (;
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Professional-grade tools used by top SEO agencies and marketers
             </p>
           </div>
@@ -1139,9 +1086,7 @@ export default function AISeosuitePage() {;
                           {toolName}
 
                         </div>
-=======
                           {toolName}
-=======
 
                           {toolName}
 
@@ -1165,7 +1110,6 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
-==============        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Proven Results
@@ -1196,8 +1140,6 @@ export default function AISeosuitePage() {;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
             {successMetrics && successMetrics.map((metric, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>;
@@ -1217,10 +1159,7 @@ export default function AISeosuitePage() {;
                 <h3 className="text-xl font-bold mb-2 text-white">{metric && metric.metric}</h3>;
                 <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
               </Card>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               See the impact our AI-powered SEO suite has on businesses
             </p>
           </div>
@@ -1237,8 +1176,6 @@ export default function AISeosuitePage() {;
                 <p className="text-gray-400 text-sm">{metric.description}</p>
               </Card>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               </Card>
 
 
@@ -1266,7 +1203,6 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
-==============        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Use Cases
@@ -1297,8 +1233,6 @@ export default function AISeosuitePage() {;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases && useCases.map((useCase, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1333,10 +1267,7 @@ export default function AISeosuitePage() {;
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Trusted by businesses across industries for SEO success
             </p>
           </div>
@@ -1362,9 +1293,7 @@ export default function AISeosuitePage() {;
                           {benefit}
 
                         </div>
-=======
                           {benefit}
-=======
 
                           {benefit}
 
@@ -1391,20 +1320,15 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
-==============        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               Choose the plan that fits your SEO needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {pricingPlans.map((plan, index) => (
           </div>;
         </div>;
@@ -1434,8 +1358,6 @@ export default function AISeosuitePage() {;
             {pricingPlans && pricingPlans.map((plan, index) => (;
               <Card
                 key={index}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 </p>;
               </Card>))}
           </div>;
@@ -1653,14 +1575,10 @@ export default function AISeosuitePage() {;
                   </div>)}
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 2'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className={`relative group ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan.color} hover:border-blue-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
@@ -1684,7 +1602,6 @@ export default function AISeosuitePage() {;
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
-=======
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -1757,7 +1674,6 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
-==============        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Seamless Integrations
@@ -1788,8 +1704,6 @@ export default function AISeosuitePage() {;
           </div>;
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1811,10 +1725,7 @@ export default function AISeosuitePage() {;
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Connect with your favorite tools and platforms
             </p>
           </div>
@@ -1831,7 +1742,6 @@ export default function AISeosuitePage() {;
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               </Card>
 
@@ -1842,7 +1752,6 @@ export default function AISeosuitePage() {;
 
 
       {/* CTA Section */}
-=======
               </Card>
 
             ))}
@@ -1850,7 +1759,6 @@ export default function AISeosuitePage() {;
         </div>
       </section>
 
-==============
             ))}
 
           </div>;
@@ -1858,23 +1766,18 @@ export default function AISeosuitePage() {;
       </section>;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
 
 
       {/* CTA Section */}
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======            Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses who are already ranking higher and
             driving more organic traffic.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href="/contact"
               variant="secondary"
@@ -1891,7 +1794,6 @@ export default function AISeosuitePage() {;
 
 }
     </>);
-=======
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -1901,15 +1803,11 @@ export default function AISeosuitePage() {;
         </div>
       </section>
     </>
-=======
   );
-=======
 
 }=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
@@ -1921,8 +1819,6 @@ export default function AISeosuitePage() {;
       </section>
     </>
   );
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
@@ -1930,9 +1826,3 @@ export default function AISeosuitePage() {;
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -5,7 +5,6 @@
   }
 ;
 export const nextGenAI2026Services: NextGenAi2026Service[] = [;
-=======
 
     address: string;
   }
@@ -39,8 +38,6 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [  {
     }
   }
 ]
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "2026-next-gen-ai",
     name: "2026 Next-Gen AI Platform",
     tagline: "Next-generation AI for 2026",
@@ -75,17 +72,10 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [  {
 ];
 ],
 ];
-=======
-=======
 
 
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709";
 ],
 
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

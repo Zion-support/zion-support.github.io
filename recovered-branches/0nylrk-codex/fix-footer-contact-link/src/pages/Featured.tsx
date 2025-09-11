@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Featured() {
   return (
     <>
@@ -20,14 +17,11 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======          
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
 import { GradientHeading } from "@/components/GradientHeading";
 
-=======
 
 
           {/* Reuse the FeaturedListings component */}
@@ -39,7 +33,3 @@ import { GradientHeading } from "@/components/GradientHeading";
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

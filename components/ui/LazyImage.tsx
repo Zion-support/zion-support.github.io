@@ -43,7 +43,6 @@
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
-=======
   return (
     <div className={`relative overflow - hidden ${class_name}`}>;
       {/* Placeholder */}      <img
@@ -51,14 +50,9 @@
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
-=======
 
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
@@ -115,15 +109,12 @@
       {isInView && (
         <motion.img
 
-==============>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
 
     </div>
     </div>
-=======
-==============
           className='w - full h - full object - cover';
           loading='lazy'          style={{ width, height }}
         />)}
@@ -142,6 +133,3 @@ export default LazyImage);
 ;
 export default LazyImage;
 ;<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

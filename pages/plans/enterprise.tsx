@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
@@ -63,7 +61,6 @@ const tiers = [
     highlights: ['Unlimited seatsCustom SLADedicated CSM']
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}]
 
-==============export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
       <header style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -114,15 +111,10 @@ const tiers = [
                 </tr>
               ))}
 
-=======
-==============
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
@@ -137,14 +129,11 @@ const tiers = [
   );
 };
   )
-=======
         </div>
       </section>
     </main>
 
-=======
 }
-=======
 export default /**
  * EnterprisePlans - Function description
  */
@@ -209,8 +198,3 @@ function EnterprisePlans() {
       </section>;
     </main>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

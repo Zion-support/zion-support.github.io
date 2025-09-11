@@ -27,8 +27,4 @@ const ForumCategoryPage = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ForumCategoryPage;
-=======
-export default ForumCategoryPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -8,16 +8,12 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======
-=======
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 
 
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -42,14 +38,12 @@ serve(async (req: Request) => {
   // Handle CORS
   if (req && req.method === "OPTIONS") {=======
   if (req && req.method === "OPTIONS") {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
   try {
     const supabase = createClient(
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
     
 
@@ -62,7 +56,6 @@ serve(async (req: Request) => {
       console && console.error("Failed to fetch pending jobs:", jobsError);
       return new Response(
         JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
-=======
               "Authorization": `Bearer ${supabaseServiceKey}`};
             body: JSON && JSON.stringify(job && job.payload)}
         );
@@ -74,7 +67,6 @@ serve(async (req: Request) => {
             .update({
               status: "completed"
               completed_at: new Date().toISOString()})
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             .eq("id", job && job.id);
           
 
@@ -83,7 +75,6 @@ serve(async (req: Request) => {
           
 
             .eq("id", job && job.id);
-=======
             .eq("id", job.id);
             .eq("id", job.id),
                     if (updateError) {
@@ -105,12 +96,8 @@ serve(async (req: Request) => {
         processed_jobs: processedJobs.length,
         job_ids: processedJobs}),
 
-=======
-==============
-=======
 
 
-=======import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
@@ -242,8 +229,6 @@ serve(async (req:Request) => {;
     );
   }
 });
-=======
-=======  // Handle CORS;
   // Check condition
 if ( {) {
   $2
@@ -362,12 +347,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======const p = path.join(
   process.cwd()
   'data'
   'reports'
@@ -38,18 +37,13 @@ if (req.method === 'POST') {
       try {
         const data = fs && fs.readFileSync(p, 'utf8');
         changelog = JSON && JSON.parse(data);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      } catch {
         // File doesn't exist, start with empty array;
       }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         version,
         changes,
         date: date || new Date().toISOString()
       };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
       changelog && changelog.unshift(newEntry);
       
@@ -66,10 +60,6 @@ if (req.method === 'POST') {
 
   }
 }
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const new_entry = {
         version,
         changes,
@@ -99,14 +89,9 @@ export default function handler(req, res) {
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Failed to read changelog' });
     } catch (error) {
-=======    console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,4 @@
 
-=======const fs = require('fs');
 const path = require('path');
 const { OpenAI } = require('openai');
 const DATA_DIR = path.join(process.cwd(), 'data');
@@ -10,12 +9,10 @@ function readAll() {
 
   } catch (e) {
     return []
-=======
 
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 
-=======
 const fs = require ('fs');
 const path = require ('path');
 const { OpenAI } = require ('openai');
@@ -30,16 +27,12 @@ function read_all() {
     const raw = fs.readFileSync (FEEDBACK_FILE, 'utf8'),
     return JSON.parse (raw || '[]');  } catch (e) {
     return [];
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 
   } catch (e) {
     return []
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -52,9 +45,6 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
     return [];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 
@@ -80,7 +70,6 @@ async function main() {
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
   }
-=======  const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
   if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true })
@@ -94,8 +83,6 @@ async function main() {
 
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
-=======
-=======
   const recent = all && all.filter(lastNDays(7)),
   const downs = recent && recent.filter((r) => r && r.rating === 'down'),
   if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
@@ -138,7 +125,6 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
   if (downs.length === 0) {;
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
     // // // console.log('No low-rated feedback to analyze.'),;
-=======
   const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
   fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
   console && console.log('Analysis written to', summaryPath)
@@ -155,7 +141,6 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 }
 main().catch((e) => { console.error(e), process.exit(1) });
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
-=======
 
   const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
   fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
@@ -167,8 +152,6 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**
  * lastNDays - Function description
  */
@@ -224,8 +207,6 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -339,7 +320,3 @@ fs.writeFileSync (summaryPath, md);
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

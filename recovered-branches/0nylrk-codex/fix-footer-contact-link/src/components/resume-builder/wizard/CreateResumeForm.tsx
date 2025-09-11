@@ -9,14 +9,10 @@ import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  isLoading 
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState(''),
 
@@ -25,7 +21,6 @@ export const CreateResumeForm = ({ ;
 
 
 
-==============
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
@@ -38,14 +33,10 @@ export const CreateResumeForm = ({ ;
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
           <div className="flex gap-2 max-w-md mx-auto">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
   isLoading ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
@@ -66,7 +57,6 @@ export const CreateResumeForm = ({;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />
@@ -80,9 +70,6 @@ export const CreateResumeForm = ({;
               disabled={!newResumeTitle.trim() || isLoading}
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Create
@@ -101,17 +88,14 @@ export const CreateResumeForm = ({;
   )
 
 
-=======
           <Button
             variant="ghost"
             onClick={onCancel}
             className="mt-4">;
-=======
 
 },
 
 
-=======import { useState } from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -156,12 +140,6 @@ export const CreateResumeForm = ({
             variant="ghost";
             on_click={on_cancel}
             className="mt - 4";
-<<<<<<< HEAD
 },
 };
 },
-==============
-
-    </Card>);
-}
-;

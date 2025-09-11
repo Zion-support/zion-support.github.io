@@ -39,29 +39,24 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-=======
 import React from "react";
 import Head from "next/head";
 origin/main
 origin/automation-improvements-final
 
-=======
 
 import React from "react";
 import Head from "next/head";
 
 
 
-=======
 import React from './react';
 import Head from './next / head';
 ;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
->>>>>>> 6d72fcb6e43ee824c52724609027e0555356221c
 interface SEOProps {
   title?: string;
   description?: string;
@@ -93,7 +88,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   keywords?: string;
 }
-=======const SEO: React.FC<SEOProps> = ({
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
   description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
   keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
@@ -118,7 +112,6 @@ origin/automation-improvements-final
       <meta name="keywords" content={keywords} />
 export default SEO;
 }
-=======
   );
 
 
@@ -127,7 +120,6 @@ export default SEO;
 export default SEO;
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
   image?: string;
   url?: string;
@@ -149,15 +141,10 @@ const SEO: React.FC<SEOProps> = ({
 export default SEO;
 
 
-<<<<<<< HEAD
 }
 export default SEO;
 }
 export default SEO;
-==============
-}
-export default SEO;=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />;

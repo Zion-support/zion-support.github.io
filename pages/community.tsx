@@ -1,13 +1,10 @@
 
                   rel='noopener noreferrer'>;
-=======                <a;
                   className='text - cyan - 400';
                   href='https://youtube.com/@ziontechgroup';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   YouTube;
                 </a>;
               </li>;
@@ -74,14 +71,9 @@
   );
 
 }
-=======
-=======
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 </div>);
 ;
@@ -125,11 +117,7 @@ export default function CommunityPage(req, res) {
   }
 }
 ;
-=======
     </div>);
 ;
 
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -18,10 +18,6 @@ import PdfExportButton from '../../components/ui/PdfExportButton';
 import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
 import { createServerClient } from '../../utils/supabase/server';
 
-=======
-=======
-=======
-=======
             onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
             className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
           >;
@@ -42,8 +38,6 @@ import { createServerClient } from '../../utils/supabase/server';
               </select>;
             </>;
 
-=======
-=======
 import { GetServerSideProps } from 'next';
 import React, { useMemo, useRef, useState } from 'react';
 import PdfExportButton from '../../components/ui/PdfExportButton';
@@ -75,7 +69,6 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
         permanent: false}}
   }
 // Placeholder: fetch resume data for the logged-in user and versions if any
-=======
 
         destination: '/auth',
         permanent: false}}
@@ -88,10 +81,8 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
     skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'],
     technologies: ['OpenAISupabasePostgresVercelDocker'],
     experience: [
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
 title: 'Senior AI Engineer'
-=======
 
       {
         title: 'Senior AI Engineer'        company: 'Zion AI'
@@ -99,7 +90,6 @@ title: 'Senior AI Engineer'
         end: 'Present'
         location: 'Remote'
         bullets: [
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
       <PdfExportButton
@@ -110,7 +100,6 @@ title: 'Senior AI Engineer'
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
       </div>;
     </div>;
-=======
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -483,10 +472,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   }
 }
 };
-=======
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

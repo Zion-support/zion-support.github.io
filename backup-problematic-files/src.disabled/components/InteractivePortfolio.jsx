@@ -9,8 +9,4 @@ const InteractivePortfolio = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default InteractivePortfolio;
-=======
-export default InteractivePortfolio;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

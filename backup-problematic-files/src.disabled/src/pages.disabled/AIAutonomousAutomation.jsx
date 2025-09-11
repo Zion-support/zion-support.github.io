@@ -9,8 +9,4 @@ const AIAutonomousAutomation = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousAutomation;
-=======
-export default AIAutonomousAutomation;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -4,11 +4,9 @@
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 
-==============
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Sample endpoint data
 
   const endpoints = [
@@ -18,13 +16,9 @@ export function ApiReference() {
       path: "/api/jobs"
       description: "Retrieve a list of job postings with optional filtering"
       parameters: [
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
         { name: "category", type: "string", description: "Filter by job category" },
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       responses: {
         "200": {
           description: "A list of jobs"
@@ -82,7 +76,6 @@ export function ApiReference() {;
     {;
 
         },
-=======
         }
         },        "401": {
           description: "Unauthorized"
@@ -90,7 +83,6 @@ export function ApiReference() {;
   "error": "invalid_token"
   "message": "The provided API key is invalid or expired"
 }`
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         },
 
         "429": {
@@ -137,18 +129,15 @@ export function ApiReference() {;
           example: `{;
   "talent": [;
     {;
-=======
   "talent": [;
     {      "id": "talent-123";
       "full_name": "Jane Smith";
       "professional_title": "Full Stack Developer",;
       "skills": ["React", "Node && Node.js", "TypeScript"];
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "hourly_rate": 75;
       "availability": "full - time";
       "years_experience": 5;
       "location": "Remote, US";
-=======
       "bio": "Experienced full stack developer with a focus on React and Node.js..."
     }      "id": "talent-123",
       "full_name": "Jane Smith",
@@ -162,15 +151,12 @@ export function ApiReference() {;
     },
 
     // More talent profiles...
-=======
       "bio": "Experienced full stack developer with a focus on React and Node && Node.js...";
     };
     // More talent profiles...;=======
       "bio": "Experienced full stack developer with a focus on React and Node.js...";
     }
     // More talent profiles...;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   "count": 38;
   "limit": 20;
@@ -180,8 +166,6 @@ export function ApiReference() {;
 
       },
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
@@ -367,7 +351,6 @@ export function ApiReference() {;
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),;
 ;
   return (;
-=======
   return (=======
   ];
   // Find the active endpoint data
@@ -418,148 +401,7 @@ export function ApiReference() {;
                           </span>;
                           <span className="text-white">{response && response.description}</span>;
                         </div>;
-<<<<<<< HEAD
                         <CodeBlock
                           code={response && response.example} 
 
                         
-=======
-
-                        <CodeBlock
-                          code={response && response.example} 
-
-=======
-
-                        
-=======
-                        <CodeBlock 
-                          code={response.example} 
-                          language="json"
-
-export default ApiReference;
-
-export default ApiReference;
-;
-            </div>;
-          ) :(;
-            <div className="p-8 border border-zinc-800 rounded-lg text-center">;
-              <p className="text-zinc-400">Select an endpoint from the list to view details</p>;
-            </div>;
-          )}
-        </div>;
-      </div>;
-    </ApiDocsLayout>;
-  ),;}
-;
-export default ApiReference,;
- 
-};
-//More jobs... ];
-"count" : 42;
-"limit" : 20;
-"offset" : 0 
-}` 
-};
-}
-};
-requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` 
-};
-] 
-}` 
-}
-};
-requestExample: `curl -X POST \\ https://api.zionai.com/v1/api/jobs \\ //More talent profiles... ];
-"count" : 38;
-"limit" : 20;
-"offset" : 0 
-}` 
-}
-};
-requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=React, Node.js&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` 
-}];
-//Find the active endpoint data <button onClick= {
-  () => setActiveEndpoint (endpoint.id) 
-}className= {
-  `w-full text-left px-3 py-2 rounded-md text-sm flex items-center $ {
-  activeEndpoint === endpoint.id </button> </li>) ) 
-}</ul> </div> </div> <Tabs defaultValue="docs" > <TabsList className="mb-6" > <TabsTrigger value="docs" >Documentation</TabsTrigger> <TabsTrigger value="try" >Try It</TabsTrigger> </TabsList> {
-  activeEndpointData.parameters && activeEndpointData.parameters.length > 0 && (<> <h4 className="text-lg font-medium text-white mb-3" >Parameters</h4> <div className="overflow-x-auto mb-6" > <table className="w-full border-collapse" > <thead> <tr className="border-b border-zinc-800" > <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Name</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Type</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Required</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Description</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> </>) 
-}<h4 className="text-lg font-medium text-white mb-3" >Example Request</h4> <CodeBlock /> </div> {
-  /* Response section */ 
-}<div> <h3 className="text-xl font-semibold text-white mb-4">Responses</h3> {
-  Object.entries (activeEndpointData.responses) .map ( ([status, response]) => (<div key= {
-  status 
-}className="mb-6"> <div className="flex items-center mb-3"> <span className= {
-  `inline-block px-2 py-1 text-xs font-medium rounded mr-3 $ {
-  status.startsWith ('2') ? 'bg-green-950 text-green-500' : status === '401' || status === '403' ? 'bg-orange-950 text-orange-500' : 'bg-red-950 text-red-500' 
-}` 
-}> {
-  status 
-}</span> /> </div>) ) 
-}</div> </TabsContent> <TabsContent value="try"> <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center"> <div className="text-center"> <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p> <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p> </div> </div> </TabsContent> </Tabs> </div>) : (<div className="p-8 border border-zinc-800 rounded-lg text-center"> <p className="text-zinc-400">Select an endpoint from the list to view details</p> </div>) 
-}</div> </div> </ApiDocsLayout>) 
-}export default ApiReference;
-                            'bg-red-950 text-red-500'
-                          }`}>
-                            {status}
-                          </span>
-                          <span className="text-white">{response.description}</span>
-                        </div>
-                        <CodeBlock
-                          code={response.example}
-                        
-                        <CodeBlock 
-                          code={response.example} 
-                          language="json"
-                          showLineNumbers={true}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </TabsContent>
-                <TabsContent value="try">
-                  <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>
-                      <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>
-                    </div>
-                  </div>
-                </TabsContent>
-              </Tabs>
-            </div>
-          ) : (
-            <div className="p-8 border border-zinc-800 rounded-lg text-center">
-              <p className="text-zinc-400">Select an endpoint from the list to view details</p>
-            </div>
-          )}
-        </div>
-      </div>
-    </ApiDocsLayout>
-  )
-}
-
-;
-export default ApiReference;
-=======
-=======
-;
-export default ApiReference;
-
-
-=======
-;
-
-export default ApiReference;
-=======
-            </div>) : (
-            <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
-              <p className="text - zinc - 400">Select an endpoint from the list to view details</p>;
-            </div>)}
-        </div>;
-      </div>;
-    </ApiDocsLayout>);
-}
-export default ApiReference;
-;
-export default ApiReference;

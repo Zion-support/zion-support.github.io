@@ -1,14 +1,12 @@
 export default function UltraFuturisticBackground({ children }: { children: React.ReactNode }) {
 	return <div className="min-h-screen bg-gradient-to-br from-slate-950 via-black to-slate-900">{children}</div>
 }
-=======
 import React from 'react';
 
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
-<<<<<<< HEAD
   const getIntensityClasses = () => {
     switch (intensity) {
       case 'low':
@@ -34,14 +32,3 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       </div>
       
       {/* Content */}
-=======
-  return (
-    <div className={`${getBackgroundClasses()} ${className}`}>
-      <div className="absolute inset-0 bg-black/20" />      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
-  );
-};
-
-export default UltraFuturisticBackground;

@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useMemo, useState } from './react';,
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",
 export interface MilestoneAssistantProps {
@@ -16,7 +15,6 @@ export interface MilestoneAssistantProps {
       </div>;
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 ;
-=======
 
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 
@@ -48,11 +46,9 @@ export interface MilestoneAssistantProps {
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
 
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
-=======
 
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 
-=======
 
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}                  />;
                 </div>;
@@ -64,7 +60,6 @@ export interface MilestoneAssistantProps {
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
                     onChange={(e) => updateItem(idx, { estimatedEffortHours:Math.max(1, parseInt(e.target.value || "0", 10)) })}
                   />;
                 </div>;
@@ -91,6 +86,3 @@ export interface MilestoneAssistantProps {
 }
 ;
 export default MilestoneAssistant;
-=======
-export default MilestoneAssistant;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

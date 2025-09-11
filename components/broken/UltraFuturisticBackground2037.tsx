@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground2037Props {
@@ -407,7 +406,6 @@ if ( {) {
       />;
       {children}
     </div>);
-<<<<<<< HEAD
 }
 export default UltraFuturisticBackground2037;
       
@@ -684,8 +682,3 @@ export default UltraFuturisticBackground2037;
 },
 
 export default UltraFuturisticBackground2037
-
-=======
-
-}
-export default UltraFuturisticBackground2037;

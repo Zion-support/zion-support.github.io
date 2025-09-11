@@ -11,13 +11,11 @@ export function MilestoneCreator(): any ({;
   projectStartDate?: string;
   projectEndDate?: string | null;
     />;
-=======
 
     />;
   );
 }
 
-=======  on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
   on_cancel: () => void,
   project_scope?: string;
@@ -40,8 +38,6 @@ function MilestoneCreator() {
       project_type={project_type}
     />);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  export function MilestoneCreator ({
   onSubmit, isSubmitting, onCancel, projectScope, projectStartDate, projectEndDate, projectType 
@@ -65,9 +61,3 @@ function MilestoneCreator() {
     />
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

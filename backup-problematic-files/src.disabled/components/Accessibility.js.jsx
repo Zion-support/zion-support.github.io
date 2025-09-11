@@ -9,8 +9,4 @@ const Accessibility.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Accessibility.js;
-=======
-export default Accessibility.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

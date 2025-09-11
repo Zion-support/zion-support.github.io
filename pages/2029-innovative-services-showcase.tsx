@@ -5,10 +5,6 @@ import {
   Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
   Phone, Mail, MapPin
 } from 'lucide-react';
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -29,24 +25,15 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Brain, Atom, Target, ArrowRight, CheckCircle, Star,;
   Phone, Mail, MapPin;
 } from 'lucide-react',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
@@ -73,7 +60,6 @@ import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-bu
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
 
 
-=======
   website: 'https://ziontechgroup.com'
 }
 export default function InnovativeServicesShowcase2029() {
@@ -102,7 +88,6 @@ export default function InnovativeServicesShowcase2029() {
       services: practicalBusinessSolutionServices2029
     }
   ]
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -110,7 +95,6 @@ const contactInfo = {;
   website: 'https://ziontechgroup.com';
 
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
     ...aiAutonomousEcosystemServices2029;
@@ -119,7 +103,6 @@ export default function InnovativeServicesShowcase2029() {
   ];
   const _serviceCategories = [
 
-=======
 
   const serviceCategories = [=======
 
@@ -128,11 +111,8 @@ export default function InnovativeServicesShowcase2029() {
       icon: Brain,
       color: 'from-violet-600 via-purple-600 to-indigo-600',
       services: aiAutonomousEcosystemServices2029
-==============
     };
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -163,7 +143,6 @@ function InnovativeServicesShowcase2029() {
 
   ],
 
-=======
   return (
     <>
       <Head>
@@ -186,8 +165,6 @@ function InnovativeServicesShowcase2029() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-=======
   ],
   return (
     <>;
@@ -202,7 +179,6 @@ function InnovativeServicesShowcase2029() {
 
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
 
-=======
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -279,10 +255,8 @@ function InnovativeServicesShowcase2029() {
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
                 Experience the future of technology with our revolutionary AI autonomous ecosystems, 
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
-=======
                 Experience the future of technology with our revolutionary AI autonomous ecosystems, 
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -327,7 +301,6 @@ function InnovativeServicesShowcase2029() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Revolutionary Service Categories
@@ -341,8 +314,6 @@ function InnovativeServicesShowcase2029() {
             <div className="grid md:grid-cols-3 gap-8 mb-20">
               {serviceCategories.map((category, index) => (
                 <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                  key={category.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -423,7 +394,6 @@ function InnovativeServicesShowcase2029() {
             <div className="grid lg:grid - cols - 2 gap - 8">;
               {all_services.slice (0, 4).map ((service, index) => (
                 <motion.div;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Featured Services
@@ -437,17 +407,11 @@ function InnovativeServicesShowcase2029() {
             <div className="grid lg:grid-cols-2 gap-8">
               {allServices.slice(0, 4).map((service, index) => (
                 <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                  key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   viewport={{ once: true }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -465,8 +429,6 @@ function InnovativeServicesShowcase2029() {
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                         {cat}
                       </span>
                     ))}                        {cat  } catch (error) {
@@ -483,7 +445,6 @@ function InnovativeServicesShowcase2029() {
                   </div>
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               viewport={{ once: true }} className="text-center mt-16">
               <Link
                 href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -493,9 +454,7 @@ function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
         {/* Contact CTA */}        {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -526,12 +485,8 @@ function InnovativeServicesShowcase2029() {
   );
 };
   )
-=======
-=======
-=======
 }
 
-=======
             >;
               <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
                 Ready to Transform Your Business?;
@@ -573,15 +528,5 @@ function InnovativeServicesShowcase2029() {
   }
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

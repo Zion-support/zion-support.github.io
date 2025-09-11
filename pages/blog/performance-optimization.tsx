@@ -268,16 +268,12 @@ export default function PerformanceOptimization() {
     </>
   )
 
-=======
 
 
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
 export default function PerformanceOptimization() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -285,11 +281,9 @@ export default /**
  * PerformanceOptimization - Function description
  */
 function PerformanceOptimization() {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-=======
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -304,7 +298,6 @@ function PerformanceOptimization() {
                 ← Back to Blog;
               </Link>;
             </nav>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <article className='prose prose-invert prose-lg max-w-none'>;
               <header className='mb-12 text-center'>;
                 <div className='flex items-center gap-3 justify-center mb-4'>;
@@ -329,21 +322,16 @@ function PerformanceOptimization() {
                   identified and resolved before they impact user experience.;
                 </p>;
               </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <div className='mt - 12 p - 6 bg - white / 10 rounded - xl border border - white / 20'>;
                 <h3 className='text - xl font - semibold mb - 4 text - cyan - 400'>;
                   Optimize Your Autonomous Systems;
                 </h3>;
                 <p className='text - white / 80 mb - 4'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   Ready to unlock the full potential of your autonomous;
                   technology? Our performance optimization expertise can help;
                   you achieve peak efficiency.;
                 </p>;
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-=======                <div className='flex flex - wrap gap - 4'>;
                   <Link;
                     href='/contact';
                     className='px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300';
@@ -354,7 +342,6 @@ function PerformanceOptimization() {
                     href='/case - studies';
                     className='px - 6 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 400 / 50 transition - all duration - 300';
                   >;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     View Success Stories;
                   </Link>;
                 </div>;
@@ -364,7 +351,6 @@ function PerformanceOptimization() {
         </main>;
       </div>;
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-=======import Head from 'next/head';
 import Link from 'next/link';
 };
 ;
@@ -632,10 +618,3 @@ export default function PerformanceOptimization(req, res) {
       </div>;
     </>);
 }
-<<<<<<< HEAD
-==============>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

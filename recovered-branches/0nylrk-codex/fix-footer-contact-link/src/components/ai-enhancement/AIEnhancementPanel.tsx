@@ -11,7 +11,6 @@ export function AIEnhancementPanel(): any ({;
 export function AIEnhancementPanel({
 
 export function AIEnhancementPanel({;
-=======
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
 import {Textarea} from '@/components/ui/textarea';
 import {Button} from '@/components/ui/button';
@@ -19,7 +18,6 @@ import {Input} from '@/components/ui/input';
 import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 
-=======interface AIEnhancementPanelProps {;
   title: string,;
   defaultOptions: AIEnhancementOptions,;
   onApply: (content: string) => void,;
@@ -32,7 +30,6 @@ import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEn
 
 export function AIEnhancementPanel(): any ({;
 
-=======
 
 
 
@@ -48,16 +45,11 @@ export function AIEnhancementPanel({;
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
-=======
   }
   };
-=======
-=======
   };
 
-=======
   const handleGenerate = async () => {;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   const handleGenerate = async () => {;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const result = await enhanceContent(options);
@@ -74,8 +66,6 @@ export function AIEnhancementPanel({;
     }
   },
 
-=======
-=======  },
 
 
 
@@ -94,7 +84,6 @@ export function AIEnhancementPanel({;
 
 
 
-=======
   }
   },
 
@@ -107,7 +96,6 @@ export function AIEnhancementPanel({;
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleInputChange = (;
     e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
     field: keyof AIEnhancementOptions;
@@ -137,7 +125,6 @@ export function AIEnhancementPanel({;
           <div className="space-y-2 mt-4">;
             <div className="flex justify-between items-center">;
               <label className="text-sm font-medium">Generated content</label>;
-=======import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
 import {Textarea} from '@/components / ui / textarea';
 import {Button} from '@/components / ui / button';
 import {Input} from '@/components / ui / input';
@@ -285,8 +272,6 @@ if ( {) {
         </CardFooter>)}
     </Card>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  value= {
   options.instructions 
@@ -345,7 +330,3 @@ if ( {) {
     </Card>
   )
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

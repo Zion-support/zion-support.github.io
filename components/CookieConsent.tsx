@@ -33,7 +33,6 @@ export default function CookieConsent() {;
   }
   return (
 
-<<<<<<< HEAD=======    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">;
       <div className="max-w-7xl mx-auto p-4">;
         {!showSettings ? (;
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">;
@@ -135,16 +134,12 @@ if ( {) {
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text - sm text - gray - 600">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
                 </p>;
               </div>;
             </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className="text-gray-400 hover:text-gray-600 transition-colors";
               >;
                 <X className="w-5 h-5" />;
@@ -160,15 +155,11 @@ if ( {) {
                     Required for the website to function properly;
                   </p>;
                 </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 />;
               </div>;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
@@ -237,8 +228,6 @@ if ( {) {
               </div>;
             </div>;
             <div className="flex flex-col sm:flex-row gap-2 justify-end">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;

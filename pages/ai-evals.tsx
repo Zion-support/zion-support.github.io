@@ -1,7 +1,5 @@
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import Head from 'next/head',;
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
@@ -22,7 +20,6 @@ export default function AIEvalsPage() {_const _contactInfo = {
 		{_name: 'Startup', _price: '$149/month', _items: ['5K eval calls', _'Latency/Cost tracking', _'Toxicity/PII checks', _'CSV export']},
 		{_name: 'Growth', _price: '$499/month', _items: ['50K eval calls', _'Custom metrics (BLEU/ROUGE/F1)', _'CI evals via API', _'Slack alerts']},
 		{_name: 'Enterprise', _price: 'Custom', _items: ['Private cloud/VPC', _'SLA & audit logs', _'SOC2 support', _'SAML/SSO']}];
-=======
 ursor/fix-lint-push-and-merge-to-main-ce13
 	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
@@ -34,14 +31,12 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Evaluations</h1>
 					<p className="text-xl text-gray-300">Benchmark models and prompts with real metrics and safety checks. Ship reliable AI faster.</p>
 					<div className="mt-6 flex justify-center gap-3">
-=======
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</a>
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</a>						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</Link>
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</Link>
 
 
 
-=======
 								))}
 							</ul>
 						</div>
@@ -63,7 +58,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
 
-=======
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 					</div>
@@ -79,8 +73,3 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 							<ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
 								{p.items.map((i) => (
 									<li key={i} className=&quot;flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400&quot;><Check /> <span>{i}</span></li>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

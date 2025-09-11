@@ -20,10 +20,6 @@ import {;
   Mail,;
   MapPin,;} from 'lucide-react';
 
-=======
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain,
   Atom,
   Shield,
@@ -44,29 +40,23 @@ import {;
   Mail,;
   MapPin,;} from 'lucide-react';
 
-=======
 
   Mail,;
   MapPin,;} from 'lucide-react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
 } from 'lucide-react';
 
 // Import our new 2025 V2 innovative services;
-=======
 // Import our new 2025 V2 innovative services
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const fadeInUp = {;
   initial: { opacity: 0, y: 20 },;
   animate: { opacity: 1, y: 0 },;
@@ -75,16 +65,13 @@ const fadeInUp = {;
   initial: { opacity: 0, y: 20 },;
   animate: { opacity: 1, y: 0 },;
   transition: { duration: 0 && 0.6 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const staggerContainer = {;
   animate: {;
     transition: {;
       staggerChildren: 0 && 0.1,;
     },;
   },};
-==============
 
-=======;
 // Import our new 2025 V2 innovative services;
 import { innovativeMicroSaas2025ExpansionV2 } from '../data / 2025 - innovative - micro - saas - expansion - v2';
 import { innovativeITServices2025ExpansionV2 } from '../data / 2025 - innovative - it - services - expansion - v2';
@@ -208,8 +195,6 @@ function ComprehensiveServicesShowcase2025V2() {
         ]}
 
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react'
 import SEO from '../components/SEO'
 import { motion } from 'framer-motion'
@@ -271,7 +256,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: innovativeMicroSaas2025ExpansionV2,
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
     };
-=======
 
     {
       id: 'it-infrastructure',
@@ -338,7 +322,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-=======
 
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
@@ -364,24 +347,20 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-=======
 
             initial={_{ opacity: 0, _y: 30}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8}}
 
-=======
             initial={_{ opacity: 0, _y: 30}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8}}>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             2025 V2 Comprehensive
             <br />
             Services Showcase
           </motion.h1>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <a
               href='#services'
@@ -395,7 +374,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
       {_/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
 
-=======
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-white mb-8"
@@ -467,8 +445,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
               <p className="text-cyan-400 text-lg">{_contactInfo.email}</p>
-=======
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {_/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
@@ -477,7 +453,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="text-3xl md:text-4xl font-bold text-white mb-8"
 
 
-=======            </div>
             <div className='text-center'>
               <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
               <h3 className='text-xl font-semibold text-white mb-2'>
@@ -486,13 +461,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-center">
               <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='space-y-20'
             variants={staggerContainer}
             initial='initial'
             whileInView='animate'
 
-=======
               <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
           </motion.div>
         </div>
@@ -652,7 +625,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {_category.services.map((service) => (
                     <motion.div
-=======          >;
             {serviceCategories && serviceCategories.map((category) => (;
               <motion && motion.div key={category && category.id} variants={fadeInUp}>;
                 <div className="text-center mb-12">;
@@ -670,14 +642,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
                   {category && category.services.map((service) => (;
                     <motion&& motion.div
                       key={service && service.id}
-=======
                   </p>;
                 </div>;
                 <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
                   {category.services.map (service => (
                     <motion.div;                      key={service.id}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                       whileHover={_{ y: -5}}
                     >
@@ -848,7 +818,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                             `Professional: ${(service as any).pricing && pricing.professional} | Enterprise: ${(service as any).pricing && pricing.enterprise}` :;
                             `${service && service.price} ${service && service.period}`;
                           }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>;
                       </div>;
 
@@ -864,7 +833,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
 
-=======
         <div className="max-w-7xl mx-auto">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
@@ -893,8 +861,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           <motion.div
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}
           <motion.div
-=======
-=======
           </motion && motion.div>;
         </div>;
       </section>;
@@ -918,7 +884,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           <motion && motion.div             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
                       </p>;
                       <div className="space - y-3 mb - 6">;
                         <div className="flex items - center text - sm text - cyan - 400">;
@@ -965,8 +930,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -992,7 +955,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-white mb-6"
             whileInView={{ opacity: 1, y: 0 }}
-=======
 
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
@@ -1069,14 +1031,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
 
             whileInView={{ opacity: 1, y: 0 }}
-=======            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             Ready to Lead the Future?
           </motion.h2>
           <motion.p
             className='text-xl text-gray-300 mb-8'            initial={{ opacity: 0, y: 20 }}          <motion.p
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Call to Action */}
       <section className='py-20 px-4'>;
         <div className='max-w-4xl mx-auto text-center'>;
@@ -1104,89 +1064,3 @@ export default function ComprehensiveServicesShowcase2025V2() {
             <a
 
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
-=======
-=======
-      {_/* Call to Action */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
-
-
-=======          >
-            Join thousands of businesses already transforming their operations
-            with our cutting-edge solutions.
-          </motion.p>
-=======          >
-            <a
-              href={`mailto:${contactInfo.email}`}
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'
-            >
-              Contact Our Team
-            </a>
-            <a
-      {_/* Call to Action */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6}}
-          >
-            Ready to Lead the Future?
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-300 mb-8"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6, _delay: 0.2}}
-          >
-            Join thousands of businesses already transforming their operations
-            with our cutting-edge solutions.
-          </motion.p>
-          <motion.div
-            className='flex flex-col sm:flex-row gap-4 justify-center'            initial={{ opacity: 0, y: 20 }}            Join thousands of businesses already transforming their operations with our cutting-edge solutions.
-          </motion.p>
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6, _delay: 0.4}}
-          >
-            <a
-              href={`mailto:${contactInfo.email}`}
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'
-            >
-              Contact Our Team
-            </a>
-            <a
-              href='https://ziontechgroup.com'
-              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'            >              href={`mailto:${contactInfo.email}`}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
-            >
-              Contact Our Team
-            </a>
-            <a
-              href="https://ziontechgroup.com"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-            >
-              Visit Website
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-);
-}
-=======
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

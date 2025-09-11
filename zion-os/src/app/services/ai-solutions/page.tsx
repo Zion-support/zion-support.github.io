@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "use client";
 import { useState } from "react";
 interface AIService {id: string;
@@ -376,19 +374,11 @@ const aiServices: AIService[] = [;
 ],;
 export default function AISolutionsPage() {;
   const [selectedService, setSelectedService] = useState<string | null>(null);
-<<<<<<< HEAD
 
   return (;
     <div className="space-y-8">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   return (;
     <div className="space-y-8">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import { useState  } from './react';,
 interface AIService {
@@ -402,7 +392,6 @@ interface AIService {
   contact_link: string,
   icon: string,
   features: string[],
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface AIService {id: string;
@@ -592,12 +581,6 @@ const ai_services: AIService[] = [;
   }
 ];
 export default function AISolutionsPage() {const [selectedService, setSelectedService] = useState<string | null>(null);
-=======
-=======
-];
-export default function AISolutionsPage() {const [selectedService, setSelectedService] = useState<string | null>(null);
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import { useState } from "react",;
 interface AIService {;

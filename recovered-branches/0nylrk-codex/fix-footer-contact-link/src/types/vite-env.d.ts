@@ -1,9 +1,7 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   readonly VITE_SUPABASE_URL: string,
   readonly VITE_SUPABASE_ANON_KEY: string,
-=======
 ;
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   readonly VITE_SUPABASE_URL: string;
@@ -27,24 +25,14 @@ declare module 'path' {
   export function dirname (path: string): string;
 }
 
-=======
-=======  export function componentTagger(): Plugin;
 }
 // Add Node.js globals
 
 
 
-=======
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
 }
   }
 };
   }
 };
-=======
-}=======
-  }
-};
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

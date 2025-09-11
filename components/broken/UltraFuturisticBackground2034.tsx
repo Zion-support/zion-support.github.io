@@ -1,9 +1,6 @@
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 type ParticleType = 'quantum' | 'neural' | 'holographic';
@@ -14,29 +11,23 @@ const UltraFuturisticBackground2034: React.FC<;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2034Props {
   intensity?: number;
   theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
 }
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
   intensity = 1
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
-=======
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -44,8 +35,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     if (!ctx) return;
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({;
   intensity = 1;
 }) => {;
@@ -60,8 +49,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     };
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
@@ -69,7 +56,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
       x: number;
       y: number;
-=======
     // Quantum entanglement lines;
     const entanglementLines: Array<{      x: number,;
       y: number,;
@@ -81,8 +67,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       type: ParticleType;
     // Quantum entanglement lines;
     const entanglementLines: Array<{;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       x1: number;
       y1: number;
       x2: number;
@@ -95,7 +79,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
     type ParticleType = 'quantum' | 'neural' | 'holographic',
 
-=======
     =======
         // Particle system
     const particles: Array<{
@@ -105,8 +88,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     // Quantum entanglement lines;
     const entanglement_lines: Array<{      coordinate_x: number,
       coordinate_y: number,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       vx: number,
       vy: number,
       size: number,
@@ -114,7 +95,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       max_life: number,=======
 
       max_life: number,
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       type: ParticleType;
     // Quantum entanglement lines;
     const entanglement_lines: Array<{
@@ -135,8 +115,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     // Initialize particles;
     const init_particles = () =>: any {
       for (let index = 0; i < 100 * intensity; i++) {        particles.push ({      x1: number,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       y1: number,
       x2: number,
       y2: number,
@@ -152,7 +130,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
           activation: Math.random()
         });      }      for (let i = 0, i < 20 * intensity, i++) {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         neuralNodes.push({
           x: Math.random() * canvas.width
           y: Math.random() * canvas.height
@@ -165,11 +142,9 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       neuralNodes.forEach((node, i) => {
         const numConnections = Math.floor(Math.random() * 3) + 1;
         for (let j = 0, j < numConnections, j++) {
-=======
 
         for (let j = 0, j < numConnections, j++) {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const targetIndex = Math.floor(Math.random() * neuralNodes.length);
           if (targetIndex !== i && !node.connections.includes(targetIndex)) {
             node.connections.push(targetIndex)
@@ -272,7 +247,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           life: Math && Math.random() * 100,;
         });      }        entanglementLines && entanglementLines.push({;
 
-=======
       }
     }
     initParticles();
@@ -436,7 +410,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       }
       animationRef && animationRef.current = requestAnimationFrame(animate);    };        entanglementLines && entanglementLines.push({;
 
-==============        ctx.begin_path ();
         ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill ();
         ctx.restore ();
@@ -567,13 +540,10 @@ if ( {) {
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [intensity]);        cancelAnimationFrame(animationRef && animationRef.current);
 
-=======
       }
       window.removeEventListener('resize', resizeCanvas);
 
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -596,10 +566,8 @@ if ( {) {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     };
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove)
             rotate: 360,
@@ -611,7 +579,6 @@ if ( {) {
 
           animate={{
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
             x: ['-100%', '100%'],          }}
@@ -645,15 +612,11 @@ if ( {) {
 
         <motion&& motion.div
 
-=======
         />
       </div>
-=======
         />;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Holographic matrix effect */}
 
 
@@ -682,27 +645,19 @@ if ( {) {
       <div className='absolute inset-0'>
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
-=======
               opacity: [0, 1, 0],
               scale_y: [0, 1, 0],            }}        {Array.from ({ length: 20 }).map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             key={i}
             className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent";
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
 
-=======
-=======              opacity: [0, 1, 0];
               scale_y: [0, 1, 0];
 
             }}
 
-=======
 
-=======
 
             transition={{
 
@@ -720,25 +675,17 @@ if ( {) {
               delay: i * 0.1
               repeat: -1
 
-==============
-
-=======
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
             transition={{
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
               ease: 'easeInOut',            }}
 
-=======
-=======
-=======
 
               ease: 'easeInOut',            }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }}
           />;
         ))}
@@ -749,10 +696,8 @@ if ( {) {
 
 
       <div className="absolute inset-0">
-=======
       <div className='absolute inset-0'>
 
-=======
 
             transition={{
               duration: 3,
@@ -791,8 +736,6 @@ export default UltraFuturisticBackground2034;        <motion.div;
           animate={{
 export default UltraFuturisticBackground2034;        <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
-=======
-=======
 };
 
 export default UltraFuturisticBackground2034;        <motion&& motion.div
@@ -853,8 +796,3 @@ export default UltraFuturisticBackground2034;
         />
       </div>
     </div>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

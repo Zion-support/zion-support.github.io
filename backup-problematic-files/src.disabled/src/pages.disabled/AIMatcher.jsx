@@ -9,8 +9,4 @@ const AIMatcher = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIMatcher;
-=======
-export default AIMatcher;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -189,7 +189,6 @@ isAuthenticated ;
   (talent.skills?.length || 0) - 5 ;
 }more </span>) ;
 }</div> </div>) ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }$ {;
   talent.hourly rate ";
 }<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";
@@ -199,6 +198,4 @@ isAuthenticated ;
 }<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
 };
 "
-<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/TalentCard.tsx
-=======

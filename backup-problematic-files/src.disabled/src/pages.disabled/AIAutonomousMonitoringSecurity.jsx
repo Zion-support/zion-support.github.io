@@ -9,8 +9,4 @@ const AIAutonomousMonitoringSecurity = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousMonitoringSecurity;
-=======
-export default AIAutonomousMonitoringSecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

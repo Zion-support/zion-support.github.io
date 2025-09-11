@@ -309,8 +309,6 @@ import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 import Link from 'next/link';
 import Head from 'next/head';
-=======
-=======
 
 
 import Link from 'next/link';
@@ -321,9 +319,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
     isLoaded: false
     hasError: false
-=======
 
-=======import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState, Service } from '../types';
@@ -353,7 +349,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-=======
     ),
   };
   return (;
@@ -617,8 +612,6 @@ import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -754,7 +747,6 @@ export default function HomePage() {
                   </div>
                 </motion.div>
               ))}
-=======            </div>
 origin/automation-improvements-final
 import React from 'react';
 import Link from 'next/link';
@@ -768,8 +760,6 @@ import Head from 'next/head';
 import { useState, useEffect, Suspense  } from 'react';
 import { ContactInfo, AnimationState  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary',
-=======
-=======
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -801,11 +791,9 @@ export default function Home() {
         </div>
       </div>
 
-=======
 
     ),
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <>;
       <Head>;
@@ -1024,14 +1012,11 @@ export default function Home() {
           logMetrics={true}
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import LoadingSpinner from '../components/LoadingSpinner';
 
 import PerformanceMonitor from '../components/PerformanceMonitor';
@@ -1090,7 +1075,6 @@ if ( {) {
         <title > Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>;
         <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />;
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions" />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta name="viewport" content="width = device - width, initial - scale = 1.0" />;
         <meta name="robots" content="index, follow" />;
         <meta name="author" content="Zion Tech Group" />;
@@ -1104,10 +1088,8 @@ if ( {) {
         <section className="py - 20 px - 4 text - center" role="banner" aria - labelledby="hero - title">;
           <div className="max - w-4xl mx - auto">;
             });
-=======
 
             });
-=======        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html:JSON && JSON.stringify({
@@ -1136,7 +1118,6 @@ if ( {) {
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState && animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>;
               We deliver cutting-edge technology solutions with 150+ micro SaaS products, ;
 
-=======
         <section className="py - 20 px - 4 text - center" role="banner" aria - labelledby="hero - title">;
           <div className="max - w-4xl mx - auto">;
             <h1 ;
@@ -1280,7 +1261,6 @@ if ( {) {
           onThresholdExceeded={(metrics) => {;
             console && console.warn('Performance thresholds exceeded:', metrics);
 
-=======        {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV === 'development'}
           log_metrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn ('Performance thresholds exceeded:', metrics);
@@ -1310,7 +1290,6 @@ export default function HomePage() {
       </div>
     </div>;
   );
-=======
 
 import { Button } from '@/components / ui / button';
 ;
@@ -1632,22 +1611,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </a>
           </div>
         </section>
-=======          </div>
         </section>
           </div>
         </section>
 
-=======}
           </div>
 
 }          </div>
 
         </section>
 
-=======        {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
               <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Contact Form
               </Link>
@@ -1703,12 +1678,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive IT solutions designed to accelerate your digital transformation journey.
@@ -1734,7 +1707,6 @@ origin/automation-improvements-final
             </motion.div>
 
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="text-4xl mb-4">;
                     <service && service.icon className="w-12 h-12 text-blue-600" />;
@@ -1832,7 +1804,6 @@ origin/automation-improvements-final
         <section className="py-20">
             </motion.div>
 
-=======        {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -1867,12 +1838,9 @@ origin/automation-improvements-final
                     ))}
 
 
-=======
 
 
 
-=======
-=======                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -1903,7 +1871,6 @@ origin/automation-improvements-final
           </div>
         </section>
 
-=======
 
                   </ul>;
                   <div className="mt-4">;
@@ -1918,10 +1885,7 @@ origin/automation-improvements-final
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Why Choose Us */}
 
 
@@ -1930,11 +1894,9 @@ origin/automation-improvements-final
 
 
 origin/automation-improvements-final
-=======        {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -2021,7 +1983,6 @@ origin/automation-improvements-final
               {whyChooseUs && whyChooseUs.map((item, index) => (;
                 <motion&& motion.div
 
-=======                  key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -2059,11 +2020,8 @@ origin/automation-improvements-final
                 </motion.div>
               ))}
 
-==============
 <p className="text-gray-600">{item.description}</p>                </motion.div>
               ))}
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </section>
@@ -2136,14 +2094,11 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   <p className="text-gray-600">{item.description}</p>
-=======
-=======
 
 
         {/* Features Section */}
@@ -2156,11 +2111,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-=======
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -2241,7 +2194,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
-=======<p className="text-gray-600">{item.description}</p>
                 </motion.div>
 
 
@@ -2249,8 +2201,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 </motion.div>
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
-=======
-=======
 
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
               ))}
@@ -2261,13 +2211,11 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         {/* CTA Section */}
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -2285,9 +2233,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 <Link
                   href="tel:+13024640950"
                 </Link>
-=======
 
-=======
             </motion.div>
 
 
@@ -2319,7 +2265,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
             </div>
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 </Link>
     );
     } catch (error) {
@@ -2425,7 +2370,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 </div>
           </div>
         </section>
-=======
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button size="lg" className="group">
@@ -2464,11 +2408,9 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
           </div>
         </section>
 
-=======
 
         </section>
 
-==============
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -2497,11 +2439,9 @@ origin/automation-improvements-final
             </motion.div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
-=======
         <section className="py-16 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
@@ -2520,7 +2460,6 @@ origin/automation-improvements-final
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {services && services.map((service, index) => (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
@@ -2556,9 +2495,7 @@ origin/automation-improvements-final
         <section className="py-20">
             </motion.div>
 
-=======
 
-=======
 
         {/* Featured Services */}
         <section className="py-16 bg-white">
@@ -2582,7 +2519,6 @@ origin/automation-improvements-final
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
-=======
             </div>;
           </div>;
         </section>;
@@ -2606,7 +2542,6 @@ origin/automation-improvements-final
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {featuredServices && featuredServices.map((service, index) => (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
@@ -2667,10 +2602,8 @@ origin/automation-improvements-final
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Why Choose Us */}
 
 
@@ -2770,7 +2703,6 @@ origin/automation-improvements-final
               {whyChooseUs && whyChooseUs.map((item, index) => (;
                 <motion&& motion.div
 
-=======
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -2826,7 +2758,6 @@ origin/main
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -2908,7 +2839,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
-=======
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <item && item.icon className="w-8 h-8 text-blue-600" />;
@@ -2920,7 +2850,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
         {/* Testimonials Section */}
         <section className="py-20 px-4">
@@ -3001,7 +2930,6 @@ origin/automation-improvements-final
                 Let's discuss how our technology solutions can drive your success
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
         <section className="py-16 bg-blue-600 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
@@ -3015,7 +2943,6 @@ origin/automation-improvements-final
                 Let's discuss how our technology solutions can drive your success;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   href="/contact"
                   className="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-400 transition-colors flex items-center justify-center">;
@@ -3025,7 +2952,6 @@ origin/automation-improvements-final
                 <Link
                   href="tel:+13024640950"
 
-=======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -3065,8 +2991,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
             </div>
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
 </Link>
     );
@@ -3187,30 +3111,17 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/automation-improvements-final      </div>
 
     </MainLayout>
-=======
->>>>>>> origin/chore/stabilize-build-minimal-index:pages_disabled/index.full.tsx
   );
 }
-=======
 
 
 
-=======      </main>
     </>
 
 
 
 
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">;
                   <Phone className="w-5 h-5 mr-2" />;
                   Call Now;
@@ -3225,8 +3136,6 @@ origin/automation-improvements-final      </div>
 }
       </main>;
     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
           </div>;
@@ -3390,5 +3299,3 @@ We deliver exceptional results through innovation, expertise, and dedication;
 }
 </main>;
     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

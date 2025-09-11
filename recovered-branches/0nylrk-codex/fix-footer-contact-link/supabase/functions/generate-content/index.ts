@@ -1,5 +1,4 @@
 
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
@@ -15,13 +14,9 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -29,7 +24,6 @@ const corsHeaders = {
   auto_publish?: boolean,
   include_image?: boolean;
 
-=======import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
@@ -68,7 +62,6 @@ serve(async (req) => {
   }
   try {
     const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-=======
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest,
     
     // Default topic if none provided
@@ -78,13 +71,10 @@ serve(async (req) => {
     let systemPrompt: string,
     let userPrompt: string,
     
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (contentType === 'blog') {
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`,
       
       userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone. 
@@ -175,7 +165,6 @@ if ( {) {
         messages: [;
           { role: "system", content: system_prompt }
           { role: "user", content: user_prompt }
-=======    const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
@@ -188,7 +177,6 @@ if ( {) {
           { role: "system", content: systemPrompt }
           { role: "user", content: userPrompt }
         ];
-=======
         temperature: 0.7})});          { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
@@ -209,8 +197,6 @@ if ( {) {
         console && console.log("Blog post saved successfully:", blogPost);
         
 
-=======
-=======
         console && console.error("Error saving blog post:", error)
       } else {
         console.log("Blog post saved successfully:", blogPost);            name: "Zion AI Team",
@@ -235,14 +221,11 @@ if ( {) {
       } else {
         // // // console.log("Blog post saved successfully:", blogPost),
         
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Create notification about new blog post
         await supabase
           .from('notifications')
           .insert({
             user_id: null, // System notification visible to admins
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent && generatedContent.title}" has been published.`;
             type: "system";
@@ -354,15 +337,6 @@ if ( {) {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
 
-<<<<<<< HEAD
-=======            title: "New Blog Post Generated"
-            message: `AI-generated blog post "${generatedContent.title}" has been published.`;
-            type: "system";
-            read: false;
-            related_id: blogPost.id
-            action_url: `/blog/${slug}`;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======            action_text: "View Post"
           })
       }
     }
@@ -375,8 +349,6 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
     // If autoPublish is true, save the content to the database;
     if (autoPublish && contentType === 'blog') {;
@@ -462,10 +434,5 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-=======
-  }
-});
-;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });

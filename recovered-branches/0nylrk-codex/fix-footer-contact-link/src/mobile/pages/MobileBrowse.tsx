@@ -1,17 +1,12 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 // Mock data for demonstration
 
 const jobsData = [
   {
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -129,7 +124,6 @@ const talentsData = [
   }
 ],
 
-=======export function MobileBrowse() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
@@ -151,7 +145,6 @@ export function MobileBrowse() {
 
   },
   
-=======  return (
     <div className="min-h-screen">
       <MobileHeader
         title={browseType === "jobs" ? "Browse Jobs" : "Browse Talents"}
@@ -178,8 +171,6 @@ export function MobileBrowse() {
       <BrowseFilters type={browseType} />
       <div className="py-4 px-4">
         <BrowseCards
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======          items={browseType === "jobs" ? jobsData : talentsData}
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -187,8 +178,6 @@ import { BrowseFilters } from "../components/browse/BrowseFilters",;
 import { BrowseCards } from "../components/browse/BrowseCards",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 // Mock data for demonstration;
 const jobsData = [;
   {;
@@ -197,8 +186,6 @@ const jobsData = [;
     subtitle: "TechCorp Inc.",;
     description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.",;
     location: "Remote",;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ];
 const talentsData = [;
   {;
@@ -211,10 +198,8 @@ export function MobileBrowse() {;  const { user } = useAuth();
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen">;
       <MobileHeader
@@ -343,8 +328,6 @@ export function MobileBrowse() {;
           <Button;
             variant={browseType === "jobs" ? "default" : "ghost"}
             className="rounded-full";
-=======
-=======
       />;
 
       <div className="flex justify-center my-3 px-4">;
@@ -353,7 +336,6 @@ export function MobileBrowse() {;
           <Button
             variant={browseType === "jobs" ? "default" : "ghost"}
             className="rounded-full"
-=======
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}
@@ -366,9 +348,6 @@ export function MobileBrowse() {;
   );
 }
 
-=======
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <BrowseFilters type={browse_type} />;
       <div className="py - 4 px - 4">;
         <BrowseCards;
@@ -380,8 +359,6 @@ export function MobileBrowse() {;
       <BottomNavigation />;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
       ;
       <BrowseFilters type={browseType} />;
       ;
@@ -415,9 +392,3 @@ return (<div className="min-h-screen" > <MobileHeader title= {
     </div>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

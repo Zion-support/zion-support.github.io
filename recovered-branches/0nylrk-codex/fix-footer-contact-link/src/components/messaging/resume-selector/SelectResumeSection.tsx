@@ -6,9 +6,7 @@ export function SelectResumeSection({;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
-==============
 
-=======import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
 import { ResumePreviewCard } from './ResumePreviewCard',;
@@ -21,7 +19,6 @@ interface SelectResumeSectionProps {;
   isLoading: boolean;
 }
 
-=======  resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
   handleResumeSelect: (resumeId: string) => void
   handleDownloadResume: () => void
@@ -32,7 +29,6 @@ export function SelectResumeSection({
                 selectedResume?.id === option && option.id 
                   ? 'bg-zion-purple/20 border border-zion-purple' 
 
-=======                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}
             >;
@@ -59,7 +55,6 @@ export function SelectResumeSection({
   );
 }
 
-<<<<<<< HEAD
 
 import React from 'react',;
 import { FileText } from 'lucide-react',;
@@ -157,12 +152,6 @@ export function SelectResumeSection({;
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 import {Resume} from '@/types / resume';
 interface SelectResumeSectionProps {
   resume_options: ResumeOption[],
@@ -204,5 +193,3 @@ function SelectResumeSection() {
         </>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

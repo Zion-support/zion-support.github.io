@@ -38,9 +38,6 @@ import {
   Eye
   Timer
   Sparkles;
-=======
-=======
-=======
 
 
   Timer,;
@@ -72,15 +69,11 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
           }
           return (
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
-=======          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
-=======
           const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           );
         case 'price':
           return (
@@ -95,11 +88,9 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
         case 'rating':
           return b.rating - a.rating;
         default: return 0
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
 
   const containerVariants = {
-=======  max_services = 12;
 }) => {
   const [selected_category, setSelectedCategory] = useState < string>('all');
   const [sort_by, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
@@ -145,7 +136,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
       opacity: 1,
       transition: {
   };
-=======
 
       }    })
     .slice(0, maxServices);
@@ -155,7 +145,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
       opacity: 1
       transition: {
 
-=======
         staggerChildren: 0.1,
       },
     },  };
@@ -244,7 +233,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
         <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
         <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
       </div>
-=======
 
 
   return (
@@ -298,21 +286,17 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
 
-=======
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
         {/* Header */}
         <motion&& motion.div
-=======
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
-=======      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header */}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -323,7 +307,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
 
             {title}
             className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'          >            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
-=======
             className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"          >
 
             {title}
@@ -357,7 +340,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======            transition={{ duration: 0.8, delay: 0.2 }}
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             {subtitle}
@@ -387,12 +369,9 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
 
-=======
 
 
-=======
 
-=======
                 <button
 
 
@@ -408,20 +387,13 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
           </div>;
 
 
-=======
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -442,7 +414,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
 
         {/* Call to Action */}
         <motion&& motion.div
-=======              className='group'
             >
               <UltraFuturisticServiceCard
                 service={service}
@@ -457,18 +428,13 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
           ))}
         </motion.div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           transition={{ duration: 0.8, delay: 0.4 }}
           className='text-center mt-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -486,13 +452,10 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
           </div>;
 
 
-=======
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Innovation Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -521,7 +484,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
                 icon: Star
                 color: 'from-yellow-500 to-orange-500'
               }
-=======        {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -580,12 +542,8 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
   );
 
 
-==============
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </motion.div>
@@ -595,10 +553,8 @@ export default UltraFuturistic2029ServiceShowcase;  )
 }
 export default UltraFuturistic2029ServiceShowcase;
 
-=======
 
 
-=======
                   services.reduce ((sum, s) => sum + s.rating, 0) /;
                   services.length).to_fixed (1),
                 icon: TrendingUp,
@@ -641,22 +597,10 @@ export default UltraFuturistic2029ServiceShowcase);
 export default UltraFuturistic2029ServiceShowcase;
 ;=======
   );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default UltraFuturistic2029ServiceShowcase;
 export default UltraFuturistic2029ServiceShowcase;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

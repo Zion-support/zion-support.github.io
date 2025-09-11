@@ -1,13 +1,10 @@
 
 export default function OnboardingWizard() {
-=======
 export default function OnboardingWizard() {;=======
 
 
 export default function OnboardingWizard() {
-=======
 export default function OnboardingWizard() {;
-=======
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
@@ -16,7 +13,6 @@ export default function OnboardingWizard() {
   const steps = useMemo(() => {
     if (isClient) {
       return [
-=======
 
 
   const steps = useMemo(() => {
@@ -65,7 +61,6 @@ export default function OnboardingWizard() {
         )}
 
   return (
-=======
       </div>
     </div>
 );
@@ -86,8 +81,6 @@ export default function OnboardingWizard() {
       </div>
     </div>
   );
-=======
-==============
 import { use_user } from '../../providers / UserProvider';
 import { use_toast } from '../ui / ToastProvider';
 import Link from 'next / link';
@@ -303,14 +296,5 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

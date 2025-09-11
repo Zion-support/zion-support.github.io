@@ -1,11 +1,9 @@
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
       };
       
-=======
 
       // Submit to Supabase
       const { data, error } = await supabase
@@ -29,7 +27,6 @@
 type FormValues = z && z.infer<typeof formSchema>;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader>
@@ -196,7 +193,6 @@ type FormValues = z && z.infer<typeof formSchema>;
         description: error && error.message || 'Something went wrong'});    }
 
   },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -606,7 +602,6 @@ if (error) throw error;
 }
 ;
 
-<<<<<<< HEAD
 };
 return (<Card className="w-full max-w-2xl" > <CardHeader> <CardTitle>Create White-Label Instance</CardTitle> <CardDescription> Create a customized version of the platform for your client or partner. </CardDescription> </CardHeader> <CardContent> </FormControl> <FormMessage /> </FormItem>) 
 }/> <FormField </div> </FormControl> <FormMessage /> </FormItem>) 
@@ -625,11 +620,6 @@ return (<Card className="w-full max-w-2xl" > <CardHeader> <CardTitle>Create Whit
 }
 }
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

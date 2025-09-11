@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "use client";
 import { useState } from "react";
 interface PricingTier {name: string;
@@ -490,72 +488,9 @@ export default function PricingPage() {;
                         tier.popular;
                           ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
                           : 'bg - zinc - 700 hover:bg - zinc - 600 text - white';
-<<<<<<< HEAD
                       href={tier.ctaLink}
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${tier.popular;
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${;
                         tier.popular;
                           ? 'bg-blue-600 hover:bg-blue-700 text-white';
                           : 'bg-zinc-700 hover:bg-zinc-600 text-white';
-=======
-                      }`}
-                    >;
-                      {tier.cta}
-                    </a>;
-                  </div>;
-                </div>))}
-            </div>;
-          </div>))}
-      </div>;
-      {/* Additional Services */}
-      <div className="bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg p - 8 text - white">;
-        <div className="text - center space - y-4">;
-          <h2 className="text - 2xl font - bold">Need Custom Solutions?</h2>;
-          <p className="opacity - 90">;
-            We offer custom development, enterprise solutions, and specialized services tailored to your specific needs.;
-          </p>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - center">;
-            <div>;
-              <h3 className="font - semibold">Custom Development</h3>;
-              <p className="text - sm opacity - 90">Tailored solutions from $5, 000+</p>;
-            </div>;
-            <div>;
-              <h3 className="font - semibold">Enterprise Solutions</h3>;
-              <p className="text - sm opacity - 90">Custom pricing for large organizations</p>;
-            </div>;
-            <div>;
-              <h3 className="font - semibold">Consulting Services</h3>;
-              <p className="text - sm opacity - 90">Strategic guidance from $150 / hour</p>;
-            </div>;
-          </div>;
-          <a;
-            href="mailto:kleber@ziontechgroup.com";
-            className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition - colors";
-          >;
-            Get Custom Quote;
-          </a>;
-        </div>;
-      </div>;
-      {/* Contact Information */}
-      <div className="text - center space - y-4">;
-        <h2 className="text - 2xl font - bold">Questions About Pricing?</h2>;
-        <p className="opacity - 80">;
-          Our team is here to help you choose the right plan for your business.;
-        </p>;
-        <div className="grid grid - cols - 1 md: grid - cols - 3 gap - 4">;
-          <div>;
-            <h3 className="font - semibold">Phone</h3>;
-            <p className="opacity - 80">+1 302 464 0950</p>;
-          </div>;
-          <div>;
-            <h3 className="font - semibold">Email</h3>;
-            <p className="opacity - 80">kleber@ziontechgroup.com</p>;
-          </div>;
-          <div>;
-            <h3 className="font - semibold">Address</h3>;
-            <p className="opacity - 80">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>);
-}

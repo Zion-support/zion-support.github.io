@@ -16,8 +16,6 @@ export default function ResourceCaseStudyPage() {
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
   }
   },
-=======
-=======
     id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
@@ -25,14 +23,10 @@ export default function ResourceCaseStudyPage() {
     results: '40% increase in production efficiency, 60% reduction in downtime',
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
 
-=======
 
   },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <Head>
@@ -43,15 +37,12 @@ export default function ResourceCaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {/* Breadcrumb */}            {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <nav className="mb-8">
 
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
@@ -59,45 +50,32 @@ export default function ResourceCaseStudyPage() {
                 ← Back to Resources
               </Link>
             </nav>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
               <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.company}</p>
               <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
             </header>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {/* Key Results */}            {/* Key Results */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.results}</p>
               </div>
             </section>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {/* Detailed Analysis */}            {/* Detailed Analysis */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
@@ -109,11 +87,9 @@ export default function ResourceCaseStudyPage() {
                     quality control, and production optimization. Each system was designed to work independently while
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
-=======
 
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
-=======                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
                     quality control, and production optimization. Each system was designed to work independently while 
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while=======
@@ -121,22 +97,17 @@ export default function ResourceCaseStudyPage() {
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
 
-=======
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
                     quality control, and production optimization. Each system was designed to work independently while 
-=======
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     sharing data for comprehensive insights.
                   </p>
                 </div>
                 <div className="bg-purple-500/10 rounded-lg p-6 border border-purple-500/20">
                   <h3 className="text-xl font-semibold text-purple-400 mb-3">Technology Stack</h3>
                   <p className="text-white/90">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and
                     predictive analytics to create a comprehensive automation solution that could adapt to changing
 
@@ -147,22 +118,16 @@ export default function ResourceCaseStudyPage() {
                 </div>
               </div>
             </section>
-=======
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Related Resources */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -170,10 +135,7 @@ export default function ResourceCaseStudyPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
                 >
@@ -183,8 +145,6 @@ export default function ResourceCaseStudyPage() {
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
                   className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
                 >
@@ -193,32 +153,22 @@ export default function ResourceCaseStudyPage() {
                 </Link>
               </div>
             </section>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {/* Call to Action */}            {/* Call to Action */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
 
 
-=======
-=======
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
@@ -227,12 +177,8 @@ export default function ResourceCaseStudyPage() {
   );
 };
   )
-=======
-=======
-=======
 }
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -301,15 +247,5 @@ function ResourceCaseStudyPage() {
   }
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

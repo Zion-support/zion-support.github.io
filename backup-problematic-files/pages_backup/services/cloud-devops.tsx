@@ -411,8 +411,6 @@ export default function CloudDevOpsPage() {
     </>
     </>
 export default Cloud-devops;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };

@@ -22,8 +22,6 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 export function WebhooksManager() {
 
 export function WebhooksManager() {
-=======
-=======
 
 export function WebhooksManager() {
 
@@ -45,7 +43,6 @@ export function WebhooksManager() {
   }, []);
 
 
-=======
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -60,7 +57,6 @@ import { ScrollArea } from "@/components/ui/scroll-area",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
     clearTestResult
-=======
   // Load webhooks on mount
   useEffect(() => {
     fetchWebhooks()
@@ -70,23 +66,17 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
     if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
-=======
 
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
-=======
-=======
                         <Checkbox 
                           id={event.value} 
 
@@ -340,7 +330,6 @@ function WebhooksManager() {
                     </SelectContent>;
                   </Select>;
                   <p className="text-xs text-zinc-500">;
-=======
                 <div className="mt - 3 flex flex - wrap gap - 2">;
                   {webhook.event_types.map ((event) => (
                     <Badge;
@@ -415,7 +404,6 @@ if ( {) {
                   </Select>;
                   <p className="text - xs text - zinc - 500">;
 
-=======                  setShowTestDialog(null),
                   setShowTestResult(false),
                   clearTestResult()
                 }}>
@@ -425,14 +413,11 @@ if ( {) {
                   setShowTestResult(false);
 
                   setShowTestResult(false),
-=======
 
                   setShowTestResult(false),
-=======
                   setShowTestResult(false);
 
                   setShowTestResult(false),
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   clearTestResult()
                 }}>
                   Test Another Event
@@ -441,35 +426,26 @@ if ( {) {
             </>
                     </Badge>;
                   </div>;
-=======
 
 
                     </Badge>;
                   </div>;
-=======
                     </Badge>;
                   </div>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="space-y-2 mt-4">;
                     <Label>Response Body</Label>;
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   clearTestResult();
                 }}>;
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )}
         </DialogContent>
       </Dialog>
@@ -508,15 +484,12 @@ if ( {) {
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               This action will permanently remove this webhook.;
               You will no longer receive events at this endpoint.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
               className="bg-red-600 hover: bg-red-700";
-=======
-=======            <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
@@ -611,16 +584,8 @@ clearTestResult ();
   );
 }
 ;
-=======
-=======
     </Card>);
 }
 
-=======
 ;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

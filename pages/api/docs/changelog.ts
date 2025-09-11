@@ -56,16 +56,12 @@ const content = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, '
 if (req.method === 'POST') {
     try {
 
-=======
-=======
 
   }
 
   if (req.method === 'POST') {
     try {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     } catch (e: any) {
       res
         .status(500)
@@ -82,8 +78,6 @@ if (req.method === 'POST') {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======export default /**
  * handler - Function description
  */
 function handler() {
@@ -124,8 +118,6 @@ if ( {) {
 }
 
 
-=======
-=======  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -149,8 +141,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

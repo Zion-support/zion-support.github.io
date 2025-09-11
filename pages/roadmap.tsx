@@ -51,8 +51,6 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     .split(/,|\n/)
     .map((s) => s.trim())
     .filter(Boolean)
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
@@ -162,7 +160,6 @@ Format:;
       setCopied(true);
 
       setTimeout(() => setCopied(false), 1500)
-=======      await navigator.clipboard.writeText(operatorPrompt)
       setCopied(true)
       setTimeout(() => setCopied(false), 1500)
 export default function RoadmapPage (): JSX.Element {
@@ -357,7 +354,6 @@ export default function RoadmapPage(): JSX.Element {;
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), []),;
   const copyPrompt = async () => {;
     try {
-=======
       await navigator.clipboard.writeText(operatorPrompt);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
@@ -393,7 +389,6 @@ export default function RoadmapPage(): JSX.Element {;
                   value={milestones}
                   onChange={(e) => setMilestones(e.target.value)}
                   rows={3}
-=======                  value={milestones  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -417,9 +412,7 @@ export default function RoadmapPage(): JSX.Element {;
               <div>
                 <label className="block text-sm font-medium text-gray-700">Vision keywords</label>
                 <input
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -427,8 +420,6 @@ export default function RoadmapPage(): JSX.Element {;
               <div>
                 <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>
                 <input
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   value={priorities}
                   onChange={(e) => setPriorities(e.target.value)}                  value={priorities  } catch (error) {
     console.error("Error:", error);
@@ -440,33 +431,24 @@ export default function RoadmapPage(): JSX.Element {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
               </div>
             </div>
           </section>
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 onClick={copyPrompt}                onClick={copyPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'  } catch (error) {
@@ -474,14 +456,11 @@ export default function RoadmapPage(): JSX.Element {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </button>
             </div>
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
@@ -506,15 +485,11 @@ export default function RoadmapPage(): JSX.Element {;
         </div>
       </main>
     </>
-=======
 
-=======
 }
 
-=======
                   on_change={(e) => set_priorities (e.target.value)}
                   className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-=======  );
 };
   };
   return (;
@@ -543,11 +518,8 @@ export default function RoadmapPage(): JSX.Element {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
-=======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -609,15 +581,5 @@ export default function RoadmapPage(): JSX.Element {;
   }
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

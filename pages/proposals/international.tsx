@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type ProposalListItem = {
   id: string
   title: string
@@ -23,7 +22,6 @@ export default function InternationalProposalsPage() {
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }, []),
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
@@ -96,9 +94,7 @@ import React, { useEffect, useState } from 'react',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type ProposalListItem = {
   id: string
   title: string
@@ -109,7 +105,6 @@ type ProposalListItem = {
   createdAt: string
 }
 
-=======export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([])
   const [filter, setFilter] = useState('All')
   useEffect(() => {
@@ -174,15 +169,12 @@ export default function InternationalProposalsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-=======
 }
 
-=======
   created_at: string;
 },
 export default /**
@@ -234,11 +226,5 @@ function InternationalProposalsPage() {
       </div>;
     </EnhancedLayout>);
 }>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

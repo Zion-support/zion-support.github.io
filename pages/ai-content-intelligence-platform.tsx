@@ -17,7 +17,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -74,7 +73,6 @@ const features = [
     color: 'from-indigo-500 to-blue-500'
   };
   {
-=======
     title: 'SEO Content Intelligence',
     description: 'AI - powered SEO optimization and keyword gap identification',
     icon: Zap,
@@ -112,7 +110,6 @@ const features = [
 
       </section>
 
-=======
 
 
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -140,11 +137,8 @@ const features = [
           </div>;
         </div>;
 
-=======
-=======
 
 
-=======
       {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -153,9 +147,7 @@ const features = [
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'      </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -206,7 +198,6 @@ const features = [
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
@@ -263,12 +254,10 @@ const features = [
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Pricing Section */}
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Pricing Section */}
       <section className="py-20">
@@ -334,10 +323,8 @@ const features = [
 
 
                   </ul>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
 
-=======
                     href="/contact"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}
                   >
@@ -368,7 +355,6 @@ const features = [
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Integrations Section */}
 
 
@@ -408,13 +394,11 @@ const features = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -424,8 +408,6 @@ const features = [
                   <p className="text-gray-400">{feature.description}</p>
                 </div>
               </motion.div>
-=======
-=======
                 className="bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 text-center hover:bg-white/20 transition-colors duration-300"
               >
                 <span className="text-white font-medium">{integration}</span>
@@ -434,7 +416,6 @@ const features = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
           </div>;
         </div>;
       </section>;
@@ -442,12 +423,10 @@ const features = [
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -472,14 +451,12 @@ const features = [
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </div>
               </motion.div>
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-=======
           </div>;
         </div>;
       </section>;
@@ -487,7 +464,6 @@ const features = [
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
       {/* Pricing Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -530,8 +506,6 @@ const features = [
 
                   </ul>                  <Link
 
-=======>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </ul>
                   <Link
                     href="/contact"
@@ -546,7 +520,6 @@ const features = [
                   </Link>
                 </div>
               </motion.div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
 
 
@@ -777,7 +750,6 @@ function AIContentIntelligencePlatform() {
                   </h3>;
                   <p className='text - gray - 400'>{feature.description}</p>                </div>;
               </motion.div>))}
-=======          </div>;
         </div>;
       </section>;
       {/* Use Cases Section */}
@@ -903,18 +875,14 @@ function AIContentIntelligencePlatform() {
           </motion.div>;
           <div className='grid grid - cols - 2 md:grid - cols - 5 gap - 6'>            {integrations.map ((integration, index) => (
               <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
 
           </div>;
@@ -936,7 +904,6 @@ function AIContentIntelligencePlatform() {
   );
 
 
-=======
 }
     </Layout>
   )
@@ -988,7 +955,6 @@ function AIContentIntelligencePlatform() {
                 href="/2025-innovative-new-services-showcase";
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
               >;
-=======                View All Services;
               </Link>;
             </div>;
           </motion.div>;
@@ -1006,14 +972,5 @@ function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

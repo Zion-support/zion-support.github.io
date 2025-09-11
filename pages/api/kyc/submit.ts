@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 function load(): Record<string, KycProfile> {
   try {
 
@@ -24,8 +22,6 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {
     return {}
   }
@@ -41,22 +37,17 @@ function save(db: Record<string, KycProfile>) {
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string };
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
 if (req && req.method !== 'POST')
-=======
 
   if (req && req.method !== 'POST')  const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
   const validation = validateKycSubmission(profile);
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ? 'clear'
       : amlResult && amlResult.status === 'match'
         ? 'match'
         : 'review';
   // Flags and risk scoring
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const flags = new Set<string>(profile && profile.flags || []);
   if (amlResult && amlResult.status !== 'clear') flags && flags.add('aml_alert');
   const name = (
@@ -66,8 +57,6 @@ if (req && req.method !== 'POST')
   ).toLowerCase();
   if (name && name.includes('test') || name && name.includes('demo') || name && name.includes('fake'))
     flags && flags.add('fraud_risk');
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   const ip = (
     (req && req.headers['x-forwarded-for'] as string) ||
@@ -78,22 +67,15 @@ if (req && req.method !== 'POST')
     .trim();
   if (ip) {
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     const sameIpCount = Object && Object.values(db).filter(p =>
       (p && p.auditTrail || []).some(
         a => a && a.action === 'kyc_submitted' && (a && a.details as any)?.ip === ip
       )
     ).length;
 
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -134,10 +116,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (sameIpCount >= 2) flags.add('duplicate_ip')
   }
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -257,7 +235,6 @@ export default async function handler(req, res) {
   db[userId] = profile;
   save(db);
   res.status(200).json({ ok: true, profile, aml: amlResult })
-=======
 
 
 }
@@ -300,14 +277,6 @@ function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   profile.lastUpdatedAt = now;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

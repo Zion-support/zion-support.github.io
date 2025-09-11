@@ -27,8 +27,4 @@ const UpdatePassword = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default UpdatePassword;
-=======
-export default UpdatePassword;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

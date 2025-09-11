@@ -45,15 +45,11 @@ class ErrorBoundary extends React.Component {
                   href='https://aws && aws.amazon.com/config/pricing/'
                   target='_blank'
                   rel='noopener noreferrer'>;
-=======
             className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
-=======        <div className='mt - 8'>;
           <a;
             href='/contact';
             className='px - 6 py - 3 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
           >;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             Contact Sales;
           </a>;
         </div>;
@@ -138,21 +134,15 @@ export default function ITAssetDiscoveryAgentPage() {
       </div>
     </UltraFuturisticBackground>;
   );
-=======
 
 
-=======
-=======
 }
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
-=======
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -189,8 +179,6 @@ export default function ITAssetDiscoveryAgentPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="font-semibold mb-2">References</h2>
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
@@ -206,17 +194,7 @@ export default function ITAssetDiscoveryAgentPage() {
 	)
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

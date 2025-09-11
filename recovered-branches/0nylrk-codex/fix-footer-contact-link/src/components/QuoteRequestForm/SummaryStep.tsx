@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -72,8 +70,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { AIMatchingResults } from "@/components/AIMatchingResults",;
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
 import { toast } from "@/hooks/use-toast",;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -104,19 +100,14 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
-=======
-=======
         // Get AI matches;
         const results = await findMatches(;
 
           queryString;
           formData && formData.serviceType;
           3;
-=======
 
-=======        );
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from './react';
 import { QuoteFormData } from '@/types / quotes';
 import { Card, CardContent } from '@/components / ui / card';
@@ -169,7 +160,6 @@ if (return) {
           variant: "destructive"});
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -234,7 +224,6 @@ if (return) {
                   </div>
                 </div>
               )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               
 
@@ -242,7 +231,6 @@ if (return) {
       } finally {
         setIsMatching (false);
       }
-=======
 
         setMatches(results);
       } catch (error) {;
@@ -360,7 +348,6 @@ const matchResult = matches.find(match => match.item.id === item.id),
       <AIMatchingResults,
 serviceType={formData.serviceType}
         projectDescription={formData.projectDescription}
-=======        matches={matchItems}
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />;      {/* Service Information */}
@@ -390,7 +377,6 @@ serviceType={formData.serviceType}
               <div>;
                 <Label className="text-zion-slate-light">Project Description</Label>;
                 <div className="text-white whitespace-pre-wrap">{formData && formData.projectDescription}</div>;
-=======
     }
 ;
     run_matching ();
@@ -477,7 +463,3 @@ if ( {) {
 
 }=======
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const InnovativeServicesOverview = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default InnovativeServicesOverview;
-=======
-export default InnovativeServicesOverview;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

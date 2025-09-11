@@ -8,7 +8,6 @@ const SAMPLE_QUERIES = [
 ];
 
 const SKILLS = [
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +31,6 @@ const SKILLS = [
   'PostgreSQL',
   'Rust'
 ];
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -57,7 +55,6 @@ const SAMPLE_QUERIES = [
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
-==============  "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
   "Blockchain developers remote"
@@ -74,7 +71,6 @@ const SAMPLE_QUERIES = [
   if (req.method !== "GET") {
   if (req.method !== "GET") {
   if (req.method !== "GET") {;
-=======    res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
 }
@@ -90,10 +86,6 @@ const SAMPLE_QUERIES = [
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export default /**
  * handler - Function description
@@ -142,12 +134,5 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

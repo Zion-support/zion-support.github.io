@@ -14,23 +14,17 @@ import Link from 'next/link';
 const InnovationPage: React.FC = () => {
   const innovation_areas = [;
     {
-=======
-==============
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const InnovationPage: React.FC = () => {
   const innovation_areas = [;
     {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         { name: 'Security Scanning', status: 'active', impact: 'critical', description: 'Automated vulnerability detection' }
       ];
     }
   ];
 ;
   const recent_innovations = [;
-=======
       category: 'AI Automation',
       innovations: [
         { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' },
@@ -120,8 +114,6 @@ const InnovationPage: React.FC = () => {
 }
   ];
   const upcomingInnovations = [
-=======
-=======
 
 
   const recentInnovations = [
@@ -558,7 +550,6 @@ const InnovationPage: React.FC = () => {
   }
 }
   ];
-=======
       status: 'planning';
     },
     {
@@ -582,41 +573,34 @@ const InnovationPage: React.FC = () => {
       case 'planning': return 'text-purple-400';
       case 'development': return 'text-orange-400';
       default: return 'text-gray-400';
-=======
 
   };
 
 
-=======      } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
   const getImpactColor = (impact: string) => {
-=======
 ;
   const getImpactColor = (impact: string) =>: any {    switch (impact) {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case 'critical': return 'bg-red-500/20 text-red-400';
       case 'high': return 'bg-orange-500/20 text-orange-400';
       case 'medium': return 'bg-yellow-500/20 text-yellow-400';
       case 'low': return 'bg-blue-500/20 text-blue-400';
       default: return 'bg-gray-500/20 text-gray-400';
-=======
 
   };
 
 
-=======      } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -631,7 +615,6 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -649,7 +632,6 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-purple-400">Active Innovations</h3>
@@ -691,7 +673,6 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </span>
                       </div>
                       <p className="text-gray-300 text-sm">{innovation.description}</p>
@@ -763,7 +744,6 @@ const InnovationPage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======        {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -793,17 +773,8 @@ const InnovationPage: React.FC = () => {
     </div>
   );
 }
-=======
-=======
-=======
 ;
 
-=======
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default InnovationPage;

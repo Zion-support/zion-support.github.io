@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react"
 import type { NextPage } from 'next'
 import React from "react";
@@ -10,9 +9,6 @@ import type { NextPage } from 'next'
 import React from "react";
 import type { NextPage } from 'next';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const "Contact": NextPage = () => {
   return (
     <div>Contact Backup</div>
@@ -20,7 +16,6 @@ const "Contact": NextPage = () => {
 
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 
-<<<<<<< HEAD
 }
 export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact

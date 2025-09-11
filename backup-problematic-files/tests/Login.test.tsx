@@ -13,8 +13,4 @@ const Login.test: React.FC<Login.testProps> = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Login.test;
-=======
-export default Login.test;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

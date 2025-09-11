@@ -61,10 +61,8 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyPage() {
   const router = useRouter(),
   const { id } = router.query,
-==============
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from 'react';
 import Head from 'next/head';
@@ -107,7 +105,6 @@ export default function CaseStudyPage() {
           <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
         </ul>
-=======
 
 
     {
@@ -145,15 +142,8 @@ export default function CaseStudyPage() {
       `
     }
 
-=======
-=======
 
-=======
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export default function CaseStudyPage(req, res) {
   try {
   const router = useRouter();
@@ -278,15 +268,11 @@ export default function CaseStudyPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!caseStudy) {
     return (
       <>
@@ -303,8 +289,6 @@ export default function CaseStudyPage(req, res) {
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -315,7 +299,6 @@ export default function CaseStudyPage(req, res) {
         </div>
       </>
     )
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 
@@ -373,11 +356,9 @@ export default function CaseStudyPage(req, res) {
                     {caseStudy.results.map((result, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-=======
                         {result}
                       </li>
                     ))}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
   if (!caseStudy) {;
@@ -497,8 +478,6 @@ export default function CaseStudyPage(req, res) {
             </div>
             <div className="text-center">
               <Link
-=======
-=======
 
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
 
@@ -508,12 +487,8 @@ export default function CaseStudyPage(req, res) {
   );
 };
   )
-=======
-=======
-=======
 }
 
-=======
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
@@ -648,15 +623,5 @@ if ( {) {
   }
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -6,7 +6,6 @@ export function createMediaAsset(asset: Omit<MediaAsset, 'id' | 'createdAt'>): M
   }
     ok: true,
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
-=======  };
 
 
 
@@ -32,19 +31,15 @@ export function createMediaAsset(asset: Omit<MediaAsset, 'id' | 'createdAt'>): M
   ];
   if (kind === 'web3') return [...base, ...web3Extras];
   return base;
-=======
 
   };
 
 
-=======  }
 
-=======
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
 
-=======
 
 
       path: '',
@@ -75,7 +70,6 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       type: 'text',
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
 
 ;
@@ -102,10 +96,6 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 
 
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 }
 }
@@ -137,11 +127,3 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

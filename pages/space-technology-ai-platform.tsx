@@ -8,7 +8,6 @@ export default function SpaceTechnologyAIPlatform() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',;
-=======
 
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -105,7 +104,6 @@ export default function SpaceTechnologyAIPlatform() {;
         <Head>
           <title>Space Technology AI Platform - Zion Tech Group</title>
 
-=======
           <meta
             name='description'
             content='Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.'
@@ -163,7 +161,6 @@ export default function SpaceTechnologyAIPlatform() {;
 
 
 
-=======
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
@@ -180,7 +177,6 @@ export default function SpaceTechnologyAIPlatform() {;
 
 
 
-=======
               <div className='flex items-center justify-center space-x-8 text-gray-400'>
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-5 h-5 text-green-400' />              <div className="flex items-center justify-center space-x-8 text-gray-400">
@@ -258,7 +254,6 @@ export default function SpaceTechnologyAIPlatform() {;
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -291,7 +286,6 @@ export default function SpaceTechnologyAIPlatform() {;
     'Maxar ($5000-50000/month)',
     'Planet Labs ($1000-10000/month)',
     'Airbus Defence ($10000-100000/month)',
-=======    'Lockheed Martin',
     'Boeing',
     'Northrop Grumman',
   ];
@@ -327,7 +321,6 @@ export default function SpaceTechnologyAIPlatform() {;
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     <span className="text-green-300 font-semibold">Our Advantage: AI integration, comprehensive platform, affordable pricing</span>
                   </div>
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </motion.div>
               <motion.div
@@ -346,14 +339,12 @@ export default function SpaceTechnologyAIPlatform() {;
 
               <motion&& motion.div
 
-=======                </div>
               </motion.div>
             </div>
           </div>
         </section>
                 className='space-y-6'>;
 className='space-y-6'>;
-=======
 
 
                 className='space-y-6'>;                <h3 className='text-2xl font-bold text-white mb-6'>;
@@ -392,7 +383,6 @@ className='space-y-6'>;
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
@@ -402,7 +392,6 @@ className='space-y-6'>;
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -416,7 +405,6 @@ className='space-y-6'>;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
                 <motion.div
                   className="group relative"
-=======                  key={useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -445,7 +433,6 @@ className='space-y-6'>;
 
 
                   className="group relative"
-=======                  key={useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -471,7 +458,6 @@ className='space-y-6'>;
   }
 }
                   className="group relative"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
@@ -484,7 +470,6 @@ className='space-y-6'>;
                     </p>
                   </div>
                 </motion.div>
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -498,9 +483,7 @@ className='space-y-6'>;
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -508,21 +491,16 @@ className='space-y-6'>;
 
             >
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
 
-==============
 
 
-=======
 
 }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6 mb - 8'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}
                   while_hover={{ scale: 1.05 }}
@@ -579,16 +557,6 @@ className='space-y-6'>;
   }
 }
 ;
-=======
-=======
-=======
 ;
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

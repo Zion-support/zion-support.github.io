@@ -1,5 +1,4 @@
 
-=======import React, { useEffect, useState, useCallback } from 'react',
 import React, { useEffect, useState, useCallback } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -39,7 +38,6 @@ import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-
   // Get featured services for rotation
   const featuredServices = allRevolutionaryServices.slice(0, 6);
   const features = [
-=======
 
 import React, { useEffect, useState, useCallback } from 'react';
 
@@ -49,7 +47,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -80,7 +77,6 @@ import { motion, AnimatePresence } from 'framer-motion';
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
 
-=======
 import { 
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
@@ -106,7 +102,6 @@ import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-
   const features = [
 
 import {
-=======
 
 
   const handleGetStarted = useCallback(() => {
@@ -349,14 +344,11 @@ import {
   const prevService = () => {;
     setCurrentServiceIndex((prev) => (prev - 1 + featuredServices && featuredServices.length) % featuredServices && featuredServices.length);
   };
-=======  return (
     <Layout>;
       {/* Main Content */}
 
         {/* Hero Section */}
-=======
         {/* Hero Section */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section
           className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'
           aria-labelledby='hero-heading'>;
@@ -389,7 +381,6 @@ import {
                     repeat: Infinity as any,
                     delay: i * 0.2,
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
               transition={{ duration: 0 && 0.8 }}>;
@@ -416,8 +407,6 @@ import {
                 Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.;
               </p>;
               {/* Enhanced CTA Buttons */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -428,19 +417,15 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleWatchDemo}
                   className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
-=======
 
                   className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <Play className="w-5 h-5" />
                   Watch Demo
@@ -466,9 +451,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                 </motion && motion.button>;
               </div>;
               {/* Enhanced Stats */}
-=======
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-=======
                   </motion.div>
 
 
@@ -480,7 +463,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
         </section>;
 
 
-=======
 
 
 
@@ -493,28 +475,18 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
-=======
-
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-==============
               className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology
@@ -544,21 +516,15 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
-=======
 
-==============
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p className='text-gray-300 mb-6 leading-relaxed'>
                     {feature.description}
                   </p>
@@ -578,37 +544,25 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
                   <a
                   <a 
-=======
-=======
                   <a 
 
 
                     className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>;
 
-=======
-=======
-
-=======
 
 
 
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-==============
               className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Featured
@@ -636,10 +590,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                 that are setting new standards in technology.
               </p>
             </motion.div>
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm">
                 <AnimatePresence mode="wait">
@@ -649,21 +600,13 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
+
                     key={currentServiceIndex}
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -675,18 +618,11 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
                   >
                     <div className='text-6xl mb-6'>
-=======
                     transition={{ duration: 0.5 }}
                     className='p-12 text-center'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
                   >
                     <div className='text-6xl mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
                     >
                       Get Started
@@ -695,7 +631,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   </motion.div>
                 </AnimatePresence>
 
-==============                {/* Navigation Controls */}
                 <button
                   onClick={prevService}
                   className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
@@ -704,8 +639,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>
@@ -722,13 +655,11 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                   {featuredServices.map((_, index) => (
-==============
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                   {featuredServices.map((_, index) => (                <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (
 
                   {featuredServices.map((_, index) => (
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
@@ -736,26 +667,20 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
-=======
                         index === currentServiceIndex
                           ? 'bg-cyan-400 w-8'                          : 'bg-white/30 hover:bg-white/50'                        index === currentServiceIndex
                           ? 'bg-cyan-400 w-8'
                           : 'bg-white/30 hover:bg-white/50'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-=======
 
 
 
-=======
+
+
                 </div>
               </div>
             </div>
           </div>
         </section>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
                     left: `${Math.random () * 100}%`,
                     top: `${Math.random () * 100}%`,
                   }}                />                    ease: "easeInOut";
@@ -1099,7 +1024,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
         {/* Enhanced Testimonials Section */}
         <section className="py-20 px-4 relative">
-=======
                       }`}
                     />
                   ))}
@@ -1115,8 +1039,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
           <div className="max-w-7xl mx-auto">
             <motion.div
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1126,7 +1048,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662            >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 What Our
                 <span className='block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
@@ -1187,22 +1108,14 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                 computing platforms are transforming industries and driving;
                 innovation.;
               </p>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
-=======
-
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
                   key={currentTestimonialIndex}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1240,7 +1153,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                       <Star
                         key={i}
                         className='w-6 h-6 text-yellow-400 fill-current'
-=======                      />                    ))}
                   <div className="flex justify-center gap-1">
                     {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
                       <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
@@ -1250,8 +1162,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
               {/* Testimonial Indicators */}
               <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (              <div className="flex justify-center gap-2 mt-8">
               <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {testimonials.map((_, index) => (
                   <button
@@ -1268,26 +1178,18 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                         ? 'bg-emerald-400 w-8'                        : 'bg-white/30 hover:bg-white/50'                      index === currentTestimonialIndex ;
                         ? 'bg-emerald-400 w-8' ;
                         : 'bg-white/30 hover:bg-white/50';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
-=======
-
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
                     }`}
                   />;
                 ))}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               </div>;
             </div>;
           </div>;
@@ -1295,10 +1197,8 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
-=======
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
-=======
                     }`}
                   />
                 ))}
@@ -1325,9 +1225,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
               whileInView={{ opacity: 1, y: 0 }}
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
-=======
-=======
-=======
         {/* Enhanced CTA Section */}        <section className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
@@ -1336,7 +1233,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1386,7 +1282,3 @@ top: `$ {
 
 }> Revolutionary 2043 Technology </div> {;
   /* Main Heading */ ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

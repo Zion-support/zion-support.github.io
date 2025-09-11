@@ -12,7 +12,6 @@
     },
     "codeQuality": {
       "success": false,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "duration": 6393,
       "errors": [],
       "warnings": []
@@ -27,19 +26,6 @@
       "success": true,
       "duration": 5672,
       "errors": [],
-<<<<<<< HEAD
-=======
-      "warnings": []
-    },
-    "seoOptimization": {
-      "success": true,
-      "duration": 42,
-      "errors": [],
-      "warnings": []
-    },
-    "accessibilityImprovement": {
-      "success": false,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "duration": 291,
       "errors": [],
       "warnings": []
@@ -48,18 +34,9 @@
       "success": true,
       "duration": 6276,
       "errors": [],
-<<<<<<< HEAD
-=======
-      "warnings": []
-    },
-    "deployment": {
-      "success": true,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "duration": 1796,
       "errors": [],
       "warnings": []
     }
   }
 }
-<<<<<<< HEAD
-=======

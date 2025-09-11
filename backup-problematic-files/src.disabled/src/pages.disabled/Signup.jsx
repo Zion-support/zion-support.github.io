@@ -27,8 +27,4 @@ const Signup = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Signup;
-=======
-export default Signup;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

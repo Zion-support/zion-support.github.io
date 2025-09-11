@@ -1,7 +1,6 @@
 
   const {;
 
-=======import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { useTalentQuotes } from '@/hooks / useTalentQuotes';
@@ -52,7 +51,6 @@ export default function RequestsPanel() {
   const isTalent = user?.userType === 'creator' |user?.userType === 'jobSeeker';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-=======
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);import type { QuoteRequest } from "@/types/quotes",
@@ -64,8 +62,6 @@ export default function RequestsPanel() {
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  const {
     quotes,
     unreadCount,
     isLoading,
@@ -80,22 +76,18 @@ export default function RequestsPanel() {
     setSelectedQuote(quote),
     setShowDetails(true),
     
-=======    // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
   // Filter quotes by archive status
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
-=======  return (
     <ProtectedRoute>
       <div>
         <Header />
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useTalentQuotes } from "@/hooks/useTalentQuotes",;
@@ -129,7 +121,6 @@ export default function RequestsPanel() {;
     setSelectedQuote(quote);
     setShowDetails(true),;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
             <RequestsHeader;
 
@@ -144,7 +135,6 @@ export default function RequestsPanel() {;
 
               <TabsContent value="active">;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
         />
         <Footer />
@@ -167,7 +157,6 @@ export default function RequestsPanel() {;
 if ( {) {
   $2
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       markAsViewed (quote.id);
     }
   }
@@ -231,8 +220,3 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

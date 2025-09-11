@@ -9,8 +9,4 @@ const SpeakersSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SpeakersSection.js;
-=======
-export default SpeakersSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

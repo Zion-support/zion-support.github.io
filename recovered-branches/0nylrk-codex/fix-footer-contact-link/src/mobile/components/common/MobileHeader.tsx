@@ -2,20 +2,16 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
   title: string
-=======
 interface MobileHeaderProps {;
   title: string,;=======
 interface MobileHeaderProps {;
   title: string,;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   showBack?: boolean;
   showNotifications?: boolean;
@@ -32,8 +28,6 @@ interface MobileHeaderProps {;
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -61,11 +55,9 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
-=======
   onSettingsClick?: () => void
 }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   title,
   showBack = false,
@@ -79,15 +71,11 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
-=======
 
   onSettingsClick?: () => void
 }
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -100,14 +88,10 @@ export function MobileHeader({
     <headerclassName={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
       className
-=======
-=======
     )}>;
       <div className="flex items-center justify-between h-14 px-4">;
         <div className="flex items-center">;
           {showBack && (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           </h1>;
         </div>;
         <div className="flex items-center space-x-2">;
@@ -159,7 +143,6 @@ export function MobileHeader({
       </div>;
     </header>);
 }
-<<<<<<< HEAD
   ),;}
  interface MobileHeaderProps {
   title: string;
@@ -200,8 +183,3 @@ className)
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

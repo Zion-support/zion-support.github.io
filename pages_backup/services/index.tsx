@@ -83,7 +83,6 @@ import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRigh
 
 export default function ServicesIndex() {
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 const ServicesIndex: NextPage = () => {
   const services = [
@@ -326,9 +325,6 @@ const ServicesIndex: NextPage = () => {
     }
   ];
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <Head>
@@ -573,10 +569,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Learn More
                   </Link>
                 </div>
@@ -926,12 +919,9 @@ export default ServicesIndex;
       </div>;
     </>;
 
-<<<<<<< HEAD
 export default ServicesIndex;
       </div>
     </>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 
       </div>

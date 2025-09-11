@@ -27,8 +27,4 @@ const OpenAppRedirect = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default OpenAppRedirect;
-=======
-export default OpenAppRedirect;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

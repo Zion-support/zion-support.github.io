@@ -16,7 +16,6 @@ describe('App', () => {
 ursor/fix-syntax-push-and-merge-to-main-40de
     const heading = screen.getByRole('heading', { level: '1' });
     expect(heading).toBeInTheDocument();
-=======  });
 });
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
@@ -45,8 +44,6 @@ describe('App', () => {
 
 origin/main
 });
-=======
-=======import { render, screen } from '@testing-library/react'
 import App from '../src/App'
 describe('App'
   it('renders without crashing'
@@ -54,8 +51,4 @@ describe('App'
   it('has proper heading structure'
     const heading = screen.getByRole('heading', { level: '1'
     const heading = screen.getByRole('heading'
-<<<<<<< HEAD
 origin/automation-improvements-final
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

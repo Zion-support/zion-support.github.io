@@ -6,7 +6,6 @@ import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 interface ListingCardProps {;
-=======
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Link } from './react-router-dom';
@@ -51,8 +50,6 @@ export function ListingCard({
   // Generate a profile ID based on the listing data
   // In a real app, this would be a proper ID from the database
   const profileId = id |(profileType === 'service' ? 'service-provider-1' : 'talent-1');
-=======
-=======  className;
   profileType = 'service';
 }: ListingCardProps) {;
   // Generate a profile ID based on the listing data;
@@ -60,7 +57,6 @@ export function ListingCard({
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
 
-=======
         className
       )}>;
       {image && (;
@@ -71,7 +67,6 @@ export function ListingCard({
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"=======
 
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
         </div>;
       )}
@@ -121,11 +116,9 @@ export function ListingCard({
           </div>
         )}
         
-=======
 
         
 
-=======
                 {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (
@@ -138,7 +131,6 @@ export function ListingCard({
               <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />;
             ) : (;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
-=======  author_image?: string;
   class_name?: string;
   profile_type?: 'service' | 'talent';
 }
@@ -190,8 +182,6 @@ function ListingCard() {
       </div>;
     </Link>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
             {category}
           </Badge>;
         </div>;
@@ -261,7 +251,3 @@ profileType = 'service'
     </Link>
   )
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

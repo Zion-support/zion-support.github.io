@@ -691,14 +691,12 @@ const nebulaGradient = ctx.createRadialGradient(
         cancelAnimationFrame(animationRef.current)
   }, [variant, intensity]),
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
 
       }
       window.removeEventListener('resize', resizeCanvas)
     }
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       <canvas,
@@ -714,7 +712,6 @@ ref={canvasRef}
         )}
         ;
 
-=======;
         ;
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
         {/* Quantum field lines */}
@@ -731,18 +728,14 @@ key={i}
               <motion.div,
 key={i}
                 className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 style={{                  top: `${(i + 1) * 16.67}%`}}
                 animate={_{
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={_{
                   duration: 4, repeat: Infinity, delay: i * 0.8}}
               />
-<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
           </div>;
         )}

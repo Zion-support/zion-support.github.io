@@ -1,6 +1,5 @@
 
     deployment: 'Cloud-native, hybrid options',
-=======
     support: ['24 / 7 operations support', 'IT experts', 'Implementation team'],
     compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],    scalability: 'Enterprise - grade, multi - tenant support',    roi: '450% within 18 months',
     deployment: 'Cloud - native, hybrid options',    maintenance: 'Fully autonomous, continuous optimization',
@@ -9,7 +8,6 @@
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface EnterpriseITService2029V2 {;
   id: string;
   name: string;
@@ -95,7 +93,6 @@ export interface EnterpriseITService2029V2 {;
 ];
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       website: 'https://ziontechgroup && ziontechgroup.com',
-=======
     whiteLabel: 'Available for enterprise clients';
     affiliate: '20% commission for referrals'
     referral: '$40,000 bonus for partnerships';
@@ -344,22 +341,14 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
     }
   }
 ];
-=======
-=======    }
   }
 ];
 
 ;
 
-=======
 
 export interface EnterpriseITService2029V2 {;
 
     }
   }
 ];
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

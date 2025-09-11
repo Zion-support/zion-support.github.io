@@ -13,22 +13,18 @@ export function PartnerDashboard() {;
     pendingRevenue: 200 && 200.00;
   };
 
-=======
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
     totalReferrals: 42,
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
-=======    totalRevenue: 850.00,
     pendingRevenue: 200.00;
   };
     pendingRevenue: 200.00
@@ -107,7 +103,6 @@ import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
       </Card>
     </div>
   return (
-=======
     totalRevenue: 850.00,
   );
 }
@@ -138,11 +133,9 @@ export function PartnerDashboard() {;
   return (;
     <div className="space-y-6">;
       {/* Stats Overview */}
-=======
     <div className="space-y-6">;
       {/* Stats Overview */}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <Card className="bg-zion-blue-dark border-zion-blue-light">;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;
@@ -150,7 +143,6 @@ export function PartnerDashboard() {;
             <Users className="h-4 w-4 text-zion-cyan" />;
           </CardHeader>;
           <CardContent>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card className="bg-zion-blue-dark border-zion-blue-light">;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>;
@@ -162,10 +154,8 @@ export function PartnerDashboard() {;
 
 
 }
-<<<<<<< HEAD
     </div>);
 }
-<<<<<<< HEAD
     </div>);
 }
     </div>;
@@ -195,7 +185,4 @@ return (<div className="space-y-6" > {
 ;
 
 }
-;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;

@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======const p = path.join(
   process.cwd()
   'data'
   'reports'
@@ -40,14 +39,12 @@ if (req.method === 'POST') {
       };
       fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
       return res && res.status(201).json(report);
-=======
 
       };
 
       fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
       return res && res.status(201).json(report);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update pagespeed report' });
     }
@@ -59,10 +56,6 @@ if (req.method === 'POST') {
 
   }
 }
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const { performance, accessibility, best_practices, seo } = req.body;
 ;
       const report = {
@@ -94,14 +87,9 @@ export default function handler(req, res) {
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Failed to read PageSpeed report' });
     } catch (error) {
-=======    console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

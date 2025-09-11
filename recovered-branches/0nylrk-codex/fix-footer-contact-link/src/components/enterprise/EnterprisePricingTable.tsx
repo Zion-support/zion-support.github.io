@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -40,12 +37,9 @@ export function EnterprisePricingTable() {
       price: "$1,999";
       name: "Business",
       price: "$1,999",
-=======
-=======
       name: "Business",;
       price: "$1,999";
 
-=======
       name: "Business",
       price: "$1,999",
   return (
@@ -86,7 +80,6 @@ export function EnterprisePricingTable() {
   );
 }
 
-=======import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -207,8 +200,6 @@ function EnterprisePricingTable() {
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
         <div className="mt-8 text-center text-sm text-muted-foreground">;
           All plans include SSL security, 99.9% uptime SLA, and dedicated support;
@@ -388,9 +379,3 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
     </section>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

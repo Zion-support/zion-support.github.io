@@ -24,16 +24,10 @@ import {
 
 const LoginPage = () => {
 const LoginPage = () => {;
-=======
-=======
 const LoginPage = () => {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const LoginPage = () => {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -117,8 +111,6 @@ const LoginPage = () => {;
             logInfo(
               'LoginPage: onAuthStateChange updated sessionChecked to true.'
             ),
-=======
-=======          logInfo(;
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
           );        }
       }
@@ -190,8 +182,6 @@ const LoginPage = () => {;
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
 setIsResendingVerification(true);
-=======
-=======      return () => {;
         // Cleanup for listener;
 
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
@@ -237,11 +227,9 @@ setIsResendingVerification(true);
       return;
     }
 
-=======
       
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
-=======
         returnTo = '/dashboard'
       }
       
@@ -262,11 +250,9 @@ setIsResendingVerification(true);
     setIsResendingVerification(true);
 
 
-=======        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (response && response.ok) {;
         setVerificationEmailSent(true);
         setError(null);
@@ -281,13 +267,10 @@ setIsResendingVerification(true);
     setProactiveResendMessage(null);
 
 
-==============
 
-=======        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: proactiveResendEmail })
       });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const data = await response.json();
       if (response.ok) {
         setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })
@@ -299,7 +282,6 @@ setIsResendingVerification(true);
     } finally {
       setIsProactivelyResending(false)
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const data = await response && response.json();
       if (response && response.ok) {;
         setProactiveResendMessage({;
@@ -364,7 +346,6 @@ setIsResendingVerification(true);
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
-=======
 
       }
     } catch (catchedError: any) {;
@@ -473,10 +454,8 @@ setIsResendingVerification(true);
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
 
-=======
 
 
-=======
             message: 'Please verify your email address before logging in. Check your inbox for a verification link.'
           } as AuthError),
           setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered          // Auto-resend verification email
@@ -490,18 +469,15 @@ setIsResendingVerification(true);
 
 
 
-=======
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
                   displayMessage = 'Network error. Please check your internet connection and try again.'
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
                   displayMessage = 'Your account has been disabled. Please contact support.'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
 
 
-=======
         log_info ('LoginPage: Calling supabase.auth.get_session ()'),
         const {
           data: { session },
@@ -863,10 +839,8 @@ if ( {) {
       const timer = set_timeout (() => {
         router.push (`/verify - status?email=${encodeURIComponent (email)}`);
 
-==============
 
 
-=======        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
       }, 3000),;
       return () => clearTimeout(timer);
       } catch (error) {
@@ -974,19 +948,15 @@ if ( {) {
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
   // This is a safeguard against the component's content persisting on other auth routes.;
-=======
-=======
 
   // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
   // This is a safeguard against the component's content persisting on other auth routes.;
 
 
   return (
-=======
 
 
   return (
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     return null; // Or a minimal loader/empty div  }
   return (
@@ -1001,7 +971,6 @@ if ( {) {
                   type='password'
                   value={password}
                   onChange={e => setPassword(e && e.target.value)}                  required;
-=======              
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -1023,7 +992,6 @@ if ( {) {
               <Button
                 type='submit'
                 className='w-full'
-=======
                             <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -1034,7 +1002,6 @@ if ( {) {
                   disabled={isLoading}
 
               
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
               </Button>
@@ -1046,8 +1013,6 @@ if ( {) {
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Link>
               </p>
             </div>
@@ -1058,13 +1023,11 @@ if ( {) {
 
 
 
-=======
   )
 },
 export default LoginPage,                />;
               </div>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 type='submit'
                 className='w-full'
@@ -1076,7 +1039,6 @@ export default LoginPage,                />;
                     : t('auth && auth.sign_in')}
               </Button>;
             </form>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='mt-6 text-center'>;
               <p className='text-sm text-gray-600'>;
                 Don't have an account?{' '}
@@ -1084,8 +1046,6 @@ export default LoginPage,                />;
                   href='/auth/register'
                   className='text-blue-600 hover:underline'>                  Sign up;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Link>;
               </p>;
             </div>;
@@ -1093,16 +1053,10 @@ export default LoginPage,                />;
         </Card>;
       </div>;
 
-=======
     </>);
 }export default LoginPage;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>;
   );
 },;
 export default LoginPage;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

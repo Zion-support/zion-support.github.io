@@ -15,8 +15,6 @@ import {Switch} from "@/components/ui/switch";
   currentValues?: ContractFormValues;
 }
 export function TemplateSaveForm(): any ({;
-=======
-=======const formSchema = z && z.object({;
   title: z && z.string().min(1, "Title is required");
   isDefault: z && z.boolean().default(false)}),;
 
@@ -34,8 +32,6 @@ interface TemplateSaveFormProps {;
 export function TemplateSaveForm(): any ({;
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -136,9 +132,7 @@ export function TemplateSaveForm({;
           templateData: currentValues;
           isDefault: values.isDefault});
 
-=======
 
-=======
 
       }
       onComplete()
@@ -152,7 +146,6 @@ export function TemplateSaveForm({;
     defaultValues: {;
       title: editTemplate?.title || "",;
       isDefault: editTemplate?.is_default || false}}),;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const onSubmit = async (values: FormValues) => {;
     if (!currentValues && !editTemplate) {;
       return;
@@ -230,7 +223,6 @@ export function TemplateSaveForm({;
     </Form>;
   );
 }
-=======import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from './zod';
@@ -308,7 +300,6 @@ if ( {) {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Template Name</FormLabel>;
-<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -387,13 +378,10 @@ export function TemplateSaveForm({;
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Template Name</FormLabel>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <FormControl>;
                 <Input {...field} placeholder="Enter template name" />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
             </FormItem>;          )}
         />;
         ;
@@ -503,11 +491,6 @@ try {
     </Form>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </FormItem>)}
         />;
         <FormField;
@@ -541,5 +524,3 @@ try {
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

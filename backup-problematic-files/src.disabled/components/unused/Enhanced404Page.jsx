@@ -27,8 +27,4 @@ const Enhanced404Page = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Enhanced404Page;
-=======
-export default Enhanced404Page;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

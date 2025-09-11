@@ -9,8 +9,4 @@ const ServiceComparison = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ServiceComparison;
-=======
-export default ServiceComparison;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

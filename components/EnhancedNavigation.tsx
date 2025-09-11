@@ -1,10 +1,8 @@
 
 
-=======import Link from 'next/link';
 
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
-=======
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +24,6 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
     { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
     { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
-=======    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
   const company = [
     { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' }
@@ -38,7 +35,6 @@ const EnhancedNavigation: React.FC = () => {
 
 
 
-=======  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
   const closeAllDropdowns = () => {
@@ -109,7 +105,6 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'services' && (
                 <motion.div
-=======
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
               >
                 <span>Services</span>
@@ -119,7 +114,6 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'services' && (
                 <motion.div
-=======                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Services</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
@@ -131,8 +125,6 @@ const EnhancedNavigation: React.FC = () => {;
 
 
 
-=======
-=======
 
             {/* Company Dropdown */}
             <div className="relative">;
@@ -181,7 +173,6 @@ const EnhancedNavigation: React.FC = () => {;
 
 
 
-=======
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
             >
               Get Started
@@ -189,10 +180,8 @@ const EnhancedNavigation: React.FC = () => {;
           </div>
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -204,8 +193,6 @@ const EnhancedNavigation: React.FC = () => {;
 
 
 
-=======
-=======
 
         {/* Mobile Menu */}
         {isOpen && (;
@@ -265,8 +252,6 @@ const EnhancedNavigation: React.FC = () => {;
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           </motion.div>)}
       </div>;
     </nav>);
@@ -536,21 +521,8 @@ export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;
-=======
-==============
 
 export default EnhancedNavigation;
 
-=======
 export default EnhancedNavigation;
-<<<<<<< HEAD
-=======
 export default EnhancedNavigation;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-export default EnhancedNavigation;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

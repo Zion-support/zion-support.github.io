@@ -15,12 +15,9 @@ import {
   CYBERSECURITY_SERVICES,
   DATA_ANALYTICS_SERVICES,;
   CLOUD_SOLUTIONS,;} from '@/data/servicesData';import { ;
-=======
-=======
 import React, { useState } from 'react';
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   SERVICE_CATEGORIES;
   ALL_SERVICES
   AI_SERVICES
@@ -29,8 +26,6 @@ import React, { useState } from 'react';
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 } from '@/data/servicesData';
 import { ServiceCategory, ServiceSolution } from '@/types/services';
 
@@ -40,7 +35,6 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
 export function ServicesPage() {;
 
 
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -79,7 +73,6 @@ import React, { useState } from 'react',;
           <div className='flex flex-wrap justify-center items-center gap-8 text-gray-600'>
             <div className='flex items-center gap-2'>
               <span className='text-blue-600'>📍</span>
-=======
 
 
       <div className="bg-white border-b">
@@ -92,28 +85,21 @@ import React, { useState } from 'react',;
       {/* Hero Section */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662            <div className="flex items-center gap-2">
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
 
               </a>
               </Link>
-=======
 
               </Link>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               </a>
               </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
@@ -143,7 +129,6 @@ import React, { useState } from 'react',;
 
           <div className="text-center py-12">
 
-=======            </div>;
           </div>;
         </div>;
 
@@ -172,7 +157,6 @@ import React, { useState } from 'react',;
               Try adjusting your search or filter criteria
             </p>          </div>          <div className="text-center py-12">
           <div className="text-center py-12">
-=======
             </div>;
           </div>;
         </div>;
@@ -180,14 +164,12 @@ import React, { useState } from 'react',;
 
         {/* Services Grid */}
 
-=======
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
 
 
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
 
@@ -206,62 +188,43 @@ import React, { useState } from 'react',;
               Try adjusting your search or filter criteria
             </p>          </div>          <div className="text-center py-12">
           <div className="text-center py-12">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
           <div className="text-center py-12">
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Choose Zion Tech Group?
             </h2>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
               <h3 className="text-xl font-semibold mb-2">Innovation First</h3>
               <p className="text-gray-600">Cutting-edge AI and technology solutions</p>
             </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <div className='text-center'>
               <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <span className='text-2xl'>🛡️</span>            
             <div className="text-center">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🛡️</span>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
               <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
             </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <div className='text-center'>
               <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <span className='text-2xl'>⚡</span>            
             <div className="text-center">
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
               <p className="text-gray-600">Quick setup and implementation</p>
             </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -289,10 +252,8 @@ import React, { useState } from 'react',;
       <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>
-=======
 
           </h2>
-=======      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business?
@@ -336,11 +297,8 @@ import React, { useState } from 'react',;
             <a
             </Link>
             </Link>
-=======
-=======
             </Link>
             <a 
-=======
             <a
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
@@ -352,7 +310,6 @@ import React, { useState } from 'react',;
       </div>
     </div>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 interface ServiceCardProps {
   service: ServiceSolution
@@ -395,7 +352,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 function ServiceCard(): any ({ service }: ServiceCardProps) {;
   const [showDetails, setShowDetails] = useState(false);
 
-=======
 
   const getPopularPlan = () => {
   const popularPlan = getPopularPlan();
@@ -405,7 +361,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     if (service.pricing.professional.popular) return service.pricing.professional,
     if (service.pricing.basic.popular) return service.pricing.basic,
     if (service.pricing.enterprise.popular) return service.pricing.enterprise,
-=======
     if (service.pricing.professional.popular) return service.pricing.professional;
     if (service.pricing.basic.popular) return service.pricing.basic;
     if (service.pricing.enterprise.popular) return service.pricing.enterprise;    return service.pricing.professional
@@ -446,8 +401,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             <span className='text-blue-600 text-sm'>✓ Verified</span>          )}
 
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       {/* Service Image */}
       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
         <img 
@@ -455,7 +408,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           alt={service.title}
           className="w-full h-full object-cover"
         />
-=======
         <div className="absolute top-4 right-4">
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
             {service.category}
@@ -526,10 +478,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         <div className='flex items - center gap - 3 mb - 4'>;
           <div className='w - 8 h - 8 bg - blue - 100 rounded - full flex items - center justify - center'>;
             <span className='text - blue - 600 font - semibold text - sm'>              {service.provider.name.char_at (0)}
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </span>;
           </div>;
           <div>          </div>;
@@ -622,7 +572,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             </div>
             {popularPlan.popular && (
               <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Most Popular
               </span>            )}
 
@@ -661,7 +610,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         {/* Features Preview */}
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </span>;
             </div>;
             {popular_plan.popular && (
@@ -685,14 +633,12 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             {service.features.slice (0, 3).map ((feature, index) => (
               <span;
                 key={index}
-=======
         <div className='mb - 4'>;
           <h4 className='font - semibold text - gray - 900 mb - 2'>Key Features:</h4>;
           <div className='flex flex - wrap gap - 2'>;
             {service.features.slice (0, 3).map ((feature, index) => (
               <span;
                 key={index}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='bg - blue - 100 text - blue - 800 px - 2 py - 1 rounded text - xs'              >            {service.features.slice (0, 3).map ((feature, index) => (
               <span;
                 key={index}
@@ -718,7 +664,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         </div>
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Detailed Information */}
         {showDetails && (
           <div className="mt-6 pt-6 border-t border-gray-200">
@@ -734,7 +679,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
-=======
 
                     <li key={index}>{benefit}</li>>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
@@ -746,12 +690,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               {/* Use Cases */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {useCase}
                     </span>;
                   ))}
@@ -761,10 +701,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
               {/* Technologies */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       {useCase}
                     </span>;
                   ))}
@@ -780,12 +718,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                       className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (
                     <span
                       key={index}
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
                     >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       {tech}
                     </span>;
                   ))}
@@ -794,32 +729,24 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               {/* Deployment & Support */}
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
                     >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {tech}
                     </span>;
                   ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
               <div className="grid grid-cols-2 gap-4 text-sm">
 
 
-=======
               <div className='grid grid-cols-2 gap-4 text-sm'>
               <div className="grid grid-cols-2 gap-4 text-sm">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div>
                   <span className='font-medium text-gray-900'>Deployment:</span>
                   <p className='text-gray-600'>{service.deploymentTime}</p>
                 </div>
                 <div>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <span className="font-medium text-gray-900">Deployment:</span>
@@ -835,17 +762,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   <p className="text-gray-600">{service.deploymentTime}</p>
                 </div>
                 <div>
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
                   <span className="font-medium text-gray-900">Support:</span>
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
                 </div>
@@ -871,14 +790,11 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   <p className="text-gray-600">{service && service.support.slice(0, 2).join(', ')}</p>;
                 </div>;
               </div>;
-=======              {/* All Pricing Plans */}
 
-=======
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Pricing Plans:</h4>
                 <div className="space-y-2">
                   {Object.entries(service.pricing).map(([plan, details]) => (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
 
                 </div>;
@@ -894,7 +810,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                 <p className='text-sm text-blue-800 mb-2'>
               <div className="bg-blue-50 rounded-lg p-4 text-center">
                 <p className="text-sm text-blue-800 mb-2">
-=======
 
                   ))}
 
@@ -912,10 +827,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
                     📞 Call +1 302 464 0950
@@ -925,18 +837,13 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
                     className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'                  >                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
                     className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
-=======
 
                     className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'                  >                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
                     className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     ✉️ Email Inquiry
                   </Link>
@@ -962,12 +869,10 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
   )
 }
-=======
 
   )
 }
 
-=======        {/* Detailed Information */}
         {show_details && (
           <div className='mt - 6 pt - 6 border - t border - gray - 200'>;
             <div className='space - y-4'>;
@@ -1102,15 +1007,12 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 }
 }
 }
-=======
-=======      </div>;
     </div>;
   );  );
 }
   )
 }
 
-=======
         {/* Detailed Information */}
         {show_details && (
           <div className='mt - 6 pt - 6 border - t border - gray - 200'>;
@@ -1231,13 +1133,5 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
       </div>;
     </div>));
 }>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

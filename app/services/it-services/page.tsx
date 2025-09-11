@@ -145,7 +145,6 @@ function Item({ title, details }: { title: string; details: string[] }) {
           </li>
         ))}
       </ul>
-=======
     <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -391,7 +390,6 @@ function FeatureCard({ title, features, icon }: { title: string; features: strin
   );
 }
 
-<<<<<<< HEAD
 export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
  * ITServicesPage - Function description
  */
@@ -424,55 +422,6 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-=======
-function PricingCard({ name, price, duration, features, popular }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[]; 
-  popular: boolean;
-}) {
-  return (
-    <div className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-green-500 shadow-lg' : 'border-gray-200'}`}>
-      {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-        </div>
-      )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="text-3xl font-bold text-green-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
-=======
-function ITServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <div className="mb-4">
-        <div className="text-2xl font-bold text-blue-600 mb-2">{price}</div>
-        <div className="text-sm text-gray-500">Starting price</div>
-      </div>
-      <ul className="text-gray-600 space-y-2">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {feature}          </li>
-        ))}
-      </ul>
-      <a 
-        href="tel:+13024640950" 
-<<<<<<< HEAD
 function ContactSection() {
   return (
     <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 text-center">
@@ -498,103 +447,5 @@ function ContactSection() {
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>    </div>
-  );
-}
-=======
-function ITProcessStep({ step, title, description }: { 
-  step: string; 
-  title: string; 
-  description: string; 
-}) {
-  return (
-    <div className="text-center p-6">
-      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function ITTechStack({ title, technologies }: { 
-  title: string; 
-  technologies: string[]; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-            {tech}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function IndustrySolution({ title, description, solutions, icon }: { 
-  title: string; 
-  description: string; 
-  solutions: string[]; 
-  icon: string; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="text-gray-600 space-y-2">
-        {solutions.map((solution) => (
-          <li key={solution} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {solution}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function ITBenefitCard({ title, description, icon }: { 
-  title: string; 
-  description: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">IT Service Pricing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Assessment" 
-          price="$4k–$10k" 
-          features={["2 weeks", "Cloud review", "Security audit", "Roadmap", "Recommendations"]} 
-          popular={false}
-        />
-        <Plan 
-          name="Implementation" 
-          price="$15k–$50k" 
-          features={["4–8 weeks", "Infra as code", "CI/CD", "Monitoring", "Security hardening"]} 
-          popular={true}
-        />
-        <Plan 
-          name="Managed Services" 
-          price="$5k+/mo" 
-          features={["24/7 on-call", "SLO mgmt", "Cost optimization", "Reports", "Proactive maintenance"]} 
-          popular={false}
-        />
-      </div>
-    </section>
   );
 }

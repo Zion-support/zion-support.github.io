@@ -80,7 +80,6 @@ import {Check, ExternalLink} from 'lucide-react';
               rel='noreferrer'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
-=======
 export default function BrowserAutomationCloudPage() {
 
 export default function BrowserAutomationCloudPage() {
@@ -159,7 +158,6 @@ export default function BrowserAutomationCloudPage() {
       </main>
     </>
   );	return (
-=======
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -190,7 +188,6 @@ export default function BrowserAutomationCloudPage() {
 	)
 }
 
-==============
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -219,20 +216,13 @@ export default function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 	),
 }
 
-<<<<<<< HEAD
 	),
 }
 	),
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 	),
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

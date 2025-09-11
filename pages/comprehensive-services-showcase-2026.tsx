@@ -1,4 +1,3 @@
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -39,8 +38,6 @@ import {;
   Database, Globe, Robot, Cube, Sparkles;
 } from 'lucide-react',;
 interface Service {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   tagline: string;
@@ -66,7 +63,6 @@ import {
   Clock, Zap, Shield, Cloud, Brain, 
   Database, Globe, Robot, Cube, Sparkles
 } from 'lucide-react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Service {
   id: string,
   name: string,
@@ -151,7 +147,6 @@ interface Service {
 }
 ;
 const ComprehensiveServicesShowcase2026: React.FC = () => {;
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -202,7 +197,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
       default:
         return 0;    }
   });
-=======
 
   const allServices = [
     ...innovativeMicroSaasServices2026;
@@ -558,7 +552,6 @@ className="text-center"
       case 'rating':;
         return b.rating - a.rating,;
       case 'customers':;
-=======
 
         return b.rating - a.rating;
       case 'customers':;        return b.customers - a.customers,;
@@ -804,8 +797,6 @@ className="text-center"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
@@ -935,14 +926,10 @@ className="text-center"
               </div>
                 </Link>
               </div>
-=======
 
                 className='bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'>;
-==============
 
                 className='bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   /* CTA Button */ 
 }<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
@@ -951,11 +938,8 @@ className="text-center"
 
 
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 },;
 
@@ -1021,10 +1005,5 @@ export default ComprehensiveServicesShowcase2026,
   );
 },;
 export default ComprehensiveServicesShowcase2026;
-=======
-<<<<<<< HEAD
 ;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ComprehensiveServicesShowcase2026;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

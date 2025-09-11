@@ -10,7 +10,6 @@ const Blueprint20250818124039: React.FC = () => {
 
     id: 'blueprint-2025-08-18-124039',
 
-=======
 
 const Blueprint20250818124039: React.FC = () => {
   const blueprintDetails = {
@@ -87,7 +86,6 @@ const Blueprint20250818124039: React.FC = () => {
 
   const quantumComponents = [
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: 'Quantum Simulator',
       description: 'Classical simulation of quantum algorithms',
@@ -104,14 +102,12 @@ const Blueprint20250818124039: React.FC = () => {
 }
   ];
   const features = [
-==============    {
       feature: 'Quantum Algorithm Optimization',
       description: 'Optimization algorithms using quantum principles',
       benefit: 'Exponential speedup for certain problems',
       status: 'development'=======
 
       status: 'development'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   ];
@@ -180,7 +176,6 @@ const Blueprint20250818124039: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
@@ -276,7 +271,6 @@ const Blueprint20250818124039: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Research Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -313,14 +307,12 @@ const Blueprint20250818124039: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======        {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
@@ -345,17 +337,8 @@ const Blueprint20250818124039: React.FC = () => {
     </div>
   );
 }
-=======
-=======
-=======
 ;
 
-=======
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default Blueprint20250818124039;

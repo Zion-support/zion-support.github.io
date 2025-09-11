@@ -206,7 +206,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
@@ -219,7 +218,6 @@ const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
 
-=======    this && this.metrics = {
 
 
 ursor/add-new-services-and-deploy-updates-0462
@@ -234,112 +232,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   startMonitoring() {
     if (typeof window !== 'undefined') {
       // Monitor page load time
-<<<<<<< HEAD
       window.addEventListener('load', () => {
         this.metrics.pageLoadTime = performance.now();
-=======
-        this.reportMetrics();
-      });
-
-        this.reportMetrics();
-      });
-        this.reportMetrics();
-      });
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-        this.reportMetrics();
-      });
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-        this.reportMetrics()});
-      // Monitor Web Vitals
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            switch (entry.entryType) {
-              case 'paint':
-                if (entry.name === 'first-contentful-paint') {
-                  this.metrics.firstContentfulPaint = entry.startTime;
-                }
-                break;
-              case 'largest-contentful-paint':
-                this.metrics.largestContentfulPaint = entry.startTime;
-                break;
-              case 'layout-shift':
-                this.metrics.cumulativeLayoutShift += entry.value;
-                break;
-              case 'first-input':
-                this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
-                break;
-            }
-          }
-        });
-
-
-=======        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-        observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
-    }
-  }
-  reportMetrics() {
-    if (process.env.NODE_ENV === 'development') {
-
-      console.log('Performance Metrics:', this.metrics);
-    }
-      console.log('Performance Metrics:', this.metrics);
-    }
-      console.log('Performance Metrics:', this.metrics);
-    }
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-      console.log('Performance Metrics:', this.metrics);
-    }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-      console.log('Performance "Metrics": ', this.metrics)}
-    // Send to analytics in production
-    if (typeof gtag !== 'undefined') {
-      Object.entries(this.metrics).forEach(([key, value]) => {
-        gtag('event', key, {
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-          event_category: 'Performance',
-          value: Math.round(value),
-          non_interaction: true
-        });
-      });
-    }
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-          "event_category": 'Performance',
-          "value": Math.round(value),
-          "non_interaction": true
-        })})}
-  }
-}
-export default PerformanceMonitor;";
-    const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js');
-    const utilsDir = path && path.dirname(scriptPath);
-    if (!fs && fs.existsSync(utilsDir)) {
-      fs && fs.mkdirSync(utilsDir, { recursive: true });
-
-    }
-    fs.writeFileSync(scriptPath, monitoringScript);
-    this.log(`✅ Performance monitoring script created: ${scriptPath}`);
-  }
-
-
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======

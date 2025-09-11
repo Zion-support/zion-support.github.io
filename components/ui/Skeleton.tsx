@@ -32,8 +32,6 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
         @keyframes shimmer {
           100% {;
           100% {
-=======
-=======
 
           100% {            transform: translateX(100%);
           }        }
@@ -61,8 +59,6 @@ export type SkeletonProps = {;
   className?: string;
 }
 
-=======
-=======
 
 export type SkeletonProps = {
   className?: string;
@@ -142,8 +138,6 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 export default Component;
 
         }      `}</style>
-=======
-=======
   ";
   if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
 if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
@@ -183,12 +177,6 @@ export default Component;
     </div>
   )
 
-=======
       `}</style>
 
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

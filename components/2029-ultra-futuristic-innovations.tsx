@@ -20,10 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 
-=======
-=======
 
-=======
   Rocket,
   Brain,
   Atom,
@@ -36,12 +33,8 @@ import { motion } from 'framer-motion';
   Eye,;
   Timer,;
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
-=======
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
@@ -53,7 +46,6 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
-=======
 
   const contactInfo = {    mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -61,9 +53,7 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
     website: 'https://ziontechgroup.com',;
   };
 
-==============
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const all2029Services = [
     ...cuttingEdgeInnovations2029
     ...spaceColonization2029Services
@@ -395,8 +385,6 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
               </div>
             </motion.div>
           </div>
-=======
-=======
       </Head>
 
       {/* Background */}
@@ -415,7 +403,6 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
       {/* Background */}
       <UltraFuturisticBackground2029 />;
-=======
 
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />;
@@ -423,9 +410,6 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======      {/* Hero Section */}
 
 
       {/* Contact CTA */}
@@ -441,15 +425,11 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Join the future of technology with our revolutionary 2029;
               innovations. Contact us today to discover how we can transform;
               your business.;
             </p>;
-=======
 
 
 }
@@ -457,7 +437,6 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
 }<UltraFuturisticFooter2029 /> </>)
   /* Footer */ 
 }<UltraFuturisticFooter2029 /> </>)   )
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
               <a;
@@ -677,8 +656,6 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
 
 }<UltraFuturisticFooter2029 /> </>)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   contactInfo.mobile
 }`
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
@@ -716,6 +693,3 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
 }
 }
 }<UltraFuturisticFooter2029 /> </>)
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

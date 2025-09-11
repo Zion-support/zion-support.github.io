@@ -249,7 +249,6 @@ const testimonials = [
     rating: 5
     avatar: '👨‍🔒'
   },];
-=======
 
 
 const contactInfo = {
@@ -329,7 +328,6 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
 ];
 
 
@@ -342,8 +340,6 @@ const testimonials = [
     company: 'TechFlow Solutions',
 content:;
       'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
-=======
-=======    services: advancedAIAutomationServices2025.filter (
       string => s.category === 'AI Data Management'),
     icon: Database,
 
@@ -500,8 +496,6 @@ const testimonials = [;
 ],
 export default function AdvancedAIAutomationServices() {
   return (
-=======
-=======
     color: 'from-cyan-500 to-blue-600',
 
 
@@ -512,7 +506,6 @@ export default function AdvancedAIAutomationServices() {
           href='https://ziontechgroup && ziontechgroup.com/advanced-ai-automation-services'
         />;
       </Head>;
-=======      {/* Hero Section */}
 
 
       {/* Hero Section */  } catch (error) {
@@ -521,7 +514,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -539,8 +531,6 @@ export default function AdvancedAIAutomationServices() {
 }=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
@@ -608,8 +598,6 @@ function AdvancedAIAutomationServices() {
             </p>;
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -620,7 +608,6 @@ function AdvancedAIAutomationServices() {
 
       </section>
 
-=======
 
 
                 href={`tel:${contactInfo && contactInfo.mobile}`}
@@ -631,11 +618,8 @@ function AdvancedAIAutomationServices() {
           </motion && motion.div>;
         </div>;
 
-=======
-=======
 
 
-=======
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -644,9 +628,7 @@ function AdvancedAIAutomationServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'      </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -733,9 +715,7 @@ function AdvancedAIAutomationServices() {
                       </div>;
                     </motion && motion.div>;
 
-=======
                 className="relative"
-==============
                 className='relative'
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (              <motion.div
@@ -765,12 +745,8 @@ function AdvancedAIAutomationServices() {
   }
 }
                 className="relative"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -879,7 +855,6 @@ function AdvancedAIAutomationServices() {
   }
 }
 
-=======
           </div>;
         </div>;
       </section>;
@@ -887,7 +862,6 @@ function AdvancedAIAutomationServices() {
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -924,7 +898,6 @@ function AdvancedAIAutomationServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       </section>;
@@ -941,8 +914,6 @@ function AdvancedAIAutomationServices() {
                             <Link
 
           >
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -963,7 +934,6 @@ function AdvancedAIAutomationServices() {
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -976,7 +946,6 @@ function AdvancedAIAutomationServices() {
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1067,12 +1036,8 @@ function AdvancedAIAutomationServices() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -1089,8 +1054,6 @@ function AdvancedAIAutomationServices() {
     </Layout>
   )
 }
-=======
-=======>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
@@ -1112,7 +1075,6 @@ function AdvancedAIAutomationServices() {
   );
 
 
-=======
 
 );
     </Layout>;
@@ -1126,16 +1088,5 @@ function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

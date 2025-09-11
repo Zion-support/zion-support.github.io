@@ -4,8 +4,6 @@ import {
   FormLabel
   FormControl
   FormMessage
-=======
-=======
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
 import {;
@@ -15,7 +13,6 @@ import {;
   FormControl,;
   FormMessage,;
 
-=======
 
 import {
 FormField
@@ -23,18 +20,11 @@ FormField
   FormLabel
   FormControl
   FormMessage
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React, { useState } from './react';
 import { Control  } from './react - hook - form';
 import {
@@ -47,7 +37,6 @@ import {
 
 
                     onChange(e);
-=======          </FormItem>)}
       />;
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
         <FormField;
@@ -78,8 +67,6 @@ import {
                   value={maxBudget || rest.value}
                   onChange={e => {;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onSuggestionApplied={handleSuggestionApplied}
           />
         </CardContent>
@@ -90,23 +77,17 @@ import {
             jobTitle={control && control._formValues.title || ""}
             category={control && control._formValues.category || ""}
             experienceLevel={control && control._formValues.experienceLevel || ""}
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onSuggestionApplied={handleSuggestionApplied}
           />;
         </CardContent>;
       </Card>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="location"
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Location</FormLabel>;
             <FormControl>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </FormItem>)}
       />;
     </div>);
@@ -115,7 +96,6 @@ import {
 
 );
 
-<<<<<<< HEAD
       />;
     </div>;
   );
@@ -172,16 +152,3 @@ return (<div className="space-y-4" > <FormField control= {
       />
     </div>
   );
-=======
-
-          </FormItem>)}
-      />;
-    </div>);}
-
-);
-      />;
-    </div>;
-  );
-};
-
-};

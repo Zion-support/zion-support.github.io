@@ -83,15 +83,10 @@ import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
 const ContentRoutes = () => {;
   return (;
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const ContentRoutes = () => {
-=======
 const ContentRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Content Routes */}
@@ -127,7 +122,6 @@ const ContentRoutes = () => {;
       <Route path="/search" element={<SearchPage />} />;
 
       {/* Sitemap Page */}
-=======import { Fragment } from './react';
 import { Route, Routes, Navigate } from './react-router-dom';
 import Home from "@/pages / Home";
 import About from "@/pages / About";
@@ -158,10 +152,8 @@ const ContentRoutes = () =>: any {
 },
 
 
-<<<<<<< HEAD
 export default ContentRoutes;
 ;
-<<<<<<< HEAD
       ;
       {/* Help Center Routes */}
       <Route path="/help" element={<HelpCenterPage />} />;
@@ -249,8 +241,4 @@ export default ContentRoutes,; const ContentRoutes = () => {
 export default ContentRoutes;
 export default ContentRoutes;
 export default ContentRoutes;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContentRoutes;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

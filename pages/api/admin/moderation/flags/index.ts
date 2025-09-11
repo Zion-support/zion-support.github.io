@@ -11,14 +11,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>,
     const flags = await readAllFlags(),
     const filtered = flags.filter(f =>
-=======
-
-    const filtered = flags.filter(f =>
-=======
 
     const filtered = flags.filter(f =>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    const filtered = flags.filter(f =>
+
       (!status || f.status === status) &&
       (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
@@ -52,8 +49,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
 
     const init = req.body |{}
-=======
-=======    );
     return res.status(200).json({ flags: filtered });
   }
 
@@ -139,14 +134,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

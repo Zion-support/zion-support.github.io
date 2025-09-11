@@ -3,10 +3,6 @@
 
 const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -29,8 +25,6 @@ export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -52,11 +46,7 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -90,7 +80,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
   const service_categories = [;
     {
   ];
-=======
   ]
   // Enhanced service categories with pricing for 2026
   const serviceCategories = [
@@ -167,7 +156,6 @@ export default function PricingEnhanced2026Page(req, res) {
     ...innovativeMicroSaasV2Services;
     {
 
-==============    ...innovative2026MicroSaasServicesV2,;
     ...emergingTech2026ServicesV2,;
     ...enterpriseIT2026ServicesV2,;
     ...innovative2026AIServicesV3,;
@@ -235,11 +223,8 @@ export default function PricingEnhanced2026Page(req, res) {
   }
 }
   ],>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   ],
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -249,52 +234,38 @@ export default function PricingEnhanced2026Page(req, res) {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Mobile App AccessAPI Access (1000 calls/month)'
       ]
       icon: <Sparkles className="w-8 h-8" />
       variant: 'quantum' as const
       popular: false
       cta: 'Start Free Trial'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      ],
       icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
       popular: false,
       cta: 'Start Free Trial',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======      color: 'from-blue-500 to-indigo-600'
 
     };
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
       ]
       icon: <Star className="w-8 h-8" />
       variant: 'holographic' as const
       popular: true
       cta: 'Start Free Trial'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      ],
       icon: <Star className="w-8 h-8" />,
       variant: 'holographic' as const,
       popular: true,
       cta: 'Start Free Trial',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======      color: 'from-purple-500 to-pink-600'
 
     };
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
       ]
       icon: <Crown className="w-8 h-8" />
@@ -303,10 +274,8 @@ export default function PricingEnhanced2026Page(req, res) {
       cta: 'Contact Sales'
       color: 'from-yellow-500 to-orange-600'
     }
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from-green-500 to-emerald-600'
     }
     {
@@ -338,8 +307,6 @@ export default function PricingEnhanced2026Page(req, res) {
     }
   ]
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      ],
       icon: <Crown className="w-8 h-8" />,
       variant: 'quantum-advanced' as const,
       popular: false,
@@ -394,8 +361,6 @@ export default function PricingEnhanced2026Page(req, res) {
   }
 }
   ],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
@@ -404,19 +369,13 @@ export default function PricingEnhanced2026Page(req, res) {
           <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
           <link rel="icon" href="/favicon.svg" />
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           {/* Open Graph */}          {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
@@ -577,8 +536,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
           <meta property="og:type" content="website" />;
           <meta property="og:url" content="https://ziontechgroup.com / pricing - enhanced - 2026" />;
           <meta property="og:image" content="https://ziontechgroup.com / og - image.svg" />;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />;
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
@@ -620,7 +577,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`}
-=======            <div className="flex items - center justify - center space - x-4 mb - 8">;
               <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
               <button;
                 on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}
@@ -695,13 +651,11 @@ price: billing_cycle === 'monthly' ? 999 : 799,
               {pricingTiers.map((tier, index) => (
                 <motion.div
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
           <div className="max - w-7xl mx - auto">;
             <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
               {pricing_tiers.map ((tier, index) => (
                 <motion.div;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662            className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
@@ -711,7 +665,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
-=======
             className="max - w-7xl mx - auto text - center";
           >;
             <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">;
@@ -725,7 +678,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
@@ -738,7 +690,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`}
-=======
             <div className="flex items - center justify - center space - x-4 mb - 8">;
               <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
               <button;
@@ -746,7 +697,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                 className={`relative inline - flex h - 8 w - 16 items - center rounded - full transition - colors ${
                   billing_cycle === 'yearly' ? 'bg - cyan - 600' : 'bg - gray - 600';
                 }`}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >;
                 <span;
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
@@ -768,7 +718,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -794,19 +743,14 @@ price: billing_cycle === 'monthly' ? 999 : 799,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                  key={tier.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={tier.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -851,9 +795,7 @@ price: billing_cycle === 'monthly' ? 999 : 799,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="relative"
                 >
                   <UltraFuturisticCard
@@ -870,16 +812,13 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                   >
                     {tier.popular && (
 
-=======
 
                     
 
-=======
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
                           {tier.icon}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
@@ -889,19 +828,13 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                         <span className="text-gray-400">{tier.period}</span>
                         {tier.savings && (
                           <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                         )}                        )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
@@ -909,7 +842,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                             <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-300">{feature}</span>
                           </li>
-=======
                       <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                         <div className="bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
                           Most Popular;
@@ -944,8 +876,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                           // Check condition
 if ( {) {
   $2
-=======
-=======
         {/* Enhanced Service Categories */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
@@ -954,7 +884,6 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                              } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1016,12 +945,10 @@ if ( {) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
-=======
 
                       </ul>
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -1029,7 +956,6 @@ if ( {) {
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
-=======
                 >;
                   <UltraFuturisticCard variant="quantum - advanced" className="h - full">;
                     <div className="p - 6">;
@@ -1066,8 +992,6 @@ if ( {) {
             </div>;
           </div>;
         </div>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Featured Services Showcase */}
         <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
           <div className="max - w-7xl mx - auto">;
@@ -1077,7 +1001,6 @@ if ( {) {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
-=======              ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1115,7 +1038,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1128,12 +1050,10 @@ if ( {) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
-=======
 
                       </ul>
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -1141,7 +1061,6 @@ if ( {) {
                         <Button
                           variant="secondary"
                           size="sm"
-=======
                 >;
                   <UltraFuturisticCard variant="holographic" className="h - full">;
                     <div className="p - 6">;
@@ -1175,8 +1094,6 @@ if ( {) {
                           variant="secondary";
                           size="sm";
                           on_click={() => window.open (`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`, '_blank')}
-=======
-=======
         {/* Enhanced Footer CTA */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
@@ -1185,7 +1102,6 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1243,7 +1159,6 @@ if ( {) {
                 <Button
                   variant="primary"
                   size="lg"
-=======
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1252,7 +1167,6 @@ if ( {) {
 
 
 
-=======
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1260,12 +1174,5 @@ if ( {) {
 }
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

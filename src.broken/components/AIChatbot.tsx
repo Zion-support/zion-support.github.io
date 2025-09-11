@@ -13,7 +13,6 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
-=======
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -91,7 +90,6 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       {/* Chat Toggle Button */}
       {!isOpen && (;
         <motion.button;
-=======
     setInputValue(reply);
     setTimeout(() => handleSendMessage(), 100);
   };
@@ -112,7 +110,6 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       )}
 ;
       {/* Chat Window */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Chat Input */}
                 <div className="p-4 border-t border-white/10">
                   <div className="flex gap-2">
@@ -128,7 +125,6 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
                     <button
                       onClick={handleSendMessage}
                       disabled={!inputValue.trim() || isTyping}
-<<<<<<< HEAD
                       className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center";
                     >;
                       <Send className="w-4 h-4" />;
@@ -143,19 +139,3 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     </div>;
   );
 },;
-=======
-                      className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
-                    >
-                      <Send className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-export default AIChatbot;

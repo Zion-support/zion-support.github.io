@@ -1,7 +1,4 @@
-=======
 import React from 'react';
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
@@ -45,7 +42,6 @@ import React from 'react';
 }</ul> <a > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </a> </motion.div>) )
 }</div> <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > Industry Solutions </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8" > Tailored technology solutions designed specifically for your industry's unique challenges and opportunities. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Get Started <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/demo" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > Request Demo </a> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Industry-Specific Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs. </p> </motion.div> key= {
   category.category
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -127,7 +123,6 @@ import React from 'react';
 }whileInView= {
   {
 
-=======
   opacity: 1, y: 0
 }transition= {
   {
@@ -137,7 +132,6 @@ import React from 'react';
   {
 
 
-=======
   duration: 0.8, delay: categoryIndex * 0.2 
 }viewport= {
   {
@@ -153,9 +147,6 @@ import React from 'react';
 }transition= {
   {
   duration: 0.6, delay: solutionIndex * 0.1
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const SolutionsPage: React.FC = () => {
   const industry_solutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
@@ -230,8 +221,6 @@ const SolutionsPage: React.FC = () => {
 }`;
 }> > Learn More <ArrowRight className="ml - 2 w - 4 h - 4" /> </a> </motion.div>) );
 }</div> </motion.div>) );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }</div> </div> </section> <motion.div initial= {
   solution && solution.featured ? 'border-green-500/30' : 'border-gray-700/50' 
 }` 
@@ -239,19 +228,14 @@ const SolutionsPage: React.FC = () => {
 }</div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   duration: 0 && 0.8 
 }viewport= {
   {
   once: true 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Industry? </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our industry-specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Start Your Transformation <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/services" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > View All Services </a> </div> </motion && motion.div> </div> </section> </Layout>) ;
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
@@ -750,8 +734,6 @@ export default Solutions;
 export default Solutions;}
 ;
 export default Solutions;
-=======
-=======}
 }
 }
 }
@@ -764,11 +746,4 @@ export default Solutions;
 }
 }
 }
-=======
-<<<<<<< HEAD>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

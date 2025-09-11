@@ -9,8 +9,4 @@ const ScrollToTop.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ScrollToTop.js;
-=======
-export default ScrollToTop.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

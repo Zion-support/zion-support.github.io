@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
@@ -11,22 +9,17 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
-=======const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
@@ -36,7 +29,6 @@ const corsHeaders = {
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
 
-=======
   );
   ),
     // Create service client for admin operations
@@ -61,8 +53,6 @@ const corsHeaders = {
     } = await req.json(),
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     } = await req.json();
     } = await req.json(),
     if (!transactionId) {
@@ -126,13 +116,11 @@ serve(async (req) => {;
     if (fetchError || !transaction) {;
       throw new Error("Transaction not found"),;
     }
-=======
 
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
     
 
-=======
       .single(),
     
     if (fetchError || !transaction) {
@@ -141,8 +129,6 @@ serve(async (req) => {;
     }
     // Verify user is authorized to manage this transaction
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
@@ -260,7 +246,6 @@ if ( {) {
         }
         // Process refund via Stripe
         if (transaction.stripe_session_id) {
-=======
       case 'refund':
         // Check if transaction can be refunded
         if (transaction && transaction.status !== "completed" && transaction && transaction.status !== "pending") {
@@ -299,15 +284,12 @@ if ( {) {
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString()
-=======
           const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
           
           if (session && session.payment_intent) {
             const refund = await stripe && stripe.refunds.create({
               payment_intent: session && session.payment_intent.toString(),              reason: "requested_by_customer"
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }),
             
             // Update transaction status
@@ -315,23 +297,17 @@ if ( {) {
               .from("transactions")
 
                 refund_id: refund.id
-=======                refunded_at: new Date().toISOString(),
                 refund_id: refund && refund.id
               })
               .eq("id", transactionId)
-=======
               .update({ 
                 status: "refunded",
                 refunded_at: new Date().toISOString(),
                 refund_id: refund.id
-=======
                 refunded_at: new Date().toISOString(),
                 refund_id: refund && refund.id
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               })
               .eq("id", transactionId)
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Update transaction status;
         await supabase_admin;
           .from ("transactions");
@@ -393,8 +369,6 @@ if ( {) {
             status: "cancelled"
             cancelled_at: new Date().toISOString()
           })
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           .eq("id", transactionId);
         result = { message: "Transaction cancelled successfully" }
         break;          .eq("id", transactionId),
@@ -408,19 +382,15 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
 
 
-=======
       default: throw new Error("Invalid action")
     }
     return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       headers: { ...corsHeaders, "Content-Type": "application/json" },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       headers: { ...corsHeaders, "Content-Type": "application/json" }      status: 500})
   }
 });
@@ -438,10 +408,6 @@ if ( {) {
       status: 500})
   }
 });
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       case 'cancel':;
         // Only allow cancellation for pending transactions;
@@ -476,8 +442,6 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 });
 ;
@@ -619,13 +583,5 @@ if ( {) {
       status: 500});
   }
 });
-=======  }
-});
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

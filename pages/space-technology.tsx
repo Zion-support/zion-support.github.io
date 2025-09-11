@@ -222,8 +222,6 @@ const SpaceTechnologyPage: React.FC = () => {
       icon: <Heart className="w-6 h-6" />
     }
   ]
-=======
-=======import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -246,7 +244,6 @@ import {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
-=======
         {/* Hero Section */}        {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -286,7 +283,6 @@ import {
 
 
 
-=======        {/* Space Capabilities */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -327,14 +323,11 @@ import {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceCapabilities.map((capability, index) => (
                 <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                  key={capability.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-=======                  key={capability.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -411,7 +404,6 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -422,7 +414,6 @@ import {
           </div>
         </section>
         {/* Space Services */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -436,8 +427,6 @@ import {
               {spaceServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -488,7 +477,6 @@ import {
                     </div>)}
                   <div className="text - center mb - 6">;
                     <div className="inline - flex p - 3 bg - purple - 500 / 20 rounded - full mb - 4">;
-=======
                 >                  {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -521,7 +509,6 @@ import {
                   <a 
                     href="/contact" 
 
-=======                  </ul>
                   <a
                     href="/contact"
 
@@ -546,7 +533,3 @@ import {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -207,8 +207,6 @@ export default function CloudServicesPage() {
       </div>;
     </Layout>;
 export default Cloud;
-=======
-<<<<<<< HEAD
   );
 };
 

@@ -45,7 +45,6 @@ jest.mock('next/image', () => ({
 }));
 
 :backup-problematic-files/jest.setup.js
-=======
         emit: jest.fn()
       },
 
@@ -70,7 +69,6 @@ jest.mock("next/link", () => {
   };
 });
 main:jest.setup.js
-=======
 
 
 // Mock Next.js Link component
@@ -79,7 +77,6 @@ jest.mock('next/link', () => ({
   default: ({ children, href, ...props }) => {
   },
 main:jest.setup.js
-=======
 
 
   },
@@ -116,7 +113,6 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
-<<<<<<< HEAD
 // Global test setup
 beforeEach(() => {
   jest.clearAllMocks();
@@ -124,6 +120,3 @@ beforeEach(() => {
 };
 };
 :backup-problematic-files/jest.setup.js
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

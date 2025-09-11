@@ -1,29 +1,20 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -34,14 +25,11 @@ export function RecentActivity() {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "act-3"
       user: "David Johnson"
@@ -52,14 +40,11 @@ export function RecentActivity() {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "act-4"
       user: "Emily Davis"
@@ -71,19 +56,15 @@ export function RecentActivity() {
   ];
   ],
 
-=======
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
-=======
 
   ],
 
-=======
   ];
   ],
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getBadgeForType = (type: string) => {
     switch (type) {
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
@@ -134,9 +115,7 @@ import {Badge} from "@/components/ui/badge";
     </Card>
   )
 
-==============
 
-=======import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 
@@ -160,7 +139,6 @@ import { Badge } from "@/components/ui/badge",;
 
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -252,8 +230,6 @@ function RecentActivity() {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </Card>);
     </Card>;
@@ -304,15 +280,7 @@ default:
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

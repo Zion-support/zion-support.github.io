@@ -212,8 +212,6 @@ export default function SMBSolutionsPage() {
       </div>;
     </Layout>;
 export default Smb;
-=======
-<<<<<<< HEAD
   );
 };
 

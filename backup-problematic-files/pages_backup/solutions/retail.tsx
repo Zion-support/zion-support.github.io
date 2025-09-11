@@ -559,8 +559,6 @@ export default function RetailSolutions() {;
     </>
     </>
 export default Retail;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };

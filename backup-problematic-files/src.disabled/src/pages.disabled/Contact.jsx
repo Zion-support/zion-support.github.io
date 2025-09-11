@@ -9,8 +9,4 @@ const Contact = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Contact;
-=======
-export default Contact;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

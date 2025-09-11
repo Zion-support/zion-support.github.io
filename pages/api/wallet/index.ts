@@ -119,12 +119,9 @@ export default function handler(req, res) {
 
 
 }
-=======
 
-=======
   if (!userId |typeof userId !== 'string') {
     return res.status(400).json({ error: 'Missing userId' });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {getWalletSummary} from '../../../utils / token / service';
 export default /**
@@ -137,7 +134,3 @@ if ( {) {
   $2
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

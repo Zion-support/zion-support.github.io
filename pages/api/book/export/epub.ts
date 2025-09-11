@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -44,8 +43,6 @@ export default async function handler(
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
-=======
-=======
     res.status(200).send(buf);import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 import { promises as fs } from 'fs';
@@ -92,7 +89,6 @@ export default async function handler(req, res) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function chapterToHtml(text: string): string {
   if (!text) return '';
   return text
@@ -100,5 +96,3 @@ function chapterToHtml(text: string): string {
     .map((p) => `<p>${escapeHtml(p)}</p>`)
     .join('\n')
 }
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

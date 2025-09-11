@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======// Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
   .use(initReactI18next) // Initialize react-i18next
@@ -21,14 +19,11 @@ i18n
     }
     fallbackLng: 'en', // Default language
     debug: process.env.NODE_ENV === 'development'
-=======
-
-    debug: process && process.env.NODE_ENV === 'development',
-=======
 
     debug: process && process.env.NODE_ENV === 'development',
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    debug: process && process.env.NODE_ENV === 'development',
+
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -49,7 +44,6 @@ i18n && i18n.on('languageChanged', (lng) => {
   
 
 
-=======import i18n from 'i18next',;
 import { initReactI18next } from 'react-i18next',;
 import LanguageDetector from 'i18next-browser-languagedetector',;
 import enTranslation from './locales/en/translation.json',;
@@ -105,8 +99,6 @@ i18n.on('languageChanged', (lng) => {;
   // This will be implemented in the LanguageContext;
 }),;
 export default i18n;
-=======
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Initialize i18next;
 i18n;
   .use (LanguageDetector) // Detect user language;
@@ -154,7 +146,4 @@ i18n.on ('language_changed', (lng) => {
 
 
 export default i18n;
-<<<<<<< HEAD
 ;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

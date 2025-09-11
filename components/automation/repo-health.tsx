@@ -15,24 +15,14 @@ interface Report {
  
 
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
  
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -40,10 +30,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 type Props = { report: Report | null },;
@@ -54,27 +40,19 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
     const data = JSON && JSON.parse(raw);
 
 
-=======
 };
 export default function RepoHealth(): any ({ report }: Props) {;
-==============
 }
 };
 
 export default function RepoHealth(): any ({ report }: Props) {;
 
-=======
 };
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======export default function RepoHealth({ report }: Props) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   if (!report) return <div>No report yet. Check back soon.</div>;
   return (
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Repo Health</h1>;
@@ -91,8 +69,6 @@ export default function RepoHealth(): any ({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {report && report.largestFiles.map((f, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           ))}
         </ul>;
       </section>;
@@ -102,7 +78,6 @@ export default function RepoHealth(): any ({ report }: Props) {;
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
-==============
         </ul>
       </section>
     </div>
@@ -111,8 +86,6 @@ export default function RepoHealth(): any ({ report }: Props) {;
   );
 }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export default /**
@@ -210,13 +183,7 @@ export default function RepoHealth({ report }: Props) {;
 }
   );
 }
-=====================
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

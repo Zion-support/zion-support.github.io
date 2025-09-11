@@ -1,8 +1,6 @@
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -20,10 +18,6 @@ import { Badge } from "@/components/ui/badge";
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Card } from "@/components/ui/card",
 import {
@@ -36,10 +30,7 @@ import {
 import { Badge } from "@/components/ui/badge",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -53,14 +44,11 @@ const syncLogs = [
 
   }
   },
-=======
 
   },
 
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "2"
     integration: "Greenhouse"
@@ -71,14 +59,11 @@ const syncLogs = [
 
   }
   },
-=======
 
   },
 
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "3"
     integration: "HubSpot"
@@ -89,14 +74,11 @@ const syncLogs = [
 
   }
   },
-=======
 
   },
 
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "4"
     integration: "Zoho CRM"
@@ -107,14 +89,11 @@ const syncLogs = [
 
   }
   },
-=======
 
   },
 
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "5"
     integration: "Lever"
@@ -138,13 +117,11 @@ export function IntegrationsSyncLog() {
       case "success": return <Badge className="bg-green-500">Success</Badge>;
     switch (status) {
       case "success": return <Badge className="bg-green-500">Success</Badge>,
-=======  }
 
   },
   
   },
   
-=======  return (
     <Card>
       <div className="p-4">
         <Table>
@@ -169,10 +146,7 @@ export function IntegrationsSyncLog() {
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -183,8 +157,6 @@ import {;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 // Sample data for integration sync logs;
 const syncLogs = [;
   {;
@@ -255,13 +227,10 @@ export function IntegrationsSyncLog() {;
       case "success":return <Badge className="bg-green-500">Success</Badge>,;
       case "error":;
         return <Badge variant="destructive">Error</Badge>,;
-=======
-=======];
 
 export function IntegrationsSyncLog() {;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":;
         return <Badge variant="destructive">Error</Badge>;
@@ -317,7 +286,6 @@ const sync_logs = [;
   }
 ];
 ;
-<<<<<<< HEAD
 export /**
  * IntegrationsSyncLog - Function description
  */
@@ -416,12 +384,6 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 }</TableCell> </TableRow>) ) 
 }</TableBody> </Table> </div> </Card>) 
 }
-<<<<<<< HEAD
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

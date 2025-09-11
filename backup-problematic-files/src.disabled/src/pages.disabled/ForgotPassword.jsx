@@ -27,8 +27,4 @@ const ForgotPassword = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ForgotPassword;
-=======
-export default ForgotPassword;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

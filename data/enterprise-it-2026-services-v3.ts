@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -33,10 +31,6 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [;
     },
   },
 ];      mobile: "+1 302 464 0950";
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -49,7 +43,6 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [;
 }
 export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
   {
-=======    id: "2026-enterprise-it-v3",
     name: "2026 Enterprise IT Solutions V3",
     tagline: "Third generation enterprise IT",
     price: "$499/month",
@@ -67,7 +60,6 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -77,10 +69,6 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-=======
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

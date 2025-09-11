@@ -1,6 +1,4 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
 "use client";
 import { useState } from "react";
 import {Rocket;
@@ -209,12 +207,10 @@ export default function DeploymentNotification({;
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
-=======
                   on_click={() => handle_action (update.id, action.action)}
                   className={`flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 text - xs font - medium rounded - lg transition - all duration - 200 ${
                     action.action === 'deploy' || action.action === 'retry';
                       ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
-=======                  onClick={() => handleAction(update.id, action.action)}
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
 
@@ -269,98 +265,3 @@ export function DeploymentNotificationExample() {;
   const handle_action = (id: string, action: string) =>: any {
     // // // console.log (`Action ${action} for update ${id}`);
     // Handle different actions here;
-<<<<<<< HEAD
-=======
-// Example usage with mock data;
-export function DeploymentNotificationExample() {const [updates, setUpdates] = useState<DeploymentUpdate[]>([;
-    {;
-      id: "1";
-      type: "deployment_started";
-      title: "Deployment Started";
-      message: "Zion Health Network is now being deployed to production";
-      timestamp: new Date().toISOString();
-      instanceName: "Zion Health Network";
-      vertical: "HEALTH";
-      governanceType: "DAO_FULL";
-      domain: "health.zion.network";
-      progress: 25;
-      actions: [;
-        { label: "View Progress", action: "view", href: "/admin/deployments" }
-        { label: "Configure", action: "configure", href: "/admin/instances" }
-      ];
-    }
-    {id: "2";
-      type: "instance_ready";
-      title: "Instance Ready";
-      message: "EduDAO Academy has been successfully deployed and is now live";
-      timestamp: new Date(Date.now() - 5 * 60 * 1000).toISOString();
-      instanceName: "EduDAO Academy";
-      vertical: "EDUCATION";
-      governanceType: "DAO_LITE";
-      domain: "edu.zion.network";
-      actions: [;
-        { label: "View Instance", action: "view", href: "/admin/instances" }
-        { label: "Manage", action: "configure", href: "/admin/instances" }
-      ];
-    }
-  ]);
-  const handleDismiss = (id: string) => {setUpdates(prev => prev.filter(update => update.id !== id));
-  }
-  const handleAction = (id: string, action: string) => {// // // console.log(`Action ${action} for update ${id}`);
-    // Handle different actions here;  }
-;
-// Example usage with mock data;
-export function DeploymentNotificationExample() {;
-  const [updates, setUpdates] = useState<DeploymentUpdate[]>([;
-    {;
-      id: "1",;
-      type: "deployment_started",;
-      title: "Deployment Started",;
-      message: "Zion Health Network is now being deployed to production",;
-      timestamp: new Date().toISOString(),;
-      instanceName: "Zion Health Network",;
-      vertical: "HEALTH",;
-      governanceType: "DAO_FULL",;
-      domain: "health.zion.network",;
-      progress: 25,;
-
-      actions: [;
-        { label: "View Progress", action: "view", href: "/admin / deployments" },
-        { label: "Configure", action: "configure", href: "/admin / instances" }
-      ];
-    },
-    {
-      id: "2",
-      type: "instance_ready",
-      title: "Instance Ready",
-      message: "EduDAO Academy has been successfully deployed and is now live",
-      timestamp: new Date (Date.now () - 5 * 60 * 1000).toISOString (),
-      instance_name: "EduDAO Academy",
-      vertical: "EDUCATION",
-      governance_type: "DAO_LITE",
-      domain: "edu.zion.network",
-      actions: [;
-        { label: "View Instance", action: "view", href: "/admin / instances" },
-        { label: "Manage", action: "configure", href: "/admin / instances" }
-      ];
-    }
-  ]),
-  const handle_dismiss = (id: string) =>: any {
-    set_updates (prev => prev.filter (update => update.id !== id));
-  },
-  const handle_action = (id: string, action: string) =>: any {
-    // // // console.log (`Action ${action} for update ${id}`);
-    // Handle different actions here;
-
-  };
-  return (;
-  };
-
-  return (;
-=======
-    <DeploymentNotification;
-      updates={updates}
-      on_dismiss={handle_dismiss}
-      on_action={handle_action}
-    />);
-}

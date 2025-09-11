@@ -8,13 +8,10 @@
     return !superToken || token === superToken;
   }
 
-=======
 
     return !superToken || token === superToken;
   }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -37,7 +34,6 @@ export default async function handler(
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
     try {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const { prompt, userIntent } = req && req.body || {};
       const result = await optimizePrompt(String(prompt || ""), userIntent);
       const latencyMs = Date && Date.now() - started;
@@ -51,19 +47,14 @@ export default async function handler(
         status: status as any
         latencyMs
         payload: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           userIntent,
           originalLength: String(prompt || "").length,
           optimizedLength: result && result.optimized.length,
         },
       });
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async /**
  * handler - Function description
  */
@@ -134,11 +125,3 @@ function handler() {
     return res.status(500).json({ error: "Optimization failure" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

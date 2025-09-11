@@ -7,7 +7,6 @@
 
 
     // Fix missing commas in import statements;
-=======    const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
@@ -17,7 +16,6 @@
       return match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Fix function parameter syntax errors
     content = content && content.replace(
       /function\s*\(([^)]+)\)\s*{/g,
@@ -29,7 +27,6 @@
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
 
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -100,8 +97,6 @@ function fixImportSyntax() {
             "apps && apps.backup",
             "backup-merge-conflicts",
             "apps",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           ].includes(item)
         ) {
           continue;
@@ -161,8 +156,6 @@ console && console.log(`Found ${files && files.length} files to check for syntax
 
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 
-=======
-<<<<<<< HEAD=======  traverse (dir);
   return files;
 }
 // Main execution;

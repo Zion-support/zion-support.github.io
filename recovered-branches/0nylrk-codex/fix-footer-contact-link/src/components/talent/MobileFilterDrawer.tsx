@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface MobileFilterDrawerProps {
 
   isMobileFilterOpen: boolean
@@ -17,7 +14,6 @@ interface MobileFilterDrawerProps {
 
 
   setIsMobileFilterOpen
-=======
 export function MobileFilterDrawer({
   isMobileFilterOpen;
 
@@ -31,10 +27,8 @@ export function MobileFilterDrawer({
   return (
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <FilterSidebar 
-=======
         <FilterSidebar
         <FilterSidebar 
 
@@ -63,7 +57,6 @@ export function MobileFilterDrawer({ ;
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;
         <FilterSidebar ;
-=======
 
 export function MobileFilterDrawer(): any ({ ;
   isMobileFilterOpen;
@@ -78,7 +71,6 @@ export function MobileFilterDrawer(): any ({ ;
         />;
       </div>;
     </Drawer>;
-<<<<<<< HEAD
   ),;}
  interface MobileFilterDrawerProps {
   isMobileFilterOpen: boolean;
@@ -99,13 +91,6 @@ filterProps
 }/> </div> </Drawer>) 
 }
 }
-<<<<<<< HEAD
-=======
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Drawer } from '@/components / ui / drawer';
 import { FilterSidebar } from '@/components / talent / FilterSidebar';
@@ -114,7 +99,6 @@ interface MobileFilterDrawerProps {
   setIsMobileFilterOpen: (is_open: boolean) => void,
   filter_props: any, // We'll pass all filter - related props through this object;
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * MobileFilterDrawer - Function description
  */
@@ -129,8 +113,3 @@ function MobileFilterDrawer() {
       </div>;
     </Drawer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

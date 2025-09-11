@@ -14,10 +14,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -34,11 +31,9 @@ import {
   FormLabel,
   FormMessage} from "@/components/ui/form",
 
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
@@ -47,7 +42,6 @@ const profileSchema = z.object({
 
 type ProfileFormValues = z.infer<typeof profileSchema>,
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const profileSchema = z && z.object({;
   displayName: z && z.string().min(2, "Name must be at least 2 characters");
@@ -128,7 +122,6 @@ function ProfileSetup() {
   return (
 
   return (
-=======          <FormField
             control={form.control}
             name="displayName"
             render={({ field }) => (
@@ -171,12 +164,9 @@ function ProfileSetup() {
 
 
 
-=======
-=======
               </FormItem>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           />;
@@ -195,7 +185,6 @@ function ProfileSetup() {
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
-=======
 ;
   return (
     <div className="space - y-6">;
@@ -239,7 +228,6 @@ function ProfileSetup() {
                         user_type === "service_provider" ? "Professional Videographer with 5+ years experience" :;
                         user_type === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
                         "Creative Director at XYZ Studios";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       }`}
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
                       {...field}
@@ -256,7 +244,6 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
                 <FormControl>;
                   <Textarea
-=======
                     <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
                   </div>;
                 </FormControl>;
@@ -271,7 +258,6 @@ function ProfileSetup() {
                 <FormLabel className="text - zion - slate - light">Bio</FormLabel>;
                 <FormControl>;
                   <Textarea;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     placeholder={`Tell us about your ${
                       user_type === "service_provider" ? "services and expertise" :;
                       user_type === "talent" ? "skills and experience" :;
@@ -284,15 +270,11 @@ function ProfileSetup() {
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
-=======
 
 
 
-=======
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </div>);
     </div>;
@@ -328,13 +310,5 @@ getTypeLabel ()
   );
 }
 ;
-=======}=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

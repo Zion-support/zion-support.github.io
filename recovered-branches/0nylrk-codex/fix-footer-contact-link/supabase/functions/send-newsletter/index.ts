@@ -2,7 +2,6 @@
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Resend } from 'npm: resend@2.0.0';
 const cors_headers = {
@@ -14,20 +13,15 @@ const cors_headers = {
   body: string;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
-=======
   testMode?: boolean
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -45,7 +39,6 @@ interface SendNewsletterRequest {
       const emailResponse = await resend.emails.send({
         from: "Zion Marketplace <newsletter@ziontechgroup.com>";
         to: [testEmail]
-=======        subject: `[TEST] ${subject}`;
         html: body
         text: previewText});
       return new Response(JSON.stringify(emailResponse), {
@@ -54,9 +47,7 @@ interface SendNewsletterRequest {
       return new Response(JSON && JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" };
 
-=======
 
-=======
 
     const resend = new Resend(resendApiKey),
     const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest,
@@ -72,8 +63,6 @@ interface SendNewsletterRequest {
 
       return new Response(JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         status: 200})
     }
     // In production, we would fetch subscriber emails from the database
@@ -88,7 +77,6 @@ interface SendNewsletterRequest {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
   } catch (error) {
-=======    console && console.error("Error in send-newsletter function:", error);
     
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
@@ -166,7 +154,6 @@ if ( {) {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
 
-=======    },
 
     return new Response(JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -178,7 +165,6 @@ if ( {) {
   }
 });
 ;
-<<<<<<< HEAD
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { Resend } from "npm:resend@2.0.0",;
@@ -272,8 +258,3 @@ status: 200
 });
   }
 });
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  }
-});
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

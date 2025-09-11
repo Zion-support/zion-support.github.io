@@ -8,7 +8,6 @@
     implementation_time: '8 - 12 weeks',
     roi: '1500% within 24 months',
 
-=======    link: 'https://ziontechgroup.com / services / synthetic - biology - platform',
     tags: [;
       'Synthetic Biology',
       'Biotechnology',
@@ -52,7 +51,6 @@
       'Research institutions',
       'Industrial companies',
     ],
-=======    market_size: '$16.5B by 2027',
     competitive_advantage:;
       'Only quantum sensors network with multi - application support',
     implementation_time: '6 - 8 weeks',
@@ -101,7 +99,6 @@
       'Gaming companies',
       'Healthcare providers',
     ],
-=======    market_size: '$28.9B by 2027',
     competitive_advantage: 'Most advanced brain - computer interface platform',
     implementation_time: '10 - 12 weeks',
     roi: '2000% within 30 months',
@@ -156,7 +153,6 @@
     implementation_time: '4 - 6 weeks',
     roi: '1000% within 18 months',
 
-=======    link: 'https://ziontechgroup.com / services / quantum - internet - security',
     tags: [;
       'Quantum Security',
       'Cybersecurity',
@@ -213,7 +209,6 @@
   },
   {
 
-=======    id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description:;
       'Revolutionary platform that uses quantum computing and AI to discover new materials with unprecedented properties for various applications.',
@@ -254,7 +249,6 @@
     implementation_time: '8 - 10 weeks',
     roi: '1100% within 20 months',
 
-=======    link: 'https://ziontechgroup.com / services / quantum - materials - discovery',
     tags: [;
       'Materials Science',
       'Quantum Computing',
@@ -298,7 +292,6 @@
       'Insurance companies',
       'Regulatory bodies',
     ],
-=======    market_size: '$18.9B by 2027',
     competitive_advantage:;
       'Only quantum financial modeling platform with real - time analysis',
     implementation_time: '6 - 8 weeks',
@@ -318,7 +311,6 @@
       'Insurance companies',
       'Energy companies',
     ],
-=======  id: string, name: string,
   description: string, category: string,
   price: string, features: string[],
   benefits: string[], useCases: string[],
@@ -327,7 +319,6 @@
   roi: string, link: string,
   tags: string[]
 }
-=======
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
@@ -336,9 +327,7 @@
     link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
 
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
-=======
 export interface Service {;
-=======
 
 
   {
@@ -585,7 +574,6 @@ export interface Service {;
   },
   {
 
-=======
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description:;
@@ -630,7 +618,6 @@ export interface Service {;
     implementation_time: '8 - 10 weeks',
     roi: '1100% within 20 months',
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - materials - discovery',
     tags: [;
       'Materials Science',
@@ -678,7 +665,6 @@ export interface Service {;
       'Regulatory bodies',
     ],
 
-=======
     market_size: '$18.9B by 2027',
     competitive_advantage:;
       'Only quantum financial modeling platform with real - time analysis',
@@ -731,7 +717,6 @@ export interface Service {;
       'Energy companies',
     ],
 
-=======
   id: string, name: string,
   description: string, category: string,
   price: string, features: string[],
@@ -762,20 +747,12 @@ export interface Service {;
     link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];  }
 
-=======
 
 export interface Service {;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   }
 ];
@@ -783,15 +760,8 @@ export interface Service {;
   }
 ];
 export interface Service {;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
 export interface Service {;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string,;
   name: string,;
   description: string,;

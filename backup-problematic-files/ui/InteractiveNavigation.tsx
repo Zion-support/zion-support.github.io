@@ -141,7 +141,6 @@ export default function InteractiveNavigation() {
 }
 const InteractiveNavigation = () => {},;
 export default InteractiveNavigation;
-=======
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -237,8 +236,4 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 export default Component}
-<<<<<<< HEAD
 main:components/ui/InteractiveNavigation.tsx
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

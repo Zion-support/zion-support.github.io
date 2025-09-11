@@ -31,17 +31,12 @@ import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 origin/main
-=======
-
-
-=======
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 interface LayoutProps {
   title?: string;
   description?: string;
@@ -49,7 +44,6 @@ interface LayoutProps {
   keywords?: string;
   ogImage?: string;
   noIndex?: boolean;
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -69,7 +63,6 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 const Layout: React.FC<LayoutProps> = ({;
   children,;
@@ -115,7 +108,6 @@ const Layout: React.FC < LayoutProps> = ({
   noIndex = false
 }: LayoutProps) {
   return (
-=======
 
 
   return (
@@ -155,7 +147,6 @@ const Layout: React.FC < LayoutProps> = ({
   }
 ;
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min - h-screen bg - white">;
       <Head>;
         <title>{title}</title>;
@@ -163,13 +154,8 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
 
-=======
-=======
-=======
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Header />;
       <main>{children}</main>;
       <Footer />;
@@ -194,13 +180,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final  );
 }
 export default Layout;
-=======
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -257,10 +241,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   );
 };
-<<<<<<< HEAD
 export default Layout;
 ;
-<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -303,8 +285,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

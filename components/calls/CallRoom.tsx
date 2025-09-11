@@ -8,8 +8,6 @@ import {
   LocalParticipant
   createLocalTracks
   VideoPresets;
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,12 +29,8 @@ class ErrorBoundary extends React.Component {
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -55,8 +49,6 @@ export default function CallRoom(): any ({;
   startMode,;
   onLeave,;
 }: Props) {;
-=======
-=======
   projectId,
   userId,
   displayName,
@@ -66,8 +58,6 @@ export default function CallRoom(): any ({;
   startMode,
   onLeave,
 }: Props) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
-=======
 
   projectId,
   userId,
@@ -79,16 +69,11 @@ export default function CallRoom(): any ({;
   onLeave,
 }: Props) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 
@@ -133,7 +118,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       localTracks = await createLocalTracks({;
         audio: true,;
         video: VideoPresets && VideoPresets.h720,;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
@@ -154,7 +138,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       }
       room.disconnect()
 
-=======
       room.disconnect();    }
   }, [connect]);
 
@@ -162,18 +145,13 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     if (room) {;
       room && room.disconnect();
   };
-=======
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
-=======
   const gridCols = useMemo(() => {
     const count = participants.length |1;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
   const gridCols = useMemo(() => {;
@@ -205,7 +183,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
 );
 }
-=======
 
         ))}
       </div>
@@ -388,7 +365,6 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
           <ParticipantTile;
             key={String ((p as any).sid || (p as any).identity) + idx}
             participant={p}
-=======
 
 
         ))}
@@ -410,12 +386,4 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
     </div>);
 }
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const AIAutonomousEdgeSecurity = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousEdgeSecurity;
-=======
-export default AIAutonomousEdgeSecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

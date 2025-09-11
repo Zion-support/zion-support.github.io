@@ -29,24 +29,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     teamOnly: req && req.query.teamOnly === 'true' ? true : undefined,  };
     return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
   };
-=======
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-=======
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
 
   }
-=======
 
   };
   const data = readOrgData();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-==============
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
@@ -57,10 +50,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

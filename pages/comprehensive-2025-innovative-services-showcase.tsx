@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
@@ -11,7 +9,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
   // Combine all services
   const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices],
 
-=======import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import {;
@@ -83,7 +80,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         duration: 0.5}
     }
   },
-=======
   };
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -126,9 +122,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
       {/* Hero Section */}
 
-=======
       {/* Hero Section */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -140,7 +134,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
 
 
             {/* Stats */  } catch (error) {
@@ -248,7 +241,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>
@@ -280,7 +272,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
           >;
             {/* Search Bar */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-6">
               <div className="relative max-w-2xl mx-auto">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -299,7 +290,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
@@ -316,9 +306,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4">;              {/* Category Filter */}
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -343,19 +330,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -371,7 +353,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">Price Range</label>
                 <select
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="all">All Prices</option>
@@ -380,7 +361,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <option value="enterprise">Enterprise ($5,000+)</option>
                 </select>
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Sort By */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -389,7 +369,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">Sort By</label>
                 <select
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="popularity">Popularity</option>
@@ -398,31 +377,23 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <option value="newest">Newest</option>
                 </select>
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               {/* View Mode */}              {/* View Mode */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
                 <div className="flex gap-2">
                   <button
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       viewMode === 'grid' 
                         ? 'bg-cyan-500 text-white' 
 
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial="hidden"
             animate="visible"
             className="mb-8"
@@ -438,16 +409,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
                 Showing results for &quot,{searchTerm |'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
-=======
-=======
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
 
-=======
 
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662              </p>
             </div>
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
@@ -463,7 +429,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                     setPriceRange('all')
-=======                  }}
                   }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -474,16 +439,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 </button>
               </div>
             ) : (
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }>
                 {filteredServices.map((service, index) => (
                   <motion.div
-=======
               <div>;
                 <label className="block text - sm font - medium text - white / 70 mb - 2">Category</label>;
                 <select;
@@ -536,9 +498,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                         ? 'bg - cyan - 500 text - white';
                         : 'bg - white / 10 text - white / 70 hover:bg - white / 20';
                     }`}
-=======
 
-=======
                     key={service.id}
                     variants={itemVariants}
                     className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
@@ -548,7 +508,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     {/* Service Card Content */}
                     <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                       {/* Header */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     <Grid className="w - 4 h - 4" />;
                   </button>;
@@ -646,12 +605,5 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
                           {service.price}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

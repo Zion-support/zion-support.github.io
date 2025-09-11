@@ -90,14 +90,9 @@ const router = useRouter ();
 }) ;
 };
 }/> </button>) ;"}"
-=======
 }variant: "default" ;
 }) ;
 };
 }/> </button>) ;
 }"
-<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardSaveButton.tsx
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -48,12 +48,9 @@ function toOpenApi() {
                 content: {
                   "application / json": { schema: ep.requestBodySchema },
                 },
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
               }
             : undefined
           responses: {
@@ -63,20 +60,15 @@ function toOpenApi() {
                   schema: ep && ep.responseBodySchema || { type: "object" },
                 "application / json": {
                   schema: ep.responseBodySchema || { type: "object" },
-=======
 
                   schema: ep && ep.responseBodySchema || { type: "object" },
-=======
                 "application / json": {
                   schema: ep.responseBodySchema || { type: "object" },
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 },
               },
             },
           },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           security:;
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
@@ -84,7 +76,6 @@ function toOpenApi() {
         }));
     });
 
-=======
 ;
 
   return {
@@ -94,7 +85,3 @@ function toOpenApi() {
         bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" }
       }
     }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

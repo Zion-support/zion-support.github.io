@@ -361,8 +361,4 @@ export default function CloudMigrationPage() {
   );
 };
 
-<<<<<<< HEAD
 export default Cloud-migration;
-=======
-export default Cloud-migration;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

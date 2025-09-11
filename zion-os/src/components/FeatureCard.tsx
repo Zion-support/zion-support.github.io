@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -71,19 +69,11 @@ export function FeatureCard({;
       onClick={onClick}
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
-<<<<<<< HEAD
 
           e.preventDefault();
           onClick();
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           e.preventDefault();
           onClick();
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -96,7 +86,6 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
-<<<<<<< HEAD
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -123,17 +112,10 @@ function FeatureCard() {
   }
   return (
     <div;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       className={`card group cursor-pointer transition-all duration-300 ${isActive ? 'scale-105 shadow-2xl' : 'hover:scale-105';
       } ${colorClasses[color as keyof typeof colorClasses]}`}
       onClick={onClick}
       onKeyDown={(e) => {if (e.key === 'Enter' |e.key === ' ') {;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;

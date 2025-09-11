@@ -484,8 +484,6 @@ export default function DigitalTransformationPage() {;
       </div>;
     </Layout>;
 export default Digital-transformation;
-=======
-<<<<<<< HEAD
   );
 };
 

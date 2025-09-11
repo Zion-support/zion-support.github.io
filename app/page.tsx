@@ -10,7 +10,6 @@ export default function HomePage() {
             description="End-to-end product engineering with billing, auth, analytics and growth."
             icon="🚀"
           />
-<<<<<<< HEAD
           <Card 
             title="AI Services" 
             href="/services/ai-services" 
@@ -34,42 +33,6 @@ export default function HomePage() {
             href="/services/ai-copilots"
             description="Intelligent assistants that enhance productivity and automate complex tasks."
             icon="🧠"
-=======
-          <Card
-            title="AI Services"
-            href="/services/ai-services"
-            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps."
-            icon="🤖"
-          />
-          <Card
-            title="IT Services"
-            href="/services/it-services"
-            description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
-            icon="⚙️"
-          />
-          <Card
-            title="Blockchain"
-            href="/services/blockchain"
-            description="Smart contracts, DeFi protocols, NFT platforms and Web3 solutions."
-            icon="⛓️"
-          />
-          <Card
-            title="Cybersecurity"
-            href="/services/cybersecurity"
-            description="Penetration testing, security audits, compliance and incident response."
-            icon="🔒"          />
-          <Card
-            title="Data Analytics"
-            href="/services/data-analytics"
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We combine technical expertise with business acumen to deliver solutions that drive real results.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
           <FeatureCard 
             title="Fast Delivery" 
             description="Rapid prototyping and deployment with modern tools and practices." 
@@ -118,38 +81,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
-          <FeatureCard
-            title="Fast Delivery"
-            description="Rapid prototyping and deployment with modern tools and practices."
-          />
-          <FeatureCard
-            title="Scalable Architecture"
-            description="Built for growth with cloud-native, microservices architecture."
-          />
-          <FeatureCard
-            title="24/7 Support"
-            description="Round-the-clock monitoring and support for your critical systems."
-          />
-          <FeatureCard
-            title="Cost Effective"
-            description="Optimized solutions that reduce operational costs and improve efficiency."
-          />
-        </div>
-      </section>    </div>
-  );
-}
-
-<<<<<<< HEAD
 function FeatureCard({ title, description }: { 
   title: string; 
   description: string; 
 }) {
-=======
-function FeatureCard({ title, description }: { title: string; description: string }) {  return (
-    <div className="text-center p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}

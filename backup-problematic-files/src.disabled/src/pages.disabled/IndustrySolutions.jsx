@@ -9,8 +9,4 @@ const IndustrySolutions = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default IndustrySolutions;
-=======
-export default IndustrySolutions;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

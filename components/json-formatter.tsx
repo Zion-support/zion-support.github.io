@@ -1,6 +1,4 @@
 
-=======
-=======class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -23,19 +21,15 @@
   }
 }
 import React, { useState } from 'react';
-=======import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
-=======
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {=======
 import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Settings,;
   Eye,;
 
@@ -64,11 +58,9 @@ import { Star } from 'lucide-react';
 
 
       <section className="py-20 bg-gray-900">
-=======
 
       <section className="py-20 bg-gray-900">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -76,8 +68,6 @@ import { Star } from 'lucide-react';
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced JSON formatter provides multiple formatting options and real-time validation.
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         />;
       </Head>;
       {/* Hero Section */}
@@ -134,10 +124,8 @@ import { Star } from 'lucide-react';
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
               Our advanced JSON formatter provides multiple formatting options and real-time validation.;
           </div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Settings Bar */}
           <Card className='p-6 bg-gray-800 border border-gray-700 mb-8'>;
             <div className='flex flex-wrap items-center justify-between gap-4'>;
@@ -163,18 +151,14 @@ import { Star } from 'lucide-react';
                   <select
                     value={indentSize}
                   >
-=======
 
                   >
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <option value={2}>2 spaces</option>
                     <option value={4}>4 spaces</option>
                     <option value={8}>8 spaces</option>
                   </select>
                 </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     onChange={(e) => setIndentSize(Number(e && e.target.value))}
                     className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500";
       JSON.parse (input_json);
@@ -347,22 +331,16 @@ import { Star } from 'lucide-react';
                     value={indent_size}
                     on_change={(e) => setIndentSize (Number (e.target.value))}
                     className="px - 3 py - 2 bg - gray - 700 border border - gray - 600 rounded text - white text - sm focus:outline - none focus:ring - 2 focus:ring - teal - 500";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     <option value={2}>2 spaces</option>;
                     <option value={4}>4 spaces</option>;
                     <option value={8}>8 spaces</option>;
                   </select>;
                 </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     className='text-sm text-gray-300'>;
                     Compact mode;
                   </label>;
                 </div>;
                 <div className='flex items-center space-x-2'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <input
                     type='checkbox'
                     id='showLineNumbers'
@@ -372,8 +350,6 @@ import { Star } from 'lucide-react';
                   />;
                   <label
                     htmlFor='showLineNumbers'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     className='text-sm text-gray-300'>;
                 <div className='flex items - center space - x-2'>;
                   <input;
@@ -402,16 +378,11 @@ import { Star } from 'lucide-react';
                     html_for='showLineNumbers';
                     className='text - sm text - gray - 300';
                   >;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     Line numbers;
                   </label>;
                 </div>;
               </div>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 
                 <div className="flex items-center space-x-2">
                   <input
@@ -420,14 +391,10 @@ import { Star } from 'lucide-react';
                     id="compactMode"
                     checked={compactMode}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <input
                     type="checkbox"
                     id="showLineNumbers"
                     checked={showLineNumbers}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     onChange={(e) => setShowLineNumbers(e && e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500";
                   />;
@@ -435,15 +402,12 @@ import { Star } from 'lucide-react';
                 </div>;
               </div>;
               <div className="flex items-center space-x-3">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <Button
                   onClick={loadSampleJSON}
                   variant="outline"
                   size="sm"
 
                     </div>
-=======          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
                 <h3 className='text-2xl font-bold text-white flex items-center'>
@@ -472,7 +436,6 @@ import { Star } from 'lucide-react';
                   {showLineNumbers && (
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
                     </div>
-=======
                       {getLineNumbers(inputJson)}
 
                     </div>
@@ -494,9 +457,6 @@ import { Star } from 'lucide-react';
                     onChange={e => setInputJson(e.target.value)}
                     placeholder='Paste your JSON data here...'                    rows={15}                    onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
-=======
-=======
-=======
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
 
@@ -564,7 +524,6 @@ import { Star } from 'lucide-react';
                     className="border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50";
 
             {/* Output Section */}
-=======
 
 
             {/* Output Section */}
@@ -577,7 +536,6 @@ import { Star } from 'lucide-react';
                 {formattedJson && (;
                   <div className='flex items-center space-x-2'>;
 
-=======
             {/* Output Section */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="flex items-center justify-between mb-6">
@@ -587,7 +545,6 @@ import { Star } from 'lucide-react';
                 </h3>
                 {formattedJson && (
                   <div className="flex items-center space-x-2">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       onClick={() => copyToClipboard(formattedJson)}
                       variant='outline';
@@ -598,20 +555,14 @@ import { Star } from 'lucide-react';
                       Copy;
                     </Button>;
 
-=======                    </p>                  </div>                  <div className="text-sm text-gray-400">
                     <p>• Characters: {formattedJson.length}</p>
                     <p>• Lines: {formattedJson.split('\n').length}</p>
                     <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
                     </p>                  </div>
 
-=======
                     <Button
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </div>
             </Card>
@@ -619,12 +570,10 @@ import { Star } from 'lucide-react';
         </div>
       </section>
 
-=======
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -636,17 +585,12 @@ import { Star } from 'lucide-react';
       {/* Features */}
 
 
-=======
               Professional JSON Formatting Features
 
 
               Professional JSON Formatting Features
 
               Professional JSON Formatting Features
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -717,11 +661,9 @@ import { Star } from 'lucide-react';
               <p className="text-gray-400">
                 Adjust indentation size, toggle compact mode, and customize display options.
               </p>
-=======
 
               </p>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>
           </div>
         </div>
@@ -1039,8 +981,6 @@ import { Star } from 'lucide-react';
               your formatting needs.;
             </p>;
           </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>👨‍💻</div>;
@@ -1063,15 +1003,11 @@ import { Star } from 'lucide-react';
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <li>• API development and testing</li>;
                 <li>• Configuration file management</li>;
                 <li>• Debug and troubleshooting</li>;
               </ul>;
             </Card>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📊</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1088,14 +1024,10 @@ import { Star } from 'lucide-react';
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <li>• Report generation</li>;
                 <li>• Data validation</li>;
               </ul>;
             </Card>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>🔧</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1112,14 +1044,10 @@ import { Star } from 'lucide-react';
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <li>• Infrastructure validation</li>;
                 <li>• Deployment automation</li>;
               </ul>;
             </Card>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📝</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1136,8 +1064,6 @@ import { Star } from 'lucide-react';
                 Format JSON examples for documentation, tutorials, and technical specifications.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <li>• API documentation</li>;
                 <li>• Technical specifications</li>;
               </ul>;
@@ -1145,10 +1071,8 @@ import { Star } from 'lucide-react';
           </div>;
         </div>;
       </section>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               View Pricing;
             </Button>;
           </div>;
@@ -1156,15 +1080,7 @@ import { Star } from 'lucide-react';
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

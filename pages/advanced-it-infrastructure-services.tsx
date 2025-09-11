@@ -229,7 +229,6 @@ const testimonials = [
     rating: 5
     avatar: '👩‍🔒'
   },];
-=======
 
 
 const contactInfo = {
@@ -309,7 +308,6 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
 ];
 
 
@@ -322,8 +320,6 @@ const testimonials = [
     company: 'QuantumTech Industries',
 content:;
       'The autonomous edge computing network has transformed our IoT operations. We now have real - time processing with 90% lower latency and 70% cost reduction.',
-=======
-=======    services: advancedITInfrastructureServices2025.filter (
       string => s.category === 'Edge Computing & IoT'),
     icon: Wifi,
     color: 'from - green - 500 to - emerald - 600',
@@ -380,7 +376,6 @@ content:;
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
 
 
-=======
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionary infrastructure solutions with quantum computing
               edge computing, and AI-powered automation for the future
@@ -388,7 +383,6 @@ content:;
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future            </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
 
@@ -404,7 +398,6 @@ content:;
                 <motion&& motion.div
 
 
-=======
 
                 >
                   {stat.icon}
@@ -415,7 +408,6 @@ content:;
 
       </section>
 
-=======
 
 
                 href={`tel:${contactInfo && contactInfo.mobile}`}
@@ -426,11 +418,8 @@ content:;
           </motion && motion.div>;
         </div>;
 
-=======
-=======
 
 
-=======
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -439,7 +428,6 @@ content:;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'      </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -452,7 +440,6 @@ content:;
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               Why Choose Our IT Infrastructure Services?;
@@ -465,18 +452,14 @@ content:;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
               <motion&& motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -490,8 +473,6 @@ content:;
                   </div>
                 </div>
               </motion.div>
-=======
-=======
             ))}
           </div>
         </div>
@@ -503,7 +484,6 @@ content:;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -511,7 +491,6 @@ content:;
 }
 
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Services Section */}
 
       <section id="services" className="py-20 bg-black">
@@ -539,8 +518,6 @@ content:;
                             <Link
 
           >
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -561,7 +538,6 @@ content:;
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -574,7 +550,6 @@ content:;
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -665,12 +640,8 @@ content:;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -687,8 +658,6 @@ content:;
     </Layout>
   )
 }
-=======
-=======>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
@@ -710,7 +679,6 @@ content:;
   );
 
 
-=======
 
 );
     </Layout>;
@@ -724,16 +692,5 @@ content:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

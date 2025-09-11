@@ -9,8 +9,4 @@ const SecurityComplianceSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SecurityComplianceSection.js;
-=======
-export default SecurityComplianceSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

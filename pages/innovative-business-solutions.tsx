@@ -81,7 +81,6 @@ const contactInfo = {;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
 const testimonials = [
-=======import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, TrendingUp, as, ChartIcon, Megaphone, HeadphonesIcon, Users, as, TeamIcon, } from 'lucide-react';
@@ -150,7 +149,6 @@ const service_categories = [;
     icon: TrendingUp,
     color: 'from - green - 500 to - emerald - 600',
     features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization'],
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 
@@ -167,10 +165,8 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
 ];
 
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -178,7 +174,6 @@ import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shiel
 import Layout from '../components / layout / Layout';
 import { innovativeBusinessSolutions2025 } from '../data / 2025 - innovative - business - solutions';
 const contact_info = {
-=======
 
 
 const contactInfo = {
@@ -248,8 +243,6 @@ const testimonials = [
     company: 'GrowthTech Solutions',
     content:
       "Zion Tech Group's business intelligence platform has transformed our decision-making process. We now have real-time insights that have increased our revenue by 300%.",
-=======
-=======
     content:;
       "Zion Tech Group's business intelligence platform has transformed our decision - making process. We now have real - time insights that have increased our revenue by 300%.",
 
@@ -265,7 +258,6 @@ const testimonials = [
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
 
 
-=======
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Transform your business operations with AI-powered intelligence
               automation, and analytics that drive growth and efficiency
@@ -273,7 +265,6 @@ const testimonials = [
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency            </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
 
@@ -289,7 +280,6 @@ const testimonials = [
                 <motion&& motion.div
 
 
-=======
 
                 >
                   {stat.icon}
@@ -313,13 +303,11 @@ const testimonials = [
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-=======            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our Business Solutions?
@@ -328,7 +316,6 @@ const testimonials = [
               Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results
             </p>
           </motion.div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               Why Choose Our Business Solutions?;
@@ -340,18 +327,14 @@ const testimonials = [
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
               <motion&& motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -365,7 +348,6 @@ const testimonials = [
                   </div>
                 </div>
               </motion.div>
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -373,19 +355,16 @@ const testimonials = [
 }
 
           </div>;
-=======
         </div>;
       </section>;
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -397,7 +376,6 @@ const testimonials = [
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
@@ -410,7 +388,6 @@ const testimonials = [
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Business Solution Categories
@@ -479,9 +456,7 @@ const testimonials = [
                       </div>;
                     </motion && motion.div>;
 
-=======
                 className="relative"
-==============
                 className='relative'
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (              <motion.div
@@ -511,12 +486,8 @@ const testimonials = [
   }
 }
                 className="relative"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -625,7 +596,6 @@ const testimonials = [
   }
 }
 
-=======
           </div>;
         </div>;
       </section>;
@@ -633,7 +603,6 @@ const testimonials = [
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -670,7 +639,6 @@ const testimonials = [
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       </section>;
@@ -688,8 +656,6 @@ const testimonials = [
 
 
           >
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -710,7 +676,6 @@ const testimonials = [
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -723,7 +688,6 @@ const testimonials = [
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -815,12 +779,8 @@ const testimonials = [
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -845,7 +805,6 @@ const testimonials = [
     </Layout>;
   );
   duration: 0 && 0.8 
-=======
 
 
   duration: 0 && 0.8 
@@ -858,10 +817,8 @@ const testimonials = [
 }</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion && motion.div>) ) ;
 }</div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -870,12 +827,10 @@ const testimonials = [
 }transition= {
   {
   duration: 0 && 0.8 
-=======
 
 
   duration: 0 && 0.8 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }viewport= {
   {
   once: true 
@@ -893,15 +848,5 @@ const testimonials = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

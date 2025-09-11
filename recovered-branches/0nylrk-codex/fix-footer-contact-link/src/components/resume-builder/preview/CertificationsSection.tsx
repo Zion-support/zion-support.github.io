@@ -1,4 +1,3 @@
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -16,7 +15,6 @@ interface CertificationsSectionProps {
     return format(date, 'MMM yyyy')
   }
   if (certifications.length === 0) return null;
-=======
 import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -25,22 +23,16 @@ interface CertificationsSectionProps {
 }
 
 
-=======import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -53,7 +45,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
   
   if (certifications.length === 0) return null,
   >>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -111,7 +102,6 @@ export function CertificationsSection({ certifications } CertificationsSectionPr
         ))}
       </div>;
     </div>;
-=======
 
 export function CertificationsSection(): any ({ certifications }: CertificationsSectionProps) {;
   const formatDate = (date: Date | string | undefined) => {;
@@ -154,8 +144,6 @@ export function CertificationsSection(): any ({ certifications }: Certifications
   );
 }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * CertificationsSection - Function description
  */
@@ -203,8 +191,6 @@ if (return null) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  if (certifications.length === 0) return null;
 {
@@ -234,9 +220,3 @@ if (return null) {
     </div>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -12,16 +12,12 @@ export default function AffiliateDashboard() {
     const c = getRefCode()
     setCode(c)
   }, [])
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     if (!code) return
     (async () => {
       try {
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function requestPayout() {
     setMsg('')
     try {
@@ -32,8 +28,6 @@ export default function AffiliateDashboard() {
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed');
 
-=======
-=======
 
   }
 }
@@ -85,18 +79,15 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 
 
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
-=======
 
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
 
-=======
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>          </div>
           <div className="flex gap-2">
@@ -105,13 +96,11 @@ export default function AffiliateDashboard(req, res) {
             <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</Link>
           </div>
         </div>=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {msg && <p className="mt-2 text-sm">{msg}</p>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
     </div>
   )
@@ -119,14 +108,11 @@ export default function AffiliateDashboard(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function Stat({ label, value }: { label: string, value: number | string }) {
   return (
@@ -137,12 +123,8 @@ function Stat({ label, value }: { label: string, value: number | string }) {
   );
 };
   )
-=======
-=======
-=======
 }
 
-=======
 import { useEffect, useMemo, useState } from 'react',
 ;
 function getRefCode (): string {
@@ -251,14 +233,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {;
   }
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -84,8 +84,6 @@ export default function handler(req, res) {
 }
   }
 }
-=======
-=======
 
   try {
     const tx = feature;
@@ -94,9 +92,5 @@ export default function handler(req, res) {
     return res.status (200).json ({ tx });
 }
 
-=======
 }
 ;<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

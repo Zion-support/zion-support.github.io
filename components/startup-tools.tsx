@@ -1,5 +1,4 @@
 import {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -51,10 +50,6 @@ import {  Rocket,
   TrendingUp,
   Zap,
   Target,
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Globe;
   ArrowRight;
   Star;
@@ -97,8 +92,6 @@ export default function StartupToolsPage() {
         'Complex for small teams'
         'Limited customization'
       ]
-=======
-=======
 
 
 
@@ -118,8 +111,6 @@ export default function StartupToolsPage() {
       pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],
       cons: ['Can get expensiveComplex for small teamsLimited customization'],
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       name: 'Calendly',
       description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
   BookOpen;
@@ -194,15 +185,12 @@ function StartupToolsPage() {
       rating: 4.8,
       users: '10M+',
       icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,      description: 'Scheduling automation platform that eliminates the back - and - forth of scheduling meetings and calls.',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       category: 'Productivity',
       pricing: 'Free - $12 / month',
       rating: 4.8,
       users: '10M+',
       name: 'Canva',
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
-=======
       name: 'Mixpanel',
       description: 'Product analytics platform that helps you understand how users interact with your product and make data - driven decisions.',
       category: 'Analytics',
@@ -220,14 +208,11 @@ function StartupToolsPage() {
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
                 {startupTools.length}+
 
-=======
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Additional Startup Resources
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Beyond tools, here are additional resources to help your startup succeed.
@@ -246,8 +231,6 @@ function StartupToolsPage() {
                 Explore Communities
               </Button>
             </Card>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 size='sm'>                Explore Communities;
               </Button>;
             </Card>;
@@ -292,8 +275,6 @@ function StartupToolsPage() {
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <h3 className="text-xl font-bold mb-4 text-white">Growth Strategies</h3>
               <p className="text-gray-400 mb-4">
                 Learn proven growth strategies from successful entrepreneurs and growth hackers.
@@ -305,7 +286,6 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />              </div>;
@@ -445,8 +425,6 @@ function StartupToolsPage() {
 }
   );
 }
-=======
-=======
 
               Explore More Tools;
             </Button>;
@@ -455,7 +433,6 @@ function StartupToolsPage() {
       </section>;
 
 
-=======
   );
 import React from 'react';
 
@@ -485,24 +462,11 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
 }</div> </div> </section> Additional Startup Resources </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > Beyond tools, here are additional resources to help your startup succeed. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Startup Communities</h3> <p className="text-gray-400 mb-4" > Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups. </p> <Button href="https://www.startupschool.org" variant="outline" size="sm" > Explore Communities </Button> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600" > <BookOpen className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Educational Resources</h3> <p className="text-gray-400 mb-4" > Access free courses from platforms like Coursera, edX, and startup-specific learning resources. </p> <Button href="https://www.coursera.org" variant="outline" size="sm" > Start Learning </Button> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600" > <TrendingUp className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Growth Strategies</h3> <p className="text-gray-400 mb-4" > Learn proven growth strategies from successful entrepreneurs and growth hackers. </p> <Button href="/resources" variant="outline" size="sm" > View Resources </Button> </Card> </div> </div> </section> Ready to Scale Your Startup? </h2> <p className="text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Our startup experts can help you choose the right tools, implement growth strategies, and accelerate your business growth. </p> <Button href="/contact" variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-gray-100 shadow-2xl" > Get Startup Consultation <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/saas-marketplace" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl" > Explore More Tools </Button> </div> </div> </section> </>) 
 }
 }
-=======
-=======
-=======}=======
     </>);
-=======
 );
 import React from 'react';
-=======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from 'react';
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

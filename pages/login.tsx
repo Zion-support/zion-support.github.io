@@ -16,21 +16,16 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-=======import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -221,11 +216,9 @@ import {;
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
-=======
   DizzyFace2
 } from 'lucide-react';
 origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Mail
   Lock
@@ -403,7 +396,6 @@ origin/automation-improvements-final
   YawningFace2
   DizzyFace2
 } from "lucide-react";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -416,7 +408,6 @@ origin/automation-improvements-final
   const [isLoading, setIsLoading] = useState(false);
 
 
-=======  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -434,30 +425,22 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {;
       // Simulate API call;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setIsLoading(true);
     setError("");
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // For demo purposes, accept any email/password;
       if (formData && formData.email && formData && formData.password) {;
         // Redirect to dashboard or home page;
         window && window.location.href = "/";
       } else {;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setError("Please fill in all fields");
       }
     } catch (err) {;
@@ -465,7 +448,6 @@ export default function LoginPage() {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-=======
     setError('');
 
     try {
@@ -480,20 +462,17 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
-=======
 
     } finally {
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
 
 
 
-=======
               Or{" "}
               Or{" "}
               Or{' '}origin/automation-improvements-final
               <Link
                 href="/contact"
-=======
 
           <motion&& motion.div
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
@@ -516,7 +495,6 @@ export default function LoginPage() {
 
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
-=======
               <div>                <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
@@ -525,21 +503,14 @@ export default function LoginPage() {
 origin/automation-improvements-final
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
-=======
 
-=======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Email address
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div>;
                 <label
                   htmlFor="email"
@@ -572,7 +543,6 @@ origin/automation-improvements-final
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </button>;
               </div>;
             </form>;
@@ -605,13 +575,10 @@ origin/automation-improvements-final
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             <p className="text-sm text-gray-600">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               Don't have an account?{" "}
               Don't have an account?{" "}
               Don't have an account?{' '}
 origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;
@@ -623,10 +590,6 @@ origin/automation-improvements-final
       </div>;
     </Layout>;
   );
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div>;
                 <button;
                   type="submit";
@@ -687,8 +650,4 @@ origin/automation-improvements-final
         </div>;
       </div>;
     </Layout>);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

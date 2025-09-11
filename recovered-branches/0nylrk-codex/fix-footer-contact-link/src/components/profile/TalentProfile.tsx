@@ -1,10 +1,7 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -12,8 +9,6 @@ interface TalentProfileProps {
 
   onMessageTalent?: () => void
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -39,7 +34,6 @@ export function TalentProfile(): any ({ ;
 
   onMessageTalent?: () => void
 }
-=======export function TalentProfile({
   profile;
   onRequestHire;
   onMessageTalent
@@ -60,24 +54,18 @@ export function TalentProfile({
 
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Create proper availability object from talent profile
 
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' :
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
@@ -119,20 +107,16 @@ export function TalentProfile({
 
             <ProfileRatings
             <ProfileRatings 
-=======
 
             <ProfileRatings 
 
-=======
             <ProfileRatings
             <ProfileRatings 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}
             />
           </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
             <h2 className="text-xl font-bold text-white mb-4">About {profile && profile.full_name}</h2>;
             <div className="prose prose-invert max-w-none">;
@@ -161,7 +145,6 @@ export function TalentProfile({
                   Connect with {profile && profile.full_name} for your next project and get started right away.;
                   {profile && profile.hourly_rate && ` Rate starts at $${profile && profile.hourly_rate}/hour.`}
                 </p>;
-=======                </p>;
                 <div className="flex flex - wrap gap - 4 justify - center">;
                   <Button;
                     size="lg";
@@ -188,8 +171,6 @@ export function TalentProfile({
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface TalentProfileProps {
   profile: TalentProfileType;
@@ -283,7 +264,3 @@ return (</div> </div> {
     </div>
   )
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

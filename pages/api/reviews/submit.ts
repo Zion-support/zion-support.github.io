@@ -4,14 +4,9 @@
   try {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-==============
       };
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const project = await findProjectById(projectId);
     if (!project) {
@@ -133,8 +128,6 @@ if ( {) {
         error: "Reviews can only be submitted after project completion",
       });
     }
-=======
-=======      return res.status(404).json({ error: 'Project not found' })
     }
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
@@ -143,11 +136,8 @@ if ( {) {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
 
 
-=======
-=======
       return res.status(404).json({ error: 'Project not found' })
     }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (project.status !== "Completed") {
       return res.status(400).json({
         error: "Reviews can only be submitted after project completion"
@@ -163,7 +153,6 @@ if ( {) {
       return res.status(403).json({ error: 'Invalid reviewer for this project' })    }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return res.status(409).json({
         error: "You have already submitted a review for this project"
       });
@@ -253,7 +242,6 @@ if ( {) {
         error: "You have already submitted a review for this project",
       });
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
-=======
 
     const toRole = counterpartRole(fromRole);
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
@@ -269,9 +257,6 @@ if ( {) {
         error: "You have already submitted a review for this project",
       });
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 
@@ -280,15 +265,11 @@ if ( {) {
       .json({ message: "Review submitted", reviewId: review && review.id });
 
       reported: false, reports: [],
-==============
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       rating,
       text: String (text).trim (),
       categories,
 
       reported: false, reports: [],
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       id: uuidv4(),
       projectId,
@@ -336,15 +317,3 @@ if ( {) {
 
   }
 }
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

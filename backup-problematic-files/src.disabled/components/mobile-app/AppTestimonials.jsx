@@ -59,8 +59,4 @@ export default function AppTestimonials({ }: AppTestimonialsProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default AppTestimonials;
-=======
-export default AppTestimonials;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -2,7 +2,6 @@
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -13,10 +12,7 @@ import {
 
   DollarSign, Shield, Mail, MapPin, Rocket, Lock,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -27,8 +23,6 @@ import {
               </motion.div>
 
 
-=======
-=======
 
 
 
@@ -37,24 +31,17 @@ import {
                 transition={{ duration: 0.8, delay: 0.4 }}
 
 
-=======
-=======
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-=======
-=======
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
                 className="mb - 8";
               >;
                 <div className="inline - flex items - center justify - center w - 24 h - 24 bg - gradient - to - br from - purple - 500 to - pink - 600 rounded - 3xl shadow - 2xl mb - 6 relative overflow - hidden">;
@@ -133,8 +120,6 @@ import {
                   </Button>;
                 </motion.div>;
               </motion.div>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Key Benefits */}
               <motion.div;
                 initial={{ opacity: 0 }}
@@ -158,8 +143,6 @@ import {
             </motion.div>
           </div>
         </section>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======        {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
@@ -168,7 +151,6 @@ import {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
 
-=======        {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -198,7 +180,6 @@ import {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -213,8 +194,6 @@ import {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                  key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -270,9 +249,6 @@ import {
 
                       {feature}
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       {feature  } catch (error) {
     console.error("Error:", error);
@@ -324,7 +300,6 @@ import {
               {useCases.map((useCase, index) => (
                 <motion.div
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -346,20 +321,14 @@ import {
                   viewport={{ once: true }}
 
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
                       <CheckCircle className="w-5 h-5 text-white" />
                     </div>
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -399,7 +368,6 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -461,7 +429,6 @@ import {
                   {technology.map((tech, index) => (
                     <motion.div
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >;
                 <h3 className="text - 3xl font - bold text - white mb - 8">;
                   <span className="bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
@@ -471,7 +438,6 @@ import {
                 <div className="grid grid - cols - 2 gap - 4">;
                   {technology.map ((tech, index) => (
                     <motion.div;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662                  className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
@@ -513,7 +479,6 @@ import {
               {/* Technology Stack */}
               <motion.div;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, x: -20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -534,7 +499,6 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -544,8 +508,6 @@ import {
                 <div className="grid grid-cols-2 gap-4">
                   {technology.map((tech, index) => (
                     <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                      key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
@@ -563,10 +525,7 @@ import {
 
                 </div>;
               </motion.div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -585,8 +544,6 @@ import {
                 <div className="grid grid - cols - 2 gap - 4">;
                   {integrations.map ((integration, index) => (
                     <motion.div;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -608,7 +565,6 @@ import {
             </div>;
           </div>;
         </section>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Market Position & ROI */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -639,8 +595,6 @@ import {
 }=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -650,7 +604,6 @@ import {
               </h2>
             </motion.div>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -660,7 +613,6 @@ import {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
 
-=======                initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -680,12 +632,8 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
@@ -693,8 +641,6 @@ import {
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   Our advantage: Quantum-resistant encryption, enterprise features, and compliance tools.
                 </p>
                 <div className="space-y-4">
@@ -713,8 +659,6 @@ import {
                 </div>
               </motion.div>
               <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -734,12 +678,8 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
@@ -765,9 +705,7 @@ import {
             </div>
           </div>
         </section>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
         {/* CTA Section */}        {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -838,10 +776,6 @@ import {
                     href="/contact" 
                   <Button
                     href="/contact"
-=======
-=======
-=======
-=======
               className="text - center mb - 16";            >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 <span className="bg - gradient - to - r from - yellow - 400 to - orange - 500 bg - clip - text text - transparent">;
@@ -908,7 +842,6 @@ import {
           </div>;
         </section>;
 
-=======
 
 
                   <Button
@@ -917,27 +850,20 @@ import {
                     href="/contact" 
                   <Button
                     href="/contact"
-=======
-=======                  whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
               <div className="mt-8 text-gray-400">
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</Link></p>
-=======
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</Link></p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -948,11 +874,8 @@ import {
   );
 };
   )
-=======
 
-=======
 }
-=======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready for Quantum - Secure Communication?;
@@ -1005,8 +928,3 @@ import {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

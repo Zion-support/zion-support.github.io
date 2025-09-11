@@ -1,14 +1,11 @@
 
 import React from 'react',
 import React from 'react';
-=======
 
 import React from 'react';
 
-=======
 import React from 'react',
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
@@ -19,16 +16,12 @@ export default function AutomationInsightsPage() {
       title: 'AI Automation Trends 2025'
       description:
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true;
     };
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -159,7 +152,6 @@ import React from 'react';
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
 
-=======  return (
     <>
       <Head>
         <title>
@@ -225,7 +217,6 @@ import React from 'react';
             {/* Automation Trends */}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 ))}
               </div>
@@ -257,16 +248,13 @@ import React from 'react';
 
 
 
-=======
                   </div>
                 ))}
               </div>
             </div>
 
-==============
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Automation Tools & Frameworks */}
 
 
@@ -281,8 +269,6 @@ import React from 'react';
 
             {/* Call to Action */}
             {/* Call to Action */}
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
                 Ready to Automate Your Business?
@@ -290,7 +276,6 @@ import React from 'react';
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               </p>
@@ -324,19 +309,10 @@ import React from 'react';
 
 
 }
-<<<<<<< HEAD
     </>);
 }>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

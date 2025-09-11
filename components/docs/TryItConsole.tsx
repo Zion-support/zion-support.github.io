@@ -3,27 +3,21 @@
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-=======
-=======
 
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
-=======
   method,
   path,
   requiresAuth,
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662  path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
-=======
-=======
 interface TryItProps {;
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string; // full URL or relative;
@@ -42,7 +36,6 @@ export default function TryItConsole(): any ({;
 export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   }, [baseUrl, path]);
@@ -151,8 +144,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
             value={token}
             on_change={e => set_token (e.target.value)}
-=======
-=======
       });
       const text = await res && res.text();
       setResponse(text);
@@ -191,7 +182,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       setLoading(false)
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
-=======    }
   }
   return (
     <div className='space-y-2'>
@@ -200,7 +190,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
     <div className="space-y-2">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
         <div>
-=======
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -214,8 +203,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <div>
           />        </div>;
       </div>;
@@ -236,15 +223,12 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
         <div>;
           <label className='block text-sm mb-1'>Request Body (JSON)</label>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
             onChange={e => setBody(e && e.target.value)}
             placeholder='{ }';
           />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </button>;
       <div>;
         <label className='block text-sm mb-1'>Response</label>;
@@ -264,8 +248,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         disabled={loading}
       >
         {loading ? 'Sending…' : 'Send Request'}
@@ -290,5 +272,3 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>
         <div>
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const ErrorPage.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ErrorPage.js;
-=======
-export default ErrorPage.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

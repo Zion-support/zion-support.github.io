@@ -5,14 +5,10 @@
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ServiceVariant =
   | 'default'
   | 'holographic'
@@ -221,7 +217,6 @@ export type ServiceVariant =
   | 'real - estate - futuristic';
   | 'industrial - futuristic';
   | 'neural - futuristic';
-<<<<<<< HEAD
 export type ServiceVariant = ;
   | 'default';
   | 'holographic';
@@ -334,6 +329,3 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
   | 'neural-futuristic';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

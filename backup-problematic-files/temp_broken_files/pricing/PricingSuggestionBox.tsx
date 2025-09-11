@@ -104,7 +104,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   confidenceColor ;
 }> {;"  suggestion.confidence ";"}confidence </Badge> </div> <div className="bg-muted/50 rounded-md p-3 text-center" > <span className="text-2xl font-bold" > $ {;
   suggestion.minRate.toFixed (0) ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }- $ {;
   suggestion.maxRate.toFixed (0) ";
 }</span> <span className="text-sm text-muted-foreground ml-1" > {";
@@ -114,6 +113,4 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 }</p> flex items-center justify-between"> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <ThumbsUp className=" h-4 w-4 mr-2"/> Apply Suggestion </Button> </TooltipTrigger> <TooltipContent> <p>Apply this suggestion to your pricing field</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> <p className=" text-xs text-center text-muted-foreground pt-2" > Based on market data & trends. You can adjust as needed. </p> </CardContent> </Card>) ;
 };
 "
-<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/PricingSuggestionBox.tsx
-=======

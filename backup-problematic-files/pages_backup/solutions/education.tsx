@@ -566,8 +566,6 @@ export default function EducationSolutionsPage() {;
     </>
     </>
 export default Education;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };

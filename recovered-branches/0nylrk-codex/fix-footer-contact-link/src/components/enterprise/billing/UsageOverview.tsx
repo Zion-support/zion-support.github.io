@@ -2,18 +2,12 @@
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function UsageOverview() {
   // Mock usage data
 
   const usage = {
     jobPosts: {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       used: 32,
       total: 100,
 
@@ -21,17 +15,14 @@ export function UsageOverview() {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },    messaging: {
       used: 1250
       total: 5000
       percentage: 25
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     },
 
@@ -67,7 +58,6 @@ export function UsageOverview() {;
 
 
 
-=======
     <Card>;
       <CardHeader>;
         <CardTitle>Usage Overview</CardTitle>;
@@ -79,8 +69,6 @@ export function UsageOverview() {;
             <TabsTrigger value="current">Current Period</TabsTrigger>;
             <TabsTrigger value="historical">Historical</TabsTrigger>;
           </TabsList>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <TabsContent value="current" className="space-y-6">;
             <div className="space-y-4">;
               <div className="space-y-2">;
@@ -88,8 +76,6 @@ export function UsageOverview() {;
                   <p className="text-sm font-medium">Job Posts</p>;
                   <p className="text-sm text-muted-foreground">;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </Card>);
 }
@@ -105,13 +91,5 @@ export function UsageOverview() {;
   );
 }
 ;
-=======}=======
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

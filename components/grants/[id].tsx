@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 
-=======
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import {useEffect, useState} from 'react';
@@ -12,7 +11,6 @@ export default function GrantDetailPage() {;
 
   const { id } = router && router.query as { id: string },;
 
-=======
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -59,7 +57,6 @@ export default function GrantDetailPage() {;
       </EnhancedLayout>;
     );
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect, useState} from 'react';
 import {use_router} from 'next / router';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
@@ -141,8 +138,6 @@ if (
         </div>;
         <div className='flex gap - 2 items - center'>;
           {item.program === 'incubator' && (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <EnhancedLayout>;
       <div className='flex items-center justify-between mb-4'>;
         <div>;
@@ -157,8 +152,6 @@ if (
             <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
               Incubated by Zion;
             </span>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           )}
           {item && item.status === 'Approved' && (;
             <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -285,10 +278,7 @@ export default function GrantDetailPage() {;
                 <ul className='list-disc list-inside text-sm'>
                   {item.supportingLinks.map((l, i) => (
                     <li key={i}>
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <a
                         className='text-blue-600'
                         href={l}
@@ -315,7 +305,6 @@ export default function GrantDetailPage() {;
                   </div>;
                 </li>;
               ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
             </div>
           </section>
@@ -330,14 +319,7 @@ export default function GrantDetailPage() {;
                   <div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
-=======
     </EnhancedLayout>
   );
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

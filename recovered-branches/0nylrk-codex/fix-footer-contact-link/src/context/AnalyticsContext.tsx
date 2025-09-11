@@ -2,7 +2,6 @@
   type: AnalyticsEventType,;
 
 
-=======import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { useLocation  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -10,11 +9,9 @@ import { supabase } from '@/integrations/supabase/client';
 
 
   type: AnalyticsEventType,;
-=======
 
   type: AnalyticsEventType,;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   path?: string;
   component?: string;
   elementId?: string;
@@ -27,8 +24,6 @@ import { supabase } from '@/integrations/supabase/client';
 export interface AnalyticsContextType {;
 
 export interface AnalyticsContextType {;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number
@@ -38,18 +33,12 @@ export interface AnalyticsContextType {;
 }
 
 
-=======
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 // Analytics event types;
 export type AnalyticsEventType =;
   | 'page_view';
@@ -69,11 +58,8 @@ import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 ;
-=======
-=======  | 'login';
 ;
 // Interface for analytics events;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface AnalyticsEvent {
   type: AnalyticsEventType
   path?: string;
@@ -98,8 +84,6 @@ export interface AnalyticsEvent {;
 export interface AnalyticsContextType {;
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Track page views when location changes
   useEffect(() => {
     trackEvent('page_view', { path: location.pathname })
@@ -131,7 +115,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 
   // Function to track general analytics events
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
-==============
   }, [location.pathname]),
 
   // Function to track general analytics events
@@ -141,8 +124,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
       timestamp: Date.now()
       userId: user?.id
       metadata
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     }
     setEvents((prevEvents) => [...prevEvents, event]);
     setLastEvent(event);    },
@@ -150,8 +131,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     setEvents((prevEvents) => [...prevEvents, event]),
     setLastEvent(event),
     
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
@@ -159,8 +138,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         path: location.pathname
         user_id: user?.id
         metadata: metadata
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   element_id?: string;
   timestamp: number,
   user_id?: string | null;
@@ -231,14 +208,11 @@ export const useAnalytics = (): AnalyticsContextType => {;
 
 export const useAnalytics = (): AnalyticsContextType => {;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Cast is used here because the context default is undefined until provided;
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
   return context as AnalyticsContextType;
 
 };
-<<<<<<< HEAD
   }
 ;
   // Function to track conversion events;
@@ -283,7 +257,6 @@ if ( {) {
   return context as AnalyticsContextType;
 }
 ;
-<<<<<<< HEAD
     }),;
   },;
   ;
@@ -353,8 +326,3 @@ setLastEvent (null)
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
   return context as AnalyticsContextType;
 };
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const AboutSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AboutSection.js;
-=======
-export default AboutSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const MobileDevelopment = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default MobileDevelopment;
-=======
-export default MobileDevelopment;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

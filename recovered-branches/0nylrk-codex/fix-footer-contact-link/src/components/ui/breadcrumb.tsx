@@ -1,15 +1,12 @@
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 
 import * as React from "react"
 
-=======const Breadcrumb = React.forwardRef<;
   HTMLElement;
 
-=======
 
 
 const Breadcrumb = React.forwardRef<
@@ -38,8 +35,6 @@ const Breadcrumb = React.forwardRef<;
     {...props}
   />;
 ));
-=======
-=======      "inline-flex items-center gap-1 text-sm text-zion-slate-light"
       className
     )}
     {...props}
@@ -63,8 +58,6 @@ const BreadcrumbLink = React && React.forwardRef<;
 
 
   BreadcrumbEllipsis}
-<<<<<<< HEAD
-<<<<<<< HEAD
   BreadcrumbEllipsis}
     &#8230,;
   </span>;
@@ -95,9 +88,4 @@ return (<Comp ref= {
 ;
   BreadcrumbEllipsis}
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -38,13 +38,11 @@ export default function Page() {
     </div>
   );
 }
-=======
 
 
 
 import React from 'react';
 import { NextPage } from 'next';
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -54,7 +52,6 @@ origin/automation-improvements-final
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -133,9 +130,6 @@ origin/automation-improvements-final
                   }}
 
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 >;
                   Clear Filters;
                 </button>;
@@ -143,7 +137,6 @@ origin/automation-improvements-final
             </div>;
           </div>;
         </section>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </div>;
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
@@ -152,7 +145,6 @@ origin/automation-improvements-final
                     <p className="text-gray-600 mb-4 leading-relaxed">;
                       {product && product.description}
                     </p>;
-=======
 
                       </div>;
                     </div>;
@@ -175,7 +167,6 @@ origin/automation-improvements-final
                         ))}
                       </ul>;
                     </div>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-2 mb-6">;
                       <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>;
                       <ul className="space-y-1">;
@@ -232,9 +223,6 @@ origin/automation-improvements-final
 
 import type { NextPage } from 'next';
 import Head from 'next/head';
-=======
-=======
-=======
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
@@ -262,7 +250,6 @@ export default ProductsIndex;
 export default Index;
 
   )
-=======
   ),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
@@ -613,22 +600,11 @@ export default Index;
 
 },
 export default Index,
-=======
-=======
 export default ProductsIndex;
 
   )
 
 
-=======
 },
 export default Index,
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

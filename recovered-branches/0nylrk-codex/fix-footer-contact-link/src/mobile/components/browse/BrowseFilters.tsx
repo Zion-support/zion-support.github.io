@@ -55,8 +55,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   },
-=======
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Slider } from '@/components / ui / slider';
@@ -70,7 +68,6 @@ import { Label } from '@/components / ui / label';
 
 
 
-=======
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;
@@ -123,9 +120,6 @@ import { Label } from '@/components / ui / label';
         </div>;
       </div>;
     </div>;
-=======
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {active_filters.map ((filter) => (
             <Badge;
               key={filter}
@@ -142,8 +136,6 @@ import { Label } from '@/components / ui / label';
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  
 }export function BrowseFilters ({
@@ -241,9 +233,3 @@ if (!activeFilters.includes (filter) ) {
     </div>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

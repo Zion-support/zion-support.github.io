@@ -17,12 +17,9 @@ export default async function handler(
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
 
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -34,7 +31,6 @@ export default async function handler(
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const token = jwt && jwt.sign(
       { sub: address && address.toLowerCase(), chain: "evm", chainId },
       JWT_SECRET,
@@ -57,12 +53,9 @@ export default async function handler(
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-<<<<<<< HEAD=======
 
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
     return res.status(500).json({ error: e?.message |"Verify failed" });
     return res.status(500).json({ error: e?.message || "Verify failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -100,9 +93,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

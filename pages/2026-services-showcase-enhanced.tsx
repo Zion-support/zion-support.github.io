@@ -141,7 +141,6 @@
         default: return a.name.localeCompare(b.name)
       }
     if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced';
-=======
   };
 
   const contactInfo = {
@@ -190,11 +189,8 @@
     })
     return filtered
 
-=======
-=======
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Services2026ShowcaseEnhancedPage(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
@@ -370,33 +366,24 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           {/* Twitter */}          {/* Twitter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
         {/* Enhanced Header Section */}        {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -404,7 +391,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 }
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >;
               <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6">;
                 Enhanced 2026 Services Showcase;
@@ -459,7 +445,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                         {category.name} ({category.count})
                       </option>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>;
                   <label className="block text - sm font - medium text - gray - 300 mb - 2">Category</label>;
                   <select;
@@ -473,7 +458,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                       </option>))}
                   </select>;
                 </div>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -512,7 +496,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -568,7 +551,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {categories.map((category) => (
@@ -578,7 +560,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                     ))}
                   </select>
                 </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Price Range Filter */}
 
 
@@ -796,7 +777,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                   {filteredServices.map((service, index) => (
                     <motion.div
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Enhanced Services Grid */}
         <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -827,12 +807,5 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                       >;
                         <div className="p - 6">;
                           {/* Service Header */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

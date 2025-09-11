@@ -162,19 +162,14 @@ import React from 'react';
 };
 
 export default Resources;
-=======
-=======import React from 'react';
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
 
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default ResourcesPage;
 
-=======
               name: 'Market Pricing',
               href: '/market - pricing',
               blurb: 'Vendor links and typical budgets.',
@@ -222,16 +217,7 @@ export default ResourcesPage;
 ;
 export default ResourcesPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export default Resources;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

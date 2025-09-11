@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -10,10 +8,7 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
@@ -37,7 +32,6 @@ function PortfolioBuilderContent() {
       </main>;
       <Footer />;
     </>;
-=======
 ;
 
 export default function PortfolioBuilder() {;
@@ -50,8 +44,6 @@ export default function PortfolioBuilder() {;
 ;
 
 
-=======
-<<<<<<< HEAD=======import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';
@@ -99,8 +91,6 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;
 }
 export default function PortfolioBuilder() {
@@ -120,9 +110,3 @@ export default function PortfolioBuilder() {;
 }
 ;
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

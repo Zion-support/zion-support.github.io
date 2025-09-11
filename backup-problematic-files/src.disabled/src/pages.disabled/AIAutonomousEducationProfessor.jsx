@@ -9,8 +9,4 @@ const AIAutonomousEducationProfessor = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousEducationProfessor;
-=======
-export default AIAutonomousEducationProfessor;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -54,7 +54,6 @@ const RegisterPage = () => {
 };
 
 
-=======              <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
                 Privacy Policy;
               </Link>;
             </p>;
@@ -281,14 +280,6 @@ export default RegisterPage,
   );
 },;
 export default RegisterPage;
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

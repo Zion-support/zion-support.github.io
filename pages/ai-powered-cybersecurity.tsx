@@ -1,6 +1,4 @@
 
-=======
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -48,8 +46,6 @@ class ErrorBoundary extends React.Component {
   );
 
 
-=======
-=======import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 export default /**
  * AIPoweredCybersecurityPage - Function description
@@ -118,8 +114,6 @@ export default function AIPoweredCybersecurityPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <Head>;
@@ -159,8 +153,3 @@ export default function AIPoweredCybersecurityPage() {
       />;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

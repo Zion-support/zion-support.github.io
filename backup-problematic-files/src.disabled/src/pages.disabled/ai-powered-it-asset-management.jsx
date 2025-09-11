@@ -9,8 +9,4 @@ const Ai-powered-it-asset-management = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Ai-powered-it-asset-management;
-=======
-export default Ai-powered-it-asset-management;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

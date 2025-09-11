@@ -1,7 +1,5 @@
 
 
-=======
-=======class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -25,10 +23,8 @@
 }
 import React from 'react';
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextPage } from './next';
 import Head from './next / head';
 import { use_router  } from './next / router';
@@ -97,7 +93,6 @@ const TalentProfile: NextPage = () => {;
           <EnhancedButton variant="ghost" onClick={() => handleRespond('Negotiate')}>Negotiate</EnhancedButton>
         </div>
       </header>
-=======;
   const [response_log, setResponseLog] = useState<;
     Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>;
   >([]);
@@ -146,7 +141,6 @@ const TalentProfile: NextPage = () => {;
 
               {responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
 
-=======                </li>
               ))}
             </ul>
           </div>
@@ -206,12 +200,9 @@ const TalentProfile: NextPage = () => {;
                     {new Date (r.at).toLocaleString ()}
                   </span>{" "}
                 </li>))}=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
 }
 export default TalentProfile;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -222,13 +213,10 @@ export default TalentProfile;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-=======
 },;
 
 
 export default TalentProfile;
-=======
     </div>);}
             </ul>;
           </div>;
@@ -238,10 +226,3 @@ export default TalentProfile;
   );
 },;
 export default TalentProfile;
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

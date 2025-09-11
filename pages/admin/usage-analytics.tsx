@@ -1,7 +1,6 @@
 
 
 
-=======import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 import { GetServerSideProps } from 'next',;
@@ -40,8 +39,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0));
-=======
-=======
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0))
   let acc = 0
   const radius = size / 2
@@ -62,7 +59,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
@@ -76,7 +72,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
   const radius = size / 2;
   const center = radius;
   const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'];
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const slices = data.map((d, i) => {
     const start = (acc / total) * 2 * Math.PI;
     acc += d.value;
@@ -108,12 +103,9 @@ function Funnel({ data }: { data: Datum[] }) {
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  return (
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**
  * LineChart - Function description
  */
@@ -124,22 +116,17 @@ function LineChart() {
     const coordinate_y = height - (d.value / max) * height,
     return `${x}, ${y}`;
   }).join (' '),
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   return (
     <svg width={width} height={height} className="border rounded bg - white / 40 dark:bg - gray - 900 / 40">;
       <polyline fill="none" stroke="#3b82f6" stroke_width="2" points={points} />;
     </svg>);
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 /**
  * Funnel - Function description
  */
 function Funnel() {
   return (
 
-=======
 
 
 
@@ -170,14 +157,12 @@ export default function UsageAnalytics(req, res) {
           </div>
 
 
-=======
               ))}
             </div>
           </div>
         </div>
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
@@ -190,11 +175,8 @@ export default function UsageAnalytics(req, res) {
   );
 };
   )
-=======
 
-=======
 }
-=======
   }, [start, end, user_type]),
   useEffect (() => { refresh () }, []),
   return (
@@ -260,8 +242,3 @@ export default function UsageAnalytics(req, res) {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

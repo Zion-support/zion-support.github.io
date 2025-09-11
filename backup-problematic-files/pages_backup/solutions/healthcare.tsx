@@ -654,8 +654,6 @@ export default function HealthcareSolutions() {;
     </>
     </>
 export default Healthcare;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };

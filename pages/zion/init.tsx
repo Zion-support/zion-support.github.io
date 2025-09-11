@@ -51,8 +51,6 @@ setState((prev) => ({
       ...prev;
       [group]: { ...prev[group], [key]: !prev[group][key] }}))
   };
-=======
-=======
 
   marketplace: true,
   gpt: true,
@@ -110,7 +108,6 @@ const InitPage: NextPage = () => {_const [state, _setState] = useState<DeployFor
       const json = await res.json()
       if (!res.ok) throw new Error(json?.error || 'Deployment failed'),
 
-=======      setResult(json)
     } catch (err: any) {
       setError(err.message || 'Unexpected error')
     } finally {
@@ -124,7 +121,6 @@ import React from 'react';
   const [state, setState] = useState<DeployFormState> ({;
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {;
   logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' };
-=======
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(state)
@@ -159,7 +155,6 @@ type DeployFormState = {
   'api-docs-wiki': true,;
   'zion-brain': true,;
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const defaultBonus: DeployFormState['bonusModules'] = {;
   'global-map': false,;
   'franchise-onboarding': false,;
@@ -186,7 +181,6 @@ const InitPage: NextPage = () => {;
   });  const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
-=======
             <label className='block text - sm font - medium'>;
               Default Language;
             </label>;
@@ -195,14 +189,10 @@ const InitPage: NextPage = () => {;
               value={state.default_language}
               on_change={e =>;
                 set_state ({ ...state, default_language: e.target.value });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               }
             />;
           </div>;
           <div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <label className='block text - sm font - medium'>;
               Deployment Region;
             </label>;
@@ -211,14 +201,10 @@ const InitPage: NextPage = () => {;
               value={state.deployment_region}
               on_change={e =>;
                 set_state ({ ...state, deployment_region: e.target.value });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               }
             />;
           </div>;
           <div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 checked={state && state.tokenActivation}
                 onChange={() =>;
                   setState({;
@@ -228,7 +214,6 @@ const InitPage: NextPage = () => {;
                 }
               />;
               <label htmlFor='token' className='text-sm'>;
-=======
             <label className='block text - sm font - medium'>;
               Token Activation;
             </label>;
@@ -251,8 +236,6 @@ const InitPage: NextPage = () => {;
           <div>;
 
             >              <option>Admin</option>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
@@ -265,7 +248,6 @@ const InitPage: NextPage = () => {;
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div>
             <label className="block text-sm font-medium">Instance Name</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.instanceName} onChange={(e) => setState({ ...state, instanceName: e.target.value })} required />
@@ -316,7 +298,6 @@ const InitPage: NextPage = () => {;
           </div>
           <div>
 
-=======              <option>DAO</option>
               <option>Hybrid</option>
             </select>
           </div>
@@ -345,11 +326,8 @@ const InitPage: NextPage = () => {;
                   ...state,;
                   branding: { ...state && state.branding, logoUrl: e && e.target.value },;
                 });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
@@ -358,10 +336,8 @@ const InitPage: NextPage = () => {;
             <input
               type='color'
               className='mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40'
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
@@ -377,25 +353,18 @@ const InitPage: NextPage = () => {;
                   ...state,
                   branding: { ...state.branding, primary_color: e.target.value },
                 });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               }
             />;
           </div>;
           <div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
           <div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     type='checkbox'
                     checked={state && state.modules[key]}
@@ -416,17 +385,12 @@ const InitPage: NextPage = () => {;
                     onChange={() => handleToggle('bonusModules', key)}
                   />                  <span>/{key}</span>;
                 </label>;
-=======
-
-
-=======
-
-=======
 
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -462,9 +426,7 @@ const InitPage: NextPage = () => {;
             </div>;
           </div>;
         </section>;
-=======
         <div className='flex items-center gap-3'>;
-=======
         </section>
         <div className='flex items-center gap-3'>          <button
             disabled={submitting}
@@ -481,17 +443,13 @@ const InitPage: NextPage = () => {;
     </div>
   )
 };
-=======
-==============
-
-
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 };
 
-=======export default InitPage;
+
+};
+
 
 }
 }
@@ -522,7 +480,6 @@ const InitPage: NextPage = () => {;
 }
     </div>;
   );
-=======
             <label className='block text - sm font - medium'>Subdomain</label>;
             <input;
               className='mt - 1 w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 60 dark:bg - black / 40 px - 3 py - 2';
@@ -587,10 +544,3 @@ export default InitPage;
 ;=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

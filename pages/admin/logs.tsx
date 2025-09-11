@@ -2,16 +2,12 @@ import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
-=======
 
 
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
-=======
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 
@@ -24,9 +20,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   Select,
   SelectContent,
   SelectItem,
@@ -41,11 +34,9 @@ import {
   Search,
   Download,;
   RefreshCw,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -63,12 +54,9 @@ import {
   AlertCircle,
   XCircle,
   Search,
-=======
 
 interface LogEntry {
-=======
 
-=======import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
@@ -110,8 +98,6 @@ import {
   Download,;
   RefreshCw,;
 } from 'lucide-react';
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
@@ -120,7 +106,6 @@ interface LogEntry {
   lastUpdated: string;
 
 
-=======
 
   lastUpdated: string;  } catch (error) {
     console.error("Error:", error);
@@ -156,12 +141,8 @@ export default function LogsPage(): any ({;
   warningCount,;
   totalCount,;
   lastUpdated,;
-==============
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     cause?: unknown
   };
   performance?: {
@@ -170,7 +151,6 @@ export default function LogsPage(): any ({;
     fps?: number
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LogsPageProps {
   logs: LogEntry[],
   errorCount: number,
@@ -294,7 +274,6 @@ const categories = Array && Array.from(new Set(logs && logs.map(log => log && lo
         (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
-=======
     // Level filter
     if (levelFilter !== 'all') {
       filtered = filtered.filter(log => log.level === levelFilter)
@@ -474,11 +453,8 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
 export default function LogsPage(req, res) {
   try {
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-=======
 
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
@@ -486,13 +462,11 @@ export default function LogsPage(req, res) {
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
-=======
 
   const categories = Array && Array.from(new Set(logs && logs.map(log => log && log.category))).filter(;
     Boolean;  );
@@ -542,11 +516,8 @@ export default function LogsPage(req, res) {
 
 
 
-=======
-=======        </Card>
         <Card>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Errors</CardTitle>
             <XCircle className="h-4 w-4 text-red-500" />
@@ -563,12 +534,8 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
@@ -589,7 +556,6 @@ export default function LogsPage(req, res) {
                 <SelectItem value="critical">Critical</SelectItem>
               </SelectContent>
 
-=======            </Select>
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
 
 
@@ -612,7 +578,6 @@ export default function LogsPage(req, res) {
                 onChange={e => setSearchTerm(e && e.target.value)}
               />;
             </div>;
-=======                <SelectValue placeholder="All sources" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Sources</SelectItem>
@@ -658,8 +623,6 @@ export default function LogsPage(req, res) {
                     </details>)}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -674,7 +637,6 @@ export default function LogsPage(req, res) {
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               ))
             ) : (
@@ -756,7 +718,6 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
                 </div>
               ))
             ) : (
@@ -769,20 +730,17 @@ export default function LogsPage(req, res) {
             ) : (;
               <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.;
               </div>;
-=======
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
             }
           }
         } catch (fileError) {;
-=======
 
 
             }
           }
         } catch (fileError) {;
-=======                            </pre>;
                           </details>)}
                         <div className="flex items - center justify - between text - xs text - gray - 500">;
                           <div>;
@@ -826,8 +784,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     // Calculate statistics
     const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
     const warningCount = logs.filter(log => log.level === 'warn').length;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
     // Sort logs by timestamp (newest first)
@@ -840,8 +796,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     // Sort logs by timestamp (newest first);
     logs.sort (
       (a, b) =>;
@@ -860,8 +814,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         total_count,
         last_updated: new Date ().toISOString (),
       },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     }
   } catch (error) {
     logErrorToProduction ('Error reading logs:', error);    return {
@@ -873,11 +825,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
         lastUpdated: new Date().toISOString()
       }
     }
-=======
   }
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         logs: [],
         errorCount: 0,
@@ -887,7 +836,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
       },
     };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Calculate statistics;
     const errorCount = logs && logs.filter(;
       log => log && log.level === 'error' || log && log.level === 'critical';
@@ -896,9 +844,3 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

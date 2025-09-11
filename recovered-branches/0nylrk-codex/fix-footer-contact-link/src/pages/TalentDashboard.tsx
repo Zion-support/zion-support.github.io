@@ -17,15 +17,12 @@ import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSte
 import {MyApplications} from "@/components/jobs/MyApplications";
 import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-=======
 function TalentDashboardContent() {;
 
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <SEO
@@ -110,7 +107,6 @@ function TalentDashboardContent() {;
   return (
 
 
-=======            
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -208,12 +204,8 @@ function TalentDashboardContent() {;
                 </div>;
               </CardContent>;
             </Card>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {/* Upcoming Interviews Card */}
@@ -289,7 +281,6 @@ function TalentDashboardContent() {;
     </>
   )
 }
-=======
 ;
 
 export default function TalentDashboard() {;
@@ -302,9 +293,6 @@ export default function TalentDashboard() {;
 ;
 
 
-=======
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -487,8 +475,6 @@ function TalentDashboard() {
       <TalentDashboardContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;
 }
 export default function TalentDashboard() {
@@ -508,9 +494,3 @@ export default function TalentDashboard() {;
 }
 ;
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

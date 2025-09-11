@@ -28,9 +28,6 @@ export default function AIAutonomousMarketingPlatform(req, res) {
   }
 }
 ;
-=======
-=======
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 export async /**
@@ -45,10 +42,4 @@ export default /**
 function AIAutonomousMarketingPlatform() {
 return <ServicePage {...props} />;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

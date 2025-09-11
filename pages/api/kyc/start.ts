@@ -10,8 +10,6 @@ function load(): Record<string, KycProfile> {
     return JSON.parse(raw)
 import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
-=======
-=======
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
 
@@ -79,18 +77,14 @@ function handler() {
   $2
 }
   const {    user_id,
-==============
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     role,
     fullLegalName,
     business_name,
     businessRegistrationNumber,
 
     userId?: string;
-=======
 
-<<<<<<< HEAD=======  const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
   const profile: KycProfile =
@@ -115,14 +109,11 @@ function handler() {
     profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   res && res.status(200).json({
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role),
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
 
 }
@@ -130,14 +121,12 @@ function handler() {
     amlStatus: 'unknown', createdAt: now,
     lastUpdatedAt: now,
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
-=======
 
 
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
-=======
 
   });
 
@@ -228,7 +217,6 @@ export default function handler(req, res) {
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2
-=======
 
 }
   const db = load ();
@@ -376,5 +364,3 @@ export default function handler(req, res) {
   }
 }
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

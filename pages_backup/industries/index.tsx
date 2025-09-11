@@ -1,5 +1,4 @@
 
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 
 
-=======import { ;
   Heart, ;
 import React from 'react';
 import Link from 'next/link';';
@@ -43,7 +41,6 @@ import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
-=======const industries = [;
   {;
     name: 'Healthcare',;
     description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;
@@ -56,7 +53,6 @@ import Layout from '../../components/Layout';';
     name: 'Finance',
     description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',
     icon: DollarSign,
-=======
     href: '/industries/finance',
     features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],
     color: 'from-green-500 to-emerald-500'
@@ -152,10 +148,6 @@ const stats = [
 ];
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
@@ -224,7 +216,6 @@ const industries = [
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
 
-=======];
 
 const benefits = [
   {
@@ -260,7 +251,6 @@ export default function IndustriesPage() {
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -388,19 +378,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
 
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
@@ -466,7 +451,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   We ensure all solutions meet industry-specific regulatory requirements and;
                   maintain the highest security standards.;
                 </p>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -505,7 +489,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* Stats Section */}
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -566,7 +549,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
                 >,
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
@@ -624,7 +606,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Don't See Your Industry?
@@ -651,8 +632,3 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>
         </section>
       </div>
-=======
-    </SimpleLayout>
-    </Layout>
-
-  );

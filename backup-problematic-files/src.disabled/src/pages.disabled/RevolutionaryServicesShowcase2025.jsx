@@ -9,8 +9,4 @@ const RevolutionaryServicesShowcase2025 = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default RevolutionaryServicesShowcase2025;
-=======
-export default RevolutionaryServicesShowcase2025;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

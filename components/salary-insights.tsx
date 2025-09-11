@@ -27,10 +27,6 @@ import {
   DonutChart,;
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
-=======
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======import {;
   LineChart,;
   BarChart,;
   DonutChart,;
@@ -49,7 +45,6 @@ import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCha
 type InsightResponse = {
   recommendedHourlyUsd: number,
   gpt_recommendation?: string;}  recommendedHourlyUsd: number,
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   recommendedMonthlyUsd: number,
   medianHourlyUsd: number,
   minHourlyUsd: number,
@@ -72,13 +67,10 @@ export default function SalaryInsightsPage() {;
 
 export default function SalaryInsightsPage() {;
 
-=======
-==============
 
 
 export default function SalaryInsightsPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -109,13 +101,9 @@ export default function SalaryInsightsPage() {;
   const [employmentType, setEmploymentType] = useState<
     'contract' | 'freelance' | 'full-time'
   >('contract');  const [loading, setLoading] = useState(false);  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
-=======
-=======
   const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');=======
-=======
   const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
   const [loading, setLoading] = useState(false);
@@ -162,8 +150,6 @@ function SalaryInsightsPage() {
 
         const { supabase } = await import('../utils/supabase/client');
 
-=======
-=======
 
   }, []);
 
@@ -185,22 +171,16 @@ function SalaryInsightsPage() {
           remote,;
           employmentType,;
         }),;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       });
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      const json = (await res.json()) as InsightResponse;
       setData(json)
     } catch (e: any) {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
 
-=======
-=======    } catch (e: any) {;
       setError(e && e.message || 'Unexpected error');
     } finally {;
       setLoading(false);    }      if (!res && res.ok) throw new Error('Failed to fetch insights');
@@ -248,18 +228,14 @@ const { supabase } = await import('../utils/supabase/client');
       }
       output: data
     };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data }
-=======
-=======  useEffect(() => {;=======
 
       setLoading(false);    }
 
 
 
-=======
     }
   }
   useEffect(() => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -292,18 +268,13 @@ const { supabase } = await import('../utils/supabase/client');
             user_id: user && user.data.user && user.id,;
             payload,;
 
-=======
-=======            user_id: user.data.user.id,
             payload});
           alert('Insight saved to your profile');
           return
-=======
       } catch {
         // fall back      }          alert ('Insight saved to your profile');
           return;
 
-=======
-=======
 
 
       } catch {}
@@ -315,8 +286,6 @@ const { supabase } = await import('../utils/supabase/client');
                   <option value="contract">Contract</option>
                   <option value="freelance">Freelance</option>
                   <option value="full-time">Full-time</option>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div>      { label: 'Above Median', value: upper || 1 }];
   }, [data]);
   return (
@@ -405,8 +374,6 @@ const { supabase } = await import('../utils/supabase/client');
               </div>;
             </div>;
             <div className='flex items-center gap-2 mt-3'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <input
                 id='remote'
                 type='checkbox'
@@ -416,15 +383,11 @@ const { supabase } = await import('../utils/supabase/client');
             </div>
 
 
-==============
 
 
-=======            <button onClick={fetchInsights} disabled={loading} className="mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50">
 
               {loading ? 'Calculating…' : 'Update Insights'}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <button
                 onClick={saveInsight}
                 className='rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900'>;
@@ -443,17 +406,14 @@ const { supabase } = await import('../utils/supabase/client');
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
-=======            </div>
           </div>
         </div>
         <div className="lg:col-span-2 space-y-6">
           {error && (
             <div className="rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm">{error}</div>
           )}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Recommended Hourly</div>;
@@ -501,10 +461,8 @@ const { supabase } = await import('../utils/supabase/client');
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
                       </tr>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </tbody>;
                 </table>;
@@ -560,7 +518,6 @@ const { supabase } = await import('../utils/supabase/client');
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <h3 className='font - medium mb - 3'>Distribution</h3>;
 
-=======            </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? (
@@ -584,28 +541,22 @@ const { supabase } = await import('../utils/supabase/client');
           )}
 
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-=======
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
-=======
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
           {data?.gptRecommendation && (
 
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </div>;
           </div>;
           {data?.gptRecommendation && (;
@@ -628,8 +579,6 @@ const { supabase } = await import('../utils/supabase/client');
                   Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr;
                 </span>;
                 {data && data.tags.map(t => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <span
                     key={t}
                     className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
@@ -642,10 +591,7 @@ const { supabase } = await import('../utils/supabase/client');
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
               </div>;
             </div>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Signals</h3>
               <div className="flex gap-2 flex-wrap">
@@ -661,7 +607,6 @@ const { supabase } = await import('../utils/supabase/client');
 
 
 
-<<<<<<< HEAD
               </div>
             </div>
           )}
@@ -672,7 +617,3 @@ const { supabase } = await import('../utils/supabase/client');
 }
 
           {data && (
-=======
-            </div>
-          )}
-

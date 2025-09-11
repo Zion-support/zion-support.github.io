@@ -6,8 +6,6 @@
   paymentStatus: "paid" | "pending" | "overdue"
 
   amount: string
-=======
-=======import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
@@ -96,8 +94,6 @@ interface ProjectViewProps {
     });
     navigate(`/call/${roomId}`)
   }
-=======
-=======
 
 
 interface Milestone {
@@ -116,8 +112,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
     const roomId = `project-${project.id}`;
     toast.success("Starting project call", {
       description: "Initializing video connection..."
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     });
     navigate(`/call/${roomId}`)
   }    }),
@@ -125,7 +119,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
     navigate(`/call/${roomId}`)
   },
   
-=======
   const messageClient = () => {
     toast.info("Opening message thread with client", {
       description: `Messaging ${project.client.name}...`
@@ -135,7 +128,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   },
   
 
-=======  return (
     <div className="space-y-6 px-4 pb-24">
       <Card>
         <CardContent className="p-4">
@@ -222,11 +214,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                   </div>
                   <Badge
                     variant={
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       milestone.paymentStatus === "paid" ? "default" : 
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
-=======
 
                     }
                   >
@@ -256,8 +246,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                  </Badge>;
                 </div>;
                 <div className="pl-7">;
                   <div className="flex justify-between text-sm">;
@@ -282,18 +270,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>;
               </CardContent>;
             </Card>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ))}
         </div>
       </section>
     </div>
   )
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProjectViewProps {;
   project: {;
     id: string,;
@@ -383,7 +366,6 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
   },;
   ;
   return (;
-=======
 
   return (    <div className="space-y-6 px-4 pb-24">;
       <Card>;
@@ -475,7 +457,6 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
         </div>;
       </section>;
     </div>;
-<<<<<<< HEAD
   ),;}
  interface Milestone {
   id: string;
@@ -501,24 +482,6 @@ const messageClient = () => {
 }</div> </section> </div>) 
 }
 }
-<<<<<<< HEAD
-=======
-=======
-  );
-}=======
-      name: string,
-      avatar?: string;
-    }
-    start_date: string,
-    end_date?: string;
-    status: string,
-    total_amount: string,
-    progress: number,
-    description: string;
-  }
-  milestones: Milestone[];
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * MobileProjectView - Function description
  */
@@ -660,8 +623,3 @@ function MobileProjectView() {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

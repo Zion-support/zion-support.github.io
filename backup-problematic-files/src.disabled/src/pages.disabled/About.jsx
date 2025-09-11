@@ -9,8 +9,4 @@ const About = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default About;
-=======
-export default About;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

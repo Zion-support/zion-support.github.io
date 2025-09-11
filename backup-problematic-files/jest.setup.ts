@@ -38,7 +38,6 @@ Object.define_property (window, 'match_media', {
     dispatch_event: jest.fn (),
   })),
 });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
   observe: jest && jest.fn(),
   unobserve: jest && jest.fn(),
@@ -73,7 +72,6 @@ afterAll(() => {
   console && console.warn = originalConsoleWarn;
 
 });
-=======;
 // Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn ().mock_implementation (() => ({
   observe: jest.fn (),
@@ -113,6 +111,3 @@ after_all (() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
-<<<<<<< HEAD
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

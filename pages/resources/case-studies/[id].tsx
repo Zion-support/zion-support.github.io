@@ -67,15 +67,8 @@ import { useRouter } from 'next/router';
       `
     }
 
-=======
-=======
 
-=======
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -258,15 +251,11 @@ export default function CaseStudyResourcePage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!caseStudy) {
     return (
       <>
@@ -283,8 +272,6 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -295,12 +282,10 @@ export default function CaseStudyResourcePage(req, res) {
         </div>
       </>
     )
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -315,8 +300,6 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -330,12 +313,8 @@ export default function CaseStudyResourcePage(req, res) {
   );
 };
   )
-=======
-=======
-=======
 }
 
-=======
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
       full_content: `;
         <h2 > Executive Summary</h2>;
@@ -414,15 +393,5 @@ if ( {) {
   }
 }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

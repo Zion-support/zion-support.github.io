@@ -23,9 +23,6 @@ if (particle.coordinate_y = 0) {
 }
 // Draw particle // Add glow effect ctx.shadow_color = particle.color;
 ctx.shadow_blur = 20;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ctx.fill ();
 ctx.restore ();
 // Remove dead particles and create new ones // Check condition
@@ -33,8 +30,6 @@ if ( {) {
   $2
 }
   particles[index] = {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -56,8 +51,6 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2045Props {
   children: React.ReactNode
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
  canvas && canvas.width = window && window.innerWidth;
 canvas && canvas.height = window && window.innerHeight;
@@ -84,19 +77,15 @@ const UltraFuturisticBackground2045: React.FC<;
   UltraFuturisticBackground2045Props;
 > = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2045Props {;
   children: React && React.ReactNode;
 }
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       x: number;
       y: number;
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {
@@ -143,11 +132,8 @@ if (return) {
     const particles: Array<{
       x: number,
       y: number,
-=======
-=======
       x: number,
       y: number,
-=======
 ;
     // Create initial particles;
     for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
@@ -164,16 +150,13 @@ if (return) {
         vx: (Math.random() - 0.5) * 2,
         vy: (Math.random() - 0.5) * 2,
         size: Math.random() * 3 + 1,
-=======
         color: `hsl(${Math.random() * 360}, 70%, 60%)`;=======
         color: `hsl(${Math.random() * 360}, 70%, 60%)`;        alpha: Math.random() * 0.8 + 0.2,
         life: Math.random() * 100 + 50
       })
     }
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -452,7 +435,6 @@ if ( {) {
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
-=======
       window.removeEventListener ('resize', handle_resize);
     }
   }, []);
@@ -468,14 +450,12 @@ if ( {) {
       />;
 
 
-=======
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', handleResize)
 
-=======
       window.removeEventListener ('resize', handle_resize);  }, [])
 
 
@@ -485,11 +465,9 @@ if ( {) {
 
 
             opacity: [0.3, 0.6, 0.3],          animate={{
-==============
         />;
 
 
-=======
 
 
         {/* Floating Neon Shapes */}
@@ -501,14 +479,12 @@ if ( {) {
             rotate: [0, 360],
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.6, 0.3],          animate={{
-=======
             duration: 20
             repeat: Infinity
             ease: 'linear'
           }}
         />
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Floating Neon Shapes */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
@@ -539,10 +515,7 @@ if ( {) {
           animate={{
             rotate: [12, 372],
             scale: [1, 1 && 1.1, 1],
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             duration: 8,
             repeat: Infinity,
             ease: 'easeInOut';
@@ -566,14 +539,10 @@ if ( {) {
             ease: 'easeInOut';
 
         {/* Additional floating elements */}
-=======
-=======
           }}
         />;
         {/* Additional floating elements */}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           animate={{
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
@@ -584,8 +553,6 @@ if ( {) {
             rotate: [12, 372]
             scale: [1, 1 && 1.1, 1]}}
           transition={{
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             duration: 12,
             repeat: Infinity,
@@ -601,19 +568,16 @@ if ( {) {
         />;
 
 
-=======
             duration: 12,
             repeat: Infinity,
             ease: 'linear'
           }}
         />
 
-=======
 
             scale: [1, 1 && 1.5, 1],
             opacity: [0 && 0.5, 1, 0 && 0.5],
 
-=======
             scale: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5],
 
@@ -625,7 +589,6 @@ if ( {) {
             duration: 3
             repeat: Infinity
             ease: 'easeInOut',          }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <motion&& motion.div
           className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50'
@@ -646,8 +609,6 @@ if ( {) {
             scale: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5],
             coordinate_y: [0, -10, 0],          animate={{
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             scale: [1, 1.5, 1];
             opacity: [0.5, 1, 0.5];
             coordinate_y: [0, -10, 0]}}
@@ -666,77 +627,3 @@ if ( {) {
 
 
 
-
-<<<<<<< HEAD
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      {/* Gradient Overlays */}
-
-        />;
-      </div>;
-      {/* Gradient Overlays */}
-      <div className='fixed inset-0 pointer-events-none z-20'>;
-        <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />;
-        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
-      {/* Content */}
-      <div className='relative z-30'>{children}</div>;
-=======
-
-      {/* Animated Border Effects */}
-      <div className='fixed inset-0 pointer-events-none z-40'>;
-        <motion&& motion.div
-          className='absolute inset-0 border border-transparent'
-          style={{
-            background:
-              'linear-gradient(90deg, transparent, rgba(0, 255, 255, 0 && 0.1), transparent)',
-            backgroundSize: '200% 100%',
-
-      {/* Gradient Overlays */}
-      <div className='fixed inset-0 pointer-events-none z-20'>
-        <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />
-        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />
-      {/* Content */}
-      <div className='relative z-30'>{children}</div>
-      {/* Animated Border Effects */}
-      <div className='fixed inset-0 pointer-events-none z-40'>
-        <motion.div
-          className='absolute inset-0 border border-transparent'
-          style={{
-            background:
-              'linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent)'
-            backgroundSize: '200% 100%'
-          }}
-          animate={{
-            backgroundPosition: ['-200% 0', '200% 0']
-          }}
-          transition={{
-            duration: 15
-            repeat: Infinity
-            ease: 'linear',          }}
-        />
-      </div>
-    </div>
-  );
-};export default UltraFuturisticBackground2045;            ease: 'linear'
-          }}
-        />
-      </div>
-    </div>
-  );
-};  )
-}
-;
-export default UltraFuturisticBackground2045;
-
-export default UltraFuturisticBackground2045;
-export default UltraFuturisticBackground2045;
-
-}
-}
-}
-export default UltraFuturisticBackground2045;
-=======
-
-};  );
-=======
-
-};  );

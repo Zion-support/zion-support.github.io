@@ -2,10 +2,6 @@
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Language {
 
   code: string
@@ -20,8 +16,6 @@ const languages: Language[] = [
   { code: "fr", name: "Français", flag: "🇫🇷" }
   { code: "de", name: "Deutsch", flag: "🇩🇪" }
   { code: "zh", name: "中文", flag: "🇨🇳" }]
-=======
-=======import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {useTheme} from "@/hooks/useTheme";
 import {Moon, Sun, Check} from "lucide-react";
@@ -45,7 +39,6 @@ export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme();
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-=======
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   const { theme, setTheme } = useTheme(),
@@ -63,14 +56,9 @@ export function LanguageThemeSelector() {;
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? "border-primary bg-primary/5"
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
-=======
-=======                  <Check className="h-4 w-4 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useTheme } from "@/hooks/useTheme",;
@@ -92,8 +80,6 @@ export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="space-y-8 px-4">;
       <div className="space-y-2">;
         <h2 className="text-xl font-medium">Select your language</h2>;
@@ -123,12 +109,9 @@ export function LanguageThemeSelector() {;
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
 
-=======
-=======
 
 
 
-=======import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
 import { Moon, Sun, Check } from './lucide-react';
@@ -213,8 +196,6 @@ function LanguageThemeSelector() {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </div>);
 }
@@ -248,13 +229,5 @@ flag: string
   );
 }
 ;
-=======}=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

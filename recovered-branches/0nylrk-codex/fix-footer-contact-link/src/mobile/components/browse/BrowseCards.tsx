@@ -2,8 +2,6 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React, { useState } from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -22,26 +20,20 @@ import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
   match?: number;
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-=======
-=======
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface BrowseItem {;
   id: string,;
   title: string,;
   subtitle: string,;
   description: string,;
-=======
 import React, { useState } from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-=======
 interface BrowseItem {
   id: string,
   title: string,
@@ -73,11 +65,9 @@ interface BrowseItem {
 
 
                 <button
-=======
 
                 <button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -87,7 +77,6 @@ interface BrowseItem {
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
 
-=======
 
                 </button>;
               </div>;
@@ -127,7 +116,6 @@ interface BrowseItem {
                 {item && item.match && (;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
                     {item && item.match}% match;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 )}
               </div>;
@@ -148,7 +136,6 @@ interface BrowseItem {
   );
 }
 
-=======  time_posted?: string;
 }
 interface BrowseCardsProps {
   items: BrowseItem[],
@@ -244,8 +231,6 @@ function BrowseCards() {
         </Card>))}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface BrowseItem {
   id: string;
@@ -336,9 +321,3 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
     </div>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

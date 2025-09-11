@@ -443,7 +443,6 @@ export default function CybersecurityServices() {
   }
 }
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
-=======              >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
                 </div>
@@ -457,7 +456,6 @@ export default function CybersecurityServices() {
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
@@ -497,7 +495,6 @@ export default function CybersecurityServices() {
       <section className='py-20 bg-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
 
-=======
 
       {/* Detailed Services */}
       <section className="py-20 bg-black">
@@ -510,7 +507,6 @@ export default function CybersecurityServices() {
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Security</span> Portfolio
@@ -562,17 +558,13 @@ export default function CybersecurityServices() {
                       <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         Popular
                       </span>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
-=======
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                                     <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-red-400">
@@ -597,7 +589,6 @@ export default function CybersecurityServices() {
                   </div>
                   <div className="flex items-center justify-between">
                     <Link href={service.link} className="text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group">
-=======
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
@@ -628,17 +619,11 @@ export default function CybersecurityServices() {
 
                     <Link href="/contact" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
                       Get Protected
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Link>
                   </div>
                 </div>
               </motion.div>
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -646,19 +631,16 @@ export default function CybersecurityServices() {
 }
 
           </div>;
-=======
         </div>;
       </section>;
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
 
-=======
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -670,7 +652,6 @@ export default function CybersecurityServices() {
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
 
-=======
 
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -683,7 +664,6 @@ export default function CybersecurityServices() {
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
@@ -696,9 +676,7 @@ export default function CybersecurityServices() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-=======
 
-=======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -710,23 +688,18 @@ export default function CybersecurityServices() {
             {benefits.map((benefit, index) => (              <motion.div
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
@@ -741,7 +714,6 @@ export default function CybersecurityServices() {
                   {benefit && benefit.description}
                 </p>              </motion && motion.div>;
             ))}
-=======
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
               </motion.div>
@@ -758,7 +730,6 @@ export default function CybersecurityServices() {
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>;
         <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -794,7 +765,6 @@ export default function CybersecurityServices() {
               <div>
                 <div className="text-3xl font-bold text-red-400 mb-2">450%</div>
                 <div className="text-gray-300">ROI Improvement</div>
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>
         <div className='container mx-auto px-4 text-center'>          <motion.div
@@ -810,7 +780,6 @@ export default function CybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
           </div>;
         </div>;
@@ -819,7 +788,6 @@ export default function CybersecurityServices() {
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>;
         <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
 
-=======
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20">
@@ -832,7 +800,6 @@ export default function CybersecurityServices() {
             viewport={{ once: true }}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
@@ -843,12 +810,8 @@ export default function CybersecurityServices() {
               <Link href="/contact" className="group">
                 <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <span>Start Your Security Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -857,12 +820,8 @@ export default function CybersecurityServices() {
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -871,18 +830,13 @@ export default function CybersecurityServices() {
 
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-=======
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div>
                 <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>
                 <div className="text-gray-300">Security Monitoring</div>
@@ -899,15 +853,11 @@ export default function CybersecurityServices() {
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
 
-=======  )
 }
-=======
 
 
-=======
   )
 }=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link href='/contact' className='group'>;
                 <button className='bg - gradient - to - r from - red - 500 to - pink - 600 hover:from - red - 600 hover:to - pink - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
@@ -978,7 +928,6 @@ export default function CybersecurityServices() {
                 <div className="text-3xl font-bold text-red-400 mb-2">450%</div>;
                 <div className="text-gray-300">ROI Improvement</div>;
               </div>;
-=======            </div>;
           </motion.div>;
         </div>;
       </section>;
@@ -994,16 +943,5 @@ export default function CybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

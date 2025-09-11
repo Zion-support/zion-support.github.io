@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
   return (
     <>
-=======
 
   return (
     <>;      <SEO
@@ -109,7 +106,6 @@ import React from 'react';
   );
 
 
-=======export default function RAGEvaluationLabPage() {
 	return (
 		<>
 			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
@@ -256,7 +252,6 @@ export default function RAGEvaluationLabPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======						].map((f) => (;
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
@@ -285,7 +280,3 @@ export default function RAGEvaluationLabPage(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

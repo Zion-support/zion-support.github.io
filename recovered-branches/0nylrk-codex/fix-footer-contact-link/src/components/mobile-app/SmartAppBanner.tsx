@@ -4,25 +4,17 @@ import {X, ArrowRight} from "lucide-react";
 import {Link} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
   appName?: string;
-=======
 interface SmartAppBannerProps {
   app_name?: string;
-=======
-=======
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SmartAppBannerProps {
   app_name?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   appName = "Zion Marketplace";
   appIconSrc;
   appStoreUrl = "/download";
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-=======
 
 
 
@@ -69,7 +61,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   }
   },
   
-==============
   const dismissBanner = () => {
     setIsVisible(false);
     localStorage.setItem("smartBannerDismissed", "true")
@@ -90,7 +81,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     ) : null
   }
   // Detect iOS or Android
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   appName = "Zion Marketplace";
@@ -194,26 +184,20 @@ export const SmartAppBanner:React.FC<SmartAppBannerProps> = ({;
   const bannerLink = isIOS ? appStoreUrl :googlePlayUrl,;
   ;
   return (;
-=======
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
       <div className="flex items-center">;
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">;
           {appIconSrc ? (;
             <img src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md" />;
 };
-=======
-==============
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
 
-=======
 
 };
 
-=======},
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;
 import { Link } from "react-router-dom",;
@@ -274,11 +258,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
         </div>;
-=======
 
         </div>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="flex-1">;
           <h4 className="font-semibold text-white">{appName}</h4>;
           <p className="text-xs text-gray-300">Get our app for the best experience</p>;
@@ -294,7 +276,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 export default SmartAppBanner;
 
 
-<<<<<<< HEAD
   ),;
 },; interface SmartAppBannerProps {
   appName?: string;
@@ -321,7 +302,3 @@ const isMobile = useIsMobile ();
 }//Detect iOS or Android) : (<div className="text-zion-cyan font-bold text-lg" >Z</div>) 
 }</div> </div> <div className="flex items-center gap-3" > <Link to="/open-app" className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium" > View <ArrowRight className="w-3 h-3 ml-1" /> </Link> </button> </div> </div> </div>) 
 };
-=======  );
-};
-
-export default SmartAppBanner;

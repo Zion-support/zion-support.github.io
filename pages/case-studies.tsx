@@ -24,11 +24,9 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-=======
 import React from 'react';
 
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { motion } from 'framer-motion';
 
 
@@ -109,7 +107,6 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
-=======
 import {;
   ArrowRight,;
   Phone,;
@@ -146,7 +143,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 const caseStudies = [;
   {;
     id: 1,;
@@ -207,7 +203,6 @@ const stats = [;
   { number: "500+", label: "Projects Completed" },;
   { number: "50+", label: "Happy Clients" },;
   { number: "99 && 99.9%", label: "Success Rate" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { number: "24/7", label: "Support Available" }
 ];
 
@@ -241,19 +236,14 @@ const stats = [;
         </section>;
 
 
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ArrowRight,
   Phone,
   Mail,
@@ -629,15 +619,10 @@ export default function CaseStudiesPage() {;
 
 
 
-==============
 
-=======
 import Head from 'next/head';
 
 
-=======
-=======
-=======import Head from 'next/head';
 
 
 
@@ -900,8 +885,6 @@ import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 export default function CaseStudiesPage() {
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     key={study.id}
                     className="bg - white rounded - lg shadow - lg overflow - hidden";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1006,7 +989,6 @@ export default function CaseStudiesPage() {
                           <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />;
                           <h4 className="text-xl font-semibold mb-2">Project Overview</h4>;
                           <p className="text-green-100">;
-=======
                           </span>;
                           <span className="text - gray - 500 text - sm">{study.duration}</span>;
                         </div>;
@@ -1106,8 +1088,6 @@ export default function CaseStudiesPage() {
 
   );
 }
-=======
-=======
 import Head from 'next/head';
 
 
@@ -1123,29 +1103,19 @@ export default function CaseStudiesPage() {;
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
-=======
 import Head from 'next/head';
 
 
-=======
-=======
-=======
 import Head from 'next/head';
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
  </Head> </section> </Layout>
-=======
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 	return (
 		<Layout>
 			<Head>
@@ -1171,7 +1141,6 @@ export default function CaseStudiesPage() {
       </section>;
     </Layout>;
   );
-==============
 
 
 }
@@ -1200,15 +1169,5 @@ export default function CaseStudiesPage(req, res) {
   }
 }
 ;
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

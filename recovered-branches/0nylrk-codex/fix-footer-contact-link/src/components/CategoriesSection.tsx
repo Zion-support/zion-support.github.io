@@ -19,9 +19,7 @@ const categories = [;
     description: "Rent or buy specialized hardware, servers, and devices";
 
 
-=======
 
-=======
 
 
 const categories = [
@@ -56,18 +54,13 @@ interface CategoriesSectionProps {
   {
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 const categories = [;
   {;
     title: "Services",;
     description: "On-demand IT support, consulting, development, and more";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const specialServices = [;
   {;
     title: "IT Onsite Services",;
@@ -119,23 +112,18 @@ interface CategoriesSectionProps {;
 ;
 export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {;
   return (;
-=======
-=======
   }
 ];
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
   return (=======
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         {showTitle && (;
@@ -221,8 +209,6 @@ function CategoriesSection() {
             </Link>;
           ))}
         </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <div className="mt-8">;
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>;
           <div className="flex flex-wrap justify-center gap-4">;
@@ -308,20 +294,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             to="/categories";
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors";
           >;
-=======
-=======              </Link>;
             ))}
-=======
 
 };
-=======          </div>;
         </div>;
 
         <div className="mt-12 flex justify-center">;
           <Link
             to="/categories" 
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors">;
-=======
               </Link>))}
           </div>;
         </div>;
@@ -330,7 +311,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             to="/categories";
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors";
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ;
     </section>;
   );}
@@ -377,16 +357,8 @@ interface CategoriesSectionProps {
 }
 ;
 ;
-=======
-=======    </section>);
 }
 
-=======
 
 
 ;
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

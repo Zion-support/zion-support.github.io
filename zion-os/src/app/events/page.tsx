@@ -1,6 +1,4 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
 import Link from "next/link";
 export const metadata = {title: "Events - Zion Tech Group | Conferences, Webinars & Workshops";
   description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.";
@@ -99,18 +97,13 @@ export default function EventsPage() {;
               <p className="text - gray - 400 mb - 4 leading - relaxed">;
                 Hands - on workshop covering the basics of quantum computing, qubits,
 
-=======
                 Hands-on workshop covering the basics of quantum computing, qubits;                Hands-on workshop covering the basics of quantum computing, qubits,;
 
-<<<<<<< HEAD
               <p className="text - gray - 400 mb - 4 leading - relaxed">;
                 Hands - on workshop covering the basics of quantum computing, qubits,
               <p className="text-gray-400 mb-4 leading-relaxed">;
                 Hands-on workshop covering the basics of quantum computing, qubits;
                 Hands-on workshop covering the basics of quantum computing, qubits,;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and quantum algorithms for beginners and intermediate developers.;
               </p>;
               <div className="flex items - center text - sm text - gray - 400 mb - 4">;

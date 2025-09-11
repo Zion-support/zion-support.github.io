@@ -5,8 +5,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers()
     if (req.method === 'GET') {
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -28,7 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         lessonId,
         percent,
       } = req && req.body || {};
-=======
     if (req && req.method === 'GET') {
       const { userId = 'demo-user' } = req && req.query;
 
@@ -253,7 +250,6 @@ export default function handler(req, res) {
 
 }
 }
-=======
     if (req && req.method === 'GET') {
       const { userId = 'demo-user' } = req && req.query;
 
@@ -261,13 +257,10 @@ export default function handler(req, res) {
 
 
   }
-=======
-=======
 
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
         course_progress.completed_lessons.push (lesson_id);
       }
@@ -278,7 +271,3 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

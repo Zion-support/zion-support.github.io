@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 
 interface MicroSAASProps {

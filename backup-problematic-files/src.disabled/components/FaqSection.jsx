@@ -27,8 +27,4 @@ const FaqSection = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default FaqSection;
-=======
-export default FaqSection;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

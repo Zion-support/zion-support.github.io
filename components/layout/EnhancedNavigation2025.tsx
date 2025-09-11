@@ -1,12 +1,10 @@
 
 
-======='use client';
 
 
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -373,7 +371,6 @@ const contactInfo = {
 };
 export default function EnhancedNavigation2025() {
 
-=======
   }, []);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -412,27 +409,8 @@ export default function EnhancedNavigation2025() {
                   <button
 
 
-=======
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  {/* Submenu */}
-                  <AnimatePresence>;
-                    {activeSubmenu === item && item.name && (;
-                      <motion&& motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0 && 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
-                        <div className="p-6">;
-                          {item && item.submenu?.map((subitem) => (;
-
-=======
 
 
                   {/* Submenu */}
@@ -446,7 +424,20 @@ export default function EnhancedNavigation2025() {
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
                         <div className="p-6">;
                           {item && item.submenu?.map((subitem) => (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
+                  {/* Submenu */}
+                  <AnimatePresence>;
+                    {activeSubmenu === item && item.name && (;
+                      <motion&& motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0 && 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
+                        <div className="p-6">;
+                          {item && item.submenu?.map((subitem) => (;
                             <Link
                               key={subitem && subitem.name}
                               href={subitem && subitem.href}
@@ -464,13 +455,10 @@ export default function EnhancedNavigation2025() {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
-=======
-=======
             </div>
 
             </div>;
 
-=======
 
 
 
@@ -480,7 +468,6 @@ export default function EnhancedNavigation2025() {
             </div>;
 
 
-=======
             </button>;
           </div>;
         </div>;
@@ -497,7 +484,6 @@ export default function EnhancedNavigation2025() {
                         <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
                           {item.badge}
                         </span>
-=======
 
 
 
@@ -514,7 +500,6 @@ export default function EnhancedNavigation2025() {
                         <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
                           {item && item.badge}
                         </span>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       )}
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -525,14 +510,12 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -555,8 +538,6 @@ export default function EnhancedNavigation2025() {
 
 
 
-=======
-=======                        onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
                       >;
                         <div className="flex items-center space-x-3">;
@@ -569,32 +550,24 @@ export default function EnhancedNavigation2025() {
                       </button>;
 
 
-=======
 
 
 
 
 
                 </div>;
-=======
-=======
                 </div>;
 
 
-=======
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">;
                     Contact Us;
                   </Link>;
                 </div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">;
                   <div className="space-y-3 text-sm">;
@@ -752,7 +725,6 @@ className="ml - 8 mt - 2 space - y-2";
               </div>;
             </div>;
 
-=======
 
 
       {/* Spacer for fixed navigation */}
@@ -768,15 +740,10 @@ className="ml - 8 mt - 2 space - y-2";
     </>;
   );
 };
-=======          </motion.div>)}
       </AnimatePresence>;
-=======
 
-=======
           </motion.div>)}
       </AnimatePresence>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             className="ml-8 space-y-2"
                           >
                             {item.submenu?.map((subitem) => (
@@ -841,9 +808,4 @@ className="ml - 8 mt - 2 space - y-2";
       <div className="h - 20" />;
     </>);
 }
-=======
-<<<<<<< HEAD
 ;>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

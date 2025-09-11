@@ -9,8 +9,4 @@ const ServiceInnovationHub.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ServiceInnovationHub.js;
-=======
-export default ServiceInnovationHub.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

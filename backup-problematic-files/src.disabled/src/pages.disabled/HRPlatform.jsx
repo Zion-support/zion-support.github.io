@@ -9,8 +9,4 @@ const HRPlatform = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default HRPlatform;
-=======
-export default HRPlatform;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,6 +1,5 @@
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
@@ -8,7 +7,6 @@ import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 
 
 
-=======export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()  if (req.method === "GET") {
 
@@ -16,7 +14,6 @@ import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
   }
 
 
-=======
 
 
   if (req.method === "POST") {
@@ -43,8 +40,6 @@ import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
     if (scope) state.config.scope = scope
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId
     writeState(state)
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    return res.status(200).json({ config: state.config })
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -222,7 +217,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 ;
-==============  return res.status(405).json({ error: "Method not allowed" });
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -238,13 +232,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 }
-=======
-=======
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

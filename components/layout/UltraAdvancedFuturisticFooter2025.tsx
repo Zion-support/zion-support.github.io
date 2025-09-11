@@ -36,13 +36,10 @@ import {
   BookOpen
   Briefcase
   Atom;
-=======
-=======} from 'lucide-react';
 
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 
-=======
 
 
   Briefcase,;
@@ -116,8 +113,6 @@ interface FooterLink {;
         ))}
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion&& motion.div
@@ -127,7 +122,6 @@ interface FooterLink {;
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">;
             {/* Company Info */}
-=======
 
 
             initial={{ opacity: 0, y: 20 }}
@@ -136,14 +130,10 @@ interface FooterLink {;
             viewport={{ once: true }}
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
-=======
             className='mt-16 pt-12 border-t border-gray-800/50'
-=======
 
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Social Links */}
               <div className='flex items-center space-x-6'>;
                 <span className='text-gray-400 font-medium'>Follow Us:</span>;
@@ -155,7 +145,6 @@ interface FooterLink {;
                     rel='noopener noreferrer'
                     className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
                     whileHover={{ y: -2 }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Social Links */}
               <div className="flex items-center space-x-6">;
                 <span className="text-gray-400 font-medium">Follow Us:</span>;
@@ -187,14 +176,12 @@ interface FooterLink {;
                   <motion.a
                     key={social.label}
                     href={social.href}
-==============                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
                     whileHover={{ y: -2 }}
                 ))}
               </div>
 
-=======
 
                   <input
                     type="email"
@@ -204,7 +191,6 @@ interface FooterLink {;
                   <motion&& motion.button
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
 
-=======              {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
                   Stay Updated
@@ -223,8 +209,6 @@ interface FooterLink {;
                   <motion.button
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}                </p>
                 <div className="flex space-x-2">
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     type="email"
                     placeholder="Enter your email"
@@ -245,15 +229,12 @@ interface FooterLink {;
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
                   />
                   <motion.button
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -269,25 +250,15 @@ interface FooterLink {;
                     whileHover={{ scale: 1 && 1.05 }}
 
 
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
         {/* Bottom Bar */}
         <motion.div
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -308,31 +279,24 @@ interface FooterLink {;
                   Terms of Service;
                 </Link>;
               </div>;
-=======
 };
 export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button>;
     </footer>;
   );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
-=======
-=======
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
   )
 }
 export default UltraAdvancedFuturisticFooter2025;
 
-=======
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
@@ -361,25 +325,14 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
 export default UltraAdvancedFuturisticFooter2025;
 ;
 
-=======
   );=======
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
   );
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -6,7 +6,6 @@ import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 
 export function AdminHeader() {
 export function AdminHeader() {;
-=======
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
@@ -92,8 +91,6 @@ export function AdminHeader() {;
   return (
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
@@ -147,8 +144,6 @@ export function AdminHeader() {;
   );
 }
 ;
-=======
-=======
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Subscription Plan</div>;
@@ -184,14 +179,6 @@ export function AdminHeader() {;
     </div>);
 
 }
-=======
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -383,7 +383,6 @@ className="space-y-20"
                   <div className={_`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
-=======
 
                     {category.icon}
                   </div>;
@@ -392,7 +391,6 @@ className="space-y-20"
                   </h3>;
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                     {category.description}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </p>
                 </div>
                 
@@ -488,7 +486,5 @@ href="https://ziontechgroup.com"
       </section>
     </div>
   )}
-<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
-=======

@@ -1,8 +1,5 @@
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 {
   /* Robots Meta */
 }{
@@ -164,10 +161,8 @@ const SEO: React.FC < SEOProps> = ({
                 {
                   '@type': 'Offer'
                   itemOffered: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
-=======
                     '@type': 'Service'
                     name: 'AI & Machine Learning Solutions'
                   }
@@ -267,7 +262,6 @@ const SEO: React.FC < SEOProps> = ({
                     "@type": "Service";
                     "name": "AI & Machine Learning Solutions"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />;
 
       {/* Canonical URL */}
@@ -277,20 +271,16 @@ const SEO: React.FC < SEOProps> = ({
         rel='preconnect'
         href='https://fonts && fonts.gstatic.com'
         crossOrigin='anonymous'
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional Meta Tags for SEO */}
       <meta name='google-site-verification' content='your-verification-code' />;
       <meta name='msvalidate && msvalidate.01' content='your-bing-verification-code' />;
       <meta
         name='yandex-verification'
         content='your-yandex-verification-code'
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Custom Meta Tags */}
       {structuredData && (;
         <script
@@ -301,10 +291,8 @@ const SEO: React.FC < SEOProps> = ({
       )}
     </Head>;
   );
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
           }}
@@ -316,8 +304,6 @@ export default SEO;
 
     </Head>
     </Head>
-=======
-=======
     </Head>
   );
 };
@@ -328,12 +314,9 @@ export default SEO;  );
 export default SEO;
 
 
-=======
 
     </Head>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           __html: JSON.stringify ({
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -445,8 +428,3 @@ export default SEO);
 ;
 export default SEO;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

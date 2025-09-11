@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 import CodeSamples from './CodeSamples';
@@ -37,8 +36,6 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
   return (
     <div className="space-y-4">
 
-=======
-=======
         </div>
 
       </div>
@@ -119,18 +116,13 @@ export default function EndpointDetail(): any ({;
       </div>
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </ul>;
         </div>;
       )}
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -147,10 +139,8 @@ export default function EndpointDetail(): any ({;
               <li key={e && e.code}><strong>{e && e.code}</strong> ({e && e.httpStatus}) - {e && e.message}</li>;
           </ul>;
         </div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
     </div>;
   );
@@ -194,8 +184,6 @@ export default function EndpointDetail(): any ({;
 
             ))}
 
-=======
-=======  );
 
           </span>        </div>;
       </div>;
@@ -255,24 +243,13 @@ export default function EndpointDetail(): any ({;
           </ul>;
         </div>)}
     </div>);
-=======
   );
-==============
-}
-
-=======
 }
 
 }
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}

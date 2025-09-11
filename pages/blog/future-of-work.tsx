@@ -263,16 +263,12 @@ export default function FutureOfWork() {
   )
 }
 
-=======
 
 
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
 export default function FutureOfWork() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -280,11 +276,9 @@ export default /**
  * FutureOfWork - Function description
  */
 function FutureOfWork() {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-=======
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -299,7 +293,6 @@ function FutureOfWork() {
                 ← Back to Blog;
               </Link>;
             </nav>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <article className='prose prose-invert prose-lg max-w-none'>;
               <header className='mb-12 text-center'>;
                 <div className='flex items-center gap-3 justify-center mb-4'>;
@@ -320,7 +313,6 @@ function FutureOfWork() {
                 </p>;
               </header>;
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-=======              <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
                   Measuring Success;
                 </h2>;
@@ -879,7 +871,6 @@ export default function FutureOfWork(req, res) {
                     href='/services';
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300';
                   >;
-=======
                     Explore Solutions;
                   </Link>;
                 </div>;
@@ -895,16 +886,4 @@ export default function FutureOfWork(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 ;
-=======
-=======
-    </>);
-}=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -5,8 +5,6 @@ import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
-=======
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
@@ -15,28 +13,20 @@ interface CreateKeyRequest {
   scopes: string[]
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 }
 ;
 interface RegenerateKeyRequest {;
@@ -58,19 +48,14 @@ interface RegenerateKeyRequest {
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   expiresAt?: string | null
-=======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
 interface CreateKeyRequest {
   name: string;
   scopes: string[],
   expires_at?: string | null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 interface RegenerateKeyRequest {
   key_id: string;
@@ -78,7 +63,6 @@ interface RegenerateKeyRequest {
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
 
@@ -86,7 +70,6 @@ const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
     }
     // Verify the token with Supabase auth
 
-=======
       headers: { 'Content-Type': 'application/json' }})
   }
 });
@@ -97,14 +80,11 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
     
     const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: keyData });
     
-=======
       console && console.error('Error fetching API keys:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API keys' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     return new Response(JSON && JSON.stringify({ keys: data }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
@@ -112,8 +92,6 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
     console && console.error('Error in getUserApiKeys:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -143,8 +121,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
       console && console.error('Error updating API key:', updateError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to update API key' }), {
         status: 500,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the regenerated key
@@ -157,7 +133,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
     if (error || !data || data && data.length === 0) {
       console && console.error('Error revoking API key:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to revoke API key or key not found' }), {
-=======        scopes: scopes,
         expires_at: expires_at});
       .select ('id, name, key_prefix, scopes, created_at, expires_at, is_active');
 ;
@@ -312,8 +287,6 @@ if ( {) {
 }
       console.error ('Error revoking API key:', error);
       return new Response (JSON.stringify ({ error: 'Failed to revoke API key or key not found' }), {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
         status: error ? 500 : 404,
         headers: { 'Content - Type': 'application / json' }});
@@ -334,8 +307,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .eq('user_id', userId);
     if (keyError) {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -591,12 +562,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
@@ -606,7 +573,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 
     // Get logs for those keys
     const ids = keyIds.map(k => k.id);
-==============
 
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);    const { data: logs, error: logsError, count } = await supabase
@@ -616,15 +582,11 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       .order('created_at', { ascending: false })
       .range(offset, offset + limit - 1);
     if (logsError) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       console && console.error('Error fetching API logs:', logsError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     return new Response(JSON && JSON.stringify({ logs, count }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
@@ -633,11 +595,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
-==============
 
       headers: { 'Content-Type': 'application/json' }})
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response (JSON.stringify ({
       message: 'API key revoked successfully',
       key: data[0];
@@ -666,15 +625,9 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       headers: { 'Content-Type': 'application/json' }})
   }
 }
-=======
-==============
       headers: { 'Content-Type': 'application/json' }})
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 async /**
@@ -829,7 +782,6 @@ async function createApiKey(userId:string, name:string, scopes:string[], expires
       status:500,;
       headers:{ 'Content-Type':'application/json' }}),;
   }
-<<<<<<< HEAD
 }
 ;
 async function getUserApiKeys(userId:string) {;
@@ -1062,6 +1014,3 @@ async function createApiKey (userId: string, name: string, scopes: string[], exp
   }
 }
 ;
-=======
-}=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

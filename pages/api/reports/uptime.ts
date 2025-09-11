@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======const p = path.join(
   process.cwd()
   'data'
   'reports'
@@ -39,14 +38,12 @@ if (req.method === 'POST') {
       };
       fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
       return res && res.status(201).json(report);
-=======
 
       };
 
       fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
       return res && res.status(201).json(report);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update uptime report' });
     }
@@ -103,13 +100,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
-=======
 ;
       const report = {
         uptime: uptime || 0,
@@ -122,7 +116,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       return res.status (201).json (report);
     } catch (error) {
 }>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -130,13 +123,5 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
