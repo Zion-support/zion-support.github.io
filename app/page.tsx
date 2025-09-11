@@ -114,9 +114,9 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <ArticleCard
-              title='LLM Cost Optimization Playbook'
-              href='/blog/llm-cost-optimization-playbook'
-              description='Cut LLM spend 20–50% via routing, retrieval, batching, and observability.'
+              title='AI Marketing Content Engine 2025'
+              href='/blog/ai-marketing-content-engine-2025'
+              description='From brief to multi-channel campaign in hours, with governance built-in.'
             />
             <ArticleCard
               title='AI Governance Checklist 2025'

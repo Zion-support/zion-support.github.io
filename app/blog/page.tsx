@@ -11,6 +11,13 @@ type BlogPostMeta = {
 
 const posts: BlogPostMeta[] = [
 	{
+		title: 'AI Marketing Content Engine 2025: From Brief to Campaign in Hours',
+		slug: 'ai-marketing-content-engine-2025',
+		description:
+			'Design a governed content pipeline that turns strategy into multi-channel output fast.',
+		date: '2025-09-11',
+	},
+	{
 		title: 'LLM Cost Optimization Playbook: Cut Spend Without Losing Quality',
 		slug: 'llm-cost-optimization-playbook',
 		description:
