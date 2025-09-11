@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -14,12 +13,6 @@ import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import ContentPromoBanner, { contentPromoBanners } from '../components/ContentPromoBanner';
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-  keywords: 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
-};
 
 export default function HomePage() {
   return (
