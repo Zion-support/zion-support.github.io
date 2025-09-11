@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return (
 
@@ -74,26 +68,6 @@ export default function ClientDashboard(req, res) {
     </div>;
   );
 
-<<<<<<< HEAD
-import Link from 'next / link';
-;
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
-export default /**
- * ClientDashboard - Function description
- */
-function ClientDashboard() {
-  const { data, error, mutate } = useSWR ('/api / jobs', fetcher);
-;
-  // Check condition
-if (return <div className='text - red - 600'>Failed to load</div>) {
-  $2
-}  // Check condition
-if (return <div > Loading…</div>) {
-  $2
-}
-import useSWR from 'swr';
-import Link from 'next/link';
-
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
@@ -148,9 +122,7 @@ import Link from 'next/link';
 
 
   }
-  return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    <div className="space-y-4">
+  return (    <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Your Jobs</h1>
         <Link href="/post-job"><a className="px-3 py-2 rounded bg-black text-white text-sm">Post New Job</Link></Link>
@@ -233,23 +205,6 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-              </div>
-              <div className="flex gap-2">
-                <Link href={`/client/jobs/${job.id}/applicants`}><a className="px-2 py-1 text-sm border rounded">View Applicants</Link></Link>
-                <Link href={`/client/jobs/${job.id}/edit`}><a className="px-2 py-1 text-sm border rounded">Edit Job</Link></Link>
-                <button className="px-2 py-1 text-sm border rounded" onClick={() => closeJob(job.id)}>Close Job</button>
-              </div>
-            </div>
-          </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-);
-
 }
 =======
 =======
@@ -269,9 +224,7 @@ export default function ClientDashboard(req, res) {
 
 =======
   )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+}=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space - y-4'>;
       <div className='flex items - center justify - between'>;
@@ -328,15 +281,9 @@ export default function ClientDashboard(req, res) {
     </div>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </div>
@@ -345,32 +292,4 @@ export default function ClientDashboard(req, res) {
 }
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

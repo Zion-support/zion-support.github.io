@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import { _Link } from 'react-router-dom';
-
 import { Link } from 'react-router-dom';
 export function BlogSection() {
     const _blogPosts = [
@@ -10,9 +5,7 @@ export function BlogSection() {
 import React from 'react';
 import { Link } from 'react-router-dom';
 export function BlogSection() {
-    const blogPosts = [
->>>>>>> origin/clean-error-fixing-automation
-        {
+    const blogPosts = [        {
             id: '1',
             title: 'The Future of AI in Technology',
             excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
@@ -50,10 +43,5 @@ export function BlogSection() {
             </article>))}
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}
-
 =======
     </section>)}
->>>>>>> origin/clean-error-fixing-automation

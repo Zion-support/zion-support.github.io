@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 =======
@@ -16,9 +12,7 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
       router.push("/auth/signin");
     }
   }, [isAuthenticated, isLoading, router]);
-  if (isLoading) {return (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
+  if (isLoading) {return (;"use client",;
 import { useAuth } from "@/contexts/AuthContext",;
 import { useRouter } from "next/navigation",;
 import { useEffect } from "react",;
@@ -33,93 +27,10 @@ export default function DashboardPage() {;
   }, [isAuthenticated, isLoading, router]);
   if (isLoading) {;
     return (;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <div className="min-h-screen flex items-center justify-center">;
+=======      <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",
-import { use_auth  } from '@/contexts / AuthContext';,
-import { use_router  } from './next / navigation';,
-import { useEffect  } from './react';,
-import Link from './next / link';,
-export default /**
- * DashboardPage - Function description
- */
-function DashboardPage() {
-  const { user, is_authenticated, is_loading } = use_auth (),
-  const router = use_router ();
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      router.push ("/auth / signin");
-    }
-  }, [is_authenticated, is_loading, router]);
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="min - h-screen flex items - center justify - center">;
-        <div className="text - center">;
-          <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - blue - 500 mx - auto mb - 4"></div>;
-          <p className="text - zinc - 400">Loading...</p>;
-<<<<<<< HEAD
-"use client";
-import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import Link from "next/link";
-export default function DashboardPage() {const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
-  useEffect(() => {if (!isLoading && !isAuthenticated) {;
-      router.push("/auth/signin");
-    }
-  }, [isAuthenticated, isLoading, router]);
-  if (isLoading) {return (;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
-import { useAuth } from "@/contexts/AuthContext",;
-import { useRouter } from "next/navigation",;
-import { useEffect } from "react",;
-import Link from "next/link",;
-export default function DashboardPage() {;
-  const { user, isAuthenticated, isLoading } = useAuth(),;
-  const router = useRouter();
-  useEffect(() => {;
-    if (!isLoading && !isAuthenticated) {;
-      router.push("/auth/signin");
-    }
-  }, [isAuthenticated, isLoading, router]);
-  if (isLoading) {;
-    return (;
-      <div className="min-h-screen flex items-center justify-center">;
-        <div className="text-center">;
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
-          <p className="text-zinc-400">Loading...</p>;
-        </div>;
-      </div>);
-  }
-
-<<<<<<< HEAD
-          Welcome back, {user?.name || "User"}! 👋;
-
   if (!isAuthenticated) {return null;
   }
   if (!isAuthenticated) {return null;
@@ -166,11 +77,7 @@ if ( {) {
 
 =======
 
-          Welcome back, {user?.name || "User"}! 👋;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        </h1>;
+          Welcome back, {user?.name || "User"}! 👋;        </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
         </p>;
@@ -245,17 +152,8 @@ if ( {) {
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
             <p className="text - white">{user?.name || "Not provided"}</p>;
 
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
-<<<<<<< HEAD
-
-=======
-            <p className="text-white">{user?.name |"Not provided"}</p>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            <p className="text-white">{user?.name || "Not provided"}</p>;
+            <p className="text-white">{user?.name |"Not provided"}</p>;            <p className="text-white">{user?.name || "Not provided"}</p>;
 
 <<<<<<< HEAD
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;

@@ -18,9 +18,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-
 
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -38,9 +35,7 @@ const EnhancedNavigation = () =>: any {
           {/* Logo */}
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { Star } from 'lucide-react';
+=======import { Star } from 'lucide-react';
 const EnhancedNavigation = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
@@ -100,12 +95,6 @@ const EnhancedNavigation = () => {
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
           {/* Logo */}
-<<<<<<< HEAD
-            className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,15 +124,6 @@ const EnhancedNavigation = () => {
                 Careers
               </Link>
               <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
-<<<<<<< HEAD
-          {/* Logo */}
-          <Link href=&quot;/&quot; className=&quot;flex items-center space-x-2&quot;>
-            <div className=&quot;w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center&quot;>
-              <span className=&quot;text-white font-bold text-xl&quot;>Z</span>
-            </div>
-            <span className=&quot;text-xl font-bold text-gray-800&quot;>Zion Tech Group</span>
-          </Link>
-
           {/* Desktop Navigation */}
           <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
             <Link href=&quot;/&quot; className=&quot;text-gray-600 hover:text-blue-600 font-medium transition-colors&quot;>
@@ -385,18 +365,13 @@ const EnhancedNavigation = () => {
                 Careers
               </Link>
               <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                Contact
+=======                Contact
               </Link>
             </div>
           </div>
         )}
       </div>
     </nav>
-<<<<<<< HEAD
-
-
 );
 },
 export default EnhancedNavigation;
@@ -530,9 +505,7 @@ export default EnhancedNavigation;
 ;
 export default EnhancedNavigation;},
 export default EnhancedNavigation;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+;=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

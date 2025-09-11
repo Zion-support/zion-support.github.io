@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const CybersecurityBestPractices: NextPage = () => {
@@ -14,8 +9,6 @@ const CybersecurityBestPractices: NextPage = () => {
       </Head>
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -27,30 +20,8 @@ const CybersecurityBestPractices: NextPage = () => {
     </div>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <main>;
-        <h1>CybersecurityBestPractices</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  ),;
-};
-<<<<<<< HEAD
-export default CybersecurityBestPractices;
-<<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default CybersecurityBestPractices;
@@ -68,9 +39,6 @@ import Head from 'next / head';
 ;
 export default CybersecurityBestPractices;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
 export default CybersecurityBestPractices
@@ -86,9 +54,7 @@ export default CybersecurityBestPractices;
 },
 export default CybersecurityBestPractices,
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 

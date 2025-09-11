@@ -1,17 +1,5 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { slide } = req.body || {};
-  if (!slide) return res.status(400).json({ error: 'Missing slide' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../../utils/auth';
-import OpenAI from 'openai';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { ensureAdminFromApi } from '../../../../utils/auth',;
-import OpenAI from 'openai',;
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
-
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |process.env.NEXT_PUBLIC_OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req);
@@ -19,9 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
   const { slide } = req.body |{}
   if (!slide) return res.status(400).json({ error: 'Missing slide' })
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
@@ -33,9 +19,6 @@ Title: ${slide.title}\nContent:\n${slide.content}`
         model: 'gpt-4o-mini'
         messages: [
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   }
@@ -71,16 +54,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       // keep original if AI fails;
     }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     if (req.method === 'POST') {
       const { slide } = req.body;
       if (!slide) return res.status(400).json({ error: 'Slide required' });
-
-<<<<<<< HEAD
-      const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 Title: ${slide.title}
 Content:
@@ -109,15 +85,6 @@ ${slide.content}`;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    } catch (err) {
-      // keep original if AI fails;
-    }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 

@@ -558,10 +558,6 @@ export default function RetailSolutions() {;
       </div>
     </>
     </>
-<<<<<<< HEAD
-  );
-};
-
 export default Retail;
 =======
 <<<<<<< HEAD
@@ -570,4 +566,3 @@ export default Retail;
 };
 
 export default Retail;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

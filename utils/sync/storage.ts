@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 =======
-  lastSyncedAt: new Date().toISOString()
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
     );
   }
@@ -155,26 +149,7 @@ export function formatDuration(startTime: string, endTime?: string): string {
   return events;export function resetState(): void {
   state = { ...defaultState }
 
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { MultiverseState, InstanceConfig, SyncEvent } from './types';
-const defaultState: SyncState = {
-  config: {
-    instanceId: 'default-instance'
-    peers: []
-    scope: 'global'
-    optIn: false
-    paused: false
-  }
-  lastSyncedAt: new Date().toISOString()
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 const default_state: SyncState = {
   config: {
@@ -211,55 +186,7 @@ if ( {) {
   state.lastSyncedAt = Math.max (state.lastSyncedAt || 0, event.timestamp || 0);
   return state;
 ;
-<<<<<<< HEAD
-export function getEntityId(event: SyncEvent): string {;
-  switch (event.type) {;
-    case "proposal": return (event.payload as any).proposalId;
-    case "token_transfer":;
-      return (event.payload as any).txId;
-    case "talent_mobility":;
-      return (event.payload as any).personId + ":" + (event.payload as any).startDate;
-    case "dao_endorsement":;
-      return (event.payload as any).resolutionId;
-    case 'leaderboard_entry':
-      return (
-        (event.payload as any).subjectId + ':' + (event.payload as any).period
-      );
-    default:
-      return (event.payload as any).id |event.eventId;
-  }
-export function filterEventsByScope(
-  events: SyncEvent[]
-  scope: InstanceConfig['scope']
-): SyncEvent[] {;
-  if (scope === 'full') return events;
-  if (scope === 'dao') {
-    return events.filter(
-      e => e.type === 'proposal' |e.type === 'dao_endorsement'
-    );
-  }
-  if (scope === 'marketplace') {
-    return events.filter(
-      e =>
-        e.type === 'token_transfer' |
-        e.type === 'talent_mobility' |
-        e.type === 'leaderboard_entry'
-    );
-  }
-  return events;export function resetState(): void {
-  state = { ...defaultState }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const default_state: SyncState = {
@@ -271,21 +198,9 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
-<<<<<<< HEAD
-  return events;export function resetState(): void {;
-  state = { ...defaultState };
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-
 }
 }
 }
-<<<<<<< HEAD
-  return events;export function resetState(): void {;
-  state = { ...defaultState };
-}
-
 =======
   const entity_id = getEntityId (event);
   const current_version = state.latestVersionByEntityId[entity_id] || 0;
@@ -293,22 +208,13 @@ const default_state: SyncState = {
 ;
   // Check condition
 if ( {) {
-  $2
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
+  $2}
 }
 }
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 export function getEntityId (event: SyncEvent): string {
   switch (event.type) {
     case 'proposal':;

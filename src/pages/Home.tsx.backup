@@ -1,16 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { SEO } from "@/components/SEO";
-import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { FuturisticBackground } from "@/components/ui/FuturisticBackground";
-import { ServicesShowcase } from "@/components/home/ServicesShowcase";
->>>>>>> f3efe67bd5a40cdc9a4ceb0ddb44619b451a40c5
-
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
@@ -69,4 +57,3 @@ export default function Home() {
 export default Home;
 =======
 }
->>>>>>> f3efe67bd5a40cdc9a4ceb0ddb44619b451a40c5

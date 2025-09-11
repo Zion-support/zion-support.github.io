@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("child_process")
 const path = require("path")
@@ -37,4 +34,3 @@ Allow: /contact"
     console.log(" SEO improvement completed!")
 =======
     console.log(" SEO improvement completed!")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 import Link from "next/link";
 export const metadata = {title: "Quantum Neural Network Platform - Zion Tech Group";
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.";
   keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"}
-export default function QuantumNeuralNetworkPlatformPage() {return (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
+export default function QuantumNeuralNetworkPlatformPage() {return (;import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Neural Network Platform - Zion Tech Group",;
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.";

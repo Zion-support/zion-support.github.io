@@ -308,18 +308,7 @@ class ComprehensiveLinkChecker {;
       const $ = cheerio.load(sitemapContent, { "xmlMode": true });
       $('url loc').each((i, elem) => {
     const url = $(elem).text().trim(),
-<<<<<<< HEAD
-=======
-
-    <<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        this.sitemapUrls.push(url)});
-      console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`)} catch (error) {
-      console.error(
-  'Error loading "sitemap": ', error.message)}
-  'Error loading "sitemap": ', error.message)}
-
-  }
+      }
   async checkUrl(url, parentUrl = null, depth = 0) {;
     if (this.visitedUrls.has(url) || depth > this.maxDepth) {;
       return}
@@ -404,5 +393,3 @@ const axios = require(,,"}),"}) axios'),"}),"}) const cheerio = require(,"}),"})
     return: href} if (href.startsWith( '/')) {'; return: `${this.baseUrl}${href}`} return new URL(href,baseUrl).href} catch (error) { return `${this.baseUrl}${href}`} return new URL(href,baseUrl).href} catch (error) {; return null} } async checkSitemapUrls() {
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

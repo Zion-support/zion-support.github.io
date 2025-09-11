@@ -1,8 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { agendaItems } from '../../../../data/expo/agenda';
-
 ) {
   const { id } = req.query as { id?: string }
 ) {;
@@ -18,8 +14,6 @@ import { agendaItems } from '../../../../data/expo/agenda';
   const { id } = req.query as { id?: string };
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -29,33 +23,7 @@ import { agendaItems } from '../../../../data/expo/agenda';
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
   res.setHeader('Content-Typetext/plain')
   res.status(200).send(transcript)
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  try {
-  const { id } = req && req.query as { id?: string };
-  const item = agendaItems && agendaItems.find(i => i && i.id === id);
-  if (!item) return res && res.status(404).send('Not found');
-  const transcript = `Transcript for ${item && item.title} (Track: ${item && item.track}, Time: ${item && item.time})\n\n[00:00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
-  res && res.setHeader('Content-Type', 'text/plain');
-  res && res.status(200).send(transcript);export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  const { id } = req && req.query as { id?: string };
-  const item = agendaItems && agendaItems.find(i => i && i.id === id);
-  if (!item) return res && res.status(404).send('Not found');
-  const transcript = `Transcript for ${item && item.title} (Track: ${item && item.track}, Time: ${item && item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
-  res && res.setHeader('Content-Typetext/plain'),
-  res && res.status(200).send(transcript)
-}
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+==============
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
@@ -88,27 +56,12 @@ function handler() {
   res.status (200).send (transcript);
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 }
 
 
 
-<<<<<<< HEAD
 }
-}
-
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 

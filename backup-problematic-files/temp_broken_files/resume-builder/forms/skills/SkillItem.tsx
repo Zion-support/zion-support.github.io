@@ -29,15 +29,5 @@ export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
 },; <Badge key= {;
   skill.id ;
 }variant="secondary" className="flex items-center gap-1 py-1.5 px-3" > > <Trash2 className="h-3 w-3" /> </Button> </Badge>) ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/skills/SkillItem.tsx
-};""
 };
 "
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/skills/SkillItem.tsx
-=======
-
-};
-"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

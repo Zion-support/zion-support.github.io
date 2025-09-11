@@ -1,17 +1,5 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-v1 && v1.sections.forEach((section) => {
-    const typeName = section && section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
-    typedefs && typedefs.push(
-      `type ${typeName} { id: ID, title: String, description: String }`,
-import type { NextApiRequest, NextApiResponse } from 'next';
-import v1 from '../../../data/api-docs/v1';
-import type { NextApiRequest, NextApiResponse } from "next";
-import v1 from "../../../data/api-docs/v1";
-function toSDL() {
-
   const typedefs = [
     `schema { query: Query, mutation: Mutation }`
     "type Query { _placeholder: String }"
@@ -44,9 +32,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).send(toSDL())
 }
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -69,12 +55,6 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
-<<<<<<< HEAD
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader("Content-Type", "text/plain");
-  res.status(200).send(toSDL());
-}
-
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
 res.setHeader("Content-Type", "text/plain");
@@ -105,18 +85,13 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export default /**
+=======export default /**
  * handler - Function description
  */
 function handler() {
   res.set_header ("Content - Type", "text / plain");
   res.status (200).send (toSDL ());
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
   res.status(200).send(toSDL());
@@ -146,9 +121,7 @@ export default function handler(req, res) {
 }
 
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 

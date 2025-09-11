@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-:src && src.disabled/components/EnterpriseDashboard && EnterpriseDashboard.js.jsx
-
 :src.disabled/components/EnterpriseDashboard.jsx
 =======
 
@@ -16,8 +12,6 @@ export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics 
 :src && src.disabled/components/EnterpriseDashboard && EnterpriseDashboard.js.jsx
 
 export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 

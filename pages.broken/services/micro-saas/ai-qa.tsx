@@ -1,13 +1,5 @@
 
 
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AIQACopilot() { return ( <Article title=\"AI QA Copilot\" subtitle=\"Autogenerates tests from user flows and PR diffs\" price=\"from $99/mo\" bullets={[\'Watches PRs and generates Playwright/Cypress tests automatically\',\'Finds flaky tests; groups by root cause and suggests fixes\',\'CI integrations for GitHub Actions,GitLab,CircleCI\',\'Tracks coverage and critical-path user flows\' ]} links={{ \"website\": \'https: /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
 import React from 'react';
@@ -16,13 +8,8 @@ interface AiqaProps {
 
 
 
-<<<<<<< HEAD
-}
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function Aiqa({ }: AiqaProps) {
+=======export default function Aiqa({ }: AiqaProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,14 +45,5 @@ export default function Aiqa(): any ({ }: AiqaProps) {;
 }
 
 
-<<<<<<< HEAD
-}
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

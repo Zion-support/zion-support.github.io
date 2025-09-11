@@ -1,16 +1,11 @@
 
 
-<<<<<<< HEAD
-export { default } from '../zion/init';
-
 export { default } from '../zion/init';
 export { default } from "../zion / init";
 
 export { default } from "../zion/init";
 export { default } from '../zion/init';
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+==============
 
 export { default } from '../zion/init';
 

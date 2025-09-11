@@ -1,21 +1,7 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import {AppHeader} from "./AppHeader";
-import {Footer} from "@/components/Footer";
-import React from "react",
-import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
-import { AppHeader } from "./AppHeader",
-import { Footer } from "@/components/Footer",
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -26,31 +12,10 @@ interface AppLayoutProps {
   hideFooter?: boolean
 }
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 import React from "react";
 import {AppHeader} from "./AppHeader";
 import {Footer} from "@/components/Footer";
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <AppHeader />
-      <main className="flex-grow">
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",;
-import { AppHeader } from "./AppHeader",;
-import { Footer } from "@/components/Footer",;
-
 interface AppLayoutProps {;
   children: React && React.ReactNode,;
   hideFooter?: boolean;
@@ -87,8 +52,6 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
   return (;
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 =======
 import React from "react",;
 import { AppHeader } from "./AppHeader",;
@@ -99,22 +62,7 @@ interface AppLayoutProps {;
   hideFooter?: boolean;
 }
 
-export function AppLayout(): any ({ children, hideFooter = false }: AppLayoutProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return (
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    <div className="flex flex-col min-h-screen bg-background">;
-      <AppHeader />;
-      <main className="flex-grow">;
-        {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
-}
-
+export function AppLayout(): any ({ children, hideFooter = false }: AppLayoutProps) {;  return (
 
 ;
 
@@ -159,9 +107,7 @@ hideFooter?: boolean
 ;
 ;
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      </main>;
+=======      </main>;
       {!hideFooter && <Footer />}
 
     </div>;

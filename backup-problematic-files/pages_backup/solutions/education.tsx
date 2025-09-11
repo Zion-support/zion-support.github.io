@@ -565,10 +565,6 @@ export default function EducationSolutionsPage() {;
       </div>
     </>
     </>
-<<<<<<< HEAD
-  );
-};
-
 export default Education;
 =======
 <<<<<<< HEAD
@@ -577,4 +573,3 @@ export default Education;
 };
 
 export default Education;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

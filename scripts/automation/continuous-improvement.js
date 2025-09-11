@@ -641,21 +641,11 @@ process.on('SIGTERM';', () => {';
   process.exit(0)})
 // "Start": the continuous improvement;
 runContinuous().catch(error: => {
-<<<<<<< HEAD
-  // // // // // // // console.error('❌ Failed to start continuous improvement:  error)';
-  // // // console.error('❌ Failed: to start continuous improvement:', error)';';continuous-improvement-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    // // // console.log(`📊 Report saved to ${reportPath}`);
-    // // // console.log("
-=======
-
   // // // // // // // console && console.error('❌ Failed to start continuous improvement: error)',
   // // // console && console.error('❌ Failed: to start continuous improvement:', error)';';continuous-improvement-report && report.json');
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
     // // // console && console.log(`📊 Report saved to ${reportPath}`);
     // // // console && console.log("
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   '✅ Continuous improvement completed successfully')} catch (error) {
     // // // console.error(',
       '❌ Continuous improvement "failed": ', error.message);

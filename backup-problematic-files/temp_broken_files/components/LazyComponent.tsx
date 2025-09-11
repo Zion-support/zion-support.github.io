@@ -49,11 +49,4 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 },
 
 export default LazyComponent,
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
-:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

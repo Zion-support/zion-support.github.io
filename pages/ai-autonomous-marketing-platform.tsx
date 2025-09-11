@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export async function getStaticProps() {
 	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
@@ -34,8 +30,6 @@ export default function AIAutonomousMarketingPlatform(req, res) {
 ;
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 =======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;

@@ -4,39 +4,14 @@
 export interface ModerationAction {;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-export interface ModerationAction {
-
 export interface ModerationAction {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  id: string;
+=======  id: string;
   flagId: string;
   action: ModerationStatus;
   adminNotes?: string;
   adminId: string;
   reason?: string;
   createdAt: string;
-
-<<<<<<< HEAD
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
-export interface ModerationAction {
-  id: string;
-  type: 'approve' | 'remove' | 'warn' | 'ban';
-  target_id: string;
-  target_type: 'post' | 'comment' | 'user';
-  admin_id: string;
-  reason?: string;
-  created_at: string,
-<<<<<<< HEAD
-}
-export interface ModerationFlag {
-}
 
 
 export interface ModerationFlag {;
@@ -63,9 +38,7 @@ export type AiScores = {;
   scam: number, // 0-1;
 };
 export type FlaggedContent = {;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  id: string;
+=======  id: string;
   flagId: string;
   action: ModerationStatus;
   adminNotes?: string;
@@ -90,9 +63,6 @@ export interface ModerationFlag {
 ursor/fix-syntax-push-and-merge-to-main-7db5
 }
 
-<<<<<<< HEAD
-=======
-
 }
 export interface ModerationFlag {
 =======
@@ -100,8 +70,6 @@ export interface ModerationFlag {
 
 
 export interface ModerationFlag {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;

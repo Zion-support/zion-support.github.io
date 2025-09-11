@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const AutoUpdate20250808t163000086z: NextPage = () => {
@@ -14,8 +9,6 @@ const AutoUpdate20250808t163000086z: NextPage = () => {
       </Head>
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -27,30 +20,8 @@ const AutoUpdate20250808t163000086z: NextPage = () => {
     </div>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <main>;
-        <h1>AutoUpdate20250808t163000086z</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  ),;
-};
-<<<<<<< HEAD
-export default AutoUpdate20250808t163000086z;
-<<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default AutoUpdate20250808t163000086z;
@@ -68,9 +39,6 @@ import Head from 'next / head';
 ;
 export default AutoUpdate20250808t163000086z;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
 export default AutoUpdate20250808t163000086z
@@ -86,9 +54,7 @@ export default AutoUpdate20250808t163000086z;
 },
 export default AutoUpdate20250808t163000086z,
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 

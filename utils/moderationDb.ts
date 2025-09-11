@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ModerationFlag {
-export interface ModerationFlag {;
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   contentId: string;
   contentType: string;
@@ -18,22 +10,6 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export interface ModerationFlag {
-  id: string;
-  content_id: string;
-  content_type: 'post' | 'comment' | 'user';
-  reason: string;
-  user_email: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  created_at: string;
-  admin_notes?: string;
-<<<<<<< HEAD
-}
-
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
   return flags.find (flag => flag.id === id) || null;
@@ -50,12 +26,6 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
   flag && flag.updatedAt = new Date().toISOString();
 
 }
-
-<<<<<<< HEAD
-// Mock data storage - replace with actual database
-let flags: ModerationFlag[] = [];
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  return flags.find(flag => flag.id === id) |null;
 
 }
 export async function readAllFlags(): Promise<ModerationFlag[]> {
@@ -74,9 +44,7 @@ export async function createFlag(data: Partial<ModerationFlag>): Promise<Moderat
     createdAt: new Date().toISOString()
     ...data
   }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 ;
@@ -169,15 +137,10 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
   flag && flag.status = status;
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   await upsertFlag(flag);
   return flag;
 
 }
-
-<<<<<<< HEAD
-
 
 
 =======
@@ -195,8 +158,6 @@ export interface ModerationFlag {
 
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];

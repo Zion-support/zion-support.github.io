@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-export {};
-module.exports = {};
-module.exports = {};
-export {};
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-// Mock test for signup auto login
+=======// Mock test for signup auto login
 describe('Signup Auto Login', () => {'
   it('should render without crashing', () => {
     expect(true).toBe(true);
   });
 });
-<<<<<<< HEAD
-
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/automate-test-improve-and-merge-code-2480
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480

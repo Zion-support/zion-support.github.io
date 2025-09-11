@@ -6,9 +6,6 @@ class $1 {
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-const glob = require('glob');
-
 console.log('🔧 Fixing remaining syntax errors...');
 
 // Function to fix remaining syntax issues
@@ -206,10 +203,6 @@ const findSyntaxErrorFiles = () => {
   }
 };
 
-<<<<<<< HEAD
-const syntaxErrorFiles = findSyntaxErrorFiles();
-console.log(`📋 Found ${syntaxErrorFiles.length} files with syntax errors`);
-
 let fixedCount = 0;
 
 for (const filePath of syntaxErrorFiles) {
@@ -266,10 +259,6 @@ for (const filePath of syntaxErrorFiles) {
 console.log(`🎉 Fixed ${fixedCount} files with syntax errors!`);
 =======
 fs.writeFileSync('/workspace/remaining-syntax-errors-fix-report.json', JSON.stringify(report, null, 2));
-console.log('📄 Report saved to remaining-syntax-errors-fix-report.json');
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+console.log('📄 Report saved to remaining-syntax-errors-fix-report.json');<<<<<<< HEAD=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

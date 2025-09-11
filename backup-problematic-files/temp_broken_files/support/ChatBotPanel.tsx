@@ -330,14 +330,9 @@ id: `user-$ {;
 }`;
 content: text;
 setIsLoading (true);
-<<<<<<< HEAD
-:temp_broken_files/support/ChatBotPanel.tsx
-
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: `bot-$ {;
   Date.now () ;
 }`;
@@ -358,14 +353,9 @@ body: JSON.stringify ({;
   ;
 }) ;
 });
-<<<<<<< HEAD
-:temp_broken_files/support/ChatBotPanel.tsx
-
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }const data = await response.json ();
 return {;
   success: true;
@@ -400,14 +390,9 @@ timestamp: new Date () ;
 }]);
 //In a real implementation, this would trigger a live chat request ;
 };
-<<<<<<< HEAD
-:temp_broken_files/support/ChatBotPanel.tsx
-
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
   Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",

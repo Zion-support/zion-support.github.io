@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
-import { Zap } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { Icon } from 'lucide-react';
-const features = [];
-const services = [];
-const solutions = [];
-
 
   { opacity: 0,
   y: 20;
@@ -173,130 +162,6 @@ export default function PricingSection(props: any) {return ("
 </div>
 </div>
 </section>
-
-<<<<<<< HEAD
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
-const plans = [
-    {
-        name: "Starter",
-        price: 99,
-        period: "month",
-        description: "Perfect for small businesses and startups",
-        icon: <Rocket className="w-8 h-8"/>,
-        color: "from-zion-cyan to-zion-blue",
-        bgColor: "from-zion-cyan/20 to-zion-blue/20",
-        features[
-            "Up to 5 team members",
-            "Basic AI tools access",
-            "Email support",
-            "Standard templates",
-            "1 project at a time"
-        ],
-        notIncluded[
-            "Advanced analytics",
-            "Priority support",
-            "Custom integrations"
-        ],
-        popular: false,
-        cta: "Get Started"
-    },
-    {
-        name: "Professional",
-        price: 299,
-        period: "month",
-        description: "Ideal for growing companies and teams",
-        icon: <Building className="w-8 h-8"/>,
-        color: "from-zion-purple to-zion-purple-dark",
-        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        features[
-            "Up to 25 team members",
-            "Full AI tools access",
-            "Priority email support",
-            "Advanced templates",
-            "Unlimited projects",
-            "Team collaboration",
-            "Basic analytics"
-        ],
-        notIncluded[
-            "Custom integrations",
-            "Dedicated account manager"
-        ],
-        popular: true,
-        cta: "Start Free Trial"
-    },
-    {
-        name: "Enterprise",
-        price: 999,
-        period: "month",
-        description: "For large organizations with complex needs",
-        icon: <Crown className="w-8 h-8"/>,
-        color: "from-zion-cyan-light to-zion-purple",
-        bgColor: "from-zion-cyan-light/20 to-zion-purple/20",
-        features[
-            "Unlimited team members",
-            "All AI tools + custom models",
-            "24/7 phone support",
-            "Custom templates",
-            "Unlimited projects",
-            "Advanced analytics",
-            "Custom integrations",
-            "Dedicated account manager",
-            "SLA guarantees",
-            "On-premise options"
-        ],
-        notIncluded[],
-        popular: false,
-        cta: "Contact Sales"
-    }
-];
-const addons = [
-    {
-        name: "AI Model Training",
-        price: 199,
-        period: "month",
-        description: "Custom AI model training and optimization",
-        icon: <Zap className="w-6 h-6"/>,
-        features["Custom model training", "Performance optimization", "Model monitoring"]
-    },
-    {
-        name: "Premium Support",
-        price: 99,
-        period: "month",
-        description: "24/7 dedicated support with guaranteed response times",
-        icon: <Shield className="w-6 h-6"/>,
-        features["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"]
-    },
-    {
-        name: "Advanced Analytics",
-        price: 149,
-        period: "month",
-        description: "Comprehensive analytics and reporting suite",
-        icon: <Users className="w-6 h-6"/>,
-        features["Custom dashboards", "Advanced reporting", "Data export options"]
-    }
-];
-export function PricingSection() {
-    const [billingPeriod, setBillingPeriod] = useState('month');
-    const [selectedPlan, setSelectedPlan] = useState(null);
-    const getDiscountedPrice = (price) => {
-        return billingPeriod === 'year' ? Math.round(price * 10) : price};
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-  hidden: { y: 30,
-  opacity: 0 
 
 },
         visible: {
@@ -500,7 +365,5 @@ export function PricingSection() {
           </div>
         </motion.div>
       </div>
-    </section>)}
->>>>>>> origin/clean-error-fixing-automation
-=======
+    </section>)}=======
 >>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

@@ -251,15 +251,5 @@ return (<div ref= {;
   ... (otherProps as any) ;
 }/>) ;
 }
-<<<<<<< HEAD
-:temp_broken_files/utils/imageOptimization.tsx
-}// Utility to preload critical images ;"}'"
 }// Utility to preload critical images ;
 }'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/imageOptimization.tsx
-=======
-
-}// Utility to preload critical images ;
-}'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

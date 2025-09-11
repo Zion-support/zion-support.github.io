@@ -1,14 +1,6 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from "./GradientHeading",
-import { Button } from "./ui/button",
-import { CheckCircle2 } from "lucide-react";
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import {
+=======import {
   Table
   TableBody
   TableCell
@@ -25,41 +17,11 @@ export function ComparisonSection() {
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
             See how Zion can drastically reduce your IT costs compared to
             traditional providers
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { GradientHeading } from "./GradientHeading";
-import { Button } from "./ui/button";
-import { CheckCircle2 } from "lucide-react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
-} from "./ui/table";
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function ComparisonSection() {
-  return (
-    <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <GradientHeading>Compare & Save</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
-            See how Zion can drastically reduce your IT costs compared to
-            traditional providers
-
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -74,41 +36,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
               <TableHeader>
                 <TableRow className="border-b border-zion-purple/20">
                   <TableHead className="text-white">Service</TableHead>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <TableHead className="text-white text-center">Traditional Providers</TableHead>
-                  <TableHead className="text-white text-center">With Zion</TableHead>
-                  <TableHead className="text-white text-center">Savings</TableHead>
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <TableHead className="text-white text-center">
-                    Traditional Providers
-                  </TableHead>
-                  <TableHead className="text-white text-center">
-                    With Zion
-                  </TableHead>
-                  <TableHead className="text-white text-center">
-                    Savings
-                  </TableHead>
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {[
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  {
-                    service: "Server Hosting"
-                    traditional: "$1,200/mo"
-                    zion: "$650/mo"
-                    savings: "45%"
-                  }
-=======
-
 import { GradientHeading  } from './GradientHeading';
 import { Button  } from './ui / button';
 import { CheckCircle2  } from './lucide-react';
@@ -153,84 +80,20 @@ function ComparisonSection() {
               </TableHeader>;
               <TableBody>;
                 {[;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  {
+=======                  {
                     service: "Server Hosting",
                     traditional: "$1, 200 / mo",
                     zion: "$650 / mo",
                     savings: "45%",
                   },
 
-<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  {
-                    service: "IT Equipment"
-                    traditional: "Full Purchase"
-                    zion: "Flexible Rental"
-                    savings: "60%"
-                  }
-                  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    service: "24/7 Support"
-                    traditional: "$2,500/mo"
-                    zion: "$950/mo"
-                    savings: "62%"
-                  }
-                  {
-                    service: "Storage Solutions"
-                    traditional: "$800/mo"
-                    zion: "$350/mo"
-                    savings: "56%"
-                  }
-                  {
-                    service: "Marketplace Listings"
-                    traditional: "$99/mo"
-                    zion: "Free"
-                    savings: "100%"
-                  }
-                ].map((item, index) => (
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
                   { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },
                   { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },
                   { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
                   { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" },
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <TableRow key={index} className="border-b border-zion-blue">
-                    <TableCell className="font-medium text-white">{item.service}</TableCell>
-                    <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
-                    <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
-                    <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
-          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
-            <div className="flex items-start">
-              <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
-              <p className="text-white">
-                <span className="font-bold">Total Annual Savings: </span>
-                <span className="text-green-400 font-bold text-xl">Up to 65%</span>
-                <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>
-              </p>
-            </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
                   {
                     service: "IT Equipment"
                     traditional: "Full Purchase"
@@ -269,18 +132,10 @@ function ComparisonSection() {
                     <TableCell className="text - center text - green - 400 font - bold">;
                       {item.savings}
             
-<<<<<<< HEAD
-            
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
             
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
@@ -288,22 +143,8 @@ function ComparisonSection() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </section>
-  );
-}
-  )
-import { GradientHeading } from "./GradientHeading",;
-import { Button } from "./ui/button",;
-import { CheckCircle2 } from "lucide-react",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
@@ -315,11 +156,6 @@ import {;
   TableHeader,;
   TableRow,;
 } from "./ui/table";
-<<<<<<< HEAD
-export function ComparisonSection() {;
-  return (
-<<<<<<< HEAD
-
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
 import { CheckCircle2 } from "lucide-react",;
@@ -329,9 +165,7 @@ export function ComparisonSection() {;
   return (;
 export function ComparisonSection() {;
   return (;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 export function ComparisonSection() {;
   return (
@@ -341,211 +175,12 @@ export function ComparisonSection() {;
         <div className="text-center mb-12">;
           <GradientHeading>Compare & Save</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            See how Zion can drastically reduce your IT costs compared to traditional providers;
-          </p>;
-        </div>;
-;
-            See how Zion can drastically reduce your IT costs compared to traditional providers;
-          </p>;
-        </div>;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            See how Zion can drastically reduce your IT costs compared to;
-            traditional providers;
-          </p>;
-        </div>;
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <div className="max-w-4xl mx-auto">;
-          <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">;
-            <Table>;
-              <TableHeader>;
-                <TableRow className="border-b border-zion-purple/20">;
-                  <TableHead className="text-white">Service</TableHead>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <TableHead className="text-white text-center">Traditional Providers</TableHead>;
-                  <TableHead className="text-white text-center">With Zion</TableHead>;
-                  <TableHead className="text-white text-center">Savings</TableHead>;
-                  <TableHead className="text-white text-center">Traditional Providers</TableHead>;
-                  <TableHead className="text-white text-center">With Zion</TableHead>;
-                  <TableHead className="text-white text-center">Savings</TableHead>;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <TableHead className="text-white text-center">;
-                    Traditional Providers;
-                  </TableHead>;
-                  <TableHead className="text-white text-center">;
-                    With Zion;
-                  </TableHead>;
-                  <TableHead className="text-white text-center">;
-                    Savings;
-                  </TableHead>;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                </TableRow>;
-              </TableHeader>;
-              <TableBody>;
-                {[;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  { service:"Server Hosting", traditional:"$1,200/mo", zion:"$650/mo", savings:"45%" },;
-                  { service:"IT Equipment", traditional:"Full Purchase", zion:"Flexible Rental", savings:"60%" },;
-                  { service:"24/7 Support", traditional:"$2,500/mo", zion:"$950/mo", savings:"62%" },;
-                  { service:"Storage Solutions", traditional:"$800/mo", zion:"$350/mo", savings:"56%" },;
-                  { service:"Marketplace Listings", traditional:"$99/mo", zion:"Free", savings:"100%" }].map((item, index) => (;
-                  { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },;
-                  { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },;
-                  { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" };
-                  { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" };
-                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (;
-                  <TableRow key={index} className="border-b border-zion-blue">;
-                    <TableCell className="font-medium text-white">{item.service}</TableCell>;
-                    <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>;
-                    <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>;
-                    <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  {;
-                    service: "Server Hosting",;
-                    traditional: "$1,200/mo",;
-                    zion: "$650/mo",;
-                    savings: "45%",;
-                  },;
-                  {;
-                    service: "IT Equipment",;
-                    traditional: "Full Purchase",;
-                    zion: "Flexible Rental",;
-                    savings: "60%",;
-                  },;
-                  {;
-                    service: "24/7 Support",;
-                    traditional: "$2,500/mo",;
-                    zion: "$950/mo",;
-                    savings: "62%",;
-                  },;
-                  {;
-                    service: "Storage Solutions",;
-                    traditional: "$800/mo",;
-                    zion: "$350/mo",;
-                    savings: "56%",;
-                  },;
-                  {;
-                    service: "Marketplace Listings",;
-                    traditional: "$99/mo",;
-                    zion: "Free",;
-                    savings: "100%",;
-                  },;
-                ].map((item, index) => (;
-                  <TableRow key={index} className="border-b border-zion-blue">;
-                    <TableCell className="font-medium text-white">;
-                      {item && item.service}
-                    </TableCell>;
-                    <TableCell className="text-center text-zion-slate-light">;
-                      {item && item.traditional}
-                    </TableCell>;
-                    <TableCell className="text-center text-zion-cyan font-semibold">;
-                      {item && item.zion}
-                    </TableCell>;
-                    <TableCell className="text-center text-green-400 font-bold">;
-                      {item && item.savings}
-                    </TableCell>;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  </TableRow>;
-                ))}
-              </TableBody>;
-            </Table>;
-          </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">;
-            <div className="flex items-start">;
-              <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
-              <p className="text-white">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                <span className="font-bold">Total Annual Savings: </span>;
-                <span className="text-green-400 font-bold text-xl">;
-                  Up to 65%;
-                </span>;
-                <span className="block text-sm text-zion-slate-light mt-1">;
-=======
-                    </TableCell>;
-                  </TableRow>))}
-              </TableBody>;
-            </Table>;
-          </div>;
-          <div className="mt - 8 flex justify - between items - center bg - zion - blue p - 6 rounded - lg border border - zion - purple / 20">;
-            <div className="flex items - start">;
-              <CheckCircle2 className="mr - 2 h - 6 w - 6 text - green - 400 flex - shrink - 0 mt - 1" />;
-              <p className="text - white">;
-                <span className="font - bold">Total Annual Savings: </span>;
-                <span className="text - green - 400 font - bold text - xl">;
-                  Up to 65%;
-                </span>;
-                <span className="block text - sm text - zion - slate - light mt - 1">;
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  Results may vary based on specific requirements and service;
-                  levels;
-                </span>;
-              </p>;
-            </div>;
-<<<<<<< HEAD
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
-<<<<<<< HEAD
-                <span className="font-bold">Total Annual Savings:</span>;
-                <span className="font-bold">Total Annual Savings: </span>;
-                <span className="text-green-400 font-bold text-xl">Up to 65%</span>;
-                <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>;
-              </p>;
-            </div>;
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Calculate Your Savings;
             </Button>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
     </section>
 
 
@@ -567,9 +202,7 @@ export function ComparisonSection() {;
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
+=======}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
     </section>;

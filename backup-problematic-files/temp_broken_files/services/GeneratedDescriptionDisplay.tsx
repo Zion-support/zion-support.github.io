@@ -100,26 +100,15 @@ setIsEditing (false);
 toast ({;
   ;
 };
-<<<<<<< HEAD
-:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
-
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
 }</Button> </CardTitle> </CardHeader> <CardContent> {;
   isEditing ? (<Textarea value= {;
   editedDescription ;
 }</div>) ;
 }</CardContent> {;
-<<<<<<< HEAD
-:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
-  isEditing && (<CardFooter> <Button onClick={;"  handleSave ";"}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
-}</Card>) ;"}'"
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isEditing && (<CardFooter> <Button onClick={;
   handleSave ";
@@ -129,5 +118,3 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDesc
 <<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useState } from 'react',
 import React, { useEffect, useState } from 'react',;
 ;
@@ -27,27 +21,6 @@ export default function PrivacySettingsPage() {
   const load = async () => {
 
     if (!userId) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    setLoading(true);
-    setMessage('');
-    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
-    const json = await res.json();
-    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
-    else setMessage(json.error || 'Failed to load');
-    setLoading(false)
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  };
-import React, { useEffect, useState } from 'react';
-export default function PrivacySettingsPage() {
-
-
-<<<<<<< HEAD
-  },
 
   const [userId, setUserId] = useState('')
   const [optOut, setOptOut] = useState(false)
@@ -76,11 +49,7 @@ export default function PrivacySettingsPage() {
 =======
 =======
 
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+  },=======
   }
   },
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -89,12 +58,6 @@ export default function PrivacySettingsPage() {
     setLoading(true)
     setMessage('')
     const res = await fetch('/api/fraud/settings/opt-out', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, optOut })});
@@ -102,71 +65,12 @@ export default function PrivacySettingsPage() {
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  };
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id');
-    if (savedUser) setUserId(savedUser)
-  }, []);
-
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
 
-<<<<<<< HEAD
-    load()
-  };
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id');
-    if (savedUser) setUserId(savedUser)
-  }, []);
-  const onSaveUser = () => {
-    localStorage.setItem('user-id', userId);
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, optOut })})
-    const json = await res.json()
-    if (res.ok) setMessage('Saved')
-    else setMessage(json.error |'Save failed')
-    setLoading(false)
-  }
+=======
   },
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id')
-=======
-  }
-  },
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id');
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    if (savedUser) setUserId(savedUser)
-  }, [])
-  }, []),
-  const onSaveUser = () => {
-<<<<<<< HEAD
-    localStorage.setItem('user-id', userId)
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    load()
-  }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-  },
-  },
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    localStorage.setItem('user-id', userId);
+  },    localStorage.setItem('user-id', userId);
 
     load()
   }
@@ -186,14 +90,8 @@ export default function PrivacySettingsPage() {
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
@@ -202,14 +100,6 @@ export default function PrivacySettingsPage() {
       </div>
     </div>
   )
-
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
-          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-          {message && <div>{message}</div>}
 
           <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
@@ -249,8 +139,6 @@ export default function PrivacySettingsPage() {
 =======
 =======
 }
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React, { useEffect, useState } from 'react',
 ;
@@ -324,18 +212,8 @@ if (return, ) {
         </div>;
       </div>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
-          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+}          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

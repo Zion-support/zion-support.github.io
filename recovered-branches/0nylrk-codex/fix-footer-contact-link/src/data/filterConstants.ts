@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const COMMON_SKILLS = [
-  'Machine Learning',
-  'Python',
-  'JavaScript',
-  'React',
-  'Data Science',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'DevOps',
-  'Cloud Architecture',;
-  'TensorFlow',];
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -34,20 +16,7 @@ export const COMMON_SKILLS = [
   'Cloud Architecture'
   'TensorFlow',];
 // Regions
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-// Common skills for filtering;
-export const COMMON_SKILLS = [;
-=======
-// Common skills for filtering
-
-export const COMMON_SKILLS = [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  'Machine Learning',
+export const COMMON_SKILLS = [  'Machine Learning',
   'Python',
   'JavaScript',
   'React',
@@ -61,41 +30,11 @@ export const COMMON_SKILLS = [
 ;
 // Regions;
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export const REGIONS = [  "Machine Learning";
-  "Python";
-  "JavaScript";
-  "React";
-  "Data Science";
-  "AWS";
-  "Docker";
-  "Kubernetes";
-  "DevOps";
-  "Cloud Architecture";
-<<<<<<< HEAD
-  "TensorFlow"
-// Regions
-export const REGIONS = [
-  'North America'
-  'Europe'
-  'Asia Pacific'
-  'South America'
-  'Middle East'
-  'Africa',];  "North America";
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
-<<<<<<< HEAD
-  "Africa"
-
 // Common skills for filtering
 export const COMMON_SKILLS = [
   "Machine Learning",
@@ -193,9 +132,7 @@ export const COMMON_SKILLS = [
 ;
 // Regions;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export const REGIONS = [  "Machine Learning";
+=======export const REGIONS = [  "Machine Learning";
   "Python";
   "JavaScript";
   "React";
@@ -212,12 +149,6 @@ export const REGIONS = [  "Machine Learning";
   "South America";
   "Middle East";
 
-<<<<<<< HEAD
-
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   'Cloud Architecture',;

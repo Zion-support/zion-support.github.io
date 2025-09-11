@@ -2,24 +2,6 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
-<<<<<<< HEAD
-import { createOpenAIClient, generateJobPost } from ';
-import { getPool, withUser } from ';
-    const allowed = (process && process.env.CORS_ORIGINS || '';
-    if (!origin || allowed && allowed.includes('*';
-    cb(new Error('Not allowed';
-  methods: ['GET', 'POST', 'OPTIONS';
-await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m';
-const openai = createOpenAIClient(process && process.env.OPENAI_API_KEY || '';
-  return (req && req.headers['x-user-id'] as string) || (req && req.query as any)['user_id';
-app && app.post('/ai/ask';
-  if (!prompt) return reply && reply.code(400).send({ error: 'prompt required';
-  const completion = await openai && openai.responses.create({ model: 'gpt-4o-mini';
-app && app.post('/jobs/generate';
-  const role = (body && body.role as string) || 'Engineer';
-       VALUES ($1, $2, $3, $4, $5, 'draft';
-=======
-
 import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
 dotenv && dotenv.config();
@@ -146,9 +128,7 @@ app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
   app && app.log.error(err);
   process && process.exit(1)
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
+=======;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
   const country = (req.query as any).country as string | undefined;

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
-import Stripe from 'stripe';
-import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
-
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2023-10-16',
 });
@@ -30,21 +23,10 @@ function isProdDomain() {
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    res.status(405).end('Method Not Allowed');
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    return;
+    res.status(405).end('Method Not Allowed');    return;
   }
 
   try {
-<<<<<<< HEAD
-    const { priceId, quantity = 1 } = req.body || {};
-    
-    if (!priceId) {
-      res.statusCode = 400;
-      res.json({ error: 'Price ID is required' });
-      return;
-    }
-
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
@@ -90,9 +72,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      url: session.url
+=======      url: session.url
     })
   } catch (err) {,
     // console.error('Checkout session API error:, err),

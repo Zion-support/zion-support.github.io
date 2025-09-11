@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function QuantumBioComputingPlatformPage() {
-	return (
-
 		<UltraFuturisticBackground>
 			<Head>
 				<title>Quantum Bio-Computing Platform | Zion Tech Group</title>
@@ -53,46 +48,11 @@ export default function QuantumBioComputingPlatformPage(req, res) {
 }
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-=======
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-<<<<<<< HEAD
-=======
-    
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-
   return (
     <UltraFuturisticBackground>;
       <Head>;
@@ -126,53 +86,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
       </div>;
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from 'react';
-import Head from 'next / head';
-import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
-export default /**
- * QuantumBioComputingPlatformPage - Function description
- */
-function QuantumBioComputingPlatformPage() {
-  return (
-    <UltraFuturisticBackground>;
-      <Head>;
-        <title > Quantum Bio - Computing Platform | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='A conceptual platform combining quantum - inspired algorithms with biological computing principles for breakthrough simulations.';
-        />;
-        <link;
-          rel='canonical';
-          href='https: //ziontechgroup.com / quantum - bio - computing - platform';
-        />;
-      </Head>;
-      <div className='container mx - auto px - 4 py - 24 text - white space - y-6'>;
-        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-          Quantum Bio - Computing Platform;
-        </h1>;
-        <p className='text - gray - 300 max - w-3xl'>;
-          This research - forward concept explores hybrid computation that;
-          leverages quantum - inspired optimization alongside bio - molecular;
-          paradigms. It is intended as a roadmap and discussion hub for future;
-          R & D collaborations.;
-        </p>;
-        <ul className='list - disc list - inside text - gray - 300 space - y-2'>;
-          <li > Quantum - inspired annealing for molecular pathways</li>;
-          <li > Bio - molecular state encoding and operations</li>;
-          <li > Simulation stacks and observability</li>;
-          <li > Ethics and safety considerations</li>;
-        </ul>;
-      </div>;
-    </UltraFuturisticBackground>);
-;
-<<<<<<< HEAD
-
-
-
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -211,9 +124,7 @@ export default function QuantumBioComputingPlatformPage() {
     </UltraFuturisticBackground>;
   );
 =======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 import React from 'react',
@@ -269,11 +180,6 @@ export default function QuantumBioComputingPlatformPage(req, res) {
   }
 }
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 =======
 import React from 'react';
 import Head from 'next / head';
@@ -313,13 +219,9 @@ function QuantumBioComputingPlatformPage() {
         </ul>;
       </div>;
     </UltraFuturisticBackground>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

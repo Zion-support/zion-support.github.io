@@ -123,11 +123,3 @@ return (<> <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" /
 };
 //A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy //dependency like DOMPurify for now and instead escape the five critical //characters. This ensures any user-supplied string is rendered harmless //before we perform our link replacements below. ;
 }//First, escape any HTML so that user input cannot break out of the intended //markup.);
-<<<<<<< HEAD
-:temp_broken_files/support/ChatMessage.tsx
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatMessage.tsx
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

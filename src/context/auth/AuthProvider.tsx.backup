@@ -1,7 +1,4 @@
 import React, { useEffect } from "react";
-<<<<<<< HEAD
-import { _supabase, getFromProfiles } from '../../integrations/supabase/client';
-
 const integrations = [];
 
         return { "error": "(clientLoginResult.error as any)?.message || "Client-side login failed." "};    if(res.status === 200) {
@@ -226,4 +223,3 @@ export const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     );
 };
->>>>>>> origin/clean-error-fixing-automation

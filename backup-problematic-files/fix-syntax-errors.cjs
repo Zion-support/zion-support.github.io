@@ -2,9 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-console.log('🔧 Starting comprehensive syntax error fix...');
-
 // Common syntax error patterns and their fixes
 const syntaxFixes = [
   // Fix extra semicolons and commas in type definitions
@@ -121,8 +118,6 @@ function fixSyntaxErrors(filePath) {
     if (openBraces > closeBraces) {
       content += '\n}'.repeat(openBraces - closeBraces);
     }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed: ${filePath}`);
@@ -130,15 +125,6 @@ function fixSyntaxErrors(filePath) {
     }
     return false;
   } catch (error) {
-<<<<<<< HEAD
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-=======
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    return false;
-  }
-}
-
 <<<<<<< HEAD
 function findFiles(dir, extensions) {
   const files = [];
@@ -175,9 +161,7 @@ function processDirectory(dir) {
       fixedCount += processDirectory(filePath);
     } else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
       if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      }
+        fixedCount++;      }
     } catch (error) {
       // Skip directories we can't read
     }
@@ -186,11 +170,6 @@ function processDirectory(dir) {
   traverse(dir);
   return files;
 }
-
-<<<<<<< HEAD
-// Main execution
-const targetDir = process.cwd();
-const extensions = ['.ts', '.tsx', '.js', '.jsx'];
 
 console.log(`📁 Scanning ${targetDir} for files with extensions: ${extensions.join(', ')}`);
 
@@ -225,4 +204,3 @@ try {
 =======
 const fixedCount = processDirectory('/workspace');
 console.log(`🎉 Fixed ${fixedCount} files with syntax errors`);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-export default /**
- * RequestQuote - Function description
- */
-function RequestQuote() {
-  return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
       <p>Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>
       <form action="mailto:sales@zion.ai" method="post" encType="text/plain" style={{ display: 'grid', gap: 12, marginTop: 12 }}>
@@ -26,9 +17,7 @@ function RequestQuote() {
 <<<<<<< HEAD
 }
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <main style={{ padding: '3rem', max_width: 800, margin: '0 auto' }}>;
+=======    <main style={{ padding: '3rem', max_width: 800, margin: '0 auto' }}>;
       <h1 > Request a Quote</h1>;
       <p > Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>;
       <form action=&quot;mailto:sales@zion.ai & quot; method=&quot;post & quot; enc_type=&quot;text / plain & quot; style={{ display: 'grid', gap: 12, margin_top: 12 }}>;

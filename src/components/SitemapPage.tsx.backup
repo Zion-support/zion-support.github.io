@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import SEO from '@/components/SEO';
-import { Cloud } from 'lucide-react';
-const services = [];
-const solutions = [];
-
 
       title: 'Main Pages',
       links: [
@@ -157,4 +151,3 @@ export default function SitemapPage() {
         </div>
       </div>
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

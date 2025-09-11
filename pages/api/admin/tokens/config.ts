@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-const body = req.body || {};
-    const current = tokenStore.getConfig();
-    const updated = { ...current, ...body };
-    tokenStore.setConfig(updated);
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { getConfig } from "../../../../utils/token/service",;
-import { tokenStore } from "../../../../utils/token/storage",;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {
-    return res.status(200).json(getConfig())
-  }
-  if (req.method === "POST") {
-const body = req.body || {},
-    const current = tokenStore.getConfig(),
-    const updated = { ...current, ...body },
-    tokenStore.setConfig(updated),
-    return res.status(200).json(updated)
-  }
-  return res.status(405).json({ error: "Method not allowed" });
-};
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getConfig } from "../../../../utils/token/service";
-import { tokenStore } from "../../../../utils/token/storage";
-
 
 
 
@@ -40,8 +14,6 @@ const body = req.body |{}
     tokenStore.setConfig(updated)
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -51,9 +23,6 @@ const body = req.body |{}
   return res.status(405).json({ error: "Method not allowed" })
 }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -77,9 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+==============
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

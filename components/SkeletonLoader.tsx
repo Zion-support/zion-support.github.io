@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-;
-interface SkeletonLoaderProps {
-  lines?: number, class_name?: string;
-}
-=======
-
 import React from 'react';
 ;
 
@@ -13,8 +5,6 @@ interface SkeletonLoaderProps {
   lines?: number, class_name?: string;
 }
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SkeletonLoaderProps {;
   lines?: number, className?: string;
 }

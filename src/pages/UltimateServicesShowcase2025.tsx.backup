@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { _ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-import { _INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
-import { _EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
-
 const features = [];
 const benefits = [];
 const services = [];
@@ -140,8 +135,6 @@ const UltimateServicesShowcase2025 = () => {
             Transform your business with cutting-edge technology solutions designed for the future.
           </p>
         </div>
-
->>>>>>> origin/clean-error-fixing-automation
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-6 mb-8 border border-blue-500/30">
           <div className="text-center">

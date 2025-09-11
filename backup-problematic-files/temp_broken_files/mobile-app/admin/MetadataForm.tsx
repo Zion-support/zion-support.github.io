@@ -179,15 +179,5 @@ if (value && !keywords.includes (value) ) {;
 }characters </FormDescription> </FormItem>) ;
 }/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> > <X className="h-3 w-3" /> </button> </Badge>) ) ";"}</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>) ;
 }/> </div> </Form> </CardContent> </Card>) ;
-<<<<<<< HEAD
-:temp_broken_files/mobile-app/admin/MetadataForm.tsx
-};"'"
 };
 '"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/MetadataForm.tsx
-=======
-
-};
-'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

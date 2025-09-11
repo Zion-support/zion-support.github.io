@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../utils/sync/storage";
-import { filterEventsByScope } from "../../../utils/sync/storage";
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState } from "../../../utils/sync/storage",;
-import { filterEventsByScope } from "../../../utils/sync/storage",;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
   const state = readState()
   if (req.method === "GET") {
     const scope = state.config.scope
@@ -61,19 +51,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
   if (req.method === "GET") {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    const scope = state.config.scope,
-    const scopedEvents = filterEventsByScope(state.events, scope),
-    return res.status(200).json({
-      status: "ok",
-<<<<<<< HEAD
-
       instanceId: state.config.instanceId,
       config: state.config,
       lastSyncedAt: state.lastSyncedAt,
@@ -87,27 +67,13 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length,
     const scope = state.config.scope,
     const scoped_events = filterEventsByScope (state.events, scope),
     return res.status (200).json ({
-      status: "ok",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      instance_id: state.config.instance_id,
+      status: "ok",      instance_id: state.config.instance_id,
       config: state.config,
       lastSyncedAt: state.lastSyncedAt,
       counts: {
 
         totalEvents: scopedEvents.length,
 
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
-        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
-        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
-        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
 
   return res.status(405).json({ error: "Method not allowed" });
 };
@@ -180,8 +146,6 @@ export default function handler(req, res) {
 =======
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 

@@ -2,14 +2,8 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -18,27 +12,6 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {useState} from "react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-  };
-import { ContractTemplate } from "@/types/contracts",
-import { Button } from "@/components/ui/button",
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react";
-interface TemplateListProps {
-
   templates: ContractTemplate[]
   isLoading: boolean
   onSelect: (template: ContractTemplate) => void
@@ -133,9 +106,7 @@ import {;
   AlertDialogHeader,;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
 import { useState } from "react",;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TemplateListProps {;
   templates: ContractTemplate[],;
@@ -143,25 +114,6 @@ interface TemplateListProps {;
   onSelect: (template: ContractTemplate) => void,;
   onEdit: (template: ContractTemplate) => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-export function TemplateList({;
-  templates,;
-  isLoading,;
-  onSelect,;
-  onEdit;
-    ),;
-  }
-;
-  return (;
-    <div className="space-y-3">;
-      {templates.map((template) => (;
-        <Card key={template.id} className={template.is_default ? "border-zion-purple" :""}>;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 export function TemplateList(): any ({;
   templates;
   isLoading;
@@ -188,20 +140,10 @@ interface TemplateListProps {
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
 
-<<<<<<< HEAD
-=======
-  const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId)
-  },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
 
   const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center py-8">;
@@ -224,29 +166,6 @@ interface TemplateListProps {
     <div className="space-y-3">;
       {templates && templates.map((template) => (;
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          <CardContent className="p-4">;
-            <div className="flex items-center justify-between">;
-              <div className="space-y-1">;
-                <div className="flex items-center gap-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}: TemplateListProps) {;
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),;
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),;
-  const handleDeleteClick = (templateId: string) => {;
-    setTemplateToDelete(templateId);
-  },;
-  const handleDeleteConfirm = async () => {;
-    if (templateToDelete) {;
-      await deleteTemplate.mutateAsync(templateToDelete),;
-      setTemplateToDelete(null);
-    }
-  },
-
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
   },
@@ -303,120 +222,15 @@ interface TemplateListProps {
             </div>
             <Separator className="my-3" />
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <h3 className="font-medium">{template && template.title}</h3>;
+=======                  <h3 className="font-medium">{template && template.title}</h3>;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Button
-              onClick={() => onSelect(template)}
-              variant="outline"
-            <Button 
-              onClick={() => onSelect(template)} 
-              variant="outline" 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              className="w-full"
-            >
-              Use This Template
-            </Button>
-          </CardContent>
-        </Card>
-      ))}
-      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Delete Template</AlertDialogTitle>
-            <AlertDialogDescription>
-              Are you sure you want to delete this template? This action cannot be undone.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-              onClick={handleDeleteConfirm}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                </div>;
-                <p className="text-xs text-muted-foreground">;
-                  Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
-                </p>;
-              </div>;
-<<<<<<< HEAD
-                  <h3 className="font-medium">{template.title}</h3>;
-                  {template.is_default && (;
-                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>;
-                  )}
-                </div>;
-                <p className="text-xs text-muted-foreground">;
-                  Last updated:{new Date(template.updated_at).toLocaleDateString()}
-                </p>;
-              </div>;
-              ;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <div className="flex items-center gap-2">;
-                <Button variant="ghost" size="icon" onClick={() => onEdit(template)}>;
-                  <Edit className="h-4 w-4" />;
-                </Button>;
-<<<<<<< HEAD
-                {!template.is_default ? (;
-                  <Button variant="ghost" size="icon" onClick={() => handleSetDefault(template.id)}>;
-                    <Star className="h-4 w-4" />;
-                  </Button>;
-                ) :(;
-=======
-                {!template && template.is_default ? (;
-                  <Button variant="ghost" size="icon" onClick={() => handleSetDefault(template && template.id)}>;
-                    <Star className="h-4 w-4" />;
-                  </Button>;
-                ) : (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  <Button variant="ghost" size="icon" disabled>;
-                    <StarOff className="h-4 w-4" />;
-                  </Button>;
-                )}
-<<<<<<< HEAD
-                <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template.id)}>;
-=======
-                <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template && template.id)}>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  <Trash className="h-4 w-4 text-destructive" />;
-                </Button>;
-              </div>;
-            </div>;
-
-<<<<<<< HEAD
-            ;
-            <Separator className="my-3" />;
-            ;
-            <Button ;
-              onClick={() => onSelect(template)} ;
-              variant="outline" ;
-              className="w-full";
-=======
-            <Separator className="my-3" />;
 
             <Button
               onClick={() => onSelect(template)} ;
@@ -519,61 +333,20 @@ if ( {) {
               variant="outline";
               className="w - full";
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            >;
+=======            >;
               Use This Template;
             </Button>;
           </CardContent>;
-<<<<<<< HEAD
-        </Card>;
-      ))}
-      ;
-      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
-        <AlertDialogContent>;
-          <AlertDialogHeader>;
-            <AlertDialogTitle>Delete Template</AlertDialogTitle>;
-=======
-
         </Card>))}
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Template</AlertDialogTitle>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <AlertDialogDescription>;
               Are you sure you want to delete this template? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<< HEAD
-            <AlertDialogCancel>Cancel</AlertDialogCancel>;
-            <AlertDialogAction ;
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
-              onClick={handleDeleteConfirm}
-            >;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            >
-              Delete
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-    </div>
-  )
-}
-            >;
-<<<<<<< HEAD
-=======
-=======
-              Use This Template;
-            </Button>;
-          </CardContent>;
-
         </Card>))}
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
         <AlertDialogContent>;
@@ -585,58 +358,11 @@ if ( {) {
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
               on_click={handleDeleteConfirm}
             >;
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              Delete;
-            </AlertDialogAction>;
-          </AlertDialogFooter>;
-        </AlertDialogContent>;
-      </AlertDialog>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
-  ),; import {
-  AlertDialog;
-AlertDialogAction;
-AlertDialogCancel;
-AlertDialogContent;
-AlertDialogDescription;
-AlertDialogFooter;
-AlertDialogHeader;
-interface TemplateListProps {
-  templates: ContractTemplate[];
-isLoading: boolean;
-onSelect: (template: ContractTemplate) => void;
-onEdit: (template: ContractTemplate) => void 
-}export function TemplateList ({
-  templates;
-isLoading;
-onSelect;
-onEdit 
-}: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null> (null);
-const {
-  deleteTemplate, setDefaultTemplate 
-}= useContractTemplates ();
-const handleDeleteClick = (templateId: string) => {
-  setTemplateToDelete (templateId) 
-};
-const handleDeleteConfirm = async () => {
-  if (templateToDelete) {
-  await deleteTemplate.mutateAsync (templateToDelete);
-setTemplateToDelete (null) 
-}
-;
 
 };
 const handleSetDefault = async (templateId: string) => {
@@ -672,8 +398,6 @@ if (isLoading) {
 ;
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     </div>);
 }
 

@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -12,37 +6,6 @@
 import React from "react",
 import { cn } from "@/lib/utils",
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  children?: React.ReactNode,
-  active?: boolean
-}
-export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
-  return (
-    <div
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-import {cn} from "@/lib/utils";
-interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  className?: string;
-  children?: React && React.ReactNode;
-  active?: boolean;
-}
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
@@ -73,8 +36,6 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 
         className
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
       {...props}>;
       {children}
@@ -107,9 +68,6 @@ function SidebarItem() {
       {children}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React from "react",;
 import { cn } from "@/lib/utils",;
 ;
@@ -180,9 +138,7 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
     </div>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

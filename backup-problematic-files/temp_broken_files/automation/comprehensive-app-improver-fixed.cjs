@@ -183,14 +183,6 @@ class ComprehensiveAppImprover {}
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`Report "generated": ${reportFile}`);
-<<<<<<< HEAD
-=======
-    
-    
-    
-    
-    
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (this.fixesApplied.length > 0) {}
       console.log('\nFixes "Applied": ');
@@ -254,4 +246,3 @@ if (require.main === module) {}
 module.exports = ComprehensiveAppImprover;
 =======
 module.exports = ComprehensiveAppImprover;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

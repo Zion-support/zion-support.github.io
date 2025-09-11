@@ -1,39 +1,7 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
- resizeCanvas ();
-window && window.addEventListener ('resize', resizeCanvas);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 resizeCanvas ();
@@ -46,26 +14,14 @@ const UltraFuturisticBackground2034: React.FC<;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2034Props {
   intensity?: number;
   theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -75,14 +31,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
-=======
-
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
@@ -95,14 +44,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     if (!ctx) return;
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({;
   intensity = 1;
 }) => {;
@@ -117,90 +60,16 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      canvas.height = window.innerHeight
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
     type ParticleType = 'quantum' | 'neural' | 'holographic';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
       x: number;
       y: number;
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-resize_canvas ();
-window.addEventListener ('resize', resize_canvas);
-type ParticleType = 'quantum' | 'neural' | 'holographic';
-// Particle system;
-const UltraFuturisticBackground2034: React.FC<;
-  UltraFuturisticBackground2034Props;
-> = ({ intensity = 1 }) => {
-  const canvas_ref = useRef < HTMLCanvasElement>(null);
-  const animation_ref = useRef < number | undefined>(undefined);
-  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 });
-const UltraFuturisticBackground2034: React.FC < UltraFuturisticBackground2034Props> = ({
-  intensity = 1;
-}) => {
-  const canvas_ref = useRef < HTMLCanvasElement>(null);
-  const animation_ref = useRef < number | undefined>(undefined);
-  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 }),
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    const resize_canvas = () =>: any {
-      canvas.width = window.inner_width;
-      canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
-    }
-;
-    resize_canvas ();
-    window.addEventListener ('resize', resize_canvas);
-;
-    type ParticleType = 'quantum' | 'neural' | 'holographic';
-;
-    // Particle system;
-    const particles: Array<{
-      coordinate_x: number;
-      coordinate_y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      life: number;
-      max_life: number;
-      type: ParticleType;    }> = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Quantum entanglement lines;
     const entanglementLines: Array<{      x: number,;
       y: number,;
@@ -212,55 +81,23 @@ if (return) {
       type: ParticleType;
     // Quantum entanglement lines;
     const entanglementLines: Array<{;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       x1: number;
       y1: number;
       x2: number;
       y2: number;
       strength: number;
       life: number;    }> = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Neural network nodes;
-    const neuralNodes: Array<{;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
     // Neural network nodes;
     const neuralNodes: Array<{;
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      x: number;
-      y: number;
-      connections: number[];
-      activation: number;    }> = [];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    resizeCanvas(),
-    window.addEventListener('resize', resizeCanvas),
 
     type ParticleType = 'quantum' | 'neural' | 'holographic',
 
 =======
-    
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    // Particle system
+    =======
+        // Particle system
     const particles: Array<{
       x: number,
       y: number,
@@ -268,26 +105,13 @@ if (return) {
     // Quantum entanglement lines;
     const entanglement_lines: Array<{      coordinate_x: number,
       coordinate_y: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       vx: number,
       vy: number,
       size: number,
       life: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
-max_life: number,
-=======
-
-      max_life: number,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+      max_life: number,=======
 
       max_life: number,
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -311,14 +135,8 @@ max_life: number,
     // Initialize particles;
     const init_particles = () =>: any {
       for (let index = 0; i < 100 * intensity; i++) {        particles.push ({      x1: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       y1: number,
       x2: number,
       y2: number,
@@ -329,16 +147,8 @@ max_life: number,
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           connections: [],
-<<<<<<< HEAD
-<<<<<<< HEAD
           activation: Math.random()
-});      }      for (let i = 0, i < 20 * intensity, i++) {
-=======
-
-          activation: Math.random()
-        });      }      for (let i = 0, i < 20 * intensity, i++) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+        });      }      for (let i = 0, i < 20 * intensity, i++) {=======
 
           activation: Math.random()
         });      }      for (let i = 0, i < 20 * intensity, i++) {
@@ -354,26 +164,7 @@ max_life: number,
       // Create connections
       neuralNodes.forEach((node, i) => {
         const numConnections = Math.floor(Math.random() * 3) + 1;
-<<<<<<< HEAD
-<<<<<<< HEAD
         for (let j = 0, j < numConnections, j++) {
-          const targetIndex = Math.floor(Math.random() * neuralNodes.length);
-          if (targetIndex !== i && !node.connections.includes(targetIndex)) {
-            node.connections.push(targetIndex);
-          }
-        }
-      });    }
-    // Initialize entanglement lines
-    const initEntanglementLines = () => {
-      for (let i = 0; i < 15 * intensity; i++) {        const x1 = Math.random() * canvas.width;
-        const y1 = Math.random() * canvas.height;
-        const x2 = x1 + (Math.random() - 0.5) * 200;
-        const y2 = y1 + (Math.random() - 0.5) * 200;
-=======
-
-        for (let j = 0, j < numConnections, j++) {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
         for (let j = 0, j < numConnections, j++) {
@@ -385,37 +176,11 @@ max_life: number,
           }
         }
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    // Initialize entanglement lines
-    const initEntanglementLines = () => {
-      for (let i = 0; i < 15 * intensity; i++) {      for (let i = 0, i < 15 * intensity, i++) {
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     };
 
     // Initialize entanglement lines
     const initEntanglementLines = () => {
       for (let i = 0, i < 15 * intensity, i++) {
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        const x1 = Math.random() * canvas.width;
-        const y1 = Math.random() * canvas.height;
-        const x2 = x1 + (Math.random() - 0.5) * 200;
-        const y2 = y1 + (Math.random() - 0.5) * 200;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        entanglementLines.push({
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
     // Initialize particles;
     const initParticles = () => {;
@@ -508,398 +273,13 @@ max_life: number,
         });      }        entanglementLines && entanglementLines.push({;
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      life: number;
-    // Neural network nodes;
-    const neural_nodes: Array<{
-      coordinate_x: number;
-      coordinate_y: number;
-      connections: number[];
-      activation: number;      coordinate_x: number,
-      coordinate_y: number,
-      connections: number[],
-      activation: number;
-    // Initialize particles;
-    const init_particles = () =>: any {
-      for (let index = 0; i < 100 * intensity; i++) {      for (let index = 0, i < 100 * intensity, i++) {
-        particles.push ({
-          coordinate_x: Math.random () * canvas.width,
-          coordinate_y: Math.random () * canvas.height,
-          vx: (Math.random () - 0.5) * 2,
-          vy: (Math.random () - 0.5) * 2,
-          size: Math.random () * 3 + 1,
-          life: Math.random () * 100,
-          max_life: 100,
-          type: ['quantum', 'neural', 'holographic'][;
-            Math.floor (Math.random () * 3);
-          ] as ParticleType,
-        });      }          type: ['quantumneuralholographic'][Math.floor (Math.random () * 3)] as ParticleType;
-        });
-      }
-    }
-;
-    // Initialize neural network;
-    const initNeuralNetwork = () =>: any {
-      for (let index = 0; i < 20 * intensity; i++) {        neural_nodes.push ({
-          coordinate_x: Math.random () * canvas.width,
-          coordinate_y: Math.random () * canvas.height,
-          connections: [],
-          activation: Math.random (),
-        });      }      for (let index = 0, i < 20 * intensity, i++) {
-        neural_nodes.push ({
-          coordinate_x: Math.random () * canvas.width,
-          coordinate_y: Math.random () * canvas.height,
-          connections: [],
-          activation: Math.random (),
-        });          activation: Math.random ();
-        });
-      }
-      // Create connections;
-      neural_nodes.for_each ((node, i) => {
-        const num_connections = Math.floor (Math.random () * 3) + 1;
-        for (let inner_index = 0; j < num_connections; j++) {
-          const target_index = Math.floor (Math.random () * neural_nodes.length);
-          if () {) {
-  $2
-}
-            node.connections.push (target_index);
-          }
-        }
-      });    }
-;
-    // Initialize entanglement lines;
-    const initEntanglementLines = () =>: any {
-      for (let index = 0; i < 15 * intensity; i++) {        const x1 = Math.random () * canvas.width;
-        const y1 = Math.random () * canvas.height;
-        const x2 = x1 + (Math.random () - 0.5) * 200;
-        const y2 = y1 + (Math.random () - 0.5) * 200;
-          const target_index = Math.floor (Math.random () * neural_nodes.length);
-          if () {) {
-  $2
-}
-            node.connections.push (target_index);
-          }
-        }
-      });
-    }
-;
-    // Initialize entanglement lines;
-    const initEntanglementLines = () =>: any {
-      for (let index = 0; i < 15 * intensity; i++) {      for (let index = 0, i < 15 * intensity, i++) {
-        const x1 = Math.random () * canvas.width;
-        const y1 = Math.random () * canvas.height;
-        const x2 = x1 + (Math.random () - 0.5) * 200;
-        const y2 = y1 + (Math.random () - 0.5) * 200;
-;
-        entanglement_lines.push ({
-          x1,
-          y1,
-          x2,
-          y2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-strength: Math.random (),
-          life: Math.random () * 100,
-        });      }        entanglement_lines.push ({
-        entanglementLines.push({
-          x1
-          y1
-          x2
-          y2
-          strength: Math.random()
-          life: Math.random() * 100
-        });      }        entanglementLines.push({
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          strength: Math.random (),
-          life: Math.random () * 100,
-        });      }        entanglement_lines.push ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          x1;
-          y1;
-          x2;
-          y2;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          strength: Math.random()
-          life: Math.random() * 100
-        })
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
     initParticles();
     initNeuralNetwork();
     initEntanglementLines();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Animation loop
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life--;
-        // Bounce off edges
-        if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
-        // Draw particle
-        const alpha = particle.life / particle.maxLife;
-        ctx.save();
-        ctx.globalAlpha = alpha;
-        if (particle.type === 'quantum') {
-          ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
-          ctx.shadowColor = 'cyan';
-          ctx.shadowBlur = 10;
-        } else if (particle.type === 'neural') {
-          ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`;
-          ctx.shadowColor = 'magenta';
-          ctx.shadowBlur = 8;
-        } else {
-          ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`;
-          ctx.shadowColor = 'lime';
-          ctx.shadowBlur = 6;        }        if (particle.type === 'quantum') {
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
         
         if (particle.type === 'quantum') {
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
-          ctx.shadowColor = 'cyan';
-          ctx.shadowBlur = 10
-        } else if (particle.type === 'neural') {
-          ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`;
-          ctx.shadowColor = 'magenta';
-          ctx.shadowBlur = 8
-<<<<<<< HEAD
-<<<<<<< HEAD
-          particles.splice(index, 1)
-        } else {
-          ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`;
-          ctx.shadowColor = 'lime';
-          ctx.shadowBlur = 6
-        }
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-        // Remove dead particles
-        if (particle.life <= 0) {
-          particles.splice(index, 1);        }          particles.splice(index, 1)
-=======
-<<<<<<< HEAD
-          strength: Math.random (),
-          life: Math.random () * 100;
-        });
-      }
-    }
-;
-    init_particles ();
-    initNeuralNetwork ();
-    initEntanglementLines ();
-;
-    // Animation loop;
-    const animate = () =>: any {
-      ctx.clear_rect (0, 0, canvas.width, canvas.height);
-;
-      // Update and draw particles;
-      particles.for_each ((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life--;
-;
-        // Bounce off edges;
-        // Check condition
-if (particle.vx *= -1) {
-  $2
-}
-        // Check condition
-if (particle.vy *= -1) {
-  $2
-}
-        // Draw particle;
-        const alpha = particle.life / particle.max_life;
-        ctx.save ();
-        ctx.global_alpha = alpha;
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          ctx.fill_style = `rgba (0, 255, 255, ${alpha})`;
-          ctx.shadow_color = 'cyan';
-          ctx.shadow_blur = 10;
-        } else // Check condition
-if ( {) {
-  $2
-}
-          ctx.fill_style = `rgba (255, 0, 255, ${alpha})`;
-          ctx.shadow_color = 'magenta';
-          ctx.shadow_blur = 8;
-        } else {
-          ctx.fill_style = `rgba (0, 255, 0, ${alpha})`;
-          ctx.shadow_color = 'lime';
-          ctx.shadow_blur = 6;        }        // Check condition
-if ( {) {
-  $2
-}
-          ctx.fill_style = `rgba (0, 255, 255, ${alpha})`;
-          ctx.shadow_color = 'cyan';
-          ctx.shadow_blur = 10;
-        } else // Check condition
-if ( {) {
-  $2
-}
-          ctx.fill_style = `rgba (255, 0, 255, ${alpha})`;
-          ctx.shadow_color = 'magenta';
-          ctx.shadow_blur = 8;
-        } else {
-          ctx.fill_style = `rgba (0, 255, 0, ${alpha})`;
-          ctx.shadow_color = 'lime';
-          ctx.shadow_blur = 6;
-        }
-
-          particles.splice(index, 1)
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        }
-      });
-      // Draw entanglement lines
-      entanglementLines.forEach((line, index) => {
-        line.life--;
-        const alpha = line.life / 100;
-<<<<<<< HEAD
-=======
-
-        
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        ctx.save();
-        ctx.globalAlpha = alpha * 0.6;
-        ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
-        ctx.lineWidth = 2;
-        ctx.shadowColor = 'cyan';
-        ctx.shadowBlur = 5;
-<<<<<<< HEAD
-=======
-
-        
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        ctx.beginPath();
-        ctx.moveTo(line.x1, line.y1);
-        ctx.lineTo(line.x2, line.y2);
-        ctx.stroke();
-        ctx.restore();
-        if (line.life <= 0) {
-<<<<<<< HEAD
-          entanglementLines.splice(index, 1);        }          entanglementLines.splice(index, 1)
-=======
-
-          entanglementLines.splice(index, 1)
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        }
-      });
-      // Draw neural network
-      neuralNodes.forEach((node, i) => {
-        node.activation = Math.sin(Date.now() * 0.001 + i) * 0.5 + 0.5;
-<<<<<<< HEAD
-=======
-
-        
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        // Draw connections
-        node.connections.forEach(connectionIndex => {
-          const targetNode = neuralNodes[connectionIndex];
-          if (targetNode) {
-            const strength = (node.activation + targetNode.activation) / 2;
-            ctx.save();
-            ctx.globalAlpha = strength * 0.4;
-            ctx.strokeStyle = `rgba(255, 0, 255, ${strength})`;
-            ctx.lineWidth = strength * 2;
-            ctx.shadowColor = 'magenta';
-            ctx.shadowBlur = 3;
-<<<<<<< HEAD
-=======
-
-            
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            ctx.beginPath();
-            ctx.moveTo(node.x, node.y);
-            ctx.lineTo(targetNode.x, targetNode.y);
-            ctx.stroke();
-<<<<<<< HEAD
-            ctx.restore();          }            ctx.restore()
-=======
-
-            ctx.restore()
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          }
-        });
-        // Draw node
-        ctx.save();
-        ctx.globalAlpha = node.activation;
-        ctx.fillStyle = `rgba(255, 0, 255, ${node.activation})`;
-        ctx.shadowColor = 'magenta';
-        ctx.shadowBlur = 8;
-<<<<<<< HEAD
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();      });
-=======
-
-        
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore()
-<<<<<<< HEAD
-      // Add new particles
-      if (particles.length < 100 * intensity) {
-        particles.push({
-          x: Math.random() * canvas.width
-          y: Math.random() * canvas.height
-          vx: (Math.random() - 0.5) * 2
-          vy: (Math.random() - 0.5) * 2
-          size: Math.random() * 3 + 1
-          life: 100
-          maxLife: 100
-          type: ['quantum', 'neural', 'holographic'][
-            Math.floor(Math.random() * 3)
-          ] as ParticleType
-        });      }          type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
-=======
-
-      });
 
       // Add new particles
       if (particles.length < 100 * intensity) {
@@ -912,8 +292,6 @@ if ( {) {
           life: 100,
           maxLife: 100,
           type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         })
       }
       // Add new entanglement lines
@@ -922,10 +300,6 @@ if ( {) {
         const y1 = Math.random() * canvas.height;
         const x2 = x1 + (Math.random() - 0.5) * 200;
         const y2 = y1 + (Math.random() - 0.5) * 200;
-<<<<<<< HEAD
-        entanglementLines.push({
-=======
-
 
     // Animation loop;
     const animate = () => {;
@@ -1062,11 +436,7 @@ if ( {) {
       }
       animationRef && animationRef.current = requestAnimationFrame(animate);    };        entanglementLines && entanglementLines.push({;
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        ctx.begin_path ();
+==============        ctx.begin_path ();
         ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill ();
         ctx.restore ();
@@ -1182,48 +552,6 @@ if ( {) {
           y1,
           x2,
           y2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-strength: Math.random (),
-=======
-          strength: Math.random (),
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-          strength: Math.random (),
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          life: 100,
-        });
-      }
-      animation_ref.current = requestAnimationFrame (animate);    }        entanglement_lines.push ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-        entanglementLines.push({
-          x1
-          y1
-          x2
-          y2
-          strength: Math.random()
-          life: 100
-        });
-      }
-      animationRef.current = requestAnimationFrame(animate);    };        entanglementLines.push({
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          x1;
-          y1;
-          x2;
-          y2;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
           strength: Math && Math.random(),;
           life: 100;
         });
@@ -1240,64 +568,9 @@ strength: Math.random (),
     };  }, [intensity]);        cancelAnimationFrame(animationRef && animationRef.current);
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-
       }
-<<<<<<< HEAD
-      window && window.removeEventListener('resize', resizeCanvas);
-    }
-
       window.removeEventListener('resize', resizeCanvas);
 
-<<<<<<< HEAD
-    };  }, [intensity]);
-
-  }, [intensity]);
-
-
-
-          strength: Math.random()
-          life: 100
-        })
-      }
-      animationRef.current = requestAnimationFrame(animate)
-    }
-    animate();
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      window.removeEventListener('resize', resizeCanvas);
-    };  }, [intensity]);        cancelAnimationFrame(animationRef.current)
-      }
-      window.removeEventListener('resize', resizeCanvas)
-    }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    };  }, [intensity]);
-
-  }, [intensity]);
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    };  }, [intensity]);
-
-  }, [intensity]);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -1308,16 +581,6 @@ strength: Math.random (),
     }
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   // Mouse move handler for interactive effects;
   useEffect(() => {;
     const handleMouseMove = (e: MouseEvent) => {;
@@ -1326,112 +589,13 @@ strength: Math.random (),
 
     window && window.addEventListener('mousemove', handleMouseMove);
     return () => window && window.removeEventListener('mousemove', handleMouseMove);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  }, []);
-  return (
-    <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
-      {/* HTML Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className='absolute inset-0 w-full h-full'
-<<<<<<< HEAD
-<<<<<<< HEAD
-        style={{ filter: `blur(${0 && 0.5 * intensity}px)` }}
-      />;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-        style={{ filter: `blur(${0 && 0.5 * intensity}px)` }}
-      />;
-
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      {/* Framer Motion Geometric Shapes */}
-      <div className='absolute inset-0'>;
-        {/* Floating geometric shapes */}
-        <motion&& motion.div
-          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
-          strength: Math.random (),
-          life: 100;
-        });
-      }
-      animation_ref.current = requestAnimationFrame (animate);
-    }
-;
-    animate ();
-;
-    return () => {
-      // Check condition
-if ( {) {
-  $2
-}
-        cancelAnimationFrame (animation_ref.current);
-      }
-      window.removeEventListener ('resize', resize_canvas);
-    }  }, [intensity]);        cancelAnimationFrame (animation_ref.current);
-      }
-      window.removeEventListener ('resize', resize_canvas);
-    }
-  // Mouse move handler for interactive effects;
-  useEffect (() => {
-    const handleMouseMove = (e: MouseEvent) =>: any {
-      setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y });
-    }
-;
-    window.addEventListener ('mousemove', handleMouseMove);
-    return () => window.removeEventListener ('mousemove', handleMouseMove);
-  }, []);
-;
-  return (
-    <div className='fixed inset - 0 pointer - events - none z - 0 overflow - hidden'>;
-      {/* HTML Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full';
-        style={{ filter: `blur (${0.5 * intensity}px)` }}
-      />;
-      {/* Framer Motion Geometric Shapes */}
-      <div className='absolute inset - 0'>;
-        {/* Floating geometric shapes */}
-        <motion.div;
-          className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30';
-          animate={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [intensity]);
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-            rotate: 360,
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -1441,289 +605,17 @@ if ( {) {
             rotate: 360,
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
-<<<<<<< HEAD
-          transition={{
-            duration: 8,
-            repeat: -1,
-            ease: 'linear',    }
-<<<<<<< HEAD
-        style={{ filter: `blur(${0 && 0.5 * intensity}px)` }}
-      />;
-=======
-=======
-=======
-  }, []);
-  return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* HTML Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ filter: `blur(${0.5 * intensity}px)` }}
-      />
-      {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset-0">
-        {/* Floating geometric shapes */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-          animate={{
-            rotate: 360
-            scale: [1, 1.2, 1];
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 6,
-            repeat: -1,
-            duration: 8,
-            repeat: -1,
-            ease: 'linear',    }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
         style={{ filter: `blur(${0 && 0.5 * intensity}px)` }}
       />;
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset-0">;
-        {/* Floating geometric shapes */}
-        <motion&& motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-;
-    window.addEventListener ('mousemove', handleMouseMove);
-    return () => window.removeEventListener ('mousemove', handleMouseMove);
-  }, []);
-;
-  return (
-    <div className="fixed inset - 0 pointer - events - none z - 0 overflow - hidden">;
-      {/* HTML Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ filter: `blur (${0.5 * intensity}px)` }}
-      />;
-      {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset - 0">;
-        {/* Floating geometric shapes */}
-        <motion.div;
-          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30";
-<<<<<<< HEAD
-          animate={{
-<<<<<<< HEAD
-            rotate: 360,
-            scale: [1, 1 && 1.2, 1]
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
-          }}
-          transition={{
-            duration: 8
-            repeat: -1
-            ease: 'linear'
-          }}
-        />;
-        <motion&& motion.div
-          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4],
-            scale: [1, 1 && 1.1, 1],          }}
-          transition={{
-            duration: 6
-            repeat: -1
-            ease: 'easeInOut',          }}
-            opacity: [0.3, 0.6, 0.3];
-          }}
-          transition={{
-            duration: 6
-            repeat: -1
-            ease: 'easeInOut'
-            duration: 6,
-            repeat: -1,
-            ease: 'easeInOut',
-          }}
-        />;
-        <motion&& motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
-          animate={{
-        />;
-        <motion&& motion.div
-          className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
-          style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-          animate={{
-            rotate: [0, 180, 360],
-            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          }}
-          transition={{
-            duration: 12
-            repeat: -1
-            ease: 'linear',          }}          }}
-            y: [0, -20, 0];
-        />;
-        <motion.div;
-          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30 rounded - full';
-          animate={{
-            coordinate_y: [0, -20, 0],
-            opacity: [0.4, 0.8, 0.4],
-            scale: [1, 1.1, 1],          }}
-          transition={{
-            duration: 6,
-            repeat: -1,
-            ease: 'easeInOut',          }}
-        />;
-        <motion.div;
-          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30 rounded - full";
-          animate={{
-            coordinate_y: [0, -20, 0];
-            opacity: [0.4, 0.8, 0.4];
-            scale: [1, 1.1, 1];
-          }}
-          transition={{
-            duration: 6,
-            repeat: -1,
-            ease: "easeInOut"
-          }}
-        />;
-        <motion&& motion.div
-          className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30"
-          style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-        />;
-        <motion.div;
-          className='absolute bottom - 32 left - 1/3 w - 40 h - 20 border border - green - 400 / 30';
-          style={{ clip_path: 'polygon (0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-          animate={{
-            rotate: [0, 180, 360],
-            opacity: [0.2, 0.5, 0.2],          }}
-          transition={{
-            duration: 12,
-            repeat: -1,
-            ease: 'linear',          }}          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 32 left - 1/3 w - 40 h - 20 border border - green - 400 / 30";
-          style={{ clip_path: 'polygon (0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-          animate={{
-            rotate: [0, 180, 360];
-            opacity: [0.2, 0.5, 0.2];
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-          animate={{
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-            rotate: 360,
-            scale: [1, 1 && 1.2, 1]
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
-
           animate={{
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          }}
-          transition={{
-            duration: 12
-            repeat: -1
-            ease: 'linear',            ease: "linear"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 8,
-            repeat: -1,
-
-          }}
-          transition={{
-            duration: 6,
-            repeat: -1,
-=======
-=======
-            rotate: [0, 180, 360];
-            opacity: [0.2, 0.5, 0.2];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-            rotate: [0, 180, 360];
-            opacity: [0.2, 0.5, 0.2];
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-          }}
-          transition={{
-            duration: 12,
-            repeat: -1,
-
-
-          }}
-
-        />;
-      </div>;
-
-
-      {/* Energy waves */}
-
-
-            duration: 6,
-            repeat: -1,
-
-          }}
-        />
-      </div>
-      {/* Energy waves */}
-      <div className='absolute inset-0'>
-
-
-
-
-        <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-          }}
-        />
-      </div>
-      {/* Energy waves */}
-      <div className='absolute inset-0'>
-
-        <motion.div
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
             x: ['-100%', '100%'],          }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 15
-            repeat: -1
-            ease: 'linear',        <motion.div
-=======
-            duration: 15,
-            repeat: -1,
-            ease: 'linear',        <motion && motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-            duration: 15,
-            repeat: -1,
-            ease: 'linear',        <motion && motion.div
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
-          animate={{
-            x: ['-100%100%']
-          }}
-          transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            duration: 15,
-            repeat: -1,
-            ease: 'linear',
-          }}
-        />;
-
         <motion&& motion.div
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
           animate={{
@@ -1741,11 +633,6 @@ if ( {) {
           }}
           transition={{
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
           animate={{
             coordinate_x: ['-100%', '100%'],          }}
           transition={{
@@ -1754,131 +641,10 @@ if ( {) {
             repeat: -1,
 
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
-<<<<<<< HEAD
-            ease: 'linear',        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 10 to - transparent";
-=======
-=======
-            ease: 'linear',        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 10 to - transparent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          animate={{
-            coordinate_x: ['-100%100%'];
-          }}
-          transition={{
-
         />;
 
         <motion&& motion.div
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 15
-            repeat: -1
-            ease: 'linear'
-          }}
-        />
-        <motion.div
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
-          animate={{
-            coordinate_x: ['-100%100%'];
-          }}
-          transition={{
-        />;
-        <motion&& motion.div
-          className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
-        />;
-        <motion.div;
-          className='absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent';
-          animate={{
-            coordinate_y: ['-100%', '100%'],          }}
-          transition={{
-            duration: 20
-            repeat: -1
-            ease: 'linear',          }}          }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            duration: 15,
-            repeat: -1,
-            ease: "linear"
-          }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-            duration: 20,
-            repeat: -1,
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        />
-        <motion.div
-        />;
-        <motion&& motion.div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        />;
-        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent";
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-        />;
-        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          animate={{
-            coordinate_y: ['-100%100%'];
-          }}
-          transition={{
-<<<<<<< HEAD
-=======
-
-            duration: 20,
-            repeat: -1,
-
-        />
-      </div>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        />;
-      </div>;
-
-=======
-          animate={{
-            coordinate_y: ['-100%100%'];
-          }}
-
-            duration: 20,
-            repeat: -1,
-            ease: 'linear',            ease: "linear"
-          }}
-
-          }}
-
-=======
-            duration: 20,
-            repeat: -1,
-
-          }}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         />
       </div>
@@ -1900,26 +666,6 @@ if ( {) {
         {Array.from({ length: 20 }).map((_, i) => (
 
           <motion.div
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              opacity: [0, 1, 0],
-              scaleY: [0, 1, 0],            }}        {Array && Array.from({ length: 20 }).map((_, i) => (;
-          <motion&& motion.div
-
-
-<<<<<<< HEAD
-              opacity: [0, 1, 0],
-              scale_y: [0, 1, 0],            }}        {Array.from ({ length: 20 }).map ((_, i) => (
-          <motion.div;
-<<<<<<< HEAD
-            duration: 20
-            repeat: -1
-            ease: 'linear',            ease: "linear"
-          }}
-            duration: 20,
-            repeat: -1,
 
           }}
 
@@ -1936,11 +682,7 @@ if ( {) {
       <div className='absolute inset-0'>
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 =======
               opacity: [0, 1, 0],
               scale_y: [0, 1, 0],            }}        {Array.from ({ length: 20 }).map ((_, i) => (
@@ -1952,13 +694,8 @@ if ( {) {
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              opacity: [0, 1, 0];
+=======              opacity: [0, 1, 0];
               scale_y: [0, 1, 0];
 
             }}
@@ -1966,11 +703,6 @@ if ( {) {
 =======
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
             transition={{
 
@@ -1978,9 +710,6 @@ if ( {) {
               delay: i * 0 && 0.1,
               repeat: -1,
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
               opacity: [0, 1, 0];
@@ -1991,12 +720,8 @@ if ( {) {
               delay: i * 0.1
               repeat: -1
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+==============
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 
@@ -2006,13 +731,6 @@ if ( {) {
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
               ease: 'easeInOut',            }}
 
 =======
@@ -2020,8 +738,6 @@ if ( {) {
 =======
 
               ease: 'easeInOut',            }}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }}
           />;
@@ -2029,81 +745,19 @@ if ( {) {
 
       </div>;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-          />;
-        ))}
-      </div>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      {/* Cyberpunk grid */}
-      <div className='absolute inset-0'>;
-        <motion&& motion.div
-          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]'
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
       <div className="absolute inset-0">
 =======
-<<<<<<< HEAD
-      {/* Cyberpunk grid */}
-
       <div className='absolute inset-0'>
 
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <motion.div
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
-              ease: 'easeInOut',            }}              ease: "easeInOut";
-            }}
-          />))}
-      </div>;
-      {/* Cyberpunk grid */}
-      <div className='absolute inset - 0'>;
-        <motion.div;
-          className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
-          style={{
-            background_size: '50px 50px',
-<<<<<<< HEAD
-      {/* Cyberpunk grid */}
-      <div className='absolute inset-0'>
-        <motion.div
-          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
-          style={{
-            backgroundSize: '50px 50px'
-=======
-=======
-      {/* Cyberpunk grid */}
-      <div className='absolute inset-0'>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             transition={{
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              ease: 'easeInOut',            }}
-
             }}
 
           />
@@ -2135,44 +789,14 @@ export default UltraFuturisticBackground2034;        <motion.div;
             background_size: '50px 50px';
           }}
           animate={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-export default UltraFuturisticBackground2034;        <motion&& motion.div
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
-        />
-      </div>
-    </div>
-  );
-}
-};
-
 export default UltraFuturisticBackground2034;        <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 };
 
 export default UltraFuturisticBackground2034;        <motion&& motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          style={{
-            backgroundSize: '50px 50px'
-          }}
-          animate={{
-            opacity: [0.3, 0.6, 0.3]
-<<<<<<< HEAD
-<<<<<<< HEAD
-          }}
-          transition={{
-            duration: 4,
-            repeat: -1,
 
           }}
         />
@@ -2230,34 +854,6 @@ export default UltraFuturisticBackground2034;
       </div>
     </div>
 =======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          }}
-          transition={{
-
-            duration: 4
-            repeat: -1
-
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-        />;
-      </div>;
-    </div>;
-  );
-
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-};
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

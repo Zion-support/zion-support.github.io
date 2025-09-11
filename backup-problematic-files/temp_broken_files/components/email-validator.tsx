@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-:components/email-validator.tsx
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
-export default function EmailValidatorPage() {const [emails, setEmails] = useState('');
-  const [validationResults, setValidationResults] = useState<any[]>([]);
-  const [isValidating, setIsValidating] = useState(false);
-  const [bulkMode, setBulkMode] = useState(false);
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Card from '../components/ui/Card',;
@@ -23,11 +8,6 @@ export default function EmailValidatorPage() {;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
   const [isValidating, setIsValidating] = useState(false),;
   const [bulkMode, setBulkMode] = useState(false),;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const validateEmails = async () => {;
     if (!emails.trim()) return;
     setIsValidating(true);
@@ -75,11 +55,6 @@ export default function EmailValidatorPage() {;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 ;
     // Additional checks;
@@ -87,12 +62,7 @@ export default function EmailValidatorPage() {;
       status = 'invalid',;
       score = 0,;
       issues.push('Email too long');
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React, { useState } from 'react',
+=======import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
@@ -170,14 +140,7 @@ if (email.length > 254) {
       status = 'invalid',
       score = 0,
       issues.push('Email too long')
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     // Additional checks;
@@ -189,21 +152,6 @@ if (email.length > 254) {
       score = 0;
       issues.push('Local part too long');
     }
-<<<<<<< HEAD
-:components/email-validator.tsx
-    return {email;
-      status;
-      score;
-      issues;
-      domain;
-      isDisposable;
-      hasTypo;
-      timestamp: new Date().toLocaleTimeString();
-    }
-}
-:components/email-validator.tsx
-},
-
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'valid':
@@ -253,8 +201,6 @@ if (email.length > 254) {
 
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-400';
@@ -300,22 +246,10 @@ if (email.length > 254) {
             Email Validator
           </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
-<<<<<<< HEAD
-:components/email-validator.tsx
-            Validate email addresses with our advanced validation service. Check for typos, disposable domains
-            and ensure maximum deliverability for your email campaigns and user registrations.
-          </p>
-            Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
-            and ensure maximum deliverability for your email campaigns and user registrations.          </p>
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
-
 
             Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
             and ensure maximum deliverability for your email campaigns and user registrations.          </p>
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
       </section>
       {/* Email Validation Tool */}
@@ -352,17 +286,10 @@ type=&quot;checkbox&quot;
                     <textarea,
 value={emails}
                       onChange={(e) => setEmails(e.target.value)}
-<<<<<<< HEAD
-:components/email-validator.tsx
-
 
 
 
 =======
-<<<<<<< HEAD:components/email-validator.tsx
-<<<<<<< HEAD
-=======
-
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Card from '../components / ui / Card',
@@ -589,22 +516,11 @@ if (return null, ) {
 
 =======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
                   </Button>;
                   {validation_results.length > 0 && (
                     <Button;
-<<<<<<< HEAD
-                      onClick={clearResults}
-variant=&quot;outline&quot;
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net"                      rows={8}
+=======                      placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net"                      rows={8}
                       className=&quot;w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none&quot;
                     />
                   </div>
@@ -661,14 +577,7 @@ onClick={validateEmails}
                     <Button,
 onClick={clearResults}
                       variant=&quot;outline&quot;
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
@@ -702,49 +611,6 @@ onClick={copyResults}
                   </Button>
                 )}
               </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      on_click={clear_results}
-variant=&quot;outline & quot;
-                      className=&quot;border - gray - 600 text - gray - 300 hover:bg - gray - 700 & quot;
-                    >;
-                      Clear;
-                    </Button>)}
-                </div>;
-                <div className=&quot;text - sm text - gray - 400 & quot;>;
-                  <p>• Validates email format and syntax</p>;
-                  <p>• Checks for disposable email domains</p>;
-                  <p>• Detects common typos and mistakes</p>;
-                  <p>• Provides deliverability score</p>;
-                </div>;
-              </div>;
-            </Card>;
-            {/* Validation Results */}
-            <Card className=&quot;p - 8 bg - gray - 800 border border - gray - 700 & quot;>;
-              <div className=&quot;flex items - center justify - between mb - 6&quot;>;
-                <h3 className=&quot;text - 2xl font - bold text - white flex items - center & quot;>;
-                  <BarChart3 className=&quot;w - 6 h - 6 mr - 3 text - indigo - 400 & quot; />;
-                  Validation Results;
-                </h3>;
-                {validation_results.length > 0 && (
-                  <Button;
-                    on_click={copy_results}
-                    variant=&quot;outline & quot;
-                    size=&quot;sm & quot;
-                    className=&quot;border - gray - 600 text - gray - 300 hover:bg - gray - 700 & quot;
-                  >;
-                    <Copy className=&quot;w - 4 h - 4 mr - 2&quot; />;
-                    Copy Results;
-                  </Button>)}
-              </div>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              {stats && (
-
                       className={`p - 4 rounded - lg border ${
                         result.status === 'valid' ? 'border - green - 500 / 30 bg - green - 500 / 10' :;
                         result.status === 'suspicious' ? 'border - yellow - 500 / 30 bg - yellow - 500 / 10' :;
@@ -777,94 +643,12 @@ variant=&quot;outline & quot;
                     <div>
                       <span className=&quot;text-gray-400&quot;>Avg Score:</span>
                       <span className={`ml-2 font-medium ${getScoreColor(stats.avgScore)}`}>
-<<<<<<< HEAD
-:components/email-validator.tsx
-                        {stats.avgScore.toFixed(0)}
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                        {stats.avgScore.toFixed(0)}                      </span>
-                    </div>
-                  </div>
-                </div>
-<<<<<<< HEAD
-              )}
-{validationResults.length > 0 ? (
-                <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-              )}
-{validationResults.length > 0 ? (
-                <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
-:components/email-validator.tsx
-                  {validationResults.map((result, index) => (
-                    <div
-                      key={index}
-                      className={`p-4 rounded-lg border ${result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
-                        result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
-                        result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
-                        'border-red-500/30 bg-red-500/10';
-                      }`}
->
-                      <div className=&quot;flex items-center justify-between mb-2&quot;>
-                        <div className=&quot;flex items-center space-x-3&quot;>
-                          {getStatusIcon(result.status)}
-                          <span className={`font-medium ${getStatusColor(result.status)}`}>;
-                            {result.email}
-                          </span>;
-                        </div>;
-                        <span className={`text-sm font-medium ${getScoreColor(result.score)}`}>;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              )}
-{validationResults.length > 0 ? (
-                <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  {validationResults.map((result, index) => (                    <div,
-key={index}
-                      className={_`p-4 rounded-lg border ${
-                        result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :
-                        result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :
-                        result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :
-                        'border-red-500/30 bg-red-500/10'}`}
-                    >
-                      <div className=&quot;flex items-center justify-between mb-2&quot;>
-                        <div className=&quot;flex items-center space-x-3&quot;>
-                          {getStatusIcon(result.status)}
-                          <span className={`font-medium ${getStatusColor(result.status)}`}>
-                            {result.email}                          </span>
-                        </div>
-                        <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-                          Score: {result.score}
-</span>
-                      </div>
-                      <div className=&quot;text-sm text-gray-300 mb-2&quot;>
-                        <span className=&quot;text-gray-400&quot;>Domain:</span>
-                        <span className=&quot;ml-2&quot;>{result.domain}</span>
-                      </div>
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                          Score: {result.score}
-
 </span>;
                       </div>;
                       <div className=&quot;text - sm text - gray - 300 mb - 2&quot;>;
                         <span className=&quot;text - gray - 400 & quot;>Domain:</span>;
                         <span className=&quot;ml - 2&quot;>{result.domain}</span>;
                       </div>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {result.issues.length > 0 && (
 
                         <div className=&quot;text-sm&quot;>
@@ -873,29 +657,10 @@ key={index}
                             {result.issues.map((issue: string, issueIndex: number) => (
                               <li key={issueIndex} className=&quot;text-red-300 flex items-center&quot;>
                                 <XCircle className=&quot;w-3 h-3 mr-2 flex-shrink-0&quot; />
-<<<<<<< HEAD
-:components/email-validator.tsx
-                                {issue}
-                              </li>;
-                                {issue}                              </li>
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
-
                                 {issue}                              </li>
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             ))}
                           </ul>;
-<<<<<<< HEAD
-                        </div>;
-                      )}
-:components/email-validator.tsx
-{result.isDisposable && (
-                        <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>
-                          ⚠️ Disposable email domain detected
-
                       {result.isDisposable && (
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
@@ -907,8 +672,6 @@ key={index}
                       {result.isDisposable && (
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </div>
                       )}
@@ -949,43 +712,6 @@ key={index}
         </div>;
       </section>;
 
-
-<<<<<<< HEAD
-
-}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-      <section className=&quot;py-20 bg-gradient-to-r from-blue-600 to-indigo-600&quot;>
-        <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-          <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
-            Ready to Improve Your Email Quality?
-          </h2>
-          <p className=&quot;text-xl text-blue-100 mb-8&quot;>
-            Join thousands of businesses who trust our email validation service to improve deliverability and user experience.
-          </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-            <Button,
-href=&quot;/contact&quot;
-              size=&quot;lg&quot;
-              className=&quot;bg-white text-blue-600 hover:bg-gray-100&quot;
-            >
-              Get Started Today
-              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
-            </Button>
-            <Button,
-href=&quot;/pricing&quot;
-              variant=&quot;outline&quot;
-              size=&quot;lg&quot;
-              className=&quot;border-white text-white hover:bg-white hover:text-blue-600&quot;
-            >
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  )}
 
 
 :components/email-validator.tsx
@@ -1117,8 +843,6 @@ href=&quot;/pricing&quot;
 =======
 ;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
 <section className=&quot;py - 20 bg - gray - 800 & quot;>;
@@ -1283,12 +1007,5 @@ href=&quot;/pricing&quot;
       </section>
     </>
   )}
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

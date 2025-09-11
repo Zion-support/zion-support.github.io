@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useToast } from '../../components/ui/NotificationSystem';
-export default function NewJobPage() {
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(false);
-  const onSubmit = null;
-import {useState} from 'react';
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useToast } from '../../components/ui/NotificationSystem';
-          </form>
-        )}
-      </EnhancedCard>
-    </div>
-);
-import { useState } from 'react'
-import EnhancedCard from '../../components/ui/EnhancedCard'
-import EnhancedButton from '../../components/ui/EnhancedButton'
-import EnhancedLoading from '../../components/ui/EnhancedLoading'
-import { useToast } from '../../components/ui/NotificationSystem'
-export default function NewJobPage() {
-  const { notify } = useToast()
-  const [loading, setLoading] = useState(false),
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    setLoading(true),
-    setTimeout(() => {
-      setLoading(false),
-      notify('Job posted! Invite talent to get responses.success')
-    }, 800)
-  },
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -53,12 +12,6 @@ export default function NewJobPage() {
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
 
-<<<<<<< HEAD
-          </form>;
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -75,9 +28,6 @@ export default function NewJobPage() {
         )}
       </EnhancedCard>
     </div>
-<<<<<<< HEAD
-=======
-
           </form>;
         )}
       </EnhancedCard>;
@@ -85,9 +35,7 @@ export default function NewJobPage() {
   );
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  )
+=======  )
 }
 import {useState} from 'react';
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -98,19 +46,9 @@ import { use_toast } from '../../components / ui / NotificationSystem';
       </EnhancedCard>;
     </div>);
 ;
-<<<<<<< HEAD
-
-);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        )  } catch (error) {
+);        )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -123,13 +61,7 @@ import { use_toast } from '../../components / ui / NotificationSystem';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

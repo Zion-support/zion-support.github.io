@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("$1")
 const path = require("path")
@@ -36,4 +33,3 @@ app.get("/ready")
     console.log(" Monitoring setup completed!")
 =======
     console.log(" Monitoring setup completed!")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

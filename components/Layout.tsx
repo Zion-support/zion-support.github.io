@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,19 +16,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-
 
 
 
@@ -54,8 +40,6 @@ origin/main
 
 =======
 
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LayoutProps {
@@ -87,36 +71,6 @@ class ErrorBoundary extends React.Component {
   }
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-origin/main
-interface LayoutProps {
-  children: React.ReactNode;
-interface LayoutProps {;
-  children: React && React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  og_title?: string;
-  og_description?: string;
-  og_image?: string;
-  no_index?: boolean;
-}
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Layout: React.FC<LayoutProps> = ({;
   children,;
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
@@ -150,12 +104,6 @@ const Layout: React.FC<LayoutProps> = ({;
       email: "kleber@ziontechgroup && ziontechgroup.com",;
     },;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="min-h-screen bg-white">;
 const Layout: React.FC < LayoutProps> = ({
@@ -214,48 +162,13 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 =======
 
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React, { ReactNode } from "react";
-        <meta property="og:title" content={ogTitle || title} />;
-        <meta
-          property="og:description"
-          content={ogDescription || description}
-        />;
-        <meta property="og:image" content={ogImage} />;
-        <meta property="og:url" content={canonical} />;
-        <meta property="og:type" content="website" />;
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={ogTitle || title} />;
-        <meta
-          name="twitter:description"
-          content={ogDescription || description}
-        />;
-        <meta name="twitter:image" content={ogImage} />;
-        {/* JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
-        />;
-      </Head>;
-<<<<<<< HEAD
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Header />;
       <main>{children}</main>;
@@ -270,15 +183,6 @@ import React, { ReactNode } from "react";
       <main>{children}</main>
       <Footer />
     </div>
-<<<<<<< HEAD
-import React, { ReactNode } from "react";
-=======
-=======
-import React, { ReactNode } from "react";
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 interface LayoutProps {
   children: ReactNode,
 }
@@ -287,21 +191,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  );
+origin/automation-improvements-final  );
 }
 export default Layout;
 =======
@@ -358,11 +254,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
     </main>
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
   );
 };
@@ -412,9 +303,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;

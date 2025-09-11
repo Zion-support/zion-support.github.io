@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /* eslint - env node */;
 /** @type {import ('next').NextConfig} */;
@@ -10,5 +7,3 @@ const next_config = {
 module.exports = next_config,
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

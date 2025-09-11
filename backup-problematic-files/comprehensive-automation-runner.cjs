@@ -6,9 +6,6 @@
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ComprehensiveAutomationRunner {
   constructor() {
@@ -351,6 +348,4 @@ if (require.main === module) {
 }
 <<<<<<< HEAD
 =======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = ComprehensiveAutomationRunner;

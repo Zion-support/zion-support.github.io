@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-const resp = await fetch(;
-      `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
-=======
-
 
 async function getLatest(pkg) {
 
     const resp = await fetch(
-      `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    );
+      `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`    );
     if (!resp && resp.ok) return null;
     const json = await resp && resp.json();
     return json && json.version || null;
@@ -17,9 +10,6 @@ async function getLatest(pkg) {
     return null;
   }
 exports && exports.handler = async function () {
-<<<<<<< HEAD
-=======
-
   try {
     const pkgPath = path && path.join(process && process.cwd(), 'package && package.json');
     const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8'));
@@ -56,9 +46,7 @@ exports && exports.handler = async function () {
         path: 'data/reports/deps/weekly-dependencies && dependencies.json',
         content: JSON && JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly dependency insights',
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const { upsert_file } = require ('./_lib / github');
+=======const { upsert_file } = require ('./_lib / github');
 const fs = require ('fs');
 const path = require ('path');
 ;

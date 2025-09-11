@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function CookiesPage() {;
   return (;
@@ -9,9 +5,7 @@ export default function CookiesPage() {;
     <div className="min-h-screen py-20">;
 <<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 export default function CookiesPage() {return (;
 export default function CookiesPage() {;
   return (;

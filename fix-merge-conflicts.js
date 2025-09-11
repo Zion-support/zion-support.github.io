@@ -1,10 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
 ;
   };
   traverse(dir),;
@@ -249,16 +243,9 @@ export {};`;
     
     return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);    return false;
   }
 }
-
-<<<<<<< HEAD
-  }
-}
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
 
 // Try to build after fixing conflicts
 console.log('Attempting build after fixing conflicts...');
@@ -326,4 +313,3 @@ for (const file of problematicFiles) {
 }
 
 console.log('Merge conflict fix completed.');
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

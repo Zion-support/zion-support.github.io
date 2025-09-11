@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 "use client";
@@ -12,9 +8,7 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     small: "w-4 h-4";
     medium: "w-8 h-8";
     large: "w-12 h-12";
-  }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
+  }"use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;
   className?: string;

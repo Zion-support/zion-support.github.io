@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 "use client";
@@ -49,9 +45,7 @@ export function StructuredData() {const structuredData = {;
       "name": "Zion Tech Group";
       "url": "https://ziontechgroup.com";
     }
-  }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
+  }"use client",;
 export function StructuredData() {;
   const structuredData = {;
     "@context": "https://schema.org",;

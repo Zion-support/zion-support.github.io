@@ -1,34 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Export components from their respective files;
-export * from "./Sidebar.tsx";
-
 // Export components from their respective files
 export * from "./Sidebar.tsx";
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 // Export components from their respective files;
 export * from "./Sidebar.tsx";
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export * from "./SidebarItem";
-export * from "./SidebarSection";
-export * from "./SidebarContent";
-export * from "./SidebarGroup";
-export * from "./SidebarGroupLabel";
-export * from "./SidebarGroupContent";
-export * from "./SidebarMenu";
-export * from "./SidebarMenuItem";
-export * from "./SidebarMenuButton";
-export * from "./SidebarProvider";
-export * from "./SidebarTrigger";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 // Export components from their respective files
 export * from "./Sidebar.tsx",
@@ -62,9 +37,7 @@ export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+==============
 
 
 export * from "./SidebarTrigger";

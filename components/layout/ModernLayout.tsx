@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 import Head from './next / head';
 import { ReactNode } from './react';
 ;
-=======
-
-import Head from './next / head';
-import { ReactNode } from './react';
-;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type ModernLayoutProps = {
   children: ReactNode
 type ModernLayoutProps = {;
@@ -17,15 +9,8 @@ type ModernLayoutProps = {;
   description?: string;
   keywords?: string;
   canonical?: string;
-<<<<<<< HEAD
 }
 ;
-=======
-
-}
-;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const ModernLayout = ({
 const ModernLayout = ({;
   children;
@@ -33,24 +18,15 @@ const ModernLayout = ({;
   description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology.";
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
   canonical;
-<<<<<<< HEAD
-}: ModernLayoutProps) => {;
-=======
-
 }: ModernLayoutProps) => {;
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}: ModernLayoutProps) =>: any {
+=======}: ModernLayoutProps) =>: any {
   return (
     <>;
       <Head>;
         <title>{title}</title>;
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta property="og: type" content="website" />;
         <meta property="og:url" content={canonical || "https://ziontechgroup && ziontechgroup.com"} />;
@@ -76,9 +52,7 @@ const ModernLayout = ({;
 =======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
+=======        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
         <meta name="author" content="Zion Tech Group" />;
         <meta name="robots" content="index, follow" />;
         {canonical ? <link rel="canonical" href={canonical} /> : null}

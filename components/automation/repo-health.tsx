@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 import fs from 'fs';
 import fs from 'fs',
@@ -20,8 +17,6 @@ interface Report {
 
 =======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -45,13 +40,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+==============
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
@@ -65,65 +55,20 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
 
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-;
-}
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps < Props> = async () => {
-  try {
-    const file = path.join (process.cwd (), 'publicautomationrepo - health.json');
-    const raw = fs.readFileSync (file, 'utf8');
-    const data = JSON.parse (raw);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    return { props: { report: data }, revalidate: 3600 }
-  } catch {;
-    return { props: { report: null }, revalidate: 3600 }
-  }
-<<<<<<< HEAD
-
 };
 export default function RepoHealth(): any ({ report }: Props) {;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 }
 };
 
 export default function RepoHealth(): any ({ report }: Props) {;
 
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!report) return <div>No report yet. Check back soon.</div>;
-  return (
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  if (!report) return <div>No report yet. Check back soon.</div>;
-  return (
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default function RepoHealth({ report }: Props) {;
+=======export default function RepoHealth({ report }: Props) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   if (!report) return <div>No report yet. Check back soon.</div>;
@@ -146,14 +91,8 @@ export default function RepoHealth({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {report && report.largestFiles.map((f, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ))}
         </ul>;
       </section>;
@@ -163,19 +102,7 @@ export default function RepoHealth({ report }: Props) {;
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
-<<<<<<< HEAD
-
-        </ul>;
-      </section>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
         </ul>
       </section>
     </div>
@@ -245,15 +172,7 @@ export default function RepoHealth({ report }: Props) {
         <ul className=&quot;text-sm space-y-1&quot;>
           {report.largestFiles.map((f, i) => (
             <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{f.file}</span><span className=&quot;text-gray-500&quot;>{(f.bytes/1024).toFixed(1)} KB</span></li>
-<<<<<<< HEAD
-
-  );
 }
-
-}
-<<<<<<< HEAD
-};
-
 export default function RepoHealth({ report }: Props) {
 export default function RepoHealth({ report }: Props) {;
   if (!report) return <div>No report yet. Check back soon.</div>;
@@ -291,11 +210,7 @@ export default function RepoHealth({ report }: Props) {;
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+=====================
 
   );
 }

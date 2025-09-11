@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-
 
 import React from 'react';
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { render, screen } from '@testing-library/react';
 import App from '../src/App';
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
-<<<<<<< HEAD
-  });
-it('has proper heading structure', () => {
-    render(<App />);
-
   });
   it('has proper heading structure', () => {
     render(<App />);
@@ -27,9 +16,7 @@ it('has proper heading structure', () => {
 ursor/fix-syntax-push-and-merge-to-main-40de
     const heading = screen.getByRole('heading', { level: '1' });
     expect(heading).toBeInTheDocument();
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  });
+=======  });
 });
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
@@ -49,12 +36,6 @@ describe('App', () => {
   });
 });
 });
-<<<<<<< HEAD
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toBeInTheDocument();
-  });
-});
-
     render(<App />);
     expect(
       screen.getByRole("heading", { level: 1, name: "Zion Tech Group" }),
@@ -65,9 +46,7 @@ describe('App', () => {
 origin/main
 });
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { render, screen } from '@testing-library/react'
+=======import { render, screen } from '@testing-library/react'
 import App from '../src/App'
 describe('App'
   it('renders without crashing'

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const paintEntries = window && window.performance.getEntriesByType("paint");
-=======
-
       const paintEntries = window && window.performance.getEntriesByType("paint");
 
       const fcp = paintEntries && paintEntries.find(
@@ -27,8 +23,6 @@ const paintEntries = window && window.performance.getEntriesByType("paint");
         largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
         cumulativeLayoutShift: cls,
         firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime : 0,
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
     }
     // Wait for all performance entries to be available

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 const SEO.dynamic = () => {
@@ -13,6 +10,4 @@ const SEO.dynamic = () => {
 ;
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default SEO.dynamic;

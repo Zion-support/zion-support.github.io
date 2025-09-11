@@ -483,10 +483,6 @@ export default function DigitalTransformationPage() {;
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-  );
-};
-
 export default Digital-transformation;
 =======
 <<<<<<< HEAD
@@ -494,4 +490,3 @@ export default Digital-transformation;
 };
 
 export default Digital-transformation;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

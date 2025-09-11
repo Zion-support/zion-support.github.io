@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -12,26 +6,10 @@
 import React from "react",
 import { cn } from "@/lib/utils",
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  title?: string,
-  children?: React.ReactNode
 
 export function SidebarSection(): any ({ className, title, children, ...props }: SidebarSectionProps) {;
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+==============
 import {cn} from "@/lib/utils";
 interface SidebarSectionProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -49,41 +27,8 @@ interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
 
 export function SidebarSection(): any ({ className, title, children, ...props }: SidebarSectionProps) {;
 
-<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
-    <div className={cn("py-2", className)} {...props}>;
-      {title && (;
-        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export function SidebarSection({
-  className
-  title
-  children
-  ...props
-}: SidebarSectionProps) {
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
-    <div className={cn("py-2", className)} {...props}>
-      {title && (
-        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React from "react",;
+=======import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;
@@ -96,24 +41,6 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
     <div className={cn("py-2", className)} {...props}>;
       {title && (;
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
-
-<<<<<<< HEAD
-import React from "react",;
-import { cn } from "@/lib/utils",;
-;
-interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
-  className?:string,;
-  title?:string,;
-  children?:React.ReactNode,;
-}
-;
-export function SidebarSection({ className, title, children, ...props } SidebarSectionProps) {;
-  return (;
-    <div className={cn("py-2", className)} {...props}>;
-      {title && (;
-        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;          {title}
-        </h3>;
-      )}
 
       <div className="space-y-1">{children}</div>;
     </div>;
@@ -158,9 +85,7 @@ children?: React.ReactNode
           {title}
         </h3>
       )}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          {title}
+=======          {title}
         </h3>;
       )}
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -170,13 +95,4 @@ children?: React.ReactNode
 }
   )
 }
-<<<<<<< HEAD
-;
-;
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { _Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
-
 import { CheckCircle } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Brain } from 'lucide-react';
@@ -15,155 +12,10 @@ const _Accessibility = () => {
 =======
 import { Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
 const Accessibility = () => {
-    const accessibilityFeatures = [
->>>>>>> origin/clean-error-fixing-automation
-        {
+    const accessibilityFeatures = [        {
             icon: Eye,
             title: "Visual Accessibility",
             description: "Support for users with visual impairments",
-<<<<<<< HEAD
-            features: ["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
-=======
-            features["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
->>>>>>> origin/clean-error-fixing-automation
-        },
-        {
-            icon: Ear,
-            title: "Auditory Accessibility",
-            description: "Support for users with hearing impairments",
-<<<<<<< HEAD
-            features: ["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
-=======
-            features["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
->>>>>>> origin/clean-error-fixing-automation
-        },
-        {
-            icon: Hand,
-            title: "Motor Accessibility",
-            description: "Support for users with motor impairments",
-<<<<<<< HEAD
-            features: ["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
-=======
-            features["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
->>>>>>> origin/clean-error-fixing-automation
-        },
-        {
-            icon: Brain,
-            title: "Cognitive Accessibility",
-            description: "Support for users with cognitive impairments",
-<<<<<<< HEAD
-            features: ["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
-        }
-    ];
-    const _complianceStandards = [
-=======
-            features["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
-        }
-    ];
-    const complianceStandards = [
->>>>>>> origin/clean-error-fixing-automation
-        {
-            standard: "WCAG 2.1",
-            level: "AA",
-            description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
-            status: "Compliant"
-        },
-        {
-            standard: "Section 508",
-            level: "Federal",
-            description: "Federal accessibility requirements for electronic information",
-            status: "Compliant"
-        },
-        {
-            standard: "ADA Title III",
-            level: "Legal",
-            description: "Americans with Disabilities Act digital accessibility requirements",
-            status: "Compliant"
-        },
-        {
-            standard: "EN 301 549",
-            level: "European",
-            description: "European accessibility requirements for ICT products and services",
-            status: "Compliant"
-        }
-    ];
-<<<<<<< HEAD
-    const _toolsAndTechnologies = [
-=======
-    const toolsAndTechnologies = [
->>>>>>> origin/clean-error-fixing-automation
-        {
-            name: "Screen Readers",
-            description: "Compatible with JAWS, NVDA, VoiceOver, and TalkBack",
-            icon: Eye
-        },
-        {
-            name: "Voice Control",
-            description: "Support for Dragon NaturallySpeaking and built-in voice assistants",
-            icon: Ear
-        },
-        {
-            name: "Keyboard Navigation",
-            description: "Full keyboard accessibility with visible focus indicators",
-            icon: Hand
-        },
-        {
-            name: "High Contrast",
-            description: "High contrast mode for better visibility",
-            icon: Eye
-        },
-        {
-            name: "Text Scaling",
-            description: "Text can be scaled up to 200% without loss of functionality",
-            icon: Brain
-        },
-        {
-            name: "Alternative Text",
-            description: "Descriptive alt text for all images and graphics",
-            icon: Eye
-        }
-    ];
-<<<<<<< HEAD
-    const _ongoingImprovements = [
-=======
-    const ongoingImprovements = [
->>>>>>> origin/clean-error-fixing-automation
-        "Regular accessibility audits and testing",
-        "User feedback integration",
-        "Continuous monitoring and updates",
-        "Staff accessibility training",
-        "Third-party accessibility reviews",
-        "Compliance monitoring and reporting"
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2"/>
-              Accessibility Commitment
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Digital
-              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"> Accessibility</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We are committed to making our website accessible to all users, 
-              regardless of their abilities or disabilities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#features" className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Learn More
-              </a>
-              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-                Report Issues
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Accessibility Features */}
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -296,9 +148,7 @@ const Accessibility = () => {
 <<<<<<< HEAD
             If you encounter any accessibility issues or have suggestions for 
 =======
-            If you encounter  accessibility issues or have suggestions for 
->>>>>>> origin/clean-error-fixing-automation
-            improvement, we want to hear from you.
+            If you encounter  accessibility issues or have suggestions for             improvement, we want to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">

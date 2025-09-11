@@ -1,38 +1,6 @@
 
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-;
-export const measure_performance = (): PerformanceMetrics | null => {
-  if () {) {
-  $2
-}
-    return null;
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  try {
-    const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
-    const paint_entries = performance.getEntriesByType ('paint');
-    const fcp = paint_entries.find (entry => entry.name === 'first - contentful - paint');
-    const lcp = performance.getEntriesByType ('largest - contentful - paint')[0] as PerformanceEntry;
-    const cls = performance.getEntriesByType ('layout - shift').reduce ((acc, entry) => {
-      return acc + (entry as any).value;
-    }, 0);
-
-<<<<<<< HEAD
-  observer.observe(img);
-};
-
 // Preload critical resources
 export const preloadResource = (href: string, as: string): void => {
   if (typeof window === 'undefined') return;
@@ -67,51 +35,7 @@ export const analyzeBundleSize = (): void => {
         totalTime: navigation.loadEventEnd - navigation.fetchStart
       });
     }
-<<<<<<< HEAD
 =======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    return {
-      fcp: fcp ? fcp.startTime : undefined
-      lcp: lcp ? lcp.startTime : undefined
-      fid: fid ? fid.processingStart - fid.startTime : undefined
-      cls: cls
-      ttfb: navigation ? navigation.responseStart - navigation.requestStart : undefined
-    }
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    const fid = performance.getEntriesByType ('first - input')[0] as PerformanceEventTiming;
-;
-    return {
-      fcp: fcp ? fcp.start_time : undefined,
-      lcp: lcp ? lcp.start_time : undefined,
-      fid: fid ? fid.processing_start - fid.start_time : undefined,
-      cls: cls,
-      ttfb: navigation ? navigation.response_start - navigation.request_start : undefined;
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  } catch (error) {
-    console.warn('Error measuring performance:', error);
-    return null;
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 
@@ -128,16 +52,8 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export const getPerformanceScore = (metrics: PerformanceMetrics): {
-};
-
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
@@ -157,17 +73,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const getScore = (value: number | undefined, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
     if (value === undefined) return 'poor';
-<<<<<<< HEAD
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    const compareValue = reverse ? threshold.good / value : value / threshold.good;
-    if (compareValue <= 1) return 'good';
-    if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
-    return 'poor';
-<<<<<<< HEAD
-=======
-
   }
   const scores = {
     fcp: getScore(metrics.fcp, thresholds.fcp)
@@ -178,8 +83,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const poorCount = Object.values(scores).filter(score => score === 'poor').length;
   const needsImprovementCount = Object.values(scores).filter(score => score === 'needs-improvement').length;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
     overall = 'poor';
@@ -191,50 +94,19 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return { overall, scores }
-}
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
-  return { overall, scores }
-}
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   return { overall, scores };
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
-
 
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
 =======
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  console.group(`🚀 ${label}`);
-  if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
-  if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
-  if (metrics.fid !== undefined) console.log('First Input Delay:', `${metrics.fid.toFixed(2)}ms`);
-  if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
-  if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
-  console.groupEnd();
 
 
 import { PerformanceMetrics } from '../types'; export const measurePerformance = (): PerformanceMetrics | null = > { if (typeof window = = = 'undefined' || !('performance' in window)) { return null} try { const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; const paintEntries = performance && performance.getEntriesByType('paint'); const fcp = paintEntries && paintEntries.find(entry = > entry && entry.name = = = 'first-contentful-paint'); const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry; const cls = performance && performance.getEntriesByType('layout-shift').reduce((acc, entry) = > { return acc + (entry as any).value}, 0); const fid = performance && performance.getEntriesByType('first-input')[0] as PerformanceEventTiming; return { loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart firstContentfulPaint: fcp ? fcp && fcp.startTime: 0 largestContentfulPaint: lcp ? lcp && lcp.startTime: 0 cumulativeLayoutShift: cls firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime: 0 }} catch (error) { console && console.warn('Error measuring performance: ', error); return null}
@@ -246,31 +118,6 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-};
-
-};
-
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-};
-=======
-  return { overall, scores }
-}
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-};
-=======
-  return { overall, scores }
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') =>: any {
   console.group (`🚀 ${label}`);

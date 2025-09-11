@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className=&quot;space-y-6&quot;>
-      <div className=&quot;flex items-end justify-between&quot;>
-        <div>
-          <h1 className=&quot;text-2xl font-semibold&quot;>DAO Metrics</h1>
-          <div className=&quot;text-xs text-gray-500&quot;>Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
-        </div>
-      </div>
-
       <section className=&quot;grid lg:grid-cols-2 gap-6&quot;>
         <div className=&quot;border rounded p-4&quot;>
           <div className=&quot;font-medium mb-2&quot;>Token Distribution (top ~sample)</div>
@@ -83,8 +73,6 @@ export default function DaoMetrics(req, res) {
   if (!data) return <div>Error loading data</div>,
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
@@ -113,19 +101,6 @@ export default function DaoMetrics(req, res) {
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
               </div>
-<<<<<<< HEAD
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
             ))}
           </div>
@@ -148,25 +123,6 @@ export default function DaoMetrics(req, res) {
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
-<<<<<<< HEAD
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-              ))}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            </tbody>
-          </table>
-        </div>
-      </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -178,23 +134,11 @@ export default function DaoMetrics(req, res) {
             <ul className="list-disc pl-5 text-sm">
               {data.activeProposals.map((p, i) => (
                 <li key={i}>{JSON.stringify(p)}</li>
-<<<<<<< HEAD
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </ul>
-          ) : (
-<<<<<<< HEAD
-
             <div className="text-sm text-gray-600">No active proposals.</div>
           )}
 =======
             <div className="text-sm text-gray-600">No active proposals.</div>
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
               ))}
             </ul>
@@ -207,12 +151,6 @@ export default function DaoMetrics(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
@@ -230,31 +168,13 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
   );
 };
   )
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
-=======
 
 =======
 }
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { useEffect, useState } from 'react',
 ;
@@ -359,14 +279,6 @@ if (return <div > Error loading data</div>, ) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

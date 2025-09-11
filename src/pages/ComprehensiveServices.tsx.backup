@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import { _motion } from 'framer-motion';
-import { _SEO } from '@/components/SEO';
-import ComprehensiveServicesShowcase from '@/components/ComprehensiveServicesShowcase';
-
 import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
 const services = [];
@@ -267,4 +260,3 @@ export default function ComprehensiveServicesPage() {
         </div>
       </div>
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

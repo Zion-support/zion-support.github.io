@@ -2,15 +2,8 @@
 
 const fs = require('fs');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 console.log('🔧 Ultimate Syntax Fix');
 console.log('=');
-=======
-
-console.log('🔧 Ultimate Syntax Fix');
-console.log('=');
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -137,9 +130,4 @@ try {
 } catch (error) {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
-<<<<<<< HEAD
 console.log('\n🎉 Ultimate syntax fix completed!');
-=======
-
-console.log('\n🎉 Ultimate syntax fix completed!');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

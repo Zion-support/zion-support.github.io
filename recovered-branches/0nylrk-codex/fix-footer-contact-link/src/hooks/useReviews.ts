@@ -22,85 +22,19 @@ if (return) {
 }
     setIsLoading (true),
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
   // Fetch reviews for a project
 
   const fetchProjectReviews = async (projectId: string) => {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import {useState} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {Review, ReviewReport} from "@/types/reviews";
-import {toast} from "@/hooks/use-toast";
-export function useReviews(projectId?: string) {;
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [userReview, setUserReview] = useState<Review | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-import { useState } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { Review, ReviewReport } from "@/types/reviews";
-import { toast } from "@/hooks/use-toast";
-export function useReviews(projectId?: string) {
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-  const [reviews, setReviews] = useState<Review[]>([]),
-  const [userReview, setUserReview] = useState<Review | null>(null),
-  const [isSubmitting, setIsSubmitting] = useState(false);
-import { Review, ReviewReport } from "@/types/reviews",
-import { toast } from "@/hooks/use-toast",
-export function useReviews(projectId?: string) {
-  const { user } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-  const [reviews, setReviews] = useState<Review[]>([]),
-  const [userReview, setUserReview] = useState<Review | null>(null),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  
-  // Fetch reviews for a project
-
   const fetchProjectReviews = async (projectId: string) => {
     if (!projectId) return;
     setIsLoading(true)
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
     if (!projectId) return;
-    setIsLoading(true)
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    if (!projectId) return,
+    setIsLoading(true)    if (!projectId) return,
     
     setIsLoading(true),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    try {
-      const { data, error } = await supabase
-        .from("reviews")
-        .select(`
-          *,
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
-        `)
-        .eq("project_id", projectId)
-        .eq("is_visible", true)
-<<<<<<< HEAD
-    if (!projectId) return,
-    
-    setIsLoading(true),
-    
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
     try {
       const { data, error } = await supabase;
         .from ("reviews");
@@ -108,109 +42,14 @@ export function useReviews(projectId?: string) {
           *;
 
 
-<<<<<<< HEAD
-        .eq("status", "approved");
-      if (error) throw error;
-      setReviews(data |[]);
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-        .eq("status", "approved");
-      if (error) throw error;
-      setReviews(data |[]);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        .eq("status", "approved"),
-        
-      if (error) throw error,
-      
-      setReviews(data || []),
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      // Check if current user has already submitted a review
-      if (user) {
-        const { data: userReviewData, error: userReviewError } = await supabase
-          .from("reviews")
-          .select("*")
-          .eq("project_id", projectId)
-<<<<<<< HEAD
-<<<<<<< HEAD
           .single(),
           
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-          .eq("reviewer_id", user.id)
-          .single();
-          .single(),
-          
-<<<<<<< HEAD
-=======
-
-          .eq("reviewer_id", user.id)
-
-          .single(),
-          
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        if (!userReviewError && userReviewData) {
+=======        if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
         }
       }
     } catch (err: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.error("Error fetching reviews:", err),
-=======
-      console && console.error("Error fetching reviews:", err);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      toast({
-        title: "Error";
-        description: "Failed to load reviews"
-        title: "Error",
-        description: "Failed to load reviews",
-        variant: "destructive"})
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  // Fetch reviews for a user (to display on profile)
-  const fetchUserReviews = async (userId: string) => {
-    if (!userId) return;
-    setIsLoading(true)
-  },
-  
-  // Fetch reviews for a user (to display on profile)
-  const fetchUserReviews = async (userId: string) => {
-    if (!userId) return,
-    
-    setIsLoading(true),
-    
-    try {
-      const { data, error } = await supabase
-        .from("reviews")
-        .select(`
-          *,
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
-        `)
-        .eq("reviewee_id", userId)
-        .eq("is_visible", true)
-        .eq("status", "approved")
-<<<<<<< HEAD
-=======
-      console && console.error("Error fetching reviews:", err);
-      toast({
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         title: "Error",
@@ -285,32 +124,9 @@ if (return) {
           *;
 
 
-<<<<<<< HEAD
-        .order("created_at", { ascending: false });
-      if (error) throw error;
-      setReviews(data |[])
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-        .order("created_at", { ascending: false });
-      if (error) throw error;
-      setReviews(data |[])
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        .order("created_at", { ascending: false }),
-        
-      if (error) throw error,
-      
-      setReviews(data || [])
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
     } catch (err: any) {
       console && console.error("Error fetching user reviews:", err);
       toast({
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         title: "Error",
         description: "Failed to load reviews",
@@ -326,9 +142,7 @@ if (return) {
         title: "Error",
         description: "Failed to load reviews",
         variant: "destructive"})
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
+=======          reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
         .eq ("reviewee_id", user_id);
         .eq ("is_visible", true);
@@ -346,54 +160,9 @@ if (throw error) {
         title: "Error";
         description: "Failed to load reviews",
         variant: "destructive"});
-<<<<<<< HEAD
-    } finally {
-      setIsLoading (false);
-    }
-
 ;
   // Submit a review;
   const submit_review = async (review: {
-
-<<<<<<< HEAD
-    } catch (err: any) {
-      console.error("Error fetching user reviews:", err),
-      toast({
-        title: "Error";
-        description: "Failed to load reviews"
-        title: "Error",
-        description: "Failed to load reviews",
-        variant: "destructive"})
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  // Submit a review
-  const submitReview = async (review: {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    } finally {
-      setIsLoading (false);
-    }
-  }
-  // Submit a review
-  const submitReview = async (review: {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    project_id: string;
-    reviewee_id: string;
-    rating: number;
-    review_text: string;
-    communication_rating?: number;
-    quality_rating?: number;
-    timeliness_rating?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    would_work_again?: boolean,
-    is_anonymous: boolean;
 
   }) => {
     // Check condition
@@ -425,9 +194,7 @@ if ( {) {
           title: "Error";
           description: "You have already submitted a review for this project"
           variant: "destructive"})
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          reviewer_id: user.id});
+=======          reviewer_id: user.id});
         .select ();
         .single ();
 ;
@@ -460,54 +227,12 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"});
 
-
-<<<<<<< HEAD
-    would_work_again?: boolean
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    would_work_again?: boolean
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  },
-  
-  // Submit a review
-  const submitReview = async (review: {
-    project_id: string,
-    reviewee_id: string,
-    rating: number,
-    review_text: string,
-    communication_rating?: number,
-    quality_rating?: number,
-    timeliness_rating?: number,
-    would_work_again?: boolean,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    is_anonymous: boolean
+=======    is_anonymous: boolean
   }) => {
     if (!user) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        title: "Error";
-        description: "You must be logged in to submit a review"
-        variant: "destructive"});
-      return false
-    }
-    setIsSubmitting(true);
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        title: "Error",
+=======        title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
       return false
@@ -515,115 +240,16 @@ if ( {) {
     
     setIsSubmitting(true),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    try {
+=======    try {
       const { data, error } = await supabase
         .from("reviews")
         .insert({
           ...review,
           reviewer_id: user.id})
         .select()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        .single();
-      if (error) throw error;
-      toast({
-        title: "Success"
-        description: "Your review has been submitted and is pending approval"});
-      setUserReview(data);
-      return true
-    } catch (err: any) {
-      console.error("Error submitting review:", err);
-      // Check for unique constraint violation
-      if (err.code === "23505") {
-        toast({
-          title: "Error";
-          description: "You have already submitted a review for this project"
-          variant: "destructive"})
-      } else {
-        toast({
-          title: "Error";
-          description: "Failed to submit review"
-          variant: "destructive"})
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        .single(),
-        
-      if (error) throw error,
-      
-      toast({
-        title: "Success",
-        description: "Your review has been submitted and is pending approval"}),
-      
-      setUserReview(data),
-      return true
-    } catch (err: any) {
-      console.error("Error submitting review:", err),
-      
-      // Check for unique constraint violation
-      if (err.code === "23505") {
-        toast({
-          title: "Error",
-          description: "You have already submitted a review for this project",
-          variant: "destructive"})
-      } else {
-        toast({
-          title: "Error",
-          description: "Failed to submit review",
-          variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Review, ReviewReport } from "@/types/reviews",;
-import { toast } from "@/hooks/use-toast",;
-export function useReviews(projectId?: string) {;
-  const { user } = useAuth(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [reviews, setReviews] = useState<Review[]>([]),;
-  const [userReview, setUserReview] = useState<Review | null>(null),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  // Fetch reviews for a project;
-  const fetchProjectReviews = async (projectId: string) => {;
-    if (!projectId) return,;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase;
-        .from("reviews");
-        .select(`;
-          *,;
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url);
-        `);
-        .eq("project_id", projectId);
-        .eq("is_visible", true);
-        .eq("status", "approved"),;
-      if (error) throw error,;
-      setReviews(data || []),;
-      // Check if current user has already submitted a review;
-      if (user) {;
-        const { data: userReviewData, error: userReviewError } = await supabase;
-          .from("reviews");
-          .select("*");
-          .eq("project_id", projectId);
-          .eq("reviewer_id", user.id);
-          .single(),;
-        if (!userReviewError && userReviewData) {;
-          setUserReview(userReviewData);
-        }
-        .single(),
+=======        .single(),
         
       if (error) throw error,
       
@@ -648,11 +274,6 @@ export function useReviews(projectId?: string) {;
           description: "Failed to submit review",
           variant: "destructive"})
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       return false;
@@ -663,116 +284,6 @@ export function useReviews(projectId?: string) {;
 
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-      return false
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-  // Update a review
-  const updateReview = async (reviewId: string, updates: Partial<Review>) => {
-    if (!user) return false;
-    setIsSubmitting(true)
-  };
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  },;
-  // Fetch reviews for a user (to display on profile);
-  const fetchUserReviews = async (userId: string) => {;
-    if (!userId) return,;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase;
-        .from("reviews");
-        .select(`;
-          *,;
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url);
-        `);
-        .eq("reviewee_id", userId);
-        .eq("is_visible", true);
-        .eq("status", "approved");
-        .order("created_at", { ascending: false }),;
-      if (error) throw error,;
-      setReviews(data || []);
-    } catch (err: any) {;
-      console.error("Error fetching user reviews:", err),;
-      toast({;
-        title: "Error",;
-        description: "Failed to load reviews",;
-        variant: "destructive"});
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  // Submit a review;
-  const submitReview = async (review: {;
-    project_id: string,;
-    reviewee_id: string,;
-    rating: number,;
-    review_text: string,;
-    communication_rating?: number,;
-    quality_rating?: number,;
-    timeliness_rating?: number,;
-    would_work_again?: boolean,;
-    is_anonymous: boolean;
-  }) => {;
-    if (!user) {;
-      toast({;
-        title: "Error",;
-        description: "You must be logged in to submit a review",;
-        variant: "destructive"}),;
-      return false;
-    }
-;
-    setIsSubmitting(true),;
-    try {;
-      const { data, error } = await supabase;
-        .from("reviews");
-        .insert({;
-          ...review,;
-          reviewer_id: user.id});
-        .select();
-        .single(),;
-      if (error) throw error,;
-      toast({;
-        title: "Success",;
-        description: "Your review has been submitted and is pending approval"}),;
-      setUserReview(data),;
-      return true;
-    } catch (err: any) {;
-      console.error("Error submitting review:", err),;
-      // Check for unique constraint violation;
-      if (err.code === "23505") {;
-        toast({;
-          title: "Error",;
-          description: "You have already submitted a review for this project",;
-          variant: "destructive"});
-      } else {;
-        toast({;
-          title: "Error",;
-          description: "Failed to submit review",;
-          variant: "destructive"});
-      }
-      return false;
-    } finally {;
-      setIsSubmitting(false);
-    }
-  },
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
@@ -781,41 +292,14 @@ export function useReviews(projectId?: string) {;
     if (!user) return false,
     
     setIsSubmitting(true),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    try {
-      const { error } = await supabase
-        .from("reviews")
-        .update(updates)
-        .eq("id", reviewId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        .eq("reviewer_id", user.id)
+            .eq("reviewer_id", user.id)
         .eq("status", "pending");
       if (error) throw error;
       toast({
         title: "Success"
         description: "Your review has been updated"});
-<<<<<<< HEAD
-=======
-
         .eq("reviewer_id", user.id)
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        .eq("status", "pending"),
+=======        .eq("status", "pending"),
         
       if (error) throw error,
       
@@ -823,12 +307,6 @@ export function useReviews(projectId?: string) {;
         title: "Success",
         description: "Your review has been updated"}),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (userReview) {
@@ -836,12 +314,6 @@ export function useReviews(projectId?: string) {;
       }
       return true
     } catch (err: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      console && console.error("Error updating review:", err);
-      toast({
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   // Update a review;
@@ -897,334 +369,8 @@ if ( {) {
   
 
 
-<<<<<<< HEAD
-      console.error("Error updating review:", err),
-      toast({
-        title: "Error";
-        description: "Failed to update review"
-        variant: "destructive"});
-        title: "Error",
-        description: "Failed to update review",
-        variant: "destructive"}),
-      return false
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-  },
-  
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-      console && console.error("Error updating review:", err);
-      toast({
-        title: "Error";
-        description: "Failed to update review"
-        variant: "destructive"});
-        title: "Error",
-        description: "Failed to update review",
-        variant: "destructive"}),
-      return false
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-  },
-  
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  // Report a review
-  const reportReview = async (reviewId: string, reason: string) => {
-    if (!user) return false
-    try {
-      const { error } = await supabase
-        .from("review_reports")
-        .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          reporter_id: user && user.id,
-
           reason});
 
-<<<<<<< HEAD
-          review_id: reviewId;
-          reporter_id: user.id
-          reason});
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-          review_id: reviewId;
-          reporter_id: user.id
-          reason});
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          review_id: reviewId,
-          reporter_id: user.id,
-          reason}),
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      if (error) {
-        // Check for unique constraint violation
-        if (error && error.code === "23505") {
-          toast({
-<<<<<<< HEAD
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-            title: "Error",
-            description: "You have already reported this review",
-
-
-            variant: "destructive"})
-=======
-            title: "Error";
-            description: "You have already reported this review"
-            title: "Error",
-            description: "You have already reported this review",
-            variant: "destructive"})
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-;
-  // Report a review;
-  const report_review = async (review_id: string, reason: string) => {
-    // Check condition
-if (return false, ) {
-  $2
-}
-    try {
-      const { error } = await supabase;
-        .from ("review_reports");
-        .insert ({
-          review_id: review_id;
-          reporter_id: user.id,
-          reason});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        // Check for unique constraint violation;
-        // Check condition
-if ( {) {
-  $2
-}
-          toast ({
-            title: "Error";
-            description: "You have already reported this review",
-            variant: "destructive"});
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        } else {
-          throw error;
-        }
-      } else {
-<<<<<<< HEAD
-
-        toast ({
-          title: "Report Submitted",
-
-          description: "Thank you. Our team will review your report"});
-        return true;
-      }
-    } catch (err: any) {
-
-      console.error ("Error reporting review:", err);
-      toast ({
-        title: "Error";
-        description: "Failed to report review",
-        variant: "destructive"});
-    }
-    return false;
-  }
-;
-  // Initialize by fetching reviews if project_id is provided;
-  // Check condition
-if ( {) {
-  $2
-}
-    fetchProjectReviews (project_id);
-
-  }
-  return {
-    reviews;
-    user_review;
-    is_loading;
-    is_submitting;
-    fetchProjectReviews;
-    fetchUserReviews;
-
-        toast({
-
-          title: "Report Submitted",
-          description: "Thank you. Our team will review your report"}),
-
-<<<<<<< HEAD
-      if (error) {
-        // Check for unique constraint violation
-        if (error.code === "23505") {
-          toast({
-            title: "Error";
-            description: "You have already reported this review"
-            title: "Error",
-            description: "You have already reported this review",
-            variant: "destructive"})
-        } else {
-          throw error
-        }
-      } else {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        toast({
-          title: "Report Submitted"
-          description: "Thank you. Our team will review your report"});
-          title: "Report Submitted",
-          description: "Thank you. Our team will review your report"}),
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        return true
-      }
-    } catch (err: any) {
-      console.error("Error reporting review:", err),
-      toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title: "Error";
-        description: "Failed to report review"
-        variant: "destructive"})
-    }
-    return false
-  }
-  // Initialize by fetching reviews if projectId is provided
-  if (projectId && reviews.length === 0 && !isLoading) {
-    fetchProjectReviews(projectId)
-  }
-  return {
-    reviews;
-    userReview;
-    isLoading;
-    isSubmitting;
-    fetchProjectReviews;
-    fetchUserReviews;
-        title: "Error",
-        description: "Failed to report review",
-        variant: "destructive"})
-  },;
-  // Update a review;
-  const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
-    if (!user) return false,;
-    setIsSubmitting(true),;
-    try {;
-      const { error } = await supabase;
-        .from("reviews");
-        .update(updates);
-        .eq("id", reviewId);
-        .eq("reviewer_id", user.id);
-        .eq("status", "pending"),;
-      if (error) throw error,;
-      toast({;
-        title: "Success",;
-        description: "Your review has been updated"}),;
-      if (userReview) {;
-        setUserReview({ ...userReview, ...updates });
-      }
-;
-      return true;
-    } catch (err: any) {;
-      console.error("Error updating review:", err),;
-      toast({;
-        title: "Error",;
-        description: "Failed to update review",;
-        variant: "destructive"}),;
-      return false;
-    } finally {;
-      setIsSubmitting(false);
-    }
-  },;
-  // Report a review;
-  const reportReview = async (reviewId: string, reason: string) => {;
-    if (!user) return false,;
-    try {;
-      const { error } = await supabase;
-        .from("review_reports");
-        .insert({;
-          review_id: reviewId,;
-          reporter_id: user.id,;
-          reason}),;
-      if (error) {;
-        // Check for unique constraint violation;
-        if (error.code === "23505") {;
-          toast({;
-            title: "Error",;
-            description: "You have already reported this review",;
-            variant: "destructive"});
-        } else {;
-          throw error;
-        }
-      } else {;
-        toast({;
-          title: "Report Submitted",;
-          description: "Thank you. Our team will review your report"}),;
-        return true;
-      }
-    } catch (err: any) {;
-      console.error("Error reporting review:", err),;
-      toast({;
-        title: "Error",;
-        description: "Failed to report review",;
-        variant: "destructive"});
-    }
-;
-    return false;
-  },;
-  // Initialize by fetching reviews if projectId is provided;
-  if (projectId && reviews.length === 0 && !isLoading) {;
-    fetchProjectReviews(projectId);
-  }
-;
-  return {;
-    reviews,;
-    userReview,;
-    isLoading,;
-    isSubmitting,;
-    fetchProjectReviews,;
-    fetchUserReviews,;
-
-
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    submitReview;
-    updateReview;
-
-    reportReview}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    submit_review;
-    update_review;
-    report_review}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
     submit_review;
     update_review;

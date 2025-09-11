@@ -17,23 +17,6 @@ class TypeChecker {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
-<<<<<<< HEAD
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    console.log('Type Checker started successfully')};
-  async runTypeCheck() {}
-    try {}
-      console.log('Running TypeScript type check...');
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      const child = spawn('npm', ['run', 'type-check'], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
-
       let output = ;';';
       let errorOutput = ;';';
 
@@ -46,8 +29,6 @@ class TypeChecker {}
 });
 <<<<<<< HEAD
 =======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}

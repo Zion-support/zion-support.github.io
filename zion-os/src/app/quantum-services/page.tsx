@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 =======
@@ -9,48 +5,7 @@ import Link from "next/link";
 export const metadata = {title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions";
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.";
   keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"}
-export default function QuantumServicesPage() {return (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
-export const metadata = {;
-  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
-  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",;
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},;
-export default function QuantumServicesPage() {;
-  return (;
-<<<<<<< HEAD
-
-
-    <div className="min-h-screen">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    <div className="min-h-screen">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from './next / link';,
-export const metadata = {
-  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
-  description: "Transform your business with Zion Tech Group's cutting - edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},
-export default /**
- * QuantumServicesPage - Function description
- */
-function QuantumServicesPage() {
-  return (
-    <div className="min - h-screen">;
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions";
-  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.";
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"}
-export default function QuantumServicesPage() {return (;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
+export default function QuantumServicesPage() {return (;import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",;
@@ -58,91 +13,6 @@ export const metadata = {;
 export default function QuantumServicesPage() {;
   return (;
     <div className="min-h-screen">;
-      {/* Hero Section */}
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
-            <span className="gradient - text">Quantum Computing Services</span>;
-          </h1>;
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
-            Harness the power of quantum mechanics to solve complex problems that;
-            are impossible for classical computers. Transform your business with;
-            next - generation computational capabilities.;
-          </p>;
-        </div>;
-      </section>;
-      {/* Quantum Overview */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="card bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20 border - purple - 500 / 30">;
-            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
-              <div>;
-                <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                  The Future of Computing is Quantum;
-                </h2>;
-                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-                  Quantum computing represents a paradigm shift in computational power.;
-                  By leveraging quantum mechanical phenomena like superposition and;
-                  entanglement, we can process information in ways that classical;
-                  computers simply cannot match.;
-                </p>;
-                <div className="space - y-4 mb - 6">;
-                  <div className="flex items - center">;
-                    <div className="w - 6 h - 6 bg - purple - 500 rounded - full mr - 3"></div>;
-                    <span className="text - gray - 300">Exponential speedup for specific problems</span>;
-                  </div>;
-                  <div className="flex items - center">;
-                    <div className="w - 6 h - 6 bg - purple - 500 rounded - full mr - 3"></div>;
-                    <span className="text - gray - 300">Revolutionary optimization capabilities</span>;
-                  </div>;
-                  <div className="flex items - center">;
-                    <div className="w - 6 h - 6 bg - purple - 500 rounded - full mr - 3"></div>;
-                    <span className="text - gray - 300">Breakthrough machine learning algorithms</span>;
-                  </div>;
-                  <div className="flex items - center">;
-                    <div className="w - 6 h - 6 bg - purple - 500 rounded - full mr - 3"></div>;
-                    <span className="text - gray - 300">Unprecedented simulation accuracy</span>;
-                  </div>;
-                </div>;
-                <Link href="/contact" className="btn - primary">;
-                  Explore Quantum Solutions;
-                </Link>;
-              </div>;
-              <div className="relative">;
-                <div className="w - full h - 80 bg - gradient - to - br from - purple - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center">;
-                  <svg className="w - 32 h - 32 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
-                  </svg>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Core Quantum Services */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="text - center mb - 16">;
-            <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-              Core Quantum Services;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-              Comprehensive quantum computing solutions designed for enterprise applications;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {/* Quantum Algorithm Development */}
-            <div className="card group hover:bg - purple - 500 / 10 transition - colors">;
-              <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - purple - 500 / 30">;
-                <svg className="w - 8 h - 8 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                  <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10 20l4 - 16m4 4l4 4 - 4 4M6 16l - 4-4 4 - 4" />;
-                </svg>;
-              </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Custom quantum algorithms designed for your specific business problems,
-
 <<<<<<< HEAD
 
                 Custom quantum algorithms designed for your specific business problems,;
@@ -157,11 +27,7 @@ export default function QuantumServicesPage() {;
 =======
 =======
 
-                Custom quantum algorithms designed for your specific business problems,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                from optimization challenges to complex simulations.;
+                Custom quantum algorithms designed for your specific business problems,;                from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
                 <li>• Custom algorithm design</li>;

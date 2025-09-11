@@ -135,15 +135,5 @@ profileType ;
 }AI Match: {;
   aiScore ;
 }% </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/profile/ProfileHero.tsx
-}</div> </div> </div> </div> </div> </div>) ;"}'"
 }</div> </div> </div> </div> </div> </div>) ;
 }'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileHero.tsx
-=======
-
-}</div> </div> </div> </div> </div> </div>) ;
-}'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

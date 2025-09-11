@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Button } from '@/components/ui/button';
-import { _Badge } from '@/components/ui/badge';
-import { _Link } from 'react-router-dom';
-import { _Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
-
 import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -25,9 +18,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
-const AIServices = [
->>>>>>> origin/clean-error-fixing-automation
-    {
+const AIServices = [    {
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",
         price: "$2,500 - $15,000",
@@ -139,59 +130,6 @@ const AIServices = [
         link: "/request-quote?service=ai-content"
     }
 ];
-<<<<<<< HEAD
-const _categories = [
-=======
-const categories = [
->>>>>>> origin/clean-error-fixing-automation
-    { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
-    { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4"/> },
-    { name: "Development", value: "development", icon: <Code className="h-4 w-4"/> },
-    { name: "Data", value: "data", icon: <Database className="h-4 w-4"/> },
-    { name: "Analytics", value: "analytics", icon: <BarChart3 className="h-4 w-4"/> },
-    { name: "Vision", value: "vision", icon: <Eye className="h-4 w-4"/> },
-    { name: "NLP", value: "nlp", icon: <MessageSquare className="h-4 w-4"/> },
-    { name: "Compliance", value: "compliance", icon: <Shield className="h-4 w-4"/> },
-    { name: "Optimization", value: "optimization", icon: <Zap className="h-4 w-4"/> },
-    { name: "Training", value: "training", icon: <Users className="h-4 w-4"/> },
-    { name: "Integration", value: "integration", icon: <Code className="h-4 w-4"/> },
-    { name: "Security", value: "security", icon: <Lock className="h-4 w-4"/> },
-    { name: "Content", value: "content", icon: <FileText className="h-4 w-4"/> }
-];
-export default function AIServicesPage() {
-    const [selectedCategory, setSelectedCategory] = React.useState("all");
-<<<<<<< HEAD
-    const _filteredServices = selectedCategory === "all"
-=======
-    const filteredServices = selectedCategory === "all"
->>>>>>> origin/clean-error-fixing-automation
-        ? AIServices
-        : AIServices.filter(service => service.category.toLowerCase() === selectedCategory);
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Services & Solutions
-          </h1>
-          <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Transform your business with cutting-edge artificial intelligence services. 
-            From strategy to implementation, we've got you covered.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate font-semibold">
-              <Search className="h-5 w-5 mr-2"/>
-              Explore Services
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <MessageSquare className="h-5 w-5 mr-2"/>
-              Get Consultation
-            </Button>
-          </div>
-        </div>
-      </div>
-
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -269,4 +207,3 @@ export default function AIServicesPage() {
 }
 =======
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

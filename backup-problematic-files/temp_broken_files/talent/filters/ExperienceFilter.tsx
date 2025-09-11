@@ -52,15 +52,5 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
 }years</span> <span> {;
   experienceRange[1] ;
 }years</span> </div> <Slider /> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/talent/filters/ExperienceFilter.tsx
-}</div>) ;"}"
 }</div>) ;
 }"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/ExperienceFilter.tsx
-=======
-
-}</div>) ;
-}"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

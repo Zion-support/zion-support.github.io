@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
 =======
-
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,14 +18,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-
-
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/cookies.tsx
-=======
+==============
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

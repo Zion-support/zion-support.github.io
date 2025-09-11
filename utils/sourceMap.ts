@@ -1,30 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 export interface DeployTemplateResult {
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-// Mock source map utility
+=======// Mock source map utility
 export function getSourceMapWithExistence() {
   return {
     nodes: []
     edges: []
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    nodes: [],
-    edges: [];
-  };
-    nodes: [],
-    edges: [];
-  };
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function getGitStatus() {
@@ -33,9 +17,6 @@ export function getGitStatus() {
     branch: 'main'
   }
 }
-<<<<<<< HEAD
-=======
-
   return nodes && nodes.map(markExistenceRecursive);
 
 
@@ -83,26 +64,15 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 }
 export function getGitStatus() {
-  return {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export function getSourceMapWithExistence(): SourceNode[] {
+  return {export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
     nodes: [],
     edges: [];
   };
@@ -111,41 +81,19 @@ export interface DeployTemplateResult {
 export function getGitStatus() {
   return {
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    connected: false,
-    branch: 'main';
-  };
-}
-
 export function getSourceMapWithExistence(): SourceNode[] {;
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 
-export interface DeployTemplateResult {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  createdPaths: string[];
-  skippedPaths: string[];
+export interface DeployTemplateResult {;  skippedPaths: string[];
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
   }
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   createdPaths: string[];
-  skippedPaths: string[];
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-export function ensureDirectory(dirPath: string): void {
+  skippedPaths: string[];export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
   }
@@ -184,9 +132,6 @@ export function deployBasicTemplateForPath(
   } else {
     skippedPaths.push(readmeFile);
   }
-<<<<<<< HEAD
-=======
-
 
   const keepFile = path && path.join(absoluteDir, '.keep');
   if (!fs && fs.existsSync(keepFile)) {
@@ -211,15 +156,10 @@ export function deployBasicTemplateForPath(
   return { createdPaths, skippedPaths }
 =======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
   return { createdPaths, skippedPaths };
 
 }
-  return { createdPaths, skippedPaths }
-
-<<<<<<< HEAD
   return { createdPaths, skippedPaths }
 
 
@@ -237,8 +177,6 @@ export function deployBasicTemplateForPath(
   skipped_paths: string[];
 ;
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return { createdPaths, skippedPaths }
 
 =======
@@ -250,11 +188,6 @@ export function deployBasicTemplateForPath(
   return { createdPaths, skippedPaths };
 
 }
-<<<<<<< HEAD
-=======
-=======
-  return { createdPaths, skippedPaths }
-
 =======
 
 
@@ -264,9 +197,7 @@ export function deployBasicTemplateForPath(
 export function ensure_directory (dir_path: string): void {
   if () {) {
   $2
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}
+}}
 }
     const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
     fs.writeFileSync (readme_file, readme);
@@ -276,18 +207,6 @@ export function ensure_directory (dir_path: string): void {
   }
   return { created_paths, skipped_paths }
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

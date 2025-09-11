@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res.status (500).json ({ error: err.message || 'Unknown error' });
-  }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
@@ -129,8 +124,6 @@ export default function handler(req, res) {
 =======
   if (!userId |typeof userId !== 'string') {
     return res.status(400).json({ error: 'Missing userId' });
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {getWalletSummary} from '../../../utils / token / service';
@@ -143,35 +136,7 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-    return res.status (400).json ({ error: 'Missing user_id' });
-  }
-  try {
-    const summary = getWalletSummary (user_id);
-    return res.status (200).json (summary);
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  try {
-    const summary = getWalletSummary(userId),
-    return res.status(200).json(summary)
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  } catch (err: any) {
-    return res.status (500).json ({ error: err.message || 'Unknown error' });
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
 import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

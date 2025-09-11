@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"export\": const ErrorPage = ({ ;
-export: const ErrorPage = ({ ;""
-:src.disabled/components/ErrorPage.jsx
-"export\": const ErrorPage = ({ ;
-export: const ErrorPage = ({ ;""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-"export\": const ErrorPage = ({ ;
-export: const ErrorPage = ({ ;""
-:temp_exclude/src.disabled/components/ErrorPage.jsx
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 =======
 "export\": const ErrorPage = ({ ;
-export: const ErrorPage = ({ ;""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ErrorPage.jsx
-<<<<<<< HEAD
+export: const ErrorPage = ({ ;""<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

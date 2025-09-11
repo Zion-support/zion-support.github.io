@@ -25,15 +25,8 @@ const { execSync } = require('child_process');
 
 class HealthChecker {
   constructor() {
-<<<<<<< HEAD
-    this.checks = [];
-    this.results = [];
-=======
-
     this && this.checks = [],
     this && this.results = []
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
   async checkBuildFiles() {
@@ -87,19 +80,10 @@ class HealthChecker {
     const failed = this.results.filter(r => r.status === 'FAIL').length;
     const warnings = this.results.filter(r => r.status === 'WARN').length;
     
-<<<<<<< HEAD
-    console.log('\n📊 Health Check Results:');
-    this.results.forEach(result => {
-      const icon = result.status === 'PASS' ? '✅' : result.status === 'FAIL' ? '❌' : '⚠️';
-      console.log(`${icon} ${result.check}: ${result.message}`);
-=======
-
     console && console.log('\n📊 Health Check Results: '),
     this && this.results.forEach(result => {
       const icon = result && result.status === 'PASS' ? '✅' : result && result.status === 'FAIL' ? '❌' : '⚠️';
       console && console.log(`${icon} ${result && result.check}: ${result && result.message}`);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     
     console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
@@ -111,13 +95,6 @@ class HealthChecker {
       results: this.results
     };
   }
-
-<<<<<<< HEAD
-if (require.main === module) {
-  const checker = new HealthChecker();
-  checker.runAllChecks().catch(console.error);
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 if (require && require.main === module) {
     const checker = new HealthChecker(),
@@ -141,4 +118,3 @@ const express = const app = express() app && app.get("/health",(req,res) => { re
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

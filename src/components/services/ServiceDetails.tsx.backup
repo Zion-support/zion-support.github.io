@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { _Server, Clock, MapPin } from "lucide-react";
-
 const _services = [];
 const _implementation = [];
 // Component to show service details for the selected country
@@ -16,9 +12,7 @@ import { Server, Clock, MapPin } from "lucide-react";
 export function ServiceDetails(_{ country }) {
     // Get datacenters for regions (simplified - in production this would come from a real database)
     const getDatacenters = (country) => {
-        const dataCenters = {
->>>>>>> origin/clean-error-fixing-automation
-            "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
+        const dataCenters = {            "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
             "United Kingdom": ["London", "Manchester", "Birmingham"],
             "Germany": ["Frankfurt", "Berlin", "Munich"],
             "Japan": ["Tokyo", "Osaka"],

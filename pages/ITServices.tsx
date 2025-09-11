@@ -18,62 +18,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-import React from "react";
-import Layout from "../components/Layout";
-export default function ITServices() {;
-  return (
-    <Layout
-      title="IT Services - Zion Tech Group"
-      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              IT Services;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Complete IT solutions to power your digital transformation.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">;
-import React from './react';
-import Layout from "../components / Layout";
-;
-export default /**
- * ITServices - Function description
- */
-function ITServices() {
-  return (
-    <Layout;
-      title="IT Services - Zion Tech Group";
-      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-              IT Services;
-            </h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Complete IT solutions to power your digital transformation.;
-            </p>;
-          </div>;
-          <div className="text - center">;
-            <p className="text - gray - 600">;
-              IT Services page is under construction.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-import React from "react";
-import Layout from "../components/Layout";
-ursor/integrate-build-improve-and-re-verify-8f7d
-import React from 'react';
-import Layout from '../components/Layout';
-origin/automation-improvements-final
-
 import React from "react";
 import Layout from "../components/Layout";
 origin/main
@@ -82,8 +26,6 @@ origin/main
 import React from "react";
 import Layout from "../components/Layout";
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ITServices() {
   return (
@@ -122,66 +64,12 @@ origin/automation-improvements-final
         </div>
       </div>
 <<<<<<< HEAD
-=======
-    </Layout>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function ITServices() {;
-  return (
-    <Layout
-      title="IT Services - Zion Tech Group"
-      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              IT Services;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Complete IT solutions to power your digital transformation.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">;
-import React from './react';
-import Layout from "../components / Layout";
-;
-export default /**
- * ITServices - Function description
- */
-function ITServices() {
-  return (
-    <Layout;
-      title="IT Services - Zion Tech Group";
-      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-              IT Services;
-            </h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Complete IT solutions to power your digital transformation.;
-            </p>;
-          </div>;
-          <div className="text - center">;
-            <p className="text - gray - 600">;
-              IT Services page is under construction.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-
-<<<<<<< HEAD
     </Layout>;
   );
 }
 }
 =======
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
 }
 
@@ -776,19 +664,11 @@ export default function ITServices() {
       </section>
     </Layout>
   );
-<<<<<<< HEAD
-}
-    </Layout>);
-}
-=======
 
 
 
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
+=======}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final

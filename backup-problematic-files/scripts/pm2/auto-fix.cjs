@@ -1,84 +1,4 @@
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
-
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node
-const { execSync } = require('child_process');
-function run(cmd) {
-	console.log(`$ ${cmd}`);
-	return execSync(cmd, { stdio: 'inherit' });
-}
-try {
-	// Lint (non-fatal), Type-check, Build
-	try { run('npm run lint'); } catch {}
-	run('npm run type-check');
-	run('npm run build');
-	// Restart preview app if running
-	try { run('pm2 reload bolt-zion-app'); } catch {}
-	console.log('Auto-fix run completed successfully.');
-} catch (e) {
-	console.error('Auto-fix run failed:', e.message);
-	process.exit(1);
-}
-#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");function run(cmd) {console.log(`$ ${cmd}`);"return execSync(cmd, { stdio: "inherit" })}try {/ Lint (non-fatal), Type-check, Build"try { run("npm run lint")} catch {}"run("npm run type-check");"run("npm run build");/ Restart preview app if running"try { run("pm2 reload bolt-zion-app")} catch {}"console.log("Auto-fix run completed successfully.")} catch (e) {""console.error("Auto-fix run failed: ", e.message);process.exit(1)}""`"`
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
-function run(cmd) {
-	return execSync(cmd, { "stdio": 'inherit' })}
-try {
-	// Lint (non-fatal), Type-check, Build
-	try { run('npm run lint')} catch {}
-	run('npm run type-check');
-	run('npm run build');
-	// Restart preview app if running
-	try { run('pm2 reload bolt-zion-app')} catch {}
-	} catch (e) {
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-function run(cmd) {}
-	console.log(`$ ${cmd}`);
-	return execSync(cmd, { "stdio": 'inherit' })};
-try {}
-	// Lint (non-fatal), Type-check, Build;
-	try { run('npm run lint')} catch {};
-	run('npm run type-check');
-	run('npm run build');
-	// Restart preview app if running;
-	try { run('pm2 reload bolt-zion-app')} catch {};
-	console.log('Auto-fix run completed successfully.')} catch (e) {}
-	console.error('Auto-fix run "failed": ', e.message);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	process.exit(1)};
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-	process.exit(1)};
-<<<<<<< HEAD
-=======
-	process.exit(1)};
-=======
-#!/usr/bin/env node
-
-/**
- * Auto Fix Automation Script
- * Automatically fixes common issues in the codebase
- */
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -297,11 +217,7 @@ try {}
 	try { run('pm2 reload bolt-zion-app')} catch {};
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
-	process.exit(1)};
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-<<<<<<< HEAD
+	process.exit(1)};=======<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======

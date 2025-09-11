@@ -1,27 +1,9 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-' \' \' \' import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,\"listings\": \'initialListing\',s,\"sortOptions\": = [\'';\'";\";
-" " " " import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,listings: "initialListing",s,sortOptions: = ["";"";";"""
-:src.disabled/components/CategoryListingPage.jsx
-' \' \' \' import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,\"listings\": \'initialListing\',s,\"sortOptions\": = [\'';\'";\";
-" " " " import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,listings: "initialListing",s,sortOptions: = ["";"";";"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-' \' \' \' import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,\"listings\": \'initialListing\',s,\"sortOptions\": = [\'';\'";\";
-" " " " import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,listings: "initialListing",s,sortOptions: = ["";"";";"""
-:temp_exclude/src.disabled/components/CategoryListingPage.jsx
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
 
 =======
 ' \' \' \' import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,\"listings\": \'initialListing\',s,\"sortOptions\": = [\'';\'";\";
-" " " " import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,listings: "initialListing",s,sortOptions: = ["";"";";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/CategoryListingPage.jsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+" " " " import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,listings: "initialListing",s,sortOptions: = ["";"";";""">>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

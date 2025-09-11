@@ -1,11 +1,5 @@
 
 
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from \'react\'; import { SEO } from \'../components/SEO\'; \"export\": default function Page() { export default function Page() { const Contact: React.FC = () => { return (<> <SEO title=\'Contact - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Contact</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Contact

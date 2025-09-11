@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-:pages-disabled/quantum-logistics.tsx
-import React from 'react',
-import React from 'react';
-:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
-import Head from 'next/head';
-import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-:pages-disabled/quantum-logistics.tsx
-import { Button  } from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import {Button} from '../components/ui/Button';
-import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
-export default function ApiObservabilityPage() {
-
 :pages-disabled/quantum-logistics.tsx
 export default function ApiObservabilityPage() {;
 export default function ApiObservabilityPage() {
@@ -28,8 +12,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 
 import {Button} from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
   if (!service) return null;
 
@@ -54,33 +36,6 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
-<<<<<<< HEAD
-:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
-              </ul>;
-            </div>;
-            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">;
-              <div className="flex items-end justify-between mb-3">;
-                <div>;
-                  <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>;
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup:{service.setupTime}</div>;
-                </div>;
-              </div>;
-              <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>;
-  ),;
-}
-;
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </ul>
             </div>
@@ -104,12 +59,6 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
     </UltraFuturisticBackground>
   )
 
-<<<<<<< HEAD
-
-:pages-disabled/quantum-logistics.tsx
-}
-}
-
 main:pages-disabled/quantum-logistics.tsx
 :backup-problematic-files/temp_conflicts/pages/api-observability.tsx
 :pages-disabled/quantum-logistics.tsx
@@ -118,8 +67,4 @@ main:pages-disabled/quantum-logistics.tsx
 :backup-problematic-files/temp_conflicts/pages/api-observability.tsx
 =======
 =======
-
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

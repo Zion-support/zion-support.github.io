@@ -84,71 +84,6 @@ class HealthMonitor {}
     const logDir = path.dirname(this.logFile);,
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
-<<<<<<< HEAD
-=======
-    }
-  }
-  log(message, level = 'INFO') {'}
-    const timestamp = new Date().toISOString();,
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
-    );
-    _console.log(logMessage.trim());
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-    try {}
-      fs.appendFileSync(this.logFile, logMessage);,
-    } catch (error) {}
-      _console.error('Failed to write to log file:', error.message);',
-    }
-  }
-  error(message) {}
-    this.log(message, 'ERROR');',
-    try {}
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
-    } catch (err) {}
-      _console.error('Failed to write to error file:', err.message);',
-    }
-  }
-  async getSystemHealth() {}
-    this.log('Checking system health...');',
-    try {}
-      const health = {}
-        timestamp: new Date().toISOString(),
-        system: await this.getSystemInfo(),
-        processes: await this.getProcessInfo(),
-        resources: await this.getResourceUsage(),
-        alerts: [];,
-;      };,
-      // Check for alerts;
-      if (health.resources.memoryUsage > this.alertThreshold) {}
-        health.alerts.push({}),
-          type: 'memory,',
-          level: 'warning,',
-          message: `Memory usage is ${health.resources.memoryUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
-        });,
-      }
-      if (health.resources.cpuUsage > this.alertThreshold) {}
-        health.alerts.push({}),
-          type: 'cpu,',
-          level: 'warning,',
-          message: `CPU usage is ${health.resources.cpuUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
-        });,
-      }
-      if (health.resources.diskUsage > this.alertThreshold) {}
-        health.alerts.push({}),
-          type: 'disk,',
-          level: 'warning,',
-          message: `Disk usage is ${health.resources.diskUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
-        });,
-      }
-      // Log alerts;
-      for (const alert of health.alerts) {}
-        if (alert.level === 'warning') {',
-;          this.log(alert.message, 'WARNING');',
-        } else {}
-          this.error(alert.message);,
-        }
-
 =======
     } catch (error) {_;
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
@@ -1830,9 +1765,7 @@ healthMonitor.run().catch(error => {,;
 
     } catch (error) {,;
       this.log(`❌ Error running health: monitor: ${error.message}`),;
-      process.exit(1);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
+      process.exit(1);    }
   }
   log(message, level = 'INFO') {'}
     const timestamp = new Date().toISOString();,
@@ -1840,17 +1773,9 @@ healthMonitor.run().catch(error => {,;
     );
     _console.log(logMessage.trim());
 
-<<<<<<< HEAD
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
 
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
@@ -1861,10 +1786,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-
-<<<<<<< HEAD
-  async getSystemHealth() {}
-    this.log('Checking system health...');',
 
     try {}
       const health = {}
@@ -1908,22 +1829,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           this.error(alert.message);,
         }
 
-<<<<<<< HEAD
-    } catch (error) {_;
-=======
-=======
-    } catch (error) {_;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
 module.exports = HealthMonitor;
-
-<<<<<<< HEAD
-}};
-; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
-; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
-; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
 
 ; // Parse memory info; const memLines = memInfo && memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
 ; // Parse disk info; const diskLines = diskInfo && diskInfo.split('\n'); const rootDisk = diskLines && diskLines.find(line = > line && line.includes('/')); const diskUsage = rootDisk ? rootDisk && rootDisk.split(/\s+/)[4].replace('%', ''): '0';
@@ -2258,9 +2164,7 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
 
 =======
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }};
 ; async checkSystemResources() {; try {; this && this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
@@ -2276,8 +2180,6 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 }}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
@@ -2297,17 +2199,6 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
 
-
-<<<<<<< HEAD
-              name: file, size: stats.size,
-              sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100, lastModified: stats.mtime,
-            });
-          };
-        });
-              name: file,
-              size: stats.size;
-              sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100;
-              lastModified: stats.mtime})
 
 
 
@@ -2392,9 +2283,7 @@ const healthMonitor = new HealthMonitor();
           }
         })
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      };
+=======      };
 ;
       return {;
         success: true, logFiles: logFiles,
@@ -2406,19 +2295,8 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
         logFiles: [], totalSize: 0,
       ;
 };
-<<<<<<< HEAD
-        success: false,
-        error: error.message;
-        logFiles: [];
-        totalSize: 0
-      }
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
 
 
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 ;
   async generateReport(systemInfo, processInfo, appInfo, logInfo) {;
@@ -2623,13 +2501,7 @@ healthMonitor.run().catch(error => {;
 });
 
 
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662    };
   };
 ,
   async checkSystemResources() {,
@@ -2639,9 +2511,6 @@ healthMonitor.run().catch(error => {;
       const memInfo = execSync('free -m', { encoding: 'utf8' }),
       const diskInfo = execSync('df -h', { encoding: 'utf8' }),
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }),
-<<<<<<< HEAD
-
-
 ,
       // Parse memory info,
     };
@@ -3055,8 +2924,6 @@ healthMonitor.run().catch(error => {,;
 
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ,
       // Parse memory info,
       const memLines = memInfo.split('\n'),
@@ -3454,14 +3321,6 @@ const healthMonitor = new HealthMonitor(),
 healthMonitor.run().catch(error => {,
   process.exit(1),
 }),
-<<<<<<< HEAD
-const healthMonitor = new HealthMonitor();
-healthMonitor.run().catch(error => {_;
-  process.exit(1)});
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return processes;
 
     } catch (error) {}
@@ -4866,10 +4725,6 @@ if ( {) {
 } this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)})} else { this.log ('\n✨ All systems are healthy!')}
 } catch (error) { this.log (`❌ Error running health monitor: ${error.message}`); process.exit (1)}}}
 ;
-<<<<<<< HEAD
-;
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {,;
       this.log(`❌ Error running health: monitor: ${error.message}`),;
@@ -4894,8 +4749,6 @@ const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error => {_;
   process.exit(1)});
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

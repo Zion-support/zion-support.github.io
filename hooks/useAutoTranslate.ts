@@ -1,20 +1,10 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils / translation';
-=======
-
-import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils / translation';
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type UseAutoTranslateResult = {
   translations: Record < string, string>;
   loading: boolean;
   error?: string;
 }
-<<<<<<< HEAD
-=======
-
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
 export type UseAutoTranslateResult = {
@@ -62,8 +52,6 @@ if ( {) {
       set_translations ({});
       return;    }      return;
 =======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -83,16 +71,8 @@ if ( {) {
     let cancelled = $2;
     const timer = setTimeout(async () => {
       try {
-<<<<<<< HEAD
-        if (!cancelled) setTranslations(res)
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Translation failed')
-=======
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        set_loading (true);
+=======        set_loading (true);
         set_error (undefined);
         const res = await translateTextViaAI (text, targets);
         if (set_translations (res)) {
@@ -114,15 +94,6 @@ if ( {) {
   $2
 }
       }
-<<<<<<< HEAD
-      clearTimeout(timer)
-    }, debounce_ms);
-;
-    return () => {
-      cancelled = true;
-      clear_timeout (timer);
-=======
-
 
     }
   }, [key, debounce_ms]);
@@ -131,9 +102,7 @@ if ( {) {
 
 }
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    }
+=======    }
   }, [key, debounce_ms]);
 ;
   return { translations, loading, error }

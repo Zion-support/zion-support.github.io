@@ -1,56 +1,7 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React from 'react';
-}
-import React, { Suspense, lazy } from 'react';
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
 
-<<<<<<< HEAD
-import React from 'react';
-};
-import React, { Suspense, lazy } from 'react';
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-import React from 'react'
-}
-import React, { Suspense, lazy } from 'react';
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface LazyComponentProps {
-  component: ComponentType < Record < string, unknown>>;
-  fallback?: ReactNode;
-  [key: string]: unknown
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -81,14 +32,8 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ ;
   component: Component, ;
   fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />,;
   ...props ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Suspense fallback={fallback}>;
       <Component {...props} />;
@@ -97,20 +42,11 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ ;
 }
 export default LazyComponent;
 
-<<<<<<< HEAD
-import React from 'react',;
-},
-
 import React from 'react';
 }
 
 
 
-<<<<<<< HEAD
-
-import React from 'react',;
-},
-
 
 =======
 
@@ -120,42 +56,15 @@ import React from 'react',;
 },
 
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 import React from 'react';
 }
 
 
 
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-const LazyComponent: React.FC < LazyComponentProps> = ({
-  component: Component,
-  fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
-  ...props;
-  return (
-    <Suspense fallback={fallback}>;
-      <Component {...props} />;
-    </Suspense>);
-}
-;
-export default LazyComponent;
-import React from 'react',
-},
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 

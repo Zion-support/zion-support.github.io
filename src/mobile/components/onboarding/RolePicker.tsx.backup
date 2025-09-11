@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import { _useTranslation } from "react-i18next";
-import { _Card, CardContent } from "@/components/ui/card";
-import { _Briefcase, Users, Check } from "lucide-react";
-
 import { Check } from 'lucide-react';
 export function RolePicker({ onSelect }) {
     const [selectedRole, setSelectedRole] = useState(null);
@@ -16,9 +11,7 @@ import { Briefcase, Users, Check } from "lucide-react";
 export function RolePicker(_{ onSelect }) {
     const [selectedRole, setSelectedRole] = useState(null);
     const { t } = useTranslation();
-    const handleSelect = (role) => {
->>>>>>> origin/clean-error-fixing-automation
-        setSelectedRole(role);
+    const handleSelect = (role) => {        setSelectedRole(role);
         onSelect(role);
     };
     return (<div className="space-y-4 px-4">

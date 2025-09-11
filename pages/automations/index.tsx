@@ -1,29 +1,15 @@
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
-
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-const AutomationsIndex: NextPage = () => {
+=======const AutomationsIndex: NextPage = () => {
   const items = [
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
-<<<<<<< HEAD
-=======
-=======
-
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -37,12 +23,7 @@ const AutomationsIndex: NextPage = () => {
             <div className="enhanced-card hover:shadow-lg cursor-pointer">
               <h2 className="text-xl font-semibold">{it.title}</h2>
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            </div>
+=======            </div>
           </Link>
         ))}
       </div>
@@ -50,11 +31,6 @@ const AutomationsIndex: NextPage = () => {
   )
 }
 export default AutomationsIndex;
-<<<<<<< HEAD
-    </main>);
-},
-export default AutomationsIndex,
-
 export default AutomationsIndex,;
         ))  } catch (error) {
     console.error("Error:", error);
@@ -66,8 +42,6 @@ export default AutomationsIndex,;
             </div>
           </Link>
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 =======
 import type { NextPage } from 'next',
@@ -90,23 +64,5 @@ const AutomationsIndex: NextPage = () => {
           </Link>))}
       </div>;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    </main>;
-  );
-},;
-export default AutomationsIndex;
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

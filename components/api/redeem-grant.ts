@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs - extra';
-import path from 'path';
-import {
-
 
   authenticateRequest,
   enforceRateLimit,;
@@ -16,24 +7,12 @@ import {
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-const REDEMPTIONS_FILE = path.join(
+=======const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
   'partners'
   'grant-redemptions.json'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
 const REDEMPTIONS_FILE = path && path.join(
   process && process.cwd(),
   'data',
@@ -44,56 +23,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-  try {
-  const started = Date && Date.now();
-  const auth = await authenticateRequest(req),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  if (!auth) {
-    return res && res.status(401).json({ error: 'Unauthorized' });
-  }
-  if (!(await enforceRateLimit(auth && auth.apiKey))) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
-    return res && res.status(429).json({ error: 'Rate limit exceeded' });
-  }
-
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
-    return res && res.status(405).json({ error: 'Method Not Allowed' });  }
-  const { studentEmail, grantCode, courseId } = req && req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
-    return res && res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: 'Method Not Allowed' });  }
-  const { studentEmail, grantCode, courseId } = req.body |{}
-  if (!studentEmail |!grantCode |!courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -101,19 +30,13 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 import { v4 as uuidv4 } from "uuid";
 const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json");
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  try {
-  const started = Date && Date.now();
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   const started = Date.now();
 =======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
-  const started = Date.now();
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  const started = Date.now();>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" });
@@ -144,41 +67,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs && fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id, redeemedAt: now });  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: "Missing required fields" })
-  }
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
-  const records = (await fs.pathExists(REDEMPTIONS_FILE)) ? await fs.readJSON(REDEMPTIONS_FILE) : [];
-  const now = new Date().toISOString();
-  const record = {
-    id: uuidv4(), partnerId: auth.partner.id,
-    studentEmail;
-    grantCode;
-    courseId;
-    redeemedAt: now};
-  records.push(record);
-  await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id, redeemedAt: now })
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 =======
 
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+}=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   authenticate_request,
   enforceRateLimit,
@@ -317,34 +210,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ id: record.id, redeemedAt: now })
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-import {
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
-  authenticateRequest,
-  enforceRateLimit,;
-  recordRequest,;
-} from '../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
 
 const REDEMPTIONS_FILE = path.join(
   process.cwd()
@@ -423,10 +290,6 @@ redeemedAt: now
 }
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "./globals.css",
 import type { ReactNode } from './react';,
@@ -25,8 +22,6 @@ export const metadata = {title: "Zion OS - Launch Sovereign AI-Powered Digital E
 export default function RootLayout({ children }: { children: ReactNode }) {return (;
 =======
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "./globals.css",;
 import type { ReactNode } from "react",;
 import { Metadata } from "next",;
@@ -36,12 +31,7 @@ export const metadata = {;
   keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"};
 export default function RootLayout({ children }: { children: ReactNode }) {;
   return (;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <html lang="en">;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662    <html lang="en">;
       <body className="min - h-screen bg-[var (--bg)] text-[var (--fg)]">;
         <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 80 backdrop - blur - md">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

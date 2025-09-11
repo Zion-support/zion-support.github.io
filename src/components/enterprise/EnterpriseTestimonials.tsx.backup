@@ -1,17 +1,11 @@
 import React from "react";
-<<<<<<< HEAD
-import { _Quote } from "lucide-react";
-import { _Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel";
-
 const testimonials = [];
 const solutions = [];
 const _testimonials = [
 =======
 import { Quote } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel";
-const testimonials = [
->>>>>>> origin/clean-error-fixing-automation
-    {
+const testimonials = [    {
         quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
         author: "Sarah Johnson",
         title: "VP of Talent Acquisition",

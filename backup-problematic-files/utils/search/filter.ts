@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-export type AccessLevel = 'public' | 'private' | 'admin';
-
 export interface SearchResult {
   id: string;
   title: string;
@@ -298,8 +295,6 @@ export function suggestDidYouMean(query: string): string | null {;
 };
 
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type AccessLevel = 'public' | 'private' | 'admin';
 
 export interface SearchResult {
@@ -475,16 +470,6 @@ export function suggestDidYouMean(query: string): string[] {
   }
   
   return suggestions.slice(0, 3); // Return max 3 suggestions
-<<<<<<< HEAD
-main:utils/search/filter.ts
-:backup-problematic-files/utils/search/filter.ts
-}
-}
-:backup-problematic-files/utils/search/filter.ts
-=======
-
 
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

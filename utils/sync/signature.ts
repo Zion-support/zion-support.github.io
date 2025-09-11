@@ -1,21 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Signature utilities
-export const signature = {
-  // Add signature functionality here
-  verify: (signature: string, message: string, address: string) => false
-  sign: (message: string, privateKey: string) => ''
-  recover: (signature: string, message: string) => ''
-
 =======
 
 import crypto from 'crypto';
 
 
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export function getSyncSecret(): string | null {
+=======export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
@@ -49,16 +38,7 @@ export function verifySignature(
     return false;
   }
 }
-<<<<<<< HEAD
-// Signature utilities;
-export const signature = {
-  // Add signature functionality here;
-}
-=======
-
 import crypto from 'crypto';
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
   verify: (signature: string, message: string, address: string) => false,
@@ -68,23 +48,6 @@ import crypto from 'crypto';
 };
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-// Signature utilities;
-export const signature = {
-  // Add signature functionality here;
-  verify: (signature: string, message: string, address: string) => false,
-  sign: (message: string, privateKey: string) => '',
-  recover: (signature: string, message: string) => '';
-
 }
 =======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

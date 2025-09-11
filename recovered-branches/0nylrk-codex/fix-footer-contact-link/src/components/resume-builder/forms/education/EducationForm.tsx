@@ -1,13 +1,6 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -21,30 +14,9 @@ import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
 
-<<<<<<< HEAD
-export function EducationForm({ ;
-
-
-<<<<<<< HEAD
-
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Education} from '@/types/resume';
-import {useResume} from '@/hooks/useResume';
-import {format} from 'date-fns';
-import {EducationFormProps} from './types';
-import {EducationList} from './EducationList';
-import {EducationFormFields} from './EducationFormFields';
-export function EducationForm({
-export function EducationForm({ ;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 export function EducationForm({ ;
 
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   resumeId;
   educationEntries
   onComplete
@@ -68,64 +40,19 @@ export function EducationForm({ ;
       is_current: data.is_current
       description: data.description
       location: data.location}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    let success;
-    if (editingId) {
-      success = await updateEducation(editingId, educationData)
-    } else {
-      success = await addEducation(resumeId, educationData)
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Education } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-import { format } from 'date-fns',;
-import { EducationFormProps } from './types',;
-import { EducationList } from './EducationList',;
-import { EducationFormFields } from './EducationFormFields',;
-export function EducationForm({;
-  resumeId,;
-  educationEntries,;
-  onComplete,;
-  onBack;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export function EducationForm(): any ({ ;
-  resumeId;
-  educationEntries, ;
-  onComplete, ;
-  onBack ;
-}: EducationFormProps) {;
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd');
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleAddOrUpdate = async (data: any) => {;
     const educationData: Education = {;
       institution: data && data.institution,;
@@ -136,35 +63,8 @@ export function EducationForm(): any ({ ;
       is_current: data && data.is_current,;
       description: data && data.description,;
       location: data && data.location},;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    let success;
-}: EducationFormProps) {;
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd');
-  },;
-  const handleAddOrUpdate = async (data: any) => {;
-    const educationData: Education = {;
-      institution: data.institution,;
-      degree: data.degree,;
-      field_of_study: data.field_of_study,;
-      start_date: data.start_date,;
-      end_date: data.is_current ? undefined : (data.end_date || undefined),;
-      is_current: data.is_current,;
-      description: data.description,;
-      location: data.location},;
-    let success,;
-=======
-
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    let success;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+    let success;=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let success;
@@ -173,23 +73,12 @@ export function EducationForm(): any ({ ;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    if (success) {
-      setEditingId(null)
-    }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
 
 =======
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
@@ -198,14 +87,7 @@ export function EducationForm(): any ({ ;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  };
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
@@ -221,73 +103,35 @@ export function EducationForm(): any ({ ;
       setEditingId(null)
     } else {
       onBack()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
     }
 =======
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (success) {;
       setEditingId(null);
     }
 
 
   };
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  },;
+=======  },;
 
   const handleEdit = (edu: Education) => {;
     setEditingId(edu && edu.id!),;
     // Form reset happens in the child component;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  }
-  };
-  },;
-  const handleEdit = (edu: Education) => {;
-    setEditingId(edu.id!),;
-    // Form reset happens in the child component;
-  },;
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
     }
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleCancel = () => {;
     if (editingId) {;
       setEditingId(null);
     } else {;
       onBack();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  },
-
   return (
     <div className="space-y-6">
       <div>
@@ -297,22 +141,15 @@ export function EducationForm(): any ({ ;
         </p>
       </div>
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
 
 =======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
@@ -328,19 +165,7 @@ export function EducationForm(): any ({ ;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <EducationList
-        educationEntries={educationEntries}
-      <EducationList 
-        educationEntries={educationEntries} 
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -348,11 +173,6 @@ export function EducationForm(): any ({ ;
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  return (
-
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Education } from '@/types/resume',;
@@ -421,9 +241,7 @@ export function EducationForm({ ;
 ;
   return (;
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
@@ -433,27 +251,6 @@ export function EducationForm({ ;
           Add your educational background and academic achievements.;
         </p>;
       </div>;
-<<<<<<< HEAD
-;
-      <EducationList ;
-        educationEntries={educationEntries} ;
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />;
-;
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Education' :'Add Education'}
-        </h3>;
-<<<<<<< HEAD
-;
-        <EducationFormFields;
-          isEditing={!!editingId}
-          onSubmit={handleAddOrUpdate}
-          onCancel={handleCancel}
-=======
-=======
-
       <EducationList
         educationEntries={educationEntries} 
         onEdit={handleEdit}
@@ -464,41 +261,20 @@ export function EducationForm({ ;
         <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        />;
-      </div>;
-;
-      {!editingId && educationEntries.length > 0 && (;
-=======
-        />;
-      </div>;
-
-      {!editingId && educationEntries && educationEntries.length > 0 && (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <div className="flex justify-end">;
+      {!editingId && educationEntries && educationEntries.length > 0 && (;        <div className="flex justify-end">;
           <Button type="button" onClick={onComplete}>;
             Next;
           </Button>;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-=======
-  );
-}
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export /**
+=======export /**
  * EducationForm - Function description
  */
 function EducationForm() {

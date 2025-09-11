@@ -1,41 +1,14 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const advancedAIServices2025 = [
   {
 
 
-<<<<<<< HEAD
-
-export const advancedAIServices2025 = [
-  {
-    id: 'ai - powered - business - intelligence - suite',
-    name: 'BusinessIntelligence AI Pro',
-    description:;
-      'Advanced AI - powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
-      'Natural language query processing',
-      'AI - powered data visualization',
-      'Predictive analytics and forecasting',
-      'Automated report generation',
-      'Real - time data monitoring',
-      'Integration with 100+ data sources',
-      'Custom AI model training',
-      'Advanced security and compliance',
-    ],
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
 export const advancedAIServices2025 = [
   {
 
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     pricing: {
       starter: {
         price: 199
@@ -43,26 +16,6 @@ export const advancedAIServices2025 = [
         features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
       }
       professional: {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        price: 499,
-        period: 'month',
-        features: [;
-          'Up to 50 users',
-          'Advanced AI models',
-          'Custom dashboards',
-          'Predictive analytics',
-        ],
-      },
-      enterprise: {
-        price: 1299,
-        period: 'month',
-        features: [;
-
           'Unlimited users',
           'Custom AI training',
           'White - label solution',
@@ -80,56 +33,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    market_size: '$27.3B',
-    target_audience:;
-      'Business analysts, data scientists, executives, enterprise businesses',
-    competitive_advantage:;
-      'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration',
-  },
-  {
-    id: 'intelligent - customer - analytics - platform',
-    name: 'CustomerAnalytics AI',
-    description:;
-      'AI - powered customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value optimization.',
-    features: [;
-      'Customer behavior prediction',
-      'Personalization engine',
-      'Churn risk analysis',
-      'Customer segmentation',
-      'Real - time analytics',
-      'Integration with CRM systems',
-      'Advanced reporting and dashboards',
-      'Custom AI model training',
-    ],
-    pricing: {
-      starter: {
-        price: 149,
-        period: 'month',
-        features: [;
-          'Up to 10, 000 customers',
-          'Basic analytics',
-          'Standard reports',
-        ],
-      },
-      professional: {
-        price: 399,
-        period: 'month',
-        features: [;
-          'Up to 100, 000 customers',
-          'Advanced AI',
-          'Custom models',
-          'Real - time insights',
-        ],
-      },
-      enterprise: {
-        price: 999,
-        period: 'month',
-        features: [;
-
           'Unlimited customers',
           'Custom AI training',
           'White - label solution',
@@ -146,56 +49,6 @@ export const advancedAIServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    market_size: '$15.8B',
-    target_audience:;
-      'Marketing teams, customer success managers, e - commerce businesses, SaaS companies',
-    competitive_advantage:;
-      'Advanced customer behavior prediction, comprehensive personalization engine, and seamless CRM integration',
-  },
-  {
-    id: 'ai - powered - financial - risk - management',
-    name: 'FinancialRisk AI',
-    description:;
-      'Intelligent financial risk management platform that uses AI to detect fraud, assess credit risk, and optimize investment portfolios.',
-    features: [;
-      'AI - powered fraud detection',
-      'Credit risk assessment',
-      'Portfolio optimization',
-      'Real - time risk monitoring',
-      'Regulatory compliance',
-      'Integration with financial systems',
-      'Advanced analytics and reporting',
-      'Custom risk models',
-    ],
-    pricing: {
-      starter: {
-        price: 299,
-        period: 'month',
-        features: [;
-          'Basic risk assessment',
-          'Standard compliance',
-          'Email alerts',
-        ],
-      },
-      professional: {
-        price: 799,
-        period: 'month',
-        features: [;
-          'Advanced AI models',
-          'Custom risk models',
-          'Real - time monitoring',
-          'Full compliance suite',
-        ],
-      },
-      enterprise: {
-        price: 1999,
-        period: 'month',
-        features: [;
 
           'Custom AI training',
           'White - label solution',
@@ -350,9 +203,7 @@ export const advancedAIServices2025 = [
     }
     category: 'Financial Risk Management'
     tags: ['AI', 'Financial Risk', 'Fraud Detection', 'Compliance']
-    website: 'https://ziontechgroup.com/financial-risk-ai'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    contact: {
+    website: 'https://ziontechgroup.com/financial-risk-ai'    contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -365,260 +216,7 @@ export const advancedAIServices2025 = [
       'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
 
   },
-  {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        price: 499,
-        period: 'month',
-        features: [;
-          'Up to 50 users',
-          'Advanced AI models',
-          'Custom dashboards',
-          'Predictive analytics',
-        ],
-      },
-      enterprise: {
-        price: 1299,
-        period: 'month',
-        features: [;
-          'Unlimited users',
-          'Custom AI training',
-          'White - label solution',
-          'Dedicated support',
-        ],
-      },
-    },
-    category: 'Business Intelligence',
-    tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization'],
-    website: 'https://ziontechgroup.com / business - intelligence - ai - pro',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    market_size: '$27.3B',
-    target_audience:;
-      'Business analysts, data scientists, executives, enterprise businesses',
-    competitive_advantage:;
-      'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration',
-  },
-  {
-    id: 'intelligent - customer - analytics - platform',
-    name: 'CustomerAnalytics AI',
-    description:;
-      'AI - powered customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value optimization.',
-    features: [;
-      'Customer behavior prediction',
-      'Personalization engine',
-      'Churn risk analysis',
-      'Customer segmentation',
-      'Real - time analytics',
-      'Integration with CRM systems',
-      'Advanced reporting and dashboards',
-      'Custom AI model training',
-    ],
-    pricing: {
-      starter: {
-        price: 149,
-        period: 'month',
-        features: [;
-          'Up to 10, 000 customers',
-          'Basic analytics',
-          'Standard reports',
-        ],
-      },
-      professional: {
-        price: 399,
-        period: 'month',
-        features: [;
-          'Up to 100, 000 customers',
-          'Advanced AI',
-          'Custom models',
-          'Real - time insights',
-        ],
-      },
-      enterprise: {
-        price: 999,
-        period: 'month',
-        features: [;
-          'Unlimited customers',
-          'Custom AI training',
-          'White - label solution',
-          'Dedicated support',
-        ],
-      },
-    },
-    category: 'Customer Analytics',
-    tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis'],
-    website: 'https://ziontechgroup.com / customer - analytics - ai',
-=======
-    id: 'intelligent-supply-chain-optimization'
-    name: 'SupplyChain AI'
-    description:
-      'AI-powered supply chain optimization platform that predicts demand, optimizes inventory, and automates logistics operations.'
-    features: [
-      'Demand forecasting with 95% accuracy'
-      'Inventory optimization'
-      'Route optimization'
-      'Supplier performance analytics'
-      'Real-time tracking'
-      'Integration with ERP systems'
-      'Advanced analytics and reporting'
-      'Custom optimization models'
-    ]
-    pricing: {
-      starter: {
-        price: 179
-        period: 'month'
-        features: [
-          'Up to 5 locations'
-          'Basic forecasting'
-          'Standard reports'
-        ]
-      }
-      professional: {
-        price: 449
-        period: 'month'
-        features: [
-          'Up to 25 locations'
-          'Advanced AI'
-          'Custom models'
-          'Full optimization suite'
-        ]
-      }
-      enterprise: {
-        price: 1199
-        period: 'month'
-        features: [
-          'Unlimited locations'
-          'Custom AI training'
-          'White-label solution'
-          'Dedicated support'
-        ]
-      }
-    }
-    category: 'Supply Chain Optimization'
-    tags: ['AI', 'Supply Chain', 'Logistics', 'Optimization']
-    website: 'https://ziontechgroup.com/supply-chain-ai'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-<<<<<<< HEAD
-    market_size: '$15.8B',
-    target_audience:;
-      'Marketing teams, customer success managers, e - commerce businesses, SaaS companies',
-    competitive_advantage:;
-      'Advanced customer behavior prediction, comprehensive personalization engine, and seamless CRM integration',
-  },
-  {
-    id: 'ai - powered - financial - risk - management',
-    name: 'FinancialRisk AI',
-    description:;
-      'Intelligent financial risk management platform that uses AI to detect fraud, assess credit risk, and optimize investment portfolios.',
-    features: [;
-      'AI - powered fraud detection',
-      'Credit risk assessment',
-      'Portfolio optimization',
-      'Real - time risk monitoring',
-      'Regulatory compliance',
-      'Integration with financial systems',
-      'Advanced analytics and reporting',
-      'Custom risk models',
-    ],
-    pricing: {
-      starter: {
-        price: 299,
-        period: 'month',
-        features: [;
-          'Basic risk assessment',
-          'Standard compliance',
-          'Email alerts',
-        ],
-      },
-      professional: {
-        price: 799,
-        period: 'month',
-        features: [;
-          'Advanced AI models',
-          'Custom risk models',
-          'Real - time monitoring',
-          'Full compliance suite',
-        ],
-      },
-      enterprise: {
-        price: 1999,
-        period: 'month',
-        features: [;
-          'Custom AI training',
-          'White - label solution',
-          'Dedicated support',
-          'Regulatory consultation',
-        ],
-      },
-    },
-    category: 'Financial Risk Management',
-    tags: ['AI', 'Financial Risk', 'Fraud Detection', 'Compliance'],
-    website: 'https://ziontechgroup.com / financial - risk - ai',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-      'Advanced AI fraud detection with 99 && 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
-    market_size: '$12.4B',
-    target_audience:;
-      'Banks, financial institutions, insurance companies, fintech startups',
-    competitive_advantage:;
-      'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
-  },
-  {
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    id: 'intelligent - supply - chain - optimization',
-    name: 'SupplyChain AI',
-    description:;
-      'AI - powered supply chain optimization platform that predicts demand, optimizes inventory, and automates logistics operations.',
-    features: [;
-      'Demand forecasting with 95% accuracy',
-      'Inventory optimization',
-      'Route optimization',
-      'Supplier performance analytics',
-      'Real - time tracking',
-      'Integration with ERP systems',
-      'Advanced analytics and reporting',
-      'Custom optimization models',
-    ],
-    pricing: {
-      starter: {
-        price: 179,
-        period: 'month',
-        features: [;
-          'Up to 5 locations',
-          'Basic forecasting',
-          'Standard reports',
-        ],
-      },
-      professional: {
-        price: 449,
-        period: 'month',
-        features: [;
-          'Up to 25 locations',
-          'Advanced AI',
-          'Custom models',
-          'Full optimization suite',
-        ],
-      },
-      enterprise: {
-        price: 1199,
-        period: 'month',
-        features: [;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          'Unlimited locations',
+  {          'Unlimited locations',
           'Custom AI training',
           'White - label solution',
           'Dedicated support',
@@ -627,27 +225,14 @@ export const advancedAIServices2025 = [
     },
     category: 'Supply Chain Optimization',
     tags: ['AI', 'Supply Chain', 'Logistics', 'Optimization'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com / supply - chain - ai',
-=======
-
-    website: 'https://ziontechgroup.com / supply - chain - ai',
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-=======
+==============
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    market_size: '$18.7B',
+=======    market_size: '$18.7B',
     target_audience:;
       'Manufacturers, distributors, logistics companies, retail chains',
     competitive_advantage:;
@@ -692,14 +277,8 @@ export const advancedAIServices2025 = [
         price: 2499,
         period: 'month',
         features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'Unlimited scans',
           'Custom AI training',
           'White - label solution',
@@ -709,14 +288,7 @@ export const advancedAIServices2025 = [
     },
     category: 'Healthcare AI',
     tags: ['AI', 'Healthcare', 'Medical Imaging', 'Diagnostics'],
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com / healthcare - diagnostics - ai',
-=======
-
-    website: 'https://ziontechgroup.com / healthcare - diagnostics - ai',
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
     website: 'https://ziontechgroup.com / healthcare - diagnostics - ai',
@@ -726,13 +298,7 @@ export const advancedAIServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -781,14 +347,8 @@ export const advancedAIServices2025 = [
         price: 1499,
         period: 'month',
         features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'Unlimited documents',
           'Custom AI training',
           'White - label solution',
@@ -798,14 +358,7 @@ export const advancedAIServices2025 = [
     },
     category: 'Legal AI',
     tags: ['AI', 'Legal Tech', 'Document Analysis', 'Compliance'],
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com / legal - document - ai',
-=======
-
-    website: 'https://ziontechgroup.com / legal - document - ai',
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
     website: 'https://ziontechgroup.com / legal - document - ai',
@@ -815,13 +368,7 @@ export const advancedAIServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -875,27 +422,14 @@ export const advancedAIServices2025 = [
     },
     category: 'Marketing AI',
     tags: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'AI',
       'Marketing Automation',
       'Personalization',
       'Campaign Optimization',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com / marketing - automation - ai',
-=======
-
-    website: 'https://ziontechgroup.com / marketing - automation - ai',
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
     website: 'https://ziontechgroup.com / marketing - automation - ai',
@@ -905,13 +439,7 @@ export const advancedAIServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -960,14 +488,8 @@ export const advancedAIServices2025 = [
         price: 799,
         period: 'month',
         features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'Unlimited sales reps',
           'Custom AI training',
           'White - label solution',
@@ -977,14 +499,7 @@ export const advancedAIServices2025 = [
     },
     category: 'Sales AI',
     tags: ['AI', 'Sales Optimization', 'Lead Scoring', 'Forecasting'],
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com / sales - optimization - ai',
-=======
-
-    website: 'https://ziontechgroup.com / sales - optimization - ai',
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
     website: 'https://ziontechgroup.com / sales - optimization - ai',
@@ -994,13 +509,7 @@ export const advancedAIServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -1058,27 +567,14 @@ export const advancedAIServices2025 = [
     },
     category: 'HR AI',
     tags: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'AI',
       'HR Recruitment',
       'Candidate Screening',
       'Hiring Optimization',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com / hr - recruitment - ai',
-=======
-
-    website: 'https://ziontechgroup.com / hr - recruitment - ai',
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
     website: 'https://ziontechgroup.com / hr - recruitment - ai',
@@ -1088,13 +584,7 @@ export const advancedAIServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -1143,14 +633,8 @@ export const advancedAIServices2025 = [
         price: 1299,
         period: 'month',
         features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'Unlimited endpoints',
           'Custom AI training',
           'White - label solution',
@@ -1160,53 +644,9 @@ export const advancedAIServices2025 = [
     },
     category: 'Cybersecurity AI',
     tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com / cybersecurity - ai',
-    contact: {
-      'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$173.5B'
-    targetAudience:
-      'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
-    competitiveAdvantage:
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },;
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com'
-    id: 'ai-powered-business-intelligence-suite', name: 'BusinessIntelligence AI Pro',
-    description: 'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
-    features: [
-      'Natural language query processingAI-powered data visualizationPredictive analytics and forecastingAutomated report generationReal-time data monitoringIntegration with 100+ data sourcesCustom AI model trainingAdvanced security and compliance'
-    ];
-    pricing: {
-      starter: { price: 199, period: 'month', features: ['Up to 10 usersBasic AI insightsStandard reports'] 
-    },
-    professional: { price: 499, period: 'month', features: ['Up to 50 usersAdvanced AI modelsCustom dashboardsPredictive analytics'] };
-      enterprise: { price: 1299, period: 'month', features: ['Unlimited usersCustom AI trainingWhite-label solutionDedicated support'] }
-    };
-    marketSize: '$173 && 173.5B',
-    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     website: 'https://ziontechgroup.com / cybersecurity - ai',
 
     contact: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-
 
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
   },;
@@ -1225,42 +665,11 @@ export const advancedAIServices2025 = [
     };
     marketSize: '$173 && 173.5B',
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-];
-
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
+<<<<<<< HEAD=======    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    market_size: '$173.5B',
-    target_audience:;
-      'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
-    competitive_advantage:;
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
 
     },;
     marketSize: '$27.3B',;
@@ -1476,24 +885,12 @@ export const advancedAIServices2025 = [
 
 
 
-<<<<<<< HEAD
-  }
-];
-;
-    competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-];
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
+=======  }
 ];
 ;
 =======
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export const advancedAIServices2025 = [;
+=======export const advancedAIServices2025 = [;
   {;
     id: 'ai-powered-business-intelligence-suite',;
     name: 'BusinessIntelligence AI Pro',;

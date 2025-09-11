@@ -2,81 +2,15 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-console.log('🔧 Starting merge conflict resolution...');
-
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
 =======
 // Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  try {
+function fixMergeConflicts(filePath) {  try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {
-      return false;
-    }
-    
-<<<<<<< HEAD
-    console.log(`📝 Resolving conflicts in: ${filePath}`);
-    
-    // Split by merge conflict markers
-    const parts = content.split(/<<<<<<< HEAD\n?/);
-    let resolved = parts[0]; // Content before first conflict
-    
-    for (let i = 1; i < parts.length; i++) {
-      const conflictPart = parts[i];
-      const conflictSections = conflictPart.split(/=======\n?/);
-      
-      if (conflictSections.length >= 2) {
-        const headContent = conflictSections[0];
-        const remaining = conflictSections.slice(1).join('=======');
-        const endMarker = remaining.split(/>>>>>>> [a-f0-9]+\n?/);
-        
-        // Choose HEAD content (first part) and remove conflict markers
-        resolved += headContent;
-        if (endMarker.length > 1) {
-          resolved += endMarker.slice(1).join('>>>>>>> ');
-        }
-      }
-    }
-    
-    // Clean up any remaining conflict markers
-    resolved = resolved.replace(/<<<<<<< HEAD\n?/g, '');
-    resolved = resolved.replace(/=======\n?/g, '');
-    resolved = resolved.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-    
-    // Write resolved content
-    fs.writeFileSync(filePath, resolved, 'utf8');
-    return true;
-  } catch (error) {
-    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
-=======
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======.*?\n?/g, '');
-    content = content.replace(/>>>>>>> [a-f0-9]+.*?\n?/g, '');
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< .*?\n?/g, '');
-    content = content.replace(/=======.*?\n?/g, '');
-    content = content.replace(/>>>>>>> .*?\n?/g, '');
-    
-    // Write the cleaned content back
-    fs.writeFileSync(filePath, content, 'utf8');
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-    return false;
-  }
-}
-
-// Function to find all files with merge conflicts
+    if (!content.includes('// Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
   
@@ -121,21 +55,11 @@ function findFilesWithConflicts(dir) {
             }
           } catch (error) {
             // Skip files that can't be read
-          }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-        }
+          }        }
       }
     }
   }
   
-<<<<<<< HEAD
-  scanDirectory(dir);
-=======
-  walkDir(dir);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  return files;
-}
-
 // Main execution
 <<<<<<< HEAD
 try {
@@ -186,6 +110,4 @@ try {
   execSync('npm run build', { stdio: 'inherit', cwd: '/workspace' });
   console.log('Build successful!');
 } catch (error) {
-  console.error('Build failed:', error.message);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-}
+  console.error('Build failed:', error.message);}

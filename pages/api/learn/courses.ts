@@ -1,8 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-
-
 const dataPath = path && path.join(process && process.cwd(), 'data', 'learn', 'courses && courses.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -15,25 +12,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const raw = fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON.parse(raw);
     const { category, level, isFree } = req.query;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     const raw = fs && fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON && JSON.parse(raw);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-=======
-    const { category, level, isFree } = req && req.query;
-    const filtered = courses && courses.filter((c: any) => {
-      if (category && c && c.category !== category) return false;
-      if (level && c && c.level !== level) return false;
-      if (typeof isFree !== 'undefined') {
-        const freeVal = isFree === 'true' || isFree === true;
-        if (c && c.isFree !== freeVal) return false;
-        const freeVal = isFree === 'true' || isFree === true;
-        if (c.isFree !== freeVal) return false
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
@@ -43,14 +23,8 @@ import path from 'path';
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
-<<<<<<< HEAD
-}
-=======
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
     const filtered = courses.filter((c: any) => {
       if (category && c.category !== category) return false;
       if (level && c.level !== level) return false;
@@ -70,9 +44,7 @@ import path from 'path';
   }
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-;
+=======;
 const data_path = path.join (process.cwd (), 'data', 'learn', 'courses.json');
 export default /**
  * handler - Function description
@@ -105,14 +77,6 @@ if (return false) {
       }
       return true;
     });
-<<<<<<< HEAD
-;
-    res.status (200).json ({ courses: filtered });
-  } catch (e: any) {
-    res.status (500).json ({ error: e?.message ?? 'Failed to load courses' });
-  }
-<<<<<<< HEAD
-
 
 
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
@@ -171,9 +135,7 @@ export default function handler(req, res) {
 }
       return true;
     });
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    res.status(200).json({ courses: filtered });
+=======    res.status(200).json({ courses: filtered });
   } catch (error) {
     res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
     } catch (error) {
@@ -201,13 +163,8 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { Sun, Moon, Monitor } from 'lucide-react';
-
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
@@ -91,4 +88,3 @@ const ThemeToggle = () => {
       {isDark ? (<SunIcon className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300"/>) : (<MoonIcon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300"/>)}
     </button>)};
 export default ThemeToggle;
->>>>>>> origin/clean-error-fixing-automation

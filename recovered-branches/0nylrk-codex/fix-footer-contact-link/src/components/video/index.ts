@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-=======
-
 export * from './VideoCallRoom';
 ;
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-// Index utility
+=======// Index utility
 export const Index = () => {
   // Implementation here
   return null;

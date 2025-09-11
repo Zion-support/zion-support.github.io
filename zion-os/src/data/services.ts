@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface Service {
   id: string,
@@ -382,8 +379,6 @@ export const getCategories = () => {return Array.from(new Set(services.map(servi
     category: 'AI Services',
     description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface Service {;
   id: string,;
   name: string,;
@@ -751,8 +746,3 @@ export const getServiceById = (id: string) => {;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
 };
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { v4 as uuidv4 } from 'uuid',;
-import { readJsonFile, writeJsonFile } from '../../utils/db',;
-import type { Application } from '../../utils/types',;
-import { rateLimit } from '../../utils/rateLimit',;
-const FILE = 'applications.json',
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return,
 
@@ -86,8 +77,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       writeJsonFile<Application[]>(FILE, apps);
       res.status(200).json({ application: existing });
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -108,13 +97,7 @@ createdAtIso: now}
   res.status(405).end('Method Not Allowed')
 }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-type Application = {
+=======type Application = {
   id: string;
   jobId: string;
   talentSlug: string;
@@ -124,67 +107,6 @@ type Application = {
 
 const FILE = 'applications.json';
 
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (!rateLimit(req, res)) return;
-    
-    if (req.method === 'GET') {
-      const { jobId, talentSlug } = req.query;
-      let apps = readJsonFile<Application[]>(FILE, []);
-      
-      if (jobId && talentSlug) {
-        apps = apps.filter((a) => a.jobId === jobId && a.talentSlug === talentSlug);
-      }
-      
-      res.status(200).json({ applications: apps });
-      return;
-    }
-    
-    if (req.method === 'POST') {
-      const { jobId, talentSlug, action } = req.body;
-      if (!jobId || !talentSlug || !action) {
-        res.status(400).json({ error: 'Invalid request' });
-        return;
-      }
-      
-      const now = new Date().toISOString();
-      const apps = readJsonFile<Application[]>(FILE, []);
-      const existing = apps.find((a) => a.jobId === jobId && a.talentSlug === talentSlug);
-      
-      if (existing) {
-        existing.status = action === 'apply' ? 'applied' : 'skipped';
-        writeJsonFile<Application[]>(FILE, apps);
-        res.status(200).json({ application: existing });
-        return;
-      }
-      
-      const app: Application = {
-        id: uuidv4(),
-        jobId: String(jobId),
-        talentSlug: String(talentSlug),
-        status: action === 'apply' ? 'applied' : 'skipped',
-        createdAtIso: now
-      };
-      
-      apps.push(app);
-      writeJsonFile<Application[]>(FILE, apps);
-      res.status(201).json({ application: app });
-      return;
-    }
-    
-    res.status(405).json({ error: 'Method not allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const inner_index = await r.json (),
-        results.push ({ id: j.id || f.name, file: f.name, generated_at: j.generated_at, insights: j.insights });
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } catch {
         // ignore;
@@ -42,94 +36,27 @@ async function fetchFromGitHub(): Promise<any[]> {
 =======
 
       } catch {
-        // ignore;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      }
+        // ignore;      }
     }
 return results;
   } catch {
     return [];
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async /**
  * handler - Function description
  */
 function handler() {
 const dir = path.join (process.cwd (), 'automation_logs'),
   try {
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-    if () {) {
-  $2
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
-      // Check condition
-if ( {) {
-  $2
-}
-        const logs = files.slice (0, 50).map ((f) => {
-          try {
-            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
-            const json = JSON.parse (raw),
-            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
-          } catch {
-            return { id: f, file: f }
-          }
-        }),
-        return res.status (200).json ({ logs });
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
       }
     }
   } catch {
     // fall through to GitHub;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-=======
-}
-
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-const remote = await fetchFromGitHub (),
-  return res.status (200).json ({ logs: remote });
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
   return res.status(200).json({ logs: remote });
 
@@ -264,9 +191,5 @@ export default async function handler(req, res) {
   return res.status(200).json({ logs: remote });
 }
 };
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

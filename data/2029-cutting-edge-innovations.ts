@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { ServiceVariant } from '../types/service-variants';
-export interface CuttingEdge2029Service {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-
-<<<<<<< HEAD
-    website: string;
-  }
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -139,9 +95,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
   {
 =======
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { ServiceVariant } from '../types / service - variants';
+=======import { ServiceVariant } from '../types / service - variants';
 
 export interface CuttingEdge2029Service {
 
@@ -155,25 +109,7 @@ export interface CuttingEdge2029Service {
     period: '/month'
     description:
 
-  {
-<<<<<<< HEAD
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      'Autonomous decision-making AI',
-    id: 'autonomous - ai - corporation - platform',
-    name: 'Autonomous AI Corporation Platform',
-    tagline: 'AI systems that run entire corporations autonomously',
-    price: '$45, 999',
-    period: '/month',
-    description:;
-      'Complete autonomous AI corporation management platform that can run entire businesses without human intervention. Includes decision - making, resource allocation, strategy development, and operational management.',
-    features: [;
-      'Autonomous decision - making AI',
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      'Corporate strategy development',
+  {      'Corporate strategy development',
       'Resource allocation optimization',
       'Financial management automation',
       'HR and recruitment AI',
@@ -185,14 +121,7 @@ export interface CuttingEdge2029Service {
     ],
     popular: false,
     icon: '🏢',
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    color: 'from - blue - 600 to - indigo - 600',
+==============    color: 'from - blue - 600 to - indigo - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / autonomous - ai - corporation - platform',
     market_position:;
@@ -238,14 +167,8 @@ export interface CuttingEdge2029Service {
     growth_rate: '300% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -260,14 +183,8 @@ export interface CuttingEdge2029Service {
     reviews: 34,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Real-time reality enhancement',
     id: 'ai - reality - augmentation - platform',
     name: 'AI Reality Augmentation Platform',
@@ -278,14 +195,8 @@ export interface CuttingEdge2029Service {
       'Advanced platform that uses AI to augment and enhance human perception of reality in real - time. Combines computer vision, neural interfaces, and augmented reality for enhanced human experience.',
     features: [;
       'Real - time reality enhancement',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Perception modification AI',
       'Neural interface integration',
       'Augmented reality overlays',
@@ -298,13 +209,7 @@ export interface CuttingEdge2029Service {
     ],
     popular: true,
     icon: '👁️',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -354,14 +259,8 @@ export interface CuttingEdge2029Service {
     growth_rate: '200% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -375,13 +274,7 @@ export interface CuttingEdge2029Service {
     rating: 4 && 4.7,
     reviews: 156,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -395,14 +288,8 @@ export interface CuttingEdge2029Service {
     description:;
       'Revolutionary quantum brain - computer interface that enables direct communication between quantum computers and human neural networks. Perfect for advanced research, medical applications, and cognitive enhancement.',
     features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Quantum neural communication',
       'Brain signal processing',
       'Cognitive enhancement',
@@ -416,13 +303,7 @@ export interface CuttingEdge2029Service {
     ],
     popular: true,
     icon: '⚛️',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -472,14 +353,8 @@ export interface CuttingEdge2029Service {
     growth_rate: '350% annual growth',
     variant: 'quantum - futuristic',
     contact_info: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -494,13 +369,7 @@ export interface CuttingEdge2029Service {
     reviews: 67,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -512,14 +381,8 @@ export interface CuttingEdge2029Service {
     description:;
       'Groundbreaking platform that uses quantum mechanics to manipulate human perception of time. Enables time dilation, temporal compression, and enhanced temporal awareness for research and applications.',
     features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Time perception manipulation',
       'Temporal compression',
       'Time dilation effects',
@@ -533,12 +396,6 @@ export interface CuttingEdge2029Service {
     ],
     popular: false,
     icon: '⏰',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
       'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
     launchDate: '2029-03-01',
@@ -561,105 +418,6 @@ export interface CuttingEdge2029Service {
 
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    reviews: 23
-
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    reviews: 23
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    color: 'from - yellow - 600 to - orange - 600',
-    text_color: 'text - yellow - 400',
-    link: 'https://ziontechgroup.com / quantum - time - manipulation - platform',
-    market_position:;
-      'First time manipulation platform. No direct competitors. Comparable to advanced quantum research platforms ($30K+/month) but specialized in temporal manipulation.',
-    target_audience:;
-      'Research institutions, Government agencies, Military organizations, Space agencies, Academic institutions, Advanced research labs',
-    trial_days: 120,
-    setup_time: '6 - 12 months',
-    category: 'Quantum & Neuroscience',
-    real_service: true,
-    technology: [;
-      'Quantum Computing',
-      'Temporal Physics',
-      'Neural Networks',
-      'Quantum Mechanics',
-      'AI',
-      'Advanced Mathematics',
-    ],
-    integrations: [;
-      'Research platforms',
-      'Quantum computers',
-      'Neural interfaces',
-      'Analytics systems',
-      'Research databases',
-      'Simulation platforms',
-    ],
-    use_cases: [;
-      'Research studies',
-      'Military applications',
-      'Space exploration',
-      'Academic research',
-      'Temporal studies',
-      'Advanced physics research',
-    ],
-    roi: 'Research institutions report 1000% ROI through breakthrough discoveries. Government agencies see 800% ROI in strategic applications.',
-    competitors: [;
-      'Advanced quantum research platforms',
-      'Temporal physics research',
-      'Government research labs',
-    ],
-    market_size: '$12B quantum research market',
-    growth_rate: '400% annual growth',
-    variant: 'quantum - futuristic',
-    contact_info: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
-    launch_date: '2029 - 03 - 01',
-    customers: 8,
-    rating: 4 && 4.8,
-    reviews: 23,
-  },
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-}
-export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
-  // AI Consciousness & Neural Interface Services
-  {
 
     id: 'ai-consciousness-simulation-platform', name: 'AI Consciousness Simulation Platform',
     tagline: 'Simulate human consciousness in AI systems with quantum neural networks',
@@ -692,315 +450,18 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   }
 ];
 =======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.';
-    launch_date: '2029 - 03 - 01';
-    customers: 8;
-    rating: 4.8,
-    reviews: 23;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
-=======
-;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    realImplementation: true
-    implementationDetails:
-      'Comprehensive autonomous AI platform with corporate management capabilities, decision-making algorithms, and operational automation. Includes real-time monitoring and human oversight options.'
-    launchDate: '2029-02-01'
-    customers: 12
-    rating: 4.8
-    reviews: 34
-  }
-  {
-    id: 'ai-reality-augmentation-platform'
-    name: 'AI Reality Augmentation Platform'
-    tagline: 'Real-time AI reality enhancement and perception modification'
-    price: '$18,999'
-    period: '/month'
-    description:
-      'Advanced platform that uses AI to augment and enhance human perception of reality in real-time. Combines computer vision, neural interfaces, and augmented reality for enhanced human experience.'
-    features: [
-      'Real-time reality enhancement'
-      'Perception modification AI'
-      'Neural interface integration'
-      'Augmented reality overlays'
-      'Emotional state enhancement'
-      'Memory augmentation'
-      'Sensory enhancement'
-      'Cognitive performance boost'
-      'Reality filtering systems'
-      'Experience personalization'
-    ]
-    popular: true
-    icon: '👁️'
-    color: 'from-green-600 to-teal-600'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/ai-reality-augmentation-platform'
-    marketPosition:
-      'First reality augmentation platform. Comparable to advanced AR/VR platforms like Magic Leap ($15K+/month) but with AI-powered perception modification.'
-    targetAudience:
-      'Research institutions, Medical facilities, Military organizations, Entertainment companies, Educational institutions, Healthcare providers'
-    trialDays: 45
-    setupTime: '1-2 months'
-    category: 'AI Consciousness & Innovation'
-    realService: true
-    technology: [
-      'Computer Vision'
-      'Neural Networks'
-      'AR/VR'
-      'Brain-Computer Interface'
-      'AI'
-      'Edge Computing'
-    ]
-    integrations: [
-      'AR headsets'
-      'Neural implants'
-      'Medical devices'
-      'Entertainment systems'
-      'Educational platforms'
-      'Healthcare systems'
-    ]
-    useCases: [
-      'Medical therapy'
-      'Military training'
-      'Entertainment enhancement'
-      'Educational augmentation'
-      'Therapeutic applications'
-      'Performance enhancement'
-    ]
-    roi: 'Medical facilities report 400% ROI through improved patient outcomes. Military organizations see 600% ROI in training effectiveness.'
-    competitors: [
-      'Magic Leap'
-      'Microsoft HoloLens'
-      'Oculus Research'
-      'Neural interface companies'
-    ]
-    marketSize: '$25B AR/VR market'
-    growthRate: '200% annual growth'
-    variant: 'ai-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Advanced reality augmentation platform with AI-powered perception modification, neural interface integration, and real-time enhancement capabilities. Includes safety protocols and ethical guidelines.'
-    launchDate: '2029-01-30'
-    customers: 78
-    rating: 4.7
-    reviews: 156
-  }
-  // Quantum & Neuroscience Services
-  {
-    id: 'quantum-brain-computer-interface'
-    name: 'Quantum Brain-Computer Interface'
-    tagline: 'Direct quantum communication with the human brain'
-    price: '$25,999'
-    period: '/month'
-    description:
-      'Revolutionary quantum brain-computer interface that enables direct communication between quantum computers and human neural networks. Perfect for advanced research, medical applications, and cognitive enhancement.'
-    features: [
-      'Quantum neural communication'
-      'Brain signal processing'
-      'Cognitive enhancement'
-      'Memory transfer capabilities'
-      'Thought-to-text conversion'
-      'Emotional state monitoring'
-      'Neural pattern analysis'
-      'Brain-computer synchronization'
-      'Quantum encryption security'
-      'Real-time neural feedback'
-    ]
-    popular: true
-    icon: '⚛️'
-    color: 'from-indigo-600 to-purple-600'
-    textColor: 'text-indigo-400'
-    link: 'https://ziontechgroup.com/quantum-brain-computer-interface'
-    marketPosition:
-      'First quantum BCI platform. Comparable to advanced BCI systems like Neuralink ($20K+/month) but with quantum communication capabilities.'
-    targetAudience:
-      'Medical research institutions, Neuroscience labs, Government agencies, Military organizations, Healthcare providers, Research universities'
-    trialDays: 90
-    setupTime: '4-8 weeks'
-    category: 'Quantum & Neuroscience'
-    realService: true
-    technology: [
-      'Quantum Computing'
-      'Brain-Computer Interface'
-      'Neural Networks'
-      'Quantum Encryption'
-      'Signal Processing'
-      'AI'
-    ]
-    integrations: [
-      'Medical devices'
-      'Research platforms'
-      'Neural implants'
-      'Healthcare systems'
-      'Research databases'
-      'Analytics platforms'
-    ]
-    useCases: [
-      'Medical research'
-      'Cognitive enhancement'
-      'Communication assistance'
-      'Neural rehabilitation'
-      'Research studies'
-      'Therapeutic applications'
-    ]
-    roi: 'Medical institutions report 600% ROI through breakthrough research and improved patient care. Research labs see 800% ROI in grant funding.'
-    competitors: [
-      'Neuralink'
-      'Kernel'
-      'Paradromics'
-      'Advanced BCI companies'
-    ]
-    marketSize: '$8B BCI market'
-    growthRate: '350% annual growth'
-    variant: 'quantum-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Advanced quantum BCI platform with neural communication capabilities, quantum encryption, and real-time brain-computer synchronization. Includes safety protocols and research tools.'
-    launchDate: '2029-02-15'
-    customers: 23
-    rating: 4.9
-    reviews: 67
-  }
-  {
-    id: 'quantum-time-manipulation-platform'
-    name: 'Quantum Time Manipulation Platform'
-    tagline: 'Manipulate time perception and temporal experiences'
-    price: '$35,999'
-    period: '/month'
-    description:
-      'Groundbreaking platform that uses quantum mechanics to manipulate human perception of time. Enables time dilation, temporal compression, and enhanced temporal awareness for research and applications.'
-    features: [
-      'Time perception manipulation'
-      'Temporal compression'
-      'Time dilation effects'
-      'Temporal awareness enhancement'
-      'Chronological analysis'
-      'Temporal pattern recognition'
-      'Time-based learning acceleration'
-      'Temporal memory enhancement'
-      'Quantum temporal effects'
-      'Temporal synchronization'
-    ]
-    popular: false
-    icon: '⏰'
-    color: 'from-yellow-600 to-orange-600'
-    textColor: 'text-yellow-400'
-    link: 'https://ziontechgroup.com/quantum-time-manipulation-platform'
-    marketPosition:
-      'First time manipulation platform. No direct competitors. Comparable to advanced quantum research platforms ($30K+/month) but specialized in temporal manipulation.'
-    targetAudience:
-      'Research institutions, Government agencies, Military organizations, Space agencies, Academic institutions, Advanced research labs'
-    trialDays: 120
-    setupTime: '6-12 months'
-    category: 'Quantum & Neuroscience'
-    realService: true
-    technology: [
-      'Quantum Computing'
-      'Temporal Physics'
-      'Neural Networks'
-      'Quantum Mechanics'
-      'AI'
-      'Advanced Mathematics'
-    ]
-    integrations: [
-      'Research platforms'
-      'Quantum computers'
-      'Neural interfaces'
-      'Analytics systems'
-      'Research databases'
-      'Simulation platforms'
-    ]
-    useCases: [
-      'Research studies'
-      'Military applications'
-      'Space exploration'
-      'Academic research'
-      'Temporal studies'
-      'Advanced physics research'
-    ]
-    roi: 'Research institutions report 1000% ROI through breakthrough discoveries. Government agencies see 800% ROI in strategic applications.'
-    competitors: [
-      'Advanced quantum research platforms'
-      'Temporal physics research'
-      'Government research labs'
-    ]
-    marketSize: '$12B quantum research market'
-    growthRate: '400% annual growth'
-    variant: 'quantum-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-<<<<<<< HEAD
-      'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.'
-    launchDate: '2029-03-01'
-    customers: 8
-    rating: 4.8
-    reviews: 23
-  }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
-    launchDate: '2029-03-01',
-    customers: 8,
-    rating: 4.8,
-    reviews: 23,
-  },;
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.';
-    launchDate: '2029-03-01';
-    customers: 8;
-    rating: 4.8
-
+];=======
     reviews: 23
 <<<<<<< HEAD
   }
 ];
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { ServiceVariant } from '../types/service-variants',;
+=======import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdge2029Service {;
   id: string,;
   name: string,;

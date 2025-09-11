@@ -1,12 +1,5 @@
 export const metadata = { 
   title: 'Cybersecurity Services | Zion Tech Group',
-<<<<<<< HEAD
-  description: 'Comprehensive cybersecurity solutions including penetration testing, security audits, compliance, and incident response.'
-=======
-  description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-};
-
 export default function CybersecurityPage() {
   return (
 <<<<<<< HEAD
@@ -246,31 +239,11 @@ function CyberServiceCard({ title, description, features, price, icon }: {
           </li>
         ))}
       </ul>
-    </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  );
+    </div>  );
 }
 
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
-<<<<<<< HEAD
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-=======
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-start text-gray-600">
-            <span className="text-blue-500 mr-2 mt-1">•</span>
-            {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 <<<<<<< HEAD
 function ServiceCard({ title, description, price, features }: { 
   title: string; 
@@ -327,71 +300,10 @@ function Pricing() {
             "Penetration testing",
             "Risk analysis report",
             "Remediation recommendations",
-            "Compliance review"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          ]} 
+            "Compliance review"          ]} 
         />
         <Plan 
           name="Security Implementation" 
-<<<<<<< HEAD
-          price="$15k–$40k" 
-          duration="4–8 weeks"
-          features={[
-            "Security tool deployment",
-            "Policy development",
-            "Staff training",
-            "Monitoring setup",
-            "Documentation",
-            "Testing & validation"
-=======
-          price="$50k–$150k" 
-          duration="8–16 weeks"
-          features={[
-            "Security technology implementation",
-            "Policy and procedure development",
-            "Security controls deployment",
-            "Integration and testing",
-            "Staff training",
-            "Documentation and handover"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          ]} 
-        />
-        <Plan 
-          name="Managed Security" 
-<<<<<<< HEAD
-          price="$3k+/mo" 
-          duration="Ongoing"
-          features={[
-            "24/7 monitoring",
-            "Incident response",
-            "Security updates",
-            "Regular assessments",
-            "Compliance management",
-            "Dedicated support"
-          ]} 
-        />
-      </div>
-      
-      <div className="text-center mt-8">
-        <p className="text-gray-600 mb-4">
-          Ready to secure your business? Let's discuss your cybersecurity needs.
-=======
-          price="$8k–$20k/mo" 
-          duration="Ongoing"
-          features={[
-            "24/7 security monitoring",
-            "Threat detection and response",
-            "Vulnerability management",
-            "Security updates and patches",
-            "Incident response",
-            "Monthly security reports"
-          ]} 
-        />
-      </div>
-    </section>
-  );
-}
-
 function Plan({ name, price, duration, features }: { 
   name: string; 
   price: string; 
@@ -430,9 +342,7 @@ function ContactSection() {
         </h3>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           Let's discuss how we can protect your business from cyber threats and ensure compliance. 
-          Our security experts have protected 200+ organizations from cyber attacks.
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        </p>
+          Our security experts have protected 200+ organizations from cyber attacks.        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:+13024640950"
@@ -447,12 +357,6 @@ function ContactSection() {
             Email Us
           </a>
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-}
-
 function Plan({ name, price, duration, features }: { 
   name: string; 
   price: string; 
@@ -478,7 +382,5 @@ function Plan({ name, price, duration, features }: {
           <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
         </div>
       </div>
-    </section>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  );
+    </section>  );
 }

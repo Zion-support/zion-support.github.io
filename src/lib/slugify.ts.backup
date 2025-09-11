@@ -1,19 +1,6 @@
 export function slugify(text: string, separator: string = '-'): string {
   return text
     .toLowerCase()
-<<<<<<< HEAD
-    .normalize('NFD') // Normalize to decomposed form
-    .replace(/[\u0300-\u036f]/g, '') // Remove accent marks
-    .replace(/[^\w\s-]/g, '') // Remove special characters
-    .replace(/[\s_-]+/g, separator) // Replace spaces and underscores with separator
-    .replace(new RegExp(`^${separator}+|${separator}+$`, 'g'), ''); // Remove leading/trailing separators
-=======
-    .trim()
-    .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens
-    .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
-    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
-}
-
 /**
  * Convert a slug back to a readable string
  * @param slug - The slug to convert
@@ -43,4 +30,3 @@ export function generateUniqueSlug(text: string, existingSlugs: string[]): strin
 
   return uniqueSlug;
 }
->>>>>>> origin/clean-error-fixing-automation

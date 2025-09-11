@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { slugify } from '@/lib/slugify',;
-import { unslugify } from '@/lib/slugify',;
-
 import { slugify  } from '@/lib/slugify';
 import { unslugify  } from '@/lib/slugify';
 import { slugify } from '@/lib/slugify',;
@@ -44,9 +39,7 @@ it('handles custom separator when unslugifying', () => {;
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title');
 });
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { slugify } from '@/lib / slugify';
+=======import { slugify } from '@/lib / slugify';
 import { unslugify } from '@/lib / slugify';
 it ('removes accents from strings', () => {
   expect (slugify ('Crème Brûlée')).to_be ('creme - brulee');

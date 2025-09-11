@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
-import { Settings } from 'lucide-react';
-
 
 "autoAnalyze": "tru e",;export default function Page(props: any) {
 interface SEOMetrics {
@@ -535,33 +529,9 @@ const SEOOptimizer = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold">{report.pagesWithIssues}</div>
-                  <div className="text-sm text-pink-100">Need Optimization</div>
->>>>>>> origin/clean-error-fixing-automation
-                </div>
+                  <div className="text-sm text-pink-100">Need Optimization</div>                </div>
               </div>)}
           </div>
-<<<<<<< HEAD
-          {/* Issues */}"
-          <div className="mb-8">"
-            <div className="flex items-center justify-between mb-4">"
-              <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
-"
-              <div className="flex space-x-1">
-                {['all',content',technical',performance',accessibility'].map((category) => (
-                  <button
-                    key={category}';
-                    onClick={() => setSelectedCategory(category)}`';';
-                    className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'';';
-                        ? 'bg-zion-cyan text-white''';';
-                        : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`                        : 'bg-zion-slate/10 text-zion-slate "hover": "b g-zion-slate/20'`;
-                    "}`}
-;
-                    onClick={() => setSelectedCategory(category)}`
-                    className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'
-                        ? 'bg-zion-cyan text-white''
-                        : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
-                    }`}
-
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
                   </button>) ) }
               </div>
@@ -892,4 +862,3 @@ const SEOOptimizer = () => {
         </div>)}
     </div>)};
 export default SEOOptimizer;
->>>>>>> origin/clean-error-fixing-automation

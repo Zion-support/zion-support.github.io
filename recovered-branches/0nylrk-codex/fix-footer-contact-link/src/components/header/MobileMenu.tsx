@@ -6,86 +6,25 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  unreadCount?: number;
-  onClose: () => void;
-}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   unreadCount?: number;
   onClose: () => void;
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  unreadCount?: number;
-  onClose: () => void
-}
 
-export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-import { Link } from "react-router-dom",
-import { useLocation } from "react-router-dom",
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
 =======
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const location = useLocation(),
-  const { user } = useAuth(),
-  const isAuthenticated = !!user,
-  
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const location = useLocation(),
-  const { user } = useAuth(),
-  const isAuthenticated = !!user,
-  
-<<<<<<< HEAD
-=======
-
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
 
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -95,31 +34,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
-    {
-      name: "Browse"
-      href: "/talent"
-      icon: Search
-      matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
-    }
-    {
-      name: "Community"
-      href: "/community"
-      icon: MessageCircle
-      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
-    }
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    },
+=======    },
     {
       name: "Browse",
       href: "/talent",
@@ -132,12 +48,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
@@ -146,11 +56,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: BriefcaseIcon
       matches: (path: string) => path.startsWith("/post-job")
       authRequired: true
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    },
-
 
     }
     },
@@ -158,8 +63,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
     },
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
     }
     },
@@ -171,11 +74,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    },
-
 
     }
     },
@@ -183,8 +81,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
     },
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
     }
     },
@@ -196,13 +92,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
   ],
 
 
@@ -248,58 +137,28 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       authRequired: true;
     }
   ];
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  ];
+=======  ];
   // Filter items based on auth status
   const visibleItems = navItems.filter(item =>
     !item.authRequired |(item.authRequired && isAuthenticated)
   );
   ],
 
-<<<<<<< HEAD
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item => 
-    !item.authRequired || (item.authRequired && isAuthenticated)
-  ),
-
   return (
-<<<<<<< HEAD
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold">Menu</h2>
-        <Button variant="ghost" size="icon" onClick={onClose}>
-          <X className="h-5 w-5" />
-        </Button>
-      </div>
-      <nav className="space-y-1">
-        {visibleItems.map(item => (
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
   return (
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          <Link
+=======          <Link
             key={item.name}
             to={item.href}
             className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "flex items-center px-6 py-3 text-base font-medium",
-
               "flex items-center px-6 py-3 text-base font-medium";
 
               "flex items-center px-6 py-3 text-base font-medium",
 =======
 
               "flex items-center px-6 py-3 text-base font-medium",
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
               "flex items-center px-6 py-3 text-base font-medium";
 
@@ -315,19 +174,9 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
               <item.icon className="h-5 w-5" />
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Filter items based on auth status;
-  const visibleItems = navItems && navItems.filter(item => ;
-    !item && item.authRequired || (item && item.authRequired && isAuthenticated);
-  );
-  return (
-
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
@@ -394,74 +243,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
     !item.authRequired || (item.authRequired && isAuthenticated);
   );
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-export interface MobileMenuProps {;
-  unreadCount?:number,;
-  onClose:() => void;
-}
-;
-export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
-  const location = useLocation(),;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  ;
-  const navItems = [;
-    {;
-      name:"Home",;
-      href:"/",;
-      icon:Home,;
-      matches:(path:string) => path === "/";
-    },;
-    {;
-      name:"Browse",;
-      href:"/talent",;
-      icon:Search,;
-      matches:(path:string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace");
-    },;
-    {;
-      name:"Community",;
-      href:"/community",;
-      icon:MessageCircle,;
-      matches:(path:string) => path.startsWith("/community") || path.startsWith("/forum");
-    },;
-    {;
-      name:"Post Job",;
-      href:"/post-job",;
-      icon:BriefcaseIcon,;
-      matches:(path:string) => path.startsWith("/post-job"),;
-      authRequired:true;
-    },;
-    {;
-      name:"Messages",;
-      href:"/messages",;
-      icon:MessageSquare,;
-      matches:(path:string) => path.startsWith("/messages") || path.startsWith("/inbox"),;
-      badge:unreadCount,;
-      authRequired:true;
-    },;
-    {;
-      name:"Dashboard",;
-      href:"/dashboard",;
-      icon:User,;
-      matches:(path:string) => path.startsWith("/dashboard"),;
-      authRequired:true;
-    }
-  ],;
-;
-  // Filter items based on auth status;
-  const visibleItems = navItems.filter(item => ;
-    !item.authRequired || (item.authRequired && isAuthenticated);
-  ),;
-;
-  return (;
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="py-6">;
       <div className="flex justify-between items-center px-6 mb-6">;
         <h2 className="text-xl font-bold">Menu</h2>;
@@ -469,18 +252,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
           <X className="h-5 w-5" />;
         </Button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {visibleItems && visibleItems.map(item => (;
-          <Link
-            key={item && item.name}
-            to={item && item.href}
-            className={cn(
-=======
-
       <nav className="space-y-1">;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               "flex items-center px-6 py-3 text-base font-medium"
               item && item.matches(location && location.pathname)
 =======
@@ -501,60 +273,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <nav className="space-y-1">;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        {visibleItems.map(item => (;
-          <Link;
-            key={item.name}
-            to={item.href}
-            className={cn(;
-              "flex items-center px-6 py-3 text-base font-medium";
-              item.matches(location.pathname);
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan";
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-            )}
-            onClick={onClose}
-          >;
-            <div className="relative mr-4">;
-              <item.icon className="h-5 w-5" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ;
-      <nav className="space-y-1">;
-        {visibleItems.map(item => (;
-          <Link;
-            key={item.name}
-            to={item.href}
-            className={cn(;
-              "flex items-center px-6 py-3 text-base font-medium",;
-              item.matches(location.pathname);
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan";
-                :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-            )}
-            onClick={onClose}
-          >;
-            <div className="relative mr-4">;
-              <item.icon className="h-5 w-5" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-                  {item.badge > 9 ? '9+' :item.badge}
-                </span>;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               )}
             </div>;
             {item.name}
@@ -570,18 +289,11 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </nav>;
-    </div>;
-
 
 
 }
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 =======
       </nav>;
     </div>;

@@ -110,34 +110,6 @@ class ErrorPreventionOrchestrator {}
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      child.on('close', (code) => {}
-        if ( {})
-          resolve()} else {}
-          reject(new Error(`Command failed with code ${code}`))};
-      })})};
-  logs() {}
-    if (fs.existsSync(this.logFile)) {}
-      const logContent = fs.readFileSync(this.logFile, 'utf8') {}
-     {}
-          resolve()} else {}
-          reject(new Error(`Command failed with code ${code}`))};
-      })})};
-  logs() {}
-    if (fs.existsSync(this.logFile)) {}
-      const logContent = fs.readFileSync(this.logFile, 'utf8'}
-});
-      console.log(logContent)} else {}
-      console.log('No logs found')};
-  };
-};
-// CLI Interface;
-const orchestrator = new ErrorPreventionOrchestrator;(;);
-const command = process.argv[2];
-
 switch (command) {}
   case 'start':
     orchestrator.start().catch(console.error);
@@ -162,4 +134,3 @@ switch (command) {}
     process.exit(1)};
 =======
     process.exit(1)};
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

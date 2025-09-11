@@ -638,10 +638,6 @@ export default function DataAnalyticsServices() {;
       </div>
     </>
     </>
-<<<<<<< HEAD
-  );
-};
-
 export default Data-analytics;
 =======
 <<<<<<< HEAD
@@ -650,4 +646,3 @@ export default Data-analytics;
 };
 
 export default Data-analytics;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

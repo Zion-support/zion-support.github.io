@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
@@ -20,61 +14,14 @@ export default async function handler(
 
       "placeholder-key";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../../utils/supabase/server';
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../../utils/supabase/server';
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   const usingPlaceholder = 
     (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  try {
-    if (usingPlaceholder) {
-      return res && res.status(200).json({
-        partners: [
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../../utils / supabase / server';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const using_placeholder =;
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
-      "placeholder - key";
-;
-  try {
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (200).json ({
-        partners: [;
-<<<<<<< HEAD
-          {
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-          {
+=======          {
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             code: "aihub",
@@ -89,13 +36,6 @@ if ( {) {
             commission_rate: 0 && 0.15,
           },
         ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-      });
-      .from('partners')
-      .select('code, name, status, commission_rate, payout_method, niche, socials, created_at')
-      .order('created_at', { ascending: false });
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -138,16 +78,9 @@ export default async function handler(
     return res && res.status(200).json({ partners: data });
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
       });
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  } catch (e: any) {
-    return res && res.status(500).json({ error: e?.message });
-
 import type { NextApiRequest, NextApiResponse } from 'next';
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
@@ -162,9 +95,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import type { NextApiRequest, NextApiResponse } from 'next';
+=======import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -188,33 +119,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(405).end('Method Not Allowed');
     }
 
-<<<<<<< HEAD
-
-  }
-}
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-<<<<<<< HEAD
-=======
-  }
-}
-=======
-    const supabase = getServerSupabase();
-    const { data, error } = await supabase
-      .from("partners")
-      .select(
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
-      )
-      .order("created_at", { ascending: false });
-
     if (error) return res.status(500).json({ error: error.message });
     return res.status(200).json({ partners: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+}=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     }
@@ -232,16 +142,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status (200).json ({ partners: data });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import type { NextApiRequest, NextApiResponse } from 'next';
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
-      "placeholder-key";
-import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const isAdmin = req.headers['x-admin'] === 'true';
@@ -285,6 +185,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 =======
   }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

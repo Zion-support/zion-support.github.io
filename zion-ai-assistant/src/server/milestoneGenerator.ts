@@ -173,13 +173,8 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
 ;
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {;
   const ai = await callOpenAI(input);
-<<<<<<< HEAD
-=======
-
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
+=======import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
   // Check condition

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 =======
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -18,83 +15,27 @@ export default function ErrorPage() {
         <Card className=&quot;w-full max-w-md&quot;>
           <CardHeader className=&quot;space-y-1 text-center&quot;>
             <div className=&quot;mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20&quot;>
-              <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <Head>
+              <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />      <Head>
         <title>Authentication Error - Zion Tech Marketplace</title>
         <meta name="description" content="Authentication error page" />
       </Head>
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            </div>
-            <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
-            <p className=&quot;text-sm text-muted-foreground&quot;>
-              There was an issue with your authentication request
-            </p>
-          </CardHeader>
-          <CardContent className=&quot;space-y-4&quot;>
-            <div className=&quot;text-center space-y-4&quot;>
-              <p className=&quot;text-sm text-muted-foreground&quot;>
-                This could be due to:
-              </p>
-              <ul className=&quot;text-sm text-muted-foreground space-y-1 text-left&quot;>
-                <li>• Invalid email or password</li>
-                <li>• Account not verified</li>
-                <li>• Network connectivity issues</li>
-                <li>• Temporary service unavailability</li>
-              </ul>
-<<<<<<< HEAD
-
 
 =======
               <div className=&quot;pt-4 space-y-2&quot;>
                 <Button asChild className=&quot;w-full&quot;>
-                  <Link href=&quot;/auth/login&quot;>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              <div className="pt-4 space-y-2">
+                  <Link href=&quot;/auth/login&quot;>              <div className="pt-4 space-y-2">
                 <Button asChild className="w-full">
                   <Link href="/auth/login">
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    Try Again
-                  </Link>
-                </Button>
-                <Button asChild variant=&quot;outline&quot; className=&quot;w-full&quot;>
-                  <Link href=&quot;/&quot;>
-                    Go to Homepage
-                  </Link>
-                </Button>
-              </div>
-<<<<<<< HEAD
-
 
 =======
               <div className=&quot;text-center text-sm text-muted-foreground pt-4&quot;>
-                Need help? <Link href=&quot;/contact&quot; className=&quot;hover:text-primary&quot;>Contact Support</Link>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              <div className="text-center text-sm text-muted-foreground pt-4">
+                Need help? <Link href=&quot;/contact&quot; className=&quot;hover:text-primary&quot;>Contact Support</Link>              <div className="text-center text-sm text-muted-foreground pt-4">
                 Need help? <Link href="/contact" className="hover:text-primary">Contact Support</Link>
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </>
-  )
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -155,9 +96,6 @@ function ErrorPage() {
     </>);
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 }
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -235,34 +173,16 @@ export default function ErrorPage() {
   )
 }
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+==============
 
 }
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
 }
 }
 =======
 
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 }

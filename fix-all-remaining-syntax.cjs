@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
-
 console.log('🔧 Fixing all remaining syntax errors...');
 
 // Function to fix all remaining syntax issues
@@ -444,4 +439,3 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxFixer;
->>>>>>> main

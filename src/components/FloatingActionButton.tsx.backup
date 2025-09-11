@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Settings } from 'lucide-react';
-
 
 Plus,
   MessageCircle,
@@ -622,4 +619,3 @@ const FloatingActionButton = ({ className = '' }) => {
       </motion.button>
     </div>)};
 export default FloatingActionButton;
->>>>>>> origin/clean-error-fixing-automation

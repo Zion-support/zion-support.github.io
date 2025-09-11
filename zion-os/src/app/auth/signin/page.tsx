@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
@@ -85,9 +82,6 @@ function SignInPage() {
                 <p className="text - red - 400 text - sm">{error}</p>;
               </div>)}
 
-<<<<<<< HEAD
-;
-
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -148,11 +142,7 @@ export default function SignInPage() {;
 =======
 =======
 
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <div>;
+;            <div>;
               <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">;
                 Email Address;
               </label>;

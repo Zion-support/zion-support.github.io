@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -13,46 +7,12 @@ import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
 
-<<<<<<< HEAD
-    } finally {
-      set_loading (false);
-    }
-  const filteredNotifications = notifications && notifications.filter(notification => {
-=======
-export const useNotificationOperations = (user_id?: string): NotificationContextType => {
-  const [notifications, set_notifications] = useState < Notification[]>([]);
-  const [loading, set_loading] = useState (false);
-  const [filter, set_filter] = useState < FilterType>('all');
-;
-  const fetch_notifications = useCallback (async () => {
-    // Check condition
-if (return) {
-  $2
-}
-    set_loading (true);
-    try {
-      const { data, error } = await supabase;
-        .from ('notifications');
-        .select ('*');
-        .eq ('user_id', user_id);
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_notifications (data || []);
-    } catch (err) {
-      console.error ('Error fetching notifications:', err);
-
     } finally {
       set_loading (false);
     }
 
 
   const filteredNotifications = notifications && notifications.filter(notification => {
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     switch (filter) {
       case 'unread':
         return !notification && notification.read;
@@ -65,17 +25,11 @@ if (throw error) {
       default: return true
     }
   });
-<<<<<<< HEAD
-  const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
-=======
-
 
   const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  }, [user_id]);
+=======  }, [user_id]);
 ;
   const markAsRead = useCallback (async (id: string) => {
     // Check condition
@@ -159,17 +113,6 @@ if (throw error) {
 ;
   const unread_count = notifications.filter (number => !n.read).length;
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return {
-    notifications;
-    filtered_notifications;
-    unread_count;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -254,22 +197,14 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     notifications;
     filteredNotifications;
     unreadCount;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     loading;
     filter;
     markAsRead;
     markAllAsRead;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     dismissNotification;
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -362,13 +297,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     dismissNotification,;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

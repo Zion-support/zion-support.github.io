@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from 'react';
-
 
 import React from 'react',
 import React from 'react';
@@ -10,8 +5,6 @@ import React from 'react';
 
 import React from 'react';
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 import React from 'react',
 import React from 'react';
@@ -26,28 +19,12 @@ export default function AutomationInsightsPage() {
       title: 'AI Automation Trends 2025'
       description:
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
-      readTime: '8 min read'
-      featured: true
-    }
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true;
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -139,15 +116,6 @@ export default function AutomationInsightsPage() {
       label: 'Pages Generated'
       description: 'Content created autonomously'
     },  ];      description: 'Content created autonomously'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -191,14 +159,7 @@ import React from 'react';
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  ];
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
+=======  return (
     <>
       <Head>
         <title>
@@ -249,36 +210,6 @@ import React from 'react';
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        <meta;
-          name='description';
-          content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems.";
-        />;
-        <meta;
-          property='og:title';
-          content='Automation Insights | Zion Tech Group';
-        />;
-        <meta;
-          property='og:description';
-          content='Expert insights on AI automation, autonomous systems, and industry trends.';
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
-        <main className='container mx - auto px - 6 py - 12'>;
-          <section className='text - center mb - 16'>;
-            <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
-              Automation Insights;
-            </h1>;
-            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
-=======
-                ))}
-              </div>
-            </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
               Deep insights into AI automation, autonomous systems, and the;
               future of intelligent technology;
             </p>;
@@ -294,133 +225,11 @@ import React from 'react';
             {/* Automation Trends */}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                ))}
-              </div>
-            </div>
-
-                  </div>
-
-                ))}
-              </div>
-            </div>
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            {/* Automation Trends */}
-            <div className='mb-16'>
-              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
-                Latest Automation Trends
-              </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-                {automationTrends.map((trend, index) => (
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-                {automationTrends.map((trend, index) => (
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-
-                {automationTrends.map((trend, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <div
-                    key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
-                  >
-                    <div className='flex items-center justify-between mb-4'>
-                      <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full'>
-                        {trend.category}
-                      </span>
-                      <span className='text-white/60 text-sm'>
-                        {trend.readTime}
-                      </span>
-                    </div>
-                    <h3 className='text-xl font-bold mb-3 text-white'>
-                      {trend.title}
-                    </h3>
-                    <p className='text-white/70 mb-4'>{trend.description}</p>
-                    <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Latest Automation Trends</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {automationTrends.map((trend, index) => (
-
-<<<<<<< HEAD
-                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-                      href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
-                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
-                      <span className="text-white/60 text-sm">{trend.readTime}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
-                    <p className="text-white/70 mb-4">{trend.description}</p>
-                    <Link
-                      href={`/blog/${trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Read More <span className="ml-1">→</span>
-                    </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                      Read More <span className='ml-1'>→</span>                    </Link>
-
-                    </Link>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -444,46 +253,6 @@ import React from 'react';
                       <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full'>
                         {tool.complexity}
                       </span>                    </div>                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
-<<<<<<< HEAD
-
-            {/* Automation Tools & Frameworks */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Our Automation Tools</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {automationTools.map((tool, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    <div className="text-4xl mb-4">🔧</div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{tool.title}</h3>
-                    <p className="text-white/70 mb-4">{tool.description}</p>
-                    <div className="flex justify-center gap-2">
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
-                      <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-                      href={`/blog/${trend && trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
-                    <div className="flex items-center justify-between mb-4">;
-                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend && trend.category}</span>;
-                      <span className="text-white/60 text-sm">{trend && trend.readTime}</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend && trend.title}</h3>;
-                    <p className="text-white/70 mb-4">{trend && trend.description}</p>;
-                    <Link
-                      href={`/blog/${trend && trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;
-                      Read More <span className="ml-1">→</span>;
-                    </Link>;
-                  </div>;
-                ))}
-              </div>;
-            </div>;
-
 
 
 
@@ -494,13 +263,9 @@ import React from 'react';
               </div>
             </div>
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+==============
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Automation Tools & Frameworks */}
 
@@ -515,17 +280,8 @@ import React from 'react';
 
 
             {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Call to Action */}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -534,48 +290,11 @@ import React from 'react';
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-              </p>
-              <div className='flex flex-wrap justify-center gap-4'>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                <Link
-                  href='/contact'
-                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
-                >
-                  Get Started
-                </Link>
-                <Link
-                  href='/case-studies'
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
@@ -595,22 +314,6 @@ import React from 'react';
         </main>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-    </>);
-}
-);
-  );
-}
-}
-  );
-}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
                   View Case Studies;
                 </Link>;
               </div>;
@@ -623,9 +326,7 @@ import React from 'react';
 }
 <<<<<<< HEAD
     </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

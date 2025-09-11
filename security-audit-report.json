@@ -277,32 +277,6 @@
   ],
   "recommendations": [
     {
-<<<<<<< HEAD
-      "type": "file_permissions",
-      "message": "package.json is world-readable",
-      "severity": "medium"
-    },
-    {
-      "type": "file_permissions",
-      "message": "package-lock.json is world-readable",
-      "severity": "medium"
-    }
-  ],
-  "summary": {
-    "totalVulnerabilities": 0,
-    "totalRecommendations": 2,
-    "securityScore": 90,
-    "status": "good"
-  }
-}
-    "Review and remove any hardcoded secrets",
-    "Update outdated dependencies",
-    "Implement proper environment variable management",
-    "Add security headers to Next.js configuration"
-  ]
-}
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "priority": "high",
       "category": "dependencies",
@@ -351,6 +325,4 @@
 }
 
 <<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

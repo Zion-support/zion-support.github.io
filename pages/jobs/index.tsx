@@ -1,18 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import {useEffect, useState} from 'react';
-import InteractiveSearch from '../../components/ui/InteractiveSearch';
-export default function JobsListPage() {;
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 500);
-    return () => clearTimeout(t);
-  }, []);
-
 import Link from 'next/link',
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
@@ -39,9 +25,7 @@ export default function JobsListPage() {
     },;
 =======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -73,21 +57,8 @@ function JobsListPage() {
       subtitle: 'Remote • Part - time',
       description: 'Design pipelines for training / inference at scale.',
     },
-<<<<<<< HEAD
-  ];
-<<<<<<< HEAD
-export default function JobsListPage() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
-
 =======
-<<<<<<< HEAD
-;
-  return (
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function JobsListPage() {
+=======export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
   const jobs = [
@@ -98,9 +69,7 @@ export default function JobsListPage() {
 
   return (
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  ];
+=======  ];
 ;
   return (
 
@@ -125,27 +94,16 @@ export default function JobsListPage() {
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
                 <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
-  );
-
           ))}
         </div>;
       )}
     </div>;
   );
 =======
-<<<<<<< HEAD
-              </a>
-            </Link>
-
     </div>;
   );
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    </div>
+=======    </div>
   )
 }
 =======
@@ -156,9 +114,7 @@ export default function JobsListPage() {
       )}
     </div>
   )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+}=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space - y-4'>;
       <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />;
@@ -178,39 +134,13 @@ export default function JobsListPage() {
         </div>)}
     </div>);
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </Link>
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-);
-
 }
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          ))  } catch (error) {
+==============
+=======          ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -229,13 +159,7 @@ export default function JobsListPage() {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

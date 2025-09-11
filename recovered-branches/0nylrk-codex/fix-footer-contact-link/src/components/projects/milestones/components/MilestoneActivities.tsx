@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from './react';
-=======
-
-import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface MilestoneActivitiesProps {
+import React from 'react';interface MilestoneActivitiesProps {
   project_id: string;
 }
 export /**
@@ -14,15 +7,9 @@ export /**
 function MilestoneActivities() {
   return <div > Activity will be shown here</div>;
 }
-<<<<<<< HEAD
-
-  projectId: string
-
 interface MilestoneActivitiesProps {;
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+==============
 
   projectId: string
 
@@ -35,11 +22,6 @@ interface MilestoneActivitiesProps {;
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
-<<<<<<< HEAD
-
-}
-;
-
 
 import React from 'react',;
 ;
@@ -74,9 +56,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 }
 
 =======
-import React from './react';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-interface MilestoneActivitiesProps {
+import React from './react';interface MilestoneActivitiesProps {
   projectId: string
 interface MilestoneActivitiesProps {;
   projectId: string;
@@ -86,12 +66,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 }
 }
 ;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 }
 }
 ;

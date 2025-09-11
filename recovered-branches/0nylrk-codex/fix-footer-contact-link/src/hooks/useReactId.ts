@@ -4,20 +4,11 @@ import * as React from "react"
 
 
 
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as React from "react"
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-/**
+=======/**
  * React 18 introduced `useId` for generating unique IDs. If an older
  * React version is used where `useId` is unavailable, this hook provides
  * a small fallback that mimics the API using `useRef`.
  */
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from &quot;react & quot;
 
@@ -83,5 +74,3 @@ export function useReactId(): string {
 <<<<<<< HEAD
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

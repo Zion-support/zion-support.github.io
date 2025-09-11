@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export const metadata = { title: 'AI Services | Zion Tech Group' };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 export default function AIPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -54,30 +48,8 @@ export default function AIPage() {
         />
       </div>
 
-<<<<<<< HEAD
-export const metadata = { 
-  title: 'AI Services | Zion Tech Group',
-  description: 'Advanced AI solutions including RAG systems, custom agents, MLOps, and production-ready AI applications.'
-=======
-export const metadata = { 
-  title: 'AI Services | Zion Tech Group',
-  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
-  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-};
-
 export default function AIPage() {
   return (
-<<<<<<< HEAD
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Services</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Ship AI features with confidence: RAG systems, intelligent agents, fine-tuning, 
-          evaluations, and production MLOps. We build AI that works in the real world.
-        </p>
-      </div>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <Item 
           title="Applied AI" 
@@ -729,55 +701,9 @@ export default function AIPage() {
         </div>
       </section>
 
-      <CTASection />
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    </div>
+      <CTASection />    </div>
   );
 }
-
-<<<<<<< HEAD
-function AIServiceCategory({ title, icon, description, services }: {
-  title: string;
-  icon: string;
-  description: string;
-  services: string[];
-}) {
-  return (
-    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-      <div className="text-3xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {services.map((service, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-purple-500 mr-2">•</span>
-            {service}
-=======
-      <div className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">AI Technologies We Work With</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Large Language Models</h3>
-            <p className="text-gray-600">GPT-4, Claude, LLaMA, and custom fine-tuned models</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-4">🔍</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Vector Search</h3>
-            <p className="text-gray-600">Pinecone, Weaviate, Chroma, and custom vector stores</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-4">👁️</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Computer Vision</h3>
-            <p className="text-gray-600">Image classification, object detection, and OCR</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">ML Frameworks</h3>
-            <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn, and Hugging Face</p>
-          </div>
-        </div>
-      </div>
 
       <PricingSection />
       
@@ -795,9 +721,7 @@ function FeatureCard({ title, features, icon }: { title: string; features: strin
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
             <span className="text-purple-500 mr-2 mt-1">•</span>
-            <span className="text-gray-600">{feature}</span>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          </li>
+            <span className="text-gray-600">{feature}</span>          </li>
         ))}
       </ul>
 =======
@@ -829,237 +753,7 @@ function AIServiceCard({ title, description, features, price, icon }: {
         className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >
         Get Started
-      </a>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">AI Development Packages</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-=======
-function PricingSection() {
-  return (
-    <div className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Service Packages</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <PricingCard 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          name="AI Discovery" 
-          price="$5k–$12k" 
-          duration="2–3 weeks"
-          features={[
-<<<<<<< HEAD
-            "Use-case analysis & design",
-            "Technology selection",
-            "Data assessment",
-            "Implementation roadmap",
-            "Proof of concept",
-            "ROI projections"
-          ]} 
-        />
-        <Plan 
-=======
-            "AI use-case analysis & design",
-            "Technology stack selection",
-            "Data assessment & preparation",
-            "Implementation roadmap",
-            "Proof of concept development",
-            "ROI projections & business case"
-          ]}
-          popular={false}
-        />
-        <PricingCard 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          name="AI Pilot" 
-          price="$15k–$45k" 
-          duration="4–8 weeks"
-          features={[
-<<<<<<< HEAD
-            "RAG/agent MVP development",
-            "Evaluation framework",
-            "Safety & guardrails",
-            "Performance dashboards",
-            "Integration testing",
-            "User feedback collection"
-          ]} 
-        />
-        <Plan 
-=======
-            "Everything in AI Discovery",
-            "RAG/agent MVP development",
-            "Model evaluation & safety testing",
-            "Performance dashboards",
-            "Integration with existing systems",
-            "User testing & feedback collection",
-            "Deployment & monitoring setup"
-          ]}
-          popular={true}
-        />
-        <PricingCard 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          name="AI Production" 
-          price="$50k+" 
-          duration="8+ weeks"
-          features={[
-<<<<<<< HEAD
-            "Hardened infrastructure",
-            "Advanced monitoring",
-            "SLA guarantees",
-            "Cost optimization",
-            "Scalability planning",
-            "24/7 support"
-          ]} 
-        />
-      </div>
-      
-      <div className="text-center mt-8">
-        <p className="text-gray-600 mb-4">
-          Ready to implement AI in your business? Let's discuss your AI requirements.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-      </div>
-function AISolution({ title, description, features, price, timeline, useCase, techStack }: {
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  timeline: string;
-  useCase: string;
-  techStack: string[];
-}) {
-  return (
-    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-4">
-        <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-          {useCase}
-        </span>
-      </div>
-      <ul className="space-y-1 mb-4">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="mb-4">
-        <p className="text-sm text-gray-500 mb-2">Tech Stack:</p>
-        <div className="flex flex-wrap gap-1">
-          {techStack.map((tech, index) => (
-            <span key={index} className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-      <div className="flex justify-between items-center pt-4 border-t border-gray-200">
-        <div>
-          <div className="font-bold text-purple-600">{price}</div>
-          <div className="text-sm text-gray-500">{timeline}</div>
-        </div>
-        <a
-          href="tel:+13024640950"
-          className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-700 transition-colors"
-        >
-          Get Quote
-        </a>
-      </div>
-=======
-            "Everything in AI Pilot",
-            "Production-grade infrastructure",
-            "Advanced monitoring & alerting",
-            "SLA guarantees & support",
-            "Cost optimization & scaling",
-            "Security hardening & compliance",
-            "Dedicated AI engineering team"
-          ]}
-          popular={false}
-        />
-      </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-function AIProcessStep({ step, title, description }: { 
-  step: string; 
-  title: string; 
-  description: string; 
-}) {
-  return (
-    <div className="text-center p-6">
-      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-function AITechnology({ category, technologies }: { category: string; technologies: string[] }) {
-  return (
-    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-      <h3 className="font-bold text-gray-900 mb-4">{category}</h3>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech, index) => (
-          <span key={index} className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
-=======
-function AITechStack({ title, technologies }: { 
-  title: string; 
-  technologies: string[]; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            {tech}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-function AIProcessStep({ step, title, description, duration }: {
-  step: string;
-  title: string;
-  description: string;
-  duration: string;
-}) {
-  return (
-    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 text-center">
-      <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-        {step}
-      </div>
-      <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-2 text-sm">{description}</p>
-      <div className="text-purple-600 font-semibold text-sm">{duration}</div>
-    </div>
+      </a>    </div>
   );
 }
 
@@ -1108,50 +802,12 @@ function PricingCard({ name, price, duration, features, popular }: {
   return (
     <div className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-purple-500 shadow-lg' : 'border-gray-200'}`}>
       {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">          <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
         </div>
       )}
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
       <div className="text-3xl font-bold text-purple-600 mb-1">{price}</div>
       <div className="text-gray-500 mb-6">{duration}</div>
-<<<<<<< HEAD
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-green-500 mr-3">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
-=======
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <a 
-        href="tel:+13024640950" 
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          popular 
-            ? 'bg-purple-600 text-white hover:bg-purple-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
-      >
-        Get Started
-      </a>
-    </div>
-  );
-}
-
 <<<<<<< HEAD
 function AIMetricCard({ metric, description, icon }: { metric: string; description: string; icon: string }) {
   return (
@@ -1220,9 +876,7 @@ function ContactSection() {
       <div className="mt-6 text-sm text-gray-500">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    </div>
+      </div>    </div>
   );
 }
 =======
@@ -1289,4 +943,3 @@ function Pricing() {
     </section>
   );
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

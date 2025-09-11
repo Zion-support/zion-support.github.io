@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Validation utilities
-export const validation = {
-  // Add validation utilities here
-};
-=======
 
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+==============
 
 
 
@@ -126,21 +116,8 @@ export const validation = {
 origin/main
 origin/automation-improvements-final
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-// Validation utilities
-export const validation = {
-  // Add validation utilities here;
-};
-=======
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+==============
 
 
 
