@@ -277,9 +277,11 @@ export default function Contact() {
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you within 24 hours.
                 </p>
-              </Card>
-            </div>
-          </div>
+              </div>
+            ) : (
+              <div>Form content here</div>
+            )}
+          </motion.div>
         </div>
       </div>
 

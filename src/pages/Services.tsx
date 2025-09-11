@@ -214,7 +214,8 @@ export default function Services() {
         </div>
       </section>
 
-        {/* Main Services */}
+      {/* Main Services */}
+      <section className="py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <ServiceCard
             title="AI & Machine Learning"
@@ -247,8 +248,10 @@ export default function Services() {
             icon="🌐"
           />
         </div>
+      </section>
 
-        {/* Additional Services */}
+      {/* Additional Services */}
+      <section className="py-20">
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">Specialized Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -281,7 +284,8 @@ export default function Services() {
         </div>
       </section>
 
-        {/* CTA Section */}
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
