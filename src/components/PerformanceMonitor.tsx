@@ -43,7 +43,8 @@ export const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             break;
           case 'first-input':
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            const fidEntry = entry as any;
+            setMetrics(prev => ({ ...prev, fid: (fidEntry.processingStart || 0) - entry.startTime }));
             break;
           case 'layout-shift':
             if (!(entry as any).hadRecentInput) {
@@ -51,7 +52,8 @@ export const PerformanceMonitor: React.FC = () => {
             }
             break;
           case 'navigation':
-            setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
+            const navEntry = entry as any;
+            setMetrics(prev => ({ ...prev, ttfb: (navEntry.responseStart || 0) - (navEntry.requestStart || 0) }));
             break;
         }
       }

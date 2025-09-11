@@ -2,21 +2,15 @@ import React, { Suspense, lazy, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
-import ErrorBoundary from './components/ErrorBoundary';
-import Header from './components/EnhancedHeader';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
+import { EnhancedHeader } from './components/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
+import { Sidebar } from './components/Sidebar';
 import LoadingSpinner from './components/LoadingSpinner';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { ErrorMonitorProvider } from './components/ErrorMonitor';
 import { performanceMonitor } from './utils/performance';
 import usePerformance from './hooks/usePerformance';
-
-// Layout Components
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
-import { Sidebar } from './components/Sidebar';
 
 // Loading component
 const LoadingSpinnerComponent = () => (
