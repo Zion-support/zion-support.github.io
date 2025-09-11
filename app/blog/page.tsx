@@ -4,6 +4,22 @@ import Link from 'next/link';
 
 const posts = [
   {
+    title: 'AI-Powered Business Automation: Complete Guide for 2025',
+    description:
+      'Discover how AI automation can transform your business operations, reduce costs by 40%, and increase efficiency with real-world examples.',
+    href: '/blog/ai-powered-business-automation-2025',
+    date: '2025-01-15',
+    tags: ['AI', 'Automation', 'Business'],
+  },
+  {
+    title: 'Micro SaaS Success Stories: From Idea to $10K MRR in 2025',
+    description:
+      'Real success stories of entrepreneurs who built profitable micro SaaS businesses. Learn their strategies, challenges, and key lessons.',
+    href: '/blog/micro-saas-success-stories-2025',
+    date: '2025-01-12',
+    tags: ['Micro SaaS', 'Success Stories', 'Entrepreneurship'],
+  },
+  {
     title: 'AI Agent Guardrails in Production: What Actually Works',
     description:
       'Practical controls for safe, reliable AI agents: scoping, approvals, evals, and budgets.',
