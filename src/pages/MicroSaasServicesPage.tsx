@@ -1,518 +1,335 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart } from "lucide-react";
-export default function MicroSAASServicesPage() {
-    const microSAASServices = [
-        {
-            id: "crm-saas",
-            title: "ZionCRM Pro",
-            description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.",
-            icon: <Users className="h-8 w-8 text-blue-500"/>,
-            price: 29,
-            currency: "$",
-            features[
-                "Contact Management",
-                "Sales Pipeline",
-                "Lead Scoring",
-                "Email Automation",
-                "Analytics Dashboard",
-                "Mobile App"
-            ],
-            category: "Business Tools",
-            badge: "Popular",
-            link: "https://ziontechgroup.com/zion-crm",
-            details: "Streamline your sales process with our comprehensive CRM solution. Track leads, manage contacts, and close more deals with intelligent automation and insights.",
-            pricing: {
-                starter: "$29/month",
-                professional: "$79/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.8,
-            reviewCount: 342
-        },
-        {
-            id: "project-management",
-            title: "ZionProject Hub",
-            description: "Project management platform with task tracking, team collaboration, and resource management.",
-            icon: <Calendar className="h-8 w-8 text-green-500"/>,
-            price: 19,
-            currency: "$",
-            features[
-                "Task Management",
-                "Team Collaboration",
-                "Time Tracking",
-                "Resource Planning",
-                "Gantt Charts",
-                "File Sharing"
-            ],
-            category: "Project Management",
-            badge: "Essential",
-            link: "https://ziontechgroup.com/zion-project",
-            details: "Keep your projects on track with our intuitive project management platform. Collaborate with your team, track progress, and deliver results on time.",
-            pricing: {
-                starter: "$19/month",
-                professional: "$49/month",
-                enterprise: "$99/month"
-            },
-            freeTrial: "30 days",
-            rating: 4.7,
-            reviewCount: 267
-        },
-        {
-            id: "analytics-platform",
-            title: "ZionAnalytics",
-            description: "Business intelligence platform with real-time dashboards, reporting, and data visualization.",
-            icon: <BarChart3 className="h-8 w-8 text-purple-500"/>,
-            price: 39,
-            currency: "$",
-            features[
-                "Real-time Dashboards",
-                "Custom Reports",
-                "Data Integration",
-                "Predictive Analytics",
-                "Export Options",
-                "API Access"
-            ],
-            category: "Analytics",
-            badge: "Insightful",
-            link: "https://ziontechgroup.com/zion-analytics",
-            details: "Transform your data into actionable insights with our powerful analytics platform. Create custom dashboards, generate reports, and make data-driven decisions.",
-            pricing: {
-                starter: "$39/month",
-                professional: "$89/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "21 days",
-            rating: 4.9,
-            reviewCount: 189
-        },
-        {
-            id: "communication-tool",
-            title: "ZionChat",
-            description: "Team communication platform with chat, video calls, and file sharing capabilities.",
-            icon: <MessageSquare className="h-8 w-8 text-orange-500"/>,
-            price: 15,
-            currency: "$",
-            features[
-                "Team Chat",
-                "Video Calls",
-                "File Sharing",
-                "Screen Sharing",
-                "Mobile App",
-                "Integrations"
-            ],
-            category: "Communication",
-            badge: "Collaborative",
-            link: "https://ziontechgroup.com/zion-chat",
-            details: "Connect your team with our modern communication platform. Chat, call, and collaborate seamlessly across all devices and platforms.",
-            pricing: {
-                starter: "$15/month",
-                professional: "$39/month",
-                enterprise: "$79/month"
-            },
-            freeTrial: "7 days",
-            rating: 4.6,
-            reviewCount: 198
-        },
-        {
-            id: "document-management",
-            title: "ZionDocs",
-            description: "Document management system with version control, collaboration, and secure storage.",
-            icon: <FileText className="h-8 w-8 text-cyan-500"/>,
-            price: 25,
-            currency: "$",
-            features[
-                "Document Storage",
-                "Version Control",
-                "Collaborative Editing",
-                "Search & Indexing",
-                "Access Control",
-                "Backup & Recovery"
-            ],
-            category: "Document Management",
-            badge: "Secure",
-            link: "https://ziontechgroup.com/zion-docs",
-            details: "Organize and secure your documents with our enterprise-grade document management system. Collaborate with your team while maintaining version control and security.",
-            pricing: {
-                starter: "$25/month",
-                professional: "$59/month",
-                enterprise: "$129/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.8,
-            reviewCount: 156
-        },
-        {
-            id: "payment-processor",
-            title: "ZionPay",
-            description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",
-            icon: <CreditCard className="h-8 w-8 text-emerald-500"/>,
-            price: 0,
-            currency: "$",
-            features[
-                "Multiple Payment Methods",
-                "Recurring Billing",
-                "Invoice Generation",
-                "Fraud Protection",
-                "Analytics Dashboard",
-                "API Integration"
-            ],
-            category: "Payments",
-            badge: "Free",
-            link: "https://ziontechgroup.com/zion-pay",
-            details: "Accept payments from customers worldwide with our secure payment processing solution. Support multiple payment methods and automate your billing processes.",
-            pricing: {
-                starter: "2.9% + $0.30",
-                professional: "2.5% + $0.30",
-                enterprise: "2.2% + $0.30"
-            },
-            freeTrial: "No setup fees",
-            rating: 4.9,
-            reviewCount: 423
-        },
-        {
-            id: "marketing-automation",
-            title: "ZionMarketing",
-            description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",
-            icon: <BarChart className="h-8 w-8 text-pink-500"/>,
-            price: 49,
-            currency: "$",
-            features[
-                "Email Campaigns",
-                "Lead Nurturing",
-                "A/B Testing",
-                "Conversion Tracking",
-                "Marketing Analytics",
-                "CRM Integration"
-            ],
-            category: "Marketing",
-            badge: "Automated",
-            link: "https://ziontechgroup.com/zion-marketing",
-            details: "Automate your marketing efforts and nurture leads effectively with our comprehensive marketing automation platform. Track conversions and optimize your campaigns.",
-            pricing: {
-                starter: "$49/month",
-                professional: "$99/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.7,
-            reviewCount: 234
-        },
-        {
-            id: "inventory-management",
-            title: "ZionInventory",
-            description: "Inventory management system with stock tracking, order management, and supplier management.",
-            icon: <Building className="h-8 w-8 text-indigo-500"/>,
-            price: 35,
-            currency: "$",
-            features[
-                "Stock Tracking",
-                "Order Management",
-                "Supplier Management",
-                "Barcode Scanning",
-                "Low Stock Alerts",
-                "Reporting Tools"
-            ],
-            category: "Inventory",
-            badge: "Efficient",
-            link: "https://ziontechgroup.com/zion-inventory",
-            details: "Keep track of your inventory in real-time with our comprehensive inventory management system. Prevent stockouts and optimize your supply chain.",
-            pricing: {
-                starter: "$35/month",
-                professional: "$79/month",
-                enterprise: "$149/month"
-            },
-            freeTrial: "21 days",
-            rating: 4.8,
-            reviewCount: 178
-        },
-        {
-            id: "hr-management",
-            title: "ZionHR",
-            description: "Human resources management platform with employee onboarding, time tracking, and performance management.",
-            icon: <Users className="h-8 w-8 text-teal-500"/>,
-            price: 45,
-            currency: "$",
-            features[
-                "Employee Onboarding",
-                "Time Tracking",
-                "Performance Reviews",
-                "Leave Management",
-                "Payroll Integration",
-                "Compliance Tools"
-            ],
-            category: "HR Management",
-            badge: "Comprehensive",
-            link: "https://ziontechgroup.com/zion-hr",
-            details: "Streamline your HR processes with our comprehensive human resources management platform. Manage employees, track performance, and ensure compliance.",
-            pricing: {
-                starter: "$45/month",
-                professional: "$89/month",
-                enterprise: "$179/month"
-            },
-            freeTrial: "30 days",
-            rating: 4.6,
-            reviewCount: 145
-        },
-        {
-            id: "accounting-software",
-            title: "ZionBooks",
-            description: "Cloud-based accounting software with invoicing, expense tracking, and financial reporting.",
-            icon: <BarChart3 className="h-8 w-8 text-amber-500"/>,
-            price: 30,
-            currency: "$",
-            features[
-                "Invoicing",
-                "Expense Tracking",
-                "Financial Reports",
-                "Bank Reconciliation",
-                "Tax Preparation",
-                "Multi-currency"
-            ],
-            category: "Accounting",
-            badge: "Financial",
-            link: "https://ziontechgroup.com/zion-books",
-            details: "Manage your business finances with our cloud-based accounting software. Create invoices, track expenses, and generate comprehensive financial reports.",
-            pricing: {
-                starter: "$30/month",
-                professional: "$69/month",
-                enterprise: "$129/month"
-            },
-            freeTrial: "30 days",
-            rating: 4.8,
-            reviewCount: 267
-        },
-        {
-            id: "ecommerce-platform",
-            title: "ZionShop",
-            description: "E-commerce platform with online store creation, payment processing, and inventory management.",
-            icon: <Globe className="h-8 w-8 text-red-500"/>,
-            price: 40,
-            currency: "$",
-            features[
-                "Online Store Builder",
-                "Payment Processing",
-                "Inventory Management",
-                "Order Fulfillment",
-                "Marketing Tools",
-                "Analytics Dashboard"
-            ],
-            category: "E-commerce",
-            badge: "Complete",
-            link: "https://ziontechgroup.com/zion-shop",
-            details: "Create and manage your online store with our comprehensive e-commerce platform. Sell products, process payments, and grow your business online.",
-            pricing: {
-                starter: "$40/month",
-                professional: "$89/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.7,
-            reviewCount: 198
-        },
-        {
-            id: "learning-platform",
-            title: "ZionAcademy",
-            description: "Online learning management system with course creation, student management, and progress tracking.",
-            icon: <FileText className="h-8 w-8 text-violet-500"/>,
-            price: 55,
-            currency: "$",
-            features[
-                "Course Creation",
-                "Student Management",
-                "Progress Tracking",
-                "Assessment Tools",
-                "Video Streaming",
-                "Mobile Learning"
-            ],
-            category: "Education",
-            badge: "Educational",
-            link: "https://ziontechgroup.com/zion-academy",
-            details: "Create and deliver online courses with our comprehensive learning management system. Engage students and track their progress effectively.",
-            pricing: {
-                starter: "$55/month",
-                professional: "$109/month",
-                enterprise: "$249/month"
-            },
-            freeTrial: "21 days",
-            rating: 4.9,
-            reviewCount: 167
-        }
-    ];
-    const categories = [
-        "All Services",
-        "Business Tools",
-        "Project Management",
-        "Analytics",
-        "Communication",
-        "Document Management",
-        "Payments",
-        "Marketing",
-        "Inventory",
-        "HR Management",
-        "Accounting",
-        "E-commerce",
-        "Education"
-    ];
-    const [selectedCategory, setSelectedCategory] = React.useState("All Services");
-    const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
-    React.useEffect(() => {
-        if (selectedCategory === "All Services") {
-            setFilteredServices(microSAASServices)}
-        else {
-            setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory))}
-    }, [selectedCategory]);
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Search, Filter, Star, Users, Zap, Phone, Mail, MapPin } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { MICRO_SAAS_SERVICES, getFeaturedMicroSaasServices } from '@/data/microSaasServices';
+
+export default function MicroSaasServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricingModel, setSelectedPricingModel] = useState('all');
+  const [sortBy, setSortBy] = useState('rating');
+  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
+
+  useEffect(() => {
+    let filtered = MICRO_SAAS_SERVICES;
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(service =>
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    }
+
+    // Filter by pricing model
+    if (selectedPricingModel !== 'all') {
+      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel);
+    }
+
+    // Sort services
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'rating':
+          return b.rating - a.rating;
+        case 'price':
+          return a.price - b.price;
+        case 'aiScore':
+          return b.aiScore - a.aiScore;
+        case 'date':
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        default:
+          return 0;
+      }
+    });
+
+    setFilteredServices(filtered);
+  }, [searchTerm, selectedCategory, selectedPricingModel, sortBy]);
+
+  const categories = [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
+  const pricingModels = [...new Set(MICRO_SAAS_SERVICES.map(service => service.pricingModel))];
+
+  const ServiceCard = ({ service, index }: { service: any; index: number }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="group bg-gradient-to-br from-zion-blue-light/10 to-zion-purple/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 hover-lift"
+    >
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+            <Zap className="w-6 h-6 text-white" />
+          </div>
+          <div className="flex items-center gap-1">
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+            <span className="text-sm text-zion-slate-light">{service.rating}</span>
+            <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
+          </div>
+        </div>
+        {service.featured && (
+          <div className="px-3 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-xs font-semibold rounded-full">
+            Featured
+          </div>
+        )}
+      </div>
+      
+      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+        {service.title}
+      </h3>
+      
+      <p className="text-zion-slate-light mb-4 leading-relaxed text-sm">
+        {service.description}
+      </p>
+      
+      <div className="space-y-3 mb-4">
+        <div className="flex items-center justify-between">
+          <div className="text-2xl font-bold text-zion-cyan">
+            ${service.price}
+            <span className="text-sm text-zion-slate-light font-normal">/{service.pricingModel}</span>
+          </div>
+          <div className="text-sm text-zion-slate-light">
+            AI Score: {service.aiScore}%
+          </div>
+        </div>
+        
+        <div className="flex flex-wrap gap-2">
+          {service.tags.slice(0, 3).map((tag, idx) => (
+            <span key={idx} className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-md">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+      
+      <div className="space-y-2 mb-4">
+        <h4 className="text-sm font-semibold text-white">Key Features:</h4>
+        <div className="space-y-1">
+          {service.features.slice(0, 3).map((feature, idx) => (
+            <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
+              <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
+              <span>{feature}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div className="flex items-center justify-between">
+        <div className="text-xs text-zion-slate-light">
+          <Users className="w-3 h-3 inline mr-1" />
+          Perfect for {service.targetAudience.slice(0, 2).join(', ')}
+        </div>
+        <a
+          href={`mailto:${service.contactEmail}?subject=Inquiry about ${service.title}`}
+          className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
+        >
+          Contact
+          <Mail className="w-4 h-4" />
+        </a>
+      </div>
+    </motion.div>
+  );
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      <SEO
+        title="Micro SAAS Services - Zion Tech Group"
+        description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation. Transform your business with cutting-edge technology."
+        keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group"
+      />
+
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-            Micro SAAS Services
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Powerful, affordable software solutions designed for modern businesses. From CRM to project management, 
-            our micro SAAS services help you grow without breaking the bank.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Explore SAAS Solutions
-            </Button>
-            <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Start Free Trial
-            </Button>
+      <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-20">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-20" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-6">
+              Micro SAAS Services
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+              Transform your business with our innovative micro SAAS solutions. From AI-powered automation to enterprise IT services,
+              we provide cutting-edge technology that drives growth and efficiency.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300 hover:scale-105"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-6 py-3 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                kleber@ziontechgroup.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Contact Info Banner */}
-      <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-center">
+      <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border-y border-zion-purple/30 py-6">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
             <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-zion-cyan"/>
-              <span className="text-white">+1 302 464 0950</span>
+              <MapPin className="w-5 h-5 text-zion-cyan" />
+              <span className="text-zion-slate-light">
+                364 E Main St STE 1008, Middletown DE 19709
+              </span>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-zion-cyan"/>
-              <span className="text-white">kleber@ziontechgroup.com</span>
+              <Phone className="w-5 h-5 text-zion-cyan" />
+              <span className="text-zion-slate-light">+1 302 464 0950</span>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="h-5 w-5 text-zion-cyan"/>
-              <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
+              <Mail className="w-5 h-5 text-zion-cyan" />
+              <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Category Filter */}
-      <div className="py-8 bg-zion-blue-dark/50">
+      {/* Filters and Search */}
+      <div className="sticky top-16 z-40 bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-purple/20 py-4">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (<Button key={category} onClick={() => setSelectedCategory(category)} className={`${selectedCategory === category
-                ? "bg-zion-purple text-white"
-                : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}>
-                {category}
-              </Button>))}
+          <div className="flex flex-col lg:flex-row gap-4 items-center">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan/20"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex items-center gap-2">
+              <Filter className="w-5 h-5 text-zion-cyan" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-3 py-2 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+              >
+                <option value="all">All Categories</option>
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Pricing Model Filter */}
+            <div className="flex items-center gap-2">
+              <span className="text-zion-slate-light text-sm">Pricing:</span>
+              <select
+                value={selectedPricingModel}
+                onChange={(e) => setSelectedPricingModel(e.target.value)}
+                className="px-3 py-2 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+              >
+                <option value="all">All Models</option>
+                {pricingModels.map(model => (
+                  <option key={model} value={model}>{model}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Sort */}
+            <div className="flex items-center gap-2">
+              <span className="text-zion-slate-light text-sm">Sort by:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-3 py-2 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+              >
+                <option value="rating">Rating</option>
+                <option value="price">Price</option>
+                <option value="aiScore">AI Score</option>
+                <option value="date">Date</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Services Grid */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (<Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="p-3 rounded-lg bg-zion-blue-dark/50 group-hover:bg-zion-purple/20 transition-colors">
-                      {service.icon}
-                    </div>
-                    {service.badge && (<Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
-                        {service.badge}
-                      </Badge>)}
-                  </div>
-                  <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-zion-slate-light text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pb-4">
-                  <div className="mb-4">
-                    <p className="text-sm text-zion-slate-light mb-3">{service.details}</p>
-                    <div className="grid grid-cols-2 gap-2 mb-4">
-                      {service.features.slice(0, 4).map((feature, index) => (<div key={index} className="flex items-center text-xs text-zion-cyan">
-                          <CheckCircle className="w-3 h-3 mr-2"/>
-                          {feature}
-                        </div>))}
-                    </div>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-2">Pricing Plans:</h4>
-                      <div className="space-y-1">
-                        {Object.entries(service.pricing).map(([plan, price]) => (<div key={plan} className="flex justify-between text-xs">
-                            <span className="text-zion-slate-light capitalize">{plan}:</span>
-                            <span className="text-zion-cyan font-semibold">{String(price)}</span>
-                          </div>))}
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
-                      <span>Free Trial:</span>
-                      <span className="text-zion-cyan font-semibold">{service.freeTrial}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (<Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'}`}/>))}
-                      <span className="text-sm text-zion-slate-light ml-2">({service.reviewCount})</span>
-                    </div>
-                  </div>
-                  <div className="text-center mb-4">
-                    <span className="text-3xl font-bold text-zion-cyan">
-                      {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
-                    </span>
-                    <span className="text-zion-slate-light">
-                      {service.price === 0 ? '' : '/month'}
-                    </span>
-                  </div>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/25 transition-all">
-                    <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2"/>
-                      Start Free Trial
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>))}
-          </div>
+      <div className="container mx-auto px-4 py-12">
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-white mb-2">
+            {filteredServices.length} Services Found
+          </h2>
+          <p className="text-zion-slate-light">
+            Discover the perfect micro SAAS solution for your business needs
+          </p>
         </div>
+
+        {filteredServices.length === 0 ? (
+          <div className="text-center py-16">
+            <div className="w-24 h-24 bg-zion-purple/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+              <Search className="w-12 h-12 text-zion-purple" />
+            </div>
+            <h3 className="text-2xl font-semibold text-white mb-4">No services found</h3>
+            <p className="text-zion-slate-light mb-6">
+              Try adjusting your search criteria or filters
+            </p>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+                setSelectedPricingModel('all');
+              }}
+              className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300"
+            >
+              Clear Filters
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <ServiceCard key={service.id} service={service} index={index} />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
+      <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border-t border-zion-purple/30 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">
-            Ready to Transform Your Business with Micro SAAS?
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Need a Custom Solution?
           </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
-            improve productivity, and drive growth. No long-term contracts, cancel time.
+          <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            Can't find exactly what you're looking for? Our team can create a custom micro SAAS solution
+            tailored to your specific business requirements.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Start Free Trial
-            </Button>
-            <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <Phone className="h-5 w-5 mr-2"/>
-              Call +1 302 464 0950
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300 hover:scale-105"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="inline-flex items-center justify-center px-8 py-3 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Send Email
+            </a>
           </div>
         </div>
       </div>
-    </div>)}
+    </div>
+  );
+}

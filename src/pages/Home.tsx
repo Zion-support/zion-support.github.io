@@ -1,87 +1,173 @@
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Code, Cloud } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { MicroSaasServicesSection } from '@/components/home/MicroSaasServicesSection';
+import { CategoriesSection } from '@/components/CategoriesSection';
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      <SEO
+        title="Zion Tech Group - AI, IT & Micro SAAS Solutions"
+        description="Leading provider of innovative AI, IT, and micro SAAS solutions. Transform your business with cutting-edge technology and expert guidance."
+        keywords="AI solutions, IT services, micro SAAS, business automation, Zion Tech Group, technology consulting"
+      />
+
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>
+      <section className="relative py-20 px-4 overflow-hidden">
+        {/* Enhanced Animated Background */}
+        <div className="absolute inset-0 futuristic-bg">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-1000"></div>
+          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-2000"></div>
+        </div>
+
+        {/* Enhanced Grid Pattern */}
+        <div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
+
+        {/* Matrix Rain Effect */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 20}s`,
+                animationDuration: `${20 + Math.random() * 10}s`
+              }}
+            >
+              {Math.random() > 0.5 ? '1' : '0'}
+            </div>
+          ))}
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <div className="animate-fade-in-up">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="neon-text">
+                Transform Your Business
+              </span>
+              <br />
+              <span className="text-white">With AI & Tech</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading technology solutions for modern businesses. Transform your digital presence with our cutting-edge services.
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services 
+              designed to propel your business into the future.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <button className="quantum-button text-lg px-8 py-4">
                 Explore Services
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-gray-300 hover:border-gray-400 text-gray-300 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300"
-              >
-                Get Started
-              </Link>
+              </button>
+              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 neon-border animate-neon-border-glow">
+                Get Free Consultation
+              </button>
+            </div>
+
+            {/* Enhanced Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              {[
+                { number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400" },
+                { number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400" },
+                { number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400" },
+                { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
+              ].map((stat, index) => (
+                <div key={index} className="text-center animate-fade-in-up group" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="relative mb-4">
+                    <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-400 font-medium">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Services Preview */}
-      <div className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Floating Elements */}
+        <div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+        <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000"></div>
+      </section>
+
+      {/* Micro SAAS Services Section */}
+      <MicroSaasServicesSection />
+
+      {/* Categories Section */}
+      <CategoriesSection />
+
+      {/* Enhanced Contact Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive technology solutions for your business needs</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Contact our team of experts to discuss your specific needs and find the perfect solution for your business.
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-2">AI & ML</h3>
-              <p className="text-blue-100">Advanced artificial intelligence solutions</p>
-            </div>
-            <div className="bg-gradient-to-br from-green-600 to-blue-600 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Cloud</h3>
-              <p className="text-green-100">Scalable cloud infrastructure</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">💻</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Web Dev</h3>
-              <p className="text-purple-100">Modern web applications</p>
-            </div>
-            <div className="bg-gradient-to-br from-red-600 to-orange-600 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Security</h3>
-              <p className="text-red-100">Comprehensive cybersecurity</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our technology solutions can help you achieve your goals.
-          </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your Project
-          </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                icon: "📱",
+                title: "Phone",
+                contact: "+1 302 464 0950",
+                description: "Call us anytime for immediate assistance",
+                color: "from-cyan-500 to-blue-500"
+              },
+              {
+                icon: "✉️",
+                title: "Email",
+                contact: "kleber@ziontechgroup.com",
+                description: "Send us a detailed message",
+                color: "from-blue-500 to-purple-500"
+              },
+              {
+                icon: "📍",
+                title: "Address",
+                contact: "364 E Main St STE 1008\nMiddletown DE 19709",
+                description: "Visit our office for in-person consultation",
+                color: "from-purple-500 to-pink-500"
+              }
+            ].map((method, index) => (
+              <div key={index} className="group text-center p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+                <div className="relative mb-4">
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
+                    {method.icon}
+                  </div>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${method.color} rounded-full blur-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{method.title}</h3>
+                <p className="text-cyan-400 font-medium mb-3 whitespace-pre-line group-hover:text-cyan-300 transition-colors duration-300">{method.contact}</p>
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{method.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <button className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50">
+              Schedule Free Consultation
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
-};
-
-export default Home;
+}

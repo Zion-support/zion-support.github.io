@@ -1,117 +1,27 @@
-<<<<<<< HEAD
-=======
-import React from "react";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from "react";
-
-export default function EnhancedCard(): any ({;
-  children,;
-  className = "",;
-}: {;
-  children: React && React.ReactNode;
-  className?: string;
-}) {;
-  return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>;
-  );
-  return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>;
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
-export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
-  return (
-    <div className={["card-base p-4", className].join(' ')}>
-      {children}
-</div>
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from './react';
-;
-export default /**
- * EnhancedCard - Function description
- */
-function EnhancedCard() {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
-    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
-  return (
-    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
-    </div>
-  )
-
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-import React from "react";
-
-import React from "react";
-export default function EnhancedCard({
-  children
-  className = ""
-}: {
-  children,
-  className = "",
-}: {;
+type EnhancedCardProps = {
+  title?: string;
   children: React.ReactNode;
-  className?: string;
-}) {
+  footer?: React.ReactNode;
+};
 
+export default function EnhancedCard({ title, children, footer }: EnhancedCardProps) {
   return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>
+    <div className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm">
+      {title ? (
+        <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-800 font-medium text-sm">
+          {title}
+        </div>
+      ) : null}
+      <div className="px-4 py-4">
+        {children}
+      </div>
+      {footer ? (
+        <div className="px-4 py-3 border-t border-gray-200 dark:border-gray-800 text-sm text-gray-500">
+          {footer}
+        </div>
+      ) : null}
+    </div>
   );
-  return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>
-  );
 }
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

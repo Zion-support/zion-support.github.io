@@ -1,7 +1,0 @@
-{
-  "exclude": [
-    "agent-open-modal-from-url-params-*.cjs",
-    "tmp-scan-debug.cjs"
-  ]
-}
-

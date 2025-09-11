@@ -1,1584 +1,180 @@
-}
-  {
-    title: "Comprehensive Services"
-    link: "/comprehensive - services"
-}
-  {
-    title: "Services Comparison"
-    link: "/services - comparison"
-}
-// Default static categories with translation keys
-
-<<<<<<< HEAD
-color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
-        ...cat
-import { GradientHeading } from "./GradientHeading"
-import Link from "next/link"
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils"
-import { useTranslation } from "react-i18next"
-// This is the type definition copied from Categories.tsx for consistency.
-// Ideally, this would be in a shared types file.
-interface CategoryType {
-  id: string
-  name: string
-  description?: string
-        ...cat;
-import { GradientHeading } from "./GradientHeading";
-import Link from "next/link";
-
-import { GradientHeading } from "./GradientHeading",
-import Link from "next/link",
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
-// This is the type definition copied from Categories.tsx for consistency.
-// Ideally, this would be in a shared types file.
-interface CategoryType {
-  id: string,
-  name: string,
-  description?: string,
-  description?: string
-  description?: string,
-  iconName?: string, // Example field if categories have icons
-  itemCount?: number, // Example field for number of items in a category
-  // Add a 'link' property if your API provides it, or construct it.
-  link?: string
-}
-  description?: string,
-  description?: string
-  itemCount?: number, // Example field for number of items in a category
-  // Add a 'link' property if your API provides it, or construct it.
-  link?: string
- * CategoriesSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-const categories = [{
-    title: "AI Services"
-    description: "Cutting - edge AI solutions, chatbots, and machine learning"
-    icon: "🤖"
-    link: "/ai - services"
-    color: "from - purple - 500 to - indigo - 600",
-}
-  {
-    title: "Micro SAAS"
-    description: "Cloud - based software solutions for modern businesses"
-    icon: "☁️"
-    link: "/micro - saas"
-    color: "from - cyan - 500 to - blue - 600",
-}
-  {
-    title: "IT Services"
-    description: "Infrastructure, security, and technical consulting"
-    icon: "⚡"
-    link: "/all - services"
-    color: "from - amber - 500 to - orange - 600",
-}
-  {
-    title: "Digital Transformation"
-    description: "Business modernization and digital strategy"
-    icon: "📈"
-    link: "/all - services"
-    color: "from - emerald - 500 to - green - 600",
-}
-]
-const specialServices = [{
-    title: "IT Onsite Services"
-    link: "/it - onsite - services"
-},
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive - services"
-},
-  {
-    title: "Services Comparison",
-    link: "/services - comparison"
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-  {
-    title: "Comprehensive Services"
-    link: "/comprehensive - services"
-}
-  {
-    title: "Services Comparison"
-    link: "/services - comparison"
-<<<<<<< HEAD
-// Default static categories with translation keys
-
-const getDefaultCategories = (t: any,) => [
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-// Default static categories with translation keys
-
-const getDefaultCategories = (t: any,) => [
-const getDefaultCategories = (t: any) => [
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-const getDefaultCategories = (t: any,) => [
-const getDefaultCategories = (t: any) => [
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  {
-    id: "services"
-    name: t('categories.services')
-    description: t('categories.services_desc')
-    iconName: "Briefcase", // Corresponds to lucide icon name
-    link: "/services"
-    color: "from-purple-500 to-indigo-600", // Keep color for styling
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-ursor/fix-website-loading-errors-and-merge-6662
-  {
-  }
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  },
-
-
-  {
-    id: "talents"
-    name: t('categories.talents')
-    description: t('categories.talents_desc')
-    iconName: "Users"
-    link: "/talent"
-    color: "from-cyan-500 to-blue-600"}
-  {
-    id: "equipment"
-    name: t('categories.equipment')
-    description: t('categories.equipment_desc')
-    iconName: "HardDrive"
-    link: "/equipment"
-    color: "from-amber-500 to-orange-600"}
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    id: "innovation"
-    name: t('categories.innovation')
-    description: t('categories.innovation_desc')
-    iconName: "Lightbulb"
-    link: "/innovation"
-    color: "from-emerald-500 to-green-600"}]
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    id: "innovation",
-    name: t('categories.innovation'),
-    description: t('categories.innovation_desc'),
-    iconName: "Lightbulb",
-    link: "/innovation",
-    color: "from-emerald-500 to-green-600"}],
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Helper to get icon component from name
-const getIcon = (iconName?: string) => {
-=======
-// Helper to get icon component from name
-const getIcon = (iconName?: string,) => {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  switch (iconName) {
-    case "Briefcase": return <Briefcase className="w-10 h-10" />
-    case "Users": return <Users className="w-10 h-10" />
-    case "HardDrive": return <HardDrive className="w-10 h-10" />
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
-  }
-}
-const getSpecialServices = (t: any,) => [
-  {
-<<<<<<< HEAD
-    title: t('categories.it_onsite_services')
-    link: "/it-onsite-services"
-  }
-]
-interface CategoriesSectionProps {
-  showTitle?: boolean
-  className?: string
-  style?: React.CSSProperties
-  categories?: CategoryType[], // Accept categories as a prop
-}
-export function CategoriesSection({
-  showTitle = true
-  className
-  style
-  categories: fetchedCategories, // Rename prop for clarity
-}: CategoriesSectionProps) {
-  const { t } = useTranslation()
-  const defaultCategories = getDefaultCategories(t)
-=======
-
-
-// Helper to get icon component from name
-const getIcon = (iconName?: string,) => {
-  switch (iconName) {
-
-    title: "AI Services",
-    description: "Cutting - edge AI solutions, chatbots, and machine learning",
-    icon: "🤖",
-    link: "/ai - services",
-    color: "from - purple - 500 to - indigo - 600", ,
-},
-  {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    title: "Micro SAAS",
-    description: "Cloud - based software solutions for modern businesses",
-    icon: "☁️",
-    link: "/micro - saas",
-    color: "from - cyan - 500 to - blue - 600", ,
-},
-  {
-    title: "IT Services",
-    description: "Infrastructure, security, and technical consulting",
-    icon: "⚡",
-    link: "/all - services",
-    color: "from - amber - 500 to - orange - 600", ,
-},
-  {
-    title: "Digital Transformation",
-    description: "Business modernization and digital strategy",
-    icon: "📈",
-    link: "/all - services",
-    color: "from - emerald - 500 to - green - 600", ,
-},
-];
-const special_services = [{
-    title: "IT Onsite Services",
-    link: "/it - onsite - services";
-},
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive - services";
-},
-  {
-    title: "Services Comparison",
-    link: "/services - comparison";
-}
-<<<<<<< HEAD
-// Default static categories with translation keys;
-const getDefaultCategories = (t: any, ) =>: any [;
-  {
-    id: "services",
-    name: t ('categories.services'),
-    description: t ('categories.services_desc'),
-    icon_name: "Briefcase", // Corresponds to lucide icon name;
-    link: "/services",
-    color: "from - purple - 500 to - indigo - 600", // Keep color for styling;
-  }
-  {
-    id: "talents",
-    name: t ('categories.talents'),
-    description: t ('categories.talents_desc'),
-    icon_name: "Users",
-    link: "/talent",
-    color: "from - cyan - 500 to - blue - 600"},
-  {
-    id: "equipment",
-    name: t ('categories.equipment'),
-    description: t ('categories.equipment_desc'),
-    icon_name: "HardDrive",
-    link: "/equipment",
-    color: "from - amber - 500 to - orange - 600"},
-  {
-    id: "innovation",
-    name: t ('categories.innovation'),
-    description: t ('categories.innovation_desc'),
-    icon_name: "Lightbulb",
-    link: "/innovation",
-    color: "from - emerald - 500 to - green - 600"}],
-// Helper to get icon component from name;
-const get_icon = (icon_name?: string, ) =>: any {
-  switch (icon_name) {
-    case "Briefcase": return <Briefcase className="w - 10 h - 10" />;
-    case "Users": return <Users className="w - 10 h - 10" />;
-    case "HardDrive": return <HardDrive className="w - 10 h - 10" />;
-    case "Lightbulb": return <Lightbulb className="w - 10 h - 10" />;
-    default: return <HelpCircle className="w - 10 h - 10" />, // Default icon;
-
-  }
-}
-const getSpecialServices = (t: any, ) =>: any [;
-  {
-
-    title: t ('categories.it_onsite_services'),
-    link: "/it - onsite - services";
-
-  }
-];
-export function CategoriesSection({ showTitle = true }) {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-  hidden: { y: 30,
-  opacity: 0 
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    case "Briefcase": return <Briefcase className="w-10 h-10" />,
-    case "Users": return <Users className="w-10 h-10" />,
-    case "HardDrive": return <HardDrive className="w-10 h-10" />,
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />,
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
-  }
-},
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };
-    const cardVariants = {
-  hidden: { scale: 0.95,
-  opacity: 0 
-
-const getSpecialServices = (t: any) => [
-  {
-    title: t('categories.it_onsite_services'),
-    link: "/it-onsite-services"
-import { GradientHeading } from "./GradientHeading",;
-import Link from "next/link",;
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;
-import { cn } from "@/lib/utils",;
-import { useTranslation } from "react-i18next",;
-// This is the type definition copied from Categories.tsx for consistency.;
-// Ideally, this would be in a shared types file.;
-interface CategoryType {;
-  id: string,;
-  name: string,;
-  description?: string,;
-  iconName?: string, // Example field if categories have icons;
-  itemCount?: number, // Example field for number of items in a category;
-  // Add a 'link' property if your API provides it, or construct it.;
-  link?: string;
-}
-;
-// Default static categories with translation keys;
-const getDefaultCategories = (t: any) => [;
-  {;
-    id: "services",;
-    name: t('categories.services'),;
-    description: t('categories.services_desc'),;
-    iconName: "Briefcase", // Corresponds to lucide icon name;
-    link: "/services",;
-    color: "from-purple-500 to-indigo-600", // Keep color for styling;
-  },;
-  {;
-    id: "talents",;
-    name: t('categories.talents'),;
-    description: t('categories.talents_desc'),;
-    iconName: "Users",;
-    link: "/talent",;
-    color: "from-cyan-500 to-blue-600"},;
-  {;
-    id: "equipment",;
-    name: t('categories.equipment'),;
-    description: t('categories.equipment_desc'),;
-    iconName: "HardDrive",;
-    link: "/equipment",;
-    color: "from-amber-500 to-orange-600"},;
-  {;
-    id: "innovation",;
-    name: t('categories.innovation'),;
-    description: t('categories.innovation_desc'),;
-    iconName: "Lightbulb",;
-    link: "/innovation",;
-    color: "from-emerald-500 to-green-600"}],;
-// Helper to get icon component from name;
-const getIcon = (iconName?: string) => {;
-  switch (iconName) {;
-    case "Briefcase": return <Briefcase className="w-10 h-10" />,;
-    case "Users": return <Users className="w-10 h-10" />,;
-    case "HardDrive": return <HardDrive className="w-10 h-10" />,;
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />,;
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon;
-  }
-},;
-const getSpecialServices = (t: any) => [;
-  {;
-    title: t('categories.it_onsite_services'),;
-    link: "/it-onsite-services";
-  }
-],;
-interface CategoriesSectionProps {;
-  showTitle?: boolean,;
-  className?: string,;
-  style?: React.CSSProperties,;
-  categories?: CategoryType[], // Accept categories as a prop;
-}
-
-export function CategoriesSection({
-  showTitle = true,
-  className,
-  style,
-  categories: fetchedCategories, // Rename prop for clarity
-}: CategoriesSectionProps) {
-  const { t } = useTranslation(),
-  const defaultCategories = getDefaultCategories(t),
-  
-
-
-  // Use fetchedCategories if provided, otherwise fallback to defaultCategories
-  const displayCategories = fetchedCategories && fetchedCategories.length > 0
-    ? fetchedCategories.map(cat => ({
-        id: cat.id
-        title: cat.name, // Map name to title
-        description: cat.description |"No description available."
-        icon: getIcon(cat.iconName), // Get icon component
-        link: cat.link |`/category/${cat.id}`, // Construct link if not provided
-        // Assign a default color or implement logic to assign colors
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
-<<<<<<< HEAD
-        title: cat.name
-        icon: getIcon(cat.iconName)}))
-        icon: getIcon(cat.iconName)})),
-
-        ...cat
-        title: cat.name
-        icon: getIcon(cat.iconName)}))
-        ...cat,
-        ...cat,
-        title: cat.name,
-        icon: getIcon(cat.iconName)})),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-        ...cat,
-        ...cat,
-
-
-        title: cat.name,
-        icon: getIcon(cat.iconName)})),
-
-  // If fetchedCategories is an empty array, and we want to show nothing:
-  if (fetchedCategories && fetchedCategories.length === 0) {
-    return (
-      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>
-          <p className="text-zion-slate-light text-lg mb-2">
-            {t('home.no_categories_desc')}
-          </p>
-          <p className="text-zion-slate-light text-md">
-            {t('home.no_categories_support')}
-<<<<<<< HEAD
-// Default static categories with translation keys;
-const getDefaultCategories = (t: any, ) =>: any [;
-  {
-    id: "services",
-    name: t ('categories.services'),
-    description: t ('categories.services_desc'),
-    icon_name: "Briefcase", // Corresponds to lucide icon name;
-    link: "/services",
-    color: "from - purple - 500 to - indigo - 600", // Keep color for styling;
-  }
-  {
-    id: "talents",
-    name: t ('categories.talents'),
-    description: t ('categories.talents_desc'),
-    icon_name: "Users",
-    link: "/talent",
-    color: "from - cyan - 500 to - blue - 600"},
-  {
-    id: "equipment",
-    name: t ('categories.equipment'),
-    description: t ('categories.equipment_desc'),
-    icon_name: "HardDrive",
-    link: "/equipment",
-    color: "from - amber - 500 to - orange - 600"},
-  {
-    id: "innovation",
-    name: t ('categories.innovation'),
-    description: t ('categories.innovation_desc'),
-    icon_name: "Lightbulb",
-    link: "/innovation",
-    color: "from - emerald - 500 to - green - 600"}],
-// Helper to get icon component from name;
-const get_icon = (icon_name?: string, ) =>: any {
-  switch (icon_name) {
-    case "Briefcase": return <Briefcase className="w - 10 h - 10" />;
-    case "Users": return <Users className="w - 10 h - 10" />;
-    case "HardDrive": return <HardDrive className="w - 10 h - 10" />;
-    case "Lightbulb": return <Lightbulb className="w - 10 h - 10" />;
-    default: return <HelpCircle className="w - 10 h - 10" />, // Default icon;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-import { GradientHeading } from "./GradientHeading",;
-import Link from "next/link",;
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;
-import { cn } from "@/lib/utils",;
-import { useTranslation } from "react-i18next",;
-;
-// This is the type definition copied from Categories.tsx for consistency.;
-// Ideally, this would be in a shared types file.;
-interface CategoryType {;
-  id:string,;
-  name:string,;
-  description?:string,;
-  iconName?:string, // Example field if categories have icons;
-  itemCount?:number, // Example field for number of items in a category;
-  // Add a 'link' property if your API provides it, or construct it.;
-  link?:string,;
-}
-;
-// Default static categories with translation keys;
-const getDefaultCategories = (t:any) => [;
-  {;
-    id:"services",;
-    name:t('categories.services'),;
-    description:t('categories.services_desc'),;
-    iconName:"Briefcase", // Corresponds to lucide icon name;
-    link:"/services",;
-    color:"from-purple-500 to-indigo-600", // Keep color for styling;
-  },;
-  {;
-    id:"talents",;
-    name:t('categories.talents'),;
-    description:t('categories.talents_desc'),;
-    iconName:"Users",;
-    link:"/talent",;
-    color:"from-cyan-500 to-blue-600"},;
-  {;
-    id:"equipment",;
-    name:t('categories.equipment'),;
-    description:t('categories.equipment_desc'),;
-    iconName:"HardDrive",;
-    link:"/equipment",;
-    color:"from-amber-500 to-orange-600"},;
-  {;
-    id:"innovation",;
-    name:t('categories.innovation'),;
-    description:t('categories.innovation_desc'),;
-    iconName:"Lightbulb",;
-    link:"/innovation",;
-    color:"from-emerald-500 to-green-600"}],;
-;
-// Helper to get icon component from name;
-const getIcon = (iconName?:string) => {;
-  switch (iconName) {;
-    case "Briefcase":return <Briefcase className="w-10 h-10" />,;
-    case "Users":return <Users className="w-10 h-10" />,;
-    case "HardDrive":return <HardDrive className="w-10 h-10" />,;
-    case "Lightbulb":return <Lightbulb className="w-10 h-10" />,;
-    default:return <HelpCircle className="w-10 h-10" />, // Default icon;
-  }
-},;
-;
-const getSpecialServices = (t:any) => [;
-  {;
-    title:t('categories.it_onsite_services'),;
-    link:"/it-onsite-services";  }
-],;
-;
-interface CategoriesSectionProps {;
-  showTitle?:boolean,;
-  className?:string,;
-  style?:React.CSSProperties,;
-  categories?:CategoryType[], // Accept categories as a prop;
-}
-
-
-          </p>;
-        </div>;
-      </section>;
-    );
-<<<<<<< HEAD
-  }
-ursor/fix-website-loading-errors-and-merge-6662
-        </div>;
-      </section>;
-    );
-
-          </p>
-        </div>
-      </section>
-    )
-  }
-          </p>;
-        </div>;
-      </section>;
-    );
-  }
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayCategories.map((category,) => (
-            <Link
-              key = {category.id,}
-              href = {category.link |'#',}
-=======
-
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }
-  return (
-;
-export function CategoriesSection({;
-  showTitle = true,;
-  className,;
-  style,;
-  categories:fetchedCategories, // Rename prop for clarity;
-} CategoriesSectionProps) {;
-  const { t } = useTranslation(),;
-  const defaultCategories = getDefaultCategories(t),;
-  ;
-  // Use fetchedCategories if provided, otherwise fallback to defaultCategories;
-  const displayCategories = fetchedCategories && fetchedCategories.length > 0;
-    ? fetchedCategories.map(cat => ({;
-        id:cat.id,;
-        title:cat.name, // Map name to title;
-        description:cat.description || "No description available.",;
-        icon:getIcon(cat.iconName), // Get icon component;
-        link:cat.link || `/category/${cat.id}`, // Construct link if not provided;
-        // Assign a default color or implement logic to assign colors;
-        color:defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}));
-    :defaultCategories.map(cat => ({;
-        ...cat,;
-        title:cat.name,;
-        icon:getIcon(cat.iconName)})),;
-;
-  // If fetchedCategories is an empty array, and we want to show nothing:;
-  if (fetchedCategories && fetchedCategories.length === 0) {;
-    return (;
-      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>;
-        <div className="container mx-auto px-4">;
-          <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>;
-          <p className="text-zion-slate-light text-lg mb-2">;
-            {t('home.no_categories_desc')}
-          </p>;
-          <p className="text-zion-slate-light text-md">;
-            {t('home.no_categories_support')}
-          </p>;
-        </div>;
-      </section>;
-    ),;
-  }
-;
-  return (;
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
-      <div className="container mx-auto px-4">;
-        {showTitle && (;
-          <div className="text-center mb-16">;
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayCategories.map((category) => (
-          {displayCategories.map((category,) => (
-          {displayCategories.map((category) => (
-            <Link
-              key={category.id}
-              href={category.link || '#'}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-            >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-white">
-                    {category.icon}
-                  </div>
-                </div>
-                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>
-                <p className="text-zion-slate-light">{category.description}</p>
-              </div>
-            </Link>
-          ))}
-<<<<<<< HEAD
-        </div>
-        </div>;
-=======
-
-
-        </div>;
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {/* Special services section with translations */}
-        <div className="mt-8">
-          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD
-        </div>
-        <div className="mt-8">
-          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {getSpecialServices(t).map((service,) => (
-              <Link
-                key = {service.title,}
-                href = {service.link,}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
-                {service.title}
-              </Link>            ))}
-          </div>
-        </div>
-
-        {/* Special services section with translations */}
-        <div className="mt-8">
-          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-            {getSpecialServices(t).map((service) => (
-              <Link 
-                key={service.title}
-                href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
-                {service.title}
-              </Link>;
-            ))}
-          </div>
-        </div>
-        
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        <div className="mt-12 flex justify-center">
-          <Link
-            href="/categories/all"
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
-          >
-            {t('home.view_all_categories')}
-<<<<<<< HEAD
-          </Link>
-        </div>
-      </div>
-=======
-export function CategoriesSection({
-  showTitle = true
-  className
-  style
-  categories: fetchedCategories, // Rename prop for clarity
-}: CategoriesSectionProps) {
-  const { t } = useTranslation()
-  const defaultCategories = getDefaultCategories(t)
-    case "Briefcase": return <Briefcase className="w-10 h-10" />,
-    case "Users": return <Users className="w-10 h-10" />,
-    case "HardDrive": return <HardDrive className="w-10 h-10" />,
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />,
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
-  }
-},
-
-const getSpecialServices = (t: any) => [
-  {
-    title: t('categories.it_onsite_services'),
-    link: "/it-onsite-services"
-import { GradientHeading } from "./GradientHeading",;
-import Link from "next/link",;
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;
-import { cn } from "@/lib/utils",;
-import { useTranslation } from "react-i18next",;
-// This is the type definition copied from Categories.tsx for consistency.;
-// Ideally, this would be in a shared types file.;
-interface CategoryType {;
-  id: string,;
-  name: string,;
-  description?: string,;
-  iconName?: string, // Example field if categories have icons;
-  itemCount?: number, // Example field for number of items in a category;
-  // Add a 'link' property if your API provides it, or construct it.;
-  link?: string;
-}
-;
-// Default static categories with translation keys;
-const getDefaultCategories = (t: any) => [;
-  {;
-    id: "services",;
-    name: t('categories.services'),;
-    description: t('categories.services_desc'),;
-    iconName: "Briefcase", // Corresponds to lucide icon name;
-    link: "/services",;
-    color: "from-purple-500 to-indigo-600", // Keep color for styling;
-  },;
-  {;
-    id: "talents",;
-    name: t('categories.talents'),;
-    description: t('categories.talents_desc'),;
-    iconName: "Users",;
-    link: "/talent",;
-    color: "from-cyan-500 to-blue-600"},;
-  {;
-    id: "equipment",;
-    name: t('categories.equipment'),;
-    description: t('categories.equipment_desc'),;
-    iconName: "HardDrive",;
-    link: "/equipment",;
-    color: "from-amber-500 to-orange-600"},;
-  {;
-    id: "innovation",;
-    name: t('categories.innovation'),;
-    description: t('categories.innovation_desc'),;
-    iconName: "Lightbulb",;
-    link: "/innovation",;
-    color: "from-emerald-500 to-green-600"}],;
-// Helper to get icon component from name;
-const getIcon = (iconName?: string) => {;
-  switch (iconName) {;
-    case "Briefcase": return <Briefcase className="w-10 h-10" />,;
-    case "Users": return <Users className="w-10 h-10" />,;
-    case "HardDrive": return <HardDrive className="w-10 h-10" />,;
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />,;
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon;
-  }
-},;
-const getSpecialServices = (t: any) => [;
-  {;
-    title: t('categories.it_onsite_services'),;
-    link: "/it-onsite-services";
-  }
-],;
-interface CategoriesSectionProps {;
-  showTitle?: boolean,;
-  className?: string,;
-  style?: React.CSSProperties,;
-  categories?: CategoryType[], // Accept categories as a prop;
-}
-
-export function CategoriesSection({
-  showTitle = true,
-  className,
-  style,
-  categories: fetchedCategories, // Rename prop for clarity
-}: CategoriesSectionProps) {
-  const { t } = useTranslation(),
-  const defaultCategories = getDefaultCategories(t),
-  
-
-
-  // Use fetchedCategories if provided, otherwise fallback to defaultCategories
-  const displayCategories = fetchedCategories && fetchedCategories.length > 0
-    ? fetchedCategories.map(cat => ({
-        id: cat.id
-        title: cat.name, // Map name to title
-        description: cat.description |"No description available."
-        icon: getIcon(cat.iconName), // Get icon component
-        link: cat.link |`/category/${cat.id}`, // Construct link if not provided
-        // Assign a default color or implement logic to assign colors
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
-
-
-        ...cat,
-        ...cat,
-
-
-        title: cat.name,
-        icon: getIcon(cat.iconName)})),
-
-  // If fetchedCategories is an empty array, and we want to show nothing:
-  if (fetchedCategories && fetchedCategories.length === 0) {
-    return (
-      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>
-          <p className="text-zion-slate-light text-lg mb-2">
-            {t('home.no_categories_desc')}
-          </p>
-          <p className="text-zion-slate-light text-md">
-            {t('home.no_categories_support')}
-
-
 import React from 'react';
-        color: defaultCategories && defaultCategories.find(dc => dc && dc.id === cat && cat.id)?.color || "from-gray-500 to-gray-600"}));
-    : defaultCategories && defaultCategories.map(cat => ({;
-        ...cat;
-import { GradientHeading } from "./GradientHeading";
-import Link from "next/link";
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
-// This is the type definition copied from Categories && Categories.tsx for consistency.;
-// Ideally, this would be in a shared types file.;
-interface CategoryType {;
-  id: string,;
-  name: string,;
-  description?: string;
-  iconName?: string, // Example field if categories have icons;
-  itemCount?: number, // Example field for number of items in a category;
-  // Add a 'link' property if your API provides it, or construct it.;
-  link?: string;
- * CategoriesSection function;
- * @param {*} params - Function parameters;
- * @returns {*} Function return value;
- */;
-function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
+import { Link } from 'react-router-dom';
+import { Code, Brain, Shield, Cloud, Database, Globe, Zap, TrendingUp, Users, Lock } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const categories = [{;
-    title: "AI Services",;
-    description: "Cutting - edge AI solutions, chatbots, and machine learning",;
-    icon: "🤖",;
-    link: "/ai - services",;
-    color: "from - purple - 500 to - indigo - 600",,;
-},;
-  {;
-    title: "Micro SAAS",;
-    description: "Cloud - based software solutions for modern businesses",;
-    icon: "☁️",;
-    link: "/micro - saas",;
-    color: "from - cyan - 500 to - blue - 600",,;
-},;
-  {;
-    title: "IT Services",;
-    description: "Infrastructure, security, and technical consulting",;
-    icon: "⚡",;
-    link: "/all - services",;
-    color: "from - amber - 500 to - orange - 600",,;
-},;
-  {;
-    title: "Digital Transformation",;
-    description: "Business modernization and digital strategy",;
-    icon: "📈",;
-    link: "/all - services",;
-    color: "from - emerald - 500 to - green - 600",,;
-},;
-];
-const specialServices = [{;
-    title: "IT Onsite Services",;
-    link: "/it - onsite - services";
-},;
-  {;
-    title: "Comprehensive Services",;
-    link: "/comprehensive - services";
-},;
-  {;
-    title: "Services Comparison",;
-    link: "/services - comparison";
-}
-
-// Default static categories with translation keys;
-const getDefaultCategories = (t: any,) => [;
-  {;
-    id: "services",;
-    name: t('categories && categories.services'),;
-    description: t('categories && categories.services_desc'),;
-    iconName: "Briefcase", // Corresponds to lucide icon name;
-    link: "/services",;
-    color: "from-purple-500 to-indigo-600", // Keep color for styling;
-  };
-  {;
-    id: "talents",;
-    name: t('categories && categories.talents'),;
-    description: t('categories && categories.talents_desc'),;
-    iconName: "Users",;
-    link: "/talent",;
-    color: "from-cyan-500 to-blue-600"},;
-  {;
-    id: "equipment",;
-    name: t('categories && categories.equipment'),;
-    description: t('categories && categories.equipment_desc'),;
-    iconName: "HardDrive",;
-    link: "/equipment",;
-    color: "from-amber-500 to-orange-600"},;
-  {;
-    id: "innovation",;
-    name: t('categories && categories.innovation'),;
-    description: t('categories && categories.innovation_desc'),;
-    iconName: "Lightbulb",;
-    link: "/innovation",;
-    color: "from-emerald-500 to-green-600"}],;
-// Helper to get icon component from name;
-const getIcon = (iconName?: string,) => {;
-  switch (iconName) {;
-    case "Briefcase": return <Briefcase className="w-10 h-10" />;
-    case "Users": return <Users className="w-10 h-10" />;
-    case "HardDrive": return <HardDrive className="w-10 h-10" />;
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon;
-  }
-};
-
-const getSpecialServices = (t: any,) => [;
-  {;
-    title: t('categories && categories.it_onsite_services'),;
-    link: "/it-onsite-services";
-=======
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  t ;
-}= useTranslation ();
-const defaultCategories = getDefaultCategories (t);
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
-<<<<<<< HEAD
-=======
-=======
-  }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+export function CategoriesSection() {
+  const categories = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI & Machine Learning",
+      description: "Cutting-edge AI solutions for business automation and insights",
+      link: "/micro-saas-services",
+      color: "from-zion-cyan to-zion-purple",
+      features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Machine Learning Models"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets",
+      link: "/micro-saas-services",
+      color: "from-zion-red to-zion-orange",
+      features: ["Threat Detection", "Vulnerability Assessment", "Security Monitoring", "Incident Response"]
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Services",
+      description: "Scalable cloud infrastructure and management solutions",
+      link: "/micro-saas-services",
+      color: "from-zion-blue to-zion-cyan",
+      features: ["Cloud Migration", "Infrastructure as Code", "Auto-scaling", "Cost Optimization"]
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Data Analytics",
+      description: "Transform raw data into actionable business insights",
+      link: "/micro-saas-services",
+      color: "from-zion-green to-zion-teal",
+      features: ["Real-time Analytics", "Data Visualization", "Business Intelligence", "Predictive Modeling"]
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Web Development",
+      description: "Modern web applications with cutting-edge technologies",
+      link: "/micro-saas-services",
+      color: "from-zion-purple to-zion-pink",
+      features: ["React/Next.js", "Progressive Web Apps", "API Development", "Performance Optimization"]
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Automation",
+      description: "Streamline workflows with intelligent automation tools",
+      link: "/micro-saas-services",
+      color: "from-zion-yellow to-zion-orange",
+      features: ["Workflow Automation", "Process Optimization", "Integration Tools", "Smart Scheduling"]
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Business Intelligence",
+      description: "Data-driven insights to accelerate business growth",
+      link: "/micro-saas-services",
+      color: "from-zion-indigo to-zion-blue",
+      features: ["KPI Dashboards", "Market Analysis", "Growth Strategies", "Performance Metrics"]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Customer Experience",
+      description: "Enhance customer engagement and satisfaction",
+      link: "/micro-saas-services",
+      color: "from-zion-pink to-zion-rose",
+      features: ["CRM Solutions", "Customer Support", "Feedback Systems", "Personalization"]
+    }
+  ];
 
   return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
-      <div className="container mx-auto px-4">;
-        {showTitle && (;
-          <div className="text-center mb-16">;
-            <GradientHeading>{t('home && home.categories_title')}</GradientHeading>;
-            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
-              {t('home && home.categories_subtitle')}
-            </p>;
-          </div>;
-        )}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayCategories.map((category,) => (
-            <Link
-              key = {category.id,}
-              href = {category.link |'#',}
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-zion-cyan/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl" />
+      </div>
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  id: cat.id;"
-title: cat.name,  //Map name to title description: cat.description |"No description available."
-icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
-  cat.id "
-}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color |"from-gray-500 to-gray-600"
-}) ) : defaultCategories.map (cat => ({
-  ...cat
-title: cat.name
-icon: getIcon (cat.iconName)
-}) )
-//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {
-}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {'
-  t ('home.no categories title') "
-}</h2> <p className="text-zion-slate-light text-lg mb-2" > {'
-  t ('home.no categories desc') "
-}</p> <p className="text-zion-slate-light text-md" > {'
-  t ('home.no categories support')
-}return (</p> </div>)
-}</div> </Link>) )
-}</div> > {
-  service.title
-}</Link>) ) "
-}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {'
-  t ('home.view all categories')
-}</Link> </div> </div> </section>)
-}'"}
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-6">
+            Explore Our Solutions
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover comprehensive micro SAAS services across multiple domains, 
+            designed to accelerate your digital transformation journey.
+          </p>
+        </motion.div>
 
-=======
-            <Link
-              key={category.id}
-              href={category.link || '#'}
-
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {categories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group"
             >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-white">
-                    {category.icon}
+              <Link
+                to={category.link}
+                className="block h-full"
+              >
+                <div className="relative h-full p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-zion-cyan/20">
+                  {/* Gradient Background */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`} />
+                  
+                  {/* Icon */}
+                  <div className="relative z-10 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-xl flex items-center justify-center text-zion-cyan group-hover:scale-110 transition-transform duration-300">
+                      {category.icon}
+                    </div>
                   </div>
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                      {category.title}
+                    </h3>
+                    <p className="text-gray-400 mb-4 text-sm leading-relaxed">
+                      {category.description}
+                    </p>
+                    
+                    {/* Features */}
+                    <ul className="space-y-2">
+                      {category.features.slice(0, 3).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                      {category.features.length > 3 && (
+                        <li className="text-sm text-zion-cyan/70">
+                          +{category.features.length - 3} more features
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+
+                  {/* Hover Effect */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>
-                <p className="text-zion-slate-light">{category.description}</p>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
-        </div>;
 
-
-        {/* Special services section with translations */}
-        <div className="mt-8">
-          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {getSpecialServices(t).map((service,) => (
-              <Link
-                key = {service.title,}
-                href = {service.link,}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
-                {service.title}
-              </Link>            ))}
-          </div>
-        </div>
-            {getSpecialServices(t).map((service) => (
-              <Link 
-                key={service.title}
-                href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
-                {service.title}
-              </Link>;
-            ))}
-          </div>
-        </div>
-        
-
-
-        <div className="mt-12 flex justify-center">
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-16"
+        >
           <Link
-            href="/categories/all"
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
+            to="/micro-saas-services"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
           >
-            {t('home.view_all_categories')}
-
-
-  t ;
-}= useTranslation ();
-const defaultCategories = getDefaultCategories (t);
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
-
-
-  id: cat.id;"
-title: cat.name,  //Map name to title description: cat.description |"No description available."
-icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
-  cat.id "
-}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color |"from-gray-500 to-gray-600"
-}) ) : defaultCategories.map (cat => ({
-  ...cat
-title: cat.name
-icon: getIcon (cat.iconName)
-}) )
-//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {
-}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {'
-  t ('home.no categories title') "
-}</h2> <p className="text-zion-slate-light text-lg mb-2" > {'
-  t ('home.no categories desc') "
-}</p> <p className="text-zion-slate-light text-md" > {'
-  t ('home.no categories support')
-}return (</p> </div>)
-}</div> </Link>) )
-}</div> > {
-  service.title
-}</Link>) ) "
-}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {'
-  t ('home.view all categories')
-}</Link> </div> </div> </section>)
-}'"}
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
-          {displayCategories && displayCategories.map((category,) => (;
-            <Link
-              key = {category && category.id,}
-              href = {category && category.link || '#',}
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">;
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">;
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category && category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <div className="text-white">;
-                    {category && category.icon}
-                  </div>;
-                </div>;
-                <h3 className="text-white text-xl font-bold mb-2">{category && category.title}</h3>;
-                <p className="text-zion-slate-light">{category && category.description}</p>;
-              </div>;
-            </Link>;
-          ))}
-        </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        {/* Special services section with translations */}
-        <div className="mt-8">;
-          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home && home.featured_services')}</h3>;
-          <div className="flex flex-wrap justify-center gap-4">;
-            {getSpecialServices(t).map((service,) => (;
-              <Link
-                key = {service && service.title,}
-                href = {service && service.link,}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">;
-                {service && service.title}
-              </Link>            ))}
-          </div>;
-        </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <div className="mt-12 flex justify-center">;
-          <Link
-            href="/categories/all"
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors">;
-            {t('home && home.view_all_categories')}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <GradientHeading>{t('home.categories_title')}</GradientHeading>;
-            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
-              {t('home.categories_subtitle')}
-            </p>;
-          </div>;
-        )}
-        ;
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
-          {displayCategories.map((category) => (;
-            <Link;
-              key={category.id}
-              href={category.link || '#'}
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan";
-            >;
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">;
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <div className="text-white">;
-                    {category.icon}
-                  </div>;
-                </div>;
-                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>;
-                <p className="text-zion-slate-light">{category.description}</p>;
-              </div>;
-            </Link>;          ))}
-        </div>;
-        ;
-        {/* Special services section with translations */}
-        <div className="mt-8">;
-          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>;
-          <div className="flex flex-wrap justify-center gap-4">;
-            {getSpecialServices(t).map((service) => (;
-              <Link ;
-                key={service.title}
-                href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300";
-              >;
-                {service.title}
-              </Link>;
-            ))}
-          </div>;
-        </div>;
-        ;
-        <div className="mt-12 flex justify-center">;
-          <Link ;
-            href="/categories/all";
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors";
-          >;
-            {t('home.view_all_categories')}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          </Link>;
-        </div>;
-      </div>;
-    </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  switch (iconName) {;
-};
-const getSpecialServices = (t: any) => [ {;
-  title: t ('categories && categories.it onsite services');
-link: "/it-onsite-services" ;
-}];
-interface CategoriesSectionProps {;
-  showTitle?: boolean;
-className?: string;
-style?: React && React.CSSProperties;
-categories?: CategoryType[], //Accept categories as a prop ;
-}export function CategoriesSection(): any ({;
-  showTitle = true;
-className;
-style;
-categories: fetchedCategories, //Rename prop for clarity ;
-}: CategoriesSectionProps) {;
-  const {;
-  t ;
-}= useTranslation ();
-const defaultCategories = getDefaultCategories (t);
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories && fetchedCategories.map (cat => ({;
-  id: cat && cat.id;";
-title: cat && cat.name,  //Map name to title description: cat && cat.description || "No description available.";
-icon: getIcon (cat && cat.iconName), //Get icon component link: cat && cat.link || `/category/$ {;
-  cat && cat.id ";
-}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories && defaultCategories.find (dc => dc && dc.id === cat && cat.id) ?.color || "from-gray-500 to-gray-600" ;
-}) ) : defaultCategories && defaultCategories.map (cat => ({;
-  ...cat;
-title: cat && cat.name;
-icon: getIcon (cat && cat.iconName) ;
-}) );
-//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
-}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
-  t ('home && home.no categories title') ";
-}</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
-  t ('home && home.no categories desc') ";
-}</p> <p className="text-zion-slate-light text-md" > {';
-  t ('home && home.no categories support') ;
-}return (</p> </div>) ;
-}</div> </Link>) ) ;
-}</div> > {;
-  service && service.title ;
-}</Link>) ) ";
-}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
-  t ('home && home.view all categories') ;
-}</Link> </div> </div> </section>) ;
-}'"}
-=======
-  );
-
-                  {/* Title and description */}
-                  <h3 className="text-white text-2xl font-bold mb-3 group-hover:text-zion-cyan transition-colors">
-                    {category.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-6 leading-relaxed">
-                    {category.description}
-                  </p>
-
-                  {/* Features list */}
-                  <div className="space-y-2 mb-6">
-                    {category.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
-                        <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                        <span>{feature}</span>
-                      </div>))}
-                  </div>
-=======
-  );
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-export /**
- * CategoriesSection - Function description
- */
-function CategoriesSection() {
-  const { t } = use_translation ();
-  const default_categories = getDefaultCategories (t);
-  // Use fetched_categories if provided, otherwise fallback to default_categories;
-  const display_categories = fetched_categories && fetched_categories.length > 0;
-    ? fetched_categories.map (cat => ({
-        id: cat.id,
-        title: cat.name, // Map name to title;
-        description: cat.description || "No description available.",
-        icon: get_icon (cat.icon_name), // Get icon component;
-        link: cat.link || `/category/${cat.id}`, // Construct link if not provided;
-        // Assign a default color or implement logic to assign colors;
-        color: default_categories.find (dc => dc.id === cat.id)?.color || "from - gray - 500 to - gray - 600"}));
-    : default_categories.map (cat => ({
-        ...cat;
-        title: cat.name,
-        icon: get_icon (cat.icon_name)})),
-  // If fetched_categories is an empty array, and we want to show nothing:;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <section className={cn ("py - 20 bg - zion - blue text - center", class_name)} style={style}>;
-        <div className="container mx - auto px - 4">;
-          <h2 className="text - 3xl font - semibold text - white mb - 4">{t ('home.no_categories_title')}</h2>;
-          <p className="text - zion - slate - light text - lg mb - 2">;
-            {t ('home.no_categories_desc')}
-          </p>;
-          <p className="text - zion - slate - light text - md">;
-            {t ('home.no_categories_support')}
-          </p>;
-        </div>;
-      </section>);
-  }
-  return (
-    <section className={cn ("py - 20 bg - zion - blue", class_name)} style={style}>;
-      <div className="container mx - auto px - 4">;
-        {show_title && (
-          <div className="text - center mb - 16">;
-            <GradientHeading>{t ('home.categories_title')}</GradientHeading>;
-            <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">;
-              {t ('home.categories_subtitle')}
-            </p>;
-          </div>)}
-        <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-          {display_categories.map ((category, ) => (
-            <Link;
-              key = {category.id, }
-              href = {category.link || '#', }
-              className="group block rounded - lg focus:outline - none focus:ring - 2 focus:ring - zion - cyan";
-            >;
-              <div className="rounded - lg overflow - hidden h - full border border - zion - blue - light bg - zion - blue - dark p - 6 transition - all duration - 300 group - hover:border - zion - purple / 50 group - focus:border - zion - purple / 50 hover:translate - y-[-5px] group - hover:shadow - lg">;
-                <div className={`rounded - full w - 16 h - 16 bg - gradient - to - br ${category.color} flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
-                  <div className="text - white">;
-                    {category.icon}
-                  </div>;
-                </div>;
-                <h3 className="text - white text - xl font - bold mb - 2">{category.title}</h3>;
-                <p className="text - zion - slate - light">{category.description}</p>;
-              </div>;
-            </Link>))}
-        </div>;
-        {/* Special services section with translations */}
-        <div className="mt - 8">;
-          <h3 className="text - center text - xl font - bold text - white mb - 6">{t ('home.featured_services')}</h3>;
-          <div className="flex flex - wrap justify - center gap - 4">;
-            {getSpecialServices (t).map ((service, ) => (
-              <Link;
-                key = {service.title, }
-                href = {service.link, }
-                className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300";
-              >;
-                {service.title}
-              </Link>            ))}
-          </div>;
-        </div>;
-        <div className="mt - 12 flex justify - center">;
-          <Link;
-            href="/categories / all";
-            className="text - zion - cyan border - b border - zion - cyan hover:border - zion - cyan - dark transition - colors";
-          >;
-            {t ('home.view_all_categories')}
-          </Link>;
-        </div>;
-      </div>;
-    </section>);
-  switch (icon_name) {
-}
-const getSpecialServices = (t: any) =>: any [ {
-  title: t ('categories.it onsite services');
-link: "/it - onsite - services";
-}];
-interface CategoriesSectionProps {
-  show_title?: boolean;
-class_name?: string;
-style?: React.CSSProperties;
-categories?: CategoryType[], //Accept categories as a prop;
-}export /**
- * CategoriesSection - Function description
- */
-function CategoriesSection() {
-  const {
-  t;
-}= use_translation ();
-const default_categories = getDefaultCategories (t);
-//Use fetched_categories if provided, otherwise fallback to default_categories const display_categories = fetched_categories && fetched_categories.length > 0 ? fetched_categories.map (cat => ({
-  id: cat.id;";
-title: cat.name,  //Map name to title description: cat.description || "No description available.";
-icon: get_icon (cat.icon_name), //Get icon component link: cat.link || `/category/$ {
-  cat.id ";
-}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: default_categories.find (dc => dc.id === cat.id) ?.color || "from - gray - 500 to - gray - 600";
-}) ) : default_categories.map (cat => ({
-  ...cat;
-title: cat.name;
-icon: get_icon (cat.icon_name);
-}) );
-//If fetched_categories is an empty array, and we want to show nothing: // Check condition
-if ( {) {
-  $2
-}
-}> <div className="container mx - auto px - 4" > <h2 className="text - 3xl font - semibold text - white mb - 4" > {';
-  t ('home.no categories title') ";
-}</h2> <p className="text - zion - slate - light text - lg mb - 2" > {';
-  t ('home.no categories desc') ";
-}</p> <p className="text - zion - slate - light text - md" > {';
-  t ('home.no categories support');
-}return (</p> </div>);
-}</div> </Link>) );
-}</div> > {
-  service.title;
-}</Link>) ) ";
-}</div> </div> <div className="mt - 12 flex justify - center" > <Link href="/categories / all" className="text - zion - cyan border - b border - zion - cyan hover:border - zion - cyan - dark transition - colors" > {';
-  t ('home.view all categories');
-}</Link> </div> </div> </section>);
-}'"}
-<<<<<<< HEAD
-  ),;   switch (iconName) {;
-  ;
-}
-};
-const getSpecialServices = (t: any) => [ {;
-  title: t ('categories.it onsite services');
-link: "/it-onsite-services" ;
-}];
-interface CategoriesSectionProps {;
-  showTitle?: boolean;
-className?: string;
-style?: React.CSSProperties;
-categories?: CategoryType[], //Accept categories as a prop ;
-}export function CategoriesSection ({;
-  showTitle = true;
-className;
-style;
-categories: fetchedCategories, //Rename prop for clarity ;
-}: CategoriesSectionProps) {;
-  const {;
-  t ;
-}= useTranslation ();
-const defaultCategories = getDefaultCategories (t);
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
-  id: cat.id;";
-title: cat.name,  //Map name to title description: cat.description || "No description available.";
-icon: getIcon (cat.iconName), //Get icon component link: cat.link || `/category/$ {;
-  cat.id ";
-}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color || "from-gray-500 to-gray-600" ;
-}) ) : defaultCategories.map (cat => ({;
-  ...cat;
-title: cat.name;
-icon: getIcon (cat.iconName) ;
-}) );
-//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
-  return (<section className= {";
-  cn ("py-20 bg-zion-blue text-center", className) ;
-}style= {;
-  style ";
-}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
-  t ('home.no categories title') ";
-}</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
-  t ('home.no categories desc') ";
-}</p> <p className="text-zion-slate-light text-md" > {';
-  t ('home.no categories support') ;
-}
-}return (</p> </div>) ;
-}</div> </Link>) ) ;
-}</div> > {;
-  service.title ;
-}</Link>) ) ";
-}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
-  t ('home.view all categories') ;
-}</Link> </div> </div> </section>) ;
-}'"
+            View All Services
+            <motion.div
+              className="ml-2"
+              animate={{ x: [0, 5, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            >
+              →
+            </motion.div>
+          </Link>
+        </motion.div>
+      </div>
+    </section>
   );
 }
-;
-}
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

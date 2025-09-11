@@ -1,23 +1,13 @@
-backup-problematic-files/
-backup/
-cache/
-clean-build/
-temp_conflicts/
-temp_broken_files/
-temp_backup/
-zion-os/
-zion-ai-assistant/
-test-*.js
-test-*.cjs
-ultimate-*.js
-ultimate-*.cjs
-tools/
-tests/
-**/backup-problematic-files/**
-**/backup/**
-**/temp_*/**
-**/zion-*/**
-**/test-*/**
-**/ultimate-*/**
-**/tools/**
-**/tests/**
+# Build output
+.next/
+out/
+dist/
+coverage/
+
+# Dependencies
+node_modules/
+
+# Generated artifacts
+*.log
+**/*.generated.*
+zion.app/recovered-content/**

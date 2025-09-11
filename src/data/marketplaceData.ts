@@ -1,7 +1,14 @@
-export const MARKETPLACE_LISTINGS = [
-  {
-    id: '1',
-    title: 'Sample Listing',
-    description: 'A sample marketplace listing',
-    price: 100,
-  },
+export function generateSearchSuggestions(): string[] {
+  return [
+    'AI Development',
+    'Cybersecurity',
+    'Cloud Migration',
+    'Data Analytics',
+    'Web Development',
+    'Mobile Apps',
+    'Blockchain',
+    'IoT Solutions',
+    'Machine Learning',
+    'DevOps Services'
+  ];
+}

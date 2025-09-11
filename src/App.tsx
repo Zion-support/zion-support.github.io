@@ -1,85 +1,103 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import LoadingSpinner from './components/LoadingSpinner';
-import Button from './components/Button';
-import Card from './components/Card';
-import ServiceCard from './components/ServiceCard';
+import React, { Suspense, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Toaster } from 'sonner';
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { LoadingSpinner } from '@/components/ui/loading-spinner';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 
-// Service pages
-const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity'));
-const CloudMigration = React.lazy(() => import('./pages/CloudMigration'));
-const DevOps = React.lazy(() => import('./pages/DevOps'));
-const MobileDevelopment = React.lazy(() => import('./pages/MobileDevelopment'));
+// Create a client
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutes
+      retry: 1,
+    },
+  },
+});
 
-const App = () => {
-  return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-          <Header />
-          <div className="flex">
-            <Sidebar />
-            <main className="flex-1">
-              <React.Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/services" element={<Services />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                  <Route path="/services/cloud-migration" element={<CloudMigration />} />
-                  <Route path="/services/devops" element={<DevOps />} />
-                  <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-                </Routes>
-              </React.Suspense>
-            </main>
-          </div>
-          <Footer />
-          <PerformanceMonitor />
-        </div>
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function AppContent() {
+  const { user, isLoading } = useAuth();
+  const { isWhitelabel } = useWhitelabel();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center">
+        <LoadingSpinner size="lg" />
       </div>
-    </div>
-  </div>
-);
+    );
+  }
 
-const App = () => {
+  const baseRoutes = [
+    { path: '/', element: <Home /> },
+    { path: '/about', element: <About /> },
+    { path: '/contact', element: <Contact /> },
+    { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
+    { path: '*', element: <NotFound /> }
+  ];
+
+  const allRoutes = baseRoutes;
+
+  return (
+    <div className="min-h-screen bg-zion-blue-dark">
+      <Header />
+      <main>
+        <Suspense fallback={
+          <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center">
+            <LoadingSpinner size="lg" />
+          </div>
+        }>
+          <Routes>
+            {allRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+          </Routes>
+        </Suspense>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export default function App() {
   return (
     <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Header />
-          <main>
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/cybersecurity" element={<Cybersecurity />} />
-                <Route path="/cloud-migration" element={<CloudMigration />} />
-                <Route path="/devops" element={<DevOps />} />
-                <Route path="/mobile-development" element={<MobileDevelopment />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <ScrollToTop />
+          <AppContent />
+          <Toaster 
+            position="top-right"
+            toastOptions={{
+              style: {
+                background: '#1e293b',
+                color: '#e2e8f0',
+                border: '1px solid #475569'
+              }
+            }}
+          />
+        </Router>
+      </QueryClientProvider>
     </ErrorBoundary>
   );
-};
-
-export default App;
+}

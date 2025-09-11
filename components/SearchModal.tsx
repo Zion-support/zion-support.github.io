@@ -1,758 +1,406 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+import { useState, useEffect, useRef, useMemo } from 'react';
+import Link from 'next/link';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React, { useState, useEffect, useRef } from './react';
-import { Search, X, ArrowRight, Clock  } from './lucide-react';
-import Link from './next / link';
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchResult {
-interface SearchResult {;
+  id: string;
   title: string;
+  type: 'service' | 'product' | 'case-study' | 'blog' | 'testimonial' | 'career';
   description: string;
   url: string;
-  category: string;
+  category?: string;
+  tags?: string[];
+  relevance: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchModalProps {
-  is_open: boolean;
-  on_close: () => void;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-const search_data: SearchResult[] = [;
-  // Services;
-  {
-    title: "AI Services",
-    description: "Machine learning, computer vision, NLP, and AI solutions",
-    url: "/ai - services",
-    category: "Services",
-  },
-  {
-    title: "IT Services",
-    description: "Cloud infrastructure, cybersecurity, and IT solutions",
-    url: "/it - services",
-    category: "Services",
-  },
-  {
-    title: "Micro SaaS",
-    description: "Custom micro SaaS platforms and automation tools",
-    url: "/micro - saas",
-    category: "Services",
-  },
-  {
-    title: "Cloud Solutions",
-    description: "AWS, Azure, GCP migration and cloud infrastructure",
-    url: "/cloud - solutions",
-    category: "Services",
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  {
-    title: "Cybersecurity"
-    description: "Security audits, penetration testing, and compliance"
-    url: "/cybersecurity"
-    category: "Services"
-  }
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    title: "Blockchain Solutions",
-    description: "Smart contracts, DeFi, and blockchain development",
-    url: "/blockchain - services",
-    category: "Services",
-  },
-  // Solutions;
-  {
-    title: "Digital Transformation",
-    description: "Complete digital transformation solutions",
-    url: "/digital - transformation",
-    category: "Solutions",
-  },
-  {
-    title: "Enterprise Solutions",
-    description: "Large - scale enterprise technology solutions",
-    url: "/enterprise - solutions",
-    category: "Solutions",
-  },
-  {
-    title: "Startup Solutions",
-    description: "Technology solutions for startups and SMBs",
-    url: "/startup - solutions",
-    category: "Solutions",
-  },
-  // Industries;
-  {
-    title: "Healthcare",
-    description: "Technology solutions for healthcare industry",
-    url: "/industries / healthcare",
-    category: "Industries",
-  },
-  {
-    title: "Finance",
-    description: "Financial technology and fintech solutions",
-    url: "/industries / finance",
-    category: "Industries",
-  },
-  {
-    title: "Education",
-    description: "Educational technology and e - learning solutions",
-    url: "/industries / education",
-    category: "Industries",
-  },
-  {
-    title: "Manufacturing",
-    description: "Industrial IoT and manufacturing automation",
-    url: "/industries / manufacturing",
-    category: "Industries",
-  },
-  // Company;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  {
-    title: "About Us"
-    description: "Learn about Zion Tech Group and our mission"
-    url: "/about"
-    category: "Company"
-  }
-  {
-    title: "Contact"
-    description: "Get in touch with our team"
-    url: "/contact"
-    category: "Company"
-  }
-  {
-    title: "Careers"
-    description: "Join our team and build the future"
-    url: "/careers"
-    category: "Company"
-  }
-  {
-    title: "Blog"
-    description: "Latest insights and technology trends"
-    url: "/blog"
-    category: "Company"
-  }
-  {
-    title: "Pricing"
-    description: "Transparent pricing for all our services"
-    url: "/pricing"
-    category: "Company"
-  }
-];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  useEffect(() => {;
-    if (isOpen && inputRef && inputRef.current) {;
-      inputRef && inputRef.current.focus();
-
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
-
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-interface SearchModalProps {;
   isOpen: boolean;
   onClose: () => void;
 }
-const searchData: SearchResult[] = [;
-  // Services;
-  {;
-    title: "AI Services",;
-    description: "Machine learning, computer vision, NLP, and AI solutions",;
-    url: "/ai-services",;
-    category: "Services",;
-  },;
-  {;
-    title: "IT Services",;
-    description: "Cloud infrastructure, cybersecurity, and IT solutions",;
-    url: "/it-services",;
-    category: "Services",;
-  },;
-  {;
-    title: "Micro SaaS",;
-    description: "Custom micro SaaS platforms and automation tools",;
-    url: "/micro-saas",;
-    category: "Services",;
-  },;
-  {;
-    title: "Cloud Solutions",;
-    description: "AWS, Azure, GCP migration and cloud infrastructure",;
-    url: "/cloud-solutions",;
-    category: "Services",;
-  },;
-  {;
-    title: "Cybersecurity",;
-    description: "Security audits, penetration testing, and compliance",;
-    url: "/cybersecurity",;
-    category: "Services",;
-  },;
-  {;
-    title: "Blockchain Solutions",;
-    description: "Smart contracts, DeFi, and blockchain development",;
-    url: "/blockchain-services",;
-    category: "Services",;
-  },;
-  // Solutions;
-  {;
-    title: "Digital Transformation",;
-    description: "Complete digital transformation solutions",;
-    url: "/digital-transformation",;
-    category: "Solutions",;
-  },;
-  {;
-    title: "Enterprise Solutions",;
-    description: "Large-scale enterprise technology solutions",;
-    url: "/enterprise-solutions",;
-    category: "Solutions",;
-  },;
-  {;
-    title: "Startup Solutions",;
-    description: "Technology solutions for startups and SMBs",;
-    url: "/startup-solutions",;
-    category: "Solutions",;
-  },;
-  // Industries;
-  {;
-    title: "Healthcare",;
-    description: "Technology solutions for healthcare industry",;
-    url: "/industries/healthcare",;
-    category: "Industries",;
-  },;
-  {;
-    title: "Finance",;
-    description: "Financial technology and fintech solutions",;
-    url: "/industries/finance",;
-    category: "Industries",;
-  },;
-  {;
-    title: "Education",;
-    description: "Educational technology and e-learning solutions",;
-    url: "/industries/education",;
-    category: "Industries",;
-  },;
-  {;
-    title: "Manufacturing",;
-    description: "Industrial IoT and manufacturing automation",;
-    url: "/industries/manufacturing",;
-    category: "Industries",;
-  },;
-  // Company;
-  {;
-    title: "About Us",;
-    description: "Learn about Zion Tech Group and our mission",;
-    url: "/about",;
-    category: "Company",;
-  },;
-  {;
-    title: "Contact",;
-    description: "Get in touch with our team",;
-    url: "/contact",;
-    category: "Company",;
-  },;
-  {;
-    title: "Careers",;
-    description: "Join our team and build the future",;
-    url: "/careers",;
-    category: "Company",;
-  },;
-  {;
-    title: "Blog",;
-    description: "Latest insights and technology trends",;
-    url: "/blog",;
-    category: "Company",;
-  },;
-  {;
-    title: "Pricing",;
-    description: "Transparent pricing for all our services",;
-    url: "/pricing",;
-    category: "Company",;
-  },;
-];
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const [query, setQuery] = useState("");
+const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
+  const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const inputRef = useRef<HTMLInputElement>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
+  const [isSearching, setIsSearching] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Mock search data - in a real app, this would come from an API or search service
+  const searchData: SearchResult[] = useMemo(() => [
+    // Services
+    {
+      id: 'ai-fraud-detection',
+      title: 'AI-Powered Fraud Detection System',
+      type: 'service',
+      description: 'Advanced machine learning system that detects fraudulent transactions with 89% accuracy',
+      url: '/services',
+      category: 'AI & Machine Learning',
+      tags: ['AI', 'fraud detection', 'machine learning', 'security'],
+      relevance: 95
+    },
+    {
+      id: 'cloud-migration',
+      title: 'Cloud Migration & Optimization',
+      type: 'service',
+      description: 'Seamless cloud migration services with 99.9% uptime guarantee',
+      url: '/services',
+      category: 'Cloud & Infrastructure',
+      tags: ['cloud', 'migration', 'AWS', 'Azure', 'optimization'],
+      relevance: 90
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity & Compliance',
+      type: 'service',
+      description: 'Comprehensive security solutions including SOC2 and ISO27001 compliance',
+      url: '/services',
+      category: 'Security',
+      tags: ['cybersecurity', 'compliance', 'SOC2', 'ISO27001', 'security'],
+      relevance: 88
+    },
+    // Products
+    {
+      id: 'quantum-ai-analytics',
+      title: 'Quantum AI Analytics Platform',
+      type: 'product',
+      description: 'Next-generation analytics platform leveraging quantum computing principles',
+      url: '/products',
+      category: 'AI Solutions',
+      tags: ['AI', 'analytics', 'quantum', 'machine learning'],
+      relevance: 92
+    },
+    {
+      id: 'autonomous-devops',
+      title: 'Autonomous DevOps Platform',
+      type: 'product',
+      description: 'Self-healing infrastructure with automated deployment and monitoring',
+      url: '/products',
+      category: 'DevOps',
+      tags: ['DevOps', 'automation', 'CI/CD', 'monitoring'],
+      relevance: 87
+    },
+    // Case Studies
+    {
+      id: 'securebank-case',
+      title: 'SecureBank Corp - AI Fraud Detection',
+      type: 'case-study',
+      description: 'Implemented AI fraud detection system achieving 89% fraud reduction',
+      url: '/case-studies',
+      category: 'Financial Services',
+      tags: ['AI', 'fraud detection', 'banking', 'machine learning'],
+      relevance: 85
+    },
+    {
+      id: 'medicore-case',
+      title: 'MediCore Health - AI Diagnostics',
+      type: 'case-study',
+      description: 'AI medical diagnostics platform with 94% accuracy improvement',
+      url: '/case-studies',
+      category: 'Healthcare',
+      tags: ['AI', 'healthcare', 'diagnostics', 'machine learning'],
+      relevance: 83
+    },
+    // Blog Posts
+    {
+      id: 'ai-trends-2024',
+      title: 'AI Trends That Will Dominate 2024',
+      type: 'blog',
+      description: 'Explore the cutting-edge AI technologies and trends shaping the future',
+      url: '/blog',
+      category: 'AI & Technology',
+      tags: ['AI', 'trends', 'technology', '2024', 'machine learning'],
+      relevance: 80
+    },
+    {
+      id: 'cloud-security',
+      title: 'Essential Cloud Security Best Practices',
+      type: 'blog',
+      description: 'Learn the critical security measures for protecting your cloud infrastructure',
+      url: '/blog',
+      category: 'Security',
+      tags: ['cloud', 'security', 'best practices', 'infrastructure'],
+      relevance: 78
+    },
+    // Testimonials
+    {
+      id: 'sarah-mitchell',
+      title: 'Sarah Mitchell - SecureBank Corp',
+      type: 'testimonial',
+      description: 'Chief Risk Officer shares success story of AI fraud detection implementation',
+      url: '/testimonials',
+      category: 'Financial Services',
+      tags: ['testimonial', 'AI', 'fraud detection', 'banking'],
+      relevance: 75
+    },
+    // Careers
+    {
+      id: 'senior-ai-engineer',
+      title: 'Senior AI Engineer Position',
+      type: 'career',
+      description: 'Join our AI team to develop cutting-edge machine learning models',
+      url: '/careers',
+      category: 'AI & Machine Learning',
+      tags: ['career', 'AI', 'machine learning', 'engineering'],
+      relevance: 70
+    }
+  ], []);
+
   useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-  useEffect(() => {;
-    if (isOpen && inputRef && inputRef.current) {;
-      inputRef && inputRef.current.focus();
-    }
-  }, [isOpen]);
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  useEffect(() => {;
-    // Load recent searches from localStorage;
-    const saved = localStorage && localStorage.getItem("recent-searches");
-    if (saved) {;
-      setRecentSearches(JSON && JSON.parse(saved));
-    }
-  }, []);
-  useEffect(() => {;
-    if (query && query.trim()) {;
-      const filtered = searchData && searchData.filter(;
-        (item) =>;
-          item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
-          item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
-          item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      );
-      setResults(filtered);
-    } else {;
+    if (isOpen) {
+      searchInputRef.current?.focus();
+      setSearchTerm('');
       setResults([]);
-;
-export default /**
- * SearchModal - Function description
- */
-function SearchModal() {
-  const [query, set_query] = useState ("");
-  const [results, set_results] = useState < SearchResult[]>([]);
-  const [recent_searches, setRecentSearches] = useState < string[]>([]);
-  const [selected_index, setSelectedIndex] = useState (0);
-  const input_ref = useRef < HTMLInputElement>(null);
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      input_ref.current.focus ();
+      setSelectedIndex(-1);
     }
-  }, [is_open]);
-;
-  useEffect (() => {
-    // Load recent searches from local_storage;
-    const saved = local_storage.get_item ("recent - searches");
-    // Check condition
-if ( {) {
-  $2
-}
-      setRecentSearches (JSON.parse (saved));
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.addEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'hidden';
     }
-  }, []);
-;
-  useEffect (() => {
-    if () {) {
-  $2
-}
-      const filtered = search_data.filter (
-        (item) =>;
-          item.title.toLowerCase ().includes (query.toLowerCase ()) ||;
-          item.description.toLowerCase ().includes (query.toLowerCase ()) ||;
-          item.category.toLowerCase ().includes (query.toLowerCase ()),
-      );
-      set_results (filtered);
-    } else {
-      set_results ([]);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen, onClose]);
+
+  useEffect(() => {
+    if (searchTerm.trim().length < 2) {
+      setResults([]);
+      return;
     }
-    setSelectedIndex (0);
-  }, [query]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === "Escape") {;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
+    setIsSearching(true);
+    
+    // Simulate search delay
+    const timeoutId = setTimeout(() => {
+      const searchResults = searchData
+        .filter(item => {
+          const searchLower = searchTerm.toLowerCase();
+          return (
+            item.title.toLowerCase().includes(searchLower) ||
+            item.description.toLowerCase().includes(searchLower) ||
+            item.category?.toLowerCase().includes(searchLower) ||
+            item.tags?.some(tag => tag.toLowerCase().includes(searchLower))
+          );
+        })
+        .sort((a, b) => b.relevance - a.relevance)
+        .slice(0, 10);
 
-  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === "Escape") {;
+      setResults(searchResults);
+      setIsSearching(false);
+    }, 300);
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      onClose();
-    } else if (e && e.key === "ArrowDown") {;
-      e && e.preventDefault();
-      setSelectedIndex((prev) => Math && Math.min(prev + 1, results && results.length - 1));
-    } else if (e && e.key === "ArrowUp") {;
-      e && e.preventDefault();
-      setSelectedIndex((prev) => Math && Math.max(prev - 1, 0));
-    } else if (e && e.key === "Enter" && results[selectedIndex]) {;
-      handleResultClick(results[selectedIndex]);
+    return () => clearTimeout(timeoutId);
+  }, [searchTerm, searchData]);
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setSelectedIndex(prev => Math.min(prev + 1, results.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setSelectedIndex(prev => Math.max(prev - 1, -1));
+    } else if (e.key === 'Enter' && selectedIndex >= 0) {
+      e.preventDefault();
+      const selectedResult = results[selectedIndex];
+      if (selectedResult) {
+        window.location.href = selectedResult.url;
+        onClose();
+      }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
-  const handleResultClick = (result: SearchResult) => {;
-    // Add to recent searches;
-    const newRecent = [;
-      result && result.title,;
-      ...recentSearches && recentSearches.filter((s) => s !== result && result.title),;
-    ].slice(0, 5);
-    setRecentSearches(newRecent);
-    localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent));
-    // Navigate to result;
-    window && window.location.href = result && result.url;
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'service': return '🚀';
+      case 'product': return '💎';
+      case 'case-study': return '📊';
+      case 'blog': return '📝';
+      case 'testimonial': return '⭐';
+      case 'career': return '💼';
+      default: return '📄';
+    }
   };
-  const handleRecentClick = (search: string) => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+  const getTypeLabel = (type: string) => {
+    switch (type) {
+      case 'service': return 'Service';
+      case 'product': return 'Product';
+      case 'case-study': return 'Case Study';
+      case 'blog': return 'Blog Post';
+      case 'testimonial': return 'Testimonial';
+      case 'career': return 'Career';
+      default: return 'Page';
+    }
+  };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    setQuery(search);
-  }
   if (!isOpen) return null;
+
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">;
-      <div className="flex min-h-screen items-start justify-center p-4 pt-16">;
-        {/* Backdrop */}
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
-          onClick={onClose}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        />;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-        />;
-
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        {/* Modal */}
-        <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
-          {/* Search Input */}
-          <div className="flex items-center p-4 border-b">;
-            <Search className="w-5 h-5 text-gray-400 mr-3" />;
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20">
+      <div 
+        ref={modalRef}
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[80vh] overflow-hidden"
+      >
+        {/* Search Header */}
+        <div className="p-6 border-b border-gray-200">
+          <div className="relative">
             <input
-              ref={inputRef}
+              ref={searchInputRef}
               type="text"
-              value={query}
-              onChange={(e) => setQuery(e && e.target.value)}
+              placeholder="Search services, products, case studies, blog posts..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Search services, solutions, industries...";
-              className="flex-1 text-lg outline-none";
-            />;
+              className="w-full pl-12 pr-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+              🔍
+            </div>
+            {isSearching && (
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Search Results */}
+        <div className="max-h-[60vh] overflow-y-auto">
+          {searchTerm.length > 0 && (
+            <>
+              {results.length > 0 ? (
+                <div className="p-4">
+                  <div className="text-sm text-gray-500 mb-4">
+                    Found {results.length} result{results.length !== 1 ? 's' : ''}
+                  </div>
+                  <div className="space-y-2">
+                    {results.map((result, index) => (
+                      <Link
+                        key={result.id}
+                        href={result.url}
+                        onClick={onClose}
+                        className={`block p-4 rounded-lg border transition-all duration-200 ${
+                          index === selectedIndex
+                            ? 'border-blue-500 bg-blue-50'
+                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                        }`}
+                      >
+                        <div className="flex items-start space-x-3">
+                          <div className="text-2xl">{getTypeIcon(result.type)}</div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center space-x-2 mb-1">
+                              <h3 className="font-semibold text-gray-900 truncate">
+                                {result.title}
+                              </h3>
+                              <span className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-full">
+                                {getTypeLabel(result.type)}
+                              </span>
+                            </div>
+                            <p className="text-sm text-gray-600 line-clamp-2 mb-2">
+                              {result.description}
+                            </p>
+                            {result.category && (
+                              <div className="text-xs text-gray-500">
+                                Category: {result.category}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : !isSearching && (
+                <div className="p-8 text-center text-gray-500">
+                  <div className="text-4xl mb-4">🔍</div>
+                  <p className="text-lg">No results found for &quot;{searchTerm}&quot;</p>
+                  <p className="text-sm mt-2">Try different keywords or browse our categories</p>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* Quick Links */}
+          {searchTerm.length === 0 && (
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+              <div className="grid grid-cols-2 gap-3">
+                <Link
+                  href="/services"
+                  onClick={onClose}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <div className="text-2xl mb-2">🚀</div>
+                  <div className="font-medium text-gray-900">Services</div>
+                  <div className="text-sm text-gray-600">Explore our solutions</div>
+                </Link>
+                <Link
+                  href="/products"
+                  onClick={onClose}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <div className="text-2xl mb-2">💎</div>
+                  <div className="font-medium text-gray-900">Products</div>
+                  <div className="text-sm text-gray-600">View our products</div>
+                </Link>
+                <Link
+                  href="/case-studies"
+                  onClick={onClose}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <div className="text-2xl mb-2">📊</div>
+                  <div className="font-medium text-gray-900">Case Studies</div>
+                  <div className="text-sm text-gray-600">Success stories</div>
+                </Link>
+                <Link
+                  href="/blog"
+                  onClick={onClose}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <div className="text-2xl mb-2">📝</div>
+                  <div className="font-medium text-gray-900">Blog</div>
+                  <div className="text-sm text-gray-600">Latest insights</div>
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div className="p-4 border-t border-gray-200 bg-gray-50">
+          <div className="flex items-center justify-between text-sm text-gray-500">
+            <div className="flex items-center space-x-4">
+              <span>Press <kbd className="px-2 py-1 bg-white border border-gray-300 rounded text-xs">⌘</kbd> + <kbd className="px-2 py-1 bg-white border border-gray-300 rounded text-xs">K</kbd> to search</span>
+            </div>
             <button
               onClick={onClose}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              className="ml-3 p-1 hover:bg-gray-100 rounded">;
-              <X className="w-5 h-5" />;
-            </button>;
-          </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          {/* Results */}
-          <div className="max-h-96 overflow-y-auto">;
-            {query && query.trim() ? (;
-              results && results.length > 0 ? (;
-                <div className="p-2">;
-                  {results && results.map((result, index) => (;
-                    <div
-;
-  const handleKeyDown = (e: React.KeyboardEvent) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      on_close ();
-    } else // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default ();
-      setSelectedIndex ((prev) => Math.min (prev + 1, results.length - 1));
-    } else // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default ();
-      setSelectedIndex ((prev) => Math.max (prev - 1, 0));
-    } else // Check condition
-if ( {) {
-  $2
-}
-      handleResultClick (results[selected_index]);
-    }
-  }
-;
-  const handleResultClick = (result: SearchResult) =>: any {
-    // Add to recent searches;
-    const new_recent = [;
-      result.title,
-      ...recent_searches.filter ((s) => s !== result.title),
-    ].slice (0, 5);
-    setRecentSearches (new_recent);
-    local_storage.set_item ("recent - searches", JSON.stringify (new_recent));
-;
-    // Navigate to result;
-    window.location.href = result.url;
-  }
-;
-  const handleRecentClick = (search: string) =>: any {
-    set_query (search);
-  }
-;
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-    <div className="fixed inset - 0 z - 50 overflow - y-auto">;
-      <div className="flex min - h-screen items - start justify - center p - 4 pt - 16">;
-        {/* Backdrop */}
-        <div;
-          className="fixed inset - 0 bg - black bg - opacity - 50 transition - opacity";
-          on_click={on_close}
-        />;
-        {/* Modal */}
-        <div className="relative w - full max - w-2xl bg - white rounded - lg shadow - xl">;
-          {/* Search Input */}
-          <div className="flex items - center p - 4 border - b">;
-            <Search className="w - 5 h - 5 text - gray - 400 mr - 3" />;
-            <input;
-              ref={input_ref}
-              type="text";
-              value={query}
-              on_change={(e) => set_query (e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder="Search services, solutions, industries...";
-              className="flex - 1 text - lg outline - none";
-            />;
-            <button;
-              on_click={on_close}
-              className="ml - 3 p - 1 hover:bg - gray - 100 rounded";
-            >;
-              <X className="w - 5 h - 5" />;
-            </button>;
-          </div>;
-          {/* Results */}
-          <div className="max - h-96 overflow - y-auto">;
-            {query.trim () ? (
-              results.length > 0 ? (
-                <div className="p - 2">;
-                  {results.map ((result, index) => (
-                    <div;
-                      key={index}
-                      className={`p - 3 rounded - lg cursor - pointer transition - colors ${
-                        index === selected_index;
-                          ? "bg - blue - 50 border border - blue - 200";
-                          : "hover:bg - gray - 50";
-                      }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                <div>;
-                  <div className="text-sm text-gray-500 mb-3">;
-                    Popular Searches;
-                  </div>;
-                  <div className="grid grid-cols-2 gap-2">;
-                    {[;
-                      "AI Services",;
-                      "Cloud Solutions",;
-                      "Cybersecurity",;
-                      "Digital Transformation",;
-                    ].map((term) => (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                      <button
-                        key={term}
-                        onClick={() => setQuery(term)}
-                        className="text-left p-2 hover:bg-gray-50 rounded text-sm text-gray-700";
-                      >;
-                        {term}
-                      </button>;
-                    ))}
-                  </div>;
-                </div>;
-              </div>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+              className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-                      on_click={() => handleResultClick (result)}
-                    >;
-                      <div className="flex items - start justify - between">;
-                        <div className="flex - 1">;
-                          <h3 className="font - medium text - gray - 900">;
-                            {result.title}
-                          </h3>;
-                          <p className="text - sm text - gray - 600 mt - 1">;
-                            {result.description}
-                          </p>;
-                          <span className="inline - block mt - 2 text - xs text - blue - 600 bg - blue - 100 px - 2 py - 1 rounded">;
-                            {result.category}
-                          </span>;
-                        </div>;
-                        <ArrowRight className="w - 4 h - 4 text - gray - 400 mt - 1" />;
-                      </div>;
-                    </div>))}
-                </div>) : (
-                <div className="p - 8 text - center text - gray - 500">;
-                  <Search className="w - 12 h - 12 mx - auto mb - 4 text - gray - 300" />;
-                  <p > No results found for "{query}"</p>;
-                  <p className="text - sm mt - 2">;
-                    Try different keywords or check our services page;
-                  </p>;
-                </div>)) : (
-              <div className="p - 4">;
-                {recent_searches.length > 0 && (
-                  <div className="mb - 6">;
-                    <div className="flex items - center text - sm text - gray - 500 mb - 3">;
-                      <Clock className="w - 4 h - 4 mr - 2" />;
-                      Recent Searches;
-                    </div>;
-                    <div className="space - y-2">;
-                      {recent_searches.map ((search, index) => (
-                        <button;
-                          key={index}
-                          on_click={() => handleRecentClick (search)}
-                          className="w - full text - left p - 2 hover:bg - gray - 50 rounded text - sm text - gray - 700";
-                        >;
-                          {search}
-                        </button>))}
-                    </div>;
-                  </div>)}
-                <div>;
-                  <div className="text - sm text - gray - 500 mb - 3">;
-                    Popular Searches;
-                  </div>;
-                  <div className="grid grid - cols - 2 gap - 2">;
-                    {[;
-                      "AI Services",
-                      "Cloud Solutions",
-                      "Cybersecurity",
-                      "Digital Transformation",
-                    ].map ((term) => (
-                      <button;
-                        key={term}
-                        on_click={() => set_query (term)}
-                        className="text - left p - 2 hover:bg - gray - 50 rounded text - sm text - gray - 700";
-                      >;
-                        {term}
-                      </button>))}
-                  </div>;
-                </div>;
-              </div>)}
-          </div>;
-        </div>;
-      </div>;
-    </div>);
-}
+};
+
+export default SearchModal;

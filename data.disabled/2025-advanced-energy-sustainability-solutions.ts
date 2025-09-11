@@ -283,11 +283,7 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     competitors: ['Sustainalytics, MSCI, ISS ESG, Bloomberg, Refinitiv'],
     marketSize: '$18B ESG reporting market',
     growthRate: '35% annual growth',
-<<<<<<<< HEAD:data.disabled/2025-advanced-energy-sustainability-solutions.ts
-    variant: 'ai-energy',
-========
-    variant: 'energy-sustainability',
->>>>>>>> origin/feature/fix-build-and-improve-navigation:.backup/2025-advanced-energy-sustainability-solutions.ts
+    variant: 'ai-services',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
