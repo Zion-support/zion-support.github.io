@@ -1,4 +1,5 @@
-// Global type declarations
+// Minimal and clean global type declarations used by the app
+
 declare module "*.svg" {
   const content: string;
   export default content;
@@ -40,7 +41,6 @@ declare module "*.module.scss" {
   export default content;
 }
 
-// Node.js environment variables
 declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: "development" | "production" | "test";

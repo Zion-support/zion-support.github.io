@@ -1,313 +1,105 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-
-const baseUrl = 'https://ziontechgroup.com';
-<<<<<<< HEAD
-;
-const pages = [;
-=======
-
-const pages = [
->>>>>>> origin/automation-fixes
-  '',
-  '/about',
-  '/services',
-  '/services/ai-development',
-  '/services/cloud-architecture',
-  '/services/cybersecurity',
-  '/services/data-analytics',
-  '/services/devops',
-  '/services/mobile-development',
-  '/blockchain-solutions',
-  '/iot-platforms',
-  '/solutions/digital-transformation',
-  '/solutions/enterprise-solutions',
-  '/contact',
-  '/privacy',
-  '/terms',
-<<<<<<< HEAD
-  '/cookies'];
-;
-const generateSitemap = () => {;
-=======
-  '/cookies';
-]
-
-const generateSitemap = () => {
->>>>>>> origin/automation-fixes
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-${pages.map(page => {
-  const url = `${baseUrl}${page}`;
-  const priority = page === '' ? '1.0' : page.startsWith('/services') ? '0.9' : '0.8';
-  const changefreq = page === '' ? 'daily' : 'weekly';
-
-  return `  <url>;
-    <loc>${url}</loc>;
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>;
-    <changefreq>${changefreq}</changefreq>;
-    <priority>${priority}</priority>;
-<<<<<<< HEAD
-  </url>`,
-}).join('\n')}
-</urlset>`;
-;
-  const publicDir = path.join(process.cwd(), 'public');
-  if (!fs.existsSync(publicDir)) {;
-    fs.mkdirSync(publicDir, { recursive: true }),
-}
-;
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  ,
-};
-;
-generateSitemap();
-=======
-<<<<<<< HEAD
-const fs from "fs";"const path from "path";"const baseUrl = "https:/ziontechgroup.com";const pages = [;" ""," "/about"," "/services"," "/services/ai-development"," "/services/cloud-architecture"," "/services/cybersecurity"," "/services/data-analytics"," "/services/devops"," "/services/mobile-development"," "/blockchain-solutions"," "/iot-platforms"," "/solutions/digital-transformation"," "/solutions/enterprise-solutions"," "/contact"," "/privacy"," "/terms"," "/cookies"];const generateSitemap = () => {; const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;"<urlset xmlns="http:/www.sitemaps.org/schemas/sitemap/0.9">;${pages.map(page => {;` const url = `${baseUrl}${page}`;" const priority = page === "" ? "1.0" : page.startsWith("/services") ? "0.9" : "0.8";" const changefreq = page === "" ? "daily" : "weekly"; ;` return ` <url>; <loc>${url}</loc>;" <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>; <changefreq>${changefreq}</changefreq>; <priority>${priority}</priority>;` </url>`,"}).join("\n")}`</urlset>`;" const publicDir = path.join(process.cwd(), "public"); if (!fs.existsSync(publicDir)) {; fs.mkdirSync(publicDir, { recursive: true }),};" fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);" console.log(" Sitemap generated successfully at public/sitemap.xml"),};generateSitemap();'"`'"`
-=======
-import fs from 'fs'
-import path from 'path'
-const baseUrl = 'https://ziontechgroup.com'
-  ''
-  '/about'
-  '/services'
-  '/services/ai-development'
-  '/services/cloud-architecture'
-  '/services/cybersecurity'
-  '/services/data-analytics'
-  '/services/devops'
-  '/services/mobile-development'
-  '/blockchain-solutions'
-  '/iot-platforms'
-  '/solutions/digital-transformation'
-  '/solutions/enterprise-solutions'
-  '/contact'
-  '/privacy'
-  '/terms'
-  '/cookies'
-  const priority = page === '' ? '1.0' : page.startsWith('/services') ? '0.9' : '0.8'
-  const changefreq = page === '' ? 'daily' : 'weekly'
-    <lastmod>${new Date().toISOString().split('T'})
-}).join('\n')
-  const publicDir = path.join(process.cwd(), 'public'
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml')
-  console.log(' Sitemap generated successfully at public/sitemap.xml')
->>>>>>> main
->>>>>>> main
-=======
-  </url>`;
-}).join('\n')}
-</urlset>`;
-
-  const publicDir = path.join(process.cwd(), 'public')
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true }),
-}
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
-  console.log('✅ Sitemap generated successfully at public/sitemap.xml'),
-}
-
-generateSitemap()
->>>>>>> origin/automation-fixes
-=======
 #!/usr/bin/env node
 
-import { writeFileSync, readdirSync, statSync } from 'fs';
-import { join, extname } from 'path';
+import fs from 'fs';
+import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = join(__filename, '..');
+const __dirname = path.dirname(__filename);
 
-// Base URL for the website
 const BASE_URL = 'https://ziontechgroup.com';
+const PAGES_DIR = path.join(__dirname, '..', 'pages');
 
-// Priority and change frequency for different types of pages
-const PAGE_PRIORITIES = {
-  '/': { priority: '1.0', changefreq: 'daily' },
-  '/services': { priority: '0.9', changefreq: 'weekly' },
-  '/solutions': { priority: '0.9', changefreq: 'weekly' },
-  '/about': { priority: '0.8', changefreq: 'monthly' },
-  '/contact': { priority: '0.8', changefreq: 'monthly' },
-  '/multiverse/launch': { priority: '0.9', changefreq: 'weekly' },
-  '/admin/os-deploy': { priority: '0.7', changefreq: 'monthly' },
-  '/admin/instances': { priority: '0.7', changefreq: 'monthly' },
-  '/docs': { priority: '0.8', changefreq: 'weekly' },
-  '/api': { priority: '0.7', changefreq: 'monthly' },
-  '/community': { priority: '0.6', changefreq: 'weekly' },
-  '/privacy': { priority: '0.5', changefreq: 'yearly' },
-  '/terms': { priority: '0.5', changefreq: 'yearly' },
-  '/cookies': { priority: '0.5', changefreq: 'yearly' },
-};
-
-// Static pages that should be included
-const STATIC_PAGES = [
-  '/',
-  '/services',
-  '/solutions',
-  '/about',
-  '/contact',
-  '/multiverse/launch',
-  '/admin/os-deploy',
-  '/admin/instances',
-  '/docs',
-  '/api',
-  '/community',
-  '/privacy',
-  '/terms',
-  '/cookies',
-];
-
-// Function to generate sitemap XML
-function generateSitemapXML(pages) {
-  const currentDate = new Date().toISOString();
-  
-  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-  
-  pages.forEach(page => {
-    const { url, priority, changefreq, lastmod } = page;
-    xml += '  <url>\n';
-    xml += `    <loc>${url}</loc>\n`;
-    if (lastmod) {
-      xml += `    <lastmod>${lastmod}</lastmod>\n`;
-    }
-    if (changefreq) {
-      xml += `    <changefreq>${changefreq}</changefreq>\n`;
-    }
-    if (priority) {
-      xml += `    <priority>${priority}</priority>\n`;
-    }
-    xml += '  </url>\n';
-  });
-  
-  xml += '</urlset>';
-  
-  return xml;
-}
-
-// Function to scan for dynamic pages (if any)
-function scanForDynamicPages() {
-  const dynamicPages = [];
-  
-  try {
-    // Look for potential dynamic content in the app directory
-    const appDir = join(__dirname, '..', 'zion-os', 'src', 'app');
-    if (statSync(appDir).isDirectory()) {
-      const scanDirectory = (dir, basePath = '') => {
-        const items = readdirSync(dir);
-        
-        items.forEach(item => {
-          const fullPath = join(dir, item);
-          const stat = statSync(fullPath);
-          
-          if (stat.isDirectory() && !item.startsWith('.')) {
-            // Check if it's a page directory
-            if (item === 'page.tsx' || item === 'page.tsx') {
-              const routePath = basePath || '/';
-              if (routePath !== '/' && !STATIC_PAGES.includes(routePath)) {
-                dynamicPages.push({
-                  url: `${BASE_URL}${routePath}`,
-                  priority: '0.6',
-                  changefreq: 'monthly',
-                  lastmod: new Date().toISOString()
-                });
-              }
-            } else {
-              // Recursively scan subdirectories
-              const newBasePath = basePath ? `${basePath}/${item}` : `/${item}`;
-              scanDirectory(fullPath, newBasePath);
-            }
-          }
-        });
-      };
-      
-      scanDirectory(appDir);
-    }
-  } catch (error) {
-    console.log('Could not scan for dynamic pages:', error.message);
-  }
-  
-  return dynamicPages;
-}
-
-// Main function to generate sitemap
 function generateSitemap() {
-  console.log('Generating sitemap...');
+  const urls = [];
   
-  // Create static pages with metadata
-  const staticPages = STATIC_PAGES.map(path => {
-    const metadata = PAGE_PRIORITIES[path] || { priority: '0.6', changefreq: 'monthly' };
-    return {
-      url: `${BASE_URL}${path}`,
-      priority: metadata.priority,
-      changefreq: metadata.changefreq,
-      lastmod: new Date().toISOString()
-    };
+  // Add static routes
+  urls.push({
+    url: '/',
+    lastmod: new Date().toISOString(),
+    changefreq: 'daily',
+    priority: '1.0'
   });
-  
-  // Scan for dynamic pages
-  const dynamicPages = scanForDynamicPages();
-  
-  // Combine all pages
-  const allPages = [...staticPages, ...dynamicPages];
-  
-  // Generate XML
-  const sitemapXML = generateSitemapXML(allPages);
-  
-  // Write to file
-  const outputPath = join(__dirname, '..', 'public', 'sitemap.xml');
-  writeFileSync(outputPath, sitemapXML, 'utf8');
-  
-  console.log(`Sitemap generated successfully with ${allPages.length} pages`);
-  console.log(`Output: ${outputPath}`);
-  
-  // Also generate a robots.txt file
-  const robotsTxt = `User-agent: *
-Allow: /
 
-# Sitemap
-Sitemap: ${BASE_URL}/sitemap.xml
-
-# Disallow admin areas for search engines
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /temp_*/
-Disallow: /zion-os/.next/
-
-# Allow important pages
-Allow: /services
-Allow: /solutions
-Allow: /about
-Allow: /contact
-Allow: /multiverse/launch
-Allow: /docs
-Allow: /community
-
-# Crawl delay (optional)
-Crawl-delay: 1`;
-  
-  const robotsPath = join(__dirname, '..', 'public', 'robots.txt');
-  writeFileSync(robotsPath, robotsTxt, 'utf8');
-  
-  console.log(`Robots.txt generated: ${robotsPath}`);
-  
-  return allPages;
-}
-
-// Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  try {
-    generateSitemap();
-  } catch (error) {
-    console.error('Error generating sitemap:', error);
-    process.exit(1);
+  // Scan pages directory for dynamic routes
+  function scanDirectory(dir, basePath = '') {
+    if (!fs.existsSync(dir)) return;
+    
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip special directories
+        if (item.startsWith('_') || item.startsWith('.') || item === 'api') {
+          continue;
+        }
+        
+        // Handle dynamic routes like [id]
+        if (item.startsWith('[') && item.endsWith(']')) {
+          // For dynamic routes, we'll add a placeholder
+          // In a real implementation, you'd fetch actual data
+          urls.push({
+            url: `${basePath}/${item.replace(/[\[\]]/g, '')}`,
+            lastmod: new Date().toISOString(),
+            changefreq: 'weekly',
+            priority: '0.8'
+          });
+        } else {
+          scanDirectory(fullPath, `${basePath}/${item}`);
+        }
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+        // Handle page files
+        const route = item.replace(/\.(tsx|ts|jsx|js)$/, '');
+        
+        if (route === 'index') {
+          // Already added root
+          continue;
+        }
+        
+        // Handle dynamic routes
+        if (route.startsWith('[') && route.endsWith(']')) {
+          urls.push({
+            url: `${basePath}/${route.replace(/[\[\]]/g, '')}`,
+            lastmod: new Date().toISOString(),
+            changefreq: 'weekly',
+            priority: '0.8'
+          });
+        } else {
+          urls.push({
+            url: `${basePath}/${route}`,
+            lastmod: new Date().toISOString(),
+            changefreq: 'weekly',
+            priority: '0.9'
+          });
+        }
+      }
+    }
   }
+
+  scanDirectory(PAGES_DIR);
+
+  // Generate sitemap XML
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(url => `  <url>
+    <loc>${BASE_URL}${url.url}</loc>
+    <lastmod>${url.lastmod}</lastmod>
+    <changefreq>${url.changefreq}</changefreq>
+    <priority>${url.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+  // Write sitemap to public directory
+  const publicDir = path.join(__dirname, '..', 'public');
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
+  }
+  
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
+  console.log(`✅ Sitemap generated with ${urls.length} URLs`);
 }
 
-export { generateSitemap };
->>>>>>> origin/automation/changelog
+generateSitemap();

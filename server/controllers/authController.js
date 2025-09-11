@@ -2,11 +2,9 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/User');
 const { jwtSecret } = require('../config');
-
 if (!jwtSecret) {
   throw new Error('JWT_SECRET not defined');
 }
-
 exports.loginUser = async function (req, res) {
   console.info('[LOGIN]', req.body.email);
   console.info('[ENV] JWT_SECRET:', jwtSecret);
@@ -18,7 +16,6 @@ exports.loginUser = async function (req, res) {
     }
     const isMatch = bcrypt.compareSync(req.body.password, user.passwordHash);
     if (!isMatch) return res.status(401).json({ message: 'Invalid credentials' });
-
     const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' });
     res.json({
       token,
@@ -29,10 +26,8 @@ exports.loginUser = async function (req, res) {
     res.status(500).json({ message: 'Server error' });
   }
 };
-
 // Maintain backwards compatibility if other modules still call `login`
 exports.login = exports.loginUser;
-
 exports.registerUser = async function (req, res) {
   try {
     const name = req.body.name;
@@ -41,11 +36,9 @@ exports.registerUser = async function (req, res) {
     if (!name || !email || !password) {
       return res.status(400).json({ message: 'Missing required fields' });
     }
-
     const user = new User({ name, email });
     await user.setPassword(password);
     await user.save();
-
     const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' });
     return res.status(201).json({
       token,
@@ -61,6 +54,5 @@ exports.registerUser = async function (req, res) {
     return res.status(500).json({ message: 'Server error' });
   }
 };
-
 // Maintain backwards compatibility if other modules still call `register`
 exports.register = exports.registerUser;

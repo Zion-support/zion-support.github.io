@@ -1,17 +1,58 @@
-import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/custom.tsx
+
+
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/custom.tsx
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Settings, Code, Zap, Users } from 'lucide-react';
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-const features = [;
+
 =======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+const features = [;
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';const features = [;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   {}
     title: 'Tailored Solutions,',
     description: 'Bespoke software solutions designed specifically for your unique business needs,',

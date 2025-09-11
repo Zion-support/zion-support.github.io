@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 // LinkedIn automation placeholder - implement actual functionality
 export const linkedinAutomation = {
-  "run": () => {
-    // LinkedIn automation placeholder - implement actual functionality
-    // TODO: Implement actual LinkedIn automation functionality
+  run: () => {
+    console.log("LinkedIn automation placeholder - implement actual functionality");
   }
 };
 export default linkedinAutomation;
-=======
-// LinkedIn automation placeholder - implement actual functionality,"}),})
-console.log("LinkedIn automation placeholder - implement actual functionality"),}),"})
-,"}),"})
->>>>>>> origin/automation-fixes

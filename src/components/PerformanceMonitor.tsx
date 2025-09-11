@@ -1,126 +1,94 @@
 import React, { useEffect, useState } from 'react';
+
 interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  renderTime: number}
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    memoryUsage: 0,
-    renderTime: 0
-  });  useEffect(() => {
-;
-interface PerformanceMetrics {;
-  "loadTime": "number;
-  "memoryUsage": number;
-  "renderTime": number;
-"}
-;
-const "PerformanceMonitor": "React.FC = () => {;
-  const [metrics", setMetrics] = useState<PerformanceMetrics>({;
-    "loadTime": "0",;
-    "memoryUsage": "0",;
-    "renderTime": "0;
-  "});
-;
-  useEffect(() => {;
-    const startTime = performance.now();
-    ;
-    // Measure page load time;
-    if (window.performance.timing) {;
-      const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-      setMetrics(prev => ({ ...prev, loadTime }))}
-      setMetrics(prev => ({ ...prev, loadTime }));
-    }    // Measure memory usage (if available)
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      setMetrics(prev => ({ 
-        ...prev, 
-        memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
-      }))}
-    // Measure render time
-    const endTime = performance.now();
-    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);;
-  return (;
-    <div className="bg-gray-100 p-4 rounded-lg">;
-      <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>;
-      <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">;
-        <div className="bg-white p-3 rounded">;
-          <div className="text-sm text-gray-600">Load Time</div>;
-          <div className="text-2xl font-bold text-blue-600">{metrics.loadTime"}ms</div>;
-        </div>;
-        <div className="bg-white p-3 rounded">;
-          <div className="text-sm text-gray-600">Memory Usage</div>;
-          <div className="text-2xl font-bold text-green-600">{metrics.memoryUsage}MB</div>;
-        </div>;
-        <div className="bg-white p-3 rounded">;
-          <div className="text-sm text-gray-600">Render Time</div>;
-          <div className="text-2xl font-bold text-purple-600">{metrics.renderTime}ms</div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-};
-;
-export default PerformanceMonitor;
-import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
-import logger from '../utils/logger';
-interface PerformanceMetrics {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
-const PerformanceMonitor = () => {
+
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+  });
+
   useEffect(() => {
-    const sendToAnalytics = (metric: PerformanceMetrics) => {
-      // Log performance metrics
-      logger.info('Performance Metric:', {
-        name: metric.name,
-        value: metric.value,
-        delta: metric.delta,
-        id: metric.id,
-        navigationType: metric.navigationType,
-      }
-    );
-      // Send to analytics service in production
-      if (process.env.NODE_ENV === 'production') {
-        // Example: Send to Google Analytics
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', metric.name, {
-            event_category: 'Web Vitals',
-            event_label: metric.id,
-            value: Math.round(metric.value),
-            non_interaction: true,
-          }
-    );
-        }
-      }
-    };
-    // Measure Core Web Vitals
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
-    // Monitor page load performance
-    if (typeof window !== 'undefined') {
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const metrics = {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-          };
-          logger.info('Page Load Metrics:', metrics);
-        }
-      }
-    );
+    // Only run in production and if PerformanceObserver is available
+    if (process.env.NODE_ENV !== 'production' || !('PerformanceObserver' in window)) {
+      return;
     }
+
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        switch (entry.entryType) {
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+            break;
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+            break;
+          case 'first-input':
+            const fidEntry = entry as any;
+            setMetrics(prev => ({ ...prev, fid: (fidEntry.processingStart || 0) - entry.startTime }));
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+            }
+            break;
+          case 'navigation':
+            const navEntry = entry as any;
+            setMetrics(prev => ({ ...prev, ttfb: (navEntry.responseStart || 0) - (navEntry.requestStart || 0) }));
+            break;
+        }
+      }
+    });
+
+    // Observe different types of performance entries
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch (e) {
+      // Fallback for browsers that don't support all entry types
+      observer.observe({ entryTypes: ['paint', 'navigation'] });
+    }
+
+    return () => observer.disconnect();
   }, []);
+
+  // Log metrics to console in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(v => v !== null)) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  // Send metrics to analytics in production
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production' && Object.values(metrics).every(v => v !== null)) {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          value: Math.round(metrics.lcp || 0),
+          custom_map: {
+            fcp: metrics.fcp,
+            lcp: metrics.lcp,
+            fid: metrics.fid,
+            cls: metrics.cls,
+            ttfb: metrics.ttfb,
+          }
+        });
+      }
+    }
+  }, [metrics]);
+
   return null; // This component doesn't render anything
 };
-export default PerformanceMonitor;

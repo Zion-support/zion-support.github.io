@@ -1,2 +1,8 @@
 
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< \"HEAD\": src.pages.disabled/MoreProductsPage.jsx import React from \'react\'; \"export default function MoreProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,\"value\": \'c\' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title=\"More Products\" description=\"Browse additional offerings priced for the average market.\" categorySlug=\"more - products\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\" import React from \'react\'; \"export default function MoreProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ \"label\": \'c\',\"value\": \'c\' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; 
+<<<<<<< "HEAD": src.pages.disabled/MoreProductsPage.jsx import _React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,"value": 'c' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title="More Products" description="Browse additional offerings priced for the average market." categorySlug="more - products" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";" import _React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value": 'c' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; =======
+
