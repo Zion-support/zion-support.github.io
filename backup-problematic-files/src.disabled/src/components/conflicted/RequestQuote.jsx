@@ -9,8 +9,4 @@ const RequestQuote = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default RequestQuote;
-=======
-export default RequestQuote;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -151,8 +151,6 @@
           user_id?: string | null
       api_logs: {;
         Row: {;
-=======
-=======          created_at: string;
           id: string;
           message: string;
           response: string;
@@ -266,7 +264,6 @@
       }
       api_logs: {;
         Row: {;
-=======
       api_logs: {
         Row: {
           api_key_id: string | null
@@ -327,10 +324,7 @@
             referenced_columns: ["id"];
             referencedColumns: ["id"]
 
-=======
-=======
           }
-=======
 
             referencedColumns: ["id"]
 
@@ -517,7 +511,6 @@
 
 
 
-=======
           }
           },          {
             foreignKeyName: "job_applications_resume_id_fkey";
@@ -532,15 +525,12 @@
             referenced_columns: ["id"];
           },
 
-=======
 
           }
-=======
 
           },=======
           }
           },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "milestone_activities_user_id_fkey";
             columns: ["user_id"];
@@ -886,15 +876,12 @@
             referenced_columns: ["user_id"];
           },
 
-=======
 
           }
-=======
 
           },=======
           }
           },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "profiles_tenant_id_fkey";
             columns: ["tenant_id"];
@@ -952,15 +939,12 @@
             referenced_columns: ["user_id"];
           },
 
-=======
 
           }
-=======
 
           },=======
           }
           },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "project_milestones_project_id_fkey";
             columns: ["project_id"];
@@ -1000,15 +984,12 @@
             referenced_columns: ["id"];
           },
 
-=======
 
           }
-=======
 
           },=======
           }
           },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "project_notes_user_id_fkey";
             columns: ["user_id"];
@@ -1064,7 +1045,6 @@
 
 
 
-=======
           }
           },          {
             foreignKeyName: "projects_job_id_fkey";
@@ -1079,15 +1059,12 @@
             referenced_columns: ["id"];
           },
 
-=======
 
           }
-=======
 
           },=======
           }
           },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
             columns: ["talent_id"];
@@ -1153,7 +1130,6 @@
             referenced_columns: ["id"];
           }
 
-=======
           }
           },          {
             foreignKeyName: "referrals_referral_code_fkey";
@@ -1255,7 +1231,6 @@
             referencedColumns: ["user_id"]
           },
 
-=======
           }
           },          {
             foreignKeyName: "review_reports_review_id_fkey";
@@ -1324,11 +1299,9 @@
           {
 
           },
-=======
 
           }
           },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "review_reports_review_id_fkey";
             columns: ["review_id"];
@@ -1398,17 +1371,14 @@
 
           },
 
-=======
           }
           },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             foreignKeyName: "reviews_project_id_fkey";
             columns: ["project_id"];
             isOneToOne: false;
@@ -1416,7 +1386,6 @@
             referenced_columns: ["id"];
           }
 
-=======
           }
           },          {
             foreignKeyName: "reviews_reviewee_id_fkey";
@@ -1433,7 +1402,6 @@
 
           },
 
-=======
           }
           },          {
             foreignKeyName: "tenant_administrators_user_id_fkey";
@@ -1774,8 +1742,6 @@
           days_since_login: number
           onboarding_status: Json
         }[]
-=======
-=======          conversion_count: number | null;
           conversion_rate: number | null;
           conversion_type: string | null;
           date: string | null;
@@ -1816,8 +1782,6 @@
         Relationships: [];
       }
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     Functions: {
       check_users_needing_reminders: {
         Args: Record<PropertyKey, never>
@@ -1834,8 +1798,6 @@
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           user_id: string;
           email: string;
           display_name: string;
@@ -1861,7 +1823,6 @@
         }
         Returns: string;
       }
-=======
       create_scheduled_reminders: {
         Args: Record<PropertyKey, never>
         Returns: undefined      create_scheduled_reminders: {;
@@ -1871,14 +1832,11 @@
 
         Returns: string
       }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       get_event_distribution: {
         Args: { days_back?: number }
         Returns: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
       schedule_email_reminders: {
         Args: Record<PropertyKey, never>
         Returns: number      schedule_email_reminders: {;
@@ -1938,7 +1896,6 @@
     }
   }
 }
-=======
 
 
 
@@ -1947,7 +1904,6 @@ export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
 
-=======
 type DefaultSchema = Database[Extract<keyof Database, "public">]
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
@@ -1973,14 +1929,12 @@ export type Tables<
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ? R;
       : never;
     : never;
 export type TablesInsert<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
-=======
     | keyof DefaultSchema["Tables"];
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
@@ -1998,13 +1952,11 @@ export type TablesInsert<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I;
       }
-=======
 
 
     | keyof DefaultSchema["Tables"]
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2019,14 +1971,12 @@ export type TablesInsert<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I
       }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ? I;
       : never;
     : never;
 export type TablesUpdate<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
-=======
     | keyof DefaultSchema["Tables"];
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
@@ -2044,13 +1994,11 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U;
       }
-=======
 
 
     | keyof DefaultSchema["Tables"]
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2156,18 +2104,13 @@ export type TablesUpdate<;
         Update: infer U;
       }
 
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ? U;
       : never;
     : never;
 export type Enums<;
   DefaultSchemaEnumNameOrOptions extends;
     | keyof DefaultSchema["Enums"];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database;
@@ -2191,8 +2134,6 @@ export type Enums<;
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     | { schema: keyof Database }
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database;
@@ -2214,8 +2155,6 @@ export type CompositeTypes<
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export const Constants = {
   public: {
     Enums: {
@@ -2236,11 +2175,8 @@ export const Constants = {
       referral_status: ["pending", "completed", "expired"]}}} as const;
 
 ;
-=======
       api_key_scope: [
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 ;
@@ -2374,7 +2310,3 @@ export const Constants = {;
         "closed",;
         "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

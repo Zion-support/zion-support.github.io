@@ -1,34 +1,12 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
 
-export default function Team() {
-  return (
-    <>
-      <SEO 
-        title="Team - Zion Tech Group" 
-        description="Team page for Zion Tech Group" 
-        keywords="Team, zion tech group"
-      />
-      <div className="min-h-screen bg-zion-blue pt-20 pb-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">
-              Team
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Welcome to our Team page
-            </p>
-            <div className="bg-white rounded-lg p-8 max-w-4xl mx-auto">
-              <h2 className="text-2xl font-semibold text-zion-slate-dark mb-4">
-                Team Content
-              </h2>
-              <p className="text-zion-slate-light">
-                This is the Team page content.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+const Team: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+		<div className="text-center text-white">
+			<h1 className="text-4xl font-bold mb-4">Our Team</h1>
+			<p className="text-xl text-gray-300">Meet the people behind Zion Tech Group.</p>
+		</div>
+	</div>
+);
+
+export default Team;

@@ -9,8 +9,4 @@ const FiveGNetworkOptimization = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default FiveGNetworkOptimization;
-=======
-export default FiveGNetworkOptimization;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

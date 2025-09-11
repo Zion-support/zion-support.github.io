@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function APIPage() {;
   return (;
@@ -6,7 +5,6 @@ export default function APIPage() {;
 
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-4">Create a Digital Economy</h3>;
               <div className="bg-gray-900/50 rounded-lg p-4">;
                 <div className="text-sm text-gray-400 mb-2">Node.js</div>;
@@ -16,16 +14,6 @@ const client = new ZionOS('YOUR_API_KEY');
 const economy = await client.economies.create({name: 'My Digital Economy';
   description: 'A sovereign digital economy';
   features: ['marketplacegovernancetokens'];
-<<<<<<< HEAD
-=======
-=======
-======={`const { ZionOS } = require('@zion-os/sdk'),;
-const client = new ZionOS('YOUR_API_KEY'),;
-const economy = await client.economies.create({;
-  name: 'My Digital Economy',;
-  description: 'A sovereign digital economy',;
-  features: ['marketplacegovernancetokens'],;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662  blockchain: 'ethereum';
 });
 // // // console.log ('Economy created:', economy.id), `}
                 </pre>;

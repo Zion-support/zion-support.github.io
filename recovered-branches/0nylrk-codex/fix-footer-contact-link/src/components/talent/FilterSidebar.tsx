@@ -10,8 +10,6 @@ import {RegionFilter} from "./filters/RegionFilter";
 import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export function FilterSidebar(): any ({;
   searchTerm;
   setSearchTerm;
@@ -44,10 +42,7 @@ import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
-=======
-=======  isMobileFilterOpen;
 }: FilterSidebarProps) {;
-=======
 
 
 import React from "react",;
@@ -87,7 +82,6 @@ export function FilterSidebar({;
       {/* Filter header */}
   isMobileFilterOpen
 }: FilterSidebarProps) {
-=======      
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from "lucide-react",;
@@ -138,8 +132,6 @@ export function FilterSidebar({;
       </div>;=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -253,7 +245,6 @@ export function FilterSidebar({;
         </Button>;
       )}
     </>;
-<<<<<<< HEAD
   ),;}
  export function FilterSidebar ({
   searchTerm;
@@ -355,15 +346,8 @@ isMobileFilterOpen
 }</>) 
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';
@@ -449,5 +433,3 @@ function FilterSidebar() {
         </Button>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

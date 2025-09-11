@@ -27,8 +27,4 @@ const SearchResultsPage = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SearchResultsPage;
-=======
-export default SearchResultsPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

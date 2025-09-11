@@ -17,17 +17,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (!vendorId |!title) return res.status(400).json({ error: 'Missing required fields' });
   const vendor = getVendorById(vendorId);
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
-=======
-=======
 
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res && res.status(500).json({ error: e && e.message });
   }  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { vendorId, title } = req && req.body || {};
   if (!vendorId || !title) return res && res.status(400).json({ error: 'Missing required fields' });
-==============import {addPipelineItem, getVendorById} from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
  */
@@ -68,18 +63,9 @@ function handler() {
   }  } catch (e: any) {
     res.status (500).json ({ error: e.message });
 
-<<<<<<< HEAD
     res.status(500).json({ error: e.message })
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
     res.status(500).json({ error: e.message })
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

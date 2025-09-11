@@ -27,8 +27,4 @@ const AccountSettings = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AccountSettings;
-=======
-export default AccountSettings;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

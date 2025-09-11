@@ -18,8 +18,6 @@ export type { ButtonProps } from "./ui/Button";
 export type { CardProps } from "./ui/Card";
 export type { LayoutProps } from "./layout/Layout";
 export type { LayoutProps } from "./layout/Layout";
-=======
-=======// Layout Components
 export { default as Layout } from "./layout/Layout";
 
 
@@ -28,11 +26,7 @@ export { default as Layout } from "./layout/Layout";
 
 export type { ButtonProps } from "./ui/Button";
 export type { CardProps } from "./ui/Card";
-<<<<<<< HEAD
 
 export type { LayoutProps } from "./layout/Layout";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export type { LayoutProps } from "./layout/Layout";
 export type { LayoutProps } from "./layout/Layout";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const FiveGSolutions = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default FiveGSolutions;
-=======
-export default FiveGSolutions;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

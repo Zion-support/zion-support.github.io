@@ -5,7 +5,6 @@ export function useJobDetails(jobId: string | undefined) {;
 
 
 
-=======
     error;
     loadJobDetails;
   }
@@ -67,18 +66,7 @@ export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .s
 }export default useJobDetails;
 ;
 export default useJobDetails;
-=======
-=======;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default useJobDetails;
-<<<<<<< HEAD
-=======
-export default useJobDetails;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

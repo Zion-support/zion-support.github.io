@@ -1,165 +1,3 @@
-
-function generateRandomService(idNum) {
-    const templates = [
-        {
-            title: "AI Automation Consulting",
-            category: "Consulting",
-            min: 4000,
-            max: 12000,
-            tags["Automation", "AI Strategy", "Optimization"],
-        },
-        {
-            title: "Cloud Migration & Support",
-            category: "Management",
-            min: 3000,
-            max: 9000,
-            tags["Cloud", "Migration", "DevOps"],
-        },
-        {
-            title: "Advanced Cybersecurity Suite",
-            category: "Security",
-            min: 5000,
-            max: 15000,
-            tags["Cybersecurity", "PenTesting", "Compliance"],
-        },
-        {
-            title: "Big Data Engineering",
-            category: "Analytics",
-            min: 3500,
-            max: 11000,
-            tags["Data Engineering", "Analytics", "ETL"],
-        },
-        {
-            title: "AI Model Training Service",
-            category: "Development",
-            min: 4500,
-            max: 13000,
-            tags["Machine Learning", "Model Training", "AI"],
-        },
-        {
-            title: "Digital Transformation Strategy",
-            category: "Strategy",
-            min: 6000,
-            max: 14000,
-            tags["Transformation", "Strategy", "Business"],
-        },
-    ];
-    const authors = [
-        "Global AI Experts",
-        "InnovateTech",
-        "SecureFuture",
-        "CloudOps Partners",
-        "DataVisor",
-        "NexGen Solutions",
-    ];
-    const images = [
-        "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
-        "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
-        "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
-        "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
-    ];
-    const template = getRandomItem(templates);
-    const author = getRandomItem(authors);
-    const price = Math.round(Math.random() * (template.max - template.min) + template.min);
-    return {
-        id: `auto-service-${idNum}`,
-        title: template.title,
-        description: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
-        category: template.category,
-        price,
-        currency: "$",
-        tags: template.tags,
-        author: { name: author, id: author.toLowerCase().replace(/\s+/g, "-") },
-        images[getRandomItem(images)],
-        createdAt: new Date().toISOString(),
-        aiScore: Math.floor(90 + Math.random() * 10),
-        rating: parseFloat((4 + Math.random()).toFixed(1)),
-        reviewCount: Math.floor(50 + Math.random() * 150),
-    }}
-// Enhanced filter options for all service categories
-const SERVICE_FILTERS = [
-    { label: 'AI & ML', value: 'ai-ml' },
-    { label: 'Cybersecurity', value: 'cybersecurity' },
-    { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
-    { label: 'Business Intelligence', value: 'business-intelligence' },
-    { label: 'Communication', value: 'communication' },
-    { label: 'Specialized Tools', value: 'specialized-tools' },
-    { label: 'Development', value: 'development' },
-    { label: 'Management', value: 'management' },
-    { label: 'Security', value: 'security' },
-    { label: 'Analytics', value: 'analytics' },
-    { label: 'Consulting', value: 'consulting' },
-    { label: 'Strategy', value: 'strategy' },
-];
-export default function ServicesPage() {
-    const [listings, setListings] = useState(SERVICE_LISTINGS);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setListings(prev => [...prev, generateRandomService(prev.length + 1)])}, 120000);
-        return () => clearInterval(interval)}, []);
-    return (<div className="min-h-screen bg-background">
-      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>
-      
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link to="/comprehensive-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2"/>
-                View All Services
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Find expert technology service providers for your business needs, from AI development to infrastructure management.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {listings.map((service) => (<div key={service.id} className="bg-white rounded-lg shadow-lg p-6 border border-zion-blue-light">
-              <div className="mb-4">
-                <h3 className="text-xl font-semibold text-zion-blue mb-2">{service.title}</h3>
-                <p className="text-zion-slate-light">{service.description}</p>
-              </div>
-              
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-2xl font-bold text-zion-purple">
-                  ${service.price?.toLocaleString()}
-                </div>
-                <div className="flex items-center gap-1">
-                  <span className="text-yellow-500">★</span>
-                  <span className="font-medium">{service.rating}</span>
-                  <span className="text-zion-slate-light text-sm">({service.reviewCount})</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {service.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue text-xs rounded-full">
-                    {tag}
-                  </span>))}
-              </div>
-
-              <Link to="/contact">
-                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                  Get Quote
-                </Button>
-              </Link>
-            </div>))}
-        </div>
-      </div>
-    </div>)}
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -191,23 +29,11 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon,
-  Atom,
-  Blockchain,
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck
+  Globe as GlobeIcon
 } from 'lucide-react';
-import SEO from "../components/SEO";
-import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "../data/innovativeMicroSaasServices2025";
-import { ALL_INNOVATIVE_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
-import { ALL_INDUSTRY_SOLUTIONS_2026 } from "../data/specializedIndustrySolutions2026";
-import { ALL_BLOCKCHAIN_WEB3_SERVICES_2026 } from "../data/blockchainWeb3Services2026";
-import { ALL_IOT_EDGE_SERVICES_2026 } from "../data/iotEdgeComputingServices2026";
+import { SEO } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES } from "@/data/additionalServices2025";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -217,61 +43,85 @@ export default function ServicesPage() {
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-automation', name: 'AI & Automation', icon: Cpu, color: 'from-zion-purple to-zion-red' },
+    { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
+    { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Blockchain, color: 'from-zion-purple to-zion-blue' },
-    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Heart, color: 'from-zion-pink to-zion-purple' },
-    { id: 'legal-tech', name: 'Legal Tech', icon: Scale, color: 'from-zion-orange to-zion-purple' },
-    { id: 'financial-ai', name: 'Financial AI', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
-    { id: 'manufacturing-ai', name: 'Manufacturing AI', icon: Factory, color: 'from-zion-blue to-zion-purple' },
-    { id: 'space-tech', name: 'Space Technology', icon: Satellite, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'neuromorphic-computing', name: 'Neuromorphic Computing', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Heart, color: 'from-zion-pink to-zion-green' },
-    { id: 'advanced-robotics', name: 'Advanced Robotics', icon: Cpu, color: 'from-zion-blue to-zion-red' },
-    { id: 'advanced-materials', name: 'Advanced Materials', icon: Factory, color: 'from-zion-green to-zion-blue' },
-    { id: 'advanced-energy', name: 'Advanced Energy', icon: Zap, color: 'from-zion-yellow to-zion-orange' },
-    { id: 'advanced-transportation', name: 'Advanced Transportation', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
-    { id: 'advanced-communication', name: 'Advanced Communication', icon: Globe, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'advanced-manufacturing', name: 'Advanced Manufacturing', icon: Factory, color: 'from-zion-orange to-zion-blue' },
-    { id: 'advanced-gaming', name: 'Advanced Gaming', icon: Code, color: 'from-zion-purple to-zion-pink' },
-    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'extended-reality', name: 'Extended Reality', icon: Code, color: 'from-zion-orange to-zion-purple' },
-    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'federated-learning', name: 'Federated Learning', icon: Brain, color: 'from-zion-purple to-zion-blue' },
-    { id: 'sustainable-tech', name: 'Sustainable Technology', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
-    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
-    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'ai-content-marketing', name: 'AI Content & Marketing', icon: Code, color: 'from-zion-orange to-zion-pink' },
-    { id: 'data-privacy-compliance', name: 'Data Privacy & Compliance', icon: Lock, color: 'from-zion-red to-zion-purple' },
-    { id: 'green-tech-sustainability', name: 'Green Tech & Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'remote-work-collaboration', name: 'Remote Work & Collaboration', icon: Users, color: 'from-zion-blue to-zion-purple' },
-    { id: 'ecommerce-retail', name: 'E-commerce & Retail', icon: ShoppingCart, color: 'from-zion-green to-zion-orange' },
-    { id: 'healthcare-technology', name: 'Healthcare Technology', icon: Heart, color: 'from-zion-pink to-zion-red' },
-    { id: 'educational-technology', name: 'Educational Technology', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
-    { id: 'real-estate-technology', name: 'Real Estate Technology', icon: Building, color: 'from-zion-orange to-zion-blue' },
-    { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
-    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
+    { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-zion-pink to-zion-purple' },
+    { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
+    { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-zion-blue to-zion-purple' },
+    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green' }
   ];
 
-  return (
-          </div>
-        </div>
-      </div>
-    </div>
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
+    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
+    { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
+  ];
+
+  const sortOptions = [
+    { id: 'featured', name: 'Featured' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'newest', name: 'Newest' },
+    { id: 'popular', name: 'Most Popular' }
+  ];
+
+  // Filter and sort services
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...SPECIALIZED_SERVICES,
+    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,
+    ...ADDITIONAL_SPECIALIZED_SERVICES
+  ];
+  
+  const filteredServices = allServices.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+    
+    const matchesCategory = selectedCategory === 'all' || 
+                           service.category.toLowerCase().includes(selectedCategory);
+    
+    const matchesPrice = selectedPriceRange === 'all' || 
+                        (selectedPriceRange === 'budget' && service.price <= 1000) ||
+                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
+                        (selectedPriceRange === 'enterprise' && service.price > 5000);
+    
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'newest':
+        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
+      default:
+        return 0;
+    }
+  });
+
+  const getCategoryIcon = (category: string) => {
+    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
+    return cat ? cat.icon : Zap;
+  };
+
+  const getCategoryColor = (category: string) => {
+    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
+  };
 
   return (
     <>
       <SEO 
         title="Innovative Micro SAAS Services - Zion Tech Group"
-        description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, Healthcare AI, Legal Tech, and more. Transform your business with our innovative technology services."
+        description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services."
         canonical="/services"
         url="https://ziontechgroup.com/services"
       />
@@ -299,7 +149,7 @@ import SEO from '../components/SEO';
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing, 
-              blockchain applications to healthcare AI, discover the future of business technology with our comprehensive micro SAAS platform.
+              discover the future of business technology with our comprehensive micro SAAS platform.
             </p>
             
             {/* Search Bar */}
@@ -324,7 +174,7 @@ import SEO from '../components/SEO';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{ALL_INNOVATIVE_SERVICES.length}+</div>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -333,7 +183,7 @@ import SEO from '../components/SEO';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">32+</div>
+                <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 
@@ -414,7 +264,7 @@ import SEO from '../components/SEO';
             </div>
 
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of {allServices.length} services
+              Showing {sortedServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
             </div>
           </motion.div>
         </div>
@@ -445,7 +295,7 @@ import SEO from '../components/SEO';
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
-                          <getCategoryIcon(service.category) className="w-6 h-6 text-white" />
+                          {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>
@@ -454,7 +304,7 @@ import SEO from '../components/SEO';
                       </div>
                       
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                        {service.name || service.title}
+                        {service.title}
                       </h3>
                       
                       <p className="text-zion-slate-light leading-relaxed">
@@ -468,11 +318,11 @@ import SEO from '../components/SEO';
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-zion-cyan font-medium">{service.category}</span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          service.pricing === 'Enterprise' 
+                          service.innovationLevel === 'Cutting-edge' 
                             ? 'bg-zion-cyan/20 text-zion-cyan' 
                             : 'bg-zion-purple/20 text-zion-purple'
                         }`}>
-                          {service.pricing || 'Professional'}
+                          {service.innovationLevel}
                         </span>
                       </div>
 
@@ -480,10 +330,10 @@ import SEO from '../components/SEO';
                       <div className="flex items-center justify-between text-sm">
                         <div className="flex items-center gap-1 text-zion-green">
                           <TrendingUp className="w-4 h-4" />
-                          <span>ROI: {service.roi || '300%+ within 12 months'}</span>
+                          <span>ROI: {service.roi}</span>
                         </div>
                         <div className="text-zion-slate-light">
-                          Market: {service.marketPrice || '$5,000-25,000/month'}
+                          Market: {service.marketPrice}
                         </div>
                       </div>
 
@@ -491,7 +341,7 @@ import SEO from '../components/SEO';
                       <div className="space-y-2">
                         <h4 className="text-sm font-semibold text-white">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
-                          {(service.features || []).slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                               <CheckCircle className="w-3 h-3 text-zion-cyan" />
                               {feature}
@@ -506,32 +356,21 @@ import SEO from '../components/SEO';
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                         <div className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
-                          <span>{service.setupTime || '2-4 weeks'}</span>
+                          <span>{service.estimatedDelivery}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <Star className="w-4 h-4 text-zion-cyan" />
-                          <span>{service.pricing || 'Professional'}</span>
+                          <span>{service.supportLevel}</span>
                         </div>
                       </div>
                       
-                      <div className="flex gap-2">
-                        {service.contactInfo && (
-                          <a
-                            href={`mailto:${service.contactInfo.email}`}
-                            className="btn-futuristic px-3 py-2 text-sm"
-                          >
-                            Contact
-                            <Mail className="w-4 h-4 ml-1" />
-                          </a>
-                        )}
-                        <Link
-                          to={`/services/${service.id}`}
-                          className="btn-futuristic px-4 py-2 text-sm"
-                        >
-                          Learn More
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Link>
-                      </div>
+                      <Link
+                        to={`/services/${service.id}`}
+                        className="btn-futuristic px-4 py-2 text-sm"
+                      >
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
                     </div>
                   </motion.div>
                 ))}
@@ -582,7 +421,7 @@ import SEO from '../components/SEO';
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[...SPECIALIZED_SERVICES, ...ALL_INDUSTRY_SOLUTIONS_2026.slice(0, 4)].map((service, index) => (
+            {SPECIALIZED_SERVICES.map((service, index) => (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"
@@ -596,7 +435,7 @@ import SEO from '../components/SEO';
                 </div>
                 
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                  {service.name || service.title}
+                  {service.title}
                 </h3>
                 
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
@@ -604,7 +443,7 @@ import SEO from '../components/SEO';
                 </p>
                 
                 <div className="text-zion-cyan font-bold mb-4">
-                  {service.marketPrice || '$5,000-25,000/month'}
+                  {service.marketPrice}
                 </div>
                 
                 <Link
@@ -613,118 +452,6 @@ import SEO from '../components/SEO';
                 >
                   Explore Solution
                 </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 2026 Innovation Showcase */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
-        <div className="container-responsive">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="heading-responsive font-bold mb-4">
-              <span className="text-gradient">2026 Innovation Showcase</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Experience the future of technology with our cutting-edge 2026 services. From quantum computing to brain-computer interfaces, 
-              discover revolutionary solutions that will transform industries and redefine possibilities.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Quantum AI Fusion */}
-            <motion.div
-              className="card-futuristic p-8"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
-                  <Atom className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Quantum AI Fusion Platform</h3>
-                  <p className="text-zion-cyan font-semibold">Revolutionary Quantum Computing</p>
-                </div>
-              </div>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Unlock unprecedented computational power with our quantum AI fusion platform. 
-                Experience 1000x faster computation and breakthrough AI capabilities that will revolutionize 
-                drug discovery, financial modeling, and climate prediction.
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="text-3xl font-bold text-zion-cyan">$25,000</div>
-                <div className="text-zion-slate-light">One-time investment</div>
-              </div>
-            </motion.div>
-
-            {/* Brain-Computer Interface */}
-            <motion.div
-              className="card-futuristic p-8"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-pink rounded-xl flex items-center justify-center">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Brain-Computer Interface</h3>
-                  <p className="text-zion-purple font-semibold">Neural Control Technology</p>
-                </div>
-              </div>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Direct neural control of digital systems with our advanced BCI platform. 
-                Enable thought-to-text conversion, cognitive enhancement, and breakthrough 
-                medical applications for rehabilitation and accessibility.
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="text-3xl font-bold text-zion-purple">$15,000</div>
-                <div className="text-zion-slate-light">per month</div>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {ALL_INNOVATIVE_SERVICES_2026.slice(0, 6).map((service, index) => (
-              <motion.div
-                key={service.id}
-                className="card-futuristic p-6"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-lg flex items-center justify-center`}>
-                    <getCategoryIcon(service.category) className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white">{service.name}</h4>
-                    <p className="text-sm text-zion-slate-light">{service.category}</p>
-                  </div>
-                </div>
-                
-                <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
-                  {service.description.substring(0, 120)}...
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="text-zion-cyan font-bold">
-                    ${service.price.toLocaleString()}
-                  </div>
-                  <div className="text-zion-slate-light text-sm">
-                    {service.pricingModel}
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -775,4 +502,4 @@ import SEO from '../components/SEO';
       </section>
     </>
   );
-
+}

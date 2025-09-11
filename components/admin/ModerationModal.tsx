@@ -1,6 +1,5 @@
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
@@ -11,22 +10,17 @@ export default function ModerationModal(): any ({;
   onClose,;
   onAction,;
 }: ModerationModalProps) {;
-==============
 
-=======
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
-=======
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -80,8 +74,6 @@ export default function ModerationModal(): any ({;
             <label className='block text-sm font-medium mb-1'>;
               Admin Notes;
             </label>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -125,11 +117,9 @@ export default function ModerationModal(): any ({;
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
   );
-=======
       </div>
     </div>
 );
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   on_close: () => void;
   on_action: (
@@ -433,16 +423,6 @@ export default function ModerationModal({
 );
 }
   );
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

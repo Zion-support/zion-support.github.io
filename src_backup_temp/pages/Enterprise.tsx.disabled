@@ -3,5 +3,3 @@ const Enterprise: React.FC = () => {;
   return (;
     <div className="mx-auto max-w-7xl px-4 py-12">";
       <h1 className="text-3xl font-bold text-gray-900">Enterprise Solutions</h1>";
-<<<<<<< HEAD:src_backup_temp/pages/Enterprise.tsx.disabled
-      <p className="mt-4 text-gray-700">,

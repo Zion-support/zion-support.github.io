@@ -2,8 +2,6 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
@@ -24,14 +22,10 @@ export function EnhancedSearchInput({
   placeholder = "Search..."
   searchSuggestions
 }: EnhancedSearchInputProps) {
-=======
-=======
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -76,13 +70,10 @@ export function EnhancedSearchInput({ ;
   const inputRef = useRef<HTMLInputElement>(null),;
   const containerRef = useRef<HTMLDivElement>(null),;
 ;
-=======
-=======
   // Filter suggestions based on input value;
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
-=======
       setFilteredSuggestions(searchSuggestions && searchSuggestions.filter(s => s && s.type === 'recent'));
       return;
     }
@@ -127,7 +118,6 @@ export function EnhancedSearchInput({ ;
         />;        <Input
           ref={inputRef}
           type="text"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -165,7 +155,6 @@ export function EnhancedSearchInput({ ;
   );
 }
 
-=======import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
 import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
@@ -261,8 +250,6 @@ function handleClickOutside() {
       />;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface EnhancedSearchInputProps {
   value: string;
@@ -304,7 +291,3 @@ if (!value) {
     </div>
   )
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

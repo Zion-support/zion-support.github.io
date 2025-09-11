@@ -9,8 +9,4 @@ const EmergingTech = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EmergingTech;
-=======
-export default EmergingTech;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

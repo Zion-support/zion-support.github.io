@@ -147,13 +147,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-=======
     }
   }
   },
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="flex items-center text-white">
@@ -170,14 +167,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
             <FormField
               control={form.control}
               name="title"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
@@ -208,8 +201,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
                       {...field}
                       placeholder="Enter key features, separated by commas";
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
-=======
-=======                    <Input
                       {...field} 
                       placeholder="e && e.g. Professional Web Design Services"
 
@@ -219,7 +210,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
 
             <FormField
               control={form && form.control}
-=======
 
 
               control={form.control}              name="keyFeatures"
@@ -243,7 +233,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
 
 
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
-=======
                     />;
                   </FormControl>;
                   <FormMessage />;
@@ -371,8 +360,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
                   Generate Description;
                 </>)}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </form>;
         </Form>;
@@ -398,16 +385,8 @@ if (error) {
   );
 }
 ;
-=======
-=======
     </Card>);
 }
 
-=======
 ;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

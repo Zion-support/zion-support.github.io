@@ -9,8 +9,4 @@ const Cookies.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Cookies.js;
-=======
-export default Cookies.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

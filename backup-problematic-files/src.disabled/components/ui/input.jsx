@@ -59,8 +59,4 @@ export default function Input({ }: InputProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default Input;
-=======
-export default Input;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 
@@ -11,13 +9,10 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
@@ -34,15 +29,11 @@ interface ReminderPayload {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "authorization, x-client-info, apikey, content-type"},
 
 interface ReminderPayload {
   user_id: string,
   missing_milestone: string,
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   role: string
 }
 serve(async (req: Request) => {
@@ -53,7 +44,6 @@ serve(async (req: Request) => {
     if (!user_id |!missing_milestone |!role) {
 
       supabaseUrl,
-=======
       supabaseUrl;      supabaseServiceKey
     );
     const payload = await req.json() as ReminderPayload;
@@ -64,21 +54,16 @@ serve(async (req: Request) => {
 
     const { user_id, missing_milestone, role } = payload;
     if (!user_id |!missing_milestone |!role) {
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ),
     
     const payload = await req.json() as ReminderPayload,
     const { user_id, missing_milestone, role } = payload,
     
     if (!user_id || !missing_milestone || !role) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });=======
       return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {
           status: 400
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -89,7 +74,6 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       .single(),
     
@@ -414,8 +398,6 @@ if (notificationError) {
     );
   }
 });
-=======
-=======    );
   } catch (error) {
     console.error (error);
     return new Response (
@@ -428,12 +410,6 @@ if (notificationError) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

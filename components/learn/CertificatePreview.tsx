@@ -1,5 +1,4 @@
 
-=======
 import React from "react";
 import React from "react";
 export default function CertificatePreview({
@@ -24,7 +23,6 @@ export default function CertificatePreview({
 
 }
 
-=======import React from './react';
 ;
 export default /**
  * CertificatePreview - Function description
@@ -138,12 +136,4 @@ export default function CertificatePreview({
   );
 }
 }
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

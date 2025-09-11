@@ -9,8 +9,4 @@ const ContentCreation = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ContentCreation;
-=======
-export default ContentCreation;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

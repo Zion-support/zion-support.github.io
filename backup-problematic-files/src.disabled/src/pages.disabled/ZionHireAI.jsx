@@ -9,8 +9,4 @@ const ZionHireAI = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ZionHireAI;
-=======
-export default ZionHireAI;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

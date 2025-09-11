@@ -9,8 +9,4 @@ const FuturisticServicesShowcase.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default FuturisticServicesShowcase.js;
-=======
-export default FuturisticServicesShowcase.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

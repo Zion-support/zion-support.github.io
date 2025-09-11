@@ -2,17 +2,13 @@ export default function ReportsIndex() {
 
 export default function ReportsIndex() {;
 export default function ReportsIndex() {
-=======
 import Link from 'next/link';
 import ContentCategorizer from '../../components/ContentCategorizer';
 
 export default function ReportsIndex() {
-=======
 
 export default function ReportsIndex() {;=======
 export default function ReportsIndex() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <main className='container mx-auto px-4 py-12 max-w-7xl'>;
@@ -91,17 +87,13 @@ function ReportsIndex() {
             className='inline - flex items - center gap - 2 text - cyan - 300 hover:text - cyan - 200 transition - colors duration - 200';
           >            ← Back to home        <div className="mt - 12 text - center">;
           <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition - colors duration - 200">;
-=======
-=======
 
         {/* Back to Home */}
 
 
   );
 }
-=======
         <div className="mt-12 text-center">
-=======
 
         {/* Content Categorizer Component */  } catch (error) {
     console.error("Error:", error);
@@ -158,11 +150,9 @@ export default function ReportsIndex() {
 }
         <div className="mt-12 text-center">
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
-==============
         <div className="mt-12 text-center">
 
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ← Back to home
           </Link>
         </div>
@@ -197,13 +187,5 @@ export default function ReportsIndex() {
   }
 }
 ;
-=======
-==============
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

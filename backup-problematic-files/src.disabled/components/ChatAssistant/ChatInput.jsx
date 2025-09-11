@@ -9,8 +9,4 @@ const ChatInput = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ChatInput;
-=======
-export default ChatInput;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -639,8 +639,6 @@ export default function DataAnalyticsServices() {;
     </>
     </>
 export default Data-analytics;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };

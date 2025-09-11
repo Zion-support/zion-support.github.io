@@ -13,18 +13,14 @@ import {Clock, ExternalLink, MessageSquare, Video, X} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {InterviewResponseForm} from "./InterviewResponseForm";
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
-=======
-=======interface InterviewCardProps {;
   interview: Interview,;
   onRefresh: () => Promise<void>;
 }
 
 export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -72,13 +68,10 @@ function InterviewCard() {
   $2
 }
       return `Took place ${formatDistanceToNow (interview_date)} ago`;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } else {
       return `Starts in ${formatDistanceToNow (interview_date)}`;
     }
   }
-=======
-=======
 
 
 
@@ -102,7 +95,6 @@ function InterviewCard() {
       toast({
         title: "Interview cancelled"
         description: "The interview has been cancelled successfully."
-=======      toast ({
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
         variant: "destructive";
@@ -321,7 +313,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       status 
     }),
     
-=======    if (success) {
       toast({
         title: `Interview ${status}`
         description: `You have successfully ${status} the interview request.`
@@ -368,7 +359,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       case 'requested':
   };
 
-=======
   },;
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
@@ -420,7 +410,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -485,7 +474,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
@@ -506,9 +494,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction
                       onClick={handleCancelInterview}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
               <AlertDialog>;
                 <AlertDialogTrigger asChild>;
                   <Button variant="outline" size="sm" className="w-full mt-2">;
@@ -527,24 +512,12 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
 
           <InterviewResponseForm 
 
-<<<<<<< HEAD
           <InterviewResponseForm ;
           <InterviewResponseForm
           <InterviewResponseForm 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-          <InterviewResponseForm
-          <InterviewResponseForm             interview={interview}
-            onConfirm={() => handleRespondToInterview('confirmed')}
-            onClose={() => setIsResponseDialogOpen(false)}
-            isLoading={isLoading}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======          />;
         </DialogContent>;
       </Dialog>;
     </Card>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
 }
             </>)}
@@ -565,5 +538,4 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
         </DialogContent>;
       </Dialog>;
     </Card>);
-=======
 ;

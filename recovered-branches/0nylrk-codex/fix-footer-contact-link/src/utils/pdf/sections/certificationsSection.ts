@@ -1,15 +1,11 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
@@ -32,8 +28,6 @@ export function addCertificationsSection(;
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 80, yPos);
 
-=======
-=======      doc && doc.addPage();
       yPos = 20
     }
 
@@ -41,8 +35,6 @@ import { jsPDF } from 'jspdf',;
 import { Certification } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
 import { formatDate } from '../formatters',;
-=======
-==============
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -57,8 +49,6 @@ if (return start_y) {
   $2
 }
   let y_pos = start_y;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export function addCertificationsSection(;
   doc:jsPDF,;
@@ -109,7 +99,6 @@ export function addCertificationsSection(;
     ;
     yPos += 16,;
   }
-<<<<<<< HEAD
   ;
   return yPos,;}
  doc.setFontSize (16);
@@ -131,12 +120,7 @@ doc.text (cert.issuing organization, 20, yPos + 5);
 }return yPos 
 }
 }
-=======
-  return y_pos;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
   // Check if we need to add a new page;
   // Check condition
@@ -184,6 +168,4 @@ if ( {) {
     y_pos += 16;
   }
   return y_pos;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

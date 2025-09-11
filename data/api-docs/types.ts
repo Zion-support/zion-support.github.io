@@ -1,22 +1,17 @@
 
 
 ;
-=======
 
 ;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface ErrorCode {
   code: string;
   http_status: number;
   message: string;
 
 ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 export interface EndpointSpec {
-=======
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -34,10 +29,7 @@ export interface ErrorCode {;
   message: string;
 
 export interface EndpointSpec {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   title: string;
   description: string;
@@ -60,8 +52,6 @@ export interface SectionSpec {;
 ;
 
 export interface ApiDocsSpec {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
@@ -71,12 +61,10 @@ export type Visibility = 'public' | 'partner' | 'internal';
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python'
   code: string
-=======
   lastUpdatedIso: string
 
 }
 
-=======
 
 }
 }
@@ -85,9 +73,6 @@ export interface CodeSample {
 }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
 export interface CodeSample {;
@@ -142,7 +127,3 @@ export interface ApiDocsSpec {;
 }
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

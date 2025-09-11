@@ -9,8 +9,4 @@ const ChatAssistant.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ChatAssistant.js;
-=======
-export default ChatAssistant.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

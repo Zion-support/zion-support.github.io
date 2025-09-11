@@ -100,7 +100,6 @@ import {
   FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -125,10 +124,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
-=======
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -136,7 +133,6 @@ import React, { useState, useEffect } from 'react';
   const router = useRouter();
 
 
-=======
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -451,7 +447,6 @@ import React, { useState, useEffect } from 'react';
 
 
 
-=======  // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
     { name: 'AI Blockchain Analytics', href: '/ai-blockchain-analytics' }
@@ -466,7 +461,6 @@ import React, { useState, useEffect } from 'react';
 
 
 
-=======  // Newly added real services quick links
   const newServiceLinks = [
     {
       name: 'Email Deliverability Monitor'
@@ -1646,8 +1640,6 @@ export default function NeoFuturisticNavigation() {;
               )}
             </div>
           </div>
-=======
-=======
   FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
@@ -1675,8 +1667,6 @@ import Button from '../ui/Button';
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1718,7 +1708,6 @@ import Button from '../ui/Button';
 
 
 
-=======
 
               {/* Company Section */}
               <div>;
@@ -1729,15 +1718,11 @@ import Button from '../ui/Button';
                   <span>Company</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   />;
                 </button>;
                 {activeDropdown === 'mobile-company' && (;
                   <div className='ml-4 space-y-3'>;
                     {companyInfo && companyInfo.map((item, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       <Link
                         key={index}
                         href={item && item.link}
@@ -1855,14 +1840,11 @@ import Button from '../ui/Button';
                   </div>
                 </div>
                 <div className='mt-6 space-y-3'>
-=======
-
-                <div className='mt-6 space-y-3'>;
-=======
 
                 <div className='mt-6 space-y-3'>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+                <div className='mt-6 space-y-3'>;
+
                   <Button
                     href='/services'
                     variant='quantum'
@@ -1920,8 +1902,6 @@ import Button from '../ui/Button';
 }</div>)
 }</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)
 }</nav>) 								<div className="mt-6 space-y-3">
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { 
 	Menu;
 	X, 
@@ -2440,10 +2420,7 @@ icon: <Atom className="w-5 h-5" />,
 }</div>)
 }</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)
 }</nav>) 								<div className="mt-6 space-y-3">
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
 										Explore Services
 										<ArrowRight className="w-5 h-5 ml-2" />
@@ -2516,7 +2493,6 @@ icon: <Atom className="w-5 h-5" />,
 }
 
 
-=======        </div>)}
     </nav>);
 ;
   `w - 4 h - 4 transition - transform duration - 300 $ {
@@ -2575,14 +2551,3 @@ icon: <Atom className="w-5 h-5" />,
 	);
 }
 
-<<<<<<< HEAD
-=======);
-}
-	);
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

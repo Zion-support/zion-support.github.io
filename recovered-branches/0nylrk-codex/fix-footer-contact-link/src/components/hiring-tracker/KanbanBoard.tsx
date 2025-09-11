@@ -20,12 +20,9 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
   index: number;
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 }
 ;
 interface DropResult {;
@@ -34,7 +31,6 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
-=======  droppableId: string
 
   index: number
 }
@@ -77,8 +73,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -120,8 +114,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       [source.droppableId]: sourceColumn;
       [destination.droppableId]: destColumn});
 ;
-=======
-=======import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
@@ -142,14 +134,10 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
-=======
 
 
-=======
 ;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface KanbanBoardProps {;
   jobId?: string;
 }
@@ -172,8 +160,6 @@ interface KanbanBoardProps {;
          destination.index === source.index)) {;
       return;
     }
-=======
-=======      const groupedApplications = COLUMNS && COLUMNS.reduce((acc, column) => {;
         acc[column && column.id] = applications && applications.filter(app => app && app.status === column && column.id);
         return acc;
       }, {} as Record<string, JobApplication[]>);
@@ -196,13 +182,11 @@ interface KanbanBoardProps {;
 
 
 
-=======  }
 
   },
   
   },
   
-=======  if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
@@ -214,8 +198,6 @@ interface KanbanBoardProps {;
               <Skeleton className="h-[400px] w-full" />
             </CardContent>
           </Card>
-=======;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Get the application that was dragged;
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
@@ -223,14 +205,10 @@ interface KanbanBoardProps {;
     // Update the application status in the database;
     const newStatus = destination && destination.droppableId as ApplicationStatus;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     setColumns({;
       ...columns;
       [source && source.droppableId]: sourceColumn;
       [destination && destination.droppableId]: destColumn});
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     // Update status in the database;
     try {;
       await updateApplicationStatus(draggableId, newStatus);
@@ -258,7 +236,6 @@ interface KanbanBoardProps {;
   ;
   if (!applications || applications.length === 0) {;
     return (;
-=======
   if (!applications |applications.length === 0) {
   
   if (!applications || applications.length === 0) {
@@ -276,7 +253,6 @@ interface KanbanBoardProps {;
       <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>;
         {COLUMNS && COLUMNS.map(column => (;
           <KanbanColumn
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from './react';
 import { DragDropContext, Droppable, Draggable } from './react - beautiful - dnd';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -425,7 +401,6 @@ if ( {) {
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
           <KanbanColumn;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             key={column.id}
             id={column.id}
             title={column.title}
@@ -468,7 +443,6 @@ if (isLoading) {
 }/>) ) 
 }</div> </DragDropContext>) 
 }
-=======            applications={columns[column.id] |[]}
             count={columns[column.id]?.length |0}
           />
         ))}
@@ -483,9 +457,4 @@ if (isLoading) {
     </DragDropContext>;
   );
 }
-=======
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

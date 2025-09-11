@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
 import {
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,6 +15,9 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+  ];
+=======
     return this.props.children;
   }
 }
@@ -26,7 +27,6 @@ import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';import Link from 'next/link';
-=======
 
 
 import Link from 'next/link';
@@ -45,6 +45,7 @@ import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-service
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
+>>>>>>> main
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -64,27 +65,17 @@ export default function Revolutionary2026ServicesShowcase() {
     }
   };
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Enhanced Background Effects */}
 
-=======  };
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
       {/* Enhanced Background Effects */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
-=======
   };
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -96,27 +87,21 @@ export default function Revolutionary2026ServicesShowcase() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>;
       </div>;
       <div className="max-w-7xl mx-auto relative z-10">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39        {/* Enhanced Header */}
         <motion&& motion.div
 
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
 
 
 
-=======
 
         {/* Enhanced Header */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
 
         {/* Enhanced Header */}
 
 
         <motion.div
-=======
           className='text-center mb-20'
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
@@ -134,8 +119,6 @@ export default function Revolutionary2026ServicesShowcase() {
             Experience the most advanced AI, quantum computing, and metaverse
             technologies ever created.
             <span className='text-purple-400 font-semibold'>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -203,8 +186,6 @@ export default function Revolutionary2026ServicesShowcase() {
             </span>{' '}
             with our revolutionary solutions.;
           </p>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           {/* Service Statistics */}
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             <div className='text - center'>;
@@ -231,7 +212,6 @@ export default function Revolutionary2026ServicesShowcase() {
           </p>;
 
 
-=======
 
 
         {/* AI Autonomous Services Section */}
@@ -242,21 +222,16 @@ export default function Revolutionary2026ServicesShowcase() {
           viewport={{ once: true }}
 
 
-=======
 
-=======
         {/* AI Autonomous Services Section */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
           viewport={{ once: true }}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
               <div className='text - gray - 400 text - sm'>Metaverse Services</div>;
             </div>;
@@ -507,7 +482,6 @@ export default function Revolutionary2026ServicesShowcase() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-==============            {featuredAIServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -621,9 +595,6 @@ export default function Revolutionary2026ServicesShowcase() {
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div
           variants={containerVariants}
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div
           variants={containerVariants}
@@ -632,7 +603,6 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           viewport={{ once: true }}
 
                       </span>;
@@ -683,7 +653,6 @@ export default function Revolutionary2026ServicesShowcase() {
           variants={container_variants}
           initial='hidden';
           whileInView='visible';
-=======
           viewport={{ once: true }}
           className='mb - 20';
         >;
@@ -731,7 +700,6 @@ export default function Revolutionary2026ServicesShowcase() {
                     <div>;
                       <h4 className='text - xl font - bold text - white'>;
 
-=======
                   <Link 
                     href={service.link} 
 
@@ -844,13 +812,11 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>;
           <div className='text-center mt-8'>;
 
-=======
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -930,7 +896,6 @@ export default function Revolutionary2026ServicesShowcase() {
           whileInView="visible"
           viewport={{ once: true }}
 
-=======
                   <Link 
                     href={service.link} 
 
@@ -1039,7 +1004,6 @@ export default function Revolutionary2026ServicesShowcase() {
             ))}
           </div>;
           <div className='text-center mt-8'>;
-=======
           <div className="text-center mt-8">
             <Link 
 
@@ -1085,18 +1049,10 @@ export default function Revolutionary2026ServicesShowcase() {
   );
 
 }
-<<<<<<< HEAD
 
 }
   );
 }
-=======
-=======}
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </span>;
                       <span className='text - gray - 400 text - sm'>;
                         ({service.reviews});
@@ -1195,17 +1151,9 @@ export default function Revolutionary2026ServicesShowcase() {
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

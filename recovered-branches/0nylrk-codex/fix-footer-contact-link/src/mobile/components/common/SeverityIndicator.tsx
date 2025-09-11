@@ -1,21 +1,17 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
   severity: "safe" | "suspicious" | "dangerous"
-=======
 
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;=======
 
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   showIcon?: boolean;
   showText?: boolean;
@@ -28,9 +24,6 @@ export function SeverityIndicator({
   className
 import { cn } from "@/lib/utils",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
   showIcon?: boolean,
@@ -42,15 +35,12 @@ interface SeverityIndicatorProps {
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   showText = true, 
   size = "md",
 
   className 
 
-==============
 
-=======import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface SeverityIndicatorProps {;
@@ -67,8 +57,6 @@ export function SeverityIndicator({;
   showText = true,;
   size = "md",;
   className;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }: SeverityIndicatorProps) {;
   const getSeverityIcon = () => {;
     switch (severity) {;
@@ -110,14 +98,11 @@ function SeverityIndicator() {
     }
   }
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className={cn ("flex items - center gap - 1", class_name)}>;
       {show_icon && getSeverityIcon ()}
       {show_text && <span className="capitalize text - sm">{severity}</span>}
     </div>);
-<<<<<<< HEAD
   ),; 
 }export function SeverityIndicator ({
   severity;
@@ -156,9 +141,3 @@ return (</div>)
   );
 }
 ;
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

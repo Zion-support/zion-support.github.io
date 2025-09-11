@@ -25,14 +25,10 @@ export function QuoteRequestForm() {;
 
 
 export function QuoteRequestForm() {;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -58,19 +54,15 @@ export function QuoteRequestForm() {
   
   
   
-=======
-=======
 
 
   
 
     }
     },
-=======
 
     },
 
-=======
     }
     },    contactInfo: {
       name: ""
@@ -78,7 +70,6 @@ export function QuoteRequestForm() {
       phone: ""
       company: ""
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }),
   
 
@@ -173,10 +164,7 @@ export function QuoteRequestForm() {
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -432,8 +420,6 @@ export function QuoteRequestForm() {;
   return (;
   };
   return (;
-=======
-=======
   };
 
   return (
@@ -455,7 +441,6 @@ export function QuoteRequestForm() {;
               )}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
@@ -463,7 +448,6 @@ export function QuoteRequestForm() {;
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
-=======;
   const renderStepContent = () =>: any {
     switch (current_step) {
       case "service":;
@@ -530,8 +514,6 @@ export function QuoteRequestForm() {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </div>);
     </div>;
@@ -575,17 +557,8 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
   );
 }
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -18,7 +18,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-=======import Head from 'next / head';
 import { motion } from 'framer-motion';
 
 
@@ -58,7 +57,6 @@ import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quant
 import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const stats = [
   {
@@ -92,15 +90,12 @@ const stats = [
 
 
 export default function CuttingEdgePricing2025() {
-=======
 
 export default function CuttingEdgePricing2025() {;
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ...cuttingEdgeQuantumServices2025;
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025;
@@ -212,9 +207,6 @@ export default function CuttingEdgePricing2025() {;
 
   return (
 
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
@@ -322,8 +314,6 @@ export default function CuttingEdgePricing2025() {;
               >
                 Cutting-Edge
                 Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
-=======
-=======                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >=======
@@ -373,17 +363,12 @@ export default function CuttingEdgePricing2025() {;
                   Pricing 2025
                 </span>
               </motion.h1>
-=======
                 initial={{ opacity: 0, y: 20 }}
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {stats.map((stat, index) => (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <div key={index} className='text-center'>
                     <div className='flex justify-center mb-2'>
                       <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
@@ -397,7 +382,6 @@ export default function CuttingEdgePricing2025() {;
 
                 ))}
 
-=======                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
                         <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -406,8 +390,6 @@ export default function CuttingEdgePricing2025() {;
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-sm text-white/70">{stat.label}</div>
 
-=======
-=======
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
                   </div>
@@ -419,7 +401,6 @@ export default function CuttingEdgePricing2025() {;
         </section>;
 
 
-=======
 
 
 
@@ -435,14 +416,10 @@ export default function CuttingEdgePricing2025() {;
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -467,7 +444,6 @@ export default function CuttingEdgePricing2025() {;
               {pricingTiers.map((tier, index) => (
 
                 <motion.div
-=======
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -479,29 +455,23 @@ export default function CuttingEdgePricing2025() {;
 
 
 
-=======                        </li>
 
                       ))}
                     </ul>
 
-==============
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <a
                       href={tier && tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                         tier && tier.popular
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                           : 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10'
-=======
                       }`}
                     >
                       {tier.cta}
                       <ArrowRight className='ml-2 w-4 h-4' />                    </a>                      <ArrowRight className="ml-2 w-4 h-4" />
                       <ArrowRight className='ml-2 w-4 h-4' />                    </a>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </a>
                   </div>
@@ -518,7 +488,6 @@ export default function CuttingEdgePricing2025() {;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
 
-=======
                     </a>
                   </div>
                 </motion.div>
@@ -536,19 +505,12 @@ export default function CuttingEdgePricing2025() {;
 
 
 
-=======
-
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -568,16 +530,10 @@ export default function CuttingEdgePricing2025() {;
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">;
 
-=======
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === 'all';
@@ -592,7 +548,6 @@ export default function CuttingEdgePricing2025() {;
 
 
 
-=======
 
 
                 <button
@@ -600,7 +555,6 @@ export default function CuttingEdgePricing2025() {;
 
 
 
-=======                  key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.name
@@ -610,14 +564,10 @@ export default function CuttingEdgePricing2025() {;
             </div>
 
 
-=======
-=======
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed mb - 4'>;
                           {service.description}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </div>
             {/* Services Grid */}
             <motion.div
@@ -633,8 +583,6 @@ export default function CuttingEdgePricing2025() {;
                   variants={itemVariants}
                   className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
@@ -652,8 +600,6 @@ export default function CuttingEdgePricing2025() {;
                         </h3>;
                         <p className="text - white / 70 text - sm leading - relaxed mb - 4">;
                           {service.description}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20'>;
                   <div className='p-6'>;
                     <div className='flex items-start justify-between mb-4'>;
@@ -696,7 +642,6 @@ export default function CuttingEdgePricing2025() {;
 
 
 
-=======                          {tag}
                         </span>;
                       ))}
                     </div>
@@ -754,8 +699,6 @@ export default function CuttingEdgePricing2025() {;
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
 
                       <span>Market: {service.marketSize}</span>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
                         </span>                      </div>;
@@ -771,8 +714,6 @@ export default function CuttingEdgePricing2025() {;
                       </h4>;
                       <div className="text - 2xl font - bold text - white">;
                         ${service.pricing.starter.price}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     </div>;
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
@@ -791,7 +732,6 @@ export default function CuttingEdgePricing2025() {;
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
-=======                  {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
 
@@ -821,9 +761,6 @@ export default function CuttingEdgePricing2025() {;
                       </a>;
                     </div>;
                   </div>;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
@@ -834,7 +771,6 @@ export default function CuttingEdgePricing2025() {;
         </section>;
 
 
-=======
 
 
 
@@ -852,8 +788,6 @@ export default function CuttingEdgePricing2025() {;
                 Contact us today for a personalized consultation.;
               </p>;
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <a
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>;
@@ -877,18 +811,10 @@ export default function CuttingEdgePricing2025() {;
   );
 
 }
-<<<<<<< HEAD
 
 }
   );
 }
-=======
-=======}
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <span className="text - sm font - normal text - white / 60">/{service.pricing.starter.period}</span>;
                       </div>;
                     </div>;
@@ -1042,17 +968,9 @@ export default function CuttingEdgePricing2025() {;
       </Layout>;
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,9 +1,7 @@
 
 
 
-==============
 
-=======import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
@@ -17,7 +15,6 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-=======
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {    return new Response(null, { headers: corsHeaders })
@@ -39,11 +36,9 @@ serve(async (req) => {
       paymentTerms;
       paymentAmount;
 
-=======      additionalClauses} = await req.json();
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -55,12 +50,9 @@ serve(async (req) => {
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
-==============
 
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662    Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
     ${endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'}
@@ -86,8 +78,6 @@ serve(async (req) => {
       `
     }
     
-=======
-=======      ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
       ${additionalClauses && additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
       ${additionalClauses && additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
       ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
@@ -98,15 +88,11 @@ serve(async (req) => {
     
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON && JSON.stringify({
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         model: 'gpt-4o';
         messages: [
           {
@@ -129,9 +115,3 @@ serve(async (req) => {
   }
 });
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

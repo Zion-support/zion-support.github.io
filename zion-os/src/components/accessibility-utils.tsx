@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useEffect, useRef, useState  } from './react';,
 // Skip link component for keyboard navigation;
@@ -9,7 +8,6 @@ function SkipLink() {
   return (
 
 
-=======
 // Tooltip component with proper accessibility;
 export function Tooltip({children;
   content;
@@ -44,33 +42,8 @@ export function Tooltip({;
   };
   return (;
     <div className="relative inline-block">;
-<<<<<<< HEAD
-=======
-=======
-  return (;
-    <div className="relative inline-block">;=======
-export /**
- * Tooltip - Function description
- */
-function Tooltip() {
-  const [is_visible, setIsVisible] = useState (false),
-  const [tooltip_id] = useState (() => `tooltip-${Math.random ().to_string (36).substr (2, 9)}`),
-  const position_classes = {
-    top: "bottom - full left - 1/2 transform -translate - x-1 / 2 mb - 2",
-    bottom: "top - full left - 1/2 transform -translate - x-1 / 2 mt - 2",
-    left: "right - full top - 1/2 transform -translate - y-1 / 2 mr - 2";
-    right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <div className="relative inline - block">;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Tooltip component with proper accessibility;
 export function Tooltip({;

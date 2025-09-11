@@ -1,20 +1,15 @@
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-=======
 
 import React, { useState, useEffect } from 'react';
 
-=======
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-=======
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -42,8 +37,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662  Menu,
   X,
   ChevronDown,
   Search,
@@ -118,17 +111,13 @@ import { motion, AnimatePresence } from 'framer-motion';
   BrainIcon,
   AtomIcon,
   MenuIcon,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   CloseIcon,;
   ChevronRightIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -239,7 +228,6 @@ const main_navigation = [;
   { name: 'Blog', href: '/blog', icon: MessageCircle },
 
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-=======
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 const companyLinks = [
@@ -291,10 +279,8 @@ const mainNavigation = [;
 
               {/* Services Dropdown */}
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>;
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>;
@@ -379,10 +365,8 @@ const mainNavigation = [;
                   <span>{item.name}</span>
                 </Link>
               ))}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group">;
@@ -393,10 +377,8 @@ const mainNavigation = [;
 
                 {/* Mega Menu */}
 
-=======
             {/* Desktop Navigation */}
 
-=======
               <Link href="/contact">
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
 
@@ -405,11 +387,7 @@ const mainNavigation = [;
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Get Started
                 </button>
               </Link>
@@ -569,8 +547,6 @@ const mainNavigation = [;
                 <button className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - lg hover:shadow - xl'>                  Get Started            <div className="hidden lg:flex items - center space - x-4">;
               <Link href="/contact">;
                 <button className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - lg hover:shadow - xl">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   Get Started;
                 </button>;
               </Link>;
@@ -584,13 +560,8 @@ const mainNavigation = [;
 
               className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
 
-=======
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -610,34 +581,26 @@ const mainNavigation = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </button>;
           </div>;
         </div>;
       </nav>;
 
 
-=======
 
 
 
 
           >
-=======
             transition={{ duration: 0.3 }}
             className='fixed inset-0 z-50 lg:hidden'
-=======
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
               onClick={closeMenu}
@@ -725,7 +688,6 @@ const mainNavigation = [;
                     <Link
                       key={item.name}
                       href={item.href}
-=======
 
                 {/* Mobile Navigation */}
                 <div className='space-y-6'>;
@@ -742,7 +704,6 @@ const mainNavigation = [;
                       <span>{item.name}</span>
                     </Link>
                   ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Mobile Navigation */}
                 <div className='space-y-6'>;
                   {mainNavigation && mainNavigation.map(item => (                <div className="space-y-6">;
@@ -780,8 +741,6 @@ const mainNavigation = [;
                           <div key={index} className="space-y-2">
                             <div className="text-sm font-medium text-cyan-400 py-2">{category.title}</div>
                             {category.services.map((service, serviceIndex) => (
-=======
-=======                    <button
                       onClick={() =>;
                         setActiveCategory(activeCategory === 0 ? null : 0);
                       }
@@ -795,19 +754,14 @@ const mainNavigation = [;
                         className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <Link
                                 key={serviceIndex}
                                 href={service && service.href}
                                 onClick={closeMenu}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             ))}
                           </div>;
                         ))}
@@ -852,13 +806,11 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                         >
                           {link.name}
                         </Link>
-=======
                   </div>
 
                   </div>;
 
 
-=======
 
 
                   {/* Company Links */}
@@ -869,7 +821,6 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -879,12 +830,10 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                       <div className='flex items-center space-x-2'>
                         <Phone className='w-4 h-4 text-cyan-400' />
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Company Links */}
 
 
                       ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -897,14 +846,11 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 
 
 
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className='flex items-center space-x-2'>
@@ -926,7 +872,6 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                       </div>
                     </div>
                   </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>;
                   </div>;
                   {/* Contact Info */}
@@ -957,7 +902,6 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                       </div>;
                     </div>;
                   </div>;
-=======
 
                   {/* CTA Button */}
                   <div className='pt-4'>;
@@ -977,17 +921,13 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
         )}
   );
 }
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   );
 
 }
 
-=======
 
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
@@ -1003,15 +943,5 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
       <div className='h-20' />
     </>
   );
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

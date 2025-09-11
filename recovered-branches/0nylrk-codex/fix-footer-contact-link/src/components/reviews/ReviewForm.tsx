@@ -8,11 +8,8 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
-==============
 interface ReviewFormValues {;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -23,11 +20,9 @@ import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
 import { Switch } from '@/components / ui / switch';
 import { Review } from '@/types / reviews';
 interface ReviewFormValues {
-=======
 }
 interface ReviewFormProps {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
@@ -43,18 +38,14 @@ interface ReviewFormProps {;
 }
 
 export function ReviewForm({;
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   defaultValues?: Review;
   isSubmitting: boolean;
 }
 
 export function ReviewForm(): any ({;
 
-==============
 
 
-=======import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
@@ -111,13 +102,11 @@ interface ReviewFormProps {;
       would_work_again: undefined,;
       is_anonymous: false}
   });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
       project_id: projectId,;
       reviewee_id: revieweeId},;
-=======
 
     const success = await onSubmit(formattedData);
     if (success) {;
@@ -138,15 +127,12 @@ interface ReviewFormProps {;
 
         {/* Additional Rating Categories (only shown if main rating is provided) */}
 
-=======
 
             
-=======
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
             
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Communication */}
             <FormField
               control={form && form.control}
@@ -265,7 +251,6 @@ interface ReviewFormProps {;
                         />;
                         <span className="text-sm text-muted-foreground">;
                           {field && field.value ? "Yes" : "No"}
-=======
             </FormItem>)}
         />;
         {/* Additional Rating Categories (only shown if main rating is provided) */}
@@ -378,7 +363,6 @@ interface ReviewFormProps {;
                         />;
                         <span className="text - sm text - muted - foreground">;
                           {field.value ? "Yes" : "No"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         </span>;
                       </div>;
                     </FormControl>;
@@ -421,7 +405,6 @@ interface ReviewFormProps {;
 }
 ;
 
-<<<<<<< HEAD
 }render= {
   ({
   field 
@@ -499,13 +482,3 @@ interface ReviewFormProps {;
 }
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-        </Button>
-      </form>
-    </Form>
-  )
-}
-}
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

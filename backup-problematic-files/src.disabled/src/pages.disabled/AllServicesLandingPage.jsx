@@ -9,8 +9,4 @@ const AllServicesLandingPage = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AllServicesLandingPage;
-=======
-export default AllServicesLandingPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,13 +1,10 @@
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 
-=======
 
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
@@ -15,7 +12,6 @@ import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const features = [
   {
     title: "Private Hiring Portal"
@@ -41,9 +37,7 @@ const features = [
     description: "Powerful analytics and management tools for team leaders and administrators."
     icon: Settings}
   {
-==============
 
-=======
 export function EnterpriseFeatures() {
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">
@@ -68,14 +62,11 @@ export function EnterpriseFeatures() {
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
-=======
 
 };
 
-=======import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 
 const features = [;
@@ -116,9 +107,6 @@ export function EnterpriseFeatures() {;
     icon: Globe}];
 export function EnterpriseFeatures() {;
   return (;
-=======
-=======    icon: Globe}],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function EnterpriseFeatures() {;
   return (
@@ -164,21 +152,11 @@ icon: Settings
 }
 ;
 ;
-=======
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
 
-=======
           {features.map((feature) => (;
             <div;
 }
 
 
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

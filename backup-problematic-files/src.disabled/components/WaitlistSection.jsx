@@ -9,8 +9,4 @@ const WaitlistSection = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default WaitlistSection;
-=======
-export default WaitlistSection;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

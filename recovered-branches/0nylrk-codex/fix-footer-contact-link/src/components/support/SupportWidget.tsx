@@ -8,10 +8,8 @@ import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       {/* Fixed button in the bottom right */}
@@ -112,8 +110,6 @@ export function SupportWidget() {;
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
             theme === "dark"
               ? "bg-zion-blue-dark border border-zion-blue-light"
-=======
-==============
 
 
       {/* Fixed button in the bottom right */}
@@ -124,15 +120,12 @@ export function SupportWidget() {;
       {isOpen && (;
         <div
           className={cn(
-==============
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
             theme === "dark"
               ? "bg-zion-blue-dark border border-zion-blue-light"
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======              : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
           <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
@@ -143,8 +136,6 @@ export function SupportWidget() {;
               </h3>;
             </div>;
             <div className="flex items-center gap-2">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 onClick={() => setIsOpen(false)}
                 aria-label="Close support";
               >;
@@ -152,12 +143,10 @@ export function SupportWidget() {;
               </Button>;
             </div>;
           </div>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ChatBotPanel />;
         </div>;
       )}
     </>;
-=======import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';
 import { MessageSquare, Info, X } from './lucide-react';
@@ -224,8 +213,6 @@ function SupportWidget() {
         </div>)}
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  export function SupportWidget () {
   const [isOpen, setIsOpen] = useState (false);
@@ -257,7 +244,3 @@ const {
     </>
   )
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

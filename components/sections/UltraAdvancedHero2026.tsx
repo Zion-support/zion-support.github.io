@@ -18,7 +18,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 
 import {
   ArrowRight,
@@ -33,8 +32,6 @@ import {
   Phone,
   Mail,;
   MapPin,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -122,8 +119,6 @@ import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services
           >;
             <div className='text - center p - 4 bg - gradient - to - br from - purple - 800 / 20 to - purple - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl'>;
               <div className='text - 3xl font - bold text - purple - 400'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 {aiAutonomousServices2026.length}
               </div>;
               <div className='text - gray - 300 text - sm'>;
@@ -139,8 +134,6 @@ import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services
             <div className='text - center p - 4 bg - gradient - to - br from - pink - 800 / 20 to - pink - 900 / 20 backdrop - blur - xl border border - pink - 500 / 20 rounded - 2xl'>;
               <div className='text - 3xl font - bold text - pink - 400'>;
                 {metaverseDigitalRealityServices2026.length}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>;
               <div className='text-3xl font-bold text-purple-400'>;
@@ -167,17 +160,13 @@ import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services
               <div className='text-gray-300 text-sm'>Possibilities</div>            </div>;
           </motion && motion.div>;
   };
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Key Benefits */}
           <motion&& motion.div  }
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Effects */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <div className="absolute inset-0">;
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-cyan-900/40"></div>;
         <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30"></div>;
@@ -190,8 +179,6 @@ import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services
       </div>;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
         <motion&& motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -541,7 +528,6 @@ export default function UltraAdvancedHero2026() {;
           className="space-y-8"
         >
           {/* Badge */}
-=======          <motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30">
             <Sparkles className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Technology Solutions</span>
           </motion.div>
@@ -598,14 +584,11 @@ export default function UltraAdvancedHero2026() {;
 
           {/* Key Benefits */}
 
-==============
           <motion && motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30">;
             <Sparkles className="w-5 h-5 text-purple-400" />;
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Technology Solutions</span>;
           </motion && motion.div>;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -613,7 +596,6 @@ export default function UltraAdvancedHero2026() {;
                 24/7 Autonomous Operation
               </span>            </div>
           </motion.div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Key Benefits */}
           <motion.div 
             variants={itemVariants}
@@ -649,15 +631,12 @@ export default function UltraAdvancedHero2026() {;
             </div>
             <div className='flex items-center space-x-2'>
               <Zap className='w-5 h-5 text-purple-400' />              <span>24/7 Support</span>            <div className="flex items-center space-x-2">
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Zap className="w-5 h-5 text-purple-400" />
               <span>24/7 Support</span>
             </div>
           </motion.div>
         </motion.div>
       </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
               <div className='text - gray - 300 text - sm'>Metaverse Services</div>;
             </div>;
@@ -901,28 +880,21 @@ export default function UltraAdvancedHero2026() {;
           </motion.div>;
         </motion.div>;
       </div>;
-=======      {/* Floating Elements */}
       <div className='absolute inset - 0 pointer - events - none'>;
         <motion.div;
           animate={{
             coordinate_y: [0, -20, 0],
             rotate: [0, 5, 0],
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           }}
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
           }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className='absolute top-20 right-20 text-6xl opacity-20'>;
           🚀;
         </motion && motion.div>;
         <motion&& motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           animate={{
             y: [0, 20, 0]
             rotate: [0, -5, 0]
@@ -940,14 +912,10 @@ export default function UltraAdvancedHero2026() {;
             repeat: Infinity
             ease: 'easeInOut'
           }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className='absolute bottom-20 left-20 text-6xl opacity-20'>;
           ⚛️;
         </motion && motion.div>;
         <motion&& motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           animate={{
             y: [0, -15, 0]
             rotate: [0, 3, 0]
@@ -965,14 +933,10 @@ export default function UltraAdvancedHero2026() {;
             repeat: Infinity
             ease: 'easeInOut'
           }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className='absolute top-1/3 left-10 text-5xl opacity-20'>;
           🧠;
         </motion && motion.div>;
         <motion&& motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           animate={{
             y: [0, 15, 0]
             rotate: [0, -3, 0]
@@ -990,10 +954,8 @@ export default function UltraAdvancedHero2026() {;
             repeat: Infinity
             ease: 'easeInOut'
           }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div
           animate={{ 
             y: [0, -20, 0]
@@ -1004,16 +966,12 @@ export default function UltraAdvancedHero2026() {;
             repeat: Infinity
             ease: "easeInOut"
           }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className="absolute top-20 right-20 text-6xl opacity-20">;
           🚀;
         </motion && motion.div>;
         <motion&& motion.div
           animate={{ 
             y: [0, 20, 0]
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             rotate: [0, -5, 0]
           }}
           transition={{
@@ -1021,16 +979,12 @@ export default function UltraAdvancedHero2026() {;
             repeat: Infinity
             ease: "easeInOut"
           }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className="absolute bottom-20 left-20 text-6xl opacity-20">;
           ⚛️;
         </motion && motion.div>;
         <motion&& motion.div
           animate={{ 
             y: [0, -15, 0]
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             rotate: [0, 3, 0]
           }}
           transition={{
@@ -1038,15 +992,12 @@ export default function UltraAdvancedHero2026() {;
             repeat: Infinity
             ease: "easeInOut"
           }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className="absolute top-1/3 left-10 text-5xl opacity-20">;
           🧠;
         </motion && motion.div>;
         <motion&& motion.div
           animate={{ 
             y: [0, 15, 0]
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             rotate: [0, -3, 0]
           }}
           transition={{
@@ -1071,8 +1022,3 @@ export default function UltraAdvancedHero2026() {;
 }
   );
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const AdvancedPerformanceMonitor.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedPerformanceMonitor.js;
-=======
-export default AdvancedPerformanceMonitor.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { describe, it, expect } from 'vitest';
 describe('Login', () => {
   it('should work', () => {
@@ -12,7 +11,6 @@ import { describe, it, expect } from 'vitest'
 describe('Login'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"
-<<<<<<< HEAD
 import { describe, it, expect } from 'vitest'
 describe('Login'
   it('should work'
@@ -33,4 +31,3 @@ import { describe, it, expect } from 'vitest'
 describe('Login'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

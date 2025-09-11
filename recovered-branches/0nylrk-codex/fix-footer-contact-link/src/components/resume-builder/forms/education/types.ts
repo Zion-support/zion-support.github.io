@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {Education} from '@/types/resume';
 export interface EducationFormProps {;
 
@@ -8,7 +6,6 @@ export interface EducationFormProps {;
 
 
 export interface EducationItemProps {;
-=======
 
   education: Education;
   onEdit: (education: Education) => void;
@@ -17,7 +14,6 @@ export interface EducationItemProps {;
 
 
 export interface EducationFormFieldsProps {;
-=======
 
   isEditing: boolean;
   onSubmit: (data: any) => Promise<void>;
@@ -25,20 +21,13 @@ export interface EducationFormFieldsProps {;
   onCancel: () => void;
 }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import { Education  } from '@/types / resume';
 export interface EducationFormProps {
   resume_id: string;
   education_entries: Education[];
   on_complete: () => void;
   on_back: () => void;
-=======
-==============
-=======
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Education } from '@/types/resume',;
 export interface EducationFormProps {;
   resumeId: string,;
@@ -60,8 +49,6 @@ export interface EducationFormFieldsProps {;
   onCancel: () => void;
 }
 ;
-=======
-=======}
 export interface EducationItemProps {
   education: Education;
   on_edit: (education: Education) => void;
@@ -77,8 +64,3 @@ export interface EducationFormFieldsProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

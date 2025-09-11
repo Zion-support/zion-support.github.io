@@ -7,7 +7,6 @@
     return res && res.status(200).json(profile);
   } catch (e: any) {
     const { address } = req && req.query as { address?: string };
-=======
 
     const { address } = req && req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
@@ -47,11 +46,6 @@ function handler() {
   }
 
 }
-=======
-==============
     return res.status(500).json({ error: e.message })
   };
 }<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

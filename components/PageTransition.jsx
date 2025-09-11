@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 ;
 const PageTransition = () =>: any {
@@ -10,5 +9,3 @@ const PageTransition = () =>: any {
 ;
 export default PageTransition;
 ;
-<<<<<<< HEAD
-=======

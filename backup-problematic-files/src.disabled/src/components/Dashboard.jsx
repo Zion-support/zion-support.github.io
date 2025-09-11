@@ -9,8 +9,4 @@ const Dashboard = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Dashboard;
-=======
-export default Dashboard;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

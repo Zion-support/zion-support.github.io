@@ -107,7 +107,6 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     reviews: 12,
   },
   {
-=======
 
 
   {
@@ -192,8 +191,6 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
   {
 
-==============
-=======
 export interface InnovativeAIService {;    id: 'autonomous - devops - platform',
     name: 'Autonomous DevOps Platform',
     tagline:;
@@ -795,7 +792,6 @@ export interface InnovativeAIService {;    id: 'autonomous - devops - platform',
       'Research collaboration tools'
     ]
     benefits: [
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Improve diagnostic accuracy by 99 && 99.9%',
     id: 'ai - healthcare - diagnostic',
     name: 'AI Healthcare Diagnostic Platform',
@@ -920,10 +916,7 @@ export interface InnovativeAIService {;    id: 'autonomous - devops - platform',
     reviews: 189,
   },
 
-=======
 export interface InnovativeAIService {;
-=======
-=======
   id: string,;
   name: string,;
   tagline: string,;
@@ -1399,13 +1392,5 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350,;
     rating: 4.9,;
     reviews: 189;
-<<<<<<< HEAD
-=======
-=======
-=======
-    rating: 4.9,
-    reviews: 189;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -56,8 +54,6 @@ direction: "ascending" | "descending"
     direction: "ascending"
   });
   const sortedData = useMemo(() => {
-=======
-=======
   const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{=======
 import { useState, useMemo  } from './react';
@@ -89,7 +85,6 @@ function ITServicePricingTable() {
     
 
 
-=======
     key: "country"
     direction: "ascending"
   });
@@ -97,7 +92,6 @@ function ITServicePricingTable() {
     let filteredData = [...onsiteServicePricing],
     
     // Filter by search query
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -134,16 +128,13 @@ export function ITServicePricingTable() {;
     
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
-=======
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
             onChange={(e) => setSearchQuery(e && e.target.value)}
 
-=======import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
@@ -191,7 +182,6 @@ export function ITServicePricingTable() {;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white";
           />;
         </div>;
@@ -203,7 +193,6 @@ export function ITServicePricingTable() {;
     </div>;
   );
 }>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
     return filtered_data;
   }, [onsiteServicePricing, search_query, sort_config]);
@@ -285,8 +274,3 @@ export function ITServicePricingTable() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -8,9 +8,6 @@ import {;
   FormDescription,;
   FormMessage,;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
   FormField,
   FormItem,
@@ -21,9 +18,6 @@ import {;
 import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from './validation';
 interface DescriptionFieldsProps {
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -31,10 +25,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {;
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function DescriptionFields(): any ({;
   control,;
   handleEditorChange,;
@@ -62,24 +54,15 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
       <FormField;
         control={control}
         name="description";
-=======
-=======
-=======
-=======
 
         control={control}
         name="description"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
-==============
               <Textarea
-=======
 
-=======
-=======
 
 import React from 'react',
 import { Control } from 'react-hook-form',
@@ -107,20 +90,16 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
       <FormField;
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
                   field.onChange(e.target.value);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e && e.target.value);
@@ -147,8 +126,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
               <Textarea;
                 placeholder="Provide instructions on how to apply for this job";
                 className="resize - none min - h-[100px]";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 {...field}
               />;
             </FormControl>;
@@ -156,8 +133,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 {...field}
               />
             </FormControl>
@@ -171,7 +146,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           </FormItem>)}
       />;
     </>);
-<<<<<<< HEAD
 }
   ),;}
  interface DescriptionFieldsProps {
@@ -189,16 +163,4 @@ editorContent: string
 }/> <FormField <FormItem> <FormLabel>Application Instructions (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Provide instructions on how to apply for this job. </FormDescription> <FormMessage /> </FormItem>) 
 }/> </>) 
 }
-=======        )}
-      />
-    </>
-      />;
-    </>;
-  );
-=======
-          </FormItem>)}
-      />;
-    </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

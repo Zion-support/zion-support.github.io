@@ -9,8 +9,4 @@ const LazyWrapper.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default LazyWrapper.js;
-=======
-export default LazyWrapper.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

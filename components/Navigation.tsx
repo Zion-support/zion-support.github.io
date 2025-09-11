@@ -1,7 +1,5 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -24,7 +22,6 @@ import Link from './next / link';
 import { motion, AnimatePresence  } from './framer-motion';
 
 import {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "lucide-react";
 import SearchModal from "./SearchModal";
   BarChart3,
@@ -33,16 +30,13 @@ import SearchModal from "./SearchModal";
 import SearchModal from './SearchModal';
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-=======
   BarChart3
 } from 'lucide-react;
-=======  BarChart3
 } from 'lucide-react;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 
-=======
 
   Menu
   X
@@ -218,19 +212,15 @@ import SearchModal from "./SearchModal";
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
   ];
-=======  ];
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   ];
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       {/* Top Bar */}
@@ -247,8 +237,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -316,16 +304,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <Link href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -349,8 +333,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - gray - 500">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   Technology Solutions;
                 </div>;
               </div>;
@@ -362,9 +344,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
 
 
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -381,18 +360,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Get Started
               </Link>
@@ -427,13 +400,10 @@ origin/automation-improvements-final
 
 
 
-=======
                   >;
                     Pricing;
                   </Link>;
                   <div className="px-4 py-2 space-y-2">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -701,8 +671,6 @@ origin/automation-improvements-final
       </nav>;
 
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

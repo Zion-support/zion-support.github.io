@@ -9,8 +9,4 @@ const CloudDevOps = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default CloudDevOps;
-=======
-export default CloudDevOps;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

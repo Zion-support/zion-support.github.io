@@ -111,8 +111,6 @@ export default function CommunityPage() {
 
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
-=======
-=======// Mock data for featured posts;
 const featuredPosts: ForumPost[] = [;
   {;
     id: "1",;
@@ -148,7 +146,6 @@ const featuredPosts: ForumPost[] = [;
     replyCount: 8,;
     isPinned: true,;
     isFeatured: true;
-=======
 
 
 // Mock data for recent posts
@@ -215,8 +212,6 @@ export default function CommunityPage() {
   
   return (
     <AppLayout>
-=======
-=======
   }
 ];
 
@@ -270,7 +265,6 @@ const recentPosts: ForumPost[] = [;
 
 
   
-=======
 export default function CommunityPage() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
@@ -278,7 +272,6 @@ export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <AppLayout>;
@@ -293,12 +286,8 @@ export default function CommunityPage() {
     </AppLayout>
   )
 }
-=======
-=======
-=======
 
 
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -409,14 +398,11 @@ export default function CommunityPage() {;
       />;
       ;
       />;
-=======
-
-      />;
-=======
 
       />;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+      />;
+
       <div className="container py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div>;
@@ -427,7 +413,6 @@ export default function CommunityPage() {;
           </div>;
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
-=======
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -553,8 +538,6 @@ function CommunityPage() {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </AppLayout>);
 }
@@ -569,15 +552,7 @@ function CommunityPage() {
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

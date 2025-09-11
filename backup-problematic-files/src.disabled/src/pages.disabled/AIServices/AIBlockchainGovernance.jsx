@@ -9,8 +9,4 @@ const AIBlockchainGovernance = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIBlockchainGovernance;
-=======
-export default AIBlockchainGovernance;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

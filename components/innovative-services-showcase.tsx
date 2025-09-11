@@ -1,20 +1,15 @@
 
 import React from 'react',
 import React from 'react';
-=======
 
 import React from 'react';
 
-=======
 import React from 'react',
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  Star,
   TrendingUp,
   Zap,
   Brain,
@@ -31,9 +26,7 @@ import {
   MapPin,;
   ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -63,7 +56,6 @@ import { motion } from 'framer-motion';
 
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
-==============  Star,
   TrendingUp,
   Zap,
   Brain,
@@ -81,7 +73,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
 
   const contactInfo = {
-=======
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -119,7 +110,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 
   };
 
-=======  const featuredServices = [
     {
       title: '🔐 Quantum Internet Security Platform'
       description:
@@ -135,7 +125,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
         'Zero-trust architecture'
       ]
       link: 'https://ziontechgroup.com/quantum-internet-security-platform'
-=======
   const itemVariants = {;
     hidden: { opacity: 0, y: 30 },;
     visible: {;
@@ -504,7 +493,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
     }
   ];
 
-=======
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
@@ -523,8 +511,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
               className="text-center mb-16"
-=======
-=======
 
 
   return (
@@ -561,7 +547,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
           />
         </Head>
 
-=======
 
   ];
 
@@ -574,8 +559,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
               className="text-center mb-16"
-=======
-=======
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -597,7 +580,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 
               initial={{ opacity: 0, y: 30 }}
 
-=======
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -607,7 +589,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
                 </span>{' '}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Innovative Services;
               </h2>;
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -625,18 +606,13 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {featuredServices && featuredServices.map((service, index) => (;
                 <motion&& motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   viewport={{ once: true }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -656,7 +632,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
             </div>
           </div>
         </section>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
           </div>;
@@ -676,10 +651,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -687,7 +659,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
               whileInView={{ opacity: 1, y: 0 }}
         {/* ArrowRight-Gen AI Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
 
 
         {/* ArrowRight-Gen AI Services */}
@@ -695,7 +666,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -707,8 +677,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
                   ArrowRight-Generation
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 </span> AI Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -751,7 +719,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
               viewport={{ once: true }}>;
               <motion&& motion.a
                 href='/services'
-=======
             </div>;
 
             <motion&& motion.div
@@ -868,7 +835,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
               >
                 <span>Discover All AI Services</span>
                 <ArrowRight className='w-6 h-6' />                <ArrowRight className="w-6 h-6" />
-=======
                 <ArrowRight className="w-6 h-6" />
               </motion.a>
             </motion.div>
@@ -894,13 +860,10 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======        {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
-=======
                 <a
                   href='/contact'
                   className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
@@ -917,15 +880,9 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 }
   );
 }
-=======
-=======
 
-=======
   );
 }
-<<<<<<< HEAD
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <motion.a;
                 href='/services';
@@ -1121,8 +1078,3 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

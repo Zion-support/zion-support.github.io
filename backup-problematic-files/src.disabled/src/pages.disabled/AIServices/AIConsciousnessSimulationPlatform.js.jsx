@@ -9,8 +9,4 @@ const AIConsciousnessSimulationPlatform.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIConsciousnessSimulationPlatform.js;
-=======
-export default AIConsciousnessSimulationPlatform.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

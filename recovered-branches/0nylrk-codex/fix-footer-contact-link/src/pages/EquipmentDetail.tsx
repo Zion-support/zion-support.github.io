@@ -94,14 +94,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface EquipmentSpecification {;
   name: string,;
   value: string;
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface EquipmentDetails {;
   id: string,;
   name: string,;
@@ -130,7 +126,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 6999
@@ -140,7 +135,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true
     expectedShipping: "3-5 business days"
     specifications: [
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
@@ -206,10 +200,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Dynamics", value: "Compressor/Gate on all channels" }
       { name: "Effects", value: "8 stereo effects processors" }
       { name: "Recording", value: "64-channel USB interface" }
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       { name: "Weight", value: "32 lbs" }
     ],
     features: [
@@ -244,11 +235,9 @@ export default function EquipmentDetail() {
     setIsAdding(true);
     setIsAdding(true),
     
-=======
 
     setIsAdding(true),
     
-=======
     setIsAdding(true);
     setIsAdding(true),
         // Simulate API call
@@ -339,8 +328,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       "Anamorphic de-squeeze options",;
       "Custom 3D LUT support";
     ],;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     warranty: "2 years manufacturer warranty",;
     returnPolicy: "30-day return policy for unused items in original packaging";
   };
@@ -404,18 +391,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
                 {/* Product Title */}
 
-=======
 
                 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
                 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -424,12 +405,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
-=======
 
                             i < Math && Math.floor(equipment && equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
 
-=======
                             i < Math.floor(equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
 
@@ -458,11 +437,9 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
                     <button
                     <button 
-=======
 
                     <button 
 
-=======
                     <button
                     <button                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
@@ -477,14 +454,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
                   <Button
                   <Button 
-=======
 
                   <Button 
 
-=======
                   <Button
                   <Button 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onClick={handleBuyNow}
                     disabled={isAdding |!equipment.inStock}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
@@ -495,12 +469,9 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
                   <Button
                   <Button 
-=======
-=======
                   <Button 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Quantity */}
                 <div className="mb-6">;
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>;
@@ -535,7 +506,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
                       <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                       <div>;
                         <p className="text-white text-sm font-medium">Returns</p>;
-=======            {/* Right Column - Purchase Info */}
             <div className="lg:col - span - 1">;
               <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6">;
                 {/* Category and Brand */}
@@ -654,9 +624,4 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
                       </div>;
                     </div>)}
                   {/* Return Policy */}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

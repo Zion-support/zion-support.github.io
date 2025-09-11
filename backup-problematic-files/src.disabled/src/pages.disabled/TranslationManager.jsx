@@ -27,8 +27,4 @@ const TranslationManager = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TranslationManager;
-=======
-export default TranslationManager;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,10 +1,7 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -14,8 +11,6 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -49,15 +44,10 @@ export function ApplicationRow(): any ({;
   );
 }
 
-=======
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
       </TableCell>;
     </TableRow>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface ApplicationRowProps {
   application: JobApplication;
@@ -96,9 +86,3 @@ onViewScore: (application: JobApplication) => void
     </TableRow>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -117,19 +117,11 @@ self.addEventListener('sync', (event) => {';
     console.error('Service Worker: Background: sync failed, ', error)}'};          "icon": '/favicon-32x32.png, '}']};    event.waitUntil(;
       self.registration.showNotification(data.title, options))});
 // "Notification": click;
-<<<<<<< HEAD
 self && self.addEventListener('notificationclick', (event) => {';
   event && event.notification.close();
   "if": (event && event.action === 'explore') {';
     event && event.waitUntil(;
       clients && clients.openWindow('/'))}'});
-=======
-self.addEventListener('notificationclick', (event) => {';
-  event.notification.close();
-  "if": (event.action === 'explore') {';
-    event.waitUntil(;
-      clients.openWindow('/'))}'});
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // "Helper": functions for background sync;
 async: function getPendingSubmissions() {;
   // In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))}),
@@ -139,7 +131,6 @@ self.addEventListener('notificationclick', (event) => {',
   "if": (event.action === 'explore') {',
     event.waitUntil(,
       clients.openWindow('/'))}'}),
-<<<<<<< HEAD
   // In a real app, you would store these in IndexedDB;    event && event.waitUntil(,      self && self.registration.showNotification(data && data.title, options))}),
 // "Notification": click,
 self && self.addEventListener('notificationclick', (event) => {',
@@ -241,8 +232,6 @@ self.addEventListener ('notificationclick', (event) => {',
   "if": (event.action === 'explore') {',
     event.wait_until (,
       clients.open_window ('/'))}'}),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // "Helper": functions for background sync,
 asyn: c: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,

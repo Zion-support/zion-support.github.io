@@ -1,20 +1,15 @@
 
 import React from 'react',
 import React from 'react';
-=======
 
 import React from 'react';
 
-=======
 import React from 'react',
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -65,7 +60,6 @@ export default function APIDocumentation() {;
         <ul className='list-disc list-inside text-slate-300 space-y-2'>;
           <li>;
             <a className='text-cyan-400' href='/api-docs'>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662  Code,
   Database,
   Shield,
   Zap,
@@ -113,16 +107,8 @@ export default function APIDocumentation() {
 	),
 }
 
-<<<<<<< HEAD
 
 	),
 }
 	),
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-	)
-}
-	),
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

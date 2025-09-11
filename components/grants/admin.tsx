@@ -1,6 +1,5 @@
 export default function GrantsAdminPage() {;
 
-=======
   };
   useEffect(() => {;
     load();
@@ -156,12 +155,10 @@ if (return) {
             <input;
               className='border rounded p - 2';
               placeholder='Admin Token';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >;
                       Milestones;
                     </button>                  </div>;
                 </div>;
-=======                    <textarea;
                       className='w - full border rounded p - 2 mb - 2';
                       placeholder='Description';
                       value={m.description || ''}
@@ -178,8 +175,6 @@ if (return) {
                         });
                       }
                     />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                         value={m && m.dueDate || ''}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -190,10 +185,7 @@ if (return) {
                               ...copy[idx],;
                               dueDate: e && e.target.value,;
                             };
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='grid grid - cols - 2 gap - 2'>;
                       <input;
                         className='border rounded p - 2';
@@ -212,8 +204,6 @@ if (return) {
                           });
                         }
                       />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                         value={m && m.trancheAmount || 0}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -224,10 +214,7 @@ if (return) {
                               ...copy[idx],;
                               trancheAmount: Number(e && e.target.value),;
                             };
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <input;
                         className='border rounded p - 2';
                         placeholder='Tranche (amount)';
@@ -247,21 +234,15 @@ if (return) {
                         }
                       />;
                     </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     <div className='mt - 2 flex items - center gap - 2'>;
                       <button;
                         className='px - 2 py - 1 border rounded';
                         on_click={() => mark_complete (m.id!)}
                         disabled={!m.id}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       >;
                         Mark Complete;
                       </button>;
                     </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     onClick={() =>;
                       setMilestones(ms => [;
                         ...(ms && ms.length ? ms : selected && selected.milestones || []),;
@@ -272,10 +253,7 @@ if (return) {
                           trancheCurrency: 'USDC',;
                         } as any,;
                       ]);
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>))}
                 <div className='flex gap - 2 mt - 2'>;
                   <button;
@@ -294,8 +272,6 @@ if (return) {
                   >;
                     Add Milestone;
                   </button>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
       <div className="grid md:grid-cols-3 gap-6">
@@ -323,8 +299,6 @@ if (return) {
             ))}
 {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         </div>
         <div>
           <div className="border rounded p-3">
@@ -352,16 +326,9 @@ if (return) {
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             )}
 
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </div>
@@ -409,18 +376,10 @@ if (return) {
   );
 
 }
-<<<<<<< HEAD
 
 }
   );
 }
-=======
-=======}
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -461,17 +420,9 @@ if (return) {
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

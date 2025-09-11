@@ -9,8 +9,4 @@ const ServicesComparisonTable.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ServicesComparisonTable.js;
-=======
-export default ServicesComparisonTable.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

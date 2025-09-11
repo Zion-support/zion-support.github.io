@@ -3,7 +3,6 @@
 export function AIMilestoneGenerator({;
 
 
-=======import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Accordion;
@@ -25,7 +24,6 @@ interface AIMilestoneGeneratorProps {
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
 export function AIMilestoneGenerator({;
-=======
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
@@ -41,16 +39,13 @@ interface AIMilestoneGeneratorProps {;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 }
-=======
 export function AIMilestoneGenerator(): any ({;
 
-=======
 
 
 
 export function AIMilestoneGenerator({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
   const handleGenerateMilestones = async () => {
     if (!scope |!startDate |!projectType) {
@@ -60,7 +55,6 @@ export function AIMilestoneGenerator({;
 
   };
 
-=======import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 import {;
@@ -130,7 +124,6 @@ export function AIMilestoneGenerator({;
                       onClick={(e) => {
 
                         handleAddSingleMilestone(milestone)
-=======
                       onClick={(e) => {;
                         e && e.stopPropagation();
                         handleAddSingleMilestone(milestone);                      }}
@@ -162,19 +155,16 @@ export function AIMilestoneGenerator({;
   );
 }
 
-=======
                     <Button;
                       variant="ghost";
                       size="sm";
                       on_click={(e) => {
                         e.stop_propagation ();
                         handleAddSingleMilestone (milestone);
-=======
                         e.stopPropagation();
 
                         e.stopPropagation(),
                         handleAddSingleMilestone(milestone)
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       }}
                       className="mr - 2";
                     >;
@@ -199,8 +189,3 @@ export function AIMilestoneGenerator({;
         </Card>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

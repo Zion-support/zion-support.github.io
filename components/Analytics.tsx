@@ -1,118 +1,72 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
 import React, { useEffect } from 'react';
-
-import Head from 'next / head';
-;
+import Head from 'next/head';
 
 interface AnalyticsProps {
   tracking_id?: string;
 }
 
-=======
-
 class ErrorBoundary extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
+  
+  static getDerivedStateFromError(error: any) {
     return { hasError: true };
   }
-  componentDidCatch(error, errorInfo) {
+  
+  componentDidCatch(error: any, errorInfo: any) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
-    if (this.state.hasError) {
+    if ((this.state as any).hasError) {
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
 }
-import React, { useEffect } from 'react';
 
-import Head from 'next / head';
-;
+const Analytics: React.FC<AnalyticsProps> = ({ tracking_id = 'G-XXXXXXXXXX' }) => {
+  useEffect(() => {
+    // Google Analytics initialization
+    if (typeof window !== 'undefined' && tracking_id) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${tracking_id}`;
+      document.head.appendChild(script);
 
-interface AnalyticsProps {
-  tracking_id?: string;
-}
+      const configScript = document.createElement('script');
+      configScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${tracking_id}');
+      `;
+      document.head.appendChild(configScript);
+    }
+  }, [tracking_id]);
 
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface AnalyticsProps {;
-  trackingId?: string;
-}
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {;
-  useEffect(() => {;
-    // Google Analytics 4;
-    if (typeof window !== 'undefined' && trackingId) {;
-      // Load gtag script;
-      const script = document && document.createElement('script');
-      script && script.async = true;
-      script && script.src = `https://www && www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document && document.head.appendChild(script);
-      // Initialize gtag;
-      window && window.dataLayer = window && window.dataLayer || [];
-      function gtag(): any (...args: unknown[]) {;
-        window && window.dataLayer.push(args),;
-      }
-      window && window.gtag = gtag;
-      gtag('js', new Date());
-
-=======
-                        name: 'load',
-                        value: Math.round(loadTime),
-
-                      });
-      <script;
-        dangerouslySetInnerHTML={{
-
-                        name: 'load',
-                        value: Math.round(loadTime),
-                      });
-=======          __html: `
-            // Performance monitoring
-            if ('performance' in window) {
-              window.addEventListener('load', function() {
-                setTimeout(function() {
-                  const perfData = performance.getEntriesByType('navigation')[0];
-                  if (perfData) {
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                    if (window.gtag) {
-                      window.gtag('event', 'timing_complete', {
-    </Head>);
-}
-;
-
-=======
-          `,
-
-        }}
-export default Analytics;
-      />
-    </Head>
+  return (
+    <ErrorBoundary>
+      <Head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${tracking_id}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${tracking_id}');
+            `,
+          }}
+        />
+      </Head>
+    </ErrorBoundary>
   );
-
 };
 
-
 export default Analytics;
-=======export default Analytics;=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

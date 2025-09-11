@@ -9,8 +9,4 @@ const PricingPage = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default PricingPage;
-=======
-export default PricingPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

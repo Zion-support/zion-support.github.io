@@ -2,8 +2,6 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -106,8 +104,6 @@ import {;
   AlertDialogHeader,;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
 import { useState } from "react",;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TemplateListProps {;
   templates: ContractTemplate[],;
   isLoading: boolean,;
@@ -133,7 +129,6 @@ export function TemplateList(): any ({;
       setTemplateToDelete(null);
     }
   };
-=======
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -221,8 +216,6 @@ interface TemplateListProps {
               </div>
             </div>
             <Separator className="my-3" />
-=======
-=======                  <h3 className="font-medium">{template && template.title}</h3>;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
@@ -236,7 +229,6 @@ interface TemplateListProps {
               onClick={() => onSelect(template)} ;
               variant="outline" ;
               className="w-full";
-=======
 import { ContractTemplate } from '@/types / contracts';
 import { Button } from '@/components / ui / button';
 import { Loader2, Edit, Trash, Star, StarOff } from './lucide-react';
@@ -333,7 +325,6 @@ if ( {) {
               variant="outline";
               className="w - full";
 
-=======            >;
               Use This Template;
             </Button>;
           </CardContent>;
@@ -396,16 +387,8 @@ if (isLoading) {
   );
 }
 ;
-=======
-=======
     </div>);
 }
 
-=======
 ;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

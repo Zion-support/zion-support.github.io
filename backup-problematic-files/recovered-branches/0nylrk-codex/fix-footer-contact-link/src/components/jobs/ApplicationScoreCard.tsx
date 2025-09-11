@@ -34,7 +34,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD
     }
   },;
 ;

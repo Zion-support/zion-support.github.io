@@ -12,8 +12,6 @@ const contactInfo = {
 export default function NeoFuturisticFooter() {
   return (  website: 'https://ziontechgroup.com'
 }
-=======
-=======class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -57,7 +55,6 @@ export default function NeoFuturisticFooter() {;
 export default function NeoFuturisticFooter() {;
   return (
 import { motion } from 'framer-motion';
-=======import {
   Phone
   Mail
   MapPin
@@ -81,7 +78,6 @@ export default function NeoFuturisticFooter() {;
 };
 export default function NeoFuturisticFooter() {;
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               Productized AI, IT and micro SaaS solutions with transparent;
@@ -90,8 +86,6 @@ export default function NeoFuturisticFooter() {;
             </p>;
           </div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <a
               className='flex items-center gap-2 text-slate-300 hover:text-cyan-300'
               href='/market-pricing'>;
@@ -116,8 +110,6 @@ export default function NeoFuturisticFooter() {;
               </a>;
               <a
                 aria-label='LinkedIn'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <footer className="relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
@@ -132,8 +124,6 @@ export default function NeoFuturisticFooter() {;
             <p className="text-slate-400 text-sm leading-relaxed">
               Productized AI, IT and micro SaaS solutions with transparent pricing and fast onboarding. Built for outcomes, delivered with reliability.
             </p>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           </div>
         </div>
           <div className="space-y-2 text-sm">
@@ -171,10 +161,7 @@ export default function NeoFuturisticFooter() {;
             <div className=&quot;flex items-center gap-3 pt-2&quot;>
               <a aria-label=&quot;GitHub&quot; href=&quot;https://github.com/Zion-Holdings&quot; className=&quot;text-slate-400 hover:text-white&quot;><Github className=&quot;w-5 h-5&quot; /></a>
               <a aria-label=&quot;LinkedIn&quot; href=&quot;https://www.linkedin.com/company/zion-tech-group/&quot; className=&quot;text-slate-400 hover:text-white&quot;><Linkedin className=&quot;w-5 h-5&quot; /></a>
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
@@ -184,8 +171,6 @@ export default function NeoFuturisticFooter() {;
             <a href="/privacy" className="hover: text-slate-300">Privacy</a>
             <a href="/terms" className="hover:text-slate-300">Terms</a>
           </div>
-=======
-=======
           <div className="text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
           <div className="text-xs text-slate-500 flex gap-4">
             <a href="/privacy" className="hover: text-slate-300">Privacy</a>
@@ -195,7 +180,6 @@ export default function NeoFuturisticFooter() {;
 
 
 
-==============
 
   Linkedin,;
   ExternalLink,;
@@ -351,15 +335,5 @@ export default function NeoFuturisticFooter() {
 
 export default function NeoFuturisticFooter() {
   return (
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -13,7 +12,6 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 
@@ -41,8 +39,6 @@ const AdminRoutes = () => {;
       <Route;
         path="/admin/quotes";
         element={;
-=======
-==============
 // Admin Pages;
 import QuoteManager from "@/pages/admin/QuoteManager";
 import ReviewsModeration from "@/pages/admin/ReviewsModeration";
@@ -145,9 +141,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",;
 
 
 export default AdminRoutes;
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 <Routes> <Route path="/admin/quotes" element= {
   <ProtectedRoute adminOnly= {
   true 
@@ -166,6 +160,3 @@ export default AdminRoutes;
   );
 },;
 export default AdminRoutes;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

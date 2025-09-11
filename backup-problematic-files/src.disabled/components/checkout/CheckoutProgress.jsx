@@ -9,8 +9,4 @@ const CheckoutProgress = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default CheckoutProgress;
-=======
-export default CheckoutProgress;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

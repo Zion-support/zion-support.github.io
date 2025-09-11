@@ -4,7 +4,6 @@
 export function slugify(title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function slugify(title: string, separator = "-"): string {
   const sep = separator,
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
@@ -28,8 +27,6 @@ export function unslugify(slug: string, separator = "-"): string {
   return slug
     .split(separator)
     .filter(Boolean)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     .map(w => w && w.charAt(0).toUpperCase() + w && w.slice(1))
     .join(" ")
 export function slugify (title: string, separator = "-"): string {
@@ -94,14 +91,9 @@ export function slugify(title: string, separator = "-"): string {;
  */;
 export function unslugify(slug: string, separator = "-"): string {;
   return slug;
-==============    .split(separator);
     .filter(Boolean);
     .map(w => w.charAt(0).toUpperCase() + w.slice(1));
     .join(" ");
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

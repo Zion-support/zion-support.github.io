@@ -4,11 +4,8 @@ import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   platform: AppPlatform
 
   metadata: AppMetadataValues
@@ -28,7 +25,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.json`;
       } else {;
         // Convert object to CSV format;
-=======
 
 
       let content: string,
@@ -44,8 +40,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.longDescription,
           metadata.version,
           metadata.platform
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======        ],
         
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
         
@@ -55,8 +49,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
       const url = URL.createObjectURL(blob),
       const link = document.createElement('a'),
@@ -69,10 +61,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       
 
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
-==============
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -133,7 +122,6 @@ if ( {) {
   
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       console.error("Export failed:", error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)
     };
@@ -147,16 +135,12 @@ if ( {) {
 
 
 
-=======
-==============
 
 
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
 
-=======
 
 
-=======},
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -223,8 +207,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
     </Card>);
 }
@@ -252,15 +234,7 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
     </Card>;
   );
 };
-=======};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

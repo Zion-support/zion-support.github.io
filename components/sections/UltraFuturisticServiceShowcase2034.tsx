@@ -46,7 +46,6 @@ class ErrorBoundary extends React.Component {
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
-==============  Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
  } from 'lucide-react';
@@ -268,7 +267,6 @@ function UltraFuturisticServiceShowcase2034() {
     visible: {
       opacity: 1
       transition: {
-=======
 
 
     visible: {
@@ -301,7 +299,6 @@ function UltraFuturisticServiceShowcase2034() {
       }
     }
   };
-=======
 
 
   };
@@ -309,15 +306,11 @@ function UltraFuturisticServiceShowcase2034() {
     hidden: { opacity: 0, y: 20 },;
     visible: { opacity: 1, y: 0 },;
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a  return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
       {/* Animated Background */}
 
-=======
-=======
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-=======
     hidden: { opacity: 0, y: 20 },
   };
 
@@ -373,9 +366,7 @@ function UltraFuturisticServiceShowcase2034() {
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             {[;
               {
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             ].map((stat, index) => (
               <motion.div
@@ -385,8 +376,6 @@ function UltraFuturisticServiceShowcase2034() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300'
               >
                 <stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
@@ -401,7 +390,6 @@ function UltraFuturisticServiceShowcase2034() {
 
         {/* Search and Filter */}
         <motion&& motion.div
-=======                <div className='text-sm text-gray-400'>{stat.label}</div>              </motion.div>                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
@@ -417,28 +405,20 @@ function UltraFuturisticServiceShowcase2034() {
 
         {/* Search and Filter */}
         <motion.div
-=======
-=======
         {/* Search and Filter */}
         <motion&& motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
 
           </div>;
         </motion && motion.div>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Search and Filter */}
         <motion&& motion.div
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -451,20 +431,15 @@ function UltraFuturisticServiceShowcase2034() {
 
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
-=======
           className='mb-12'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
 
 
-=======                onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
 
@@ -478,10 +453,8 @@ function UltraFuturisticServiceShowcase2034() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
           viewport={{ once: true }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
@@ -494,7 +467,6 @@ function UltraFuturisticServiceShowcase2034() {
             ))}
           </div>
         </motion.div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </motion && motion.div>;
@@ -502,8 +474,6 @@ function UltraFuturisticServiceShowcase2034() {
 
 
 
-=======
-==============
 
 
 
@@ -532,12 +502,8 @@ function UltraFuturisticServiceShowcase2034() {
               )}
 
               {/* Service Icon */}
-=======
-=======                </div>              )}
               {/* Service Icon */}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   {service.icon}
                 </div>;
                 <div className='text - right'>;
@@ -561,7 +527,6 @@ function UltraFuturisticServiceShowcase2034() {
                   <Clock className='w-4 h-4' />
                   <span>{service.setupTime}</span>
                 </div>                  <span>{service.setupTime}</span>
-=======
                 {service.description}
               </p>
 
@@ -578,7 +543,6 @@ function UltraFuturisticServiceShowcase2034() {
                     <span>{feature}</span>
                   </div>
                 <div className="flex items-center space-x-2 text-gray-400">
-=======
 
                 <div className="flex items-center space-x-2 text-gray-400">
                   <TrendingUp className="w-4 h-4 text-green-400" />
@@ -587,11 +551,9 @@ function UltraFuturisticServiceShowcase2034() {
               </div>
               {/* Market Position */}
               <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10">
-=======
 
               <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-xs text-gray-400 mb-1">Market Position</div>
                 <div className="text-sm text-gray-300 leading-relaxed">
                   {service.marketPosition}
@@ -599,18 +561,14 @@ function UltraFuturisticServiceShowcase2034() {
               </div>
               {/* ROI */}
               <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
-=======
 
               <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
                 <div className="text-sm text-green-300 font-medium">
                   {service.roi}
                 </div>
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               </div>;
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;
@@ -671,10 +629,7 @@ function UltraFuturisticServiceShowcase2034() {
 
                 <a
               <div className="flex space-x-3">
-=======
               <div className='flex space-x-3'>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
                 <a
                   href={service.link}
@@ -687,8 +642,6 @@ function UltraFuturisticServiceShowcase2034() {
                   <Eye className="w-4 h-4" />
                 </button>
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   href={service && service.link}
                   className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group'>;
                   Get Started;
@@ -716,11 +669,8 @@ function UltraFuturisticServiceShowcase2034() {
 
         {/* Call to Action */}
         <motion.div
-=======
-=======        </motion && motion.div>;
 
 
-=======
 
 
 
@@ -753,9 +703,7 @@ function UltraFuturisticServiceShowcase2034() {
       </div>;
     </section>;
   );
-=======
 
-=======
 
               <a
                 href="/contact"
@@ -764,8 +712,6 @@ function UltraFuturisticServiceShowcase2034() {
               </a>;
                              <a
                  href="/pricing-2034"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                  className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg"
                >
                  View Pricing
@@ -784,10 +730,6 @@ function UltraFuturisticServiceShowcase2034() {
 }=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   );
 }
@@ -965,8 +907,6 @@ function UltraFuturisticServiceShowcase2034() {
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg"
               >
                 Start Your Free Trial
@@ -992,9 +932,3 @@ function UltraFuturisticServiceShowcase2034() {
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const LinkHealthChecker = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default LinkHealthChecker;
-=======
-export default LinkHealthChecker;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,5 +1,4 @@
 
-=======import React, { useState } from 'react',
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -66,7 +65,6 @@ import {
   Award
   Clock
   CheckCircle;} from 'lucide-react';import {
-=======
 
 import React, { useState } from 'react';
 
@@ -76,7 +74,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -103,11 +100,8 @@ import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Clock,;
   CheckCircle,;} from 'lucide-react';import { ;
 
@@ -141,37 +135,27 @@ const serviceCategories = [
       {
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: '🔬 2029 Research & Development',
     icon: Eye,
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
     description: 'Breakthrough research solutions',
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Advanced Research Automation',
       'Quantum Research Platform',
       'AI Research Assistant',
       'Biotech Research Suite',
     ],
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite'
     ]
   }
 ];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const mainNavigation = [
-==============
 
 
 const mainNavigation = [
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, ];      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite';
     ];
   }
@@ -552,10 +536,6 @@ const quickLinks = [
 export default function UltraFuturisticNavigation2029V2() {
 export default function UltraFuturisticNavigation2029V2() {;
   const [isOpen, setIsOpen] = useState(false);
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -564,15 +544,10 @@ export default function UltraFuturisticNavigation2029V2() {;
 
             className='flex-shrink-0'
 
-=======
 
-=======
             className='flex-shrink-0'
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -603,8 +578,6 @@ export default function UltraFuturisticNavigation2029V2() {;
               </div>
             </Link>
           </motion.div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             transition={{ duration: 0 && 0.5 }}
             className='flex-shrink-0'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -636,10 +609,8 @@ export default function UltraFuturisticNavigation2029V2() {;
               </div>;
             </Link>;
           </motion && motion.div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>;
             {mainNavigation && mainNavigation.map(item => (              <motion&& motion.div
@@ -652,12 +623,10 @@ export default function UltraFuturisticNavigation2029V2() {;
             ))}
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-=======
 
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-=======                animate={{ opacity: 1, y: 0 }}          <div className="hidden lg:flex items-center space-x-8">
             {mainNavigation.map((item) => (
               <motion.div
                 key={item.name}
@@ -674,11 +643,9 @@ export default function UltraFuturisticNavigation2029V2() {;
           </div>
 
           {/* Right side - Contact & Search */}
-=======
 
           <div className="hidden lg:flex items-center space-x-4">=======
           <div className='hidden lg:flex items-center space-x-4'>
-=======
 
               </motion.div>
 
@@ -695,34 +662,25 @@ export default function UltraFuturisticNavigation2029V2() {;
                 placeholder='Search services...'
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39              <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
 
-=======                onChange={e => setSearchQuery(e.target.value)}
 
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />
 
-=======              />
 
             </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0 && 0.5, delay: 0 && 0.5 }}>;
               <Link
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button
               onClick={toggleMenu}
               className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300'>;
@@ -741,13 +699,10 @@ export default function UltraFuturisticNavigation2029V2() {;
       </div>;
 
 
-=======
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -769,16 +724,11 @@ export default function UltraFuturisticNavigation2029V2() {;
 
           >
             <div className='px-4 py-6 space-y-4'>
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
-=======
 
           >
             <div className='px-4 py-6 space-y-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Mobile Search */}
               <div className='relative'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -791,13 +741,10 @@ export default function UltraFuturisticNavigation2029V2() {;
               </div>;
 
 
-=======            transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20"
           >
             <div className="px-4 py-6 space-y-4">
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
@@ -813,16 +760,12 @@ export default function UltraFuturisticNavigation2029V2() {;
               <div className='space-y-2'>
                 {mainNavigation.map(item => (              <div className="space-y-2">
                 {mainNavigation.map((item) => (
-=======
-=======
 
               {/* Mobile Navigation Links */}
 
-=======
               <div className="space-y-2">
                 {mainNavigation.map((item) => (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662              {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
                   Quick Links
@@ -836,7 +779,6 @@ export default function UltraFuturisticNavigation2029V2() {;
                     >
                       <item.icon className='w-4 h-4' />
                       <span className='text-sm'>{item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -995,7 +937,6 @@ export default function UltraFuturisticNavigation2029V2() {;
       </AnimatePresence>;
 
 
-=======
 
 
       {/* Service Categories Dropdown */}
@@ -1005,11 +946,8 @@ export default function UltraFuturisticNavigation2029V2() {;
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-=======
 
                         </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ))}
                     </div>;
                   </div>;
@@ -1022,18 +960,10 @@ export default function UltraFuturisticNavigation2029V2() {;
     </nav>;
   );
 }
-<<<<<<< HEAD
 
 }
   );
 }
-=======
-=======}
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </p>;
                       </div>;
                     </div>;
@@ -1092,8 +1022,6 @@ export default function UltraFuturisticNavigation2029V2() {;
       </AnimatePresence>;
     </nav>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
       </AnimatePresence>
     </nav>
 );
@@ -1102,9 +1030,3 @@ export default function UltraFuturisticNavigation2029V2() {;
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

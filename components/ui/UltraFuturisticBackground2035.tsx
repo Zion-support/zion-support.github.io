@@ -192,8 +192,6 @@ const UltraFuturisticBackground2035: React.FC<
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     }
-=======
-=======
       canvas.height = window.innerHeight
     };
 
@@ -221,22 +219,18 @@ const UltraFuturisticBackground2035: React.FC<
           particle.type = Math.random() > 0.7 ? 'quantum' : 'normal'
 
           ctx.shadowBlur = 0
-=======
 
           ctx.shadowBlur = 0
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         } else {
           // Normal particle
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
           ctx.fill()
-=======
 
           ctx.fill()
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       });
       // Draw holographic grid
@@ -349,21 +343,17 @@ const UltraFuturisticBackground2035: React.FC<
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
       ctx.stroke()
-=======
 
       ctx.stroke()
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
     
-=======
 
     
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Neon orbs
     for (let i = 0, i < 3, i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
@@ -455,7 +445,6 @@ const UltraFuturisticBackground2035: React.FC<
   };
   return (
 
-=======
               `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors && colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
@@ -470,20 +459,14 @@ const UltraFuturisticBackground2035: React.FC<
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             ],          }}
           transition={{
             duration: 8,
             repeat: Infinity,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             ease: 'easeInOut',              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
               `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`;
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
             ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           transition={{
             duration: 8
             repeat: Infinity
@@ -610,8 +593,6 @@ ease: "easeInOut"
           }}
         />
         />;
-=======
-=======
         />;
 
 
@@ -655,7 +636,6 @@ ease: "easeInOut"
 
                 ease: "easeInOut"
 
-=======
                 scaleX: [0, 1, 0]              }}
               transition={{
                 duration: 3
@@ -665,13 +645,8 @@ ease: "easeInOut"
               }}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
 
 
-=======
-=======
 
 
 
@@ -679,30 +654,22 @@ ease: "easeInOut"
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
             />
 
           ))}
-=======
 
                 ease: "easeInOut"
 
               }}
             />;
-=======
                 duration: 3
                 delay: i * 0.1
                 repeat: Infinity
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
-=======
 
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{
                 duration: 3,
                 delay: i * 0.1,
@@ -715,7 +682,6 @@ ease: "easeInOut"
 export default UltraFuturisticBackground2035;  );
 };
 
-=======
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
@@ -723,11 +689,5 @@ export default UltraFuturisticBackground2035;
 };
 
 
-<<<<<<< HEAD
 export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

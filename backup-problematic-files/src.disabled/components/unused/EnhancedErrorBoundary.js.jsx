@@ -9,8 +9,4 @@ const EnhancedErrorBoundary.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedErrorBoundary.js;
-=======
-export default EnhancedErrorBoundary.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

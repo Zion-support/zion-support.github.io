@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
@@ -19,8 +18,6 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
     iconExports[alias] = createIconComponent(alias, lucideName)
 ;
 export const {
-=======
-=======
 // Alias for missing icons or for icons with different names;
 const icon_aliases: Record < string, keyof typeof LucideIcons> = {
   // Grid views;
@@ -136,12 +133,10 @@ if ( {) {
   }
 });
 export const {
-=======// Alias for missing icons or for icons with different names;
 const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   // Grid views;
   LayoutGrid: 'LayoutGrid',;
   List: 'List',;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // UI elements;
   Zap: 'Zap',;
   Settings: 'Settings',;
@@ -197,7 +192,6 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
 
 export const {;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   LayoutGrid;
   List;
   Zap;
@@ -444,24 +438,16 @@ export const {;
   Tag} = iconExports;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
-=======
 
 
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
-=======
 
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

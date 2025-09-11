@@ -9,8 +9,4 @@ const AIBusinessIntelligenceElite.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIBusinessIntelligenceElite.js;
-=======
-export default AIBusinessIntelligenceElite.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const HealthcareSolutions = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default HealthcareSolutions;
-=======
-export default HealthcareSolutions;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

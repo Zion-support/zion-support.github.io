@@ -1,9 +1,10 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
-
-
+<<<<<<< HEAD
+import Card from '../ui/Card';
 =======
+
+
 import React from 'react',
 import React from 'react';import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
@@ -33,7 +34,6 @@ const Features: React.FC<FeaturesProps> = ({;
     3: 'md:grid-cols-2 lg:grid-cols-3',;
     4: 'md:grid-cols-2 lg:grid-cols-4',;
   };
-=======
 
   return (
     <section className='py-24 bg-black relative overflow-hidden'>;
@@ -49,10 +49,8 @@ const Features: React.FC<FeaturesProps> = ({;
             {title}
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-==============
+>>>>>>> main
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -90,7 +88,6 @@ const Features: React.FC<FeaturesProps> = ({
 {title}
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {subtitle}
           </p>;
         </div>;
@@ -140,19 +137,16 @@ const Features: React.FC<FeaturesProps> = ({
             {title}
           </h2>
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-=======
             {subtitle}
           </p>
         </div>
 
 
-=======
 
 
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card
               key={index}
               className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -176,12 +170,15 @@ const Features: React.FC<FeaturesProps> = ({
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
               </div>
+<<<<<<< HEAD
+=======
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
+>>>>>>> main
             </Card>
           ))}
         </div>
@@ -194,9 +191,4 @@ export default Features;  )
 export default Features;
 
 
-<<<<<<< HEAD
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

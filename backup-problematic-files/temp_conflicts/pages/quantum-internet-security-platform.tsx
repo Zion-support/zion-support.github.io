@@ -1,5 +1,4 @@
 
-=======
 
 import React from "react";
 import Head from "next/head";
@@ -16,14 +15,12 @@ import {
   ArrowRight
   Shield
   Star
-=======  Phone,
   Mail,
   MapPin,
   Check,
   ArrowRight,
   Shield,
   Star,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662} from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
@@ -32,15 +29,12 @@ export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
     s.link.endsWith("/quantum-internet-security-platform")
     s.link.endsWith("/quantum-internet-security-platform"),;
-=======
 export default function QuantumInternetSecurityPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
     s && s.link.endsWith("/quantum-internet-security-platform"),;
 
-=======
 
     s.link.endsWith("/quantum-internet-security-platform"),;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   if (!service) return null;
 
@@ -97,7 +91,6 @@ function QuantumInternetSecurityPage() {
   // Check condition
 if (return null) {
   $2
-=======                className="w-full"
               >
                 Request a Security Demo
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -161,7 +154,6 @@ if (return null) {
                     <Check className="w - 5 h - 5 text - emerald - 400 mt - 0.5" />;
                     <span>{feat}</span>;
                   </li>))}
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
@@ -199,32 +191,13 @@ if (return null) {
                   </li>
                 ))}
 :backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </ul>;
             </div>;
             <div className="bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6 h - fit">;
               <div className="flex items - end justify - between mb - 3">;
                 <div>;
-<<<<<<< HEAD
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>;
                   <div className="text-slate-400">{service.trialDays}-day free trial • Setup:{service.setupTime}</div>;
-=======
-                  <div className="text - 3xl font - bold text - white">;
-                    {service.price}
-                    <span className="text - slate - 400 text - base">;
-                      {service.period}
-                    </span>;
-                  </div>;
-                  <div className="text - slate - 400">;
-                    {service.trial_days}-day free trial • Setup:{" "}
-                    {service.setup_time}
-                  </div>;
-                </div>;
-                <div className="flex items - center text - yellow - 400">;
-                  <Star className="w - 4 h - 4 mr - 1" />;
-                  {service.rating.to_fixed (1)}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
               </div>;
               <Button;
@@ -254,7 +227,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>;
   ),;
               </ul>
@@ -314,8 +286,4 @@ main:pages-disabled/quantum-iot.tsx
 main:pages-disabled/quantum-iot.tsx
 }
 :backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx
-=======
-    </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

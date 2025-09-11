@@ -1,34 +1,23 @@
 
-=======
-=====================
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function ApiSampleCode() {
   // JavaScript example with Axios
   const jsAxiosExample = `// Using Axios with JavaScript;
 import axios from 'axios';
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ApiSampleCode() {
   // JavaScript example with Axios
   const jsAxiosExample = `// Using Axios with JavaScript
@@ -47,10 +36,8 @@ const api = axios && axios.create({;
   headers: {;
     'Authorization': \`Bearer \${YOUR_API_KEY}\`;
     'Content - Type': 'application / json';
-=======  headers: {
     'Authorization': \`Bearer \${YOUR_API_KEY}\`,
     'Content-Type': 'application/json'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 });
 ;
@@ -72,20 +59,15 @@ async /**
  * create_job - Function description
  */
 function create_job() {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   try {
     const response = await api.post ('/api / jobs', job_data);
     return response.data;
   } catch (error) {
-=======
-=======
     'Authorization': \`Bearer \${YOUR_API_KEY}\`,
     'Content-Type': 'application/json'
 
 
 
-=======
 
 
 
@@ -100,8 +82,6 @@ async function createJob(): any (jobData) {;
     throw error;
   }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     console && console.log('Jobs:', jobs);
     // Create a new job;
     const newJob = await createJob({;
@@ -195,7 +175,6 @@ const talent = await searchTalent({skills: 'React', limit: 10})
 ;
 main(),`,;
 ;
-=======
   // Python example with requests;
   const pythonExample = `# Using requests with Python;
 import requests;
@@ -291,8 +270,6 @@ async function apiRequest(): any (endpoint, options = {}) {;
 async function getJobs(): any (filters = {}) {;
   // Convert filters to query string;
 
-=======
-=======  },
   
   const response = await fetch(url, config),
   
@@ -352,8 +329,6 @@ async function getJobs(): any (filters = {}) {;
   if (!response.ok) {
     const error = await response.json(),
     throw new Error(error.message || \`API error: \${response.status}\`)
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
   return response.json()
@@ -373,8 +348,6 @@ async function getJobs(filters = {}) {
   });
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' })
-=======
-==============
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' });
 // Get all jobs;
@@ -388,10 +361,7 @@ async function getJobs(filters = {}) {;
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' });
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Post a new job
 async function createJob(jobData) {
@@ -400,19 +370,16 @@ async function createJob(jobData) {
     body: JSON.stringify(jobData)
   })
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const queryString = params && params.toString() ? \`?\${params && params.toString()}\` : '';
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' });
 
 
 
-==============
 
 
   const queryString = params && params.toString() ? \`?\${params && params.toString()}\` : '';
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' });
-=======
 
 
 // Search for talent
@@ -424,10 +391,7 @@ async function searchTalent(filters = {}) {
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
   return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' })
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Search for talent;
 async function searchTalent(filters = {}) {;
@@ -437,10 +401,8 @@ async function searchTalent(filters = {}) {;
   }),;
   const queryString = params.toString() ? \`?\${params.toString()}\` : '',;
   return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' });
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 // Example usage
@@ -462,13 +424,10 @@ async function searchTalent(): any (filters = {}) {;
   Object && Object.entries(filters).forEach(([key, value]) => {;
     params && params.append(key, value);
   });
-=======    const jobs = await getJobs({ status: 'open', limit: 5 })
     console.log('Jobs:', jobs);
     const jobs = await getJobs({ status: 'open', limit: 5 }),
     // // // console.log('Jobs:', jobs),
     
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Create a new job
     const newJob = await createJob({
       title: 'Backend Developer'
@@ -478,8 +437,6 @@ async function searchTalent(): any (filters = {}) {;
         min: 6000
         max: 8000
         currency: 'USD'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      },
       skills: ['Node.jsExpressMongoDB']
     }),
     // // // console.log('New job created:', newJob),
@@ -487,13 +444,10 @@ async function searchTalent(): any (filters = {}) {;
     // Search for talent with Node.js skills
     const talent = await searchTalent({ skills: 'Node.js', limit: 10 }),
     // // // console.log('Talent:', talent)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  } catch (error) {
     console.error('Something went wrong:', error)
   }
 }
 main(),`,
-=======
 main(),`;
 
   return (
@@ -549,20 +503,16 @@ main(),`;
       </div>
     </ApiDocsLayout>
   )
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const queryString = params && params.toString() ? \`?\${params && params.toString()}\` : '';
   return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' });
-=======}
 
 
 
 
   return (
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Example usage;
 async function main() {;
@@ -615,29 +565,21 @@ main(),`,;
     <ApiDocsLayout>;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Sample Code</h1>;
-=======
-=======
     <ApiDocsLayout>;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Sample Code</h1>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <h2>Authentication</h2>;
         <p>;
           All API requests require authentication using API keys. Make sure to include your API key;
           in the Authorization header as shown in the examples below.;
         </p>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">;
           <h3 className="text-yellow-500 text-sm font-medium mt-0">Security Warning</h3>;
           <p className="text-sm text-yellow-300/90 mb-0">;
             Never include your API key directly in client-side code. These examples are intended for server-side usage only.;
           </p>;
         </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <h2>Code Examples</h2>;
         <Tabs defaultValue="javascript">;
           <TabsList>;
@@ -645,208 +587,3 @@ main(),`,;
             <TabsTrigger value="python">Python</TabsTrigger>;
 
 export default ApiSampleCode;
-<<<<<<< HEAD
-
-=======
-def get_jobs (filters = None):;
-    """Get all jobs with optional filters""";
-    url = f"{BASE_URL}/api / jobs";
-    response = requests.get (url, params = filters, headers = headers);
-    response.raise_for_status ()  # Raise exception for 4XX / 5XX responses;
-    return response.json ();
-def create_job (job_data):;
-    """Create a new job posting""";
-    url = f"{BASE_URL}/api / jobs";
-    response = requests.post (url, json = job_data, headers = headers);
-    response.raise_for_status ();
-    return response.json ();
-def search_talent (filters = None):;
-    """Search for talent with optional filters""";
-    url = f"{BASE_URL}/api / talent";
-    response = requests.get (url, params = filters, headers = headers);
-    response.raise_for_status ();
-    return response.json ();
-# Example usage;
-if __name__ == "__main__":;
-    try:;
-        # Get all open jobs;
-        jobs = get_jobs ({'status': 'openlimit': 5});
-        print (f"Found {len (jobs['jobs'])} jobs");
-        # Create a new job;
-        new_job = create_job ({
-            'title': 'Data Scientistdescription': 'Looking for an experienced data scientist...category': 'databudget': {
-                'min': 6000;
-                'max': 9000;
-                'currency': 'USD';
-            }
-            'skills': ['PythonMachine LearningSQL'];
-        });
-        print (f"New job created with ID: {new_job['id']}");
-        # Search for talent with Python skills;
-        talent = search_talent ({'skills': 'Pythonlimit': 10});
-        print (f"Found {len (talent['talent'])} talented people");
-    except requests.exceptions.HTTPError as e:;
-        print (f"HTTP Error: {e}");
-        print (f"Response: {e.response.text}");
-    except Exception as e:;
-        print (f"Error: {e}")`,
-  // Node.js example with fetch;
-const nodeFetchExample = `// Using node - fetch with Node.js;
-import fetch from 'node - fetch';
-const API_KEY = 'YOUR_API_KEY';
-const BASE_URL = 'https: //api.zionai.com / v1',
-// Helper to handle API requests;
-async /**
- * api_request - Function description
- */
-function api_request() {
-  const url = \`\${BASE_URL}\${endpoint}\`;
-;
-  const headers = {
-    'Authorization': \`Bearer \${API_KEY}\`;
-    'Content - Type': 'application / json';
-    ...options.headers;
-  }
-;
-  const config = {
-    ...options;
-    headers;
-  }
-;
-  const response = await fetch (url, config);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const error = await response.json ();
-    throw new Error (error.message || \`API error: \${response.status}\`);
-  }
-  return response.json ();
-}
-// Get all jobs;
-async /**
- * get_jobs - Function description
- */
-function get_jobs() {
-  // Convert filters to query string;
-  const params = new URLSearchParams ();
-  Object.entries (filters).for_each (([key, value]) => {
-    params.append (key, value);
-  });
-;
-  const query_string = params.to_string () ? \`?\${params.to_string ()}\` : '';
-  return api_request (\`/api / jobs\${query_string}\`, { method: 'GET' });
-}
-// Post a new job;
-async /**
- * create_job - Function description
- */
-function create_job() {
-  return api_request ('/api / jobs', {
-    method: 'POST',
-    body: JSON.stringify (job_data);
-  });
-}
-// Search for talent;
-async /**
- * search_talent - Function description
- */
-function search_talent() {
-  const params = new URLSearchParams ();
-  Object.entries (filters).for_each (([key, value]) => {
-    params.append (key, value);
-  });
-;
-  const query_string = params.to_string () ? \`?\${params.to_string ()}\` : '';
-  return api_request (\`/api / talent\${query_string}\`, { method: 'GET' });
-}
-// Example usage;
-async /**
- * main - Function description
- */
-function main() {
-  try {
-    // Get all open jobs;
-    const jobs = await get_jobs ({ status: 'open', limit: 5 }),
-    console.log ('Jobs:', jobs);
-;
-    // Create a new job;
-    const new_job = await create_job ({
-      title: 'Backend Developer',
-      description: 'We need a skilled backend developer...',
-      category: 'development',
-      budget: {
-        min: 6000,
-        max: 8000,
-        currency: 'USD';
-      }
-      skills: ['Node.jsExpressMongoDB'];
-    });
-    console.log ('New job created:', new_job);
-;
-    // Search for talent with Node.js skills;
-    const talent = await search_talent ({ skills: 'Node.js', limit: 10 }),
-    console.log ('Talent:', talent);
-  } catch (error) {
-    console.error ('Something went wrong:', error);
-  }
-}
-main (), `;
-;
-  return (
-    <ApiDocsLayout>;
-      <div className="max - w-3xl prose prose - invert">;
-        <h1 > Sample Code</h1>;
-        <p>;
-          The following code examples demonstrate how to integrate with the Zion AI Marketplace API;
-          using different programming languages and libraries.;
-        </p>;
-        <h2 > Authentication</h2>;
-        <p>;
-          All API requests require authentication using API keys. Make sure to include your API key;
-          in the Authorization header as shown in the examples below.;
-        </p>;
-        <div className="bg - yellow - 900 / 20 border border - yellow - 700 / 50 rounded - md p - 4 my - 6">;
-          <h3 className="text - yellow - 500 text - sm font - medium mt - 0">Security Warning</h3>;
-          <p className="text - sm text - yellow - 300 / 90 mb - 0">;
-            Never include your API key directly in client - side code. These examples are intended for server - side usage only.;
-          </p>;
-        </div>;
-        <h2 > Code Examples</h2>;
-        <Tabs default_value="javascript">;
-          <TabsList>;
-            <TabsTrigger value="javascript">JavaScript (Axios)</TabsTrigger>;
-            <TabsTrigger value="python">Python</TabsTrigger>;
-            <TabsTrigger value="node">Node.js (fetch)</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value="javascript">;
-            <p > Using Axios with JavaScript:</p>;
-            <CodeBlock code={jsAxiosExample} language="javascript" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="python">;
-            <p > Using requests with Python:</p>;
-            <CodeBlock code={python_example} language="python" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="node">;
-            <p > Using fetch with Node.js:</p>;
-            <CodeBlock code={nodeFetchExample} language="javascript" showLineNumbers={true} />;
-          </TabsContent>;
-        </Tabs>;
-        <h2 > Using the Examples</h2>;
-        <p>;
-          To use these examples, you'll need to replace 'YOUR_API_KEY' with your actual API key;
-          which you can generate in the <a href="/developers / portal" className="text - zion - cyan">Developer Portal</a>.;
-        </p>;
-        <h2 > Additional Resources</h2>;
-        <ul>;
-          <li > Download our <a href="#" className="text - zion - cyan">Postman Collection</a> for easy API testing</li>;
-          <li > Check out our <a href="#" className="text - zion - cyan">GitHub repository</a> for more code examples</li>;
-          <li > Join our <a href="#" className="text - zion - cyan">Developer Discord</a> for community support</li>;
-        </ul>;
-      </div>;
-    </ApiDocsLayout>);
-}
-export default ApiSampleCode;
-;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======

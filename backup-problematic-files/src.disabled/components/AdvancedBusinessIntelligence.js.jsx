@@ -9,8 +9,4 @@ const AdvancedBusinessIntelligence.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedBusinessIntelligence.js;
-=======
-export default AdvancedBusinessIntelligence.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

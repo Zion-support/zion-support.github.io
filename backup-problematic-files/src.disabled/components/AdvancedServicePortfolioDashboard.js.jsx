@@ -9,8 +9,4 @@ const AdvancedServicePortfolioDashboard.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedServicePortfolioDashboard.js;
-=======
-export default AdvancedServicePortfolioDashboard.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

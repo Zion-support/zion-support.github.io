@@ -9,8 +9,4 @@ const CreatePostButton = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default CreatePostButton;
-=======
-export default CreatePostButton;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

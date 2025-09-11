@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
@@ -20,7 +18,6 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
-=======export async function createNotification({;
   userId;
   title;
   message;
@@ -30,15 +27,12 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
   actionUrl = null;
   actionText = null
 }: {
-=======  userId: string,
   title: string,
   message: string,
   type: NotificationType,
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======  actionText?: string | null
 }) {
   void actionUrl;
   void actionText;
@@ -46,13 +40,9 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
  * Creates a notification for a user and optionally sends an email notification;
@@ -92,17 +82,12 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
 
@@ -114,12 +99,9 @@ success: talentNotification && talentNotification.success && adminNotification &
       talentNotification,
 
       adminNotification
-=======
 
   } catch (error) {;
     console.error('Error creating notification:', error),;
-=======
-=======
   } catch (error) {;
     console.error('Error creating notification:', error),;
     return { success: false, error }
@@ -129,21 +111,18 @@ success: talentNotification && talentNotification.success && adminNotification &
 /**
  * Creates a hire request notification for admin and talent
  */
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export async function createHireRequestNotifications({
 
     }
   }
   return {
     success: talentNotification && talentNotification.success,
-=======
     }
   }
   return {
 
     success: talentNotification && talentNotification.success,
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     talentNotification
   }
 }
@@ -160,8 +139,6 @@ export async function createOnboardingNotification({
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   userId;
   missingMilestone;
   userRole
@@ -199,14 +176,10 @@ export async function createSystemNotification({;
   actionUrl?: string | null,;
   actionText?: string | null,;
   sendEmail?: boolean;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export async function createTestNotification(userId:string) {;
   const types:NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;
   const randomType = types[Math.floor(Math.random() * types.length)],;
@@ -308,9 +281,3 @@ case 'talent invited':
 ;
 }
 ;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

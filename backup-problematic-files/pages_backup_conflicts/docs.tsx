@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface DocsProps {
   // Add props here as needed
 }

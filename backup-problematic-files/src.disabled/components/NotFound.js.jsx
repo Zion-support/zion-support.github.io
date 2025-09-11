@@ -9,8 +9,4 @@ const NotFound.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default NotFound.js;
-=======
-export default NotFound.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -4,7 +4,6 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   on_deploy?: () => void;
   on_sign?: () => void;
   on_close?: () => void;
@@ -18,10 +17,8 @@ function ContractPreview() {
   // Use either contract_content or generated_contract, whichever is provided;
   const display_content = contract_content || generated_contract || "";
 ;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
@@ -53,7 +50,6 @@ export function ContractPreview(): any ({ ;
   const displayContent = contractContent || generatedContract || "",
   
   return (
-=======import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { TalentProfile } from "@/types/talent",;
@@ -111,8 +107,6 @@ export function ContractPreview({ ;
   ;
   return (;
   return (;
-=======
-=======
   deployStatus;
   deploymentInfo;
 }: ContractPreviewProps) {;
@@ -157,18 +151,8 @@ export function ContractPreview({ ;
         
 
 
-<<<<<<< HEAD
         
         
-==============
-        )}
-        {status === 'ready' && onSign && (
-          <Button onClick={onSign}>
-            Sign Contract
-          </Button>
-        )}
-        
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain
@@ -177,16 +161,12 @@ export function ContractPreview({ ;
       </div>
     </div>
   )
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
-=======
         {status === 'ready' && onSign && (;
           <Button onClick={onSign}>;
             Sign Contract;
           </Button>;
         )}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {status === 'ready' && onDeploy && (;
           <Button variant="outline" onClick={onDeploy}>;
             Deploy on Blockchain;
@@ -194,7 +174,6 @@ export function ContractPreview({ ;
         )}
       </div>;
     </div>;
-<<<<<<< HEAD
   ),;}
  interface ContractPreviewProps {
   contractContent?: string;
@@ -236,13 +215,6 @@ deploymentInfo
 }</div> </div>) 
 }
 }
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           <Badge;
             variant="secondary";
             className="text - sm bg - green - 100 text - green - 800";
@@ -289,5 +261,3 @@ deploymentInfo
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

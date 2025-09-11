@@ -1,5 +1,4 @@
 import React from 'react';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 const PerformanceMonitor.dynamic = () => {
   return (
@@ -8,6 +7,3 @@ const PerformanceMonitor.dynamic = () => {
     </div>);
 }
 ;
-<<<<<<< HEAD
-=======
-export default PerformanceMonitor.dynamic;

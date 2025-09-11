@@ -15,7 +15,6 @@ export default function EnterpriseAdmin() {
   const { user } = useAuth();
   // Check if user has enterprise admin role
 
-=======
   // Check if user has enterprise admin role;  const isEnterpriseAdmin = user?.role === "enterprise_admin";
 
 import { SEO } from "@/components/SEO",
@@ -31,26 +30,21 @@ export default function EnterpriseAdmin() {
 
 
 }
-=======
   // Check if user has enterprise admin role;
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 
   if (!isEnterpriseAdmin) {;
     return <Navigate to="/unauthorized" />;
 
-=======
 
 
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-=======
 
 
-==============
     <ProtectedRoute>;
       <SEO
         title="Enterprise Admin - Zion AI Marketplace"
@@ -83,8 +77,6 @@ export default function EnterpriseAdmin() {;
       <SEO;
         title="Enterprise Admin - Zion AI Marketplace";
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -95,20 +87,11 @@ export default function EnterpriseAdmin() {;
 
 
 }
-=======
-=======  );
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -123,7 +106,6 @@ export default /**
 function EnterpriseAdmin() {
   const { user } = use_auth ();
 ;
-<<<<<<< HEAD
   // Check if user has enterprise admin role;
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 ;
@@ -146,7 +128,6 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
   ),;}
  export default function EnterpriseAdmin () {
   const {
@@ -158,8 +139,3 @@ if ( {) {
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

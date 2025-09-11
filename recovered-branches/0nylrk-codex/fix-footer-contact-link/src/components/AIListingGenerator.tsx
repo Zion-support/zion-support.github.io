@@ -2,8 +2,6 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -33,8 +31,6 @@ interface AIListingGeneratorProps {
     targetAudience?: string
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
-=======
-=======
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
 
@@ -101,7 +97,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
-=======
 
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
@@ -147,7 +142,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   }
   },
 
-=======
   }
   },
   const handleGenerate = async () => {
@@ -156,8 +150,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      }),
       return
 ;
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
@@ -211,7 +203,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
     setIsLoading(true),
     
-=======
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
         body: { title, category, key_features, target_audience }
@@ -224,12 +215,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       if (data.error) {
         throw new Error(data.error)
@@ -239,7 +226,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 
       setGeneratedContent(data.generated),
-==============
       setGeneratedContent(data.generated);
 
       setGeneratedContent(data.generated),      toast({
@@ -247,8 +233,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "AI has created optimized listing content for you."
       })
     } catch (error) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
       // Check condition
 if ( {) {
@@ -274,7 +258,6 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive";
       });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsLoading (false);
     }
@@ -289,7 +272,6 @@ if ( {) {
             onClick={handleGenerate}
 
 
-=======
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>
@@ -317,9 +299,6 @@ if ( {) {
               <ul className="list-disc pl-5 text-white space-y-1">
                 {generatedContent.keyPoints.map((point, index) => (
                   <li key={index}>{point}</li>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
       {generatedContent && !isLoading && (;
         <Card className="border border-zion-blue-light bg-zion-blue-dark">;
           <CardHeader>;
@@ -337,7 +316,6 @@ if ( {) {
               <ul className="list-disc pl-5 text-white space-y-1">;
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;                ))}
-=======
 ;
   const handle_apply = () =>: any {
     // Check condition
@@ -477,6 +455,4 @@ if ( {) {
         </Card>)}
     </div>);
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

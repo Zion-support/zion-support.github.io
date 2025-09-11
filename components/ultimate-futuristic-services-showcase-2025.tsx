@@ -1,10 +1,7 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import Head from 'next/head';
 
 
-=======
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,7 +30,6 @@ import Head from 'next / head';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 
@@ -43,8 +39,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 export default function UltimateFuturisticServicesShowcase2025() {;
 
 export default function UltimateFuturisticServicesShowcase2025() {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -233,7 +227,6 @@ function UltimateFuturisticServicesShowcase2025() {
   }
 ;
   return (
-=======
 
       }
     }
@@ -282,7 +275,6 @@ function UltimateFuturisticServicesShowcase2025() {
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div        <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>
-=======
 
     <Layout>
       <Head>
@@ -408,13 +400,9 @@ function UltimateFuturisticServicesShowcase2025() {
                     <div className="text-sm text-gray-300">{stat && stat.label}</div>;
                 </motion && motion.div>;
 
-=======
-==============
 
 
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {stats.map ((stat, index) => (                Ultimate Futuristic;
               </span>;
               <br />;
@@ -497,15 +485,10 @@ function UltimateFuturisticServicesShowcase2025() {
               {stats.map((stat, index) => (
                 <motion.div
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </motion && motion.div>;
         </div>;
@@ -516,8 +499,6 @@ function UltimateFuturisticServicesShowcase2025() {
 
 
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -525,11 +506,6 @@ function UltimateFuturisticServicesShowcase2025() {
 
 
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -540,12 +516,10 @@ function UltimateFuturisticServicesShowcase2025() {
 
 
             {/* Category Filter */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <input
                 type="text"
                 placeholder="Search futuristic services..."
                 value={searchTerm}
-=======
 
             {/* Category Filter */}
             <div className='flex flex-wrap gap-3'>;
@@ -566,9 +540,6 @@ function UltimateFuturisticServicesShowcase2025() {
                     {category && category.title} ({category && category.count});
                   </option>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
               <select
@@ -579,8 +550,6 @@ function UltimateFuturisticServicesShowcase2025() {
                 <option value="all">All Categories</option>
                 {serviceCategories.map((category) => (
                   <option key={category.title} value={category.title}>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======            <div className='flex flex-wrap gap-3'>
 
               />
             </div>
@@ -591,7 +560,6 @@ function UltimateFuturisticServicesShowcase2025() {
 
                     {category.title} ({category.count})
                   </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
@@ -605,25 +573,17 @@ function UltimateFuturisticServicesShowcase2025() {
             animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
 
-=======
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variants={itemVariants}
                 className={`group relative ${
 
                   viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid'
-=======
           >
-=======
-=======
           >
 
-=======
           >
 
             {sortedServices.map((service, index) => (
@@ -652,7 +612,6 @@ function UltimateFuturisticServicesShowcase2025() {
                 variants={item_variants}
                 className={`group relative ${
 
-=======
 
                 {/* Popular Badge */}
                 {service.popular && (
@@ -671,8 +630,6 @@ function UltimateFuturisticServicesShowcase2025() {
                     <div
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
                     >
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {service.icon}
                     </div>
                   </div>
@@ -797,7 +754,6 @@ function UltimateFuturisticServicesShowcase2025() {
                         <CheckCircle className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                        {feature}
                       </div>))}
                     {service.features.length > 4 && (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <div className='text-gray-400'>
                     <span className='block'>Trial</span>
@@ -837,8 +793,6 @@ function UltimateFuturisticServicesShowcase2025() {
                     <span className="text-white font-medium">{service.customers}+</span>
                   </div>
                 </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   </div>;
                 </div>;
                 {/* Service Details */}
@@ -887,10 +841,8 @@ function UltimateFuturisticServicesShowcase2025() {
                     <span className="text-white font-medium">{service && service.customers}+</span>;
                   </div>;
                 </div>;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20'>;
                   <div className='text-sm'>;
@@ -919,8 +871,6 @@ function UltimateFuturisticServicesShowcase2025() {
                   </div>;
                 </div>;
                 {/* Action Buttons */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     href={service && service.link}
                     className='flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>;
                     Get Started;
@@ -940,11 +890,9 @@ function UltimateFuturisticServicesShowcase2025() {
 
                         {contactInfo.email}
 
-=======
 
 
                 {/* Contact Info */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </a>
                     </div>
                   </div>
@@ -952,8 +900,6 @@ function UltimateFuturisticServicesShowcase2025() {
               </motion.div>
             ))}
           </motion.div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
@@ -961,9 +907,6 @@ function UltimateFuturisticServicesShowcase2025() {
           {/* No Results */}
 
           {sortedServices.length === 0 && (
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* No Results */}
 
           {sortedServices.length === 0 && (
@@ -1012,8 +955,6 @@ function UltimateFuturisticServicesShowcase2025() {
         </div>
       </section>
 
-=======
-=======
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
@@ -1021,7 +962,6 @@ function UltimateFuturisticServicesShowcase2025() {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
@@ -1048,12 +988,7 @@ function UltimateFuturisticServicesShowcase2025() {
               <Link
                 href='/pricing'
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1070,11 +1005,8 @@ function UltimateFuturisticServicesShowcase2025() {
                 href="/contact"
 
 
-==============
   );
 }=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   );
 }
@@ -1282,8 +1214,3 @@ function UltimateFuturisticServicesShowcase2025() {
       </section>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

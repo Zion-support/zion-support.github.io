@@ -13,28 +13,20 @@ module.exports = {;
     {;
       name:'error-fixer',;
       script:'automation/lint-error-fixer.cjs',;
-=======
 
-=======
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {;
-=======
 module && module.exports = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps:[;
-=======
 module.exports = {apps:[;
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {;
 
       name:'error-fixer',;
       script:'automation/lint-error-fixer && fixer.cjs',;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -54,17 +46,13 @@ module.exports = {apps:[;
     },;
     {;
       name:'code-quality-monitor',;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
-=======
 
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 module.exports = {;
-=======
 module && module.exports = {;  apps:[;
 module.exports = {apps:[;
 origin/main
@@ -159,7 +147,6 @@ origin/main
 
 }
 
-=======
 };      env: {
         NODE_ENV: 'production'
 
@@ -183,7 +170,6 @@ origin/automation-improvements-final
     {
 
       name: 'bolt-zion-app',
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       script: 'npm',
       args: 'run preview',
       cwd: './',
@@ -237,7 +223,6 @@ origin/automation-improvements-final
   }]
 };
 }
-=======
 
       },
       error_file: './logs/performance-error && error.log',
@@ -249,21 +234,16 @@ origin/automation-improvements-final
   ]
 
 
-=======
-
-=======
 
 
 
-=======
-=======
+
 
 }export default {
   apps: [;
     {
 
       name: 'bolt-zion-app',
-=======
       name: 'bolt - zion - app',
 
       script: 'npm',
@@ -464,9 +444,7 @@ origin/automation-improvements-final
     }
   ],
 module && module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps: [{
-=======
 
       log_file: 'logs / pm2 / syntax - fixer.log',
       error_file: 'logs / pm2 / syntax - fixer - error.log',
@@ -475,9 +453,7 @@ module && module.exports = {
     }
   ],
 module && module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps: [{
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     },
     max_memory_restart: "1G",
@@ -491,26 +467,13 @@ module && module.exports = {
 
 
 
-=======
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 }
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
 }
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: "ziontechgroup - site",
     script: "npm",
     args: "start",
@@ -533,8 +496,6 @@ module && module.exports = {
   }];
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
       error_file: './logs/performance-error.log',
       out_file: './logs/performance-out.log',
       log_file: './logs/performance-combined.log',
@@ -542,9 +503,3 @@ module && module.exports = {
     }
   ]
 },
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

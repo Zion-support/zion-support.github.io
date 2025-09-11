@@ -9,8 +9,4 @@ const AIAutonomousDiscovery = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousDiscovery;
-=======
-export default AIAutonomousDiscovery;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

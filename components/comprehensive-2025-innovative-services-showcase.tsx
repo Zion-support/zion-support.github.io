@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import SEO from '../components / SEO';
 import Layout from '../components / layout / Layout';
@@ -44,7 +43,6 @@ import {
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,7 +52,6 @@ import {
 
             {/* Enhanced Company Badge */}
             className='space-y-6'            className="space-y-6"
-=======
             className="space-y-6"          >
 
             {/* Enhanced Company Badge */}
@@ -72,8 +69,6 @@ import {
             </p>;
               transition={{ duration: 0.6, delay: 0.2 }}
               className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
-=======
-=======
             className="space-y-6"
           >
 
@@ -81,7 +76,6 @@ import {
 
 
             {/* Enhanced Company Badge */}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
       name: 'AI & Marketing',
@@ -200,11 +194,8 @@ import {
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-=======
               transition={{ duration: 0.6, delay: 0.2 }}
               className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             >
               <Star className='w-5 h-5' />
@@ -235,22 +226,16 @@ import {
 
 
 
-==============
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Enhanced Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-==============
               transition={{ duration: 0.8, delay: 0.4 }}
               className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>
                 <div className='text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors'>
@@ -357,33 +342,22 @@ import {
         <div className="max-w-7xl mx-auto relative z-10">;
           <motion&& motion.div
 
-=======
 
 
 
 
-=======
-
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-==============
             className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
               Service Categories
@@ -401,23 +375,16 @@ import {
 
 
                 >
-=======
               
 
-=======
 
 
 
 
-=======
               
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'>;
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
               Service Categories;
@@ -501,8 +468,6 @@ import {
       {/* Featured Services */}
       <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-=======
-=======;
                 >;
                   <div;
                     className={`p - 8 rounded - 2xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl`}
@@ -546,7 +511,6 @@ import {
 
 
 
-=======
               return (
                 <motion.div
                   key={category.name}
@@ -575,23 +539,16 @@ import {
       </section>;
 
 
-=======
 
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
       {/* Featured Services */}
       <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>          <motion.div
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {innovative2025MicroSaasBatch
@@ -668,10 +625,6 @@ import {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-=======
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'>;
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
               Featured Services;
@@ -694,8 +647,6 @@ import {
                           Popular;
                         </div>;
                       )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <motion.div;
                   key={category.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
@@ -727,7 +678,6 @@ import {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {service.icon}
                         </div>;
                         <h3 className='text - 2xl font - bold text - white mb - 2'>;
@@ -819,7 +769,6 @@ import {
         <div className='max-w-7xl mx-auto relative z-10'>      <section className="py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-=======
       {/* All Services Grid */}
       <section className='py-20 px-4 bg-black/30 relative'>
         <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5'></div>
@@ -865,7 +814,6 @@ import {
 
                     {/* Market Info */}
 
-=======
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
@@ -920,7 +868,6 @@ import {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
 
-=======
           <motion.div
 
 
@@ -929,15 +876,10 @@ import {
 
           <motion.div
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
               Ready to Transform Your Business?
@@ -964,112 +906,12 @@ import {
               </a>;
               <a
 
-<<<<<<< HEAD>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======              return (
-                <motion&& motion.div
-                  key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.05 }}
-                  viewport={{ once: true }}
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Contact CTA */}
-      <section className="py-20 px-4">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-=======
-=======  )
-};
-export default Comprehensive2025InnovativeServicesShowcase;
-
-
-                </motion.div>);
-            })}
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact CTA */}
-      <section className="py - 20 px - 4">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space - y-8";
-          >;
-            <h2 className="text - 4xl md:text - 5xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w-2xl mx - auto">;
-              Get in touch with our team to discuss how our innovative services can drive your success;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <a;
-                href="tel:+13024640950";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - cyan - 500 / 25 flex items - center justify - center space - x-2";
-              >;
-                <Zap className="w - 5 h - 5" />;
-                <span > Call Now: +1 302 464 0950</span>;
-              </a>;
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
-                className="px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
-              >;
-                Email Us;
-              </a>;
-            </div>;
-            <div className='text - sm text - gray - 400'>;
-              <p > Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
-              <p>;
-                Website:{' '}
-                <a;
-                  href='https://ziontechgroup.com';
-                  className='text - cyan - 400 hover:text - cyan - 300';
-                >;
-                  https://ziontechgroup.com;
-                </a>;
-              </p>            </div>;
-            <div className="text - sm text - gray - 400">;
-              <p > Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
-              <p > Website: <a href="https://ziontechgroup.com" className="text - cyan - 400 hover: text - cyan - 300">https://ziontechgroup.com</a></p>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </Layout>);
-}export default Comprehensive2025InnovativeServicesShowcase);
-=======
-export default Comprehensive2025InnovativeServicesShowcase;
-
-export default Comprehensive2025InnovativeServicesShowcase;
-<<<<<<< HEAD
 
 
 }
 ;
 export default Comprehensive2025InnovativeServicesShowcase;
 ;
-<<<<<<< HEAD
 
 export default Comprehensive2025InnovativeServicesShowcase;
 export default Comprehensive2025InnovativeServicesShowcase;
-=======
-=======
-export default Comprehensive2025InnovativeServicesShowcase;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-}
-export default Comprehensive2025InnovativeServicesShowcase;
-=======
-
-}
-;
-export default Comprehensive2025InnovativeServicesShowcase;
-;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

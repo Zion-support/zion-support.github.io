@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 
@@ -69,8 +68,6 @@ import {
         );  const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
-=======
-==============
 export default function SaaSMarketplacePage() {;
   const microSaasServices = [;
     {;
@@ -313,7 +310,6 @@ export default function SaaSMarketplacePage() {;
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],;
     },;
 
-=======
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
     {
@@ -357,10 +353,7 @@ export default function SaaSMarketplacePage() {
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
     : microSaasServices.filter(service => service.category === selectedCategory);
@@ -421,7 +414,6 @@ export default function SaaSMarketplacePage() {
         </div>;
       </section>;
       {/* Category Filter */}
-=======
 
 
       {/* Category Filter */}
@@ -433,7 +425,6 @@ export default function SaaSMarketplacePage() {
           <div className="flex flex-wrap justify-center gap-4">;
             {categories && categories.map((category) => (;
 
-=======
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,16 +434,10 @@ export default function SaaSMarketplacePage() {
 
               <button
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <button
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -469,8 +454,6 @@ export default function SaaSMarketplacePage() {
 
 
       {/* Services Grid */}
-=======
-=======
 
 
       {/* Services Grid */}
@@ -547,7 +530,6 @@ export default function SaaSMarketplacePage() {
                         {service.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
-=======
                       </div>;
                     </div>;
                     <div className='flex items-center justify-between'>;
@@ -620,7 +602,6 @@ export default function SaaSMarketplacePage() {
                         href={service.website}
                         variant='outline'
                         size='sm'
-=======                        className='group-hover:border-blue-500 group-hover:text-blue-400'
                       >
                         Visit Website
                         <ExternalLink className='w-4 h-4 ml-2' />
@@ -643,14 +624,10 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-=======
-=======
       {/* CTA Section */}
 
 
 
-=======
-=======            Our team of experts can help you select the perfect SaaS tools for;
             your business needs. Get personalized recommendations and;
             implementation support.;
           </p>;
@@ -666,22 +643,10 @@ export default function SaaSMarketplacePage() {
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
   );
-=======}
   );
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const AIContentGenerationAutomation.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIContentGenerationAutomation.js;
-=======
-export default AIContentGenerationAutomation.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

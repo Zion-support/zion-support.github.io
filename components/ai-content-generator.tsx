@@ -31,7 +31,6 @@ icon: <Clock className="w-8 h-8 text-white" />,
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
-=======import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
@@ -201,7 +200,6 @@ import {
       description: 'For large organizations and enterprises',
 
 
-=======
         'Unlimited words'
         'All templates + custom'
         'Full SEO suite'
@@ -238,7 +236,6 @@ import {
 
   ];
 
-=======  const useCases = [
     {
       title: 'Blog Writing'
       description:
@@ -381,10 +378,8 @@ import {
               href='#demo'
               variant='outline'
               size='lg'
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
       {/* Hero Section */}
@@ -419,12 +414,9 @@ import {
               variant="outline"
               size="lg"
 
-=======            </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
@@ -442,7 +434,6 @@ import {
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-=======
                 </p>
               </Card>
             ))}
@@ -461,8 +452,6 @@ import {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
-=======
-=======
 
 
                   {feature.description}
@@ -470,7 +459,6 @@ import {
 
                 </p>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
@@ -502,7 +490,6 @@ import {
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases && useCases.map((useCase, index) => (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -537,9 +524,7 @@ import {
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
-==============
 
-=======              Versatile content creation for every industry and purpose
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -564,9 +549,7 @@ import {
                           {example}
 
                         </div>
-=======
                           {example}
-=======
 
                           {example}
 
@@ -593,20 +576,15 @@ import {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
-==============        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               Choose the plan that fits your content creation needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {pricingPlans.map((plan, index) => (
           </div>;
         </div>;
@@ -636,8 +614,6 @@ import {
             {pricingPlans && pricingPlans.map((plan, index) => (;
               <Card
                 key={index}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 </p>;
               </Card>))}
           </div>;
@@ -749,14 +725,10 @@ import {
                   </div>)}
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 2'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan.color} hover:border-purple-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
@@ -780,7 +752,6 @@ import {
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
-=======
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -853,7 +824,6 @@ import {
             </p>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
-==============        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Seamless Integrations
@@ -884,8 +854,6 @@ import {
           </div>;
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -907,10 +875,7 @@ import {
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Connect with your favorite tools and platforms
             </p>
           </div>
@@ -927,7 +892,6 @@ import {
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               </Card>
 
@@ -938,7 +902,6 @@ import {
 
 
       {/* CTA Section */}
-=======
               </Card>
 
             ))}
@@ -946,7 +909,6 @@ import {
         </div>
       </section>
 
-==============
             ))}
 
           </div>;
@@ -954,23 +916,18 @@ import {
       </section>;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
 
 
       {/* CTA Section */}
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======            Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of content creators who are already saving hours
             every day with AI-powered content generation.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href="/contact"
               variant="secondary"
@@ -983,7 +940,6 @@ import {
               href="#demo"
               variant="outline"
               size="lg"
-=======
 
               Watch Demo;
             </Button>;
@@ -992,23 +948,15 @@ import {
       </section>;
   );
 }
-=======
 
   );
 }
 }
 ;
 }
-=======
-=======
   );
 
     </>);
 }
 
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

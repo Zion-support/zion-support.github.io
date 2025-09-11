@@ -2,8 +2,6 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -29,8 +27,6 @@ interface MobileConversationListProps {
 }
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
-=======
-=======interface Conversation {;
   id: string,;
   name: string,;
   avatar?: string;
@@ -79,8 +75,6 @@ interface MobileConversationListProps {;
   onSelectConversation: (id: string) => void;
 }
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -89,8 +83,6 @@ export function MobileConversationList({
   onSelectConversation: (id: string) => void;
 }
 export function MobileConversationList(): any ({;
-=======
-=======
 
 export function MobileConversationList(): any ({;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   conversations;
@@ -102,7 +94,6 @@ export function MobileConversationList(): any ({;>>>>>>> f8e247744ae2f2b9a6ba042
       <div className="px-4 mb-2">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-=======
 
     <div className="space-y-4">;
       <div className="px-4 mb-2">;
@@ -128,7 +119,6 @@ export function MobileConversationList(): any ({;>>>>>>> f8e247744ae2f2b9a6ba042
             className={cn(
 export function MobileConversationList(): any ({;  conversations;
   activeConversation;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onSelectConversation;
 } MobileConversationListProps) {;
   return (;
@@ -154,11 +144,9 @@ export function MobileConversationList(): any ({;  conversations;
               "px-4";
 
               "px-4",
-=======
               "px-4";
 
               "px-4",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -183,12 +171,9 @@ export function MobileConversationList(): any ({;  conversations;
 
                     {conversation.isTyping
                     {conversation.isTyping 
-=======
-=======
                     {conversation.isTyping 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex-1 min-w-0">;
                 <div className="flex justify-between items-baseline">;
                   <h3 className="font-medium truncate">{conversation && conversation.name}</h3>;
@@ -196,7 +181,6 @@ export function MobileConversationList(): any ({;  conversations;
                     {conversation && conversation.timestamp}
                   </span>;
                 </div>;
-=======import React from './react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -281,8 +265,6 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface Conversation {
   id: string;
@@ -329,7 +311,3 @@ onSelectConversation
     </div>
   )
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

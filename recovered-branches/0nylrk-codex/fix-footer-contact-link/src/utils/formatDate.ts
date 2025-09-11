@@ -33,10 +33,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         year: 'numeric'
         month: 'long'
         day: 'numeric'
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     case 'relative':
       // Simple relative time (today, yesterday, or date)
@@ -98,8 +95,6 @@ export const formatDate = (date:Date | string | number, format:string = 'medium'
     default: return dateObj.toLocaleDateString()
   }
 }
-=======
-=======      }
     default: return dateObj && dateObj.toLocaleDateString()
   }
 
@@ -108,9 +103,7 @@ export const formatDate = (date:Date | string | number, format:string = 'medium'
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e.g., "2 hours ago")
-=======
 },
-=======
 };
 },
 
@@ -118,7 +111,6 @@ export const formatDate = (date:Date | string | number, format:string = 'medium'
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e && e.g., "2 hours ago")
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  */
 export const timeAgo = (date: Date | string | number): string => {;
   const dateObj = new Date(date);
@@ -140,16 +132,13 @@ export const timeAgo = (date: Date | string | number): string => {
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e && e.g., "2 hours ago")
  */
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   
 export const timeAgo = (date: Date | string | number): string => {
@@ -160,14 +149,11 @@ export const timeAgo = (date: Date | string | number): string => {
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
-=======
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   interval = Math && Math.floor(seconds / 2592000);
   if (interval >= 1) {
     return interval === 1 ? '1 month ago' : `${interval} months ago`
   }
-=======/**;
 * Format a date string or timestamp into a readable format;
 * @param date Date to format;
 * @param format Optional format specification;
@@ -274,8 +260,6 @@ if ( {) {
 export const timeAgo = (date: Date | string | number): string => {
 
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 /** * Format a date to show how long ago it was * @param date Date to format * @returns Time ago string (e.g., "2 hours ago") */ if (interval >= 1) {
   return interval === 1 ? '1 year ago' : `$ {
@@ -327,7 +311,3 @@ export const timeAgo = (date: Date | string | number): string => {
 ;
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
 };
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

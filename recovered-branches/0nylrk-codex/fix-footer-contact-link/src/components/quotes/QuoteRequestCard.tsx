@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {format} from "date-fns";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -11,9 +9,6 @@ import React from "react",
 import { format } from "date-fns",
 import React from "react",
 import { format } from "date-fns",
-=======
-=======
-=======
 import React from "react",
 import { format } from "date-fns",
 import React from './react';
@@ -83,7 +78,6 @@ export const QuoteRequestCard:React.FC<QuoteRequestCardProps> = ({;
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
@@ -127,8 +121,6 @@ type QuoteRequestCardProps = {
           <span>Timeline: {quote.timeline}</span>
         </div>
         <div className="flex justify-between items-center mt-4">
-=======
-=======          <span className="text-white font-medium">From: </span>;
           {quote && quote.requester_name}
         </div>;
 
@@ -141,10 +133,7 @@ type QuoteRequestCardProps = {
 
         <div className="flex justify-between items-center mt-4">;
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="ghost"
                 size="sm"
@@ -166,12 +155,8 @@ type QuoteRequestCardProps = {
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
 
-=======
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -228,8 +213,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <CalendarIcon className="h-4 w-4" />;
           <span>Timeline: {quote.timeline}</span>;
         </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             className="flex items-center gap-1";
           >;
             <Eye className="h-4 w-4" />;
@@ -254,12 +237,9 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
 
-=======
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
     </Card>);
 }
@@ -295,15 +275,7 @@ quote, onViewDetails, onMarkAsResponded, onToggleArchive
     </Card>;
   );
 };
-=======};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

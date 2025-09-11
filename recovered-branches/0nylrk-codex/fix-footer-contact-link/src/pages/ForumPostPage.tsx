@@ -4,12 +4,9 @@ import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -30,7 +27,6 @@ const mockPost: ForumPost = {
   isFeatured: true
 },
 
-=======const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
@@ -61,8 +57,6 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
     downvotes: 0
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  },
   {
     id: "reply2",
     postId: "1",
@@ -88,8 +82,6 @@ const mockReplies: ForumReply[] = [
     downvotes: 0,
     isAnswer: true
   },
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "reply4"
     postId: "1"
@@ -191,7 +183,6 @@ const mockReplies:ForumReply[] = [;
   }
 ],;
 ;
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -414,7 +405,6 @@ export default function ForumPostPage() {
   }
   },
 
-=======
   }
   },
   const handleDownvote = () => {
@@ -432,7 +422,6 @@ export default function ForumPostPage() {
 
 
 
-==============
   }
   },
   const handleSubmitReply = async (content: string) => {
@@ -444,8 +433,6 @@ export default function ForumPostPage() {
     }
     // Create a new reply
     const newReply: ForumReply = {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      id: `reply${Date.now()}`,
       postId: post.id,
       content,
       authorId: user.id || 'unknown',
@@ -467,7 +454,6 @@ export default function ForumPostPage() {
   },
 
 
-=======  const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
       toast({
@@ -505,7 +491,6 @@ export default function ForumPostPage() {
   },
 
 
-=======  const handleReportPost = () => {
     if (!user) {
       toast({
         title: "Authentication required"
@@ -528,8 +513,6 @@ export default function ForumPostPage() {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>
       <SEO
@@ -561,8 +544,6 @@ export default function ForumPostPage() {
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -810,12 +791,8 @@ export default function ForumPostPage() {;
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {post.authorRole}
                     </Badge>
                   )}
@@ -839,14 +816,10 @@ export default function ForumPostPage() {;
     }));
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
-=======
-==============
 
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const handleReportPost = () => {;
     if (!user) {;
       toast({;
@@ -854,8 +827,6 @@ export default function ForumPostPage() {;
         description: "Please sign in to report content"}),;
       return;
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     toast({;
       title: "Report submitted",;
       description: "A moderator will review this content"});
@@ -867,7 +838,6 @@ export default function ForumPostPage() {;
 
     setPost({ ...post, isLocked: !post && post.isLocked }),;
 
-=======
               <div className="flex items-center gap-2">;
                 {(isAuthor || isAdminOrMod) && (;
                   <Button variant="ghost" size="sm" asChild>;
@@ -892,12 +862,10 @@ export default function ForumPostPage() {;
                   onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
                   canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
                 />;
-=======                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
           </div>;
         </div>;
@@ -905,7 +873,6 @@ export default function ForumPostPage() {;
     </AppLayout>;
   );
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (
@@ -949,7 +916,6 @@ export default function ForumPostPage() {;
         </div>;
       </div>;
     </AppLayout>);
-<<<<<<< HEAD
 };
   if (!user) {
   toast ({
@@ -1016,10 +982,4 @@ downvotes: 0
 }/>) ) 
 }</div> </div> </div> </AppLayout>) 
 }
-;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-
-=======
 ;

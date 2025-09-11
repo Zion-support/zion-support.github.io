@@ -9,8 +9,4 @@ const AIAutonomousTrading = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousTrading;
-=======
-export default AIAutonomousTrading;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

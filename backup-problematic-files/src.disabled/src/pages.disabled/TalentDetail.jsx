@@ -9,8 +9,4 @@ const TalentDetail = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TalentDetail;
-=======
-export default TalentDetail;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

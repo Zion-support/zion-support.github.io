@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { X } from 'lucide-react';
 
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
@@ -16,10 +14,6 @@ export default function ChatWidget() {
   return id
 }
 export default function ChatWidget() {;
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -194,9 +188,6 @@ function generateSessionId(): any (): string {;
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents(n => {;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -223,8 +214,6 @@ function generateSessionId(): any (): string {;
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
-=======
-=======
     } catch (e) {;
       setMessages(prev => [;
         ...prev,;
@@ -246,7 +235,6 @@ function generateSessionId(): any (): string {;
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
-=======
     <div className='fixed bottom-4 right-4 z-50'>      }
 
       if (data?.meta?.intentMatched === false) {;
@@ -331,10 +319,8 @@ function generateSessionId(): any (): string {;
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 
 
-==============
     <div className='fixed bottom-4 right-4 z-50'>
 
-==============
   return (
 
 
@@ -355,7 +341,6 @@ function generateSessionId(): any (): string {;
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 >
                   {m.content}
@@ -364,8 +349,6 @@ function generateSessionId(): any (): string {;
 
             )}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
@@ -375,17 +358,12 @@ function generateSessionId(): any (): string {;
 
                     {q}
                   </button>
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {q}
                   </button>;=======
-=======
             <div className="px-3 pb-2">
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {q}
                   </button>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))}
               </div>;
             </div>;
@@ -397,7 +375,6 @@ function generateSessionId(): any (): string {;
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
-=======
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (;
@@ -408,8 +385,6 @@ function generateSessionId(): any (): string {;
                   onKeyDown={e => {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -429,8 +404,6 @@ function generateSessionId(): any (): string {;
                   disabled={isLoading}
                 <input
                   value={input}
-=======
-=======
 
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
             {!showEscalation ? (
@@ -459,46 +432,29 @@ function generateSessionId(): any (): string {;
 
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
 
-=======
 
                     }
                   }}
-=======
                       onSend()
                     }
                   }}
-=======
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-=======
 
 
 }
-=======
-=======
 
   );
 
 }
-=======
 
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 useEffect ( () => {
   // Check condition
 if ( {) {
@@ -872,17 +828,9 @@ if ( {) {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

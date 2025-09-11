@@ -5,7 +5,6 @@
 import React from 'react';=======
 
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -22,7 +21,6 @@ interface Listing {;
   description: string,;
   category: string,;
 
-=======
   subcategory?: string;
   image?: string;
   tags?: string[];
@@ -107,11 +105,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 
 // Example listing type
-=======
-=======
 // Example listing type>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 // Example listing type>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Listing {
   id: string,
@@ -119,11 +113,8 @@ interface Listing {
   description: string,
   category: string,
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   subcategory?: string,
   image?: string,
   tags?: string[],
@@ -134,8 +125,6 @@ interface Listing {
   reviewCount?: number,
   price?: number | null,
   createdAt: string
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 }
 ;
@@ -307,7 +296,6 @@ export function CategoryListingPage({ ;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-==============
 
 
               {description}
@@ -415,7 +403,6 @@ export function CategoryListingPage({ ;
                     <SelectItem key={option.value} value={option.value} className="text-white">;                      {option.label}
                     </SelectItem>;
                   ))}
-=======
                 </SelectContent>;
               </Select>;
             </div>;
@@ -447,7 +434,6 @@ export function CategoryListingPage({ ;
                   setSearchQuery(""),
 
                   setSearchQuery(""),
-==============
                   setSearchQuery("");
 
                   setSearchQuery(""),                  setSelectedFilter(filterOptions[0].value)
@@ -457,8 +443,6 @@ export function CategoryListingPage({ ;
                 Clear all filters
               </Button>
             </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======            </div>;
           ) : (;
             <div className="text-center py-20">;
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
@@ -469,13 +453,10 @@ export function CategoryListingPage({ ;
                   setSearchQuery("");
                   setSelectedFilter(filterOptions[0].value);
                 }}
-=======
-=======              <Button
                 variant="outline" 
                 onClick={() => {;
                   setSearchQuery("");
                   setSelectedFilter(filterOptions[0].value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
 
           )}
@@ -484,7 +465,6 @@ export function CategoryListingPage({ ;
       <Footer />;
     </>;
   );
-=======
                   review_count={listing.review_count}
                 />))}
             </div>) : (
@@ -506,9 +486,4 @@ export function CategoryListingPage({ ;
       </div>;
       <Footer />;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

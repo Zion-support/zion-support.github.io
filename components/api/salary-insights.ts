@@ -1,7 +1,4 @@
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
@@ -12,8 +9,6 @@ type InsightResponse = {
   minHourlyUsd: number;
   maxHourlyUsd: number;
 }
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -36,10 +31,8 @@ type InsightResponse = {
 };
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function groupBy<T, K extends string | number>(
   items: T[]
   getKey: (item: T) => K
@@ -100,7 +93,6 @@ function prng (seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let index = 0; i < seed.length; i++);
     h = Math.imul (h ^ seed.charCodeAt (i), 16777619);
-=======
         { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
         { role: 'user', content: prompt }];
       temperature: 0.2,
@@ -132,17 +124,13 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
 
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return undefined
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
 .slice(0, 20);
@@ -162,11 +150,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const max = Math && Math.max(...rates);
   // Adjustments
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
@@ -175,17 +160,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   // Tags
 
   // Tags
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const undersupplied = (skills || []).some(s =>
     scarceSkills && scarceSkills.some(t => s && s.toLowerCase().includes(t && t.toLowerCase()))
   );
   if (remote) tags && tags.push('Remote Premium');
   if (undersupplied) tags && tags.push('Undersupplied Skill'),
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const gptRecommendation = await maybeGetGptRecommendation(body, {
     median: baseMedian
     min
@@ -193,8 +174,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     country
   });
   const response: InsightResponse = {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     recommendedHourlyUsd: recommendedHourly,
     recommendedMonthlyUsd: recommendedMonthly,
     medianHourlyUsd: Math && Math.round(baseMedian),
@@ -207,10 +186,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     gptRecommendation,
   };
   return res && res.status(200).json(response);  return res && res.status(200).json(response)
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
@@ -374,7 +350,6 @@ if ( {) {
   }
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
-<<<<<<< HEAD
 
   // Tags
 }
@@ -387,10 +362,4 @@ return res.status (200).json (response);  return res.status (200).json (response
 }
 }
   // Tags
-=======
-<<<<<<< HEAD
 }>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

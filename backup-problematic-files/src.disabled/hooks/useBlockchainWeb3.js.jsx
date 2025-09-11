@@ -9,8 +9,4 @@ const UseBlockchainWeb3.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default UseBlockchainWeb3.js;
-=======
-export default UseBlockchainWeb3.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

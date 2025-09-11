@@ -1,8 +1,6 @@
 const { spawn } = require ('child_process'),
 console.log ('🚀 Starting development server...'),
-=======
 
-=======
 
 console.log('🚀 Starting development server...'),;
 
@@ -22,7 +20,6 @@ dev_process.on ('close', (code) => {
 process.on('SIGINT', () => {
   console.log('Stopping development server...');
   devProcess.kill('SIGINT');
-=======
 process.on('SIGINT', () => {;
   console.log('Stopping development server...'),;
   devProcess.kill('SIGINT'),;  process.exit(0);
@@ -31,9 +28,4 @@ process.on('SIGTERM', () => {;
   console.log('Stopping development server...'),;
   devProcess.kill('SIGTERM'),;
   process.exit(0);
-<<<<<<< HEAD
 });
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}),;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

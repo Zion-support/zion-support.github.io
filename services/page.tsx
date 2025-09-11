@@ -26,10 +26,7 @@ export default function ServicesPage() {
                     {/* Services List */};
                     <div className="mb-6">,
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,
-=======
-=======
 
-=======
   };
 ],
 ,
@@ -41,7 +38,6 @@ export default function ServicesPage() {,
       keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",
     >,
       <div className="min-h-screen bg-gray-50">,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ];
 ;
@@ -73,7 +69,6 @@ export default function ServicesPage() {,;
       keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",;
     >,;
       <div className="min-h-screen bg-gray-50">,;
-=======        {/* Hero Section */};
                     {/* Header */};
                     <div className="flex items-center mb-6">,
                       <div className={`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>,
@@ -99,7 +94,6 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
         {/* Why Choose Us */}
 ;
 
-=======
 
 ;
   }
@@ -148,14 +142,9 @@ export default function ServicesPage() {,;
 
 
         {/* Why Choose Us */};
-<<<<<<< HEAD
 ;          </div>,
         </section>,
         {/* Why Choose Us */};
         {/* Why Choose Us */};
         {/* Why Choose Us */};
         {/* Why Choose Us */};
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 'use client',
 import React, { useState } from 'react',
 import Link from 'next / link',
@@ -28,25 +27,20 @@ function InteractiveCard() {
       <div className=&quot;relative&quot;>
     >
       <div className="relative">
-=======
 
     >
       <div className="relative">>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 >
       <div className=&quot;relative&quot;>
     >
       <div className="relative">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
         <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-=======
 
 
         <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -63,7 +57,6 @@ function InteractiveCard() {
           </p>;
           {/* Custom children or default arrow */}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 {children || (
 
@@ -117,7 +110,6 @@ function InteractiveCard() {
           style={{
             background: `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;
 
-=======<div className=&quot;relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300&quot;>
           {icon}
         </div>;
         {/* Content */}
@@ -131,7 +123,6 @@ function InteractiveCard() {
           <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
@@ -148,7 +139,6 @@ function InteractiveCard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -173,27 +163,21 @@ function InteractiveCard() {
           style={{background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
-=======
-=======
 
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }}
         />;
       </div>;
     </Link>);
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * FeatureCard - Function description
  */
 function FeatureCard() {
   return (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662      {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
           <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -203,7 +187,6 @@ function FeatureCard() {
       </div>;
       {/* Quote */}
       </blockquote>
-=======      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
 
 
@@ -212,23 +195,14 @@ function FeatureCard() {
         &quot;{quote}&quot;
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
-=======
 
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </blockquote>
-=======
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </blockquote>
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">

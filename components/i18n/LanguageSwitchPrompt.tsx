@@ -14,9 +14,6 @@ const localeLabelKey: Record<string, string> = {
   ar: "lang.arabic",
 };
 export default function LanguageSwitchPrompt() {;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
@@ -27,25 +24,19 @@ const localeLabelKey: Record<string, string> = {
   ar: 'lang.arabic'
 };
 export default function LanguageSwitchPrompt() {
-=======
 
 
 export default function LanguageSwitchPrompt() {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -89,7 +80,6 @@ export default function LanguageSwitchPrompt() {;
         ? normalized;
         : null;
 
-=======
 
     );
     document && document.documentElement.setAttribute("lang", suggested!);
@@ -99,7 +89,6 @@ export default function LanguageSwitchPrompt() {;
   const decline = () => {;
     localStorage && localStorage.setItem("langPromptShown1", "true");
 
-<<<<<<< HEAD=======    setSuggested(null);
   }
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">;
@@ -254,5 +243,3 @@ export default function LanguageSwitchPrompt() {;
   );
 }
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

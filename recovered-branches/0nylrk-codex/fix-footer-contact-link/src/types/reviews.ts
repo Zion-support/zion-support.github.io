@@ -1,12 +1,10 @@
 
-=======export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
 
 export interface Review {
 
 export interface Review {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662  id: string;
   project_id: string;
   reviewer_id: string;
   reviewee_id: string;
@@ -35,8 +33,6 @@ export interface ReviewReport {;
 export interface ReviewReport {
 
 export interface ReviewReport {;
-=======
-=======    display_name: string,
     avatar_url?: string;
 
   }
@@ -86,13 +82,6 @@ export interface ReviewReport {;
   created_at: string,
   resolved_at?: string;
 
-=======
-=======
   created_at: string,
   resolved_at?: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

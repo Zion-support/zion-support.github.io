@@ -9,8 +9,6 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -30,8 +28,6 @@ function FeatureCTAs() {
       link: "/marketplace",
       badge: "Popular",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     }
     {
       title: "Talent Directory"
@@ -41,19 +37,15 @@ function FeatureCTAs() {
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability.";
 
 
-=======
 
 export function FeatureCTAs() {
   const features = [
     {
-=======      title: "AI Talent Matching",;
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -74,7 +66,6 @@ export function FeatureCTAs() {
       badge: "New",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
     },
-=======
     <section className="py-16 bg-gradient-to-b from-background to-background/90">;
       <div className="container mx-auto px-4">;
         <div className="mb-12 text-center">;
@@ -219,8 +210,6 @@ export function FeatureCTAs() {;
         </div>;
       </div>;
     </section>;
-=======
-=======                    <ArrowRight className="h-4 w-4" />;
                   </Link>;
                 </Button>;
               </CardFooter>;
@@ -233,11 +222,6 @@ export function FeatureCTAs() {;
   );
 }
 
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Badge>)}
                 </div>;
                 <CardTitle className="mt - 4">{feature.title}</CardTitle>;
@@ -259,8 +243,6 @@ export function FeatureCTAs() {;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  import {
   ArrowRight;
@@ -308,9 +290,3 @@ Clock const features = [ {
     </section>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

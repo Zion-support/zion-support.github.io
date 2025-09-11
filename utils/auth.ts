@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -41,7 +39,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
     ensureAdmin(user);
 
-=======
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -112,7 +109,6 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
 // Additional auth utilities for login;
 
 export interface DemoUser {
-=======
     user,
     token,
     expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
@@ -145,20 +141,13 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   } catch {
     return null;
   }
-=======
-=======
   }
 }
 
-=======
-=======
 
   }
 }
 
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -176,7 +165,6 @@ export function hasRole(session: AuthSession | null, role: string): boolean {
 export function isModerator(session: AuthSession | null): boolean {
   return hasRole(session, 'moderator') || isAdmin(session);
 
-<<<<<<< HEAD}
 
 
   }
@@ -185,5 +173,3 @@ export function isModerator(session: AuthSession | null): boolean {
   }
 }
 }
-=======
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

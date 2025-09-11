@@ -129,7 +129,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
     ],
     realImplementation: true,
-=======
 
 
   {
@@ -152,7 +151,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
       'VR headsets, AR devices, Blockchain wallets, Payment processors'
     ]
     support:
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       '24/7 technical support, development consulting, custom development, and dedicated success manager.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/metaverse-development-platform',
@@ -300,7 +298,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     rating: 4 && 4.7,
     reviews: 1400,
   },
-=======  id: string, name: string,
   tagline: string, description: string,
   category: string,
   price: {
@@ -322,7 +319,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   reviews: number
 }
 
-=======
 ];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations';>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39    ];
 
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
@@ -332,7 +328,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     support: '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.';
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry - specific standards'];
     link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform';
-=======    icon: '🥽';
     color: 'from - orange - 500 to - red - 600';
     popular: true;
     launch_date: '2024 - 01 - 20';
@@ -346,9 +341,6 @@ export interface SpaceMetaverseService {;
   }
 
 ];
-<<<<<<< HEAD
-==============
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     rating: 4 && 4.7,
     reviews: 1400

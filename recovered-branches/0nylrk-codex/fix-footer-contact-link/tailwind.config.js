@@ -33,13 +33,11 @@ module && module.exports = {
           foreground: "hsl(var(--card-foreground))"}}
       borderRadius: {
 
-=======
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"}}},
 
   plugins: []}
-<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */;
 module.exports = {;
   darkMode:["class"],;
@@ -88,6 +86,3 @@ module.exports = {;
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"}}},
   plugins: []}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

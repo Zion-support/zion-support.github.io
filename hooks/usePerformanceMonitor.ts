@@ -15,8 +15,6 @@ export function usePerformanceMonitor() {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const entries = list && list.getEntries();
       
@@ -33,7 +31,6 @@ export function usePerformanceMonitor() {;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
 
-=======  load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
 }
@@ -122,8 +119,6 @@ if ( {) {
       observer && observer.disconnect();
     };
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
   return { metrics, isSupported }
 }

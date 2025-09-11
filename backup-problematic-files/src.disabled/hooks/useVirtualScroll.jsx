@@ -9,8 +9,4 @@ const UseVirtualScroll = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default UseVirtualScroll;
-=======
-export default UseVirtualScroll;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

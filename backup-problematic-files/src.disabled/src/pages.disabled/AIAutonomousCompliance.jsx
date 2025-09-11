@@ -9,8 +9,4 @@ const AIAutonomousCompliance = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousCompliance;
-=======
-export default AIAutonomousCompliance;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

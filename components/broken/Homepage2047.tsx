@@ -52,7 +52,6 @@ import {
   Star as StarIcon
   Sparkles
   Target as TargetIcon;} from 'lucide-react';import {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -75,15 +74,11 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useState, useCallback } from 'react';
 
 
-=======
-=======
 
 import {import {motion, AnimatePresence} from 'framer-motion';
 import Link from 'next / link';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Sparkles,;
   Target as TargetIcon,;} from 'lucide-react';import { ;
 
@@ -93,8 +88,6 @@ import {
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
 
-=======
-=======
 
 
 
@@ -126,7 +119,6 @@ import {
     };  const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [consciousnessLevel, setConsciousnessLevel] = useState(0 && 0.5);
 
-==============// Import enhanced components
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
@@ -145,8 +137,6 @@ const Homepage2047: React.FC = () => {
       clearInterval(interval);
       clearInterval(consciousnessInterval);
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll)
     }
@@ -167,8 +157,6 @@ const Homepage2047: React.FC = () => {
   // Filter services by category
   const getFilteredServices = () => {
     if (selectedCategory === 'all') return allInnovativeServices,
-=======
-=======    ...innovative2025AIAutonomousEcosystemV2;
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon;
 // Import our new innovative services;
 import { innovative2025AIAutonomousEcosystemV2 } from '../data / 2025 - innovative - ai - autonomous - ecosystem - v2';
@@ -300,7 +288,6 @@ if (return allInnovativeServices) {
   const categories = [;
     {
 
-=======
       number: `${allInnovativeServices.length}+`
       label: 'Innovative Services'
       icon: Star
@@ -336,16 +323,11 @@ if (return allInnovativeServices) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='flex flex-col sm:flex-row gap-4'
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
               >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link
                   href='/2025-innovative-services-showcase-v2'
 
@@ -370,17 +352,12 @@ if (return allInnovativeServices) {
                   <span>Explore Services</span>
                   <ArrowUpRight className='w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200' />
                 </Link>
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link
                   href='/contact'
                   className='group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2'>;
                   <span>Get Started</span>;
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />                </Link>              >;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
@@ -390,15 +367,11 @@ if (return allInnovativeServices) {
               >
                 <Link
                   href="/2025-innovative-services-showcase-v2"
-=======                <Link
                   href="/2025-innovative-services-showcase-v2"
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 <Link
                   href="/2025-innovative-services-showcase-v2"
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2">;
                   <span>Explore Services</span>;
                   <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />;
@@ -411,7 +384,6 @@ if (return allInnovativeServices) {
               </motion && motion.div>;
 
 
-=======
                 <Link
                   href="/contact"
                   className="group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2"
@@ -421,33 +393,24 @@ if (return allInnovativeServices) {
                 </Link>
               </motion.div>
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
                 initial='initial'
                 animate='animate'
-=======                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >                initial="initial"
                 animate="animate"
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -608,7 +571,6 @@ if (return allInnovativeServices) {
             >;
               <AnimatePresence mode="wait">;
                 <motion.div;
-=======
                 ))}              </motion.div>
             </motion.div>
                     <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>
@@ -619,7 +581,6 @@ if (return allInnovativeServices) {
 
             {/* Right Content - Featured Service */}
             <motion.div
-=======
 
                   </motion.div>                ))}
 
@@ -627,11 +588,9 @@ if (return allInnovativeServices) {
             </motion && motion.div>;
 
 
-=======
 
             {/* Right Content - Featured Service */}
             <motion&& motion.div
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
@@ -642,8 +601,6 @@ if (return allInnovativeServices) {
               <AnimatePresence mode="wait">
                 <motion.div
 
-=======
-=======
 
 
 
@@ -687,10 +644,7 @@ if (return allInnovativeServices) {
                           {
                             featuredServices[currentServiceIndex]?.pricing
                               .starter
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           }
                         </span>;
                       </div>;
@@ -700,7 +654,6 @@ if (return allInnovativeServices) {
                   className="relative"
                 >
 
-==============                      {featuredServices[currentServiceIndex]?.name}
                     </h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {featuredServices[currentServiceIndex]?.description}
@@ -721,7 +674,6 @@ if (return allInnovativeServices) {
                     </div>
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
-=======
 
                     >
 
@@ -787,11 +739,7 @@ if (return allInnovativeServices) {
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies;
             </p>;
           </motion && motion.div>;
-=======
-=======
-=======
 
-=======
 
 
 
@@ -806,7 +754,6 @@ if (return allInnovativeServices) {
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-=======
 
 
       {/* Featured Services Grid */}
@@ -817,8 +764,6 @@ if (return allInnovativeServices) {
 
 
 
-=======
-=======
       {/* Featured Services Grid */}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -831,20 +776,16 @@ if (return allInnovativeServices) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-=======
 
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -929,13 +870,9 @@ if (return allInnovativeServices) {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-=======
-=======
 
 
-=======
 
-=======
           {/* Services Grid */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -946,7 +883,6 @@ if (return allInnovativeServices) {
             whileInView="animate"
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -957,14 +893,10 @@ if (return allInnovativeServices) {
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* View All Services CTA */}
           <motion&& motion.div
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* View All Services CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -987,35 +919,27 @@ className="text-center mt-16"
               <ArrowRight className='w-5 h-5' />            </Link>          >
             <Link
               href="/2025-innovative-services-showcase-v2"
-=======
 
 
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-center mt-16'
-=======
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/2025-innovative-services-showcase-v2'
               className='inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25'>;
               <span>View All {allInnovativeServices && allInnovativeServices.length}+ Services</span>;
               <ArrowRight className='w-5 h-5' />            </Link>          >;
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mt-16"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Link
               href="/2025-innovative-services-showcase-v2"
 
 
-=======
 
 
       {/* CTA Section */}
 
-=======
 
 
       {/* CTA Section */}
@@ -1024,10 +948,7 @@ className="text-center mt-16"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1060,30 +981,22 @@ className="text-center mt-16"
 
                 className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200">;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Footer */}
       <UltraFuturisticFooter2047 />;
     </div>;
   );
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default Homepage2047;  );
 };
 export default Homepage2047;
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>;
                     <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200'>;
                       <span className='text - sm font - medium'>Learn More</span>;
@@ -1181,21 +1094,12 @@ export default Homepage2047;
 
 
 
-==============
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
@@ -1204,20 +1108,9 @@ export default Homepage2047;  )
 }
 export default Homepage2047;
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Homepage2047;
 export default Homepage2047;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

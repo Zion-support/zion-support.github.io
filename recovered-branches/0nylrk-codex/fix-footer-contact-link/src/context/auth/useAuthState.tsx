@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 /**
  * Custom hook to manage auth state
  */
@@ -11,8 +9,6 @@ export function useAuthState() {
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
 
   
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     user,
     setUser,
@@ -21,7 +17,6 @@ export function useAuthState() {
     onboardingStep,
     setOnboardingStep
 
-=======
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;import React, { useState } from './react';
 import type { UserProfile } from "@/types / auth";
@@ -35,7 +30,6 @@ function useAuthState() {
   const [user, set_user] = useState < UserProfile | null>(null);
   const [is_loading, setIsLoading] = useState < boolean>(true);
   const [onboarding_step, setOnboardingStep] = useState < string | null>(null);
-=======
 
   }
 }
@@ -49,7 +43,6 @@ function useAuthState() {
 
     setOnboardingStep;
   }
-<<<<<<< HEAD
 }
   }
 }
@@ -57,6 +50,3 @@ function useAuthState() {
   }
 }
 ;
-=======
-}=======;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -315,13 +315,8 @@ export function DynamicListingPage({;
                   <Slider;
                     aria-label="Price range";                    defaultValue={[0, priceRange.max]}
                     min={0}
-<<<<<<< HEAD
                     max={priceRange && priceRange.max}
                     step={priceRange && priceRange.max / 100}
-=======
-                    max={priceRange.max}
-                    step={priceRange.max / 100}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
                     className="mb-4";
@@ -615,8 +610,4 @@ setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

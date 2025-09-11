@@ -45,9 +45,7 @@ export const crm = {
 
 // ATS actions
 export const ats = {
-=======
 ;>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-==============
 
   async pushApplicant($2) {
     return simulateAction($3);
@@ -59,7 +57,6 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change })
   }};
 
-=======
   async sync_contact (
     connection: ProviderConnection,
     contact: Record < string, any>,
@@ -90,9 +87,6 @@ export const ats = {
   },
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   async createCandidate(
     connection: ProviderConnection,
@@ -102,8 +96,6 @@ export const ats = {
   },
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Email actions
 export const email = {
   async sendNotification(
@@ -113,9 +105,3 @@ export const email = {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
 };
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

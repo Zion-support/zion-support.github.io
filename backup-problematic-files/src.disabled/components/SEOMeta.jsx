@@ -9,8 +9,4 @@ const SEOMeta = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SEOMeta;
-=======
-export default SEOMeta;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

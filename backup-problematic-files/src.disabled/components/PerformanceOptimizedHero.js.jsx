@@ -9,8 +9,4 @@ const PerformanceOptimizedHero.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default PerformanceOptimizedHero.js;
-=======
-export default PerformanceOptimizedHero.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

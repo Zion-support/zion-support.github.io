@@ -1,11 +1,8 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
@@ -15,8 +12,6 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
-=======
-=======  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -36,10 +31,7 @@ serve(async (req) => {
     
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`;
     }
-=======
-=======      finetuneJobId = `ft - job-${model_id}-${Date.now ()}`;
     }
-=======
 
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"}}),
@@ -63,7 +55,6 @@ serve(async (req) => {
         progress: data.trained_tokens ? {
           trainedTokens: data.trained_tokens
           trainingFiles: data.training_file} : null
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     return new Response(
       JSON.stringify({
@@ -88,7 +79,6 @@ serve(async (req) => {
         progress: data.trained_tokens ? {
           trainedTokens: data.trained_tokens
           trainingFiles: data.training_file} : null
-=======      JSON && JSON.stringify({ 
         status, 
         error;
         progress: data && data.trained_tokens ? {
@@ -113,20 +103,12 @@ serve(async (req) => {
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
 
-=======
 
     console.error ("Error in check - training - status function:", error);
-=======
 
 
-=======
-=======
 
     console.error ("Error in check - training - status function:", error);
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -168,7 +150,6 @@ serve(async (req) => {
       }),;
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
-=======  } catch (error) {;
     console.error("Error in check-training-status function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
@@ -176,12 +157,6 @@ serve(async (req) => {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
-=======
   }
 });
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

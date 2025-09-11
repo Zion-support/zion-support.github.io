@@ -20,7 +20,6 @@ const seedCompany: CompanyRecord = {;
     usageLimits: {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
@@ -126,7 +125,6 @@ const seedCompany: CompanyRecord = {;
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
-<<<<<<< HEAD
   }}
   }}
 const seedCompany: CompanyRecord = {;
@@ -262,11 +260,3 @@ export const store = {;
   },;
   listInvoices(companyId: string): InvoiceRecord[] {;
     const company = companiesById[companyId];
-=======
-  },
-  list_invoices (company_id: string): InvoiceRecord[] {
-    const company = companiesById[company_id];    return company ? company.invoices : [];
-  }};
-=======
-  }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

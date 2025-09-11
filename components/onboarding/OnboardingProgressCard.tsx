@@ -1,7 +1,5 @@
 
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,10 +56,8 @@ function computePercentage(steps: OnboardingStep[]): number {
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>;
         <div
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">;
         <div
@@ -95,26 +91,19 @@ function computePercentage(steps: OnboardingStep[]): number {
           <PartyPopper size={18} />;
           <span className='text-sm'>All steps completed — great job!</span>        </div>;
       ) : null}
-=======
       {/* Checklist */}        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">;
           <PartyPopper size={18} />;
           <span className="text-sm">All steps completed — great job!</span>;
         </div>;
       ) : null}
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <ul className="mt-4 space-y-2">
         {steps.map((step) => (
           <li key={step.id} className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               {step.completed ? (
                 <CheckCircle2 className="text-green-600 dark:text-green-400" size={18} />
-=======
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   {step.ctaLabel}
@@ -160,22 +149,17 @@ function computePercentage(steps: OnboardingStep[]): number {
     </div>
   );
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </li>;
         ))}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ) : null}
           </li>;
         ))}
       </ul>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       </ul>;
 
 
-=======
 
 
 
@@ -187,9 +171,7 @@ function computePercentage(steps: OnboardingStep[]): number {
   );
 
 }
-=======
 }
-=======
 
   );
 }=======
@@ -246,7 +228,6 @@ function computePercentage(steps: OnboardingStep[]): number {
           <span className="text-sm">All steps completed — great job!</span>
         </div>
       ) : null}
-<<<<<<< HEAD
       {/* Checklist */}
       <ul className='mt-4 space-y-2'>
         {steps.map(step => (
@@ -268,13 +249,3 @@ function computePercentage(steps: OnboardingStep[]): number {
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 
       {/* Checklist */}
-=======
-                  {step.ctaLabel}
-                </a>
-              </Link>
-            ) : null}
-          </li>
-        ))}
-      </ul>
-}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -166,8 +166,4 @@ const baseItems = [ {';
   item.name ;
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const AIServicesShowcase = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIServicesShowcase;
-=======
-export default AIServicesShowcase;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

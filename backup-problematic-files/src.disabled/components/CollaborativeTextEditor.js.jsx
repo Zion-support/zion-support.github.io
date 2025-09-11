@@ -9,8 +9,4 @@ const CollaborativeTextEditor.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default CollaborativeTextEditor.js;
-=======
-export default CollaborativeTextEditor.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

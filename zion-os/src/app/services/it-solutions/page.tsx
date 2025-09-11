@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "use client";
 import { useState } from "react";
 interface ITService {id: string;
@@ -572,17 +570,9 @@ const itServices: ITService[] = [;
 ],;
 export default function ITSolutionsPage() {;
   return (;
-<<<<<<< HEAD
 
     <div className="space-y-8">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="space-y-8">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import { useState  } from './react';,
 interface ITService {
@@ -597,7 +587,6 @@ interface ITService {
   icon: string,
   features: string[],
   technologies: string[],
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface ITService {id: string;
@@ -886,12 +875,6 @@ const it_services: ITService[] = [;
   }
 ];
 export default function ITSolutionsPage() {return (;
-=======
-=======
-];
-export default function ITSolutionsPage() {return (;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import { useState } from "react",;
 interface ITService {;

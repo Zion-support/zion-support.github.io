@@ -3,17 +3,12 @@
 import { supabase } from "@/integrations/supabase/client";
 import { FraudFlag, FraudStats } from "@/types/fraud";
 // Import refactored components
-=======
 import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
 import { supabase } from "@/integrations/supabase/client",
 import { FraudFlag, FraudStats } from "@/types/fraud",
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Import refactored components
 import {
   FraudStatsCards,
@@ -22,7 +17,6 @@ import {
   FraudTabContent
 } from "@/components/admin/fraud-detection",
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
@@ -67,10 +61,8 @@ class ErrorBoundary extends React.Component {
         .eq("id", flagId),
 
       if (error) throw error,
-=======
 
 
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -137,7 +129,6 @@ export default function FraudDetection() {;
 
 
 
-=======
   }
   },
   const resetFilters = () => {
@@ -155,7 +146,6 @@ export default function FraudDetection() {;
     setStatusFilter(null),
     setSeverityFilter(null),
     setContentTypeFilter(null)
-=======  }
   const hasFilters = !!(searchQuery |statusFilter |severityFilter |contentTypeFilter);
   },
 
@@ -178,7 +168,6 @@ export default function FraudDetection() {;
           </div>
           <div className="mt-4 md:mt-0">
           <TabsContent value="all" className="mt-6">
-=======
 
       toast({;
         title: "Flag updated",;
@@ -187,8 +176,6 @@ export default function FraudDetection() {;
       // Refresh the data;
       fetchFraudFlags();
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const resetFilters = () => {;
     setSearchQuery("");
     setStatusFilter(null);
@@ -196,19 +183,15 @@ export default function FraudDetection() {;
     setContentTypeFilter(null);
   };
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
-=======
 
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>;
       <SEO
         title="Fraud Detection | Admin Dashboard" 
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" 
       />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
           <div>;
@@ -233,7 +216,6 @@ export default function FraudDetection() {;
         <FraudStatsCards stats={stats} />;
 
         <Tabs defaultValue="all" className="mb-8">;
-=======
 import React, { useState, useEffect } from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -411,7 +393,6 @@ if (throw error) {
               search_query={search_query}
               setSearchQuery={setSearchQuery}
               status_filter={status_filter}
-<<<<<<< HEAD=======              setStatusFilter={setStatusFilter}
               severity_filter={severity_filter}
               setSeverityFilter={setSeverityFilter}
               contentTypeFilter={contentTypeFilter}
@@ -425,7 +406,6 @@ if (throw error) {
 }
 ;
 
-<<<<<<< HEAD
 };
 useEffect ( () => {
   fetchFraudFlags () 
@@ -486,11 +466,6 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
   handleAction 
 }/> </CardContent> </Card> </TabsContent> <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/> </TabsContent> <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/> </TabsContent> <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" /> </TabsContent> </Tabs> </div> </AppLayout>) 
 }
-}
-}
-;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 }
 ;

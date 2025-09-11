@@ -1,8 +1,6 @@
 
 export default function Home() {;
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div>
       <main>

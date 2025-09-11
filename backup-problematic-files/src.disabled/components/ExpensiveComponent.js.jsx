@@ -9,8 +9,4 @@ const ExpensiveComponent.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ExpensiveComponent.js;
-=======
-export default ExpensiveComponent.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

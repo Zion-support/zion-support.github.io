@@ -1,7 +1,5 @@
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
-=======
-=======
 
 
   communication?: number, // 1-5 optional;
@@ -10,8 +8,6 @@ export type ReviewCategoryScores = {
   wouldWorkWithAgain?: boolean, // optional;
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export type Review = {
   id: string;
   projectId: string;
@@ -32,39 +28,26 @@ export type Review = {
   createdAt: string; // ISO
 }
 export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
-=======
-=======
-
-=======
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
   toId: string, // target id (talentSlug or clientId);
   rating: number, // 1-5;
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   reports?: { reason: string, reportedAt: string }[],;
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export type ProjectStatus = 'InProgress' | 'Completed',
 export type Project = {
   id: string,
@@ -105,10 +88,8 @@ export type ReviewsSummary = {
   totalCompletedProjects: number,
   most_recent: PublicReview[];
 
-=======
 }};
 
-<<<<<<< HEAD
 }
 export type ProjectStatus = 'InProgress' | 'Completed',;
 ;
@@ -160,6 +141,3 @@ export type ReviewRole = 'client' | 'talent';
   mostRecent: PublicReview[];
 }
 };
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

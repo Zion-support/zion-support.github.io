@@ -9,8 +9,4 @@ const AIAutonomousDecisionEngine = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousDecisionEngine;
-=======
-export default AIAutonomousDecisionEngine;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

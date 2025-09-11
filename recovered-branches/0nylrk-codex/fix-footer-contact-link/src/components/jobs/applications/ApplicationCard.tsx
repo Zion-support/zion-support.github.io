@@ -25,8 +25,6 @@ import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
 }
-=======
-=======interface ApplicationCardProps {;
   application: JobApplication;
 }
 
@@ -41,7 +39,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {;
     switch (application && application.status) {;
 
-=======
 
 
 
@@ -158,7 +155,6 @@ function ApplicationCard() {
         <ApplicationProgress status={application.status} className="my-4" />
         {expanded && (
           <div className="mt-4 space-y-3">
-=======
       <CardContent className="pb - 3">;
         <ApplicationProgress status={application.status} className="my - 4" />;
 
@@ -194,7 +190,6 @@ function ApplicationCard() {
               </div>
             )}
           </div>
-=======
       <CardContent className="pb - 3">;
         <ApplicationProgress status={application.status} className="my - 4" />;
 
@@ -202,11 +197,8 @@ function ApplicationCard() {
           <div className="mt - 4 space - y-3">;
             {application.cover_letter && (
 
-=======
-=======
             )}
           </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
@@ -257,8 +249,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
     }
   };
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <div className="flex justify-between items-start">;
@@ -297,7 +287,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 }
 ;
 
-<<<<<<< HEAD
         ;
         <Button ;
           variant="secondary" ;
@@ -333,11 +322,6 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 }</div>) 
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) 
 }
-}
-}
-;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 }
 ;

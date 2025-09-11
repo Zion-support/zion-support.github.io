@@ -11,10 +11,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
 
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -23,11 +20,9 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
 
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {
   Table,
@@ -79,14 +74,12 @@ import { Button } from "@/components/ui/button",
       onRefresh();
       setViewDetailsOpen(false)
     }
-=======    onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
 
-==============
     }});
     }}),
   const getStatusColor = (status: ReviewStatus) => {
@@ -98,7 +91,6 @@ import { Button } from "@/components/ui/button",
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
 
-==============
   }
   },
   const getInitials = (name: string) => {
@@ -108,7 +100,6 @@ import { Button } from "@/components/ui/button",
       .join("")
       .toUpperCase()
 
-==============
   }
   },
   if (isLoading) {
@@ -143,7 +134,6 @@ import { Button } from "@/components/ui/button",
 
   },
 
-=======  const renderStars = (rating: number) => {
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
@@ -151,9 +141,7 @@ import { Button } from "@/components/ui/button",
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
-==============
 
-=======import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
 import { format } from "date-fns",;
@@ -182,8 +170,6 @@ import {;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
@@ -210,7 +196,6 @@ export function ReviewsModerationTable(): any ({;
   };
 
 
-=======
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -271,8 +256,6 @@ export function ReviewsModerationTable(): any ({;
                 <div className="flex justify-end gap-2">;
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
-=======
-=======                    {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
 
 
@@ -321,49 +304,29 @@ export function ReviewsModerationTable(): any ({;
                   >;
                     Reject;
                   </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Button;
                     onClick={() => handleApprove(selectedReview.id)}                    disabled={isPending}
-=======
                   <Button
                     onClick={() => handleApprove(selectedReview && selectedReview.id)}
                     disabled={isPending}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-                  <Button
-                    onClick={() => handleApprove(selectedReview && selectedReview.id)}
-                    disabled={isPending}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     Approve;
                   </Button>;
                 </>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
               {selectedReview.status === "approved" && (;
                 <Button;
                   variant="destructive";
                   onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"rejected" })}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {selectedReview && selectedReview.status === "approved" && (;
                 <Button
                   variant="destructive"
                   onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "rejected" })}
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   disabled={isPending}
                 >;
                   Mark as Rejected;
                 </Button>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
               {selectedReview.status === "rejected" && (;
                 <Button;
                   onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"approved" })}
@@ -371,9 +334,6 @@ export function ReviewsModerationTable(): any ({;
                 >;
                   Mark as Approved;
                 </Button>;              )}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {selectedReview && selectedReview.status === "rejected" && (;
                 <Button
                   onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "approved" })}
@@ -382,17 +342,11 @@ export function ReviewsModerationTable(): any ({;
                   Mark as Approved;
                 </Button>;
               )}
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
     </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),; import {
   Table;
 TableBody;
@@ -643,11 +597,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
       )}
     </>
   )
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
-=======
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -760,9 +710,4 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
           </DialogContent>;
         </Dialog>)}
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

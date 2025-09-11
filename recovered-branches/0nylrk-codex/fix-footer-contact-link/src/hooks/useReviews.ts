@@ -29,7 +29,6 @@ if (return) {
   const fetchProjectReviews = async (projectId: string) => {
     if (!projectId) return;
     setIsLoading(true)
-==============
     if (!projectId) return;
     setIsLoading(true)    if (!projectId) return,
     
@@ -45,12 +44,10 @@ if (return) {
           .single(),
           
 
-=======        if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
         }
       }
     } catch (err: any) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         title: "Error",
         description: "Failed to load reviews",
@@ -133,7 +130,6 @@ if (return) {
 
 
         variant: "destructive"})
-=======
     } catch (err: any) {
       console && console.error("Error fetching user reviews:", err);
       toast({
@@ -142,7 +138,6 @@ if (return) {
         title: "Error",
         description: "Failed to load reviews",
         variant: "destructive"})
-=======          reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
         .eq ("reviewee_id", user_id);
         .eq ("is_visible", true);
@@ -194,7 +189,6 @@ if ( {) {
           title: "Error";
           description: "You have already submitted a review for this project"
           variant: "destructive"})
-=======          reviewer_id: user.id});
         .select ();
         .single ();
 ;
@@ -227,12 +221,9 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"});
 
-=======    is_anonymous: boolean
   }) => {
     if (!user) {
       toast({
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======        title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
       return false
@@ -240,16 +231,12 @@ if ( {) {
     
     setIsSubmitting(true),
     
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    try {
       const { data, error } = await supabase
         .from("reviews")
         .insert({
           ...review,
           reviewer_id: user.id})
         .select()
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======        .single(),
         
       if (error) throw error,
       
@@ -273,8 +260,6 @@ if ( {) {
           title: "Error",
           description: "Failed to submit review",
           variant: "destructive"})
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       return false;
     } finally {
@@ -285,7 +270,6 @@ if ( {) {
   };
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
@@ -299,7 +283,6 @@ if ( {) {
         title: "Success"
         description: "Your review has been updated"});
         .eq("reviewer_id", user.id)
-=======        .eq("status", "pending"),
         
       if (error) throw error,
       
@@ -307,14 +290,11 @@ if ( {) {
         title: "Success",
         description: "Your review has been updated"}),
       
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (userReview) {
         setUserReview({ ...userReview, ...updates })
       }
       return true
     } catch (err: any) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   // Update a review;
   const update_review = async (review_id: string, updates: Partial < Review>) => {
@@ -371,13 +351,7 @@ if ( {) {
 
           reason});
 
-=======
     submit_review;
     update_review;
     report_review}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

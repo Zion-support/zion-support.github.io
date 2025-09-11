@@ -57,8 +57,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
 
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -95,8 +93,6 @@ const technology = [;
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps'
 ];
-=======
-=======
 
 const useCases = [;
 
@@ -111,11 +107,9 @@ const technology = [;
   'Quantum computing integrationBlockchain security';
 ];
 
-=======
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps'
 ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const integrations = [;
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
@@ -125,7 +119,6 @@ const integrations = [;  'Wearable devicesMobile applicationsWeb platformsSmart 
   'Fitness trackersMeditation apps';
 ];
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain,
   Star,
   Users,
@@ -262,7 +255,6 @@ export default /**
  */
 function AIConsciousnessEvolution2025() {
   return (
-=======
 
   {
 
@@ -272,7 +264,6 @@ function AIConsciousnessEvolution2025() {
 
   return (
 
-=======
 
   {
 
@@ -284,7 +275,6 @@ export default function AIConsciousnessEvolution2025() {
   return (
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Layout>;
       <Head>;
         <title>;
@@ -323,13 +313,11 @@ export default function AIConsciousnessEvolution2025() {
           {[...Array (15)].map ((_, i) => (
             <motion.div;
               key={i}
-=======
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 0.8, 0.3],
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}>;
@@ -351,8 +339,6 @@ export default function AIConsciousnessEvolution2025() {
               your emotional intelligence, expand self-awareness, and unlock
               your full potential.
             </p>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
                 AI Consciousness
@@ -411,10 +397,7 @@ export default function AIConsciousnessEvolution2025() {
                 { label: 'Active Users', value: '12.5K+', icon: <Users className="w-8 h-8" /> }
                 { label: 'Improvement', value: '300%', icon: <TrendingUp className="w-8 h-8" /> }
                 { label: 'Satisfaction', value: '4.9/5', icon: <Star className="w-8 h-8" /> }
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <motion.div
                   key={stat.label}
               <Sparkles className='w-4 h-4 mr-2' />;
@@ -471,8 +454,6 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
-=======
-=======
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
                   className='text-center'
 
@@ -519,7 +500,6 @@ export default function AIConsciousnessEvolution2025() {
             {/* CTA Buttons */}
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -531,9 +511,6 @@ export default function AIConsciousnessEvolution2025() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -543,30 +520,19 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-==============
             className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Revolutionary Features for
@@ -587,14 +553,10 @@ export default function AIConsciousnessEvolution2025() {
 
 
               </motion.div>
-=======
 
-=======
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>;
         </div>;
       </section>;
@@ -622,30 +584,19 @@ export default function AIConsciousnessEvolution2025() {
 
               </motion.div>
             ))}
-=======
-==============
 
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-==============
             className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               How AI Consciousness Evolution
@@ -653,7 +604,6 @@ export default function AIConsciousnessEvolution2025() {
             className="text-center mb-16"
           >
 
-=======                step: '01',
                 title: 'AI Assessment',
 
                 key={step.step}
@@ -661,23 +611,16 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-==============
             className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Transform Your Life with
@@ -698,14 +641,10 @@ export default function AIConsciousnessEvolution2025() {
 
 
               </motion.div>
-=======
 
-=======
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300'
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>;
         </div>;
       </section>;
@@ -733,30 +672,19 @@ export default function AIConsciousnessEvolution2025() {
 
               </motion.div>
             ))}
-=======
-==============
 
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-==============
             className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Cutting-Edge
@@ -780,10 +708,6 @@ export default function AIConsciousnessEvolution2025() {
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>;
               </motion && motion.div>;
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 key={tech}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -805,7 +729,6 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Testimonials Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
@@ -837,28 +760,18 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
-=======
-
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-==============
             className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               What Our Users
@@ -870,11 +783,8 @@ export default function AIConsciousnessEvolution2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
                 viewport={{ once: true }}
-==============
                 className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className='flex items-center mb-4'>
                   <div className='text-3xl mr-3'>{testimonial.avatar}</div>
@@ -894,33 +804,26 @@ export default function AIConsciousnessEvolution2025() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                 className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6"
               >
-=======                <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>
 
               </motion.div>
 
 
 
             ))}
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>
         </div>
       </section>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </div>;
       </section>;
 
 
-=======
 
 
 
-=======
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -930,28 +833,18 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
-=======
-
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-==============
             className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Choose Your
@@ -976,11 +869,9 @@ export default function AIConsciousnessEvolution2025() {
               >;
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-=======
 
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                       Most Popular
                     </span>
@@ -994,8 +885,6 @@ export default function AIConsciousnessEvolution2025() {
                     <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
                   </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -1075,7 +964,6 @@ export default function AIConsciousnessEvolution2025() {
                       : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
                   }`}
                 >                  Get Started                <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
-==============                  plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
                     : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
                 }`}>
@@ -1114,9 +1002,7 @@ export default function AIConsciousnessEvolution2025() {
                 >
                   className='text-center'
 
-=======
                   className='text-center'
-=======
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {contact.icon}
@@ -1143,9 +1029,7 @@ export default function AIConsciousnessEvolution2025() {
   );  );
 }
 
-==============
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </div>
           </motion.div>
@@ -1155,8 +1039,6 @@ export default function AIConsciousnessEvolution2025() {
 );  )
 }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
                     </span>;
@@ -1296,16 +1178,6 @@ export default function AIConsciousnessEvolution2025() {
 );  )
 }
   );
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

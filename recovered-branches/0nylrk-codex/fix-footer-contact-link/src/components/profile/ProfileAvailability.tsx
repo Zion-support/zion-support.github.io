@@ -1,4 +1,3 @@
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Availability } from '@/types / profile';
 import { Badge } from '@/components / ui / badge';
 import { Calendar, Clock, Check } from './lucide-react';
@@ -22,7 +21,6 @@ interface ProfileAvailabilityProps {
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
-=======
 import { Availability } from '@/types / profile';
 import { Badge } from '@/components / ui / badge';
 import { Calendar, Clock, Check } from './lucide-react';
@@ -30,7 +28,6 @@ import { Calendar, Clock, Check } from './lucide-react';
 interface ProfileAvailabilityProps {
   availability: Availability;
 }
-=======import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
 
@@ -65,8 +62,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
-=======
-=======interface ProfileAvailabilityProps {;
   availability: Availability;
 }
 
@@ -105,7 +100,6 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
           variant="outline"
         <Badge 
           variant="outline" 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;
         <Badge
           variant="outline" 
@@ -116,7 +110,6 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
   );
 }
 
-=======export /**
  * ProfileAvailability - Function description
  */
 function ProfileAvailability() {
@@ -172,8 +165,6 @@ function ProfileAvailability() {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface ProfileAvailabilityProps {
   availability: Availability 
@@ -197,9 +188,3 @@ function ProfileAvailability() {
     </div>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -19,8 +19,6 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {
-=======
-=======
 import {;
   Card,;
   CardContent,;
@@ -40,7 +38,6 @@ export function ConversionAnalysisChart(): any ({;
   const dataKeys =;
     data && data.length > 0;
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
-=======import React from './react';
 import {
   Card,
   CardContent,
@@ -53,7 +50,6 @@ import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';  da
   onTimeRangeChange: (range: string) => void;
 }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -70,7 +66,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
-=======
 
 
   return (
@@ -116,8 +111,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } C
         <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>;
       </CardHeader>;
       <CardContent>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -143,8 +136,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}
           type="bar"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
@@ -152,9 +143,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
     </Card>;
 
   );
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -164,7 +152,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
-<<<<<<< HEAD
     </Card>;
   ),;}
  interface ConversionAnalysisProps {
@@ -180,12 +167,7 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }
   );
 }
-=======
-    </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -196,6 +178,4 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
         />;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

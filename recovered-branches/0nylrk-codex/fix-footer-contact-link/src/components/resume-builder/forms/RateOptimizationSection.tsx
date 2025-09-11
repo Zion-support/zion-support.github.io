@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -11,17 +9,12 @@ import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
-=======
-=======
-=======
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
 
-=======import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
 import {;
   FormField,;
@@ -37,15 +30,12 @@ import { Card, CardContent } from "@/components/ui/card",;
 
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   location,;
   rateType;
 }) => {;
   const handleSuggestionApplied = (rate: number) => {;
     setValue("hourlyRate", rate);
   };
-=======
 
   return (
     <div className="space-y-4">;
@@ -108,7 +98,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
-=======            <FormControl>;
               <Input;
                 type="number";
                 min="1";
@@ -121,14 +110,9 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         <CardContent className="pt-4">;
 
           <TalentRateRecommender
-=======
 
 
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             rate_type={rate_type}
           />;
         </CardContent>;
@@ -136,7 +120,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>);
 }
 ;
-<<<<<<< HEAD
   ),;
 },; import {
   FormField;
@@ -176,8 +159,3 @@ return (<div className="space-y-4" > <FormField control= {
 };
   );
 };
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

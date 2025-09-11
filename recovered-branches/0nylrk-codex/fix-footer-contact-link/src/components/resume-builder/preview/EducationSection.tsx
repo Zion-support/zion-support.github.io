@@ -1,13 +1,10 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
 
-=======
 
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
 
-=======
 
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
@@ -27,7 +24,6 @@ export function EducationSection({ education }: EducationSectionProps) {
 
   const sortedEducation = [...education].sort((a, b) => {
   const sortedEducation = [...education].sort((a, b) => {;
-==============    if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
@@ -39,12 +35,8 @@ export function EducationSection({ education }: EducationSectionProps) {
       return format(new Date(date), 'MMM yyyy')
 
 
-=======
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
@@ -66,8 +58,6 @@ export function EducationSection({ education }: EducationSectionProps) {;
       return format(new Date(date), 'MMM yyyy');
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     }
     return format(date, 'MMM yyyy')
   },
@@ -127,7 +117,6 @@ export function EducationSection({ education } EducationSectionProps) {;
         ))}
       </div>;
     </div>;
-=======
 
 export function EducationSection(): any ({ education }: EducationSectionProps) {;
   // Sort education by date (newest first);
@@ -178,8 +167,6 @@ export function EducationSection(): any ({ education }: EducationSectionProps) {
   );
 }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * EducationSection - Function description
  */
@@ -240,8 +227,6 @@ if (return null) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  if (sortedEducation.length === 0) return null;
 ) 
@@ -259,9 +244,3 @@ if (return null) {
     </div>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

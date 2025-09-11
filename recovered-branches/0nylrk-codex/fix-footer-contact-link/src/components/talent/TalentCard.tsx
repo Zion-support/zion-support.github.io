@@ -8,16 +8,13 @@
   isAuthenticated: boolean
 }
 export function TalentCard({
-=======
-
-
-
-=======
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
@@ -75,8 +72,6 @@ import { TalentProfile } from "@/types/talent",;
 
 
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -86,11 +81,9 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 }
 export function TalentCard(): any ({;
-=======
 
 export function TalentCard(): any ({;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talent;
   onViewProfile;
   onRequestHire;
@@ -107,7 +100,6 @@ export function TalentCard(): any ({;
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -120,11 +112,9 @@ export function TalentCard(): any ({;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
-=======
                 </div>;
               )}
 
-=======
 
             </div>;
           </div>;
@@ -140,13 +130,10 @@ export function TalentCard(): any ({;
                 </span>;
               ))}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
         {/* Skills */}
         {skills && skills.length > 0 && (;
@@ -164,7 +151,6 @@ export function TalentCard(): any ({;
                   +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </div>;
           </div>;
@@ -188,12 +174,3 @@ export function TalentCard(): any ({;
 
                 e.stopPropagation(),
 
-
-<<<<<<< HEAD
-=======              onClick={(e) => {
-                e.stopPropagation();
-
-                e.stopPropagation(),=======
-
-    </Card>);
-}

@@ -9,8 +9,4 @@ const FuturisticLoader.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default FuturisticLoader.js;
-=======
-export default FuturisticLoader.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

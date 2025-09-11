@@ -7,10 +7,6 @@ export interface PartnerProfile {
 export interface PartnerProfile {;
 
 export interface PartnerProfile {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   user_id: string;
   name: string;
@@ -29,11 +25,9 @@ export interface PartnerProfile {;
 
 }
 export interface PartnerSettings {
-=======
 
 export interface PartnerSettings {;
 
-=======  id: string;
   commission_rate: number;
 
   fraud_threshold: number,
@@ -59,10 +53,6 @@ export interface PartnerSettings {;
 export interface PartnerReferralLink {
 
 export interface PartnerReferralLink {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   url: string;
@@ -72,7 +62,6 @@ export interface PartnerReferralLink {;
 
 }
 export interface PartnerPayout {
-=======
 export interface PartnerPayout {;
 
   created_at: string
@@ -80,9 +69,6 @@ export interface PartnerPayout {;
 export interface PartnerPayout {
 
 export interface PartnerPayout {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   partner_id: string;
   amount: number;
@@ -145,12 +131,5 @@ export interface PartnerPayout {;
   created_at: string,
   completed_at?: string;
 
-=======
-=======  created_at: string,
   completed_at?: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -44,8 +44,6 @@ import { ExperienceFilterProps } from "@/types/filters",;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
 
 
-=======
-=======
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Slider} from "@/components/ui/slider";
 import {ExperienceFilterProps} from "@/types/filters";
@@ -54,7 +52,6 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
     setExperienceRange([values[0], values[1]]);
   };
 
-=======
 
 
   return (
@@ -71,12 +68,8 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
           </div>;
 
           <Slider
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
           <Slider 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
@@ -86,7 +79,6 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
   );
 }
 
-=======import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { ExperienceFilterProps  } from '@/types / filters';
 export /**
@@ -125,8 +117,6 @@ function ExperienceFilter() {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  export function ExperienceFilter ({
   experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen 
@@ -149,9 +139,3 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
     </div>
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

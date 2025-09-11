@@ -8,13 +8,10 @@ import * as LabelPrimitive from "@radix-ui/react-label"
 import { cn } from "@/lib/utils"
 
 import { cn } from "@/lib/utils";
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const labelVariants = cva(
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70"
 );
@@ -42,9 +39,7 @@ Label.displayName = LabelPrimitive.Root.displayName
 
 export { Label };
 ;
-==============
 
-=======import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
@@ -76,8 +71,6 @@ Label.displayName = LabelPrimitive.Root.displayName;
 export { Label }
 export { Label }
 ;
-=======
-=======
 );
 ;
 const Label = React.forward_ref<;
@@ -104,23 +97,18 @@ const Label = React && React.forwardRef<;
     VariantProps<typeof labelVariants>;
 >(({ className, ...props }, ref) => (;
   <LabelPrimitive&& LabelPrimitive.Root
-=======
 
 export { Label }
 ;
 
-=======
 
   <LabelPrimitive.Root;
 export { Label }=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   />));
 Label.display_name = LabelPrimitive.Root.display_name;
 ;
 export { Label }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 Label.displayName = LabelPrimitive.Root.displayName;
 ;
 export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> > ( ({
@@ -137,9 +125,3 @@ export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & Va
 Label.displayName = LabelPrimitive.Root.displayName;
 export { Label }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

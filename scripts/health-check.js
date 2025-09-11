@@ -115,6 +115,4 @@ app && app.get("/ready", (req, res) => {
 module && module.exports = app
 const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app
 
-<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======

@@ -1,20 +1,15 @@
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-=======
 
 import React, { useState, useEffect } from 'react';
 
-=======
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-=======
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -42,8 +37,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662  Menu,
   X,
   ChevronDown,
   Search,
@@ -93,17 +86,13 @@ import { motion, AnimatePresence } from 'framer-motion';
   Mountain,
   Code,
   Wrench,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   Smartphone,;
   BarChart3,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -150,8 +139,6 @@ const serviceCategories = [
   },  {      { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform', description: 'Predict climate changes with 99.9% accuracy', price: '$2,999/month' }
       { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall', description: 'Unbreakable quantum encryption', price: '$4,999/month' }
       { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network', description: 'AI-powered drone delivery', price: '$1,999/month' }
-=======
-=======
 
       { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall', description: 'Unbreakable quantum encryption', price: '$4,999/month' };
       { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network', description: 'AI-powered drone delivery', price: '$1,999/month' };
@@ -209,7 +196,6 @@ const companyLinks = [
   { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-=======
 
 const companyLinks = [;
   { name: '🏠 Home', href: '/', icon: Home },;
@@ -242,7 +228,6 @@ const companyLinks = [;
 
   const handleCategoryHover = (categoryTitle: string) => {;
     setActiveCategory(categoryTitle);
-=======
   const handleCategoryHover = (categoryTitle: string) => {
     setActiveCategory(categoryTitle)
 
@@ -255,13 +240,8 @@ const companyLinks = [;
 
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
                             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           ))}
                         </div>
                       </div>
@@ -269,7 +249,6 @@ const companyLinks = [;
 
                         View All Services
 
-=======
                                   </h4>;
                                   <p className="text - xs text - purple - 300">{service.description}</p>;
                                 </div>;
@@ -331,7 +310,6 @@ const companyLinks = [;
       </div>;
 
 
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -341,14 +319,10 @@ const companyLinks = [;
             exit={{ opacity: 0, height: 0 }}
           >
             <div className='px-4 py-6 space-y-6'>
-=======
             className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
-=======
 
           >
             <div className='px-4 py-6 space-y-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Mobile Search */}
               <div className='relative'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
@@ -378,20 +352,12 @@ const companyLinks = [;
 
           >
             <div className="px-4 py-6 space-y-6">
-=======
-=======>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >
             <div className="px-4 py-6 space-y-6">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
           >
             <div className="px-4 py-6 space-y-6">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
@@ -402,29 +368,21 @@ const companyLinks = [;
 
               {/* Mobile Service Categories */}
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Link
                           key={service && service.name}
                           href={service && service.href}
                           onClick={closeMenu}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ))}
                     </div>;
                   </div>;
                 ))}
-=======
               </div>
 
               </div>;
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -450,14 +408,10 @@ const companyLinks = [;
               {/* Mobile Company Links */}
 
 
-=======
-=======
 
               {/* Mobile Company Links */}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ))}
 
                 </div>;
@@ -483,8 +437,6 @@ const companyLinks = [;
                   href="/contact"
                   onClick={closeMenu}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -611,7 +563,6 @@ const companyLinks = [;
               </div>;
             </div>;
 
-=======
                     </Link>
 
                   ))}
@@ -631,11 +582,9 @@ const companyLinks = [;
               </div>
             </div>
           </motion.div>
-=======
 
         )}
       </AnimatePresence>
-=======
       </AnimatePresence>;
 
       {/* Search Results Dropdown */}
@@ -665,7 +614,6 @@ const companyLinks = [;
                   href={service.href}
                   className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                 >
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
       </AnimatePresence>;
 
@@ -675,43 +623,26 @@ const companyLinks = [;
 
                 </Link>
                 </Link>
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
             </div>;
           </div>;
         </div>;
       )}
 }
-=======
-=======
 
   );
 
 }
-=======
 
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </nav>;
   );
 }
     </nav>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </motion.div>)}
       </AnimatePresence>;
       {/* Search Results Dropdown */}
@@ -754,17 +685,9 @@ const companyLinks = [;
         </div>)}
     </nav>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

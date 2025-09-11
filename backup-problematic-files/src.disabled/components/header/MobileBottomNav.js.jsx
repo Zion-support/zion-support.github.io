@@ -9,8 +9,4 @@ const MobileBottomNav.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default MobileBottomNav.js;
-=======
-export default MobileBottomNav.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

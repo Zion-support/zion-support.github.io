@@ -29,17 +29,11 @@ import EnhancedFooter from './EnhancedFooter';
 }
 export default EnhancedLayout;
 
-=======
 
 
-=======      </main>;
       <EnhancedFooter />;
     </div>);
 },
 export default EnhancedLayout;
 ;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

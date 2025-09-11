@@ -9,8 +9,4 @@ const UltimateServicesShowcase2026 = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default UltimateServicesShowcase2026;
-=======
-export default UltimateServicesShowcase2026;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,7 +1,6 @@
 
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -33,8 +32,6 @@ export default async function handler(
     return res.status(200).json({ certifications })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -57,7 +54,6 @@ res.setHeader("Allow", "GET");
 }
 
 
-=======
 const _CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json");
 
 export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "GET") {
@@ -71,8 +67,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   }
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (req.method !== 'GET') {;
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -87,9 +81,5 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   };
 }
 }
-  };
-}
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   };
 }

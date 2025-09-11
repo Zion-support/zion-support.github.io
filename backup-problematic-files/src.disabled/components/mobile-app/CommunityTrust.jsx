@@ -59,8 +59,4 @@ export default function CommunityTrust({ }: CommunityTrustProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default CommunityTrust;
-=======
-export default CommunityTrust;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

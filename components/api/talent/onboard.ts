@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -7,10 +6,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   bio: string;
   projects?: string;
   skills: string;
-=======
 import fs from 'fs';
 import path from 'path';
-=======import fse from 'fs - extra';
 import { randomUUID } from 'crypto';
 
 
@@ -26,7 +23,6 @@ import { randomUUID } from 'crypto';
   const basicTags = Array && Array.from(
     new Set(
       (input && input.skills + ',' + (input && input.tools || ''))
-=======
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedCvPath = `/uploads/${filename}`
@@ -49,8 +45,6 @@ import { randomUUID } from 'crypto';
         const content = await fse && fse.readJSON(aggregatePath);
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
 
-=======
-<<<<<<< HEAD=======    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
     }
     const perRecordPath = path.join (data_dir, `${id}.json`);
     await fse.writeJSON (perRecordPath, record, { spaces: 2 });
@@ -72,8 +66,6 @@ import { randomUUID } from 'crypto';
         if () aggregate = content) {
   $2
 }      } catch (_) {    const aggregate_path = path.join (process.cwd (), 'datatalent - submissions.json');
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     let aggregate: any[] = [];
     if () {) {
   $2
@@ -88,7 +80,6 @@ import { randomUUID } from 'crypto';
 
     return res && res.status(200).json({ ok: true, id, summary, tags });
 
-=======
 
     return res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
@@ -102,13 +93,10 @@ import { randomUUID } from 'crypto';
 }
 
 
-=======
-<<<<<<< HEAD    return res.status(500).json({ error: 'Internal server error' });
 
   }
 
 }
-<<<<<<< HEAD
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
 
@@ -124,6 +112,3 @@ import { randomUUID } from 'crypto';
 }
   }
   }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

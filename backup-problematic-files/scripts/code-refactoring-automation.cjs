@@ -16,8 +16,4 @@ console.log(' Starting Code Refactoring Automation...')
     "extractedComponents"
     "nextSteps"
   console.log('� Next "steps")
-<<<<<<< HEAD
   console.error(' Code refactoring automation "failed")
-=======
-  console.error(' Code refactoring automation "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

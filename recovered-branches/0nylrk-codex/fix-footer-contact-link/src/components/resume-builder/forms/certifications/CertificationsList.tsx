@@ -1,22 +1,16 @@
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -28,10 +22,7 @@ interface CertificationsListProps {;
   onDelete: (id: string) => void;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export function CertificationsList({
   certifications
@@ -46,7 +37,6 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
 
   return (
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Certification  } from '@/types / resume';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -78,7 +68,6 @@ if ( {) {
                 <h4 className="font - medium">{cert.name}</h4>;
                 <p className="text - sm text - muted - foreground">;
                   {cert.issuing_organization}
-=======
 
                   {cert.issuing_organization}
     <div className="space-y-4">;
@@ -259,10 +248,8 @@ export function CertificationsList({
                 <h4 className="font-medium">{cert.name}</h4>
                 <p className="text-sm text-muted-foreground">
                   {cert.issuing_organization}
-=======
                     </>;
 
-=======                </p>
                 <p className="text-xs text-muted-foreground mt-1">
                   Issued:{" "}
                   {cert.issue_date
@@ -278,11 +265,8 @@ export function CertificationsList({
                         ? cert.expiration_date
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
-=======
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
@@ -347,7 +331,6 @@ export function CertificationsList({
   );
 }
 
-=======
                   target="_blank";
                   rel="noopener noreferrer";
                   className="text - primary hover:underline";
@@ -364,12 +347,6 @@ export function CertificationsList({
   )
 }
 ;
-=======
-=======
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

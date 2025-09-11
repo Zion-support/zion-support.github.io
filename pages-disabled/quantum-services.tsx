@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,14 +23,12 @@ import React from 'react';
 
 import React from 'react';
 import Layout from '../components/layout/Layout';
-=======import SEO from '../components/SEO';
 
 import {motion} from 'framer-motion';
 import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
 
 
 
-=======
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
     {
@@ -143,7 +139,6 @@ import {motion} from 'framer-motion';
 import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
 ;
 
-=======
 
 
 const QuantumServicesPage: React.FC = () => {
@@ -252,11 +247,8 @@ export default function QuantumServices() {;
   return (
     <Layout>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <Layout>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SEO
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for the future. From neural networks to financial trading, unlock quantum advantage."
@@ -332,7 +324,6 @@ export default function QuantumServices() {;
         </section>;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -368,16 +359,13 @@ export default function QuantumServices() {;
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25'
                     service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
-=======
 
                     service && service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
 
-=======
 
                     service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       : 'border-gray-700 hover:border-blue-500'
                   }`}
                 >
@@ -664,10 +652,8 @@ function QuantumServices() {
                   <a 
                     href="/contact" 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -693,13 +679,9 @@ function QuantumServices() {
 
 
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -733,7 +715,6 @@ function QuantumServices() {
         </section>
       </main>
     </Layout>
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -750,7 +731,6 @@ function QuantumServices() {
                   Start Your Quantum Journey;
                 </a>;
                 <a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   href="/contact" 
                   className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
                   Schedule Consultation;
@@ -766,11 +746,5 @@ function QuantumServices() {
 
 
 }
-=======
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default QuantumServicesPage;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

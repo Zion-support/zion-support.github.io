@@ -11,16 +11,13 @@
   onReject?: (id: string) => Promise<void>
 }
 export function MilestoneCard({
-=======
-
-
-
-=======
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
 import React from 'react';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -85,8 +82,6 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 
 
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface MilestoneCardProps {;
   id: string,;
   projectId: string,;
@@ -116,8 +111,6 @@ interface MilestoneCardProps {;
 export function MilestoneCard({ ;
   id,;
   projectId,;
-=======
-=======  description?: string;
   amount: number,;
   status: string,;
   dueDate?: string;
@@ -163,8 +156,6 @@ export function MilestoneCard({;
         return 'bg-green-500',;
       case 'in_progress':;
         return 'bg-blue-500',;
-=======
-=======
   dueDate;
   onApprove;
   onReject;
@@ -187,13 +178,9 @@ export function MilestoneCard({;
     </Card>
   )
 }
-=======
-==============
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 
-=======
     return (
     <Card>;
       <CardHeader className="pb-2">;
@@ -240,31 +227,23 @@ export function MilestoneCard({;
             />;
           )}
 
-=======
 
-
-=======
-        </div>;
-=======
 
         </div>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+        </div>;
+
         <div className="flex gap-2">;
           {status === 'pending' && onReject && !isUnderDispute && (;
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
               <X className="h-4 w-4 mr-1" /> Reject;
             </Button>;
           )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           {status === 'pending' && onApprove && !isUnderDispute && (;
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
               <Check className="h-4 w-4 mr-1" /> Approve;
             </Button>;
           )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           {isUnderDispute && (;
             <Button variant="outline" size="sm" disabled>;
               Actions frozen due to dispute;
@@ -276,20 +255,11 @@ export function MilestoneCard({;
 
 
 }
-=======
-=======  );
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -316,7 +286,6 @@ export /**
 function MilestoneCard() {
   const { isUnderDispute, dispute_status } = useDisputeCheck (project_id, id);
 ;
-<<<<<<< HEAD
   /**
  * getStatusBadgeColor - Function description
  */
@@ -387,7 +356,6 @@ function getStatusBadgeColor() {
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
   ),;}
  interface MilestoneCardProps {
   id: string;
@@ -432,8 +400,3 @@ case 'rejected':
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

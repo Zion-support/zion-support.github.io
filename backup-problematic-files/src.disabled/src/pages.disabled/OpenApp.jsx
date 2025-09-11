@@ -9,8 +9,4 @@ const OpenApp = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default OpenApp;
-=======
-export default OpenApp;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

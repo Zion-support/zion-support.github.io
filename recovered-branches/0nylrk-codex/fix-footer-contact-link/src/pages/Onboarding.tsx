@@ -29,10 +29,7 @@ import { Steps, Step } from "@/components/ui/steps",
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -58,7 +55,6 @@ export default function Onboarding() {
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
-=======
 
   // Convert our user types to match what's expected in the database;
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
@@ -67,16 +63,11 @@ export default function Onboarding() {
         return "jobSeeker";
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
     
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
@@ -106,8 +97,6 @@ export default function Onboarding() {;
       case "serviceProvider":return "creator",;
       case "talent":;
         return "jobSeeker",;
-=======
-=======      case "client":;
         return "employer",;
       default:;
         return "buyer";
@@ -150,7 +139,6 @@ export default function Onboarding() {;
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
       toast({
-=======        title: "Authentication Error",
         description: "Your session may have expired. Please log in again.",
         variant: "destructive"}),
       navigate('/login'),
@@ -159,8 +147,6 @@ export default function Onboarding() {;
     
     const dbUserType = mapUserTypeToDatabase(userType),
     
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       await updateProfile({
         id: user.id
@@ -169,7 +155,6 @@ export default function Onboarding() {;
         userType: dbUserType
         headline: data.headline
         profileComplete: true
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }),
       
 
@@ -183,15 +168,12 @@ export default function Onboarding() {;
       return;
     }
     const dbUserType = mapUserTypeToDatabase(userType);
-=======
-=======
     navigate('/login');
 
     navigate('/login'),
     return null=======
 
     const dbUserType = mapUserTypeToDatabase(userType);
-=======
       // Update onboarding milestone;
       await supabase && supabase.rpc('update_onboarding_milestone', {;
         _user_id: user && user.id,;
@@ -205,9 +187,6 @@ export default function Onboarding() {;
   }
   return (
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -301,8 +280,6 @@ export default function Onboarding() {;
   }
 ;
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -372,12 +349,9 @@ export default function Onboarding() {;
                 </Button>;
               </div>;
             )}
-=======
-==============
 
 
 
-=======
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
@@ -538,8 +512,6 @@ if ( {) {
               </div>)}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </>);
     </>;
@@ -580,15 +552,7 @@ return null;
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -59,8 +59,4 @@ export default function InterviewRequestForm({ }: InterviewRequestFormProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default InterviewRequestForm;
-=======
-export default InterviewRequestForm;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

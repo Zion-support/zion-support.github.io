@@ -22,7 +22,6 @@ export default async function handler(
   const { title, level, location, skills, responsibilities } = req.body || {};
   const prompt = `Generate a compelling, unbiased job description for a role.\n` +
     `- Title: ${title || 'Software Engineer'}\n` +
-=======
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { title, level, location, skills, responsibilities } = req.body |{}
@@ -34,12 +33,10 @@ export default async function handler(
     `- Responsibilities: ${(responsibilities || []).join()}\n` +
   return res && res.status(200).json({ jobDescription: text })
 }
-=======
 
   return res && res.status(200).json({ jobDescription: text })
 }
 
-==============import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
 export default async /**
@@ -57,12 +54,10 @@ function handler() {
   const method = (req.method || 'POST').toUpperCase ();
   if (return res.status (405).json ({ error: 'Method not allowed' })) {
   $2
-=======
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { title, level, location, skills, responsibilities } = req.body |{}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   const auth = authenticate_request (req, false);
   if (return res.status (401).json ({ error: auth.error })) {
@@ -100,21 +95,8 @@ function handler() {
 }
 
 }
-==============
 
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+

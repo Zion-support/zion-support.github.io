@@ -1,5 +1,4 @@
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { QuoteRequest } from "@/types/quotes";
 
 import {ProtectedRoute} from "@/components/ProtectedRoute";
@@ -48,7 +47,6 @@ function QuoteManager() {
     setSearchQuery;
     date_range;
     setDateRange;
-=======
 
 
 export default function QuoteManager() {;
@@ -73,8 +71,6 @@ export default function QuoteManager() {
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  const {
     quotes,
     isLoading,
     error,
@@ -91,7 +87,6 @@ export default function QuoteManager() {
     deleteQuote
 
 
-==============
   } = useAdminQuotes();
   } = useAdminQuotes(),
   // Count quotes by status
@@ -149,7 +144,6 @@ export default function QuoteManager() {
     return <Navigate to="/unauthorized" replace />;
   }
   return (
-=======  }
   },
 
   const handleViewDetails = (quote: QuoteRequest) => {
@@ -175,7 +169,6 @@ export default function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
-=======
 
             
 
@@ -188,7 +181,6 @@ export default function QuoteManager() {
 
 
   const handleResetFilters = () => {
-=======    setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined })
@@ -196,12 +188,10 @@ export default function QuoteManager() {
 
 
 
-=======
   }
   },
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
-=======
 
   // Count quotes by status;
   const statusCounts = {;
@@ -226,11 +216,8 @@ export default function QuoteManager() {
 
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" replace />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <ProtectedRoute adminOnly>
       <div>
         <Header />
@@ -248,8 +235,6 @@ import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -266,13 +251,10 @@ import { useAuth } from "@/hooks/useAuth",;
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             />;
-=======
 
             />;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
@@ -280,11 +262,9 @@ import { useAuth } from "@/hooks/useAuth",;
                 <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
               </TabsList>;
               <TabsContent value="active">;
-=======
 
               <TabsContent value="active">;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
@@ -307,8 +287,6 @@ import { useAuth } from "@/hooks/useAuth",;
             </Tabs>
           </div>
         </div>
-=======
-=======
                   />;
                 </Card>;
               </TabsContent>;
@@ -328,7 +306,6 @@ import { useAuth } from "@/hooks/useAuth",;
         </div>;
 
 
-=======
 
 
             setSelectedQuote(null)
@@ -339,11 +316,8 @@ import { useAuth } from "@/hooks/useAuth",;
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
         />
         <Footer />
@@ -385,7 +359,6 @@ import { useAuth } from "@/hooks/useAuth",;
 if ( {) {
   $2
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -463,8 +436,3 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

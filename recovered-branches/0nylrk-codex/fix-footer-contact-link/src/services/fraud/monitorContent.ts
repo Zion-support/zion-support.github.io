@@ -6,8 +6,6 @@ export const monitorContent = async (;
 
 export const monitorContent = async (
 export const monitorContent = async (;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -20,7 +18,6 @@ export const monitorContent = async (;
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
     
 
-=======
 
 
     }
@@ -54,7 +51,6 @@ export const monitorContent = async (;
       severity,
       analysis.reasons.join(),
       undefined // IP address would be added in a real implementation
-=======    );
     ),
     
     // If this is a 'dangerous' flag, automatically hide content
@@ -144,7 +140,6 @@ undefined //IP address would be added in a real implementation);
 }
 
 
-=======
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
 
@@ -186,10 +181,8 @@ if (||) {
       severity;
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
-=======
 
 
-=======
 ;
     // If this is a 'dangerous' flag, automatically hide content;
     // This would be implemented in a real system with appropriate flags;
@@ -203,16 +196,10 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 };
     }
@@ -221,9 +208,3 @@ if ( {) {
     }
   }
 };
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

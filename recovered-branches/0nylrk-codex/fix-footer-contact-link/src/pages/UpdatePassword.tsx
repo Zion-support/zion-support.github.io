@@ -87,7 +87,6 @@ if ( {) {
   }, [location]);
   }, [location]),
 
-=======
   }, [location]);
   }, [location]),
   // Form submission handler
@@ -95,17 +94,14 @@ if ( {) {
     if (!accessToken) {
       setError("No access token found. Please request a new password reset link.")
       return
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize react-hook-form;
   const form = useForm<UpdatePasswordFormValues>({;
     resolver: zodResolver(updatePasswordSchema),;
     defaultValues: {;
       password: "",;
       confirmPassword: ""}}),;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));
@@ -116,12 +112,10 @@ if ( {) {
     setIsLoading(true),
 
 
-=======          title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
         setError(error.message),
 
-=======        return
       }
       // Show success message and clean up auth state
       setSuccess(true);
@@ -179,9 +173,7 @@ if ( {) {
         description: "You can now log in with your new password."}),;
       // Clean auth state and redirect after a delay;
       cleanupAuthState(),;
-=======
 
-=======    try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
         access_token: accessToken,;
@@ -210,13 +202,11 @@ if ( {) {
       cleanupAuthState();
     }
   }
-=======
     }
 
   },
 
   return (
-=======
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
@@ -235,11 +225,9 @@ if ( {) {
 
 
 
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -256,9 +244,6 @@ if ( {) {
               ) : (
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
               {success ? (;
                 <div className="text-center py-8">;
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
@@ -304,11 +289,8 @@ if ( {) {
 
                     <div className="text-center">;
 
-==============
-=======
 
 
-=======                      name="confirmPassword";
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
@@ -326,8 +308,6 @@ if ( {) {
                   </form>
                 </Form>
               )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </div>;
           </div>;
         </div>;
@@ -335,8 +315,6 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </>);
     </>;
@@ -389,15 +367,7 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

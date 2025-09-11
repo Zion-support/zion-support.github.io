@@ -5,12 +5,9 @@ interface Contract {
 
 
 
-=======
-=======
 
 interface RecentContractsTableProps {;
 
-=======
 
 
 
@@ -35,7 +32,6 @@ interface RecentContractsTableProps {;
 ;
 export function RecentContractsTable({ contracts, onViewContract } RecentContractsTableProps) {;
   return (;
-=======
   return (=======
   contracts: Contract[];
   onViewContract: (contractId: string) => void
@@ -117,17 +113,13 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                 </td>
               </tr>
             ))}
-=======
                   <Button
                     variant="ghost"
                     size="sm"                    onClick={() => onViewContract(contract && contract.id)}
-=======
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => onViewContract(contract && contract.id)}
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contract_id: string) => void;
@@ -208,7 +200,6 @@ function RecentContractsTable() {
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
 
-=======
           </tbody>;
         </table>;
       </div>;
@@ -218,15 +209,6 @@ function RecentContractsTable() {
 
 
   );
-<<<<<<< HEAD
-=======
-=======              </tr>))}
-          </tbody>;
-        </table>;
-      </div>;
-    </>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
   ),;}
  interface Contract {
@@ -259,11 +241,5 @@ onViewContract: (contractId: string) => void
     </>;
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

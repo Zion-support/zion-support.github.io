@@ -9,8 +9,4 @@ const QuantumNeuralNetworkPlatform.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default QuantumNeuralNetworkPlatform.js;
-=======
-export default QuantumNeuralNetworkPlatform.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

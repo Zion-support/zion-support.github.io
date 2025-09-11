@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export interface ProfileSkill {
 
 
@@ -44,8 +42,6 @@ export interface ProfileProject {;
 export interface ProfileExperience {
 
 export interface ProfileExperience {;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   role: string;
   company: string;
@@ -81,7 +77,6 @@ export interface ProfileData {;
   name: string;
   title: string;
   avatarUrl: string;
-==============  coverImageUrl?: string;
   bio: string;
   location?: string;
   rating?: number;
@@ -140,12 +135,6 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
-=======
-=======  hourly_rate?: number,
   contact_email?: string;
 
 }
-=======<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

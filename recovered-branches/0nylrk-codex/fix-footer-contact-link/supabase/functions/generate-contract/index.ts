@@ -1,4 +1,3 @@
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -7,28 +6,20 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
-=======interface Milestone {
   title: string;
   description: string;
   dueDate: string
   estimatedHours: number
-=======
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -39,14 +30,9 @@ interface Milestone {
   description: string,
   dueDate: string,
   estimatedHours: number
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 }
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -228,8 +214,6 @@ interface Milestone {title: string,
 
 serve(async (req) => {_// Handle CORS preflight requests,
 if (req.method === 'OPTIONS') {
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response(null, { headers: corsHeaders })
   }
 
@@ -268,12 +252,10 @@ serve(async (req) => {
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno.env.get('OPENAI_API_KEY');
-=======
     // Get the OpenAI API key from environment variables
     const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');=======
     // Get the OpenAI API key from environment variables
     const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
     }
@@ -294,10 +276,7 @@ serve(async (req) => {
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -337,7 +316,6 @@ if (milestones && milestones.length > 0) {prompt += `
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
       The project will be divided into the following milestones: `
       milestones.forEach((milestone: Milestone, index: number) => {
-=======
       
       The project will be divided into the following milestones: `,
       
@@ -367,7 +345,6 @@ if (milestones && milestones.length > 0) {prompt += `
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON && JSON.stringify({
-=======
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON && JSON.stringify({
         model: 'gpt-4o';
@@ -391,7 +368,6 @@ if (milestones && milestones.length > 0) {prompt += `
     }), {
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
-=======        temperature: 0.7})});
     const data = await response.json();
     if (!response.ok) {
       throw new Error(data.error?.message |'Failed to generate contract')
@@ -411,7 +387,6 @@ if (milestones && milestones.length > 0) {prompt += `
       });
       { 
         status: 500, 
-=======
         - Estimated Work: ${milestone.estimatedHours} hours;
         `;
       }),;        temperature: 0 && 0.7})});
@@ -428,7 +403,6 @@ if (milestones && milestones.length > 0) {prompt += `
       success: true, 
       contract 
 
-=======
 ;
     const data = await response.json ();
 ;
@@ -453,8 +427,6 @@ if ( {) {
       });
       {
         status: 500
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
@@ -471,7 +443,3 @@ if ( {) {
     )  }
 }),
 
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

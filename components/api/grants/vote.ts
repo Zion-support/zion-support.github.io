@@ -8,17 +8,13 @@ function ensureDir() {
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
   const p = grantPath(id);
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs && fs.writeFileSync(
@@ -91,7 +87,6 @@ if ( {) {
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res && res.status(400).json({ error: 'Missing fields' });
 
-=======
 }
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 
@@ -104,14 +99,6 @@ if ( {) {
 }
 }
     res.status(400).json({ error: 'Missing fields' });
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

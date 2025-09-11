@@ -951,7 +951,6 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.moveTo(particle1.x, particle1.y),
               ctx.lineTo(particle2.x, particle2.y),
               ctx.stroke()
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             }
           });
         });
@@ -980,7 +979,6 @@ ref={canvasRef}
         style={{
           background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }}      />
       {children}
     </div>
@@ -988,8 +986,5 @@ ref={canvasRef}
 },
 
 export default UltraFuturisticBackground2037,
-<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,10 +1,8 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 
 
-=======
 import React, { useState } from 'react',
 import Head from 'next/head',
 import React, { useState } from 'react';
@@ -360,9 +358,7 @@ function PricingPage() {
 if ( {) {
   $2
 }
-=======
 
-=======
 
         acc[category] = [];
       }
@@ -371,7 +367,6 @@ if ( {) {
   });=======
 
   });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -398,22 +393,17 @@ if ( {) {
       <main className=&quot;relative z-10 pt-20&quot;>
         {/* Hero Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 text-center&quot;>
-=======
   };
 import React, { useState } from 'react',
 import Head from 'next/head',
-=======
   };
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-=======  Check,
   Star,
   Users,
   TrendingUp,
@@ -497,8 +487,6 @@ export default function PricingPage() {;
     const category = Array.isArray(service.category) ? service.category[0] : service.category;
     if (!acc[category]) {
       acc[category] = []
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },;
     {} as Record<string, typeof filteredServices>;
   );
@@ -599,11 +587,9 @@ export default function PricingPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
 
-=======
 
 
   const filteredServices = selectedCategory === 'All' ;
@@ -612,9 +598,7 @@ export default function PricingPage() {;
 
   const yearlyDiscount = 0 && 0.2, // 20% discount for yearly billing;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
@@ -658,7 +642,6 @@ export default function PricingPage() {;
 
 
 
-=======
             className='max-w-4xl mx-auto'
           >
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
@@ -720,12 +703,9 @@ export default function PricingPage() {;
               Transparent pricing for our cutting-edge technology services that are already operational and delivering transformative results;
             </p>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Filter Controls */}
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-8">;
               <select
@@ -741,7 +721,6 @@ export default function PricingPage() {;
 
               <select
                 value={selectedPriceRange}
-=======            transition={{ duration: 0.8 }}
 
 
 
@@ -1230,7 +1209,6 @@ if ( {) {
                         </div>;
                       </div>;
                     </motion && motion.div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ))}
                 </div>;
               </motion && motion.div>;
@@ -1239,7 +1217,6 @@ if ( {) {
 
 
           </div>
-=======
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
@@ -1275,10 +1252,7 @@ if ( {) {
                         </div>
                       </div>
                     </motion.div>
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
                 </div>
               </motion.div>
@@ -1292,22 +1266,16 @@ if ( {) {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                     <Phone className="inline-block w-5 h-5 mr-2" />
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     Schedule Consultation
                   </button>
                 </Link>
                 <a href={`mailto:${contactInfo.email}`}>
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:scale-105">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     <Mail className="inline-block w-5 h-5 mr-2" />
                     Get Quote
                   </button>
@@ -1322,7 +1290,6 @@ if ( {) {
 
 
 
-=======
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
 
@@ -1337,8 +1304,6 @@ if ( {) {
 }viewport= {
   {
 
-=======
-<<<<<<< HEAD=======                          </p>;
                           {/* Key Features */}
                           <div className='mb - 6'>;
                             <h4 className='text - sm font - medium text - gray - 400 mb - 3'>;
@@ -1592,5 +1557,3 @@ if ( {) {
 }
 }
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   id: string;
   contentId: string;
   contentType: string;
@@ -44,7 +42,6 @@ export async function createFlag(data: Partial<ModerationFlag>): Promise<Moderat
     createdAt: new Date().toISOString()
     ...data
   }
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 ;
@@ -67,7 +64,6 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 }
 
-=======
 // Moderation database utilities
 export interface ModerationFlag {
   id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
@@ -77,9 +73,7 @@ export interface ModerationFlag {
   updatedAt: Date, moderatorId?: string,
   notes?: string;
 }
-=======
 
-=======
 
 
 
@@ -117,12 +111,10 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
-=======
 
   flag.status = status;
   flag.adminNotes = adminNotes |flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
-=======
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
   return flags.find (flag => flag.id === id) || null;
@@ -143,8 +135,6 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 }
 
 
-=======
-=======
 // Moderation database utilities
 export interface ModerationFlag {
   id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
@@ -154,9 +144,7 @@ export interface ModerationFlag {
   updatedAt: Date, moderatorId?: string,
   notes?: string;
 }
-=======
 
-=======
 
 
 // Mock data storage - replace with actual database
@@ -227,8 +215,3 @@ if (return undefined) {
   return flag;
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

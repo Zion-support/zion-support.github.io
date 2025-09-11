@@ -9,8 +9,4 @@ const AdvancedServicesShowcase2025 = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedServicesShowcase2025;
-=======
-export default AdvancedServicesShowcase2025;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

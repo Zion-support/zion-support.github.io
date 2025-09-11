@@ -3,7 +3,6 @@
 interface HTMLElement {;
 
 
-<<<<<<< HEAD=======interface HTMLDivElement extends HTMLElement {;
   tagName: 'DIV';
 }
 const badgeVariants = cva(;
@@ -29,8 +28,6 @@ export interface BadgeProps;
   extends React && React.HTMLAttributes<HTMLDivElement>,;
     VariantProps<typeof badgeVariants> {}
 function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );

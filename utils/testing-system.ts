@@ -1,22 +1,14 @@
-
-
-=======
-
+import React from 'react';
+export class TestingSystem {
+  static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
+    switch (action) {
+      case 'click':
+        element.click();
+        break;
+      case 'type': // Handle typing
+        break;
+      case 'hover': // Handle hover
+        break;
+    }
+  }
 }
-  }
-  }
-<<<<<<< HEAD
-  }
-
-
-}
-
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-}
-=======
-  }
-=======
-  }>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,10 +1,7 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -24,8 +21,6 @@ interface ResumeStepContentProps {
         <BasicInfoForm
           resumeId={resume?.id!}
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {TabsContent} from "@/components/ui/tabs";
 import {Resume} from "@/types/resume";
 import {BasicInfoForm} from '../forms/basic-info';
@@ -78,8 +73,6 @@ import { EducationForm } from '../forms/EducationForm',;
 import { SkillsForm } from '../forms/SkillsForm',;
 import { CertificationsForm } from '../forms/CertificationsForm',;
 import { PreviewResume } from '../PreviewResume',;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ResumeStepContentProps {;
   activeTab: string,;
   resume: Resume,;
@@ -143,8 +136,6 @@ interface ResumeStepContentProps {;
       </TabsContent>;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
-=======
-=======
 export const ResumeStepContent = ({ ;
   activeTab;
   resume, ;
@@ -181,23 +172,17 @@ export const ResumeStepContent = ({ ;
       <TabsContent value="work-experience">;
 
         <WorkExperienceForm
-=======
 
         <WorkExperienceForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />;
       </TabsContent>;
 
       <TabsContent value="education">;
 
         <EducationForm
-=======
 
         <EducationForm 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
@@ -210,10 +195,8 @@ export const ResumeStepContent = ({ ;
       <TabsContent value="certifications">;
 
         <CertificationsForm
-=======
 
         <CertificationsForm =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
@@ -307,13 +290,3 @@ export const ResumeStepContent = ({
         <PreviewResume 
           resume={resume as Resume} 
           onBack={onPrevStep}
-<<<<<<< HEAD
-=======
-=======
-==============        />;
-      </TabsContent>;
-    </>;
-  );
-
-
-};

@@ -9,8 +9,4 @@ const AIAutonomousMicroserviceSecurity = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousMicroserviceSecurity;
-=======
-export default AIAutonomousMicroserviceSecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

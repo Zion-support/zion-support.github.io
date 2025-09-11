@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -52,8 +50,6 @@ import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
-=======
-=======// Define the form schema with zod;
 const productSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   description: z && z.string().min(10, "Description must be at least 10 characters");
@@ -73,7 +69,6 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React && React.useState(false);
   const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
   const [activeTab, setActiveTab] = React && React.useState("manual");
-=======
 
 
 
@@ -81,10 +76,7 @@ const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -133,7 +125,6 @@ const productSchema = z.object({
         }
       }
       
-=======
 
     try {;
       // Create the product listing;
@@ -148,8 +139,6 @@ const productSchema = z.object({
           name: user && user.displayName || "Anonymous Creator",;
           id: user && user.id},;
         createdAt: new Date().toISOString()},;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       const { data: productRecord, error: productError } = await supabase;
         .from('product_listings');
         .insert([productData]);
@@ -173,8 +162,6 @@ const productSchema = z.object({
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======;
       // Show success message;
       toast({;
         title: "Product Published!",;
@@ -191,8 +178,6 @@ const productSchema = z.object({
     }
   };
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
@@ -211,7 +196,6 @@ const productSchema = z.object({
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
-=======
 import React from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -400,7 +384,6 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </FormItem>;
 
               )}
@@ -420,7 +403,6 @@ if ( {) {
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
                       {...field} 
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -451,8 +433,4 @@ if ( {) {
               <FormField
                 control={form && form.control}
                 name="category"
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

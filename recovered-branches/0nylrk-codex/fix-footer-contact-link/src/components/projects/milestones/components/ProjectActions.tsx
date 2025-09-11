@@ -7,8 +7,6 @@ import { Link  } from 'react-router-dom';
 import { ShieldAlert } from "lucide-react";
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
-=======
-=======
 
 
 
@@ -21,15 +19,12 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
   disputeId?: string;
   isTalent: boolean
 
-=======
 
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
@@ -37,8 +32,6 @@ import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
@@ -62,11 +55,8 @@ interface ProjectActionsProps {
           </Link>
         </Button>
       ) : (
-=======
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-==============import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
 import { ShieldAlert } from "lucide-react",;
@@ -105,12 +95,9 @@ export function ProjectActions({;
 } ProjectActionsProps) {;
   return (;
   return (;
-=======
   return (;
-=======
   return (;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="flex gap-2">;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;
@@ -124,26 +111,15 @@ export function ProjectActions({;
       ) : (;
 
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
           Add Milestone
         </Button>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   ),;}
  interface ProjectActionsProps {
@@ -173,14 +149,6 @@ onAddMilestone
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-=======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {Button} from '@/components / ui / button';
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
@@ -192,7 +160,6 @@ interface ProjectActionsProps {
   is_talent: boolean,
   onAddMilestone: () => void;
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * ProjectActions - Function description
  */
@@ -216,8 +183,3 @@ function ProjectActions() {
         </Button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

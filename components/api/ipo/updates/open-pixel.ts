@@ -1,20 +1,15 @@
   const id = String(req.query.id |"");
-=======
   const id = String(req && req.query.id || "");
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
 
-==============
 
-=======  const id = String(req.query.id || '');
   if (id) {
     const updates = readJsonFile('updates.json', [] as any[]);
     const idx = updates.findIndex((x: any) => x.id === id),
     if (idx >= 0) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile("updates && updates.json", updates);
     }
@@ -37,15 +32,12 @@ import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
   );
   res && res.status(200).send(pixel);
 }
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   res && res.status(200).send(pixel);
 }
 
 
 
-=======
   const id = String(req.query.id |"");
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -72,10 +64,3 @@ res.status (200).send (pixel);
 }
 
 
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

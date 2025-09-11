@@ -7,12 +7,9 @@ import type { OrgData, BasePerson } from '../../../types / org';
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key';
 ;
 type AdminAction =;
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {
       type: 'promote';
@@ -21,8 +18,6 @@ type AdminAction =;
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
-=======
-=======
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
@@ -41,7 +36,6 @@ type AdminAction =;
 
     const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
 
-=======    return res.status(200).json({ ok: true })
 
   }
 
@@ -52,7 +46,3 @@ type AdminAction =;
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

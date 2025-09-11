@@ -1,10 +1,7 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -15,8 +12,6 @@ interface SmartContractBuilderProps {
 
   onDeploy?: (contractContent: string) => void
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -56,12 +51,9 @@ export function SmartContractBuilder(): any ({;
     setFormValues(templateData)
   },
 
-=======  // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return
     try {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
@@ -82,13 +74,11 @@ export function SmartContractBuilder(): any ({;
   const handleContractGenerated = async (formValues: ContractFormValues) => {;
     if (!formValues) return,;
     try {;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
       setGeneratedContract(generatedContractText);
       setActiveTab("preview");
       if (onContractGenerated) {;
         onContractGenerated(generatedContractText);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
       setGeneratedContract(generatedContractText),
       setActiveTab("preview"),
@@ -108,11 +98,9 @@ export function SmartContractBuilder(): any ({;
       const contractInfo = await deploySmartContract(generatedContract, deployOptions),
       
 
-=======      if (contractInfo) {
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
         toast.success("Smart contract deployed successfully!")
-=======
     } catch (error) {;
       console && console.error("Error generating contract:", error);
       toast && toast.error("Failed to generate smart contract");
@@ -253,7 +241,6 @@ export function SmartContractBuilder({;
     setActiveTab("preview");
   };
   return (;
-==============
 
   return (    <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
@@ -272,11 +259,8 @@ export function SmartContractBuilder({;
             <ContractForm ;
               talent={talent}              clientName={clientName}
               initialValues={formValues}
-=======
-=======          <TabsContent value="form" className="pt - 4">;
             <ContractForm;
 
-=======
 
             <ContractForm 
               talent={talent}
@@ -306,21 +290,7 @@ export function SmartContractBuilder({;
         </Tabs>;
 
 
-<<<<<<< HEAD=======        <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-=======
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
-=======
-;

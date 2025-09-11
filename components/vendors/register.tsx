@@ -2,17 +2,11 @@
 import {FormEvent, useState} from 'react';
 import {FormEvent, useState} from 'react';
 
-=======
-=======
 
 export default function VendorRegisterPage() {;
-=======
 
 import {FormEvent, useState} from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     const form = e && e.currentTarget;
     const formData = new FormData(form);
     const payload = Object && Object.fromEntries(formData && formData.entries()),;
@@ -38,10 +32,7 @@ import {FormEvent, useState} from 'react';
       });
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -81,8 +72,6 @@ export default function VendorRegisterPage() {;
           about: String(payload.about |'')
           verificationDocs: String(payload.verificationDocs |'')
             .split(',')
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             .map(s => s.trim())
             .filter(Boolean)
           caseStudies: []
@@ -303,17 +292,6 @@ export default function VendorRegisterPage() {;
 
   return (
   return (
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const AIAutonomousCreativity = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousCreativity;
-=======
-export default AIAutonomousCreativity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

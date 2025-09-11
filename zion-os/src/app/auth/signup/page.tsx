@@ -1,6 +1,4 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -54,7 +52,6 @@ export default function SignUpPage() {;
       setIsLoading(false);
     }
   };
-=======  return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
         <div className="text-center">;
@@ -77,12 +74,8 @@ export default function SignUpPage() {;
 
 ;
 
-<<<<<<< HEAD
 ;
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

@@ -1,10 +1,6 @@
 
-=======
-=====================
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -19,8 +15,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -43,8 +37,6 @@ import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -125,7 +117,6 @@ const getNotificationIcon = (type: NotificationType, class_name: string = "h - 5
       return <AlertCircle className={cn (class_name, "text - yellow - 500")} />;
     default:;
       return <Bell className={cn (class_name, "text - gray - 500")} />;
-=======  }
 }
 ;
 const getNotificationTypeBadge = (type: NotificationType) =>: any {
@@ -236,10 +227,8 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
       return <Badge className="bg-zion-purple">Hire Request</Badge>,;
     case 'onboarding':;
       return <Badge className="bg-zion-cyan">Onboarding</Badge>,;
-=======
 
   }
-=======    case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
       return <Badge variant="outline">Notification</Badge>;
@@ -263,15 +252,12 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
 
 
   >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   },
-=======
   };
   },
 
 
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -303,7 +289,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
                 onClick={() => onDismiss(notification && notification.id)}=======
 
                 onClick={() => onDismiss(notification && notification.id)}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >;
                 <Trash2 className="h-4 w-4 text-red-400" />;
                 <span className="sr-only">Dismiss</span>;
@@ -319,7 +304,6 @@ export default function NotificationsPage() {
 
     filteredNotifications;
     unreadCount;
-=======    action_text?: string;
   }
   onMarkAsRead: (id: string) => Promise < void>,
   on_dismiss: (id: string) => Promise < void>;
@@ -514,7 +498,6 @@ export default function NotificationsPage() {
                   ))}
                 </div>
               )}
-=======            </TabsContent>
           </Tabs>
         </div>
       </main>
@@ -586,16 +569,8 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
   );
 }
 ;
-=======
-=======
     </>);
 }
 
-=======
 ;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

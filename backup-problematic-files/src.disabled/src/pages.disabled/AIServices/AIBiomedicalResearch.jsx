@@ -9,8 +9,4 @@ const AIBiomedicalResearch = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIBiomedicalResearch;
-=======
-export default AIBiomedicalResearch;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

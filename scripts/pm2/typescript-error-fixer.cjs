@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -10,23 +9,11 @@ class TypeScriptErrorFixer {}
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
-<<<<<<< HEAD
     this.fixedFiles = new Set();
   }
   log(level, message, data = null) {
     const timestamp = new Date().toISOString();
     const logEntry = {
-=======    this.fixedFiles = new Set()};
-  log(level, message, data = null) {}
-    const timestamp = new Date().toISOString();
-    const logEntry = {}
-      timestamp,
-      level,
-      message,
-      data,
-      service: 'typescript-error-fixer'
-    };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -47,147 +34,6 @@ class TypeScriptErrorFixer {}
       this.startContinuousFixing();
       this.setupSignalHandlers();
       this.log('info', 'TypeScript Error Fixer Service started successfully');
-<<<<<<< HEAD
-      setInterval(async () => {
-        await this.performTypeScriptFixes();
-      }, this.fixInterval);
-    } catch (error) {
-      this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
-      process.exit(1);
-    }
-  }
-  ensureDirectories() {
-    const dirs = ['logs/pm2', 'backups/typescript-fixes', 'temp', 'fixed-files'];
-    dirs.forEach(dir => {
-      const fullPath = path.join(this.projectRoot, dir);
-      if (!fs.existsSync(fullPath)) {
-        fs.mkdirSync(fullPath, { recursive: true });
-      }
-    });
-  }
-  async performTypeScriptFixes() {
-    this.log('info', 'Starting TypeScript error fixing process...');
-    try {
-      this.resetCounters();
-      const errors = await this.getTypeScriptErrors();
-      if (errors.length === 0) {
-        this.log('info', 'No TypeScript errors found');
-        return;
-      }
-      this.log('info', `Found ${errors.length} TypeScript errors`);
-      for (const error of errors) {
-        if (this.fixesApplied >= 50) break; // Limit fixes per run
-        try {
-          await this.fixTypeScriptError(error);
-        } catch (fixError) {
-          this.log('error', `Failed to fix error in ${error.file}`, fixError);
-          this.fixesFailed++;
-        }
-      }
-      await this.generateFixReport();
-      this.log('info', `TypeScript fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`);
-    } catch (error) {
-      this.log('error', 'Error during TypeScript fixing process', error);
-    }
-  }
-  resetCounters() {
-    this.fixesApplied = 0;
-    this.fixesFailed = 0;
-    this.fixesSkipped = 0;
-    this.fixedFiles.clear();
-  }
-  async getTypeScriptErrors() {
-    try {
-      const result = execSync('npx tsc --noEmit --json', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      if (result) {
-        const parsed = JSON.parse(result);
-        return parsed.errors || [];
-      }
-      return [];
-    } catch (error) {
-      // Parse stderr for errors
-      const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseTypeScriptErrors(stderr);
-    }
-  }
-  parseTypeScriptErrors(stderr) {
-    const errors = [];
-    const lines = stderr.split('\n');
-    lines.forEach(line => {
-      const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
-      if (match) {
-        errors.push({
-=======
-            setInterval(async () => {}
-        await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
-      this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
-      process.exit(1)};
-  };
-  ensureDirectories() {}
-    const dirs = ['logs/pm2', 'backups/typescript-fixes', 'temp', 'fixed-files'];
-    dirs.forEach(dir => {})
-      const fullPath = path.join(this.projectRoot, dir);
-      if (!fs.existsSync(fullPath)) {}
-        fs.mkdirSync(fullPath, { recursive: true })};
-    })};
-  async performTypeScriptFixes() {}
-    this.log('info', 'Starting TypeScript error fixing process...');
-    try {}
-      this.resetCounters();
-      const errors = await this.getTypeScriptErrors();
-      if (errors.length === 0) {}
-        this.log('info', 'No TypeScript errors found');
-        return};
-      this.log('info', `Found ${errors.length} TypeScript errors`);
-      for (const error of errors) {}
-        if (this.fixesApplied >= 50) break; // Limit fixes per run;
-        try {}
-          await this.fixTypeScriptError(error)} catch (fixError) {}
-          this.log('error', `Failed to fix error in ${error.file}`, fixError);
-          this.fixesFailed++};
-      };
-      await this.generateFixReport();
-      this.log('info', `TypeScript fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {`}
-      this.log('error', 'Error during TypeScript fixing process', error)};
-  };
-  resetCounters() {}
-    this.fixesApplied = 0;
-    this.fixesFailed = 0;
-    this.fixesSkipped = 0;
-    this.fixedFiles.clear()};
-  async getTypeScriptErrors() {}
-    try {}
-      const result = execSync('npx tsc --noEmit --json', { })
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      }
-});
-      if (result) {}
-        const parsed = JSON.parse(result);
-        return parsed.errors || []};
-      return []} catch (error) {}
-      // Parse stderr for errors;
-      const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseTypeScriptErrors(stderr)};
-  };
-  parseTypeScriptErrors(stderr) {}
-    const errors = [];
-    const lines = stderr.split('\n');
-    lines.forEach(line => {})
-      const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
-      if (match) {}
-        errors.push({})
-          file: match[1].trim(),
-          line: parseInt(match[2]),
-          column: parseInt(match[3]),
-          message: match[4].trim(),
-          code: 'TS_ERROR'
-<<<<<<< HEAD
         });
       }
     });
@@ -219,8 +65,6 @@ class TypeScriptErrorFixer {}
         // Create backup
         await this.createBackup(error.file);
         // Write fixed content
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         })};
     }
 });
@@ -251,7 +95,6 @@ class TypeScriptErrorFixer {}
         fs.writeFileSync(error.file, fixedContent, 'utf8');
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
-<<<<<<< HEAD
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`);
       } else {
         this.fixesSkipped++;
@@ -262,9 +105,6 @@ class TypeScriptErrorFixer {}
     }
   }
   shouldSkipLine(line) {
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -278,7 +118,6 @@ class TypeScriptErrorFixer {}
            trimmed.startsWith('/*') || 
            trimmed.startsWith('*') ||
            trimmed.startsWith('import') ||
-<<<<<<< HEAD
            trimmed.startsWith('export');
   }
   async fixTypeScriptLine(line, error, allLines, lineIndex) {
@@ -298,8 +137,6 @@ class TypeScriptErrorFixer {}
     return fixedLine;
   }
   fixUndefinedName(line, error, allLines, lineIndex) {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
            trimmed.startsWith('export')};
   async fixTypeScriptLine(line, error, allLines, lineIndex) {}
     let fixedLine = line;
@@ -315,7 +152,6 @@ class TypeScriptErrorFixer {}
     const nameMatch = error.message.match(/Cannot find name '([^']+)'/);
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
-<<<<<<< HEAD
     // Try to find the name in the file
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
@@ -349,9 +185,6 @@ class TypeScriptErrorFixer {}
     return line;
   }
   fixModuleError(line, error, allLines, lineIndex) {
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
@@ -382,7 +215,6 @@ class TypeScriptErrorFixer {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
-<<<<<<< HEAD
     // Try to fix common module issues
     if (moduleName.startsWith('@/')) {
       const fixedModule = moduleName.replace('@/', './src/');
@@ -394,9 +226,6 @@ class TypeScriptErrorFixer {}
     return line;
   }
   fixPropertyError(line, error, allLines, lineIndex) {
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -408,7 +237,6 @@ class TypeScriptErrorFixer {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
     const propertyName = propertyMatch[1];
-<<<<<<< HEAD
     // Add type assertion
     if (line.includes('.' + propertyName)) {
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`);
@@ -432,9 +260,6 @@ class TypeScriptErrorFixer {}
   }
   shouldBeDeclared(name, allLines) {
     // Check if it's used before declaration
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
@@ -456,7 +281,6 @@ class TypeScriptErrorFixer {}
     const namePattern = new RegExp(`\\b${name}\\b`, 'g');
     let firstUsage = -1;
     let declaration = -1;
-<<<<<<< HEAD
     allLines.forEach((line, index) => {
       if (namePattern.test(line)) {
         if (firstUsage === -1) firstUsage = index;
@@ -487,9 +311,6 @@ class TypeScriptErrorFixer {}
   }
   async createBackup(filePath) {
     try {
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -520,7 +341,6 @@ class TypeScriptErrorFixer {}
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       fs.copyFileSync(filePath, backupPath);
-<<<<<<< HEAD
       this.log('debug', `Backup created: ${backupPath}`);
     } catch (error) {
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message);
@@ -530,8 +350,6 @@ class TypeScriptErrorFixer {}
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
   };
@@ -543,13 +361,10 @@ class TypeScriptErrorFixer {}
         fixesApplied: this.fixesApplied,
         fixesFailed: this.fixesFailed,
         fixesSkipped: this.fixesSkipped,
-<<<<<<< HEAD
         successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100
       },
       fixedFiles: Array.from(this.fixedFiles),
       recommendations: this.generateRecommendations()
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100;
       },
       fixedFiles: Array.from(this.fixedFiles),
@@ -558,7 +373,6 @@ class TypeScriptErrorFixer {}
     const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log('info', `TypeScript fix report generated: ${reportPath}`);
-<<<<<<< HEAD
     return report;
   }
   generateRecommendations() {
@@ -617,8 +431,6 @@ fixer.start().catch(error => {
   fixer.log('error', 'Failed to start service', error);
   process.exit(1);
 });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return report};
   generateRecommendations() {}
     const recommendations = [];
@@ -670,8 +482,4 @@ process.on('unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

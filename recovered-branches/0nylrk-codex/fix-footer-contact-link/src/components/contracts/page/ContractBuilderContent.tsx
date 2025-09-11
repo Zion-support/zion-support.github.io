@@ -1,7 +1,5 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -20,8 +18,6 @@ const mockTalent: TalentProfile = {
   skills: ['ReactNode.jsSmart Contracts']}
 export function ContractBuilderContent() {
 export function ContractBuilderContent() {;
-=======
-=======
 // Mock data for demo purposes
 
 
@@ -29,9 +25,7 @@ export function ContractBuilderContent() {;
 
 
 
-==============
 
-=======import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
 import { ContractHeader } from './ContractHeader',;
@@ -70,11 +64,9 @@ export function ContractBuilderContent() {;
     }
   ]),
 
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
@@ -89,7 +81,6 @@ export function ContractBuilderContent() {;
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
       
       <ContractTypeCards 
-=======
       <ContractTypeCards
       
       <ContractTypeCards 
@@ -109,7 +100,6 @@ export function ContractBuilderContent() {;
   );
 }
 
-=======import {TalentProfile} from '@/types / talent';
 import {use_auth} from '@/hooks / use_auth';
 // Mock data for demo purposes;
 const mock_talent: TalentProfile = {
@@ -183,8 +173,6 @@ function ContractBuilderContent() {
         />)}
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  //Future implementation: View specific contract details 
 };
@@ -243,9 +231,3 @@ function ContractBuilderContent() {
     </>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

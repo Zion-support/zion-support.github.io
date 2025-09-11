@@ -59,8 +59,4 @@ export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default ServiceProcessSteps;
-=======
-export default ServiceProcessSteps;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const SocialShareSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SocialShareSection.js;
-=======
-export default SocialShareSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

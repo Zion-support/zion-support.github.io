@@ -10,8 +10,6 @@ import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {toast} from "sonner";
     loading
-=======
-=======export function WebhookManager() {;
   const { ;
     webhooks;
     loading, ;
@@ -22,7 +20,6 @@ import {toast} from "sonner";
     toggleWebhook;
     deleteWebhook;
 
-=======  const [newWebhook, setNewWebhook] = useState({
 
     name: ""
     url: ""
@@ -30,7 +27,6 @@ import {toast} from "sonner";
     eventTypes: [] as WebhookEventType[]
 
     secret: ""
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }),
   
 
@@ -47,9 +43,7 @@ import {toast} from "sonner";
   }
   },
   
-=======
 
-=======    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return
     }
@@ -61,7 +55,6 @@ import {toast} from "sonner";
   },
   
 
-=======
   }
   },
     const handleRemoveEvent = (event: WebhookEventType) => {
@@ -69,8 +62,6 @@ import {toast} from "sonner";
       ...newWebhook
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  },
   
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
@@ -78,16 +69,12 @@ import {toast} from "sonner";
       return
     }
     await createWebhook(
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       newWebhook.name, 
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
     ),
     
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Reset form
     setNewWebhook({
       name: ""
@@ -102,7 +89,6 @@ import {toast} from "sonner";
     await testWebhook(webhookId, eventType)
   },
   
-=======  return (
     <div className="space-y-8">
       <Card>
         <CardHeader>
@@ -124,12 +110,10 @@ import {toast} from "sonner";
             </div>
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
-=======
 
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
@@ -306,12 +290,9 @@ export function WebhookManager() {;
             Define webhooks to notify external systems when events occur in Zion.;
           </CardDescription>;
         </CardHeader>;
-=======            <Input
               id="webhook-secret"
             <Input 
               id="webhook-secret" 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -329,8 +310,6 @@ export function WebhookManager() {;
       </Card>
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -350,14 +329,11 @@ export function WebhookManager() {;
 
                             {eventOptions.find(e => e.value === event)?.label |event}
                             {eventOptions.find(e => e.value === event)?.label || event}
-=======
 
                             {eventOptions.find(e => e.value === event)?.label || event}
 
-=======
                             {eventOptions.find(e => e.value === event)?.label |event}
                             {eventOptions.find(e => e.value === event)?.label || event}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </ClickableBadge>
                         ))}
                       </div>
@@ -365,7 +341,6 @@ export function WebhookManager() {;
                     <div className="text-xs text-muted-foreground">
                       {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="space-y-2">;
             <Label htmlFor="webhook-secret">Secret (optional)</Label>;
             <Input
@@ -426,7 +401,6 @@ export function WebhookManager() {;
                   </Button>;
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
-=======                <CardFooter className="flex justify - between pt - 2">;
                   <Button;
                     variant="outline";
                     size="sm";
@@ -462,13 +436,8 @@ export function WebhookManager() {;
                     {testResult.responseBody || '<empty>'}
 
 
-<<<<<<< HEAD
                     {testResult.responseBody |'<empty>'}
                     {testResult.responseBody || '<empty>'}
-==============
-                    {testResult.responseBody |'<empty>'}
-                    {testResult.responseBody || '<empty>'}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </pre>
                 </div>
               </div>
@@ -479,9 +448,7 @@ export function WebhookManager() {;
     </div>
   )
         ;
-=======
 }
-=======
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
             <CardHeader>;
@@ -491,8 +458,6 @@ export function WebhookManager() {;
               <div className="space-y-2">;
                 <div className="flex justify-between">;
                   <span className="font-medium">Status:</span>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
           </Card>)}
       </div>;

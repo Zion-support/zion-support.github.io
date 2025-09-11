@@ -9,8 +9,4 @@ const Infrastructure = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Infrastructure;
-=======
-export default Infrastructure;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

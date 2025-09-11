@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -15,13 +14,6 @@
   async attemptSecurityFix() {}
     try {}
       console.log('Attempting to fix security issues...');
-<<<<<<< HEAD
-=======
-            const child = spawn('npm', ['audit', 'fix', '--force'], {})
-        "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -56,7 +48,3 @@ if ( {})
     process.exit(0)}
 });
   auditor.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = SecurityAuditor;
-=======
-module.exports = SecurityAuditor;

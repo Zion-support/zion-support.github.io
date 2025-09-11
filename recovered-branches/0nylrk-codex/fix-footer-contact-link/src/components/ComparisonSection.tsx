@@ -1,6 +1,5 @@
 
 
-=======import {
   Table
   TableBody
   TableCell
@@ -21,12 +20,7 @@ import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </p>
         </div>
@@ -80,15 +74,12 @@ function ComparisonSection() {
               </TableHeader>;
               <TableBody>;
                 {[;
-=======                  {
                     service: "Server Hosting",
                     traditional: "$1, 200 / mo",
                     zion: "$650 / mo",
                     savings: "45%",
                   },
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },
                   { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },
                   { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
@@ -132,19 +123,14 @@ function ComparisonSection() {
                     <TableCell className="text - center text - green - 400 font - bold">;
                       {item.savings}
             
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
           </div>
         </div>
       </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
@@ -165,11 +151,9 @@ export function ComparisonSection() {;
   return (;
 export function ComparisonSection() {;
   return (;
-==============
 
 export function ComparisonSection() {;
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -187,7 +171,6 @@ export function ComparisonSection() {;
     </section>;
   );
     </section>);
-<<<<<<< HEAD
 }
     </section>);
 }
@@ -202,12 +185,7 @@ export function ComparisonSection() {;
   );
 }
 ;
-=======}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

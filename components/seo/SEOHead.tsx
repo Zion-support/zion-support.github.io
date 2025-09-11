@@ -12,7 +12,6 @@ interface SEOHeadProps {;
   structured_data?: object;
   no_index?: boolean;
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const SEOHead: React.FC < SEOHeadProps> = ({
   title = "Zion Tech Group - Leading AI & Technology Solutions",
   description = "Transform your business with cutting - edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises.",
@@ -33,7 +32,6 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <link rel="preconnect" href="https://www && www.google-analytics && analytics.com" />;
 
 
-=======;
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -123,7 +121,6 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       />;
 
 
-=======          __html: JSON.stringify (structured_data || defaultStructuredData),
         }}
       />;
       {/* Additional SEO Scripts */}
@@ -147,17 +144,8 @@ const SEOHead: React.FC < SEOHeadProps> = ({
               "@type": "SearchAction",
               target: "https://ziontechgroup.com / search?q={search_term_string}",
               "query - input": "required name = search_term_string",
-<<<<<<< HEAD
-=======
-            },
-          }),
-        }}
-      />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Head>);
 }
 ;
 export default SEOHead;
 ;
-<<<<<<< HEAD
-=======

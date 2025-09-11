@@ -40,7 +40,6 @@ if (return) {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setTimeout(() => {;
         setIsSuccess(false);
       }, 5000);
@@ -49,7 +48,6 @@ if (return) {
     } finally {;
       setIsSubmitting(false);
 
-=======import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 export const MobileEmailCapture: React.FC = () => {
@@ -188,17 +186,13 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   };
   return (;
-=======
   },
 
 
-=======
   }
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
@@ -218,14 +212,11 @@ export const MobileEmailCapture: React.FC = () => {;
               value={email}
 
 
-=======
 
           <p className="text-sm text-gray-400 mt-4">;
-=======
 
 
 
-=======      setIsSubmitting (false);
     }
   }
 ;
@@ -260,8 +251,6 @@ export const MobileEmailCapture: React.FC = () => {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
     </section>);
 }
@@ -286,13 +275,4 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
     </section>;
   );
 };
-=======};=======
-    </section>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

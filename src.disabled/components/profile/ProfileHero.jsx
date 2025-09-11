@@ -12,7 +12,6 @@ export default function ProfileHero({ }: ProfileHeroProps) {
 
 }
 
-<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function ProfileHero({ }: ProfileHeroProps) {
   return (
@@ -21,20 +20,4 @@ export default function ProfileHero({ }: ProfileHeroProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
-:src.disabled/components/profile/ProfileHero.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-}
-:temp_exclude/src.disabled/components/profile/ProfileHero.jsx
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/profile/ProfileHero.jsx
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

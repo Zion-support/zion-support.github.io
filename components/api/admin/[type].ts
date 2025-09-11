@@ -28,8 +28,6 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     format: (format as any) || undefined,
   };
 
-=======
-=======
 
   });
   return {
@@ -41,9 +39,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     pageSize: pageSize ? Number(pageSize) : 20, filters,
     format: (format as any) || undefined}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
     search,
     sort,
     order: (order as any) || 'desc',
@@ -52,7 +48,6 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters,
     format: (format as any) || undefined,
 
-=======
   return lines.join('\n');
 export default async function handler(
   req: NextApiRequest
@@ -82,21 +77,17 @@ export default async function handler(
       }
 
       if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
     filters,
     format: (format as any) || undefined}
 }
-=======
 
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
-=======
     filters,
     format: (format as any) || undefined}
 }
-=======  };
 
     filters
     format: (format as any) |undefined}
@@ -193,7 +184,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
         });
       }
-==============      const total = filtered && filtered.length;
       const start = params && params.page * params && params.pageSize;
       const end = start + params && params.pageSize;
       const pageItems = filtered && filtered.slice(start, end);
@@ -207,8 +197,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).send(toCsv(pageItems));
 
       }
-=======
-=======
       }
 
 
@@ -227,17 +215,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (!id) return res.status(400).json({ error: 'Missing id' });
       }
-=======
-=======
 
   if (req && req.method === 'PATCH') {
     const { id, updates } = req && req.body as {
-=======
         return res.status(200).send(toCsv(pageItems));
 
       }
-=======
-=======
       }
       return res.status(200).json({ items: pageItems, total });
     }
@@ -259,20 +242,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (error) return res && res.status(500).json({ error: error && error.message });
       return res && res.status(200).json({ item: data });
     } else {
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const updated = {
         ...list[idx]
         ...updates
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return res.status(200).json({ item: updated })
 
-=======
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })    }
   }
 
@@ -318,11 +297,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

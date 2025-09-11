@@ -1,5 +1,3 @@
-=======
-=======import Link from 'next / link';
 import type { GetServerSideProps } from 'next';
 
 
@@ -28,9 +26,7 @@ function VendorsPage() {
         </Link>;
       </div>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 export default function VendorsPage({ vendors }: Props) {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -51,10 +47,8 @@ export default function VendorsPage({ vendors }: Props) {
                 ) : (;
                   <div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />;
                 )}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ))}
       </div>;
       <div className='text-center text-xs text-gray-500'>;
@@ -72,10 +66,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   return { props: { vendors } }
 };  return { props: { vendors } }
 
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
       {vendors.length === 0 && (
         <p className=&quot;text-gray-500&quot;>No vendors yet. Be the first to apply.</p>
@@ -220,5 +211,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -29,11 +29,8 @@ export function ProfileErrorState({ error } ProfileErrorStateProps) {;
 }export function ProfileErrorState ({;
   error ;
 }: ProfileErrorStateProps) {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" > {";
   error || "Something went wrong" ;
 }</div> ;
 }'"
-<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileErrorState.tsx
-=======

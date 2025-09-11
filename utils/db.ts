@@ -28,7 +28,6 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   writeJsonFile<T[]>(fileName, items);
 
 }
-=======
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -72,7 +71,6 @@ export class DatabaseManager {
     } catch (error) {
       throw error;
     }
-=======
     if (fs.existsSync(filePath)) {;
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
@@ -94,9 +92,6 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
   writeJsonFile < T[]>(file_name, items);
 }=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
@@ -108,19 +103,9 @@ import path from 'path';
 
 }
 }
-=======
-=======
-=======
 import fs from 'fs';
 import path from 'path';
 
 
 }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

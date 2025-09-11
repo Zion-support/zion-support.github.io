@@ -9,8 +9,4 @@ const EnhancedServicesPage = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedServicesPage;
-=======
-export default EnhancedServicesPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -2,10 +2,6 @@
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CountrySelectorProps {
 
   onCountryChange: (country: CountryPricing | null) => void
@@ -36,7 +32,6 @@ interface CountrySelectorProps {
 
 
 
-=======
 interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void,;
   selectedCountry: CountryPricing | null;
@@ -68,7 +63,6 @@ interface CountrySelectorProps {;
         onValueChange={handleCountryChange} 
         value={selectedCountry?.country}>;
 
-<<<<<<< HEAD=======                {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
           </div>
@@ -81,21 +75,11 @@ interface CountrySelectorProps {;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </SelectContent>
       </Select>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
             {topCountries.map((item) => (;
               <SelectItem key={item.country} value={item.country} className="text-white">;                {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>;
@@ -110,19 +94,11 @@ interface CountrySelectorProps {;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
-=======
 }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </SelectContent>;
       </Select>;
     </div>;
-<<<<<<< HEAD
   ),;}
  interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
@@ -150,13 +126,6 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 }</div> </SelectContent> </Select> </div>) 
 }
 }
-<<<<<<< HEAD
-=======
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from './react';
 import { Globe } from './lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
@@ -165,7 +134,6 @@ interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void,
   selected_country: CountryPricing | null;
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * CountrySelector - Function description
  */
@@ -220,8 +188,3 @@ function CountrySelector() {
       </Select>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

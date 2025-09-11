@@ -27,8 +27,4 @@ const Onboarding = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Onboarding;
-=======
-export default Onboarding;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

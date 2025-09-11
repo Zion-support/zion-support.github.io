@@ -9,8 +9,4 @@ const Resources = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Resources;
-=======
-export default Resources;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -11,8 +11,6 @@ import {
   Brain
   Rocket
   CheckCircle;
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,10 +38,7 @@ import { motion } from 'framer-motion';
 
 interface EnhancedHero2026Props {;
   contactInfo: {;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Rocket,;
   CheckCircle,;
 
@@ -57,7 +52,6 @@ interface EnhancedHero2026Props {
     website: string;
   };
   serviceStats: {;
-=======
   Rocket,;
   CheckCircle,;
 interface EnhancedHero2026Props {
@@ -68,8 +62,6 @@ interface EnhancedHero2026Props {
 
     website: string;
   serviceStats: {
-=======
-=======
   };
   serviceStats: {;
 
@@ -109,7 +101,6 @@ export default function EnhancedHero2026({
               delay: Math.random() * 2,            }}  };
 
 
-=======            }}
             transition={{
               duration: 3 + Math.random() * 2
               repeat: Infinity
@@ -120,19 +111,13 @@ export default function EnhancedHero2026({
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
 
-=======
-=======
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-=======
 
             }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           />
@@ -142,8 +127,6 @@ export default function EnhancedHero2026({
       </div>;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <motion && motion.div variants={itemVariants} className='space-y-6'>;
             <div className='inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6'>;
               <Star className='w-5 h-5 text-yellow-400' />;
@@ -169,7 +152,6 @@ export default function EnhancedHero2026({
                 {' '}
                 1000+ cutting-edge solutions;
               </span>{' '}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               ease: 'easeInOut',
               delay: Math.random () * 2,              ease: "easeInOut",
               delay: Math.random () * 2;
@@ -394,7 +376,6 @@ export default function EnhancedHero2026({
                 {' '}
                 1000+ cutting-edge solutions
               </span>{' '}
-=======              delivering unprecedented ROI.            </p>
           </motion.div>
           {/* Enhanced Stats Grid */}
           <motion.div
@@ -451,8 +432,6 @@ export default function EnhancedHero2026({
           {/* Enhanced Stats Grid */}
 
                   {stat.label}
-=======
-=======
               ease: 'easeInOut',
               delay: Math.random () * 2,              ease: "easeInOut",
               delay: Math.random () * 2;
@@ -590,18 +569,14 @@ export default function EnhancedHero2026({
             ))}
           </motion.div>
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Enhanced CTA Section */}
 
               
               <Button 
                 href="/contact" 
 
-=======
               <Button 
                 href="/contact" 
 
@@ -610,11 +585,9 @@ export default function EnhancedHero2026({
                 variant='secondary'
                 size='xl'
                 <span className="flex items-center">
-=======
 
                 <span className="flex items-center">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Shield className="mr-3 w-7 h-7" />
                   Get Expert Consultation
                 </span>
@@ -650,8 +623,6 @@ export default function EnhancedHero2026({
           </motion && motion.div>;
 
 
-=======
-==============
 
 
 
@@ -683,7 +654,6 @@ export default function EnhancedHero2026({
               <div className='text-center'>
                 <div className='text-cyan-400 font-medium'>Website</div>
                 <div className='text-white'>{contactInfo.website}</div>              </div>            variants={itemVariants}
-==============            className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
           >
             <div className="text-center mb-4">
               <h3 className="text-lg font-semibold text-white mb-2">Ready to Get Started?</h3>
@@ -755,12 +725,9 @@ export default function EnhancedHero2026({
   );  );
 }
 
-==============
 );  )
 }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
           <motion.div variants={item_variants} className='space - y-6'>;
@@ -879,16 +846,6 @@ export default function EnhancedHero2026({
 );  )
 }
   );
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,4 @@
 import {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   LightBulbIcon,
   CpuChipIcon,
   AcademicCapIcon,
@@ -81,15 +79,11 @@ const research_impact = [;
     metric: 'Citations',
     value: '10, 000+',
     description: 'Academic citations demonstrating research influence'},
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     metric: 'Patents Filed'
     value: '25+'
     description: 'Intellectual property protecting our innovations'}
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     metric: 'Research Collaborations',
     value: '50+',
     description: 'Partnerships with leading academic institutions'}];
@@ -157,7 +151,6 @@ function ResearchPage() {
 export default function ResearchPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
-=======
     name: 'University of Tokyo'
     location: 'Tokyo, Japan'
     focus: 'Robotics & Autonomous Systems'
@@ -219,7 +212,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                       <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
                     </div>
                   ))}
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Innovation;
               </span>;
@@ -250,7 +242,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
                   <area.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
                   <h3 className=&quot;text - xl font - semibold text - white & quot;>{area.name}</h3>;
-=======
     name: 'University of Tokyo'
     location: 'Tokyo, Japan'
     focus: 'Robotics & Autonomous Systems'
@@ -321,7 +312,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Recent Publications */}
-=======
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
@@ -349,7 +339,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                     'bg-gray-600/20 text-gray-400'
                   }`}>
 
-=======      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -397,7 +386,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
@@ -405,10 +393,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
             Interested in collaborating on cutting-edge AI research?
-=======
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

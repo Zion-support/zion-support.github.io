@@ -9,8 +9,4 @@ const ClientSuccessStoriesSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ClientSuccessStoriesSection.js;
-=======
-export default ClientSuccessStoriesSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

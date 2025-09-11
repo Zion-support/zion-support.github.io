@@ -9,8 +9,4 @@ const OrderDetail = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default OrderDetail;
-=======
-export default OrderDetail;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -30,9 +30,7 @@ export function Web3Login() {;
           <Wallet className="h-5 w-5" />
         </>
 
-==============
 
-=======import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Wallet } from "@/components/icons",;
@@ -73,14 +71,12 @@ export function Web3Login() {;
 
       )}
     </Button>;
-=======
       )}
 
     </Button>;
   );
 }
 
-=======import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';
 import { Wallet } from '@/components / icons';
@@ -92,7 +88,6 @@ function Web3Login() {
   const { loginWithWeb3 } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
 ;
-<<<<<<< HEAD
   const handleWeb3Login = async () => {
     try {
       setIsLoading (true);
@@ -153,7 +148,6 @@ if (!ethereum) {
 }finally {
   setIsLoading (false) 
 }
-<<<<<<< HEAD
 };
 return (<Button type="button" variant="outline" className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick= {
   handleWeb3Login 
@@ -168,8 +162,3 @@ return (<Button type="button" variant="outline" className="w-full border border-
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

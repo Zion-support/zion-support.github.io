@@ -9,8 +9,4 @@ const TokenIntegrations = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TokenIntegrations;
-=======
-export default TokenIntegrations;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

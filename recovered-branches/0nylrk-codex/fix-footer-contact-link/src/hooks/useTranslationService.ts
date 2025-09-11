@@ -8,7 +8,6 @@ import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 export function useTranslationService() {;
-=======
 
 
 
@@ -24,7 +23,6 @@ export function useTranslationService() {;
   ): Promise<TranslationResponse> => {
     setIsTranslating(true)
     try {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       return { translations: data && data.translations }
     } catch (err) {
@@ -190,13 +188,6 @@ if ( {) {
     isTranslating;
 
     getTranslation
-<<<<<<< HEAD
-=======
-        return { translations: initialTranslations, error: error.message }
-      }
-      return { translations: data.translations }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (err) {;
       setIsTranslating(false),;
       console.error('Translation service error:', err),;
@@ -204,8 +195,6 @@ if ( {) {
         en: content,;
         es: '',;
         pt: '',;
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   const getTranslation = (translations: Record<SupportedLanguage string>, fallback: string = '') => {;
     if (!translations) return fallback,;
@@ -221,28 +210,14 @@ if ( {) {
     // Check condition
 if (return fallback, ) {
   $2
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
   }
-<<<<<<< HEAD
 }
-=======
-=======
-}
-    return translations[current_language] || translations.en || fallback;
-  }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   return {
     translate_content;
     is_translating;
     get_translation;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

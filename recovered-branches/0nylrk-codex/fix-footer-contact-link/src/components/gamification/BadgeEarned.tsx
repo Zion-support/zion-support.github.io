@@ -2,13 +2,11 @@
 import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
 
-=======
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 interface BadgeEarnedProps {;
   badge: BadgeKey,;
   size?: number;
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
-=======
 interface BadgeEarnedProps {
 
   badge: BadgeKey
@@ -18,8 +16,6 @@ interface BadgeEarnedProps {
 
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   show_name?: boolean;
   show_desc?: boolean;
   earned_date?: string;
@@ -45,13 +41,9 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
-=======
-=======
-=======
 
 
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
-=======
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
@@ -61,8 +53,6 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           background: meta && meta.bg,
           borderRadius: "9999px",
           width: size,
@@ -81,13 +71,9 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
           alignItems: "center"
           justifyContent: "center"}}
         className="shadow hover-scale"
-=======
-=======
           justifyContent: "center"}}
         className="shadow hover-scale"
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 interface BadgeEarnedProps {;
   badge: BadgeKey,;
@@ -131,11 +117,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   );
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
-=======};=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   show_name = true;
   show_desc = false,
   earned_date}) => {
@@ -180,8 +162,4 @@ if (return null) {
     </div>;
   );
 };
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

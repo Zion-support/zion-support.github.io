@@ -24,8 +24,6 @@ type TimeRange = '7d' | '30d' | '90d' | '365d',
 
 export function UserBehaviorStats() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -133,7 +131,6 @@ if (eventsByDate[date][event.event_type] = 0) {
 
   }),
   }),
-=======      }
 
 
       return data || [];
@@ -150,7 +147,6 @@ if (eventsByDate[date][event.event_type] = 0) {
   }),
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Get the event types for chart data keys
   const getEventTypes = () => {
@@ -161,8 +157,6 @@ if (eventsByDate[date][event.event_type] = 0) {
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)
       })
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     });
     return Array.from(allKeys)
   }    }),
@@ -170,15 +164,12 @@ if (eventsByDate[date][event.event_type] = 0) {
     return Array.from(allKeys)
   },
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Format event type names for better display
   const formatEventType = (type: string) => {
     return type
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
-=======          description="Button and link interactions"
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.button_click |0), 0) |0
@@ -194,7 +185,6 @@ if (eventsByDate[date][event.event_type] = 0) {
   return (
     <div className="space-y-6">;
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-=======        <EventTypeCard
           title="Click Events" 
           description="Button and link interactions"
           isLoading={isLoading}
@@ -238,10 +228,7 @@ if (eventsByDate[date][event.event_type] = 0) {
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.conversion |0), 0) |0
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>;
@@ -258,7 +245,6 @@ if (eventsByDate[date][event.event_type] = 0) {
       />
     </div>
   )
-=======
       />;
     </div>;
   );}
@@ -267,7 +253,6 @@ interface EventTypeCardProps {
   description: string
   count: number
   icon: React.ReactNode
-=======;
 interface EventTypeCardProps {;
   title: string,;
   description: string,;
@@ -275,8 +260,6 @@ interface EventTypeCardProps {;
   icon: React.ReactNode;
   isLoading: boolean;
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   isLoading: boolean
 }
@@ -410,9 +393,4 @@ function EventTypeCard() {
                 new Intl.NumberFormat ().format (count))}
 
 
-=======
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

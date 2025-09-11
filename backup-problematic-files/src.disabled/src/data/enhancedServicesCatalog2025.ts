@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 interface EnhancedServicesCatalog2025Props {
   // Add props here as needed
@@ -18,6 +17,4 @@ export default function EnhancedServicesCatalog2025({ }: EnhancedServicesCatalog
   );
 
 
-<<<<<<< HEAD
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

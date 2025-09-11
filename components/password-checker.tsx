@@ -10,13 +10,10 @@ import {
   AlertTriangle
   ArrowRight;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-=======
 
 export default function PasswordCheckerPage() {
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Lock,
   Shield,
   Eye,
@@ -30,7 +27,6 @@ export default function PasswordCheckerPage() {
       analyzePassword(password)
     } else {
       resetAnalysis()
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,7 +54,6 @@ import React, { useState, useEffect } from 'react';
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
-=======
 
 export default function PasswordCheckerPage() {;
 
@@ -69,9 +64,7 @@ export default function PasswordCheckerPage() {;
   const [generatedPassword, setGeneratedPassword] = useState('');
   useEffect(() => {
     if (password) {
-=======
 
-=======
 
       analyzePassword(password);
     } else {
@@ -191,7 +184,6 @@ export default function PasswordCheckerPage() {;
     setStrengthText(''),
     setStrengthColor(''),
     setChecks({
-=======
 
 
     // Generate suggestions;
@@ -290,12 +282,9 @@ if (
       numbers: false,
       symbols: false,
 
-=======      no_common: false,
       no_sequential: false,
-=======
       no_common: false,
       no_sequential: false,
-=======      length: false
       uppercase: false
       lowercase: false
       numbers: false
@@ -338,7 +327,6 @@ if (
       .join('');
     setGeneratedPassword(result);
     setPassword(result);
-=======
 
   return (
 
@@ -365,7 +353,6 @@ if (
             Analyze your password security with our advanced strength checker.;
             Get detailed feedback, suggestions, and generate strong passwords to;
             protect your accounts and data.          </p>      </Head>;
-=======
       {/* Password Checker Tool */}
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -378,8 +365,6 @@ if (
               determine password strength and security.;
             </p>;
           </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {/* Input Form */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>;
@@ -388,11 +373,9 @@ if (
                 Password Analysis;
               </h3>;
               <div className='space-y-6'>;
-=======
 
               <div className='space-y-6'>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Password Input */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -418,7 +401,6 @@ if (
                       {generatedPassword}
                     </div>;
                   </div>;
-=======                        variant='outline'
                         size='sm'
                         className='border-gray-600 text-gray-300 hover:bg-gray-600'
                       >
@@ -434,12 +416,9 @@ if (
 
                     </div>
                   </div>
-=======
 
                     </div>
                   </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
 
 
@@ -451,8 +430,6 @@ if (
                   </div>
                 )}
                 <div className='text-sm text-gray-400'>                  <p>• Real-time strength analysis</p>                <div className="text-sm text-gray-400">
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p>• Real-time strength analysis</p>
                   <p>• Multiple security criteria</p>
                   <p>• Detailed feedback and suggestions</p>
@@ -462,11 +439,9 @@ if (
             </Card>
             {/* Strength Analysis */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
-=======
 
             <Card className="p-8 bg-gray-800 border border-gray-700">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-6 h-6 mr-3 text-purple-400" />
                 Security Analysis
@@ -493,7 +468,6 @@ if (
               {password ? (;
                 <div className='space-y-6'>;
 
-=======
 
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
 
@@ -504,13 +478,11 @@ if (
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Security Criteria</h4>
                     <div className="space-y-3">
-=======                  {/* Security Checks */}
                   <div>
                     <h4 className='text-lg font-semibold text-white mb-3'>
                       Security Criteria
                     </h4>
                     <div className='space-y-3'>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className='flex items-center space-x-3'>
                           {getCheckIcon(passed)}
@@ -522,7 +494,6 @@ if (
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
                           >                            {key === 'length' && 'At least 8 characters'}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662                            {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
                             {key === 'numbers' && 'Contains number'}
@@ -532,10 +503,8 @@ if (
                   </div>
 
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -579,7 +548,6 @@ if (
                           </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662                        ))}
                       </div>;
                     </div>;
                   )}
@@ -676,8 +644,6 @@ if (
               <p className='text-gray-400'>
                 Your passwords are never stored or transmitted - analysis
                 happens locally in your browser.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-=======
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
       <section className="py-20 bg-gray-800">
@@ -735,11 +701,9 @@ if (
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
 
               </p>
-=======
 
               </p>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>
           </div>
         </div>
@@ -794,15 +758,7 @@ if (
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

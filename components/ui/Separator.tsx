@@ -17,7 +17,6 @@ const Separator: React.FC<SeparatorProps> = ({;
   orientation = "horizontal",;
 }) => {;
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div;
       className={`bg - gray - 200 ${orientation === "horizontal" ? "h - px w - full" : "w - px h - full"} ${class_name}`}
     />);
@@ -25,5 +24,3 @@ const Separator: React.FC<SeparatorProps> = ({;
 ;
 export { Separator }
 ;
-<<<<<<< HEAD
-=======

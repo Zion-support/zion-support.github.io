@@ -18,7 +18,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 const \"Contact\": NextPage = () => {;
-=======
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -126,7 +125,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
@@ -134,7 +132,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
                 <motion.form
-=======
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -174,7 +171,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                       Service Interest
                     </label>
-=======
                        />;
                     </div>;
                   </div>;
@@ -195,7 +191,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                       ))}
                       Message *
                     </label>
-=======
                     </select>;
                   </div>;
                   <div className=\"mb-6\">;
@@ -216,7 +211,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                     type=\"submit\"
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -237,11 +231,8 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
               {/* Contact Form */}
 
 
-<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -303,156 +294,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
-<<<<<<< HEAD
-=======
-                        <input
-                          type=\"text\"
-                          id=\"company\"
-                          name=\"company\"
-                          value={formData && formData.company}
-                          onChange={handleInputChange}
-                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                          placeholder=\"Your company name\"
-                        />;
-                      </div>;
-                      <div>;
-                        <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
-                          Phone Number;
-                        </label>;
-                        <input
-                          type=\"tel\"
-                          id=\"phone\"
-                          name=\"phone\"
-                          value={formData && formData.phone}
-                          onChange={handleInputChange}
-                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                          placeholder=\"+1 (555) 123-4567\"
-                        />;
-                      </div>;
-                    </div>;
-                    <div>;
-                      <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
-                        Service Interest;
-                      </label>;
-                      <select
-                        id=\"service\"
-                        name=\"service\"
-                        value={formData && formData.service}
-                        onChange={handleInputChange}
-                        className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\">;
-                        <option value=\"">Select a service</option>;
-                        {services && services.map((service) => (;
-                          <option key={service} value={service}>{service}</option>;
-                        ))}
-                      </select>;
-                    </div>;
-                    <div>;
-                      <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
-                        Message *;
-                      </label>;
-                      <textarea
-                        id=\"message\"
-                        name=\"message\"
-                        required
-                        rows={6}
-                        value={formData && formData.message}
-                        onChange={handleInputChange}
-                        className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                        placeholder=\"Tell us about your project or requirements...\"
-                      />;
-                    </div>;
-                    <button
-                      type=\"submit\"
-                      disabled={isSubmitting}
-                      className=\"w-full inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300\">;
-                      {isSubmitting ? (;
-                        <>;
-                          <div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2\"></div>;
-                          Sending...;
-                        </>;
-                      ) : (;
-                        <>;
-                          <Send className=\"w-5 h-5 mr-2\" />;
-                          Send Message;
-                        </>;
-                      )}
-                    </button>;
-                  </form>;
-                )}
-              </div>;
-              {/* Contact Information */}
-
-          </section>
-              <div className=\"space-y-8\">;
-                <div>;
-                  <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>;
-                  <p className=\"text-lg text-gray-300 mb-8\">;
-                    We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.;
-                  </p>;
-                </div>;
-                <div className=\"space-y-6\">;
-                <div className="space-y-6">;
-                  {contactInfo && contactInfo.map((info, index) => (;
-                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">;
-                      <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">;
-                        <info && info.icon className=\"w-6 h-6 text-white\" />;
-                      </div>;
-                      <div>;
-                        <h3 className=\"text-lg font-semibold text-white mb-1\">{info && info.title}</h3>;
-                        <p className=\"text-cyan-400 font-medium mb-1\">{info && info.details}</p>;
-                        <p className=\"text-gray-400 text-sm\">{info && info.description}</p>;
-                      </div>;
-                    </div>;
-                  ))}
-                </div>;
-              </div>;
-            </div>;
-          </section>;
-=======
-
-          {/* Services Overview */}
-          <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
-              <motion.div
-                initial={{ opacity: 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
-                  Our Services
-                </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Comprehensive technology solutions to meet all your business needs
-                </p>
-              </motion.div>
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
-                {services.map((service, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ "opacity": 0, "y": 20 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center"
-                  >
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {service}
-                    </h3>
-                  </motion.div>
-                ))}
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </PageTransition>;
-    </>;
-  );
-}
-
-
-
-
-<<<<<<< HEAD
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 }
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
@@ -460,6 +301,3 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

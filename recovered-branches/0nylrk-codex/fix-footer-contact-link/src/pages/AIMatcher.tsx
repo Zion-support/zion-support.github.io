@@ -22,11 +22,8 @@ export default function AIMatcherPage() {
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
 
-=======
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -41,7 +38,6 @@ export default function AIMatcherPage() {
         specificItem: match.item
       }
     })
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
 
@@ -114,8 +110,6 @@ export default function AIMatcherPage() {;
     });
   };
   return (;
-=======
-=======
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -176,7 +170,6 @@ export default function AIMatcherPage() {;
             <AIMatchmaker
             
             <AIMatchmaker 
-=======            <AIMatchmaker 
 
 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
@@ -191,16 +184,8 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 }
 ;
 ;
-=======
-=======
     </>);
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,7 +1,5 @@
 <<<<<<<< HEAD:data-disabled/2034-cutting-edge-ai-services.ts
-========
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
->>>>>>>> origin/feature/fix-build-and-improve-navigation:.backup/2034-cutting-edge-ai-services.ts
 
   id: string;
   name: string,

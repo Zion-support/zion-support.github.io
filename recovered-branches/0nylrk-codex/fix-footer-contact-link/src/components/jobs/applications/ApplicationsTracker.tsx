@@ -1,5 +1,4 @@
 
-=======
 
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
@@ -9,14 +8,12 @@ export function ApplicationsTracker() {
 
   const { applications, isLoading, error } = useJobApplications();
 
-=======  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
     "all",;
 
   );
 
 
 
-=======
     return <ErrorState error={error} />;
   }
   if (applications.length === 0) {
@@ -78,21 +75,17 @@ export function ApplicationsTracker() {
       
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
 
-=======
       
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
@@ -103,13 +96,10 @@ export function ApplicationsTracker() {
     </div>;
 
 
-=======
-=======
       )}
     </div>
     </div>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 ;
   // Check condition
@@ -195,9 +185,5 @@ if ( {) {
         </div>)}
     </div>);
 
-<<<<<<< HEAD
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

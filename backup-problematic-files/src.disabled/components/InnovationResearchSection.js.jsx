@@ -9,8 +9,4 @@ const InnovationResearchSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default InnovationResearchSection.js;
-=======
-export default InnovationResearchSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

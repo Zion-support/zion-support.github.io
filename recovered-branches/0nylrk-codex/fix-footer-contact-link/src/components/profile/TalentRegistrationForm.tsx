@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
@@ -88,7 +86,6 @@ type TalentFormValues = z && z.infer<typeof talentProfileSchema>;
 
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
 
-=======
 
 
 }
@@ -115,8 +112,6 @@ export function TalentRegistrationForm() {
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
 
-=======
-=======
   // Initialize form with default values;
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentProfileSchema),;
@@ -140,13 +135,10 @@ export function TalentRegistrationForm() {
   const generateEnhancedProfile = async () => {
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
   };
@@ -154,7 +146,6 @@ export function TalentRegistrationForm() {
   const handleRemoveSkill = (skill: string) => {;
     setSkillTags(skillTags && skillTags.filter((s) => s !== skill));
   };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle key press in skills input (add on enter);
   const handleSkillKeyPress = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === "Enter") {;
@@ -162,7 +153,6 @@ export function TalentRegistrationForm() {
       handleAddSkill();
     }
   };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle avatar upload;
   const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const file = e && e.target.files?.[0];
@@ -175,11 +165,8 @@ export function TalentRegistrationForm() {
     }
   };
 
-=======
-==============
 
 
-=======
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
     const formData = form && form.getValues();
@@ -217,8 +204,6 @@ const talentProfileSchema = z.object ({
   availability: z.enum (["available", "limited", "unavailable"]);
   enhanced_profile: z.boolean ().default (true)}),
 type TalentFormValues = z.infer < typeof talentProfileSchema>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'soft_skills' | 'other';
 ;
@@ -273,7 +258,6 @@ function TalentRegistrationForm() {
 
   };
 
-=======
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -374,7 +358,6 @@ if ( {) {
   const sendEnhancementNotification = async (userId: string, email: string) => {;
     try {;
       await supabase && supabase.functions.invoke('send-email', {;
-=======              }
             }
           });
           if (aiData) {
@@ -409,10 +392,8 @@ if ( {) {
         description: "Please add at least one skill to your profile.",;
         variant: "destructive"}),;
       return;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     setIsSubmitting(true);
-=======
 
     }
     setIsSubmitting(true);
@@ -450,7 +431,6 @@ if ( {) {
     }
     setIsSubmitting (true);
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -494,7 +474,6 @@ if ( {) {
 
             const aiSkills: string[] = [],;
 
-=======              talent_data: {
                 name: values.name,
                 title: values.title,
                 bio: values.bio,
@@ -513,8 +492,6 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             Object.values(categorizedSkills).forEach(categorySkills => {;
               if (Array.isArray(categorySkills)) {;
                 categorySkills.forEach(skill => {;
@@ -522,7 +499,6 @@ if ( {) {
                     aiSkills.push(skill);
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
-=======
             Object.values (categorized_skills).for_each (category_skills => {
               if () {) {
   $2
@@ -533,11 +509,8 @@ if ( {) {
   $2
 }
                     ai_skills.push (skill);
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 });
               }
@@ -564,7 +537,6 @@ if ( {) {
 
 
 
-==============
       }, 1500);
       }, 1500),
       // Here would be the actual code to save the profile to Supabase
@@ -713,7 +685,6 @@ if ( {) {
       const { error } = await supabase;
         .from('talent_profiles');
         .insert({;
-=======        });
       if (error) throw error;
         }),
 
@@ -734,13 +705,9 @@ if ( {) {
   }
   return (
 
-=======    }
   }
 
   return (
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -786,8 +753,6 @@ if ( {) {
     }
   };
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -814,28 +779,21 @@ if ( {) {
                     <FormField
                       control={form && form.control}
                       name="location"
-=======
                         onClick={applyGeneratedContent}>;
                         <Check className="mr-1 h-3 w-3" /> Apply;
                       </Button>;
                     </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     <div className="space-y-4">;
                       <div>;
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
                         <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
                       </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       {generatedContent && generatedContent.categorizedSkills && (;
                         <div>;
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;
                           <div className="flex flex-wrap gap-2 mt-1">;
                             {Object && Object.entries(generatedContent && generatedContent.categorizedSkills).map(([category, skills]) => (;
                               <div key={category} className="flex items-center gap-2">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
@@ -866,7 +824,6 @@ if ( {) {
 
                                 checked={field && field.value === "limited"}
                                 onChange={() => field && field.onChange("limited")}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="limited" className="text-white flex items-center gap-2">;
@@ -875,11 +832,9 @@ if ( {) {
                               </label>;
                             </div>;
                             <div className="flex items-center space-x-2">;
-=======
 
                             <div className="flex items-center space-x-2">;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <input
                                 type="radio"
                                 id="unavailable"
@@ -997,7 +952,6 @@ type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'oth
 }
 ;
 
-<<<<<<< HEAD
 };
 //Handle removing skill tags const handleRemoveSkill = (skill: string) => {
   setSkillTags (skillTags.filter ( (s) => s !== skill) ) 
@@ -1184,11 +1138,6 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }
 }
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -9,8 +9,4 @@ const FinancialSolutions = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default FinancialSolutions;
-=======
-export default FinancialSolutions;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

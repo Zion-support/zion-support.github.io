@@ -9,8 +9,4 @@ const EnhancedHome = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedHome;
-=======
-export default EnhancedHome;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

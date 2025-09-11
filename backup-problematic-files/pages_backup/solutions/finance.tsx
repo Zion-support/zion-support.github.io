@@ -655,8 +655,6 @@ export default function FinanceSolutions() {;
     </>
     </>
 export default Finance;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };

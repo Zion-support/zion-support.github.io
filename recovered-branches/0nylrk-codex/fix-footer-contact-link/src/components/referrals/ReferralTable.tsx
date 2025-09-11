@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ReferralTableProps {
 
   referrals: Referral[]
@@ -15,7 +12,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
 
   const renderStatusBadge = (status: ReferralStatus) => {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
     switch (status) {
       case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>,
@@ -45,13 +41,10 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
 
       case "completed":
         return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>,
-=======
       case "expired":
         return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
       default:
         return null
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       case "expired":;
         return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>,;
       default:;
@@ -70,7 +63,6 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
   if (isLoading) {;
     return (
 
-==============
       <div className="flex items-center justify-center p-8">;
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
       </div>;
@@ -85,7 +77,6 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
   if (referrals && referrals.length === 0) {;
 
     return (
-=======
 ;
   if (referrals.length === 0) {;
     return (;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -113,16 +104,12 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
   return (;
 ;
   return (;
-=======
-=======
-=======
 ;
   return (;
 
               {referral.referred_user_type;
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 : '-'}
             </TableCell>;
             <TableCell>{referral && referral.completed_at ? formatDate(referral && referral.completed_at) : '-'}</TableCell>;
@@ -143,7 +130,6 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
   );
 }
 
-=======import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Referral, ReferralStatus } from '@/types / referrals';
 import { Badge } from '@/components / ui / badge';
 import { format_date } from '@/utils / referral_utils';
@@ -227,8 +213,6 @@ if ( {) {
       </TableBody>;
     </Table>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface ReferralTableProps {
   referrals: Referral[];
@@ -278,9 +262,3 @@ isLoading: boolean
     </Table>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

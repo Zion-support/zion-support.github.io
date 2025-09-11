@@ -1,14 +1,11 @@
 
 import React from 'react',
 import React from 'react';
-=======
 
 import React from 'react';
 
-=======
 import React from 'react',
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
@@ -24,7 +21,6 @@ export default function AISolutionsPage() {
 
       complexity: 'Advanced'
     }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Predictive Analytics',
         'Pattern Recognition',
         'Anomaly Detection',
@@ -33,8 +29,6 @@ export default function AISolutionsPage() {
       category: 'Core AI',
       complexity: 'Advanced';
     };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -95,7 +89,6 @@ function AISolutionsPage() {
       complexity: 'Advanced';
     }
     {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: 'ai - automation',
       title: 'AI - Powered Automation',
@@ -103,7 +96,6 @@ function AISolutionsPage() {
 
 
 
-=======
       id: 'ai-automation'
       title: 'AI-Powered Automation'
       description: 'Intelligent automation that learns and improves over time.'
@@ -183,9 +175,7 @@ function AISolutionsPage() {
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
 
 
-==============
 
-=======  const use_cases = [;
     {
       industry: 'Manufacturing',
       solutions: [;
@@ -255,8 +245,6 @@ function AISolutionsPage() {
         <title>;
           AI Solutions | Zion Tech Group - Advanced AI & Machine Learning;
         </title>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -272,8 +260,6 @@ function AISolutionsPage() {
             </p>;
           </section>;
           <section className='mx-auto max-w-7xl'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {/* AI Solutions Grid */}
             <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>;
@@ -305,8 +291,6 @@ function AISolutionsPage() {
                           <span className='text-cyan-400 mr-2'>•</span>                          {feature}
                         </li>;
                       ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   ];
   return (
     <>
@@ -362,7 +346,6 @@ function AISolutionsPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-=======      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <section className='text-center mb-16'>
             <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
@@ -409,11 +392,8 @@ function AISolutionsPage() {
                       ))}
                     </ul>
                     <Link      </Head>
-=======
       
-=======
                     <Link      </Head>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -440,7 +420,6 @@ function AISolutionsPage() {
           <section className="mx-auto max-w-7xl">;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {feature}
                         </li>;
                       ))}
@@ -454,12 +433,7 @@ function AISolutionsPage() {
                       Learn More <span className="ml-1">→</span>;
                     </Link>;
                   </div>;
-=======
-==============
 
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta;
           name='description';
           content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems.";
@@ -528,8 +502,6 @@ function AISolutionsPage() {
             </p>;
           </section>;
           <section className="mx - auto max - w-7xl">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {/* AI Solutions Grid */}
             <div className="mb - 16">;
               <h2 className="text - 3xl font - bold mb - 8 text - center text - cyan - 400">Our AI Solutions</h2>;
@@ -552,13 +524,9 @@ function AISolutionsPage() {
 
 
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 ))}
               </div>
             </div>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
 
@@ -576,7 +544,6 @@ function AISolutionsPage() {
 
 
                 {useCases.map((useCase, index) => (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {solution}
                         </li>;
                       ))}
@@ -603,7 +570,6 @@ function AISolutionsPage() {
             </div>;
 
 
-=======
 
 
             {/* Success Stories */}
@@ -614,7 +580,6 @@ function AISolutionsPage() {
                     className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='text-cyan-400 hover:text-cyan-300 transition-colors'>                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
                   <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Content Generation Scale</h3>;
                   <p className="text-white/70 mb-4">;
@@ -627,7 +592,6 @@ function AISolutionsPage() {
 
                   >
 
-=======                        </li>))}
                     </ul>;
                     <Link;
                       href={`/services#${solution.id}`}
@@ -746,8 +710,6 @@ function AISolutionsPage() {
                     href="/case - studies#content - generation - scale";
                     className="text - cyan - 400 hover:text - cyan - 300 transition - colors";
                     Read Case Study →;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   </Link>;
                 </div>;
               </div>;
@@ -971,12 +933,9 @@ function AISolutionsPage() {
                   href='/automation-insights'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
               <div className="flex flex-wrap justify-center gap-4">
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
@@ -1004,7 +963,6 @@ function AISolutionsPage() {
         </main>;
       </div>;
 
-<<<<<<< HEAD
 }
     </>);
 );
@@ -1013,18 +971,8 @@ function AISolutionsPage() {
 }=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-}
-  );
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  );
+}

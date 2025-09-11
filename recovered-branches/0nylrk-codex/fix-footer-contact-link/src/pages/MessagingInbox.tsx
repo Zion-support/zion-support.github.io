@@ -43,7 +43,6 @@ export default function MessagingInbox() {
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
-=======
 import React, { useEffect, useState } from 'react';
 
 import {MessageSquare, Video} from 'lucide-react';
@@ -52,7 +51,6 @@ import {ProtectedRoute} from '@/components / ProtectedRoute';
 import {ConversationsList, ConversationDetailView} from '@/components / messaging';
 import {useIsMobile} from '@/hooks / use - mobile';
 import {toast} from 'sonner';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -113,7 +111,6 @@ function MessagingInbox() {
     navigate(`/call/${roomId}`)
   },
   
-=======  return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
@@ -124,11 +121,8 @@ function MessagingInbox() {
             </h1>
             {activeConversation && (
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
@@ -147,8 +141,6 @@ function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { ProtectedRoute } from '@/components/ProtectedRoute',;
@@ -169,8 +161,6 @@ export default function MessagingInbox() {;
   const isMobile = useIsMobile(),;
   const navigate = useNavigate(),;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   useEffect(() => {;
     // Fetch conversations when component mounts;
     const loadData = async () => {;
@@ -203,7 +193,6 @@ export default function MessagingInbox() {;
 
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
-=======
     }
 ;
     load_data ();
@@ -255,17 +244,13 @@ if ( {) {
                   <div className="animate - pulse">Loading conversations...</div>;
                 </div>) : (
                 <ConversationsList;
-=======
 
-=======
                 <ConversationsList;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Conversation Detail */}
               <ConversationDetailView />;
             </div>;
@@ -274,7 +259,6 @@ if ( {) {
 }
 ;
 
-<<<<<<< HEAD
 };
 }, [fetchConversations]);
 }const roomId = `msg-$ {
@@ -317,16 +301,3 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
             </div>
           </div>
         </div>
-=======
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
-        {isMobile && <div className="h-16"></div>}
-      </div>
-    </ProtectedRoute>
-  )
-}
-}
-;
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

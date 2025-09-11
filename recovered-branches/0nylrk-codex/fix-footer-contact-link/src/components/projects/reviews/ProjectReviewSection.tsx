@@ -2,10 +2,7 @@
 
 import { Project } from "@/types/projects";
 import { useAuth } from "@/hooks/useAuth";
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -15,10 +12,7 @@ import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
 import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -31,10 +25,7 @@ import { useAuth } from "@/hooks/useAuth",
 
 import { Project } from "@/types/projects";
 import { useAuth } from "@/hooks/useAuth";
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface ProjectReviewSectionProps {
   project: Project;
@@ -56,8 +47,6 @@ interface ProjectReviewSectionProps {
     : clientProfile?.display_name |"Client";
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview;
   const hasLeftReview = userReview != null;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
@@ -100,11 +89,7 @@ interface ProjectReviewSectionProps {
 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
   const hasLeftReview = userReview != null;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   return (
     <Card className="mt-6">
@@ -118,14 +103,11 @@ interface ProjectReviewSectionProps {
           submit feedback
         </CardDescription>
       </CardHeader>
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
             {(isClient |isTalent) && (
               <div className="border-b pb-4 mb-4">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -136,7 +118,6 @@ import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
 
-=======import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -149,7 +130,6 @@ import { useAuth } from "@/hooks/useAuth",;
 interface ProjectReviewSectionProps {;
   project: Project;
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionProps) {;
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(project && project.id);
@@ -201,7 +181,6 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
   const hasLeftReview = userReview != null,;
   ;
   return (;
-=======
 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
   const hasLeftReview = userReview != null;
@@ -258,7 +237,6 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
           </div>
         )}
       </CardContent>
-=======
       {/* Review Modal */}
       {(isClient |isTalent) && (
       {(isClient || isTalent) && (
@@ -266,20 +244,16 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
       {/* Review Modal */}
       {(isClient || isTalent) && (;
 
-=======
 
       {(isClient || isTalent) && (
         <LeaveReviewModal
           projectId={project && project.id}=======
           projectId={project && project.id}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           revieweeId={revieweeId}
           revieweeName={revieweeName}
           isOpen={isReviewModalOpen}
           onClose={() => setIsReviewModalOpen(false)}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Card>;
-=======
         />;
       )}
 
@@ -287,7 +261,6 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
   );
 }
 
-=======                    </p>;
                     {user_review.status === "pending" && (
                       <Button;
                         variant="outline";
@@ -324,8 +297,6 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
         />)}
     </Card>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface ProjectReviewSectionProps {
   project: Project 
@@ -377,9 +348,3 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Star class
     </Card>
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

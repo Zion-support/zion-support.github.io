@@ -27,8 +27,4 @@ const CTASection = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default CTASection;
-=======
-export default CTASection;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -57,8 +57,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Advanced features",
 
 
-=======
-=======
 
       "Emerging tech breakthroughs";
       "Innovation platform";
@@ -70,11 +68,8 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     real_implementation: true,
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 export interface EmergingTechBreakthrough2029 {;
 
-=======
 
 export interface EmergingTechBreakthrough2029 {;
 
@@ -99,22 +94,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 
 ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======;
-    }
-  }
-];
-export interface EmergingTechBreakthrough2029 {;
-=======
-=======
-;
-=======
-=======
-export interface EmergingTechBreakthrough2029 {;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
@@ -168,11 +147,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-<<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======    }
-  }
-];

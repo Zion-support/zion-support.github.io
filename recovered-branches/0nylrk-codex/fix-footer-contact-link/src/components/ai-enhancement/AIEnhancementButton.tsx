@@ -15,15 +15,12 @@ interface AIEnhancementButtonProps {
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
-=======
-==============
 
 
 
 export function AIEnhancementButton(): any ({;
   options;
   onEnhanced;
-=======
 
   options: AIEnhancementOptions
   onEnhanced: (enhancedContent: string) => void
@@ -33,7 +30,6 @@ export function AIEnhancementButton(): any ({;
   options;
   onEnhanced;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   buttonText = "Enhance with AI";
   className;
   variant = "ghost";
@@ -44,11 +40,8 @@ export function AIEnhancementButton(): any ({;
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
@@ -56,8 +49,6 @@ import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContent
 import { toast } from '@/hooks/use-toast',
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -91,14 +82,9 @@ interface AIEnhancementButtonProps {
 
 
   
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -118,18 +104,13 @@ interface AIEnhancementButtonProps {
     }
   }
   };
-=======
-==============
 
   };
 
-=======
   const handleEnhance = async () => {;
     if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
         (!options && options.context || options && options.context.trim().length < contentLength)) {;
   
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -148,7 +129,6 @@ interface AIEnhancementButtonProps {
 
 
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       variant={variant}
       size={size}
       className={`gap-1 ${className}`}
@@ -372,7 +352,6 @@ return
 }
 ;
 
-<<<<<<< HEAD
 }
 };
 <Button type="button" variant="ghost" size="sm" onClick= {
@@ -385,9 +364,3 @@ return
 }
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-}
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

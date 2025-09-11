@@ -1,21 +1,16 @@
 
 import React from 'react',
 import React from 'react';
-=======
 
 import React from 'react';
 
-=======
 import React from 'react',
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   Phone,
   Mail,
   MapPin,
@@ -37,10 +32,8 @@ import {
   Youtube,;
   Github,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -314,17 +307,14 @@ const companyLinks = [
   { name: 'Partners', href: '/partners' },
   { name: 'Investors', href: '/investors' },
   { name: 'Contact Us', href: '/contact' },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (;
             <motion&& motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       href={service.href}
                       className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
                     >;
@@ -346,8 +336,6 @@ const companyLinks = [
                   </li>;
 
 
-=======
-=======
 
         {/* Additional Links */}
 
@@ -359,16 +347,11 @@ const companyLinks = [
 
           {/* Company Links */}
           <motion&& motion.div
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
 
           {/* Company Links */}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -388,21 +371,15 @@ const companyLinks = [
               ))}
 
 
-=======
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Resources */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     href={link.href}
                     className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
                   >;
@@ -422,13 +399,9 @@ const companyLinks = [
               ))}
 
 
-=======
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Social Media */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -453,18 +426,15 @@ const companyLinks = [
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-=======                  className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
                 >
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
                 >
                   <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
                 </Link>
 
-=======
 
                 </Link>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
             </div>
           </motion.div>
@@ -483,34 +453,26 @@ const companyLinks = [
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
 
 
-=======
 
 
-=======
 
 
                 </Link>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </motion && motion.div>;
         </div>;
 
 
-=======
 
 
 
-=======
           transition={{ duration: 0.6, delay: 0.5 }}
           className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <input
                 type='email'
                 placeholder='Enter your email'
@@ -528,7 +490,6 @@ const companyLinks = [
             </div>;
           </div>;
 
-=======
 
 
         {/* Bottom Bar */}
@@ -539,29 +500,21 @@ const companyLinks = [
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
 
-=======
-
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
         {/* Bottom Bar */}
         <motion&& motion.div
-=======
         </motion.div>;
         {/* Bottom Bar */}
         <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='border-t border-gray-800 pt-8'
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
@@ -587,57 +540,7 @@ const companyLinks = [
               <Link
                 href='/terms'
                 className='hover:text-cyan-400 transition-colors duration-300'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </footer>
-=======
-=======                Terms of Service;
-              </Link>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <div className='flex items-center text-gray-400 text-sm'>;
-                <Star className='w-4 h-4 text-yellow-400 mr-1' />;
-                Trusted by 2500+ Companies;
-              </div>;
-              <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'></div>;
-              <div className='text-cyan-400 text-sm font-semibold'>                99 && 99.9% Uptime        >;
-          <div className="flex flex-col md: flex-row justify-between items-center">;
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">;
-              © 2026 Zion Tech Group. All rights reserved. | ;
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">;
-                Privacy Policy;
-              </Link>;
-              <span className="mx-2">|</span>;
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">;
-                Terms of Service;
-              </Link>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <div className="flex items-center text-gray-400 text-sm">;
-                <Star className="w-4 h-4 text-yellow-400 mr-1" />;
-                Trusted by 2500+ Companies;
-              </div>;
-              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>;
-              <div className="text-cyan-400 text-sm font-semibold">;
-                99 && 99.9% Uptime;
-              </div>;
-            </div>;
-          </div>;
-        </motion && motion.div>;
-      </div>;
-    </footer>;
-  );
-}
-
-=======
-  );
-
-
-    </footer>
-  );
-
-}
-<<<<<<< HEAD
 
 }
 }
@@ -645,10 +548,3 @@ const companyLinks = [
     </footer>
   );
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-  );
-=======
-
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

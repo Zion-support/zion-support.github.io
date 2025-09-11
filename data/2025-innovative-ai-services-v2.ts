@@ -131,8 +131,6 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators',
     ],
     realImplementation: true,
-=======
-=======
 
   {
 
@@ -140,8 +138,6 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     ],
     realImplementation: true,
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       'Dedicated quantum physicist, 24/7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-fusion-platform',
@@ -213,8 +209,6 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       'Dedicated quantum physicist, 24 / 7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
     link: 'https://ziontechgroup.com / quantum - ai - fusion - platform',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     icon: '⚛️',
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,
@@ -228,15 +222,11 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
   },
   {
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface InnovativeAIService {;
 
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const innovativeAIServicesV2: InnovativeAIService[] = [;
   {;
     id: 'ai-emotional-intelligence-platform',;
@@ -476,9 +466,3 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
 ];
   }
 ];
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -233,7 +233,6 @@ export default function BlogPage() {
       </div>
     </>
   );
-=======
 import Head from 'next/head'
 import Link from 'next/link'
 

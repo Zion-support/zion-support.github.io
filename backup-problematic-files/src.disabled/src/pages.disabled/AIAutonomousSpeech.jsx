@@ -9,8 +9,4 @@ const AIAutonomousSpeech = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousSpeech;
-=======
-export default AIAutonomousSpeech;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
