@@ -154,7 +154,7 @@
     font-size: 0.75rem;
     padding: 0.375rem 0.5rem;
   }
-  
+
   .tooltip--left,
   .tooltip--right {
     position: fixed;
@@ -165,7 +165,7 @@
     transform: none;
     margin: 0;
   }
-  
+
   .tooltip--left .tooltip__arrow,
   .tooltip--right .tooltip__arrow {
     display: none;

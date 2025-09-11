@@ -1,4 +1,3 @@
-
 // Minimal performance monitor: logs memory usage and uptime
 
 function formatBytes(bytes) {
@@ -16,11 +15,10 @@ const report = {
   heapUsed: formatBytes(mem.heapUsed),
   external: formatBytes(mem.external || 0),
   arrayBuffers: formatBytes(mem.arrayBuffers || 0),
-  uptimeSeconds: process.uptime().toFixed(2)
+  uptimeSeconds: process.uptime().toFixed(2),
 };
 
 console.log('[Performance Monitor]');
 console.log(JSON.stringify(report, null, 2));
 
 process.exit(0);
-

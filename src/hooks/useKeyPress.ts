@@ -15,7 +15,11 @@ export function useKeyPress(
     target?: EventTarget | null;
   } = {}
 ): void {
-  const { preventDefault = false, stopPropagation = false, target = document } = options;
+  const {
+    preventDefault = false,
+    stopPropagation = false,
+    target = document,
+  } = options;
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {

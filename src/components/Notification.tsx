@@ -69,32 +69,28 @@ const Notification: React.FC<NotificationProps> = ({
       className={`notification notification--${type} ${
         isVisible ? 'notification--visible' : ''
       } ${isLeaving ? 'notification--leaving' : ''}`}
-      role="alert"
-      aria-live="polite"
+      role='alert'
+      aria-live='polite'
     >
-      <div className="notification__icon">
-        {getIcon()}
-      </div>
-      <div className="notification__content">
-        <div className="notification__title">{title}</div>
-        {message && (
-          <div className="notification__message">{message}</div>
-        )}
+      <div className='notification__icon'>{getIcon()}</div>
+      <div className='notification__content'>
+        <div className='notification__title'>{title}</div>
+        {message && <div className='notification__message'>{message}</div>}
         {action && (
           <button
-            className="notification__action"
+            className='notification__action'
             onClick={action.onClick}
-            type="button"
+            type='button'
           >
             {action.label}
           </button>
         )}
       </div>
       <button
-        className="notification__close"
+        className='notification__close'
         onClick={handleClose}
-        aria-label="Close notification"
-        type="button"
+        aria-label='Close notification'
+        type='button'
       >
         ×
       </button>

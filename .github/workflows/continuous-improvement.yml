@@ -26,15 +26,15 @@ jobs:
         run: npm ci
       - name: Run continuous improvement
         run: |
-          npm run automation:improvement || echo "Automation improvement completed"
-          npm run diversify || echo "Diversification completed"
+          npm run automation:improvement || true
+          npm run diversify || true
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'chore(improvement): continuous improvement + diversity results'
-          title: 'chore(improvement): apply continuous improvement and diversity results'
+          commit-message: "chore(improvement): continuous improvement + diversity results"
+          title: "chore(improvement): apply continuous improvement and diversity results"
           body: |
             Automated improvement and diversity loop.
 
@@ -54,3 +54,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
+      - name: Attempt immediate merge
+        if: steps.cpr.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = Number(core.getInput('pr'))
+            try {
+              await github.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr,
+                merge_method: 'squash'
+              })
+            } catch (e) {
+              core.info(`Merge not completed yet: ${e.message}`)
+            }
+          result-encoding: string
+          inputs: |
+            pr: ${{ steps.cpr.outputs.pull-request-number }}

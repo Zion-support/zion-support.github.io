@@ -12,9 +12,7 @@ const Dashboard: React.FC<DashboardProps> = ({ children, className = '' }) => {
   return (
     <div className={`dashboard ${className}`}>
       <ProgressBar />
-      <div className="dashboard__content">
-        {children}
-      </div>
+      <div className='dashboard__content'>{children}</div>
       <ScrollToTop />
     </div>
   );

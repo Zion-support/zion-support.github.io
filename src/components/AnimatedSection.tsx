@@ -30,10 +30,12 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
       className={`animated-section animated-section--${animation} ${
         isIntersecting ? 'animated-section--visible' : ''
       } ${className}`}
-      style={{
-        '--animation-delay': `${delay}ms`,
-        '--animation-duration': `${duration}ms`,
-      } as React.CSSProperties}
+      style={
+        {
+          '--animation-delay': `${delay}ms`,
+          '--animation-duration': `${duration}ms`,
+        } as React.CSSProperties
+      }
     >
       {children}
     </div>

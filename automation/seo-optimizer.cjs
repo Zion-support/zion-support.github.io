@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-function log(message, type = "INFO") {
-  const icons = { INFO: "ℹ️", SUCCESS: "✅", ERROR: "❌", WARNING: "⚠️" };
+function log(message, type = 'INFO') {
+  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
   console.log(`[${new Date().toISOString()}] [${type}] ${message}`);
 }
 
@@ -28,24 +28,28 @@ function findFiles(dir, exts) {
 }
 
 function optimizeSEO(rootDir, report) {
-  const htmlFiles = findFiles(rootDir, [".html", ".tsx", ".jsx"]);
+  const htmlFiles = findFiles(rootDir, ['.html', '.tsx', '.jsx']);
   let optimizedCount = 0;
-  
+
   for (const file of htmlFiles) {
     try {
-      const content = fs.readFileSync(file, "utf8");
+      const content = fs.readFileSync(file, 'utf8');
       let updated = content;
       let modified = false;
-      
+
       // Add meta description if missing
-      if (!content.includes('name="description"') && !content.includes('property="og:description"')) {
-        const metaDescription = '    <meta name="description" content="Zion Tech Group - Advanced AI, IT Solutions, and Digital Transformation Services" />';
+      if (
+        !content.includes('name="description"') &&
+        !content.includes('property="og:description"')
+      ) {
+        const metaDescription =
+          '    <meta name="description" content="Zion Tech Group - Advanced AI, IT Solutions, and Digital Transformation Services" />';
         if (content.includes('<head>')) {
           updated = updated.replace('<head>', `<head>\n${metaDescription}`);
           modified = true;
         }
       }
-      
+
       // Add Open Graph tags if missing
       if (!content.includes('property="og:title"')) {
         const ogTags = `    <meta property="og:title" content="Zion Tech Group" />
@@ -57,7 +61,7 @@ function optimizeSEO(rootDir, report) {
           modified = true;
         }
       }
-      
+
       if (modified) {
         fs.writeFileSync(file, updated);
         optimizedCount++;
@@ -67,7 +71,7 @@ function optimizeSEO(rootDir, report) {
       report.errors.push(`Failed optimizing ${file}: ${e.message}`);
     }
   }
-  
+
   report.actions.push(`Optimized SEO for ${optimizedCount} files`);
 }
 
@@ -78,28 +82,31 @@ function main() {
     timestamp,
     actions: [],
     modifiedFiles: [],
-    errors: []
+    errors: [],
   };
-  
-  log("Starting SEO Optimizer");
-  
-  ensureDir(path.join(root, "automation-reports"));
-  
+
+  log('Starting SEO Optimizer');
+
+  ensureDir(path.join(root, 'automation-reports'));
+
   // Optimize SEO in src/ directory
-  optimizeSEO(path.join(root, "src"), report);
-  
+  optimizeSEO(path.join(root, 'src'), report);
+
   const outFile = path.join(
     root,
     `automation-reports/seo-optimizer-report-${timestamp}.json`
   );
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
-  
-  log(`SEO optimization complete. Report: ${path.basename(outFile)}`, "SUCCESS");
+
+  log(
+    `SEO optimization complete. Report: ${path.basename(outFile)}`,
+    'SUCCESS'
+  );
 }
 
 try {
   main();
 } catch (e) {
-  log(`SEO optimizer failed: ${e.message}`, "ERROR");
+  log(`SEO optimizer failed: ${e.message}`, 'ERROR');
   process.exit(1);
 }

@@ -16,14 +16,20 @@ interface ThemeProviderProps {
   defaultTheme?: Theme;
 }
 
-export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProviderProps) {
+export function ThemeProvider({
+  children,
+  defaultTheme = 'system',
+}: ThemeProviderProps) {
   const [theme, setTheme] = useLocalStorage<Theme>('theme', defaultTheme);
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     const updateResolvedTheme = () => {
       if (theme === 'system') {
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+          .matches
+          ? 'dark'
+          : 'light';
         setResolvedTheme(systemTheme);
       } else {
         setResolvedTheme(theme);
@@ -46,17 +52,20 @@ export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProvid
 
   useEffect(() => {
     const root = document.documentElement;
-    
+
     // Remove existing theme classes
     root.classList.remove('light', 'dark');
-    
+
     // Add new theme class
     root.classList.add(resolvedTheme);
-    
+
     // Update meta theme-color
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', resolvedTheme === 'dark' ? '#0f172a' : '#ffffff');
+      metaThemeColor.setAttribute(
+        'content',
+        resolvedTheme === 'dark' ? '#0f172a' : '#ffffff'
+      );
     }
   }, [resolvedTheme]);
 
@@ -67,9 +76,7 @@ export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProvid
   };
 
   return (
-    <ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 }
 

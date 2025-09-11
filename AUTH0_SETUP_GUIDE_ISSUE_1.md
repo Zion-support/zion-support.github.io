@@ -1,49 +1,11 @@
-# Auth0 Setup Guide - Fix Critical Signup Issue #1
-
-## 🚨 **Critical Issue: Sign-up Fails**
-
-**Current Symptoms:**
-
-- Page shows banner "Authentication service is temporarily unavailable"
-- Sign-up attempts result in "Authentication service not configured" error
-- Toast notification: "Signup failed (Trace ID: ...)"
-- New users cannot join the platform
-
-**Root Cause:** Auth0 environment variables are not configured.
-
-## 🛠️ **Quick Fix Instructions**
-
-### Step 1: Create Environment File
-
-Create a `.env.local` file in your project root with the following template:
-
-```bash
-# ====
-# AUTH0 CONFIGURATION (REQUIRED)
-# ====
-
-# Your Auth0 domain (from Auth0 Dashboard)
-AUTH0_ISSUER_BASE_URL=https://your-tenant.us.auth0.com
-
-# Your application's base URL
-AUTH0_BASE_URL=http://localhost:3000
-
-# Your Auth0 Application credentials
-AUTH0_CLIENT_ID=your_auth0_client_id_here
-AUTH0_CLIENT_SECRET=your_auth0_client_secret_here
-
-# Session encryption secret (generate new one)
-AUTH0_SECRET=your_64_character_hex_secret_here
-
-# ====
-# OPTIONAL CONFIGURATION
-# ====
-
 # Sentry error monitoring
+
 NEXT_PUBLIC_SENTRY_DSN=https://your-sentry-dsn@sentry.io/project-id
 
 # Reown wallet integration
+
 NEXT_PUBLIC_REOWN_PROJECT_ID=your_reown_project_id_here
+
 ```
 
 ### Step 2: Auth0 Account Setup
@@ -64,32 +26,36 @@ NEXT_PUBLIC_REOWN_PROJECT_ID=your_reown_project_id_here
    In your Auth0 application settings, configure:
 
    **Allowed Callback URLs:**
+```
 
-   ```
-   http://localhost:3000/api/auth/callback,
-   https://yourdomain.com/api/auth/callback
-   ```
+http://localhost:3000/api/auth/callback,
+https://yourdomain.com/api/auth/callback
 
-   **Allowed Logout URLs:**
+```
 
-   ```
-   http://localhost:3000,
-   https://yourdomain.com
-   ```
+**Allowed Logout URLs:**
+```
 
-   **Allowed Web Origins:**
+http://localhost:3000,
+https://yourdomain.com
 
-   ```
-   http://localhost:3000,
-   https://yourdomain.com
-   ```
+```
 
-   **Allowed Origins (CORS):**
+**Allowed Web Origins:**
+```
 
-   ```
-   http://localhost:3000,
-   https://yourdomain.com
-   ```
+http://localhost:3000,
+https://yourdomain.com
+
+```
+
+**Allowed Origins (CORS):**
+```
+
+http://localhost:3000,
+https://yourdomain.com
+
+````
 
 ### Step 3: Get Auth0 Credentials
 
@@ -105,7 +71,7 @@ Run this command to generate a secure secret:
 
 ```bash
 openssl rand -hex 32
-```
+````
 
 Use the output as your `AUTH0_SECRET` value.
 

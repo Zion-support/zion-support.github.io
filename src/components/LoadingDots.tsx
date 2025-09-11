@@ -16,11 +16,11 @@ const LoadingDots: React.FC<LoadingDotsProps> = ({
     <div
       className={`loading-dots loading-dots--${size} ${className}`}
       style={{ '--dot-color': color } as React.CSSProperties}
-      aria-label="Loading"
+      aria-label='Loading'
     >
-      <span className="loading-dots__dot" />
-      <span className="loading-dots__dot" />
-      <span className="loading-dots__dot" />
+      <span className='loading-dots__dot' />
+      <span className='loading-dots__dot' />
+      <span className='loading-dots__dot' />
     </div>
   );
 };

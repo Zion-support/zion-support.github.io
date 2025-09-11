@@ -22,7 +22,7 @@ class SecurityAuditor {
       timestamp: new Date().toISOString(),
       vulnerabilities: this.vulnerabilities,
       recommendations: this.recommendations,
-      status: this.vulnerabilities.length === 0 ? 'secure' : 'needs_attention'
+      status: this.vulnerabilities.length === 0 ? 'secure' : 'needs_attention',
     };
     const outDir = process.cwd();
     const reportPath = path.join(outDir, `security-audit-${Date.now()}.json`);

@@ -17,7 +17,10 @@ interface ContactFormProps {
   className?: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, className = '' }) => {
+const ContactForm: React.FC<ContactFormProps> = ({
+  onSubmit,
+  className = '',
+}) => {
   const { showNotification } = useNotifications();
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -32,12 +35,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, className = '' }) =
   const submitForm = async (data: FormData): Promise<void> => {
     // Simulate network delay
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     // Simulate success
     if (data.email === 'error@example.com') {
       throw new Error('Simulated error for testing');
     }
-    
+
     return Promise.resolve();
   };
 
@@ -66,22 +69,22 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, className = '' }) =
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (field: keyof FormData) => (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: e.target.value,
-    }));
-
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors(prev => ({
+  const handleInputChange =
+    (field: keyof FormData) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData(prev => ({
         ...prev,
-        [field]: undefined,
+        [field]: e.target.value,
       }));
-    }
-  };
+
+      // Clear error when user starts typing
+      if (errors[field]) {
+        setErrors(prev => ({
+          ...prev,
+          [field]: undefined,
+        }));
+      }
+    };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,7 +100,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, className = '' }) =
 
     try {
       await executeSubmit(formData);
-      
+
       if (onSubmit) {
         await onSubmit(formData);
       }
@@ -105,7 +108,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, className = '' }) =
       showNotification({
         type: 'success',
         title: 'Message Sent!',
-        message: 'Thank you for your message. We\'ll get back to you soon.',
+        message: "Thank you for your message. We'll get back to you soon.",
       });
 
       // Reset form
@@ -126,69 +129,69 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, className = '' }) =
 
   return (
     <form className={`contact-form ${className}`} onSubmit={handleSubmit}>
-      <div className="contact-form__header">
-        <h3 className="contact-form__title">Get in Touch</h3>
-        <p className="contact-form__subtitle">
+      <div className='contact-form__header'>
+        <h3 className='contact-form__title'>Get in Touch</h3>
+        <p className='contact-form__subtitle'>
           Ready to transform your business? Let's discuss your project.
         </p>
       </div>
 
-      <div className="contact-form__fields">
-        <div className="contact-form__row">
+      <div className='contact-form__fields'>
+        <div className='contact-form__row'>
           <Input
-            label="Full Name"
-            type="text"
+            label='Full Name'
+            type='text'
             value={formData.name}
             onChange={handleInputChange('name')}
             error={errors.name}
-            placeholder="Enter your full name"
+            placeholder='Enter your full name'
             required
             fullWidth
           />
         </div>
 
-        <div className="contact-form__row">
+        <div className='contact-form__row'>
           <Input
-            label="Email Address"
-            type="email"
+            label='Email Address'
+            type='email'
             value={formData.email}
             onChange={handleInputChange('email')}
             error={errors.email}
-            placeholder="Enter your email address"
+            placeholder='Enter your email address'
             required
             fullWidth
           />
         </div>
 
-        <div className="contact-form__row">
+        <div className='contact-form__row'>
           <Input
-            label="Company (Optional)"
-            type="text"
+            label='Company (Optional)'
+            type='text'
             value={formData.company}
             onChange={handleInputChange('company')}
-            placeholder="Enter your company name"
+            placeholder='Enter your company name'
             fullWidth
           />
         </div>
 
-        <div className="contact-form__row">
-          <div className="input-container input-container--full-width">
-            <label htmlFor="message" className="input-label">
+        <div className='contact-form__row'>
+          <div className='input-container input-container--full-width'>
+            <label htmlFor='message' className='input-label'>
               Message
-              <span className="input-required">*</span>
+              <span className='input-required'>*</span>
             </label>
             <textarea
-              id="message"
+              id='message'
               className={`input input--textarea ${errors.message ? 'input--error' : ''}`}
               value={formData.message}
               onChange={handleInputChange('message')}
-              placeholder="Tell us about your project..."
+              placeholder='Tell us about your project...'
               rows={5}
               required
             />
             {errors.message && (
-              <div className="input-message">
-                <span className="input-error" role="alert">
+              <div className='input-message'>
+                <span className='input-error' role='alert'>
                   {errors.message}
                 </span>
               </div>
@@ -197,21 +200,21 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, className = '' }) =
         </div>
       </div>
 
-      <div className="contact-form__actions">
+      <div className='contact-form__actions'>
         <Button
-          type="submit"
-          variant="primary"
-          size="large"
+          type='submit'
+          variant='primary'
+          size='large'
           loading={submitState.loading}
           fullWidth
-          leftIcon="📧"
+          leftIcon='📧'
         >
           {submitState.loading ? 'Sending...' : 'Send Message'}
         </Button>
       </div>
 
       {submitState.error && (
-        <div className="contact-form__error">
+        <div className='contact-form__error'>
           <p>Error: {submitState.error.message}</p>
         </div>
       )}

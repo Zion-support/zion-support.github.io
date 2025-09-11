@@ -15,7 +15,10 @@ class AccessibilityChecker {
     const timestamp = new Date().toISOString();
     const line = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(line);
-    fs.appendFileSync(path.join(this.logsDir, 'accessibility-checker.log'), line + '\n');
+    fs.appendFileSync(
+      path.join(this.logsDir, 'accessibility-checker.log'),
+      line + '\n'
+    );
   }
 
   run(command, description) {
@@ -33,7 +36,9 @@ class AccessibilityChecker {
   async runAll() {
     const results = [];
     // Best-effort checks; tolerate missing scripts
-    results.push(this.run('npm run -s test:accessibility', 'Accessibility tests'));
+    results.push(
+      this.run('npm run -s test:accessibility', 'Accessibility tests')
+    );
     results.push(this.run('npm run -s lint', 'ESLint (includes a11y rules)'));
     return results;
   }
@@ -45,7 +50,10 @@ class AccessibilityChecker {
       failedChecks: results.filter(r => !r.success).length,
     };
     const report = { timestamp: new Date().toISOString(), results, summary };
-    const out = path.join(this.logsDir, `accessibility-report-${Date.now()}.json`);
+    const out = path.join(
+      this.logsDir,
+      `accessibility-report-${Date.now()}.json`
+    );
     fs.writeFileSync(out, JSON.stringify(report, null, 2));
     this.log(`Report saved: ${out}`);
   }

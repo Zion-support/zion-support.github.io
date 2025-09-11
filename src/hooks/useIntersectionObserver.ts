@@ -38,7 +38,10 @@ export function useIntersectionObserver<T extends Element = HTMLDivElement>(
     if (!hasIOSupport || frozen || !node) return;
 
     const observerParams = { threshold, root, rootMargin };
-    const currentObserver = new IntersectionObserver(updateEntry, observerParams);
+    const currentObserver = new IntersectionObserver(
+      updateEntry,
+      observerParams
+    );
 
     observer.current = currentObserver;
     currentObserver.observe(node);

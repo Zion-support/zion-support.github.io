@@ -100,15 +100,14 @@ This Node.js service is designed to monitor the latency and availability of spec
       3.  `latencyValue`: The measured latency in milliseconds.
     - **Customization**: Edit the script to add logic based on the `serviceName` or `problemURL`. For example, you might restart a specific PM2 process, trigger a Kubernetes deployment rollout, or call another API.
       `bash
-    #!/bin/bash
-    SERVICE_NAME="$1"
+      #!/bin/bash
+      SERVICE_NAME="$1"
     # ... add your custom logic here
     echo "Remediation called for $SERVICE_NAME"
     if [ "$SERVICE_NAME" == "my-critical-service" ]; then
-      # pm2 restart my-critical-service
+    # pm2 restart my-critical-service
     fi
-    `
-      Ensure the script is executable: `chmod +x monitoring/remediate.sh`.
+    `  Ensure the script is executable:`chmod +x monitoring/remediate.sh`.
 
 ## Running the Service
 
