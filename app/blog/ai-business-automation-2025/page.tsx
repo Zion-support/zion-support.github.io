@@ -1,16 +1,16 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'AI Business Automation 2025: Complete Implementation Guide',
+  description: 'Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.',
+  keywords: 'AI automation, business automation, productivity, cost reduction, implementation guide, 2025',
+};
 
 export default function AIBusinessAutomation2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Business Automation 2025: Complete Implementation Guide"
-        description="Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025."
-        keywords="AI automation, business automation, productivity, cost reduction, implementation guide, 2025"
-        url="/blog/ai-business-automation-2025"
-      />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}

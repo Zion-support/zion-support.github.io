@@ -5,290 +5,311 @@ interface ContentItem {
   title: string;
   description: string;
   href: string;
-  category: string;
-  readTime: string;
+  icon: string;
+  readTime?: string;
+  category?: string;
   isNew?: boolean;
   isTrending?: boolean;
-  icon: string;
-  stats?: string;
+  isFeatured?: boolean;
+  stats?: {
+    value: string;
+    label: string;
+  }[];
 }
 
-const featuredContent: ContentItem[] = [
-  {
-    title: "AI Business Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
-    href: "/blog/ai-business-automation-2025",
-    category: "AI & Automation",
-    readTime: "12 min read",
-    isNew: true,
-    icon: "🤖",
-    stats: "40% productivity boost"
-  },
-  {
-    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
-    href: "/blog/ai-startup-funding-playbook-2025",
-    category: "Startup Strategy",
-    readTime: "22 min read",
-    isNew: true,
-    icon: "💰",
-    stats: "$47B+ funding insights"
-  },
-  {
-    title: "AI Financial Services Transformation: $50M Cost Savings Case Study",
-    description: "Discover how a leading financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
-    href: "/case-studies/ai-financial-services-transformation-2025",
-    category: "Case Study",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "🏦",
-    stats: "$50M savings achieved"
-  },
-  {
-    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
-    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
-    href: "/resources/ai-implementation-master-guide-2025",
-    category: "Master Guide",
-    readTime: "150 pages",
-    isNew: true,
-    icon: "📚",
-    stats: "500+ companies using this"
-  }
-];
-
-const trendingContent: ContentItem[] = [
-  {
-    title: "AI 2025 Predictions: The Future of AI in Business",
-    description: "The future of AI in business - key trends and predictions that will shape the industry in 2025 and beyond.",
-    href: "/blog/ai-2025-predictions",
-    category: "AI Trends",
-    readTime: "20 min read",
-    isTrending: true,
-    icon: "🔮",
-    stats: "Trending this week"
-  },
-  {
-    title: "AI Automation Trends 2025: Transform Your Operations",
-    description: "Transform your business operations with the latest intelligent automation trends and proven implementation strategies.",
-    href: "/blog/ai-automation-trends-2025",
-    category: "Automation",
-    readTime: "16 min read",
-    isTrending: true,
-    icon: "⚡",
-    stats: "300% efficiency gains"
-  },
-  {
-    title: "AI Enterprise Security 2025: Complete Implementation Guide",
-    description: "Complete implementation guide for securing AI systems in enterprise environments with proven security frameworks.",
-    href: "/blog/ai-enterprise-security-2025",
-    category: "Security",
-    readTime: "20 min read",
-    isTrending: true,
-    icon: "🛡️",
-    stats: "Enterprise-grade security"
-  }
-];
-
-const latestContent: ContentItem[] = [
-  {
-    title: "AI Productivity Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 2025.",
-    href: "/blog/ai-productivity-automation-2025",
-    category: "Productivity",
-    readTime: "12 min read",
-    isNew: true,
-    icon: "🚀",
-    stats: "40% productivity boost"
-  },
-  {
-    title: "Startup Pricing Strategy 2025: Validate Willingness to Pay",
-    description: "Master startup pricing with data-driven strategies. Learn to validate willingness to pay and scale with confidence.",
-    href: "/blog/startup-pricing-strategy-2025",
-    category: "Startup Strategy",
-    readTime: "15 min read",
-    isNew: true,
-    icon: "💡",
-    stats: "Data-driven pricing"
-  },
-  {
-    title: "AI Healthcare Diagnosis Success: 95% Accuracy",
-    description: "Discover how a leading healthcare provider achieved 95% accuracy in medical diagnosis using AI automation.",
-    href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-    category: "Healthcare AI",
-    readTime: "8 min read",
-    isNew: true,
-    icon: "🏥",
-    stats: "95% accuracy achieved"
-  }
-];
-
-interface ContentCardProps {
-  item: ContentItem;
-  variant?: 'default' | 'featured' | 'compact';
+interface EnhancedContentShowcaseProps {
+  title: string;
+  subtitle: string;
+  items: ContentItem[];
+  variant?: 'default' | 'featured' | 'trending' | 'new';
+  showViewAll?: boolean;
+  viewAllHref?: string;
+  className?: string;
 }
 
-const ContentCard: React.FC<ContentCardProps> = ({ item, variant = 'default' }) => {
-  const baseClasses = "group relative overflow-hidden rounded-xl transition-all duration-300 hover:shadow-xl";
-  
-  const variantClasses = {
-    default: "bg-white border border-gray-200 hover:border-blue-300",
-    featured: "bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 hover:border-blue-400",
-    compact: "bg-white border border-gray-200 hover:border-gray-300"
+export default function EnhancedContentShowcase({
+  title,
+  subtitle,
+  items,
+  variant = 'default',
+  showViewAll = true,
+  viewAllHref = '/blog',
+  className = ''
+}: EnhancedContentShowcaseProps) {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'featured':
+        return {
+          container: 'bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          cardHover: 'hover:bg-opacity-20',
+          title: 'text-white',
+          subtitle: 'text-white opacity-90',
+          itemTitle: 'text-white',
+          itemDesc: 'text-white opacity-90',
+          meta: 'text-white opacity-75',
+          button: 'bg-white text-indigo-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-indigo-600',
+          stats: 'bg-white bg-opacity-20'
+        };
+      case 'trending':
+        return {
+          container: 'bg-gradient-to-br from-orange-500 to-red-500 text-white',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          cardHover: 'hover:bg-opacity-20',
+          title: 'text-white',
+          subtitle: 'text-white opacity-90',
+          itemTitle: 'text-white',
+          itemDesc: 'text-white opacity-90',
+          meta: 'text-white opacity-75',
+          button: 'bg-white text-orange-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-orange-600',
+          stats: 'bg-white bg-opacity-20'
+        };
+      case 'new':
+        return {
+          container: 'bg-gradient-to-br from-green-600 to-blue-600 text-white',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          cardHover: 'hover:bg-opacity-20',
+          title: 'text-white',
+          subtitle: 'text-white opacity-90',
+          itemTitle: 'text-white',
+          itemDesc: 'text-white opacity-90',
+          meta: 'text-white opacity-75',
+          button: 'bg-white text-green-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-green-600',
+          stats: 'bg-white bg-opacity-20'
+        };
+      default:
+        return {
+          container: 'bg-white',
+          badge: 'bg-blue-100 text-blue-800',
+          badgeText: 'text-blue-800',
+          card: 'bg-white border border-gray-200',
+          cardHover: 'hover:shadow-lg',
+          title: 'text-gray-900',
+          subtitle: 'text-gray-600',
+          itemTitle: 'text-gray-900',
+          itemDesc: 'text-gray-600',
+          meta: 'text-gray-500',
+          button: 'bg-blue-600 text-white hover:bg-blue-700',
+          buttonSecondary: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white',
+          stats: 'bg-gray-50'
+        };
+    }
+  };
+
+  const styles = getVariantStyles();
+
+  const getBadgeText = () => {
+    switch (variant) {
+      case 'featured': return '✨ FEATURED CONTENT';
+      case 'trending': return '🔥 TRENDING NOW';
+      case 'new': return '🚀 JUST PUBLISHED';
+      default: return '📚 LATEST CONTENT';
+    }
   };
 
   return (
-    <Link href={item.href} className={`${baseClasses} ${variantClasses[variant]}`}>
-      <div className="p-6">
-        {/* Header with icon and badges */}
-        <div className="flex items-start justify-between mb-4">
-          <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
-            {item.icon}
-          </div>
-          <div className="flex gap-2">
-            {item.isNew && (
-              <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
-                NEW
-              </span>
-            )}
-            {item.isTrending && (
-              <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
-                TRENDING
-              </span>
-            )}
-          </div>
-        </div>
-
-        {/* Category and stats */}
-        <div className="flex items-center gap-3 mb-3">
-          <span className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">
-            {item.category}
-          </span>
-          {item.stats && (
-            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
-              {item.stats}
+    <section className={`py-16 ${styles.container} relative overflow-hidden ${className}`}>
+      {variant !== 'default' && (
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+      )}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className={`inline-flex items-center ${styles.badge} rounded-full px-6 py-2 mb-6`}>
+            <span className={`text-sm font-medium ${styles.badgeText}`}>
+              {getBadgeText()}
             </span>
+          </div>
+          <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${styles.title}`}>
+            {title}
+          </h2>
+          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.subtitle}`}>
+            {subtitle}
+          </p>
+          {showViewAll && (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link
+                href={viewAllHref}
+                className={`${styles.button} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
+              >
+                📚 View All Content
+              </Link>
+              <Link
+                href="/resources"
+                className={`${styles.buttonSecondary} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
+              >
+                📋 Download Resources
+              </Link>
+            </div>
           )}
         </div>
 
-        {/* Title */}
-        <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-          {item.title}
-        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {items.map((item, index) => (
+            <Link key={index} href={item.href} className="group">
+              <div className={`${styles.card} p-6 rounded-xl transition-all duration-300 ${styles.cardHover}`}>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  {item.isNew && (
+                    <span className="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      NEW
+                    </span>
+                  )}
+                  {item.isTrending && (
+                    <span className="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      TRENDING
+                    </span>
+                  )}
+                  {item.isFeatured && (
+                    <span className="bg-purple-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      FEATURED
+                    </span>
+                  )}
+                  {item.category && (
+                    <span className={`${styles.meta} text-xs font-medium`}>
+                      {item.category}
+                    </span>
+                  )}
+                </div>
+                <h3 className={`text-lg font-semibold mb-2 ${styles.itemTitle}`}>
+                  {item.title}
+                </h3>
+                <p className={`text-sm mb-3 ${styles.itemDesc}`}>
+                  {item.description}
+                </p>
+                
+                {/* Stats Display */}
+                {item.stats && item.stats.length > 0 && (
+                  <div className="mb-3">
+                    <div className="flex flex-wrap gap-2">
+                      {item.stats.map((stat, statIndex) => (
+                        <div key={statIndex} className={`${styles.stats} px-2 py-1 rounded text-xs font-medium`}>
+                          <span className="font-bold">{stat.value}</span> {stat.label}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
-        {/* Description */}
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
-          {item.description}
-        </p>
-
-        {/* Footer */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs text-gray-500">
-            <span>{item.readTime}</span>
-            <span>•</span>
-            <span>Jan 28, 2025</span>
-          </div>
-          <span className="text-blue-600 font-medium group-hover:underline text-sm">
-            {item.category === 'Case Study' ? 'Read Case Study →' : 
-             item.category === 'Master Guide' ? 'Download Guide →' : 'Read Article →'}
-          </span>
-        </div>
-      </div>
-    </Link>
-  );
-};
-
-interface EnhancedContentShowcaseProps {
-  variant?: 'default' | 'featured' | 'trending' | 'latest';
-  showTitle?: boolean;
-  maxItems?: number;
-}
-
-const EnhancedContentShowcase: React.FC<EnhancedContentShowcaseProps> = ({ 
-  variant = 'default', 
-  showTitle = true,
-  maxItems = 4 
-}) => {
-  const getContent = () => {
-    switch (variant) {
-      case 'featured':
-        return featuredContent.slice(0, maxItems);
-      case 'trending':
-        return trendingContent.slice(0, maxItems);
-      case 'latest':
-        return latestContent.slice(0, maxItems);
-      default:
-        return [...featuredContent, ...trendingContent, ...latestContent].slice(0, maxItems);
-    }
-  };
-
-  const getTitle = () => {
-    switch (variant) {
-      case 'featured':
-        return 'Featured Content';
-      case 'trending':
-        return 'Trending This Week';
-      case 'latest':
-        return 'Latest Articles';
-      default:
-        return 'Expert Insights & Resources';
-    }
-  };
-
-  const getSubtitle = () => {
-    switch (variant) {
-      case 'featured':
-        return 'Hand-picked content showcasing the best of our AI and business insights';
-      case 'trending':
-        return 'Most popular content this week based on reader engagement';
-      case 'latest':
-        return 'Fresh content published this week with expert insights';
-      default:
-        return 'Discover our latest articles, case studies, and resources covering AI implementation, startup strategies, and digital transformation';
-    }
-  };
-
-  const content = getContent();
-
-  return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {showTitle && (
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-medium">🔥 {variant.toUpperCase()} CONTENT</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {getTitle()}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              {getSubtitle()}
-            </p>
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {content.map((item, index) => (
-            <ContentCard 
-              key={`${item.href}-${index}`} 
-              item={item} 
-              variant={index === 0 && variant === 'featured' ? 'featured' : 'default'}
-            />
+                <div className="flex items-center text-xs opacity-75">
+                  {item.readTime && (
+                    <>
+                      <span className={styles.meta}>{item.readTime}</span>
+                      <span className={`mx-2 ${styles.meta}`}>•</span>
+                    </>
+                  )}
+                  <span className={styles.meta}>
+                    {item.href.includes('/blog/') ? 'Article' : 
+                     item.href.includes('/case-studies/') ? 'Case Study' : 
+                     item.href.includes('/resources/') ? 'Resource' : 'Content'}
+                  </span>
+                </div>
+              </div>
+            </Link>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Link 
-            href="/blog" 
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
-          >
-            View All Content
-            <span>→</span>
-          </Link>
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default EnhancedContentShowcase;
-export { featuredContent, trendingContent, latestContent };
+// Enhanced content collections with stats
+export const newFeaturedContent = [
+  {
+    title: "AI Enterprise Transformation 2025",
+    description: "Complete implementation guide: 300% productivity gains, 40% cost reduction, and 95% accuracy improvements",
+    href: "/blog/ai-enterprise-transformation-2025",
+    icon: "🏢",
+    readTime: "18 min read",
+    category: "Enterprise AI",
+    isNew: true,
+    isFeatured: true,
+    stats: [
+      { value: "300%", label: "Productivity" },
+      { value: "40%", label: "Cost Reduction" },
+      { value: "95%", label: "Accuracy" }
+    ]
+  },
+  {
+    title: "AI Customer Experience Revolution",
+    description: "Transform CX with 95% satisfaction, 80% faster resolution, and 60% cost reduction",
+    href: "/blog/ai-customer-experience-revolution-2025",
+    icon: "🎯",
+    readTime: "14 min read",
+    category: "Customer Experience",
+    isNew: true,
+    isTrending: true,
+    stats: [
+      { value: "95%", label: "Satisfaction" },
+      { value: "80%", label: "Faster Resolution" },
+      { value: "60%", label: "Cost Reduction" }
+    ]
+  },
+  {
+    title: "AI Retail Transformation Success",
+    description: "Real case study: 300% revenue growth, 95% customer satisfaction, and 80% cost reduction",
+    href: "/case-studies/ai-retail-transformation-success-2025",
+    icon: "🏪",
+    readTime: "Case Study",
+    category: "Retail & E-commerce",
+    isNew: true,
+    isFeatured: true,
+    stats: [
+      { value: "300%", label: "Revenue Growth" },
+      { value: "95%", label: "Satisfaction" },
+      { value: "80%", label: "Cost Reduction" }
+    ]
+  }
+];
+
+export const trendingContent = [
+  {
+    title: "AI Go-To-Market 2025",
+    description: "From zero to traction: positioning, pricing, and distribution strategies",
+    href: "/blog/ai-go-to-market-2025",
+    icon: "📈",
+    readTime: "12 min read",
+    category: "Growth & Marketing",
+    isTrending: true,
+    stats: [
+      { value: "200%", label: "Faster Growth" },
+      { value: "85%", label: "Success Rate" }
+    ]
+  },
+  {
+    title: "LLM Guardrails in Production",
+    description: "Safety without blocking delivery - practical implementation guide",
+    href: "/blog/llm-guardrails-in-production-2025",
+    icon: "🛡️",
+    readTime: "8 min read",
+    category: "AI Engineering",
+    isTrending: true,
+    stats: [
+      { value: "99.9%", label: "Uptime" },
+      { value: "90%", label: "Safety Score" }
+    ]
+  },
+  {
+    title: "Edge AI: Privacy by Design",
+    description: "On-device intelligence for instant, compliant customer experiences",
+    href: "/blog/edge-ai-privacy-by-design-2025",
+    icon: "🔐",
+    readTime: "7 min read",
+    category: "AI & Privacy",
+    isTrending: true,
+    stats: [
+      { value: "100%", label: "Privacy" },
+      { value: "50ms", label: "Response Time" }
+    ]
+  }
+];

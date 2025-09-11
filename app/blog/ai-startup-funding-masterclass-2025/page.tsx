@@ -364,7 +364,7 @@ export default function AIStartupFundingMasterclass2025() {
                   </div>
                   <div>
                     <h4 className="font-medium text-blue-900">Growth-Adjusted</h4>
-                    <p className="text-blue-800 text-sm">Higher multiples for companies growing >100% YoY</p>
+                    <p className="text-blue-800 text-sm">Higher multiples for companies growing &gt;100% YoY</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-blue-900">Market-Adjusted</h4>

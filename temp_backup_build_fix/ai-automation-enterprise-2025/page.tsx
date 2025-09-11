@@ -1,22 +1,17 @@
 import React from 'react';
-import { Metadata } from 'next';
+import SEO from '../../../components/SEO';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Zap, Target, Users, TrendingUp, Shield, Clock, BarChart3, Brain, Database, Cloud } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'AI Automation in Enterprise: Complete 2025 Implementation Guide | Zion Tech Group',
-  description: 'Everything you need to know about implementing AI automation in your enterprise. From planning to optimization, get the complete guide for 2025.',
-  keywords: 'AI automation, enterprise AI, business automation, AI implementation, enterprise automation, AI strategy',
-  openGraph: {
-    title: 'AI Automation in Enterprise: Complete 2025 Implementation Guide',
-    description: 'Complete guide to implementing AI automation in enterprise environments with real-world case studies and best practices.',
-    type: 'article',
-  },
-};
 
 export default function AIAutomationEnterprise2025() {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="AI Automation in Enterprise: Complete 2025 Implementation Guide | Zion Tech Group"
+        description="Everything you need to know about implementing AI automation in your enterprise. From planning to optimization, get the complete guide for 2025."
+        keywords="AI automation, enterprise AI, business automation, AI implementation, enterprise automation, AI strategy"
+        url="/blog/ai-automation-enterprise-2025"
+      />
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <header className="mb-12">

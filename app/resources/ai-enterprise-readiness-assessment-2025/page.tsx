@@ -1,15 +1,15 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Enterprise Readiness Assessment 2025 - Free Download',
+  description: 'Comprehensive assessment tool to evaluate your organization\'s readiness for AI implementation. Download our free 50-point checklist and framework.',
+  keywords: 'AI readiness assessment, enterprise AI, AI implementation, AI strategy, digital transformation',
+};
 
 export default function AIEnterpriseReadinessAssessment2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Enterprise Readiness Assessment 2025 - Free Download"
-        description="Comprehensive assessment tool to evaluate your organization's readiness for AI implementation. Download our free 50-point checklist and framework."
-        keywords="AI readiness assessment, enterprise AI, AI implementation, AI strategy, digital transformation"
-        url="/resources/ai-enterprise-readiness-assessment-2025"
-      />
       
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-12">
