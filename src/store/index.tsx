@@ -1,3 +1,4 @@
+import React from 'react';
 ;
 export default function Index("props": "any) {;
   return (;
@@ -22,5 +23,6 @@ export default function Index("props": "any) {;
     </div>
     );
 }
+import React from &apos;react&apos;; export default function Index($1) { return ( <div className=&quot;min-h-screen bg-white&quot;> <div className=&quot;max-w-4xl mx-auto px-6 py-16&quot;> <h1 className=&quot;text-4xl font-bold text-gray-900 mb-8&quot;>Index</h1> <p className=&quot;text-lg text-gray-600 mb-8&quot;> This is a placeholder component for index. </p> </div> </div> )} ;&apos;;&apos;;
 const React from "react"; export default function Index($1) { return ( <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Index</h1> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for index. </p> </div> </div> )} ;";";'"'"
 import _React from 'react'; export default function Index(_) { return ( <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Index</h1> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for index. </p> </div> </div> )} ;';';

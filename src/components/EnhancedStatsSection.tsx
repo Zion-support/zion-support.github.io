@@ -14,7 +14,7 @@ import {
 
 interface Stat {
   id: string;
-  icon: React.ComponentTypeg<div>;
+  icon: React.ComponentType<any>;
   value: string;
   label: string;
   description: string;

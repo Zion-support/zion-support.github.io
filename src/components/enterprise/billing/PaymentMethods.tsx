@@ -3,6 +3,7 @@ import { CreditCard, Plus, Trash } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
+import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
@@ -47,6 +48,7 @@ export function PaymentMethods() {
         {paymentMethods.map((method,) => (
           <div
             key = {method.id,}
+import React from 'react';
 import {;
   Card,;
   CardContent,;
@@ -57,6 +59,7 @@ import {;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CreditCard, Plus, Trash } from 'lucide-react';
+import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from 'lucide-react';
@@ -166,6 +169,7 @@ export function PaymentMethods() {;
       </CardFooter>
     </Card>
 
+import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from 'lucide-react';

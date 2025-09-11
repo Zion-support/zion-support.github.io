@@ -1,3 +1,4 @@
+import React from 'react';
 import { _Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
 
 import { CheckCircle } from 'lucide-react';

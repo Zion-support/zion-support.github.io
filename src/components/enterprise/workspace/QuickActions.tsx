@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
@@ -72,6 +73,7 @@ import { Calendar } from 'lucide-react';
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
+import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { FileText, Plus, Search, Calendar } from 'lucide-react';

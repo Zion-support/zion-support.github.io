@@ -22,10 +22,17 @@ if ('serviceWorker' in navigator) {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+<<<<<<< HEAD
     <Router>
       <HelmetProvider>
         <App />
       </HelmetProvider>
     </Router>
+  </React.StrictMode>
+);
+=======
+    <App />
   </React.StrictMode>,
 );
+
+>>>>>>> d94b6091b187 (Resolve merge conflicts in package.json, index.html, and main.tsx)

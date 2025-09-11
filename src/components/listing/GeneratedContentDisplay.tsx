@@ -7,9 +7,11 @@
             {content && content.tags.map((tag, index) => (;
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
+import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from 'lucide-react'
@@ -23,6 +25,7 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
+import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { ArrowRight } from 'lucide-react';
@@ -126,6 +129,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
               <li key={index}>{point}</li>;
 
             ))}
+import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { ArrowRight } from 'lucide-react';

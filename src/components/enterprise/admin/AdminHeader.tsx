@@ -1,4 +1,5 @@
 
+import React from "react",
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
@@ -6,6 +7,7 @@ export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace();
 
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
@@ -170,6 +172,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
+import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Download, Settings } from 'lucide-react';
 import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';

@@ -40,6 +40,7 @@ export function SeverityIndicator ({
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 interface SeverityIndicatorProps {;
@@ -84,6 +85,7 @@ export function SeverityIndicator({;
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 interface SeverityIndicatorProps {;

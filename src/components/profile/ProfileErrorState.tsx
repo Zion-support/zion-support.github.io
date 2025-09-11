@@ -30,6 +30,7 @@ interface ProfileErrorStateProps {
 
     </div>
 
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -50,6 +51,7 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
           <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory;
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;
           <ArrowLeft className="mr-2 h-4 w-4" />;
+import React from 'react';
 import { Button } from "@/components/ui/button";
 
 import Link from "next/link";

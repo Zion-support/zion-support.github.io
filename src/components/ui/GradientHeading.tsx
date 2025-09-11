@@ -1,3 +1,4 @@
+import React from 'react';
 import { cn } from '../../lib/utils';
 export function GradientHeading({ children, variant = 'primary', size = '2xl', className = '', customGradient }) {
     const gradients = {

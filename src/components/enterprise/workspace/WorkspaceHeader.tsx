@@ -1,14 +1,17 @@
 
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
 interface WorkspaceHeaderProps {;
+import React from 'react'
 import { Button } from '@/components/ui/button'
 import { type Company } from './CompanyDashboard'
 import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
   company: Company
 
+import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from 'lucide-react'
@@ -41,9 +44,11 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
 
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
 import { Bell, Users, Settings } from 'lucide-react'
+import React from 'react';
 import { Button } from '@/components / ui / button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';

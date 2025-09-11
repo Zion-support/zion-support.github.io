@@ -21,7 +21,7 @@ const LoadingSpinnerComponent = () => (
 
 // Optimized lazy loading with preloading hints
 const createLazyComponent = (
-  importFn: () => Promiseg<div>,
+  importFn: () => Promise<any>,
   fallback?: React.ReactNode
 ) => {
   const LazyComponent = lazy(importFn);

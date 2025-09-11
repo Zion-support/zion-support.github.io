@@ -133,6 +133,7 @@ export function TalentDashboard() {
                     92% match;
                   </div>;
                   <span className='text-xs text-muted-foreground mt-1'>;
+import React from 'react';
 import {
   Card,
   CardContent,
@@ -150,6 +151,7 @@ import { Badge } from '@/components / ui / badge';
   BookOpen,
 } from 'lucide-react';
 import Link from 'next / link';
+import React from './react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';

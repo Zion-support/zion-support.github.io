@@ -1,6 +1,8 @@
 import { Star } from 'lucide-react'
+import React from 'react'
 import { Button } from '@/components/ui/button'
 
+import React from 'react';
 import { Button } from "@/components/ui/button";
 
 interface SaveTalentButtonProps {
@@ -55,6 +57,7 @@ export function SaveTalentButton(): any ({;
           ? 'bg-yellow-500 hover:bg-yellow-600 text-white';
           : 'text-yellow-500 border-yellow-500 hover:bg-yellow-500/10';
       }    >;
+import React from 'react';
 import { Button } from "@/components/ui/button";
 
 import { Star } from 'lucide-react';
@@ -73,6 +76,7 @@ export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTale
   );
 
 }
+import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Star } from 'lucide-react';
 interface SaveTalentButtonProps {

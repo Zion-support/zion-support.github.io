@@ -13,6 +13,7 @@ interface MilestoneCardProps {
   status: string
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>;
+  onReject?: (id: string) => Promise<void>; import React from 'react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -44,6 +45,7 @@ export function MilestoneCard({
     switch (status) {
       case 'completed':
 
+import React from 'react';
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -75,6 +77,7 @@ interface MilestoneCardProps {;
 
         return 'bg-red-500';
 
+import React from 'react';
 import {
   Card,
   CardContent,
@@ -98,12 +101,14 @@ interface MilestoneCardProps {
   status: string;
   due_date?: string;
   on_approve?: (id: string) => Promise < void>;
+  on_reject?: (id: string) => Promise < void>; import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 interface MilestoneCardProps {
   id: string,
   project_id: string,
+import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",

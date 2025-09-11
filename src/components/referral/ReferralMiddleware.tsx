@@ -1,3 +1,4 @@
+import React from 'react';
 import { _useEffect } from 'react';
 import { _supabase } from '../../integrations/supabase/client';
 import { _useAuth } from '../../hooks/useAuth';

@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { LoadingSpinner } from './ui/LoadingSpinner';
 
 interface LazyLoaderProps {
-  component: React.ComponentTypeg<div>;
+  component: React.ComponentType<any>;
   fallback?: React.ReactNode;
   props?: any;
 }

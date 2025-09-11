@@ -47,7 +47,7 @@ interface ServiceShowcaseProps {;
 ;
 export function ComprehensiveNewServicesShowcase2025({ className = '' }: "ServiceShowcaseProps) {;
   const [activeTab", setActiveTab] = useState<'micro-saas' | 'it-services' | 'ai-services'>('micro-saas');
-  const [selectedService, setSelectedService] = useStateg<div>(null);
+  const [selectedService, setSelectedService] = useState<any>(null);
 ;
   const _tabs = [;
     { "id": 'micro-saas', "name": 'Micro SAAS', "icon": "Zap", "count": "NEW_MICRO_SAAS_SERVICES_2025.length "},;

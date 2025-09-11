@@ -1,3 +1,4 @@
+import React from 'react';
 export function DisputeDashboard() {
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6'>

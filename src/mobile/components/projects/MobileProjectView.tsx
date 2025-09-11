@@ -11,6 +11,7 @@ id: string;
     totalAmount: string;
     progress: number;
 
+import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
@@ -27,6 +28,7 @@ import { SeverityIndicator } from '../common / SeverityIndicator';
 import { use_router } from 'next / router';
 import { toast } from 'sonner';
 
+import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -44,6 +46,7 @@ interface Milestone {
   status: "completed" | "in_progress" | "pending",
   paymentStatus: "paid" | "pending" | "overdue",
   amount: string
+import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;

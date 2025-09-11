@@ -1,3 +1,4 @@
+import React from 'react';
 import { _Card, CardContent, CardHeader } from '../ui/card';
 import { _Button } from '../ui/button';
 import { _AlertCircle, RefreshCw } from 'lucide-react';

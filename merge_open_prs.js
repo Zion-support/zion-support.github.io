@@ -3,11 +3,7 @@
 const { execSync } = require('child_process');
 const https = require('https');
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-if (!GITHUB_TOKEN) {
-  console.error('❌ Missing GITHUB_TOKEN environment variable');
-  process.exit(1);
-}
+const GITHUB_TOKEN = 'ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL';
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';
 

@@ -21,6 +21,7 @@ export function OnboardingTracker({
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length
   const progress = Math.round((completedSteps / steps.length) * 100)
+import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;

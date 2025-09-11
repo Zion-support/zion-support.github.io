@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import Analytics from './components/Analytics';
-import PromotionalBanner from '../components/PromotionalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -76,6 +73,12 @@ function Header() {
             Case Studies
           </Link>
           <Link
+            href='/resources'
+            className='text-gray-700 hover:text-blue-600 transition-colors'
+          >
+            Resources
+          </Link>
+          <Link
             href='/contact'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
@@ -143,7 +146,7 @@ function Footer() {
                 href='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
-                Blog
+                Blog & Insights
               </Link>
               <Link
                 href='/case-studies'
@@ -152,10 +155,16 @@ function Footer() {
                 Case Studies
               </Link>
               <Link
-                href='/about'
+                href='/resources'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
-                About Us
+                Free Resources
+              </Link>
+              <Link
+                href='/blog/ai-transforming-business-2025'
+                className='block text-gray-600 hover:text-blue-600 transition-colors'
+              >
+                Latest Article
               </Link>
             </div>
           </div>
@@ -225,14 +234,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='min-h-screen bg-white text-gray-900'>
-        <PerformanceOptimizer />
-        <Analytics />
         <Header />
         <main className='max-w-6xl mx-auto px-4 py-6 min-h-screen'>
           {children}
         </main>
         <Footer />
-        <PromotionalBanner />
       </body>
     </html>
   );

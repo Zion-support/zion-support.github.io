@@ -21,7 +21,7 @@ interface PerformanceMetric {
   unit: string;
   trend: 'up' | 'down' | 'stable';
   status: 'good' | 'warning' | 'critical';
-  icon: React.ComponentTypeg<div>;
+  icon: React.ComponentType<any>;
 }
 
 interface PerformanceData {

@@ -1,3 +1,4 @@
+import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
 import { _GradientHeading } from '../ui/GradientHeading';

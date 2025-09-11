@@ -20,7 +20,7 @@ interface ServiceShowcase {
   id: string;
   title: string;
   description: string;
-  icon: React.ComponentTypeg<div>;
+  icon: React.ComponentType<any>;
   color: string;
   features: string[];
   price: string;

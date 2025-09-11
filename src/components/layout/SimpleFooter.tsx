@@ -1,3 +1,4 @@
+import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 

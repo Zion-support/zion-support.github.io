@@ -75,65 +75,6 @@ const HomePage: React.FC = () => {
         </AnimatedSection>
 
         <AnimatedSection animation="slideUp" delay={200}>
-          <section className="latest-blog">
-            <div className="container">
-              <h2 className="section-title">Latest from the Blog</h2>
-              <div className="blog-grid">
-                <div className="blog-card">
-                  <h3>
-                    <a href="/blog/ai-enterprise-roadmap-2025">AI Enterprise Roadmap 2025</a>
-                  </h3>
-                  <p>Quarter-by-quarter plan to deliver AI value safely and efficiently.</p>
-                  <a className="service-link" href="/blog/ai-enterprise-roadmap-2025">Read more →</a>
-                </div>
-                <div className="blog-card">
-                  <h3>
-                    <a href="/blog/edge-ai-inference-guide">Edge AI Inference Guide</a>
-                  </h3>
-                  <p>Design low-latency, cost-efficient inference close to users.</p>
-                  <a className="service-link" href="/blog/edge-ai-inference-guide">Read more →</a>
-                </div>
-                <div className="blog-card">
-                  <h3>
-                    <a href="/blog/ai-infrastructure-blueprint-2025">AI Infrastructure Blueprint 2025</a>
-                  </h3>
-                  <p>Design a cost-aware, reliable, and safe AI platform end-to-end.</p>
-                  <a className="service-link" href="/blog/ai-infrastructure-blueprint-2025">Read more →</a>
-                </div>
-                <div className="blog-card">
-                  <h3>
-                    <a href="/blog/generative-ai-security-best-practices">Generative AI Security Best Practices</a>
-                  </h3>
-                  <p>Secure LLM apps with guardrails, governance, and continuous evals.</p>
-                  <a className="service-link" href="/blog/generative-ai-security-best-practices">Read more →</a>
-                </div>
-                <div className="blog-card">
-                  <h3>
-                    <a href="/blog/edge-personalization-patterns-2025">Edge Personalization Patterns for 2025</a>
-                  </h3>
-                  <p>Geo and audience‑aware experiences with flags and experiments at the edge.</p>
-                  <a className="service-link" href="/blog/edge-personalization-patterns-2025">Read more →</a>
-                </div>
-                <div className="blog-card">
-                  <h3>
-                    <a href="/blog/llm-cost-optimization-playbook">LLM Cost Optimization Playbook</a>
-                  </h3>
-                  <p>Cut inference spend 20–50% with routing, retrieval, and batching.</p>
-                  <a className="service-link" href="/blog/llm-cost-optimization-playbook">Read more →</a>
-                </div>
-                <div className="blog-card">
-                  <h3>
-                    <a href="/blog/ai-governance-checklist-2025">AI Governance Checklist 2025</a>
-                  </h3>
-                  <p>Operationalize policy with evals, guardrails, and clear ownership.</p>
-                  <a className="service-link" href="/blog/ai-governance-checklist-2025">Read more →</a>
-                </div>
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection animation="slideUp" delay={200}>
           <section className="services-preview">
             <div className="container">
               <h2 className="section-title">Our Core Services</h2>

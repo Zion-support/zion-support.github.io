@@ -149,7 +149,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   };
 
   const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ComponentTypeg<div> } = {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
       'IT Services': Shield,

@@ -83,17 +83,16 @@ report.checks.push({
   found,
 });
 if (found.length) report.overallStatus = 'warning';
-class SecurityScanner {
-  constructor() {
-    this.securityReport = {
+class SecurityScanner {}
+  constructor() {}
+    this.securityReport = {}
       timestamp: new Date().toISOString(),
       overallStatus: 'unknown',
-      checks: []
+      checks: {};
     };
-  }
-  
-  async runAllChecks() {
-    try {
+  };
+  async runAllChecks() {}
+    try {}
       await this.checkNpmAudit();
       await this.checkDependencies();
       await this.checkSensitiveFiles();

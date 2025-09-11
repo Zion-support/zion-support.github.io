@@ -4,6 +4,7 @@ import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
 
+import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components/ui/button';
 import { DialogFooter } from '@/components/ui/dialog';
@@ -91,6 +92,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               <>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
 
+import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
 import { Button } from "@/components/ui/button";
 import { DialogFooter } from "@/components/ui/dialog";

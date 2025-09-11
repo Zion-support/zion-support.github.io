@@ -1,120 +1,117 @@
-import React from 'react';
+import React from "react";
+interface StructuredDataProps {;
+  data: any}
 
-interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
-  data: any;
-}
+export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
+  return ("
+    <script"
+      type = "application/ld+json""
+      dangerouslySetInnerHTML="{{" __html: JSON.stringify(data) }}>
+  />
+  )
 
-export default function StructuredData({ type, data }: StructuredDataProps) {
-  const getStructuredData = () => {
-    switch (type) {
-      case 'Organization':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "description": "Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
-          },
-          "sameAs": [
-            "https://linkedin.com/company/zion-tech-group",
-            "https://twitter.com/ziontechgroup"
-          ],
-          "foundingDate": "2020",
-          "numberOfEmployees": "10-50",
-          "industry": "Technology Services"
-        };
+export const OrganizationSchema = () => {"
+  const organizationData = {},"
+    contactPoint: {""
+      "@type": "ContactPoint","
+      contactType: "customer service","
+      url: "http,"
+    s:// comment;
+    sameAs: [""
+      "http,"
+    s:// comment;
+      "https:// comment;
+    sameAs: ["
+      "https:// comment;
+      "https: // comment;
+      "https:// comment;
+    "foundingDate": "2020","
+    "numberOfEmployees": "50-100","
+    "industry": "Technology Services"
+}"
+    foundingDate: "2020","
+    numberOfEmployees: "50-100","
+    industry: "Technology Services"}
 
-      case 'WebSite':
-        return {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "description": "Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        };
+"
+  return <StructuredData data="{organizationData}"   />
 
-      case 'Article':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": data.title,
-          "description": data.description,
-          "image": data.image || "https://ziontechgroup.com/default-article-image.jpg",
-          "author": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://ziontechgroup.com/logo.png"
-            }
-          },
-          "datePublished": data.datePublished,
-          "dateModified": data.dateModified || data.datePublished,
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": data.url
-          }
-        };
 
-      case 'Service':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": data.name,
-          "description": data.description,
-          "provider": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "areaServed": "United States",
-          "serviceType": data.serviceType,
-          "offers": {
-            "@type": "Offer",
-            "price": data.price,
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          }
-        };
+export const WebSiteSchema = () => {"
+  const websiteData = {}","
+      "query-input": "required name=search_term_string"
 
-      default:
-        return {};
-    }
-  };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(getStructuredData(), null, 2)
-      }}
-    />
-  );
-}
+  }"
+    "@context": "https:// comment;
+    "@type": "WebSite","
+    "@context": "https:// comment;
+    name: "Zion Tech Group","
+    url: "http,"
+    s:// comment;
+    description: ""
+      "Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.","
+    potentialAction: {""
+      "@type": "SearchAction","
+      target: "http,"
+    s:// comment;
+      target: "https:// comment;
+      "query-input": "required name=search_term_string","
+      target: "https:// comment;
+"
+  return <StructuredData data="{websiteData}"   />
+
+
+export const ServiceSchema = () => {"
+  const serviceData = {},"
+    serviceType: "Artificial Intelligence","
+    areaServed: "Worldwide","
+    hasOfferCatalog: {""
+      "@type": "OfferCatalog","
+      name: "AI Services"
+      itemListElement: ["
+        {""
+          "@type": "Offer","
+          itemOffered: {""
+            "@type": "Service","
+            name: "Content Creation"}},"
+        {""
+          "@type": "Offer","
+          itemOffered: {""
+            "@type": "Service","
+            name: "Email Automation"}},"
+        {""
+          "@type": "Offer","
+          itemOffered: {""
+            "@type": "Service","
+            name: "Customer Support"}}
+        {"
+          "@type": "Offer","
+          "itemOffered": {"
+            "@type": "Service","
+            "name": "Business Intelligence"
+
+
+        }
+
+      ]
+
+
+  }
+
+"
+  return <StructuredData data="{serviceData}"   />
+}"
+        {""
+          "@type": "Offer","
+          itemOffered: {""
+            "@type": "Service","
+            name: "Business Intelligence"}}]}}
+
+"
+  return <StructuredData data="{serviceData}"   />
+
+
+"""
+
+export default Component;

@@ -1,4 +1,5 @@
 import { Handshake, MessageSquare, Star } from 'lucide-react'
+import React from "react",
 
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -11,6 +12,7 @@ import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 
+import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -87,6 +89,7 @@ export function TalentProfile(): any ({;
         <div className='lg:col-span-2 space-y-8'>;
           {/* Bio Section */}
 
+import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { HireNowCTA } from './HireNowCTA';
@@ -132,6 +135,7 @@ function TalentProfile() {
   
   return (
     <div className="container mx-auto px-4 py-8">
+import React from "react",;
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { HireNowCTA } from "./HireNowCTA",;

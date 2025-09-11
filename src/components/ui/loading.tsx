@@ -1,3 +1,4 @@
+import React from 'react';
 import { cn } from '@/lib/utils';
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
   const sizeClasses = {

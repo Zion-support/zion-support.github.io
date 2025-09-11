@@ -64,9 +64,11 @@ export function BillingHeader() {;
             <Link href="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;
 
+import React from "react";
 import { Button } from "@/components/ui/button";
 
   )
+import React from "react",;
 import { Button } from "@/components/ui/button",;
 
     <div className="space-y-2">;
@@ -84,6 +86,7 @@ import { Button } from "@/components/ui/button",;
           <Button variant="outline" size="sm" className="gap-1" asChild>;
             <Link href="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;
+import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Download, Mail, BarChart3 } from 'lucide-react';
 import Link from 'next / link';
@@ -112,6 +115,7 @@ function BillingHeader() {
           <Button variant="outline" size="sm" className="gap - 1" as_child>;
             <Link href="/dashboard / client / analytics">;
               <BarChart3 className="h - 4 w - 4" />;
+import React from './react';
 import { Button  } from '@/components / ui / button';
 import Link from './next / link';
 export /**

@@ -26,8 +26,8 @@ interface HeroSlide {
   path: string;
   features: string[];
   gradient: string;
-  icon: React.ComponentTypeg<div>;
-  stats: { label: string; value: string; icon: React.ComponentTypeg<div> }[];
+  icon: React.ComponentType<any>;
+  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
 }
 
 export default function EnhancedHeroSection() {
