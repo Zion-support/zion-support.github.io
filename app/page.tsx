@@ -348,6 +348,102 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+
+          {/* Featured Content Grid */}
+          <div className='grid md:grid-cols-3 gap-8 mb-12'>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-left'>
+              <div className='text-3xl mb-4'>🤖</div>
+              <h3 className='text-xl font-bold mb-3'>AI Productivity Automation 2025</h3>
+              <p className='text-sm opacity-90 mb-4'>
+                Complete guide to transforming your workflow with AI automation tools and strategies.
+              </p>
+              <Link
+                href='/blog/ai-productivity-automation-2025'
+                className='text-white text-sm font-medium hover:underline'
+              >
+                Read Article →
+              </Link>
+            </div>
+
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-left'>
+              <div className='text-3xl mb-4'>☁️</div>
+              <h3 className='text-xl font-bold mb-3'>Cloud-Native Architecture Blueprint</h3>
+              <p className='text-sm opacity-90 mb-4'>
+                Build scalable, resilient applications with modern cloud-native patterns and practices.
+              </p>
+              <Link
+                href='/blog/cloud-native-architecture-2025'
+                className='text-white text-sm font-medium hover:underline'
+              >
+                Read Article →
+              </Link>
+            </div>
+
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-left'>
+              <div className='text-3xl mb-4'>💰</div>
+              <h3 className='text-xl font-bold mb-3'>Startup Funding in AI Era</h3>
+              <p className='text-sm opacity-90 mb-4'>
+                Navigate the new funding landscape and position your AI startup for success.
+              </p>
+              <Link
+                href='/blog/startup-funding-ai-era-2025'
+                className='text-white text-sm font-medium hover:underline'
+              >
+                Read Article →
+              </Link>
+            </div>
+          </div>
+
+          {/* Resources Showcase */}
+          <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8'>
+            <h3 className='text-2xl font-bold mb-6 text-center'>Free Resources & Tools</h3>
+            <div className='grid md:grid-cols-2 gap-6'>
+              <div className='flex items-center gap-4'>
+                <div className='w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center'>
+                  <span className='text-xl'>📋</span>
+                </div>
+                <div>
+                  <h4 className='font-semibold'>AI Implementation Checklist</h4>
+                  <p className='text-sm opacity-90'>Step-by-step guide to successful AI implementation</p>
+                </div>
+              </div>
+              <div className='flex items-center gap-4'>
+                <div className='w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center'>
+                  <span className='text-xl'>🛡️</span>
+                </div>
+                <div>
+                  <h4 className='font-semibold'>AI Security Hardening</h4>
+                  <p className='text-sm opacity-90'>Essential security measures for AI systems</p>
+                </div>
+              </div>
+              <div className='flex items-center gap-4'>
+                <div className='w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center'>
+                  <span className='text-xl'>💰</span>
+                </div>
+                <div>
+                  <h4 className='font-semibold'>AI ROI Calculator</h4>
+                  <p className='text-sm opacity-90'>Calculate potential return on AI investments</p>
+                </div>
+              </div>
+              <div className='flex items-center gap-4'>
+                <div className='w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center'>
+                  <span className='text-xl'>⚖️</span>
+                </div>
+                <div>
+                  <h4 className='font-semibold'>AI Governance Framework</h4>
+                  <p className='text-sm opacity-90'>Complete framework for responsible AI governance</p>
+                </div>
+              </div>
+            </div>
+            <div className='text-center mt-6'>
+              <Link
+                href='/resources'
+                className='bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+              >
+                View All Resources
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
