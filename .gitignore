@@ -33,3 +33,6 @@ core
 
 core
 *.core
+
+# Ignore core dumps
+core
