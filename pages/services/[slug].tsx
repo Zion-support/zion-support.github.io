@@ -49,6 +49,8 @@ import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-ad
 import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
 import { real2025Q4AugmentedBatch } from '../../data/real-2025-q4-augmented-batch';
 
+import { verifiedRealServices2025Batch3 } from '../../data/verified-real-services-2025-batch3';
+
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 const contactInfo = {
@@ -101,6 +103,9 @@ function getAllServices(): Service[] {
 		.concat(real2031MicroSaasAdditions as unknown as Service[])
 		.concat(real2031ITServicesAdditions as unknown as Service[])
 		.concat(real2031AIServicesAdditions as unknown as Service[]);
+
+		.concat(verifiedRealServices2025Batch3 as unknown as Service[]);
+
 }
 
 function toSlug(value: string): string {

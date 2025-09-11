@@ -42,6 +42,8 @@ import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-ad
 import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
 import { real2025Q4AugmentedBatch } from '../../data/real-2025-q4-augmented-batch';
 
+import { verifiedRealServices2025Batch3 } from '../../data/verified-real-services-2025-batch3';
+
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
@@ -96,6 +98,21 @@ export default function ServicesIndexPage() {
       real2031MicroSaasAdditions as unknown[],
       real2031ITServicesAdditions as unknown[],
       real2031AIServicesAdditions as unknown[]
+
+      extraServices as any[],
+      additionalEnhancedServices as any[],
+      newlyAddedServices as any[],
+      curatedMarketServices as any[],
+      realMarketServices as any[],
+      new2025Services as any[],
+      marketValidatedServices as any[],
+      moreRealServices2025 as any[],
+      realOperationalServices as any[],
+      verified2025Additions as any[],
+      realServicesQ12025 as any[],
+      realEnterpriseServices2025 as any[],
+      verifiedRealServices2025Batch3 as any[]
+
     );
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
