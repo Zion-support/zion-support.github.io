@@ -1,6 +1,16 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import SEO from '../components/SEO';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import NewContentBanner from '../components/NewContentBanner';
+import EnhancedNewsletter from '../components/EnhancedNewsletter';
+import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -45,6 +55,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Content Banner - Top */}
+      <NewContentBanner variant="default" maxItems={4} />
 
       {/* New Content Showcase Banner */}
       <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -915,6 +928,31 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase variant="featured" maxItems={4} />
+      
+      {/* New Content Banner */}
+      <NewContentBanner variant="gradient" maxItems={4} />
+
+      {/* Trending Content Section */}
+      <EnhancedContentShowcase variant="trending" maxItems={4} />
+      
+      {/* Latest Content Section */}
+      <EnhancedContentShowcase variant="latest" maxItems={4} />
+
+
+      {/* Performance Metrics Section */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
+        <PerformanceMetrics />
+      </Suspense>
+
+      {/* Technology Stack Section */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading tech stack..." />}>
+        <TechnologyStack />
+      </Suspense>
+>>>>>>> cursor/create-and-deploy-new-content-50f9
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
