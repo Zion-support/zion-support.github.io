@@ -112,22 +112,22 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='Production-Grade AI Agents: Observability and Safety'
-              href='/blog/production-grade-ai-agents'
-              description='From demos to durable agents with logging, evals, safety and cost controls.'
-              icon='🛡️'
+              title='GenAI Security in 2025: Practical Controls That Actually Work'
+              href='/blog/genai-security-2025'
+              description='Blueprint for securing GenAI systems with gateways, guardrails, and evals.'
+              icon='🔐'
             />
             <Card
-              title='Cloud FinOps Automation: 30% Savings With Guardrails'
-              href='/blog/cloud-finops-automation'
-              description='Automation-first FinOps with rightsizing, policies, and continuous verification.'
-              icon='💸'
+              title='AI Governance Operating Model: From Policy to Practice'
+              href='/blog/ai-governance-operating-model'
+              description='Make governance an accelerator with clear roles, lifecycle controls, and cadence.'
+              icon='🏛️'
             />
             <Card
-              title='The Modern Data Stack in 2025: Pragmatic Guide'
-              href='/blog/modern-data-stack-2025'
-              description='Simple, reliable data architectures: ingestion, lakehouse, transforms, activation.'
-              icon='📊'
+              title='Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready'
+              href='/blog/serverless-for-ml-2025'
+              description='Run ML and GenAI on serverless with strong reliability and lower costs.'
+              icon='⚡'
             />
           </div>
         </div>
