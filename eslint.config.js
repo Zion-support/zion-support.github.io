@@ -14,13 +14,11 @@ export default [
       'dist/**',
       'build/**',
       'out/**',
-      'src/**',
       'src/pages.disabled/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       // Newly ignored problematic directories
-      'src/**',
       'src.pages.disabled/**',
       'src.disabled/**',
       'components.disabled/**',
@@ -74,6 +72,7 @@ export default [
       'zion-os.disabled/**',
       'zion_academy/**',
       'backup/**',
+      '.backup/**',
       'automation/backups/**',
       'ai-optimization-backups/**',
       'pages.__backup/**',
@@ -144,8 +143,6 @@ export default [
   },
   {
     ignores: [
-      // Globally ignore all files to pass lint in current repository state
-      '**',
       'node_modules/**',
       '.next/**',
       'dist/**',
