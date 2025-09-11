@@ -3,7 +3,7 @@
 echo "🔍 Starting PR merge process..."
 
 # Set up variables
-GITHUB_TOKEN="ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL"
+GITHUB_TOKEN="${GITHUB_TOKEN}"
 REPO="Zion-Holdings/zion.app"
 
 # Function to merge a PR

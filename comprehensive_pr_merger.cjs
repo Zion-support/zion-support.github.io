@@ -5,7 +5,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 // Configuration
-const GITHUB_TOKEN = 'ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';
 const WORKSPACE = '/workspace';
@@ -19,7 +19,7 @@ function githubRequest(path, method = 'GET', data = null) {
             path: path,
             method: method,
             headers: {
-                'Authorization': `token ${GITHUB_TOKEN}`,
+                'Authorization': GITHUB_TOKEN ? `token ${GITHUB_TOKEN}` : undefined,
                 'Accept': 'application/vnd.github.v3+json',
                 'User-Agent': 'PR-Merger-Bot/1.0'
             }

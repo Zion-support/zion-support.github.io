@@ -28,6 +28,8 @@
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   # Enable build caching
   NETLIFY_CACHE_DIR = ".netlify/cache"
+  # Netlify Secrets Scanner: allow public client-side env var
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 
 # IMPORTANT: This is a Vite project, NOT a Next.js project
 # The @netlify/plugin-nextjs plugin is NOT needed and should NOT be installed
