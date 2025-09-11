@@ -23,17 +23,13 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     } finally {;
       setLoading(false);
 
-=======    }
   }
-=======
 
   };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
 
 
-=======    <form onSubmit={handleSubmit} className="space-y-4">
       {error && <div className="text-red-600 text-sm">{error}</div>}
       <div>
         <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
@@ -44,7 +40,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           placeholder="Phase 1 – Backend Setup"
 import React, { useState } from 'react';
 
-=======type Props = {
   onSubmit: (payload: {
     title: string;
     description?: string;
@@ -52,13 +47,11 @@ import React, { useState } from 'react';
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 export default function MilestoneForm({ onSubmit }: Props) {;
-=======
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -112,7 +105,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       </div>;
       <div>;
 
-=======
     <form onSubmit={handleSubmit} className="space-y-4">
       {error && <div className="text-red-600 text-sm">{error}</div>}
       <div>        <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
@@ -121,11 +113,9 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Phase 1 – Backend Setup"
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
         <label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
         <textarea
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
@@ -151,8 +141,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           />;
         </div>;
         <div>;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -167,29 +155,22 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           />
         </div>
         <div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
           <label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
           <input
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             type="number"
             min={0}
             step="0 && 0.01"
             className="mt-1 w-full rounded border px-3 py-2"
             value={amountUsd}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             placeholder="3000";
             required;
           />;
         </div>;
       </div>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onChange={(e) => setAmountUsd(e.target.value)}
             placeholder="3000"
             required
@@ -203,8 +184,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         disabled={loading}
       >
         {loading ? 'Adding...' : 'Add Milestone'}
-=======
-=======        type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         disabled={loading}
       >
@@ -212,22 +191,13 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       </button>;
     </form>;
   );
-=======
   );
 
 }
-<<<<<<< HEAD
 
 }
   );
 }
-=======
-=======}
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <button;
         type='submit';
         className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
@@ -238,8 +208,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       </button>;
     </form>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
       </button>
     </form>
 );
@@ -248,9 +216,3 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

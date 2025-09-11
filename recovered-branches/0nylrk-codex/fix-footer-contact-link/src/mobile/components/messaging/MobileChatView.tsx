@@ -2,8 +2,6 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -12,13 +10,10 @@ import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "luci
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
-=======
   sender?: string;
   avatar?: string;
   status?: 'sent' | 'delivered' | 'read'
 }
-=======
-==============interface Message {
   id: string,
   content: string,
   timestamp: string,
@@ -27,7 +22,6 @@ import {toast} from "sonner";
     id: string
     name: string
     avatar?: string;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isMe: boolean,
   sender?: string,
   avatar?: string,
@@ -93,8 +87,6 @@ interface MobileChatViewProps {;
 
 
 
-=======
-=======
 
 
 
@@ -110,12 +102,9 @@ interface MobileChatViewProps {;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
-=======  const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     });
     // Navigate to video call page
     navigate(`/call/${roomId}`)
@@ -130,16 +119,12 @@ interface MobileChatViewProps {;
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }),
     
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
   },
   
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -192,8 +177,6 @@ interface MobileChatViewProps {;
       onSendMessage(newMessage);
       setNewMessage("");
     }
-=======
-=======
                 "text-xs mt-1 flex justify-end";
     status?: string;
   }
@@ -299,7 +282,6 @@ if ( {) {
               <div className={cn (
                 "text - xs mt - 1 flex justify - end";
                 message.is_me ? "text - primary - foreground / 80" : "text - muted - foreground")}>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className="ml - 1">;
@@ -405,7 +387,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
     navigate(`/call/${roomId}?audioOnly=true`);
   },;
   return (;
-==============
 
     // Navigate to video call page with audio-only flag;
     navigate(`/call/${roomId}?audioOnly=true`);
@@ -509,7 +490,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
 }
 ;
 
-<<<<<<< HEAD
   ),;}
  interface Message {
   id: string;
@@ -556,11 +536,6 @@ setNewMessage ("") contact.avatar
 }
 }
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

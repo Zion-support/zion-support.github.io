@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
@@ -11,69 +13,61 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-export default function App() {
-  const services = [
-    {
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions for your business needs. From machine learning to natural language processing.',
-      icon: '🤖',
-      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT services and infrastructure management. Keep your systems running smoothly and securely.',
-      icon: '💻',
-      features: ['System Administration', 'Network Security', 'Cloud Migration', '24/7 Support'],
-    },
-    {
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.',
-      icon: '☁️',
-      features: ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Auto-scaling'],
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your business from evolving threats and ensure compliance.',
-      icon: '🔒',
-      features: ['Threat Detection', 'Compliance', 'Penetration Testing', 'Security Audits'],
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics and business intelligence solutions.',
-      icon: '📊',
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Custom Dashboards'],
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation services to modernize your business processes and improve efficiency.',
-      icon: '🚀',
-      features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
-    },
-  ];
-
-  const handleMenuClick = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
-export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Header />
-          <Sidebar />
-          <main className="flex-1 lg:ml-80">
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <ScrollToTop />
+        <ParticleBackground />
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+        <Footer />
+        <ChatAssistant />
       </Router>
     </ErrorBoundary>
+  );
+}
+
+// Placeholder components - replace with actual implementations
+function HomePage() {
+  return (
+    <div>
+      <h1>Welcome to Zion Tech</h1>
+      <p>Your trusted technology partner</p>
+    </div>
+  );
+}
+
+function ServicesPage() {
+  return (
+    <div>
+      <h1>Our Services</h1>
+      <p>Comprehensive technology solutions</p>
+    </div>
+  );
+}
+
+function AboutPage() {
+  return (
+    <div>
+      <h1>About Us</h1>
+      <p>Learn more about our company</p>
+    </div>
+  );
+}
+
+function ContactPage() {
+  return (
+    <div>
+      <h1>Contact Us</h1>
+      <p>Get in touch with our team</p>
+    </div>
   );
 }

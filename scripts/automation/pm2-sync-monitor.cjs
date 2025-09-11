@@ -28,7 +28,6 @@
  * - Alert system;
  */;
 #!/usr/bin/env node;
->>>>>>> origin/automation-fixes
 /**;
  * PM2 Sync Monitor System;
  * Health check and status monitoring for the PM2 sync automation system;

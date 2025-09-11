@@ -3,7 +3,6 @@ import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
@@ -39,12 +38,10 @@ export function ActiveFilters(): any ({;
     priceRange[0] !== 50 |
     priceRange[1] !== 200;
   if (!hasActiveFilters) return null;
-=======
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
       {selectedSkills.map(skill => (
-=======
         <ClickableBadge
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -58,7 +55,6 @@ export function ActiveFilters(): any ({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
@@ -83,12 +79,7 @@ export function ActiveFilters(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
@@ -120,7 +111,6 @@ function ActiveFilters() {
     price_range[0] !== 50 ||;
     price_range[1] !== 200;
 ;
-<<<<<<< HEAD
   // Check condition
 if (return null) {
   $2
@@ -183,7 +173,6 @@ if (return null) {
       </Button>;
     </div>);
 }
-<<<<<<< HEAD
       ;
       <Button ;
         variant="ghost" ;
@@ -231,8 +220,3 @@ if (!hasActiveFilters) return null;
 ;
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

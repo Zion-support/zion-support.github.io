@@ -15,16 +15,12 @@ export function ApplicationProgress({
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
 }
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Define the progress value based on status
 
   const getProgressValue = () => {
@@ -75,8 +71,6 @@ function ApplicationProgress() {
       <Progress value={progressValue} className="h-2" />=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -103,7 +97,6 @@ function ApplicationProgress() {
 
 
   )
-=======
   );}
 function StatusIcon({
   status
@@ -123,10 +116,7 @@ function StatusIcon({
   }
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
@@ -140,8 +130,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -150,8 +138,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
     // This step is upcoming
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
 }    return <Circle className="h-4 w-4 text-muted-foreground/50" />
@@ -211,8 +197,6 @@ export function ApplicationProgress({ status, className } ApplicationProgressPro
       ;
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
-=======
-=======
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
 
@@ -225,7 +209,6 @@ function StatusIcon(): any ({;
 }) {;
   // Helper to determine if this step is active, completed, or inactive;
   const statusRank: Record<ApplicationStatus, number> = {;
-<<<<<<< HEAD=======  if (currentRank < statusRank_) {;
     // This step is complete;
     return <CheckCircle2 className="h-4 w-4 text-green-500" />;
   } else if (currentRank === statusRank_) {;
@@ -235,8 +218,6 @@ function StatusIcon(): any ({;
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
   const progress_value = getProgressValue ();
 ;
@@ -301,7 +282,5 @@ if ( {) {
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
 }
-=======
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

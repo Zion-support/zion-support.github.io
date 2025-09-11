@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils",
 
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
-=======import {QuoteRequestSteps} from "../QuoteRequestForm";
 import {CheckIcon} from "@/components/icons";
 import {cn} from "@/lib/utils";
 import { QuoteRequestSteps } from "../QuoteRequestForm",
@@ -16,9 +15,7 @@ import { cn } from "@/lib/utils",
     { id: "details", label: "Details" }
     { id: "timeline", label: "Timeline" }
     { id: "budget", label: "Budget" }
-=======}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
@@ -32,16 +29,12 @@ import { cn } from "@/lib/utils",
     return "upcoming"
   },
 
-=======
 
 
 interface StepProgressProps {
   currentStep: QuoteRequestSteps}
     { id: "summary", label: "Summary" }
   ],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
@@ -61,7 +54,6 @@ interface StepProgressProps {
       <div className="flex justify-between relative">
         {steps.map((step) => {
 
-=======
 
 
 export function StepProgress(): any ({ currentStep }: StepProgressProps) {;=======
@@ -103,7 +95,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;  con
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
-=======
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
@@ -111,11 +102,8 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;  con
               <span
                 className={cn(
                   "text-xs mt-2 font-medium"
-=======
-=======
 
 
-=======                  "text-xs mt-2 font-medium",
 
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : =======
@@ -131,7 +119,6 @@ import { cn } from "@/lib/utils",;
 interface StepProgressProps {;
   currentStep:QuoteRequestSteps;
 }
-<<<<<<< HEAD
 ;
 export function StepProgress({ currentStep } StepProgressProps) {;
   const steps:{ id:QuoteRequestSteps, label:string }[] = [;
@@ -201,6 +188,3 @@ export function StepProgress({ currentStep } StepProgressProps) {;
   );
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

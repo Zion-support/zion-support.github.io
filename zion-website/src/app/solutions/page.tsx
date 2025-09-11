@@ -1,6 +1,4 @@
 import {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   LightBulbIcon,
   CpuChipIcon,
   RocketLaunchIcon,
@@ -117,7 +115,6 @@ function SolutionsPage() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
@@ -125,10 +122,6 @@ function SolutionsPage() {
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
             Let's discuss how our AI solutions can accelerate your growth and give you a
-=======
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

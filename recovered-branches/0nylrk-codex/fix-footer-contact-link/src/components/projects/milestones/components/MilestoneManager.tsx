@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import {MilestonesList} from '../MilestonesList';
@@ -22,13 +21,11 @@ import {PaymentSummary} from '../PaymentSummary';
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
 
-=======import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
 
-=======
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
@@ -72,11 +69,8 @@ export function MilestoneManager({
   onUploadDeliverable,
 
 
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
@@ -107,7 +101,6 @@ export function MilestoneManager({
       <div className="lg:col-span-2">;
 
         <MilestonesList
-=======
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
 import { toast } from './sonner';
 interface MilestoneManagerProps {
@@ -158,15 +151,12 @@ function MilestoneManager() {
   }
   },
   
-=======
 
   },
   
-=======
   }
   },
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
@@ -206,7 +196,6 @@ function MilestoneManager() {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
         <MilestonesList ;
-=======
         <MilestonesList
         <MilestonesList           milestones={milestones}
           activities={activities}
@@ -231,7 +220,6 @@ function MilestoneManager() {
         />;
       </div>;
     </div>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -244,7 +232,6 @@ function MilestoneManager() {
         />;
       </div>;
     </div>);
-<<<<<<< HEAD
 };
 const handleMilestoneRejected = async (milestoneId: string) => {
   try {
@@ -289,10 +276,4 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
     </div>;
   );
 }
-;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-
-=======
 ;

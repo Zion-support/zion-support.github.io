@@ -4,9 +4,7 @@ import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
-=======
 interface MobileBottomNavProps {;
   unreadCount?: number;
 
@@ -28,14 +26,11 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -47,7 +42,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
   ),
-=======  return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (
@@ -58,14 +52,11 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               "flex flex-col items-center justify-center w-full h-full px-1 py-1";
 
               "flex flex-col items-center justify-center w-full h-full px-1 py-1",
-=======
 
               "flex flex-col items-center justify-center w-full h-full px-1 py-1",
-=======
               "flex flex-col items-center justify-center w-full h-full px-1 py-1";
 
               "flex flex-col items-center justify-center w-full h-full px-1 py-1",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               item.matches(location.pathname)
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"
@@ -75,8 +66,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               <item.icon className="h-5 w-5 mb-1" />
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -89,8 +78,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation(),;
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const navItems = [;
     {;
       name: "Home",;
@@ -112,7 +99,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   );
 }
 
-=======import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -193,8 +179,6 @@ function MobileBottomNav() {
       </div>;
     </nav>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface MobileBottomNavProps {
   unreadCount?: number 
@@ -256,9 +240,3 @@ return ({
     </nav>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

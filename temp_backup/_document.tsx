@@ -19,7 +19,6 @@ export default class MyDocument extends Document {
 			</Html>
 		)
 	}}
-=======
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {

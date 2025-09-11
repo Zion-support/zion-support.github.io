@@ -8,16 +8,13 @@
   isAuthenticated: boolean
 }
 export function TalentCard({
-=======
-
-
-
-=======
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
@@ -71,8 +68,6 @@ import { TalentProfile } from "@/types/talent",;
 
 
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -82,17 +77,14 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 }
 export function TalentCard(): any ({;
-=======
 
 export function TalentCard(): any ({;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
@@ -133,7 +125,6 @@ export function TalentCard({;
   onRequestHire,;
   isSaved,;
   onToggleSave,;
-=======
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
@@ -145,9 +136,7 @@ export function TalentCard({;
       onRequestHire(talent);
     }
   };
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -185,7 +174,6 @@ export function TalentCard({;
                   <span>{talent.availability_type}</span>
                 </div>
               )}
-=======
                 </div>;
               )}            </div>
           </div>
@@ -223,7 +211,6 @@ export function TalentCard({;
             </div>;
           </div>;
         </div>;
-=======
 
 
             </div>;          </div>;
@@ -245,7 +232,6 @@ export function TalentCard({;
                   {skill}
                 </span>;
               ))}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
@@ -269,7 +255,6 @@ export function TalentCard({;
 
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light">;
               View <ArrowRight className="ml-1 h-4 w-4" />;
-=======
 import { Button } from '@/components / ui / button';
 import { Card } from '@/components / ui / card';
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from './lucide-react';
@@ -425,5 +410,3 @@ if ( {) {
 
     </Card>);
 }
-
-<<<<<<< HEAD=======

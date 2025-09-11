@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 import * as React from "react"
@@ -31,13 +30,9 @@ const Progress = React.forwardRef<
     className={cn(
       'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
-=======
-=======
 
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
-=======
-=======
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 
@@ -51,7 +46,6 @@ const Progress = React && React.forwardRef<;
   <ProgressPrimitive&& ProgressPrimitive.Root    ref={ref}
     className={cn(
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
-=======
       'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",      className
     )}
@@ -91,8 +85,6 @@ export { Progress };
 Progress.displayName = ProgressPrimitive.Root.displayName;
 export { Progress }
 ;
-=======
-==============
       className="h-full w-full flex-1 bg-primary transition-all"
 
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
@@ -102,8 +94,6 @@ export { Progress }
 Progress && Progress.displayName = ProgressPrimitive && ProgressPrimitive.Root.displayName;
 
 export { Progress };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as ProgressPrimitive from '@radix - ui / react - progress';
 ;
 import {cn} from '@/lib / utils';
@@ -132,8 +122,3 @@ export { Progress }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +17,35 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+import React from 'react';
+import Image from 'next/image';
+interface EnhancedMarketplaceCardProps {
+  title: string;
+  description: string;
+  price?: string;
+  image?: string;
+}
+export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
+  return (
+    <div className="rounded-xl border bg-white shadow-sm hover:shadow-md transition p-4 flex flex-col">
+      <div className="flex items-center gap-3 mb-3">
+        {image ? (
+          <Image src={image} alt={title} width={48} height={48} className="rounded" />
+        ) : (
+          <div className="h-12 w-12 rounded bg-gray-200" />
+        )}
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+      </div>
+      <p className="text-sm text-gray-600 mb-4">{description}</p>
+      <div className="mt-auto flex items-center justify-between">
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+        <a href="/contact" className="text-sm text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded">
+          Get started
+        </a>
+      </div>
+    </div>
+  );
+}
           <div className="h-12 w-12 rounded bg-gray-200" />)};
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
@@ -26,7 +54,6 @@ import React from 'react';
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Link from 'next/link';
 import Image from 'next/image';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="h - 12 w - 12 rounded bg - gray - 200" />)}
         <h3 className="text - lg font - semibold text - gray - 900">{title}</h3>;
       </div>;
@@ -123,41 +150,6 @@ import Image from 'next / image';
         </div>;
       </div>;
     </Link>;
-<<<<<<< HEAD
-=======
-interface MarketplaceCardProps {
-  title: string
-  description: string
-  price: number
-  rating: number
-  image: string
-  onAddToCart?: () => void;
-  onFavorite?: () => void;
-}
-const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
-          <div className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">;
-            Learn more →;
-          </div>;
-        </div>;
-      </div>;
-    </Link>;
-interface MarketplaceCardProps {;
-  title: string,;
-  description: string,;
-  price: number,;
-  rating: number,;
-  image: string,;
-  onAddToCart?: () => void;
-  on_favorite?: () => void;
-}
-const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
-  title;
-  description;
-  price;
-  rating;
-  image;
-  onAddToCart;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">;
           <Heart className="w-4 h-4 text-gray-600" />;
         </button>;
@@ -180,18 +172,9 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
         </button>;
       </div>;
     </div>;
-<<<<<<< HEAD
   );
 }
 export default EnhancedMarketplaceCard;
-
-=======
-
-
-  );
-}
-export default EnhancedMarketplaceCard;
-=======
   on_favorite;
 }) => {
   return (
@@ -227,4 +210,4 @@ export default EnhancedMarketplaceCard;
 }
 ;
 export default EnhancedMarketplaceCard;
-;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;

@@ -36,12 +36,6 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-
->
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -74,15 +68,90 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
-
         timestamp: new Date().toISOString()
-
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+      });
+    }
+  }
+  async checkTypeScriptErrors() {
+    try {
+      execSync('npx tsc --noEmit --pretty false', {
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: ['pipe', 'pipe', 'pipe'],
+      });
+      this.monitoringReport.metrics.typeCheckSuccess = true;
+      console.log('✅ TypeScript check passed');
+    } catch (error) {
+      if (error.stdout) {
+        const errors = this.parseTypeScriptErrors(error.stdout);
+        this.monitoringReport.errorsDetected.push(...errors);
+        this.monitoringReport.metrics.totalErrors += errors.length;
+        this.monitoringReport.metrics.typeCheckSuccess = false;
+        console.log(`❌ TypeScript check failed with ${errors.length} errors`);
+      }
+    }
+  }
+  async checkESLintErrors() {
+    try {
+      execSync('npx eslint . --format=compact --no-eslintrc', {
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: ['pipe', 'pipe', 'pipe'],
+      });
+      this.monitoringReport.metrics.lintSuccess = true;
+      console.log('✅ ESLint check passed');
+    } catch (error) {
+      if (error.stdout) {
+        const errors = this.parseESLintErrors(error.stdout);
+        this.monitoringReport.errorsDetected.push(...errors);
+        this.monitoringReport.metrics.totalErrors += errors.length;
+        this.monitoringReport.metrics.lintSuccess = false;
+        console.log(`❌ ESLint check failed with ${errors.length} errors`);
+      }
+    }
+  }
+  async checkBuildStatus() {
+    try {
+      // Quick build check (without full build)
+      execSync('npx next build --dry-run', {
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: ['pipe', 'pipe', 'pipe'],
+        timeout: 30000, // 30 second timeout
+      });
+      this.monitoringReport.metrics.buildSuccess = true;
+      console.log('✅ Build check passed');
+    } catch (error) {
+      this.monitoringReport.metrics.buildSuccess = false;
+      this.monitoringReport.errorsDetected.push({
+        type: 'build_failure',
+        message: error.message,
+        timestamp: new Date().toISOString(),
+      });
+      this.monitoringReport.metrics.totalErrors += 1;
+      console.log('❌ Build check failed');
+    }
+  }
+  async checkCriticalFiles() {
+    const criticalFiles = [
+      'package.json',
+      'tsconfig.json',
+      'next.config.js',
+      'src/App.tsx',
+      'src/pages/index.tsx',
+    ];
      is missing`,
-     is missing`,
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
+    for (const file of criticalFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      if (!fs.existsSync(filePath)) {
+        this.monitoringReport.errorsDetected.push({
+          type: 'missing_critical_file',
+          file: file,
+          message: `Critical file ${file} is missing`,
      is missing`,
           timestamp: new Date().toISOString(),
         });
@@ -93,38 +162,32 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-            timestamp: new Date().toISOString(),
-          });
-
-    );
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-        }
-      }
-    }
-
-
-
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(
+          /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
+        );
+        if (match) {
+          errors.push({
+            type: 'typescript_error',
+            file: match[1].trim(),
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            message: match[4].trim(),
             timestamp: new Date().toISOString()
-=======
-
+            timestamp: new Date().toISOString()
             timestamp: new Date().toISOString(),
           });
     );
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         }
       }
     }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return errors;
   }
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-
     for (const line of lines) {
       const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
       if (match) {
@@ -139,12 +202,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         });
       }
     }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    for (const line of lines) {
+      const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
+      if (match) {
+        errors.push({
+          type: 'eslint_error',
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
     );
       }
     }
@@ -156,21 +226,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         });
       }
     }
-
->
-
-
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return errors;
-          timestamp: new Date().toISOString()
-        });
-      }
-    }    return errors;
   }
   updateHealthStatus() {
     const totalErrors = this.monitoringReport.metrics.totalErrors;
@@ -187,46 +243,73 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     const status = this.monitoringReport.healthStatus;
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
-
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-
-<<<<<<< HEAD
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(
+      `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
+    );
+    console.log(
+      `🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`
+    );
+    console.log(
+      `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
+    );
+  }
+  async triggerErrorFixer() {
+    console.log('🚀 Triggering error fixer...');
+    try {
+      const ErrorFixerAutomation = require('./error-fixer-automation.js');
+      const automation = new ErrorFixerAutomation();
+      await automation.run();
       console.log('✅ Error fixer completed');
       console.log('✅ Error fixer completed');
-      console.log('✅ Error fixer completed');
-      console.log('✅ Error fixer completed');
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-      console.log('✅ Error fixer completed');
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
-
-        timestamp: new Date().toISOString()
->
-
-
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+      });
+    }
+  }
+  startContinuousMonitoring() {
+    console.log(
+      `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 1000} seconds)...`
+    );
+    setInterval(async () => {
+      if (this.isRunning) {
+        await this.performHealthCheck();
+        await this.saveReport();
+      }
+    }, this.checkInterval);
+  }
+  async saveReport() {
+    const reportPath = path.join(
+      this.projectRoot,
+      'error-reports',
+      `error-monitor-report-${Date.now()}.json`
+    );
+    const reportDir = path.dirname(reportPath);
+    if (!fs.existsSync(reportDir)) {
+      fs.mkdirSync(reportDir, { recursive: true });
+    }
     // Add duration to report
-        timestamp: new Date().toISOString()    // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
       reportPath,
@@ -264,15 +347,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
-
-
 }
-
-
+// Run the monitor
+if (require.main === module) {
+  const monitor = new ErrorMonitor();
+  monitor.start().catch(console.error);
 module.exports = ErrorMonitor;
+}
 module.exports = ErrorMonitor;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
 module.exports = ErrorMonitor;

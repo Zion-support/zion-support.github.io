@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 export default function PricingPage() {
   const plans = [
     {
@@ -53,15 +67,35 @@ export default function PricingPage() {
         "Email support",
         "Basic analytics",
         "Monthly reports"
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       ],
       \"popular\": false
     },
     {
+<<<<<<< HEAD
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       \"name\": \"Professional\",
       \"description\": \"Ideal for growing businesses\",
       \"price\": \"$7,999\",
@@ -94,8 +128,59 @@ export default function PricingPage() {
         '6 months maintenance included',
         'Analytics integration',
         'Content management system'
+<<<<<<< HEAD
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      ],
+      \"popular\": true
+    },
+    {
+      \"name\": \'Enterprise\',
+      \"description\": \'For large organizations and enterprises\',
+      \"price\": \'$10,000\',
+      \"period\": \'per month\',
+      \"features\": [\'Full-stack development\',
+        \'Unlimited pages\',
+        \'Custom integrations\',
+        \'Advanced security features\',
+        \'24/7 dedicated support\',
+        \'12 months maintenance included\',
+        \'Performance optimization\',
+        \'Scalable architecture\',
+        \'API development\',
+        \'Third-party integrations\'
+      ],
+      \"popular\": false
+    }
+  ];
+  return (
+    <>
+      <Head>
+        <title>Pricing - Zion Tech Group</title>
+        <meta name=\"description\" content=\"Transparent pricing for our technology services. Choose the plan that fits your business needs.\" />
+      </Head>
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       <div className=\"min-h-screen bg-gray-50 py-12\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -104,7 +189,244 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+              Simple, Transparent Pricing
+            </h1>
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+              Choose the plan that fits your business needs.
+            </p>
+          </div>
+<<<<<<< HEAD
+
+
+=======
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+=======
+<<<<<<< HEAD
+=======
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            {pricingPlans.map((plan, index) => (
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+export default function PricingPage() {;
+  const plans = [;
+    {;
+      \"name\": \"Starter\",;
+      \"description\": \"Perfect for small businesses and startups\",;
+      \"price\": \"$2,999\",;
+      \"period\": \"/month\",;
+      \"icon\": Zap,;
+      \"color\": \"from-green-500 to-emerald-500\",;
+      \"features\": [;
+        \"Up to 5 users\",;
+        \"Basic AI automation\",;
+        \"Standard security features\",;
+        \"Email support\",;
+        \"Basic analytics\",;
+        \"Monthly reports\";
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {CheckCircle,, ArrowRight,, Users,, Zap,, Shield} from 'lucide-react';
+const "PricingPage": React.FC = () => {;
+  const pricingPlans = [{;
+      name: 'Starter',;
+      "description": 'Perfect for small businesses and startups',;
+      "price": '$2,500',;
+      "period": 'per month',;
+      "features": [;
+        'Basic website development',;
+        'Up to 5 pages',;
+        'Mobile responsive design',;
+        'Basic SEO optimization',;
+        'Email support',;
+        '3 months maintenance included';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {Check,, Star,, Zap,, Shield,, Users,, Clock,, ArrowRight} from 'lucide-react';
+export default function PricingPage() {;
+  const plans = [;
+    {;
+      "name": "Starter",;
+      "description": "Perfect for small businesses and startups",;
+      "price": "$2,999",;
+      "period": "/month",;
+      "icon": Zap,;
+      "color": "from-green-500 to-emerald-500",;
+      "features": [;
+        "Up to 5 users",;
+        "Basic AI automation",;
+        "Standard security features",;
+        "Email support",;
+        "Basic analytics",;
+        "Monthly reports";
+      ],;
+      \"popular\": false;
+    },;
+    {;
+      \"name\": \"Professional\",;
+      \"description\": \"Ideal for growing businesses\",;
+      \"price\": \"$7,999\",;
+      \"period\": \"/month\",;
+      \"icon\": Shield,;
+      \"color\": \"from-cyan-500 to-blue-500\",;
+      \"features\": [\'Advanced website development\',;
+        \'Up to 15 pages\',;
+        \'Custom functionality\',;
+        \'Advanced SEO optimization\',;
+        \'Priority support\',;
+        \'6 months maintenance included\',;
+        \'Analytics integration\',;
+        \'Content management system\';
+      "name": 'Professional',;
+      "description": 'Ideal for growing businesses',;
+      "price": '$5,000',;
+      "period": 'per month',;
+      "name": "Professional",;
+      "description": "Ideal for growing businesses",;
+      "price": "$7,999",;
+      "period": "/month",;
+      "icon": Shield,;
+      "color": "from-cyan-500 to-blue-500",;
+      "features": ['Advanced website development',;
+        'Up to 15 pages',;
+        'Custom functionality',;
+        'Advanced SEO optimization',;
+        'Priority support',;
+        '6 months maintenance included',;
+        'Analytics integration',;
+        'Content management system';
+      ],;
+      \"popular\": true;
+    },;
+    {;
+      \"name\": \'Enterprise\',;
+      \"description\": \'For large organizations and enterprises\',;
+      \"price\": \'$10,000\',;
+      \"period\": \'per month\',;
+      \"features\": [\'Full-stack development\',;
+        \'Unlimited pages\',;
+        \'Custom integrations\',;
+        \'Advanced security features\',;
+        \'24/7 dedicated support\',;
+        \'12 months maintenance included\',;
+        \'Performance optimization\',;
+        \'Scalable architecture\',;
+        \'API development\',;
+        \'Third-party integrations\';
+      ],;
+      \"popular\": false;
+    }
+  ];
+  return (
+    <>;
+      <Head>;
+        <title>Pricing - Zion Tech Group</title>;
+        <meta name=\"description\" content=\"Transparent pricing for our technology services. Choose the plan that fits your business needs.\" />;
+      </Head>;
+      <div className=\"min-h-screen bg-gray-50 py-12\">;
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
+          <div className=\"text-center mb-16\">;
+            <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">;
+      <div className="min-h-screen bg-gray-50 py-12">;
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
+          <div className="text-center mb-16">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              Simple, Transparent Pricing;
+            </h1>;
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
+              Choose the plan that fits your business needs.;
+            </p>;
+          </div>;
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">;
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">;
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">;
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;
+            {pricingPlans && pricingPlans.map((plan, index) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/pricing.tsx
+              <div
+                key={plan && plan.name}
+                className={`relative bg-white rounded-2xl shadow-lg p-8 ${
+                  plan && plan.popular ? \'ring-2 ring-blue-500 transform scale-105\' : \''
+                }`}>;
+                {plan && plan.popular && (;
+                  <div className=\"absolute -top-4 left-1/2 transform -translate-x-1/2\">;
+                    <span className=\"bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium\">;
+                      Most Popular;
+                    </span>;
+                  </div>;
+                )}
+<<<<<<< HEAD
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                <div className=\"text-center mb-8\">
                   <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan.name}</h3>
                   <p className=\"text-gray-600 mb-4\">{plan.description}</p>
                   <div className=\"mb-4\">
@@ -122,9 +444,18 @@ export default function PricingPage() {
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center\">
                       <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />
@@ -168,12 +499,34 @@ export default function PricingPage() {
                 </Link>
               </div>
             ))}
+<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
+=======
+          </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+          <div className=\"text-center\">
+            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               Ready to Get Started?
             </h2>
             <p className=\"text-xl text-gray-600 mb-8\">
@@ -213,22 +566,44 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </div>;
     </>;
   );
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+}
+};
+export default PricingPage;
+}
 <<<<<<< HEAD
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-==============
+=======
+import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
 };
 export default PricingPage;
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports";
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports";
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/pricing.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

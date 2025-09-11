@@ -10,17 +10,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
-=======
 
-=======
-=======
-=======
 import { readJsonFile } from '../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('audit-log.json', [] as unknown[]);
@@ -35,8 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 }
-=======
-=======
 import { readJsonFile } from '../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../utils / api / auth';
 export default /**
@@ -62,11 +54,5 @@ function handler() {
   res.status (200).send (JSON.stringify (data, null, 2));
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

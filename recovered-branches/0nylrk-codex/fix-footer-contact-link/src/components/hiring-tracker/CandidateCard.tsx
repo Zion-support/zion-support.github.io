@@ -1,5 +1,4 @@
 
-=======import { useState } from "react",
 import { Draggable } from "react-beautiful-dnd",
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
@@ -24,7 +23,6 @@ import { ;
   AlertTriangle,;
   BriefcaseIcon;
 } from "lucide-react",;
-=======import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
@@ -41,7 +39,6 @@ import { ;
 } from "lucide-react",
 
 
-=======import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { 
   MessageSquare;
@@ -62,8 +59,6 @@ import {
   AlertTriangle
   BriefcaseIcon
 } from "lucide-react";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -83,12 +78,10 @@ import { HireConfirmationModal } from "./HireConfirmationModal";
   BriefcaseIcon
 } from "lucide-react",
 
-=======
   BriefcaseIcon,;
 } from "lucide-react";
   BriefcaseIcon
 } from "lucide-react",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -133,7 +126,6 @@ interface CandidateCardProps {
 
 
 
-=======
     const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
@@ -180,7 +172,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                       {application.talent_profile?.full_name |"Candidate"}
                     </h4>
                     <p className="text-xs text-muted-foreground">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662              <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <Avatar className="h-8 w-8">;
                           application && application.talent_profile.full_name || "Candidate"
@@ -200,28 +191,19 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     )}
 
                       {application.talent_profile?.professional_title || "Applicant"}
-=======                    </p>
                   </div>
                 </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
-=======
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
 
-=======
         on_confirm={handleHireConfirmed}
       />;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

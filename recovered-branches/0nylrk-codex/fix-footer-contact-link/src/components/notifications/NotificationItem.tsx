@@ -8,17 +8,13 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/compon
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
 
-=======
 
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -35,14 +31,12 @@ import { Notification, NotificationType } from '@/context/notifications',
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
-=======
 
 
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
-=======
 export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
@@ -68,9 +62,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
-==============
 
-=======import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
 import { Button } from '@/components/ui/button',;
@@ -98,8 +90,6 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-gray-500">📣</span>;
   }
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -110,9 +100,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   const handleClick = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
@@ -140,13 +128,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
       navigate(notification && notification.action_url);
     }
   }
-=======
   },
-=======
   };
   },
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div
       className={cn(
@@ -171,8 +156,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 
             {notification && notification.action_url && notification && notification.action_text && (;
 
-=======
-=======                onClick={handleClick}>;
                 {notification && notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />;
               </Button>;
@@ -186,8 +169,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
     </div>);
 }
@@ -195,15 +176,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
     </div>;
   );
 };
-=======};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

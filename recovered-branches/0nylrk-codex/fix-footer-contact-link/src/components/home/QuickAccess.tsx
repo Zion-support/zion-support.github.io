@@ -1,7 +1,6 @@
 
 import {Link} from "react-router-dom";
 import {ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone} from "lucide-react";
-==============
 
 
 export function QuickAccess() {
@@ -15,11 +14,9 @@ export function QuickAccess() {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },    {
       title: "Service Marketplace"
@@ -29,14 +26,11 @@ export function QuickAccess() {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware"
@@ -45,14 +39,11 @@ export function QuickAccess() {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: "Community"
       description: "Connect with tech professionals"
@@ -61,14 +52,11 @@ export function QuickAccess() {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: "Mobile App"
       description: "Zion on the go"
@@ -95,7 +83,6 @@ export function QuickAccess() {
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3">
 import React from "react",;
 import { Link } from "react-router-dom",;
-=======                {link.icon}
               </div>
               <h3 className="text-white font-medium mb-1">{link.title}</h3>
               <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>
@@ -189,11 +176,7 @@ function QuickAccess() {
 ;
   return (
 
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Link } from "react-router-dom",;
 import {;
@@ -245,8 +228,6 @@ export function QuickAccess() {;
     }
   ];
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <section className="py-12 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-8">;
@@ -265,15 +246,11 @@ export function QuickAccess() {;
               className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center">;
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3">;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662          ))}
         </div>;
       </div>;
     </section>;
   );
 }
-<<<<<<< HEAD
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py - 12 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 8">;
@@ -305,8 +282,6 @@ export function QuickAccess() {;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
         ;
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
           {quickLinks.map((link, index) => (;
@@ -347,9 +322,3 @@ Smartphone const quickLinks = [ {
     </section>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

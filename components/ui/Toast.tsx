@@ -1,9 +1,5 @@
-
 interface ToastProps {
   toast: Toast;
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
@@ -17,7 +13,6 @@ interface ToastProps {;
   toast: Toast;
   onRemove: (id: string) => void;
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface Toast {;
   id: string,;
   type: ToastType,;
@@ -25,21 +20,15 @@ export interface Toast {;
   id: string,
   type: ToastType,
   title: string,;
-
       setTimeout(() => onRemove(toast.id), 300)
     }, toast.duration || 5000);
-
     return () => clearTimeout(timer)
   }, [toast.id, toast.duration, onRemove]);
-
   }
-=======
-=======  const getIcon = () => {
     switch (toast.type) {
       case 'success':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'error':
-
         return <CheckCircle className='w-5 h-5 text-green-400' />;
       case 'error':;
         return <AlertCircle className='w-5 h-5 text-red-400' />;
@@ -56,40 +45,26 @@ export interface Toast {;
         return <Info className="w-5 h-5 text-blue-400" />;
       default: return <Info className="w-5 h-5 text-blue-400" />;
     }
-
         return <AlertCircle className='w-5 h-5 text-red-400' />;
       case 'warning':
         return <AlertCircle className='w-5 h-5 text-yellow-400' />;
       case 'info':
         return <Info className='w-5 h-5 text-blue-400' />;
       default:
-
-
-=======
     }
-
-
-
-
   };
-
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
-
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
-=======
-==============
-=======        return 'border-green-500/20';
       case 'error':
         return 'border-red-500/20';
       case 'warning':
         return 'border-yellow-500/20';
       case 'info':
         return 'border-blue-500/20';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
   const getBorderColor = () => {;
     switch (toast && toast.type) {;
@@ -104,7 +79,6 @@ export interface Toast {;
       default:;
         return 'border-blue-500/20';    }      default: return 'border-blue-500/20';
     }
-==============      default:
         return 'border-blue-500/20';    }      default: return 'border-blue-500/20'
     }
   }
@@ -118,7 +92,6 @@ export interface Toast {;
         return 'bg-yellow-500/10';
       case 'info':
         return 'bg-blue-500/10';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <motion&& motion.div
       initial={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
@@ -129,14 +102,11 @@ export interface Toast {;
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
           {getIcon()}
-
         </div>
         <div className="flex-1 min-w-0">
           <h4 className="text-sm font-semibold text-white">
 ;
-
 export type ToastType = 'success' | 'error' | 'info' | 'warning',
-
 export interface Toast {
   id: string,
   type: ToastType,
@@ -315,24 +285,12 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({;
   return (
             setTimeout(() => onRemove(toast.id), 300)
           }}
-=======
-=======
-
         <button
           onClick={() => {;
             setIsVisible(false);
-
-
   return (
-
             setTimeout(() => onRemove(toast.id), 300)
           }}
-
-=======
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">;
         <motion&& motion.div
@@ -352,7 +310,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({;
       default: return 'border-blue-500/20'
     }
   },
-
   const _getBackgroundColor = () => {_switch (toast.type) {
       case 'success':
         return 'bg-green-500/10',
@@ -365,13 +322,11 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({;
       default: return 'bg-blue-500/10'
     }
   },
-
       default:
         return 'bg-blue-500/10';
     }
   }
   };
-
     >
       <div className='flex items-start space-x-3'>
         <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>
@@ -402,9 +357,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({;
             </p>
           )}
             <p className='mt-1 text-sm text-white/70'>{toast.message}</p>          )}
-
           )}
-
         </div>
         <button
           onClick={() => {
@@ -464,31 +417,21 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
             toast.type === 'success' ? 'bg-green-400' :
             toast.type === 'error' ? 'bg-red-400' :
             toast.type === 'warning' ? 'bg-yellow-400' :
-
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             'bg-blue-400'
           }`}
           initial={{ width: '100%' }}
           animate={{ width: '0%' }}
-
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
-==============
-
           transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
       </div>;
     </motion && motion.div>;
@@ -497,7 +440,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
         ))}
       </AnimatePresence>
     </div>
-
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
@@ -508,16 +450,10 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       <AnimatePresence>
         {toasts.map((toast) => (
   );};
-
-
 };    toasts;
-
-==============
-=======
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const newToast = { ...toast, id };
     setToasts(prev => [...prev, newToast])
   };
@@ -538,19 +474,12 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
   };
   return {
     toasts;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     showSuccess;
     showError;
     showInfo;
     showWarning;
     removeToast}
 };
-
-=======
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='fixed top - 4 right - 4 z - 50 space - y-3'>;
       <AnimatePresence>;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
@@ -577,8 +506,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       </div>;
     </motion.div>);
 }
-=======
-<<<<<<< HEAD
 ;
 interface ToastContainerProps {
   toasts: Toast[],
@@ -606,6 +533,19 @@ export const use_toast = () =>: any {
   const remove_toast = (id: string) =>: any {
     set_toasts (prev => prev.filter (toast => toast.id !== id));
   }
+};
+// HOC to wrap components with toast functionality
+export const withToast = <P extends object>(
+  Component: React.ComponentType<P & { toast?: ToastContextType }>
+) => {
+  return (props: P) => (
+    <ToastContext.Consumer>
+      {(toastContext) => (
+        <Component {...props} toast={toastContext} />
+      )}
+    </ToastContext.Consumer>
+  );
+};
 ;
   const show_success = (title: string, message?: string) =>: any {
     add_toast ({ type: 'success', title, message });
@@ -638,6 +578,4 @@ export const use_toast = () =>: any {
     show_warning;
     remove_toast}
 }
-;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+;

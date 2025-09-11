@@ -22,11 +22,9 @@ export type AmlCheckResult = {
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
 }
-=======
 
 
 
-=======
 
 // Singleton instance
 export const amlManager = new AmlManager();
@@ -44,11 +42,9 @@ export function createAmlCheck(
     details: {}
   };
 }
-=======
 
 
 
-=======
 
 // Singleton instance
 export const amlManager = new AmlManager();
@@ -104,9 +100,3 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

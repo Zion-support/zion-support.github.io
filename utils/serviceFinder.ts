@@ -1,5 +1,3 @@
-
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface Service {
   id: string;
   name: string;
@@ -30,10 +28,4 @@ export const findService = ("_serviceName": string) => {
   // Implementation placeholder
   return null;
 };
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export const findService = (_serviceName: string) => { return null};

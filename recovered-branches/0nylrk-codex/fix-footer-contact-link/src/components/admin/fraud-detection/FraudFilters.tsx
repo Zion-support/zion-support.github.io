@@ -2,10 +2,6 @@
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface FraudFiltersProps {
 
   searchQuery: string
@@ -40,7 +36,6 @@ interface FraudFiltersProps {;
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
   searchQuery;
-=======
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
 
@@ -55,11 +50,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>;
       </Select>;
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter (value || null)}>;
-=======
 
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter (value || null)}>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
@@ -84,23 +77,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 };
 
 export default FraudFilters;
-=======
-=======      <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
         <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
       </Button>;
     </div>);
 }
 ;
 
-=======
 
 export default FraudFilters;
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

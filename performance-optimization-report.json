@@ -17284,7 +17284,6 @@
       ]
     }
   ]
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
     "Use WebP format for images",
@@ -17319,7 +17318,6 @@
       "Use CDN for static assets",
       "Enable gzip compression"
     ]
-<<<<<<< HEAD
   "timestamp": "2025-09-06T00:06:24.470Z",
   "metrics": {
     "bundleSize": "5.7M",
@@ -17330,7 +17328,3 @@
     }
   }
   }
-=======
-
-  }>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}

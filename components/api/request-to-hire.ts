@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 
   }
-=======
 
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
@@ -28,7 +27,6 @@ import path from 'path';
     return res.status(200).json({ ok: true });
   } catch (err) {
 
-=======
   }
 
   try {
@@ -87,11 +85,9 @@ if ( {) {
 }
     const payload = {
       timestamp,
-=======
 
       timestamp,
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'datarequests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
@@ -107,7 +103,6 @@ if ( {) {
 }
 
 
-=======
     // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
 
     return res.status(200).json({ ok: true })
@@ -117,16 +112,8 @@ if ( {) {
 
   }
 }
-=======
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

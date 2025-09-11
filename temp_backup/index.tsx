@@ -721,7 +721,6 @@ export default function Home() {
       <UltraFuturisticFooter2029 />
     </>  );
 export default function HomePage() {
-=======
 import Head from 'next/head'
 
 export default function Home() {	return (
@@ -730,12 +729,10 @@ export default function Home() {	return (
 				<title>Zion Tech Group</title>
 				<meta name="description" content="Zion Tech Group website" />
 			</Head>
-<<<<<<< HEAD:temp_backup/index.tsx
 			<Homepage2025 />
 		</Layout>
 	);
 }
-=======
 			<main className="max-w-3xl mx-auto px-4 py-16">
 				<h1 className="text-3xl font-bold mb-4">Zion Tech Group</h1>
 				<p className="text-gray-300">Site setup successful. More pages re-enabling soon.</p>
@@ -743,4 +740,3 @@ export default function Home() {	return (
 		</div>
 	)
 }
->>>>>>> origin/chore/standardize-pages-router:pages/index.tsx

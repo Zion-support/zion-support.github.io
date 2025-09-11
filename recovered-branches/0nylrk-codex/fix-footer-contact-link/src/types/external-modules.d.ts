@@ -12,13 +12,9 @@ declare module '@tanstack / react - query';
 declare module 'react - day - picker' {
 
 }
-=======
 
-=======
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
@@ -59,18 +55,12 @@ import {FC, SVGProps} from 'react';
   export const DayPicker: any
 }
 };
-=======
-==============
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {FC, SVGProps} from 'react';
-=======
   export interface UseFormReturn<;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     TFieldValues extends FieldValues = FieldValues;
   > {
     control: Control < TFieldValues>;
@@ -93,9 +83,6 @@ import {FC, SVGProps} from 'react';
 
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-=======
-=======
-=======
   export const FormProvider: ComponentType < FormProviderProps < any>>;
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
@@ -110,7 +97,3 @@ declare module 'semver';
 declare module 'ws';
 declare module 'recharts';
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

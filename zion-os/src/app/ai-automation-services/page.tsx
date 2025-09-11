@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import Link from "next/link";
 export const metadata = {title: "AI Automation Services - Zion Tech Group";
   description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.";
@@ -11,19 +9,11 @@ export const metadata = {;
   keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"};
 export default function AIAutomationServicesPage() {;
   return (;
-<<<<<<< HEAD
 
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from './next / link';,
 export const metadata = {
   title: "AI Automation Services - Zion Tech Group",
@@ -36,15 +26,11 @@ function AIAutomationServicesPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
-<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "AI Automation Services - Zion Tech Group";
   description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.";
   keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"}
 export default function AIAutomationServicesPage() {return (;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from "next/link",;
 export const metadata = {;
   title: "AI Automation Services - Zion Tech Group",;

@@ -1,9 +1,7 @@
 
 }</tbody> </table> </div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';import path from 'path';
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch {}
   return { props: { routes, generatedAt } }
@@ -49,13 +47,10 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
 
     </div>;
-=======
 
 );
 }
 
-=======
-<<<<<<< HEAD=======export default /**
  * SiteMapIntelPage - Function description
  */
 function SiteMapIntelPage() {
@@ -113,7 +108,3 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 }
   );
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

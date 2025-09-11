@@ -17,14 +17,11 @@ export interface CreateNotificationParams {;
   actionText?: string | null
 }
 
-==============
 
 export interface CreateNotificationResult {;
 
 
 export interface CreateNotificationResult {;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   success: boolean;
   notificationId?: string
   error?: any
@@ -36,8 +33,6 @@ export interface HireRequestNotificationParams {;
 
 
 export interface HireRequestNotificationParams {;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -46,8 +41,6 @@ export interface HireRequestNotificationParams {;
   projectSummary?: string
   hireRequestId: string
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   related_id?: string | null;
   send_email?: boolean;
   action_url?: string | null,
@@ -78,8 +71,6 @@ export interface SystemNotificationParams {
 export interface OnboardingNotificationParams {;
 
 export interface OnboardingNotificationParams {;
-==============
-=======
 
 
 export interface OnboardingNotificationParams {;
@@ -149,19 +140,11 @@ export interface SystemNotificationParams {;
 }
 ;
 
-=======
-=======
 
 export interface SystemNotificationParams {;
 
   userId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

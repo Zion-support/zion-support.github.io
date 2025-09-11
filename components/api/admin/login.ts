@@ -14,10 +14,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const envUser = process.env.ADMIN_USERNAME |'kleber@ziontechgroup.com';
   const envPass = process.env.ADMIN_PASSWORD |'Tw2.R5u&2!sDfeW';
 
-==============
 
 
-=======import { setSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
  */
@@ -56,11 +54,3 @@ if ( {) {
     res.status(401).json({ error: 'Invalid credentials' })
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

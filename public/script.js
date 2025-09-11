@@ -3,8 +3,6 @@
 })
 //Zion Tech Group Website JavaScript 
 
-=======
-=======
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)'
@@ -55,8 +53,6 @@
     // Initialize modals
     initializeModals()
 }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
@@ -66,10 +62,8 @@ function performSearch(query) {
 }
 // Counter animation
 function animateCounter(element) {
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const timer = setInterval(() => {
 
         current += step
@@ -78,8 +72,6 @@ function animateCounter(element) {
             clearInterval(timer)
         }
         element.textContent = Math.floor(current) + suffix
-=======
-=======
         
         const suffix = element && element.textContent.replace(/\d/g, ''),
         element && element.textContent = Math && Math.floor(current) + suffix
@@ -92,8 +84,6 @@ function animateCounter(element) {
                 this.tooltip.remove()
 
                 this.tooltip = null
-=======
-=======
             }
         })
     })
@@ -102,10 +92,7 @@ function animateCounter(element) {
 function initializeModals() {
 
                 document.body.style.overflow = 'hidden'
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
         })
     })
@@ -113,21 +100,15 @@ function initializeModals() {
                 this.classList.remove('active')
 
                 document.body.style.overflow = ''
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
             }
         })
         // Close modal on close button click
 
                 document.body.style.overflow = ''
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             })
         }
     })
@@ -295,10 +276,8 @@ function initializeModals() {
                 if (modal && modal.classList.contains('active')) {
                     modal && modal.classList.remove('active'),
                     document && document.body.style && style.overflow = ''
-=======
 
 
-=======//Zion Tech Group Website JavaScript;
 });
 // Search function;
 /**
@@ -327,8 +306,6 @@ if ( {) {
                 `<a href="${result.url}" class="search - result - item">${result.title}</a>`).join (''),
             search_results.style.display = 'block';
         } else {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             search_results.innerHTML = '<div class="search - result - item no - results">No results found</div>',
             search_results.style.display = 'block';
         }
@@ -464,10 +441,6 @@ function initializeModals() {;
                 if (modal.classList.contains('active')) {;
                     modal.classList.remove('active'),;
                     document.body.style.overflow = '';
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }
             });
         }
@@ -489,12 +462,8 @@ function logPerformance() {
         }
     });
 }
-=======
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
@@ -508,7 +477,6 @@ function logPerformance() {
 }
 // Error tracking
 window.addEventListener('error', function(e) {
-==============
     }
 }
 // Error tracking
@@ -521,10 +489,7 @@ window.addEventListener('error', function(e) {
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
     console.log('Event tracked:', eventName, eventData)
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     // Implement your analytics tracking here
 }
@@ -550,7 +515,6 @@ function trackEvent(eventName, eventData = {}) {
 
 //Reset button after delay //Initialize tooltips initializeTooltips ();
 //Initialize modals initializeModals ()
-=======
 // Performance monitoring;
 /**
  * log_performance - Function description
@@ -641,8 +605,6 @@ document.addEventListener('click', function(e) {
             button_text: e.target.textContent
             button_class: e.target.className
             page: window.location.pathname
-=======
-=======
   page: window && window.location.pathname;
 title: document && document.title 
 
@@ -854,14 +816,10 @@ document && document.addEventListener('click', function(e) {
     }
 })
 // Log performance when page is fully loaded
-=======
 window && window.addEventListener('load', logPerformance),
 window.addEventListener('load', logPerformance),
-=======
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
 }
 {
@@ -873,8 +831,6 @@ window.addEventListener('load', logPerformance),
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   button text: e.target.textContent;
 button class: e.target.className;
 page: window.location.pathname 
@@ -890,7 +846,3 @@ page: window.location.pathname
 }),;
 // Log performance when page is fully loaded;
 window.addEventListener('load', logPerformance),;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

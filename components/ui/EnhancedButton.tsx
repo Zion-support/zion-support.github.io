@@ -1,10 +1,8 @@
 
   };
-=======
 
   };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const baseStyles =;
   "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
@@ -34,17 +32,13 @@ export default function EnhancedButton(): any ({;
   return (
     <button
 className={clsx(
-=======
   return (
     <button
       className={clsx(
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   return (
     <button
       className={clsx(
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
@@ -54,7 +48,6 @@ className={clsx(
       {...props}
 }
 
-=======
 const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
   return (
     <div className={className || ''}>
@@ -65,16 +58,8 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
 };
 
 export default EnhancedButton;
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
-=======
     />;
 );
 }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

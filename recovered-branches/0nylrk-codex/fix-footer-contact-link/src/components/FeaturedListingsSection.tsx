@@ -1,7 +1,5 @@
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
 export /**
@@ -13,7 +11,6 @@ function FeaturedListingsSection() {
 export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {
   const featuredListings = [
     {
-=======      id: "advanced-nlp-model"
       title: "Advanced NLP Model for Text Analysis"
       description: "State-of-the-art natural language processing with 98% accuracy"
       price: 4999
@@ -24,13 +21,10 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-11-15T14:48:00.000Z"
       rating: 4.8
       reviewCount: 124
-=======      author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    },
     {
       id: "image-generation-service",
       title: "AI Image Generation Service",
@@ -43,8 +37,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
       reviewCount: 89,
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       author: {
         name: "VisualAI"
         id: "visual-ai"
@@ -52,34 +44,26 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
       description: "End-to-end development for AI-powered applications"
       price: null, // Custom pricing
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      currency: "$",
       category: "Services",
       tags: ["Development", "Full-stack", "AI"],
       images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
       reviewCount: 56,
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       author: {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
       }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -116,20 +100,16 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
             <ProductListingCard
               key={listing && listing.id}
-=======
               onRequestQuote={() => {}}
 
 
 
 
-=======
         </div>;
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </section>);
 }
@@ -150,15 +130,7 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

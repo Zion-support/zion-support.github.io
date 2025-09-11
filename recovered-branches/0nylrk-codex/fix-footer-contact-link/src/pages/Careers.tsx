@@ -4,12 +4,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AppLayout } from "@/layout/AppLayout",
-=======
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const jobs = {
     engineering: [
       {
@@ -17,7 +14,6 @@ import { AppLayout } from "@/layout/AppLayout",
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
-=======
 
         title: "Senior Frontend Engineer",
         location: "Remote",
@@ -53,14 +49,11 @@ import { AppLayout } from "@/layout/AppLayout",
 
       }
       },
-=======
 
       },
 
-=======
       }
       },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {
         title: "Talent Acquisition Specialist"
         location: "Remote"
@@ -73,7 +66,6 @@ import { AppLayout } from "@/layout/AppLayout",
 
 
 
-==============
   }
   },
   // Benefits list
@@ -89,14 +81,11 @@ import { AppLayout } from "@/layout/AppLayout",
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: "Health & Wellness"
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
@@ -108,14 +97,11 @@ import { AppLayout } from "@/layout/AppLayout",
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: "Continuous Learning"
       description: "Education stipends and dedicated learning time to help you grow professionally."
@@ -193,7 +179,6 @@ export default function Careers() {;
         location: "Remote",;
         type: "Full-time",;
         department: "Product",;
-=======
 import { SEO } from '@/components / SEO';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -262,14 +247,10 @@ function Careers() {
       }
     ];
     operations: [;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       title: "Competitive Compensation",
       description: "Salary packages that recognize your value, plus equity options to share in our success.",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      icon: (
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
@@ -366,7 +347,6 @@ function Careers() {
   return (
 
 
-=======import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -487,8 +467,6 @@ export default function Careers() {;
     }
   ];
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <AppLayout>;
       <SEO
         title="Careers at Zion - Join Our Team" 
@@ -504,8 +482,6 @@ export default function Careers() {;
               Help us build the future of AI and technology;
             </p>;
           </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>;
@@ -531,7 +507,6 @@ export default function Careers() {;
               />;
             </div>;
           </div>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="mb-24">;
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -555,8 +530,6 @@ export default function Careers() {;
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>;
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>;
               </TabsList>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               {Object && Object.entries(jobs).map(([department, jobList]) => (;
                 <TabsContent key={department} value={department} className="space-y-6">;
                   {jobList && jobList.map((job, index) => (;
@@ -584,12 +557,10 @@ export default function Careers() {;
           </div>;
           ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
-=======
 
                     </Card>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </TabsContent>;
               ))}
@@ -597,12 +568,10 @@ export default function Careers() {;
 
 
 
-=======
             </Tabs>;
           </div>;
 
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
               We're always looking for talented individuals who are passionate about AI and technology. ;
@@ -612,8 +581,6 @@ export default function Careers() {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </AppLayout>);
     </AppLayout>;
@@ -694,15 +661,7 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

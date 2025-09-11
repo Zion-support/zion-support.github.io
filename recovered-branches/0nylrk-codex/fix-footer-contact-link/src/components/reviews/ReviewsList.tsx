@@ -11,16 +11,12 @@ import { ReviewCard } from "./ReviewCard",
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
 
-=======
-=======
 
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
 
-=======
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
-=======
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
 
@@ -79,10 +75,7 @@ export function ReviewsList({
             </div>))}
       </div>);
   }
-=======
-=======}: ReviewsListProps) {
   if (isLoading) {
-=======
 import { Review  } from '@/types / reviews';
 import { ReviewCard  } from './ReviewCard';
 interface ReviewsListProps {
@@ -98,7 +91,6 @@ function ReviewsList() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div className="space - y-4">;
         {Array (3);
@@ -144,8 +136,6 @@ interface ReviewsListProps {;
 export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListProps) {;
   if (isLoading) {;
     return (;
-=======
-=======
 export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: ReviewsListProps) {;
   if (isLoading) {;
     return (
@@ -166,7 +156,6 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
 }
 ;
 
-<<<<<<< HEAD
     ),;
   }
   ;
@@ -216,18 +205,3 @@ onReportReview: (reviewId: string, reason: string) => Promise<boolean>
     );
   }
 return (
-=======
-
-=======    <div className="space-y-4">
-      {reviews.map((review) => (
-        <ReviewCard key={review.id} review={review} onReport={onReportReview} />
-        <ReviewCard 
-          key={review.id} 
-          review={review} 
-          onReport={onReportReview} 
-        />
-      ))}
-    </div>
-  )
-}
-;

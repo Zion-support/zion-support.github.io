@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useState, useEffect  } from './react';,
 import { use_auth  } from '@/contexts / AuthContext';,
@@ -178,7 +177,6 @@ if ( {) {
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
 
-=======
             style={{;
               top: "50%",;
               left: "50%",;
@@ -189,7 +187,6 @@ if ( {) {
     </>;
   );
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 // Hook to add data attributes for walkthrough targeting;
@@ -198,20 +195,3 @@ export function useWalkthroughTarget(id: string) {;
 
 
     "data-walkthrough-target": id;
-<<<<<<< HEAD
-=======
-=======
-export /**
- * useWalkthroughTarget - Function description
- */
-function useWalkthroughTarget() {
-  return {
-    "data - walkthrough - target": id;
-=======export function useWalkthroughTarget(id: string) {return {;
-;
-// Hook to add data attributes for walkthrough targeting;
-export function useWalkthroughTarget(id: string) {;
-  return {;
-    "data-walkthrough-target": id;
-    id}
-}

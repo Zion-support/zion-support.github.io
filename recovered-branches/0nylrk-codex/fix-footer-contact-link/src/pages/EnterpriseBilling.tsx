@@ -17,7 +17,6 @@ export default function EnterpriseBilling() {
 
   const hasBillingAccess = user?.role === "enterprise_admin" |
                           (user?.permissions && user.permissions.includes('billing_access'));
-=======
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" || ;
                           (user?.permissions && user && user.permissions.includes('billing_access'));
@@ -38,7 +37,6 @@ export default function EnterpriseBilling() {
 
 
 }
-=======
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" || ;
                           (user?.permissions && user && user.permissions.includes('billing_access'));
@@ -46,19 +44,15 @@ export default function EnterpriseBilling() {
   if (!hasBillingAccess) {;
     return <Navigate to="/unauthorized" />;
 
-=======
 
 
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-=======
 
 
-==============
     <ProtectedRoute>;
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
@@ -92,8 +86,6 @@ export default function EnterpriseBilling() {;
       <SEO;
         title="Enterprise Billing - Zion AI Marketplace";
         description="Manage your subscription, view invoice history, and download billing statements.";
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -104,20 +96,11 @@ export default function EnterpriseBilling() {;
 
 
 }
-=======
-=======  );
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -132,7 +115,6 @@ export default /**
 function EnterpriseBilling() {
   const { user } = use_auth ();
 ;
-<<<<<<< HEAD
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" ||;
                           (user?.permissions && user.permissions.includes ('billing_access'));
@@ -156,7 +138,6 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
   ),;}
  export default function EnterpriseBilling () {
   const {
@@ -168,8 +149,3 @@ if ( {) {
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

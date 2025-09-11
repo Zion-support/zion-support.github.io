@@ -1,6 +1,154 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { extraServices } from '../../data/extra-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { realMarketServices } from '../../data/real-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { realOperationalServices } from '../../data/real-operational-services';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025'
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
+import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
+import { realServicesQ22025 } from '../../data/real-services-q2-2025';
+import { realServicesQ32025 } from '../../data/real-services-q3-2025';
+import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
+import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
+import { realMarketServicesExtended } from '../../data/real-market-services-extended';
+import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
+import { added2026Q2Services } from '../../data/added-2026-q2-services';
+import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
+import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
+import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
+import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
+import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
+import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
+import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
+import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
+import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
+import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
+import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
+import { real2025Q4AugmentedBatch } from '../../data/real-2025-q4-augmented-batch';
+
+import { verifiedRealServices2025Batch3 } from '../../data/verified-real-services-2025-batch3';
+
+function toSlug(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+const categories = [
+  'AI & Data',
+  'Developer Tools',
+  'Cloud & FinOps',
+  'Observability',
+  'Quality & Monitoring',
+];
+
+export default function ServicesIndexPage() {
+  const all = (enhancedRealMicroSaasServices as unknown[])
+    .concat(
+      extraServices as unknown[],
+      additionalEnhancedServices as unknown[],
+      newlyAddedServices as unknown[],
+      curatedMarketServices as unknown[],
+      realMarketServices as unknown[],
+      realMarketServicesExtended as unknown[],
+      new2025Services as unknown[],
+      marketValidatedServices as unknown[],
+      moreRealServices2025 as unknown[],
+      realOperationalServices as unknown[],
+      verified2025Additions as unknown[],
+      realServicesQ12025 as unknown[],
+      realEnterpriseServices2025 as unknown[],
+      realMarketAugmentations2025 as unknown[],
+      verifiedRealServices2025Batch2 as unknown[],
+      additionalLiveServices2025 as unknown[],
+      real2025Q2Additions as unknown[],
+      augmentedServicesBatch3 as unknown[],
+      realServicesQ22025 as unknown[],
+      realServicesQ32025 as unknown[],
+      realQ4Services2025 as unknown[],
+      real2025Q4Additions as unknown[],
+      real2025Q4AugmentedBatch as unknown[],
+      real2026Q1Additions as unknown[],
+      added2026Q2Services as unknown[],
+      real2026Q3Additions as unknown[],
+      real2026Q4Additions as unknown[],
+      real2026Q4NewServices as unknown[],
+      real2027Q1Additions as unknown[],
+      real2027Q2Additions as unknown[],
+      real2028ServiceExpansions as unknown[],
+      real2029Q1Additions as unknown[],
+      real2029Q2Additions as unknown[],
+      real2029Q3Additions as unknown[],
+      real2030Q1Additions as unknown[],
+      real2030Q2Additions as unknown[],
+      real2031MicroSaasAdditions as unknown[],
+      real2031ITServicesAdditions as unknown[],
+      real2031AIServicesAdditions as unknown[]
+
+      extraServices as any[],
+      additionalEnhancedServices as any[],
+      newlyAddedServices as any[],
+      curatedMarketServices as any[],
+      realMarketServices as any[],
+      new2025Services as any[],
+      marketValidatedServices as any[],
+      moreRealServices2025 as any[],
+      realOperationalServices as any[],
+      verified2025Additions as any[],
+      realServicesQ12025 as any[],
+      realEnterpriseServices2025 as any[],
+      verifiedRealServices2025Batch3 as any[]
+
+    );
+  const byCategory: Record<string, unknown[]> = {};
+  for (const c of categories) byCategory[c] = [];
+  // Normalize various category labels into our main buckets
+  const categoryAliases: Record<string, string> = {
+    'AI & Data': 'AI & Data',
+    'AI & Machine Learning': 'AI & Data',
+    'GenAI': 'AI & Data',
+    'Cloud & FinOps': 'Cloud & FinOps',
+    'Cloud & Data': 'Cloud & FinOps',
+    'Platform Engineering': 'Cloud & FinOps',
+    'Observability': 'Observability',
+    'Observability & Telemetry': 'Observability',
+    'Quality & Monitoring': 'Quality & Monitoring',
+    'Security & Reliability': 'Quality & Monitoring',
+    'Security & Compliance': 'Quality & Monitoring',
+    'Developer Tools': 'Developer Tools',
+    'Growth & Marketing': 'Developer Tools'
+  };
+  for (const s of all) {
+    const service = s as { category?: string };
+    const rawCat = (service.category || '').trim();
+    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
+    byCategory[mapped].push(s);
+  }
+
+  const anchorMap: Record<string, string> = {
+    'AI & Data': 'ai',
+    'Developer Tools': 'developer-tools',
+    'Cloud & FinOps': 'cloud',
+    'Observability': 'observability',
+    'Quality & Monitoring': 'quality',
+  };
+
+  const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
+
 export default function ServicesIndex() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -53,19 +201,6 @@ export default function ServicesIndex() {
               { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
               { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
               { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
-              { href: '/services/cloud-cost-optimizer', title: 'Cloud Cost Optimizer', desc: 'Autonomous FinOps for AWS, GCP, Azure.' },
-              { href: '/services/m365-security-copilot', title: 'M365 Security Copilot', desc: 'Harden Microsoft 365 with guardrails.' },
-              { href: '/services/ai-knowledgebase-agent', title: 'AI Knowledgebase Agent', desc: 'RAG assistant with sources and SDK.' },
-              { href: '/services/data-governance-observability', title: 'Data Governance & Observability', desc: 'Lineage, quality checks, and alerts.' },
-              { href: '/services/devops-release-automation', title: 'DevOps Release Automation', desc: 'Policy-driven CI/CD and safe rollbacks.' },
-              { href: '/services/fractional-cto', title: 'Fractional CTO', desc: 'Strategic tech leadership on-demand.' },
-              { href: '/services/governed-ai-agents', title: 'Governed AI Agents', desc: 'Multi-agent automation with approvals.' },
-              { href: '/services/gdpr-dsar-portal', title: 'Privacy Request Portal (DSAR)', desc: 'Manage GDPR/CPRA requests end-to-end.' },
-              { href: '/services/security-headers-csp-manager', title: 'CSP & Security Headers Manager', desc: 'Enforce CSP, HSTS, and modern headers.' },
-              { href: '/services/checkout-performance-optimizer', title: 'Checkout A/B Optimizer', desc: 'Increase conversion with safe experiments.' },
-              { href: '/services/status-incident-hub', title: 'Status & Incident Hub', desc: 'Status pages, incidents, and SLOs.' },
-              { href: '/services/ai-talent-sourcing-copilot', title: 'AI Talent Sourcing Copilot', desc: 'Sourcing, outreach, and pipeline analytics.' },
-              { href: '/services/vendor-risk-automation', title: 'Vendor Risk Automation', desc: 'Questionnaires, ratings, and remediation.' },
             ].map((s) => (
               <Link key={s.href} href={s.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">

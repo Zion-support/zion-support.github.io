@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import {
   Brain
   Shield
@@ -29,9 +28,6 @@ import {
   ChevronDown,;
 } from 'lucide-react';
 interface Service {;
-
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -51,15 +47,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-
 } from 'lucide-react';
 interface Service {;
-=======
-=======
   Filter,;
   ChevronDown,;
-
-
 } from 'lucide-react';
 ;
 interface Service {
@@ -78,27 +69,19 @@ interface Service {
   growth_rate: string;
   popular?: boolean;
   ];
-
   const filteredServices = services.filter(service => {
     const matchesCategory =
       selectedCategory === 'all' |service.category === selectedCategory;
     const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-=======
-
-=======  return (
+  return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   };
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
@@ -115,10 +98,8 @@ interface Service {
             Cutting-edge technology solutions designed to transform your business and accelerate innovation;
           </p>;
         </div>;
-
         {/* Filters */}
-
-=======        <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
+        <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
           {/* Category Filter */}
           <div className="relative">
             <select
@@ -128,8 +109,6 @@ interface Service {
             >
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
-
-
         {/* Filters */}
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>    }
     return iconMap[category] |Brain
@@ -172,8 +151,6 @@ interface Service {
               ))}
             </select>
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />          {/* Category Filter */}
-=======
-
         {/* Filters */}
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}          <div className="relative">
@@ -184,26 +161,18 @@ interface Service {
             >
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
-
-
-
-
             </select>;
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
           </div>;
-
               onChange={e => setSearchTerm(e && e.target.value)}
               className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64';
             />;
             <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />          </div>;
         </div>;
-
-
         {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index) => (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>;
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices && filteredServices.map((service, index) => (;
@@ -228,13 +197,7 @@ interface Service {
                 </div>;
               )}
               {/* Service Content */}
-
               <div className='p-8'>
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       color: 'from - blue - 500 to - cyan - 500',
     },
   ];
@@ -394,19 +357,14 @@ interface Service {
               <div className='p - 8'>;
               {/* Service Content */}
               <div className='p-8'>
-=======        </div>
-
+        </div>
         {/* Services Grid */}
-
                     Popular
-
                   </div>
                 </div>
               )}
-
               {/* Service Content */}
               <div className='p-8'>
-
                 {/* Icon and Category */}
                 <div className='flex items - center justify - between mb - 4'>;
                   <div;
@@ -417,42 +375,24 @@ interface Service {
                   <div className='text - right'>;
                     <div className='text - xs text - white / 60 mb - 1'>;
                       {getCategoryIcon (service.category)({
-                        class_name: 'w - 3 h - 3',=======
-                      })}
+                        class_name: 'w - 3 h - 3',                      })}
                     </div>;
                     <div className='text - xs text - white / 40'>;
                       {service.category}
               <div className="p-8">
                 {/* Icon and Category */}
-
                     ))}
                   </div>
                 </div>
                   </div>;
                 </div>;
-
-
-
-=======
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Benefits */}
-
-
                     ))}
-
-
-
-
                 <div className="mb-6 p-4 bg-white/5 rounded-lg">
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>
                   <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>
                   <div className="mt-2 text-xs text-white/60">
                     Market: {service.marketSize} • Growth: {service.growthRate}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   </div>
                 </div>
                   </div>;
@@ -472,8 +412,6 @@ interface Service {
                   </div>;
                 </div>;
                 {/* Action Buttons */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     </div>                  </div>;
                 </div>;
                 {/* Service Info */}                {/* Icon and Category */}
@@ -593,17 +531,11 @@ interface Service {
                     }
                     className='px - 4 py - 3 border border - white / 20 hover:border - white / 40 rounded - xl font - semibold text - white transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                    on_click={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject = Demo request for ${service.name}`}
                     className="px - 4 py - 3 border border - white / 20 hover:border - white / 40 rounded - xl font - semibold text - white transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   >;
                     Demo;
                   </button>;
                 </div>;
               </div>;
-==============
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="flex gap-3">
                   <button
                     onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
@@ -613,17 +545,11 @@ interface Service {
                   </button>
                   <button
           ))}
-
         {/* CTA Section */}
-
-
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
-
-
-
               Ready to Transform Your Business?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -635,7 +561,6 @@ interface Service {
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
-
               Ready to Transform Your Business?
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
@@ -660,8 +585,6 @@ interface Service {
         </div>
       </div>
     </section>
-=======
-==============
             </div>))}
         </div>;
         {/* CTA Section */}
@@ -705,19 +628,10 @@ interface Service {
           </div>;
         </div>;
       </div>;
-
-
 };
 export default EnhancedServicesShowcase;  );
 };
 export default EnhancedServicesShowcase;
-
-
-=======
 export default EnhancedServicesShowcase;  )
 }
 export default EnhancedServicesShowcase;
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

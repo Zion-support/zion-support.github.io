@@ -1,5 +1,4 @@
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface UseHireRequestFormProps {
   talent: TalentProfile;
   on_close: () => void;
@@ -45,9 +44,7 @@ interface UseHireRequestFormProps {;
   userDetails?: {;
     name?: string,;
     email?: string,;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
     name?: string;
 
 
@@ -58,17 +55,14 @@ interface UseHireRequestFormProps {;
 
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface FormValues {
   requester_name: string;
   requester_email: string;
   project_overview: string;
   timeline: string;
 
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   budgetMin: number
 
   budgetMax: number
@@ -105,7 +99,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     message: "Maximum budget must be greater than or equal to minimum budget"
     path: ["budgetMax"]
 
-=======
   });
   }),
   // Initialize the form
@@ -119,12 +112,9 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-=======      requesterName: userDetails?.name |"";
       requesterEmail: userDetails?.email |""
       projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "";
       timeline: "";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======      requesterName: userDetails?.name || "",
       requesterEmail: userDetails?.email || "",
       projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",
       timeline: "",
@@ -133,11 +123,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     }
   }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======  // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
-=======
   budget_min: number,
   budget_max: number;
 }
@@ -177,7 +164,6 @@ function useHireRequestForm() {
   // Handle form submission;
   const on_submit = async (values: FormValues) => {
     setIsSubmitting (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const request_data = {
         talent: {
@@ -227,16 +213,12 @@ function useHireRequestForm() {
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
-=======
       }
     } catch (error) {
       console && console.error("Error submitting hire request:", error)
-=======
       }
     } catch (error) {
       console && console.error("Error submitting hire request:", error)
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           id: talent.id || "";
           full_name: talent.full_name,
           professional_title: talent.professional_title}
@@ -268,15 +250,10 @@ if ( {) {
     onSubmit
   }
 }
-=======
-==============    } finally {
 
-=======
       setIsSubmitting(false)
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -287,8 +264,6 @@ if ( {) {
     form;
     isSubmitting;
     onSubmit;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
   }
@@ -444,14 +419,9 @@ onSubmit
 }
 }
   }
-<<<<<<< HEAD
 }
 ;
   }
 }
 ;
-=======
-}=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

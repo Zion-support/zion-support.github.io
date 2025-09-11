@@ -54,7 +54,6 @@ export default function DevOpsAutomationPage() {
       description: 'Terraform, CloudFormation, and Kubernetes automation';
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600';
     }
-=======
       color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600';
     }
     {
@@ -86,10 +85,8 @@ export default function DevOpsAutomationPage() {
       color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
     },  ];      color: 'bg - gradient - to - br from - orange - 500 to - red - 600';
     }
-==============
   ];
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ];
 ;
   const pricing_plans = [;
@@ -151,10 +148,7 @@ export default function DevOpsAutomationPage() {
       cta: 'Start Free Trial'
       color: 'border-gray-600 hover:border-blue-500'
     },    {        'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ];
       popular: false
       cta: 'Start Free Trial'
@@ -278,47 +272,35 @@ export default function DevOpsAutomationPage() {
       cta: 'Contact Sales',
       color: 'border - gray - 600 hover:border - blue - 500',
     },  ];        'Unlimited repositories_enterprise CI / CDAdvanced IaC automation_custom integrations24 / 7 dedicated supportSLA guarantees_on - premise options_custom security policies';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       ];
       popular: false,
       cta: 'Contact Sales',
       color: 'border - gray - 600 hover:border - blue - 500';
     }
   const market_comparison = [;
-=======
 
   const market_comparison = [;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       competitor: 'GitHub Actions',
       pricing: 'Free + $0.008 / min',
       repositories: 'Unlimited',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       rating: '4.6 / 5',
       pros: ['GitHub native', 'Good free tier'],
       cons: ['Expensive for teams', 'Limited features'],
     },    {      pros: ['GitHub native_good free tier'],
       cons: ['Expensive for teams_limited features'];
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     {
       competitor: 'GitLab CI / CD',
       pricing: '$19 / user / month',
       repositories: 'Unlimited',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       rating: '4.4 / 5',
       pros: ['Integrated platform', 'Good CI / CD'],
       cons: ['User - based pricing', 'Limited integrations'],
     },    {      pros: ['Integrated platform_good CI / CD'],
       cons: ['User - based pricing_limited integrations'];
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     {
       competitor: 'Jenkins',
       pricing: 'Free',
@@ -326,7 +308,6 @@ export default function DevOpsAutomationPage() {
       rating: '4.2 / 5',=======
 
       rating: '4.2 / 5',
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       pros: ['Completely free', 'Highly customizable'],
       cons: ['Requires maintenance', 'No managed service'],
     },  ];      pros: ['Completely free_highly customizable'],
@@ -338,7 +319,6 @@ export default function DevOpsAutomationPage() {
 
 
 
-=======
 
     {
 
@@ -348,15 +328,11 @@ export default function DevOpsAutomationPage() {
 
     }
   ];
-=======
     }
   ];
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
         />;
@@ -422,8 +398,6 @@ export default function DevOpsAutomationPage() {
 
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 href='#pricing'
                 variant='primary'
@@ -442,10 +416,7 @@ export default function DevOpsAutomationPage() {
                 Start Free Trial
               </Button>
               <Button
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title>
@@ -496,7 +467,6 @@ export default function DevOpsAutomationPage() {
 
                 </Card>
 
-=======            </div>;
           </div>;
         </section>;
 
@@ -511,8 +481,6 @@ export default function DevOpsAutomationPage() {
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======                What You Can Automate
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 See how Zion DevOps can transform your development workflow.
@@ -590,20 +558,16 @@ export default function DevOpsAutomationPage() {
                         <li key={featureIndex} className="flex items-center text-gray-300">;
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-=======
 
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -684,7 +648,6 @@ export default function DevOpsAutomationPage() {
                 </Card>;
               ))}
               ))}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
           </div>;
@@ -709,7 +672,3 @@ export default function DevOpsAutomationPage() {
 
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

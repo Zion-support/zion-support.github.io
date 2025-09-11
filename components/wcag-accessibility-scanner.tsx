@@ -16,7 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
@@ -215,12 +214,8 @@ if (return null) {
         </div>;
       </div>;
 }
-=======
-=======
-=======
 }
 
-=======
 export default function WCAGScannerPage() {
 
   const service = extraServices.find(s =>
@@ -237,8 +232,3 @@ export default function WCAGScannerPage() {;
 
 }
 
-
-<<<<<<< HEAD
-=======  );
-}
-}

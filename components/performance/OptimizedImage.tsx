@@ -17,23 +17,69 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
-
 interface OptimizedImageProps {;
   src: string, alt: string,;
-
-=======
-=======
-
-=======
-const OptimizedImage: React.FC < OptimizedImageProps> = ({=======
-
-=======
-const OptimizedImage: React.FC < OptimizedImageProps> = ({  src,
+import Image from 'next / image';
+;
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  className?: string;
+  sizes?: string;
+}
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+  src: string, alt: string,
+  width?: number;
+  height?: number;
+  class_name?: string;
+  priority?: boolean;
+  sizes?: string;
+  quality?: number;
+  fill?: boolean;
+  style?: React && React.CSSProperties;
+}
+const OptimizedImage: React.FC<OptimizedImageProps> = ({;
+  src,;
+  alt,;
+  width,;
+  height,;
+  className = '',;
+  priority = false,;
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',;
+  quality = 85,;
+  fill = false,;
+  style;
+}) => {;
+  if (fill) {;
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
   alt,
   width,
   height,
-class_name = '',
+  class_name = '',
+  priority = false,
+  className,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+}) => {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
+      className={className}
+      sizes={sizes}
+      quality={85}
+    />
+  );
+};
+export default OptimizedImage;
+  className = '',
   priority = false,
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
@@ -54,27 +100,14 @@ if ( {) {
         sizes={sizes}
         quality={quality}
         style={style}
-
     <Image;
-
-
-=======      quality={quality}
       style={style}
-
-
-
-
   );
 };
-
-=======      quality={quality}
       style={style}
-
   );
 };
-
 export default OptimizedImage;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+;
+export default OptimizedImage;
+;

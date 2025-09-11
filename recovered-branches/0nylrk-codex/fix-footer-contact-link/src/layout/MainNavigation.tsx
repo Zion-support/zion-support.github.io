@@ -3,14 +3,11 @@ import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface MainNavigationProps {;
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -24,14 +21,11 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Talent"
       href: "/talent"
@@ -39,19 +33,15 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Equipment"
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     },
 
@@ -69,8 +59,6 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
                 link.matches(location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { Link, useLocation } from "react-router-dom",;
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
 import { MessageSquare } from "lucide-react",;
@@ -84,8 +72,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
   const location = useLocation(),;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const links = [;
     {;
       name: "Home",;
@@ -94,12 +80,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   // Add authenticated-only links;
   if (isAuthenticated) {;
     links && links.push({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
 
-=======
 
               )}
             >
@@ -113,14 +97,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         {/* Messages link with unread counter */}
         {isAuthenticated && (
           <li>
-=======        ))}
 
 
 
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Link
               to="/messages"
               className={cn(
@@ -142,10 +124,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
                 location && location.pathname === "/messages" || location && location.pathname === "/inbox"
 
-=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -158,11 +138,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
               )}
             >;
-=======
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <MessageSquare className="w-4 h-4 mr-1" />;
               Messages;
               {unreadCount > 0 && (;
@@ -180,18 +158,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </ul>;
     </nav>;
-=======        )}
 
       </ul>;
     </nav>;
   );
 }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
@@ -302,8 +276,6 @@ if ( {) {
       </ul>;
     </nav>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  interface MainNavigationProps {
   isAdmin?: boolean;
@@ -399,9 +371,3 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
     </nav>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

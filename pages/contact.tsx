@@ -1,256 +1,76 @@
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
 
 
-
-
-import React from 'react';
-
-import Layout from '../components/Layout';
-
-import Layout from '../components/Layout';
-=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
     
     return this.props.children;
   }
 }
 
-=======
-
 import React from "react";
 import Layout from "../components/Layout";
+
 import React from 'react';
-ursor/integrate-build-improve-and-re-verify-8f7d
-import Layout from '../components/Layout';
-import Layout from '../components/Layout';
-origin/automation-improvements-final
+
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
 
-
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-  const services = [
-    'AI Services & Solutions',
-    'IT Infrastructure & Cloud',
-    'Micro SAAS Development',
-    'Digital Transformation',
-    'Cybersecurity Solutions',
-    'Data Analytics & Insights'
-  ];
-=======
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
-  const services = [
-    'AI Automation Platform',
-    'Cloud Infrastructure',
-    'Micro SaaS Development',
-    'Cybersecurity Solutions',
-    'Data Analytics & BI',
-    'Blockchain Solutions',
-    'Other'
-  ];
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  };
-  return (
-    <Layout
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Contact Us
-            </h1>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-origin/automation-improvements-final
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-origin/main
-import React from "react";
-import Layout from "../components/Layout";
-export default function Contact() {
-  return (
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
-
-import React from 'react';
-    return this.props.children;
-  }
-}
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-ursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
-import Layout from '../components/Layout';
-origin/automation-improvements-final
-
-import Head from 'next/head';
-import { useState } from 'react';
-import { ContactInfo } from '../types';
-=======
-    
-    return this.props.children;
-  }
-}
-
-=======
 
 import React from "react";
 import Layout from "../components/Layout";
-=======
-import React from 'react';
 
-=======
-
-
-
-=======
-import Head from 'next/head';
-import { useState } from 'react';
-import { ContactInfo } from '../types';
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
-  const services = [
-    'AI Automation Platform',
-    'Cloud Infrastructure',
-    'Micro SaaS Development',
-    'Cybersecurity Solutions',
-    'Data Analytics & BI',
-    'Blockchain Solutions',
-    'Other'
-  ];
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  };
-  return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		company: '',
+		message: ''
+	})
+	const [isSubmitted, setIsSubmitted] = useState(false)
+
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault()
+		// Here you would typically send the form data to your backend
+		console.log('Form submitted:', formData)
+		setIsSubmitted(true)
+		// Reset form after submission
+		setTimeout(() => {
+			setIsSubmitted(false)
+			setFormData({ name: '', email: '', company: '', message: '' })
+		}, 3000)
+	}
+
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value
+		})
+	}
 
 import React from "react";
 import Layout from "../components/Layout";
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-origin/automation-improvements-final
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-origin/main
 
-import React from "react";
-import Layout from "../components/Layout";
 export default function Contact() {
   return (
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -271,33 +91,191 @@ export default function Contact() {
             {/* A placeholder for a contact form could go here */}
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
-            </p>
-export default function Contact() {
-  return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
-        <title>Contact — Zion</title>
-        <meta name="description" content="Get in touch to explore autonomous cloud solutions." />
-=======
-import Head from 'next/head';
-import Link from 'next/link';
 
-export default function Page() {
-  return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
-        <title>Contact — Let's Collaborate</title>
-        <meta name="description" content="Reach out to discuss your autonomous roadmap and use‑cases." />      </Head>
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
-        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
-        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
+            </p>
+          </div>
+          <Link href="/services" className="btn-secondary">
+            Explore Our Services
+          </Link>
+        </main>
+      </div>
+    </>
+  );
+
 }
 
+import Head from 'next/head';
+
+						{/* Contact Information */}
+						<div>
+							<h2 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h2>
+							<div className="space-y-6">
+								<div className="flex items-start gap-4">
+									<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+										<Mail className="h-6 w-6 text-blue-600" />
+									</div>
+									<div>
+										<h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+										<p className="text-gray-600">kleber@ziontechgroup.com</p>
+										<p className="text-sm text-gray-500">We typically respond within 24 hours</p>
+									</div>
+								</div>
+								<div className="flex items-start gap-4">
+									<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
+										<Phone className="h-6 w-6 text-green-600" />
+									</div>
+									<div>
+										<h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+										<p className="text-gray-600">+1 302 464 0950</p>
+										<p className="text-sm text-gray-500">Monday - Friday, 9 AM - 6 PM EST</p>
+									</div>
+								</div>
+								<div className="flex items-start gap-4">
+									<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
+										<MapPin className="h-6 w-6 text-purple-600" />
+									</div>
+									<div>
+										<h3 className="text-lg font-semibold text-gray-900 mb-2">Office</h3>
+										<p className="text-gray-600">364 E Main St STE 1008</p>
+										<p className="text-gray-600">Middletown, DE 19709</p>
+									</div>
+								</div>
+							</div>
+
+							{/* Additional Info */}
+							<div className="mt-8 p-6 bg-gray-50 rounded-lg">
+								<h3 className="text-lg font-semibold text-gray-900 mb-4">Ready to Get Started?</h3>
+								<p className="text-gray-600 mb-4">
+									Schedule a consultation to discuss your technology needs and explore how our solutions can drive your business forward.
+								</p>
+								<Link
+									to="/services"
+									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
+								>
+									Explore Our Services →
+								</Link>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+                <div>
+                  <h2 className='text-2xl font-bold mb-6'>Send us a Message</h2>
+                  <ContactForm />
+                </div>
+              </div>
+
+}
+
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+};
+
+export default function ContactPage() {
+  return (
+    <UltraFuturisticBackground variant="quantum" intensity="high">
+      <SEO title="Contact | Zion Tech Group" description="Get in touch for quotes, demos, and technical guidance." canonical="https://ziontechgroup.com/contact/" />
+      <div className="container mx-auto px-4 py-16 text-white">
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Contact Us</h1>
+        <p className="text-gray-300 mb-8">We usually respond within one business day. For urgent requests, please call.</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="md:col-span-2 space-y-6">
+            <div className="p-6 bg-black/40 border border-gray-700/60 rounded-xl">
+              <h2 className="text-xl font-semibold mb-3">Request a Quote or Demo</h2>
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input className="px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg" placeholder="Name" />
+                  <input className="px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg" placeholder="Email" />
+                </div>
+                <input className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg" placeholder="Company" />
+                <textarea className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg h-32" placeholder="How can we help?" />
+                <button type="submit" className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">Send</button>
+              </form>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <div className="p-6 bg-black/40 border border-gray-700/60 rounded-xl">
+              <h3 className="font-semibold mb-2">Contact Details</h3>
+              <div className="text-gray-300 space-y-2">
+                <div>Mobile: <a href={`tel:${contact.mobile}`} className="text-cyan-300">{contact.mobile}</a></div>
+                <div>Email: <a href={`mailto:${contact.email}`} className="text-cyan-300">{contact.email}</a></div>
+                <div className="text-sm">Address: {contact.address}</div>
+              </div>
+            </div>
+            <div className="p-6 bg-black/40 border border-gray-700/60 rounded-xl">
+              <h3 className="font-semibold mb-2">Sales</h3>
+              <p className="text-gray-300 text-sm">For pricing and bundles, see <a href="/pricing" className="text-cyan-300">Pricing</a> and <a href="/market-pricing" className="text-cyan-300">Market Pricing</a>.</p>
 
             </div>
           </div>
         </div>
       </div>
+
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              Contact Us;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>;
+
+  );
+
+    </>
+
+  );
+
+}
+
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * Contact - Function description
+ */
+function Contact() {
+  return (
+    <Layout;
+      title="Contact Us - Zion Tech Group";
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              Contact Us;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>);
+}
+
+    </UltraFuturisticBackground>
+  );
+}
 

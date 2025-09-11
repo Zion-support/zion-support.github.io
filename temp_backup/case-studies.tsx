@@ -645,11 +645,6 @@ export default function CaseStudiesPage() {
 		</>
 	);
 }
-<<<<<<< HEAD:temp_backup/case-studies.tsx
 export default CaseStudies;
-=======
-=======
 export default CaseStudies;
-=======
 export default CaseStudies;
->>>>>>> origin/chore/stabilize-build-minimal-index:pages_disabled/case-studies.tsx

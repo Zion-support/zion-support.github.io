@@ -22,7 +22,7 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
       default:
         return 'border-blue-500/50 bg-gradient-to-br from-blue-900/20 to-purple-900/20';
     }
-  };
+  }[variant];
 
   const getGlowClasses = () => {
     if (!glow) return '';

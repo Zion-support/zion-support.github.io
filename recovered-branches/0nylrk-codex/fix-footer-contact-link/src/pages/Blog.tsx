@@ -6,12 +6,9 @@ const BLOG_POSTS: BlogPost[] = [
   {
 import { BlogPost } from "@/types/blog",
 import { Search } from "lucide-react",
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -26,8 +23,6 @@ const BLOG_POSTS: BlogPost[] = [
 
 
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
@@ -37,10 +32,8 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>4. Quantum AI</h2>
 <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
 <h2>5. AI for Climate Solutions</h2>
-=======
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -59,8 +52,6 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -71,12 +62,9 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Consider offering tiered packages that cater to different client needs and budgets. Clearly differentiate what's included in each tier, and consider adding value-based pricing elements that tie your compensation to client results.</p>
 <h2>Leveraging Reviews and Testimonials</h2>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -277,8 +265,6 @@ const BLOG_POSTS: BlogPost[] = [
     featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630";
   }
 ];
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     publishedDate: "Mar 15, 2025",
     readTime: "6 min read",
@@ -288,8 +274,6 @@ const BLOG_POSTS: BlogPost[] = [
   }
 ],
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======// Categories for filtering
 const CATEGORIES = [
   "All Categories",
   "Trends",
@@ -345,7 +329,6 @@ export default function Blog() {
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
-=======
 ;
 export default /**
  * Blog - Function description
@@ -426,7 +409,6 @@ function Blog() {
                     className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit";
                   >;
                     <Link to={`/blog/${featured_posts[0].slug}`}>;
-=======
 
 
           {/* Filters and Search */}
@@ -434,14 +416,10 @@ function Blog() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   onChange={(e) => setSearchQuery(e && e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                 />;
               </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>;
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
                   <SelectValue placeholder="Select Category" />;
@@ -455,7 +433,6 @@ function Blog() {
 
 
                   setSelectedCategory("All Categories")
-=======
             </div>;
           ) : (;
             <div className="text-center py-16">;
@@ -468,10 +445,7 @@ function Blog() {
               </Button>
             </div>
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>;
                     <div className="flex items-center">;
                       <img;
@@ -520,28 +494,13 @@ function Blog() {
             </div>;
           )}
           )}
-=======
-=======
 
 
           )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </div>;
       <Footer />;
     </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Card>))}
             </div>) : (
             <div className="text - center py - 16">;
@@ -644,18 +603,12 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
 }> Read More → </Link> </Button> </CardFooter> </Card>) ) 
 }</div>) : (<div className="text-center py-16"> <h3 className="text-xl font-bold text-white mb-2">No articles found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your search or filter criteria</p> <Button 
 }
-<<<<<<< HEAD
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" 
 }</div> </div> <Footer /> </>) 
 }
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

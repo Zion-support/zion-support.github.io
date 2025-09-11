@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+import { supabase as supabaseClient } from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL } from '@/data/talent';
+import type { TalentProfile } from '@/utils/types/talent';
+import { v4 as uuid } from 'uuid';
+import { translateText, detectLanguageSimple } from '@/utils/api/translate';
 const hasSupabase =
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -20,22 +23,13 @@ export default async function handler(
     } catch (e: any) {
       return res && res.status(500).json({ error: e && e.message });
     }  }
-==============
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return res && res.status(500).json({ error: e && e.message })
     };
   }
   if (req && req.method === 'POST') {
     try {
-
-
         }
       }
       item && item.originalLanguage = originalLang;
@@ -79,9 +73,7 @@ const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
-
     .end('Method Not Allowed');  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-
 export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method === 'GET') {
     try {
       if (hasSupabase) {
@@ -93,13 +85,11 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
         return res.status(200).json({ items: data as TalentProfile[] })
       }
       return res.status(200).json({ items: LOCAL })
-
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
     }
   }
 availability: (payload.availability as any) || 'Open',
-=======
 }
         reviews_count: 0,
         created_at: new Date ().toISOString (),
@@ -164,8 +154,7 @@ if ( {) {
         const { error } = await supabase_client.from ('talent_profiles').insert ({
       if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({
-
-=======          id: item.id,
+          id: item.id,
           slug: item.slug,
           name: item.name,
           title: item.title,
@@ -188,7 +177,6 @@ request_quote: item.request_quote ?? null,
           created_at: item.created_at,
           original_language: item.original_language,
           translations: item.translations as any,
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     try {  if (req.method === 'POST') {
@@ -298,14 +286,7 @@ return res
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 }
-==============
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}

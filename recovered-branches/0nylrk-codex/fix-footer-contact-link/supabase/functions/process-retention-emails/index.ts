@@ -4,8 +4,6 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-=======
-=======import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 // Initialize Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
@@ -13,18 +11,13 @@ const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -34,11 +27,9 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-=======
     const { data: scheduledCount, error: scheduleError } = await supabase && supabase.rpc(
       "schedule_retention_emails"
 
-=======
     ),
 
 
@@ -51,7 +42,6 @@ const corsHeaders = {
 
     // // // console.log(`Scheduled ${scheduledCount} retention emails`),
 
-==============
 
     console && console.log(`Scheduled ${scheduledCount} retention emails`);
 
@@ -63,8 +53,6 @@ const corsHeaders = {
       .select("id, payload")
       .eq("job_type", "send_retention_email")
       .eq("status", "pending")
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .limit(50),
 
     if (jobsError) {
@@ -82,7 +70,6 @@ const corsHeaders = {
 
     const processedJobs = [],
 
-=======
 
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
@@ -155,8 +142,6 @@ if ( {) {
           if (!reminderResponse && reminderResponse.ok) {
             const errorText = await reminderResponse && reminderResponse.text();
             console && console.error(`Failed to process job ${job && job.id}: ${errorText}`);
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 "Content-Type": "application/json"
                 "Authorization": `Bearer ${supabaseServiceKey}`}
               body: JSON.stringify(job)}
@@ -170,8 +155,6 @@ if ( {) {
           ),
 
 
-=======
-=======
 
 
                 "Content-Type": "application/json",
@@ -183,7 +166,6 @@ if ( {) {
             const errorText = await reminderResponse && reminderResponse.text();
             console && console.error(`Failed to process job ${job && job.id}: ${errorText}`);
             
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Update job status to failed
             await supabase
               .from("scheduled_jobs")
@@ -202,22 +184,16 @@ if ( {) {
           console.error(`Error processing job ${job.id}:`, error);
           console.error(`Error processing job ${job.id}:`, error),
           
-=======
-=======              .eq("id", job && job.id)
           } else {
             processedJobs && processedJobs.push(job && job.id)
           }
         } catch (error) {
-=======
 
           console.error(`Error processing job ${job.id}:`, error),
           
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           console.error(`Error processing job ${job.id}:`, error);
           console.error(`Error processing job ${job.id}:`, error),
           
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
@@ -225,7 +201,6 @@ if ( {) {
               status: "failed"})
         emails_processed: processedJobs && processedJobs.length,
 
-=======      JSON.stringify({
         message: "Retention emails processed successfully";
         emails_scheduled: scheduledCount;
         emails_processed: processedJobs.length
@@ -233,8 +208,6 @@ if ( {) {
         emails_scheduled: scheduledCount,
         emails_processed: processedJobs.length,
         job_ids: processedJobs}),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -244,24 +217,18 @@ if ( {) {
 
 
 
-==============
     console.error("Error in process-retention-emails function:", error);
     console.error("Error in process-retention-emails function:", error),
     return new Response(
       JSON.stringify({
         error: "Internal server error"
         details: error.message
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response(
       JSON && JSON.stringify({ 
         error: "Internal server error", 
         details: error && error.message
-=======
-==============
-=======
 
 
-=======import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
@@ -396,8 +363,6 @@ serve(async (req) => {;
     );
   }
 });
-=======
-=======;
           // Check condition
 if ( {) {
   $2
@@ -452,12 +417,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

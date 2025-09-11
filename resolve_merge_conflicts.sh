@@ -1,101 +1,35 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and merge all feature branches
-set -e
+echo "🔧 Resolving merge conflicts automatically..."
 
-echo "Starting merge conflict resolution process..."
+# Find all files with merge conflict markers
+echo "📁 Searching for files with merge conflicts..."
 
-# Function to resolve conflicts automatically
+# Function to resolve conflicts in a file
 resolve_conflicts() {
-    local branch=$1
-    echo "Attempting to merge branch: $branch"
+    local file="$1"
+    echo "🔧 Resolving conflicts in: $file"
     
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-commit; then
-        echo "Successfully merged $branch without conflicts"
-        git commit -m "Merge $branch into main - resolved conflicts automatically"
-        return 0
-    else
-        echo "Conflicts found in $branch, attempting to resolve..."
-        
-        # Check if we're in a merge state
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD\|^AU\|^UA\|^DU\|^UD"; then
-            echo "Resolving conflicts for $branch..."
-            
-            # Strategy: prefer main branch (ours) for most conflicts
-            # But keep new files from feature branch
-            git status --porcelain | while read status file; do
-                case $status in
-                    "UU"|"AA"|"AU"|"UA")
-                        echo "Resolving conflict in $file"
-                        # For add/add conflicts, prefer the feature branch version
-                        if [[ $file == *.tsx || $file == *.ts || $file == *.js || $file == *.jsx ]]; then
-                            git checkout --theirs "$file" 2>/dev/null || true
-                        else
-                            git checkout --ours "$file" 2>/dev/null || true
-                        fi
-                        git add "$file" 2>/dev/null || true
-                        ;;
-                    "DD")
-                        echo "File $file was deleted in both branches, keeping deleted"
-                        git rm "$file" 2>/dev/null || true
-                        ;;
-                    "DU")
-                        echo "File $file was deleted in main, keeping from feature branch"
-                        git add "$file" 2>/dev/null || true
-                        ;;
-                    "UD")
-                        echo "File $file was deleted in feature branch, keeping deleted"
-                        git rm "$file" 2>/dev/null || true
-                        ;;
-                esac
-            done
-            
-            # Add all resolved files
-            git add . 2>/dev/null || true
-            
-            # Commit the merge
-            if git commit -m "Merge $branch into main - resolved conflicts automatically"; then
-                echo "Successfully resolved conflicts and merged $branch"
-                return 0
-            else
-                echo "Failed to commit merge for $branch"
-                git merge --abort
-                return 1
-            fi
-        else
-            echo "No conflicts detected, but merge failed for $branch"
-            git merge --abort
-            return 1
-        fi
-    fi
+    # Remove all conflict markers and keep the newer version (after =======)
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> /d' "$file"
+    
+    echo "✅ Resolved conflicts in: $file"
 }
 
-# List of feature branches to merge
-FEATURE_BRANCHES=(
-    "feature/comprehensive-ui-components"
-    "feature/enhanced-routing-and-ai-services"
-    "feature/enhanced-services-and-design"
-    "feature/expand-zion-services-2025"
-    "feature/expanded-services"
-    "feature/expanded-services-2026"
-    "feature/fix-build-and-improve-navigation"
-    "feature/futuristic-ui-services"
-    "feature/homepage-ai-search"
-    "feature/merge-conflicts-and-improvements"
-)
-
-# Merge each feature branch
-for branch in "${FEATURE_BRANCHES[@]}"; do
-    echo "Processing branch: $branch"
-    if resolve_conflicts "$branch"; then
-        echo "✅ Successfully merged $branch"
-    else
-        echo "❌ Failed to merge $branch, skipping..."
+# Find and resolve conflicts in TypeScript/JavaScript files
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read -r file; do
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        resolve_conflicts "$file"
     fi
-    echo "---"
 done
 
-echo "Merge conflict resolution process completed!"
-echo "Current status:"
-git status
+# Find and resolve conflicts in other source files
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules | grep -v .git | while read -r file; do
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        resolve_conflicts "$file"
+    fi
+done
+
+echo "🎉 All merge conflicts resolved!"
+echo "📝 Please review the changes and test the application"

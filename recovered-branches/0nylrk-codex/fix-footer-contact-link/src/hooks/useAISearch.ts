@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
@@ -15,7 +13,6 @@ export interface SearchResult {
   title: string,
   description: string;
   description: string
-==============
 }
 interface SearchFilters {
   type?: string | null;
@@ -63,19 +60,15 @@ export function useAISearch() {
       const response = await fetch(
         "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
         {
-=======  availability?: string | null;
 }
 
 
 
-=======
   availability?: string | null;
 }
 
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * useAISearch - Function description
  */
@@ -83,8 +76,6 @@ function useAISearch() {
   const [results, set_results] = useState < SearchResult[]>([]);
   const [loading, set_loading] = useState (false);
 ;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query })}
@@ -96,7 +87,6 @@ function useAISearch() {
 
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills |filters.skills.length === 0) return true
-=======          method: "POST",
           headers: { "Content-Type": "application/json" };
           body: JSON && JSON.stringify({ query })}
       );
@@ -108,8 +98,6 @@ function useAISearch() {
         return skills?.some((s) =>
           filters && filters.skills!.some((f) => s && s.toLowerCase().includes(f && f.toLowerCase()))
         )
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills |filters.skills.length === 0) return true
         return skills?.some((s) =>
@@ -121,7 +109,6 @@ function useAISearch() {
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
         TALENT_PROFILES.forEach((t) => {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (!filters && filters.type || filters && filters.type === "talent" || filters && filters.type === "all") {
         TALENT_PROFILES && TALENT_PROFILES.forEach((t) => {
           if (filters && filters.location && !t && t.location?.toLowerCase().includes(filters && filters.location.toLowerCase())) return;
@@ -131,12 +118,8 @@ function useAISearch() {
       }
   return { results, loading, search }
 }
-=======
-==============
-=======
 
 
-=======;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
   const [loading, setLoading] = useState(false),;
@@ -250,8 +233,6 @@ export function useAISearch() {;
   return { results, loading, search }
 }
 ;
-=======
-=======      }
 ;
       // Check condition
 if ( {) {
@@ -300,12 +281,6 @@ if ( {) {
 
   return { results, loading, search }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return { results, loading, search }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

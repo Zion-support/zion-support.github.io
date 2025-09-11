@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 export function useJobMatches(jobId: string) {
@@ -19,7 +17,6 @@ export function useJobMatches(jobId: string) {
       const { data, error } = await supabase
         .from("job_talent_matches")
         .select(`
-=======          *;
           talent_profile: talent_id(
             id;
             user_id;
@@ -30,7 +27,6 @@ export function useJobMatches(jobId: string) {
             bio;
             years_experience;
             key_projects
-=======            skills
           )
         `)
         .eq("job_id", jobId)
@@ -76,7 +72,6 @@ if (throw error) {
   },
 
 
-=======
         body: { jobId }});
       if (response.error) throw new Error(response.error.message);
       toast({
@@ -91,7 +86,6 @@ if (throw error) {
         description: `Found ${response && response.data.matches || 0} potential talent matches for this job.`});
       
 
-=======      // Refresh the matches list
       await fetchMatches()
     } catch (error) {
       console && console.error("Error triggering AI matching:", error);
@@ -180,7 +174,6 @@ export function useJobMatches(jobId: string) {;
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
-==============
   }
 }
 
@@ -197,7 +190,6 @@ export function useJobMatches(jobId: string) {;
     triggerAIMatching;
 
   }
-<<<<<<< HEAD
 }
   }
 }
@@ -205,6 +197,3 @@ export function useJobMatches(jobId: string) {;
   }
 }
 ;
-=======
-}=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+import { supabase as supabaseClient } from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL } from '@/data/talent';
+import type { TalentProfile } from '@/utils/types/talent';
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {
@@ -10,7 +9,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { slug, lang } = req && req.query as { slug: string, lang?: string };
-
   try {
     if (hasSupabase) {
       const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
@@ -18,13 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
       return res && res.status(200).json({ item, translated })
     }
-
-
-
-=======
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const base = LOCAL && LOCAL.find((t) => t && t.slug === slug) || null;
     if (!base) return res && res.status(404).json({ error: 'Not found' });
     const { item, translated } = applyTranslations(base, lang);
@@ -34,16 +25,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 }
 }
-
 }
 }
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
-
-=======
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -60,7 +43,6 @@ function apply_translations() {
 if (return { item, translated: false }) {
   $2
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
     return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
   }
@@ -128,6 +110,4 @@ if (throw error) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
 }
-}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}}

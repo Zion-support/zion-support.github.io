@@ -1,14 +1,11 @@
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
-=======
 
 
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
@@ -30,7 +27,6 @@ export function Footer() {
                 <Link
                   to="/marketplace"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======import { NewsletterForm  } from '@/components / NewsletterForm';
 import { Twitter, Linkedin, Facebook, Instagram, Github  } from './lucide-react';
 import { Link  } from './react-router-dom';
 export /**
@@ -104,13 +100,11 @@ function Footer() {
                   to="/marketplace";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link;
                   to="/services";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======                <Link;
                   to="/sitemap - page";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;                  Sitemap;
@@ -123,14 +117,11 @@ function Footer() {
           </div>;
         </div>;
       </div>;
-=======    </footer>
 
 
     </footer>;
   );
-<<<<<<< HEAD
     </footer>);
-<<<<<<< HEAD
 }
     </footer>);
     </footer>;
@@ -143,10 +134,5 @@ function Footer() {
     </footer>;
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -5,17 +5,13 @@ import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
 
-=======
 
 
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**
  * Main function to process job-talent matching
  * @param job The job data to find matches for
@@ -33,29 +29,23 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
       skills: jobSkillsNormalized,
       budget: job && job.budget
     };
-=======
     
 
-=======
 
     // Normalize job skills and generate embeddings via OpenAI
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Use OpenAI to find best matches
     const bestMatches = await findBestMatches(jobDetails, talents);
     return bestMatches
   } catch (error) {
     console && console.error("Error in processJobMatching:", error);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         talent_id: match && match.talentId;
         match_score: match && match.score;
         matched_skills: match && match.matchedSkills,
         reason: match && match.reason
       .insert({
 
-=======
 
       });
-=======
 
       .insert({    if (matchError) {
       console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
@@ -64,8 +54,6 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
       await supabase && supabase.rpc('create_notification', {
         _user_id: match && match.talentId;
         _title: "New Job Match",
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`;
         _type: "job_match"
         _related_id: jobId
@@ -159,7 +147,6 @@ if ( {) {
   });
       await supabase.rpc('create_notification', {
 
-=======
   
   await Promise && Promise.all(matchInsertPromises)
 }        _user_id: match.talentId,
@@ -207,7 +194,6 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
     throw error,;
   }
 }
-<<<<<<< HEAD
 ;
 /**;
  * Stores match results in the database and creates notifications;
@@ -253,11 +239,7 @@ await Promise.all (matchInsertPromises)
 ;
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
   await Promise.all (matchInsertPromises);
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

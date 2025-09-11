@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,6 @@ import {
 import {  CardContent,
   CardFooter,
   CardHeader,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   key_points: string[];
 }
 interface GeneratedContentDisplayProps {
@@ -34,11 +32,9 @@ interface GeneratedContentDisplayProps {;
 
 }
 interface GeneratedContentDisplayProps {
-=======
 interface GeneratedContentDisplayProps {;=======
   CardTitle,;
 } from "@/components/ui/card";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -47,11 +43,8 @@ import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -68,9 +61,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -78,15 +68,12 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
 
-=======
         
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
@@ -136,7 +123,6 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
         
 
 
-=======
               <Badge
                 key={index}
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
@@ -150,8 +136,6 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -164,10 +148,8 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
         
 
 
-=======
         
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -192,7 +174,6 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
           <ul className="list-disc pl-5 text-white space-y-1">;
             {content && content.keyPoints.map((point, index) => (;
               <li key={index}>{point}</li>;            ))}
-=======
   on_apply: () => void;
 }
 export /**
@@ -241,14 +222,10 @@ function GeneratedContentDisplay() {
           <ul className="list - disc pl - 5 text - white space - y-1">;
             {content.key_points.map ((point, index) => (
               <li key={index}>{point}</li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </ul>;
         </div>;
       </CardContent>;
       <CardFooter>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -259,7 +236,6 @@ function GeneratedContentDisplay() {
   );
 }
 ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Card>
 
 
@@ -274,7 +250,6 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
-<<<<<<< HEAD
     </Card>;
   );}
  interface GeneratedContent {
@@ -297,8 +272,3 @@ onApply: () => void
 }</div> </div> <div> </p> </div> <div>) ) 
 }</ul> </div> </CardContent> <CardFooter> <Button ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) 
 }
-=======
-    </Card>);}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

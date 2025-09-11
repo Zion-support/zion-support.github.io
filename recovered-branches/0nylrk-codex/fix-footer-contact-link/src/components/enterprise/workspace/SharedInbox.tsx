@@ -1,29 +1,20 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function SharedInbox() {
   // Mock messages
 
   const messages = [
     {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       id: "msg-1",
       from: "John Smith",
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "msg-2"
       from: "Talent Support"
@@ -34,14 +25,11 @@ export function SharedInbox() {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "msg-3"
       from: "Sarah Wilson"
@@ -54,8 +42,6 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 ;
-=======
-=======
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";export function SharedInbox() {;
@@ -64,10 +50,8 @@ import {Badge} from "@/components/ui/badge";export function SharedInbox() {;
     {;
 
 
-=======
 
 
-=======import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 export function SharedInbox() {;
@@ -108,8 +92,6 @@ export function SharedInbox() {;
           </div>;
         {messages && messages.length === 0 && (;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </Card>);
 }
@@ -156,13 +138,5 @@ flex items-center justify-between" > <div> <CardTitle>Shared Inbox</CardTitle> <
   );
 }
 ;
-=======}=======
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

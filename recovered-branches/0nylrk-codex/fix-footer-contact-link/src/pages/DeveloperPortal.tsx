@@ -1,11 +1,9 @@
 
 
 
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
@@ -17,7 +15,6 @@ import { ApiLogs } from "@/components/developers/ApiLogs",
 
 
 
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function DeveloperPortal() {;
   const { user } = useAuth();
@@ -34,7 +31,6 @@ export function DeveloperPortal() {
 export function DeveloperPortal() {;
 
   const { user } = useAuth();
-=======
 
 
 
@@ -49,7 +45,6 @@ export function DeveloperPortal() {;
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-=======                <Icon size={16} className="mr-2" />
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import {;
@@ -75,8 +70,6 @@ interface TabDefinition {;
 export function DeveloperPortal() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState<string>("documentation"),;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
@@ -86,7 +79,6 @@ export function DeveloperPortal() {;
     { id: "logs", label: "Logs", icon: List }],;
 
   return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
       <div className="mb-8">;
         <h1 className="text-3xl font-bold text-white flex items-center">;
@@ -182,8 +174,6 @@ export function DeveloperPortal() {;
       </div>
       {/* Tab content */}
       <div>
-=======
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           })}
 
         </div>;
@@ -193,10 +183,8 @@ export function DeveloperPortal() {;
       {/* Tab content */}
       <div>;
 
-=======
 
 
-=======
 ;
 
 export default function ProtectedDeveloperPortal() {;
@@ -209,9 +197,6 @@ export default function ProtectedDeveloperPortal() {;
 ;
 
 
-=======
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <button;
                 key={tab.id}
                 className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
@@ -245,8 +230,6 @@ function ProtectedDeveloperPortal() {
       <DeveloperPortal />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;
 }
       </div>
@@ -270,9 +253,3 @@ export default function ProtectedDeveloperPortal() {;
 }
 ;
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

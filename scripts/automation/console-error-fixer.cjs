@@ -9,17 +9,91 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-class ConsoleErrorFixer {}
-    constructor() {}
-        this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'console-error-fixer.log');
-        this.reportFile = path.join(this.projectRoot, 'console-error-fix-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
-        if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+
+console.log('🔧 Starting continuous console error fixer automation...');
+
+// Get automation interval from environment variable (default: 15 minutes)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes
+
+async function runConsoleErrorFixer() {
+  try {
+    console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
+    
+    // Build the project first
+    console.log('🏗️ Building project for console error detection...');
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build completed');
+    } catch (error) {
+      console.log('⚠️  Build failed but continuing...');
+      return;
+    }
+    
+    // Check if dist folder exists
+    const distPath = path.join(process.cwd(), 'dist');
+    if (!fs.existsSync(distPath)) {
+      console.log('⚠️  Build verification failed: dist folder not found');
+      return;
+    }
+    
+    // Scan for console statements in source code
+    console.log('🔍 Scanning for console statements in source code...');
+    const consoleStatements = findConsoleStatements('./src');
+    if (consoleStatements.length > 0) {
+      console.log(`⚠️  Found ${consoleStatements.length} console statements in source code:`);
+      consoleStatements.forEach(stmt => {
+        console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);
+      });
+    } else {
+      console.log('✅ No console statements found in source code');
+    }
+    
+    // Check for console statements in build output
+    console.log('🔍 Checking build output for console statements...');
+    const buildConsoleStatements = findConsoleStatements(distPath);
+    if (buildConsoleStatements.length > 0) {
+      console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build output:`);
+      buildConsoleStatements.forEach(stmt => {
+        console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);
+      });
+    } else {
+      console.log('✅ No console statements found in build output');
+    }
+    
+    // Check for potential error patterns
+    console.log('🔍 Checking for potential error patterns...');
+    const errorPatterns = findErrorPatterns('./src');
+    if (errorPatterns.length > 0) {
+      console.log(`⚠️  Found ${errorPatterns.length} potential error patterns:`);
+      errorPatterns.forEach(pattern => {
+        console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`);
+      });
+    } else {
+      console.log('✅ No potential error patterns found');
+    }
+    
+    // Run linting to catch console errors
+    console.log('🔍 Running linting for console errors...');
+    try {
+      execSync('npm run lint', { stdio: 'pipe' });
+      console.log('✅ Linting completed - no console errors found');
+    } catch (error) {
+      console.log('⚠️  Linting found issues, checking for console errors...');
+      const lintOutput = error.message;
+      if (lintOutput.includes('console.')) {
+        console.log('⚠️  Console statements detected in linting output');
+      }
+    }
+    
+    // Generate console error fixer report
+    console.log('📊 Generating console error fixer report...');
+    const report = {
+      timestamp: new Date().toISOString(),
+      consoleStatements: consoleStatements.length,
+      buildConsoleStatements: buildConsoleStatements.length,
+      errorPatterns: errorPatterns.length,
+      summary: 'Console error fixer completed',
+      status: 'completed'
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}

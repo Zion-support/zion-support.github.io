@@ -151,10 +151,7 @@ export function JobMatchCard({;
       onInvite(matchId);
     }
   },
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -317,10 +314,6 @@ import React from 'react';
     </Card>
   )
 }
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </CardContent>;
@@ -329,12 +322,7 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -370,7 +358,6 @@ if ( {) {
     }
   }
 ;
-<<<<<<< HEAD
   const handleViewDetails = () =>: any {
     // Check condition
 if ( {) {
@@ -581,7 +568,6 @@ onInvite
   if (onApply) {
   onApply (matchId) 
 }
-<<<<<<< HEAD
 };
 const handleViewDetails = () => {
   if (onViewDetails) {
@@ -615,8 +601,3 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 ;
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

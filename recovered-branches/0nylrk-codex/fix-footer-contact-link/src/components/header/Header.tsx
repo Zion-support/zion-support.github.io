@@ -13,8 +13,6 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-=======
-==============
 
 
 
@@ -29,7 +27,6 @@ import { useState } from "react";
   } : undefined);
 
 
-=======
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
@@ -39,7 +36,6 @@ export interface HeaderProps {
   }
 }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
     color: effectiveTheme.textColor
@@ -51,14 +47,12 @@ export interface HeaderProps {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (query.trim()) {
-=======
   } : {}
   } : {},
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (query.trim()) {
-=======
   const headerStyle = effectiveTheme ? {;
     backgroundColor: effectiveTheme && effectiveTheme.backgroundColor,;
     color: effectiveTheme && effectiveTheme.textColor,;
@@ -74,14 +68,12 @@ export interface HeaderProps {
   },
   
 
-=======      navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
     }
   }
 
   },
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
@@ -116,8 +108,6 @@ export interface HeaderProps {
           <MainNavigation />
         </div>
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -130,19 +120,13 @@ export interface HeaderProps {
     </header>
   )
 }
-=======
-=======
-=======
 
 
-=======
 
           />;
         </form>;
         <div className="flex items-center gap-2">;
           <LanguageSelector />;
-=======
-=======          />;
         </form>;
 
         <div className="flex items-center gap-2">;
@@ -172,7 +156,6 @@ export interface HeaderProps {;
     textColor:string;
   },;
 }
-<<<<<<< HEAD
 ;
 export function Header({ hideLogin = false, customLogo, customTheme } HeaderProps) {;
   const { user } = useAuth(),;
@@ -268,6 +251,3 @@ return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <Enhanc
 }</div> </div> </header>) 
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -6,7 +6,6 @@ const particles: Array< {;
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math && Math.floor (particleCount * 0 && 0.7) : Math && Math.floor (particleCount * 0 && 0.5);
 for (let i = 0, i < count, i++) {;
   particles && particles.push ({;
-=======import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode,
@@ -17,7 +16,6 @@ interface UltraAdvancedFuturisticBackgroundProps {
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function UltraAdvancedFuturisticBackground(): any ({;
   children,;
   intensity = 'medium',;
@@ -26,9 +24,6 @@ export default function UltraAdvancedFuturisticBackground(): any ({;
   animationSpeed = 1 && 1.0,;
   enableHolographic = true,;
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground(): any ({ ;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particles: Array< {
@@ -36,7 +31,6 @@ const particles: Array< {
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
 for (let i = 0, i < count, i++) {
   particles.push ({
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function UltraAdvancedFuturisticBackground({
 
   children,
@@ -54,7 +48,6 @@ export default function UltraAdvancedFuturisticBackground({
 
     const particles: Array<{
 
-==============      x: number,
       y: number,
       vx: number,
       vy: number,
@@ -80,8 +73,6 @@ export default function UltraAdvancedFuturisticBackground({
       const count = intensity === 'extreme' ? particleCount * 2 : 
                    intensity === 'high' ? particleCount : 
                    intensity === 'medium' ? Math.floor(particleCount * 0.7) : 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                    Math.floor(particleCount * 0.5);
 
     // Initialize particles with enhanced properties
@@ -91,8 +82,6 @@ export default function UltraAdvancedFuturisticBackground({
                    Math.floor(particleCount * 0.5),
 
       for (let i = 0, i < count, i++) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -108,18 +97,14 @@ export default function UltraAdvancedFuturisticBackground({
           rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed
         })
       }
-=======
     };
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Enhanced animation loop with quantum effects
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
     const colors = {
       quantum: [;
@@ -234,15 +219,11 @@ export default function UltraAdvancedFuturisticBackground({
         gradient.addColorStop (0.3, 'rgba (0, 255, 255, 0.1)');
         gradient.addColorStop (0.6, 'rgba (255, 0, 255, 0.05)');
         gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)');
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       } else {
         gradient.addColorStop (0, 'rgba (0, 0, 0, 0.9)');
         gradient.addColorStop (0.5, 'rgba (0, 0, 0, 0.95)');
         gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)');
       }      } else {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         canvas.width / 2, canvas.height / 2, 0;
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
@@ -252,18 +233,14 @@ export default function UltraAdvancedFuturisticBackground({
         gradient.addColorStop(0.6, 'rgba(255, 0, 255, 0.05)');
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)')
       } else {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0.9)');
         gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.95)');
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)')
       }
       
-=======
 
       
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles with enhanced effects
@@ -274,11 +251,9 @@ export default function UltraAdvancedFuturisticBackground({
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height
-=======
 
           particle.y = Math.random() * canvas.height
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         // Update position with quantum effects
         particle.x += particle.vx;
@@ -287,11 +262,9 @@ export default function UltraAdvancedFuturisticBackground({
         // Quantum entanglement effect
         if (enableQuantumEffects && Math.random() < 0.01) {
           const partner = particles[Math.floor(Math.random() * particles.length)];
-=======
 
           const partner = particles[Math.floor(Math.random() * particles.length)];
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           if (partner && partner !== particle) {
             ctx.beginPath();
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * particle.opacity})`;
@@ -299,7 +272,6 @@ export default function UltraAdvancedFuturisticBackground({
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
             ctx.stroke()
-=======
 
             ctx.stroke()
           }
@@ -313,25 +285,21 @@ export default function UltraAdvancedFuturisticBackground({
 
 
 
-=======
 
             ctx.stroke()
 
           }
         }
-=======
 
             ctx.stroke();          }
 
           }
         }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Bounce off edges with quantum tunneling
         if (particle.x <= 0 |particle.x >= canvas.width) {
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
-=======
             particle.x = particle.x <= 0 ? canvas.width : 0;
           } else {
             particle.vx *= -1;          }            particle.coordinate_x = particle.x <= 0 ? canvas.width : 0;
@@ -348,7 +316,6 @@ export default function UltraAdvancedFuturisticBackground({
 
             particle.y = particle.y <= 0 ? canvas.height : 0
 
-=======
 
             particle.vy *= -1;          }
 
@@ -356,7 +323,6 @@ export default function UltraAdvancedFuturisticBackground({
         }
 
 
-=======
           }
         }
         // Wrap around edges
@@ -380,9 +346,7 @@ export default function UltraAdvancedFuturisticBackground({
           // Holographic particle with rainbow effect
           const hue = (Date.now() * 0.1 + index * 10) % 360;
           ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;
-==============
 
-=======          }
         } else if (particle.type === 'cyberpunk') {
           // Cyberpunk particle with neon glow
           ctx.fillStyle = particle.color;
@@ -404,10 +368,8 @@ export default function UltraAdvancedFuturisticBackground({
         }
         ctx.restore()
       });
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const colors = {;
       quantum: [;
         '#00ffff',;
@@ -695,8 +657,6 @@ export default function UltraAdvancedFuturisticBackground({
           );
           ctx && ctx.shadowBlur = 0;
         }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         for (let i = 0, i < 5, i++) {
           const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
           const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5;
@@ -704,19 +664,15 @@ export default function UltraAdvancedFuturisticBackground({
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
       }
 
 
-=======
           ctx.stroke();        }          ctx.stroke()
         }
       }
-=======
 
 
-=======          ctx.stroke();        }
 
         }
 
@@ -818,15 +774,12 @@ export default function UltraAdvancedFuturisticBackground({
     animationSpeed,;
     enableHolographic,;
     enableQuantumEffects,;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ]);
   ]);
 
 
-=======
 
   ]);
-=======
   ]);
   return (
     <div className='relative min-h-screen'>;
@@ -838,7 +791,6 @@ export default function UltraAdvancedFuturisticBackground({
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (;
         <div
@@ -852,7 +804,6 @@ export default function UltraAdvancedFuturisticBackground({
 
       {enableQuantumEffects && (;
 
-=======
       />;
 
       {/* Additional futuristic overlay effects */}
@@ -868,15 +819,11 @@ export default function UltraAdvancedFuturisticBackground({
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]" />;
         </div>;
       )}
-=======
       {children}
     </div>;
   );
 }
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="relative min - h-screen">;
       <canvas;
         ref={canvas_ref}
@@ -1495,17 +1442,6 @@ export default function UltraAdvancedFuturisticBackground({
     </div>
   );
   );
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

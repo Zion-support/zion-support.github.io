@@ -1,6 +1,5 @@
 import React from 'react';
 
-=======
 import {
 
 import { motion } from 'framer-motion';import {
@@ -13,23 +12,6 @@ import { motion } from 'framer-motion';import {
   Globe
   Rocket;
 
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Brain,
-  Globe,;
-  Rocket,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
-=======
-
-
-=======
-
   ArrowRight,
   Star,
   TrendingUp,
@@ -39,8 +21,17 @@ import { motion } from 'framer-motion';import {
   Globe,;
   Rocket,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,;
+  Rocket,;
+
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -48,7 +39,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-=======
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -62,7 +52,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       },
     },  };
 
-=======  const itemVariants = {
     hidden: {
       opacity: 0
       y: 50
@@ -92,7 +81,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
   }
         stagger_children: 0.2,
       variants={itemVariants}
-=======
 
       variants={itemVariants}
       whileHover='hover'
@@ -111,14 +99,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />;
         <div className="relative p-6">;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       whileHover="hover"
       className="group relative"
-=======
 
       whileHover="hover"
       className="group relative"=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >
       <motion.div
         variants={cardVariants}
@@ -176,8 +161,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         variants={card_variants}
         className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - slate - 900 / 80 via - slate - 800 / 80 to - slate - 900 / 80 backdrop - blur - xl border border - slate - 700 / 50 hover:border - slate - 600 / 50 transition - all duration - 300";
       >;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         {/* Glowing border effect */}
         <div className="absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
         <div className="relative p - 6">;
@@ -199,8 +182,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               </div>)}
           </div>;
           {/* Description */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           </div>;
           {/* Description */}
           <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service && service.description}
@@ -351,7 +332,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
         <div className='relative p-6'>
           {/* Service header */}
-=======
                   <span>{feature}</span>
                 </div>
               ))}
@@ -427,8 +407,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           {/* Features */}
 
           <div className="mb-4">
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
             <div className="grid grid-cols-1 gap-1">
               {service.features.slice(0, 3).map((feature: string, idx: number) => (
@@ -452,8 +430,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </div>
             {service.popular && (
               <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
                 <span>Popular</span>
@@ -474,12 +450,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           {/* Features */}
 
             </motion.button>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -499,11 +471,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </div>
           {/* Market info */}
           <div className="mt-4 pt-4 border-t border-slate-700/50">
-=======
 
           <div className="mt-4 pt-4 border-t border-slate-700/50">
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="flex items-center justify-between text-xs text-slate-500">
               <span>Market: {service.marketSize}</span>
               <span>Growth: {service.growthRate}</span>
@@ -525,8 +495,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
       <div className="container mx-auto px-4 relative z-10">
-=======
-=======        {/* Hover glow effect */}
 
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
 
@@ -616,14 +584,11 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           className='text-center mb-16'
 
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -664,10 +629,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
 
-=======
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -679,14 +640,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-20'
-=======
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -766,10 +722,8 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
-=======
           transition={{ duration: 0.8, delay: 0.4 }}
           className='mb-20'
-=======
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -787,7 +741,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               renderServiceCard(service, index)
             )}          </motion.div>        >
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Micro SAAS Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -817,11 +770,8 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             initial="hidden"
             whileInView="visible"
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Micro SAAS Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -841,14 +791,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           whileInView={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* CTA Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -859,24 +805,17 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className='text-center mt-16'
-=======
-=======
           transition={{ duration: 0.8, delay: 0.8 }}
           className='text-center mt-16'
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
@@ -912,11 +851,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
-=======
 
                 className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Schedule Demo
               </motion.button>
@@ -926,8 +863,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       </div>
     </section>
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
-=======
-=======
 
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
           className='text-center mt-16'>;
@@ -1180,14 +1115,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 }
 
 }
-=======
   );
 
 }
-=======}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
               <motion.button;
                 while_hover={{ scale: 1.05 }}
@@ -1221,17 +1151,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -3,13 +3,10 @@ import path from 'path';
 ;
 
 export interface TokenTransaction {
-=======
 
 export interface TokenTransaction {;
 
 export interface TokenTransaction {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -25,8 +22,6 @@ export interface TokenConfig {;
 
 
 export interface TokenConfig {;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name: string;
   symbol: string;
   total_supply: number;
@@ -104,7 +99,6 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   save_transactions (transactions);
   return new_transaction;
 }
-<<<<<<< HEAD
 export function getConfig(): TokenConfig {
   return loadConfig();
 }
@@ -112,38 +106,3 @@ export function set_config (config: TokenConfig): void {
   save_config (config);
 }
 export function getUserBalance(userId: string): number {
-=======
-export function getUserBalance(userId: string): number {
-=======
-export function getConfig(): TokenConfig {;
-  return loadConfig();
-}
-
-export function setConfig(config: TokenConfig): void {;
-  saveConfig(config);
-}
-
-export function getUserBalance(userId: string): number {;
-  const transactions = loadTransactions();
-  let balance = 0;
-;
-  for (const tx of transactions) {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        balance += tx.amount;
-      } else // Check condition
-if ( {) {
-  $2
-}
-        balance -= tx.amount;
-      }
-    }
-  }
-  return Math.max (0, balance);
-}

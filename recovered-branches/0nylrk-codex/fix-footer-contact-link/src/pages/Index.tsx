@@ -88,14 +88,11 @@ export default function Index() {;
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: t("home.tool_analytics")
       description: t("home.tool_analytics_desc")
@@ -104,14 +101,11 @@ export default function Index() {;
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
@@ -127,7 +121,6 @@ export default function Index() {;
       />
       <Header />
       <HeroSection />
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
@@ -161,7 +154,6 @@ export default function Index() {;
       <FloatingCTA />;
       <Footer />;
     </div>;
-<<<<<<< HEAD
   ),;}
  import {
   ArrowRight;
@@ -230,13 +222,6 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
 }<SocialShareSection /> <WaitlistSection /> <FloatingCTA /> <Footer /> </div>) 
 }
 }
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <div className="min - h-screen bg - zion - blue text - white">;
       <SEO;
         title={t ("home.seo_title")}
@@ -293,5 +278,3 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
       <Footer />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

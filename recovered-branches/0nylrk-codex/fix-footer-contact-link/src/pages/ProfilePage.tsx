@@ -15,10 +15,8 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -61,23 +59,16 @@ export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
-=======
 
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     const fetchProfile = async () => {
 
 
   useEffect(() => {
     const fetchProfile = async () => {
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setIsLoading(true),
       setIsError(false),
       try {
@@ -86,7 +77,6 @@ export default function ProfilePage() {
           .select("*")
           .eq("id", profileId)
 
-==============
           .single();
           .single(),
         if (error) {
@@ -102,8 +92,6 @@ export default function ProfilePage() {
           variant: "destructive"})
       } finally {
         setIsLoading(false)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export default function ProfilePage() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -152,11 +140,8 @@ export default function ProfilePage() {;
     const fetchProfile = async () => {;
       setIsLoading(true),;
       setIsError(false),;
-=======
-=======
   useEffect(() => {;
     const fetchProfile = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(true);
       setIsError(false);
 import { useState, useEffect } from './react';
@@ -244,7 +229,6 @@ if ( {) {
                         <span>{profileData && profileData.availability}</span>;
                       </div>;
                     )}
-=======
                   </div>
                 </div>
               </div>                  </div>;
@@ -253,20 +237,16 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
 
 
             </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
               <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
             </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
@@ -278,11 +258,9 @@ if ( {) {
             </div>
               </div>;
             </div>;
-=======
               <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
             </div>
-=======
               </div>;
             </div>;
             {/* Experience Section */}
@@ -290,12 +268,10 @@ if ( {) {
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>;
               <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
             </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a            {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
               <div className="flex space-x-4">;
 
-=======
                 {profileData && profileData.github_link && (;
                   <a
                     href={profileData && profileData.github_link}
@@ -308,7 +284,6 @@ if ( {) {
                   </a>
                   </Link>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -320,11 +295,9 @@ if ( {) {
                   >
                     <Twitter className="h-6 w-6" />
 
-=======
                   </a>
                   </Link>
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
@@ -384,7 +357,6 @@ if ( {) {
                     href={profileData.linkedin_link}
                     target="_blank"
                     rel="noopener noreferrer"
-=======
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Linkedin className="h-6 w-6" />
@@ -399,7 +371,6 @@ if ( {) {
 
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <HireNowCTA
               talentProfile={{
                 id: profileData?.id |''
@@ -417,8 +388,6 @@ if ( {) {
     </>
   )
 }
-==============
-=======
     }
 ;
     // Check condition
@@ -578,9 +547,7 @@ if ( {) {
                 full_name: profile_data?.full_name || '',
                 professional_title: profile_data?.professional_title || '',
                 hourly_rate: profile_data?.hourly_rate || 0;
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
@@ -634,25 +601,14 @@ if (isLoading) {
 }
 ;
 ;
-=======
 
     </>);
 }
 
-=======
-=======
 
     </>);
 };
 
-=======
 
 ;
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

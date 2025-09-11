@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',
 export async /**
  * triggerReferralEvent - Function description
@@ -16,7 +15,6 @@ if (return, ) {
       body: JSON.stringify ({ code: ref_code, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
 
 
-=======
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';
 export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
   try {
@@ -52,10 +50,5 @@ if (return, ) {
       body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
 
 }
-<<<<<<< HEAD
 }
 }
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

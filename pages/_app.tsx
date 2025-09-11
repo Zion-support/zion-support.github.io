@@ -1,24 +1,39 @@
-import React from 'react';
-import { HelmetProvider } from 'react-helmet-async';
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import ErrorBoundary from '../components/ErrorBoundary';
 import '../styles/globals.css';
-
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>Zion Tech Group — AI, IT & Micro SaaS</title>
-        </Head>
-        <div className="min-h-screen flex flex-col">
-          <main className="flex-grow">
-            <Component {...pageProps} />
-          </main>
-        </div>
-      </ErrorBoundary>
-    </HelmetProvider>
+  return <Component {...pageProps} />;
+}
+import Layout from '../components/layout/Layout';
+import '../styles/globals.css';
+import '../src/styles/globals.css';
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+import '../styles/globals.css';
+import '../src/styles/globals.css';
+export default function App({ Component, pageProps }: AppProps) {
+return <Component {...pageProps} />;
+import '../styles/globals.css';
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+import '../src/styles/globals.css';
+export default function App({ Component, pageProps }: AppProps) {
+import '../styles/globals.css';
+import type { AppProps } from 'next / app';
+import '../src / styles / globals.css';
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+return <Component {...page_props} />;
+import '../styles / globals.css';
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+  return <Component {...page_props} />;
+}
   );
 }

@@ -8,13 +8,10 @@
       <SEO
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <main className="flex-1">;
         {/* Hero Section */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
                 </h1>;
                 <p className="text-lg text-zion-slate-light max-w-[600px]">;
@@ -55,7 +52,6 @@
                   </Button>
                   <Button
                     variant="outline"
-=======
                   <Button
                     size="lg" 
                     className="bg-zion-purple hover:bg-zion-purple-light text-white"
@@ -328,7 +324,6 @@ function ZionHireAI() {
 
 
 
-=======import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -387,8 +382,6 @@ export default function ZionHireAI() {;
                 </div>;
               </div>;
               <div className="relative hidden md:block">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 />;
               </div>;
             </div>;
@@ -399,8 +392,6 @@ export default function ZionHireAI() {;
           <div className="container mx-auto px-4 md: px-6">;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </>);
 }
@@ -424,13 +415,5 @@ reduce time-to-hire, and improve candidate experience. </p> <Button asChild > <L
   );
 }
 ;
-=======}=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

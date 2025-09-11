@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -12,11 +10,6 @@ interface CTAButtonProps {
   on_click?: () => void;
     <Link;
       href={href}
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -52,7 +45,6 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className={classes}
       onClick={onClick}
       role="button";
@@ -61,5 +53,3 @@ export function CTAButton({;
       {children}
     </Link>);
 }
-=======
-=======

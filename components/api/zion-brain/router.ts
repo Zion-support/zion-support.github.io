@@ -4,7 +4,6 @@
     return !superToken || token === superToken;
   }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
   export default async function handler(
@@ -59,16 +58,12 @@ function handler() {
       const latency_ms = Date.now () - started;
 ;
       append_log ({
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         module: "router",
         type: result && result.intent,
         status: "ok",
         latency_ms,
         payload: { text_length: String (text || "").length, routed },
       });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
@@ -86,10 +81,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const routed = await routeToChain(result.intent, payload || {});
     const latencyMs = Date.now() - started;
     appendLog({ module: 'router', type: result.intent, status: 'ok', latencyMs, payload: { textLength: String(text || '').length, routed } });
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status(200).json({ ...result, routed })
   } catch (e: any) {
     const latencyMs = Date.now() - started;
@@ -120,11 +113,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Router failure" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

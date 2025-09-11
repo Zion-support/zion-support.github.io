@@ -1,5 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -25,7 +24,6 @@ export const useAdminQuotes = () => {;
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotesadmin'];
     queryFn: () => quoteRequestService && quoteRequestService.getAll(),
-=======
 
     queryFn: () => quoteRequestService && quoteRequestService.getAll(),
     enabled: true});
@@ -47,13 +45,10 @@ export const useAdminQuotes = () => {;
         !quote && quote.project_name.toLowerCase().includes(query) &&
         !quote && quote.project_summary.toLowerCase().includes(query) &&
         !(quote && quote.talent_name && quote && quote.talent_name.toLowerCase().includes(query))
-=======
         variant: "destructive"
       })
     }
   });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======    },
     onError: (error: Error) => {
       toast({
         title: "Error",
@@ -63,14 +58,12 @@ export const useAdminQuotes = () => {;
     }
   }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);=======
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     onSuccess: () => {
       toast({
         title: "Quote deleted"
@@ -81,13 +74,10 @@ export const useAdminQuotes = () => {;
     };
 
 
-==============
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     onError: (error: Error) => {
       toast({
@@ -173,22 +163,11 @@ export const useAdminQuotes = () => {;
     toggleArchive: (id: string, isArchived: boolean) =>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setDateRange,
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
@@ -196,11 +175,6 @@ export const useAdminQuotes = () => {;
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     date_range;
     setDateRange,
     update_status: (id: string, status: QuoteStatus) =>;
@@ -210,8 +184,6 @@ export const useAdminQuotes = () => {;
     delete_quote: (id: string) => delete_mutation.mutate (id)}
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -377,9 +349,3 @@ export const useAdminQuotes = () => {;
   
 }
 });
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

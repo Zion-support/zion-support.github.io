@@ -24,8 +24,6 @@ import React from 'react';
 
 export default function CloudMonitoringPage() {
   const features = [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -72,10 +70,8 @@ export default function CloudMonitoringPage() {
       title: 'Auto-scaling'
       description:
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
-=======
 
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
-=======
         'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500',
@@ -88,7 +84,6 @@ import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shiel
 export default function CloudMonitoringPage() {
   const features = [
     {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const pricingPlans = [
     {
@@ -113,22 +108,17 @@ export default function CloudMonitoringPage() {
 
   const pricingPlans = [
 
-==============    {
       name: 'Starter',
       price: '$49',
       period: '/month',
       description: 'Perfect for small teams and startups',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       name: 'Professional',
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses',
     };
     {
-=======
   const integrations = [
-=======
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
@@ -146,14 +136,11 @@ export default function CloudMonitoringPage() {
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-=======
-=======
                   {feature.description}
 
 
                 </p>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
@@ -161,7 +148,6 @@ export default function CloudMonitoringPage() {
 
 
 
-=======
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -182,7 +168,6 @@ export default function CloudMonitoringPage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Comprehensive Monitoring
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Monitor every aspect of your infrastructure with detailed metrics and insights
@@ -201,7 +186,6 @@ export default function CloudMonitoringPage() {
             {monitoringCapabilities && monitoringCapabilities.map((capability, index) => (;
               <Card
                 key={index}
-=======
 
                           {metric}
                         </div>;
@@ -218,7 +202,6 @@ export default function CloudMonitoringPage() {
 
 
 
-=======
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -230,7 +213,6 @@ export default function CloudMonitoringPage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Use Cases
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Trusted by teams across industries for reliable infrastructure monitoring
@@ -258,13 +240,10 @@ export default function CloudMonitoringPage() {
                 </div>;
               </Card>;
             ))}
-=======
               Choose the plan that fits your monitoring needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             {pricingPlans.map((plan, index) => (
           </div>;
         </div>;
@@ -292,8 +271,6 @@ export default function CloudMonitoringPage() {
             {pricingPlans && pricingPlans.map((plan, index) => (;
               <Card
                 key={index}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             {use_cases.map ((use_case, index) => (
               <Card;
@@ -385,14 +362,10 @@ export default function CloudMonitoringPage() {
                   </div>)}
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 2'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover:border-green-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
@@ -416,7 +389,6 @@ export default function CloudMonitoringPage() {
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
-=======
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -489,7 +461,6 @@ export default function CloudMonitoringPage() {
             </p>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
-==============        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Seamless Integrations
@@ -520,8 +491,6 @@ export default function CloudMonitoringPage() {
           </div>;
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300'>;
@@ -543,10 +512,7 @@ export default function CloudMonitoringPage() {
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Connect with your favorite tools and platforms
             </p>
           </div>
@@ -563,7 +529,6 @@ export default function CloudMonitoringPage() {
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               </Card>
 
@@ -574,7 +539,6 @@ export default function CloudMonitoringPage() {
 
 
       {/* CTA Section */}
-=======
               </Card>
 
             ))}
@@ -582,7 +546,6 @@ export default function CloudMonitoringPage() {
         </div>
       </section>
 
-==============
             ))}
 
           </div>;
@@ -590,23 +553,18 @@ export default function CloudMonitoringPage() {
       </section>;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
 
 
       {/* CTA Section */}
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======            Ready to Monitor Your Infrastructure?
           </h2>
           <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of DevOps teams who trust us to monitor their
             critical infrastructure.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href="/contact"
               variant="secondary"
@@ -623,7 +581,6 @@ export default function CloudMonitoringPage() {
 
 }
     </>);
-=======
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -633,15 +590,11 @@ export default function CloudMonitoringPage() {
         </div>
       </section>
     </>
-=======
   );
-=======
 
 }=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
             >
@@ -653,16 +606,8 @@ export default function CloudMonitoringPage() {
       </section>
     </>
   );
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

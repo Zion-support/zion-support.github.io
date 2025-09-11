@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next / head';
 
-=======
 import React, { useState } from 'react';
 
 import Head from 'next/head';
@@ -38,8 +37,6 @@ import {
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight
 
-=======
-=======
 import React, { useState } from 'react',
 import React, { useState } from 'react';
 import Head from 'next/head';>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -48,11 +45,7 @@ import { motion } from 'framer-motion';
 import { 
   Search, Filter, Star, CheckCircle, ArrowRight, 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -187,7 +180,6 @@ const serviceCategories = [
   },  {    badge: 'Enterprise';
   }
 
-=======
   {
     id: 'financial-technology'
     title: '💰 Financial Technology'
@@ -318,18 +310,15 @@ export default function InnovativeServicesShowcase2025() {;
             .toLowerCase()
             .includes(searchTerm.toLowerCase()) |
           service.category.toLowerCase().includes(searchTerm.toLowerCase()))    )  const filteredServices = serviceCategories.flatMap(category =>
-==============    category.services.filter(service =>
       (selectedCategory === 'all' |category.id === selectedCategory) &&
       (searchTerm === '' |
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
     )
-=======
 
     )
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -564,10 +553,7 @@ export default function InnovativeServicesShowcase2025() {;
       default:;
         return 0;    }      default: return 0;
 
-=======
 
-=======
-=======
 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -627,12 +613,9 @@ export default function InnovativeServicesShowcase2025() {;
             transition={{ duration: 0.8, delay: 0.2 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
 
-==============
             transition={{ duration: 0.8, delay: 0.2 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -688,21 +671,14 @@ export default function InnovativeServicesShowcase2025() {;
           </motion.div>
         </div>
       </section>
-=======
 
-=======                  onChange={e => setSearchTerm(e.target.value)}
 
                   className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'                />
 
-=======                />
 
               </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Category Filter */}
               <div>;
                 <select
@@ -714,7 +690,6 @@ export default function InnovativeServicesShowcase2025() {;
                   ))}
                 </select>
               </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </select>;
               </div>;
@@ -747,11 +722,8 @@ export default function InnovativeServicesShowcase2025() {;
       <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {sortedServices.map((service, index) => (      <section className="py-20 bg-slate-900">
-==============
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Sort By */}
               <div>;
                 <select
@@ -768,12 +740,9 @@ export default function InnovativeServicesShowcase2025() {;
         </div>;
       </section>;
 
-=======
       {/* Services Grid */}
       <section className="py-20 bg-slate-900">
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -783,9 +752,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
               >
                 {/* Service Header */}
               >
-=======
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'
-=======
 
               >>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Service Header */}
@@ -853,11 +820,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   </p>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Features */}
 
-=======
-=======
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}
 
                     {service.description}
@@ -872,7 +836,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                       </li>
 
 
-=======
                     )}
                   </ul>
                 </div>
@@ -888,33 +851,22 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 
         </div>;
       </section>;
-=======
 
           )}
         </div>
       </section>
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         </div>
       </section>
-=======
               </div>            </motion.div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -922,22 +874,15 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
           <motion.div
 
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-==============
             className='text-center mb-16'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
@@ -980,29 +925,17 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             <motion&& motion.div
 
 
-=======
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
-==============
               className='text-center'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -1017,11 +950,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             </motion.div>
             <motion.div
 
-==============
               className='text-center'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -1036,11 +966,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             </motion.div>
             <motion.div
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
             >
-=======              className='text-center'
 
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
@@ -1064,8 +991,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 }
 ;
 }
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
                   </p>;
@@ -1253,11 +1178,5 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
     </Layout>);
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

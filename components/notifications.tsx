@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +17,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
 import dynamic from 'next / dynamic';
 ;
 const NotificationCenter = dynamic (
@@ -55,9 +53,3 @@ export default /**
 function NotificationsPage() {
   return <NotificationCenter />;
 }
-
-=======
-
-
-  return <NotificationCenter />;
-}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

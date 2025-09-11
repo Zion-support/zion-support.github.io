@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
@@ -24,8 +22,6 @@ const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method |'GET').toUpperCase()
   const method = (req.method || 'GET').toUpperCase(),;
-=======
-=======
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
@@ -41,9 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { by_tenant: {} }
 ;
@@ -120,17 +113,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
 return res.status(405).json({ error: 'Method not allowed' });
 }
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

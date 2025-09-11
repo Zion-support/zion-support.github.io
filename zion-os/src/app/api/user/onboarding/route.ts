@@ -9,19 +9,15 @@
     return NextResponse.json(
       { error: 'Internal server error' }
       { error: 'Internal server error' },
-=======
       { error: 'Internal server error' },
 
 
-=======
 
       { error: 'Internal server error' },
 
-=======import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
 export async function POST(request: NextRequest) {;
-=======  try {;
     const session = await getServerSession();
 if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -64,11 +60,9 @@ if (!session?.user?.email) {
       { error: 'Internal server error' },
 
 
-=======
 
       { error: 'Internal server error' },
 
-=======
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -103,20 +97,13 @@ export async function POST(request: NextRequest) {;
     return NextResponse.json(;
       { error: "Internal server error" };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662      { status: 500 }
     );
   }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       { status: 500 }
     );
   }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export async function POST(request: NextRequest) { try {
     const body = await request.json();
     const { userId, preferences  } = body;

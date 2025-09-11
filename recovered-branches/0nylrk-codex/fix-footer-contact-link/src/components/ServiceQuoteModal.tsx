@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -19,16 +17,10 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
 import { useState } from 'react',
 import { useState } from 'react',
-=======
 
-=======
 import { useState } from 'react',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
-=======
 import { useState } from 'react',
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -41,7 +33,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
@@ -83,11 +74,9 @@ export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: Servi
     email: '',;
     budget: BUDGET_RANGES[0].value,;
     timeframe: TIMELINE_OPTIONS[0].value}),;
-=======  const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
@@ -147,7 +136,6 @@ function ServiceQuoteModal() {
     email: '',
     budget: BUDGET_RANGES[0].value,
 
-=======    description: '',
     email: '',
     budget: BUDGET_RANGES[0].value,
     timeframe: TIMELINE_OPTIONS[0].value}),;
@@ -161,24 +149,18 @@ function ServiceQuoteModal() {
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  },
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(),
     setIsSubmitting(true),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
         body: {
           service: service ? {
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
     const { name, value } = e && e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -198,23 +180,18 @@ function ServiceQuoteModal() {
           quoteDetails: {
             ...formData
             startDate: startDate?.toISOString()
-=======            endDate: endDate?.toISOString()}
         }
       });
       if (error) throw error;
-=======      }),
 
       if (error) throw error,
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Show success message
       toast({
         title: "Quote Request Submitted!"
         description: "We've sent your request to the service provider. They will contact you soon."})
       // Close the modal and reset form
       onOpenChange(false),
-=======
       onOpenChange(false);      setFormData({
         description: ''
         email: ''
@@ -222,8 +199,6 @@ function ServiceQuoteModal() {
         timeframe: TIMELINE_OPTIONS[0].value})
       setStartDate(new Date());
       setEndDate(undefined);
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         description: '',
         email: '',
         budget: BUDGET_RANGES[0].value,
@@ -237,7 +212,6 @@ function ServiceQuoteModal() {
       setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Error"
         description: "There was an error submitting your quote request. Please try again."
@@ -277,7 +251,6 @@ function ServiceQuoteModal() {
   }
   },
 
-==============    } finally {
       setIsSubmitting (false);
     }
   }
@@ -295,7 +268,6 @@ function ServiceQuoteModal() {
   }
   },
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -316,11 +288,8 @@ function ServiceQuoteModal() {
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-white">Project Description</Label>
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Textarea
                   id="description"
                   name="description"
@@ -343,8 +312,6 @@ function ServiceQuoteModal() {
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {BUDGET_RANGES.map((range) => (
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { useState } from 'react',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -409,8 +376,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         }
       }),;
       if (error) throw error,;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       // Show success message;
       toast({;
         title: "Quote Request Submitted!",;
@@ -420,7 +385,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
       // Close the modal and reset form;
       onOpenChange(false);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setFormData({;
         description: '',;
         email: '',;
@@ -546,8 +510,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
     else if (currentStep === 'contact') setCurrentStep('timeline');
   },;
   return (;
-=======
-=======  };
 
   const nextStep = () => {;
     if (currentStep === 'details') setCurrentStep('timeline');
@@ -560,8 +522,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
   };
 
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <form onSubmit={handleSubmit} className="space-y-6">;
           {/* Step 1: Service Details */}
           {currentStep === 'details' && (;
@@ -584,8 +544,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                 />;
               </div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
@@ -598,8 +556,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 
                         {range.label}
                       </SelectItem>                    ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           {/* Step 2: Timeline */}
           {currentStep === 'timeline' && (;
             <div className="space-y-4">;
@@ -622,8 +578,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Calendar
                         mode="single"
                         selected={endDate}
@@ -645,7 +599,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
               <div className="space-y-2">;
                 <Label htmlFor="email" className="text-white">Contact Email</Label>;
 
-=======
                 />;
               </div>;
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
@@ -660,7 +613,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 
 
 
-=======
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light";
               >;
                 Cancel;
@@ -680,9 +632,4 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

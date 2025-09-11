@@ -1,19 +1,10 @@
-
-
-
-
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
-  
   const isMobile = useIsMobile();
-
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
-  
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  return (
     <>
       <SEO
         title="Application Status Tracker | Zion AI Marketplace"
@@ -41,7 +32,6 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
-
 }
 export default function ApplicationStatusTracker() {
   return (
@@ -52,32 +42,23 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
-=======
-=======import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {ApplicationsTracker} from "@/components/jobs/applications";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
-=======
-
-
-=======
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
-
   return (
     <>;
       <SEO
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />;
-
 }
 export default function ApplicationStatusTracker() {;
   return (
-=======
   );
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -124,12 +105,10 @@ export default /**
  * ApplicationStatusTracker - Function description
  */
 function ApplicationStatusTracker() {
-  return (=======
-    <ProtectedRoute>;
+  return (    <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
-
 }
     </ProtectedRoute>;
   ),;
@@ -146,15 +125,8 @@ Application Status Tracker | Zion AI Marketplace"description=" Track the status 
 }> <ApplicationsTracker /> </CardContent> </Card> </div> </div> </>) 
 }export default function ApplicationStatusTracker () {
   return (<ProtectedRoute> <AppLayout> <ApplicationStatusTrackerContent /> </AppLayout> </ProtectedRoute> 
-=======    </ProtectedRoute>;
   );
 }
 ;
 }
-
-
-
-}<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}

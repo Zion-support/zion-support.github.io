@@ -15,8 +15,6 @@ export function useResumeBasic() {;
     updateBasicInfo: resumeActions.updateBasicInfo
 
     updateBasicInfo: resumeActions.updateBasicInfo,
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
@@ -31,8 +29,6 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
     setActiveResume: resumeActions.setActiveResume}
@@ -59,22 +55,6 @@ export function useResumeBasic() {;
 }
     setActiveResume: resumeActions.setActiveResume}
 }
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-    isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
-    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
-    resume: fetchResumeOperations && fetchResumeOperations.resume;
-    fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
-    
-    // From useResumeActions
-    createResume: resumeActions && resumeActions.createResume;
-    updateBasicInfo: resumeActions && resumeActions.updateBasicInfo,
-    setActiveResume: resumeActions && resumeActions.setActiveResume}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {useFetchResume} from './useFetchResume';
 import {useResumeActions} from './useResumeActions';
 export /**
@@ -96,5 +76,3 @@ function useResumeBasic() {
     updateBasicInfo: resume_actions.updateBasicInfo,
     setActiveResume: resume_actions.setActiveResume}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,4 @@
 import React from 'react';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 const PerformanceOptimizer.dynamic = () => {
   return (
@@ -8,6 +7,3 @@ const PerformanceOptimizer.dynamic = () => {
     </div>);
 }
 ;
-<<<<<<< HEAD
-=======
-export default PerformanceOptimizer.dynamic;

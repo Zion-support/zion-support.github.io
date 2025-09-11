@@ -1,9 +1,9 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
+// import { AccessibilityControls } from './components/AccessibilityControls';
 // Note: These dashboard components may need to be created or have different exports
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
@@ -13,14 +13,14 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import { LinkHealthMonitor } from './components/LinkHealthMonitor';
+// import PerformanceOptimizer from './components/PerformanceOptimizer';
+// import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks/useScrollToTop";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import EnhancedSEO from './components/EnhancedSEO';
+// import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 
 // Enhanced lazy loading with preloading hints
@@ -47,7 +47,7 @@ const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'))
 const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Enhanced innovative services page
-const EnhancedInnovativeServices = lazy(() => import('./pages/EnhancedInnovativeServices'));
+// const EnhancedInnovativeServices = lazy(() => import('./pages/EnhancedInnovativeServices'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -67,7 +67,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Mission = lazy(() => import('./pages/Mission'));
 const Team = lazy(() => import('./pages/Team'));
 const Pricing = lazy(() => import('./pages/Pricing'));
-const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing'));
+// const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
@@ -146,7 +146,7 @@ const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusine
 const NewServices = lazy(() => import('./pages/NewServices'));
 
 const App: React.FC = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  // const [sidebarOpen, setSidebarOpen] = useState(false);
   useScrollToTop();
 
   return (

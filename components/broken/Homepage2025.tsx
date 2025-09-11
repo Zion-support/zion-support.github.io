@@ -1,9 +1,7 @@
 
 };>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
 ...innovative2035ITServices;
@@ -71,7 +69,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
   opacity: 0, y: 50 
 
-=======
 }initial= {
   {
   duration: 0.8, delay: index * 0.1 }viewport= {
@@ -79,12 +76,10 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   once: true 
 
 
-=======}> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
   service.id
 
-=======
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
   service.id>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -108,27 +103,14 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   service && service.id 
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 {
   title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) );
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
 }export default Homepage2025;export default Homepage2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

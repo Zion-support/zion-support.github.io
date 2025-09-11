@@ -7,8 +7,6 @@ import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
 interface UltraAdvancedFuturisticBackground2026Props {;
-=======
-=======
 
 
 const UltraAdvancedFuturisticBackground2026: React.FC<;
@@ -48,13 +46,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
   enableNeuralNetworks = true
   enableMultidimensional = true
   children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   intensity = 'high';
   colorScheme = 'neural-network';
   particleCount = 300;
@@ -62,10 +56,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
   enableHolographic = true;
   enableQuantumEffects = true;
   enableNeuralNetworks = true;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!ctx) return;
 
 
@@ -136,11 +128,8 @@ this.maxLife = this.life
         this.alpha = Math.random() * 0.8 + 0.2;
         this.life = Math.random() * 100 + 50;
         this.maxLife = this.life;      }        this.maxLife = this.life
-=======
-=======
       x: number,
       y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
@@ -154,7 +143,6 @@ this.maxLife = this.life
         this.maxLife = this.life
 
         this.alpha = this.life / this.maxLife
-=======
 
         this.alpha = this.life / this.maxLife
       }
@@ -165,7 +153,6 @@ this.maxLife = this.life
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-=======
         ctx.restore();      }        ctx.restore()        ctx.restore();      }
 
 
@@ -187,16 +174,12 @@ this.maxLife = this.life
       intensity: number;
     // Quantum field class
     class QuantumField {
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       x: number,
       y: number,
       radius: number,
       intensity: number,
       phase: number,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
@@ -258,8 +241,6 @@ this.maxLife = this.life
     }
     // Holographic layer class;
     class HolographicLayer {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       x: number;
       y: number;
       max_life: number,
@@ -420,14 +401,10 @@ if ( {) {
       height: number;
       rotation: number;
       alpha: number;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       x: number,
       y: number,
       color: string;      coordinate_x: number,
       coordinate_y: number,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       width: number,
       height: number,
       rotation: number,
@@ -440,32 +417,23 @@ if ( {) {
         this.rotation += 0.005 * animationSpeed;
         this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2
 
-=======
         ctx.restore();      }        
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         
         
-=======
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         ctx.restore()
 
     }
-=======
-=======
     }
       }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
@@ -477,8 +445,6 @@ if ( {) {
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'neural-network': ['#00ffff#0080ff#8000ff#ff0080'];
         'quantum-field': ['#00ff80#80ff00#ff8000#ff0080'];
         'cyberpunk': ['#ff0066#00ffff#ffff00#ff6600'];
@@ -490,20 +456,14 @@ if ( {) {
     }
     // Initialize particles
     for (let i = 0, i < particleCount, i++) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       particles.push(new Particle(
         Math.random() * canvas.width;
         Math.random() * canvas.height
       ))
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     }
     // Initialize neural network
     if (enableNeuralNetworks) {
       for (let i = 0, i < 20, i++) {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         neuralNodes.push(new NeuralNode(
           Math.random() * canvas.width;
           Math.random() * canvas.height
@@ -519,11 +479,9 @@ Math.random() * canvas.width;
           Math.random() * canvas.height
         ))
       }
-=======
 
       }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
     // Initialize holographic layers
@@ -539,11 +497,9 @@ Math.random() * canvas.width;
         quantumFields.forEach(field => {
           field.update();
           field.draw()
-=======
 
           field.draw()
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         })
       }
       // Update and draw holographic layers
@@ -551,11 +507,9 @@ Math.random() * canvas.width;
         holographicLayers.forEach(layer => {
           layer.update();
           layer.draw()
-=======
 
           layer.draw()
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         })
       }
       // Update and draw neural network
@@ -563,11 +517,9 @@ Math.random() * canvas.width;
         neuralNodes.forEach(node => {
           node.update();
           node.draw()
-=======
 
           node.draw()
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         })
       }
       // Update and draw particles
@@ -578,11 +530,9 @@ Math.random() * canvas.width;
         if (particle.life <= 0) {
           particles[index] = new Particle(
             Math.random() * canvas.width;
-=======
 
             Math.random() * canvas.width;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Math.random() * canvas.height
           )
         }
@@ -642,9 +592,7 @@ Math.random() * canvas.width;
             );
             
 
-==============
 
-=======        this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
         this.width = Math.random () * 200 + 100;
         this.height = Math.random () * 200 + 100;
@@ -906,19 +854,13 @@ if ( {) {
               ctx.restore ();
 
 
-==============
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
           });
         });
       }
-=======
       animationFrameId = requestAnimationFrame(animate);    };            }
           })
         })
@@ -929,7 +871,6 @@ if ( {) {
 
     };
 
-=======    animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
@@ -955,7 +896,6 @@ if ( {) {
 
 
     >
-=======
     >>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <canvas
         ref={canvasRef}
@@ -965,7 +905,6 @@ if ( {) {
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1040,10 +979,8 @@ if ( {) {
               ease: 'easeInOut'
   return (
       />;
-=======
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
 
-=======
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
 
   return (
@@ -1072,8 +1009,6 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
   )
 }
 export default UltraAdvancedFuturisticBackground2026;
-=======
-=======
 
             animate={{
 
@@ -1086,8 +1021,6 @@ export default UltraAdvancedFuturisticBackground2026;
 
 };
 export default UltraAdvancedFuturisticBackground2026;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               ease: 'easeInOut',              ease: "easeInOut";
             }}
           />;
@@ -1102,18 +1035,10 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 ;
 export default UltraAdvancedFuturisticBackground2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               duration: 10,
               repeat: Infinity,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             }}
           />
         </div>
       )}
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -14,12 +14,9 @@ import { TalentProfile } from "@/types/talent";
 export const TALENT_PROFILES: TalentProfile[] = [
   {
 
-=======
-=======
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
-=======
         title: 'Real - Time Analytics Dashboard',
         description:;
           'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
@@ -27,7 +24,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
       },
     ],
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
@@ -73,12 +69,5 @@ export const TALENT_PROFILES: TalentProfile[] = [
       },
     ],
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

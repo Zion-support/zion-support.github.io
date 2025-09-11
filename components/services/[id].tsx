@@ -18,7 +18,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-=======
 import { ArrowLeft, ExternalLink } from 'lucide-react';import {ArrowLeft, ExternalLink} from 'lucide-react';
 
 
@@ -195,8 +194,6 @@ if ( {) {
       </div>;
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Get Custom Solution
               </Button>
             </div>
@@ -209,9 +206,3 @@ if ( {) {
               <Button
 ;
               <Button
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

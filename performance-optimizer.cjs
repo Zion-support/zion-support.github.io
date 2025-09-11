@@ -1,10 +1,19 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { try { / Find image files const imageFiles = this.findImageFiles(;); for (const file of imageFiles) { / Add image optimization logic here this.optimizations.push({" type: "image", file,"" action: "optimized"," timestamp: new Date().toISOString() })} return this.optimizations} catch (error) {"" console.error("Error optimizing images: ", error); return []} } findImageFiles() { const files = [];" const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]; function traverse(dir) { const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir, item;); const stat = fs.statSync(fullPath;); " if (&& !item.startsWith(".") && item !== "node_modules") { traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } " traverse(".")) {" && !item.startsWith(".") && item !== "node_modules") { traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } " traverse(".")} return files} async optimizeBundle() { try { / Analyze bundle size const bundleAnalysis = this.analyzeBundleSize(;); this.optimizations.push({"" type: "bundle","" action: "analyzed"," size: bundleAnalysis.size," timestamp: new Date().toISOString() }); return this.optimizations} catch (error) {"" console.error("Error optimizing bundle: ", error); return []} } analyzeBundleSize() { / Simple bundle size analysis" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8";);); const dependencies = Object.keys(packageJson.dependencies | {}); return {;" size: dependencies.length * 1000, / Estimated size" dependencies: dependencies.length }} async generateOptimizationReport() { await this.optimizeImages(); await this.optimizeBundle(); const report = {" timestamp: new Date().toISOString()," optimizations: this.optimizations," recommendations: this.generateOptimizationRecommendations() }; " fs.writeFileSync("performance-optimization-report.json", JSON.stringify(report, null, 2)); return report} generateOptimizationRecommendations() { const recommendations = []; if ( { recommendations.push({"" type: "general","" priority: "medium","" message: "Consider implementing lazy loading for better performance." })} return recommendations) { { recommendations.push({"" type: "general","" priority: "medium","" message: "Consider implementing lazy loading for better performance." })} return recommendations}}}/ Run optimizationconst optimizer = new PerformanceOptimizer;(;);optimizer.generateOptimizationReport().then(report => {"" console.log(" Performance optimization report generated: ", report)}).catch(error => {"" console.error(" Optimization failed: ", error)});"""
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-
-console.log('🚀 Performance Optimizer - Implementing Critical Improvements')
-console.log('=============================================================')
-
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { try { / Find image files const imageFiles = this.findImageFiles(;); for (const file of imageFiles) { / Add image optimization logic here this.optimizations.push({" type: "image", file,"" action: "optimized"," timestamp: new Date().toISOString() })} return this.optimizations} catch (error) {"" console.error("Error optimizing images: ", error); return []} } findImageFiles() { const files = [];" const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]; function traverse(dir) { const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir, item;); const stat = fs.statSync(fullPath;); " if (&& !item.startsWith(".") && item !== "node_modules") { traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } " traverse(".")) {" && !item.startsWith(".") && item !== "node_modules") { traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } " traverse(".")} return files} async optimizeBundle() { try { / Analyze bundle size const bundleAnalysis = this.analyzeBundleSize(;); this.optimizations.push({"" type: "bundle","" action: "analyzed"," size: bundleAnalysis.size," timestamp: new Date().toISOString() }); return this.optimizations} catch (error) {"" console.error("Error optimizing bundle: ", error); return []} } analyzeBundleSize() { / Simple bundle size analysis" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8";);); const dependencies = Object.keys(packageJson.dependencies | {}); return {;" size: dependencies.length * 1000, / Estimated size" dependencies: dependencies.length }} async generateOptimizationReport() { await this.optimizeImages(); await this.optimizeBundle(); const report = {" timestamp: new Date().toISOString()," optimizations: this.optimizations," recommendations: this.generateOptimizationRecommendations() }; " fs.writeFileSync("performance-optimization-report.json", JSON.stringify(report, null, 2)); return report} generateOptimizationRecommendations() { const recommendations = []; if ( { recommendations.push({"" type: "general","" priority: "medium","" message: "Consider implementing lazy loading for better performance." })} return recommendations) { { recommendations.push({"" type: "general","" priority: "medium","" message: "Consider implementing lazy loading for better performance." })} return recommendations}}}/ Run optimizationconst optimizer = new PerformanceOptimizer;(;);optimizer.generateOptimizationReport().then(report => {"" console.log(" Performance optimization report generated: ", report)}).catch(error => {"" console.error(" Optimization failed: ", error)});"""
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/main
+const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
     this.improvements = []
@@ -16,6 +25,79 @@ class PerformanceOptimizer {
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
     console.log(logEntry)
   }
+  analyzeBundleSize() {
+    // Simple bundle size analysis
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
+    const dependencies = Object.keys(packageJson.dependencies || {});
+    return {;
+      "size": dependencies.length * 1000, // Estimated size
+      "dependencies": dependencies.length
+    }}
+  async generateOptimizationReport() {
+    await this.optimizeImages();
+    await this.optimizeBundle();
+    const report = {
+      "timestamp": new Date().toISOString(),
+      "optimizations": this.optimizations,
+      "recommendations": this.generateOptimizationRecommendations()
+   };
+    fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
+    return report}
+  generateOptimizationRecommendations() {
+    const recommendations = [];
+    if ( {
+      recommendations.push({
+        "type": 'general',
+        "priority": 'medium',
+        "message": 'Consider implementing lazy loading for better performance.'
+      })}
+    return recommendations) {
+     {
+      recommendations.push({
+        "type": 'general',
+        "priority": 'medium',
+        "message": 'Consider implementing lazy loading for better performance.'
+      })}
+    return recommendations}}
+}
+// Run optimization
+const optimizer = new PerformanceOptimizer;(;);
+optimizer.generateOptimizationReport().then(report => {
+  }).catch(error => {
+  console.error('❌ Optimization "failed": ', error)});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+const { execSync } = require('child_process')
+          "type"
+          "action"
+      console.error('Error optimizing "images")
+        "type"
+        "action"
+      console.error('Error optimizing "bundle")
+        "type"
+        "priority"
+        "message"
+        "type"
+        "priority"
+        "message"
+  console.log(' Performance optimization report "generated")
+<<<<<<< HEAD
+  console.error(' Optimization "failed")
+=======
+  console.error(' Optimization "failed")
+<<<<<<< HEAD
+=======
+=======
+  console.error(' Optimization "failed")
+>>>>>>> origin/main
+#!/usr/bin/env node
 
   async optimizeBundleSize() {
     this.log('Optimizing bundle size...')
@@ -131,238 +213,10 @@ export const performanceMonitor = {
   }
 }
 
-// Auto-report web vitals
-if (typeof window !== 'undefined') {
-  performanceMonitor.reportWebVitals()
-}
-`
-    
-    const utilsPath = path.join(process.cwd(), 'src', 'utils')
-    if (!fs.existsSync(utilsPath)) {
-      fs.mkdirSync(utilsPath, { recursive: true })
-    }
-    
-    fs.writeFileSync(path.join(utilsPath, 'performance.ts'), performanceCode)
-    this.log('✅ Performance monitoring added')
-    this.improvements.push('Performance monitoring added')
-  }
-
-  async optimizeImages() {
-    this.log('Optimizing images...')
-    
-    // Create image optimization script
-    const imageOptimizer = `
-const sharp = require('sharp')
-const fs = require('fs')
-const path = require('path')
-
-async function optimizeImages() {
-  const publicPath = path.join(process.cwd(), 'public')
-  const imagesPath = path.join(publicPath, 'images')
-  
-  if (!fs.existsSync(imagesPath)) {
-    console.log('No images directory found')
-    return
-  }
-  
-  const files = fs.readdirSync(imagesPath)
-  const imageFiles = files.filter(file => 
-    /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-  )
-  
-  for (const file of imageFiles) {
-    const inputPath = path.join(imagesPath, file)
-    const outputPath = path.join(imagesPath, \`optimized-\${file}\`)
-    
-    try {
-      await sharp(inputPath)
-        .resize(1200, 800, { fit: 'inside', withoutEnlargement: true })
-        .jpeg({ quality: 80 })
-        .toFile(outputPath)
-      
-      console.log(\`Optimized: \${file}\`)
-    } catch (error) {
-      console.error(\`Error optimizing \${file}:\`, error.message)
-    }
-  }
-}
-
-optimizeImages()
-`
-    
-    fs.writeFileSync(path.join(process.cwd(), 'scripts', 'optimize-images.js'), imageOptimizer)
-    this.log('✅ Image optimization script created')
-    this.improvements.push('Image optimization script created')
-  }
-
-  async addErrorBoundary() {
-    this.log('Adding comprehensive error boundary...')
-    
-    const errorBoundaryCode = `
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-}
-
-interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-}
-
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    })
-    
-    // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo)
-    
-    // Send to error reporting service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
-      })
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="error-boundary">
-          <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo.componentStack}
-          </details>
-        </div>
-      )
-    }
-
-    return this.props.children
-  }
-}
-
-export default ErrorBoundary
-`
-    
-    const componentsPath = path.join(process.cwd(), 'src', 'components')
-    if (!fs.existsSync(componentsPath)) {
-      fs.mkdirSync(componentsPath, { recursive: true })
-    }
-    
-    fs.writeFileSync(path.join(componentsPath, 'ErrorBoundary.tsx'), errorBoundaryCode)
-    this.log('✅ Error boundary added')
-    this.improvements.push('Error boundary added')
-  }
-
-  async addTypeScriptStrictMode() {
-    this.log('Enabling TypeScript strict mode...')
-    
-    const tsConfigPath = path.join(process.cwd(), 'tsconfig.json')
-    let tsConfig = {}
-    
-    if (fs.existsSync(tsConfigPath)) {
-      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))
-    }
-    
-    // Enable strict mode
-    tsConfig.compilerOptions = {
-      ...tsConfig.compilerOptions,
-      strict: true,
-      noImplicitAny: true,
-      strictNullChecks: true,
-      strictFunctionTypes: true,
-      noImplicitReturns: true,
-      noFallthroughCasesInSwitch: true,
-      noUncheckedIndexedAccess: true,
-      exactOptionalPropertyTypes: true
-    }
-    
-    fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2))
-    this.log('✅ TypeScript strict mode enabled')
-    this.improvements.push('TypeScript strict mode enabled')
-  }
-
-  async addESLintRules() {
-    this.log('Adding comprehensive ESLint rules...')
-    
-    const eslintConfig = {
-      extends: [
-        'eslint:recommended',
-        '@typescript-eslint/recommended',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended'
-      ],
-      plugins: ['@typescript-eslint', 'react', 'react-hooks'],
-      rules: {
-        'no-console': 'warn',
-        'no-debugger': 'error',
-        'no-unused-vars': 'error',
-        '@typescript-eslint/no-explicit-any': 'error',
-        '@typescript-eslint/no-unused-vars': 'error',
-        'react/prop-types': 'off',
-        'react/react-in-jsx-scope': 'off',
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn'
-      },
-      settings: {
-        react: {
-          version: 'detect'
-        }
-      }
-    }
-    
-    fs.writeFileSync(path.join(process.cwd(), '.eslintrc.json'), JSON.stringify(eslintConfig, null, 2))
-    this.log('✅ ESLint rules configured')
-    this.improvements.push('ESLint rules configured')
-  }
-
-  async runOptimizations() {
-    try {
-      this.log('Starting performance optimizations...')
-      
-      await this.optimizeBundleSize()
-      await this.optimizeViteConfig()
-      await this.addPerformanceMonitoring()
-      await this.optimizeImages()
-      await this.addErrorBoundary()
-      await this.addTypeScriptStrictMode()
-      await this.addESLintRules()
-      
-      const endTime = Date.now()
-      const duration = Math.round((endTime - this.startTime) / 1000)
-      
-      console.log('\n🎉 Performance Optimizations Complete!')
-      console.log('=====================================')
-      console.log(`Duration: ${duration} seconds`)
-      console.log(`Improvements implemented: ${this.improvements.length}`)
-      console.log('\nImprovements:')
-      this.improvements.forEach((improvement, index) => {
-        console.log(`  ${index + 1}. ${improvement}`)
-      })
-      
-    } catch (error) {
-      this.log(`Optimization failed: ${error.message}`, 'error')
-    }
-  }
-}
-
-// Run optimizations
-const optimizer = new PerformanceOptimizer()
-optimizer.runOptimizations()
+// Run performance optimization
+optimizePerformance();
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main

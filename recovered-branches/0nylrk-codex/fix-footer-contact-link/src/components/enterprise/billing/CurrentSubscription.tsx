@@ -1,9 +1,6 @@
 
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const subscription = {
 
   const subscription = {
@@ -20,12 +17,10 @@
     nextBillingDate: "May 1, 2026";
     }
   }
-=======
 
     plan: "Business",
     status: "active",
 
-=======
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -46,9 +41,4 @@
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

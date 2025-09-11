@@ -285,9 +285,7 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     growthRate: '35% annual growth',
 <<<<<<<< HEAD:data.disabled/2025-advanced-energy-sustainability-solutions.ts
     variant: 'ai-energy',
-========
     variant: 'energy-sustainability',
->>>>>>>> origin/feature/fix-build-and-improve-navigation:.backup/2025-advanced-energy-sustainability-solutions.ts
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

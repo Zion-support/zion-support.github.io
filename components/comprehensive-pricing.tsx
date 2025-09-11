@@ -19,8 +19,6 @@ import {;
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     );
   }
   // Sort services
@@ -28,22 +26,18 @@ import {;
     switch (sortBy) {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
-=======
 
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
 
-=======
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const allServices = [;
     ...revolutionaryMicroSaasServices,;
     ...enhancedMicroSaasServices,;
@@ -126,13 +120,11 @@ import {;
   });
 
 
-=======  const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
 
       metric: '2000%+',
       label: 'Average ROI',
@@ -140,7 +132,6 @@ import {;
 
 
 
-=======        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
       icon: <Star className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-600',
@@ -174,7 +165,6 @@ import {;
   // Pricing tiers
   const pricingTiers = [
 
-=======    {
       name: 'Starter',
       price: '$49',
       period: '/month',
@@ -482,7 +472,6 @@ export default function ComprehensivePricingPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
 
   // Pricing tiers
   const pricingTiers = [
@@ -590,15 +579,11 @@ export default function ComprehensivePricingPage() {;
     }
     {
 
-==============      metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
       icon: <Star className="w-6 h-6" />,
@@ -671,7 +656,6 @@ export default function ComprehensivePricingPage() {;
       label: 'Average ROI',
       description: 'Proven business value',
 
-==============  ];
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -852,7 +836,6 @@ export default function ComprehensivePricingPage() {;
       },
     },
 
-=======
         duration: 0.5
       }
     }        duration: 0.5,
@@ -884,17 +867,13 @@ export default function ComprehensivePricingPage() {;
 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Transparent pricing for all our revolutionary micro SaaS services. 
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
               </motion.p>
@@ -912,8 +891,6 @@ export default function ComprehensivePricingPage() {;
               {/* Market Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-=======
-=======
 
                 Transparent pricing for all our revolutionary micro SaaS services. 
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
@@ -942,8 +919,6 @@ export default function ComprehensivePricingPage() {;
               {/* Market Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -961,8 +936,6 @@ export default function ComprehensivePricingPage() {;
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 ))}
               </motion.div>
                   </div>
@@ -970,11 +943,7 @@ export default function ComprehensivePricingPage() {;
                 ))}
               </motion.div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -1075,17 +1044,13 @@ export default function ComprehensivePricingPage() {;
             <motion.div 
             <motion.div
             <motion.div 
-=======
-=======
 
-=======
 
             <motion.div 
 
                       ))}
                     </div>
 
-=======
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -1096,12 +1061,9 @@ export default function ComprehensivePricingPage() {;
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
 
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
                     </button>;
                   </div>;
                 </div>;
@@ -1109,19 +1071,14 @@ export default function ComprehensivePricingPage() {;
 
 
               className={viewMode === 'grid' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
 
               viewport={{ once: true }}
 
-==============
               whileInView="visible"
               whileInView='visible'              viewport={{ once: true }}
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1129,23 +1086,16 @@ export default function ComprehensivePricingPage() {;
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
-=======
-=======
                     variant={service.variant as any || 'quantum-advanced'}
 
-=======
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
 
-=======
-=======                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               variants={container_variants}
               initial='hidden';
               whileInView='visible'              viewport={{ once: true }}            <motion.div;
@@ -1173,8 +1123,6 @@ export default function ComprehensivePricingPage() {;
                       <div className='text - center'>;
                         <div className='text - 4xl mb - 4'>{service.icon}</div>;
                         <h3 className='text - xl font - bold text - white mb - 2'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                           {service.name}
                         </h3>;
                         <p className='text - gray - 300 mb - 4 text - sm'>;
@@ -1185,10 +1133,8 @@ export default function ComprehensivePricingPage() {;
                         </div>;
                         <div className='text - sm text - gray - 400 mb - 4'>;
                           {service.period}
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant={(service && service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service && service.variant as any || 'quantum-advanced'}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}>;
@@ -1229,7 +1175,6 @@ export default function ComprehensivePricingPage() {;
                             <div key={idx} className="flex items-center gap-2 text-sm">;
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
                               <span className="text-gray-300">{feature}</span>;
-=======                          ))}
                         </div>
                         <div className='text-center space-y-2'>
                           <Button
@@ -1273,7 +1218,6 @@ export default function ComprehensivePricingPage() {;
                               </div>
                             </div>
                           </div>
-=======
                       </div>
                     ) : (
                       // List View
@@ -1368,9 +1312,7 @@ export default function ComprehensivePricingPage() {;
                                                          <Button
                                variant="primary"
                                size="sm"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                size="sm"
-=======                               onClick={() => window && window.open('https: //ziontechgroup && ziontechgroup.com/contact_blank')}
                              >;
                                Get Pricing;
                                <DollarSign className="ml-2 w-4 h-4" />;
@@ -1381,15 +1323,12 @@ export default function ComprehensivePricingPage() {;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </motion && motion.div>;
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -1426,7 +1365,6 @@ export default function ComprehensivePricingPage() {;
 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-=======
 
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
@@ -1441,18 +1379,14 @@ export default function ComprehensivePricingPage() {;
                 </p>
                 <Button
                   variant='primary'
-=======
 
                 >;
                   Clear Filters;
                 </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                  <Button
                    variant="primary"
                    onClick={() => {;
@@ -1472,7 +1406,6 @@ export default function ComprehensivePricingPage() {;
 
               initial={{ opacity: 0, y: 20 }}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </motion.div>
           </div>
@@ -1552,18 +1485,9 @@ export default function ComprehensivePricingPage() {;
   );  );
 }
 
-=======
 );  )
 }
   );
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

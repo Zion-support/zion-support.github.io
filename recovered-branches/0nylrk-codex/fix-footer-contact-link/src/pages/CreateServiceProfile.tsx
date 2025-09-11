@@ -4,22 +4,14 @@ import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-=======
-=======
 
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-=======
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -36,16 +28,11 @@ export default function CreateServiceProfile() {
     </div>
   )
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-=======
 
-=======
 
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-=======
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 
@@ -62,8 +49,6 @@ import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 export default function CreateServiceProfile() {;
   return (;
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
       <div className="container mx-auto px-4">;
         <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
@@ -74,15 +59,3 @@ export default function CreateServiceProfile() {;
   );
 }
 ;
-<<<<<<< HEAD
-=======
-
-
-=======
-    </div>;
-  );
-}
-
-;
-
-

@@ -1,10 +1,7 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface ApplicationsTableProps {
 
   applications: JobApplication[]
@@ -12,10 +9,6 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
-=======
-==============
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -33,14 +26,11 @@ import {toast} from "@/hooks/use-toast";
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
-=======
-=======interface ApplicationsTableProps {;
   applications: JobApplication[],;
   processingId: string | null,;
   onViewApplication: (applicationId: string) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,;
   onViewScore: (application: JobApplication) => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
 export function ApplicationsTable({ 
   applications, 
@@ -134,14 +124,10 @@ export function ApplicationsTable(): any ({ ;
                 </TableCell>
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
-=======
 
 
-==============
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
@@ -163,8 +149,6 @@ export function ApplicationsTable(): any ({ ;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire
                     </ClickableBadge>
                     <ApplicationActions
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { format } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
 import { Avatar } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
@@ -200,13 +184,10 @@ export function ApplicationsTable({;
 }: ApplicationsTableProps) {;
   const [hireModalOpen, setHireModalOpen] = useState(false),;
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const handleHireClick = (application: JobApplication) => {;
     setSelectedApplication(application),;
     setHireModalOpen(true);
   };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleHireConfirmed = () => {;
     // This will be called after the hire confirmation is completed;
     toast({;
@@ -214,7 +195,6 @@ export function ApplicationsTable({;
       description: "Offer has been sent to the talent.";
     });
   };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <img;
                           src={application.talent_profile.profile_picture_url}
                           alt={application.talent_profile.full_name || "Candidate"}
@@ -408,8 +388,6 @@ export function ApplicationsTable({ ;
       />;
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
 };
   applications.map ( (application) => (<TableRow key= {
@@ -463,9 +441,3 @@ export function ApplicationsTable({ ;
     </>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

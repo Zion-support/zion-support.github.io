@@ -6,15 +6,12 @@ interface EmailValidationResult {
   email: string;
   is_valid: boolean;
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
  import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface EmailValidationResult {
   email: string;
   is_valid: boolean;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface EmailValidationResult {
@@ -61,13 +58,10 @@ export default async function handler(
     const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d));
     // Check for role-based emails
     const roleBasedPatterns = [
-=======
-=======
 
     // Check for free email providers
     const freeProviders = [
 
-=======
       'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
 
     const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider);
@@ -146,7 +140,6 @@ export default async function handler(
       'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
     ];
     const isFreeProvider = freeProviders.some(provider => domain === provider);
-==============    // Calculate score (0-100)
     let score = 100;
     if (!hasValidFormat) score -= 50;
     if (!hasValidDomain) score -= 20;
@@ -171,7 +164,6 @@ export default async function handler(
     };
     res && res.status(200).json(result);
 
-=======      suggestions.push('Check email format (should be user@domain.com)')
     }
     if (isDisposable) {
       suggestions.push('Consider using a permanent email address')
@@ -186,10 +178,7 @@ const result: EmailValidationResult = {
       email;
       isValid: score >= 70,
       score: Math.max(0, score);
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         hasValidFormat,
         hasValidDomain,
         hasValidMX: true, // Simplified for demo;
@@ -203,8 +192,6 @@ const result: EmailValidationResult = {
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     };
     res && res.status(200).json(result)
   } catch (error) {
@@ -214,13 +201,6 @@ const result: EmailValidationResult = {
 
 }
 
-=======
     res.status(500).json({ error: 'Internal server error' })
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

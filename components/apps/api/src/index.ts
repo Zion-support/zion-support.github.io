@@ -1,10 +1,8 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 
 
-=======
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit',
@@ -33,8 +31,6 @@ await app.register(cors, {
       .split(',')
       .map(s => s.trim());
     if (!origin |allowed.includes('*') |allowed.includes(origin)) {
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       cb(null, true);
       return;
     }
@@ -52,7 +48,6 @@ function getUserId(req: any): string | null {
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     return res && res.rows
   });
@@ -72,19 +67,13 @@ app.get('/notifications', async (req, reply) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return { items }
 });
 
 
-=======
 
-=======    );
-=======
     );
     );
-=======
-<<<<<<< HEAD
 ;
 app.get ('/projects/:name / track', async (req, reply) => {
   const name = (req.params as any).name as string;
@@ -140,7 +129,3 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   process.exit (1);
 });
 ;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -22,13 +22,10 @@ export function ServiceProviderRegistrationForm() {;
 
 
 
-=======
       }
 
       setGeneratedContent(data as { summary: string, services: string[] }),
       
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   // Apply generated content to form
@@ -44,11 +41,8 @@ export function ServiceProviderRegistrationForm() {;
 
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
-==============
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
@@ -91,7 +85,6 @@ if ( {) {
 
     setIsSubmitting(true),
 
-=======;
       setGeneratedContent(data as { summary: string, services: string[] }),;
       toast({;
         title: "Enhanced Profile Generated",;
@@ -101,14 +94,10 @@ if ( {) {
       toast({;
         title: "Generation failed",;
         description: error.message || "There was an error generating your enhanced profile. Please try again.",;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         variant: "destructive"});
     } finally {;
       setIsGenerating(false);
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   },;
   // Apply generated content to form;
   const applyGeneratedContent = () => {;
@@ -119,8 +108,6 @@ if ( {) {
           service => typeof service === 'string' && service && !serviceTags.includes(service);
         ),;
         if (newServices.length > 0) {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           setServiceTags([...serviceTags, ...newServices]);
         }
       }
@@ -129,7 +116,6 @@ if ( {) {
   // Handle form submission;
   const onSubmit = async (values: ServiceFormValues) => {;
     if (serviceTags.length === 0) {;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({;
         title: "Services required",;
         description: "Please add at least one service to your profile.",;
@@ -150,7 +136,6 @@ if ( {) {
     }
     setIsSubmitting (true);
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -160,7 +145,6 @@ if ( {) {
         throw new Error ("User not authenticated");
       }
 
-=======    }
 ;
     setIsSubmitting(true),;
 
@@ -190,7 +174,6 @@ if ( {) {
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -220,14 +203,12 @@ if ( {) {
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = userData.user?.email,
-=======
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
 
 
       }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       // Create the service profile
       const { data: profileData, error } = await supabase
@@ -243,7 +224,6 @@ if ( {) {
         })
         .eq('id', user.id)
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       // Get user email for notification;
       const { data: userData } = await supabase && supabase.auth.getUser(),;
@@ -263,16 +243,12 @@ if ( {) {
         .eq('id', user && user.id);
         .select();
       if (error) throw error;
-=======
         .select();
       if (error) throw error;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .select(),
 
       if (error) throw error,
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
@@ -280,18 +256,13 @@ if ( {) {
         .from('service_profiles')
         .insert({
 
-=======      */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
-=======
 
-==============        try {
           await supabase.functions.invoke ('send - email', {
             body: {
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
           })
         } catch (emailError) {
@@ -451,8 +422,6 @@ if ( {) {
                 </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -494,7 +463,6 @@ if ( {) {
                           AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className="text-zion-slate-light">;
-=======
               <Separator className="bg - zion - blue - light / 50" />;
               {/* Bio Section */}
               <div className="space - y-4">;
@@ -538,27 +506,20 @@ if ( {) {
 
                 {form && form.watch("enhancedProfile") && (;
                   <div className="flex justify-end">;
-=======
                         onClick={applyGeneratedContent}>;
                         <Check className="mr-1 h-3 w-3" /> Apply;
                       </Button>;
                     </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     <div className="space-y-4">;
                       <div>;
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
                         <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
                       </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                       {generatedContent && generatedContent.services && generatedContent && generatedContent.services.length > 0 && (;
                         <div>;
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>;
                           <div className="flex flex-wrap gap-2 mt-1">;
                             {generatedContent && generatedContent.services.map((service, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                               <Badge
                                 key={index}
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
@@ -684,8 +645,6 @@ if ( {) {
                         key={service}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
                       >
-=======
-=======
                   />;
 
                   <div className="flex flex-wrap gap-2 mt-2">;
@@ -694,7 +653,6 @@ if ( {) {
                       <Badge
                         key={service}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1">;
-=======
                   </div>
                 </div>                  </div>;
                 </div>;
@@ -715,7 +673,6 @@ if ( {) {
                             <Input
                               className="pl-8 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="e && e.g., 85"
-=======
                           <Button;
                             type="button";
                             variant="outline";
@@ -765,7 +722,6 @@ if ( {) {
                             <Input;
                               className="pl - 8 bg - zion - blue border - zion - blue - light text - white";
                               placeholder="e.g., 85";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               {...field}
                             />;
                           </div>;
@@ -788,7 +744,6 @@ if ( {) {
 
                                 checked={field && field.value === "available"}
                                 onChange={() => field && field.onChange("available")}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="available" className="text-white flex items-center gap-2">;
@@ -797,11 +752,9 @@ if ( {) {
                               </label>;
                             </div>;
                             <div className="flex items-center space-x-2">;
-=======
 
                             <div className="flex items-center space-x-2">;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <input
                                 type="radio"
                                 id="limited"
@@ -811,7 +764,6 @@ if ( {) {
 
                                 checked={field && field.value === "limited"}
                                 onChange={() => field && field.onChange("limited")}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="limited" className="text-white flex items-center gap-2">;
@@ -820,11 +772,9 @@ if ( {) {
                               </label>;
                             </div>;
                             <div className="flex items-center space-x-2">;
-=======
 
                             <div className="flex items-center space-x-2">;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <input
                                 type="radio"
                                 id="unavailable"
@@ -871,7 +821,6 @@ FormLabel;
 }
 ;
 
-<<<<<<< HEAD
 };
 //Handle removing service tags const handleRemoveService = (service: string) => {
   setServiceTags (serviceTags.filter ( (s) => s !== service) ) 
@@ -1000,9 +949,3 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-}
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

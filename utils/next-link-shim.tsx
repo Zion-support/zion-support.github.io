@@ -1,5 +1,3 @@
-
-
 ;
   };
   };
@@ -9,18 +7,12 @@
       {children};};
 };
 };
-;
-origin/cursor/integrate-build-improve-and-re-verify-242d
-}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
-=======
-
-=======
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
 };
 };
   return (;
@@ -29,68 +21,51 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
 };
 };
-
-=======
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from 'react';
 };
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
 // Define HTMLAnchorElement if not available;
 interface HTMLElement {;
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
 // Define HTMLAnchorElement if not available;
 interface HTMLElement {;
   className: string;
@@ -99,9 +74,11 @@ interface HTMLElement {;
   textContent: string | null;
   style: { [key: string]: string }
 }
-
 interface HTMLAnchorElement extends HTMLElement {;
-
+  tagName: 'A';
+  href: string;
+  target: string;
+}
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
@@ -110,18 +87,66 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     <a href={resolved} className={className} {...rest}>;
       {children};
 };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href;
+  children: React.ReactNode;
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 };
-ursor/integrate-build-improve-and-re-verify-8f7d
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
+import React from 'react';
+// Define HTMLAnchorElement type if not available
+interface HTMLElement {
+  className?: string;
+}
+interface HTMLAnchorElement extends HTMLElement {
+  href: string,
+  className?: string;
+}
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href,
+  children: React.ReactNode,
+};
 };
 }
+function resolveHref(href: Href): string {
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React && React.AnchorHTMLAttributes<HTMLAnchorElement> & {;
+  href: Href;
+  children: React && React.ReactNode;
+};
+function resolveHref(): any (href: Href): string {;
+  if (typeof href === 'string') return href;
+  return href?.pathname |(href as { href?: string })?.href |'#';
+}
+export default function Link({ href, children, className, ...rest }: LinkProps) {
+  const resolved = resolveHref(href);
+  if (React.isValidElement(children)) {
+    const existingClass = (children.props as { className?: string })?.className |'';
+    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
+    return React.cloneElement(children as React.ReactElement<{ href?: string; className?: string }>, {
       href: resolved
       className: mergedClassName
       ...rest
-
     });
   }
-
-
+import React from 'react';
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  "href": Href;
+  children: React.ReactNode;
+};
+function resolveHref("href": Href): string {
+  if (typeof href === 'string') return href;
+  return href?.pathname || (href as { href?: string })?.href || '#';
+}
+export default function Link({ href, children, className, ...rest }: LinkProps) {;
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {
     const existingClass = (children.props as { className?: string })?.className || '';
@@ -131,73 +156,31 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       "className": mergedClassName,
       ...rest});
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-
-
-
-
-
-
-
-
-
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <a href={resolved} className={className} {...rest}>
       {children}
     </a>
   );
-
-
-}
-
-}
-
-}
-
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
 }
 }
 import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
 }
 import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
 }
-=======
-=======
-
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
-
-=======
 }
 import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 }
-ursor/integrate-build-improve-and-re-verify-b76c
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-origin/cursor/integrate-build-improve-and-re-verify-242d
 }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
 }
-origin/main
-origin/automation-improvements-final
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
-
-=======>>>>>>> origin/automation-improvements-final
-=======
+;
+// Define HTMLAnchorElement if not available;
+interface HTMLElement {
+  class_name: string;
+  id: string;
+  innerHTML: string;
+  text_content: string | null;
+  style: { [key: string]: string }
 }
 interface HTMLAnchorElement extends HTMLElement {
   tag_name: 'A';
@@ -241,11 +224,4 @@ function Link() {
       {children}
     </a>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}

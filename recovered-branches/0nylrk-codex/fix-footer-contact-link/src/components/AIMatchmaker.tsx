@@ -1,7 +1,6 @@
 import React from 'react';=======
 
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -13,8 +12,6 @@ import {Sparkles, Search} from "lucide-react";
   onMatchSelect?: (match: any) => void
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
-=======
-=======
 interface AIMatchmakerProps {;
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;
@@ -49,13 +46,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
-=======
 
-=======
   onMatchSelect?: (match: any) => void
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
-=======
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,  className?: string
@@ -63,11 +57,7 @@ interface AIMatchmakerProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
 
@@ -96,8 +86,6 @@ interface AIMatchmakerProps {
         query,
         serviceType,
         3
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       );
       console.log("AI matching results:", results);
       setMatches(results);      ),
@@ -105,8 +93,6 @@ interface AIMatchmakerProps {
       // // // console.log("AI matching results:", results),
       setMatches(results),
       
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
@@ -116,9 +102,6 @@ interface AIMatchmakerProps {
   };
 
   };
-=======
-==============
-=======import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -184,8 +167,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   },
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
@@ -193,8 +174,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   }
       console && console.log("AI matching results:", results);
       setMatches(results);
-=======
-=======
 
       console && console.log("AI matching results:", results);
       setMatches(results);
@@ -213,7 +192,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       setIsMatchmaking(false);
     }
   };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleItemSelect = (item: any) => {;
     if (onMatchSelect) {;
       // Find the original MatchResult that contains this item;
@@ -259,8 +237,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),; interface AIMatchmakerProps {
   serviceType?: string;
 onMatchSelect?: (match: any) => void;
@@ -311,16 +287,12 @@ if (onMatchSelect) {
       </CardContent>
     </Card>
   )
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
           )}
         </div>;
       </CardContent>;
     </Card>;
   );
-=======
         <div className="space - y-4">;
           <div className="space - y-2">;
             <Textarea;
@@ -353,9 +325,4 @@ if (onMatchSelect) {
         </div>;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -38,7 +37,6 @@ import {  Phone,
   ArrowRight,
   Brain,;
   Star,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -46,11 +44,9 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-ai-brain-computer-interface')
-=======
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-ai-brain-computer-interface');
@@ -145,7 +141,6 @@ export default function QuantumAIBCIPage() {;
 
   );
 }
-=======
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -155,7 +150,6 @@ export default function QuantumAIBCIPage() {;
 
 
   );
-=======
 
   );
 
@@ -280,15 +274,8 @@ if (return null) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-=======
 
 }
 
-=======
 
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

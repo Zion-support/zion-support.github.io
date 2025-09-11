@@ -50,5 +50,4 @@ monitor.measureBuildTime();
 monitor.measureBundleSize();
 const report = monitor.generateReport();
 
-fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
-console.log('Performance report generated');
+module.exports = PerformanceMonitor;

@@ -13,8 +13,6 @@ export default function ServiceDescriptionGenerator() {
       </div>;
     );
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
@@ -39,17 +37,13 @@ export default function ServiceDescriptionGenerator() {
             ;
             {generatedDescription && (;
               <GeneratedDescriptionDisplay ;
-=======
-=======          <div className="space-y-8">;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
 
             {generatedDescription && (;
 
               <GeneratedDescriptionDisplay
-=======
 
               <GeneratedDescriptionDisplay 
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -110,5 +104,3 @@ if ( {) {
                 description={generated_description}
                 on_save={handleDescriptionSave}
               />)}
-
-<<<<<<< HEAD=======

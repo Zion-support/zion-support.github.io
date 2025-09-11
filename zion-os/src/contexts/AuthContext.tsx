@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 import { use_session, sign_in, sign_out  } from './next - auth / react';,
@@ -11,11 +9,6 @@ interface User {
   role: string,
   onboarding_completed: boolean;
   }
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -245,6 +238,3 @@ export function useAuth() {;
   }>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return context;
 }
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

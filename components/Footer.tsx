@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +16,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+import React from 'react;';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 import React from "react";
 import Link from "next/link";
 import {;
@@ -29,13 +30,9 @@ import {;
   Linkedin,;
   Instagram,;
   ArrowRight,;
-=======
-
 } from "lucide-react";
-
 import React from 'react;';
 import Link from 'next/link';
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const footerLinks = {
@@ -43,8 +40,6 @@ export default function Footer() {
 import React from './react';
 import Link from './next / link';
 import {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -66,7 +61,7 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Link from "next/link";
 import {
-=======  Phone,
+  Phone,
   Mail,
   MapPin,
   Facebook,
@@ -74,13 +69,10 @@ import {
   Linkedin,
   Instagram,
 export default function Footer() {
-=======
 export default function Footer() {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
-
 import React from './react';
 import Link from './next / link';
 import {
@@ -99,23 +91,6 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  ArrowRight,;
-} from "lucide-react";
-origin/main
-import React from 'react;';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
-origin/automation-improvements-final
-
-export default function Footer() {
-export default function Footer() {;
-  const currentYear = new Date().getFullYear();
-  const footerLinks = {
-    services: [
-      { name: "AI Services", href: "/ai-services" },
-      { name: "IT Services", href: "/it-services" },
-      { name: "Micro SaaS", href: "/micro-saas" },
-=======
   ArrowRight,
 } from './lucide-react';
 ;
@@ -130,7 +105,7 @@ function Footer() {
       { name: "AI Services", href: "/ai - services" },
       { name: "IT Services", href: "/it - services" },
       { name: "Micro SaaS", href: "/micro - saas" },
-
+} from "lucide-react";
 export default function Footer() {
 export default function Footer() {;
   const currentYear = new Date().getFullYear();
@@ -143,8 +118,6 @@ export default function Footer() {;
       { name: "IoT Solutions", href: "/iot" },
       { name: "Cybersecurity", href: "/cybersecurity" },
     ],
-
-
       { name: "AI Services", href: "/ai-services" }
       { name: "IT Services", href: "/it-services" }
       { name: "Micro SaaS", href: "/micro-saas" }
@@ -186,7 +159,6 @@ export default function Footer() {;
       { name: "Contact", href: "/contact" },
     ],
     resources: [;
-
       { name: "Blog", href: "/blog" },
       { name: "Documentation", href: "/docs" },
       { name: "API Reference", href: "/api" },
@@ -194,8 +166,6 @@ export default function Footer() {;
       { name: "White Papers", href: "/white - papers" },
       { name: "Support", href: "/support" },
     ],
-
-
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Micro SaaS', href: '/micro-saas' },
@@ -227,12 +197,9 @@ export default function Footer() {;
       { name: 'White Papers', href: '/white-papers' },
       { name: 'Support', href: '/support' }
     ]
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662  };
-
   };
 origin/automation-improvements-final
   };
-
       { name: "Blog", href: "/blog" }
       { name: "Documentation", href: "/docs" }
       { name: "API Reference", href: "/api" }
@@ -256,7 +223,6 @@ origin/automation-improvements-final
               cybersecurity, cloud infrastructure, quantum computing,;
               blockchain, IoT, and digital transformation services.;
             </p>;
-
   };
       { name: "Blog", href: "/blog" }
       { name: "Documentation", href: "/docs" }
@@ -272,7 +238,6 @@ origin/automation-improvements-final
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
-
           <div className="lg:col-span-2">;
             <Link href="/" className="text-2xl font-bold text-white mb-4 block">;
               Zion Tech Group;
@@ -282,43 +247,32 @@ origin/automation-improvements-final
               cybersecurity, cloud infrastructure, quantum computing,;
               blockchain, IoT, and digital transformation services.;
             </p>;
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               quantum computing, blockchain, IoT, and digital transformation services.
             </p>
-            
 origin/automation-improvements-final
               Leading technology solutions provider specializing in AI
               cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
             </p>
             {/* Contact Info */}
+                <span>
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown DE 19709
+                </span>
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Phone className="w-4 h-4 mr-3" />
                 <span>+1 302 464 0950</span>
               </div>
-
-=======
               <div className="flex items-center text-gray-300">
                 <Mail className="w-4 h-4 mr-3" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-start text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />
-                <span>
-                  364 E Main St STE 1008
-                  <br />
-                  Middletown DE 19709
-                </span>
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-
-
-=======
-=======
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from lucide-react';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
@@ -406,37 +360,21 @@ const Footer: React.FC = () => {
               <div className="flex items-center">
                 <MapPin className=w-4 h-4 mr-2 text-blue-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <span>
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
                 </span>
-
->>>>>>> origin/automation-improvements-final>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-
->>>>>>> origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </div>
           {/* Services */}
           <div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-=======                  <Link
+                  <Link
                     href={link.href}
                   <Link 
                     href={link.href} 
@@ -446,152 +384,82 @@ origin/automation-improvements-final
                     {link.name}
                   </Link>
                 </li>
-
+            <h3 className="text-lg font-semibold mb-6>Services</h3>
+            <div className="space-y-4">
+              {Object.entries(services).map(([category, links]) => (
+                <div key={category}>
+                  <h4 className=text-sm font-medium text-blue-400 mb-2">{category}</h4>
+                  <ul className="space-y-1>
+                    {links.slice(0, 3).map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-sm text-gray-300 hover:text-white transition-colors"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </ul>
           </div>
-=======
-==============
-
-
-=======
               ))}
             </ul>
           </div>
-
-
-=======
-=======
-            <div className="space-y-3">;
-              <div className="flex items-center text-gray-300">;
-                <Phone className="w-4 h-4 mr-3" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center text-gray-300">;
-                <Mail className="w-4 h-4 mr-3" />;
-                <span>kleber@ziontechgroup && ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-start text-gray-300">;
-                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
-                <span>;
-                  364 E Main St STE 1008;
-                  <br />;
-                  Middletown DE 19709;
-                </span>;
-              </div>;
-            </div>;
-          </div>;
-          {/* Services */}
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Services</h3>;
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.services.map((link) => (;
-                <li key={link && link.name}>;
-                  <Link
-                    href={link && link.href}
-                    className="text-gray-300 hover:text-white transition-colors">;
-                    {link && link.name}
-                  </Link>;
-                </li>;
-              ))}
-            </ul>;
-          </div>;          {/* Solutions */}
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.solutions.map((link) => (;
-                <li key={link && link.name}>;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
               ))}
             </ul>
           </div>
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-origin/main
-origin/automation-improvements-final
-
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
-                  <Link
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-              ))}
-            </ul>
-          </div>
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-origin/main
-origin/automation-improvements-final
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
-            <div className="space-y-3">;
-              <div className="flex items-center text-gray-300">;
-                <Phone className="w-4 h-4 mr-3" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center text-gray-300">;
-                <Mail className="w-4 h-4 mr-3" />;
-                <span>kleber@ziontechgroup && ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-start text-gray-300">;
-                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
-                <span>;
-                  364 E Main St STE 1008;
-                  <br />;
-                  Middletown DE 19709;
-                </span>;
-              </div>;
-            </div>;
-          </div>;
-          {/* Services */}
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Services</h3>;
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.services.map((link) => (;
-                <li key={link && link.name}>;
-                  <Link
-                    href={link && link.href}
-                    className="text-gray-300 hover:text-white transition-colors">;
-                    {link && link.name}
-                  </Link>;
-                </li>;
-              ))}
-            </ul>;
-          </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
-          {/* Solutions */}
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.solutions.map((link) => (;
-                <li key={link && link.name}>;
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
-=======
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
-            <ul className="space-y-2">
-              {footerLinks.solutions.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
+                  <Link 
+                    href={link.href} 
                     className="text-gray-300 hover:text-white transition-colors"
+            <div className="space-y-3">;
+              <div className="flex items-center text-gray-300">;
+                <Phone className="w-4 h-4 mr-3" />;
+                <span>+1 302 464 0950</span>;
+              </div>;
+              <div className="flex items-center text-gray-300">;
+                <Mail className="w-4 h-4 mr-3" />;
+                <span>kleber@ziontechgroup && ziontechgroup.com</span>;
+              </div>;
+              <div className="flex items-start text-gray-300">;
+                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
+                <span>;
+                  364 E Main St STE 1008;
+                  <br />;
+                  Middletown DE 19709;
+                </span>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Services */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Services</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.services.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link && link.href}
+                    className="text-gray-300 hover:text-white transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
+              ))}
+            </ul>;
+          </div>;
+          {/* Solutions */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.solutions.map((link) => (;
+                <li key={link && link.name}>;
           {/* Company */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Company</h3>
@@ -601,23 +469,9 @@ origin/automation-improvements-final
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -625,18 +479,15 @@ origin/automation-improvements-final
               ))}
             </ul>
           </div>
-
-
-origin/main
-origin/automation-improvements-final
-
-=======
-==============
->>>>>>> origin/automation-improvements-final
-
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          {/* Company & Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 mb-6">
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href} 
+                    className="text-gray-300 hover:text-white transition-colors"
           {/* Company & Resources */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
@@ -644,31 +495,25 @@ origin/automation-improvements-final
               {footerLinks && footerLinks.company.map((link) => (;
                 <li key={link && link.name}>;
                   <Link
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          {/* Resources */}
+          <div>
+            <h3 className=text-lg font-semibold mb-6">Resources</h3>
+            <ul className="space-y-3>
+              {resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-
-=======            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
@@ -684,7 +529,6 @@ origin/automation-improvements-final
               {footerLinks && footerLinks.resources.map((link) => (;
                 <li key={link && link.name}>;
                   <Link
-==============
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
@@ -692,9 +536,6 @@ origin/automation-improvements-final
                   </Link>
                 </li>
               ))}
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ;
   return (
@@ -787,14 +628,10 @@ origin/automation-improvements-final
                     {link.name}
                   </Link>;
                 </li>))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             </ul>;
           </div>;
         </div>;
       </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               />;
               <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">;
                 Subscribe;
@@ -832,36 +669,45 @@ origin/automation-improvements-final
                 href="https://instagram && instagram.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-
-=======              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-
-
-=======
-=======
-
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+            {/* Legal Links */}
+            <div className="flex space-x-6 text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+            {/* Social Links */}
+            <div className=mt-6">
+              <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target=_blank"
+                    rel="noopener noreferrer
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label={social.name}
+                  >
+                    <social.icon className=h-5 w-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Bottom Footer */}
+        <div className="border-t border-gray-800 mt-8 pt-8>
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className=text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm>
+              <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-
->>>>>>> origin/automation-improvements-final>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-
->>>>>>> origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Privacy Policy
               </Link>
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -882,7 +728,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               </Link>;
               <Link
                 href="/cookies"
-
+                className="text-gray-400 hover:text-white transition-colors">;
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Cookie Policy
@@ -893,23 +739,100 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       </div>
     </footer>
   );
-=======}
 }
-};
-export default Footer;
+      {/* Newsletter Signup */}
+      <div className="border - t border - gray - 800">;
+        <div className="container mx - auto px - 4 py - 8">;
+          <div className="max - w-2xl mx - auto text - center">;
+            <h3 className="text - xl font - semibold mb - 2">Stay Updated</h3>;
+            <p className="text - gray - 300 mb - 4">;
+              Get the latest technology insights and company updates delivered;
+              to your inbox.;
+            </p>;
+            <div className="flex flex - col sm:flex - row gap - 3 max - w-md mx - auto">;
+              <input;
+                type="email";
+                placeholder="Enter your email";
+                className="flex - 1 px - 4 py - 2 bg - gray - 800 border border - gray - 700 rounded - md text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+              />;
+              <button className="px - 6 py - 2 bg - blue - 600 text - white rounded - md hover:bg - blue - 700 transition - colors flex items - center justify - center">;
+                Subscribe;
+                <ArrowRight className="w - 4 h - 4 ml - 2" />;
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Bottom Footer */}
+      <div className="border - t border - gray - 800">;
+        <div className="container mx - auto px - 4 py - 6">;
+          <div className="flex flex - col md:flex - row justify - between items - center">;
+            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">;
+              © {current_year} Zion Tech Group. All rights reserved.;
+            </div>;
+            {/* Social Links */}
+            <div className="flex space - x-4 mb - 4 md:mb - 0">;
+              <a;
+                href="https://linkedin.com / company / zion - tech - group";
+                target="_blank";
+                rel="noopener noreferrer";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                <Linkedin className="w - 5 h - 5" />;
+              </a>;
+              <a;
+                href="https://twitter.com / ziontechgroup";
+                target="_blank";
+                rel="noopener noreferrer";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                <Twitter className="w - 5 h - 5" />;
+              </a>;
+              <a;
+                href="https://facebook.com / ziontechgroup";
+                target="_blank";
+                rel="noopener noreferrer";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                <Facebook className="w - 5 h - 5" />;
+              </a>;
+              <a;
+                href="https://instagram.com / ziontechgroup";
+                target="_blank";
+                rel="noopener noreferrer";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                <Instagram className="w - 5 h - 5" />;
+              </a>;
+            </div>;
+            {/* Legal Links */}
+            <div className="flex space - x-6 text - sm">;
+              <Link;
+                href="/privacy";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                Privacy Policy;
+              </Link>;
+              <Link;
+                href="/terms";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                Terms of Service;
+              </Link>;
+              <Link;
+                href="/cookies";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                Cookie Policy;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 export default Footer;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

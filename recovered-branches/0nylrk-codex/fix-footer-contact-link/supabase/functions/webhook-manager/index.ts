@@ -2,35 +2,26 @@
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-=======
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CreateWebhookRequest {
   name: string,
   url: string,
   eventTypes: string[],
   secret?: string
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 }
 ;
 interface WebhookTestRequest {;
@@ -50,10 +41,6 @@ const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   secret?: string
 }
@@ -68,7 +55,6 @@ interface WebhookTestRequest {
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
 
@@ -85,10 +71,6 @@ const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
@@ -168,8 +150,6 @@ if ( {) {
 }
       console.error ('Error toggling webhook:', error);
       return new Response (JSON.stringify ({ error: 'Failed to update webhook or webhook not found' }), {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
         status: error ? 500 : 404,
         headers: { 'Content - Type': 'application / json' }});
@@ -190,10 +170,7 @@ async function deleteWebhook(userId: string, webhookId: string) {
       .eq('user_id', userId)
       .select('id');
     if (error) {
-=======
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     return new Response(JSON.stringify({ error: 'Invalid action' }), {;
       status: 400,;
@@ -307,25 +284,19 @@ async function deleteWebhook(userId: string, webhookId: string) {;
         headers: { 'Content-Type': 'application/json' }});
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404
         headers: { 'Content-Type': 'application/json' }})
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
 
 
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Check condition
 if ( {) {
   $2
@@ -343,7 +314,6 @@ if ( {) {
       return new Response(JSON && JSON.stringify({ error: 'Webhook not found or access denied' }), {
         status: 404,
 
-=======
   const key = await crypto && crypto.subtle.importKey(
     'raw';
     encoder && encoder.encode(secret),
@@ -351,8 +321,6 @@ if ( {) {
     false;
     ['sign']
   );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   
   const signature = await crypto && crypto.subtle.sign(
     'HMAC';
@@ -362,12 +330,10 @@ if ( {) {
   // Convert to hex string
   return Array && Array.from(new Uint8Array(signature))
     .map(b => b && b.toString(16).padStart(2, '0'))
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const eventId = crypto && crypto.randomUUID();
   // Create different test payload based on event type
   switch (eventType) {
     case 'new_application':
-=======
 
   const eventId = crypto && crypto.randomUUID();
   
@@ -375,7 +341,6 @@ if ( {) {
   // Create different test payload based on event type
   switch (eventType) {
     case 'new_application':
-=======    return new Response (JSON.stringify ({
       message: 'Webhook deleted successfully',
       id: webhook_id;
     }), {
@@ -496,7 +461,6 @@ function createTestPayload() {
   // Create different test payload based on event type;
   switch (event_type) {
     case 'new_application':;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           application_id: crypto.randomUUID ();
           job_id: crypto.randomUUID ();
           talent_id: crypto.randomUUID ();
@@ -507,7 +471,6 @@ function createTestPayload() {
       }
 ;
     case 'quote_received':;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           status: 'offer_accepted'
         }
       }
@@ -515,7 +478,6 @@ function createTestPayload() {
         event_type: 'test_event';
         event_id: eventId;
         timestamp
-=======
 
           project_id: crypto.randomUUID ();
           talent_id: crypto.randomUUID ();
@@ -529,9 +491,6 @@ function createTestPayload() {
       }
   }
 }
-=======
-==============
-=======;
     return new Response(JSON.stringify({;
       message: 'Webhook deleted successfully',;
       id: webhookId;
@@ -1132,8 +1091,6 @@ case 'milestone approved':
   }
 }
 ;
-=======
-=======          status: 'offer_accepted';
         }
       }
 ;
@@ -1141,20 +1098,14 @@ case 'milestone approved':
         event_type: 'test_event';
         event_id: event_id;
         timestamp,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         data: {
           message: 'This is a test webhook event';
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

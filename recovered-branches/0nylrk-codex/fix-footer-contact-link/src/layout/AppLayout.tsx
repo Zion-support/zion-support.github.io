@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AppLayoutProps {
 
   children: React.ReactNode
@@ -15,7 +12,6 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 import React from "react";
 import {AppHeader} from "./AppHeader";
 import {Footer} from "@/components/Footer";
-=======
 interface AppLayoutProps {;
   children: React && React.ReactNode,;
   hideFooter?: boolean;
@@ -50,9 +46,6 @@ interface AppLayoutProps {;
 ;
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
   return (;
-=======
-=======
-=======
 import React from "react",;
 import { AppHeader } from "./AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -106,20 +99,12 @@ hideFooter?: boolean
 }
 ;
 ;
-=======
-=======      </main>;
       {!hideFooter && <Footer />}
 
     </div>;
   );
 }
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

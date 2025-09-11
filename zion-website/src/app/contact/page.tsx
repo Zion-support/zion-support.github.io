@@ -4,7 +4,6 @@ import React from 'react';
 
 const contactMethods = [
 const contactMethods = [
-=======
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
@@ -12,14 +11,12 @@ const contactMethods = [
   ChatBubbleLeftRightIcon;
 } from '@heroicons / react / 24 / outline';
 const contact_methods = [;
-=======
   EnvelopeIcon
   PhoneIcon
   MapPinIcon
   ClockIcon
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
-=======
 import React from 'react';
 
 const contactMethods = [
@@ -61,8 +58,6 @@ const office_locations = [;
     email: 'tokyo@ziontechgroup.com',
     hours: 'Mon - Fri: 9:00 AM - 6:00 PM JST'}];
 const faqs = [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     question: 'What industries do you serve?'
     answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
@@ -80,7 +75,6 @@ function ContactPage() {  return (
 
 
 
-=======
 
   return (
     <div className="bg-black">      {/* Hero section */}
@@ -94,7 +88,6 @@ function ContactPage() {  return (
               Ready to transform your business with AI? Let's discuss how our cutting-edge 
 
 
-=======
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Touch
               </span>
@@ -107,10 +100,8 @@ function ContactPage() {  return (
           </div>
         </div>
       </div>
-=======
                 </dt>
 
-=======
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
@@ -137,19 +128,15 @@ function ContactPage() {  return (
                     <a 
                       href={method.href} 
                       className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
-=======                    >
                       {method.value} <span aria-hidden=&quot;true&quot;>→</span>
                     </Link>
                   </p>
                 </dd>
               </div>
             ))}
-=======
 export default function ContactPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
-=======
-=======
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 export default function ContactPage() {
@@ -213,9 +200,7 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* Contact form */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
@@ -295,7 +280,6 @@ export default function ContactPage() {
                   <textarea
                     name="message"
                     id="message"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
                     default_value={''}
                   />;
@@ -314,7 +298,6 @@ export default function ContactPage() {
         </div>;
       </div>;
 
-=======
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
@@ -334,7 +317,3 @@ export default function ContactPage() {
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
 
 export default Page;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

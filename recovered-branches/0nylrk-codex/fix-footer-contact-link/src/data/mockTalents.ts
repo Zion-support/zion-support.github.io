@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       {
 
@@ -858,9 +857,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
-=======
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
-=======
 
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
@@ -882,7 +879,6 @@ export const MOCK_TALENTS: ProfileData[] = [
       },      {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
-=======
         tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
         date: 'Dec 2022',
       },
@@ -1380,7 +1376,3 @@ contact_email: "david.martinez@example.com";
 }];
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

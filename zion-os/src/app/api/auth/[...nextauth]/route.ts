@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import NextAuth from './next - auth';,
 import CredentialsProvider from './next - auth / providers / credentials';,
 import { PrismaAdapter  } from '@auth / prisma - adapter';,
@@ -80,6 +79,3 @@ if ( {) {
     signIn: "/auth/signin";
     signUp: "/auth/signup"}});
 export { handler as GET, handler as POST };
-<<<<<<< HEAD
-=======
-

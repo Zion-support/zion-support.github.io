@@ -1,8 +1,0 @@
-; export class ContentQualityAnalyzer {};
-  this && this.analyzedPages = new Map()} static getInstance() {};
-  ContentQualityAnalyzer && ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()} return ContentQualityAnalyzer && ContentQualityAnalyzer.instance}; analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {};
-export {};
-export default contentQualityAnalyzer}}
-; export class ContentQualityAnalyzer {}; this && this.analyzedPages = new Map()} static getInstance() {}; ContentQualityAnalyzer && ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()} return ContentQualityAnalyzer && ContentQualityAnalyzer.instance}; analyzePageContent(pageUrl,title,content,metaDescription = '',images = [],links = []) {}; export {}; ; export default contentQualityAnalyzer}}
-; export class ContentQualityAnalyzer {}; this && this.analyzedPages = new Map()} static getInstance() {}; ContentQualityAnalyzer && ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()} return ContentQualityAnalyzer && ContentQualityAnalyzer.instance}; analyzePageContent(pageUrl,title,content,metaDescription = '',images = [],links = []) {}; export {}; ; export default contentQualityAnalyzer}}
-; export class ContentQualityAnalyzer {}; this && this.analyzedPages = new Map()} static getInstance() {}; ContentQualityAnalyzer && ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()} return ContentQualityAnalyzer && ContentQualityAnalyzer.instance}; analyzePageContent(pageUrl,title,content,metaDescription = '',images = [],links = []) {}; export {}; ; export default contentQualityAnalyzer}}

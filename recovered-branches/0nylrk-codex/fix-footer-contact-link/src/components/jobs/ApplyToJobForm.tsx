@@ -1,18 +1,13 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface ApplyToJobFormProps {
 
   job: Job
 
   onSuccess?: () => void
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -29,8 +24,6 @@ import {Job} from "@/types/jobs";
 import {toast} from "sonner";
 
 
-=======
-=======import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
@@ -52,7 +45,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { resumes, isLoading: isResumesLoading } = useResume()
   const navigate = useNavigate();
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
-=======
   const { resumes, isLoading: isResumesLoading } = useResume(),;
   const navigate = useNavigate();
 
@@ -92,11 +84,9 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
       toast && toast.error("You must be logged in to apply"),;
       navigate("/login", { state: { returnTo: `/jobs/${job && job.id}` } }),;
       return;
-=======
 }
 
 
-=======    if (!user) {
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
       return
@@ -105,8 +95,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     if (!coverLetter && coverLetter.trim()) {;      setError("Please provide a cover letter");
       return;
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     setIsSubmitting(true);
     setError(null);
     try {
@@ -122,7 +110,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
         toast.success("Your application has been submitted!");=======
       if (success) {
         toast.success("Your application has been submitted!");
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (onSuccess) {
           onSuccess()
         }
@@ -130,8 +117,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -202,7 +187,6 @@ if ( {) {
     } catch (err: any) {
       set_error (err.message || "Failed to submit application"),
       toast.error ("Failed to submit application");
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsSubmitting (false);
     }
@@ -221,8 +205,6 @@ if ( {) {
         <Button
           type="button"
           variant="outline"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { useResume } from "@/hooks/useResume",;
@@ -303,8 +285,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
             rows={6}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
             className="mt-1";
           />;
@@ -312,8 +292,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             Provide a brief introduction and highlight your relevant skills and experience.;
           </p>;
         </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <div>;
           <Label htmlFor="resume">Select Resume (Optional)</Label>;
           {isResumesLoading ? (;
@@ -369,14 +347,11 @@ handleSubmit
     </form>
   )
 }
-=======
-=======
         </div>;
       </div>;
 
       <div className="flex justify-end gap-2">;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
@@ -440,9 +415,4 @@ handleSubmit
     </form>);
 }
 
-=======
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

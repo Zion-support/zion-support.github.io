@@ -1,6 +1,4 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -11,16 +9,10 @@ import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
-=======
 
-=======
 import { UseFormReturn } from "react-hook-form",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
-=======
 import { UseFormReturn } from "react-hook-form",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { 
   FormField;
   FormItem;
@@ -32,14 +24,11 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { Input } from "@/components/ui/input",
-=======
 
 import { Input } from "@/components/ui/input",
 
-=======
 import { Input } from "@/components/ui/input";
 import { Input } from "@/components/ui/input",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { 
   Select;
   SelectContent;
@@ -49,7 +38,6 @@ import {
 } from "@/components/ui/select",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
 
@@ -61,7 +49,6 @@ import { ContractFormValues } from "./ContractForm",
 }
 
 
-=======
 interface PaymentTermsFieldsProps {;
   form: UseFormReturn<ContractFormValues>,;
   talent: TalentProfile,;
@@ -81,7 +68,6 @@ export function PaymentTermsFields(): any ({ ;
             <FormItem>;
               <FormLabel>Payment Terms</FormLabel>;
               <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
 import { UseFormReturn } from './react - hook - form';
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components / ui / form';
 import { Input } from '@/components / ui / input';
@@ -123,7 +109,6 @@ function PaymentTermsFields() {
   );
 }
 
-=======            </FormItem>)}
         />;
         <FormField;
           control={form.control}
@@ -160,8 +145,6 @@ function PaymentTermsFields() {
         </div>)}
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  import {
   FormField;
@@ -204,9 +187,3 @@ handleMilestonesGenerated
     </>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

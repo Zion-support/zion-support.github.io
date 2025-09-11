@@ -19,7 +19,6 @@ type DocsContent = {
 }
 ;
 type PageProps = {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   docs: DocsContent;
 }
 ;
@@ -34,8 +33,6 @@ type PageProps = {
 };
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
-=======
-=======
   return {
     props: {
       docs: content as DocsContent
@@ -60,11 +57,9 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
-=======
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
@@ -114,19 +109,14 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
 export default function PrintDocs(): any ({ docs }: PageProps) {;
   useEffect(() => {;
     const id = setTimeout(() => window && window.print(), 500);
-==============
 
-=======};
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
   }, []);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="p-8 max-w-4xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
@@ -144,7 +134,6 @@ export default function PrintDocs({ docs }: PageProps) {
     </div>;
   );
 }
-=======  );
 }
 export default /**
  * PrintDocs - Function description
@@ -206,7 +195,6 @@ export default function PrintDocs({ docs }: PageProps) {
             <h2 className=&quot;text-2xl font-semibold mb-2&quot;>{s.title}</h2>
             {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
             {s.code && s.code.map((c, i) => (
-=======
 
 
         ))}
@@ -216,7 +204,6 @@ export default function PrintDocs({ docs }: PageProps) {
 }
   );
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
             ))}
           </section>
@@ -234,23 +221,9 @@ export default function PrintDocs({ docs }: PageProps) {
 }
 
 }
-==============
 
   );
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+

@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-==============
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   id: string;
@@ -35,8 +33,6 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -65,31 +61,23 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
 
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
-=======};
 
 export const getPopularInnovativeMicroSaasServices2026 = () => {;
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
 export const getPopularInnovativeMicroSaasServices2026 = () => {;  return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
 };
 
-=======
   })
 }
 
   })
 }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -513,16 +501,9 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 };    return price >= minPrice && price <= maxPrice
   })
 };
-=======
-=======
     return price >= minPrice && price <= maxPrice;
   });
 
 
 };
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

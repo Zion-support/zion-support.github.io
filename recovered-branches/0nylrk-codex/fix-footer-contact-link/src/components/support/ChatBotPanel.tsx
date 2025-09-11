@@ -4,11 +4,8 @@ import { Send, Loader2 } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { Send, Loader2 } from "lucide-react",
 import { useTheme } from "@/hooks/useTheme",
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }
   { id: "match", text: "How do I get matched?" }
@@ -25,14 +22,11 @@ export function ChatBotPanel() {;
       content: "Hi! How can I help you?",;
       sender: "bot",;
       timestamp: new Date()}]),;
-=======  const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const { theme } = useTheme();
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 
 export function ChatBotPanel() {
@@ -41,8 +35,6 @@ export function ChatBotPanel() {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
@@ -53,7 +45,6 @@ export function ChatBotPanel() {
       scrollAreaRef && scrollAreaRef.current.scrollTop = scrollAreaRef && scrollAreaRef.current.scrollHeight;
     }
   }, [messages]);
-=======
     }
   }, [messages]);
   // Focus input when component mounts;
@@ -62,7 +53,6 @@ export function ChatBotPanel() {
       inputRef && inputRef.current.focus();
     }
   }, []);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {
@@ -95,21 +85,17 @@ export function ChatBotPanel() {
 
       console.log("Support escalation triggered", {
       // // // console.log("Support escalation triggered", { 
-=======
 
       // // // console.log("Support escalation triggered", { 
 
-=======
       console.log("Support escalation triggered", {
       // // // console.log("Support escalation triggered", { 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         conversationHistory: messages.map(m => ({
           content: m.content
           sender: m.sender
           timestamp: m.timestamp
         }))
       })
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later.";
 
@@ -248,7 +234,6 @@ export function ChatBotPanel() {;
         message:"I'm experiencing technical difficulties. Please try again later.";
       },;
     }
-=======
 
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later.";
@@ -293,7 +278,6 @@ export function ChatBotPanel() {;
     handleSendMessage(text)
   },
 
-=======      },
       {
         id: `bot-${Date.now()}`,
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
@@ -302,8 +286,6 @@ export function ChatBotPanel() {;
       }
     ]),
     
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted"
@@ -312,7 +294,6 @@ export function ChatBotPanel() {;
 
 
 
-==============
   }
   },
   const handleEmailSupport = () => {
@@ -326,14 +307,11 @@ export function ChatBotPanel() {;
 
       }
       },
-=======
 
       },
 
-=======
       }
       },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {
         id: `bot-${Date.now()}`
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours."
@@ -344,7 +322,6 @@ export function ChatBotPanel() {;
   },
 
 
-==============
   }
   },
   return (
@@ -353,8 +330,6 @@ export function ChatBotPanel() {;
         <div className="flex flex-col gap-4">
           {messages.map((message) => (
             <ChatMessage
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  },;
 
   const suggestEscalation = () => {;
     const escalationMessage: Message = {;
@@ -380,9 +355,7 @@ export function ChatBotPanel() {;
       {;
         id: `bot-${Date && Date.now()}`,;
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
-=======
           
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isLoading && (
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
@@ -397,7 +370,6 @@ export function ChatBotPanel() {;
           </p>
           <div className="flex flex-wrap gap-2">
             {QUICK_REPLIES.map((reply) => (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />;
@@ -406,7 +378,6 @@ export function ChatBotPanel() {;
         </div>;
       </ScrollArea>;
       
-=======
             {failedAttempts >= 3 && (
         <div className="px-4 py-3 border-t border-zion-purple/10">
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
@@ -447,10 +418,8 @@ export function ChatBotPanel() {;
 
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
-=======
 
 
-=======;
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>;
@@ -505,16 +474,10 @@ export function ChatBotPanel() {;
             className="bg-zion-cyan hover: bg-zion-cyan/80 text-white">;
 
 }
-=======
-=======  );
 
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const handleQuickReply = (text: string) =>: any {
     handleSendMessage (text);
@@ -655,7 +618,6 @@ export function ChatBotPanel () {
   if (scrollAreaRef.current) {
   scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight 
 }
-<<<<<<< HEAD
 }, [messages]);
 //Focus input when component mounts useEffect ( () => {
   if (inputRef.current) {
@@ -761,9 +723,4 @@ timestamp: new Date ()
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

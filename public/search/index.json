@@ -1,289 +1,92 @@
 [
   {
-    "route": "/2025-advanced-services-showcase",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/2025-comprehensive-services-showcase-v2",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/2025-comprehensive-services-showcase",
-    "title": "",
-    "h1": "2025 Comprehensive Services Showcase"
-  },
-  {
-    "route": "/2026-services-showcase-v3",
-    "title": "Revolutionary 2026 Services Showcase | Zion Tech Group",
-    "h1": "Revolutionary 2026 Services"
-  },
-  {
-    "route": "/2026-services-showcase",
-    "title": "Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+ Solutions",
-    "h1": ""
-  },
-  {
-    "route": "/2027-services-showcase",
-    "title": "2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations & Micro SAAS",
-    "h1": ""
-  },
-  {
-    "route": "/2028-services-showcase",
-    "title": "2028 Revolutionary Services Showcase | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/2029-ultimate-services-showcase",
-    "title": "2029 Ultimate Services Showcase - Zion Tech Group | Revolutionary Technology Solutions",
-    "h1": ""
-  },
-  {
-    "route": "/2029-ultra-futuristic-innovations",
-    "title": "2029 Ultra-Futuristic Innovations | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/2030-revolutionary-services",
-    "title": "2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining",
-    "h1": ""
-  },
-  {
-    "route": "/404",
-    "title": "",
-    "h1": "404 - Page Not Found"
-  },
-  {
-    "route": "/500",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/[slug]",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": "Service not found"
-  },
-  {
     "route": "/_app",
     "title": "",
-    "h1": "";
+    "h1": ""
   },
   {
     "route": "/_document",
     "title": "",
-    "h1": "";
+    "h1": ""
   },
   {
     "route": "/about",
     "title": "About Us - Zion Tech Group",
-    "h1": "About Zion Tech Group";  },
+    "h1": "About Zion Tech Group"
+  },
   {
     "route": "/comprehensive-2025-services-showcase",
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
-    "h1": "2025 Innovative Services Showcase";
-  },
-  {
-    "route": "/comprehensive-pricing",
-    "title": "Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans",
-    "h1": ""
-  },
-  {
-    "route": "/comprehensive-services-showcase-2025",
-    "title": "Comprehensive Services Showcase 2025 - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/contact",
-    "title": "Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services",
-    "h1": "Let's Transform Your Business"
-  },
-  {
-    "route": "/cutting-edge-pricing-2025",
-    "title": "Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions",
-    "h1": ""
-  },
-  {
-    "route": "/cutting-edge-services-showcase-2025",
-    "title": "Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions",
-    "h1": ""
-  },
-  {
-    "route": "/dashboard",
-    "title": "",
-    "h1": "{branding?.name || 'Zion Hire AI'}"
-  },
-  {
-    "route": "/defi-nexus-platform",
-    "title": "DeFi Nexus Platform | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/demos",
-    "title": "Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services",
-    "h1": ""
-  },
-  {
-    "route": "/developer-tools",
-    "title": "Developer Tools & Services | Zion Tech Group - Real Dev Tools with Pricing",
-    "h1": "Professional Developer Tools That Actually Work"
-  },
-  {
-    "route": "/devops-automation",
-    "title": "DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation",
-    "h1": "DevOps Automation"
-  },
-  {
-    "route": "/diversity-inclusion",
-    "title": "Diversity & Inclusion | Zion Tech Group",
-    "h1": "Diversity & Inclusion"
-  },
-  {
-    "route": "/docs",
-    "title": "Documentation | Zion Tech Group",
-    "h1": "Documentation"
-  },
-  {
-    "route": "/download.page",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/download",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/email-validator",
-    "title": "Email Validator - Zion Tech Group",
-    "h1": "Email Validator"
-  },
-  {
-    "route": "/enhanced-home",
-    "title": "",
-    "h1": "Enhanced Home"
-  },
-  {
-    "route": "/enhanced-services-showcase",
-    "title": "Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions",
-    "h1": "Enhanced Services Showcase"
-  },
-  {
-    "route": "/expo",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/favorites",
-    "title": "Favorites — Zion AI Marketplace",
-    "h1": "Saved Talent"
-  },
-  {
-    "route": "/features.page",
-    "title": "",
-    "h1": "Features"
-  },
-  {
-    "route": "/holographic-ai-communication-platform",
-    "title": "Holographic AI Communication Platform - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/iam-access-review",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/incident-automation-suite",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/incubator",
-    "title": "",
-    "h1": "Zion Incubator"
-  },
-  {
-    "route": "/index-enhanced",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/index.page",
-    "title": "",
-    "h1": ""
+    "h1": "2025 Innovative Services Showcase"
   },
   {
     "route": "/",
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
-    "h1": "Zion Tech Group";
+    "h1": "Zion Tech Group"
   },
   {
     "route": "/portfolio",
     "title": "Our Work - Zion Tech Group | Portfolio of Revolutionary Technology Solutions",
-    "h1": "Our Work";  },
+    "h1": "Our Work"
+  },
   {
     "route": "/pricing-2025",
     "title": "2025 Pricing & Services — Zion Tech Group",
-    "h1": "2025 Pricing & Services";
+    "h1": "2025 Pricing & Services"
   },
   {
     "route": "/whitepapers",
     "title": "Whitepapers - Zion Tech Group | Research & Insights",
-    "h1": "Whitepapers & Research";
+    "h1": "Whitepapers & Research"
   },
   {
     "route": "/solutions/enterprise",
     "title": "Enterprise Solutions - Zion Tech Group",
-    "h1": "Enterprise Solutions";
+    "h1": "Enterprise Solutions"
   },
   {
     "route": "/solutions",
     "title": "Technology Solutions - Zion Tech Group",
-    "h1": "Technology Solutions";
+    "h1": "Technology Solutions"
   },
   {
     "route": "/solutions/industry",
     "title": "Industry Specialized Solutions - Zion Tech Group",
-    "h1": "Industry Specialized Solutions";
+    "h1": "Industry Specialized Solutions"
   },
   {
     "route": "/solutions/startups",
     "title": "Startup Tools - Zion Tech Group",
-    "h1": "Startup Tools";
+    "h1": "Startup Tools"
   },
   {
     "route": "/services/ai-ml",
     "title": "AI & Machine Learning Services - Zion Tech Group",
-    "h1": "AI & Machine Learning";
+    "h1": "AI & Machine Learning"
   },
   {
     "route": "/services/cybersecurity",
     "title": "Cybersecurity Services - Zion Tech Group",
-    "h1": "Cybersecurity";
+    "h1": "Cybersecurity"
   },
   {
     "route": "/services/devops",
     "title": "DevOps & Infrastructure Services - Zion Tech Group",
-    "h1": "DevOps & Infrastructure";
+    "h1": "DevOps & Infrastructure"
   },
   {
     "route": "/services/edge-computing",
     "title": "Edge Computing Services - Zion Tech Group",
-    "h1": "Edge Computing";
+    "h1": "Edge Computing"
   },
   {
     "route": "/services/quantum",
     "title": "Quantum Computing Services - Zion Tech Group",
-    "h1": "Quantum Computing";
+    "h1": "Quantum Computing"
   },
   {
     "route": "/services/space-tech",
     "title": "Space Technology Services - Zion Tech Group",
-    "h1": "Space Technology";
-  },
-  {
-    "route": "/services",
-    "title": "Services — Zion Tech Group | AI, Micro SaaS & IT Solutions",
-    "h1": "Our Services";  }
+    "h1": "Space Technology"
+  }
 ]

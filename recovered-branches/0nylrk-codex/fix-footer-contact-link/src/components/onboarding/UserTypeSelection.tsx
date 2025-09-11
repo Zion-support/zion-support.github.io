@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface UserTypeOption {
 
   id: "serviceProvider" | "talent" | "client"
@@ -37,11 +34,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
     }
     },
-=======
 
     },
 
-=======
     }
     },    {
 
@@ -61,8 +56,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
-=======
-=======
 import {useState} from "react";
 import {Briefcase, Star, User} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -155,7 +148,6 @@ function UserTypeSelection() {
       </div>;
       <div className="grid gap - 4 md: grid - cols - 3">;
         {user_types.map ((type) => {
-=======
   ];
   ],
 
@@ -187,9 +179,6 @@ function UserTypeSelection() {
                 isSelected
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple"
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
-=======
-==============
-=======              }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
@@ -198,10 +187,7 @@ function UserTypeSelection() {
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -278,10 +264,7 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
   ],;
 ;
   return (;
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>;
@@ -303,7 +286,6 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
                 isSelected ;
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white";}
-<<<<<<< HEAD
               on_click={() => on_select (type.id)}
               variant="outline";
               className={`h - auto flex flex - col items - center justify - center p - 6 space - y-3 border ${
@@ -326,7 +308,6 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
       </div>;
     </div>);
 }
-<<<<<<< HEAD
                   :"border-zion-blue-light hover:border-zion-cyan/50 text-white";
               }`}
             >;
@@ -347,7 +328,3 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
   );
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

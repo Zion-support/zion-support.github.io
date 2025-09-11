@@ -1,33 +1,73 @@
-import React, { useState } from 'react';
-import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Search, Filter, DollarSign, Users, Clock, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+
+// Mock data for cloud DevOps services
+const cloudDevOpsServices = [
+  {
+    id: 1,
+    name: 'AWS DevOps Pipeline',
+    description: 'Complete CI/CD pipeline setup on AWS',
+    category: 'CI/CD',
+    pricing: 'Enterprise',
+    features: ['Automated testing', 'Blue-green deployment', 'Monitoring'],
+    targetAudience: ['Large enterprises', 'DevOps teams'],
+    duration: '2-4 weeks',
+    price: 15000,
+    userLimit: 'Unlimited users',
+    deliveryTime: '2-4 weeks',
+    contactInfo: {
+      website: 'https://zion.app/contact',
+      email: 'devops@zion.app',
+      phone: '+1-555-0123'
+    }
+  }
+  // Add more services as needed
+];
+
 const CloudDevOpsServices = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPricing, setSelectedPricing] = useState('all');
-    // Cloud & DevOps Services data
-    const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
-    const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
-    const filteredServices = cloudDevOpsServices.filter(service => {
-        const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-        return matchesSearch && matchesCategory && matchesPricing});
-    const getCategoryIcon = (category) => {
-        switch (category) {
-            case 'Cloud Management': return <Cloud className="w-6 h-6"/>;
-            case 'Container Orchestration': return <Server className="w-6 h-6"/>;
-            case 'DevOps Automation': return <GitBranch className="w-6 h-6"/>;
-            case 'Serverless': return <Zap className="w-6 h-6"/>;
-            case 'Infrastructure': return <Server className="w-6 h-6"/>;
-            case 'Security': return <Shield className="w-6 h-6"/>;
-            default: return <Code className="w-6 h-6"/>}
-    };
-    const getPricingColor = (pricing) => {
-        switch (pricing) {
-            case 'Enterprise': return 'text-purple-400';
-            case 'Professional': return 'text-blue-400';
-            case 'Standard': return 'text-green-400';
-            default: return 'text-gray-400'}
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedPricing, setSelectedPricing] = useState('All');
+
+  // Extract unique categories and pricing options
+  const categories = useMemo(() => {
+    const cats = ['All', ...Array.from(new Set(cloudDevOpsServices.map(service => service.category)))];
+    return cats;
+  }, []);
+
+  const pricingOptions = useMemo(() => {
+    const pricing = ['All', ...Array.from(new Set(cloudDevOpsServices.map(service => service.pricing)))];
+    return pricing;
+  }, []);
+
+  const filteredServices = cloudDevOpsServices.filter((service: any) => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesPricing = selectedPricing === 'All' || service.pricing === selectedPricing;
+    return matchesSearch && matchesCategory && matchesPricing;
+  });
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'CI/CD': return <Clock className="w-5 h-5" />;
+      case 'Monitoring': return <CheckCircle className="w-5 h-5" />;
+      case 'Security': return <Users className="w-5 h-5" />;
+      default: return <Search className="w-5 h-5" />;
+    }
+  };
+
+  const getPricingColor = (pricing: string) => {
+    switch (pricing) {
+      case 'Starter': return 'text-green-400 bg-green-500/20';
+      case 'Professional': return 'text-blue-400 bg-blue-500/20';
+      case 'Enterprise': return 'text-purple-400 bg-purple-500/20';
+      default: return 'text-gray-400 bg-gray-500/20';
+    }
+  };
+
+  return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">

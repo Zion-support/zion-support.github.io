@@ -19,25 +19,18 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
 
   Popover,
   PopoverContent,
   PopoverTrigger,;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5=======
 
 
-=======
-=======
 
 import React from 'react',
 import { format } from 'date-fns',
@@ -49,7 +42,6 @@ import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -67,7 +59,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               <Button
                 variant={"outline"}
                 className={cn(
-=======
               selected={startDate}
               onSelect={setStartDate}
               disabled={(date) => date > new Date()}import React from 'react',;
@@ -87,8 +78,6 @@ interface DateFieldsProps {;
 ;
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {;
   return (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
@@ -102,11 +91,8 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                   "w-full md: w-[240px] pl-3 text-left font-normal"
 
                   "w-full md:w-[240px] pl-3 text-left font-normal",
-=======
-=======
 
                   "w-full md:w-[240px] pl-3 text-left font-normal",
-=======
                   "w-full md: w-[240px] pl-3 text-left font-normal"
 
                   "w-full md:w-[240px] pl-3 text-left font-normal",                  !endDate && "text-muted-foreground"
@@ -126,11 +112,9 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               selected={endDate}
               onSelect={setEndDate}
 
-=======              disabled={(date) =>;
                 date < new Date();
               }
 
-=======
               disabled={(date) =>;
                 date < new Date();
               }
@@ -222,17 +206,9 @@ function DateFields() {
       </div>;
 
 
-=======    </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

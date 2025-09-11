@@ -6,8 +6,6 @@ function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
   
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
     useEffect(() => {
@@ -15,7 +13,6 @@ function InterviewsContent() {
 
     const loadInterviews = async () => {
       await fetchInterviews()
-=======        ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
@@ -35,7 +32,6 @@ function InterviewsContent() {
         </div>;
 
 
-=======import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
 import { AppHeader } from '@/layout / AppHeader';
@@ -206,8 +202,6 @@ if ( {) {
     </>;
   );
 }
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -217,7 +211,6 @@ if ( {) {
 }
 
 
-=======
 
           </TabsContent>;
         </Tabs>;
@@ -236,11 +229,9 @@ export default function Interviews() {;
   );
 }
 
-=======
 ;
 
 
-=======    </>);
 }
 export default /**
  * Interviews - Function description
@@ -251,8 +242,6 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>;
   ),;
 }
@@ -266,9 +255,3 @@ export default function Interviews() {;
 }
 ;
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

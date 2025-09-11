@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React from './react';
 import { CheckCircle, Smartphone, Users, Star, Mail } from './lucide-react';
 
@@ -20,8 +18,6 @@ export const MobileFeatureShowcase: React.FC = () => {
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />
       title: "Hire from Anywhere"
-==============
-=======
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
 
@@ -33,7 +29,6 @@ export const MobileFeatureShowcase: React.FC = () => {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
 
     },
@@ -41,7 +36,6 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
@@ -49,14 +43,11 @@ export const MobileFeatureShowcase: React.FC = () => {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
@@ -64,19 +55,15 @@ export const MobileFeatureShowcase: React.FC = () => {
 
     }
     },
-=======
 
     },
 
-=======
     }
     },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
       description: "Chat with candidates or clients and receive notifications in real-time."
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     },
 
@@ -153,10 +140,7 @@ export const MobileFeatureShowcase:React.FC = () => {;
   ],;
 ;
   return (;
-=======
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section id="features" className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -180,16 +164,10 @@ export const MobileFeatureShowcase:React.FC = () => {;
             </div>;
 
 };
-=======
-=======  );
 
 
 
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
       title: "Hire from Anywhere",
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
@@ -244,7 +222,6 @@ export const MobileFeatureShowcase:React.FC = () => {;
     </section>);
 }
 ;
-<<<<<<< HEAD
   ),;
 },; const features = [ {
   Everything You Need On The Go </h2> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto" > The Zion mobile app brings the power of our AI marketplace to your pocket with these key features </p> </div> <div key= {
@@ -254,8 +231,3 @@ export const MobileFeatureShowcase:React.FC = () => {;
 };
   );
 };
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

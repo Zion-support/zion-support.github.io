@@ -18,7 +18,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 const \"Contact\": NextPage = () => {;
-=======
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -126,7 +125,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
@@ -134,7 +132,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
                 <motion.form
-=======
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -174,7 +171,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                       Service Interest
                     </label>
-=======
                        />;
                     </div>;
                   </div>;
@@ -195,7 +191,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                       ))}
                       Message *
                     </label>
-=======
                     </select>;
                   </div>;
                   <div className=\"mb-6\">;
@@ -216,7 +211,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                     type=\"submit\"
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -237,11 +231,8 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
               {/* Contact Form */}
 
 
-<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -303,8 +294,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
-<<<<<<< HEAD
-=======
+
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -382,63 +372,34 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>;
               {/* Contact Information */}
 
-          </section>
-              <div className=\"space-y-8\">;
-                <div>;
-                  <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>;
-                  <p className=\"text-lg text-gray-300 mb-8\">;
-                    We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.;
-                  </p>;
-                </div>;
-                <div className=\"space-y-6\">;
-                <div className="space-y-6">;
-                  {contactInfo && contactInfo.map((info, index) => (;
-                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">;
-                      <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">;
-                        <info && info.icon className=\"w-6 h-6 text-white\" />;
-                      </div>;
-                      <div>;
-                        <h3 className=\"text-lg font-semibold text-white mb-1\">{info && info.title}</h3>;
-                        <p className=\"text-cyan-400 font-medium mb-1\">{info && info.details}</p>;
-                        <p className=\"text-gray-400 text-sm\">{info && info.description}</p>;
-                      </div>;
-                    </div>;
-                  ))}
-                </div>;
-              </div>;
-            </div>;
-          </section>;
-=======
 
           {/* Services Overview */}
-          <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
-              <motion.div
+          <section className="py-20">;
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
+              <motion&& motion.div
                 initial={{ opacity: 0, "y": 20 }}
                 animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
-                  Our Services
-                </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Comprehensive technology solutions to meet all your business needs
-                </p>
-              </motion.div>
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
-                {services.map((service, index) => (
-                  <motion.div
+                transition={{ "duration": 0 && 0.6 }}
+                className="text-center mb-16">;
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
+                  Our Services;
+                </h2>;
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                  Comprehensive technology solutions to meet all your business needs;
+                </p>;
+              </motion && motion.div>;
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">;
+                {services && services.map((service, index) => (;
+                  <motion&& motion.div
                     key={index}
                     initial={{ "opacity": 0, "y": 20 }}
                     animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center"
-                  >
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;
+                    <h3 className="text-lg font-semibold text-gray-900">;
                       {service}
-                    </h3>
-                  </motion.div>
+                    </h3>;
+                  </motion && motion.div>;
                 ))}
               </div>;
             </div>;
@@ -450,16 +411,24 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 }
 
 
-
-
-<<<<<<< HEAD
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-}
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          </div>
+        </section>
+      </div>
+    </>
+=======
+export default ContactPage;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/contact.tsx
+  );
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -1,10 +1,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function FeatureHighlights() {
 
   const highlightsData = [
@@ -41,7 +38,6 @@ export function FeatureHighlights() {;
   ];
 ;
   return (
-=======import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
 export function FeatureHighlights() {;
@@ -49,8 +45,6 @@ export function FeatureHighlights() {;
     {;
       title: "For Talent Seekers",;
       features: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -78,7 +72,6 @@ export function FeatureHighlights() {;
             </Card>;
           ))}
 
-=======    <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
           <h2 className="text - 3xl font - bold text - white mb - 3">Tailored Solutions for Everyone</h2>;
@@ -104,8 +97,6 @@ export function FeatureHighlights() {;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  export function FeatureHighlights () {
   const highlightsData = [ {
@@ -160,9 +151,3 @@ return (<section className="py-16 bg-zion-blue" > <div className="container mx-a
     </section>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

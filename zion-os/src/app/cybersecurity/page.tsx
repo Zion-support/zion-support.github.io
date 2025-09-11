@@ -1,6 +1,4 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
 import Link from "next/link";
 export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
   description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
@@ -15,13 +13,10 @@ export default function CybersecurityPage() {;
     <div className="min-h-screen">;
             security solutions. From threat detection to compliance management;
             security solutions. From threat detection to compliance management,;
-=======
             security solutions. From threat detection to compliance management,
 
-=======
 
             security solutions. From threat detection to compliance management,;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             we secure your digital assets and ensure business continuity.;
           </p>;
         </div>;
@@ -127,11 +122,8 @@ export default function CybersecurityPage() {;
               <p className="text-gray-400 mb-4">;
                 Comprehensive security assessments including penetration testing;
                 Comprehensive security assessments including penetration testing,;
-=======
-=======
 
                 Comprehensive security assessments including penetration testing,;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 vulnerability scanning, and risk analysis.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -157,10 +149,6 @@ export default function CybersecurityPage() {;
 
 
                 GDPR, and industry-specific regulations.;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <h3 className="text - xl font - semibold mb - 3">Compliance Management</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Ensure compliance with industry standards including SOC2, ISO 27001,
@@ -168,19 +156,6 @@ export default function CybersecurityPage() {;
               <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>;
               <p className="text-gray-400 mb-4">;
                 Ensure compliance with industry standards including SOC2, ISO 27001;
-<<<<<<< HEAD
-=======
-                Ensure compliance with industry standards including SOC2, ISO 27001,;
-                GDPR, and industry-specific regulations.;
-=======
-              <h3 className="text - xl font - semibold mb - 3">Compliance Management</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Ensure compliance with industry standards including SOC2, ISO 27001,
-                GDPR, and industry - specific regulations.;
-=======
-              <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>;
-              <p className="text-gray-400 mb-4">;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Ensure compliance with industry standards including SOC2, ISO 27001,;
                 GDPR, and industry-specific regulations.;
               </p>;

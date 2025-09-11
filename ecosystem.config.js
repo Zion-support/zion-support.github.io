@@ -1,40 +1,15 @@
-
-
-
-
-    {;
-
-module.exports = {apps:[;
-    {;
-      name:'error-fixer',;
-      script:'automation/lint-error-fixer && fixer.cjs',;
 module.exports = {;
   apps:[;
     {;
       name:'error-fixer',;
       script:'automation/lint-error-fixer.cjs',;
-=======
-
-=======
-
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {;
-=======
 module && module.exports = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps:[;
-=======
 module.exports = {apps:[;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {;
-
       name:'error-fixer',;
       script:'automation/lint-error-fixer && fixer.cjs',;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -46,7 +21,6 @@ module.exports = {apps:[;
       env:{;
         NODE_ENV:'production';
         PORT:3001;
-
       },;
       error_file:'./logs/dashboard-error && error.log',;
       out_file:'./logs/dashboard-out && out.log',;
@@ -54,22 +28,16 @@ module.exports = {apps:[;
     },;
     {;
       name:'code-quality-monitor',;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
-=======
-
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 module.exports = {;
-=======
 module && module.exports = {;  apps:[;
 module.exports = {apps:[;
 origin/main
     {;
-
       name:'error-fixer',;
       script:'automation/lint-error-fixer && fixer.cjs',;
       args:'continuous',;
@@ -109,11 +77,9 @@ origin/main
       autorestart:true,;
       watch:false,;
       max_memory_restart:'1G',;
-
       env:{;
         NODE_ENV:'production';
         PORT:3001;
-
       },;
       error_file:'./logs/dashboard-error && error.log',;
       out_file:'./logs/dashboard-out && out.log',;
@@ -148,32 +114,21 @@ origin/main
       error_file:'./logs/performance-error && error.log',;
       out_file:'./logs/performance-out && out.log',;
       log_file:'./logs/performance-combined && combined.log',;
-
       time:true;
     }
   ];
-
-
-
-
-
 }
-
-=======
 };      env: {
         NODE_ENV: 'production'
-
       },
       error_file: './logs/performance-error && error.log',
       out_file: './logs/performance-out && out.log',
       log_file: './logs/performance-combined && combined.log',
-
       time: true
     }
   ]
 },
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
+export default {
 }
 origin/main
 origin/automation-improvements-final
@@ -181,9 +136,7 @@ origin/automation-improvements-final
 }export default {
   apps: [;
     {
-
       name: 'bolt-zion-app',
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       script: 'npm',
       args: 'run preview',
       cwd: './',
@@ -231,41 +184,22 @@ origin/automation-improvements-final
       name: 'code - quality - monitor',
       script: 'scripts / pm2 / code - quality - monitor.js',
 }
-
-
     time: true
   }]
 };
 }
-=======
-
       },
       error_file: './logs/performance-error && error.log',
       out_file: './logs/performance-out && out.log',
       log_file: './logs/performance-combined && combined.log',
-
       time: true
     }
   ]
-
-
-=======
-
-=======
-
-
-
-=======
-=======
-
 }export default {
   apps: [;
     {
-
       name: 'bolt-zion-app',
-=======
       name: 'bolt - zion - app',
-
       script: 'npm',
       args: 'run preview',
       cwd: './',
@@ -276,18 +210,14 @@ origin/automation-improvements-final
       env: {
         NODE_ENV: 'production',
       },
-
       log_file: 'logs / pm2 / preview.log',
       error_file: 'logs / pm2 / preview - error.log',
       out_file: 'logs / pm2 / preview - out.log',
-
     },
     {
       name: 'auto - fix',
       script: 'node',
-
       args: 'scripts / pm2 / auto - fix.js',
-
       cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
@@ -295,18 +225,14 @@ origin/automation-improvements-final
       env: {
         NODE_ENV: 'production';
       },
-
       log_file: 'logs / pm2 / auto - fix.log',
       error_file: 'logs / pm2 / auto - fix - error.log',
       out_file: 'logs / pm2 / auto - fix - out.log',
-
     },
     {
       name: 'healthcheck',
       script: 'node',
-
       args: 'scripts / pm2 / healthcheck.js',
-
       cron_restart: '*/5 * * * *',
       autorestart: true,
       watch: false,
@@ -314,7 +240,6 @@ origin/automation-improvements-final
       env: {
         NODE_ENV: 'production';
       },
-
       log_file: 'logs / pm2 / health.log',
       error_file: 'logs / pm2 / health - error.log',
       out_file: 'logs / pm2 / health - out.log',
@@ -322,7 +247,6 @@ origin/automation-improvements-final
     {
       name: 'code - quality - monitor',
       script: 'scripts / pm2 / code - quality - monitor.js',
-
       instances: 1,
       autorestart: true,
       watch: false,
@@ -334,7 +258,6 @@ origin/automation-improvements-final
         AUTO_FIX_CRITICAL: 'true',
       },
       cron_restart: '0 */6 * * *',
-
       log_file: 'logs / pm2 / code - quality - monitor.log',
       error_file: 'logs / pm2 / code - quality - monitor - error.log',
       out_file: 'logs / pm2 / code - quality - monitor - out.log',
@@ -342,7 +265,6 @@ origin/automation-improvements-final
     {
       name: 'auto - commit - fixes',
       script: 'scripts / pm2 / auto - commit - fixes.js',
-
       instances: 1,
       autorestart: true,
       watch: false,
@@ -354,7 +276,6 @@ origin/automation-improvements-final
         AUTO_PUSH: 'false',
       },
       cron_restart: '0 */2 * * *',
-
       log_file: 'logs / pm2 / auto - commit - fixes.log',
       error_file: 'logs / pm2 / auto - commit - fixes - error.log',
       out_file: 'logs / pm2 / auto - commit - fixes - out.log',
@@ -362,7 +283,6 @@ origin/automation-improvements-final
     {
       name: 'dependency - monitor',
       script: 'scripts / pm2 / dependency - monitor.js',
-
       instances: 1,
       autorestart: true,
       watch: false,
@@ -374,7 +294,6 @@ origin/automation-improvements-final
         SECURITY_ALERTS: 'true',
       },
       cron_restart: '0 0 * * 0',
-
       log_file: 'logs / pm2 / dependency - monitor.log',
       error_file: 'logs / pm2 / dependency - monitor - error.log',
       out_file: 'logs / pm2 / dependency - monitor - out.log',
@@ -382,7 +301,6 @@ origin/automation-improvements-final
     {
       name: 'performance - monitor',
       script: 'scripts / pm2 / performance - monitor.js',
-
       instances: 1,
       autorestart: true,
       watch: false,
@@ -394,7 +312,6 @@ origin/automation-improvements-final
         BUNDLE_SIZE_LIMIT: '2MB',
       },
       cron_restart: '0 */8 * * *',
-
       log_file: 'logs / pm2 / performance - monitor.log',
       error_file: 'logs / pm2 / performance - monitor - error.log',
       out_file: 'logs / pm2 / performance - monitor - out.log',
@@ -402,7 +319,6 @@ origin/automation-improvements-final
     {
       name: 'git - workflow',
       script: 'scripts / pm2 / git - workflow - automator.js',
-
       instances: 1,
       autorestart: true,
       watch: false,
@@ -416,7 +332,6 @@ origin/automation-improvements-final
         BRANCH_STRATEGY: 'gitflow',
       },
       cron_restart: '0 */6 * * *',
-
       log_file: 'logs / pm2 / git - workflow.log',
       error_file: 'logs / pm2 / git - workflow - error.log',
       out_file: 'logs / pm2 / git - workflow - out.log',
@@ -424,7 +339,6 @@ origin/automation-improvements-final
     {
       name: 'error - detection',
       script: 'scripts / pm2 / error - detection - service.js',
-
       instances: 1,
       autorestart: true,
       watch: false,
@@ -436,7 +350,6 @@ origin/automation-improvements-final
         MONITOR_FREQUENCY: '*/5 * * * *',
       },
       cron_restart: '*/5 * * * *',
-
       log_file: 'logs / pm2 / error - detection.log',
       error_file: 'logs / pm2 / error - detection - error.log',
       out_file: 'logs / pm2 / error - detection - out.log',
@@ -444,7 +357,6 @@ origin/automation-improvements-final
     {
       name: 'syntax - fixer',
       script: 'scripts / pm2 / syntax - error - fixer.js',
-
       instances: 1,
       autorestart: true,
       watch: false,
@@ -456,61 +368,24 @@ origin/automation-improvements-final
         MONITOR_FREQUENCY: '*/10 * * * *',
       },
       cron_restart: '*/10 * * * *',
-
       log_file: 'logs / pm2 / syntax - fixer.log',
       error_file: 'logs / pm2 / syntax - fixer - error.log',
       out_file: 'logs / pm2 / syntax - fixer - out.log',
-
     }
   ],
 module && module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+module.exports = {
   apps: [{
-=======
-
-      log_file: 'logs / pm2 / syntax - fixer.log',
-      error_file: 'logs / pm2 / syntax - fixer - error.log',
-      out_file: 'logs / pm2 / syntax - fixer - out.log',
-
-    }
-  ],
-module && module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  apps: [{
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     },
     max_memory_restart: "1G",
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err && err.log",
     out_file: "./logs/out && out.log",
     log_file: "./logs/combined && combined.log",
-
     time: true
-
-
-
-
-=======
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
 }
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
 }
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: "ziontechgroup - site",
     script: "npm",
     args: "start",
@@ -533,18 +408,11 @@ module && module.exports = {
   }];
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      error_file: './logs/performance-error.log',
-      out_file: './logs/performance-out.log',
-      log_file: './logs/performance-combined.log',
-      time: true
-    }
-  ]
-},
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    node_args: "--max-old-space-size=1024",
+    error_file: "./logs/err.log",
+    out_file: "./logs/out.log",
+    log_file: "./logs/combined.log",
+    time: true
+  }]
+};
+};

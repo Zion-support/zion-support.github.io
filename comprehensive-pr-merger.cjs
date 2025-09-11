@@ -2,18 +2,17 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 
-console.log('🚀 Comprehensive PR Merger - Processing All Remaining Branches')
+console.log('🚀 Comprehensive PR Merger - Processing All Open Branches')
+console.log('========================================================')
 
 class ComprehensivePRMerger {
   constructor() {
     this.processedBranches = []
     this.mergedBranches = []
     this.failedBranches = []
-    this.skippedBranches = []
     this.conflictsResolved = 0
     this.startTime = Date.now()
-    this.batchSize = 5
-    this.maxRetries = 3
+    this.batchSize = 5 // Process branches in batches
   }
 
   log(message, type = 'info') {
@@ -29,14 +28,14 @@ class ComprehensivePRMerger {
         encoding: 'utf8', 
         stdio: 'pipe',
         cwd: process.cwd(),
-        maxBuffer: 1024 * 1024 * 100 // 100MB buffer
+        maxBuffer: 1024 * 1024 * 10 // 10MB buffer
       })
       this.log(`✅ ${description} completed successfully`, 'success')
       return result
     } catch (error) {
-      if (retries < this.maxRetries && error.message.includes('ENOBUFS')) {
-        this.log(`⚠️  ENOBUFS error, retrying (${retries + 1}/${this.maxRetries})`, 'warning')
-        await new Promise(resolve => setTimeout(resolve, 2000))
+      if (retries < 2 && (error.message.includes('ENOBUFS') || error.message.includes('timeout'))) {
+        this.log(`⚠️  Error, retrying (${retries + 1}/2)`, 'warning')
+        await new Promise(resolve => setTimeout(resolve, 3000))
         return this.runCommand(command, description, retries + 1)
       }
       this.log(`❌ ${description} failed: ${error.message}`, 'error')
@@ -44,22 +43,31 @@ class ComprehensivePRMerger {
     }
   }
 
-  async getAllRemainingBranches() {
+  async getBranchesToProcess() {
     try {
-      const result = await this.runCommand('git branch -r', 'Getting all remote branches')
-      const branches = result.split('\n')
-        .map(branch => branch.trim())
-        .filter(branch => branch && !branch.includes('HEAD') && branch.startsWith('origin/'))
-        .map(branch => branch.replace('origin/', ''))
-        .filter(branch => branch !== 'main')
-        .filter(branch => !branch.includes('backup-'))
-        .filter(branch => !branch.includes('cursor/'))
-        .filter(branch => branch.match(/(chore|fix|feature|codex)/i))
-      
-      this.log(`Found ${branches.length} remaining branches to process`)
-      return branches
+      // Get all remote branches that look like PRs
+      const branches = execSync('git branch -r | grep -E "(codex|fix|feature)" | grep -v "origin/main" | head -50', {
+        encoding: 'utf8',
+        maxBuffer: 1024 * 1024 * 5
+      }).trim().split('\n').filter(b => b.trim())
+
+      // Filter out already processed branches
+      const processedBranches = [
+        'origin/0nylrk-codex/fix-footer-contact-link',
+        'origin/0parff-codex/centralize-api-error-handling-and-add-errorboundary',
+        'origin/0smfo8-codex/fix-404-error-for-non-existent-route',
+        'origin/0t8m4m-codex/update-project-color-palette',
+        'origin/0une71-codex/fix-unsupported-shell-syntax-in-setup.sh',
+        'origin/14gqd5-codex/implement-checkout-flow-with-auth-redirect',
+        'origin/1dcwqi-codex/implement-global-pricing-with-currency-selection',
+        'origin/1fjs4s-codex/implement-instant-messaging-for-negotiations',
+        'origin/1m9jcs-codex/fix-client-side-rendering-and-javascript-errors',
+        'origin/1nc0kn-codex/fix-blank-screen-on-app-load'
+      ]
+
+      return branches.filter(branch => !processedBranches.includes(branch.trim()))
     } catch (error) {
-      this.log(`Error getting remote branches: ${error.message}`, 'error')
+      this.log(`Error getting branches: ${error.message}`, 'error')
       return []
     }
   }
@@ -69,7 +77,9 @@ class ComprehensivePRMerger {
       this.log(`Processing branch: ${branchName}`)
       this.processedBranches.push(branchName)
 
-      // Fetch the latest changes
+      // Start with fresh main
+      await this.runCommand('git checkout main', 'Switching to main')
+      await this.runCommand('git pull --rebase origin main', 'Pulling latest main')
       await this.runCommand('git fetch origin', 'Fetching latest changes')
 
       // Checkout the branch
@@ -93,8 +103,9 @@ class ComprehensivePRMerger {
       // Push the updated branch
       await this.runCommand(`git push origin ${branchName}`, `Pushing updated ${branchName}`)
 
-      // Switch back to main
+      // Switch back to main and merge
       await this.runCommand('git checkout main', 'Switching back to main')
+      await this.runCommand('git pull --rebase origin main', 'Pulling latest main before merge')
 
       // Merge the branch into main
       await this.runCommand(`git merge ${branchName} --no-ff -m "Merge ${branchName} into main"`, `Merging ${branchName} into main`)
@@ -119,6 +130,7 @@ class ComprehensivePRMerger {
       // Switch back to main on error
       try {
         await this.runCommand('git checkout main', 'Switching back to main after error')
+        await this.runCommand('git pull --rebase origin main', 'Pulling latest main after error')
       } catch (checkoutError) {
         this.log(`Error switching back to main: ${checkoutError.message}`, 'error')
       }
@@ -130,7 +142,7 @@ class ComprehensivePRMerger {
       // Get list of files with conflicts
       const conflictFiles = execSync('git diff --name-only --diff-filter=U', {
         encoding: 'utf8',
-        maxBuffer: 1024 * 1024 * 10 // 10MB buffer
+        maxBuffer: 1024 * 1024 * 5 // 5MB buffer
       }).trim().split('\n').filter(f => f)
 
       this.log(`Resolving conflicts in ${conflictFiles.length} files for ${branchName}`)
@@ -161,43 +173,39 @@ class ComprehensivePRMerger {
     }
   }
 
+  async processBatch(branches) {
+    this.log(`Processing batch of ${branches.length} branches`)
+    
+    for (const branch of branches) {
+      try {
+        await this.processBranch(branch)
+        // Small delay between branches
+        await new Promise(resolve => setTimeout(resolve, 2000))
+      } catch (error) {
+        this.log(`Failed to process ${branch}: ${error.message}`, 'error')
+      }
+    }
+  }
+
   async runAutomation() {
     try {
-      this.log('Starting comprehensive PR merge automation...')
+      this.log('Starting comprehensive PR processing...')
 
-      // Get all remaining branches
-      const branches = await this.getAllRemainingBranches()
-
-      if (branches.length === 0) {
-        this.log('No branches to process', 'info')
-        return
-      }
+      // Get all branches to process
+      const allBranches = await this.getBranchesToProcess()
+      this.log(`Found ${allBranches.length} branches to process`)
 
       // Process branches in batches
-      for (let i = 0; i < branches.length; i += this.batchSize) {
-        const batch = branches.slice(i, i + this.batchSize)
-        this.log(`Processing batch ${Math.floor(i/this.batchSize) + 1}/${Math.ceil(branches.length/this.batchSize)} (${batch.length} branches)`)
-
-        for (const branch of batch) {
-          try {
-            await this.processBranch(branch)
-            // Small delay between branches
-            await new Promise(resolve => setTimeout(resolve, 1000))
-          } catch (error) {
-            this.log(`Failed to process ${branch}: ${error.message}`, 'error')
-          }
-        }
-
-        // Longer delay between batches
-        await new Promise(resolve => setTimeout(resolve, 5000))
+      for (let i = 0; i < allBranches.length; i += this.batchSize) {
+        const batch = allBranches.slice(i, i + this.batchSize)
+        this.log(`Processing batch ${Math.floor(i / this.batchSize) + 1}/${Math.ceil(allBranches.length / this.batchSize)}`)
         
-        // Pull latest changes every 10 batches
-        if ((i / this.batchSize) % 10 === 0) {
-          try {
-            await this.runCommand('git pull --rebase origin main', 'Pulling latest changes')
-          } catch (pullError) {
-            this.log(`Warning: Could not pull latest changes: ${pullError.message}`, 'warning')
-          }
+        await this.processBatch(batch)
+        
+        // Longer delay between batches
+        if (i + this.batchSize < allBranches.length) {
+          this.log('Waiting before next batch...')
+          await new Promise(resolve => setTimeout(resolve, 10000))
         }
       }
 
@@ -227,10 +235,15 @@ class ComprehensivePRMerger {
     }
 
     // Save report to file
-    fs.writeFileSync('comprehensive-pr-merge-report.json', JSON.stringify(report, null, 2))
+    fs.writeFileSync('comprehensive-pr-merger-report.json', JSON.stringify(report, null, 2))
 
     // Display summary
+<<<<<<< HEAD
+    console.log('\n🎉 Comprehensive PR Processing Complete!')
+    console.log('========================================')
+=======
     console.log('\n🎉 Comprehensive PR Merge Complete!')
+>>>>>>> f486c088f70cf83d108c340ae5c03420e8c8e219
     console.log(`Total branches processed: ${this.processedBranches.length}`)
     console.log(`Successfully merged: ${this.mergedBranches.length}`)
     console.log(`Failed branches: ${this.failedBranches.length}`)
@@ -239,22 +252,19 @@ class ComprehensivePRMerger {
 
     if (this.failedBranches.length > 0) {
       console.log('\n❌ Failed branches:')
-      this.failedBranches.slice(0, 10).forEach(failure => {
+      this.failedBranches.forEach(failure => {
         console.log(`  - ${failure.branch}: ${failure.error}`)
       })
-      if (this.failedBranches.length > 10) {
-        console.log(`  ... and ${this.failedBranches.length - 10} more`)
-      }
     }
 
-    console.log('\n📊 Detailed report saved to: comprehensive-pr-merge-report.json')
+    console.log('\n📊 Detailed report saved to: comprehensive-pr-merger-report.json')
   }
 }
 
 // Run the automation
 const automation = new ComprehensivePRMerger()
 automation.runAutomation().then(() => {
-  console.log('\n🚀 Comprehensive PR merge automation completed!')
+  console.log('\n🚀 Comprehensive PR processing completed!')
 }).catch(error => {
   console.error('Automation failed:', error.message)
   process.exit(1)

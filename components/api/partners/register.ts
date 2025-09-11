@@ -24,7 +24,6 @@
   }
 
 
-=======import type { NextApiRequest, NextApiResponse } from './next';
 import { create_partner  } from '../../../utils / api / partner_auth';
 ;
 export default async /**
@@ -42,7 +41,6 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-=======
 
   }
 }}
@@ -156,12 +154,5 @@ export default async function handler(
 
 }
 }
-==============
-=======
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

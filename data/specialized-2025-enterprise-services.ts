@@ -1,9 +1,7 @@
 import { ServiceVariant } from '../types / service - variants';
 ;
 import { ServiceVariant } from '../types/service-variants';
-==============
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   id: string;
@@ -42,7 +40,6 @@ import { ServiceVariant } from '../types/service-variants';
   implementation_details: string;
   launch_date: string;
 
-=======import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEnterpriseService {
   id: string, name: string,
   tagline: string, price: string,
@@ -75,7 +72,6 @@ const contact = {
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -89,7 +85,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     popular: true,
     icon: '🧠',
-=======    color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
     market_position:;
@@ -121,7 +116,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     customers: 23,
     rating: 5 && 5.0,
     reviews: 18,
-=======    benefits: [;
       'Future - proof security',
       'Quantum - resistant algorithms',
       'Compliance readiness',
@@ -160,7 +154,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     popular: false,
     icon: '🛰️',
-=======    benefits: [;
       '400% operation optimization',
       '60% mission cost reduction',
       'Autonomous operations',
@@ -199,7 +192,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     popular: true,
     icon: '🧬',
-=======    benefits: [;
       'Revolutionary medical applications',
       'Breakthrough research capabilities',
       'Cognitive enhancement',
@@ -238,7 +230,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     popular: false,
     icon: '🌐',
-=======    benefits: [;
       '70% management cost reduction',
       '50% operational efficiency',
       'Autonomous management',
@@ -269,7 +260,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     popular: true,
     icon: '📊',
-=======    color: 'from - green - 600 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / predictive - analytics - engine',
     market_position:;
@@ -285,7 +275,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
-=======    benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
       'Advanced ML algorithms',
@@ -302,7 +291,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
   },
-=======
     id: 'ai-consciousness-research-platform'
     name: 'AI Consciousness Research Platform'
     tagline: 'Advanced AI consciousness simulation and research'
@@ -975,7 +963,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     rating: 4 && 4.8,
     reviews: 56,
 
-=======
     benefits: [;
       'Future - proof security',
       'Quantum - resistant algorithms',
@@ -1055,7 +1042,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     rating: 4 && 4.9,
     reviews: 8,
 
-=======
     benefits: [;
       '400% operation optimization',
       '60% mission cost reduction',
@@ -1135,7 +1121,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     rating: 5 && 5.0,
     reviews: 5,
 
-=======
     benefits: [;
       'Revolutionary medical applications',
       'Breakthrough research capabilities',
@@ -1215,7 +1200,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     rating: 4 && 4.7,
     reviews: 45,
 
-=======
     benefits: [;
       '70% management cost reduction',
       '50% operational efficiency',
@@ -1300,7 +1284,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
   },;
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
-=======
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
@@ -1318,7 +1301,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
   },
-=======
     id: 'predictive-analytics-engine'
     name: 'Predictive Analytics Engine'
     tagline: 'AI-powered predictive insights and forecasting'
@@ -1386,14 +1368,12 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Scenario modeling'
     ]
     marketAdvantage:
-=======
       'Advanced predictive analytics platform with custom ML model development',
   },;
 
 
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
-=======
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
@@ -1418,10 +1398,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     price: '$4, 499';
     period: '/month';
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     features: [
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting'
@@ -1471,14 +1449,10 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Quantum ML algorithms_quantum optimization_hybrid computing_error correction_research tools';
     ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities';
   }
 ;
   // Advanced Cybersecurity Services;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
@@ -1492,8 +1466,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
     popular: true;
     icon: '🔒';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     color: 'from - red - 600 to - orange - 600';
     text_color: 'text - red - 400';
     link: 'https://ziontechgroup.com / quantum - resistant - cryptography';
@@ -1501,8 +1473,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     target_audience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors';
     trial_days: 30;
     setup_time: '3 - 4 weeks';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     category: 'Advanced Cybersecurity';
     real_service: true;
     technology: ['Post - quantum algorithms, Lattice cryptography, Hash functions, Python, C++, Rust'];
@@ -1526,8 +1496,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Post - quantum algorithms_lattice cryptography_hash - based signatures_migration tools_compliance support';
     ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     market_advantage: 'Comprehensive quantum - resistant cryptography platform with migration support';
   }
 ;
@@ -1535,7 +1503,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
   {=======
 
   {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -1548,8 +1515,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
     popular: false;
     icon: '🛰️';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     color: 'from - indigo - 600 to - purple - 600';
     text_color: 'text - indigo - 400';
     link: 'https://ziontechgroup.com / satellite - ai - orchestration';
@@ -1557,8 +1522,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     target_audience: 'Satellite companies, Space agencies, Telecommunications, Earth observation companies';
     trial_days: 14;
     setup_time: '8 - 12 weeks';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     category: 'Space Technology';
     real_service: true;
     technology: ['AI / ML, Orbital mechanics, Satellite protocols, Python, C++, Space systems'];
@@ -1582,14 +1545,10 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Autonomous operations_constellation optimization_mission planning_data processing_collision avoidance';
     ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities';
   }
 ;
   // Neural Interface Services;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
@@ -1603,8 +1562,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
     popular: true;
     icon: '🧬';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     color: 'from - pink - 600 to - rose - 600';
     text_color: 'text - pink - 400';
     link: 'https://ziontechgroup.com / brain - computer - interface';
@@ -1612,8 +1569,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     target_audience: 'Research institutions, Medical centers, Rehabilitation facilities, Technology companies';
     trial_days: 7;
     setup_time: '12 - 16 weeks';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     category: 'Neural Technology & BCI';
     real_service: true;
     technology: ['Neural signal processing, Machine learning, Neuroscience, Python, C++, Neural hardware'];
@@ -1637,14 +1592,10 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Neural signal processing_brain - computer communication_cognitive enhancement_medical applications_research tools';
     ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools';
   }
 ;
   // Advanced IoT Services;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
@@ -1658,8 +1609,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
     popular: false;
     icon: '🌐';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     color: 'from - teal - 600 to - cyan - 600';
     text_color: 'text - teal - 400';
     link: 'https://ziontechgroup.com / autonomous - iot - ecosystem';
@@ -1667,8 +1616,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     target_audience: 'Manufacturing companies, Smart cities, Energy companies, Industrial IoT providers';
     trial_days: 30;
     setup_time: '4 - 6 weeks';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     category: 'Advanced IoT & Edge Computing';
     real_service: true;
     technology: ['AI / ML, IoT protocols, Edge computing, Python, Kubernetes, Docker'];
@@ -1692,14 +1639,10 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Autonomous management_self - healing networksAI optimization_predictive maintenance_security automation';
     ];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities';
   }
 ;
   // Advanced Analytics Services;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   {
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
@@ -1713,8 +1656,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
     popular: true;
     icon: '📊';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     color: 'from - green - 600 to - emerald - 600';
     text_color: 'text - green - 400';
     link: 'https://ziontechgroup.com / predictive - analytics - engine';
@@ -1725,8 +1666,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     category: 'Advanced Analytics & AI';
     real_service: true;
     technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     use_cases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%';
@@ -2129,21 +2068,11 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
   }
 ];
 export default specializedEnterpriseServices;
-=======
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default specializedEnterpriseServices;
 
 
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default specializedEnterpriseServices;

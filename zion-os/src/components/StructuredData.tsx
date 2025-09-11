@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "use client";
 export function StructuredData() {const structuredData = {;
     "@context": "https://schema.org";
@@ -95,17 +93,9 @@ export function StructuredData() {;
       "url": "https://ziontechgroup.com";
     }
   };
-<<<<<<< HEAD
 
   return (;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   return (;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 export /**
  * StructuredData - Function description
@@ -133,7 +123,6 @@ function StructuredData() {
         "https://twitter.com / ziontechgroup",
         "https://github.com / ziontechgroup",
         "https://linkedin.com / company / ziontechgroup";
-<<<<<<< HEAD
 "use client";
 export function StructuredData() {const structuredData = {;
     "@context": "https://schema.org";
@@ -182,10 +171,6 @@ export function StructuredData() {const structuredData = {;
       "url": "https://ziontechgroup.com";
     }
   }
-=======
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 export function StructuredData() {;
   const structuredData = {;

@@ -47,8 +47,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       return;    }  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
   const submit = async () => {;
     if (!rating) {;
-=======
-=======
 
   );
   const submit = async () => {;
@@ -59,8 +57,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const submit = async () => {;
     if (!rating) {;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     try {;
       const res = await fetch('/api/feedback/submit', {;
         method: 'POST',;
@@ -84,10 +80,8 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     } finally {;
 
       setSubmitting(false);    }
-=======  return (
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button
               type="button"
               onClick={() => setRating(rating === 'up' ? null : 'up')}
@@ -100,16 +94,12 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         </div>;
       )}
 }
-=======
-=======
 
   );
 
 }
-=======
 
 }
-=======
   const _submit = async () => {
     if (!rating) {
       setError('Please choose 👍 or 👎'),
@@ -149,58 +139,3 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={_rating === 'up'}
-<<<<<<< HEAD
-=======
-=======            >
-              <span>👍</span>
-              <span>Yes</span>
-            </button>
-            <button
-              type='button'              onClick={() => setRating(rating === 'down' ? null : 'down')}              type="button"
-              onClick={() => setRating(rating === 'down' ? null : 'down')}
-              className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
-              aria-pressed={rating === 'down'}
-            >
-              <span>👎</span>
-              <span>No</span>
-            </button>
-          </div>
-          <textarea
-            placeholder='Optional feedback (what worked, what didn’t)'
-            value={comment}
-            onChange={e => setComment(e.target.value.slice(0, 2000))}
-            className='w-full rounded-md border px-3 py-2 text-sm'
-            rows={3}
-          />
-          {error && <div className='text-xs text-red-600'>{error}</div>}
-          <div>
-            <button
-              onClick={submit}
-              disabled={submitting}
-              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'
-            >              {submitting ? 'Submitting…' : 'Submit feedback'}            value={comment}
-            onChange={(e) => setComment(e.target.value.slice(0, 2000))}
-            className="w-full rounded-md border px-3 py-2 text-sm"
-            rows={3}
-          />
-          {error && <div className="text-xs text-red-600">{error}</div>}
-          <div>
-            <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
-              {submitting ? 'Submitting…' : 'Submit feedback'}
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
-}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  );
-}
-=======
-}
-=======
-  );
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

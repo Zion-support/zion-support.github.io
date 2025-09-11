@@ -1,3 +1,8 @@
+export const metadata = { 
+  title: 'Micro SaaS Development | Zion Tech Group',
+  description: 'Complete micro SaaS solutions from MVP to scale. Revenue-generating products with modern tech stack and growth optimization.'
+};
+
 export default function MicroSaaSPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -405,7 +410,6 @@ function Item({ title, details }: { title: string; details: string[] }) {
           </div>
         </div>
       </div>
-=======
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
@@ -676,7 +680,6 @@ function FeatureCard({ title, features, icon }: { title: string; features: strin
             <span className="text-gray-600">{feature}</span>          </li>
         ))}
       </ul>
-=======
 function ServiceCard({ title, description, features, price, icon }: { 
   title: string; 
   description: string; 
@@ -709,7 +712,6 @@ function ServiceCard({ title, description, features, price, icon }: {
   );
 }
 
-<<<<<<< HEAD
 function MicroSaaSPricingPlan({ name, price, duration, features, popular }: {
   name: string;
   price: string;
@@ -721,24 +723,6 @@ function MicroSaaSPricingPlan({ name, price, duration, features, popular }: {
     <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-blue-500' : 'border-gray-200'} relative`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-=======
-function PricingCard({ name, price, duration, features, popular }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[]; 
-  popular: boolean;
-}) {
-  return (
-    <div className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-blue-500 shadow-lg' : 'border-gray-200'}`}>
-      {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-        </div>
-      )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="text-3xl font-bold text-blue-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-<<<<<<< HEAD
 function MetricCard({ metric, description, icon }: { metric: string; description: string; icon: string }) {
   return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 text-center">
@@ -749,90 +733,34 @@ function MetricCard({ metric, description, icon }: { metric: string; description
   );
 }
 
-export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' } export default /**
- * MicroSaaSPage - Function description
- */
-function MicroSaaSPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>Micro SaaS Development</h1> <p style={{margin_top: 8, color: '#374151'}}>We design, build, launch and operate revenue - generating micro SaaS products end - to - end.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Core features" details={["Multi - tenant architecture", "Auth (email, OAuth)", "Billing (Stripe)", "Admin + analytics", "In - app onboarding"]} /> <Item title="Growth stack" details={["SEO - ready marketing site", "Blog + docs", "Email campaigns", "Referral + affiliates"]} /> <Item title="Ops & reliability" details={["CI / CD", "Observability", "Error budgets", "SLOs", "On - call setup"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="MVP Sprint" price="$8k–$20k" features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics"]} /> <Plan name="Growth" price="$20k–$60k" features={["6–10 weeks", "SEO + content", "CRM + email", "Observability"]} /> <Plan name="Scale" price="$60k+" features={["Custom roadmap", "SRE + security", "Multi - region", "SLAs"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[] 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-1">{price}</div>
-      <div className="text-sm text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="text-gray-600 flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-=======
 function ContactSection() {
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Micro SaaS?</h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your project and create a custom solution that drives revenue and growth for your business.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>    </div>
-  );
-}
-=======
-function Pricing() {
-  return (
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="MVP Sprint" 
-          price="$8k–$20k" 
-          features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics", "Hosting setup"]} 
-          popular={false}
-        />
-        <Plan 
-          name="Growth" 
-          price="$20k–$60k" 
-          features={["6–10 weeks", "SEO + content", "CRM + email", "Observability", "Advanced features"]} 
-          popular={true}
-        />
-        <Plan 
-          name="Scale" 
-          price="$60k+" 
-          features={["Custom roadmap", "SRE + security", "Multi-region", "SLAs", "Dedicated support"]} 
-          popular={false}
-        />
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Build Your Micro SaaS?
+        </h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss your idea and create a custom solution that drives real revenue. 
+          Our team has launched 50+ successful micro SaaS products.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
       </div>
     </section>
   );

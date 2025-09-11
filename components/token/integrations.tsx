@@ -20,8 +20,6 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
 export default function TokenIntegrationsPage() {
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 export default function TokenIntegrationsPage() {;
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -48,8 +46,6 @@ export default function TokenIntegrationsPage() {;
     if (!account) {
       await connect();
       return;    }      return
-=======
-=======
 
   async function syncDepin() {;
     if (!account) {;
@@ -57,7 +53,6 @@ export default function TokenIntegrationsPage() {;
       await connect();
       return;    }      return;
 
-=======
       await connect();
       return
 
@@ -72,14 +67,10 @@ export default function TokenIntegrationsPage() {;
       body: JSON && JSON.stringify({ region, stakeUsd: stake }),;
 
 
-=======
     });
-=======
 
 
 
-=======
-=======
 
 
     const data = await res.json();
@@ -103,8 +94,6 @@ export default function TokenIntegrationsPage() {;
           jobs, and data streaming.;
         </p>;
         <div className='flex gap-2'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <button
             onClick={syncDepin}
             className='px-4 py-2 rounded bg-purple-600 text-white'>;
@@ -115,14 +104,12 @@ export default function TokenIntegrationsPage() {;
               Connect Wallet;
             </button>;
           )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ region, stakeUsd: stake })}),
     const data = await res.json();
     setSuggestion(data)
   }
-=======
 
     setSuggestion(data)
   }
@@ -140,8 +127,6 @@ export default function TokenIntegrationsPage() {;
     setSuggestion(data);
   }
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
   }
@@ -159,8 +144,6 @@ export default function TokenIntegrationsPage() {;
         <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;
         <div className="flex gap-2">;
           <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>;
         {rewards && (;
@@ -173,7 +156,6 @@ export default function TokenIntegrationsPage() {;
 
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </section>;
       <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>;
         <h2 className='text-lg font-semibold'>Operator AI Actions</h2>;
@@ -233,7 +215,6 @@ export default function TokenIntegrationsPage() {;
             </div>;
             {suggestion && suggestion.alternatives && (;
               <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map((a: any) => a && a.chain.name).join(', ')}</div>;
-=======          {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>
         {rewards && (
           <div className="mt-3 space-y-2 text-sm">
@@ -340,18 +321,12 @@ export default function TokenIntegrationsPage() {;
               <div key={i} className="flex items-center justify-between">
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
-=======              </div>
               </div>
 
-=======
 
-=======
-=======
 
               </div>
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         )}
@@ -388,7 +363,3 @@ export default function TokenIntegrationsPage() {;
         </ul>
       </section>
     </div>
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

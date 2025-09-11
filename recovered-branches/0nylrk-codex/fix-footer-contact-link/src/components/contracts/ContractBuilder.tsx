@@ -1,10 +1,7 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -14,8 +11,6 @@ interface ContractBuilderProps {
 
   onContractGenerated?: (contractContent: string) => void
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -36,8 +31,6 @@ import {SmartContractBuilder} from "./SmartContractBuilder";
 export function ContractBuilder(): any ({;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }}
         talent={talent}
         client_name={client_name}
@@ -71,9 +64,7 @@ export function ContractBuilder(): any ({;
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
-=======
 
-=======
 
               <Button
                 variant="secondary"
@@ -135,21 +126,7 @@ export function ContractBuilder(): any ({;
         </Tabs>;
 
 
-<<<<<<< HEAD=======        <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-=======
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
-=======
-;

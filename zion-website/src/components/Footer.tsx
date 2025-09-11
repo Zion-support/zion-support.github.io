@@ -1,5 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const navigation = {main: [;
     { name: 'About', href: '/about' }
     { name: 'Services', href: '/services' }
@@ -23,21 +21,18 @@ const navigation = {main: [;
     {;
       name: 'LinkedIn',;
       href: 'https://linkedin.com/company/ziontechgroup',;
-=======
       )}
     {name: 'Twitter';
       href: 'https://twitter.com/ziontechgroup';      )},;
     {;
       name: 'Twitter',;
       href: 'https://twitter.com/ziontechgroup',;
-=======
       )}
     {name: 'GitHub';
       href: 'https://github.com/ziontechgroup';      )},;
     {;
       name: 'GitHub',;
       href: 'https://github.com/ziontechgroup',;
-=======
       )}
     {name: 'YouTube';
       href: 'https://youtube.com/@ziontechgroup';      )},;
@@ -48,7 +43,6 @@ const navigation = {main: [;
 export default function Footer() {;
   return (;
 
-=======
 export default function Footer() {return (;
 ;
 export default function Footer() {;
@@ -57,14 +51,6 @@ export default function Footer() {;
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">;
           <div className="space-y-8 xl:col-span-1">;
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const navigation = {
   main: [;
     { name: 'About', href: '/about' },
@@ -113,7 +99,6 @@ function Footer() {
         <div className="xl:grid xl:grid - cols - 3 xl:gap - 8">;
           <div className="space - y-8 xl:col - span - 1">;
             <div className="text - 2xl font - bold bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent">;
-<<<<<<< HEAD
 const navigation = {main: [;
     { name: 'About', href: '/about' }
     { name: 'Services', href: '/services' }
@@ -125,9 +110,6 @@ const navigation = {main: [;
   social: [;
     {name: 'LinkedIn';
       href: 'https://linkedin.com/company/ziontechgroup';
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const navigation = {;
   main: [;
     { name: 'About', href: '/about' },;

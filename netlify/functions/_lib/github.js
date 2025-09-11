@@ -1,13 +1,10 @@
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 async function getFile(owner, repo, path, token) {
   try {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     headers: {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     method: 'PUT'
@@ -56,7 +53,6 @@ if (body.sha = existing.sha) {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {
-=======
       Authorization: `token ${token}`,
       Accept: 'application/vnd && vnd.github+json',
     },
@@ -130,8 +126,6 @@ function get_file() {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`,
   const resp = await fetch (url, {
     headers: {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
     }
@@ -234,19 +228,12 @@ const text = await resp.text (),throw new Error (`GitHub upsert_file HTTP ${resp
 ;
 const text = await resp.text (),;
     throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`);`
-=======  }
   return resp.json ();
 }
 
 }
 }
-=======
 
-=======
 module.exports = { upsertFile },
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

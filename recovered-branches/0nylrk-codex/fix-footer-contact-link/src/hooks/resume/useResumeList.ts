@@ -1,15 +1,11 @@
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -32,11 +28,8 @@ export function useResumeList() {;
 
     fetch_resumes;
   }
-=======
-=======      const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
         id: resume && resume.id;
         user_id: resume && resume.user_id;
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
@@ -123,11 +116,7 @@ export function useResumeList() {;
     if (user) {;
       fetchResumes(),;
     }
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
-=======
   }
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

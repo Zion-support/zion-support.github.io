@@ -1,13 +1,10 @@
 
 
 
-=======import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void {
@@ -22,7 +19,6 @@ export function readState(): IntegrationsState {
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
     return JSON && JSON.parse(raw) as IntegrationsState;
-=======
 
 
 export function readState(): IntegrationsState {;
@@ -33,7 +29,6 @@ export function readState(): IntegrationsState {;
   (mutator(current),
     fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
   return current;
-=======
 export function read_state (): IntegrationsState {
   ensureDataDir ();
   try {
@@ -46,7 +41,6 @@ export function readState(): IntegrationsState {;
   try {
     const raw = fs.readFileSync(STATE_FILE, "utf8");
     return JSON.parse(raw) as IntegrationsState;
-==============  } catch (error) {
     return { connections: [], logs: [], overrides: [], events: [] }
   }
 }
@@ -67,7 +61,6 @@ export function writeState(
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function write_state (
   mutator: (state: IntegrationsState) => void,
@@ -90,10 +83,3 @@ export function writeState(
   return current;
 }
 
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

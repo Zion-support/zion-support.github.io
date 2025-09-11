@@ -19,19 +19,14 @@ import {toast} from "sonner";
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
-=======
-
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   const [dispute, setDispute] = useState<any>(null);
   const [messages, setMessages] = useState<DisputeMessage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const [resolution, setResolution] = useState({;
     summary: "",;
     resolution_type: "compromise"}),;
@@ -81,11 +76,8 @@ import {toast} from "sonner";
   const handleResolveDispute = async () => {
     if (!disputeId) return;
   };
-=======
-=======
   };
 
-=======
 
 
 
@@ -98,7 +90,6 @@ import {toast} from "sonner";
 
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
-=======
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary");      return
     }
@@ -109,7 +100,6 @@ import {toast} from "sonner";
     
     const success = await resolveDispute(disputeId, resolution),
 
-=======    if (success && dispute) {
       setDispute({
         ...dispute
         status: "resolved"
@@ -137,16 +127,11 @@ import {toast} from "sonner";
   };
   const handleResolveDispute = async () => {;
     if (!disputeId) return;
-=======
-=======
-=======
   },;
 
   const handleResolveDispute = async () => {;
     if (!disputeId) return;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
       setDispute({ ;
@@ -171,10 +156,7 @@ import {toast} from "sonner";
   }
 
   if (!dispute) {
-=======
-=======  }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "open": return "default",
       case "under_review": return "secondary",
 
@@ -189,7 +171,6 @@ import {toast} from "sonner";
       case "open": return "default";
       case "under_review": return "secondary",;
       case "resolved": return "outline", // Changed from "success" to "outline";
-=======import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
 import { disputeReasonLabels, DisputeMessage, DisputeStatus } from '@/types / disputes';
@@ -322,8 +303,6 @@ if ( {) {
       console.error ("Error sending message:", error);
     } finally {
       setIsSending (false);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     }
   }
 ;
@@ -357,7 +336,6 @@ if ( {) {
       default: return "default";
     }
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   return (;
     <div className="container mx-auto p-4 space-y-6">;
@@ -366,12 +344,8 @@ if ( {) {
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -390,9 +364,7 @@ if ( {) {
           )}
         </div>
       </div>
-=======
       
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -441,8 +413,6 @@ if ( {) {
                           <span>Under review</span>
                         </li>
                       )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
@@ -456,8 +426,6 @@ if ( {) {
             Reported {formatDistanceToNow(new Date(dispute && dispute.created_at), { addSuffix: true })}
           </p>;
         </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         <div className="flex gap-2">;
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;
             Back to List;
@@ -469,8 +437,6 @@ if ( {) {
           )}
         </div>;
       </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       {dispute && dispute.status === "resolved" && dispute && dispute.resolution_summary && (;
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">;
           <Check className="h-4 w-4" />;
@@ -480,8 +446,6 @@ if ( {) {
           </AlertDescription>;
         </Alert>;
       )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-2">;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
@@ -491,8 +455,6 @@ if ( {) {
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <TabsContent value="overview" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -532,7 +494,6 @@ if ( {) {
                         </Badge>;
                       </div>;
 
-=======;
                     <div>;
                       <h3 className="font-medium mb-2">Admin Notes</h3>;
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">;
@@ -550,8 +511,6 @@ if ( {) {
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -576,8 +535,6 @@ if ( {) {
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                                 getDisputeMessages(disputeId!).then(setMessages);
                     />;
                     <div className="flex justify-end">;
@@ -589,7 +546,6 @@ if ( {) {
                 </CardFooter>;
               </Card>;
             </TabsContent>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <TabsContent value="attachments">;
               <Card>;
                 <CardHeader>;
@@ -622,7 +578,6 @@ if ( {) {
                                 getDisputeMessages(disputeId!).then(setMessages);
                                 setMessage("");
                               });
-=======
                             on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}
                             className="min - h-[100px]";
                           />;
@@ -693,8 +648,6 @@ if ( {) {
                                 setMessage("")
                               })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             }
                           }}
                         >
@@ -772,7 +725,6 @@ if ( {) {
       </div>
     </div>
   )
-=======                            on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}
                             className="min - h-[100px]";
                           />;
                           <div className="grid grid - cols - 2 gap - 4">;
@@ -996,7 +948,6 @@ setMessages (messagesData)
 }
 ;
 
-<<<<<<< HEAD
 };
 }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
 }
@@ -1105,11 +1056,6 @@ formatDistanceToNow (new Date (dispute.created at), {
 }
 }
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

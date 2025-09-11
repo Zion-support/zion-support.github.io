@@ -1,5 +1,4 @@
 
-=======
 import { Facebook, Twitter } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Facebook, Twitter } from "lucide-react";
@@ -28,8 +27,6 @@ export function SocialLogin() {
 
   );
 }
-=======
-==============
         <Button
           type="button"
           variant="outline"
@@ -70,7 +67,6 @@ export function SocialLogin() {
     </div>
 
 
-=======
 export function SocialLogin() {;
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
@@ -79,8 +75,6 @@ export function SocialLogin() {;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
         </div>;
       </div>;
@@ -92,5 +86,3 @@ export function SocialLogin() {;
   );
 }
 ;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

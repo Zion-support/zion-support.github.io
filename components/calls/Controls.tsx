@@ -15,10 +15,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled)
   };
@@ -26,8 +23,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     if (!room) return;
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
     setCamEnabled(enabled)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   };
   const toggleCam = async () => {;
     if (!room) return;
@@ -40,25 +35,19 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled);
 
   };
-=======
 
   };
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
       </button>;
     </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   );
 }
 import type { Room } from 'livekit - client';
@@ -236,17 +225,6 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
 
   return (
   return (
-=======
-=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

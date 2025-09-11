@@ -19,16 +19,11 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 export default function InvestorsPage() {
-=======
 
 
 export default function InvestorsPage() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 export default function InvestorsPage() {
-=======
 
 export default function InvestorsPage() {  return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
@@ -111,7 +106,6 @@ export default function InvestorsPage() {
 	),;
 }
 
-==============import Head from 'next / head';
 export default /**
  * InvestorsPage - Function description
  */
@@ -177,17 +171,6 @@ function InvestorsPage() {
 	),
 }
 
-<<<<<<< HEAD
 
 	),
 }
-=======	)
-}
-	),
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

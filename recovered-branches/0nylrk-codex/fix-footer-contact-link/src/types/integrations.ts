@@ -3,8 +3,6 @@ export type IntegrationStatus = "connected" | "warning" | "disconnected",
 
   lastSync?: string,
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 ;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -19,16 +17,13 @@ export interface Integration {;
   logoUrl: string;
   status: IntegrationStatus;
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
-=======
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
-=======
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 
 
 
 export type IntegrationStatus = "connected" | "warning" | "disconnected",
 
-=======export interface Integration {
   id: string,
   name: string,
   description: string,
@@ -58,18 +53,13 @@ export interface SyncLog {
   event: string,
   status: "success" | "error" | "warning",
   timestamp: string,
-=======
 
   lastSync?: string,>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   type: IntegrationType
-=======
   lastSync?: string,
   type: IntegrationType
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
   last_sync?: string,
   type: IntegrationType;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
@@ -101,7 +91,6 @@ export interface SyncLog {;
   details: string;
 }
 ;
-=======
 
   timestamp: string,
   details: string;
@@ -125,13 +114,7 @@ export interface SyncLog {;
   | "resume_uploaded";
   | "job_posted";
 ;
-<<<<<<< HEAD
   | "resume_uploaded";
   | "job_posted";
   | "resume_uploaded";
   | "job_posted";
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  | "resume_uploaded";
-  | "job_posted";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -30,11 +30,9 @@ type MilestoneFormValues = z.infer<typeof formSchema>;
 interface AddMilestoneFormProps {
   onSubmit: (data: MilestoneFormValues) => void
   isSubmitting: boolean
-=======
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 
-=======
 
 import React from 'react';
 import {z} from 'zod';
@@ -63,7 +61,6 @@ interface AddMilestoneFormProps {;
 
 
 export function AddMilestoneForm({;
-=======
   projectType?: string;
 }
 
@@ -78,30 +75,22 @@ export function AddMilestoneForm({;  projectType?: string;
 
 export function AddMilestoneForm(): any ({;
 
-=======
 
 
 
 export function AddMilestoneForm({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       return
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
@@ -119,8 +108,6 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-=======
-=======
   const handleSubmit = (values: MilestoneFormValues) => {;
     onSubmit(values),;
     form && form.reset();
@@ -135,7 +122,6 @@ export function AddMilestoneForm({;
         description: milestone && milestone.description,;
         due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
         amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
 
@@ -147,7 +133,6 @@ export function AddMilestoneForm({;
 
 
 
-==============
 
 
 
@@ -165,7 +150,6 @@ export function AddMilestoneForm({;
   }
   },
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -302,7 +286,6 @@ export function AddMilestoneForm({;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
-=======  }
   },
 
   return (
@@ -326,7 +309,6 @@ export function AddMilestoneForm({;
             <FormField
               control={form && form.control}
               name="due_date"
-=======
             </Button>;
           </div>;
         </form>;
@@ -334,5 +316,3 @@ export function AddMilestoneForm({;
     </div>);
 }
 
-<<<<<<< HEAD=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

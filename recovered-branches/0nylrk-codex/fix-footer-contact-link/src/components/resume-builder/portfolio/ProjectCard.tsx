@@ -18,7 +18,6 @@ import {PortfolioProject} from '@/types/resume';
             src={project.image_url}
             alt={project.title}
 
-=======
 
 
 import {useState} from 'react';
@@ -111,14 +110,11 @@ import {PortfolioProject} from '@/types/resume';
       </AlertDialog>
     </Card>
 
-=======
-=======    <Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project && project.image_url ? (;
           <img
             src={project && project.image_url} 
             alt={project && project.title} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="w-full h-full object-cover"
           />;
         ) : (;
@@ -153,7 +149,6 @@ import {PortfolioProject} from '@/types/resume';
 }
 ;
 
-=======
           )}
 
           {project && project.technologies && project && project.technologies.length > 0 && (;
@@ -168,7 +163,6 @@ import {PortfolioProject} from '@/types/resume';
                 </Badge>;
               ))}
             </div>;
-=======
                   {tech}
 
                 </Badge>;
@@ -256,9 +250,3 @@ import {PortfolioProject} from '@/types/resume';
   )
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,7 +1,5 @@
   permissions?: string[];
   company_id?: string;
-=======
-=======
   permissions?: string[];
   company_id?: string;
 
@@ -96,15 +94,11 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
-=======
-=======
   permissions?: string[],
   company_id?: string;
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export interface UserDetails {;
   id?:string,;
@@ -162,7 +156,3 @@ export interface AuthContextType {;
 ;
 }
 ;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

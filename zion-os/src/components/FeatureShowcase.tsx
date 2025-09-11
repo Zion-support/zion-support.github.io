@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
 import { useState, useEffect } from "react",;
@@ -153,7 +152,6 @@ export function FeatureShowcase() {;
       <div className="max-w-7xl mx-auto">;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
-=======
 "use client",
 import { useState, useEffect  } from './react';,
 interface Feature {
@@ -175,7 +173,6 @@ const features: Feature[] = [;
         <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
       </svg>),
     color: "blue",
-=======
 "use client",;
 import { useState, useEffect } from "react",;
 interface Feature {;
@@ -197,7 +194,6 @@ const features: Feature[] = [;
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
       </svg>;
-=======    ),;
     color: "blue",;
     details: [;
       "Smart job matching algorithms",;
@@ -282,7 +278,6 @@ export function FeatureShowcase() {;
                   activeFeature === feature.id;
 
 
-=======
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${;
                   activeFeature === feature.id;                    ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
@@ -290,27 +285,19 @@ export function FeatureShowcase() {;
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
-=======
 
                   <div className={`transform transition - transform duration - 300 ${
                     active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';
 
-=======
-=======
                   <div className={`transform transition-transform duration-300 ${activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className={`transform transition-transform duration-300 ${;
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
 
-<<<<<<< HEAD
                   <div className={`transform transition - transform duration - 300 ${
                     active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';
                   <div className={`transform transition-transform duration-300 ${activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
                   <div className={`transform transition-transform duration-300 ${;
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }`}>;
                     <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                       <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;

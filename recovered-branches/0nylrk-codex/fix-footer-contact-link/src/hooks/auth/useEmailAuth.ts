@@ -6,10 +6,6 @@ import {cleanupAuthState} from "@/utils/authUtils";
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
 import { cleanupAuthState } from "@/utils/authUtils",
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
@@ -49,7 +45,6 @@ export const useEmailAuth = (
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
 
-=======
       console.error("Login error:", error),
       toast({
         title: "Login failed";
@@ -106,7 +101,6 @@ export const useEmailAuth = (
     } finally {
       setIsLoading(false)
     }
-=======  }
   },
 
   const signup = async (email: string, password: string, userData?: any) => {
@@ -123,7 +117,6 @@ export const useEmailAuth = (
         toast({
           title: "Signup failed",
           description: error.message,
-=======
           variant: "destructive"});
         return { error };
       }
@@ -135,17 +128,13 @@ export const useEmailAuth = (
     } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
-=======        title: "Signup failed";
 
         description: error && error.message || "An unexpected error occurred",
 
 
-=======        title: "Signup failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         redirectTo: `${window.location.origin}/update-password`}),
 
       if (error) {
@@ -178,8 +167,6 @@ if ( {) {
         return { error }
       }
 
-=======
-=======
           variant: "destructive"});
         return { error };
       }
@@ -191,12 +178,9 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Password reset error:", error);
       toast({
-=======        title: "Password reset failed";
 
         description: error && error.message || "An unexpected error occurred",
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ;
   return { login, signup, reset_password }
 }
@@ -382,12 +366,6 @@ return {
 
   return { login, signup, resetPassword }
 };
-=======
-=======
 
   return { login, signup, resetPassword }
 };
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

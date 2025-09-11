@@ -2,14 +2,12 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
-=======
 
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
 
 
 
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
-=======
 
 interface AnalyticsContainerProps {
   children: React.ReactNode
@@ -24,11 +22,9 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
   
 
-=======
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const { isAuthenticated, isLoading, user } = useAuth();
 
-==============
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
@@ -42,24 +38,18 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   
   
   
-=======
 
   
-=======
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />
   }
   
   
-=======
 
   
-=======
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // If not admin, redirect
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
@@ -79,8 +69,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates
           </p>
         </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -184,19 +172,9 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
   );
 }
 ;
-=======
-=======
     </div>);
 
 }
-=======
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

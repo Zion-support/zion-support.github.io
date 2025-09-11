@@ -169,13 +169,8 @@ interface TranslatableJobFormProps {
         break
       }
     }
-=======
-==============
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void,;
   isSubmitting?: boolean;
@@ -196,7 +191,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;=======
 
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     en: "",;
     es: "",;
     pt: "",;
@@ -261,8 +255,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           description: error
           variant: "destructive"})
         return
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======;
     if (!content) {;
       toast({;
         title: t('translation.no_content'),;
@@ -279,12 +271,8 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           description: error,;
           variant: "destructive"}),;
         return;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       if (field === 'title') {
         setTitle(translations)
@@ -293,12 +281,10 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       } else if (field === 'requirements') {
         setRequirements(translations)
       }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -319,13 +305,11 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   >>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
   },
-=======
   };
   },
 
 
   
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -440,7 +424,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
                   placeholder={t('jobs && jobs.requirements_placeholder')}
                   className="min-h-24 w-full";
                   dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-<<<<<<< HEAD=======            <Input
               id="budget"
               value={budget}
               onChange={(e) => setBudget(e && e.target.value)}
@@ -810,67 +793,3 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-=======        </Button>;
-      </div>;
-    </form>;
-  );
-}
-      <div className="pt - 4">;        <Button;
-          type="submit";
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";
-          disabled={isSubmitting || isTranslating}
-        >;
-          {isSubmitting ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;              {t('jobs.submitting')}
-            </>;
-          ) :(;
-            t('jobs.post_job_button');
-          )}
-        </Button>;
-      </div>;
-    </form>;
-  ),; interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void;
-isSubmitting?: boolean 
-}export function TranslatableJobForm ({
-  onSubmit, isSubmitting = false 
-}: TranslatableJobFormProps) {
-  const {
-  t 
-}= useTranslation ();
-const {
-  translateContent, isTranslating 
-}= useTranslationService ();
-const {
-  supportedLanguages, currentLanguage 
-}= useLanguage ();
-//Form fields with translations const [budget, setBudget] = useState ("");
-const [deadline, setDeadline] = useState ("");
-onSubmit ({
-  //Find first non-empty content to translate for (const lang of supportedLanguages.map (l => l.code) ) {
-  if (field === 'title' && title[lang]) {
-  return;
-}return;
-}
-;
-
-      <div className="pt - 4">;
-        <Button;
-          type="submit";
-          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan";
-          disabled={is_submitting || is_translating}
-        >;
-          {is_submitting ? (
-            <>;
-              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-              {t ('jobs.submitting')}
-            </>) : (
-            t ('jobs.post_job_button'))}
-        </Button>;
-      </div>;
-    </form>);
-}
-
-=======
-;

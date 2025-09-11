@@ -1,31 +1,19 @@
 #!/bin/bash
 
-echo "Fixing merge conflicts in the codebase..."
+echo "Fixing merge conflicts in all files..."
 
-# Find all files with merge conflict markers
-conflict_files=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" | cut -d: -f1 | sort -u)
-
-echo "Found merge conflicts in:"
-echo "$conflict_files"
-
-for file in $conflict_files; do
+# Find all files with merge conflict markers and fix them
+find src -name "*.jsx" -o -name "*.tsx" -o -name "*.js" -o -name "*.ts" | while read -r file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
     echo "Fixing merge conflicts in: $file"
     
-    # Create a backup
-    cp "$file" "$file.backup"
+    # Remove merge conflict markers and keep content between HEAD and ======
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> main/d' "$file"
     
-    # Remove merge conflict markers and keep the HEAD version (first part)
-    awk '/^<<<<<<< HEAD/,/^=======/ { if (!/^<<<<<<< HEAD/ && !/^=======/) print } /^>>>>>>>/ { next } !/^<<<<<<< HEAD/,/^=======/ { print } !/^>>>>>>>/ { print }' "$file" > "$file.tmp"
-    
-    # If the file is still corrupted, try a simpler approach
-    if grep -q "<<<<<<< HEAD" "$file.tmp"; then
-        echo "Using simpler conflict resolution for $file"
-        # Keep only the HEAD version (before =======)
-        sed '/^=======/,/^>>>>>>>/d' "$file" | sed '/^<<<<<<< HEAD/d' > "$file.tmp"
-    fi
-    
-    mv "$file.tmp" "$file"
-    echo "Fixed: $file"
+    # Clean up any remaining empty lines
+    sed -i '/^[[:space:]]*$/d' "$file"
+  fi
 done
 
 echo "Merge conflicts fixed!"

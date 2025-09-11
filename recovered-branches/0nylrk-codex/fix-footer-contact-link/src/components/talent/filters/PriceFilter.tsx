@@ -44,8 +44,6 @@ import { PriceFilterProps } from "@/types/filters",;
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
 
 
-=======
-=======
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Slider} from "@/components/ui/slider";
 import {PriceFilterProps} from "@/types/filters";
@@ -54,7 +52,6 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
     setPriceRange([values[0], values[1]]);
   };
 
-=======
 
 
   return (
@@ -71,12 +68,8 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
           </div>;
 
           <Slider
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
           <Slider 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
@@ -86,7 +79,6 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
   );
 }
 
-=======import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { PriceFilterProps  } from '@/types / filters';
 export /**
@@ -125,8 +117,6 @@ function PriceFilter() {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),;}
  export function PriceFilter ({
   priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen 
@@ -149,9 +139,3 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
     </div>
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

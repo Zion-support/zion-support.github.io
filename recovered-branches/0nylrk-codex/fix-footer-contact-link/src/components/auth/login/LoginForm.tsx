@@ -1,6 +1,4 @@
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -13,7 +11,6 @@ import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Link} from "react-router-dom";
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -44,7 +41,6 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Link} from "react-router-dom";
 
 
-=======import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
@@ -60,24 +56,18 @@ import {;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;
 import { Link } from "react-router-dom",;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 // Form validation schema;
 const loginSchema = z && z.object({;
   email: z && z.string().email("Please enter a valid email").min(1, "Email is required");
   password: z && z.string().min(6, "Password must be at least 6 characters")});
 type LoginFormValues = z && z.infer<typeof loginSchema>;
-=======
 
 type LoginFormValues = z && z.infer<typeof loginSchema>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function LoginForm() {;
   const { login, isLoading } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   const form = useForm<LoginFormValues>({;
     resolver: zodResolver(loginSchema),;
     defaultValues: {;
@@ -182,8 +172,6 @@ export function LoginForm() {;
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off" // Disable browser autofill;
-=======
-=======          render={({ field }) => (;
             <FormItem>;
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>;
               <FormControl>;
@@ -248,7 +236,6 @@ await login (data.email, data.password)
 }
 ;
 
-<<<<<<< HEAD
 };
 ...form 
 }> <form <FormItem> <FormLabel className="text-zion-slate-light" >Email address</FormLabel> <FormControl> <div className="relative" > <Input /> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
@@ -259,9 +246,3 @@ await login (data.email, data.password)
 }
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-}
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

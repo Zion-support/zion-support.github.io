@@ -27,8 +27,6 @@ export function UpcomingInterviewsCard() {;
         const now = new Date(),
         
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -40,8 +38,6 @@ export function UpcomingInterviewsCard() {;
           )
           .slice(0, 3), // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React, { useEffect, useState } from './react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -68,7 +64,6 @@ function UpcomingInterviewsCard() {
 ;
     loadInterviews()
   }, []),
-=======  if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -87,8 +82,6 @@ function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { useInterviews } from "@/hooks/useInterviews",;
@@ -178,8 +171,6 @@ export function UpcomingInterviewsCard() {;
   }, []),;
   if (isLoading) {;
     return (;
-=======
-=======          );
           .slice(0, 3), // Take only the next 3 interviews;
 
         setUpcomingInterviews(upcoming);
@@ -197,15 +188,12 @@ export function UpcomingInterviewsCard() {;
 
     return (
 
-=======
-=======            ))}
           </div>;
         </CardContent>;
       </Card>;
     );
   }
 
-=======
 
 
   if (upcomingInterviews.length === 0) {
@@ -231,8 +219,6 @@ export function UpcomingInterviewsCard() {;
     )
   }
   return (
-=======
-=======    );
   }
   return (
 
@@ -246,7 +232,6 @@ export function UpcomingInterviewsCard() {;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
-=======            return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar |interview.talent_avatar ? (
@@ -269,7 +254,6 @@ export function UpcomingInterviewsCard() {;
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             // Determine if interview is happening soon (within 30 minutes);
             const now = new Date(),;
             const isStartingSoon = ;
@@ -447,7 +431,6 @@ const now = new Date ();
 }
 ;
 
-<<<<<<< HEAD
 };
 }, []);
 <CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews </CardTitle> </CardHeader> <CardContent> </div> </div>) ) 
@@ -465,9 +448,3 @@ return (<img src= {
 }
 }
 ;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-}
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

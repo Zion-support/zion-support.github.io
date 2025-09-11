@@ -9,8 +9,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Button} from "@/components/ui/button";
 import {Gift, ArrowRight, ExternalLink} from "lucide-react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -28,11 +26,6 @@ import {
 
 
 
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type RewardOption = {
   id: string
   title: string
@@ -43,7 +36,6 @@ type RewardOption = {
 
 
 
-==============
 }
 },
 const REWARD_OPTIONS: RewardOption[] = [
@@ -56,14 +48,11 @@ const REWARD_OPTIONS: RewardOption[] = [
 
   }
   },
-=======
 
   },
 
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: 'resume-review'
     title: 'AI Resume Review'
@@ -73,14 +62,11 @@ const REWARD_OPTIONS: RewardOption[] = [
 
   }
   },
-=======
 
   },
 
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: 'platform-credit'
     title: '$5 Platform Credit'
@@ -123,10 +109,7 @@ export function RedeemTokensCard() {
     </Card>
   )
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -139,16 +122,12 @@ import {;
   DialogHeader,;
   DialogTitle,;
   DialogTrigger} from "@/components/ui/dialog",;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 type RewardOption = {;
   id: string,;
   title: string,;
   description: string,;
   cost: number,;
   type: 'credit' | 'feature' | 'course';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 };
 const REWARD_OPTIONS: RewardOption[] = [;
   {;
@@ -224,8 +203,6 @@ export function RedeemTokensCard() {;
     setOpen(false);
   };
   return (;
-=======
-=======];
 
 export function RedeemTokensCard() {;
   const { wallet, spendTokens } = useWallet();
@@ -242,8 +219,6 @@ export function RedeemTokensCard() {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
     </Card>);
 }
@@ -310,15 +285,7 @@ flex items-center gap-2"> <Gift className=" h-5 w-5"/> Redeem Rewards </CardTitl
   );
 }
 ;
-=======}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

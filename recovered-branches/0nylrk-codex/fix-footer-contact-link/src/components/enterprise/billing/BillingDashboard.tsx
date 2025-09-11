@@ -1,15 +1,10 @@
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { InvoiceHistory } from "./InvoiceHistory";
 import { UsageOverview } from "./UsageOverview";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Tabs defaultValue="subscription" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
@@ -17,8 +12,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>
         </TabsList>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======        
         <TabsContent value="subscription" className="space-y-8">
           <CurrentSubscription />
         </TabsContent>
@@ -31,12 +24,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
           <InvoiceHistory />
         </TabsContent>
         
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
@@ -60,7 +49,6 @@ export function BillingDashboard() {;
       ;
       <Tabs defaultValue="subscription" className="mt-8">;
         <TabsList className="grid w-full grid-cols-4 mb-8">;
-=======
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
       <BillingHeader />;
       <Tabs defaultValue="subscription" className="mt-8">;
@@ -119,8 +107,6 @@ function BillingDashboard() {
   );
 }
 ;
-=======
-=======        <TabsContent value="subscription" className="space - y-8">;
           <CurrentSubscription />;
         </TabsContent>;
         <TabsContent value="payment" className="space - y-8">;
@@ -136,10 +122,4 @@ function BillingDashboard() {
     </div>);
 
 }
-=======
 
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,16 +1,7 @@
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CategoryCardProps {
-
   title: string
   description: string
   icon: ReactNode | string
-
   /**
    * Optional color to use for the icon. If not provided the default cyan
    * accent colour is used. Previously this prop was ignored which meant
@@ -20,37 +11,27 @@ import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
-=======
         className
       )}
     >
       <div
         className={cn(
           !color && "text-zion-cyan"
-=======
-=======
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
-
           !color && "text-zion-cyan"
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "mb-4 p-3 bg-zion-blue-dark rounded-full",
           !color && "text-zion-cyan"
 import React, { ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { slugify } from "@/lib/slugify",;
 import { Link } from "react-router-dom",;
-
 export function CategoryCard(): any ({ title, description, icon, color, count, className }: CategoryCardProps) {;
   // Create a URL-friendly slug from the category title;
   const slug = slugify(title);
-
-
   const slug = slugify(title);
   return (
     <Link
-
       to={`/category/${slug}`} 
-
           !color && "text-zion-cyan"
         )}
         style={color ? { color } : undefined}>;
@@ -63,7 +44,6 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
       )}
     </Link>;
   );
-=======
 import React, { ReactNode } from './react';
 import { cn } from '@/lib / utils';
 import { slugify } from '@/lib / slugify';
@@ -96,12 +76,9 @@ function CategoryCard() {
         class_name)}
     >;
       <div;
-
         className={cn(;
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
           !color && "text-zion-cyan";
-
-
         )}        style={color ? { color } : undefined}
       >;
         {icon}
@@ -110,8 +87,4 @@ function CategoryCard() {
       <p className="text - zion - slate - light text - center">{description}</p>;
       {count !== undefined && (
         <div className="mt - 3 text - sm text - zion - cyan">{count} listings</div>)}
-    </Link>);<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}
+    </Link>);}

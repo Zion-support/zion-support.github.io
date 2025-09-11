@@ -1,4 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 
@@ -52,7 +51,6 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
-=======
 
 
   Brain;
@@ -62,8 +60,6 @@ import {
   FileText,
   BarChart3,
   Users,
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Zap;
   ArrowRight;
   Star;
@@ -100,8 +96,6 @@ export default function AIBusinessToolsPage() {
         'Good free tier'
       ]
       cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns']
-=======
-=======
 
 
 
@@ -176,8 +170,6 @@ export default function AIBusinessToolsPage() {
                 AI-Powered Business Solutions;
               </div>;
             </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>;
               AI Business Tools;
             </h1>;
@@ -552,14 +544,11 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
               enterprises.
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
-=======
-
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
-=======
 
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+
               <Button
                 href='#tools'
                 size='lg'
@@ -577,11 +566,9 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                 variant="outline"
                 size="lg"
                 style={{ animationDelay: '0.4s' }}
-=======
 
                 style={{ animationDelay: '0.4s' }}
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Get AI Consultation
               </Button>
@@ -593,8 +580,6 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -846,9 +831,6 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
               </div>;
               <div className="text - gray - 400 text - sm">Total Users</div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -858,14 +840,9 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 
               <button
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               <button
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -882,8 +859,6 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 
 
       {/* Tools Grid */}
-=======
-=======
 
 
       {/* Tools Grid */}
@@ -960,7 +935,6 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                         {tool.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
-=======
                       </div>;
                     </div>;
 
@@ -1034,10 +1008,8 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                       <p className='text-sm text-gray-400'>{tool.bestFor}</p>
                     </div>
                     <div className='flex items-center justify-between'>
-=======
 
                     <div className='flex items-center justify-between'>;
-=======
 
                     <div className='flex items-center justify-between'>;
                       <Button
@@ -1051,14 +1023,11 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
       {/* AI Benefits Section */}
-=======
 
 
 
 
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1139,7 +1108,6 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
           </div>
         </div>
       </section>
-=======
 
               Explore More Tools;
             </Button>;
@@ -1148,22 +1116,10 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
   );
-=======}
   );
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

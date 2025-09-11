@@ -29,8 +29,6 @@ export default function OnboardingWizard() {;
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('zion_has_onboarded', '1');
 
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -67,7 +65,6 @@ import React, { useEffect, useState } from 'react';
       if (!has) {;
         setOpen(true);
 
-=======
       const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {
         setOpen(true)
@@ -98,7 +95,6 @@ import React, { useEffect, useState } from 'react';
   if (!open) return null;
 
   return (
-=======
       }
     } catch {}
   }, []);
@@ -121,10 +117,7 @@ import React, { useEffect, useState } from 'react';
 );
 }
   );
-=======
-=======
 
-=======
   );
 }
 import Link from 'next / link';
@@ -285,15 +278,6 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,10 +1,6 @@
 
 
-=======
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;export interface ListingItem {
   id: string;
   title: string;
@@ -19,14 +15,9 @@ export interface ContactInfo {;
   phone: string
   company: string
 }
-=======
 ;
 export interface ListingItem {
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface ListingItem {;
 
@@ -68,8 +59,6 @@ export interface Budget {;
   startDate?: Date;
   endDate?: Date;
 export interface QuoteRequest {
-=======
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   timeline: TimelineType;
 
   budget: Budget,
@@ -79,13 +68,10 @@ export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'clos
 ;
 
 export interface QuoteRequest {
-=======
 
 export interface QuoteRequest {;
 
 export interface QuoteRequest {;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -180,13 +166,6 @@ export interface QuoteRequest {;
   created_at: string,
   updated_at: string;
 
-=======
-=======
   created_at: string,
   updated_at: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

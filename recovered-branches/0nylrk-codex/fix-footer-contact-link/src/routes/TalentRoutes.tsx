@@ -46,17 +46,11 @@ import ProfilePage from "../pages/ProfilePage",;
 
 const TalentRoutes = () => {
 const TalentRoutes = () => {;
-=======
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const TalentRoutes = () => {
-=======
 const TalentRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
 import TalentsPage from "../pages / TalentsPage";
@@ -94,10 +88,8 @@ const TalentRoutes = () =>: any {
 },
 
 
-<<<<<<< HEAD
 export default TalentRoutes;
 ;
-<<<<<<< HEAD
   ),;
 },;
 ;export default TalentRoutes,
@@ -119,6 +111,3 @@ export default TalentRoutes;
   );
 },;
 export default TalentRoutes;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======export default TalentRoutes;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

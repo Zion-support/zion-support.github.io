@@ -1,9 +1,7 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Layout from './layout/Layout';
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -149,35 +147,25 @@ const Homepage2026: React.FC = () => {
 
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <button className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105">;
                     All Services;
                   </button>;
                 </Link>;
                 <a href="mailto:kleber@ziontechgroup.com">;
                   <button className="px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     Get Started;
                   </button>;
                 </a>;
               </div>;
 
-=======              
 
 
 
 
-=======
               =======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -205,18 +193,13 @@ const Homepage2026: React.FC = () => {
             </motion.div>
           </div>
         </section>
-=======
-=======
 
         {/* Company Stats */}
         <section className='py-20 px-4 bg-black/30 relative'>;
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>;
           <div className='max-w-6xl mx-auto relative z-10'>            <motion&& motion.div
-=======
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Company Stats */}
         <section className="py-20 px-4 bg-black/30 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
@@ -225,8 +208,6 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
@@ -240,21 +221,17 @@ const Homepage2026: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-center"
-=======
 
                 className="text-center"
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 text-sm">
                   Starting at $69/month for specialized business solutions
-=======
 
                   Starting at $69/month for specialized business solutions
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
               </motion.div>
               <motion.div
@@ -262,21 +239,17 @@ const Homepage2026: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center"
-=======
 
                 className="text-center"
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-4xl mb-4">🏗️</div>
                 <h3 className="text-xl font-semibold text-white mb-2">IT Infrastructure</h3>
                 <p className="text-gray-300 text-sm">
                   Starting at $499/month for robust infrastructure solutions
-=======
 
                   Starting at $499/month for robust infrastructure solutions
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
               </motion.div>
               <motion.div
@@ -284,21 +257,17 @@ const Homepage2026: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-center"
-=======
 
                 className="text-center"
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
                 <p className="text-gray-300 text-sm">
                   Starting at $199/month for intelligent automation
-=======
 
                   Starting at $199/month for intelligent automation
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
               </motion.div>
               <motion.div
@@ -306,21 +275,17 @@ const Homepage2026: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center"
-=======
 
                 className="text-center"
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>
                 <p className="text-gray-300 text-sm">
                   Starting at $179/month for next-generation AI
-=======
 
                   Starting at $179/month for next-generation AI
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
               </motion.div>
             </div>
@@ -417,12 +382,8 @@ const Homepage2026: React.FC = () => {
 
         {/* Service Categories */}
         <section className="py-20 px-4">
-=======
-=======
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               >
                 <div className='text-5xl mb-6'>🏗️</div>
@@ -533,10 +494,6 @@ const Homepage2026: React.FC = () => {
               </motion && motion.div>;
 
 
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
@@ -548,12 +505,9 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
 
-==============
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
-=======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -618,8 +572,6 @@ const Homepage2026: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
-=======
-=======                transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'>🚀</div>;
                 <h3 className='text-2xl font-semibold text-white mb-4'>;
@@ -747,13 +699,8 @@ const Homepage2026: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               >
                 <div className='text-5xl mb-6'>🧠</div>
@@ -870,7 +817,6 @@ const Homepage2026: React.FC = () => {
         {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
               {/* Contact Information */}
               <div className='bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8'>;
                 <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>;
@@ -882,10 +828,8 @@ const Homepage2026: React.FC = () => {
                     <div>;
                       <div className='text-sm text-gray-400'>Website</div>;
                       <a
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Contact Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
@@ -893,7 +837,6 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -1159,10 +1102,8 @@ const Homepage2026: React.FC = () => {
 };
 export default Homepage2026;  );
 };
-=======export default Homepage2026;
 
 
-=======
 export default Homepage2026;  )
 }
 export default Homepage2026;
@@ -1170,11 +1111,5 @@ export default Homepage2026;
 };
 
 
-<<<<<<< HEAD
 export default Homepage2026;
 export default Homepage2026;
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

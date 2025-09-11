@@ -19,9 +19,6 @@ import {
 } from 'lucide-react';
 interface PerformanceMetrics {;
   loadTime: number;
-
-=======
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -42,16 +39,11 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-
 } from 'lucide-react';
 interface PerformanceMetrics {;
   loadTime: number;
-=======
-=======
   Database,;
   Network,;
-
-
 } from 'lucide-react';
 interface PerformanceMetrics {
   load_time: number;
@@ -60,10 +52,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }, []);
-
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
-
-
 //Optimize images for (const img of Array && Array.from (images) ) {;
   if (img && img.complete && img && img.naturalWidth > 0) {;
   //Add lazy loading img && img.loading = 'lazy';
@@ -91,8 +80,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     cumulativeLayoutShift: 0,;
     firstInputDelay: 0,;
     timeToInteractive: 0,  });    timeToInteractive: 0;
-
-=======
           }
           optimized_count++;        }
       }
@@ -107,8 +94,6 @@ if ( {) {
           optimized_count++;
         }
       }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       setOptimizationStatus (`Optimized ${optimized_count} images`);
 ;
       // Simulate optimization delay;
@@ -123,8 +108,6 @@ if ( {) {
       await new Promise (resolve => set_timeout (resolve, 1000));
 ;
       setOptimizationStatus ('Image optimization complete');
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     } catch (error) {
       setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
@@ -132,17 +115,12 @@ if ( {) {
       setIsOptimizing (false);
     }
   }, []);
-
           optimizedCount++;
-
         }
       }
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
-
-
       setOptimizationStatus('Image optimization complete');
     } catch (error) {;
-
   // Optimize fonts;
   const optimizeFonts = useCallback(async () => {;
     setIsOptimizing(true);
@@ -152,8 +130,6 @@ if ( {) {
       const style = document && document.createElement('style'),;
       style && style.textContent = `;
         @font-face {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           font-family: 'Inter';
           font-display: swap;
         }
@@ -162,24 +138,19 @@ if ( {) {
         @font-face {;
           font-family: 'JetBrains Mono',;
           font-display: swap;
-
-=======          font-family: 'Inter',
+          font-family: 'Inter',
           font-display: swap
-
         }
         @font-face {;
           font-family: 'Orbitron';
-
   // Optimize images
   const optimizeImages = useCallback(async () => {
     setIsOptimizing(true),
     setOptimizationStatus('Optimizing images...'),
-
       for (const img of Array.from(images)) {
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading
           img.loading = 'lazy',
-          
           // Add responsive sizes if not present
           if (!img.sizes) {
             img.sizes =
@@ -223,19 +194,12 @@ if ( {) {
       style.textContent = `
         @font-face {
 `;
-=======
-=======
         }
-
         @font-face {
           font-family: 'Orbitron',
           font-display: swap
         }
-
       `;
-
-
-
       await new Promise(resolve => setTimeout(resolve, 800));
     } catch (error) {;
       setOptimizationStatus('Font optimization failed');
@@ -248,8 +212,6 @@ if ( {) {
       console && console.error('Font optimization error:', error);
     } finally {;
       setIsOptimizing(false);
-
-=======
   // Optimize CSS and JavaScript;
   const optimizeCode = useCallback(async () => {;
     setIsOptimizing(true);
@@ -274,8 +236,6 @@ if ( {) {
         { rel: 'preload', href: '/fonts/jetbrains-mono-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
         { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       ];
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
       setIsOptimizing (false);
@@ -317,7 +277,6 @@ preloadImages = [], preloadFonts = [;
     'https: //fonts && fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;
   ], criticalCSS'}) => {;
   useEffect(() => {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Performance monitoring;
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
         for (const entry of list && list.getEntries()) {;
@@ -369,7 +328,6 @@ if ( {) {
     } finally {
       setIsOptimizing(false)    }
   }, []);
-
   // Run all optimizations;
   const runAllOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
@@ -379,9 +337,7 @@ if ( {) {
       await optimizeImages(),
       await optimizeFonts(),
       await optimizeCode(),
-      
       setOptimizationStatus('All optimizations complete!'),
-
   }, []);
   // Optimize CSS and JavaScript
   const optimizeCode = useCallback(async () => {
@@ -475,33 +431,25 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
     } finally {
       setIsOptimizing(false)
     }
-=======
-=======
   criticalCSS?: string;
 }
-
-
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
 preloadImages = [], preloadFonts = [;
     'https: //fonts && fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;
   ], criticalCSS'}) => {;
   useEffect(() => {;
-
     // Performance monitoring;
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
         for (const entry of list && list.getEntries()) {;
 if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);
 '          }'          if (entry && entry.entryType === 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime);'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value);'            }'          }}
       });
-
       try {;
         observer && observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
 '      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
         console && console.log('Performance monitoring not fully supported');
 '      }';
       // Resource hints for better performance;
-
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
 preload_images = [], preload_fonts = [;
     'https: //fonts.googleapis.com / css2?family = Inter:wght@300;400;500;600;700;800;900 & display = swap;
@@ -535,7 +483,6 @@ if ( {) {
   $2
 }
             link.set_attribute (key, value as string);
-
           } else {
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document && document.createElement('link');
@@ -546,20 +493,14 @@ if ( {) {
             (link as any)[key] = value;
           }
         });
-
-
       await new Promise(resolve => setTimeout(resolve, 1200));
     } catch (error) {;
       setOptimizationStatus('Code optimization failed');
-
       console.error('Code optimization error:', error)
     } finally {
       setIsOptimizing(false)
-
     }
   }, []);
-
-
   // Run all optimizations;
   const runAllOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
@@ -568,18 +509,12 @@ if ( {) {
       await optimizeImages();
       await optimizeFonts();
       await optimizeCode();
-
-
       setOptimizationStatus('Optimization failed');
-
       console.error('Optimization error:', error)
     } finally {
       setIsOptimizing(false)
-
     }
   }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
-
-
   // Initialize performance monitoring;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
@@ -593,16 +528,8 @@ if ( {) {
             if (lcp > 2500) {;
               // LCP should be under 2 && 2.5s;
               console && console.warn('LCP is too slow:', lcp);            }
-
-=======      
       // Monitor for performance issues
-=======
-
-=======
-      
       // Monitor for performance issues
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
   // Initialize performance monitoring
   useEffect(() => {
@@ -626,7 +553,6 @@ if ( {) {
             const lcp = entry.startTime;
             if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
-=======
         document.head.append_child (link);
       });
 ;
@@ -715,13 +641,7 @@ if ( { // LCP should be under 2.5s) {
 }
               console.warn ('LCP is too slow:', lcp);
   }, [measurePerformance]);
-=======  }, [measurePerformance]);
-
-
-
-    
-
-=======
+  }, [measurePerformance]);
           className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
         >
           {showMetrics ? 'Hide' : 'Show'} Metrics
@@ -731,14 +651,10 @@ if ( { // LCP should be under 2.5s) {
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
-
-
           />
         </div>
         <div className='text-right mt-1'>
-
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>
-
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-white/70">Performance Score</span>
@@ -752,7 +668,7 @@ if ( { // LCP should be under 2.5s) {
             {performanceGrade}
           </span>
         </div>
-=======        <div className='w-full bg-white/10 rounded-full h-3'>
+        <div className='w-full bg-white/10 rounded-full h-3'>
           <motion.div
             className='h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full'
             initial={{ width: 0 }}
@@ -764,7 +680,6 @@ if ( { // LCP should be under 2.5s) {
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>        </div>
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
-=======
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-white/70">Performance Score</span>
@@ -772,41 +687,25 @@ if ( { // LCP should be under 2.5s) {
         </div>
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
-
-=======          />
+          />
         </div>
         <div className="text-right mt-1">
           <span className="text-sm text-white/60">{performanceScore}/100</span>
         </div>
       </div>
-
-=======
           />
         </div>
         <div className='text-right mt-1'>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>
-
         </div>
-
       </div>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
-
       {/* Optimization Controls */}
       <div className=&quot;space-y-3&quot;>
         <button
@@ -820,16 +719,12 @@ if ( { // LCP should be under 2.5s) {
           {_isOptimizing ? (
             <>
               <div className=&quot;w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin&quot; />
-
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
-
         >
-==============
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -879,11 +774,7 @@ if ( { // LCP should be under 2.5s) {
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
       <div className='space-y-3'>        <button
-
         <button
-
-=======
-=======
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />;
             <div className='text-lg font-bold text-white'>;
@@ -891,7 +782,6 @@ if ( { // LCP should be under 2.5s) {
             </div>;
             <div className='text-xs text-white/60'>Load Time</div>;
           </div>;
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <Activity className='w-6 h-6 text-green-400 mx-auto mb-2' />;
             <div className='text-lg font-bold text-white'>;
@@ -899,7 +789,6 @@ if ( { // LCP should be under 2.5s) {
             </div>;
             <div className='text-xs text-white/60'>FCP</div>;
           </div>;
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <TrendingUp className='w-6 h-6 text-purple-400 mx-auto mb-2' />;
             <div className='text-lg font-bold text-white'>;
@@ -907,7 +796,6 @@ if ( { // LCP should be under 2.5s) {
             </div>;
             <div className='text-xs text-white/60'>LCP</div>;
           </div>;
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <Cpu className='w-6 h-6 text-yellow-400 mx-auto mb-2' />;
             <div className='text-lg font-bold text-white'>;
@@ -915,7 +803,6 @@ if ( { // LCP should be under 2.5s) {
             </div>;
             <div className='text-xs text-white/60'>TTI</div>;
           </div>;
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <Database className='w-6 h-6 text-orange-400 mx-auto mb-2' />;
             <div className='text-lg font-bold text-white'>;
@@ -923,7 +810,6 @@ if ( { // LCP should be under 2.5s) {
             </div>;
             <div className='text-xs text-white/60'>CLS</div>;
           </div>;
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <Network className='w-6 h-6 text-red-400 mx-auto mb-2' />;
             <div className='text-lg font-bold text-white'>;
@@ -935,37 +821,24 @@ if ( { // LCP should be under 2.5s) {
             <div className="text-lg font-bold text-white">{Math && Math.round(metrics && metrics.firstInputDelay)}ms</div>;
             <div className="text-xs text-white/60">FID</div>;
         </motion && motion.div>;
-
       )}
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">;
-
-=======
           </div>
         </motion.div>
       )}
         <button
-
-
       {/* Optimization Controls */}
-
         <button
-=======
-
-
       {/* Optimization Controls */}
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
             isOptimizing
               ? 'bg-gray-600 cursor-not-allowed'
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105'
-
             <div className="text-sm text-white/80">{optimizationStatus}</div>
           </div>
-
         </button>;
         {optimizationStatus !== 'idle' && (;
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
@@ -974,8 +847,6 @@ if ( { // LCP should be under 2.5s) {
           </div>;
         )}
       </div>;
-
-
       {/* Preload critical resources */}
       {preloadImages && preloadImages.map((image, index) => (;
         <link
@@ -984,28 +855,20 @@ key={`preload-image-${index}}          rel="preload""          as="image""      
         <link
 key={`preload-font-${index}`}          rel="preload""          as="style""          href={font}"          onLoad={() => {;
             const link = document && document.querySelector(link[href="${font}"]`);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;
 }'          }}`        />;
       ))}
       {/* Performance hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       <script
         dangerouslySetInnerHTML={{
           __html:             if ('serviceWorker' in navigator) {'              window && window.addEventListener('load', function() {'                navigator && navigator.serviceWorker.register('/sw && sw.js')'                  .then(function(registration) {'                    console && console.log('SW registered: ', registration)
 '                  })'                  .catch(function(registrationError) {
                     console && console.log('SW registration failed: ', registrationError)'                  })'              })
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 }
           ``        }}/>;
     </Head>;
   );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 };
   );
       {/* Performance Tips */}
@@ -1014,13 +877,9 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <ul className="text-xs text-white/60 space-y-1">
         )}
       </div>
-
       {/* Performance Tips */}
         )}
       </div>
-
-
-
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
@@ -1037,16 +896,10 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
     limit: number;
   }
 }
-=======
-
 interface PerformanceOptimizerProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enable_reporting?: boolean;
 }
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PerformanceOptimizerProps {;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableReporting?: boolean;
@@ -1088,16 +941,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   }, [onMetricsUpdate, enableReporting]);
   useEffect(() => {;
     if (document && document.readyState === 'complete') {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
       measureWebVitals();
     } else {;
       window && window.addEventListener('load', measureWebVitals);
     }
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return () => {;
       window && window.removeEventListener('load', measureWebVitals);
     };
@@ -1106,9 +953,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   useEffect(() => {;
     if (!metrics) return;
     const warnings: string[] = [];
-
-
-=======
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
   onMetricsUpdate,
   enable_reporting = false;
@@ -1211,19 +1055,11 @@ if ( {) {
 }
 ;
 export default PerformanceOptimizer;
-;=======  );
-
-
-
+;  );
     }
   }, [metrics, enableReporting]);
   return null;
-
 }
-
 export default PerformanceOptimizer;
 };export default PerformanceOptimizer;
-
 export default PerformanceOptimizer;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

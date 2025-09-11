@@ -3,17 +3,14 @@
 
 import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
-=======
 
 
 import type { UserProfile } from "@/types/auth",
 
-=======
 import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
@@ -27,8 +24,6 @@ import type { UserProfile } from "@/types/auth",
  */
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
   return {
-=======
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export interface SupabaseUser {
 
   id: string,
@@ -47,14 +42,12 @@ export interface SupabaseUser {
     avatar_url: profile && profile.avatar_url || undefined,
     avatarUrl: profile && profile.avatar_url || undefined, // Add for compatibility
     role: profile && profile.user_type // Map user_type to role for backward compatibility
-==============
 /**
  * Maps Supabase profile data to our app's user model
  */
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
   return {;
     id: user.id;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     email: user.email || "";
     display_name: profile.display_name || "";
     user_type: (profile.user_type as "creator" | "job_seeker" | "employer" | "buyer" | "admin" | null) || null;
@@ -77,7 +70,6 @@ import type { UserProfile } from "@/types/auth",;
     bio: profile.bio || undefined;
     headline: profile.headline || undefined;
     avatar_url: profile.avatar_url || undefined,
-=======    avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
   }
 }
@@ -139,8 +131,3 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     role: profile.user_type // Map user_type to role for backward compatibility;
   return {
 
-<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

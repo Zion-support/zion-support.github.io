@@ -19,16 +19,11 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 export default function PartnersPage() {
-=======
 
 
 export default function PartnersPage() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 export default function PartnersPage() {
-=======
 
 export default function PartnersPage() {  return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
@@ -37,8 +32,6 @@ export default function PartnersPage() {  return (
         <meta
           name='description'
           content='Technology and go-to-market partners powering our customer outcomes.'
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />;
       </Head>;
@@ -57,8 +50,6 @@ export default function PartnersPage() {  return (
           <li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>;
         </ul>;
         <div className='pt-4 text-slate-300'>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           Partner with us:{' '}
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
             kleber@ziontechgroup.com
@@ -70,7 +61,6 @@ export default function PartnersPage() {  return (
 export default function PartnersPage() {
 	return (
 
-==============import Head from 'next / head';
 export default /**
  * PartnersPage - Function description
  */
@@ -129,18 +119,4 @@ function PartnersPage() {
 	),
 }
 
-<<<<<<< HEAD
 
-=======				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
-			</div>
-		</div>
-	)
-}
-	),
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
