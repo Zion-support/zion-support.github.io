@@ -204,40 +204,28 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='AI-Powered Business Automation: Complete Guide for 2025'
-              href='/blog/ai-powered-business-automation-2025'
-              description='Discover how AI automation can transform your business operations, reduce costs, and increase efficiency.'
-              icon='🤖'
+              title='AI Agents in the Enterprise: Practical Playbooks for 2025'
+              href='/blog/ai-agents-in-enterprise-2025'
+              description='Architectures, guardrails, and KPIs to deploy reliable AI agents.'
+              icon='🧠'
             />
             <Card
-              title='Micro SaaS Success Stories: From Idea to $10K MRR'
-              href='/blog/micro-saas-success-stories-2025'
-              description='Real success stories of entrepreneurs who built profitable micro SaaS businesses.'
-              icon='🚀'
+              title='Startup Distribution in 2025: A Practical Playbook'
+              href='/blog/startup-distribution-playbook-2025'
+              description='The highest-leverage channels to reach 0 → 500 customers.'
+              icon='📈'
             />
             <Card
-              title='AI Agent Guardrails in Production'
-              href='/blog/ai-agent-guardrails-in-production'
-              description='Make agents predictable with scoped tools, approvals, evals, and budgets.'
+              title='AI Governance Blueprint 2025: Controls that Actually Work'
+              href='/blog/ai-governance-blueprint-2025'
+              description='Policy, process, and technical controls that reduce real risk.'
               icon='🛡️'
             />
             <Card
-              title='GenAI Security in 2025'
-              href='/blog/genai-security-2025'
-              description='A pragmatic blueprint for securing GenAI systems in production with real controls.'
-              icon='🔒'
-            />
-            <Card
-              title='LLM Cost Optimization Playbook'
-              href='/blog/llm-cost-optimization-playbook'
-              description='Reduce inference spend 20–50% with routing, retrieval, batching, and observability.'
-              icon='💸'
-            />
-            <Card
-              title='Micro SaaS Distribution 2025'
-              href='/blog/startup-micro-saas-distribution-2025'
-              description='Repeatable channels to land the first 100–500 customers efficiently.'
-              icon='📈'
+              title='GenAI Observability: The 2025 Checklist'
+              href='/blog/genai-observability-checklist-2025'
+              description='Telemetry that matters across prompts, tools, retrieval, and costs.'
+              icon='🔍'
             />
           </div>
         </div>

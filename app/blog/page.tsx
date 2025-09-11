@@ -81,20 +81,6 @@ export default function BlogPage() {
       image: '/api/placeholder/600/400',
     },
     {
-<<<<<<< HEAD
-=======
-      id: 'blockchain-business-applications',
-      title: 'Blockchain Beyond Crypto: Real Business Applications',
-      excerpt:
-        'Exploring practical blockchain applications in supply chain, healthcare, and finance that are driving real business value.',
-      date: '2025-01-08',
-      readTime: '10 min read',
-      category: 'Blockchain',
-      featured: false,
-      image: '/api/placeholder/600/400',
-    },
-    {
->>>>>>> origin/main
       id: 'cybersecurity-2025-trends',
       title: 'Cybersecurity Trends Every Business Should Know in 2025',
       excerpt:
@@ -113,6 +99,51 @@ export default function BlogPage() {
       date: '2025-01-03',
       readTime: '9 min read',
       category: 'Data & Analytics',
+      featured: false,
+      image: '/api/placeholder/600/400',
+    },
+    // New posts (2025-09)
+    {
+      id: 'ai-agents-in-enterprise-2025',
+      title: 'AI Agents in the Enterprise: Practical Playbooks for 2025',
+      excerpt:
+        'Architectures, guardrails, and KPIs to deploy reliable AI agents that move business metrics.',
+      date: '2025-09-11',
+      readTime: '11 min read',
+      category: 'AI & Automation',
+      featured: true,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'startup-distribution-playbook-2025',
+      title: 'Startup Distribution in 2025: A Practical Playbook',
+      excerpt:
+        'The highest-leverage channels and measurement to get from 0 → 500 customers.',
+      date: '2025-09-11',
+      readTime: '9 min read',
+      category: 'Growth',
+      featured: true,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Controls that Actually Work',
+      excerpt:
+        'Policy, process, and technical controls that reduce risk without blocking the business.',
+      date: '2025-09-11',
+      readTime: '10 min read',
+      category: 'Governance',
+      featured: false,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'genai-observability-checklist-2025',
+      title: 'GenAI Observability: The 2025 Checklist',
+      excerpt:
+        'Telemetry that matters across prompts, tools, retrieval, costs, and outcomes.',
+      date: '2025-09-11',
+      readTime: '7 min read',
+      category: 'MLOps',
       featured: false,
       image: '/api/placeholder/600/400',
     },
@@ -281,8 +312,4 @@ const PostCard: FC<{ post: any }> = ({ post }) => {
       </article>
     </Link>
   );
-<<<<<<< HEAD
-};
-=======
 }
->>>>>>> origin/main
