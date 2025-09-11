@@ -99,4 +99,64 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2025-09-11',
     readTime: 7,
   },
+  {
+    id: '7',
+    title: 'RAG Done Right: From Toy Demos to Reliable Systems',
+    slug: 'rag-done-right',
+    excerpt:
+      'Hard-earned patterns for building retrieval-augmented generation that stands up to production traffic.',
+    content:
+      'RAG systems fail for predictable reasons: poor chunking, weak retrieval, missing grounding, and no evaluation. We cover index design, hybrid search, citation enforcement, structured outputs, and continuous eval loops that keep responses accurate as content evolves.',
+    featuredImage: '/images/blog/rag-done-right.jpg',
+    category: 'AI',
+    tags: ['RAG', 'LLM', 'Search'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 7,
+  },
+  {
+    id: '8',
+    title: 'From Dashboards to Decisions: Actionable Observability',
+    slug: 'actionable-observability',
+    excerpt:
+      'Turn signals into safe, automated actions with SLO-aware guardrails and feedback loops.',
+    content:
+      'Most stacks stop at charts. We outline a playbook to tie alerts to runbooks, codify guardrails, and trigger safe remediations. With canaries, circuit breakers, and human-in-the-loop policies, teams cut MTTR while reducing alert fatigue.',
+    featuredImage: '/images/blog/actionable-observability.jpg',
+    category: 'Observability',
+    tags: ['SRE', 'SLO', 'Automation'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 6,
+  },
+  {
+    id: '9',
+    title: 'Designing AI Products Users Actually Trust',
+    slug: 'designing-trustworthy-ai-products',
+    excerpt:
+      'Explainability, controls, and fallbacks that boost adoption—not just accuracy scores.',
+    content:
+      'Trust is earned through predictable behavior and clear affordances. We cover UX patterns for AI: uncertainty displays, actionable citations, reversible changes, privacy-level controls, and escape hatches to human help. The result: higher retention and fewer surprises.',
+    featuredImage: '/images/blog/trustworthy-ai-products.jpg',
+    category: 'Product',
+    tags: ['UX', 'AI', 'Product'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 5,
+  },
+  {
+    id: '10',
+    title: 'Serverless at Scale: Cost, Cold Starts, and Control',
+    slug: 'serverless-at-scale',
+    excerpt:
+      'Practical strategies to keep latency predictable and costs sane as functions multiply.',
+    content:
+      'We dig into workload shaping, provisioned concurrency, connection pooling, and shared-nothing constraints. Learn when to shard, when to co-locate, and how to trace across ephemeral boundaries so incidents are debuggable.',
+    featuredImage: '/images/blog/serverless-at-scale.jpg',
+    category: 'Cloud',
+    tags: ['Serverless', 'Architecture', 'Performance'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 7,
+  },
 ];
