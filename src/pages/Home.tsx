@@ -1,63 +1,24 @@
 import React from 'react';
-import { SEO } from "../components/SEO";
-import { EnhancedHeroSection } from "../components/home/EnhancedHeroSection";
-import { QuickAccess } from "../components/home/QuickAccess";
-import { FeatureCTAs } from "../components/home/FeatureCTAs";
-import { FeatureHighlights } from "../components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "../components/home/ITServiceRequestHero";
-import { FuturisticBackground } from "../components/ui/FuturisticBackground";
-import { ServicesShowcase } from "../components/home/ServicesShowcase";
 
-import { BenefitsSection } from "../components/BenefitsSection";
-import { HowItWorksSection } from "../components/HowItWorksSection";
-import { NewsletterSection } from "../components/NewsletterSection";
-import { FeaturedListingsSection } from "../components/FeaturedListingsSection";
-
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Futuristic Background */}
-      <FuturisticBackground variant="default" intensity="medium" />
-      
-      <SEO 
-        title="Zion Tech Group - Leading AI & Technology Marketplace" 
-        description="Transform your business with cutting-edge AI and technology solutions. Connect with world-class experts, innovative services, and enterprise-grade solutions."
-        keywords="AI, artificial intelligence, technology marketplace, cloud services, cybersecurity, data analytics, machine learning, blockchain, IoT, enterprise solutions"
-        canonical="https://ziontechgroup.com/"
-      />
-
-      {/* Enhanced Hero Section */}
-      <EnhancedHeroSection />
-
-      {/* IT Service Request Hero */}
-      <ITServiceRequestHero />
-      
-      {/* Quick Access */}
-      <QuickAccess />
-      
-      {/* Feature Highlights */}
-      <FeatureHighlights />
-      
-      {/* Feature CTAs with new services */}
-      <FeatureCTAs />
-      
-      {/* Services Showcase */}
-      <ServicesShowcase />
-      
-      {/* Categories Section */}
-
-      
-      {/* Benefits Section */}
-      <BenefitsSection />
-      
-      {/* How It Works Section */}
-      <HowItWorksSection />
-      
-      {/* Featured Listings */}
-      <FeaturedListingsSection />
-      
-      {/* Newsletter Section */}
-      <NewsletterSection />
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl md:text-6xl font-bold mb-8 text-center">
+          Welcome to Zion Tech Group
+        </h1>
+        <p className="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+          Leading provider of innovative technology solutions, AI services, and IT solutions
+          for businesses worldwide.
+        </p>
+        <div className="text-center">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Get Started
+          </button>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;

@@ -1,54 +1,212 @@
-export type KycRole = 'client' | 'talent' | 'enterprise';
-export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 
+
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  url: string;
+  uploaded_at: string;
+  status: 'pending' | 'approved' | 'rejected';
+}
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface KycProfile {
-  id: string;
+  user_id: string;
+=======
+
+
+export interface KycProfile {;
+
+  userId: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  role: KycRole;
+  fullLegalName?: string;
+  business_name?: string;
+  businessRegistrationNumber?: string;
+  country?: string;
+  dateOfBirth?: string;
+  documents: KycDocumentMeta[];
+  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
+  aml_status: 'unknown' | 'clear' | 'match' | 'review';
+  flags?: string[];
+  risk_score?: number;
+  created_at: string;
+  lastUpdatedAt: string;
+  audit_trail: Array<{
+    at: string;
+    by: string;
+    action: string;
+
+    details?: any
+
+  }>;
+
+=======
+// KYC (Know Your Customer) utilities
+export interface KycProfile {
+  userId: string;
+  role: 'client' | 'talent' | 'both';
+  fullLegalName: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  documents: KycDocument[];
+  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired';
+  submittedAt?: string;
+  reviewedAt?: string;
+  expiresAt?: string;
+  reviewerId?: string;
+  rejectionReason?: string;
+  notes?: string;
+
+}
+
+export function getRequiredDocuments (role: KycRole): string[] {
+  // Check condition
+if ( {) {
+  $2
+}
+
+    return ['government_id', 'proof_of_address'];
+  } else {
+    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
+  }
+}
+
+
+    return ['bank_statement', 'utility_bill'];
+  } else {
+    return ['bank_statement', 'utility_bill', 'tax_certificate'];
+  }
+}
+
+
+
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
+
+
+  const missing: string[] = [];
+  
+  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
+    missing && missing.push('name'),
+  }
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+  }
+  
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+    missing && missing.push('dateOfBirth');
+  }
+  return { ok: missing && missing.length === 0, missing };  
+  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+    missing && missing.push('businessRegistrationNumber');
+=======
+
+  
+  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
+    missing && missing.push('name'),
+
+=======
+
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  }
+  
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+
+  if (profile.role === 'client' && !profile.dateOfBirth) {
+    missing.push('dateOfBirth');
+  }
+
+  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
+    missing.push('businessRegistrationNumber');
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+    missing && missing.push('dateOfBirth');
+  }
+  return { ok: missing && missing.length === 0, missing };  
+  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+    missing && missing.push('businessRegistrationNumber');
+  }
+  return {
+
+    ok: missing && missing.length === 0,
+
+    missing
+
+  }
+
+}
+=======
+
+
+export interface KycDocumentMeta {;
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  url: string;
+  uploadedAt: string;
+  status: 'pending' | 'approved' | 'rejected';
+}
+
+export interface KycProfile {;
   userId: string;
   role: KycRole;
-  status: KycStatus;
-  documents: KycDocument[];
-  verification: KycVerification;
+  fullLegalName?: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  country?: string;
+  dateOfBirth?: string;
+  documents: KycDocumentMeta[];
+  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
+  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
+  flags?: string[];
+  riskScore?: number;
   createdAt: string;
-  updatedAt: string;
+  lastUpdatedAt: string;
+  auditTrail: Array<{
+    at: string;
+    by: string;
+    action: string;
+    details?: any
+  }>;
 }
-
-export interface KycDocument {
-  id: string;
-  type: 'passport' | 'drivers_license' | 'utility_bill' | 'bank_statement' | 'business_license';
-  url: string;
-  status: 'pending' | 'approved' | 'rejected';
-  uploadedAt: string;
+export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = [];
+;
+  // Check condition
+if ( {) {
+  $2
 }
-
-export interface KycVerification {
-  identity: boolean;
-  address: boolean;
-  business: boolean;
-  aml: boolean;
+    missing.push ('name');
+  }
+  // Check condition
+if ( {) {
+  $2
 }
-
-export function createKycProfile(userId: string, role: KycRole): KycProfile {
+    missing.push ('country');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('dateOfBirth');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('businessRegistrationNumber');
+  }
   return {
-    id: `kyc_${Date.now()}`,
-    userId,
-    role,
-    status: 'not started',
-    documents: [],
-    verification: {
-      identity: false,
-      address: false,
-      business: false,
-      aml: false
-    },
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  };
+    ok: missing.length === 0,
+    missing;
+  }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
-export function updateKycStatus(profile: KycProfile, status: KycStatus): KycProfile {
-  return {
-    ...profile,
-    status,
-    updatedAt: new Date().toISOString()
-  };
-}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======

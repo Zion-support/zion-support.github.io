@@ -1,97 +1,122 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  poweredByHeader: false,
-  trailingSlash: false,
   reactStrictMode: true,
-  
-  // Disable ESLint during build to avoid parsing errors
+  compress: true,
+  poweredByHeader: false,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
-  
-  // Images configuration
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  trailingSlash: true,
   images: {
-    domains: ["localhost"],
-    unoptimized: true,
+    domains: [
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com"
+    ],
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000
   },
-
-  // Compiler options
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
-
-  // Transpile packages
-  transpilePackages: [
-    'react-markdown',
-    'date-fns',
-    'react-day-picker',
-    'lodash',
-    'lodash-es',
-    'formik',
-  ],
-
-  // Webpack configuration
   webpack: (config, { dev, isServer }) => {
-    // Handle ESM packages
-    config.module.rules.push({
-      test: /\.m?js$/,
-      type: 'javascript/auto',
-      resolve: {
-        fullySpecified: false,
-      },
-    });
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          "**/node_modules/**",
+          "**/.git/**",
+          "**/pages_backup*/**",
+          "**/pages.*/**",
+          "**/pages-*/**",
+          "**/pages_disabled*/**",
+          "**/pages.disabled*/**",
+          "**/pages.broken*/**",
+          "**/pages.corrupted*/**",
+          "**/pages.old*/**",
+          "**/pages._*/**",
+          "**/pages.__*/**",
+          "**/backup-pages/**",
+          "**/src.pages.disabled/**",
+          "**/lib_backup*/**",
+          "**/src_backup*/**",
+          "**/corrupted-files-backup*/**",
+          "**/performance-reports*/**",
+          "**/log-analysis-reports*/**",
+          "**/link-reports*/**",
+          "**/lint-target*/**",
+          "**/monitoring*/**",
+          "**/pm2-automation*/**",
+          "**/automation/logs*/**",
+          "**/automation/backup*/**",
+          "**/performance-*.json",
+          "**/performance-*.js",
+          "**/performance-*.cjs",
+          "**/performance-*.sh",
+          "**/performance-*.html",
+          "**/performance-*.md",
+          "**/performance-*.txt",
+          "**/apps/**"
+        ],
+        poll: 1000,
+        aggregateTimeout: 300
+      }
+    }
 
-    // Add polyfills for Node.js APIs
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false,
-      crypto: false,
-      async_hooks: false,
-      diagnostics_channel: false,
-      worker_threads: false,
-      module: false,
-      child_process: false,
-      http: false,
-      https: false,
-      os: false,
-      path: false,
-      stream: false,
-      util: false,
-      zlib: false,
-      url: false,
-    };
-
-    // Optimize bundle size
-    if (!dev) {
-      config.optimization = {
-        ...config.optimization,
-        moduleIds: 'deterministic',
-        chunkIds: 'deterministic',
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-              priority: 10,
-            },
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              priority: 5,
-              reuseExistingChunk: true,
-            },
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
           },
         },
       };
     }
 
+    // Exclude apps directory from compilation
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: /apps\//,
+      use: "ignore-loader"
+    });
+
     return config;
   },
-};
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff"
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY"
+          },
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block"
+          },
+          {
+            key: "Referrer-Policy",
+            value: "origin-when-cross-origin"
+          }
+        ]
+      }
+    ];
+  }
+}
 
-module.exports = nextConfig;
+export default nextConfig

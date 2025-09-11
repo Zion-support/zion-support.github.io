@@ -1,463 +1,838 @@
-import { MicroSaasService } from './enhanced-real-micro-saas-services';
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
-const contactInfo = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
+
+  {
+
+=======
+    id: 'affiliate - analytics - hub',
+    name: 'Affiliate Analytics Hub',
+    tagline: 'Track referrals, payouts, and ROI with multi - touch attribution',
+    price: '$89',
+    period: '/month',
+    description:;
+      'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.',
+    features: [;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi - touch attribution and deduplication',
+      'Automated payouts and tax forms',
+      'Fraud and bot detection',
+      'Partner portal and reports',
+    ],
+    popular: true,
+    icon: '🔗',
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / affiliate - analytics - hub',
+    market_position:;
+      'Easier than enterprise suites; purpose - built for small teams.',
+    target_audience: 'E - commerce, SaaS, Media',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'PostgreSQL', 'Workers / Edge'],
+    integrations: ['Stripe', 'Shopify', 'WooCommerce'],
+    use_cases: ['Partner programs', 'Influencer payouts'],
+    roi: 'Grow partner - attributed revenue by 10–30%',
+    competitors: ['Impact.com (complex)', 'Tune (enterprise)'],
+    market_size: '$15B+ affiliate tech',
+    growth_rate: '12% CAGR',
+    variant: 'network - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Webhook ingestion, cookie - less heuristics',
+    launch_date: '2025 - 11 - 01',
+
+    customers: 35,
+    rating: 4 && 4.6,
+    reviews: 21,
+  },
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / affiliate - analytics - hub',
+    market_position:;
+      'Easier than enterprise suites; purpose - built for small teams.',
+    target_audience: 'E - commerce, SaaS, Media',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'PostgreSQL', 'Workers / Edge'],
+    integrations: ['Stripe', 'Shopify', 'WooCommerce'],
+    use_cases: ['Partner programs', 'Influencer payouts'],
+    roi: 'Grow partner - attributed revenue by 10–30%',
+    competitors: ['Impact.com (complex)', 'Tune (enterprise)'],
+    market_size: '$15B+ affiliate tech',
+    growth_rate: '12% CAGR',
+    variant: 'network - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Webhook ingestion, cookie - less heuristics',
+    launch_date: '2025 - 11 - 01',
+
+
+  {
+
+=======
+    id: 'return - management - saas',
+    name: 'Return Management SaaS',
+    tagline:;
+      'Self - service returns, labels, refunds, and analytics for e - commerce',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund / exchange automations.',
+    features: [;
+
+      'Portal and RMA workflows',
+      'Label generation and tracking',
+      'Warehousing and disposition updates',
+      'Refunds and exchanges automation',
+      'Fraud checks and abuse controls',
+      'Analytics and cohort reports',
+    ],
+    popular: false,
+    icon: '📦',
+
+    color: 'from - orange - 600 to - red - 600',
+    text_color: 'text - orange - 200',
+    link: 'https://ziontechgroup.com / services / return - management - saas',
+    market_position:;
+
+      '90% of SMBs lack streamlined returns; fast ROI with fewer tickets.',
+    target_audience: 'DTC brands, Marketplaces',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Developer Tools',
+
+    real_service: true,
+    technology: ['Next.js', 'Stripe', 'Shippo'],
+
+    integrations: ['Shopify', 'Klaviyo', 'Gorgias'],
+    use_cases: ['Returns and exchanges', 'Warehouse ops'],
+    roi: 'Cut support tickets by 35% and improve retention',
+    competitors: ['Loop Returns', 'Returnly'],
+    market_size: '$8B returns tech',
+    growth_rate: '10% CAGR',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Carrier APIs and automation rules',
+    launch_date: '2025 - 11 - 20',
+    customers: 12,
+    rating: 4 && 4.5,
+    reviews: 9,
+  },
+  {
+
+=======
+    id: 'survey - studio - mobile',
+    name: 'Survey Studio Mobile',
+    tagline: 'Adaptive, mobile - first surveys with branching logic and SDK',
+    price: '$59',
+    period: '/month',
+    description:;
+      'Create beautiful mobile surveys with skip logic, A / B paths, and an embeddable SDK. Export to Sheets, BI tools, or your data warehouse.',
+    features: [;
+
+      'Branching logic designer',
+      'Embeddable SDK and JS snippet',
+      'Real - time analytics and funnels',
+      'Webhook exports and CSV',
+      'Email / SMS invite campaigns',
+      'Consent and PII redaction',
+    ],
+    popular: false,
+    icon: '📱',
+
+    color: 'from - purple - 600 to - pink - 600',
+    text_color: 'text - purple - 300',
+    link: 'https://ziontechgroup.com / services / survey - studio - mobile',
+    market_position:;
+      'Faster to deploy than Qualtrics / Typeform for mobile CX teams.',
+    target_audience: 'CX, Product, Research',
+    trial_days: 7,
+    setup_time: '1 hour',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'Twilio', 'PostgreSQL'],
+
+    integrations: ['Segment', 'HubSpot', 'Slack'],
+    use_cases: ['NPS / CSAT', 'In - app feedback', 'Research studies'],
+    roi: 'Improve survey completion by 2 - 3x on mobile',
+    competitors: ['Typeform', 'Survicate'],
+    market_size: '$5B survey tech',
+    growth_rate: '11% CAGR',
+    variant: 'network - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Client SDK + webhooks',
+    launch_date: '2025 - 10 - 28',
+    customers: 16,
+    rating: 4 && 4.6,
+    reviews: 10,
+  },
+  {
+
+=======
+    id: 'website - analytics - lite',
+    name: 'Website Analytics Lite',
+    tagline: 'Privacy - friendly traffic, engagement, and conversion analytics',
+    price: '$39',
+    period: '/month',
+    description:;
+      'No - cookie analytics with funnel views, events, and attribution—built for SMBs and agencies. Export raw data easily.',
+    features: [;
+
+      'Pageviews, sessions, and cohorts',
+      'Events and conversions',
+      'Source / medium attribution',
+      'Funnel and retention views',
+      'Custom dashboards',
+      'CSV and webhook export',
+    ],
+    popular: false,
+    icon: '📊',
+
+    color: 'from - indigo - 600 to - blue - 700',
+    text_color: 'text - indigo - 300',
+    link: 'https://ziontechgroup.com / services / website - analytics - lite',
+    market_position:;
+
+      'Simple alternative to GA4; easy client reporting for agencies.',
+    target_audience: 'Agencies, SMBs, Creators',
+    trial_days: 7,
+    setup_time: '30 minutes',
+    category: 'Developer Tools',
+
+    real_service: true,
+    technology: ['Next.js', 'PostgreSQL', 'ClickHouse (optional)'],
+
+    integrations: ['Shopify', 'WordPress', 'Webflow'],
+    use_cases: ['Funnel analysis', 'Campaign attribution'],
+    roi: 'Faster insights with low overhead',
+    competitors: ['Plausible', 'Fathom'],
+    market_size: '$3B lightweight analytics',
+    growth_rate: '9% CAGR',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Lightweight script & edge collection',
+    launch_date: '2025 - 12 - 05',
+    customers: 9,
+    rating: 4 && 4.5,
+    reviews: 6,
+  },
+];	{
+
+=======
+const contact = {
+	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
+export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
+	{
+		id: 'ai-email-responder-pro', name: 'AI Email Responder Pro',
+		tagline: 'Autonomous replies, triage, and sentiment insights for Gmail/O365',
+    price: '$129', period: '/month',
+		description: 'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.',
+    features: [
 
-export const realServicesQ42025: MicroSaasService[] = [
-	{
-		id: 'tls-certificate-monitor',
-		name: 'TLS Certificate Monitor',
-		tagline: 'Prevent outages with proactive TLS/SSL expiry alerts',
-		price: '$29',
-		period: '/month',
-		description: 'Continuously monitor TLS/SSL certificates for expiry, misconfigurations, and weak ciphers. Get multi-channel alerts with remedial guidance and API integration.',
-		features: [
-			'Expiry monitoring with 30/14/7/1‑day alerts',
-			'Misconfiguration and weak cipher checks',
-			'Multi-domain and wildcard support',
-			'Email, Slack, and Webhook notifications',
-			'API and CLI automation',
-			'Exportable compliance reports'
-		],
-		popular: true,
-		icon: '🔐',
-		color: 'from-cyan-600 to-blue-600',
-		textColor: 'text-cyan-400',
-		link: 'https://ziontechgroup.com/tls-certificate-monitor',
-		marketPosition: 'Competes with UptimeRobot, StatusCake. Focused on security-grade checks and compliance export.',
-		targetAudience: 'SRE, Security, Platform Engineering',
-		trialDays: 14,
-		setupTime: '15 minutes',
-		category: 'Quality & Monitoring',
-		realService: true,
-		technology: ['Node.js', 'Next.js', 'OpenSSL'],
-		integrations: ['Slack', 'Webhook', 'Email'],
-		useCases: ['Cert compliance', 'Expiry prevention', 'Security posture'],
-		roi: 'Avoid costly outages and reputational damage from expired certificates.',
-		competitors: ['UptimeRobot', 'StatusCake', 'Checkly'],
-		marketSize: 'Growing with zero-trust adoption',
-		growthRate: '12% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Uses OpenSSL checks and scheduled probes',
-		launchDate: '2025-10-01',
-		customers: 120,
-		rating: 4.8,
-		reviews: 61
-	},
-	{
-		id: 'domain-dns-monitor',
-		name: 'Domain & DNS Monitor',
-		tagline: 'Catch DNS drift and outages before your customers do',
-		price: '$19',
-		period: '/month',
-		description: 'Continuous monitoring of DNS records, NS/CAA changes, propagation health, and name server availability with alerting and snapshots.',
-		features: [
-			'DNS record drift detection',
-			'NS/CAA/MX change alerts',
-			'Propagation checks in multiple regions',
-			'SLA/SLO tracking',
-			'Exportable change history'
-		],
-		popular: false,
-		icon: '🌐',
-		color: 'from-blue-600 to-indigo-600',
-		textColor: 'text-blue-400',
-		link: 'https://ziontechgroup.com/domain-dns-monitor',
-		marketPosition: 'Competes with DNS Spy; simpler pricing and faster detection.',
-		targetAudience: 'SRE, NetOps, Platform',
-		trialDays: 14,
-		setupTime: '10 minutes',
-		category: 'Observability',
-		realService: true,
-		technology: ['Node.js', 'DNS over HTTPS'],
-		integrations: ['Slack', 'Webhook', 'Email'],
-		useCases: ['DNS drift detection', 'Incident response', 'Domain hygiene'],
-		roi: 'Reduce downtime from misconfigured DNS.',
-		competitors: ['DNS Spy', 'Catchpoint'],
-		marketSize: 'Mid-market web properties',
-		growthRate: '9% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Regional resolvers and diff engine',
-		launchDate: '2025-10-02',
-		customers: 85,
-		rating: 4.7,
-		reviews: 38
-	},
-	{
-		id: 'api-security-scanner',
-		name: 'API Security Scanner',
-		tagline: 'Shift-left API security for modern stacks',
-		price: '$99',
-		period: '/month',
-		description: 'Discover endpoints, detect OWASP API Top 10 issues, schema drift, and auth misconfigurations with CI integration and dev-friendly remediation tips.',
-		features: [
-			'Endpoint discovery and inventory',
-			'OWASP API Top 10 checks',
-			'OAS/Swagger schema validation',
-			'Auth/Rate limit misconfig detection',
-			'CI/CD gate and PR comments'
-		],
-		popular: true,
-		icon: '🛡️',
-		color: 'from-purple-600 to-pink-600',
-		textColor: 'text-purple-400',
-		link: 'https://ziontechgroup.com/api-security-scanner',
-		marketPosition: 'Competes with Salt Security (enterprise). Lighter-weight and dev-first.',
-		targetAudience: 'AppSec, Platform, Developers',
-		trialDays: 14,
-		setupTime: '30 minutes',
-		category: 'Security & Reliability',
-		realService: true,
-		technology: ['Node.js', 'OpenAPI'],
-		integrations: ['GitHub', 'GitLab', 'Slack'],
-		useCases: ['Pre-prod checks', 'Inventory', 'Schema drift'],
-		roi: 'Reduce vulnerabilities and fix time by 50%.',
-		competitors: ['Salt Security', '42Crunch'],
-		marketSize: 'Rapidly expanding API economy',
-		growthRate: '18% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Static and dynamic analysis hybrid',
-		launchDate: '2025-10-04',
-		customers: 60,
-		rating: 4.6,
-		reviews: 29
-	},
-	{
-		id: 'email-dmarc-analyzer',
-		name: 'Email DMARC Analyzer',
-		tagline: 'Boost deliverability and stop spoofing with guided DMARC',
-		price: '$29',
-		period: '/month',
-		description: 'Collect and visualize DMARC aggregate reports, SPF/DKIM health, and provide SPF flattening and alignment suggestions with step-by-step remediation.',
-		features: [
-			'DMARC report parsing and charts',
-			'SPF/DKIM/DMARC alignment checks',
-			'Spoofing and anomaly detection',
-			'Warmup and reputation guidance',
-			'Exportable audit reports'
-		],
-		popular: true,
-		icon: '✉️',
-		color: 'from-rose-600 to-orange-600',
-		textColor: 'text-rose-400',
-		link: 'https://ziontechgroup.com/email-dmarc-analyzer',
-		marketPosition: 'Competes with Valimail and DMARC Digests; simpler for SMBs.',
-		targetAudience: 'Marketing Ops, IT, Security',
-		trialDays: 14,
-		setupTime: '45 minutes',
-		category: 'Quality & Monitoring',
-		realService: true,
-		technology: ['Node.js', 'Mail parsers'],
-		integrations: ['Gmail', 'Office 365', 'SendGrid'],
-		useCases: ['Deliverability', 'Brand protection', 'Compliance'],
-		roi: 'Higher inbox placement and reduced spoofing.',
-		competitors: ['Valimail', 'Dmarcian'],
-		marketSize: 'Email-heavy SMBs',
-		growthRate: '11% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Parses XML reports and aggregates metrics',
-		launchDate: '2025-10-05',
-		customers: 95,
-		rating: 4.7,
-		reviews: 41
-	},
-	{
-		id: 'serverless-cron-manager',
-		name: 'Serverless Cron Manager',
-		tagline: 'Reliable scheduled tasks for any endpoint',
-		price: '$19',
-		period: '/month',
-		description: 'Define cron jobs with retries, jitter, failure hooks and observability. Perfect for webhooks, ETL triggers, and heartbeat checks.',
-		features: [
-			'Cron UI with schedules and logs',
-			'Retries and exponential backoff',
-			'Webhook signing and secrets',
-			'Alerting on failures',
-			'JSON and CSV exports'
-		],
-		popular: false,
-		icon: '⏱️',
-		color: 'from-emerald-600 to-teal-600',
-		textColor: 'text-emerald-400',
-		link: 'https://ziontechgroup.com/serverless-cron-manager',
-		marketPosition: 'Competes with cron-job.org and GitHub Actions schedules.',
-		targetAudience: 'Developers, Ops, Growth',
-		trialDays: 7,
-		setupTime: '10 minutes',
-		category: 'Developer Tools',
-		realService: true,
-		technology: ['Node.js', 'Cron'],
-		integrations: ['Slack', 'Webhook'],
-		useCases: ['Data sync', 'Reminders', 'ETL triggers'],
-		roi: 'Automate repetitive tasks with audit trails.',
-		competitors: ['cron-job.org', 'Zapier (schedules)'],
-		marketSize: 'Broad developer audience',
-		growthRate: '10% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Durable scheduler with retries',
-		launchDate: '2025-10-06',
-		customers: 140,
-		rating: 4.6,
-		reviews: 52
-	},
-	{
-		id: 'browser-performance-monitor',
-		name: 'Browser Performance Monitor',
-		tagline: 'Core Web Vitals and UX telemetry in minutes',
-		price: '$25',
-		period: '/month',
-		description: 'Track LCP, INP, CLS, network and device breakdowns with real-user monitoring (RUM) and synthetic checks. Benchmark pages and regressions.',
-		features: [
-			'RUM script and privacy controls',
-			'Synthetic checks with thresholds',
-			'CWV dashboards and alerts',
-			'Comparisons over time',
-			'Export and BigQuery sync'
-		],
-		popular: false,
-		icon: '⚡',
-		color: 'from-yellow-500 to-amber-600',
-		textColor: 'text-yellow-400',
-		link: 'https://ziontechgroup.com/browser-performance-monitor',
-		marketPosition: 'Competes with SpeedCurve, Calibre at SMB tier.',
-		targetAudience: 'Frontend, Growth, Product',
-		trialDays: 14,
-		setupTime: '20 minutes',
-		category: 'Observability',
-		realService: true,
-		technology: ['JS RUM', 'Lighthouse'],
-		integrations: ['Slack', 'BigQuery'],
-		useCases: ['UX monitoring', 'SEO improvements', 'Perf budgets'],
-		roi: 'Improve conversions by faster UX.',
-		competitors: ['SpeedCurve', 'Calibre', 'Cloudflare Web Analytics'],
-		marketSize: 'Ecommerce and content sites',
-		growthRate: '8% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Lightweight RUM and synthetic scheduler',
-		launchDate: '2025-10-06',
-		customers: 70,
-		rating: 4.5,
-		reviews: 28
-	},
-	{
-		id: 'data-quality-monitor',
-		name: 'Data Quality Monitor',
-		tagline: 'Catch schema, freshness, and anomaly issues early',
-		price: '$49',
-		period: '/month',
-		description: 'Automated monitors for freshness, nulls, uniqueness, and distribution drifts. Get alerts and Jira tickets with lineage context.',
-		features: [
-			'Freshness and volume checks',
-			'Null/uniqueness constraints',
-			'Statistical drift alerts',
-			'Lineage context',
-			'CLI/CI integration'
-		],
-		popular: true,
-		icon: '📊',
-		color: 'from-indigo-600 to-violet-600',
-		textColor: 'text-indigo-400',
-		link: 'https://ziontechgroup.com/data-quality-monitor',
-		marketPosition: 'Competes with Monte Carlo (enterprise) at a lighter SMB tier.',
-		targetAudience: 'Data Engineering, Analytics',
-		trialDays: 14,
-		setupTime: '30 minutes',
-		category: 'AI & Data',
-		realService: true,
-		technology: ['Node.js', 'Python'],
-		integrations: ['Snowflake', 'BigQuery', 'dbt'],
-		useCases: ['DQ automation', 'Incident prevention', 'SLOs'],
-		roi: 'Reduce bad-data incidents by 60%.',
-		competitors: ['Monte Carlo', 'Bigeye'],
-		marketSize: 'Data-driven SMBs',
-		growthRate: '15% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Checks via SQL and metadata APIs',
-		launchDate: '2025-10-07',
-		customers: 55,
-		rating: 4.6,
-		reviews: 22
-	},
-	{
-		id: 'database-performance-monitor',
-		name: 'Database Performance Monitor',
-		tagline: 'Find slow queries and improve reliability',
-		price: '$79',
-		period: '/month',
-		description: 'Monitor query latency, locks, cache hit ratio, and resource usage across Postgres clusters with guidance and anomaly detection.',
-		features: [
-			'Slow query capture and ranking',
-			'Lock/Contention alerts',
-			'Index and plan insights',
-			'Anomaly detection',
-			'Export to Grafana'
-		],
-		popular: false,
-		icon: '🗄️',
-		color: 'from-sky-600 to-cyan-600',
-		textColor: 'text-sky-400',
-		link: 'https://ziontechgroup.com/database-performance-monitor',
-		marketPosition: 'Competes with pganalyze and New Relic DB at SMB tier.',
-		targetAudience: 'Backend, SRE, Data',
-		trialDays: 14,
-		setupTime: '45 minutes',
-		category: 'Observability',
-		realService: true,
-		technology: ['Postgres', 'pg_stat_statements'],
-		integrations: ['Slack', 'Grafana'],
-		useCases: ['DB tuning', 'Incident prevention', 'Cost savings'],
-		roi: 'Cut infra costs via optimized queries.',
-		competitors: ['pganalyze', 'New Relic'],
-		marketSize: 'SaaS and data-heavy apps',
-		growthRate: '10% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Agent and extension based telemetry',
-		launchDate: '2025-10-08',
-		customers: 48,
-		rating: 4.6,
-		reviews: 19
-	},
-	{
-		id: 'cloud-cost-optimizer',
-		name: 'Cloud Cost Optimizer',
-		tagline: 'Find waste and anomalies automatically',
-		price: '$49',
-		period: '/month',
-		description: 'Automated analysis of AWS/GCP/Azure bills with anomaly alerts, idle resource detection, and rightsizing recommendations.',
-		features: [
-			'Cost anomaly detection',
-			'Idle resource finder',
-			'Commitment/discount tracking',
-			'Rightsizing recommendations',
-			'Weekly email digests'
-		],
-		popular: true,
-		icon: '💸',
-		color: 'from-green-600 to-emerald-600',
-		textColor: 'text-emerald-400',
-		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-		marketPosition: 'Competes with CloudZero and Finout at SMB level.',
-		targetAudience: 'FinOps, Platform, CFO Office',
-		trialDays: 14,
-		setupTime: '1 hour',
-		category: 'Cloud & FinOps',
-		realService: true,
-		technology: ['AWS CUR', 'BigQuery'],
-		integrations: ['AWS', 'GCP', 'Azure'],
-		useCases: ['FinOps dashboards', 'Alerts', 'Savings'],
-		roi: 'Typical 15–30% cloud savings.',
-		competitors: ['CloudZero', 'Finout', 'Kubecost'],
-		marketSize: 'Cloud adopters',
-		growthRate: '14% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Billing exports analysis and heuristics',
-		launchDate: '2025-10-08',
-		customers: 110,
-		rating: 4.7,
-		reviews: 44
-	},
-	{
-		id: 'api-latency-slo-tracker',
-		name: 'API Latency SLO Tracker',
-		tagline: 'SLO-driven latency and error budgets made simple',
-		price: '$39',
-		period: '/month',
-		description: 'Define SLOs, visualize error budgets, track burn rates, and alert on SLIs for latency and availability with simple instrumentation.',
-		features: [
-			'Latency/availability SLIs',
-			'Error budget and burn rate alerts',
-			'Service and endpoint breakdowns',
-			'SLO templates and CLI',
-			'Pager escalation hooks'
-		],
-		popular: false,
-		icon: '🎯',
-		color: 'from-cyan-600 to-sky-600',
-		textColor: 'text-cyan-400',
-		link: 'https://ziontechgroup.com/api-latency-slo-tracker',
-		marketPosition: 'Competes with Nobl9 at SMB tier; dev-friendly setup.',
-		targetAudience: 'SRE, Backend, Platform',
-		trialDays: 14,
-		setupTime: '30 minutes',
-		category: 'Observability',
-		realService: true,
-		technology: ['Node.js', 'Prometheus'],
-		integrations: ['Slack', 'PagerDuty'],
-		useCases: ['SLI/SLO hygiene', 'Error budgets'],
-		roi: 'Reduce incidents and MTTR by 25%.',
-		competitors: ['Nobl9', 'Datadog SLO'],
-		marketSize: 'Engineering orgs',
-		growthRate: '10% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'SDK and exporter-based metrics',
-		launchDate: '2025-10-09',
-		customers: 42,
-		rating: 4.5,
+			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governanceDashboard with analytics and coaching'
+		];
+		popular: true;
+		icon: '📧';
+		color: 'from-cyan-600 to-blue-700';
+		textColor: 'text-cyan-300';
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-responder-pro';
+		marketPosition: 'Alternative to Front/Superhuman add-ons with deeper AI and governance.',
+
+		targetAudience: 'Sales, Success, Support, Ops';
+		trialDays: 14;
+		setupTime: '2 hours';
+		category: 'AI & Data';
+		realService: true;
+		technology: ['Gmail/O365 APIsOpenAI/GroqNext && GroqNext.js'];
+		integrations: ['GmailOutlookSalesforceHubSpotZendesk'];
+		useCases: ['Inbound triageFollow-upsNPS outreach'];
+		roi: 'Reduce first response time by 60% and improve CSAT by 20%+';
+		competitors: ['Superhuman AIFront Workflows'];
+		marketSize: '$10B+ communications AI';
+		growthRate: '25% CAGR';
+		variant: 'ai-futuristic';
+		contactInfo: contact;
+		realImplementation: true
+		implementationDetails: 'OAuth, vector memory, policy guardrails';
+		launchDate: '2025-10-15';
+		customers: 24;
+
+		rating: 4 && 4.8,
+
 		reviews: 17
-	},
+	}
 	{
-		id: 'pdf-render-api',
-		name: 'PDF Render API',
-		tagline: 'Reliable HTML-to-PDF with templates and webhooks',
-		price: '$9',
-		period: '/month',
-		description: 'Fast and reliable PDF rendering with HTML/CSS, watermarking, pagination control, and signed webhooks for delivery and storage.',
+		id: 'affiliate-analytics-hub';
+		name: 'Affiliate Analytics Hub'
+		tagline: 'Track referrals, payouts, and ROI with multi-touch attribution';
+		price: '$89';
+		period: '/month'
+		description: 'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.';
 		features: [
-			'HTML/CSS to PDF with assets',
-			'Headers/footers and page numbers',
-			'Watermarking and encryption',
-			'Signed webhooks',
-			'Usage dashboard and logs'
-		],
-		popular: true,
-		icon: '📄',
-		color: 'from-slate-600 to-gray-700',
-		textColor: 'text-slate-300',
-		link: 'https://ziontechgroup.com/pdf-render-api',
-		marketPosition: 'Competes with DocRaptor, PDFMonkey for basic needs at lower cost.',
-		targetAudience: 'Developers, Ops, Finance',
-		trialDays: 7,
-		setupTime: '5 minutes',
-		category: 'Developer Tools',
-		realService: true,
-		technology: ['Node.js', 'Chromium'],
-		integrations: ['Webhook', 'S3'],
-		useCases: ['Invoices', 'Reports', 'Certificates'],
-		roi: 'Lower engineering time for document automation.',
-		competitors: ['DocRaptor', 'PDFMonkey', 'Gotenberg'],
-		marketSize: 'Broad developer audience',
-		growthRate: '7% YoY',
-		variant: 'default',
-		contactInfo,
-		realImplementation: true,
-		implementationDetails: 'Headless chromium-based renderer',
-		launchDate: '2025-10-09',
-		customers: 180,
-		rating: 4.8,
-		reviews: 72
+			'Link shortener and branded domainsUTM builder and traffic quality scoringMulti-touch attribution and deduplicationAutomated payouts and tax formsFraud and bot detectionPartner portal and reports'
+		];
+		popular: true;
+		icon: '🔗';
+		color: 'from-emerald-600 to-teal-700';
+		textColor: 'text-emerald-300';
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-analytics-hub',
+
+		marketPosition: 'Easier than enterprise suites, purpose-built for small teams.';
+		targetAudience: 'E-commerce, SaaS, Media';
+		trialDays: 14;
+		setupTime: '1 day';
+		category: 'Developer Tools';
+		realService: true;
+		technology: ['Next && Next.jsPostgreSQLWorkers/Edge'];
+		integrations: ['StripeShopifyWooCommerce'];
+		useCases: ['Partner programsInfluencer payouts'];
+		roi: 'Grow partner-attributed revenue by 10–30%';
+		competitors: ['Impact && Impact.com (complex)Tune (enterprise)'];
+		marketSize: '$15B+ affiliate tech';
+		growthRate: '12% CAGR';
+		variant: 'network-futuristic';
+		contactInfo: contact;
+		realImplementation: true
+		implementationDetails: 'Webhook ingestion, cookie-less heuristics';
+		launchDate: '2025-11-01';
+		customers: 35;
+
+		rating: 4 && 4.6,
+
+		reviews: 21
+	}
+	{
+		id: 'return-management-saas';
+		name: 'Return Management SaaS'
+		tagline: 'Self-service returns, labels, refunds, and analytics for e-commerce';
+		price: '$99';
+		period: '/month'
+		description: 'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund/exchange automations.';
+		features: [
+			'Portal and RMA workflowsLabel generation and trackingWarehousing and disposition updatesRefunds and exchanges automationFraud checks and abuse controlsAnalytics and cohort reports'
+		];
+		popular: false;
+		icon: '📦';
+		color: 'from-orange-600 to-red-600';
+		textColor: 'text-orange-200';
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/return-management-saas',
+
+		marketPosition: '90% of SMBs lack streamlined returns, fast ROI with fewer tickets.';
+		targetAudience: 'DTC brands, Marketplaces';
+		trialDays: 14;
+		setupTime: '1 day';
+		category: 'Developer Tools';
+		realService: true;
+		technology: ['Next && Next.jsStripeShippo'];
+		integrations: ['ShopifyKlaviyoGorgias'];
+		useCases: ['Returns and exchangesWarehouse ops'];
+		roi: 'Cut support tickets by 35% and improve retention';
+		competitors: ['Loop ReturnsReturnly'];
+		marketSize: '$8B returns tech';
+		growthRate: '10% CAGR';
+		variant: 'ai-futuristic';
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Carrier APIs and automation rules';
+		launchDate: '2025-11-20';
+		customers: 12;
+
+		rating: 4 && 4.5,
+
+		reviews: 9
+	}
+	{
+		id: 'survey-studio-mobile';
+		name: 'Survey Studio Mobile'
+		tagline: 'Adaptive, mobile-first surveys with branching logic and SDK';
+		price: '$59';
+		period: '/month'
+		description: 'Create beautiful mobile surveys with skip logic, A/B paths, and an embeddable SDK. Export to Sheets, BI tools, or your data warehouse.';
+		features: [
+			'Branching logic designerEmbeddable SDK and JS snippetReal-time analytics and funnelsWebhook exports and CSVEmail/SMS invite campaignsConsent and PII redaction'
+		];
+		popular: false;
+		icon: '📱';
+		color: 'from-purple-600 to-pink-600';
+		textColor: 'text-purple-300';
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/survey-studio-mobile';
+		marketPosition: 'Faster to deploy than Qualtrics/Typeform for mobile CX teams.',
+
+		targetAudience: 'CX, Product, Research';
+		trialDays: 7;
+		setupTime: '1 hour';
+		category: 'Developer Tools';
+		realService: true;
+		technology: ['Next && Next.jsTwilioPostgreSQL'];
+		integrations: ['SegmentHubSpotSlack'];
+		useCases: ['NPS/CSATIn-app feedbackResearch studies'];
+		roi: 'Improve survey completion by 2-3x on mobile';
+		competitors: ['TypeformSurvicate'];
+		marketSize: '$5B survey tech';
+		growthRate: '11% CAGR';
+		variant: 'network-futuristic';
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Client SDK + webhooks';
+		launchDate: '2025-10-28';
+		customers: 16;
+
+		rating: 4 && 4.6,
+
+		reviews: 10
+	}
+	{
+		id: 'website-analytics-lite';
+		name: 'Website Analytics Lite'
+		tagline: 'Privacy-friendly traffic, engagement, and conversion analytics';
+		price: '$39';
+		period: '/month'
+		description: 'No-cookie analytics with funnel views, events, and attribution—built for SMBs and agencies. Export raw data easily.';
+		features: [
+			'Pageviews, sessions, and cohortsEvents and conversionsSource/medium attributionFunnel and retention viewsCustom dashboardsCSV and webhook export'
+		];
+		popular: false;
+		icon: '📊';
+		color: 'from-indigo-600 to-blue-700';
+		textColor: 'text-indigo-300';
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/website-analytics-lite',
+
+		marketPosition: 'Simple alternative to GA4, easy client reporting for agencies.';
+		targetAudience: 'Agencies, SMBs, Creators';
+		trialDays: 7;
+		setupTime: '30 minutes';
+		category: 'Developer Tools';
+		realService: true;
+		technology: ['Next && Next.jsPostgreSQLClickHouse (optional)'];
+		integrations: ['ShopifyWordPressWebflow'];
+		useCases: ['Funnel analysisCampaign attribution'];
+		roi: 'Faster insights with low overhead';
+		competitors: ['PlausibleFathom'];
+		marketSize: '$3B lightweight analytics';
+		growthRate: '9% CAGR';
+		variant: 'ai-futuristic';
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Lightweight script & edge collection';
+		launchDate: '2025-12-05';
+		customers: 9;
+
+		rating: 4 && 4.5,
+
+		reviews: 6
+
+=======
+=======
+	}
+];
+
+=======
+  id: 'ai - email - responder - pro';
+  name: 'AI Email Responder Pro',
+  tagline: 'Autonomous replies, triage, and sentiment insights for Gmail / O365';
+  price: '$129';
+  period: '/month',
+  description: 'LLM - powered email assistant that drafts context - aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2 - ready with redaction.';
+  features: [;
+  'LLM reply drafts with tone controls_intent routing and SLA prediction_smart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governance_dashboard with analytics and coaching';
+  ];
+  popular: true;
+  icon: '📧';
+  color: 'from - cyan - 600 to - blue - 700';
+  text_color: 'text - cyan - 300';
+  link: 'https://ziontechgroup.com / services / ai - email - responder - pro';
+  market_position: 'Alternative to Front / Superhuman add - ons with deeper AI and governance.',
+  target_audience: 'Sales, Success, Support, Ops';
+  trial_days: 14;
+  setup_time: '2 hours';
+  category: 'AI & Data';
+  real_service: true;
+  technology: ['Gmail / O365 APIsOpenAI / GroqNext.js'];
+  integrations: ['GmailOutlookSalesforceHubSpotZendesk'];
+  use_cases: ['Inbound triage_follow - upsNPS outreach'];
+  roi: 'Reduce first response time by 60% and improve CSAT by 20%+';
+  competitors: ['Superhuman AIFront Workflows'];
+  market_size: '$10B+ communications AI';
+  growth_rate: '25% CAGR';
+  variant: 'ai - futuristic';
+  contact_info: contact;
+  real_implementation: true,
+  implementation_details: 'OAuth, vector memory, policy guardrails';
+  launch_date: '2025 - 10 - 15';
+  customers: 24;
+  rating: 4.8,
+  reviews: 17;
+}
+{
+  id: 'affiliate - analytics - hub';
+  name: 'Affiliate Analytics Hub',
+  tagline: 'Track referrals, payouts, and ROI with multi - touch attribution';
+  price: '$89';
+  period: '/month',
+  description: 'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.';
+  features: [;
+  'Link shortener and branded domainsUTM builder and traffic quality scoring_multi - touch attribution and deduplication_automated payouts and tax forms_fraud and bot detection_partner portal and reports';
+  ];
+  popular: true;
+  icon: '🔗';
+  color: 'from - emerald - 600 to - teal - 700';
+  text_color: 'text - emerald - 300';
+  link: 'https://ziontechgroup.com / services / affiliate - analytics - hub',
+  market_position: 'Easier than enterprise suites, purpose - built for small teams.';
+  target_audience: 'E - commerce, SaaS, Media';
+  trial_days: 14;
+  setup_time: '1 day';
+  category: 'Developer Tools';
+  real_service: true;
+  technology: ['Next.jsPostgreSQLWorkers / Edge'];
+  integrations: ['StripeShopifyWooCommerce'];
+  use_cases: ['Partner programs_influencer payouts'];
+  roi: 'Grow partner - attributed revenue by 10–30%';
+  competitors: ['Impact.com (complex)Tune (enterprise)'];
+  market_size: '$15B+ affiliate tech';
+  growth_rate: '12% CAGR';
+  variant: 'network - futuristic';
+  contact_info: contact;
+  real_implementation: true,
+  implementation_details: 'Webhook ingestion, cookie - less heuristics';
+  launch_date: '2025 - 11 - 01';
+  customers: 35;
+  rating: 4.6,
+  reviews: 21;
+}
+{
+  id: 'return - management - saas';
+  name: 'Return Management SaaS',
+  tagline: 'Self - service returns, labels, refunds, and analytics for e - commerce';
+  price: '$99';
+  period: '/month',
+  description: 'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund / exchange automations.';
+  features: [;
+  'Portal and RMA workflows_label generation and tracking_warehousing and disposition updates_refunds and exchanges automation_fraud checks and abuse controls_analytics and cohort reports';
+  ];
+  popular: false;
+  icon: '📦';
+  color: 'from - orange - 600 to - red - 600';
+  text_color: 'text - orange - 200';
+  link: 'https://ziontechgroup.com / services / return - management - saas',
+  market_position: '90% of SMBs lack streamlined returns, fast ROI with fewer tickets.';
+  target_audience: 'DTC brands, Marketplaces';
+  trial_days: 14;
+  setup_time: '1 day';
+  category: 'Developer Tools';
+  real_service: true;
+  technology: ['Next.jsStripeShippo'];
+  integrations: ['ShopifyKlaviyoGorgias'];
+  use_cases: ['Returns and exchanges_warehouse ops'];
+  roi: 'Cut support tickets by 35% and improve retention';
+  competitors: ['Loop ReturnsReturnly'];
+  market_size: '$8B returns tech';
+  growth_rate: '10% CAGR';
+  variant: 'ai - futuristic';
+  contact_info: contact;
+  real_implementation: true;
+  implementation_details: 'Carrier APIs and automation rules';
+  launch_date: '2025 - 11 - 20';
+  customers: 12;
+  rating: 4.5,
+  reviews: 9;
+}
+{
+  id: 'survey - studio - mobile';
+  name: 'Survey Studio Mobile',
+  tagline: 'Adaptive, mobile - first surveys with branching logic and SDK';
+  price: '$59';
+  period: '/month',
+  description: 'Create beautiful mobile surveys with skip logic, A / B paths, and an embeddable SDK. Export to Sheets, BI tools, or your data warehouse.';
+  features: [;
+  'Branching logic designer_embeddable SDK and JS snippet_real - time analytics and funnels_webhook exports and CSVEmail / SMS invite campaigns_consent and PII redaction';
+  ];
+  popular: false;
+  icon: '📱';
+  color: 'from - purple - 600 to - pink - 600';
+  text_color: 'text - purple - 300';
+  link: 'https://ziontechgroup.com / services / survey - studio - mobile';
+  market_position: 'Faster to deploy than Qualtrics / Typeform for mobile CX teams.',
+  target_audience: 'CX, Product, Research';
+  trial_days: 7;
+  setup_time: '1 hour';
+  category: 'Developer Tools';
+  real_service: true;
+  technology: ['Next.jsTwilioPostgreSQL'];
+  integrations: ['SegmentHubSpotSlack'];
+  use_cases: ['NPS / CSATIn - app feedback_research studies'];
+  roi: 'Improve survey completion by 2 - 3x on mobile';
+  competitors: ['TypeformSurvicate'];
+  market_size: '$5B survey tech';
+  growth_rate: '11% CAGR';
+  variant: 'network - futuristic';
+  contact_info: contact;
+  real_implementation: true;
+  implementation_details: 'Client SDK + webhooks';
+  launch_date: '2025 - 10 - 28';
+  customers: 16;
+  rating: 4.6,
+  reviews: 10;
+}
+{
+  id: 'website - analytics - lite';
+  name: 'Website Analytics Lite',
+  tagline: 'Privacy - friendly traffic, engagement, and conversion analytics';
+  price: '$39';
+  period: '/month',
+  description: 'No - cookie analytics with funnel views, events, and attribution—built for SMBs and agencies. Export raw data easily.';
+  features: [;
+  'Pageviews, sessions, and cohorts_events and conversions_source / medium attribution_funnel and retention views_custom dashboardsCSV and webhook export';
+  ];
+  popular: false;
+  icon: '📊';
+  color: 'from - indigo - 600 to - blue - 700';
+  text_color: 'text - indigo - 300';
+  link: 'https://ziontechgroup.com / services / website - analytics - lite',
+  market_position: 'Simple alternative to GA4, easy client reporting for agencies.';
+  target_audience: 'Agencies, SMBs, Creators';
+  trial_days: 7;
+  setup_time: '30 minutes';
+  category: 'Developer Tools';
+  real_service: true;
+  technology: ['Next.jsPostgreSQLClickHouse (optional)'];
+  integrations: ['ShopifyWordPressWebflow'];
+  use_cases: ['Funnel analysis_campaign attribution'];
+  roi: 'Faster insights with low overhead';
+  competitors: ['PlausibleFathom'];
+  market_size: '$3B lightweight analytics';
+  growth_rate: '9% CAGR';
+  variant: 'ai - futuristic';
+  contact_info: contact;
+  real_implementation: true;
+  implementation_details: 'Lightweight script & edge collection';
+  launch_date: '2025 - 12 - 05';
+  customers: 9;
+  rating: 4.5,
+  reviews: 6;
+}
+=======
+		rating: 4.5
+		reviews: 6
+
+
+=======
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
+const contact = {;
+	mobile: '+1 302 464 0950',;
+	email: 'kleber@ziontechgroup.com',;
+	address: '364 E Main St STE 1008 Middletown DE 19709',;
+	website: 'https://ziontechgroup.com';
+},;
+export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
+	{;
+		id: 'ai-email-responder-pro',;
+		name: 'AI Email Responder Pro',;
+		tagline: 'Autonomous replies, triage, and sentiment insights for Gmail/O365',;
+		price: '$129',;
+		period: '/month',;
+		description: 'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.',;
+		features: [;
+			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governanceDashboard with analytics and coaching';
+		],;
+		popular: true,;
+		icon: '📧',;
+		color: 'from-cyan-600 to-blue-700',;
+		textColor: 'text-cyan-300',;
+		link: 'https://ziontechgroup.com/services/ai-email-responder-pro',;
+		marketPosition: 'Alternative to Front/Superhuman add-ons with deeper AI and governance.',;
+		targetAudience: 'Sales, Success, Support, Ops',;
+		trialDays: 14,;
+		setupTime: '2 hours',;
+		category: 'AI & Data',;
+		realService: true,;
+		technology: ['Gmail/O365 APIsOpenAI/GroqNext.js'],;
+		integrations: ['GmailOutlookSalesforceHubSpotZendesk'],;
+		useCases: ['Inbound triageFollow-upsNPS outreach'],;
+		roi: 'Reduce first response time by 60% and improve CSAT by 20%+',;
+		competitors: ['Superhuman AIFront Workflows'],;
+		marketSize: '$10B+ communications AI',;
+		growthRate: '25% CAGR',;
+		variant: 'ai-futuristic',;
+		contactInfo: contact,;
+		realImplementation: true,;
+		implementationDetails: 'OAuth, vector memory, policy guardrails',;
+		launchDate: '2025-10-15',;
+		customers: 24,;
+		rating: 4.8,;
+		reviews: 17;
+	},;
+	{;
+		id: 'affiliate-analytics-hub',;
+		name: 'Affiliate Analytics Hub',;
+		tagline: 'Track referrals, payouts, and ROI with multi-touch attribution',;
+		price: '$89',;
+		period: '/month',;
+		description: 'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.',;
+		features: [;
+			'Link shortener and branded domainsUTM builder and traffic quality scoringMulti-touch attribution and deduplicationAutomated payouts and tax formsFraud and bot detectionPartner portal and reports';
+		],;
+		popular: true,;
+		icon: '🔗',;
+		color: 'from-emerald-600 to-teal-700',;
+		textColor: 'text-emerald-300',;
+		link: 'https://ziontechgroup.com/services/affiliate-analytics-hub',;
+		marketPosition: 'Easier than enterprise suites, purpose-built for small teams.',;
+		targetAudience: 'E-commerce, SaaS, Media',;
+		trialDays: 14,;
+		setupTime: '1 day',;
+		category: 'Developer Tools',;
+		realService: true,;
+		technology: ['Next.jsPostgreSQLWorkers/Edge'],;
+		integrations: ['StripeShopifyWooCommerce'],;
+		useCases: ['Partner programsInfluencer payouts'],;
+		roi: 'Grow partner-attributed revenue by 10–30%',;
+		competitors: ['Impact.com (complex)Tune (enterprise)'],;
+		marketSize: '$15B+ affiliate tech',;
+		growthRate: '12% CAGR',;
+		variant: 'network-futuristic',;
+		contactInfo: contact,;
+		realImplementation: true,;
+		implementationDetails: 'Webhook ingestion, cookie-less heuristics',;
+		launchDate: '2025-11-01',;
+		customers: 35,;
+		rating: 4.6,;
+		reviews: 21;
+	},;
+	{;
+		id: 'return-management-saas',;
+		name: 'Return Management SaaS',;
+		tagline: 'Self-service returns, labels, refunds, and analytics for e-commerce',;
+		price: '$99',;
+		period: '/month',;
+		description: 'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund/exchange automations.',;
+		features: [;
+			'Portal and RMA workflowsLabel generation and trackingWarehousing and disposition updatesRefunds and exchanges automationFraud checks and abuse controlsAnalytics and cohort reports';
+		],;
+		popular: false,;
+		icon: '📦',;
+		color: 'from-orange-600 to-red-600',;
+		textColor: 'text-orange-200',;
+		link: 'https://ziontechgroup.com/services/return-management-saas',;
+		marketPosition: '90% of SMBs lack streamlined returns, fast ROI with fewer tickets.',;
+		targetAudience: 'DTC brands, Marketplaces',;
+		trialDays: 14,;
+		setupTime: '1 day',;
+		category: 'Developer Tools',;
+		realService: true,;
+		technology: ['Next.jsStripeShippo'],;
+		integrations: ['ShopifyKlaviyoGorgias'],;
+		useCases: ['Returns and exchangesWarehouse ops'],;
+		roi: 'Cut support tickets by 35% and improve retention',;
+		competitors: ['Loop ReturnsReturnly'],;
+		marketSize: '$8B returns tech',;
+		growthRate: '10% CAGR',;
+		variant: 'ai-futuristic',;
+		contactInfo: contact,;
+		realImplementation: true,;
+		implementationDetails: 'Carrier APIs and automation rules',;
+		launchDate: '2025-11-20',;
+		customers: 12,;
+		rating: 4.5,;
+		reviews: 9;
+	},;
+	{;
+		id: 'survey-studio-mobile',;
+		name: 'Survey Studio Mobile',;
+		tagline: 'Adaptive, mobile-first surveys with branching logic and SDK',;
+		price: '$59',;
+		period: '/month',;
+		description: 'Create beautiful mobile surveys with skip logic, A/B paths, and an embeddable SDK. Export to Sheets, BI tools, or your data warehouse.',;
+		features: [;
+			'Branching logic designerEmbeddable SDK and JS snippetReal-time analytics and funnelsWebhook exports and CSVEmail/SMS invite campaignsConsent and PII redaction';
+		],;
+		popular: false,;
+		icon: '📱',;
+		color: 'from-purple-600 to-pink-600',;
+		textColor: 'text-purple-300',;
+		link: 'https://ziontechgroup.com/services/survey-studio-mobile',;
+		marketPosition: 'Faster to deploy than Qualtrics/Typeform for mobile CX teams.',;
+		targetAudience: 'CX, Product, Research',;
+		trialDays: 7,;
+		setupTime: '1 hour',;
+		category: 'Developer Tools',;
+		realService: true,;
+		technology: ['Next.jsTwilioPostgreSQL'],;
+		integrations: ['SegmentHubSpotSlack'],;
+		useCases: ['NPS/CSATIn-app feedbackResearch studies'],;
+		roi: 'Improve survey completion by 2-3x on mobile',;
+		competitors: ['TypeformSurvicate'],;
+		marketSize: '$5B survey tech',;
+		growthRate: '11% CAGR',;
+		variant: 'network-futuristic',;
+		contactInfo: contact,;
+		realImplementation: true,;
+		implementationDetails: 'Client SDK + webhooks',;
+		launchDate: '2025-10-28',;
+		customers: 16,;
+		rating: 4.6,;
+		reviews: 10;
+	},;
+	{;
+		id: 'website-analytics-lite',;
+		name: 'Website Analytics Lite',;
+		tagline: 'Privacy-friendly traffic, engagement, and conversion analytics',;
+		price: '$39',;
+		period: '/month',;
+		description: 'No-cookie analytics with funnel views, events, and attribution—built for SMBs and agencies. Export raw data easily.',;
+		features: [;
+			'Pageviews, sessions, and cohortsEvents and conversionsSource/medium attributionFunnel and retention viewsCustom dashboardsCSV and webhook export';
+		],;
+		popular: false,;
+		icon: '📊',;
+		color: 'from-indigo-600 to-blue-700',;
+		textColor: 'text-indigo-300',;
+		link: 'https://ziontechgroup.com/services/website-analytics-lite',;
+		marketPosition: 'Simple alternative to GA4, easy client reporting for agencies.',;
+		targetAudience: 'Agencies, SMBs, Creators',;
+		trialDays: 7,;
+		setupTime: '30 minutes',;
+		category: 'Developer Tools',;
+		realService: true,;
+		technology: ['Next.jsPostgreSQLClickHouse (optional)'],;
+		integrations: ['ShopifyWordPressWebflow'],;
+		useCases: ['Funnel analysisCampaign attribution'],;
+		roi: 'Faster insights with low overhead',;
+		competitors: ['PlausibleFathom'],;
+		marketSize: '$3B lightweight analytics',;
+		growthRate: '9% CAGR',;
+		variant: 'ai-futuristic',;
+		contactInfo: contact,;
+		realImplementation: true,;
+		implementationDetails: 'Lightweight script & edge collection',;
+		launchDate: '2025-12-05',;
+		customers: 9,;
+		rating: 4.5;
+		reviews: 6;
+=======
+
+
 	}
 ];

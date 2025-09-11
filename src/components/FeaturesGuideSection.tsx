@@ -1,162 +1,1649 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-
-interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  icon: string;
-  benefits: string[];
-  complexity: 'Beginner' | 'Intermediate' | 'Advanced';
-}
-
-const features: Feature[] = [
-  {
-    id: '1',
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'Get real-time insights into your business performance with intelligent data visualization.',
-    category: 'AI Services',
-    icon: '📊',
-    benefits: ['Real-time monitoring', 'Predictive insights', 'Custom reports', 'Automated alerts'],
-    complexity: 'Intermediate',
-  },
-  {
-    id: '2',
-    title: 'Cloud Migration Assistant',
-    description: 'Streamline your cloud migration process with our intelligent planning and execution tools.',
-    category: 'IT Services',
-    icon: '☁️',
-    benefits: ['Migration planning', 'Cost optimization', 'Security compliance', 'Performance monitoring'],
-    complexity: 'Advanced',
-  },
-  {
-    id: '3',
-    title: 'Workflow Automation Engine',
-    description: 'Automate repetitive tasks and streamline business processes for maximum efficiency.',
-    category: 'Micro SAAS',
-    icon: '⚡',
-    benefits: ['Process automation', 'Integration capabilities', 'Custom workflows', 'Performance tracking'],
-    complexity: 'Beginner',
-  },
-  {
-    id: '4',
-    title: 'Cybersecurity Threat Monitor',
-    description: 'Stay protected with advanced threat detection and real-time security monitoring.',
-    category: 'IT Services',
-    icon: '🛡️',
-    benefits: ['Threat detection', 'Incident response', 'Compliance reporting', 'Security training'],
-    complexity: 'Advanced',
-  },
-  {
-    id: '5',
-    title: 'Customer Intelligence Platform',
-    description: 'Understand your customers better with AI-driven insights and predictive analytics.',
-    category: 'AI Services',
-    icon: '🧠',
-    benefits: ['Customer segmentation', 'Behavior analysis', 'Predictive modeling', 'Personalization'],
-    complexity: 'Intermediate',
-  },
-  {
-    id: '6',
-    title: 'Resource Optimization Tool',
-    description: 'Optimize your business resources and reduce costs with intelligent recommendations.',
-    category: 'Micro SAAS',
-    icon: '🎯',
-    benefits: ['Cost analysis', 'Resource planning', 'Efficiency metrics', 'Optimization suggestions'],
-    complexity: 'Beginner',
-  },
-];
-
+import Link from 'next/link'
+import { GradientHeading } from './GradientHeading'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Button } from './ui/button'
+import { fireEvent } from '@/lib/analytics'
+import {
+  Users
+  Zap
+  Settings
+  MessageSquare
+  Sparkles
+  ArrowRight
+  BarChart3
+  Plus
+  HelpCircle
+} from 'lucide-react'
 export function FeaturesGuideSection() {
-  const getComplexityColor = (complexity: string) => {
-    switch (complexity) {
-      case 'Beginner':
-        return 'bg-green-100 text-green-800 border-green-200';
-      case 'Intermediate':
-        return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'Advanced':
-        return 'bg-red-100 text-red-800 border-red-200';
-      default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
-  };
+  const features = [
+    {import Link from "next/link"
+import { GradientHeading } from "./GradientHeading"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "./ui/button"
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
+import { Zap } from 'lucide-react'
+export function FeaturesGuideSection() {
+  const features = [
+    {
 
+
+        'Navigate to the AI Matcher page from the homepage or marketplace',
+        'Fill in your project requirements and specifications',
+        'Review the AI-recommended matches tailored to your needs',
+        'Connect with matched talents or services directly',
+      ],
+      link: '/match',
+      buttonText: 'Try AI Matcher',
+    },
+    {
+      id: 'talent-directory',
+      title: 'Talent Directory',
+      description:
+        'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.',
+      icon: <Users className='h-10 w-10 text-zion-purple' />,
+      instructions: [
+        'Access the talent directory from the main navigation',
+        'Use filters to narrow down by skills, experience, and pricing',
+        'Save favorite profiles for future reference',
+        'Contact talents directly or request quotes through their profiles',
+      ],
+      link: '/talents',
+      buttonText: 'Explore Talents',
+    },
+    {
+      id: 'services',
+      title: 'Services Marketplace',
+      description:
+        'Discover professional services for your AI and tech needs, from development to consulting.',
+      icon: <Zap className='h-10 w-10 text-zion-cyan' />,
+      instructions: [
+        'Browse service categories on the marketplace',
+        'Compare service offerings and pricing options',
+        'Request customized quotes for specific requirements',
+        'Book and manage services through your dashboard',
+      ],
+      link: '/services',
+      buttonText: 'View Services',
+    },
+    {
+      id: 'equipment',
+      title: 'Equipment Catalog',
+      description:
+        'Rent or buy specialized hardware and tech equipment for AI development and research.',
+      icon: <Settings className='h-10 w-10 text-zion-purple' />,
+      instructions: [
+        'Search the equipment catalog by category or specifications',
+        'Check availability and rental/purchase options',
+        'Request quotes for bulk orders or specialized equipment',
+        'Schedule delivery or pickup through the platform',
+      ],
+      link: '/equipment',
+      buttonText: 'Browse Equipment',
+    },
+    {
+      id: 'analytics',
+      title: 'Marketplace Analytics',
+      description:
+        'Gain insights into industry trends, pricing benchmarks, and marketplace activity.',
+      icon: <BarChart3 className='h-10 w-10 text-zion-cyan' />,
+      instructions: [
+        'Access analytics from your user dashboard',
+        'View interactive charts on market trends and rates',
+        'Export reports for your business planning',
+        'Set up alerts for changes in your areas of interest',
+      ],
+      link: '/analytics',
+      buttonText: 'View Analytics',
+    },
+    {
+      id: 'ai-assistant',
+      title: 'Zion AI Assistant',
+      description:
+        'Get real-time help, recommendations, and marketplace guidance from our AI assistant.',
+      icon: <MessageSquare className='h-10 w-10 text-zion-purple' />,
+      instructions: [
+        'Click on the chat icon in the bottom right corner',
+        'Ask questions about available services or talents',
+        'Get recommendations based on your project needs',
+        'Receive step-by-step guidance for using platform features',
+      ],
+      link: '#',
+      buttonText: 'Chat with Assistant',
+      action: 'openChat',
+    },
+    {
+      id: 'publishing',
+      title: 'List Your Services',
+      description:
+        'Showcase your AI and tech expertise by creating your own listings on the marketplace.',
+      icon: <Plus className='h-10 w-10 text-zion-cyan' />,
+      instructions: [
+        'Create or log in to your account',
+        "Navigate to 'Create Listing' in your dashboard",
+        'Choose between talent profile, service, or equipment listing',
+        'Complete the guided form and publish your listing',
+      ],
+      link: '/create-profile',
+      buttonText: 'Create Listing',
+    },
+    {
+      id: 'help-center',
+      title: 'Help & Resources',
+      description:
+        'Access guides, tutorials, and support resources to maximize your marketplace experience.',
+      icon: <HelpCircle className='h-10 w-10 text-zion-purple' />,
+      instructions: [
+        'Visit our comprehensive knowledge base',
+        'Watch video tutorials on specific features',
+        'Join community forums to connect with other users',
+        'Contact our support team for personalized assistance',
+      ],
+      link: '/help',
+      buttonText: 'View Resources',
+    },
+  ]
   return (
-    <section className="py-16 bg-muted/30">
+    <section className='py-20 bg-zion-blue-dark'>
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-12'>
+          <GradientHeading>Your Complete Guide to Zion</GradientHeading>
+          <p className='text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto'>
+            Discover all the powerful tools and features available to help you
+            navigate the world of AI and tech services
+          </p>
+        </div>
+        <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>
+          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>
+            {features.slice(0, 4).map(feature => (
+              <TabsTrigger
+                key={feature.id}
+                value={feature.id}
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+      instructions: [
+        "Navigate to the AI Matcher page from the homepage or marketplace"
+        "Fill in your project requirements and specifications"
+        "Review the AI-recommended matches tailored to your needs"
+        "Connect with matched talents or services directly"
+      ]
+      link: "/match",
+      buttonText: "Try AI Matcher"
+    }
+    {
+      id: "talent-directory",
+      title: "Talent Directory",
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings."
+      icon: <Users className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Access the talent directory from the main navigation"
+        "Use filters to narrow down by skills, experience, and pricing"
+        "Save favorite profiles for future reference"
+        "Contact talents directly or request quotes through their profiles"
+      ]
+      link: "/talents",
+      buttonText: "Explore Talents"
+    }
+    {
+      id: "services",
+      title: "Services Marketplace",
+      description: "Discover professional services for your AI and tech needs, from development to consulting."
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />,
+      instructions: [
+        "Browse service categories on the marketplace"
+        "Compare service offerings and pricing options"
+        "Request customized quotes for specific requirements"
+        "Book and manage services through your dashboard"
+      ]
+      link: "/services",
+      buttonText: "View Services"
+    }
+    {
+      id: "equipment",
+      title: "Equipment Catalog",
+      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",
+      icon: <Settings className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Search the equipment catalog by category or specifications"
+        "Check availability and rental/purchase options"
+        "Request quotes for bulk orders or specialized equipment"
+        "Schedule delivery or pickup through the platform"
+      ]
+      link: "/equipment",
+      buttonText: "Browse Equipment"
+    }
+    {
+      id: "analytics",
+      title: "Marketplace Analytics",
+      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity."
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
+      instructions: [
+        "Access analytics from your user dashboard"
+        "View interactive charts on market trends and rates"
+        "Export reports for your business planning"
+        "Set up alerts for changes in your areas of interest"
+      ]
+      link: "/analytics",
+      buttonText: "View Analytics"
+    }
+    {
+      id: "ai-assistant",
+      title: "Zion AI Assistant",
+      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant."
+      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Click on the chat icon in the bottom right corner"
+        "Ask questions about available services or talents"
+        "Get recommendations based on your project needs"
+        "Receive step-by-step guidance for using platform features"
+      ]
+      link: "#",
+      buttonText: "Chat with Assistant",
+      action: "openChat"
+    }
+    {
+      id: "publishing",
+      title: "List Your Services",
+      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",
+      icon: <Plus className="h-10 w-10 text-zion-cyan" />,
+      instructions: [
+        "Create or log in to your account"
+        "Navigate to 'Create Listing' in your dashboard"
+        "Choose between talent profile, service, or equipment listing"
+        "Complete the guided form and publish your listing"
+      ]
+      link: "/create-profile",
+      buttonText: "Create Listing"
+    }
+    {
+      id: "help-center",
+      title: "Help & Resources",
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience."
+      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Visit our comprehensive knowledge base"
+        "Watch video tutorials on specific features"
+        "Join community forums to connect with other users"
+        "Contact our support team for personalized assistance"
+      ]
+      link: "/help",
+      buttonText: "View Resources"
+    }
+  ]
+  return (
+    <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Explore Our Features
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Discover the powerful tools and capabilities that make Zion Tech Group the leading choice 
-            for AI services, IT solutions, and micro SAAS platforms.
+          <GradientHeading>Your Complete Guide to Zion</GradientHeading>
+          <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">
+            Discover all the powerful tools and features available to help you navigate 
+            the world of AI and tech services
+          </p>
+        </div>
+        <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
+            {features.slice(0, 4).map(feature => (
+              <TabsTrigger 
+                key={feature.id} 
+                value={feature.id}
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+              >
+import Link from "next/link",
+import { GradientHeading } from "./GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from "./ui/button",
+import { fireEvent } from '@/lib/analytics',
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
+
+export function FeaturesGuideSection() {
+  const features = [
+    {
+
+      id: "ai-matcher",
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
+      instructions: [
+        "Navigate to the AI Matcher page from the homepage or marketplace",
+        "Fill in your project requirements and specifications",
+        "Review the AI-recommended matches tailored to your needs",
+        "Connect with matched talents or services directly"
+      ],
+      link: "/match",
+      buttonText: "Try AI Matcher"
+    },
+    {
+      id: "talent-directory",
+      title: "Talent Directory",
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",
+      icon: <Users className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Access the talent directory from the main navigation",
+        "Use filters to narrow down by skills, experience, and pricing",
+        "Save favorite profiles for future reference",
+        "Contact talents directly or request quotes through their profiles"
+      ],
+      link: "/talents",
+      buttonText: "Explore Talents"
+    },
+    {
+      id: "services",
+      title: "Services Marketplace",
+      description: "Discover professional services for your AI and tech needs, from development to consulting.",
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />,
+      instructions: [
+        "Browse service categories on the marketplace",
+        "Compare service offerings and pricing options",
+        "Request customized quotes for specific requirements",
+        "Book and manage services through your dashboard"
+      ],
+      link: "/services",
+      buttonText: "View Services"
+    },
+    {
+      id: "equipment",
+      title: "Equipment Catalog",
+      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",
+      icon: <Settings className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Search the equipment catalog by category or specifications",
+        "Check availability and rental/purchase options",
+        "Request quotes for bulk orders or specialized equipment",
+        "Schedule delivery or pickup through the platform"
+      ],
+      link: "/equipment",
+      buttonText: "Browse Equipment"
+    },
+    {
+      id: "analytics",
+      title: "Marketplace Analytics",
+      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
+      instructions: [
+        "Access analytics from your user dashboard",
+        "View interactive charts on market trends and rates",
+        "Export reports for your business planning",
+        "Set up alerts for changes in your areas of interest"
+      ],
+      link: "/analytics",
+      buttonText: "View Analytics"
+    },
+    {
+      id: "ai-assistant",
+      title: "Zion AI Assistant",
+      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
+      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Click on the chat icon in the bottom right corner",
+        "Ask questions about available services or talents",
+        "Get recommendations based on your project needs",
+        "Receive step-by-step guidance for using platform features"
+      ],
+      link: "#",
+      buttonText: "Chat with Assistant",
+      action: "openChat"
+    },
+    {
+      id: "publishing",
+      title: "List Your Services",
+      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",
+      icon: <Plus className="h-10 w-10 text-zion-cyan" />,
+      instructions: [
+        "Create or log in to your account",
+        "Navigate to 'Create Listing' in your dashboard",
+        "Choose between talent profile, service, or equipment listing",
+        "Complete the guided form and publish your listing"
+      ],
+      link: "/create-profile",
+      buttonText: "Create Listing"
+    },
+    {
+      id: "help-center",
+      title: "Help & Resources",
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
+      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Visit our comprehensive knowledge base",
+        "Watch video tutorials on specific features",
+        "Join community forums to connect with other users",
+        "Contact our support team for personalized assistance"
+      ],
+      link: "/help",
+      buttonText: "View Resources"
+    }
+  ],
+
+  return (
+    <section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <GradientHeading>Your Complete Guide to Zion</GradientHeading>
+          <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">
+            Discover all the powerful tools and features available to help you navigate 
+            the world of AI and tech services
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
-            <Card key={feature.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{feature.icon}</div>
-                  <Badge 
-                    variant="outline" 
-                    className={`${getComplexityColor(feature.complexity)} border-current`}
-                  >
-                    {feature.complexity}
-                  </Badge>
-                </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
-                <CardDescription className="mt-2">
-                  {feature.description}
-                </CardDescription>
-                <Badge variant="secondary" className="mt-2">
-                  {feature.category}
-                </Badge>
-              </CardHeader>
-              <CardContent>
-                <h4 className="font-semibold text-foreground mb-3">Key Benefits:</h4>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-center text-sm text-muted-foreground">
-                      <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="mt-6 pt-4 border-t border-border">
-                  <button className="w-full px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
-                    Learn More
-                  </button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
+            {features.slice(0, 4).map(feature => (
+              <TabsTrigger 
+                key={feature.id} 
+                value={feature.id}
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+              >
+import Link from "next/link",;
+import { GradientHeading } from "./GradientHeading",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Button } from "./ui/button",;
+import { fireEvent } from '@/lib/analytics',;
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
+export function FeaturesGuideSection() {;
+  const features = [;
+    {;
+      id: "ai-matcher",;
+      title: "AI Matcher",;
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;
+      instructions: [;
+        "Navigate to the AI Matcher page from the homepage or marketplace",;
+        "Fill in your project requirements and specifications",;
+        "Review the AI-recommended matches tailored to your needs",;
+        "Connect with matched talents or services directly";
+      ],;
+      link: "/match",;
+      buttonText: "Try AI Matcher";
+    },;
+    {;
+      id: "talent-directory",;
+      title: "Talent Directory",;
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",;
+      icon: <Users className="h-10 w-10 text-zion-purple" />,;
+      instructions: [;
+        "Access the talent directory from the main navigation",;
+        "Use filters to narrow down by skills, experience, and pricing",;
+        "Save favorite profiles for future reference",;
+        "Contact talents directly or request quotes through their profiles";
+      ],;
+      link: "/talents",;
+      buttonText: "Explore Talents";
+    },;
+    {;
+      id: "services",;
+      title: "Services Marketplace",;
+      description: "Discover professional services for your AI and tech needs, from development to consulting.",;
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />,;
+      instructions: [;
+        "Browse service categories on the marketplace",;
+        "Compare service offerings and pricing options",;
+        "Request customized quotes for specific requirements",;
+        "Book and manage services through your dashboard";
+      ],;
+      link: "/services",;
+      buttonText: "View Services";
+    },;
+    {;
+      id: "equipment",;
+      title: "Equipment Catalog",;
+      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
+      icon: <Settings className="h-10 w-10 text-zion-purple" />,;
+      instructions: [;
+        "Search the equipment catalog by category or specifications",;
+        "Check availability and rental/purchase options",;
+        "Request quotes for bulk orders or specialized equipment",;
+        "Schedule delivery or pickup through the platform";
+      ],;
+      link: "/equipment",;
+      buttonText: "Browse Equipment";
+    },;
+    {;
+      id: "analytics",;
+      title: "Marketplace Analytics",;
+      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",;
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;
+      instructions: [;
+        "Access analytics from your user dashboard",;
+        "View interactive charts on market trends and rates",;
+        "Export reports for your business planning",;
+        "Set up alerts for changes in your areas of interest";
+      ],;
+      link: "/analytics",;
+      buttonText: "View Analytics";
+    },;
+    {;
+      id: "ai-assistant",;
+      title: "Zion AI Assistant",;
+      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",;
+      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;
+      instructions: [;
+        "Click on the chat icon in the bottom right corner",;
+        "Ask questions about available services or talents",;
+        "Get recommendations based on your project needs",;
+        "Receive step-by-step guidance for using platform features";
+      ],;
+      link: "#",;
+      buttonText: "Chat with Assistant",;
+      action: "openChat";
+    },;
+    {;
+      id: "publishing",;
+      title: "List Your Services",;
+      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
+      icon: <Plus className="h-10 w-10 text-zion-cyan" />,;
+      instructions: [;
+        "Create or log in to your account",;
+        "Navigate to 'Create Listing' in your dashboard",;
+        "Choose between talent profile, service, or equipment listing",;
+        "Complete the guided form and publish your listing";
+      ],;
+      link: "/create-profile",;
+      buttonText: "Create Listing";
+    },;
+    {;
+      id: "help-center",;
+      title: "Help & Resources",;
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",;
+      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
+      instructions: [;
+        "Visit our comprehensive knowledge base",;
+        "Watch video tutorials on specific features",;
+        "Join community forums to connect with other users",;
+        "Contact our support team for personalized assistance";
+      ],;
+      link: "/help";
+      buttonText: "View Resources";
 
-        <div className="text-center mt-12">
-          <div className="bg-background rounded-lg p-8 shadow-lg border border-border">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Need Help Choosing the Right Features?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Our experts can help you identify the perfect combination of features for your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
-                Schedule Consultation
-              </button>
-              <button className="px-6 py-3 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors">
-                View Feature Comparison
-              </button>
-            </div>
-          </div>
+    }
+    {
+      id: 'talent-directory'
+      title: 'Talent Directory'
+      description:
+        'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.'
+      icon: <Users className='h-10 w-10 text-zion-purple' />
+      instructions: [
+        'Access the talent directory from the main navigation'
+        'Use filters to narrow down by skills, experience, and pricing'
+        'Save favorite profiles for future reference'
+        'Contact talents directly or request quotes through their profiles'
+      ]
+      link: '/talents'
+      buttonText: 'Explore Talents'
+    }
+    {
+      id: 'services'
+      title: 'Services Marketplace'
+      description:
+        'Discover professional services for your AI and tech needs, from development to consulting.'
+      icon: <Zap className='h-10 w-10 text-zion-cyan' />
+      instructions: [
+        'Browse service categories on the marketplace'
+        'Compare service offerings and pricing options'
+        'Request customized quotes for specific requirements'
+        'Book and manage services through your dashboard'
+      ]
+      link: '/services'
+      buttonText: 'View Services'
+    }
+    {
+      id: 'equipment'
+      title: 'Equipment Catalog'
+      description:
+        'Rent or buy specialized hardware and tech equipment for AI development and research.'
+      icon: <Settings className='h-10 w-10 text-zion-purple' />
+      instructions: [
+        'Search the equipment catalog by category or specifications'
+        'Check availability and rental/purchase options'
+        'Request quotes for bulk orders or specialized equipment'
+        'Schedule delivery or pickup through the platform'
+      ]
+      link: '/equipment'
+      buttonText: 'Browse Equipment'
+    }
+    {
+      id: 'analytics'
+      title: 'Marketplace Analytics'
+      description:
+        'Gain insights into industry trends, pricing benchmarks, and marketplace activity.'
+      icon: <BarChart3 className='h-10 w-10 text-zion-cyan' />
+      instructions: [
+        'Access analytics from your user dashboard'
+        'View interactive charts on market trends and rates'
+        'Export reports for your business planning'
+        'Set up alerts for changes in your areas of interest'
+      ]
+      link: '/analytics'
+      buttonText: 'View Analytics'
+    }
+    {
+      id: 'ai-assistant'
+      title: 'Zion AI Assistant'
+      description:
+        'Get real-time help, recommendations, and marketplace guidance from our AI assistant.'
+      icon: <MessageSquare className='h-10 w-10 text-zion-purple' />
+      instructions: [
+        'Click on the chat icon in the bottom right corner'
+        'Ask questions about available services or talents'
+        'Get recommendations based on your project needs'
+        'Receive step-by-step guidance for using platform features'
+      ]
+      link: '#'
+      buttonText: 'Chat with Assistant'
+      action: 'openChat'
+    }
+    {
+      id: 'publishing'
+      title: 'List Your Services'
+      description:
+        'Showcase your AI and tech expertise by creating your own listings on the marketplace.'
+      icon: <Plus className='h-10 w-10 text-zion-cyan' />
+      instructions: [
+        'Create or log in to your account'
+        "Navigate to 'Create Listing' in your dashboard"
+        'Choose between talent profile, service, or equipment listing'
+        'Complete the guided form and publish your listing'
+      ]
+      link: '/create-profile'
+      buttonText: 'Create Listing'
+    }
+    {
+      id: 'help-center'
+      title: 'Help & Resources'
+      description:
+        'Access guides, tutorials, and support resources to maximize your marketplace experience.'
+      icon: <HelpCircle className='h-10 w-10 text-zion-purple' />
+      instructions: [
+        'Visit our comprehensive knowledge base'
+        'Watch video tutorials on specific features'
+        'Join community forums to connect with other users'
+        'Contact our support team for personalized assistance'
+      ]
+      link: '/help'
+      buttonText: 'View Resources'
+    }
+  ]
+  return (
+    <section className='py-20 bg-zion-blue-dark'>
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-12'>
+          <GradientHeading>Your Complete Guide to Zion</GradientHeading>
+          <p className='text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto'>
+            Discover all the powerful tools and features available to help you
+            navigate the world of AI and tech services
+          </p>
+        </div>
+        <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>
+          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>
+            {features.slice(0, 4).map(feature => (
+              <TabsTrigger
+                key={feature.id}
+                value={feature.id}
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+      instructions: [
+        "Navigate to the AI Matcher page from the homepage or marketplace"
+        "Fill in your project requirements and specifications"
+        "Review the AI-recommended matches tailored to your needs"
+        "Connect with matched talents or services directly"
+      ]
+      link: "/match"
+      buttonText: "Try AI Matcher"
+    }
+    {
+      id: "talent-directory"
+      title: "Talent Directory"
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings."
+      icon: <Users className="h-10 w-10 text-zion-purple" />
+      instructions: [
+        "Access the talent directory from the main navigation"
+        "Use filters to narrow down by skills, experience, and pricing"
+        "Save favorite profiles for future reference"
+        "Contact talents directly or request quotes through their profiles"
+      ]
+      link: "/talents"
+      buttonText: "Explore Talents"
+    }
+    {
+      id: "services"
+      title: "Services Marketplace"
+      description: "Discover professional services for your AI and tech needs, from development to consulting."
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />
+      instructions: [
+        "Browse service categories on the marketplace"
+        "Compare service offerings and pricing options"
+        "Request customized quotes for specific requirements"
+        "Book and manage services through your dashboard"
+      ]
+      link: "/services"
+      buttonText: "View Services"
+    }
+    {
+      id: "equipment"
+      title: "Equipment Catalog"
+      description: "Rent or buy specialized hardware and tech equipment for AI development and research."
+      icon: <Settings className="h-10 w-10 text-zion-purple" />
+      instructions: [
+        "Search the equipment catalog by category or specifications"
+        "Check availability and rental/purchase options"
+        "Request quotes for bulk orders or specialized equipment"
+        "Schedule delivery or pickup through the platform"
+      ]
+      link: "/equipment"
+      buttonText: "Browse Equipment"
+    }
+    {
+      id: "analytics"
+      title: "Marketplace Analytics"
+      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity."
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
+      instructions: [
+        "Access analytics from your user dashboard"
+        "View interactive charts on market trends and rates"
+        "Export reports for your business planning"
+        "Set up alerts for changes in your areas of interest"
+      ]
+      link: "/analytics"
+      buttonText: "View Analytics"
+    }
+    {
+      id: "ai-assistant"
+      title: "Zion AI Assistant"
+      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant."
+      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />
+      instructions: [
+        "Click on the chat icon in the bottom right corner"
+        "Ask questions about available services or talents"
+        "Get recommendations based on your project needs"
+        "Receive step-by-step guidance for using platform features"
+      ]
+      link: "#"
+      buttonText: "Chat with Assistant"
+      action: "openChat"
+    }
+    {
+      id: "publishing"
+      title: "List Your Services"
+      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace."
+      icon: <Plus className="h-10 w-10 text-zion-cyan" />
+      instructions: [
+        "Create or log in to your account"
+        "Navigate to 'Create Listing' in your dashboard"
+        "Choose between talent profile, service, or equipment listing"
+        "Complete the guided form and publish your listing"
+      ]
+      link: "/create-profile"
+      buttonText: "Create Listing"
+    }
+    {
+      id: "help-center"
+      title: "Help & Resources"
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience."
+      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />
+      instructions: [
+        "Visit our comprehensive knowledge base"
+        "Watch video tutorials on specific features"
+        "Join community forums to connect with other users"
+        "Contact our support team for personalized assistance"
+      ]
+      link: "/help"
+      buttonText: "View Resources"
+import Link from 'next/link';
+import { GradientHeading } from './GradientHeading';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from './ui/button';
+import { fireEvent } from '@/lib/analytics';
+import {;
+  Users,;
+  Zap,;
+  Settings,;
+  MessageSquare,;
+  Sparkles,;
+  ArrowRight,;
+  BarChart3,;
+  Plus,;
+  HelpCircle,;
+} from 'lucide-react';
+export function FeaturesGuideSection() {;
+  const features = [;
+    {import Link from "next/link";
+import { GradientHeading } from "./GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "./ui/button";
+import { fireEvent } from '@/lib/analytics';
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
+export function FeaturesGuideSection() {;
+  const features = [;
+    {;
+      id: 'ai-matcher',;
+      title: 'AI Matcher',;
+      description:;
+        'Find the perfect match for your project needs with our intelligent AI-powered matching system.',;
+      icon: <Sparkles className='h-10 w-10 text-zion-cyan' />,;
+      instructions: [;
+        'Navigate to the AI Matcher page from the homepage or marketplace',;
+        'Fill in your project requirements and specifications',;
+        'Review the AI-recommended matches tailored to your needs',;
+        'Connect with matched talents or services directly',;
+      ],;
+      link: '/match',;
+      buttonText: 'Try AI Matcher',;
+    },;
+    {;
+      id: 'talent-directory',;
+      title: 'Talent Directory',;
+      description:;
+        'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.',;
+      icon: <Users className='h-10 w-10 text-zion-purple' />,;
+      instructions: [;
+        'Access the talent directory from the main navigation',;
+        'Use filters to narrow down by skills, experience, and pricing',;
+        'Save favorite profiles for future reference',;
+        'Contact talents directly or request quotes through their profiles',;
+      ],;
+      link: '/talents',;
+      buttonText: 'Explore Talents',;
+    },;
+    {;
+      id: 'services',;
+      title: 'Services Marketplace',;
+      description:;
+        'Discover professional services for your AI and tech needs, from development to consulting.',;
+      icon: <Zap className='h-10 w-10 text-zion-cyan' />,;
+      instructions: [;
+        'Browse service categories on the marketplace',;
+        'Compare service offerings and pricing options',;
+        'Request customized quotes for specific requirements',;
+        'Book and manage services through your dashboard',;
+      ],;
+      link: '/services',;
+      buttonText: 'View Services',;
+    },;
+    {;
+      id: 'equipment',;
+      title: 'Equipment Catalog',;
+      description:;
+        'Rent or buy specialized hardware and tech equipment for AI development and research.',;
+      icon: <Settings className='h-10 w-10 text-zion-purple' />,;
+      instructions: [;
+        'Search the equipment catalog by category or specifications',;
+        'Check availability and rental/purchase options',;
+        'Request quotes for bulk orders or specialized equipment',;
+        'Schedule delivery or pickup through the platform',;
+      ],;
+      link: '/equipment',;
+      buttonText: 'Browse Equipment',;
+    },;
+    {;
+      id: 'analytics',;
+      title: 'Marketplace Analytics',;
+      description:;
+        'Gain insights into industry trends, pricing benchmarks, and marketplace activity.',;
+      icon: <BarChart3 className='h-10 w-10 text-zion-cyan' />,;
+      instructions: [;
+        'Access analytics from your user dashboard',;
+        'View interactive charts on market trends and rates',;
+        'Export reports for your business planning',;
+        'Set up alerts for changes in your areas of interest',;
+      ],;
+      link: '/analytics',;
+      buttonText: 'View Analytics',;
+    },;
+    {;
+      id: 'ai-assistant',;
+      title: 'Zion AI Assistant',;
+      description:;
+        'Get real-time help, recommendations, and marketplace guidance from our AI assistant.',;
+      icon: <MessageSquare className='h-10 w-10 text-zion-purple' />,;
+      instructions: [;
+        'Click on the chat icon in the bottom right corner',;
+        'Ask questions about available services or talents',;
+        'Get recommendations based on your project needs',;
+        'Receive step-by-step guidance for using platform features',;
+      ],;
+      link: '#',;
+      buttonText: 'Chat with Assistant',;
+      action: 'openChat',;
+    },;
+    {;
+      id: 'publishing',;
+      title: 'List Your Services',;
+      description:;
+        'Showcase your AI and tech expertise by creating your own listings on the marketplace.',;
+      icon: <Plus className='h-10 w-10 text-zion-cyan' />,;
+      instructions: [;
+        'Create or log in to your account',;
+        "Navigate to 'Create Listing' in your dashboard",;
+        'Choose between talent profile, service, or equipment listing',;
+        'Complete the guided form and publish your listing',;
+      ],;
+      link: '/create-profile',;
+      buttonText: 'Create Listing',;
+    },;
+    {;
+      id: 'help-center',;
+      title: 'Help & Resources',;
+      description:;
+        'Access guides, tutorials, and support resources to maximize your marketplace experience.',;
+      icon: <HelpCircle className='h-10 w-10 text-zion-purple' />,;
+      instructions: [;
+        'Visit our comprehensive knowledge base',;
+        'Watch video tutorials on specific features',;
+        'Join community forums to connect with other users',;
+        'Contact our support team for personalized assistance',;
+      ],;
+      link: '/help',;
+      buttonText: 'View Resources',;
+    },;
+  ];
+
+  return (
+    <section className='py-20 bg-zion-blue-dark'>;
+      <div className='container mx-auto px-4'>;
+        <div className='text-center mb-12'>;
+          <GradientHeading>Your Complete Guide to Zion</GradientHeading>;
+          <p className='text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto'>;
+            Discover all the powerful tools and features available to help you;
+            navigate the world of AI and tech services;
+          </p>;
+        </div>;
+
+        <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>;
+          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>;
+            {features && features.slice(0, 4).map(feature => (;
+              <TabsTrigger
+                key={feature && feature.id}
+                value={feature && feature.id}
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'>                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
+      instructions: [;
+        "Navigate to the AI Matcher page from the homepage or marketplace";
+        "Fill in your project requirements and specifications";
+        "Review the AI-recommended matches tailored to your needs";
+        "Connect with matched talents or services directly";
+      ];
+      link: "/match",;
+      buttonText: "Try AI Matcher";
+    };
+    {;
+      id: "talent-directory",;
+      title: "Talent Directory",;
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
+      icon: <Users className="h-10 w-10 text-zion-purple" />,;
+      instructions: [;
+        "Access the talent directory from the main navigation";
+        "Use filters to narrow down by skills, experience, and pricing";
+        "Save favorite profiles for future reference";
+        "Contact talents directly or request quotes through their profiles";
+      ];
+      link: "/talents",;
+      buttonText: "Explore Talents";
+    };
+    {;
+      id: "services",;
+      title: "Services Marketplace",;
+      description: "Discover professional services for your AI and tech needs, from development to consulting.";
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />,;
+      instructions: [;
+        "Browse service categories on the marketplace";
+        "Compare service offerings and pricing options";
+        "Request customized quotes for specific requirements";
+        "Book and manage services through your dashboard";
+      ];
+      link: "/services",;
+      buttonText: "View Services";
+    };
+    {;
+      id: "equipment",;
+      title: "Equipment Catalog",;
+      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
+      icon: <Settings className="h-10 w-10 text-zion-purple" />,;
+      instructions: [;
+        "Search the equipment catalog by category or specifications";
+        "Check availability and rental/purchase options";
+        "Request quotes for bulk orders or specialized equipment";
+        "Schedule delivery or pickup through the platform";
+      ];
+      link: "/equipment",;
+      buttonText: "Browse Equipment";
+    };
+    {;
+      id: "analytics",;
+      title: "Marketplace Analytics",;
+      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;
+      instructions: [;
+        "Access analytics from your user dashboard";
+        "View interactive charts on market trends and rates";
+        "Export reports for your business planning";
+        "Set up alerts for changes in your areas of interest";
+      ];
+      link: "/analytics",;
+      buttonText: "View Analytics";
+    };
+    {;
+      id: "ai-assistant",;
+      title: "Zion AI Assistant",;
+      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";
+      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;
+      instructions: [;
+        "Click on the chat icon in the bottom right corner";
+        "Ask questions about available services or talents";
+        "Get recommendations based on your project needs";
+        "Receive step-by-step guidance for using platform features";
+      ];
+      link: "#",;
+      buttonText: "Chat with Assistant",;
+      action: "openChat";
+    };
+    {;
+      id: "publishing",;
+      title: "List Your Services",;
+      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
+      icon: <Plus className="h-10 w-10 text-zion-cyan" />,;
+      instructions: [;
+        "Create or log in to your account";
+        "Navigate to 'Create Listing' in your dashboard";
+        "Choose between talent profile, service, or equipment listing";
+        "Complete the guided form and publish your listing";
+      ];
+      link: "/create-profile",;
+      buttonText: "Create Listing";
+    };
+    {;
+      id: "help-center",;
+      title: "Help & Resources",;
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
+      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
+import Link from 'next / link';
+import { GradientHeading } from './GradientHeading';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Button } from './ui / button';
+import { fire_event } from '@/lib / analytics';
+import {
+  Users,
+  Zap,
+  Settings,
+  MessageSquare,
+  Sparkles,
+  ArrowRight,
+  BarChart3,
+  Plus,
+  HelpCircle,
+} from 'lucide-react';
+export /**
+ * FeaturesGuideSection - Function description
+ */
+function FeaturesGuideSection() {
+  const features = [;
+    {import Link from './next / link';
+import { GradientHeading  } from './GradientHeading';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+import { Button  } from './ui / button';
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+export /**
+ * FeaturesGuideSection - Function description
+ */
+function FeaturesGuideSection() {
+  const features = [;
+    {
+      id: 'ai - matcher',
+      title: 'AI Matcher',
+      description:;
+        'Find the perfect match for your project needs with our intelligent AI - powered matching system.',
+      icon: <Sparkles className='h - 10 w - 10 text - zion - cyan' />,
+      instructions: [;
+        'Navigate to the AI Matcher page from the homepage or marketplace',
+        'Fill in your project requirements and specifications',
+        'Review the AI - recommended matches tailored to your needs',
+        'Connect with matched talents or services directly',
+      ],
+      link: '/match',
+      button_text: 'Try AI Matcher',
+    },
+    {
+      id: 'talent - directory',
+      title: 'Talent Directory',
+      description:;
+        'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.',
+      icon: <Users className='h - 10 w - 10 text - zion - purple' />,
+      instructions: [;
+        'Access the talent directory from the main navigation',
+        'Use filters to narrow down by skills, experience, and pricing',
+        'Save favorite profiles for future reference',
+        'Contact talents directly or request quotes through their profiles',
+      ],
+      link: '/talents',
+      button_text: 'Explore Talents',
+    },
+    {
+      id: 'services',
+      title: 'Services Marketplace',
+      description:;
+        'Discover professional services for your AI and tech needs, from development to consulting.',
+      icon: <Zap className='h - 10 w - 10 text - zion - cyan' />,
+      instructions: [;
+        'Browse service categories on the marketplace',
+        'Compare service offerings and pricing options',
+        'Request customized quotes for specific requirements',
+        'Book and manage services through your dashboard',
+      ],
+      link: '/services',
+      button_text: 'View Services',
+    },
+    {
+      id: 'equipment',
+      title: 'Equipment Catalog',
+      description:;
+        'Rent or buy specialized hardware and tech equipment for AI development and research.',
+      icon: <Settings className='h - 10 w - 10 text - zion - purple' />,
+      instructions: [;
+        'Search the equipment catalog by category or specifications',
+        'Check availability and rental / purchase options',
+        'Request quotes for bulk orders or specialized equipment',
+        'Schedule delivery or pickup through the platform',
+      ],
+      link: '/equipment',
+      button_text: 'Browse Equipment',
+    },
+    {
+      id: 'analytics',
+      title: 'Marketplace Analytics',
+      description:;
+        'Gain insights into industry trends, pricing benchmarks, and marketplace activity.',
+      icon: <BarChart3 className='h - 10 w - 10 text - zion - cyan' />,
+      instructions: [;
+        'Access analytics from your user dashboard',
+        'View interactive charts on market trends and rates',
+        'Export reports for your business planning',
+        'Set up alerts for changes in your areas of interest',
+      ],
+      link: '/analytics',
+      button_text: 'View Analytics',
+    },
+    {
+      id: 'ai - assistant',
+      title: 'Zion AI Assistant',
+      description:;
+        'Get real - time help, recommendations, and marketplace guidance from our AI assistant.',
+      icon: <MessageSquare className='h - 10 w - 10 text - zion - purple' />,
+      instructions: [;
+        'Click on the chat icon in the bottom right corner',
+        'Ask questions about available services or talents',
+        'Get recommendations based on your project needs',
+        'Receive step - by - step guidance for using platform features',
+      ],
+      link: '#',
+      button_text: 'Chat with Assistant',
+      action: 'open_chat',
+    },
+    {
+      id: 'publishing',
+      title: 'List Your Services',
+      description:;
+        'Showcase your AI and tech expertise by creating your own listings on the marketplace.',
+      icon: <Plus className='h - 10 w - 10 text - zion - cyan' />,
+      instructions: [;
+        'Create or log in to your account',
+        "Navigate to 'Create Listing' in your dashboard",
+        'Choose between talent profile, service, or equipment listing',
+        'Complete the guided form and publish your listing',
+      ],
+      link: '/create - profile',
+      button_text: 'Create Listing',
+    },
+    {
+      id: 'help - center',
+      title: 'Help & Resources',
+      description:;
+        'Access guides, tutorials, and support resources to maximize your marketplace experience.',
+      icon: <HelpCircle className='h - 10 w - 10 text - zion - purple' />,
+      instructions: [;
+        'Visit our comprehensive knowledge base',
+        'Watch video tutorials on specific features',
+        'Join community forums to connect with other users',
+        'Contact our support team for personalized assistance',
+      ],
+      link: '/help',
+      button_text: 'View Resources',
+    },
+  ];
+  return (
+    <section className='py - 20 bg - zion - blue - dark'>;
+      <div className='container mx - auto px - 4'>;
+        <div className='text - center mb - 12'>;
+          <GradientHeading > Your Complete Guide to Zion</GradientHeading>;
+          <p className='text - zion - slate - light text - xl mt - 4 max - w-3xl mx - auto'>;
+            Discover all the powerful tools and features available to help you;
+            navigate the world of AI and tech services;
+          </p>;
+        </div>;
+        <Tabs default_value='ai - matcher' className='w - full max - w-5xl mx - auto'>;
+          <TabsList className='grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8'>;
+            {features.slice (0, 4).map (feature => (
+              <TabsTrigger;
+                key={feature.id}
+                value={feature.id}
+                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
+      instructions: [;
+        "Navigate to the AI Matcher page from the homepage or marketplace";
+        "Fill in your project requirements and specifications";
+        "Review the AI - recommended matches tailored to your needs";
+        "Connect with matched talents or services directly";
+      ];
+      link: "/match",
+      button_text: "Try AI Matcher";
+    }
+    {
+      id: "talent - directory",
+      title: "Talent Directory",
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
+      icon: <Users className="h - 10 w - 10 text - zion - purple" />,
+      instructions: [;
+        "Access the talent directory from the main navigation";
+        "Use filters to narrow down by skills, experience, and pricing";
+        "Save favorite profiles for future reference";
+        "Contact talents directly or request quotes through their profiles";
+      ];
+      link: "/talents",
+      button_text: "Explore Talents";
+    }
+    {
+      id: "services",
+      title: "Services Marketplace",
+      description: "Discover professional services for your AI and tech needs, from development to consulting.";
+      icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
+      instructions: [;
+        "Browse service categories on the marketplace";
+        "Compare service offerings and pricing options";
+        "Request customized quotes for specific requirements";
+        "Book and manage services through your dashboard";
+      ];
+      link: "/services",
+      button_text: "View Services";
+    }
+    {
+      id: "equipment",
+      title: "Equipment Catalog",
+      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",
+      icon: <Settings className="h - 10 w - 10 text - zion - purple" />,
+      instructions: [;
+        "Search the equipment catalog by category or specifications";
+        "Check availability and rental / purchase options";
+        "Request quotes for bulk orders or specialized equipment";
+        "Schedule delivery or pickup through the platform";
+      ];
+      link: "/equipment",
+      button_text: "Browse Equipment";
+    }
+    {
+      id: "analytics",
+      title: "Marketplace Analytics",
+      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
+      icon: <BarChart3 className="h - 10 w - 10 text - zion - cyan" />,
+      instructions: [;
+        "Access analytics from your user dashboard";
+        "View interactive charts on market trends and rates";
+        "Export reports for your business planning";
+        "Set up alerts for changes in your areas of interest";
+      ];
+      link: "/analytics",
+      button_text: "View Analytics";
+    }
+    {
+      id: "ai - assistant",
+      title: "Zion AI Assistant",
+      description: "Get real - time help, recommendations, and marketplace guidance from our AI assistant.";
+      icon: <MessageSquare className="h - 10 w - 10 text - zion - purple" />,
+      instructions: [;
+        "Click on the chat icon in the bottom right corner";
+        "Ask questions about available services or talents";
+        "Get recommendations based on your project needs";
+        "Receive step - by - step guidance for using platform features";
+      ];
+      link: "#",
+      button_text: "Chat with Assistant",
+      action: "open_chat";
+    }
+    {
+      id: "publishing",
+      title: "List Your Services",
+      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",
+      icon: <Plus className="h - 10 w - 10 text - zion - cyan" />,
+      instructions: [;
+        "Create or log in to your account";
+        "Navigate to 'Create Listing' in your dashboard";
+        "Choose between talent profile, service, or equipment listing";
+        "Complete the guided form and publish your listing";
+      ];
+      link: "/create - profile",
+      button_text: "Create Listing";
+    }
+    {
+      id: "help - center",
+      title: "Help & Resources",
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
+      icon: <HelpCircle className="h - 10 w - 10 text - zion - purple" />,
+      instructions: [;
+        "Visit our comprehensive knowledge base";
+        "Watch video tutorials on specific features";
+        "Join community forums to connect with other users";
+        "Contact our support team for personalized assistance";
+      ];
+
+
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
+              >;
+
+
+                {feature.title}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
+            {features.slice(4).map(feature => (
+              <TabsTrigger
+                key={feature.id}
+                value={feature.id}
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+            {features.slice(4).map(feature => (
+              <TabsTrigger
+                key={feature.id}
+                value={feature.id}
+
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
+            {features.slice(4).map(feature => (
+              <TabsTrigger 
+                key={feature.id} 
+                value={feature.id}
+
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+              >
+                {feature.title}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          {features.map(feature => (
+
+      link: "/help",
+      button_text: "View Resources";
+    }
+  ];
+  return (
+    <section className="py - 20 bg - zion - blue - dark">;
+      <div className="container mx - auto px - 4">;
+        <div className="text - center mb - 12">;
+          <GradientHeading > Your Complete Guide to Zion</GradientHeading>;
+          <p className="text - zion - slate - light text - xl mt - 4 max - w-3xl mx - auto">;
+            Discover all the powerful tools and features available to help you navigate;
+            the world of AI and tech services;
+          </p>;
+        </div>;
+        <Tabs default_value="ai - matcher" className="w - full max - w-5xl mx - auto">;
+          <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
+            {features.slice (0, 4).map (feature => (
+              <TabsTrigger;
+                key={feature.id}
+                value={feature.id}
+                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
+              >;
+                {feature.title}
+              </TabsTrigger>))}
+          </TabsList>;
+          <TabsList className='grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1'>;
+            {features.slice (4).map (feature => (
+              <TabsTrigger;
+                key={feature.id}
+                value={feature.id}
+                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
+            {features.slice (4).map (feature => (
+              <TabsTrigger;
+                key={feature.id}
+                value={feature.id}
+                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
+              >;
+                {feature.title}
+              </TabsTrigger>))}
+          </TabsList>;
+          {features.map (feature => (
+            <TabsContent key={feature.id} value={feature.id} className='mt - 8'>;
+              <div className='bg - zion - blue rounded - lg border border - zion - blue - light p - 6 md:p - 8 flex flex - col md:flex - row gap - 8'>;
+                <div className='md:w - 1/3 flex flex - col items - center md:items - start'>;
+                  <div className='bg - zion - blue - dark p - 4 rounded - xl mb - 4'>;
+
+                    {feature.icon}
+                  </div>;
+                  <h3 className='text - 2xl font - bold text - white mb - 3'>;
+                    {feature.title}
+                  </h3>;
+                  <p className='text - zion - slate - light mb - 6'>;
+                    {feature.description}
+
+            <TabsContent key={feature.id} value={feature.id} className="mt-8">
+              <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
+                <div className="md:w-1/3 flex flex-col items-center md:items-start">
+                  <div className="bg-zion-blue-dark p-4 rounded-xl mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-zion-slate-light mb-6">{feature.description}</p>
+                  <Button 
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+
+
+                    asChild
+                  >
+                    <Link href={feature.link}>
+                      {feature.buttonText}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+                
+                <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
+                  <ol className="list-decimal list-inside space-y-3 pl-4">
+                    {feature.instructions.map((instruction, idx,) => (
+                      <li key={idx} className="text-zion-slate-light">
+                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>
+
+    <section className="py-20 bg-zion-blue-dark">;
+      <div className="container mx-auto px-4">;
+        <div className="text-center mb-12">;
+          <GradientHeading>Your Complete Guide to Zion</GradientHeading>;
+          <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">;
+            Discover all the powerful tools and features available to help you navigate ;
+            the world of AI and tech services;
+          </p>;
+        </div>;
+
+        <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">;
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">;
+            {features && features.slice(0, 4).map(feature => (;
+              <TabsTrigger
+                key={feature && feature.id} 
+                value={feature && feature.id}
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan">;
+                {feature && feature.title}
+              </TabsTrigger>;
+            ))}
+          </TabsList>;
+          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>;
+            {features && features.slice(4).map(feature => (;
+              <TabsTrigger
+                key={feature && feature.id}
+                value={feature && feature.id}
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'>                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
+            {features && features.slice(4).map(feature => (;
+              <TabsTrigger
+                key={feature && feature.id} 
+                value={feature && feature.id}
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan">;
+                {feature && feature.title}
+              </TabsTrigger>;
+            ))}
+          </TabsList>;
+
+          {features && features.map(feature => (;
+            <TabsContent key={feature && feature.id} value={feature && feature.id} className='mt-8'>;
+              <div className='bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8'>;
+                <div className='md:w-1/3 flex flex-col items-center md:items-start'>;
+                  <div className='bg-zion-blue-dark p-4 rounded-xl mb-4'>;
+                    {feature && feature.icon}
+                  </div>;
+                  <h3 className='text-2xl font-bold text-white mb-3'>;
+                    {feature && feature.title}
+                  </h3>;
+                  <p className='text-zion-slate-light mb-6'>;
+                    {feature && feature.description}
+                  </p>;
+                  <Button
+                    className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'                    asChild>;
+                    <Link href={feature && feature.link}>;
+                      {feature && feature.buttonText}
+                      <ArrowRight className='ml-2 h-4 w-4' />                  <h3 className="text-2xl font-bold text-white mb-3">{feature && feature.title}</h3>;
+                  <p className="text-zion-slate-light mb-6">{feature && feature.description}</p>;
+                  <Button
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+                    <Link href={feature && feature.link}>;
+                      {feature && feature.buttonText}
+                      <ArrowRight className='ml-2 h-4 w-4' />;
+                    </Link>;
+                  </Button>;
+                </div>;
+
+                <div className='md:w-2/3 bg-zion-blue-dark p-6 rounded-lg'>;
+                  <h4 className='text-xl font-semibold text-white mb-4'>;
+                    How to Use;
+                  </h4>;
+                  <ol className='list-decimal list-inside space-y-3 pl-4'>;
+                    {feature && feature.instructions.map((instruction, idx) => (;
+                      <li key={idx} className='text-zion-slate-light'>;
+                        <span className='text-zion-cyan mr-2'>{idx + 1}.</span>                        {instruction}                ;
+                <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">;
+                  <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>;
+                  <ol className="list-decimal list-inside space-y-3 pl-4">;
+                    {feature && feature.instructions.map((instruction, idx,) => (;
+                      <li key={idx} className="text-zion-slate-light">;
+                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
+                      </li>;
+
+                    ))}
+                  </ol>;
+                </div>;
+              </div>;
+            </TabsContent>;
+          ))}
+
+
+          <Button
+            variant='outline'
+            className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
+            asChild>;
+            <Link
+              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
+              href="/marketplace";
+              onClick = {() => fireEvent('explore_marketplace_click'),}
+
+
+                    ))}
+                  </ol>
+                </div>
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
+        <div className='mt-12 text-center'>
+        
+        <div className="mt-12 text-center">
+
+
+          <Button
+            variant="outline"
+            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+            asChild
+          >
+            <Link
+              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
+              href="/marketplace"
+              onClick = {() => fireEvent('explore_marketplace_click'),}
+            >
+              Explore Full Marketplace
+              <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
+              href="/marketplace"
+              onClick={() => fireEvent('explore_marketplace_click')}
+            >
+              Explore Full Marketplace
+              <ArrowRight className="ml-2 h-4 w-4" />
+
+
+
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
   );
+};
+
+
+  );
+}
+                  </p>;
+                  <Button;
+                    className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple'                    as_child;
+                  >;
+                    <Link href={feature.link}>;
+                      {feature.button_text}
+                      <ArrowRight className='ml - 2 h - 4 w - 4' />                  <h3 className="text - 2xl font - bold text - white mb - 3">{feature.title}</h3>;
+                  <p className="text - zion - slate - light mb - 6">{feature.description}</p>;
+                  <Button;
+                    className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
+                  >;
+                    <Link href={feature.link}>;
+                      {feature.button_text}
+                      <ArrowRight className='ml - 2 h - 4 w - 4' />;
+                    </Link>;
+                  </Button>;
+                </div>;
+                <div className='md:w - 2/3 bg - zion - blue - dark p - 6 rounded - lg'>;
+                  <h4 className='text - xl font - semibold text - white mb - 4'>;
+                    How to Use;
+                  </h4>;
+                  <ol className='list - decimal list - inside space - y-3 pl - 4'>;
+                    {feature.instructions.map ((instruction, idx) => (
+                      <li key={idx} className='text - zion - slate - light'>;
+                        <span className='text - zion - cyan mr - 2'>{idx + 1}.</span>                        {instruction}
+                <div className="md:w - 2/3 bg - zion - blue - dark p - 6 rounded - lg">;
+                  <h4 className="text - xl font - semibold text - white mb - 4">How to Use</h4>;
+                  <ol className="list - decimal list - inside space - y-3 pl - 4">;
+                    {feature.instructions.map ((instruction, idx, ) => (
+                      <li key={idx} className="text - zion - slate - light">;
+                        <span className="text - zion - cyan mr - 2">{idx + 1}.</span>;
+                      </li>))}
+                  </ol>;
+                </div>;
+              </div>;
+            </TabsContent>))}
+        </Tabs>;
+        <div className='mt - 12 text - center'>;
+          <Button;
+            variant='outline';
+            className='border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10';
+            as_child;
+          >;
+            <Link;
+              href='/marketplace'              on_click={() => fire_event ('explore_marketplace_click')}
+              href="/marketplace";
+              on_click = {() => fire_event ('explore_marketplace_click'), }
+            >;
+              Explore Full Marketplace;
+              <ArrowRight className='ml - 2 h - 4 w - 4' />            </Link>              <ArrowRight className="ml - 2 h - 4 w - 4" />;
+            </Link>;
+          </Button>;
+        </div>;
+      </div>;
+    </section>);
+}
+  );
+}
+
+  )
 }

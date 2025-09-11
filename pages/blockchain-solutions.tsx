@@ -1,8 +1,37 @@
-export default function BlockchainSolutions() {
-  return (
-    <div className="space-y-3">
-      <h1 className="text-xl font-semibold">Blockchain Solutions</h1>
-      <p className="text-gray-700 dark:text-gray-300">Enterprise-grade blockchain development services.</p>
+
+
+      <main>
+        <h1>BlockchainSolutions</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
-  );
+
+
+      <main>;
+        <h1>BlockchainSolutions</h1>;
+        <p>This page is under construction.</p>;
+      </main>;
+    </div>;
+  ),;
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default BlockchainSolutions;
+
+
+=======
+import Head from 'next / head';
+      <main>;
+        <h1 > BlockchainSolutions</h1>;
+        <p > This page is under construction.</p>;
+      </main>;
+    </div>),
 }
+;
+export default BlockchainSolutions;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
