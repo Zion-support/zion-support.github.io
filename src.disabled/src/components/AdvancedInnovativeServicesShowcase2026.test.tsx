@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import AdvancedInnovativeServicesShowcase2026 from &apos;./AdvancedInnovativeServicesShowcase2026; describe(&apos;AdvancedInnovativeServicesShowcase2026&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<AdvancedInnovativeServicesShowcase2026 / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
 it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import AdvancedInnovativeServicesShowcase2026 from &apos;./AdvancedInnovativeServicesShowcase2026; describe(&apos;AdvancedInnovativeServicesShowcase2026&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<AdvancedInnovativeServicesShowcase2026 / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
 import React from 'react';
@@ -14,4 +12,3 @@ export default function AdvancedInnovativeServicesShowcase2026.test({ }: Advance
     </div>
   );
 }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

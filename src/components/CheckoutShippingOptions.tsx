@@ -1,101 +1,91 @@
-<<<<<<< HEAD:src_backup_temp/components/CheckoutShippingOptions.tsx
-interface Address {;
-  "name": "string;
-  "address": string;
-  "city": string;
-  "country": string"}
-;
-interface ShippingRate {;
-  "id": "string;
-  "carrier": string;
-  "service": string;
-  "rate": string;
-  "currency": string;
-  delivery_days?: number | null;
-  tax?: string"}
-;
-interface Props {;
-  "toAddress": "Addres s | null;
-  onSelect?: ("rate": ShippingRat e) => void"}
-;
-export function CheckoutShippingOptions("props": "any) {;
-  const [rates", setRates] = useState<ShippingRate[]>([]);
-  const [loading, setLoading] = useState<any>(false);
-  const [selected, setSelected] = useState<string>('');
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-=======
+import React, { useState } from 'react';
 
-interface Address {
-  name: string;
-  address: string;
-  city: string;
-  country: string}
+import { Check } from 'lucide-react';
 
-interface ShippingRate {
+interface ShippingOption {
   id: string;
-  carrier: string;
-  service: string;
-  rate: string;
-  currency: string;
-  delivery_days?: number | null;
-  tax?: string}
+  name: string;
+  price: number;
+  estimatedDays: string;
+  description: string;
+}
 
-interface Props {
-  toAddress: Address | null;
-  onSelect?: (rate: ShippingRate) => void}
+interface CheckoutShippingOptionsProps {
+  onSelectShipping: (option: ShippingOption) => void;
+  selectedShipping?: string;
+}
 
-export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
-  const [rates, setRates] = useState<ShippingRate[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState<string>('');
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
+const shippingOptions: ShippingOption[] = [
+  {
+    id: 'standard',
+    name: 'Standard Shipping',
+    price: 9.99,
+    estimatedDays: '5-7 business days',
+    description: 'Regular ground shipping'
+  },
+  {
+    id: 'express',
+    name: 'Express Shipping',
+    price: 19.99,
+    estimatedDays: '2-3 business days',
+    description: 'Priority shipping for faster delivery'
+  },
+  {
+    id: 'overnight',
+    name: 'Overnight Shipping',
+    price: 39.99,
+    estimatedDays: '1 business day',
+    description: 'Next business day delivery'
+  }
+];
 
-  return () => {;
-    // Cleanup function;
-};
-}, []); []);
->>>>>>> origin/automation-fixes:src/components/CheckoutShippingOptions.tsx
-    if(!toAddress) return;
-      try {;
-        if(res.ok) {;
-          setRates(data.rates || [])} else {;
-          console.error('Rates error', data)}
-      } catch(err) {;
-        console.error('Rates error', err)} finally {;
-        setLoading(false)}
-    };
-    fetchRates()}, [toAddress]);
-    if(rate && onSelect) onSelect(rate)};
-  if(!toAddress) return null;
-;
-  return (<div className="my-4">;
-      <h2 className="font-semibold mb-2">Shipping Options</h2>;  return (
-        <div className="my-4">
-      <h2 className="font-semibold mb-2">Shipping Options</h2>
-      {loading && <p>Loading...</p>}
-      {!loading && (;
-        <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">;
-          {rates.map(rate => (;
-            <label key={rate.id} className="flex items-center gap-2">;
-              <RadioGroupItem value={rate.id}   />;
-              <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>;
-              {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}
-            </label>;
-          ))}
-        </RadioGroup>;
-      )}
-    </div>;
-  )}
+export default function CheckoutShippingOptions({ 
+  onSelectShipping, 
+  selectedShipping 
+}: CheckoutShippingOptionsProps) {
+  const [selectedOption, setSelectedOption] = useState(selectedShipping || '');
 
-export type { ShippingRate };
-;
-</string>;
-</any>;
-</ShippingRate>
+  const _handleOptionChange = (option: ShippingOption) => {
+    setSelectedOption(option.id);
+    onSelectShipping(option);
+  };
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold text-gray-900">Shipping Options</h3>
+      <div className="space-y-3">
+        {shippingOptions.map((option) => (
+          <label
+            key={option.id}
+            className={`flex items-center p-4 border rounded-lg cursor-pointer transition-colors ${
+              selectedOption === option.id
+                ? 'border-blue-500 bg-blue-50'
+                : 'border-gray-200 hover:border-gray-300'
+            }`}
+          >
+            <input
+              type="radio"
+              name="shipping"
+              value={option.id}
+              checked={selectedOption === option.id}
+              onChange={() => handleOptionChange(option)}
+              className="mr-3 text-blue-600 focus:ring-blue-500"
+            />
+            <div className="flex-1">
+              <div className="flex justify-between items-start">
+                <div>
+                  <div className="font-medium text-gray-900">{option.name}</div>
+                  <div className="text-sm text-gray-600">{option.description}</div>
+                  <div className="text-sm text-gray-500">{option.estimatedDays}</div>
+                </div>
+                <div className="text-lg font-semibold text-gray-900">
+                  ${option.price.toFixed(2)}
+                </div>
+              </div>
+            </div>
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+}

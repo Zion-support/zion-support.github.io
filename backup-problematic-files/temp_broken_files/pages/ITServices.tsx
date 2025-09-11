@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/ITServices.tsx
 import { 
   Server, 
   Shield, 
@@ -29,7 +28,6 @@ import {
   BarChart3,
   Headphones,
   Wrench,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/ITServices.tsx
   FileText,
   Cpu,
   Lock
@@ -145,9 +143,9 @@ export default function ITServicesPage() {
                   <service.icon className="h-8 w-8 text-blue-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
@@ -159,7 +157,7 @@ export default function ITServicesPage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
                   <ul className="space-y-2">
@@ -171,7 +169,7 @@ export default function ITServicesPage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-blue-400">{service.price}</div>
                   <Link
@@ -211,7 +209,6 @@ export default function ITServicesPage() {
                 <MapPin className="h-5 w-5 mr-2" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/ITServices.tsx
             </div>
           </motion.div>
         </div>

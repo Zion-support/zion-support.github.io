@@ -1,21 +1,7 @@
-<<<<<<< HEAD:src_backup_temp/components/Testimonials.tsx
-export default function Testimonials("props": "any) {;
-interface Testimonial {;
-  "quote": string;
-  "author": string;
-  "role": string;
-  "company": string;
-  "rating": number;
-  "avatar": string;
-"}
-;
-interface TestimonialsProps {;
-
   "testimonials": "Testimonia l[];
 ;
 "}
 ;
-=======
 export default function Testimonials() {;
 interface Testimonial {
   quote: string;
@@ -29,8 +15,6 @@ interface Testimonial {
 interface TestimonialsProps {
   testimonials: Testimonial[];
 }
-
->>>>>>> origin/automation-fixes:src/components/Testimonials.tsx
   return (<section className="py-20 bg-gray -800">;
       <div className="max - w-7xl mx - auto px-4 "sm": "p x-6 "lg": p x-8">;
         <div className="text-center mb-16">;

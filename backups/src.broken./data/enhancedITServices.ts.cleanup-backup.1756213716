@@ -3,43 +3,6 @@ export interface ITService {
   title: string;
   description: string;
   category: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'hourly';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  featured?: boolean;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  marketSize?: string;
-  roi?: string;
-  expertise?: string[];
-  certifications?: string[];
-  technologies?: string[];
-  caseStudies?: string[];
-  testimonials?: string[];
-  availability?: string;
-  responseTime?: string;
-  sla?: string;
-}
-
 export const ENHANCED_IT_SERVICES: ITService[] = [
   // Cloud Infrastructure & Migration
   {
@@ -602,10 +565,6 @@ export const IT_SERVICE_PRICING_MODELS = [
   { name: "Monthly", description: "Recurring monthly services for ongoing support", range: "$150-15,000/month" },
   { name: "Per Project", description: "Fixed project pricing for specific deliverables", range: "$5,000-100,000" }
 ];
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   pricing: {
     hourly: number;
     project: number;
@@ -1194,10 +1153,3 @@ export const getITServicesByCategory = (category: string): ITService[] => {
 export const getITServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))];
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

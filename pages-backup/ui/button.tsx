@@ -42,4 +42,3 @@ export;
   text-zion-cyan hover: underline focu,
     s:ring-zion-cyan}
 export type { ButtonProps }}}}``
-

@@ -1,21 +1,13 @@
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
-<<<<<<< HEAD:src_backup_temp/components/ServicesOverview.tsx
 ;
 export function ServicesOverview(...args[]): "{;
       "icon": Hear t",;
       "color": 'from-zion-pink to-zion-purple',;
       "description": 'Healthcare artificial intelligence solutions',;
       "services": "INNOVATIVE_MICRO_SAAS_SERVICES_202 5.filter(s => s.category.includes('Healthcare'))"};
-=======
-export function ServicesOverview(...args[]):  {;
-
-      icon: Heart,
-      color: 'from-zion-pink to-zion-purple',
-      description: 'Healthcare artificial intelligence solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
->>>>>>> origin/automation-fixes:src/components/ServicesOverview.tsx
   ];
+;
   return ();
     <div className="py-20 bg-futuristic relative overflow-hidden">;
       {/* Background effects */}";
@@ -28,7 +20,6 @@ export function ServicesOverview(...args[]):  {;
         <motion.div";
           className="text-center mb-16";
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ServicesOverview.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -37,18 +28,6 @@ export function ServicesOverview(...args[]):  {;
   "y": "0;
 "}}
           transition={{ "duration": "0.6 "}}
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          transition={{ duration: 0.6 }}
->>>>>>> origin/automation-fixes:src/components/ServicesOverview.tsx
 ";
           <h1 className="heading-responsive font-bold mb-6">";
             <span className="text-gradient neon-text-cyan">Comprehensive Technology</span>;
@@ -66,7 +45,6 @@ export function ServicesOverview(...args[]):  {;
               key={category.id}";
               className="group";
               initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ServicesOverview.tsx
   { "opacity": "0",;
   "y": "3 0;
 "}}
@@ -79,23 +57,6 @@ export function ServicesOverview(...args[]):  {;
   "delay": "inde x * 0.1;
 "}}
               whileHover={{ "y": "-10 "}}
-=======
-
-  { opacity: 0,
-  y: 30;
-}}
-              whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-              transition = {;
-
-  { duration: 0.6,
-  delay: index * 0.1;
-}}
-              whileHover={{ y: -10 }}
->>>>>>> origin/automation-fixes:src/components/ServicesOverview.tsx
 ";
               <Link to={`/services/${category.id}`} className="block">";
                 <div className="card-futuristic h-full "hover": "borde r-zion-cyan/50 transition-all duration-300">;
@@ -108,7 +69,8 @@ export function ServicesOverview(...args[]):  {;
                     {category.name"}
                   </h3>;
 ";
-                  <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">;                  {/* Category Info */}"
+                  <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">;
+                  {/* Category Info */}"
                   <h3 className="text-lg font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300 text-center">
                     {category.name}
 "
@@ -135,7 +97,6 @@ export function ServicesOverview(...args[]):  {;
         <motion.div";
           className="mb-16";
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ServicesOverview.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -144,18 +105,6 @@ export function ServicesOverview(...args[]):  {;
   "y": "0;
 "}}
           transition={{ "duration": "0.6 "}}
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          transition={{ duration: 0.6 }}
->>>>>>> origin/automation-fixes:src/components/ServicesOverview.tsx
 ";
           <h2 className="heading-responsive font-bold mb-8 text-center">";
             <span className="text-gradient neon-text-purple">Featured Services</span>;
@@ -167,7 +116,6 @@ export function ServicesOverview(...args[]):  {;
                 key={service.id}";
                 className="card-futuristic group";
                 initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ServicesOverview.tsx
   { "opacity": "0",;
   "x": "inde x % 2 === 0 ? -30 : 30;
 "}}
@@ -180,30 +128,14 @@ export function ServicesOverview(...args[]):  {;
   "delay": "inde x * 0.1;
 "}}
                 whileHover={{ "y": "-5 "}}
-=======
-
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30;
-}}
-                whileInView = {;
-
-  { opacity: 1,
-  x: 0;
-}}
-                transition = {;
-
-  { duration: 0.6,
-  delay: index * 0.1;
-}}
-                whileHover={{ y: -5 }}
->>>>>>> origin/automation-fixes:src/components/ServicesOverview.tsx
 ";
                 <div className="flex items-start justify-between mb-4">";
                   <div className="flex-1">";
                     <h3 className="text-xl font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors duration-300">;
                       {service.title"}
                     </h3>";
-                    <p className="text-zion-slate-light leading-relaxed mb-3">;}}
+                    <p className="text-zion-slate-light leading-relaxed mb-3">;
+}}
                 whileHover={{ y: -5 }}
 "
                 <div className="flex items-start justify-between mb-4">"
@@ -227,11 +159,7 @@ export function ServicesOverview(...args[]):  {;
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${service.innovationLevel === 'Cutting-edge'';
                         ? 'bg-zion-cyan/20 text-zion-cyan'';
                         : 'bg-zion-purple/20 text-zion-purple'`;
-<<<<<<< HEAD:src_backup_temp/components/ServicesOverview.tsx
                     }`}>;
-=======
-}`}>;
->>>>>>> origin/automation-fixes:src/components/ServicesOverview.tsx
                       {service.innovationLevel}
                     </span>;
                   </div>;
@@ -269,19 +197,10 @@ export function ServicesOverview(...args[]):  {;
         <motion.div";
           className="text-center";
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ServicesOverview.tsx
   { "opacity": "0",;
   "y": "3 0 "}}          whileInView = {;
   { "opacity": "1",;
   "y": "0 "}}          transition={{ "duration": "0.8 "}}
-=======
-
-  { opacity: 0,
-  y: 30 }}          whileInView = {;
-
-  { opacity: 1,
-  y: 0 }}          transition={{ duration: 0.8 }}
->>>>>>> origin/automation-fixes:src/components/ServicesOverview.tsx
 ";
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">";
             <h2 className="heading-responsive font-bold mb-6">;

@@ -1,54 +1,40 @@
-import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import Footer from \'../components/Footer\'; const \"About\": NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group</title> <meta name=\"description\" content=\"Learn about Zion Tech Group\'s mission to provide cutting-edge technology solutions and our team of expert professionals.\" /> </Head> <Navigation /> <main className=\"min-h-screen bg-gray-900 pt-16\"> <div className=\"container mx-auto px-4 py-16\"> <div className=\"max-w-4xl mx-auto text-center text-white\"> <h1 className=\"text-5xl font-bold mb-8\"> About <span className=\"bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\">Zion Tech Group</span> </h1> <p className=\"text-xl text-gray-300 mb-12 leading-relaxed\"> We are a leading technology solutions provider dedicated to transforming businesses through innovative AI,cloud architecture,and cutting-edge development services. </p> <div className=\"grid \"md\": grid-cols-3 gap-8 mt-16\"> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-blue-400\">Our Mission</h3> <p className=\"text-gray-300\"> To empower businesses with cutting-edge technology solutions that drive growth,efficiency,and innovation in the digital age. </p> </div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-purple-400\">Our Vision</h3> <p className=\"text-gray-300\"> To be the global leader in AI-powered technology solutions,setting the standard for innovation and excellence. </p> </div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-pink-400\">Our Values</h3> <p className=\"text-gray-300\"> Innovation,integrity,excellence,and client success are the core values that guide everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </> )}; export default About;
-const type { NextPage } from "next"; import Head from "next/head"; import Navigation from "./components/Navigation"; import Footer from "./components/Footer"; const About: NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group</title> <meta name="description" content="Learn about Zion Tech Group"s mission to provide cutting-edge technology solutions and our team of expert professionals." /> </Head> <Navigation /> <main className="min-h-screen bg-gray-900 pt-16"> <div className="container mx-auto px-4 py-16"> <div className="max-w-4xl mx-auto text-center text-white"> <h1 className="text-5xl font-bold mb-8"> About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span> </h1> <p className="text-xl text-gray-300 mb-12 leading-relaxed"> We are a leading technology solutions provider dedicated to transforming businesses through innovative AI,cloud architecture,and cutting-edge development services. </p> <div className="grid md: grid-cols-3 gap-8 mt-16"> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-blue-400">Our Mission</h3> <p className="text-gray-300"> To empower businesses with cutting-edge technology solutions that drive growth,efficiency,and innovation in the digital age. </p> </div> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-purple-400">Our Vision</h3> <p className="text-gray-300"> To be the global leader in AI-powered technology solutions,setting the standard for innovation and excellence. </p> </div> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-pink-400">Our Values</h3> <p className="text-gray-300"> Innovation,integrity,excellence,and client success are the core values that guide everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </> )}; export default About;"""
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-import React from 'react';
-
 
 
 import React from 'react';
 import * as React from 'react';
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import Footer from \'../components/Footer\'; const \"About\": NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group</title> <meta name=\"description\" content=\"Learn about Zion Tech Group\'s mission to provide cutting-edge technology solutions and our team of expert professionals.\" /> </Head> <Navigation /> <main className=\"min-h-screen bg-gray-900 pt-16\"> <div className=\"container mx-auto px-4 py-16\"> <div className=\"max-w-4xl mx-auto text-center text-white\"> <h1 className=\"text-5xl font-bold mb-8\"> About <span className=\"bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\">Zion Tech Group</span> </h1> <p className=\"text-xl text-gray-300 mb-12 leading-relaxed\"> We are a leading technology solutions provider dedicated to transforming businesses through innovative AI,cloud architecture,and cutting-edge development services. </p> <div className=\"grid \"md\": grid-cols-3 gap-8 mt-16\"> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-blue-400\">Our Mission</h3> <p className=\"text-gray-300\"> To empower businesses with cutting-edge technology solutions that drive growth,efficiency,and innovation in the digital age. </p> </div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-purple-400\">Our Vision</h3> <p className=\"text-gray-300\"> To be the global leader in AI-powered technology solutions,setting the standard for innovation and excellence. </p> </div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-pink-400\">Our Values</h3> <p className=\"text-gray-300\"> Innovation,integrity,excellence,and client success are the core values that guide everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </> )}; export default About;
+const type { NextPage } from "next"; import Head from "next/head"; import Navigation from "./components/Navigation"; import Footer from "./components/Footer"; const About: NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group</title> <meta name="description" content="Learn about Zion Tech Group"s mission to provide cutting-edge technology solutions and our team of expert professionals." /> </Head> <Navigation /> <main className="min-h-screen bg-gray-900 pt-16"> <div className="container mx-auto px-4 py-16"> <div className="max-w-4xl mx-auto text-center text-white"> <h1 className="text-5xl font-bold mb-8"> About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span> </h1> <p className="text-xl text-gray-300 mb-12 leading-relaxed"> We are a leading technology solutions provider dedicated to transforming businesses through innovative AI,cloud architecture,and cutting-edge development services. </p> <div className="grid md: grid-cols-3 gap-8 mt-16"> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-blue-400">Our Mission</h3> <p className="text-gray-300"> To empower businesses with cutting-edge technology solutions that drive growth,efficiency,and innovation in the digital age. </p> </div> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-purple-400">Our Vision</h3> <p className="text-gray-300"> To be the global leader in AI-powered technology solutions,setting the standard for innovation and excellence. </p> </div> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-pink-400">Our Values</h3> <p className="text-gray-300"> Innovation,integrity,excellence,and client success are the core values that guide everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </> )}; export default About;"""
+import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import Footer from \'../components/Footer\'; const \"About\": NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group</title> <meta name=\"description\" content=\"Learn about Zion Tech Group\'s mission to provide cutting-edge technology solutions and our team of expert professionals.\" /> </Head> <Navigation /> <main className=\"min-h-screen bg-gray-900 pt-16\"> <div className=\"container mx-auto px-4 py-16\"> <div className=\"max-w-4xl mx-auto text-center text-white\"> <h1 className=\"text-5xl font-bold mb-8\"> About <span className=\"bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\">Zion Tech Group</span> </h1> <p className=\"text-xl text-gray-300 mb-12 leading-relaxed\"> We are a leading technology solutions provider dedicated to transforming businesses through innovative AI,cloud architecture,and cutting-edge development services. </p> <div className=\"grid \"md\": grid-cols-3 gap-8 mt-16\"> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-blue-400\">Our Mission</h3> <p className=\"text-gray-300\"> To empower businesses with cutting-edge technology solutions that drive growth,efficiency,and innovation in the digital age. </p> </div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-purple-400\">Our Vision</h3> <p className=\"text-gray-300\"> To be the global leader in AI-powered technology solutions,setting the standard for innovation and excellence. </p> </div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-pink-400\">Our Values</h3> <p className=\"text-gray-300\"> Innovation,integrity,excellence,and client success are the core values that guide everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </> )}; export default About;
+const type { NextPage } from "next"; import Head from "next/head"; import Navigation from "./components/Navigation"; import Footer from "./components/Footer"; const About: NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group</title> <meta name="description" content="Learn about Zion Tech Group"s mission to provide cutting-edge technology solutions and our team of expert professionals." /> </Head> <Navigation /> <main className="min-h-screen bg-gray-900 pt-16"> <div className="container mx-auto px-4 py-16"> <div className="max-w-4xl mx-auto text-center text-white"> <h1 className="text-5xl font-bold mb-8"> About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span> </h1> <p className="text-xl text-gray-300 mb-12 leading-relaxed"> We are a leading technology solutions provider dedicated to transforming businesses through innovative AI,cloud architecture,and cutting-edge development services. </p> <div className="grid md: grid-cols-3 gap-8 mt-16"> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-blue-400">Our Mission</h3> <p className="text-gray-300"> To empower businesses with cutting-edge technology solutions that drive growth,efficiency,and innovation in the digital age. </p> </div> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-purple-400">Our Vision</h3> <p className="text-gray-300"> To be the global leader in AI-powered technology solutions,setting the standard for innovation and excellence. </p> </div> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-pink-400">Our Values</h3> <p className="text-gray-300"> Innovation,integrity,excellence,and client success are the core values that guide everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </> )}; export default About;"""
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import Footer from \'../components/Footer\'; const \"About\": NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group</title> <meta name=\"description\" content=\"Learn about Zion Tech Group\'s mission to provide cutting-edge technology solutions and our team of expert professionals.\" /> </Head> <Navigation /> <main className=\"min-h-screen bg-gray-900 pt-16\"> <div className=\"container mx-auto px-4 py-16\"> <div className=\"max-w-4xl mx-auto text-center text-white\"> <h1 className=\"text-5xl font-bold mb-8\"> About <span className=\"bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\">Zion Tech Group</span> </h1> <p className=\"text-xl text-gray-300 mb-12 leading-relaxed\"> We are a leading technology solutions provider dedicated to transforming businesses through innovative AI,cloud architecture,and cutting-edge development services. </p> <div className=\"grid \"md\": grid-cols-3 gap-8 mt-16\"> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-blue-400\">Our Mission</h3> <p className=\"text-gray-300\"> To empower businesses with cutting-edge technology solutions that drive growth,efficiency,and innovation in the digital age. </p> </div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-purple-400\">Our Vision</h3> <p className=\"text-gray-300\"> To be the global leader in AI-powered technology solutions,setting the standard for innovation and excellence. </p> </div> <div className=\"bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10\"> <h3 className=\"text-2xl font-bold mb-4 text-pink-400\">Our Values</h3> <p className=\"text-gray-300\"> Innovation,integrity,excellence,and client success are the core values that guide everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </> )}; export default About;
+const type { NextPage } from "next"; import Head from "next/head"; import Navigation from "./components/Navigation"; import Footer from "./components/Footer"; const About: NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group</title> <meta name="description" content="Learn about Zion Tech Group"s mission to provide cutting-edge technology solutions and our team of expert professionals." /> </Head> <Navigation /> <main className="min-h-screen bg-gray-900 pt-16"> <div className="container mx-auto px-4 py-16"> <div className="max-w-4xl mx-auto text-center text-white"> <h1 className="text-5xl font-bold mb-8"> About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span> </h1> <p className="text-xl text-gray-300 mb-12 leading-relaxed"> We are a leading technology solutions provider dedicated to transforming businesses through innovative AI,cloud architecture,and cutting-edge development services. </p> <div className="grid md: grid-cols-3 gap-8 mt-16"> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-blue-400">Our Mission</h3> <p className="text-gray-300"> To empower businesses with cutting-edge technology solutions that drive growth,efficiency,and innovation in the digital age. </p> </div> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-purple-400">Our Vision</h3> <p className="text-gray-300"> To be the global leader in AI-powered technology solutions,setting the standard for innovation and excellence. </p> </div> <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10"> <h3 className="text-2xl font-bold mb-4 text-pink-400">Our Values</h3> <p className="text-gray-300"> Innovation,integrity,excellence,and client success are the core values that guide everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </> )}; export default About;"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
 interface AboutProps {
   // Add props here as needed
 }
-export default function About({ }: AboutProps) {
-  return (
-    <div>
-      <h1>About</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-}
 
 export default function About({ }: AboutProps) {
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -72,18 +58,19 @@ export default function About(): any ({ }: AboutProps) {;
     </div>;
   );
 
-
-
-
-
+}
 }
 
-
 }
-
-
-
 }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

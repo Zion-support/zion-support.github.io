@@ -1,22 +1,29 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 
-const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
+ const response = await client && client.chat.completions && completions.create ({  model: 'gpt-4o-mini';
+messages: [ {
 
-async function loadRequests(): Promise<any[]> {
+  role: 'system', content: 'You are a helpful assistant.' 
+
+=======
+
+
+=======
+temperature: 0.3
+});
+const content = response && response.choices[0]?.message?.content || '';
+const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
+
+
+      return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
+  fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
+  fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
+}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+async function summarizeWithOpenAI(description: string) {
   try {
-    const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
-    return [];
-  }
-}
 
-async function saveRequests(requests: any[]) {
-  fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2));
-}
 
 async function summarizeWithOpenAI(description: string) {
   try {
@@ -25,51 +32,57 @@ async function summarizeWithOpenAI(description: string) {
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
     const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
+      model: 'gpt-4o-mini'
+=======
+    if (!process && process.env.OPENAI_API_KEY) return { summary: description && description.slice(0, 280), type: 'unknown' };
+    const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
+    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
+    const response = await client && client.chat.completions && completions.create({
+      model: 'gpt-4o-mini',      messages: [
+        { role: 'system', content: 'You are a helpful assistant.' }
+        { role: 'user', content: prompt }
+      ]
+      temperature: 0.3
         { role: 'system', content: 'You are a helpful assistant.' },
         { role: 'user', content: prompt },
       ],
       temperature: 0.3,
-    });
-    const content = response.choices[0]?.message?.content || '';
-    const typeMatch = content.match(/type\s*:\s*(.+)$/im);
-    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' };
-  } catch (err) {
-    return { summary: description.slice(0, 280), type: 'unknown' };
-  }
+    });const response = await client.chat.completions.create ({
+  model: 'gpt - 4o - mini';
+messages: [ {
+  role: 'system', content: 'You are a helpful assistant.';
 }
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-  const { name, email, budget, timeline, description, talentSlug } = req.body || {};
-  if (!name || !email || !description) return res.status(400).json({ error: 'Missing required fields' });
-
-  const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
-  const ai = await summarizeWithOpenAI(String(description));
-
-  const requests = await loadRequests();
-  const now = new Date().toISOString();
-  const id = `req_${Date.now()}`;
-  const record = {
-    id,
-    name,
-    email,
-    budget: normalizedBudget,
-    timeline: String(timeline || ''),
-    description: String(description),
-    talentSlug: talentSlug || null,
-    aiSummary: ai.summary,
-    aiType: ai.type,
-    status: 'new',
-    createdAt: now,
-    updatedAt: now,
-  };
-  requests.push(record);
-  await saveRequests(requests);
-
-  // TODO: Integrate notifications (email/webhook) for admin and talent
-
-  return res.status(200).json({ id, status: 'ok' });
+{
+  role: 'user', content: prompt;
+}];
+temperature: 0.3;
+});
+const content = response.choices[0]?.message?.content || '';
+const type_match = content.match (/type\s*:\s* (.+) $/im);
+;
+      return { summary: description.slice (0, 280), type: 'unknown' }    const { OpenAI } = await import ('openai');async /**
+ * save_requests - Function description
+ */
+function save_requests() {
+  fs.mkdir_sync (path.dirname (REQUESTS_PATH), { recursive: true });
+  fs.writeFileSync (REQUESTS_PATH, JSON.stringify (requests, null, 2));
 }
+async /**
+ * summarizeWithOpenAI - Function description
+ */
+function summarizeWithOpenAI() {
+  try {
+    if (return { summary: description.slice (0, 280), type: 'unknown' }) {
+  $2
+}
+    const client = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
+    const prompt = `Summarize the following project description in 2 - 3 sentences and classify the request type (e.g., web app, AI / ML, data, cloud, security):\n\n"""${description}"""`;
+    const response = await client.chat.completions.create ({
+      model: 'gpt - 4o - mini',
+      messages: [;
+  if (req && req.method !== 'POST')
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -11,19 +11,6 @@ class IntelligentErrorDetector {
     this.errors = [];
     this.fixes = [];
     this.patterns = {
-<<<<<<< HEAD
-=======
-      mergeConflicts: /[\s\S]*?>>>>>>>/g,
-      syntaxErrors: /SyntaxError|ParseError|Unexpected token/g,
-      typeErrors: /TypeError|Cannot read property|is not defined/g,
-      importErrors: /Cannot resolve module|Module not found/g,
-      lintingErrors: /warning|error.*eslint/g,
-      consoleStatements: /console\.(log|warn|error|info)/g,
-      unusedImports: /import.*from.*['"][^'"]*['"];?\s*$/gm,
-      unescapedEntities: /[^\\]'|[^\\]"/g
-    };
-  }
-
             branchContent.push(line);
         } else {
   // TODO: Implement
@@ -323,9 +310,7 @@ class IntelligentErrorDetector {
           inConflict = true;
           conflictType = 'head';
           continue;
-        } else if (line.includes('')) {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-          conflictType = 'branch';
+        } else if (line.includes('')) {          conflictType = 'branch';
           continue;
         } else if (line.includes('>>>>>>>')) {
           // End of conflict - choose the newer version (branch content)

@@ -1,15 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-interface QuantumHolographicMatrixBackgroundProps {
-  children: React.ReactNode;
-  variant?: string;
-  intensity?: string;
-}
-
-export default function QuantumHolographicMatrixBackground({ children, variant = 'default', intensity = 'medium' }: QuantumHolographicMatrixBackgroundProps) {
-  return (
-    <div className="min-h-screen bg-black text-white">
-      {children}
-    </div>
-  );
+export default function QuantumHolographicMatrixBackground({ children }: { children: React.ReactNode }) {
+	return <div className="min-h-screen bg-gradient-to-br from-cyan-950 via-black to-fuchsia-950">{children}</div>
 }

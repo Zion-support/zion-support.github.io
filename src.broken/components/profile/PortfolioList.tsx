@@ -1,10 +1,16 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+
 interface PortfolioItem {
   title: string,
-  description: string}
-
-interface PortfolioListProps {
-  projects: PortfolioItem[]
+  description: string
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+interface PortfolioItem {;
+  title: string,;
+  description: string;
+}
+;
+interface PortfolioListProps {;
+  projects: PortfolioItem[];
 }
 
 export function PortfolioList({ projects }: PortfolioListProps) {
@@ -22,10 +28,9 @@ export function PortfolioList({ projects }: PortfolioListProps) {
               <span className="font-medium">{p.title}:</span> {p.description}
             </li>
           ))}
-        </ul>
-      </CardContent>
-    </Card>
-  )
-}
+        </ul>;
+      </CardContent>;
+    </Card>;
   );
-};
+}
+;

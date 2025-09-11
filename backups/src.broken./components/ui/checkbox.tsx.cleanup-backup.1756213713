@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import React from 'react';
-
 interface CheckboxProps {
   checked: boolean;
   onChange: (checked: boolean) => void;
@@ -55,7 +49,5 @@ export function Checkbox({ checked, onCheckedChange, onChange, className = '', d
         'h-4 w-4 rounded border-zion-blue-light bg-zion-blue-dark text-zion-cyan focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2',
         className
       )}
-    />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  );
+    />  );
 }

@@ -4,13 +4,6 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-<<<<<<< HEAD
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-
 # Allow important pages
 Allow: /
 Allow: /docs/
@@ -43,4 +36,3 @@ Allow: /cookies
 
 # Crawl delay (optional)
 Crawl-delay: 1
->>>>>>> origin/cursor/website-audit-and-enhancement-8931

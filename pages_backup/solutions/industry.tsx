@@ -1,17 +1,48 @@
-import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/industry.tsx
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
 const industries = [;
-=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';const industries = [;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   {}
     name: 'Healthcare,',
     icon: Heart,

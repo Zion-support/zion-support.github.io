@@ -1,162 +1,103 @@
-import { Link  } from 'react-router-dom';
-import { Link  } from 'react-router-dom';
- from 'react';
-import React, { useState } from 'react';
-export /**;
-import { motion  } from 'framer-motion';
-import { motion, AnimatePresence  } from 'framer-motion';
- params - Function parameters;
- * @returns {*} Function return value;
- */;
-<<<<<<< HEAD:src_backup_temp/components/FeaturedListingsSection.tsx
-function FeaturedListingsSection("props": "any) {          initial = {;
-  { "opacity": 0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6 "}}
-=======
-function FeaturedListingsSection () {          initial = {;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
-  { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
+interface FeaturedListing {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  price: string;
+  featured: boolean;
+  image?: string;
+}
 
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
->>>>>>> origin/automation-fixes:src/components/FeaturedListingsSection.tsx
-        >";
-          <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
-            Featured Services;
-          </h2>";
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">;
-            Discover our most popular and innovative technology solutions that are transforming businesses worldwide;
-          </p>;
-        </motion.div>;
-";
-        <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8">;
-          {featuredListings.map((listing", index) => (;
-            <motion.div;
-              key={listing.id}";
-              className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 "hover": "borde r-blue-500/50 transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25";
-              initial={{ "opacity": 0", "y": "3 0 "}}
-              whileInView={{ "opacity": "1", "y": "0 "}}
-              viewport={{ "once": "tru e "}}
-              transition={{ "duration": "0.6", "delay": "inde x * 0.1 "}}
-            >";
-              <div className="relative">;
-                <img src={listing.image}
-                  alt={listing.title}
-                  className="w-full h-48 object -cover";
-                  />;
-                <div className="absolute top - 3 left -3">;
-                  <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">                    {listing.category}
-                  </span>;
-                </div>;
-";
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-"hover": "scal e-110 transition-transform duration-300">;
-                  {service.image"}
-                </div>;
-";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-"hover": "tex t-blue-600 transition-colors">;
-                  {service.title"}
-                </h3>;
-";
-                <p className="text-gray-600 mb-4 leading-relaxed">;
+const featuredListings: FeaturedListing[] = [
+  {
+    id: '1',
+    title: 'AI-Powered Content Generation Suite',
+    description: 'Advanced AI tools for creating high-quality content across multiple formats.',
+    category: 'AI Services',
+    price: '$299/month',
+    featured: true,
+  },
+  {
+    id: '2',
+    title: 'Cybersecurity Monitoring Platform',
+    description: 'Real-time threat detection and security monitoring for businesses.',
+    category: 'IT Services',
+    price: '$199/month',
+    featured: true,
+  },
+  {
+    id: '3',
+    title: 'Cloud Cost Optimization Tool',
+    description: 'Intelligent cloud resource management and cost optimization.',
+    category: 'Micro SAAS',
+    price: '$99/month',
+    featured: true,
+  },
+];
+
+export function FeaturedListingsSection() {
+  return (
+    <section className="py-16 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
+            Featured Services
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Discover our most popular and innovative solutions that are transforming businesses worldwide.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredListings.map((listing) => (
+            <Card key={listing.id} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <CardTitle className="text-lg">{listing.title}</CardTitle>
+                    <CardDescription className="mt-2">
+                      {listing.description}
+                    </CardDescription>
+                  </div>
+                  {listing.featured && (
+                    <Badge className="bg-primary text-primary-foreground">
+                      Featured
+                    </Badge>
+                  )}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between mb-4">
+                  <Badge variant="secondary">{listing.category}</Badge>
+                  <span className="text-lg font-semibold text-primary">
+                    {listing.price}
                   </span>
                 </div>
-"
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover: scal e-110 transition-transform duration-300">
-                  {service.image}
-                </div>
-"
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover: tex t-blue-600 transition-colors">
-                  {service.title}
-"
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {service.description}
-                </p>;
-";
-                <div className="mb-4">";
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key "Features": "</h4>";
-                  <ul className="space-y-1">;
-                    {service.features.map((feature", idx) => (";
-                      <li key={idx} className="flex items-center text-sm text-gray-600">";
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>;
-                        {feature}
-                      </li>) ) }
-                  </ul>;
-                </div>;
-";
-                <div className="flex items-center justify-between mb-4">";
-                  <span className="text-2xl font-bold text-gray-900">{service.price}</span>;
-                  <Link;
-                    to={service.link}";
-                    className="text-blue-600 "hover": "tex t-blue-700 font-medium text-sm group-"hover": underlin e";
-                    Learn More →;
-                  </Link>;
-                </div>;
-              </div>;
-";
-              <div className="px-6 pb-6">;
-                <Link;
-                  to={service.link"}";
-                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg "hover": "b g-blue-700 transition-colors duration-300 text-center block group-"hover": shado w-lg";
-                  Get Started;
-                </Link>;
-              </div>;
-            </motion.div>) ) "}
-        </div>;
-        <motion.div;
-          className="mt-16 text-center"          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/FeaturedListingsSection.tsx
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "0.4;
-"}}
-=======
+                <Link
+                  to={`/services/${listing.id}`}
+                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                >
+                  Learn More
+                </Link>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-  { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition = {;
-
-  { duration: 0.6,
-  delay: 0.4;
-}}
->>>>>>> origin/automation-fixes:src/components/FeaturedListingsSection.tsx
-        >;
-          <Link            to="/services";
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg "hover": "fro m-blue-700 "hover": t o-purple-700 transition-all duration-200 "hover": scal e-105";
-          >;
-            View All Services";
-            <span className="text-xl">→</span>;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;) "}
-'";
-</motion>;
-</motion>
+        <div className="text-center mt-8">
+          <Link
+            to="/services"
+            className="inline-flex items-center px-6 py-3 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
+          >
+            View All Services
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

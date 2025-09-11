@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-@layer base {
-  :root {
-    --bg: #0f172a;
-    --fg: #ffffff;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-}
-
 @layer components {
   .gradient-text {
     @apply bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600 bg-clip-text text-transparent;
@@ -92,27 +76,10 @@
   }
   
   .animate-slide-in-right {
-    animation: slideInRight 0.6s ease-out;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434f
-  }
+    animation: slideInRight 0.6s ease-out;  }
 }
 
 @layer utilities {
-<<<<<<< HEAD
-  .text-balance {
-    text-wrap: balance;
-  }
-=======
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -170,6 +137,4 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, var(--secondary), var(--accent));
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434f
-}
+  background: linear-gradient(45deg, var(--secondary), var(--accent));}

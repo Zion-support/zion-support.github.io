@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import SEOHead from '../components/SEOHead" describe('SEOHead',() => {' test('renders without crashing',() => {' render(<SEOHead / />) expect(screen.getByTestId("seohead")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOHead / />) }) test('handles user interactions',() => {' render(<SEOHead / />) }) test('applies correct styling',() => {' render(<SEOHead / />) }) })
 =======
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SEOHead from "./components/SEOHead" describe("SEOHead",() => {" test("renders without crashing",() => {" render(<SEOHead / />) expect(screen.getByTestId("seohead")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SEOHead / />) }) test("handles user interactions",() => {" render(<SEOHead / />) }) test("applies correct styling",() => {" render(<SEOHead / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import SEOHead from '../components/SEOHead" describe('SEOHead',() => {' test('renders without crashing',() => {' render(<SEOHead / />) expect(screen.getByTestId("seohead")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOHead / />) }) test('handles user interactions',() => {' render(<SEOHead / />) }) test('applies correct styling',() => {' render(<SEOHead / />) }) })
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

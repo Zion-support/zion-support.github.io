@@ -19,7 +19,8 @@ interface AccessibilityContextType {;
 ;
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 ;
-export const useAccessibility = ("props": "any) => {;interface AccessibilityContextType {
+export const useAccessibility = ("props": "any) => {;
+interface AccessibilityContextType {
   highContrast: boolean;
   toggleHighContrast: () => void;
   reducedMotion: boolean;
@@ -36,7 +37,12 @@ export const useAccessibility = ("props": "any) => {;interface AccessibilityCont
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 export const useAccessibility = (props: any) => {
   const context = useContext(AccessibilityContext);';
-  if (!context) {';';export const useAccessibility = (props: any) => {
+  if (!context) {';';
+;
+export const useAccessibility = (props: any) => {;
+  const context = useContext(AccessibilityContext);
+  if (!context) {;
+export const useAccessibility = (props: any) => {
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
@@ -49,7 +55,8 @@ interface AccessibilityProviderProps {;
 ;
 "}
 ;
-export const "AccessibilityProvider": "React.FC<AccessibilityProviderProps> = ({ children "}) => {;interface AccessibilityProviderProps {
+export const "AccessibilityProvider": "React.FC<AccessibilityProviderProps> = ({ children "}) => {;
+interface AccessibilityProviderProps {
   children: ReactNod e;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
@@ -62,7 +69,14 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   useEffect(() => {';';
     const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';';';
     const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';';';
-    const savedFontSize = localStorage.getItem('zion-font-size');';';  // Load accessibility preferences from localStorage
+    const savedFontSize = localStorage.getItem('zion-font-size');';';
+;
+  // Load accessibility preferences from localStorage;
+  useEffect(() => {;
+    const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
+    const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
+    const savedFontSize = localStorage.getItem('zion-font-size');
+  // Load accessibility preferences from localStorage
   useEffect(() => {
     const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
     const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
@@ -75,7 +89,22 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   "}, []);
 ;
   // Apply accessibility settings to document;
-  useEffect(() => {;;
+  useEffect(() => {;
+  }, []);
+  // Apply accessibility settings to document
+  useEffect(() => {
+    const root = document.documentElement;
+    // Apply high contrast';
+    if (highContrast) {';';
+      root.classList.add('high-contrast');';
+    } else {';';
+      root.classList.remove('high-contrast');
+    }
+    // Apply reduced motion';
+    if (reducedMotion) {';';
+      root.classList.add('reduce-motion');';
+    } else {';';
+;
     // Apply high contrast;
     if (highContrast) {;
     // Apply high contrast
@@ -87,7 +116,20 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     // Apply reduced motion
     if (reducedMotion) {
       root.classList.add('reduce-motion');
-    } else {;  // Keyboard navigation support
+    } else {;
+    } else {
+      root.classList.remove('reduce-motion');
+    }
+    // Apply font size
+    root.style.fontSize = `${fontSize}px`;
+  }, [highContrast, reducedMotion, fontSize]);
+;
+  // Keyboard navigation support;
+  useEffect(() => {;
+    const handleKeyDown = ("props": "any) => {;
+      // Show skip links on Tab press;
+      if (event.key === 'Tab') {;
+  // Keyboard navigation support
   useEffect(() => {
     const handleKeyDown = (props: any) => {
       // Show skip links on Tab press
@@ -140,18 +182,46 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   };
   const toggleVoiceNavigation = (props: any) => {
     const newValue = !voiceNavigation;';
-    setVoiceNavigation(newValue);';';    };
+    setVoiceNavigation(newValue);';';
+;
+  // Keyboard navigation support;
+  useEffect(() => {;
+    const handleKeyDown = (props: any) => {;
+      // Show skip links on Tab press;
+      if (event.key === 'Tab') {;
+        setShowSkipLinks(true);
+        setTimeout(() => setShowSkipLinks(false), 5000);
+      }
+;
+      // High contrast toggle (Alt + H);
+      if (event.altKey && event.key === 'h') {;
+        event.preventDefault();
+        toggleHighContrast();
+      }
+;
+      // Font size controls (Alt + Plus/Minus);
+      if (event.altKey && event.key === '+') {;
+        event.preventDefault();
+        increaseFontSize();
+      }
+      if (event.altKey && event.key === '-') {;
+        event.preventDefault();
+        decreaseFontSize();
+      }
+    };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 ;
-  const toggleHighContrast = ("props": "any) => {;  const toggleHighContrast = (props: any) => {
+  const toggleHighContrast = ("props": "any) => {;
+  const toggleHighContrast = (props: any) => {
     const newValue = !highContrast;
     setHighContrast(newValue);
     localStorage.setItem('zion-high-contrast'", newValue.toString());
   };
 ;
-  const toggleReducedMotion = ("props": "any) => {;  const toggleReducedMotion = (props: any) => {
+  const toggleReducedMotion = ("props": "any) => {;
+  const toggleReducedMotion = (props: any) => {
     const newValue = !reducedMotion;
     setReducedMotion(newValue);
     localStorage.setItem('zion-reduced-motion'", newValue.toString());
@@ -169,7 +239,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     localStorage.setItem('zion-font-size', newSize.toString());
   };
 ;
-  const resetFontSize = ("props": "any) => {;  const increaseFontSize = (props: any) => {
+  const resetFontSize = ("props": "any) => {;
+  const increaseFontSize = (props: any) => {
     const newSize = Math.min(fontSize + 2, 24);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString());
@@ -188,7 +259,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   const toggleVoiceNavigation = (props: any) => {
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);
-    localStorage.setItem('zion-voice-navigation', newValue.toString());    localStorage.setItem('zion-voice-navigation'", newValue.toString());
+    localStorage.setItem('zion-voice-navigation', newValue.toString());
+    localStorage.setItem('zion-voice-navigation'", newValue.toString());
   };
   const value = {
     highContrast,
@@ -251,7 +323,28 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               className={`p-2 rounded-lg transition-colors ${';
                 highContrast';';
                   ? 'bg-blue-500 text-white'';';
-                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'              className={`p-2 rounded-lg transition-colors ${;
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
+              className={`p-2 rounded-lg transition-colors ${;
+                highContrast;
+                  ? 'bg-blue-500 text-white';
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
+              }`}
+              className={`p-2 rounded-lg transition-colors ${;
+                highContrast;
+                  ? 'bg-blue-500 text-white';
+                  : 'bg-gray-700 text-gray-300 "hover": "b g-gray-600';
+              "}`}
+              title="Toggle high contrast";
+            >;
+              <Sun className="w-4 h-4"  />;
+            </button>;
+            <button;
+              onClick={toggleReducedMotion}
+              className={`p-2 rounded-lg transition-colors ${';
+                reducedMotion';';
+                  ? 'bg-blue-500 text-white'';';
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
+              className={`p-2 rounded-lg transition-colors ${;
                 reducedMotion;
                   ? 'bg-blue-500 text-white';
                   : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
@@ -284,7 +377,115 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
                 className={`p-2 rounded-lg transition-colors ${';
                   voiceNavigation';';
                     ? 'bg-blue-500 text-white'';';
-                    : 'bg-gray-700 text-gray-300 hover: b g-gray-600'      {children}
+                    : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
+                className={`p-2 rounded-lg transition-colors ${;
+                  voiceNavigation;
+                    ? 'bg-blue-500 text-white';
+                    : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
+                }`}
+                onClick={toggleVoiceNavigation"}
+                className={`p-2 rounded-lg transition-colors ${;
+                  voiceNavigation;
+                    ? 'bg-blue-500 text-white';
+                    : 'bg-gray-700 text-gray-300 "hover": "b g-gray-600';
+                "}`}
+                title="Toggle voice navigation";
+              >;
+                <Accessibility className="w-4 h-4"  />;
+              </button>;
+          </div>;
+        </motion.div>;
+      </div>;
+      <AnimatePresence>
+        {showSkipLinks && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed top-0 left-0 right-0 z-50 bg-blue-500 text-white p-4 text-center"
+          >
+            <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
+              <a
+                href="#main-content"
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white"
+              >
+                Skip to main content
+              </a>
+              <a
+                href="#navigation"
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white"
+              >
+                Skip to navigation
+              </a>
+              <button
+                onClick={() => setShowSkipLinks(false)}
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* Accessibility Controls */}
+      <div className="fixed bottom-4 left-4 z-40">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="bg-gray-800 border border-blue-400/20 rounded-lg p-2 shadow-2xl"
+        >
+          <div className="flex flex-col gap-2">
+            <button
+              onClick={toggleHighContrast}
+              className={`p-2 rounded-lg transition-colors ${
+                highContrast
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
+              }`}
+              title="Toggle high contrast"
+            >
+              <Sun className="w-4 h-4"  />
+            </button>
+            <button
+              onClick={toggleReducedMotion}
+              className={`p-2 rounded-lg transition-colors ${
+                reducedMotion
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
+              }`}
+              title="Toggle reduced motion"
+            >
+              <SkipForward className="w-4 h-4"  />
+            </button>
+            <button
+              onClick={increaseFontSize}
+              className="p-2 bg-gray-700 text-gray-300 hover: b g-gray-600 rounded-lg transition-colors"
+              title="Increase font size"
+            >
+              <Volume2 className="w-4 h-4"  />
+            </button>
+            <button
+              onClick={decreaseFontSize}
+              className="p-2 bg-gray-700 text-gray-300 hover: b g-gray-600 rounded-lg transition-colors"
+              title="Decrease font size"
+            >
+              <VolumeX className="w-4 h-4"  />
+            </button>
+                          <button
+                onClick={toggleVoiceNavigation}
+                className={`p-2 rounded-lg transition-colors ${
+                  voiceNavigation
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
+                }`}
+                title="Toggle voice navigation"
+              >
+                <Accessibility className="w-4 h-4"  />
+              </button>
+          </div>
+        </motion.div>
+      </div>
+      {children}
     </AccessibilityContext.Provider>
   );
 };
@@ -301,31 +502,64 @@ export const "FocusTrap": "React.FC<{ "children": ReactNod e; isActive?: boolean
       if (event.key !== 'Tab') return;
 ';
       const focusableElements = document.querySelectorAll(';';
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+;
     const handleKeyDown = ("props": "any) => {;
       if (event.key !== 'Tab') return;
 ;
       const focusableElements = document.querySelectorAll(;
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        'button", [href], input, select, textarea, [tabindex]: "not([tabindex="-1"])';
+// Focus trap component for modals
+export const FocusTrap: React.FC<{ children: ReactNod e; isActive?: boolean }> = ({
+  children,
+  isActive = true
+}) => {
+  useEffect(() => {
+    if (!isActive) return;
+    const handleKeyDown = (props: any) => {
+      if (event.key !== 'Tab') return;
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      "} else if (!event.shiftKey && document.activeElement === lastElement) {;
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
         event.preventDefault();
         firstElement.focus();
       }
     };';
 ';';
-    document.addEventListener('keydown', handleKeyDown);';';    };
+    document.addEventListener('keydown', handleKeyDown);';';
+    };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isActive]);
   return <>{children}</>;
 };
-
 </motion>
 </motion>
 </AccessibilityContext>
 </any>
 </any>
 </AccessibilityProviderProps>';
-</AccessibilityContextType>;';;';</any>
+</AccessibilityContextType>;';;';
+;
+</motion>;
+</motion>;
+</AccessibilityContext>;
+</any>;
+</any>;
+</any>;
+</any>;
+</any>;
+</AccessibilityProviderProps>;
+</AccessibilityContextType>;
+</any>
 </any>
 </any>
 </AccessibilityProviderProps>

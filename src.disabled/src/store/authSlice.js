@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 import React from "react"; ); export default function Authslice() {}; return null} }
-const React from "react"; ); export default function Authslice() { return
-}; return null} }""
+const React from "react"; ); export default function Authslice() { return; }; return null} }""
 import _React from "react"; ); export default function Authslice() {}; return null} }
-=======
+ursor/fix-syntax-push-and-merge-to-main-40de
 import React from "react";
   );
 export default function Authslice() {};
@@ -12,4 +11,10 @@ export default function Authslice() {};
 import React from "react"; ); export default function Authslice() {}; return null} }
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
 import _React from "react"; ); export default function Authslice() {}; return null} }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+
+
+
+import _React from "react"; ); export default function Authslice() {}; return null} }
+import _React from "react"; ); export default function Authslice() {}; return null} }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de

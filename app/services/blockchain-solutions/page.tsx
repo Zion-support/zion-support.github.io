@@ -23,87 +23,45 @@ export default function BlockchainSolutionsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <BlockchainServiceCard 
               title="Smart Contract Development" 
-              description="Secure, audited smart contracts for various blockchain platforms with comprehensive testing"
-              features={["Solidity development", "Security audits", "Gas optimization", "Multi-chain support", "Upgradeable contracts", "Testing suites"]}
+              description="Secure, audited smart contracts for various blockchain platforms"
+              features={["Solidity development", "Security audits", "Gas optimization", "Multi-chain support"]}
               price="Starting at $15k"
               icon="📜"
             />
             <BlockchainServiceCard 
               title="DeFi Protocols" 
-              description="Decentralized finance applications and yield farming platforms with advanced features"
-              features={["DEX development", "Lending protocols", "Yield farming", "Liquidity pools", "Flash loans", "Governance tokens"]}
+              description="Decentralized finance applications and yield farming platforms"
+              features={["DEX development", "Lending protocols", "Yield farming", "Liquidity pools"]}
               price="Starting at $25k"
               icon="💰"
             />
             <BlockchainServiceCard 
               title="NFT Marketplaces" 
               description="Complete NFT platforms with minting, trading, and auction features"
-              features={["NFT minting", "Marketplace UI", "Royalty system", "Metadata management", "Auction system", "Rarity tools"]}
+              features={["NFT minting", "Marketplace UI", "Royalty system", "Metadata management"]}
               price="Starting at $20k"
               icon="🎨"
             />
             <BlockchainServiceCard 
               title="Web3 Applications" 
               description="Decentralized applications with wallet integration and blockchain connectivity"
-              features={["Wallet integration", "MetaMask support", "IPFS storage", "User authentication", "Multi-wallet support", "Mobile compatibility"]}
+              features={["Wallet integration", "MetaMask support", "IPFS storage", "User authentication"]}
               price="Starting at $18k"
               icon="🌐"
             />
             <BlockchainServiceCard 
               title="Token Development" 
-              description="Custom token creation and tokenomics design with advanced features"
-              features={["ERC-20/ERC-721", "Tokenomics design", "Vesting contracts", "Multi-signature wallets", "Token bridges", "Staking mechanisms"]}
+              description="Custom token creation and tokenomics design"
+              features={["ERC-20/ERC-721", "Tokenomics design", "Vesting contracts", "Multi-signature wallets"]}
               price="Starting at $12k"
               icon="🪙"
             />
             <BlockchainServiceCard 
               title="Blockchain Integration" 
               description="Integrate blockchain functionality into existing applications"
-              features={["API development", "Node management", "Transaction handling", "Event monitoring", "Webhook integration", "Real-time updates"]}
+              features={["API development", "Node management", "Transaction handling", "Event monitoring"]}
               price="Starting at $10k"
               icon="🔗"
-            />
-            <BlockchainServiceCard 
-              title="DAO Development" 
-              description="Decentralized Autonomous Organization platforms with governance and voting mechanisms"
-              features={["Governance tokens", "Voting systems", "Proposal management", "Treasury management", "Member management", "Transparency tools"]}
-              price="Starting at $30k"
-              icon="🏛️"
-            />
-            <BlockchainServiceCard 
-              title="Staking Platforms" 
-              description="Staking and yield farming platforms with automated rewards and compound interest"
-              features={["Staking contracts", "Yield farming", "Compound interest", "Reward distribution", "Slashing protection", "Validator management"]}
-              price="Starting at $22k"
-              icon="🌾"
-            />
-            <BlockchainServiceCard 
-              title="Cross-Chain Bridges" 
-              description="Interoperability solutions for seamless asset transfers between different blockchains"
-              features={["Asset bridging", "Cross-chain swaps", "Liquidity pools", "Security audits", "Multi-chain support", "Fast finality"]}
-              price="Starting at $40k"
-              icon="🌉"
-            />
-            <BlockchainServiceCard 
-              title="Oracle Integration" 
-              description="Decentralized oracle solutions for real-world data integration into smart contracts"
-              features={["Price feeds", "Random number generation", "External API integration", "Data verification", "Custom oracles", "Reliability guarantees"]}
-              price="Starting at $18k"
-              icon="🔮"
-            />
-            <BlockchainServiceCard 
-              title="Layer 2 Solutions" 
-              description="Scalability solutions including rollups, sidechains, and state channels"
-              features={["Optimistic rollups", "ZK rollups", "Sidechain development", "State channels", "Batch processing", "Cost optimization"]}
-              price="Starting at $35k"
-              icon="⚡"
-            />
-            <BlockchainServiceCard 
-              title="Blockchain Analytics" 
-              description="Advanced analytics and monitoring tools for blockchain applications and transactions"
-              features={["Transaction tracking", "Address monitoring", "Risk assessment", "Compliance reporting", "Real-time alerts", "Custom dashboards"]}
-              price="Starting at $15k"
-              icon="📊"
             />
           </div>
         </div>

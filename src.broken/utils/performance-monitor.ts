@@ -1,4 +1,4 @@
-// Utility functions for performance-monitor,
-export const performance-monitor = $2;
-  // TODO: Implement utility functions
-},
+// Utility functions for performance-monitor,;
+export const performance-monitor = {,;
+  // TODO: Implement utility functions;
+};

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"use client";
-
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -184,7 +181,6 @@ export default function ContactPage() {
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-1">
                   Email Address *
-=======
 import Link from 'next/link';
 
 export default function ContactPage() {
@@ -336,64 +332,26 @@ export default function ContactPage() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email Address
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-                </label>
+                  Email Address                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-<<<<<<< HEAD
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full p-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40"
-                  placeholder="Enter your email"
-                />
-              </div>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="company" className="block text-sm font-medium mb-1">
-=======
                   className="w-full px-4 py-3 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Enter your email address"
                 />
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-                  Company
+                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">                  Company
                 </label>
                 <input
                   type="text"
                   id="company"
                   name="company"
-<<<<<<< HEAD
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="w-full p-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40"
-                  placeholder="Enter company name"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-1">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full p-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40"
-                  placeholder="Enter phone number"
-                />
-              </div>
-            </div>
-
             <div>
               <label htmlFor="service" className="block text-sm font-medium mb-1">
                 Service of Interest
@@ -498,7 +456,6 @@ export default function ContactPage() {
                 Emergency support available 24/7 for enterprise clients
               </p>
             </div>
-=======
                   className="w-full px-4 py-3 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Enter your company name"
                 />
@@ -543,33 +500,10 @@ export default function ContactPage() {
               >
                 Send Message
               </button>
-            </form>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-          </div>
+            </form>          </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* Call to Action */}
-      <div className="text-center space-y-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8">
-        <h2 className="text-2xl font-bold">Ready to Get Started?</h2>
-        <p className="opacity-90">
-          Launch your instance today or schedule a consultation with our team.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/multiverse/launch"
-            className="px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Launch Your Instance
-          </a>
-          <a
-            href="/pricing"
-            className="px-6 py-3 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-          >
-            View Pricing
-          </a>
-=======
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 text-center">
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
@@ -587,7 +521,6 @@ export default function ContactPage() {
               View Case Studies
             </Link>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
         </div>
       </div>
     </div>

@@ -1,73 +1,43 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  
-  // Image optimization
+  reactStrictMode: false,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  experimental: {
+    newNextLinkBehavior: true,
+    scrollRestoration: true
+  },
   images: {
-    domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-    ],
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
-  webpack: (config, { dev, isServer }) => {
-    if (dev) {
-      config.watchOptions = {
-        ignored: [
-          '**/node_modules/**',
-          '**/.git/**',
-          '**/pages_backup*/**',
-          '**/pages.*/**',
-          '**/pages-*/**',
-          '**/pages_disabled*/**',
-          '**/pages.disabled*/**',
-          '**/pages.broken*/**',
-          '**/pages.corrupted*/**',
-          '**/pages.old*/**',
-          '**/pages._*/**',
-          '**/pages.__*/**',
-          '**/backup-pages/**',
-          '**/src.pages.disabled/**',
-          '**/lib_backup*/**',
-          '**/src_backup*/**',
-          '**/corrupted-files-backup*/**',
-          '**/performance-reports*/**',
-          '**/log-analysis-reports*/**',
-          '**/link-reports*/**',
-          '**/lint-target*/**',
-          '**/monitoring*/**',
-          '**/pm2-automation*/**',
-          '**/automation/logs*/**',
-          '**/automation/backup*/**',
-          '**/performance-*.json',
-          '**/performance-*.js',
-          '**/performance-*.cjs',
-          '**/performance-*.sh',
-          '**/performance-*.html',
-          '**/performance-*.md',
-        ],
-      };
-    }
-    return config;
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: '/(.*)',
         headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "X-XSS-Protection", value: "1; mode=block" },
-          { key: "Referrer-Policy", value: "origin-when-cross-origin" },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;",
+          },
         ],
       },
     ];
   }
-}
+};
 
-export default nextConfig;
+module.exports = nextConfig;

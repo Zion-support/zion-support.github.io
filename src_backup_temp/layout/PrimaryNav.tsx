@@ -6,23 +6,19 @@ import React from 'react';
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component;
+;
   const [isDark, setIsDark] = useState<typeof false>(false);
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
 ;
   const toggleTheme = (..."args": "unknow n[]): unknown => {;    setIsDark(!isDark);
     // Add theme switching logic here;
   "};
 ;
-=======
-  const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
-    // Add theme switching logic here;
-};
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
   return ();
     <>;
       <header;
         className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";
         role="navigation";
+        ;
         data-testid="header";
 ";
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 "sm": "p x-6">;
@@ -34,24 +30,13 @@ import React from 'react';
                   // // // // // // // // ;
                 onSelectSuggestion = {;
   (sugg) => {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
                   // // // // // ;
-=======
-
-                  // // // // // console.log('PrimaryNav search suggestion selected:',
-  sugg);
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
                   // Handle different suggestion types with proper navigation;
                   if(sugg.id) {;
                     // Product listings with IDs go to product detail page`;
                     router.push(`/marketplace/listing/${sugg.id;
 '`;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
 "}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
-=======
-}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
-
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
                     // Documentation suggestions navigate directly to their path';
                     router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {;
                     // Blog posts navigate to blog detail page`;
@@ -59,21 +44,14 @@ import React from 'react';
                     // "Default": "search results page with slug;`;
                     router.push(`/search/${sugg.slug || slugify(sugg.text)"}`)};
                   setQuery('');
+;
                   // Track analytics event';
                   if(typeof window !== 'null' && window.gtag) {;
                     window.gtag('event',search_suggestion_click', {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
                       "search_term": "sug g.text",;
                       "suggestion_type": "sug g.type",;
                       "suggestion_id": "sug g.id || sugg.slug;
                     "})}
-=======
-
-                      search_term: sugg.text,
-                      suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug;
-})}
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
                 }}
                 searchSuggestions = {suggestions}
               />;
@@ -87,10 +65,6 @@ import React from 'react';
                     href="/cart";
                     className="relative p-1";
                     aria-label= {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
-=======
-
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
   t('nav.cart',Cart');
 }
                   >";
@@ -133,6 +107,7 @@ import React from 'react';
               {isLoggedIn && <UserMenu  />}
             </div>;
           </div>;
+          ;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsOpen(!isOpen)}";
@@ -145,7 +120,6 @@ import React from 'react';
           {isOpen && ;
             <motion.div;
               initial = {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
   { "opacity": "0",;
   "height": "0;
 "}}
@@ -160,24 +134,6 @@ import React from 'react';
               transition={{ "duration": "0.3 "}}";
               className=""lg": "hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10";
             >";
-=======
-
-  { opacity: 0,
-  height: 0;
-}}
-              animate = {;
-
-  { opacity: 1,
-  height: 'auto';
-}}
-              exit = {;
-
-  { opacity: 0,
-  height: 0;
-}}
-              transition={{ duration: 0.3 }}";
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
               <div className="px-4 py-6 space-y-4">;
                 {services.map((category", index) => (;
                   <div key={index}>";
@@ -207,7 +163,7 @@ import React from 'react';
                     </div>;
                   </div>;
                 ))}
-
+;
                 <div className="pt-4 border-t border-white/10 space-y-2">;
                   <Link                    to="/solutions";
                     className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";

@@ -2,38 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Automation Services - Zion Tech Group",
-<<<<<<< HEAD
-  description: "Transform your business with intelligent AI automation solutions. Streamline operations, enhance productivity, and drive innovation with our cutting-edge automation technology.",
-=======
-  description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.",
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-  keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group",
-};
-
 export default function AIAutomationServicesPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen py-20">
-      {/* Hero Section */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">AI Automation Services</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business operations with intelligent automation that learns, adapts, and scales with your needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-              Get Started
-            </Link>
-            <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-              View Case Studies
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Services Overview */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -46,7 +16,6 @@ export default function AIAutomationServicesPage() {
             </p>
           </div>
           
-=======
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -115,9 +84,7 @@ export default function AIAutomationServicesPage() {
 
         {/* Services Grid */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12">Our AI Automation Solutions</h2>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Our AI Automation Solutions</h2>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Process Automation */}
             <div className="card group">
               <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
@@ -125,13 +92,6 @@ export default function AIAutomationServicesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold mb-2">Process Automation</h3>
-              <p className="text-gray-400">
-                Automate repetitive business processes with intelligent workflows that adapt to changing conditions.
-              </p>
-            </div>
-
             {/* Cognitive Automation */}
             <div className="card group">
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
@@ -271,7 +231,6 @@ export default function AIAutomationServicesPage() {
                 Start Your Automation Journey
               </Link>
               <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-=======
               <h3 className="text-xl font-semibold mb-3">Process Automation</h3>
               <p className="text-gray-400 mb-4">
                 Automate repetitive business processes with intelligent workflows that adapt to changing conditions.
@@ -397,19 +356,11 @@ export default function AIAutomationServicesPage() {
               <Link href="/contact" className="btn-primary">
                 Start Your Automation Journey
               </Link>
-              <Link href="/case-studies" className="btn-secondary">
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-                View Success Stories
+              <Link href="/case-studies" className="btn-secondary">                View Success Stories
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-=======
         </section>
-      </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-    </div>
+      </div>    </div>
   );
 }

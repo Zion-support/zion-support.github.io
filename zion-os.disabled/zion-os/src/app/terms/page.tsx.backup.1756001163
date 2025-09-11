@@ -1,19 +1,5 @@
 export default function TermsPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Terms of Service</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Please read these terms carefully before using Zion OS services.
-          </p>
-          <p className="text-sm text-gray-400 mt-4">Last updated: January 2024</p>
-        </div>
-
         <div className="space-y-8">
           <div className="card">
             <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
@@ -351,17 +337,10 @@ export default function TermsPage() {
               <div className="space-y-2 text-white/70">
                 <p><strong>Email:</strong> legal@ziontechgroup.com</p>
                 <p><strong>Phone:</strong> +1 (302) 464-0950</p>
-                <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-8931
-              </div>
+                <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>              </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
-      </section>
-
       {/* CTA Section */}
       <section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -384,8 +363,6 @@ export default function TermsPage() {
             </a>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-8931
-    </div>
+      </section>    </div>
   );
 }

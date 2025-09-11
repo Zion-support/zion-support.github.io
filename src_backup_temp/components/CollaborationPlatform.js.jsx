@@ -29,7 +29,10 @@ export function CollaborationPlatform("props": "any) {;
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [participants, setParticipants] = useState(mockParticipants);
   const [localUser, setLocalUser] = useState({;
-
+    "isVideoOn": "true",;
+    "isAudioOn": "true",;
+    "isScreenSharing": "false",;
+    "isMuted": "false"});
     isVideoOn: true,
     isAudioOn: true,
     isScreenSharing: false,
@@ -51,7 +54,6 @@ export function CollaborationPlatform("props": "any) {;
   const containerRef = useRef(null);
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -65,9 +67,7 @@ export function CollaborationPlatform("props": "any) {;
   const toggleRecording = ("props": "any) => {setIsRecording(!isRecording);"};
   const sendMessage = ("props": "any) => {;
     if(newMessage.trim()) {;
-
       const message = {;
-
         "id": Date.now().toString()",;
         "user": 'You',;
         "message": "newMessage",;
@@ -77,7 +77,6 @@ export function CollaborationPlatform("props": "any) {;
     }
   };
   const formatTime = seconds => {;
-
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const secs = seconds % 60;
@@ -85,7 +84,6 @@ export function CollaborationPlatform("props": "any) {;
   };
   const toggleChat = ("props": "any) => {setActiveChat(!activeChat);"};
   if(!isOpen) {;
-
     return ();
       <button;
         onClick={() => setIsOpen(true)}
@@ -97,7 +95,6 @@ export function CollaborationPlatform("props": "any) {;
     );
   "}
   if(isMinimized) {;
-
     return (";
       <div className="fixed bottom-4 right-20 z-50">";
         <div className="bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">";
@@ -174,7 +171,5 @@ export function CollaborationPlatform("props": "any) {;
           </button>;
         </div>;
       </div>";
-
 export default Component;
-
 </div>"

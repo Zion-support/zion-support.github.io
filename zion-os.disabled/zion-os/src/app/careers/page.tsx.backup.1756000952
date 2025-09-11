@@ -1,202 +1,14 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of innovators at Zion Tech Group. Explore exciting career opportunities in AI, quantum computing, and technology solutions.',
-=======
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
-  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-};
+  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',};
 
 export default function CareersPage() {
   const openPositions = [
     {
-<<<<<<< HEAD
-      id: 'ai-research-scientist',
-      title: 'Senior AI Research Scientist',
-      department: 'Research & Development',
-      location: 'San Francisco, CA / Remote',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Join our cutting-edge AI consciousness research team. You\'ll work on developing autonomous AI systems and exploring the frontiers of artificial intelligence.',
-      responsibilities: [
-        'Lead research initiatives in AI consciousness and autonomous systems',
-        'Develop and implement novel machine learning algorithms',
-        'Publish research findings in top-tier conferences and journals',
-        'Collaborate with cross-functional teams on product development',
-        'Mentor junior researchers and engineers'
-      ],
-      requirements: [
-        'Ph.D. in Computer Science, AI, or related field',
-        'Strong background in machine learning, neural networks, and AI research',
-        'Experience with autonomous systems and consciousness research',
-        'Proven track record of research publications',
-        'Excellent problem-solving and analytical skills'
-      ],
-      benefits: [
-        'Competitive salary with equity options',
-        'Flexible work arrangements',
-        'Professional development opportunities',
-        'Health, dental, and vision insurance',
-        '401(k) with company match'
-      ]
-    },
-    {
-      id: 'quantum-computing-engineer',
-      title: 'Quantum Computing Engineer',
-      department: 'Quantum Solutions',
-      location: 'Palo Alto, CA / Remote',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Help us build the future of quantum computing. You\'ll develop quantum algorithms and solutions for complex optimization problems.',
-      responsibilities: [
-        'Design and implement quantum algorithms for optimization problems',
-        'Develop quantum machine learning solutions',
-        'Work with quantum hardware and simulators',
-        'Collaborate with research teams on quantum applications',
-        'Optimize quantum circuits and algorithms'
-      ],
-      requirements: [
-        'M.S. or Ph.D. in Physics, Computer Science, or related field',
-        'Experience with quantum computing frameworks (Qiskit, Cirq, etc.)',
-        'Knowledge of quantum algorithms and quantum mechanics',
-        'Programming experience in Python, C++, or similar',
-        'Strong mathematical and analytical skills'
-      ],
-      benefits: [
-        'Competitive salary with equity options',
-        'Access to cutting-edge quantum computing resources',
-        'Conference attendance and training opportunities',
-        'Comprehensive health benefits',
-        'Flexible work schedule'
-      ]
-    },
-    {
-      id: 'full-stack-developer',
-      title: 'Full-Stack Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Build our next-generation AI platforms and applications. You\'ll work on both frontend and backend systems that power our AI solutions.',
-      responsibilities: [
-        'Develop and maintain web applications and APIs',
-        'Build responsive and accessible user interfaces',
-        'Implement AI/ML features and integrations',
-        'Optimize application performance and scalability',
-        'Collaborate with design and product teams'
-      ],
-      requirements: [
-        'Bachelor\'s degree in Computer Science or related field',
-        'Experience with React, Node.js, and modern web technologies',
-        'Knowledge of cloud platforms (AWS, Azure, GCP)',
-        'Experience with databases and API design',
-        'Understanding of AI/ML concepts and applications'
-      ],
-      benefits: [
-        'Competitive salary with equity options',
-        'Remote-first work environment',
-        'Latest development tools and equipment',
-        'Health and wellness benefits',
-        'Professional development budget'
-      ]
-    },
-    {
-      id: 'data-scientist',
-      title: 'Senior Data Scientist',
-      department: 'Data & Analytics',
-      location: 'New York, NY / Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Transform data into actionable insights that drive business decisions. You\'ll work with large datasets and develop predictive models.',
-      responsibilities: [
-        'Analyze complex datasets to identify patterns and trends',
-        'Develop machine learning models for business applications',
-        'Create data visualizations and reports',
-        'Collaborate with business teams on data-driven solutions',
-        'Mentor junior data scientists and analysts'
-      ],
-      requirements: [
-        'M.S. or Ph.D. in Statistics, Data Science, or related field',
-        'Experience with Python, R, SQL, and data science tools',
-        'Knowledge of machine learning algorithms and statistical methods',
-        'Experience with big data technologies (Spark, Hadoop)',
-        'Strong business acumen and communication skills'
-      ],
-      benefits: [
-        'Competitive salary with equity options',
-        'Access to cutting-edge data science tools',
-        'Conference attendance and training opportunities',
-        'Comprehensive health benefits',
-        'Flexible work arrangements'
-      ]
-    },
-    {
-      id: 'cybersecurity-architect',
-      title: 'Cybersecurity Architect',
-      department: 'Security',
-      location: 'Austin, TX / Remote',
-      type: 'Full-time',
-      experience: '6+ years',
-      description: 'Design and implement secure systems that protect our AI platforms and client data. You\'ll be at the forefront of AI-powered security.',
-      responsibilities: [
-        'Design secure architecture for AI systems and platforms',
-        'Implement security controls and monitoring systems',
-        'Develop security policies and procedures',
-        'Conduct security assessments and penetration testing',
-        'Stay current with emerging security threats and technologies'
-      ],
-      requirements: [
-        'Bachelor\'s degree in Computer Science, Cybersecurity, or related field',
-        'Experience with cloud security and zero-trust architecture',
-        'Knowledge of AI/ML security considerations',
-        'Experience with security frameworks and compliance',
-        'Relevant certifications (CISSP, CISM, etc.) preferred'
-      ],
-      benefits: [
-        'Competitive salary with equity options',
-        'Latest security tools and technologies',
-        'Professional certification support',
-        'Comprehensive health benefits',
-        'Flexible work schedule'
-      ]
-    },
-    {
-      id: 'product-manager',
-      title: 'Product Manager - AI Solutions',
-      department: 'Product',
-      location: 'San Francisco, CA / Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Drive the development of our AI products and solutions. You\'ll work closely with engineering, design, and business teams.',
-      responsibilities: [
-        'Define product vision and strategy for AI solutions',
-        'Gather and prioritize product requirements',
-        'Work with engineering teams on product development',
-        'Analyze market trends and competitive landscape',
-        'Collaborate with sales and marketing teams'
-      ],
-      requirements: [
-        'Bachelor\'s degree in Business, Engineering, or related field',
-        'Experience in product management or related roles',
-        'Understanding of AI/ML technologies and applications',
-        'Strong analytical and communication skills',
-        'Experience with agile development methodologies'
-      ],
-      benefits: [
-        'Competitive salary with equity options',
-        'Professional development opportunities',
-        'Health and wellness benefits',
-        'Flexible work arrangements',
-        'Performance-based bonuses'
-      ]
-    }
-  ];
-
   const departments = [
     {
       name: 'Research & Development',
@@ -234,7 +46,6 @@ export default function CareersPage() {
       positions: 7,
       icon: '🚀'
     }
-=======
       title: 'Senior AI Research Engineer',
       department: 'Research & Development',
       location: 'Remote / Global',
@@ -285,74 +96,10 @@ export default function CareersPage() {
         'Knowledge of AI security and adversarial attacks',
         'Relevant certifications (CISSP, CEH, etc.)',
       ],
-    },
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-  ];
+    },  ];
 
   const benefits = [
     {
-<<<<<<< HEAD
-      category: 'Health & Wellness',
-      items: [
-        'Comprehensive health, dental, and vision insurance',
-        'Mental health support and counseling services',
-        'Fitness and wellness programs',
-        'Flexible spending accounts (FSA)',
-        'Health savings accounts (HSA)'
-      ]
-    },
-    {
-      category: 'Financial',
-      items: [
-        'Competitive salary with equity options',
-        '401(k) with company match',
-        'Performance-based bonuses',
-        'Professional development budget',
-        'Conference attendance support'
-      ]
-    },
-    {
-      category: 'Work-Life Balance',
-      items: [
-        'Flexible work arrangements',
-        'Unlimited paid time off',
-        'Parental leave programs',
-        'Remote work options',
-        'Flexible scheduling'
-      ]
-    },
-    {
-      category: 'Growth & Development',
-      items: [
-        'Professional development opportunities',
-        'Mentorship programs',
-        'Internal training and workshops',
-        'Conference attendance',
-        'Advanced degree support'
-      ]
-    },
-    {
-      category: 'Culture & Community',
-      items: [
-        'Inclusive and diverse workplace',
-        'Team building activities',
-        'Community service opportunities',
-        'Employee resource groups',
-        'Regular team events and celebrations'
-      ]
-    },
-    {
-      category: 'Technology & Tools',
-      items: [
-        'Latest development tools and equipment',
-        'Access to cutting-edge AI and quantum resources',
-        'Cloud computing credits',
-        'Software licenses and subscriptions',
-        'Home office setup support'
-      ]
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -464,7 +211,6 @@ export default function CareersPage() {
               </div>
             ))}
           </div>
-=======
       title: 'Remote First',
       description: 'Work from anywhere in the world with our distributed team.',
       icon: '🌍',
@@ -541,40 +287,10 @@ export default function CareersPage() {
                 </ul>
               </div>
             </div>
-          ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-        </div>
+          ))}        </div>
       </section>
 
       {/* Benefits */}
-<<<<<<< HEAD
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Benefits & Perks</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We take care of our team with comprehensive benefits and perks
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((category, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
-                <ul className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-2">
-                      <span className="text-blue-600 text-sm">✓</span>
-                      <span className="text-gray-700 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Open Positions */}
       <section id="open-positions" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -692,7 +408,6 @@ export default function CareersPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Offer</h3>
               <p className="text-gray-600">Welcome to the Zion Tech Group team!</p>
             </div>
-=======
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -730,36 +445,11 @@ export default function CareersPage() {
             <p className="opacity-80 leading-relaxed">
               Whether you're a seasoned expert or just starting your career, we provide the 
               support and resources you need to succeed.
-            </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-          </div>
+            </p>          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Join Our Team?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Don't see the perfect role? We're always looking for talented individuals 
-            to join our team. Send us your resume and let's explore opportunities together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              Contact Us
-            </Link>
-            <a
-              href="mailto:careers@ziontechgroup.com"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              Send Resume
-            </a>
-          </div>
-=======
       <section className="text-center py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
         <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
@@ -778,7 +468,6 @@ export default function CareersPage() {
           >
             Send Resume
           </a>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
         </div>
       </section>
     </div>

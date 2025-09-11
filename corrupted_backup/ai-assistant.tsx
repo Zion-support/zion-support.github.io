@@ -55,7 +55,6 @@ const AIAssistant: React.FC = () => {
               <li>• Data visualization</li>
               <li>• Trend analysis</li>
             </ul>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
 
@@ -79,5 +78,3 @@ const AIAssistant: React.FC = () => {
 };
 
 export default AIAssistant;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-assistant.tsx

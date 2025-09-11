@@ -140,7 +140,37 @@ const NextNavigation = ("props": "any) => {;
                       onClick={() => toggleDropdown(item.name);
       )}
     </div>;
-  );    </div>
+  );
+    </div>
+    );
+}
+                      className={`flex items-center space-x-1 text-gray-300 "hover": "tex t-cyan-300 transition-colors duration-200 py-2`';
+                    >';';
+                      <span>{item.name"}</span>';';';
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${',';';
+    ';';';
+                        activeDropdown === item.name ? 'rotate-180' : '';
+}`}  />;
+                    </button>;
+                    <AnimatePresence>;
+                      {activeDropdown === item.name && (;
+                        <motion.div;
+                          initial={{ "opacity": "0", "y": "1 0", "scale": "0.95 "}}
+                          animate={{ "opacity": "1", "y": "0", "scale": "1 "}}
+                          exit={{ "opacity": "0", "y": "1 0", "scale": "0.95 "}}
+                          transition={{ "duration": "0.2 "}}
+                          className=`absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden`}
+                        >;
+                          <div className="p-4">;
+                            {item.dropdown.map((dropdownItem) => (;
+                              <Link;
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                onClick={() => setActiveDropdown(null);
+      )}
+    </div>;
+  );
+    </div>
     );
 }
                                 className="flex items-start space-x-3 p-3 rounded-lg "hover": "b g-gray-800/50 transition-colors duration-200 group";
@@ -160,7 +190,17 @@ const NextNavigation = ("props": "any) => {;
                             ));
       )}
     </div>;
-  );    </div>
+  );
+    </div>
+    );
+}
+                          </div>;
+                        </motion.div>;
+                      );
+      )}
+    </div>;
+  );
+    </div>
     );
 }
                     </AnimatePresence>;
@@ -176,7 +216,16 @@ const NextNavigation = ("props": "any) => {;
                 );
       )}
     </div>;
-  );    </div>
+  );
+    </div>
+    );
+}
+              </div>;
+            ));
+      )}
+    </div>;
+  );
+    </div>
     );
 }
           </div>;
@@ -194,7 +243,37 @@ const NextNavigation = ("props": "any) => {;
             onClick={() => setIsOpen(!isOpen);
       )}
     </div>;
-  );            animate={{ opacity: 1, height: 'auto' }}
+  );
+    </div>
+    );
+}
+            className=""lg": "hidden p-2 rounded-lg text-gray-300 "hover": tex t-cyan-300 "hover": b g-gray-800/50 transition-colors duration-200";
+            aria-label="Toggle mobile menu";
+          >;
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />"}
+          </button>;
+        </div>;
+      </div>;
+      {/* Mobile Menu */}
+      <AnimatePresence>' {isOpen && (';';
+          <motion.div';';';
+            initial={{ "opacity": "0", "height": "0 "}}',';';
+    ';';';
+            animate={{ "opacity": "1", "height": 'auto' }}
+            exit={{ "opacity": "0", "height": "0 "}}
+            transition={{ "duration": "0.3 "}}
+            className=""lg": "hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20";
+          >;
+            <div className="px-4 py-6 space-y-4">;
+              {/* Contact Information */"}
+              <div className="pb-4 border-b border-gray-700">;
+                <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wide">;
+                  Contact Information;
+                </h3>;
+                <div className="space-y-2">;
+                  {contactInfo.map((contact, index) => (;
+                    <a;
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg: hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20"
@@ -217,7 +296,24 @@ const NextNavigation = ("props": "any) => {;
                   ));
       )}
     </div>;
-  );    </div>
+  );
+    </div>
+    );
+}
+                </div>;
+              </div>;
+              {/* Navigation Items */}
+              <div className="space-y-2">;
+                { navigationItems.map((item) => (;
+                  <div key={item.name}>;
+                    {item.dropdown ? (;
+                      <div>;
+                        <button;
+                          onClick={() => toggleDropdown(item.name);
+      )}
+    </div>;
+  );
+    </div>
     );
 }
                           className={`flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 "hover": "tex t-cyan-300 "hover": b g-gray-800/50 rounded-lg transition-colors duration-200`';
@@ -250,7 +346,16 @@ const NextNavigation = ("props": "any) => {;
                               ));
       )}
     </div>;
-  );    </div>
+  );
+    </div>
+    );
+}
+                            </motion.div>;
+                          );
+      )}
+    </div>;
+  );
+    </div>
     );
 }
                         </AnimatePresence>;
@@ -270,7 +375,16 @@ const NextNavigation = ("props": "any) => {;
                     );
       )}
     </div>;
-  );    </div>
+  );
+    </div>
+    );
+}
+                  </div>;
+                ));
+      )}
+    </div>;
+  );
+    </div>
     );
 }
               </div>;
@@ -289,7 +403,33 @@ const NextNavigation = ("props": "any) => {;
         );
       )"}
     </div>;
-  );export default NextNavigation;"';';';';
+  );
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 shadow-lg hover: shado w-cyan-500/25"
+                >
+                  Get Started Today
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )
+      )}
+    </div>
+    );
+}
+      </AnimatePresence>;
+    </nav>';
+  );';';
+};';';';
+export default NextNavigation;";
+</motion>;
+</ChevronDown>;
+</motion>;
+</motion>;
+</ChevronDown>;
+</string>;
+</any>;
+</any>
+export default NextNavigation;"';';';';
 </motion>
 </ChevronDown>
 </motion>

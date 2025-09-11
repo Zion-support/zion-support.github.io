@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from "next/link";
-
 export const metadata = {
   title: "Contact Us - Zion Tech Group | Get in Touch",
   description: "Contact Zion Tech Group for AI, quantum computing, cybersecurity, and enterprise technology solutions. Get in touch with our expert team.",
@@ -315,87 +312,16 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">Email *</label>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-                  <input
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">Email *</label>                  <input
                     type="email"
                     id="email"
                     name="email"
-<<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                    Company
-                  </label>
-=======
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-              </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium mb-2">Company</label>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-                  <input
+                  <label htmlFor="company" className="block text-sm font-medium mb-2">Company</label>                  <input
                     type="text"
                     id="company"
                     name="company"
-<<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service of Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-services">AI & Machine Learning</option>
-                    <option value="quantum-services">Quantum Computing</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="enterprise-it">Enterprise IT</option>
-                    <option value="space-tech">Space Technology</option>
-                    <option value="zion-os">Zion OS Platform</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or inquiry..."
-                    required
-                  ></textarea>
-                </div>
-                
-                <button type="submit" className="btn-primary w-full">
-                  Send Message
-                </button>
-              </form>
-            </div>
-
             {/* Office Locations */}
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Offices</h2>
@@ -626,9 +552,7 @@ export default function ContactPage() {
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
-            </form>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-          </div>
+            </form>          </div>
         </div>
       </section>
     </div>

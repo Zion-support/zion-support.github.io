@@ -1,8 +1,5 @@
 # Changelog
 
-<<<<<<< HEAD
-All notable changes to the Zion Tech Group application will be documented in this file.
-
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -169,7 +166,6 @@ For support and questions:
 ---
 
 **Note**: This changelog is automatically maintained by GitHub Actions. For detailed information about each release, please refer to the GitHub releases page.
-=======
 Generated on 2025-08-24T03:55:58.628Z
 
 ## 2025-08-24
@@ -203,5 +199,3 @@ Generated on 2025-08-24T03:55:58.628Z
 - chore(auto): sync public/automation/monitoring/trends-metrics-1755218265138.json via Netlify function (2025-08-24T03:49:50.894Z) (55bcb9b)
 - chore(auto): sync public/automation/monitoring/trends-metrics-1755218520003.json via Netlify function (2025-08-24T03:49:49.943Z) (d3c9aa3)
 - chore(auto): sync public/automation/monitoring/trends-metrics-1755218520088.json via Netlify function (2025-08-24T03:49:49.000Z) (7b3be04)
-
->>>>>>> origin/automation/changelog

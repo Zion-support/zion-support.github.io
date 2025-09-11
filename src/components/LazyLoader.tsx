@@ -1,13 +1,10 @@
 import React, { Suspense, lazy } from 'react';
-export const LazyPricing = lazy(() => import('../pages / Pricing') ) ;
-import { LoadingSpinner } from './ui / LoadingSpinner';
-<<<<<<< HEAD:src_backup_temp/components/LazyLoader.tsx
+export const _LazyPricing = lazy(() => import('../pages / Pricing') ) ;
+import { _LoadingSpinner } from './ui / LoadingSpinner';
 ;
 export default function Page("props": "any) {;
 export;
 "
-=======
 export default function Page() {;
 export ;
 }
->>>>>>> origin/automation-fixes:src/components/LazyLoader.tsx

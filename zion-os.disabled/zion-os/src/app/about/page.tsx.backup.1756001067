@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-
 export default function AboutPage() {
   const values = [
     {
@@ -621,8 +618,6 @@ export default function AboutPage() {
             Explore Services
           </a>
         </div>
-      </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6e4a
-    </div>
+      </div>    </div>
   );
 }

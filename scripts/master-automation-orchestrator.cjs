@@ -1,201 +1,284 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Starting Master Automation Orchestrator...')
-console.log('=====')
-    "status"
-      "encoding"
-      "stdio"
-const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
-  console.log('\n "Recommendations")
-=======
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Master Automation Orchestrator')
-console.log('==================================')
-
 class MasterAutomationOrchestrator {
   constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
     this.results = {
-      syntaxFixes: 0,
-      buildSuccess: false,
-      testsPassed: 0,
-      optimizations: 0,
+      scripts: [],
+      tests: { passed: 0, failed: 0 },
+      builds: { success: false },
+      improvements: [],
       errors: []
-    }
-    this.startTime = Date.now();
+    };
   }
 
-  log(message, type = 'info') {
+  log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-  async runCommand(command, description) {
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
     try {
-      this.log(`Running: ${description}`);
       const result = execSync(command, {
-        encoding: 'utf8',
+        cwd: this.projectRoot,
         stdio: 'pipe',
-        cwd: process.cwd()
+        encoding: 'utf8',
+        ...options,
       });
-      this.log(`✅ ${description} completed successfully`, 'success');
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      return {
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
+      };
+    }
+  }
+
+  async runScript(scriptPath, description) {
+    this.log(`\n🔄 Running: ${description}`);
+    
+    try {
+      const result = await this.runCommand(`node ${scriptPath}`, description);
+      
+      this.results.scripts.push({
+        name: description,
+        path: scriptPath,
+        success: result.success,
+        error: result.error
+      });
+      
+      if (result.success) {
+        this.log(`✅ ${description} completed successfully`, 'SUCCESS');
+      } else {
+        this.log(`❌ ${description} failed: ${result.error}`, 'ERROR');
+        this.results.errors.push(`${description}: ${result.error}`);
+      }
+      
       return result;
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      this.results.errors.push({ command, description, error: error.message });
-      throw error;
+      this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
+      this.results.errors.push(`${description}: ${error.message}`);
+      return { success: false, error: error.message };
     }
   }
 
-  async fixSyntaxErrors() {
-    this.log('🔧 Starting comprehensive syntax error fixing...');
-    
-    try {
-      // Run the syntax fixer script
-      await this.runCommand('node scripts/fix-syntax-errors.cjs', 'Syntax Error Fixing');
-      this.results.syntaxFixes++;
-      this.log('✅ Syntax errors fixed successfully');
-    } catch (error) {
-      this.log(`❌ Syntax fixing failed: ${error.message}`, 'error');
-    }
-  }
+  async runAllAutomationScripts() {
+    this.log('\n🚀 RUNNING ALL AUTOMATION SCRIPTS');
+    this.log('='.repeat(60));
 
-  async runBuild() {
-    this.log('🏗️ Starting build process...');
-    
-    try {
-      await this.runCommand('npm run build', 'Application Build');
-      this.results.buildSuccess = true;
-      this.log('✅ Build completed successfully');
-    } catch (error) {
-      this.log(`❌ Build failed: ${error.message}`, 'error');
+    const scripts = [
+      { path: 'comprehensive-automation-suite.cjs', description: 'Comprehensive Automation Suite' },
+      { path: 'automation-runner.cjs', description: 'Automation Runner' },
+      { path: 'comprehensive-fix-script.cjs', description: 'Comprehensive Fix Script' },
+      { path: 'scripts/advanced-app-improver.cjs', description: 'Advanced App Improver' },
+      { path: 'scripts/comprehensive-tester.cjs', description: 'Comprehensive Tester' },
+      { path: 'scripts/performance-monitor.cjs', description: 'Performance Monitor' },
+      { path: 'scripts/health-checker.cjs', description: 'Health Checker' },
+      { path: 'scripts/bundle-analyzer.cjs', description: 'Bundle Analyzer' },
+      { path: 'scripts/performance-optimizer.cjs', description: 'Performance Optimizer' },
+      { path: 'scripts/security-enhancer.cjs', description: 'Security Enhancer' },
+      { path: 'scripts/accessibility-improver.cjs', description: 'Accessibility Improver' },
+      { path: 'scripts/app-monitor.cjs', description: 'App Monitor' }
+    ];
+
+    for (const script of scripts) {
+      if (fs.existsSync(script.path)) {
+        await this.runScript(script.path, script.description);
+      } else {
+        this.log(`⚠️ Script not found: ${script.path}`, 'WARNING');
+      }
     }
   }
 
   async runTests() {
-    this.log('🧪 Running tests...');
+    this.log('\n🧪 RUNNING TESTS');
     
     try {
-      await this.runCommand('npm run type-check', 'TypeScript Type Checking');
-      this.results.testsPassed++;
-    } catch (error) {
-      this.log(`❌ Type checking failed: ${error.message}`, 'error');
-    }
+      // Run type check
+      const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check');
+      if (typeResult.success) {
+        this.results.tests.passed++;
+      } else {
+        this.results.tests.failed++;
+      }
 
-    try {
-      await this.runCommand('npm run lint', 'ESLint Linting');
-      this.results.testsPassed++;
-    } catch (error) {
-      this.log(`❌ Linting failed: ${error.message}`, 'error');
-    }
-  }
+      // Run linting
+      const lintResult = await this.runCommand('npm run lint:fix', 'ESLint fix');
+      if (lintResult.success) {
+        this.results.tests.passed++;
+      } else {
+        this.results.tests.failed++;
+      }
 
-  async optimizePerformance() {
-    this.log('⚡ Starting performance optimizations...');
-    
-    try {
-      // Run performance monitoring
-      await this.runCommand('node scripts/performance-monitor.cjs', 'Performance Monitoring');
-      this.results.optimizations++;
-      this.log('✅ Performance optimization completed');
-    } catch (error) {
-      this.log(`❌ Performance optimization failed: ${error.message}`, 'error');
-    }
-  }
+      // Run smoke tests
+      const testResult = await this.runCommand('npm run test:smoke', 'Smoke tests');
+      if (testResult.success) {
+        this.results.tests.passed++;
+      } else {
+        this.results.tests.failed++;
+      }
 
-  async runSecurityAudit() {
-    this.log('🔒 Running security audit...');
-    
-    try {
-      await this.runCommand('node scripts/security-audit.cjs', 'Security Audit');
-      this.log('✅ Security audit completed');
+      this.log(`✅ Tests completed: ${this.results.tests.passed} passed, ${this.results.tests.failed} failed`, 'SUCCESS');
     } catch (error) {
-      this.log(`❌ Security audit failed: ${error.message}`, 'error');
+      this.log(`❌ Test error: ${error.message}`, 'ERROR');
+      this.results.errors.push(`Test error: ${error.message}`);
     }
   }
 
-  async generateReport() {
-    this.log('📊 Generating automation report...');
+  async buildProject() {
+    this.log('\n🏗️ BUILDING PROJECT');
     
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
+    try {
+      // Clean build
+      await this.runCommand('npm run clean', 'Clean build');
+
+      // Build project
+      const buildResult = await this.runCommand('npm run build', 'Production build');
+      
+      if (buildResult.success) {
+        this.results.builds.success = true;
+        this.log('✅ Build successful', 'SUCCESS');
+      } else {
+        this.log('❌ Build failed', 'ERROR');
+        this.results.errors.push('Build failed');
+      }
+    } catch (error) {
+      this.log(`❌ Build error: ${error.message}`, 'ERROR');
+      this.results.errors.push(`Build error: ${error.message}`);
+    }
+  }
+
+  async commitAndPush() {
+    this.log('\n📝 COMMITTING AND PUSHING CHANGES');
     
+    try {
+      // Add all changes
+      await this.runCommand('git add .', 'Git add');
+
+      // Commit changes
+      const commitMessage = `feat: Comprehensive automation improvements and fixes - ${new Date().toISOString()}`;
+      await this.runCommand(`git commit -m "${commitMessage}"`, 'Git commit');
+
+      // Push changes
+      await this.runCommand('git push origin HEAD', 'Git push');
+
+      this.log('✅ Changes committed and pushed', 'SUCCESS');
+    } catch (error) {
+      this.log(`❌ Error committing/pushing: ${error.message}`, 'ERROR');
+      this.results.errors.push(`Git error: ${error.message}`);
+    }
+  }
+
+  async mergeToMain() {
+    this.log('\n🔄 MERGING TO MAIN BRANCH');
+    
+    try {
+      // Check current branch
+      const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
+      this.log(`Current branch: ${currentBranch}`);
+
+      if (currentBranch !== 'main') {
+        // Switch to main branch
+        await this.runCommand('git checkout main', 'Switch to main branch');
+        
+        // Merge the current branch
+        await this.runCommand(`git merge ${currentBranch}`, `Merge ${currentBranch} into main`);
+        
+        // Push to main
+        await this.runCommand('git push origin main', 'Push to main branch');
+        
+        this.log('✅ Successfully merged to main branch', 'SUCCESS');
+      } else {
+        this.log('ℹ️ Already on main branch', 'INFO');
+      }
+    } catch (error) {
+      this.log(`❌ Error merging to main: ${error.message}`, 'ERROR');
+      this.results.errors.push(`Merge error: ${error.message}`);
+    }
+  }
+
+  generateFinalReport() {
+    const duration = Date.now() - this.startTime;
+    
+    this.log('\n📊 MASTER AUTOMATION ORCHESTRATOR REPORT');
+    this.log('='.repeat(60));
+    this.log(`Total Duration: ${duration}ms`);
+    this.log(`Scripts Run: ${this.results.scripts.length}`);
+    this.log(`Tests Passed: ${this.results.tests.passed}`);
+    this.log(`Tests Failed: ${this.results.tests.failed}`);
+    this.log(`Build Success: ${this.results.builds.success}`);
+    this.log(`Errors: ${this.results.errors.length}`);
+    this.log('');
+
+    if (this.results.scripts.length > 0) {
+      this.log('✅ Scripts Executed:');
+      this.results.scripts.forEach(script => {
+        const status = script.success ? '✅' : '❌';
+        this.log(`  ${status} ${script.name}`);
+      });
+    }
+
+    if (this.results.errors.length > 0) {
+      this.log('\n❌ Errors:');
+      this.results.errors.forEach(error => this.log(`  - ${error}`));
+    }
+
+    // Save comprehensive report
     const report = {
       timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
+      duration,
       results: this.results,
       summary: {
-        totalSteps: 5,
-        successfulSteps: this.results.syntaxFixes + (this.results.buildSuccess ? 1 : 0) + this.results.testsPassed + this.results.optimizations,
-        failedSteps: this.results.errors.length
+        totalScripts: this.results.scripts.length,
+        successfulScripts: this.results.scripts.filter(s => s.success).length,
+        failedScripts: this.results.scripts.filter(s => !s.success).length,
+        testsPassed: this.results.tests.passed,
+        testsFailed: this.results.tests.failed,
+        buildSuccess: this.results.builds.success,
+        totalErrors: this.results.errors.length
       }
-    }
-    // Save report
-    const reportPath = path.join(process.cwd(), 'automation', 'logs', 'master-automation-report.json');
-    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📄 Report saved to: ${reportPath}`);
-    return report;
+    };
+
+    fs.writeFileSync('master-automation-report.json', JSON.stringify(report, null, 2));
+    this.log('\n📄 Master automation report saved to master-automation-report.json');
   }
 
   async run() {
-    this.log('🚀 Starting Master Automation Orchestrator...');
-    
+    this.log('🚀 Starting Master Automation Orchestrator');
+    this.log('='.repeat(60));
+
     try {
-      // Step 1: Fix syntax errors
-      await this.fixSyntaxErrors();
-      
-      // Step 2: Run build
-      await this.runBuild();
-      
-      // Step 3: Run tests
+      await this.runAllAutomationScripts();
       await this.runTests();
-      
-      // Step 4: Optimize performance
-      await this.optimizePerformance();
-      
-      // Step 5: Security audit
-      await this.runSecurityAudit();
-      
-      // Generate final report
-      const report = await this.generateReport();
-      
-      this.log('🎉 Master Automation Orchestrator completed successfully!');
-      this.log(`📊 Summary: ${report.summary.successfulSteps}/${report.summary.totalSteps} steps successful`);
-      
-      return report;
-      
+      await this.buildProject();
+      await this.commitAndPush();
+      await this.mergeToMain();
     } catch (error) {
-      this.log(`💥 Master Automation Orchestrator failed: ${error.message}`, 'error')
-      await this.generateReport()
-      process.exit(1)
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+    } finally {
+      this.generateFinalReport();
     }
   }
 }
 
-// Run the orchestrator if this script is executed directly
+// Run the master automation orchestrator
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.run().then(report => {
-    console.log('\n📋 Final Report:');
-    console.log(JSON.stringify(report, null, 2));
-    process.exit(report.summary.failedSteps > 0 ? 1 : 0);
-  }).catch(error => {
-    console.error('💥 Orchestrator failed:', error)
-    process.exit(1)
-  })
+  orchestrator.run().catch(console.error);
 }
 
-module.exports = MasterAutomationOrchestrator;
->>>>>>> origin/automation-fixes
+module.exports = MasterAutomationOrchestrator;>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs

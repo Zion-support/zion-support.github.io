@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import OptimizedImage from '../components/OptimizedImage" describe('OptimizedImage',() => {' test('renders without crashing',() => {' render(<OptimizedImage / />) expect(screen.getByTestId("optimizedimage")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<OptimizedImage / />) }) test('handles user interactions',() => {' render(<OptimizedImage / />) }) test('applies correct styling',() => {' render(<OptimizedImage / />) }) })
 =======
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import OptimizedImage from "./components/OptimizedImage" describe("OptimizedImage",() => {" test("renders without crashing",() => {" render(<OptimizedImage / />) expect(screen.getByTestId("optimizedimage")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<OptimizedImage / />) }) test("handles user interactions",() => {" render(<OptimizedImage / />) }) test("applies correct styling",() => {" render(<OptimizedImage / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import OptimizedImage from '../components/OptimizedImage" describe('OptimizedImage',() => {' test('renders without crashing',() => {' render(<OptimizedImage / />) expect(screen.getByTestId("optimizedimage")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<OptimizedImage / />) }) test('handles user interactions',() => {' render(<OptimizedImage / />) }) test('applies correct styling',() => {' render(<OptimizedImage / />) }) })
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

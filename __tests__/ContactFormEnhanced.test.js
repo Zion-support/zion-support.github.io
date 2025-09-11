@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import ContactFormEnhanced from '../components/ContactFormEnhanced" describe('ContactFormEnhanced',() => {' test('renders without crashing',() => {' render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactFormEnhanced / / />) }) test('handles user interactions',() => {' render(<ContactFormEnhanced / / />) }) test('applies correct styling',() => {' render(<ContactFormEnhanced / / />) }) })
-=======
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactFormEnhanced from "./components/ContactFormEnhanced" describe("ContactFormEnhanced",() => {" test("renders without crashing",() => {" render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactFormEnhanced / / />) }) test("handles user interactions",() => {" render(<ContactFormEnhanced / / />) }) test("applies correct styling",() => {" render(<ContactFormEnhanced / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ContactFormEnhanced from '../components/ContactFormEnhanced" describe('ContactFormEnhanced',() => {' test('renders without crashing',() => {' render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactFormEnhanced / / />) }) test('handles user interactions',() => {' render(<ContactFormEnhanced / / />) }) test('applies correct styling',() => {' render(<ContactFormEnhanced / / />) }) })
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+
+=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

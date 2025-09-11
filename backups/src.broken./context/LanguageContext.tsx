@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-=======
-import * as React from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-import React, { createContext, useContext, useState, ReactNode } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  t: (key: string) => string;
-  isRTL: boolean;
-}
-
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 interface LanguageProviderProps {
@@ -63,10 +45,6 @@ export function useLanguage(): LanguageContextType {
   }
   return context;
 }
-<<<<<<< HEAD
-=======
-}
-
 const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -86,6 +64,3 @@ export const useLanguage = (): LanguageContextType => {
   }
   return context;
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

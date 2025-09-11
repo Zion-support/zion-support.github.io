@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-import AIChatbot from './AIChatbot;
-describe('AIChatbot', () => {;
-  it('renders without crashing', () => {;
-describe('AIChatbot', () => {
-  it(renders without crashing, () => {
-    render(<AIChatbot />);
-    expect(screen.getByRole('main')).toBeInTheDocument();  });;
-  it('displays correct content', () => {
-    render(<AIChatbot />);
-    // Add specific content checks based on component functionality});
-  it(handles user interactions, () => {
-    render(<AIChatbot />);
-import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
-// Add interaction tests based on component functionality})});
-<<<<<<< HEAD
-import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import AIChatbot from '
+describe('AIChatbot'
+  it('renders without crashing'
+    expect(screen ;'  });
+  it('displays correct content'
+  it('handles user interactions'
+
 =======
-import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+import AIChatbot from './AIChatbot; ; describe('AIChatbot', () => {; it('renders without crashing', () => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbot />); }); ; it('handles user interactions'>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
