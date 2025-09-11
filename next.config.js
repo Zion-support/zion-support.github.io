@@ -4,11 +4,13 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
-  // Compile only whitelisted page files to avoid corrupted files
-  pageExtensions: ['route.tsx', 'route.ts'],
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
