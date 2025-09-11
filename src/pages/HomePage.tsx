@@ -75,6 +75,30 @@ const HomePage: React.FC = () => {
         </AnimatedSection>
 
         <AnimatedSection animation="slideUp" delay={200}>
+          <section className="latest-blog">
+            <div className="container">
+              <h2 className="section-title">Latest from the Blog</h2>
+              <div className="blog-grid">
+                <div className="blog-card">
+                  <h3>
+                    <a href="/blog/generative-ai-security-best-practices">Generative AI Security Best Practices</a>
+                  </h3>
+                  <p>Secure LLM apps with guardrails, governance, and continuous evals.</p>
+                  <a className="service-link" href="/blog/generative-ai-security-best-practices">Read more →</a>
+                </div>
+                <div className="blog-card">
+                  <h3>
+                    <a href="/blog/edge-personalization-patterns-2025">Edge Personalization Patterns for 2025</a>
+                  </h3>
+                  <p>Geo and audience‑aware experiences with flags and experiments at the edge.</p>
+                  <a className="service-link" href="/blog/edge-personalization-patterns-2025">Read more →</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection animation="slideUp" delay={200}>
           <section className="services-preview">
             <div className="container">
               <h2 className="section-title">Our Core Services</h2>
