@@ -6,6 +6,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase from '../components/ContentShowcase';
+import EnhancedContentBanner from '../components/EnhancedContentBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -80,6 +82,42 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Latest Content Showcase */}
+      <ContentShowcase
+        title="🚀 Latest AI & Business Insights"
+        subtitle="Stay ahead with our newest content covering the most important trends in AI, automation, and business growth for 2025"
+        items={[
+          {
+            title: "AI Productivity Automation 2025: Transform Your Workflow",
+            description: "Discover the latest AI productivity automation tools and strategies that are revolutionizing how businesses operate in 2025.",
+            href: "/blog/ai-productivity-automation-2025",
+            icon: "⚡",
+            readTime: "15 min read",
+            category: "AI & Automation",
+            isNew: true
+          },
+          {
+            title: "AI Startup Funding Guide 2025: From Seed to Series A",
+            description: "Navigate the $47B AI investment landscape with our comprehensive funding guide and proven strategies.",
+            href: "/blog/ai-startup-funding-guide-2025",
+            icon: "💰",
+            readTime: "22 min read",
+            category: "Startup Strategy",
+            isNew: true
+          },
+          {
+            title: "AI Financial Services Transformation: $50M Cost Savings",
+            description: "How a Fortune 500 financial services company achieved $50M in annual cost savings through AI transformation.",
+            href: "/case-studies/ai-financial-services-transformation-2025",
+            icon: "🏦",
+            readTime: "18 min read",
+            category: "Case Study",
+            isNew: true
+          }
+        ]}
+        className="bg-gray-50"
+      />
 
       {/* New Content Showcase Banner */}
       <section className='py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
@@ -1357,6 +1395,41 @@ export default function HomePage() {
       <Suspense fallback={<LoadingSpinner size="md" text="Loading tech stack..." />}>
         <TechnologyStack />
       </Suspense>
+
+      {/* Resources Showcase */}
+      <ContentShowcase
+        title="📋 Free Resources & Tools"
+        subtitle="Download our comprehensive guides, checklists, and templates to accelerate your AI implementation"
+        items={[
+          {
+            title: "AI Implementation Playbook 2025",
+            description: "Complete step-by-step guide with templates, checklists, and proven strategies for successful AI deployment.",
+            href: "/resources/ai-implementation-playbook-2025",
+            icon: "📋",
+            readTime: "45 min read",
+            category: "Free Download",
+            isNew: true
+          },
+          {
+            title: "AI Transformation Checklist 2025",
+            description: "150+ actionable items for successful AI implementation with real-world examples and best practices.",
+            href: "/resources/ai-transformation-checklist-2025",
+            icon: "✅",
+            readTime: "30 min read",
+            category: "Checklist",
+            isTrending: true
+          },
+          {
+            title: "AI ROI Calculator 2025",
+            description: "Calculate potential return on AI investments with our comprehensive ROI calculator and financial models.",
+            href: "/resources/ai-automation-roi-calculator",
+            icon: "💰",
+            readTime: "Interactive Tool",
+            category: "Calculator"
+          }
+        ]}
+        className="bg-white"
+      />
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
