@@ -344,6 +344,59 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Showcase */}
+      <section className='py-16 bg-gradient-to-r from-green-50 to-blue-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              🎉 Just Released: 2025 AI & Tech Guides
+            </h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Get instant access to our latest comprehensive guides, toolkits, and resources 
+              designed to accelerate your AI and technology implementation.
+            </p>
+          </div>
+          
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12'>
+            <div className='bg-white p-6 rounded-xl shadow-sm border border-green-200'>
+              <div className='text-3xl mb-3'>💰</div>
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>AI Cost Optimization Toolkit</h3>
+              <p className='text-gray-600 text-sm mb-4'>Reduce AI costs by 40-70% with proven strategies and frameworks</p>
+              <div className='flex items-center justify-between'>
+                <span className='text-sm text-green-600 font-medium'>4.1K downloads</span>
+                <Link href='/resources/ai-cost-optimization-toolkit' className='text-blue-600 text-sm font-medium hover:underline'>
+                  Download →
+                </Link>
+              </div>
+            </div>
+            
+            <div className='bg-white p-6 rounded-xl shadow-sm border border-blue-200'>
+              <div className='text-3xl mb-3'>📚</div>
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Enterprise RAG Implementation Guide</h3>
+              <p className='text-gray-600 text-sm mb-4'>Build production-ready RAG systems with governance and cost controls</p>
+              <div className='flex items-center justify-between'>
+                <span className='text-sm text-blue-600 font-medium'>2.8K downloads</span>
+                <Link href='/resources/enterprise-rag-implementation-guide' className='text-blue-600 text-sm font-medium hover:underline'>
+                  Download →
+                </Link>
+              </div>
+            </div>
+            
+            <div className='bg-white p-6 rounded-xl shadow-sm border border-purple-200'>
+              <div className='text-3xl mb-3'>🧮</div>
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>AI Automation ROI Calculator</h3>
+              <p className='text-gray-600 text-sm mb-4'>Calculate potential savings and ROI from AI automation projects</p>
+              <div className='flex items-center justify-between'>
+                <span className='text-sm text-purple-600 font-medium'>3.2K downloads</span>
+                <Link href='/resources/ai-automation-roi-calculator' className='text-blue-600 text-sm font-medium hover:underline'>
+                  Download →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Latest Articles */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
