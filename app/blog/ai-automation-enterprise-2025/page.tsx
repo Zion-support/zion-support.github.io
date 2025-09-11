@@ -341,39 +341,11 @@ export default function AIAutomationEnterprise2025() {
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Download Implementation Checklist
-=======
-      {/* Hero Section */}
-      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-medium">New Article • January 2025</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Automation in Enterprise: Complete 2025 Implementation Guide
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Transform your business operations with intelligent automation. Learn how to implement AI automation that delivers real ROI and competitive advantage.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#implementation-guide"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center"
-              >
-                Read Implementation Guide
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <Link
-                href="/contact"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg inline-flex items-center justify-center"
-              >
-                Get AI Consultation
->>>>>>> origin/cursor/create-and-deploy-new-content-415e
               </Link>
             </div>
           </div>
         </div>
-      </article>
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
