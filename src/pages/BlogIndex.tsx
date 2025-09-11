@@ -18,6 +18,12 @@ export default function BlogIndex() {
           <li>
             <a href="/blog/edge-personalization-patterns-2025">Edge Personalization Patterns for 2025</a>
           </li>
+          <li>
+            <a href="/blog/llm-cost-optimization-playbook">LLM Cost Optimization Playbook</a>
+          </li>
+          <li>
+            <a href="/blog/ai-governance-checklist-2025">AI Governance Checklist 2025</a>
+          </li>
         </ul>
       </div>
     </>
