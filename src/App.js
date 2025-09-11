@@ -8,6 +8,9 @@ import { SonnerToaster } from '@/components/ui/sonner';
 import { Footer } from "./components/Footer";
 import { useScrollToTop } from '@/hooks/useScrollToTop';
 import { PageLoader } from '@/components/ui/LoadingSpinner';
+// import ErrorBoundary from '@/components/ErrorBoundary';
+// import PerformanceOptimizer from '@/components/PerformanceOptimizer';
+// import AnalyticsTracker from '@/components/AnalyticsTracker';
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
