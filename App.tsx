@@ -49,7 +49,7 @@ function ServicesPage() {
   return (
     <div>
       <h1>Our Services</h1>
-      <p>Comprehensive technology solutions</p>
+      <p>Discover our technology solutions</p>
     </div>
   );
 }
