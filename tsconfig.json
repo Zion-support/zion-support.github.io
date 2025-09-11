@@ -9,7 +9,6 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-<<<<<<< HEAD
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -19,18 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "vite.config.ts"
-=======
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "noEmit": true,
     "incremental": true,
-    "isolatedModules": true,
     "jsx": "preserve",
     "plugins": [
       {
@@ -43,21 +31,14 @@
     "pages",
     "components",
     "types",
-    ".next/types/**/*.ts"
->>>>>>> origin/chore/stabilize-build-minimal-index
+    ".next/types/**/*.ts",
+    "src/App.tsx",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build",
     ".next",
-    "out",
-    "src_disabled",
-    "broken_files_backup",
-    "components_backup",
-    "tests.disabled",
-    "automation",
-    "pages",
-    "data"
+    "out"
   ]
 }
