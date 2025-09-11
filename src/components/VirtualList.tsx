@@ -7,15 +7,17 @@ interface VirtualListProps<T> {
   renderItem: (item: T, index: number) => React.ReactNode;
   overscan?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function VirtualList<T>({
+function VirtualList<T>({
   items,
   itemHeight,
   containerHeight,
   renderItem,
   overscan = 5,
   className = '',
+  style = {},
 }: VirtualListProps<T>) {
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,8 +32,12 @@ export function VirtualList<T>({
   }, [scrollTop, itemHeight, containerHeight, items.length, overscan]);
 
   const visibleItems = useMemo(() => {
-    return items.slice(visibleRange.startIndex, visibleRange.endIndex + 1);
-  }, [items, visibleRange.startIndex, visibleRange.endIndex]);
+    const { startIndex, endIndex } = visibleRange;
+    return items.slice(startIndex, endIndex + 1).map((item, index) => ({
+      item,
+      index: startIndex + index,
+    }));
+  }, [items, visibleRange]);
 
   const totalHeight = items.length * itemHeight;
   const offsetY = visibleRange.startIndex * itemHeight;
@@ -40,14 +46,34 @@ export function VirtualList<T>({
     setScrollTop(e.currentTarget.scrollTop);
   };
 
+  useEffect(() => {
+    const container = containerRef.current;
+    if (container) {
+      const handleScrollEvent = () => {
+        setScrollTop(container.scrollTop);
+      };
+      container.addEventListener('scroll', handleScrollEvent);
+      return () => container.removeEventListener('scroll', handleScrollEvent);
+    }
+  }, []);
+
   return (
     <div
       ref={containerRef}
-      className={`overflow-auto ${className}`}
-      style={{ height: containerHeight }}
+      className={`virtual-list ${className}`}
+      style={{
+        height: containerHeight,
+        overflow: 'auto',
+        ...style,
+      }}
       onScroll={handleScroll}
     >
-      <div style={{ height: totalHeight, position: 'relative' }}>
+      <div
+        style={{
+          height: totalHeight,
+          position: 'relative',
+        }}
+      >
         <div
           style={{
             transform: `translateY(${offsetY}px)`,
@@ -57,12 +83,16 @@ export function VirtualList<T>({
             right: 0,
           }}
         >
-          {visibleItems.map((item, index) => (
+          {visibleItems.map(({ item, index }) => (
             <div
-              key={visibleRange.startIndex + index}
-              style={{ height: itemHeight }}
+              key={index}
+              style={{
+                height: itemHeight,
+                display: 'flex',
+                alignItems: 'center',
+              }}
             >
-              {renderItem(item, visibleRange.startIndex + index)}
+              {renderItem(item, index)}
             </div>
           ))}
         </div>

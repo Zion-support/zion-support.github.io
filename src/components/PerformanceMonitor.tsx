@@ -60,15 +60,33 @@ export const PerformanceMonitor: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Send metrics to analytics (placeholder)
+  // Log metrics to console in development
   useEffect(() => {
-    if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
-      // In a real app, you would send this to your analytics service
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(v => v !== null)) {
       console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  // Send metrics to analytics in production
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production' && Object.values(metrics).every(v => v !== null)) {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          value: Math.round(metrics.lcp || 0),
+          custom_map: {
+            fcp: metrics.fcp,
+            lcp: metrics.lcp,
+            fid: metrics.fid,
+            cls: metrics.cls,
+            ttfb: metrics.ttfb,
+          }
+        });
+      }
     }
   }, [metrics]);
 
   return null; // This component doesn't render anything
 };
-
-export default PerformanceMonitor;
