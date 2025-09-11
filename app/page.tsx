@@ -112,28 +112,22 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='AI Copilots for Engineering Teams'
-              href='/blog/ai-copilots-for-engineering'
-              description='Deploy repo-aware copilots to accelerate reviews and reduce engineering toil.'
-              icon='🧭'
+              title='LLM Cost Optimization Playbook: Cut Spend Without Losing Quality'
+              href='/blog/llm-cost-optimization-playbook'
+              description='Reduce inference spend 20–50% with routing, retrieval, batching, and tight observability.'
+              icon='💰'
             />
             <Card
-              title='Secure RAG Architecture in 2025: Safety, Scale, and Speed'
-              href='/blog/secure-rag-architecture-2025'
-              description='Multi-tenant RAG with strong isolation, evals, and predictable latency.'
-              icon='🛡️'
+              title='AI Governance Checklist 2025: Operationalize Policy With Evals'
+              href='/blog/ai-governance-checklist-2025'
+              description='A concise, actionable checklist to stand up pragmatic AI governance that accelerates delivery.'
+              icon='📋'
             />
             <Card
-              title='AI-Powered Customer Support Playbooks'
-              href='/blog/ai-customer-support-playbooks'
-              description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'
-              icon='🎧'
-            />
-            <Card
-              title='AI Automation for Businesses: Complete Guide'
-              href='/blog/ai-automation-for-businesses'
-              description='Transform your business operations with AI automation. Learn strategies that achieve 40% efficiency gains.'
-              icon='🤖'
+              title='Startup Fundraising in 2025: Efficient Rounds in a Tough Market'
+              href='/blog/startup-fundraising-in-2025'
+              description='Prove traction, run a tight process, and negotiate governance to raise efficiently.'
+              icon='🚀'
             />
           </div>
         </div>
