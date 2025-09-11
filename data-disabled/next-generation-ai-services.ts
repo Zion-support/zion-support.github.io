@@ -36,7 +36,6 @@ export interface NextGenerationAIService {
   customers: number;
   rating: number;
 export const nextGenerationAIServices: NextGenerationAIService[] = [;
-<<<<<<< HEAD:data-disabled/next-generation-ai-services.ts
   {
     id: "quantum-ai-brain-computer-interface",;
     name: "Quantum AI Brain-Computer Interface",;

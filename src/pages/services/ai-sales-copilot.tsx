@@ -12,7 +12,7 @@ import {
   Smartphone,
   Headphones
 } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 const AISalesCopilot: React.FC = () => {
   const features = [

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-"}}
-
-<<<<<<< HEAD
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '' }) => {
@@ -51,6 +44,3 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
         </motion.p>)}
     </div>)};
 export default EnhancedLoading;
->>>>>>> origin/clean-error-fixing-automation
-=======
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

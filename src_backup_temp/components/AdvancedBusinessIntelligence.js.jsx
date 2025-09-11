@@ -46,7 +46,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     setIsRefreshing(false);};
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -55,9 +54,7 @@ export function AdvancedBusinessIntelligence("props": "any) {;
       return () => clearInterval(interval);}
   }, [autoRefresh]);
   const getTrendIcon = trend => {;
-
     switch(trend) {;
-
       case 'up': ";
         return <TrendingUp className="w-4 h-4 text-green-500"  />;
       case 'down':";
@@ -67,9 +64,7 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     "}
   };
   const getPriorityColor = priority => {;
-
     switch(priority) {;
-
       case 'high':';
         return 'border-red-500 bg-red-50 "dark": "bg-red-900/20';
       case 'medium':';
@@ -79,9 +74,7 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     "}
   };
   const getInsightIcon = type => {;
-
     switch(type) {;
-
       case 'prediction':";
         return <Brain className="w-5 h-5 text-blue-500"  />;
       case 'anomaly':";
@@ -95,24 +88,19 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     }
   };
   const formatValue = ("props": "any) => {;
-
     if(unit === 'USD') {;
-
       return new Intl.NumberFormat('en-US'", {;
-
         "style": 'currency',;
         "currency": 'USD',;
         "minimumFractionDigits": "0",;
         "maximumFractionDigits": "0"}).format(value);
     }
     if(unit === '%') {;
-
       return `${value.toFixed(1)}%`;
     }
     return new Intl.NumberFormat('en-US').format(value);
   };
   if(!isOpen) {;
-
     return ();
       <button;
         onClick={() => setIsOpen(true)}";
@@ -124,7 +112,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     );
   "}
   if(isMinimized) {;
-
     return (";
       <div className="fixed bottom-4 right-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
         <div className="flex items-center gap-2 p-3">";
@@ -194,7 +181,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
           </button>;
         </div>;
       </div>;
-
       {/* Controls */"}";
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">";
         <div className="flex items-center justify-between">";
@@ -249,7 +235,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
           </div>;
         </div>;
       </div>;
-
       {/* Tabs */"}";
       <div className="flex border-b border-zion-slate-light">;
         {[';
@@ -258,7 +243,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
           {"id": 'models', "label": 'ML Models', "icon": "Zap"},;
           {"id": 'analytics', "label": 'Analytics', "icon": "TrendingUp"},;
         ].map(tab => {;
-
           const Icon = tab.icon;
           return ();
             <button;
@@ -275,7 +259,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
           );
         })}
       </div>;
-
       {/* Content */}";
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">;
         {activeTab === 'overview' && (";
@@ -290,7 +273,7 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                   <div className="flex items-center justify-between mb-3">";
                     <h3 className="font-semibold text-zion-slate">;
                       {metric.name}
-                    
+                    </h3>;
                     {getTrendIcon(metric.trend)}
                   </div>";
                   <div className="text-2xl font-bold text-zion-slate mb-2">;
@@ -326,7 +309,14 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 </div>;
               ))}
             </div>;
-
+            {/* Quick Actions */}";
+            <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">";
+              <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">";
+                <Zap className="w-5 h-5 text-zion-cyan"  />;
+                Quick Actions;
+              </h3>";
+              <div className="grid grid-cols-2 "md": "grid-cols-4 gap-3">;
+                {[{;
             {/* Quick Actions */}"
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">"
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"
@@ -335,23 +325,19 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               "
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[{
-
                     "label": 'Generate Report'",;
                     "icon": "Download",;
                     "action": "() => {"}},;
                   {;
-
                     "label": 'Schedule Review',;
                     "icon": "Calendar",;
                     "action": "() => {"}},;
                   {;
-
                     "label": 'Set Alerts',;
                     "icon": "AlertTriangle",;
                     "action": "() => {"}},;
                   { "label": 'Export Data', "icon": "Download", "action": "() => {"} },;
                 ].map((item, index) => {;
-
                   const Icon = item.icon;
                   return ();
                     <button;
@@ -382,7 +368,22 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">";
                       <h3 className="font-semibold text-zion-slate">;
                         {insight.title}
-                      
+                      </h3>;
+                      <span`;
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high'';
+                            ? 'bg-red-100 text-red-700 "dark": "bg-red-900/30 "dark":text-red-300'';
+                            : insight.impact === 'medium'';
+                              ? 'bg-yellow-100 text-yellow-700 "dark":bg-yellow-900/30 "dark":text-yellow-300'';
+                              : 'bg-green-100 text-green-700 "dark":bg-green-900/30 "dark":text-green-300'`;
+                        "}`}
+                      >;
+                        {insight.impact} Impact;
+                      </span>";
+                      <span className="text-sm text-zion-slate-light">;
+                        {insight.confidence}% confidence;
+                      </span>;
+                    </div>";
+                    <p className="text-zion-slate-light mb-3">;
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high''
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
@@ -423,7 +424,26 @@ export function AdvancedBusinessIntelligence("props": "any) {;
             ))}
           </div>;
         )}
-
+;
+        {activeTab === 'models' && (";
+          <div className="space-y-4">;
+            {models.map(model => (;
+              <div;
+                key={model.id}";
+                className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow";
+              >";
+                <div className="flex items-center justify-between mb-3">";
+                  <h3 className="font-semibold text-zion-slate">;
+                    {model.name"}
+                  </h3>;
+                  <span`;
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active'';
+                        ? 'bg-green-100 text-green-700 "dark": "bg-green-900/30 "dark":text-green-300'';
+                        : model.status === 'training'';
+                          ? 'bg-yellow-100 text-yellow-700 "dark":bg-yellow-900/30 "dark":text-yellow-300'';
+                          : 'bg-red-100 text-red-700 "dark":bg-red-900/30 "dark":text-red-300'`;
+                    "}`}
+                  >;
         {activeTab === 'models' && ("
           <div className="space-y-4">
             {models.map(model => (
@@ -434,7 +454,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 <div className="flex items-center justify-between mb-3">"
                   <h3 className="font-semibold text-zion-slate">
                     {model.name}
-                  
                   <span`
                     className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active''
                         ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300''
@@ -476,7 +495,20 @@ export function AdvancedBusinessIntelligence("props": "any) {;
             ))}
           </div>;
         )}
-
+;
+        {activeTab === 'analytics' && (";
+          <div className="space-y-6">";
+            <div className="text-center text-zion-slate-light">";
+              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"  />";
+              <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>;
+              <p>Detailed analytics and custom reports coming soon...</p>;
+            </div>;
+          </div>;
+        )}
+      </div>;
+    </div>;
+  );}
+"export default ComponentName;";
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
@@ -490,6 +522,5 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     </div>
     );}
 "export default ComponentName;"
-
 </RefreshCw>;
 </RefreshCw>

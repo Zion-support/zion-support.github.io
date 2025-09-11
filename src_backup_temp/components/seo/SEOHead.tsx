@@ -11,7 +11,44 @@ export function SEOHead(props: any) {
     'quantum computing',';';
     'blockchain solutions',';';
     'cloud services',';';
-    'digital transformation',';';"}
+    'digital transformation',';';
+interface SEOHeadProps {
+  title: string;
+  description: string;
+interface SEOHeadProps {;
+  "title": "string;
+  "description": string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  noIndex?: boolean;
+  noFollow?: boolean;
+  ogType?: string;
+  ogImage?: string;
+  structuredData?: any;
+}
+export function SEOHead({ 
+  title, 
+  description, 
+  keywords = [], 
+  canonicalUrl, 
+  noIndex = false, 
+  noFollow = false, 
+  ogType = 'website', 
+  ogImage = 'https://ziontechgroup.com/images/og-image.png',
+  structuredData 
+}: SEOHeadProps) {
+  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
+  const defaultKeywords = [
+    'AI services',
+    'technology solutions',
+    'enterprise automation',
+    'cybersecurity',
+    'quantum computing',
+    'blockchain solutions',
+    'cloud services',
+    'digital transformation',
+    'Zion Tech Group'
+"}
 ;
 export function SEOHead({ ;
   title, ;
@@ -99,7 +136,11 @@ export function SEOHead({ ;
       </script>
     </Helmet>
   );';
-};';;';      </script>;
+};';;';
+  );
+}
+export default SEOHead;
+      </script>;
     </Helmet>;
   );
 }

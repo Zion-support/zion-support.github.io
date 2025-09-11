@@ -1,35 +1,35 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { _motion, useInView } from 'framer-motion';
-import { _EnhancedLoading } from './EnhancedLoading';
+import React, { Suspense, lazy, ComponentType } from 'react';
+import Loading from './Loading';
 
-import { motion } from 'framer-motion';
-const _LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant = 'default', loadingText = 'Loading...', loadingSize = 'md' }) => {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [isInView, setIsInView] = useState(false);
-    const _ref = useRef(null);
-    const _inView = useInView(ref, { amount: threshold });
-    useEffect(() => {
-        if (inView && !isInView) {
-            setIsInView(true);
-            // Simulate loading delay for better UX
-            const _timer = setTimeout(() => {
-                setIsLoaded(true);
-            }, 300);
-            return () => clearTimeout(timer);
-        }
-    }, [inView, isInView]);
-    if (!isInView) {
-        return (<div ref={ref} className={`min-h-[200px] ${className}`}>
-        <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>
-      </div>);
-    }
-    if (!isLoaded) {
-        return (<div className={`min-h-[200px] ${className}`}>
-        <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>
-      </div>);
-    }
-    return (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className={className}>
+interface LazyWrapperProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}
+
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
+  children, 
+  fallback = <Loading fullScreen text="Loading page..." />
+}) => {
+  return (
+    <Suspense fallback={fallback}>
       {children}
     </motion.div>);
 };
+
+// Higher-order component for lazy loading
+export const withLazyLoading = <P extends object>(
+  Component: ComponentType<P>,
+  fallback?: React.ReactNode
+) => {
+  const LazyComponent = lazy(() => 
+    Promise.resolve({ default: Component })
+  );
+
+  return (props: P) => (
+    <LazyWrapper fallback={fallback}>
+      <LazyComponent {...props} />
+    </LazyWrapper>
+  );
+};
+
 export default LazyWrapper;

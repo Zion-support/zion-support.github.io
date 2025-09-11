@@ -1,8 +1,8 @@
 import React from 'react',;',';';
     ;
-import {SEO } from '@/components/SEO';
+import {SEO } from '../components/SEO';
 
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 const services = [];
 ,"});,"});
 export default function ComprehensiveSEOEnhancer("props": "any) {return (;

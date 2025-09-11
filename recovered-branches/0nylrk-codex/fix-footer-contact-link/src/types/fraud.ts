@@ -1,0 +1,125 @@
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
+;
+
+export interface FraudFlag {
+
+export interface FraudFlag {;
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
+;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  id: string;
+  user_id: string;
+  user_email?: string;
+  content_type: 'signup' | 'job' | 'message' | 'quote' | 'review';
+  content_id: string;
+  content_excerpt: string;
+  severity: FraudSeverity;
+  reason: string;
+  timestamp: string;
+  ip_address?: string;
+  status: 'pending' | 'reviewed' | 'ignored' | 'actioned';
+  reviewed_by?: string;
+  reviewed_at?: string;
+  action_taken?: 'none' | 'warning' | 'suspension' | 'ban';
+  gpt_classification?: string;
+<<<<<<< HEAD
+
+  gpt_explanation?: string,
+  is_false_positive?: boolean;
+
+}
+export interface FraudStats {
+}
+
+
+export interface FraudStats {;
+
+<<<<<<< HEAD
+  gpt_explanation?: string
+  is_false_positive?: boolean
+}
+export interface FraudStats {
+
+export interface FraudStats {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export interface FraudStats {
+=======
+  gpt_explanation?: string
+  is_false_positive?: boolean
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  total_flags: number;
+  pending_flags: number;
+  suspicious_count: number;
+  dangerous_count: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  false_positives: number
+
+  actioned_count: number
+}
+export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous',;
+export interface FraudFlag {;
+  id: string,;
+  user_id: string,;
+  user_email?: string,;
+  content_type: 'signup' | 'job' | 'message' | 'quote' | 'review',;
+  content_id: string,;
+  content_excerpt: string,;
+  severity: FraudSeverity,;
+  reason: string,;
+  timestamp: string,;
+  ip_address?: string,;
+  status: 'pending' | 'reviewed' | 'ignored' | 'actioned',;
+  reviewed_by?: string,;
+  reviewed_at?: string,;
+  action_taken?: 'none' | 'warning' | 'suspension' | 'ban',;
+  gpt_classification?: string,;
+  gpt_explanation?: string,;
+  is_false_positive?: boolean;
+}
+;
+export interface FraudStats {;
+  total_flags: number,;
+  pending_flags: number,;
+  suspicious_count: number,;
+  dangerous_count: number,;
+  false_positives: number;
+  actioned_count: number;
+}
+;
+  false_positives: number,
+  actioned_count: number;
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+  false_positives: number,
+  actioned_count: number;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

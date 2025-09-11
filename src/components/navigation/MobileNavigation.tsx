@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';
-import { _Button } from '@/components/ui/button';
+import { _Button } from '../../components/ui/button';
 
 import { Link } from 'react-router-dom';
 const services = [];

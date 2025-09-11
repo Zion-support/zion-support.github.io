@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Cloud } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Zap } from 'lucide-react';

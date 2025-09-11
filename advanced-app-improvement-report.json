@@ -1,17 +1,6 @@
 {
-
-  "timestamp": "2025-09-06T01:31:58.924Z",
-  "duration": 151,
-  "improvements": [
-    "Created bundle analyzer script",
-    "Created performance optimizer script",
-    "Created security enhancer script",
-    "Created accessibility improver script",
-    "Created app monitoring script"
-  ],
-  "errors": [],
-  "success": true
-}
+<<<<<<< HEAD
+"timestamp": "2025-09-06T10:42:44.767Z",
   "timestamp": "2025-09-06T10:42:44.767Z",
   "totalDuration": 17470,
   "successfulTasks": 3,
@@ -25,6 +14,23 @@
     "seoOptimization": false,
     "monitoringSetup": true
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  "timestamp": "2025-09-06T01:31:58.924Z",
+  "duration": 151,
+  "improvements": [
+    "Created bundle analyzer script",
+    "Created performance optimizer script",
+    "Created security enhancer script",
+    "Created accessibility improver script",
+    "Created app monitoring script"
+  ],
+  "errors": [],
+  "success": true
+<<<<<<< HEAD
 }
+=======
 
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

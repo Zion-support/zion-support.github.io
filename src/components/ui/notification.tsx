@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState, createContext, useContext, useCallback, ReactNode } from 'react';
-import { _motion, AnimatePresence } from 'framer-motion';
-import { _X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell } from 'lucide-react';
-import { _Button } from './button';
-
-import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
-import { Check } from 'lucide-react';
-
-=======
 import React, { useState, createContext, useContext, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell } from 'lucide-react';
@@ -206,4 +194,3 @@ function NotificationItem({ notification }) {
 // Convenience functions for quick notifications
 export function showInfo(title, message, options) {
     return { type: 'info', title, message, ...options }}
->>>>>>> origin/clean-error-fixing-automation

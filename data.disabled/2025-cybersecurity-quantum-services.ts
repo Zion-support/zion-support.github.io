@@ -2,6 +2,7 @@
 
   {
 
+<<<<<<< HEAD
 export interface CybersecurityQuantumService {
 export interface CybersecurityQuantumService {;
   id: string;
@@ -95,14 +96,16 @@ export interface CybersecurityQuantumService {;
     reviews: 480,
   },
   {
+=======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     techStack: [
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
     realImplementation: true,
-
 
     implementationDetails:
       'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
@@ -409,8 +412,23 @@ export interface CybersecurityQuantumService {;
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
-
+<<<<<<< HEAD
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+<<<<<<< HEAD
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.'
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS']
+    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
+    icon: '🔍'
+    color: 'from-green-500 to-emerald-600'
+    popular: true
+    launchDate: '2024-02-15'
+    customers: 2500
+    rating: 4.8
+    reviews: 1900
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -427,8 +445,8 @@ export interface CybersecurityQuantumService {;
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
@@ -505,16 +523,19 @@ export interface CybersecurityQuantumService {;
     reviews: 1900,
   },
 
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string, name: string,
   tagline: string, description: string,
   category: string,
   price: {
-      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: string
-  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -528,39 +549,70 @@ export interface CybersecurityQuantumService {;
   customers: number, rating: number,
   reviews: number
 }
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
+=======
+
+
+=======
+];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ];
 
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
     support: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.';
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
 
+<<<<<<< HEAD
+];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
+    ];
+    integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
+    support: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.';
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
+    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     icon: '🔍';
     color: 'from - green - 500 to - emerald - 600';
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.8,
 
     reviews: 1900
-    rating: 4.8,
-    reviews: 1900;
-  }
-
 
 export interface CybersecurityQuantumService {;
 
   }
 
 ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
-;
+<<<<<<< HEAD
+    rating: 4 && 4.8,
+    reviews: 1900
   }
 ];
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface CybersecurityQuantumService {;
+=======
+=======
   id: string,;
   name: string,;
   tagline: string,;
@@ -822,9 +874,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
-  }
-];
+<<<<<<< HEAD
+=======
+=======
+=======
     rating: 4.8,
     reviews: 1900;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

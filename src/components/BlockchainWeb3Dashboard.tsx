@@ -6,7 +6,7 @@ import { _useAnalytics } from '../hooks/useAnalytics';
 
 import { motion } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Icon } from 'lucide-react';
 const features = [];
 export const _BlockchainWeb3Dashboard = ({ className = '' }) => {

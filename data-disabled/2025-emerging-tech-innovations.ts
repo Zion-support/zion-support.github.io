@@ -78,7 +78,6 @@ export interface EmergingTechInnovationService {
   };
   realImplementation?: boolean;
   implementationDetails?: string}
-<<<<<<< HEAD:data-disabled/2025-emerging-tech-innovations.ts
 
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [;
   {

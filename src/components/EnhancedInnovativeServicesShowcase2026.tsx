@@ -1,35 +1,62 @@
 import React, { useState, useEffect } from 'react';
-import { _motion, AnimatePresence } from 'framer-motion';
-import { _Link } from 'react-router-dom';
-import { _Brain, Shield, Atom, Cpu, Network, Heart, Scale, DollarSign, Factory, Satellite, Code, Users, Globe, Server, Zap, Star, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon, ExternalLink, Rocket, Award, MessageCircle } from 'lucide-react';
-import { _EXPANDED_INNOVATIVE_SERVICES_2026, SPECIALIZED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, ZION_TECH_GROUP_CONTACT, SERVICE_BENEFITS_SUMMARY } from '@/data/expandedInnovativeServices2026';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Heart } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Icon } from 'lucide-react';
-const features = [];
-const benefits = [];
-const integrations = [];
-const services = [];
-const solutions = [];
+import { 
+  Brain, 
+  Shield, 
+  Atom, 
+  Cpu, 
+  Blockchain, 
+  Heart, 
+  Scale, 
+  DollarSign,
+  Factory,
+  Satellite,
+  Code,
+  Users,
+  Globe,
+  Server,
+  Zap,
+  Star,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe as GlobeIcon,
+  ExternalLink,
+  Play,
+  BookOpen,
+  MessageCircle,
+  Clock,
+  DollarSign as DollarIcon,
+  Target,
+  Award,
+  Rocket,
+  Lightbulb,
+  BarChart3,
+  Lock,
+  Network,
+  Database,
+  Cloud,
+  Smartphone,
+  Monitor,
+  Camera,
+  Wifi,
+  Cpu as CpuIcon,
+  HardDrive,
+  Activity,
+  Zap as ZapIcon
+} from 'lucide-react';
+import { EXPANDED_INNOVATIVE_SERVICES_2026, SPECIALIZED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, ZION_TECH_GROUP_CONTACT, SERVICE_BENEFITS_SUMMARY } from '@/data/expandedInnovativeServices2026';
 
 export default function EnhancedInnovativeServicesShowcase2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-  const _categories = [
+  const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue', count: EXPANDED_INNOVATIVE_SERVICES_2026.length },
     ...SPECIALIZED_SERVICE_CATEGORIES.map(cat => ({
       id: cat.id,
@@ -46,7 +73,7 @@ export default function EnhancedInnovativeServicesShowcase2026() {
       'cybersecurity': Shield,
       'quantum-tech': Atom,
       'iot-edge': Cpu,
-      'blockchain-web3': Network,
+      'blockchain-web3': Blockchain,
       'healthcare-ai': Heart,
       'legal-tech': Scale,
       'financial-ai': DollarSign,
@@ -80,19 +107,19 @@ export default function EnhancedInnovativeServicesShowcase2026() {
     return colorMap[categoryId] || 'from-zion-cyan to-zion-blue';
   }
 
-  const _filteredServices = selectedCategory === 'all' 
+  const filteredServices = selectedCategory === 'all' 
     ? EXPANDED_INNOVATIVE_SERVICES_2026
     : EXPANDED_INNOVATIVE_SERVICES_2026.filter(service => {
-        const _category = SPECIALIZED_SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory);
+        const category = SPECIALIZED_SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory);
         return category?.services.includes(service.id);
       });
 
-  const _handleServiceClick = (service: any) => {
+  const handleServiceClick = (service: any) => {
     setSelectedService(service);
     setIsVideoPlaying(false);
   };
 
-  const _formatPrice = (price: number) => {
+  const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}k`;
     }

@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState, useEffect, createContext, useContext } from 'react';
-import { _motion, AnimatePresence } from 'framer-motion';
-import { _Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-import { _Button } from '../ui/button';
-
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Settings } from 'lucide-react';
-const _AccessibilityContext = createContext(undefined);
-export const _useAccessibility = () => {
-    const _context = useContext(AccessibilityContext);
-    if (!context) {
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
-    }
-    return context;
-};
-// Accessibility Provider Component
-export const _AccessibilityProvider = ({ children }) => {
-=======
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
@@ -31,77 +10,12 @@ export const useAccessibility = () => {
     return context};
 // Accessibility Provider Component
 export const AccessibilityProvider = ({ children }) => {
->>>>>>> origin/clean-error-fixing-automation
     const [highContrast, setHighContrast] = useState(false);
     const [reducedMotion, setReducedMotion] = useState(false);
     const [fontSize, setFontSize] = useState('medium');
     const [colorBlindMode, setColorBlindMode] = useState('none');
     // Load settings from localStorage
     useEffect(() => {
-<<<<<<< HEAD
-        const _savedSettings = localStorage.getItem('zion-accessibility-settings');
-        if (savedSettings) {
-            const _settings = JSON.parse(savedSettings);
-            setHighContrast(settings.highContrast || false);
-            setReducedMotion(settings.reducedMotion || false);
-            setFontSize(settings.fontSize || 'medium');
-            setColorBlindMode(settings.colorBlindMode || 'none');
-        }
-    }, []);
-    // Save settings to localStorage
-    useEffect(() => {
-        const _settings = {
-            highContrast,
-            reducedMotion,
-            fontSize,
-            colorBlindMode
-        };
-        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
-    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    // Apply accessibility settings to document
-    useEffect(() => {
-        const _root = document.documentElement;
-        // High contrast mode
-        if (highContrast) {
-            root.classList.add('high-contrast');
-        }
-        else {
-            root.classList.remove('high-contrast');
-        }
-        // Reduced motion
-        if (reducedMotion) {
-            root.classList.add('reduced-motion');
-        }
-        else {
-            root.classList.remove('reduced-motion');
-        }
-        // Font size
-        root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
-        // Color blind mode
-        root.style.filter = colorBlindMode === 'none' ? 'none' :
-            colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
-                colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
-                    'url(#tritanopia)';
-    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    const _toggleHighContrast = () => setHighContrast(!highContrast);
-    const _toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-    const _value = {
-        highContrast,
-        reducedMotion,
-        fontSize,
-        colorBlindMode,
-        toggleHighContrast,
-        toggleReducedMotion,
-        setFontSize,
-        setColorBlindMode
-    };
-    return (<AccessibilityContext.Provider value={value}>
-      {children}
-    </AccessibilityContext.Provider>);
-};
-// Accessibility Panel Component
-export const _AccessibilityPanel = () => {
-=======
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedSettings) {
             const settings = JSON.parse(savedSettings);
@@ -159,33 +73,10 @@ export const _AccessibilityPanel = () => {
     </AccessibilityContext.Provider>)};
 // Accessibility Panel Component
 export const AccessibilityPanel = () => {
->>>>>>> origin/clean-error-fixing-automation
     const [isOpen, setIsOpen] = useState(false);
     const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
     // Keyboard shortcuts
     useEffect(() => {
-<<<<<<< HEAD
-        const _handleKeyDown = (event) => {
-            // Ctrl/Cmd + Shift + A to open accessibility panel
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-                event.preventDefault();
-                setIsOpen(!isOpen);
-            }
-            // Ctrl/Cmd + Shift + H to toggle high contrast
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
-                event.preventDefault();
-                toggleHighContrast();
-            }
-            // Ctrl/Cmd + Shift + M to toggle reduced motion
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-                event.preventDefault();
-                toggleReducedMotion();
-            }
-        };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [isOpen, toggleHighContrast, toggleReducedMotion]);
-=======
         const handleKeyDown = (event) => {
             // Ctrl/Cmd + Shift + A to open accessibility panel
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
@@ -202,7 +93,6 @@ export const AccessibilityPanel = () => {
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
->>>>>>> origin/clean-error-fixing-automation
     return (<>
       {/* Floating Accessibility Button */}
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">
@@ -212,9 +102,6 @@ export const AccessibilityPanel = () => {
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
-<<<<<<< HEAD
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-=======
             <motion.div initial = {
   { scale: 0.9,
   opacity: 0 
@@ -228,7 +115,6 @@ export const AccessibilityPanel = () => {
   opacity: 0 
 
 }} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
->>>>>>> origin/clean-error-fixing-automation
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white flex items-center gap-2">
@@ -316,27 +202,6 @@ export const AccessibilityPanel = () => {
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </>);
-};
-// Skip to Content Link
-export const _SkipToContent = () => (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
-    Skip to main content
-  </a>);
-// Focus Trap Hook
-export const _useFocusTrap = (isActive) => {
-    useEffect(() => {
-        if (!isActive)
-            return;
-        const _focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-        const _container = document.activeElement?.closest('[data-focus-trap]');
-        if (!container)
-            return;
-        const _focusableContent = container.querySelectorAll(focusableElements);
-        const _firstFocusableElement = focusableContent[0];
-        const _lastFocusableElement = focusableContent[focusableContent.length - 1];
-        const _handleTabKey = (e) => {
-=======
     </>)};
 // Skip to Content Link
 export const SkipToContent = () => (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
@@ -354,42 +219,21 @@ export const useFocusTrap = (isActive) => {
         const firstFocusableElement = focusableContent[0];
         const lastFocusableElement = focusableContent[focusableContent.length - 1];
         const handleTabKey = (e) => {
->>>>>>> origin/clean-error-fixing-automation
             if (e.key === 'Tab') {
                 if (e.shiftKey) {
                     if (document.activeElement === firstFocusableElement) {
                         e.preventDefault();
-<<<<<<< HEAD
-                        lastFocusableElement.focus();
-                    }
-=======
                         lastFocusableElement.focus()}
->>>>>>> origin/clean-error-fixing-automation
                 }
                 else {
                     if (document.activeElement === lastFocusableElement) {
                         e.preventDefault();
-<<<<<<< HEAD
-                        firstFocusableElement.focus();
-                    }
-=======
                         firstFocusableElement.focus()}
->>>>>>> origin/clean-error-fixing-automation
                 }
             }
         };
         document.addEventListener('keydown', handleTabKey);
-<<<<<<< HEAD
-        return () => document.removeEventListener('keydown', handleTabKey);
-    }, [isActive]);
-};
-// Screen Reader Only Text
-export const _SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
-export default AccessibilityPanel;
-
-=======
         return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};
 // Screen Reader Only Text
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
 export default AccessibilityPanel;
->>>>>>> origin/clean-error-fixing-automation

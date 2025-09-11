@@ -34,7 +34,6 @@ export interface EmergingTechnologyService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD:data-disabled/2026-emerging-technology-services.ts
 const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;

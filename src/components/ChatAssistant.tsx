@@ -40,7 +40,7 @@ const suggestions = [
   "View case studies"
 ];
 
-function ChatAssistant() {
+export function ChatAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -305,4 +305,3 @@ function ChatAssistant() {
   );
 };
 
-export default ChatAssistant;

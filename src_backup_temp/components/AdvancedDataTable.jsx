@@ -3,6 +3,10 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
 import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
 ;
+export const AdvancedDataTable = ("props": "any) => {;
+    const { trackEvent "} = useAnalytics({"enableTracking": "true",;
+        "enableUserBehaviorTracking": "true;"});';
+    // State management'';
 export const AdvancedDataTable = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
@@ -16,7 +20,15 @@ export const AdvancedDataTable = (props: any) => {
     const [showFilters, setShowFilters] = useState(false);
     // Process data based on search, filters, and sorting;
 const processedData = useMemo(() => {}
-
+;
+        "let": "result = [...data]",;
+        // comment;
+        "if": "(searchQuery.trim()) {"}";"""""""";
+    const {trackEvent} = useAnalytics();""""""""";
+export const AdvancedDataTable = ("props": "any) => {const { trackEvent "} = useAnalytics({"enableTracking": "true", "enableUserBehaviorTracking": "true"})";framer-motion";;react"framer - motion",lucide - react",../hooks/useVirtualScroll.jsx";&apos;&apos;
+export const AdvancedDataTable = ("props": "any) => {&apos"}&apos;
+    const;const {trackEvent} = useAnalytics({"enableTracking": "true",";
+        "enableUserBehaviorTracking": "true"});
         let: result = [...data],
         // comment
         if: (searchQuery.trim()) {}";""""""""
@@ -35,7 +47,6 @@ export const AdvancedDataTable = ("props": "any) => {"";
     const {trackEvent} = useAnalytics();
 }
 export const AdvancedDataTable = memo(({data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = "", onRowClick, onSelectionChange, onExport}) => {;
-
 export const AdvancedDataTable = ("props": "any) => {// comment;
     const [searchQuery", setSearchQuery] = useState("")}
     // comment;
@@ -83,7 +94,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 }
         // comment;
                 switch (filter.operator) {}";
-
                     case &apos;contains&apos;: "any",;
                         return value.includes(filterValue);
 }
@@ -298,7 +308,18 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
         const headers = columns.map(col => col.header).join(");
 }
         const rows = data.map(item => columns.map(col => {}
-
+;
+"""";";
+            const value = item[col.key]"",";
+            "return": "typeof value == = "string" && value.includes(") ? ""${value"}"" : "value"}).join("))",";";
+        "return": "[headers", ...rows].join(";
+")}";
+    // comment;
+    const downloadCSV = ("props": "any) => {"}
+;
+        const blob = new Blob([content] {type "text/csv"})";
+        const url = window.URL.createObjectURL(blob)";;";
+        const a = document.createElement("a");
 """";"
             const value = item[col.key]"","
             return: typeof value == = "string" && value.includes(") ? ""${value}"" : value}).join("))",";"
@@ -306,7 +327,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 ")}"
     // comment
     const downloadCSV = (props: any) => {}
-
         const blob = new Blob([content] {type "text/csv"})"
         const url = window.URL.createObjectURL(blob)";"
         const a = document.createElement("a")
@@ -315,10 +335,46 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
         a."download": "= filename",;
         a.click(),;
         window.URL.revokeObjectURL(url)}
-
+;
+    // comment;
+    const getSortIcon = ("props": "any) => {"}
+;
+        if(!"enableSorting": "|| sortConfig ? .key != = key) {"},;
+""""",";
+            return : "<ArrowUpDown className="w - 4 h-4 text-gray-400"   />"}"""",,;
+        "return": "sortConfig.direction === "asc""""""",,",;
+            ? <ChevronUp : "className = "w-4 h-4 text-blue-500"  />"""""",",";
+            : "<ChevronDown : className="w-4 h-4 text-blue-500"  />"}";
+    // comment;
+    const renderCell = ("props": "any) => {"}
+;
+        const value = item[column.key];
+        "if": "(column.render) {"}";
+"";";";
+            "return": "column.render(value", item, index)}""""";";";
+        "return": "(<span className="{"truncate" ${column.align === "center" ? "text-center" : column."align": === "right" ? "text-right" : "text-left""}"}>";" {value}";
+      </span>)}"";
+    "return": "(<div className="{"bg-white" "dark": bg-gray-"800": rounded-xl shadow-lg border border-gray-200 "dark":border-gray-"700": overflow-hidden ${classNam",e}"}>"""";" {/* comment */}""""";";";
+      <"div": "className="p-4 border-b border-gray-200 "dark": border-gray-"700": bg-gray-50 "dark":bg-gray-700">"""""",";";
+        <"div": "className = "flex items-center justify-between mb-4">"""""",",";
+          <"h3": "className="text-lg font-semibold text-gray-900 "dark": text-white">"",;
+            "Data": "Table ({processedData.length"} items)";
+          </h3>""";";";
+          <"div": "className="flex items-center gap-2">""""{enableExport && (<button onClick="{handleExport"}" className="px-3 py-2 bg-green-500 "hover": "bg-green-"600": text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"""""",";";
+                <Download : "className = "w-4 h-4"  />"",",;
+                "Export": "</button>)"}";";
+            """";";";
+            <"button": "onClick="{()" => setShowFilters(!showFilters)"} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters""",";
+            ? "bg-blue-"500": "text-white""""""",",",";
+            : "bg-gray-"200": "dark": "bg-gray-"600": text-gray-700 "dark":text-gray-"300": "hover":bg-gray-"300": "dark":"hover":bg-gray-500","}"}>""""";";";
+              <Filter : "className = "w-4 h-4"  />"",",;
+              "Filters": "</button>;
+          </div>"",,;
+"""{/* comment */}""""{enableSearch && (<div className="relative">""""",";
+            <Search : "className = "absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />"""""",",";
+            <"input": "type="text" placeholder="Search in all columns..." value="{searchQuery"}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-"600": rounded-lg "focus":outline-"none": "focus":ring-"2": "focus":ring-blue-"500": "focus":border-"transparent": bg-white "dark":bg-gray-"700": text-gray-900 "dark":text-gray-100" />"",;
     // comment
     const getSortIcon = (props: any) => {}
-
         if(!enableSorting: || sortConfig ? .key != = key) {},
 """"","
             return : <ArrowUpDown className="w - 4 h-4 text-gray-400"   />}"""",,
@@ -327,7 +383,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
             : <ChevronDown : className="w-4 h-4 text-blue-500"  />}"
     // comment
     const renderCell = (props: any) => {}
-
         const value = item[column.key]
         if: (column.render) {}"
 "";";"
@@ -467,6 +522,48 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
       </span>)}";
     return();
 }
+          </h3>"";";
+          <div className="flex items-center gap-2">""{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 "hover": "bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">""",",;
+                <Download className = "w-4 h-4"   />,;
+                Export,;
+              </button>)}";
+            """;";
+            <button onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters"",;
+            ? "bg - blue-500 text-white"""",;
+            : "bg-gray-200 "dark": "bg-gray-600 text-gray-700 "dark":text-gray-300 "hover":bg-gray-300 "dark":"hover":bg-gray-500""}"}>"";";
+              <Filter className="w-4 h-4"   />;
+              Filters;
+            </button>;
+          </div>;";
+""{/* comment */}""{enableSearch && (<div className="relative">"";";
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />"";";
+            <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 "dark":text-gray-100" />",,;
+&apos,",;
+            return column.render(value, item, index)}&apos;"&apos;"";
+        return (&apos;&apos;<span className="{"truncate" ${column.align === &apos;center&apos; ? &apos;text-center&apos; : "column.align === &apos;right&apos; ? &apos;text-right&apos; : &apos;text-left&apos"}"}>;
+        {value}"&apos;
+    return (";
+    <div className="{"bg-white" "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar","k": "border-gray-700 overflow-hidden ${className"}"}>&apos;&apos,";
+      {/* comment */}&apos;&apos,&apos;&apos,";
+      <div className="&apos;p-4" border-b border-gray-200 "dark": "border-gray-700 bg-gray-50 "dark":bg-gray-700&apos",>"&apos,&apos,&apos;&apos,",;
+        <div className="&apos;flex" items-center justify-between mb-4&apos;>"&apos;&apos,&apos;&apos,";
+          <h3 className = "&apos,text-lg" font-semibold text-gray-900 dar,"k": "text-white&apos",>;
+            Data Table ({processedData.length} items)&apos;
+          </h3>&apos;&apos,;
+          &apos;&apos,&apos;&apos,";
+          <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,{enableExport && (&apos}&apos;<button onClick="{handleExport}" className="&apos;px-3" py-2 bg-green-500 "hover": "bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos",>"&apos,&apos,&apos;&apos;";
+                <Download className="&apos;w-4" h-4&apos;        />;
+                Export&apos,",;
+            "&apos,"&apos,";
+            <button onClick="{()" => setShowFilters(!showFilters)} className="{"px-3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters&apos;&apos;";
+            ? &apos;bg-blue-500 text-white&apos;&apos;"&apos;&apos;";
+            : "&apos;bg-gray-200 "dark":bg-gray-600 text-gray-700 "dark":text-gray-300 "hover":bg-gray-300 "dark":hove","r": "bg-gray-500&apos"}"}>&apos;&apos,&apos;&apos,";
+              <Filter className="&apos;w-4" h-4&apos;        />;
+              Filters&apos;
+            </button>";
+&apos;&apos,{/* comment */}&apos;&apos,&apos {enableSearch && (&apos}&apos;<div className="&apos;relative&apos;">"&apos;&apos,&apos;&apos;";
+            <Search className="&apos;absolute" left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&apos;        />&apos;&apos,&apos;&apos,";
+            <input type="&apos;text&apos;" placeholder="&apos;Search" in all columns...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 dar","k": "text-gray-100&apos",/>&apos,;
           "";"
           <div className="flex items-center gap-2">""{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"",",
                 <Download className = "w-4 h-4"   />,
@@ -512,10 +609,53 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
         {/* comment */}
 ;
           {showFilters && (}<motion.div initial = {}
-
+;
+  {"opacity": "0>;
+  "height": 0"}} animate = {}
+;
+  {"opacity": "1",;
+  "height": "&apos",auto&apos}} exit = {}>;
+  "height": "0 &apos",&apos,",;
+&apos,&apos,"&apos}} className="&apos;mt-4" p-4 bg-white "dark": "bg-gray-600 rounded-lg border border-gray-200 "dark":border-gray-500&apos",>"&apos,&apos,&apos;&apos,",;
+              <h4 className="&apos;font-medium" text-gray-900 "dark": "text-white mb-3&apos;>Advanced Filters&apos",</h4>&apos,&apos,&apos,&apos,";
+              <div className="&apos,grid" grid-cols-1 m,"d": "grid-cols-3 gap-4&apos",>"&apos,&apos,"{columns.filter(col => col.filterable !== false).map(column => (&apos}&apos;<div key="{String(column.key)}" className="&apos;space-y-2&apos;">"&apos;&apos,&apos;&apos;";
+                    <label className="&apos;block" text-sm font-medium text-gray-700 "dark": "text-gray-300&apos",>;
+                      {column.header}&apos;
+                    <select onChange = {}>;
+" (e) => handleFilterChange(column.key, e.target.value,contains&apos)"&apos;";
+&apos;&apos,&apos} className="&apos;w-full" px-3 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 dar","k": "text-gray-100&apos",>"&apos,&apos,&apos;&apos;";
+                      <option value="&apos;&apos;">No filter&apos;&apos;</option>&apos;&apos,&apos;&apos,";
+                      <option value="&apos;contains&apos;">Contains&apos;</option>&apos;&apos,&apos;&apos,";
+                      <option value="&apos;equals&apos;">Equals&apos;</option>&apos;&apos,&apos;&apos,";
+                      <option value="&apos;starts_with&apos;">Starts with&apos;</option>&apos;&apos,&apos;&apos,",;
+                      <option value="&apos;ends_with&apos;">Ends with&apos,</option>";
+"","";
+            return column.render(value, item, index)}""""";
+        return (<span className = "{"truncate" ${column.align === "center" ? "text-center" : "column.align === "right" ? "text-right" : "text-left""}"}>;
+        {value}";
+    return (";
+    <div className="{"bg-white" "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 "dark":border-gray-700 overflow-hidden ${className"}"}>""""";
+      {/* comment */}"""";
+      <div className="p-4 border-b border-gray-200 "dark": "border-gray-700 bg-gray-50 "dark":bg-gray-700">"""";
+        <div className="flex items-center justify-between mb-4">"""";
+          <h3 className="text-lg font-semibold text-gray-900 "dark":text-white">",;
+            Data Table ({processedData.length} items)";
+          </h3>"""";
+          <div className="flex items-center gap-2">""""{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 "hover": "bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"""";
+                <Download className="w-4 h-4"   />;
+                Export",;
+              </button>)}";
+            """";
+            <button onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters""",;
+            ? "bg-blue-500 text-white"""""""";
+            : "bg-gray-200 "dark": "bg-gray-600 text-gray-700 "dark":text-gray-300 "hover":bg-gray-300 "dark":"hover":bg-gray-500""}"}>"""";
+              <Filter className = "w-4 h-4"   />;
+              Filters";
+"""{/* comment */}""""{enableSearch && (<div className="relative">""""";
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />"""";
+            <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 "dark":text-gray-100" />",;
   {opacity: 0>
   height: 0}} animate = {}
-
   {opacity: 1,
   height: &apos,auto&apos}} exit = {}>
   height: 0 &apos,&apos,",
@@ -845,7 +985,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
     const {trackEvent} = useAnalytics({"enableTracking": "true", "enableUserBehaviorTracking": "true"})";
 ";";
 ;";
-
 const page = i + 1;`;
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page';
                         ? 'bg-blue-500 text-white''`;
@@ -861,7 +1000,6 @@ const page = i + 1;`;
         </div>)"}
     </div>)};
 '"`;
-
 </button>;
 </button>;
 </button>;

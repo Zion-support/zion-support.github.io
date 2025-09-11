@@ -9,7 +9,7 @@ import { CheckCircle } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Settings } from 'lucide-react';
 import { Check } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Icon } from 'lucide-react';
 export const _SecurityComplianceDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({

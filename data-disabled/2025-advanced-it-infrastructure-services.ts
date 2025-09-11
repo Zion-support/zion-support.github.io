@@ -38,7 +38,6 @@ export interface AdvancedITInfrastructureService {
   rating: number;
 export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [;
   // Multi-Cloud Orchestration Platform;
-<<<<<<< HEAD:data-disabled/2025-advanced-it-infrastructure-services.ts
   {
     id: "multi-cloud-orchestration",;
     name: "Multi-Cloud Orchestration Platform",;

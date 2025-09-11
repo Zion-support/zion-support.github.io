@@ -1,21 +1,16 @@
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
-"use client"; ","; "react";"; "framer-motion'''
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
-:src.disabled/components/ui/accessibility-panel.jsx
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
-:temp_exclude/src.disabled/components/ui/accessibility-panel.jsx
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
-"use client"; ","; "react";"; "framer-motion'''
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
-"use client"; ","; "react";"; "framer-motion'''
-"use client"; ","; "react";"; "framer-motion'''
+import React from 'react';
+
+const Accessibility-panel = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Accessibility-panel</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+export default Accessibility-panel;
+=======
+export default Accessibility-panel;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

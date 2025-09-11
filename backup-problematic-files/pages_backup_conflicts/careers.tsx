@@ -1,5 +1,9 @@
-import * as React from 'react';
+import React from 'react';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface CareersProps {
   // Add props here as needed
 }

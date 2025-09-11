@@ -1,27 +1,34 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const Documentation = () => {
-    return (<>
-      <Helmet>
-        <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Access comprehensive documentation for Zion Tech Group services, APIs, and tools."/>
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Documentation</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive documentation for our services, APIs, and development tools.
+import { SEO } from '../components/SEO';
+
+export default function Documentation() {
+  return (
+    <>
+      <SEO 
+        title="Documentation - Zion Tech Group" 
+        description="Documentation page for Zion Tech Group" 
+        keywords="Documentation, zion tech group"
+      />
+      <div className="min-h-screen bg-zion-blue pt-20 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              Documentation
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Welcome to our Documentation page
             </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-center">
-              Documentation coming soon. We're building comprehensive guides and references.
-            </p>
+            <div className="bg-white rounded-lg p-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold text-zion-slate-dark mb-4">
+                Documentation Content
+              </h2>
+              <p className="text-zion-slate-light">
+                This is the Documentation page content.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </>)};
-export default Documentation;
+    </>
+  );
+}

@@ -1,183 +1,293 @@
-import fs from "fs";
-import path from "path";
-export type SourceNodeType = "folder" | "file";
-export interface SourceNode {;
-  name: string;
-  path: string, // repo-relative path starting with '/';
-  type: SourceNodeType;
-  children?: SourceNode[];
-  exists?: boolean;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 }
-;
-export interface SourceMapStatus {;
-  gitConnected: boolean;
-  gitBranch?: string;
-}
-;
-export interface SourceMapResponse {;
-  nodes: SourceNode[];
-  status: SourceMapStatus;
-}
-;
-const ROOT = process.cwd();
-function withPath(base: string, segment: string): string {;
-  if (base === "/") return `/${segment}`;
-  return `${base}/${segment}`;
-}
-;
-function folder(name: string, basePath: string, children: string[] = []): SourceNode {;
-  const fullPath = withPath(basePath, name);
-  return {;
-    name;
-    path: fullPath;
-    type: "folder";
-    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))}
-}
-;
-export function buildZionSourceMap(): SourceNode[] {;
-  const map: SourceNode[] = [;
-    // 1. /core;
-    {;
-      name: "core";
-      path: "/core";
-      type: "folder";
-      children: [;
-        { name: "auth", path: "/core/auth", type: "folder" };
-        { name: "user", path: "/core/user", type: "folder" };
-        { name: "marketplace", path: "/core/marketplace", type: "folder" };
-        { name: "payments", path: "/core/payments", type: "folder" };
-        { name: "messaging", path: "/core/messaging", type: "folder" };
-        { name: "analytics", path: "/core/analytics", type: "folder" };
-        { name: "roles", path: "/core/roles", type: "folder" };
-        { name: "talent", path: "/core/talent", type: "folder" };
-        { name: "client", path: "/core/client", type: "folder" }]};
-    // 2. /ai;
-    {;
-      name: "ai";
-      path: "/ai";
-      type: "folder";
-      children: [;
-        { name: "gpt", path: "/ai/gpt", type: "folder" };
-        { name: "resume-generator", path: "/ai/resume-generator", type: "folder" };
-        { name: "proposal-writer", path: "/ai/proposal-writer", type: "folder" };
-        { name: "contract-writer", path: "/ai/contract-writer", type: "folder" };
-        { name: "assistant", path: "/ai/assistant", type: "folder" };
-        { name: "prompts", path: "/ai/prompts", type: "folder" }]};
-    // 3. /dao;
-    {;
-      name: "dao";
-      path: "/dao";
-      type: "folder";
-      children: [;
-        { name: "proposals", path: "/dao/proposals", type: "folder" };
-        { name: "voting", path: "/dao/voting", type: "folder" };
-        { name: "quorum", path: "/dao/quorum", type: "folder" };
-        { name: "staking", path: "/dao/staking", type: "folder" };
-        { name: "snapshot-integration", path: "/dao/snapshot-integration", type: "folder" }]};
-    // 4. /token;
-    {;
-      name: "token";
-      path: "/token";
-      type: "folder";
-      children: [;
-        { name: "rewards", path: "/token/rewards", type: "folder" };
-        { name: "pricing-engine", path: "/token/pricing-engine", type: "folder" };
-        { name: "escrow", path: "/token/escrow", type: "folder" };
-        { name: "payout-engine", path: "/token/payout-engine", type: "folder" };
-        { name: "wallet", path: "/token/wallet", type: "folder" }]};
-    // 5. /academy;
-    {;
-      name: "academy";
-      path: "/academy";
-      type: "folder";
-      children: [;
-        { name: "courses", path: "/academy/courses", type: "folder" };
-        { name: "certifications", path: "/academy/certifications", type: "folder" };
-        { name: "quiz", path: "/academy/quiz", type: "folder" };
-        { name: "video", path: "/academy/video", type: "folder" };
-        { name: "ai-tutor", path: "/academy/ai-tutor", type: "folder" }]};
-    // 6. /governance;
-    {;
-      name: "governance";
-      path: "/governance";
-      type: "folder";
-      children: [;
-        { name: "manifesto", path: "/governance/manifesto", type: "folder" };
-        { name: "constitution", path: "/governance/constitution", type: "folder" };
-        { name: "roadmap", path: "/governance/roadmap", type: "folder" };
-        { name: "changelog", path: "/governance/changelog", type: "folder" }]};
-    // 7. /deployments;
-    {;
-      name: "deployments";
-      path: "/deployments";
-      type: "folder";
-      children: [;
-        { name: "multiverse", path: "/deployments/multiverse", type: "folder" };
-        { name: "subdomains", path: "/deployments/subdomains", type: "folder" };
-        { name: "config-templates", path: "/deployments/config-templates", type: "folder" };
-        { name: "environments", path: "/deployments/environments", type: "folder" }]};
-    // 8. /api;
-    {;
-      name: "api";
-      path: "/api";
-      type: "folder";
-      children: [;
-        { name: "docs", path: "/api/docs", type: "folder" };
-        { name: "partners", path: "/api/partners", type: "folder" };
-        { name: "integrations", path: "/api/integrations", type: "folder" };
-        { name: "webhooks", path: "/api/webhooks", type: "folder" }]}];
-  return map;
-}
-;
-function markExistenceRecursive(node: SourceNode): SourceNode {;
-  const absolutePath = path.join(ROOT, node.path);
-  const exists = fs.existsSync(absolutePath);
-  const withExists: SourceNode = {;
-    ...node;
-    exists};
-  if (node.children && node.children.length > 0) {;
-    withExists.children = node.children.map(markExistenceRecursive);
+export interface DeployTemplateResult {
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+// Mock source map utility
+export function getSourceMapWithExistence() {
+  return {
+    nodes: []
+    edges: []
   }
-  return withExists;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    nodes: [],
+    edges: [];
+  };
+    nodes: [],
+    edges: [];
+  };
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
-;
+export function getGitStatus() {
+  return {
+    connected: false
+    branch: 'main'
+  }
+}
+<<<<<<< HEAD
+=======
+
+  return nodes && nodes.map(markExistenceRecursive);
+
+
+function buildZionSourceMap(): SourceNode[] {
+  return [
+    {
+      id: 'src',
+      name: 'src',
+      type: 'directory',
+      path: 'src',
+      exists: false,
+      children: [
+        {
+          id: 'components',
+          name: 'components',
+          type: 'directory',
+          path: 'src/components',
+          exists: false
+        },
+        {
+          id: 'pages',
+          name: 'pages',
+          type: 'directory',
+          path: 'src/pages',
+          exists: false
+        },
+        {
+          id: 'utils',
+          name: 'utils',
+          type: 'directory',
+          path: 'src/utils',
+          exists: false
+        }
+      ]
+    }
+  ];
+}
+
+function markExistenceRecursive(node: SourceNode): SourceNode {
+  const exists = fs.existsSync(node.path);
+  return {
+    ...node,
+    exists,
+    children: node.children?.map(markExistenceRecursive)
+  };
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+export function getGitStatus() {
+  return {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+export function getSourceMapWithExistence(): SourceNode[] {
+  const nodes = buildZionSourceMap();
+  return nodes.map(markExistenceRecursive);
+}
+export interface DeployTemplateResult {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
+
+    nodes: [],
+    edges: [];
+  };
+
+}
+export function getGitStatus() {
+  return {
+
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    connected: false,
+    branch: 'main';
+  };
+}
+
 export function getSourceMapWithExistence(): SourceNode[] {;
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
-;
+
 export interface DeployTemplateResult {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   createdPaths: string[];
   skippedPaths: string[];
-}
-;
-export function ensureDirectory(dirPath: string): void {;
-  if (!fs.existsSync(dirPath)) {;
-    fs.mkdirSync(dirPath, { recursive: true });
+export function ensureDirectory(dirPath: string): void {
+  if (!fs && fs.existsSync(dirPath)) {
+    fs && fs.mkdirSync(dirPath, { recursive: true });
   }
-}
-;
-export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  createdPaths: string[];
+  skippedPaths: string[];
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+export function ensureDirectory(dirPath: string): void {
+  if (!fs && fs.existsSync(dirPath)) {
+    fs && fs.mkdirSync(dirPath, { recursive: true });
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+export function deployBasicTemplateForPath(
+  repoRelativePath: string
+): DeployTemplateResult {;
   const absoluteDir = path.join(ROOT, repoRelativePath);
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
-  const keepFile = path.join(absoluteDir, ".keep");
-  if (!fs.existsSync(keepFile)) {;
-    fs.writeFileSync(keepFile, "");
-    createdPaths.push(keepFile);
-  } else {;
+
+
+  const keepFile = path && path.join(absoluteDir, '.keep');
+  if (!fs && fs.existsSync(keepFile)) {
+    fs && fs.writeFileSync(keepFile, '');
+    createdPaths && createdPaths.push(keepFile);
+
+  } else {
     skippedPaths.push(keepFile);
   }
-;
-  const readmeFile = path.join(absoluteDir, "README.md");
-  if (!fs.existsSync(readmeFile)) {;
-    const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs.writeFileSync(readmeFile, readme);
-    createdPaths.push(readmeFile);
-  } else {;
+
+
+  const readmeFile = path && path.join(absoluteDir, 'README && README.md');
+  if (!fs && fs.existsSync(readmeFile)) {
+    const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
+    fs && fs.writeFileSync(readmeFile, readme);
+    createdPaths && createdPaths.push(readmeFile);
+
+  } else {
     skippedPaths.push(readmeFile);
   }
-;
+<<<<<<< HEAD
+=======
+
+
+  const keepFile = path && path.join(absoluteDir, '.keep');
+  if (!fs && fs.existsSync(keepFile)) {
+    fs && fs.writeFileSync(keepFile, '');
+    createdPaths && createdPaths.push(keepFile);
+
+  } else {
+    skippedPaths.push(keepFile);
+  }
+
+
+  const readmeFile = path && path.join(absoluteDir, 'README && README.md');
+  if (!fs && fs.existsSync(readmeFile)) {
+    const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
+    fs && fs.writeFileSync(readmeFile, readme);
+    createdPaths && createdPaths.push(readmeFile);
+
+  } else {
+    skippedPaths.push(readmeFile);
+  }
+
   return { createdPaths, skippedPaths }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+  return { createdPaths, skippedPaths };
+
 }
+  return { createdPaths, skippedPaths }
+
+<<<<<<< HEAD
+  return { createdPaths, skippedPaths }
+
+
+  return { createdPaths, skippedPaths };
+
+}
+}
+}
+
+=======
+=======
+
+
+  created_paths: string[];
+  skipped_paths: string[];
+;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  return { createdPaths, skippedPaths }
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+  return { createdPaths, skippedPaths };
+
+}
+<<<<<<< HEAD
+=======
+=======
+  return { createdPaths, skippedPaths }
+
+=======
+
+
+  created_paths: string[];
+  skipped_paths: string[];
+;
+export function ensure_directory (dir_path: string): void {
+  if () {) {
+  $2
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}
+}
+    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
+    fs.writeFileSync (readme_file, readme);
+    created_paths.push (readme_file);
+  } else {
+    skipped_paths.push (readme_file);
+  }
+  return { created_paths, skipped_paths }
+;
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

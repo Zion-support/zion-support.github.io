@@ -1,11 +1,16 @@
 import useSWR from 'swr';
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+const fetcher = (url: string) => fetch(url).then(r => (r.ok ? r.json() : null));
 export function useCurrentUser() {
 
 export function useCurrentUser() {;
-
-export function useCurrentUser() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
     user: data?.user |null
@@ -27,13 +32,9 @@ function useCurrentUser() {
     mutate,
   }
     loading: !data && !error;
-
     error
 
-
     error,
-
-
     mutate}
 
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),
@@ -43,9 +44,6 @@ export function useCurrentUser() {
     user: data?.user || null, loading: !data && !error,
     error;
 
-    mutate}
-}
-}
     mutate}
 }
 }

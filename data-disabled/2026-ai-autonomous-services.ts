@@ -13,7 +13,6 @@ export interface AiAutonomousService2026 {
     mobile: string;
     email: string;
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [;
-<<<<<<< HEAD:data-disabled/2026-ai-autonomous-services.ts
   {
     id: "2026-ai-autonomous",;
     name: "2026 AI Autonomous Platform",;

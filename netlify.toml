@@ -1,14 +1,20 @@
 [build]
 <<<<<<< HEAD
+<<<<<<< HEAD
   command = "npm ci --no-audit --no-fund --omit=optional && npm run build"
 =======
   # Use Yarn with frozen lockfile to ensure reproducible installs, then build
   command = "corepack enable && yarn install --frozen-lockfile && yarn build"
 >>>>>>> origin/chore/netlify-build-yarn
+=======
+  # Use Yarn with frozen lockfile to ensure reproducible installs, then build
+  command = "corepack enable && yarn install --frozen-lockfile && yarn build"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
+<<<<<<< HEAD
 <<<<<<< HEAD
 NODE_VERSION = "22.12.0"
 NODE_OPTIONS = "--max-old-space-size=6144"
@@ -31,6 +37,41 @@ VITE_LEGACY_BUILD = "false"
   # Disable Netlify's auto dependency installers; we handle installs in the build command
   NETLIFY_SKIP_INSTALL = "true"
 >>>>>>> origin/chore/netlify-build-yarn
+=======
+<<<<<<< HEAD
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  NODE_VERSION = "22.12.0"
+  NODE_OPTIONS = "--max-old-space-size=6144"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  # Skip Sharp postinstall to avoid NAPI issues
+  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
+  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
+  # Force Vite build
+  VITE_BUILD = "true"
+  # Ensure proper build environment
+  NODE_ENV = "production"
+  CI = "true"
+  # Disable linting during build to prevent failures
+  ESLINT_NO_DEV_ERRORS = "true"
+  # Optimize build performance
+  VITE_LEGACY_BUILD = "false"
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
+  NETLIFY_SKIP_INSTALL = "true"
+
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
 
 # API functions (disabled for Vite SPA)
 # [functions]
@@ -61,6 +102,7 @@ VITE_LEGACY_BUILD = "false"
     Cache-Control = "public, max-age=31536000, immutable"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [[headers]]
   for = "/js/*"
   [headers.values]
@@ -72,46 +114,102 @@ VITE_LEGACY_BUILD = "false"
 <<<<<<< HEAD
   schedule = "*/15 * * * *" # every 15 minutes
 >>>>>>> origin/chore/futuristic-automations
+=======
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
 
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/images/*"
+for = "/*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+
+<<<<<<< HEAD
+# Static redirects to mirror Next.js redirects (since output: export)
+=======
+# Static redirects for exported site
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+[[redirects]]
+from = "/ai-customer-success-platform"
+to = "/services/ai-customer-success-platform/"
+status = 301
 
 [[redirects]]
-  from = "/ai-financial-planning-platform"
-  to = "/services/ai-financial-planning-platform/"
-  status = 301
+from = "/ai-sales-intelligence-platform"
+to = "/services/ai-sales-intelligence-platform/"
+status = 301
 
 [[redirects]]
-  from = "/ai-powered-decision-engine"
-  to = "/services/ai-powered-decision-engine/"
-  status = 301
+from = "/ai-financial-planning-platform"
+to = "/services/ai-financial-planning-platform/"
+status = 301
 
 [[redirects]]
-  from = "/intelligent-content-automation-platform"
-  to = "/services/intelligent-content-automation-platform/"
-  status = 301
+from = "/ai-powered-decision-engine"
+to = "/services/ai-powered-decision-engine/"
+status = 301
 
 [[redirects]]
-  from = "/intelligent-hr-analytics-platform"
-  to = "/services/intelligent-hr-analytics-platform/"
-  status = 301
+from = "/intelligent-content-automation-platform"
+to = "/services/intelligent-content-automation-platform/"
+status = 301
 
 [[redirects]]
-  from = "/smart-crm-intelligence-suite"
-  to = "/services/smart-crm-intelligence-suite/"
-  status = 301
+from = "/intelligent-hr-analytics-platform"
+to = "/services/intelligent-hr-analytics-platform/"
+status = 301
 
 [[redirects]]
+from = "/smart-crm-intelligence-suite"
+to = "/services/smart-crm-intelligence-suite/"
+status = 301
+
+[[redirects]]
+<<<<<<< HEAD
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+=======
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 # SPA fallback for client-side routing
@@ -304,3 +402,29 @@ VITE_LEGACY_BUILD = "false"
   name = "hyper-fast-orchestrator"
   schedule = "*/3 * * * *" # every 3 minutes for ultra-fast refresh
 >>>>>>> origin/chore/new-automations-futuristic-front
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/seo-redirects-netlify-fix
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/seo-redirects-netlify-fix
+=======
+>>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

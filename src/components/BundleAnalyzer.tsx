@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw } from 'lucide-react';
@@ -313,4 +309,3 @@ export const BundleAnalyzer = () => {
           </motion.div>)}
       </AnimatePresence>
     </>)};
->>>>>>> origin/clean-error-fixing-automation

@@ -12,7 +12,6 @@ export interface EnterpriseIt2026ServiceV3 {
     mobile: string;
     email: string;
 export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [;
-<<<<<<< HEAD:data-disabled/enterprise-it-2026-services-v3.ts
   {
     id: "2026-enterprise-it-v3",;
     name: "2026 Enterprise IT Solutions V3",;

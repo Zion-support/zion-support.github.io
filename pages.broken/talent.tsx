@@ -1,5 +1,32 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import MainLayout from '../components/layout/MainLayout';
 const jobOpenings = [{
     "id": 1,
@@ -16,25 +43,25 @@ const jobOpenings = [{
       "Experience with cloud platforms (AWS, Azure, GCP)"
 import Layout from '../components/Layout';
 
-const jobOpenings = [
-  {
-    id: 1,
-    title: "Senior AI/ML Engineer",
-    department: "AI Services",
-    location: "Remote",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
-    requirements: [
-      "Master's degree in Computer Science or related field",
-      "5+ years experience in AI/ML development",
-      "Proficiency in Python, TensorFlow, PyTorch",
-      "Experience with cloud platforms (AWS, Azure, GCP)",
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "id": 2,
     "title": "Full-Stack Developer"
     "department": "Micro SaaS"
@@ -58,11 +85,29 @@ const jobOpenings = [
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "id": 3,
     "title": "Cloud Solutions Architect"
     "department": "IT Services"
@@ -86,11 +131,29 @@ const jobOpenings = [
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "id": 4,
     "title": "Cybersecurity Specialist"
     "department": "Security"
@@ -114,11 +177,29 @@ const jobOpenings = [
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "id": 5,
     "title": "DevOps Engineer"
     "department": "Engineering"
@@ -142,11 +223,29 @@ const jobOpenings = [
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "id": 6,
     "title": "UX/UI Designer"
     "department": "Design"
@@ -170,11 +269,27 @@ const jobOpenings = [
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -408,6 +523,12 @@ const values = [;
   "Work-life balance",;
   "Diversity and inclusion",;
 
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -476,42 +597,6 @@ const benefits = [;
   }
 ];
 
-  }
-];
-const values = ["Innovation and creativity"
-  "Collaboration and teamwork"
-  "Continuous learning"
-  "Work-life balance"
-  "Diversity and inclusion"
-const benefits = [
-  {
-    title: "Competitive Compensation",
-    description: "We offer competitive salaries and performance-based bonuses",
-    icon: Star
-  },
-  {
-    title: "Health & Wellness",
-    description: "Comprehensive health insurance and wellness programs",
-    icon: Users
-  },
-  {
-    title: "Flexible Work",
-    description: "Remote work options and flexible schedules",
-    icon: Clock
-  },
-  {
-    title: "Professional Growth",
-    description: "Learning opportunities and career development support",
-    icon: ArrowRight
-  }
-];
-const values = [
-  "Innovation and creativity",
-  "Collaboration and teamwork",
-  "Continuous learning",
-  "Work-life balance",
-  "Diversity and inclusion",
-
   "Client success focus"
 ];
 export default function TalentPage() {
@@ -530,16 +615,39 @@ export default function TalentPage() {;
   return (
     <MainLayout,
     title="Careers - Zion Tech Group"
+const values = [
+  "Innovation and creativity",
+  "Collaboration and teamwork",
+  "Continuous learning",
+  "Work-life balance",
+  "Diversity and inclusion",
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+  "Client success focus"
 ];
-export default function TalentPage() {;
+export default function TalentPage() {
+  return (
+ursor/fix-syntax-push-and-merge-to-main-40de
+    <MainLayout,
+    title="Careers - Zion Tech Group"
+  
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
   return (
 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
         <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />
       </Head>
+    <div className="min-h-screen bg-gray-50">;
+      <Head>;
+        <title>Join Our Team - Zion Tech Group</title>;
+        <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />;
+      </Head>;
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -567,21 +675,54 @@ export default function TalentPage() {;
                   key={job.id}
     <Layout 
       title="Careers - Zion Tech Group"
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div,
+
+<<<<<<< HEAD
+            <motion.div,
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0.8 }}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -605,6 +746,13 @@ export default function TalentPage() {;
         {/* Benefits Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <motion.div,
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
@@ -638,8 +786,14 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -651,14 +805,6 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
-                return (
-                  <motion.div,
-    key={index}
-                    className="text-center p-6"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
                   >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
@@ -670,11 +816,60 @@ export default function TalentPage() {;
                       {benefit.description}
                     </p>
                   </motion.div>
-
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Why Work With Us?;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                We're building a culture of innovation, collaboration, and growth where talented individuals can thrive;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {benefits && benefits.map((benefit, index) => {;
+                const IconComponent = benefit && benefit.icon;
+                return (
+                  <motion&& motion.div,
+    key={index}
+                    className="text-center p-6"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>;
+                    <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;
+                      <IconComponent className="w-8 h-8" />;
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">;
+                      {benefit && benefit.title}
+                    </h3>;
+                    <p className="text-gray-600">;
+                      {benefit && benefit.description}
+                    </p>;
+                  </motion && motion.div>;
+                );
+              })}
+            </div>;
+          </div>;
+        </section>;
         {/* Values Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div,
+
+<<<<<<< HEAD
+            <motion.div,
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -685,8 +880,13 @@ export default function TalentPage() {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -769,10 +969,24 @@ export default function TalentPage() {;
                   key={index}
         </section>;
         {/* Job Openings Section */}
-        <section id="openings" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+        <section id="openings" className="py-20 bg-white">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div,
+
+<<<<<<< HEAD
+            <motion.div,
+        <section id="openings" className="py-20 bg-white">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -783,17 +997,13 @@ export default function TalentPage() {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-            <motion.div,
-    initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -806,7 +1016,6 @@ export default function TalentPage() {;
               {jobOpenings.map((job, index) => (
                 <motion.div,
     key={job.id}
-
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -916,10 +1125,24 @@ export default function TalentPage() {;
     </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
+          <div className="container mx-auto px-4 text-center">;
+            <motion&& motion.div,
+
+<<<<<<< HEAD
+            <motion.div,
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
+          <div className="container mx-auto px-4 text-center">;
+            <motion&& motion.div,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -928,8 +1151,13 @@ export default function TalentPage() {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?
@@ -946,7 +1174,7 @@ export default function TalentPage() {;
       </div>
     </MainLayout>
   );
-transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md: text-4xl font-bold mb-6">;
                 Don't See the Right Role?;
@@ -963,3 +1191,4 @@ transition={{ duration: 0 && 0.8 }}
       </div>;
     </MainLayout>;
   ),;
+}

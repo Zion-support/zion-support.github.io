@@ -1,5 +1,5 @@
-import { _calculatePasswordStrength, getStrengthLabel } from "@/utils/passwordStrength";
-import { _Progress } from "@/components/ui/progress";
+import { _calculatePasswordStrength, getStrengthLabel } from "../utils/passwordStrength";
+import { _Progress } from "../components/ui/progress";
 export function PasswordStrengthMeter({ password }) {
     const _score = calculatePasswordStrength(password);
     const _value = (score / 4) * 100;

@@ -1,14 +1,3 @@
-import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
-import { Cloud } from 'lucide-react';
-const features = [];
-const benefits = [];
-const integrations = [];
-const services = [];
-const applications = [];
-const solutions = [];
-
-
 // Expanded Innovative Services for 2026 - Zion Tech Group
 export const EXPANDED_INNOVATIVE_SERVICES_2026 = [
     // AI-Powered Business Intelligence & Analytics
@@ -821,4 +810,3 @@ export const SERVICE_BENEFITS_SUMMARY = {
     compliance: "Built-in regulatory compliance and security",
     integration: "Seamless integration with existing systems"
 };
-

@@ -2,7 +2,7 @@ import React from 'react';
 import { _cn } from "../../utils/cn";
 ;
 interface SwitchProps {;
-import { _cn } from "@/lib/utils"
+import { _cn } from "../../lib/utils"
 
 import { Check } from 'lucide-react';
   checked?: boolean;

@@ -1,4 +1,4 @@
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Cloud } from 'lucide-react';
 const features = [];
 const benefits = [];

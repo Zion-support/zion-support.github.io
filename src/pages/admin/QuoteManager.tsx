@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useAdminQuotes } from "../../hooks/useAdminQuotes";
+import { useAuth } from "../../hooks/useAuth";
+import { Card } from "../../components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs";
 import { Navigate } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
-import { QuoteStatusCards, QuotesFilter, QuotesTable } from "@/components/admin/quotes";
+import { ProtectedRoute } from "../../components/ProtectedRoute";
+import { QuoteDetails } from "../../components/quotes/QuoteDetails";
+import { ExportToCSV } from "../../components/quotes/ExportToCSV";
+import { QuoteStatusCards, QuotesFilter, QuotesTable } from "../../components/admin/quotes";
 export default function QuoteManager() {
     const { user } = useAuth();
     const isAdmin = user?.userType === 'admin';

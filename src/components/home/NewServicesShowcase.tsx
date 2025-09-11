@@ -1,9 +1,9 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
-import { _Button } from '@/components/ui/button';
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Badge } from '@/components/ui/badge';
-import { _SERVICE_CATEGORIES } from '@/data/microSaasServices';
+import { _Button } from '../../components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
+import { _Badge } from '../../components/ui/badge';
+import { _SERVICE_CATEGORIES } from '../../data/microSaasServices';
 import { _Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, MessageCircle } from 'lucide-react';
 
 import { Link } from 'react-router-dom';

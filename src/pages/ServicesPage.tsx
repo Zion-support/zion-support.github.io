@@ -1,11 +1,13 @@
 <<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe import { useEffect, useState } from "react";
-import { SEO } from "@/components/SEO";
-// Enhanced service listings with new micro SAAS services
-const SERVICE_LISTINGS = [
-    // AI & Machine Learning Services
+
+    allServices = [...allServices, ...newServices]
+    let filteredServices = allServices
+}
+import React from 'react'
+import React from 'react';
+
+const ServicesPage: React.FC = () => {
+  const services = [
     {
         id: "ai-content-generation",
         title: "AI Content Generator Pro",
@@ -491,6 +493,8 @@ function getRandomItem(arr) {
 
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function generateRandomService(idNum) {
     const templates = [
         {
@@ -567,12 +571,7 @@ function generateRandomService(idNum) {
         aiScore: Math.floor(90 + Math.random() * 10),
         rating: parseFloat((4 + Math.random()).toFixed(1)),
         reviewCount: Math.floor(50 + Math.random() * 150),
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-    };
-
-=======
     }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai-ml' },
@@ -656,13 +655,7 @@ export default function ServicesPage() {
             </div>))}
         </div>
       </div>
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -761,71 +754,66 @@ export default function ServicesPage() {
     { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
-    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
-    { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
-  ];
-
-  const sortOptions = [
-    { id: 'featured', name: 'Featured' },
-    { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' },
-    { id: 'newest', name: 'Newest' },
-    { id: 'popular', name: 'Most Popular' }
-  ];
-
-  // Combine all services
-  const allServices = [
-    ...ALL_INNOVATIVE_SERVICES,
-    ...SPECIALIZED_SERVICES,
-    ...ALL_INNOVATIVE_SERVICES_2026,
-    ...ALL_INDUSTRY_SOLUTIONS_2026,
-    ...ALL_BLOCKCHAIN_WEB3_SERVICES_2026,
-    ...ALL_IOT_EDGE_SERVICES_2026
-  ];
-
-  // Filter and sort services
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-    
-    const matchesPrice = selectedPriceRange === 'all' || 
-                        (selectedPriceRange === 'budget' && service.price <= 1000) ||
-                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
-                        (selectedPriceRange === 'enterprise' && service.price > 5000);
-    
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
-
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return a.price - b.price;
-      case 'price-high':
-        return b.price - a.price;
-      case 'newest':
-        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
-      default:
-        return 0;
-    }
-  });
-
-  const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.icon : Zap;
-  };
-
-  const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
+  return (
+<<<<<<< HEAD
+    <div className="min-h-screen py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
+            Our Services
+          </h1>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
+                <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+                  {service.title}
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-600">
+                      <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+=======
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">IT Solutions</h3>
+            <p className="text-gray-600">
+              Comprehensive IT infrastructure and support services.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">AI Services</h3>
+            <p className="text-gray-600">
+              Artificial intelligence solutions and automation services.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Blockchain</h3>
+            <p className="text-gray-600">
+              Blockchain development and Web3 solutions.
+            </p>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          </div>
+        </div>
+      </div>
+    </div>
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
   return (
     <>
@@ -1335,5 +1323,23 @@ export default function ServicesPage() {
       </section>
     </>
   );
+<<<<<<< HEAD
+};
+
+<<<<<<< HEAD
+export default ServicesPage;
+ursor/fix-website-loading-errors-and-merge-6662
+export default ServicesPage;
+  );
+};
+
+export default ServicesPage;
+export default ServicesPage;
+export default ServicesPage;
+=======
+
+export default ServicesPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 }
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

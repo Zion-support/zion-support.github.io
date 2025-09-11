@@ -40,7 +40,6 @@ export interface ZionCuttingEdgeService2029 {
   reviews: number}
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
   // AI-Powered Quantum Computing Solutions;
-<<<<<<< HEAD:data-disabled/zion-2029-cutting-edge-services.ts
   {
     id: "quantum-ai-optimization-suite",;
     name: "Quantum AI Optimization Suite",;

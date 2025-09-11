@@ -11,19 +11,27 @@ export const "SearchAndFilterSystem": "React.FC<SearchAndFilterSystemProps> = ({
   data",;
   onResultsChange,;
   placeholder = "Search services, articles, team members...",;
-  showFilters = true}) => {;export default function Page(props: any) {
+  showFilters = true}) => {;
+export default function Page(props: any) {
 > {
   data: SearchResul t[];
   onResultsChange?: (results: SearchResul t[]) => void;
   placeholder?: string;
   showFilters?: boolean}
-
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data,
   onResultsChange,
   placeholder = "Search services, articles, team members...",
   showFilters = true}) => {';
-';';  const [searchQuery, setSearchQuery] = useState<any>('');
+';';
+;
+export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
+  data,;
+  onResultsChange,;
+  placeholder = "Search services, articles, team members...",;
+  showFilters = true}) => {;
+  showFilters = true}) => {
+  const [searchQuery, setSearchQuery] = useState<any>('');
   const [isSearchFocused, setIsSearchFocused] = useState<any>(false);
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
   const [showFilterPanel, setShowFilterPanel] = useState<any>(false);
@@ -50,7 +58,41 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
-  "};;
+  "};
+      default: // relevance
+        // Keep original order for relevance
+        break;
+    return results}, [data, searchQuery, selectedCategory, activeFilters, sortBy]) ;
+  // Update parent component with results
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    onResultsChange?.(filteredResults) }, [filteredResults, onResultsChange]) ;
+  // Toggle filter
+    if(newFilters.has(filterId)) {
+      newFilters.delete(filterId)} else {
+      newFilters.add(filterId);
+    setActiveFilters(newFilters) };
+  // Clear all filters';
+  ';';
+    setSelectedCategory('all');';';
+    setSortBy('relevance')};
+  // Get icon for type
+  const getTypeIcon = (props: any) => {
+';
+    switch(type) {';';
+'"';';
+      case 'service': return <Zap className="w-4 h-4"   />;'"';';
+      case 'article': return <Tag className="w-4 h-4"   />;'"';';
+      case 'team': return <Users className="w-4 h-4"   />;'"';';
+      case 'technology': return <Brain className="w-4 h-4"   />;"
+      default: retur n <Globe className="w-4 h-4"   />};
+  // Get category color';
+  ';';
+;
   // Clear all filters;
   // Clear all filters
     setSelectedCategory('all');
@@ -66,7 +108,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       case 'technology': return <Brain className="w-4 h-4"   />;";
       "default": retur n <Globe className="w-4 h-4"   />"};
 ;
-  // Get category color;  // Get icon for type
+  // Get category color;
+  // Get icon for type
   const getTypeIcon = (props: any) => {
     switch(type) {
 '"
@@ -76,7 +119,6 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       case 'technology': return <Brain className="w-4 h-4"   />;"
       default: retur n <Globe className="w-4 h-4"   />};
   // Get category color
-  
     return colors[category as keyof typeof colors] || 'text-zinc-400'};
   return ("
     <div className="w-full max-w-6xl mx-auto">
@@ -96,7 +138,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             <button'';';
               onClick={() => setSearchQuery('')}"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover: tex t-white transition-colors"
-"            placeholder={placeholder}";
+"
+            placeholder={placeholder}";
             className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent transition-all duration-300 backdrop-blur-md";
           />;
           {searchQuery && (;
@@ -181,13 +224,81 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               {filterOptions.categories.map((category) => (;
                 <option key={category.id"} value={category.value}>;
                   {category.label} ({category.count});
-                </option>;          {/* Filter Toggle */"}
+                </option>;
+              onChange={(e) => setSelectedCategory(e.target.value)}"
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300"
+"
+              <option value="all">All Categories</option>
+              {filterOptions.categories.map((category) => (
+                <option key={category.id} value={category.value}>
+                  {category.label} ({category.count})
+                </option>
+              ))}
+            </select>"
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>
+          {/* Sort Options */}"
+          <div className="relative">
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}";
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent transition-all duration-300";
+";
+              <option value="relevance">Relevance</option>";
+              <option value="date">Date</option>";
+              <option value="rating">Rating</option>";
+              <option value="name">Name</option>;
+            </select>";
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>;
+          {/* Filter Toggle */}
+          <button';
+            onClick={() => setShowFilterPanel(!showFilterPanel)}`';';
+className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel'';';
+                ? 'bg-zion-cyan text-white''';';
+                : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`
+          {/* Filter Toggle */"}
           <button;
             onClick={() => setShowFilterPanel(!showFilterPanel)}`;
 "className": "{`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel';
                 ? 'bg-zion-cyan text-white'';
                 : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`;
-            }`}          {activeFilters.size > 0 && (
+            }`}
+                : 'bg-zinc-900/50 text-zinc-300 "hover": tex t-white border border-zinc-700/50'`;
+            "}`}
+";
+            <Filter className="w-4 h-4"   />            Filters;
+            {activeFilters.size > 0 && (";
+              <span className="ml-1 px-2 py-0.5 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
+              onChange={(e) => setSortBy(e.target.value)}"
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300"
+"
+              <option value="relevance">Relevance</option>"
+              <option value="date">Date</option>"
+              <option value="rating">Rating</option>"
+              <option value="name">Name</option>
+            </select>"
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>
+          {/* Filter Toggle */}
+          <button
+            onClick={() => setShowFilterPanel(!showFilterPanel)}`
+className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel'
+                ? 'bg-zion-cyan text-white''
+                : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`
+            }`}
+"
+            <Filter className="w-4 h-4"   />            Filters
+            {activeFilters.size > 0 && ("
+              <span className="ml-1 px-2 py-0.5 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
+                {activeFilters.size}
+              </span>) }
+          </button>
+          {/* Clear Filters */}
+          {activeFilters.size > 0 && (;
+            <button;
+              onClick={clearAllFilters}";
+              className="px-3 py-2 text-sm text-zinc-400 "hover": "tex t-white transition-colors";
+              Clear all;
+            </button>) "}
+          {activeFilters.size > 0 && (
             <button
               onClick={clearAllFilters}"
               className="px-3 py-2 text-sm text-zinc-400 hover: tex t-white transition-colors"
@@ -209,7 +320,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             animate = {';
 ';';
   { height: 'auto',
-  opacity: 1            animate = {;
+  opacity: 1
+            animate = {;
   { height: 'auto',;
   opacity: 1;
 }}
@@ -227,7 +339,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">"
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
 "
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">  { "height": "0",;
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">
+  { "height": "0",;
   "opacity": "0;
 "}}
             animate = {;
@@ -248,7 +361,28 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters;
 ";
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">;
-                {/* Type Filters */}      <AnimatePresence>
+                {/* Type Filters */}
+              <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-4">;
+                {/* Type Filters */"}
+                <div>";
+                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Type</h4>";
+                  <div className="space-y-2">;
+                    {filterOptions.types.map((type) => (";
+                      <label key={type.id} className="flex items-center gap-2 cursor-pointer">;
+                        <input";
+                          type="checkbox";
+                          checked={activeFilters.has(type.value)}
+                          onChange={() => toggleFilter(type.value)}";
+                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded "focus": "rin g-zion-cyan "focus": rin g-2";
+                        />";
+                        <span className="text-sm text-zinc-300">{type.label"}</span>";
+                        <span className="text-xs text-zinc-500">({type.count})</span>;
+                      </label>;
+                    ))}
+                  </div>;
+                </div>;
+                {/* Tag Filters */}
+      <AnimatePresence>
         {showFilterPanel && (<motion.div
             initial = {
   { height: 0,
@@ -300,12 +434,29 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                         onClick={() => toggleFilter(tag.toLowerCase())}`';
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())';';
                             ? 'bg-zion-cyan text-white''';';
-                            : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`                        onClick={() => toggleFilter(tag.toLowerCase())}`
+                            : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`
+                <div>";
+                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>";
+                  <div className="flex flex-wrap gap-2">;
+                    {['AI',Cloud',Security',DevOps',Digital Transformation',Machine Learning'].map((tag) => (;
+                      <button;
+                        key={tag}
+                        onClick={() => toggleFilter(tag.toLowerCase())}`;
+                        className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase());
+                            ? 'bg-zion-cyan text-white'';
+                            : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`;
+                        }`}
+                        onClick={() => toggleFilter(tag.toLowerCase())}`;
+                        className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase());
+                            ? 'bg-zion-cyan text-white'';
+                            : 'bg-zinc-800/50 text-zinc-300 "hover": "b g-zinc-700/50'`;
+                        "}`}
+;
+                        onClick={() => toggleFilter(tag.toLowerCase())}`
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())
                             ? 'bg-zion-cyan text-white''
                             : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`
                         }`}
-
                         {tag}
                       </button>) ) }
                   </div>
@@ -330,7 +481,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                           className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded "focus": "rin g-zion-cyan "focus": rin g-2";
                         />";
                         <span className="text-sm text-zinc-300">{location"}</span>;
-                      </label>;                          onChange={() => toggleFilter(location.toLowerCase())}"
+                      </label>;
+                          onChange={() => toggleFilter(location.toLowerCase())}"
                           className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2"
                         />"
                         <span className="text-sm text-zinc-300">{location}</span>
@@ -377,7 +529,50 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                         <Star className="w-4 h-4 fill-current"   />"                        <span className="text-sm">{result.rating}</span>;
                       </div>;
                     )}`;
-                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>;                    </div>
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>;
+            initial = {
+  { opacity: 0,
+  y: 2 0
+}}
+            animate = {
+  { opacity: 1,
+  y: 0
+}}"
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300 cursor-pointer group"
+"
+            <div className="flex items-start gap-4">"
+              <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hover: b g-zion-cyan/20 transition-colors">
+                {getTypeIcon(result.type)}
+              </div>
+"
+              <div className="flex-1 min-w-0">"
+                <div className="flex items-start justify-between mb-2">"
+                  <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
+                    {result.title}
+                  "
+                  <div className="flex items-center gap-2">
+                    {result.rating && ("
+                      <div className="flex items-center gap-1 text-yellow-400">"
+                        <Star className="w-4 h-4 fill-current"   />"                        <span className="text-sm">{result.rating}</span>
+                      </div>
+                    )}`
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>
+                      {result.category}
+                    </span>
+                  </div>
+                </div>
+"
+                <p className="text-zinc-300 mb-3 line-clamp-2">{result.description}</p>
+"
+                <div className="flex items-center gap-4 text-sm text-zinc-400">
+                  {result.location && ("
+                    <div className="flex items-center gap-1">"
+                      <MapPin className="w-4 h-4"   />
+                      {result.location}
+                        </div>
+  );
+}
+                    </div>
                   )}
                   {result.date && ("
                     <div className="flex items-center gap-1">"
@@ -407,6 +602,24 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 </div>;
               </div>;
             </div>;
+          </motion.div>;) ) }
+      </div>
+      {/* No Results */}
+      {filteredResults.length === 0 && (<motion.div;
+          initial={{ "opacity": "0 "}}
+          animate={{ "opacity": "1 "}}";
+          className="text-center py-12";
+";
+          <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4"   />";
+          <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found"          <p className="text-zinc-400 mb-4">;
+            Try adjusting your search terms or filters;
+          </p>;
+          <button;
+            onClick={clearAllFilters}";
+            className="px-4 py-2 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/80 transition-colors";
+            Clear all filters;
+          </button>;
+        </motion.div>) "}
       {filteredResults.length === 0 && (<motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}"
@@ -423,7 +636,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           </button>
         </motion.div>) }
         </div>
-  );}
+  );
+    </div>) }
+}
+}
 '"`
 </motion>
 </motion>
@@ -436,3 +652,24 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 </Set>
 </any>';
 </SearchAndFilterSystemProps>;';;';
+    </div>) }
+;
+}
+;
+}
+'"`;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</any>;
+</any>;
+</any>;
+</string>;
+</Set>;
+</any>;
+</any>;
+</SearchAndFilterSystemProps>;
+</any>
+</any>
+</SearchAndFilterSystemProps>

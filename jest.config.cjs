@@ -1,51 +1,96 @@
-/** @type {import('jest').Config} */
-module.exports = {
-	testEnvironment: 'jsdom',
-	transform: {
-		'^.+\\.(t|j)sx?$': ['ts-jest', { tsconfig: { jsx: 'react-jsx' } }],
-	},
-	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-	setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
-	testMatch: ['**/__tests__/**/*.(js|jsx|ts|tsx)', '**/*.(test|spec).(js|jsx|ts|tsx)'],
-};
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+<<<<<<< HEAD
+=======
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './',
+});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js'
+    '^@/(.*)$': '<rootDir>/$1',
   },
-  testMatch: ['<rootDir>/tests/**/smoke.test.{js,jsx,ts,tsx}'],
+  collectCoverageFrom: [
+    'components/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    'utils/**/*.{js,jsx,ts,tsx}',
+    '!**/node_modules/**',
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/out/',
+    '<rootDir>/__tests__.disabled/',
+    '<rootDir>/tests.disabled/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/test.disabled/',
+    '<rootDir>/plugins.disabled/',
+    '<rootDir>/supabase.disabled/',
+    '<rootDir>/dao/',
+    '<rootDir>/pages.disabled/',
+  ],
+}
+
+<<<<<<< HEAD
+module.exports = createJestConfig(customJestConfig)
+=======
+  testMatch: [
+    '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)',
+  ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/.next/',
+    '/out/',
+    '/dist/',
+    '/recovered-branches/',
+    '/src_backup/',
+    '/e2e/',
+  ],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts'
+    'components/**/*.{js,jsx,ts|tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
   ],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  },
+  transformIgnorePatterns: [
+    '/node_modules/',
+    '^.+\\.module\\.(css|sass|scss)$',
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  verbose: true,
+  collectCoverage: false,
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testPathIgnorePatterns: [
-    '<rootDir>/node_modules/',
-    '<rootDir>/dist/',
-    '<rootDir>/build/',
-    '<rootDir>/zion-os.disabled/',
-    '<rootDir>/backup-problematic-files/',
-    '<rootDir>/tests/integration/',
-    '<rootDir>/tests/e2e/',
-    '<rootDir>/tests/playwright/',
-    '<rootDir>/tests/storybook/'
-  ],
-  transformIgnorePatterns: ['node_modules/(?!(.*\\.mjs$))'],
-  roots: ['<rootDir>/src', '<rootDir>/tests'],
-  watchPathIgnorePatterns: [
-    '<rootDir>/zion-os.disabled/',
-    '<rootDir>/backup-problematic-files/',
-    '<rootDir>/zion-os.disabled/zion-os/package.json',
-    '<rootDir>/backup-problematic-files/temp-exclude/zion-os/package.json'
-  ]
+  testTimeout: 10000,
 };
+
+module.exports = createJestConfig(customJestConfig);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

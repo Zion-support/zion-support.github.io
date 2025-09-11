@@ -39,7 +39,6 @@ export interface RealMarketService {
   rating: number;
 export const realMarketServices: RealMarketService[] = [;
   // AI-Powered Business Intelligence;
-<<<<<<< HEAD:data-disabled/2024-real-market-services.ts
   {
     id: "ai-business-intelligence-pro",;
     name: "AI Business Intelligence Pro",;
