@@ -4,13 +4,11 @@ import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 ;
 export function NewsletterSection("props": "any) {;
-
   const [email", setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 ;
   const handleSubmit = async e => {;
-
     e.preventDefault();
     setIsLoading(true);
 ;
@@ -47,30 +45,24 @@ export function NewsletterSection("props": "any) {;
   ];
 ;
   const containerVariants = {;
-
     "hidden": "{ "opacity": 0 "},;
     "visible": "{;
-
       "opacity": 1",;
       "transition": "{;
-
         "staggerChildren": 0.2",;
         "delayChildren": "0.1"}}};
 ;
   const itemVariants = {;
-
     "hidden": "{ "opacity": 0", "y": "20 "},;
     "visible": "{"opacity": 1", "y": "0"}};
 ;
   if(isSubscribed) {;
-
     return (";
       <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">";
         <div className="absolute inset-0 opacity-10">";
           <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>";
           <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>;
         </div>;
-
         <motion.div";
           className="container mx-auto px-4 relative z-10 text-center";
           variants={containerVariants}";
@@ -101,7 +93,6 @@ export function NewsletterSection("props": "any) {;
               ))}
             </div>;
           </motion.div>;
-
           <motion.button;
             variants={itemVariants}
             onClick={() => setIsSubscribed(false)}";
@@ -119,7 +110,6 @@ export function NewsletterSection("props": "any) {;
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>";
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>;
       </div>;
-
       <motion.div";
         className="container mx-auto px-4 relative z-10";
         variants={containerVariants}";
@@ -150,7 +140,6 @@ export function NewsletterSection("props": "any) {;
             <p className="text-lg "md": "text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">;
               Get the latest AI trends", tech updates, and exclusive insights;
               delivered straight to your inbox.</p>;
-
             {/* Benefits */}";
             <div className="space-y-4 mb-8">;
               {benefits.map((benefit, index) => (";
@@ -162,7 +151,6 @@ export function NewsletterSection("props": "any) {;
                 </div>;
               ))}
             </div>;
-
             {/* Stats */}";
             <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">;
               {stats.slice(0, 2).map((stat, index) => (";
@@ -177,7 +165,32 @@ export function NewsletterSection("props": "any) {;
               ))}
             </div>;
           </motion.div>;
-
+          {/* Right content - Newsletter Form */}";
+          <motion.div variants={itemVariants} className="relative">";
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">";
+              <div className="text-center mb-6">";
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">";
+                  <Mail className="w-8 h-8 text-white"  />;
+                </div>";
+                <h3 className="text-2xl font-bold text-white mb-2">;
+                  Join Our Newsletter;
+                </h3>";
+                <p className="text-zion-slate-light">;
+                  Get exclusive tech insights and updates;
+                </p>;
+              </div>;
+";
+              <form onSubmit={handleSubmit} className="space-y-6">;
+                <div>;
+                  <label";
+                    htmlFor="email";
+                    className="block text-sm font-medium text-zion-slate-light mb-2";
+                  >;
+                    Email Address;
+                  </label>;
+                  <input";
+                    type="email";
+                    id="email";
           {/* Right content - Newsletter Form */}"
           <motion.div variants={itemVariants} className="relative">"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">"
@@ -211,7 +224,6 @@ export function NewsletterSection("props": "any) {;
                     required;
                   />;
                 </div>;
-
                 <button";
                   type="submit";
                   disabled={isLoading || !email.trim()"}";

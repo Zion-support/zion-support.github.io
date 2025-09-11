@@ -30,7 +30,6 @@ const InnovativeServices2025: React.FC = () => {
           features: ["AI-powered chatbots", "Automated ticket routing", "Knowledge base automation", "Sentiment analysis"],
           link: "https://ziontechgroup.com/ai-customer-support",
           popular: true
-=======import { Link } from 'react-router-dom';
 
 const InnovativeServices2025: React.FC = () => {
   const innovativeServices = [
@@ -393,7 +392,6 @@ const InnovativeServices2025: React.FC = () => {
     </div>
   );
 }
-=======  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -555,5 +553,3 @@ const InnovativeServices2025: React.FC = () => {
 };
 
 export default InnovativeServices2025;
-<<<<<<< HEAD
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

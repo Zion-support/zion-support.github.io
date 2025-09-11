@@ -52,6 +52,3 @@ unauthorized access, alteration, disclosure, or destruction.;
                 </p>;
               </div>;
     </MainLayout>;
-  )}
-";
-export default PrivacyPolicy

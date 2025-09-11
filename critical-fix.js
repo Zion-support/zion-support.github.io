@@ -1,6 +1,7 @@
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-function createValidComponent(filePath) {
+function createValidComponent() {
+
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName;
     .split("-");

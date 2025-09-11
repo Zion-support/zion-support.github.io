@@ -15,4 +15,3 @@ describe('getWallet', () => {;
     // Add error handling tests;
     expect(() => getWallet(undefined)).not.toThrow();
 });
-});

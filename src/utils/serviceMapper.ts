@@ -1,3 +1,8 @@
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+
 export type ServiceInfo = {
   id: string;
   title: string;

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-06T09:19:37.644Z",
+  "fixedFiles": [
+    "pages/api/disputes/[id]/download.ts",
+    "pages/api/disputes/[id]/message.ts",
+    "pages/api/disputes/[id]/resolve.ts",
+    "pages/api/disputes/[id]/upload.ts",
+    "pages/api/disputes/index.ts"
+  ],
+  "errors": [],
+  "totalFixed": 5,
+  "totalErrors": 0
+}

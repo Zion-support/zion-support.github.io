@@ -113,8 +113,6 @@ export default function MicroSaasServicesPage() {
                 <p className="text-zion-slate-light">Address</p>
                 <p className="text-white font-medium">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Filter, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
@@ -387,7 +385,6 @@ export default function MicroSaasServicesPage() {
       </section>
 
       <TrustedBySection />
-==============import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
@@ -530,8 +527,6 @@ export default function MicroSaasServicesPage() {
               </Badge>
             )}
         {/* Benefits */}
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </>
         )}
       </div>
@@ -559,12 +554,5 @@ export default function MicroSaasServicesPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

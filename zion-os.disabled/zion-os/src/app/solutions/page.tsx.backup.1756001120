@@ -37,7 +37,6 @@ export default function SolutionsPage() {
         "30% reduction in treatment time",
         "40% increase in patient outcomes"
       ]
-=======
   const caseStudies = [
     {
       title: "AI-Powered Manufacturing Optimization",
@@ -259,7 +258,6 @@ export default function SolutionsPage() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Our Implementation Process
           </h2>
-=======
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
@@ -395,16 +393,10 @@ export default function SolutionsPage() {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-2">Strategy</h3>
-              <p className="text-gray-300">We develop a comprehensive AI strategy tailored to your business objectives.</p>
-            </div>
-=======
               <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
               <p className="text-gray-300 text-sm">
                 Our team designs a customized solution architecture tailored to your business requirements.
@@ -414,39 +406,10 @@ export default function SolutionsPage() {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-2">Optimization</h3>
-              <p className="text-gray-300">We continuously monitor and optimize your AI systems for peak performance.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the AI revolution and discover how our solutions can drive innovation, efficiency, and growth for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105">
-              Start Your Transformation
-            </Link>
-            <Link href="/services" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
-=======
               <h3 className="text-lg font-semibold text-white mb-2">Optimize</h3>
               <p className="text-gray-300 text-sm">
                 Continuous monitoring and optimization ensure maximum performance and ROI.

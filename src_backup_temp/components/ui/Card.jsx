@@ -1,3 +1,6 @@
+import React from 'react';';
+const Card = ("props": "any) => {"}
+  return();
 import React from 'react';'
 const Card = (props: any) => {}
   return()
@@ -5,6 +8,9 @@ const Card = (props: any) => {}
       className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
     >
       {children}
+    </div>';
+  );';';
+};'
     </div>;
   );
 };';
@@ -19,6 +25,9 @@ const CardHeader = ("props": "any) => {"}
   return()````;
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>;
       {children}
+    </div>';
+  );';';
+};'
     </div>;
   );
 };';
@@ -39,6 +48,20 @@ const CardHeader = (props: any) => {}
   return()````
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
       {children}
+    </h3>';
+  );';';
+};'
+const CardDescription = (props: any) => {}
+`
+  return()``
+    <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>';
+  );';';
+};'
+const CardContent = (props: any) => {}
+`
+``';
+  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;';';
+};'
     </div>
     );
 };'
@@ -110,6 +133,23 @@ var __rest =
         if()
           e.indexOf(p[i]) < 0 &&
           Object.prototype.propertyIsEnumerable.call(s, p[i])
+        )';
+          t[p[i]] = s[p[i]];';';
+      }'';';
+    return t;''';';
+  };'''';';
+import {jsx as _jsx} from 'react/jsx-runtime';'''';';
+import React from 'react';'''';';
+import {cn} from '@/lib/utils';';
+const Card = React.forwardRef((_a, ref) => {}';';
+  var {className} = _a,'';';
+    props = __rest(_a, ['className']);'';';
+  return _jsx(''';';
+    'div',';
+    Object.assign() {}';';
+        ref: ref,'';';
+        className: cn(''';';
+          'rounded-lg border bg-card text-card-foreground shadow-sm',
 var __rest =;
   (this && this.__rest) ||;
   function (s, e) {}
@@ -137,12 +177,43 @@ const Card = React.forwardRef((_a, ref) => {}
   return _jsx(''
     'div',
     Object.assign() {}
+        ref: ref,';
+        className: cn('';
+          'rounded-lg border bg-card text-card-foreground shadow-sm',;
+        "ref": "ref",';
+        "className": "cn('';
+          'rounded-lg border bg-card text-card-foreground shadow-sm'",;
         ref: ref,'
         className: cn(''
           'rounded-lg border bg-card text-card-foreground shadow-sm',
           className;
         )},
       props;
+    )';
+  );';';
+});'';';
+Card.displayName = 'Card';';
+const CardHeader = React.forwardRef((_a, ref) => {}';';
+  var {className} = _a,'';';
+    props = __rest(_a, ['className']);'';';
+  return _jsx(''';';
+    'div','';';
+    Object.assign(''';';
+      {ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className)},
+      props;
+    )';
+  );';';
+});'';';
+CardHeader.displayName = 'CardHeader';';
+const CardTitle = React.forwardRef((_a, ref) => {}';';
+  var {className} = _a,'';';
+    props = __rest(_a, ['className']);'';';
+  return _jsx(''';';
+    'h3',';
+    Object.assign() {}';';
+        ref: ref,'';';
+        className: cn(''';';
+          'text-2xl font-semibold leading-none tracking-tight',
     );
     )
   );
@@ -150,6 +221,12 @@ const Card = React.forwardRef((_a, ref) => {}
     );'
 Card.displayName = 'Card';
 const CardHeader = React.forwardRef((_a, ref) => {}
+  var {className} = _a,';
+    props = __rest(_a, ['className']);';
+  return _jsx('';
+    'div',';
+    Object.assign('';
+      {"ref": "ref", "className": "cn('flex flex-col space-y-1.5 p-6'", className)},;
   var {className} = _a,'
     props = __rest(_a, ['className']);'
   return _jsx(''
@@ -168,12 +245,54 @@ const CardTitle = React.forwardRef((_a, ref) => {}
   return _jsx(''
     'h3',
     Object.assign() {}
+        ref: ref,';
+        className: cn('';
+          'text-2xl font-semibold leading-none tracking-tight',;
+        "ref": "ref",';
+        "className": "cn('';
+          'text-2xl font-semibold leading-none tracking-tight'",;
         ref: ref,'
         className: cn(''
           'text-2xl font-semibold leading-none tracking-tight',
           className;
         )},
       props;
+    )';
+  );';';
+});'';';
+CardTitle.displayName = 'CardTitle';';
+const CardDescription = React.forwardRef((_a, ref) => {}';';
+  var {className} = _a,'';';
+    props = __rest(_a, ['className']);'';';
+  return _jsx(''';';
+    'p','';';
+    Object.assign(''';';
+      {ref: ref, className: cn('text-sm text-muted-foreground', className)},
+      props;
+    )';
+  );';';
+});'';';
+CardDescription.displayName = 'CardDescription';';
+const CardContent = React.forwardRef((_a, ref) => {}';';
+  var {className} = _a,'';';
+    props = __rest(_a, ['className']);'';';
+  return _jsx(''';';
+    'div','';';
+    Object.assign({ref: ref, className: cn('p-6 pt-0', className)}, props)';
+  );';';
+});'';';
+CardContent.displayName = 'CardContent';';
+const CardFooter = React.forwardRef((_a, ref) => {}';';
+  var {className} = _a,'';';
+    props = __rest(_a, ['className']);'';';
+  return _jsx(''';';
+    'div','';';
+    Object.assign(''';';
+      {ref: ref, className: cn('flex items-center p-6 pt-0', className)},
+      props;
+    )';
+  );';';
+});'';';
     );
     )
   );
@@ -181,6 +300,12 @@ const CardTitle = React.forwardRef((_a, ref) => {}
     );'
 CardTitle.displayName = 'CardTitle';
 const CardDescription = React.forwardRef((_a, ref) => {}
+  var {className} = _a,';
+    props = __rest(_a, ['className']);';
+  return _jsx('';
+    'p',';
+    Object.assign('';
+      {"ref": "ref", "className": "cn('text-sm text-muted-foreground'", className)},;
   var {className} = _a,'
     props = __rest(_a, ['className']);'
   return _jsx(''
@@ -194,6 +319,11 @@ const CardDescription = React.forwardRef((_a, ref) => {}
     );'
 CardDescription.displayName = 'CardDescription';
 const CardContent = React.forwardRef((_a, ref) => {}
+  var {className} = _a,';
+    props = __rest(_a, ['className']);';
+  return _jsx('';
+    'div',';
+    Object.assign({"ref": "ref", "className": "cn('p-6 pt-0'", className)}, props);
   var {className} = _a,'
     props = __rest(_a, ['className']);'
   return _jsx(''
@@ -204,6 +334,12 @@ const CardContent = React.forwardRef((_a, ref) => {}
     );'
 CardContent.displayName = 'CardContent';
 const CardFooter = React.forwardRef((_a, ref) => {}
+  var {className} = _a,';
+    props = __rest(_a, ['className']);';
+  return _jsx('';
+    'div',';
+    Object.assign('';
+      {"ref": "ref", "className": "cn('flex items-center p-6 pt-0'", className)},;
   var {className} = _a,'
     props = __rest(_a, ['className']);'
   return _jsx(''
@@ -213,6 +349,7 @@ const CardFooter = React.forwardRef((_a, ref) => {}
       props;
     )
   );
+});';
 CardFooter.displayName = 'CardFooter';
 export {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent};
 ;
@@ -223,6 +360,8 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, C
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 ;
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};';
+;';;';
 ;
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 ;
@@ -230,13 +369,8 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, C
     );'
 CardFooter.displayName = 'CardFooter';
 export {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};

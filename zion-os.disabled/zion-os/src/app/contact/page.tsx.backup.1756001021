@@ -156,7 +156,6 @@ export default function ContactPage() {
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Message *
-=======
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -266,7 +265,6 @@ export default function ContactPage() {
                 className="w-full btn-primary py-4 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
-=======
                   rows={5}
                   className="input-field resize-none"
                   placeholder="Tell us about your project or question..."
@@ -340,7 +338,6 @@ export default function ContactPage() {
                   <h3 className="font-semibold mb-1">Business Hours</h3>
                   <p className="text-gray-300">Monday - Friday</p>
                   <p className="text-gray-400 text-sm">9:00 AM - 6:00 PM EST</p>
-=======
             <div className="card">
               <h2 className="text-2xl font-bold mb-6">Get in touch</h2>
               <div className="space-y-4">
@@ -409,50 +406,6 @@ export default function ContactPage() {
         </div>
 
         {/* FAQ Section */}
-<<<<<<< HEAD
-        <section className="mt-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Common questions about our services and processes
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-2">How quickly can you start a project?</h3>
-              <p className="text-gray-400">
-                We can typically begin most projects within 1-2 weeks of initial consultation, 
-                depending on complexity and current capacity.
-              </p>
-            </div>
-            
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-2">Do you offer ongoing support?</h3>
-              <p className="text-gray-400">
-                Yes, we provide comprehensive ongoing support, maintenance, and optimization 
-                services for all our solutions.
-              </p>
-            </div>
-            
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-2">What industries do you specialize in?</h3>
-              <p className="text-gray-400">
-                We work across industries including finance, healthcare, manufacturing, 
-                retail, and technology, adapting our solutions to specific needs.
-              </p>
-            </div>
-            
-            <div className="card p-6">
-              <h3 className="text-lg font-semibold mb-2">How do you ensure data security?</h3>
-              <p className="text-gray-400">
-                We implement enterprise-grade security measures including encryption, 
-                access controls, and compliance with industry standards like SOC2.
-              </p>
-            </div>
-          </div>
-        </section>
-=======
         <div className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -481,7 +434,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1e9c
       </div>
     </div>
   );

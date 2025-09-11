@@ -1,1 +1,0 @@
-export const generateRandomBlogPost = { init: function() { } } export default generateRandomBlogPost;

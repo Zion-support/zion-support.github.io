@@ -7,7 +7,8 @@ export default function Page("props": "any) {;
   // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }) ;
 ;
   // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }
-    );    observerRef.current.observe(imgRef.current) ;
+    );
+    observerRef.current.observe(imgRef.current) ;
 ;
     return () => {;
       if(observerRef.current) {;
@@ -78,7 +79,8 @@ export default function Page("props": "any) {;
         </div>;
       </div>) ;
   "}}) => {;
-    </div>;  // Base classes
+    </div>;
+  // Base classes
   // Loading skeleton
   if(!isIntersecting) {
     return (

@@ -1,3 +1,10 @@
+import React, {useState} from 'react',;',';';';';
+    ';';';';';';
+import {Link, useLocation} from 'react-router-dom',;';';';';
+    ';';';';';
+import {ChevronDown, ;';';';';';';
+import React, { useState } from 'react';""',';';';';
+    ';';';';';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, ChevronRight, Home, Zap, Shield, Cloud, Brain, Settings, Users, BarChart3, Mail, Phone, MapPin } from 'lucide-react';
@@ -53,6 +60,13 @@ export function Sidebar() {;
     </div>;
   );
 }
+import React, {useState} from 'react',;',';';
+    ';';';';
+import {Link, useLocation} from 'react-router-dom',;';';
+    ';';';
+import {ChevronDown, ;';';';';
+import React, { useState } from 'react';""',';';
+    ';';';
 import {Link, useLocation} from 'react-router-dom';
 import {ChevronDown, ChevronRight,
   Home, Zap,
@@ -779,6 +793,8 @@ export function Sidebar(props: any) {';';';
 </button>
 </X>
 </div>
+</div>';
+</div>;';;';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, ChevronRight, Home, Zap, Shield, Cloud, Brain, Settings, Users, BarChart3, Mail, Phone, MapPin } from 'lucide-react';
