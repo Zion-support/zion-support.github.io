@@ -64,6 +64,18 @@ function Header() {
             Services
           </Link>
           <Link
+            href='/blog'
+            className='text-gray-700 hover:text-blue-600 transition-colors'
+          >
+            Blog
+          </Link>
+          <Link
+            href='/case-studies'
+            className='text-gray-700 hover:text-blue-600 transition-colors'
+          >
+            Case Studies
+          </Link>
+          <Link
             href='/contact'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
@@ -94,7 +106,7 @@ function Footer() {
   return (
     <footer className='border-t border-gray-200 mt-10 py-6 bg-gray-50'>
       <div className='max-w-6xl mx-auto px-4'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
           <div>
             <h3 className='font-semibold text-gray-900 mb-3'>Services</h3>
             <div className='space-y-2'>
@@ -121,6 +133,29 @@ function Footer() {
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 IT Services
+              </Link>
+            </div>
+          </div>
+          <div>
+            <h3 className='font-semibold text-gray-900 mb-3'>Resources</h3>
+            <div className='space-y-2'>
+              <Link
+                href='/blog'
+                className='block text-gray-600 hover:text-blue-600 transition-colors'
+              >
+                Blog
+              </Link>
+              <Link
+                href='/case-studies'
+                className='block text-gray-600 hover:text-blue-600 transition-colors'
+              >
+                Case Studies
+              </Link>
+              <Link
+                href='/about'
+                className='block text-gray-600 hover:text-blue-600 transition-colors'
+              >
+                About Us
               </Link>
             </div>
           </div>
