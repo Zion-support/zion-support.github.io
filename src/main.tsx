@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import App from './AppMinimal';
+import AppMinimal from './AppMinimal';
 import './index.css';
 
 // Register service worker for PWA functionality
@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Router>
       <HelmetProvider>
-        <App />
+        <AppMinimal />
       </HelmetProvider>
     </Router>
   </React.StrictMode>
