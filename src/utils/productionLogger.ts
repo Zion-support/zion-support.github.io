@@ -1,30 +1,8 @@
-// Production logger utility
-export const _productionLogger = {
-  log: (...args: any[]) => {
-    if (process.env.NODE_ENV === 'development') {
-      // console.log(...args);
-    }
-  },
-  error: (...args: any[]) => {
-    if (process.env.NODE_ENV === 'development') {
-      // console.error(...args);
-    }
-  },
-  warn: (...args: any[]) => {
-    if (process.env.NODE_ENV === 'development') {
-      // console.warn(...args);
-    }
-  },
-  info: (...args: any[]) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.info(...args);
-    }
+export function logErrorToProduction(message: string, error?: any): void {
+  // In production, we might want to send errors to a logging service
+  // For now, just console.error in development
+  if (process.env['NODE_ENV'] === 'development') {
+    console.error(message, error);
   }
-};
-
-export const _logErrorToProduction = (error: any, context?: string) => {
-  if (process.env.NODE_ENV === 'development') {
-    // console.error('Error logged to production:', { error, context });
-  }
-  // In production, this would send to a logging service
-};
+  // TODO: Implement production error logging service
+}

@@ -1,11 +1,55 @@
-
-
-  "timestamp": "2025-09-07T06:34:57.329Z",
-
-
-    "totalImprovements": 6,
-    "totalImprovements": 5,
-    "totalErrors": 0,
-    "success": true
+{
+  "timestamp": "2025-09-11T02:39:49.605Z",
+  "linting": [
+    {
+      "command": "npm run lint:fix",
+      "result": {
+        "success": true,
+        "output": "\n> zion-tech-group-website@0.1.0 lint:fix\n> eslint \"src/AppMinimal.tsx\" \"src/main.tsx\" --fix\n\n"
+      }
+    },
+    {
+      "command": "npm run lint:check",
+      "result": {
+        "success": true,
+        "output": "\n> zion-tech-group-website@0.1.0 lint:check\n> eslint --no-error-on-unmatched-pattern \"src/AppMinimal.tsx\" \"src/main.tsx\" --max-warnings 0\n\n"
+      }
+    }
+  ],
+  "build": [
+    {
+      "command": "npm run build",
+      "result": {
+        "success": true,
+        "output": "\n> zion-tech-group-website@0.1.0 build\n> vite build --mode production && cp -f _redirects dist/_redirects || true && cp -f public/_headers dist/_headers || true\n\nvite v4.5.14 building for production...\ntransforming...\n✓ 1533 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                        1.62 kB │ gzip:  0.67 kB\ndist/assets/index-2caaaf64.css                       356.03 kB │ gzip: 42.89 kB\ndist/assets/ai-content-creation-4ed993c7.js            0.06 kB │ gzip:  0.08 kB │ map:   0.11 kB\ndist/assets/zap-bb8cedd7.js                            0.37 kB │ gzip:  0.29 kB │ map:   0.76 kB\ndist/assets/shield-04d704e6.js                         0.37 kB │ gzip:  0.30 kB │ map:   0.78 kB\ndist/assets/cloud-b6de48c1.js                          0.38 kB │ gzip:  0.30 kB │ map:   0.78 kB\ndist/assets/arrow-right-0c721564.js                    0.39 kB │ gzip:  0.30 kB │ map:   0.88 kB\ndist/assets/clock-e957369a.js                          0.40 kB │ gzip:  0.31 kB │ map:   0.89 kB\ndist/assets/map-pin-44ede14f.js                        0.42 kB │ gzip:  0.33 kB │ map:   0.92 kB\ndist/assets/star-2ae42ea3.js                           0.43 kB │ gzip:  0.32 kB │ map:   0.85 kB\ndist/assets/target-9979a1f2.js                         0.44 kB │ gzip:  0.30 kB │ map:   1.04 kB\ndist/assets/dollar-sign-2ee1a847.js                    0.44 kB │ gzip:  0.33 kB │ map:   0.97 kB\ndist/assets/bar-chart-3-b7a4db8e.js                    0.46 kB │ gzip:  0.32 kB │ map:   1.07 kB\ndist/assets/database-0e825eb4.js                       0.47 kB │ gzip:  0.34 kB │ map:   1.05 kB\ndist/assets/FAQ-77355a42.js                            0.47 kB │ gzip:  0.32 kB │ map:   0.75 kB\ndist/assets/Blog-d6ddd032.js                           0.48 kB │ gzip:  0.32 kB │ map:   0.75 kB\ndist/assets/News-7fa89b93.js                           0.48 kB │ gzip:  0.32 kB │ map:   0.75 kB\ndist/assets/Help-569cdf79.js                           0.48 kB │ gzip:  0.32 kB │ map:   0.75 kB\ndist/assets/Terms-557d7b7a.js                          0.48 kB │ gzip:  0.32 kB │ map:   0.76 kB\ndist/assets/Search-4b85b109.js                         0.48 kB │ gzip:  0.32 kB │ map:   0.77 kB\ndist/assets/Careers-b947491e.js                        0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Privacy-e66f6a15.js                        0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Pricing-4413ebbc.js                        0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Cookies-0f9b9af2.js                        0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Sitemap-3cedca29.js                        0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Training-9c83ac3f.js                       0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Partners-717f3322.js                       0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Webinars-e03df607.js                       0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Research-5280064b.js                       0.49 kB │ gzip:  0.32 kB │ map:   0.78 kB\ndist/assets/Categories-055d7afd.js                     0.50 kB │ gzip:  0.32 kB │ map:   0.80 kB\ndist/assets/Marketplace-33f91c44.js                    0.50 kB │ gzip:  0.32 kB │ map:   0.80 kB\ndist/assets/SystemStatus-50078852.js                   0.50 kB │ gzip:  0.32 kB │ map:   0.81 kB\ndist/assets/Documentation-99abcdef.js                  0.50 kB │ gzip:  0.32 kB │ map:   0.82 kB\ndist/assets/PrivacyPolicy-dc259c52.js                  0.50 kB │ gzip:  0.33 kB │ map:   0.82 kB\ndist/assets/Accessibility-4f392837.js                  0.50 kB │ gzip:  0.33 kB │ map:   0.82 kB\ndist/assets/DataProtection-436e729e.js                 0.51 kB │ gzip:  0.33 kB │ map:   0.83 kB\ndist/assets/TermsOfService-6a2e2b34.js                 0.51 kB │ gzip:  0.32 kB │ map:   0.83 kB\ndist/assets/Team-553ac309.js                           0.51 kB │ gzip:  0.34 kB │ map:   0.79 kB\ndist/assets/shopping-cart-ee97759e.js                  0.51 kB │ gzip:  0.37 kB │ map:   1.16 kB\ndist/assets/users-1b3a697c.js                          0.52 kB │ gzip:  0.36 kB │ map:   1.13 kB\ndist/assets/server-4dd85511.js                         0.56 kB │ gzip:  0.35 kB │ map:   1.36 kB\ndist/assets/network-9bf6a2ba.js                        0.61 kB │ gzip:  0.37 kB │ map:   1.43 kB\ndist/assets/trending-up-0bc24a19.js                    0.75 kB │ gzip:  0.41 kB │ map:   1.74 kB\ndist/assets/check-circle-dab86589.js                   1.41 kB │ gzip:  0.70 kB │ map:   4.02 kB\ndist/assets/phone-efe13b4a.js                          1.53 kB │ gzip:  0.61 kB │ map:   2.92 kB\ndist/assets/Cybersecurity-45eae5cc.js                  1.62 kB │ gzip:  0.70 kB │ map:   2.65 kB\ndist/assets/Services-a51bf007.js                       2.23 kB │ gzip:  0.97 kB │ map:   3.83 kB\ndist/assets/About-7bbad588.js                          2.57 kB │ gzip:  0.90 kB │ map:   4.26 kB\ndist/assets/Home-7c02d33e.js                           2.81 kB │ gzip:  0.99 kB │ map:   4.64 kB\ndist/assets/MobileAppPage-ad736171.js                  3.07 kB │ gzip:  1.47 kB │ map:  11.12 kB\ndist/assets/Login-11e16191.js                          3.21 kB │ gzip:  1.13 kB │ map:  11.11 kB\ndist/assets/Contact-ea60c744.js                        4.17 kB │ gzip:  1.20 kB │ map:   8.92 kB\ndist/assets/CloudDevOpsServices-a334bd30.js            6.93 kB │ gzip:  2.29 kB │ map:  14.70 kB\ndist/assets/CybersecurityServices-63559fcc.js          9.55 kB │ gzip:  2.78 kB │ map:  17.86 kB\ndist/assets/CloudDevOpsServices-ae472d1d.js           10.09 kB │ gzip:  2.98 kB │ map:  19.48 kB\ndist/assets/ai-email-responder-41edc37b.js            10.21 kB │ gzip:  2.99 kB │ map:  19.55 kB\ndist/assets/mobile-survey-tool-6377de05.js            11.93 kB │ gzip:  3.35 kB │ map:  22.92 kB\ndist/assets/AICustomerServiceAutomation-ea168dae.js   12.57 kB │ gzip:  3.39 kB │ map:  24.17 kB\ndist/assets/ai-talent-matching-7b17ba49.js            13.40 kB │ gzip:  3.72 kB │ map:  26.14 kB\ndist/assets/ecommerce-return-management-fb86b9c5.js   15.18 kB │ gzip:  4.01 kB │ map:  29.73 kB\ndist/assets/CloudMigrationServices-ef2745d8.js        17.37 kB │ gzip:  4.45 kB │ map:  35.96 kB\ndist/assets/utils-90a03423.js                         20.36 kB │ gzip:  6.89 kB │ map: 107.13 kB\ndist/assets/router-174dce64.js                        21.29 kB │ gzip:  7.95 kB │ map: 359.29 kB\ndist/assets/index-8e2ebadd.js                         53.40 kB │ gzip: 15.78 kB │ map: 142.12 kB\ndist/assets/vendor-729d4b68.js                       141.33 kB │ gzip: 45.46 kB │ map: 344.56 kB\n✓ built in 7.56s\n"
+      }
+    },
+    {
+      "command": "npm run build:clean",
+      "result": {
+        "success": false,
+        "error": "Command failed: npm run build:clean\nnpm error Missing script: \"clean\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-11T02_39_38_119Z-debug-0.log\n"
+      }
+    }
+  ],
+  "security": [
+    {
+      "command": "npm audit --audit-level=moderate",
+      "result": {
+        "success": false,
+        "error": "Command failed: npm audit --audit-level=moderate"
+      }
+    },
+    {
+      "command": "npm audit fix --force",
+      "result": {
+        "success": true,
+        "output": "\nadded 207 packages, removed 28 packages, changed 49 packages, and audited 1047 packages in 10s\n\n196 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n"
+      }
+    }
+  ],
+  "summary": {
+    "totalCommands": 6,
+    "successfulCommands": 4
   }
 }

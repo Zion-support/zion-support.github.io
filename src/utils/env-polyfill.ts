@@ -1,4 +1,27 @@
 
+// Minimal environment polyfill to avoid runtime errors in client bundles
+
+export function initializeEnvironmentPolyfill(): void {
+	try {
+		if (typeof (globalThis as any).process === 'undefined') {
+			(Object.assign(globalThis as any, { process: { env: {} } }));
+		}
+		if (typeof (globalThis as any).global === 'undefined') {
+			(Object.assign(globalThis as any, { global: globalThis }));
+		}
+	} catch {
+		// ignore
+	}
+}
+
+try {
+	if (typeof window !== 'undefined') {
+		initializeEnvironmentPolyfill();
+	}
+} catch {
+	// ignore
+}
+
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:

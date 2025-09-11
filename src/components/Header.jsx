@@ -1,21 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MainNavigation } from './header/MainNavigation';
 
-export const Header = () => {
-  return (
-    <header className="bg-slate-800 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold">Zion Tech Group</Link>
-        <nav>
-          <ul className="flex space-x-6">
-            <li><Link to="/services" className="hover:text-cyan-400">Services</Link></li>
-            <li><Link to="/about" className="hover:text-cyan-400">About</Link></li>
-            <li><Link to="/contact" className="hover:text-cyan-400">Contact</Link></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  );
-};
-
-export default Header;
+export function Header() {
+    return (
+      <header className="bg-white shadow-sm border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <Link to="/" className="flex-shrink-0">
+                <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
+              </Link>
+            </div>
+            <MainNavigation />
+          </div>
+        </div>
+      </header>
+    );
+}
