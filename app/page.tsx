@@ -7,6 +7,8 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import NewContentBanner from '../components/NewContentBanner';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 
@@ -83,6 +85,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Content Banner - Top */}
+      <NewContentBanner variant="default" maxItems={4} />
 
       {/* New Content Showcase Banner */}
       <section className='py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
@@ -1260,11 +1265,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* New Content Showcase */}
-      <NewContentShowcase />
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase variant="featured" maxItems={4} />
+      
+      {/* New Content Banner */}
+      <NewContentBanner variant="gradient" maxItems={4} />
 
       {/* Trending Content Section */}
-      <TrendingContent />
+      <EnhancedContentShowcase variant="trending" maxItems={4} />
+      
+      {/* Latest Content Section */}
+      <EnhancedContentShowcase variant="latest" maxItems={4} />
 
 
       {/* Performance Metrics Section */}
