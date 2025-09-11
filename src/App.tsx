@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
@@ -38,14 +38,14 @@ const App = () => {
   return (
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
-        <Suspense fallback={<EnhancedSuspenseFallback />}>
+        <React.Suspense fallback={<EnhancedSuspenseFallback />}>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
             ))}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Suspense>
+        </React.Suspense>
 
         {/* Global Components */}
         <Footer />

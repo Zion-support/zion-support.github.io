@@ -1,22 +1,22 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { NotificationProvider } from './contexts/NotificationContext';
-import ErrorBoundary from './components/ErrorBoundary';
-import LoadingSpinner from './components/LoadingSpinner';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/LoadingSpinner';
 import ThemeToggle from './components/ThemeToggle';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import ProgressBar from './components/ProgressBar';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./pages/HomePage'));
-const AboutPage = lazy(() => import('./pages/AboutPage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const AboutPage = React.lazy(() => import('./pages/AboutPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
+const NotFoundPage = React.lazy(() => import('./pages/NotFoundPage'));
 
 export default function AppMinimal() {
   return (
@@ -71,7 +71,7 @@ export default function AppMinimal() {
             </header>
 
             <main className='app-main'>
-              <Suspense fallback={<LoadingSpinner text='Loading page...' />}>
+              <React.Suspense fallback={<LoadingSpinner text='Loading page...' />}> 
                 <Routes>
                   <Route path='/' element={<HomePage />} />
                   <Route path='/about' element={<AboutPage />} />
@@ -79,7 +79,7 @@ export default function AppMinimal() {
                   <Route path='/contact' element={<ContactPage />} />
                   <Route path='*' element={<NotFoundPage />} />
                 </Routes>
-              </Suspense>
+              </React.Suspense>
             </main>
 
             <footer className='app-footer'>
