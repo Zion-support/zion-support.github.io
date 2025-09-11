@@ -394,6 +394,20 @@ export default function HomePage() {
             </div>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <Link href='/blog/ai-ops-runbooks-2025' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>🛠️</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>AI Ops Runbooks 2025</h3>
+                <p className='text-sm opacity-90'>Resolve LLM incidents faster with practical guardrails and playbooks.</p>
+              </div>
+            </Link>
+            <Link href='/blog/startup-seo-content-engine-2025' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>🧭</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Startup SEO Content Engine 2025</h3>
+                <p className='text-sm opacity-90'>A lean system to ship weekly content and compound traffic.</p>
+              </div>
+            </Link>
             <Link href='/blog/ai-platform-engineering-2025' className='group'>
               <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
                 <div className='text-3xl mb-2'>🧩</div>
@@ -445,6 +459,20 @@ export default function HomePage() {
           </div>
           {/* New Content Promo */}
           <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <Link href='/blog/ai-ops-runbooks-2025' className='group'>
+              <div className='rounded-lg border border-rose-200 bg-rose-50 p-6 hover:bg-rose-100 transition-colors'>
+                <div className='text-sm font-medium text-rose-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-rose-900 group-hover:underline'>AI Ops Runbooks 2025</h3>
+                <p className='text-rose-800 mt-2'>Playbooks for quality regressions, cost spikes, and tool failures.</p>
+              </div>
+            </Link>
+            <Link href='/blog/startup-seo-content-engine-2025' className='group'>
+              <div className='rounded-lg border border-emerald-200 bg-emerald-50 p-6 hover:bg-emerald-100 transition-colors'>
+                <div className='text-sm font-medium text-emerald-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-emerald-900 group-hover:underline'>Startup SEO Content Engine 2025</h3>
+                <p className='text-emerald-800 mt-2'>Ship weekly, measure impact, and build topic authority.</p>
+              </div>
+            </Link>
             <Link href='/blog/ai-platform-engineering-2025' className='group'>
               <div className='rounded-lg border border-indigo-200 bg-indigo-50 p-6 hover:bg-indigo-100 transition-colors'>
                 <div className='text-sm font-medium text-indigo-700 mb-1'>New</div>

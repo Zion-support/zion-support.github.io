@@ -4,6 +4,28 @@ import Link from 'next/link';
 export default function BlogPage() {
 	const blogPosts = [
 	  {
+	    id: 'ai-ops-runbooks-2025',
+	    title: 'AI Ops Runbooks 2025: Resolve Incidents Faster with Guardrails',
+	    excerpt:
+	      'Playbooks for LLM incidents: budget spikes, quality regressions, tool failures, and data drift.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'AI Operations',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-seo-content-engine-2025',
+	    title: 'Startup SEO Content Engine 2025: Ship Weekly, Compound Traffic',
+	    excerpt:
+	      'A lean system to ideate, draft, and publish content that converts—without a big team.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'Growth',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
 	    id: 'ai-platform-engineering-2025',
 	    title: 'AI Platform Engineering in 2025: Reliable, Governed, Cost-Aware',
 	    excerpt:
