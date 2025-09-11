@@ -113,20 +113,23 @@ export default function HomePage() {
             <Link href='/blog' className='text-blue-600 font-semibold hover:underline'>View all</Link>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <ArticleCard
-              title='AI Marketing Content Engine 2025'
-              href='/blog/ai-marketing-content-engine-2025'
-              description='From brief to multi-channel campaign in hours, with governance built-in.'
+            <Card
+              title='AI Sales Playbooks 2025: Sequencing, Scoring, and Agentic SDRs'
+              href='/blog/ai-sales-playbooks-2025'
+              description='Outbound frameworks with AI research, multi-channel cadences, and evals.'
+              icon='📈'
             />
-            <ArticleCard
-              title='AI Governance Checklist 2025'
-              href='/blog/ai-governance-checklist-2025'
-              description='Operationalize policy with risk tiering, evals, and release gates.'
+            <Card
+              title='Data Governance for AI 2025: Practical, Lightweight Controls'
+              href='/blog/data-governance-for-ai-2025'
+              description='Trustable data flows, lineage, and access control for GenAI without ceremony.'
+              icon='🧭'
             />
-            <ArticleCard
-              title='AI Copilots for Engineering Teams'
-              href='/blog/ai-copilots-for-engineering'
-              description='Secure, repo-aware copilots to speed reviews and reduce toil.'
+            <Card
+              title='LLM Cost Optimization Playbook: Cut Spend Without Losing Quality'
+              href='/blog/llm-cost-optimization-playbook'
+              description='Reduce inference spend 20–50% with routing, retrieval, batching, and observability.'
+              icon='💰'
             />
           </div>
         </div>
