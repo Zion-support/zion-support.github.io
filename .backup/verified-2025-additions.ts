@@ -353,7 +353,7 @@ export const verified2025Additions: VerifiedService2025[] = [
       'Weekly reports and summaries',
       'CSV/JSON exports'
     ],
-    popular: false,
+    popular: false,;
     icon: '⏱️',;
     color: 'from-slate-600 to-gray-700',;
     textColor: 'text-slate-300',;
