@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { NotificationProvider } from './contexts/NotificationContext';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import ThemeToggle from './components/ThemeToggle';
@@ -18,7 +19,8 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 export default function AppMinimal() {
   return (
     <ThemeProvider>
-      <ErrorBoundary>
+      <NotificationProvider>
+        <ErrorBoundary>
         <Helmet>
           <title>Zion Tech Group - Advanced Technology Solutions</title>
           <meta 
@@ -75,7 +77,8 @@ export default function AppMinimal() {
         
         {/* Performance Monitor - Development Only */}
         <PerformanceMonitor />
-      </ErrorBoundary>
+        </ErrorBoundary>
+      </NotificationProvider>
     </ThemeProvider>
   );
 }
