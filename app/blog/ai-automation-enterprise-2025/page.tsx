@@ -541,7 +541,6 @@ export default function AIAutomationEnterprise2025() {
               Successful AI automation requires effective change management. Here's how to ensure smooth 
               adoption and maximize employee buy-in.
             </p>
-
             <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-8 mb-8">
               <h3 className="text-xl font-semibold text-yellow-900 mb-4">Change Management Best Practices</h3>
               <div className="grid md:grid-cols-2 gap-6">
@@ -619,6 +618,21 @@ export default function AIAutomationEnterprise2025() {
                   </div>
                 </div>
               </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Get Free Consultation
+              </Link>
+              <Link
+                href="/resources/ai-implementation-checklist"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Download Implementation Checklist
+              </Link>
             </div>
           </section>
 
