@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-09-11T13:55:49.415Z",
+  "timestamp": "2025-09-11T14:32:37.895Z",
   "bundleSize": {
-    "totalBytes": 6082534,
-    "totalSize": "5.80 MB",
-    "gzippedEstimate": 1824760,
-    "gzippedSize": "1.74 MB",
-    "fileCount": 190,
+    "totalBytes": 6996822,
+    "totalSize": "6.67 MB",
+    "gzippedEstimate": 2099046,
+    "gzippedSize": "2.00 MB",
+    "fileCount": 201,
     "recommendations": [
       "Consider code splitting to reduce initial bundle size",
       "Consider consolidating small files",
@@ -24,9 +24,9 @@
     ]
   },
   "dependencies": {
-    "totalDependencies": 119,
+    "totalDependencies": 120,
     "productionDependencies": 93,
-    "devDependencies": 26,
+    "devDependencies": 27,
     "potentialUnused": []
   },
   "recommendations": [
