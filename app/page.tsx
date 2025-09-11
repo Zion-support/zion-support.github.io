@@ -112,22 +112,22 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='Secure RAG Architecture in 2025: Safety, Scale, and Speed'
-              href='/blog/secure-rag-architecture-2025'
-              description='Multi-tenant RAG with strong isolation, evals, and predictable latency.'
-              icon='🛡️'
+              title='LLM Cost Optimization Playbook: Cut Spend Without Losing Quality'
+              href='/blog/llm-cost-optimization-playbook'
+              description='Reduce inference spend 20–50% with routing, retrieval, and batching.'
+              icon='💸'
             />
             <Card
-              title='AI Product Roadmaps That Actually Ship'
-              href='/blog/ai-product-roadmaps-that-ship'
-              description='Milestones and guardrails that keep AI features shipping with quality.'
-              icon='🗺️'
+              title='AI Governance Checklist 2025: Operationalize Policy With Evals'
+              href='/blog/ai-governance-checklist-2025'
+              description='A concise, actionable checklist for pragmatic AI governance.'
+              icon='✅'
             />
             <Card
-              title='GenAI Evals in Production: What Actually Works'
-              href='/blog/genai-evals-in-production'
-              description='Continuous eval loops that keep quality, safety, and costs in check.'
-              icon='🧪'
+              title='Startup Fundraising in 2025: Efficient Rounds in a Tough Market'
+              href='/blog/startup-fundraising-in-2025'
+              description='Prove traction, run a tight process, and negotiate governance.'
+              icon='📈'
             />
           </div>
         </div>
