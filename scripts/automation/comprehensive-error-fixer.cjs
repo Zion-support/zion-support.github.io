@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env node;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-#!/usr/bin/env node;
-/**;
- * Comprehensive Error Fixer Automation;
- * Fixes multiple types of errors comprehensively;
- * Runs every 30 minutes;
- */;
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process`)
-const glob = require(`glob`)class $1 {
-  constructor() {
-
-<<<<<<< HEAD
-  /**;
- * Comprehensive Error Fixer Automation;
- * Fixes multiple types of errors comprehensively;
- * Runs every 30 minutes;
- */;
-=======
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
 class ComprehensiveErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -116,9 +89,7 @@ module.exports = ComprehensiveErrorFixer;
 <<<<<<< HEAD
     }
   async generateFixReport() {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    console.log('✅ Build errors should be resolved by previous fixes')}
+=======    console.log('✅ Build errors should be resolved by previous fixes')}
   async generateFixReport() {
     console.log('📊 Generating fix report...');
     this.fixReport.totalFixes = this.fixesApplied.length + this.fixesFailed.length;
@@ -136,9 +107,7 @@ module.exports = ComprehensiveErrorFixer;
     );
     this.fixesApplied.forEach((fix, index) => {
       }] ${fix.action || fix.file}`)});
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    console.log(`📄 Fix report saved "to": ${reportPath}`)}
+=======    console.log(`📄 Fix report saved "to": ${reportPath}`)}
   printSummary() {
     console.log('\n🔧 ERROR FIXING SUMMARY');
     console.log('='.repeat(50));

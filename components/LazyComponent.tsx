@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { Suspense, lazy } from 'react',
 interface LazyComponentProps {
@@ -24,4 +21,3 @@ export default LazyComponent;
 =======
 
 export default LazyComponent;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

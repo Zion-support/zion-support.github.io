@@ -1,25 +1,12 @@
 
 {
 
-<<<<<<< HEAD
-
-"timestamp": "2025-09-06T12:00:35.732Z",
-  "totalDuration": 40787,
-  "successfulTasks": 5,
-
   "successfulTasks": 6,
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
   "successfulTasks": 6,
   "timestamp": "2025-09-06T09:22:21.501Z",
   "totalDuration": 93290,
   "successfulTasks": 2,
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
@@ -28,11 +15,6 @@
 
       "duration": 80288,
 
-<<<<<<< HEAD
-"duration": 6023,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
       "duration": 80288,
       "errors": [],
       "warnings": []
@@ -40,13 +22,6 @@
     "codeQuality": {
       "success": false,
 
-
-<<<<<<< HEAD
-      "duration": 5840,
-      "errors": [
-        "spawnSync /bin/sh ENOBUFS",
-        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      ],
 
 "duration": 26106,
       "errors": [
@@ -74,18 +49,11 @@
 "success": true,
 
       "duration": 46,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      "duration": 5840,
+=======      "duration": 5840,
       "errors": [
         "spawnSync /bin/sh ENOBUFS",
         "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      ],
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      "warnings": []
+      ],      "warnings": []
     },
     "securityAudit": {
       "success": false,
@@ -93,17 +61,12 @@
 "duration": 2836,
 =======
 
-      "duration": 3375,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      "errors": [
+      "duration": 3375,      "errors": [
         "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
       ],
       "warnings": []
     },
     "buildOptimization": {
-<<<<<<< HEAD
-      "errors": [],
-
 
       "errors": [],
       "warnings": []
@@ -163,15 +126,10 @@
 <<<<<<< HEAD
 
 
-      "errors": [],
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      "warnings": []
+      "errors": [],      "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
-<<<<<<< HEAD
-"duration": 9692,
-
       "errors": [],
 
       "warnings": []
@@ -198,25 +156,16 @@
         "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
       ],
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
       "warnings": []
     },
     "deployment": {
       "success": true,
-
-<<<<<<< HEAD
-
-      "duration": 1619,
-"duration": 1383,
 
       "errors": [],
       "warnings": []
     }
   }
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
       "duration": 1619,
       "errors": [],
       "warnings": []
@@ -225,9 +174,6 @@
   "recommendations": [
     "Review and fix code quality issues",
     "Address security vulnerabilities",
-<<<<<<< HEAD
-}
-
 
 "Enhance accessibility features"
   ]
@@ -242,5 +188,3 @@
 
 }
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

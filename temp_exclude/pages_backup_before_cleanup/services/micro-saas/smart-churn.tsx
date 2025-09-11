@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-export default function SmartChurn() {; return (; <Article; title=\"Smart Churn Predictor\"; subtitle=\"ML-based churn scoring with prescriptive save plays\"; price=\"from $299/mo\"; bullets={[
-    ; \'Real-time churn scoring using product usage + billing + support\',; \'Sends save offers and playbooks to Intercom,Zendesk,or email\',; \'Cohort analysis and revenue-at-risk dashboards\',; \'Export to BigQuery/Snowflake,
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     webhooks and REST API\'
   ]} links={{ \"website\": \'https: /> );
   } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string } }) {; return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;
@@ -25,9 +18,3 @@ export default function Smartchurn(): any ({ }: SmartchurnProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,28 +1,4 @@
 
-<<<<<<< HEAD
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-
-import React from "react";
-import {
-
-<<<<<<< HEAD
-
-import React from "react";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 import React from "react";
 import {
 
@@ -32,25 +8,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-export function TeamStats() {;
-  return (
-} from "@/components/ui/card";
-
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
-export function TeamStats() {;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
+export function TeamStats() {;  return (
     <Card>
       <CardHeader>
         <CardTitle>Team Stats</CardTitle>
@@ -65,13 +29,8 @@ export function TeamStats() {;
           <Progress value={64} className="h-2" />
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <div className="space-y-4 pt-2">
+=======        <div className="space-y-4 pt-2">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1">
               <p className="text-xs text-muted-foreground">Active projects</p>
@@ -89,9 +48,6 @@ export function TeamStats() {;
               <p className="text-xs text-muted-foreground">
                 Interviews this month
               </p>
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
@@ -99,8 +55,6 @@ import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
@@ -124,12 +78,6 @@ export function TeamStats() {
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
@@ -140,26 +88,11 @@ export function TeamStats() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
 
-<<<<<<< HEAD
-        
-        
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
@@ -167,18 +100,6 @@ export function TeamStats() {
           </button>
         </div>
       </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Card>
-  );
-}
-  )
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Progress } from "@/components/ui/progress";
-export function TeamStats() {;
-  return (;
-
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress",;
@@ -186,8 +107,6 @@ import { Progress } from "@/components/ui/progress",;
 export function TeamStats() {;
   return (;
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -197,32 +116,8 @@ export function TeamStats() {;
         <CardDescription>Performance metrics for your team</CardDescription>;
       </CardHeader>;
       <CardContent className="space-y-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="space-y-1.5">;
-        <div className="space-y-1.5">;
-=======
-        <div className="space-y-1 && 1.5">;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-        <div className="space-y-1 && 1.5">;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          <div className="flex items-center justify-between text-sm">;
-            <span>Team capacity</span>;
-            <span className="font-medium">32 / 50 seats used</span>;
-          </div>;
-          <Progress value={64} className="h-2" />;
-          <p className="text-xs text-muted-foreground">18 seats available</p>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="space-y-4 pt-2">;
           <div className="grid grid-cols-2 gap-4">;
             <div className="space-y-1">;
@@ -238,35 +133,6 @@ export function TeamStats() {;
               <p className="text-xl font-bold">14d</p>;
             </div>;
             <div className="space-y-1">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <p className="text-xs text-muted-foreground">Interviews this month</p>;
-              <p className="text-xs text-muted-foreground">Interviews this month</p>;
-=======
-              <p className="text-xs text-muted-foreground">;
-                Interviews this month;
-              </p>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-              <p className="text-xs text-muted-foreground">;
-                Interviews this month;
-              </p>;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              <p className="text-xl font-bold">24</p>;
-            </div>;
-          </div>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ;
-        <div className="pt-4 text-center border-t border-border mt-4">;
-          <button className="text-sm text-blue-500 font-medium hover:text-blue-700">;
-        <div className="pt-4 text-center border-t border-border mt-4">;
-          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
         <div className="pt-4 text-center border-t border-border mt-4">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 =======
@@ -323,20 +189,6 @@ function TeamStats() {
         <div className="pt - 4 text - center border - t border - border mt - 4">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            View Full Analytics;
-          </button>;
-        </div>;
-      </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
     </Card>
 
 
@@ -358,11 +210,7 @@ function TeamStats() {
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======}=======
     </Card>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );

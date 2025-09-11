@@ -300,35 +300,6 @@ export class PerformanceMonitor {}
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      // Log slow operations;
-      if ( {})
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
-    };
-  };
-  getMetrics() {}
-    return Object.fromEntries(this.metrics)) {}
-     {}
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
-    };
-  };
-  getMetrics() {}
-    return Object.fromEntries(this.metrics)}};
-  clearMetrics() {}
-    this.metrics.clear();
-    if ( {})
-      performance.clearMarks()) {}
-     {}
-      performance.clearMarks()};
-      performance.clearMeasures()};
-  };
-};
-export const performanceMonitor = new PerformanceMonitor;(;);
-";
-
         fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
         
         // Web Vitals utility;
@@ -494,4 +465,3 @@ if ( {})
 module.exports = AdvancedAppOptimizer;
 =======
 module.exports = AdvancedAppOptimizer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

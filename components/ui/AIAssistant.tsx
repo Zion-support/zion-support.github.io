@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-export type AIAssistantProps = {
-
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 =======
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
 =======
-
-<<<<<<< HEAD
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-export type AIAssistantProps = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-class ErrorBoundary extends React.Component {
+=======class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -41,24 +22,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
 
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
@@ -69,9 +40,6 @@ export type AIAssistantProps = {;
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   buttonLabel = "Generate with AI"
   title = "AI Writing Assistant"
   defaultPrompt
@@ -79,9 +47,7 @@ export type AIAssistantProps = {;
   onAccept
   authorizationToken
 }: AIAssistantProps) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+==============
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
@@ -95,21 +61,7 @@ export type AIAssistantProps = {;
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-export default function AIAssistant({
-  buttonLabel = 'Generate with AI',
-  title = 'AI Writing Assistant',
-  defaultPrompt,
-  systemPrompt,
-  onAccept,
-authorizationToken
-}: AIAssistantProps) {
-
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
@@ -121,10 +73,6 @@ authorizationToken
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const onOpen = useCallback(() => {;
 
 
 
@@ -299,8 +247,6 @@ if ( {) {
   const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     } catch {}
 }, [output]);
   const onOpen = useCallback(() => {;
@@ -321,25 +267,6 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
-    <>;
-      <button
-        type="button"
-        onClick={onOpen}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
-      >
-        {buttonLabel}
-      </button>
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -362,18 +289,6 @@ if ( {) {
                 className="text-sm opacity-70 hover:opacity-100">;
                 Close;
               </button>{" "}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>;
-            <div className="p-4 space-y-3">;
-              <div>;
-                <label
-                  className="block text-xs font-medium mb-1"
-htmlFor="input-Operator prompt">;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
             </div>;
             <div className="p-4 space-y-3">;
               <div>;
@@ -381,77 +296,6 @@ htmlFor="input-Operator prompt">;
                 <label
                   className="block text-xs font-medium mb-1"
                   htmlFor="input-Operator prompt">;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  Operator prompt;
-                </label>;
-                <textarea
-                  value={prompt}
-                  onChange={(e) => setPrompt(e && e.target.value)}
-                  rows={4}
-<<<<<<< HEAD
-<<<<<<< HEAD
-className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
-                />;
-              </div>;
-              <div className="flex items-center gap-2">;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
-                />;
-              </div>;
-              <div className="flex items-center gap-2">;
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                <button
-                  onClick={callOperator}
-                  disabled={loading}
-                  className="rounded-md bg-blue-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60">;
-                  {loading ? "Generating…" : "Generate"}
-                </button>;
-                <button
-                  onClick={callOperator}
-                  disabled={loading}
-                  className="rounded-md border px-3 py-1 && 1.5 text-sm">;
-                  {loading ? "…" : "Regenerate"}
-                </button>;
-                <button
-                  onClick={() => setIsEditing((v) => !v)}
-                  className="rounded-md border px-3 py-1 && 1.5 text-sm";
-                >;
-                  {isEditing ? "Preview" : "Edit"}
-                </button>;
-                <button
-                  onClick={onCopy}
-                  disabled={!output}
-                  className="rounded-md border px-3 py-1 && 1.5 text-sm disabled: opacity-60">;
-                  Copy;
-                </button>;
-                <button
-                  onClick={() => {;
-                    (onAccept(output), onClose());
-                  }}
-                  disabled={!canAccept}
-<<<<<<< HEAD
-<<<<<<< HEAD
-className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
-
-                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const on_open = useCallback (() => {
     setIsOpen (true);
@@ -535,66 +379,18 @@ className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm d
                   }}
                   disabled={!can_accept}
                   className="ml - auto rounded - md bg - green - 600 text - white px - 3 py - 1.5 text - sm disabled:opacity - 60";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   Accept;
                 </button>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              {error && (
-                <div className="text-red-600 text-sm">{error}</div>
-              )}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
               {error && (
                 <div className="text-red-600 text-sm">{error}</div>
               )}
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              {error && <div className="text-red-600 text-sm">{error}</div>}
-              <div>;
-                <label
-                  className="block text-xs font-medium mb-1"
-<<<<<<< HEAD
-<<<<<<< HEAD
-htmlFor="input-Output (markdown)">;
-=======
-                  htmlFor="input-Output (markdown)">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-                  htmlFor="input-Output (markdown)">;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  Output (markdown);
-                </label>;
-                {isEditing ? (;
-                  <textarea
-                    value={output}
-                    onChange={(e) => setOutput(e && e.target.value)}
-                    rows={12}
-<<<<<<< HEAD
-<<<<<<< HEAD
-className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
-=======
-
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";=======
 
                     className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -603,14 +399,8 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">;
                     {output || "No content yet. Click Generate."}
                   </pre>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </div>;
             </div>;
@@ -628,13 +418,6 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
         </div>
       )}
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-}
-=======
-  );
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {error && <div className="text - red - 600 text - sm">{error}</div>}
               <div>;
@@ -660,10 +443,6 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
         </div>)}
     </>);
 }
-<<<<<<< HEAD
-
-}
-
   );
 }
 }
@@ -671,11 +450,7 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
 
 =======
 
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+}=======
   );
 }
 }

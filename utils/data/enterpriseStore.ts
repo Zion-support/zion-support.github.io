@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',;
-const generateId = () => Math.random().toString(36).slice(2, 10),;
-const seedCompany: CompanyRecord = {;
-  id: 'cmp_acme',;
-  name: 'Acme Corporation',;
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 import {
   CompanyRecord,
   CompanyMember,
@@ -18,35 +6,10 @@ import {
 } from '../types/enterprise';
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-const generateId = () => Math.random().toString(36).slice(2, 10);
-=======
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
-const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
-const seed_company: CompanyRecord = {
-  id: 'cmp_acme',
-  name: 'Acme Corporation',
-  slug: 'acme',
-  logo_url: '/logo - acme.svg',
-  brand_color: '#4F46E5',
-  plan: {
-    tier: 'business',
-    seats_purchased: 25,
-    seats_used: 3,
-    usage_limits: {
-      monthlyJobPosts: 50,
-      budgetCapUsd: 10000}},
-=======
-
 
 const seedCompany: CompanyRecord = {;
   id: 'cmp_acme';
-  name: 'Acme Corporation';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+  name: 'Acme Corporation';=======
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
@@ -103,25 +66,6 @@ const seedCompany: CompanyRecord = {;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
 
     return true;
-<<<<<<< HEAD
-  }
-  listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
-const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
-const seed_company: CompanyRecord = {
-  id: 'cmp_acme',
-  name: 'Acme Corporation',
-  slug: 'acme',
-  logo_url: '/logo - acme.svg',
-  brand_color: '#4F46E5',
-  plan: {
-    tier: 'business',
-    seats_purchased: 25,
-    seats_used: 3,
-    usage_limits: {
-      monthlyJobPosts: 50,
-      budgetCapUsd: 10000}},
-
 
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
@@ -321,9 +265,7 @@ export const store = {;
 =======
   },
   list_invoices (company_id: string): InvoiceRecord[] {
-    const company = companiesById[company_id];
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    return company ? company.invoices : [];
+    const company = companiesById[company_id];    return company ? company.invoices : [];
   }};
 =======
   }}

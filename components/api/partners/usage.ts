@@ -1,8 +1,5 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -21,9 +18,7 @@ export default async function handler(
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -31,12 +26,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
-<<<<<<< HEAD
-
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
   const auth = null;
   return res.status(200).json({ summary })
@@ -49,14 +38,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const summary = await calculateUsageSummary(auth && auth.partner.id);
   return res && res.status(200).json({ summary })
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 
 =======
@@ -106,9 +89,6 @@ if ( {) {
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {;
     res.setHeader("Allow", "GET");
@@ -127,14 +107,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 =======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

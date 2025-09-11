@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-:utils/email.ts
-import fs from 'fs-extra';
-import path from 'path';
-export interface WarningEmailPayload {
-
 :backup-problematic-files/utils/email.ts
 import fs from 'fs-extra',;
 import path from 'path',;
@@ -13,17 +7,11 @@ export interface WarningEmailPayload {;
 =======
 
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   toUserId: string;
   toAddress?: string | null;
   subject: string;
   body: string;
 }
-<<<<<<< HEAD
-export interface EmailOptions {
-:utils/email.ts
-
 export interface EmailOptions {;
   to: string;
   subject: string;
@@ -76,6 +64,4 @@ main:utils/email.ts
 
 
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

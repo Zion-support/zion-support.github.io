@@ -1,37 +1,9 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const fetcher = (url: string) => fetch(url).then(r => r && r.json());
-const fetcher = (url: string) => fetch(url).then((r) => r.json()),
-export default function JobApplicantsPage() {
-  const router = useRouter();
-  const { id } = router.query;
-  const { data: appsData } = useSWR(id ? `/api/applications?jobId=${id}` : null, fetcher);
-  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-export default function JobApplicantsPage() {;
-  const router = useRouter(),;
-  const { id } = router && router.query;
-  const { data: appsData } = useSWR(;
-    id ? `/api/applications?jobId=${id}` : null,;
-    fetcher;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {use_router} from 'next / router';
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import useSWR from 'swr';
 import {TALENT_PROFILES} from '../../../../data / talent';
 import Link from 'next / link';
@@ -80,12 +52,7 @@ function JobApplicantsPage() {
                 </button>;
               </div>;
             </div>);
-        })}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {applications && applications.map(a => {;
+        })}        {applications && applications.map(a => {;
           const talent = TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === a && a.talentSlug);
             >;
               <div className='flex items-center justify-between'>;
@@ -106,23 +73,6 @@ function JobApplicantsPage() {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Applicants</h1>
-        <Link href="/client/dashboard"><a className="text-sm underline">Back to Dashboard</a></Link>
-      </div>
-{job && <p className="text-sm text-gray-600">For job: {job.title}</p>}
-      <div className="grid gap-3">
-        {applications.length === 0 && <p className="text-sm text-gray-500">No applicants yet.</p>}
-        {applications.map((a) => {
-          const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug);
-import { useRouter  } from 'next/router';
-import {useRouter} from 'next/router';
-import useSWR from 'swr';
-import { TALENT_PROFILES  } from '../../../../data/talent';
-import Link from 'next/link';
-
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function JobApplicantsPage() {
   const router = useRouter()
@@ -158,9 +108,7 @@ export default function JobApplicantsPage() {
   const job = jobData?.job
   const applications = (appsData?.applications as any[]) || []
   return (
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    <div className="space-y-4">
+=======    <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
         <Link href="/client/dashboard"><a className="text-sm underline">Back to Dashboard</Link></Link>
@@ -233,11 +181,6 @@ export default function JobApplicantsPage() {_const _router = useRouter();
             </div>
           );
         })}
-<<<<<<< HEAD
-      </div>
-    </div>
-);
-
 }
           )
         })  } catch (error) {
@@ -254,11 +197,7 @@ export default function JobApplicantsPage() {_const _router = useRouter();
   }
 }
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
       </div>;
     </div>;
   );
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

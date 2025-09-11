@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
@@ -13,49 +7,6 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-/** @type {import('next').NextConfig} */;
-
-const nextConfig = {;
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-/** @type {import('next').NextConfig} */;
-const nextConfig = {reactStrictMode: true;
-  compress: true;
-  poweredByHeader: false;
-  eslint: { ignoreDuringBuilds: true }
-  typescript: { ignoreBuildErrors: true }
-  pageExtensions: ['tsxtsjsxjs'];
-  // Image optimization;
-  images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
-    formats: ['image/webpimage/avif'];
-  }
-  // Output configuration;
-  output: 'standalone';
-  // Trailing slash;
-  trailingSlash: false;
-  // Base path;
-  basePath: '';
-  // Asset prefix;
-  assetPrefix: '';
-  // Generate ETags;
-  generateEtags: true;
-  // Dist directory;
-  distDir: '.next';
-}
-module.exports = nextConfig;
-const nextConfig = {;
-<<<<<<< HEAD
-  reactStrictMode: true;
-  reactStrictMode: true,;
-  reactStrictMode: true;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   compress: true,;
   poweredByHeader: false,;
@@ -123,8 +74,6 @@ module.exports = nextConfig;
 module.exports = nextConfig,;
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   // Image optimization;
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
@@ -144,9 +93,7 @@ module.exports = nextConfig,;
 <<<<<<< HEAD
   dist_dir: '.next';
 },
-module.exports = next_config,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+module.exports = next_config,>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
   distDir: '.next';
 },;

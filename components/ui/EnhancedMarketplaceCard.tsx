@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-          <div className="h-12 w-12 rounded bg-gray-200" />)}
-=======
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,8 +19,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
           <div className="h-12 w-12 rounded bg-gray-200" />)};
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -32,9 +26,6 @@ import React from 'react';
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Link from 'next/link';
 import Image from 'next/image';
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="h - 12 w - 12 rounded bg - gray - 200" />)}
         <h3 className="text - lg font - semibold text - gray - 900">{title}</h3>;
@@ -46,99 +37,6 @@ import Image from 'next/image';
 import Link from 'next / link';
 import Image from 'next / image';
 ;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-interface EnhancedMarketplaceCardProps {
-  title: string, description: string
-  price?: string;
-  href: string, image?: string
-interface EnhancedMarketplaceCardProps {;
-  title: string, description: string,;
-  price?: string;
-  href: string, image?: string,;
-  category?: string;
-  rating?: number;
-  reviews?: number;
-  featured?: boolean;
-  class_name?: string;
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
-  title,
-  description,
-  price,
-  href,
-  image,
-  category,
-  rating,
-  reviews,
-  featured = false,
-  class_name = '';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}) => {
-const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
-  title,;
-  description,;
-  price,;
-  href,;
-  image,;
-  category,;
-  rating,;
-  reviews,;
-  featured = false,;
-  className = '';
-}) => {;
-  return (
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        <div className="flex items-start space-x-3 mb-4">;
-          {image ? (;
-            <Image
-              src={image} 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              alt={title}
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-lg object-cover"
-            />;
-          ) : (;
-            <div className="h-12 w-12 rounded bg-gray-200" />;
-          )}
-          <div className="flex-1">;
-            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">;
-              {title}
-            </h3>;
-            {category && (;
-              <span className="inline-block px-2 py-1 text-xs font-medium text-blue-600 bg-blue-100 rounded-full mt-1">;
-                {category}
-              </span>;
-            )}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          </div>;
-        </div>;
-        {/* Description */}
-        <p className="text-sm text-gray-600 mb-4 flex-1">{description}</p>;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Rating */}
         {rating && reviews && (;
           <div className="flex items-center space-x-1 mb-4">;
@@ -166,12 +64,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
             <span className="text-lg font-semibold text-blue-600">;
               {price}
             </span>;
-          )}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <Link href={href} className={`block group ${class_name}`}>;
+          )}    <Link href={href} className={`block group ${class_name}`}>;
       <div className={`bg - white rounded - lg shadow - md hover:shadow - lg transition - shadow duration - 300 p - 6 h - full flex flex - col ${
         featured ? 'ring - 2 ring - blue - 500' : '';
       }`}>;
@@ -232,8 +125,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
     </Link>;
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface MarketplaceCardProps {
   title: string
   description: string
@@ -259,22 +150,13 @@ interface MarketplaceCardProps {;
   onAddToCart?: () => void;
   on_favorite?: () => void;
 }
-<<<<<<< HEAD
 const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
-=======
-
-const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title;
   description;
   price;
   rating;
   image;
   onAddToCart;
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">;
           <Heart className="w-4 h-4 text-gray-600" />;
@@ -345,6 +227,4 @@ export default EnhancedMarketplaceCard;
 }
 ;
 export default EnhancedMarketplaceCard;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

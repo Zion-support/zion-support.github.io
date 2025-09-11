@@ -1,8 +1,5 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 // Re-export types for external use;
 
 export type { ButtonProps } from "./ui/Button";
@@ -22,17 +19,9 @@ export type { CardProps } from "./ui/Card";
 export type { LayoutProps } from "./layout/Layout";
 export type { LayoutProps } from "./layout/Layout";
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-// Layout Components
+=======// Layout Components
 export { default as Layout } from "./layout/Layout";
 
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
 
 
 // Re-export types for external use;
@@ -42,8 +31,6 @@ export type { CardProps } from "./ui/Card";
 <<<<<<< HEAD
 
 export type { LayoutProps } from "./layout/Layout";
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 export type { LayoutProps } from "./layout/Layout";

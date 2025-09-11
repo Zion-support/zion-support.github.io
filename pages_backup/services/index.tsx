@@ -1,175 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-const ServicesIndex: NextPage = () => {
-  const services = [
-    {
-      id: 'ai-development',
-      title: 'AI Development & Machine Learning',
-      description: 'Custom AI solutions, machine learning models, and intelligent automation systems tailored to your business needs.',
-      features: [
-        'Natural Language Processing (NLP)',
-        'Computer Vision & Image Recognition',
-        'Predictive Analytics & Forecasting',
-        'Chatbots & Virtual Assistants',
-        'Recommendation Systems',
-        'Fraud Detection & Risk Assessment'
-      ],
-      pricing: 'Starting at $2,500/month',
-      icon: '🧠',
-      link: '/services/ai-development'
-    },
-    {
-      id: 'cloud-solutions',
-      title: 'Cloud Solutions & Infrastructure',
-      description: 'Scalable cloud infrastructure, migration services, and DevOps automation for modern applications.',
-      features: [
-        'AWS, Azure, GCP Migration',
-        'Container Orchestration (Kubernetes)',
-        'Serverless Architecture',
-        'Cloud Security & Compliance',
-        'Auto-scaling & Load Balancing',
-        'Disaster Recovery & Backup'
-      ],
-      pricing: 'Starting at $1,800/month',
-      icon: '☁️',
-      link: '/services/cloud-solutions'
-    },
-    {
-      id: 'blockchain',
-      title: 'Blockchain & Cryptocurrency Solutions',
-      description: 'Secure blockchain development, smart contracts, and DeFi applications for the decentralized future.',
-      features: [
-        'Smart Contract Development',
-        'DeFi Applications & Protocols',
-        'NFT Marketplaces & Platforms',
-        'Cryptocurrency Integration',
-        'Token Development & ICOs',
-        'Blockchain Security Audits'
-      ],
-      pricing: 'Starting at $3,500/month',
-      icon: '🔗',
-      link: '/services/blockchain'
-    },
-    {
-      id: 'iot-platforms',
-      title: 'IoT Platforms & Connected Solutions',
-      description: 'Connected device solutions, sensor networks, and real-time data processing for smart environments.',
-      features: [
-        'Device Management & Monitoring',
-        'Real-time Analytics & Dashboards',
-        'Edge Computing Solutions',
-        'Industrial IoT (IIoT)',
-        'Sensor Data Processing',
-        'Remote Device Control'
-      ],
-      pricing: 'Starting at $2,200/month',
-      icon: '🌐',
-      link: '/services/iot-platforms'
-    },
-    {
-      id: 'micro-saas',
-      title: 'Micro SAAS Solutions',
-      description: 'Custom micro SAAS platforms and automation tools designed to streamline business processes.',
-      features: [
-        'Workflow Automation Tools',
-        'Data Processing & Analytics',
-        'API Integration Services',
-        'Custom Dashboard Solutions',
-        'Business Process Optimization',
-        'Third-party Integrations'
-      ],
-      pricing: 'Starting at $1,500/month',
-      icon: '⚡',
-      link: '/products/micro-saas'
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity & Compliance',
-      description: 'Comprehensive security solutions and compliance services to protect your digital assets.',
-      features: [
-        'Security Audits & Assessments',
-        'Penetration Testing',
-        'Compliance Management (GDPR, HIPAA)',
-        'Incident Response & Recovery',
-        'Security Training & Awareness',
-        'Vulnerability Management'
-      ],
-      pricing: 'Starting at $2,000/month',
-      icon: '🔒',
-      link: '/services/cybersecurity'
-    },
-    {
-      id: 'web-development',
-      title: 'Web & Mobile Development',
-      description: 'Modern web applications, mobile apps, and progressive web apps built with cutting-edge technologies.',
-      features: [
-        'React, Vue.js, Angular Development',
-        'Native & Cross-platform Mobile Apps',
-        'Progressive Web Apps (PWA)',
-        'E-commerce Solutions',
-        'API Development & Integration',
-        'Performance Optimization'
-      ],
-      pricing: 'Starting at $1,200/month',
-      icon: '💻',
-      link: '/services/web-development'
-    },
-    {
-      id: 'data-analytics',
-      title: 'Data Analytics & Business Intelligence',
-      description: 'Transform your data into actionable insights with advanced analytics and business intelligence solutions.',
-      features: [
-        'Data Warehousing & ETL',
-        'Business Intelligence Dashboards',
-        'Real-time Data Processing',
-        'Machine Learning Analytics',
-        'Data Visualization',
-        'Custom Reporting Solutions'
-      ],
-      pricing: 'Starting at $1,800/month',
-      icon: '📊',
-      link: '/services/data-analytics'
-  const microSaasServices = [
-    {
-      name: "AI-Powered Analytics Dashboard",
-      description: "Real-time business intelligence with predictive analytics and automated reporting",
-      features: ["Custom dashboards", "Predictive modeling", "Automated alerts", "Multi-platform integration"],
-      pricing: "Starting at $299/month",
-      link: "/services/ai-analytics-dashboard"
-    },
-    {
-      name: "Smart Document Processor",
-      description: "Automated document processing with OCR, classification, and data extraction",
-      features: ["OCR technology", "Document classification", "Data extraction", "API integration"],
-      pricing: "Starting at $199/month",
-      link: "/services/smart-document-processor"
-    },
-    {
-      name: "Customer Experience Optimizer",
-      description: "AI-driven customer journey mapping and optimization platform",
-      features: ["Journey mapping", "Sentiment analysis", "A/B testing", "ROI tracking"],
-      pricing: "Starting at $399/month",
-      link: "/services/customer-experience-optimizer"
-    },
-    {
-      name: "Automated Social Media Manager",
-      description: "AI-powered social media scheduling, content creation, and engagement tracking",
-      features: ["Content generation", "Optimal timing", "Engagement tracking", "Multi-platform support"],
-      pricing: "Starting at $149/month",
-      link: "/services/automated-social-media-manager"
-    },
-    {
-      name: "Intelligent Inventory Manager",
-      description: "Smart inventory optimization with demand forecasting and automated reordering",
-      features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],
-      pricing: "Starting at $249/month",
-      link: "/services/intelligent-inventory-manager"
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   ];
   const itServices = [
@@ -250,56 +81,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-const services = [
-  {
-    id: 'ai-development',
-    title: 'AI Development',
-    description: 'Custom AI solutions tailored to your business needs',
-    icon: Brain,
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-    pricing: 'Starting at $5,000/month',
-    icon: '🤖',
-    link: '/ai-services'
-  },
-  {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Scalable cloud infrastructure and migration services',
-    icon: Cloud,
-    features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
-    pricing: 'Starting at $2,000/month',
-    icon: '☁️',
-    link: '/services/cloud'
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your business',
-    icon: Shield,
-    features: ['Threat Detection', 'Security Audits', 'Data Protection', 'Compliance'],
-    pricing: 'Starting at $1,500/month',
-    icon: '🔒',
-    link: '/services/cybersecurity'
-  },
-  {
-    id: 'data-analytics',
-    title: 'Data Analytics',
-    description: 'Transform data into actionable business insights',
-    icon: BarChart3,
-    features: ['Business Intelligence', 'Predictive Analytics', 'Data Visualization', 'Reporting'],
-    pricing: 'Starting at $1,800/month',
-    icon: '📊',
-    link: '/services/data-analytics'
-  }
-];
-
 export default function ServicesIndex() {
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -541,14 +326,7 @@ const ServicesIndex: NextPage = () => {
     }
   ];
 
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 =======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
@@ -558,100 +336,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
       </Head>
 
-
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Comprehensive Technology Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              From AI development to cloud solutions, we provide end-to-end technology services 
-              that drive innovation and accelerate your business growth.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Get Free Consultation
-              </Link>
-              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Portfolio</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our comprehensive range of technology services, each designed to address 
-              specific business challenges and drive digital transformation.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-6">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center">
-                      <svg className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mb-6">
-                  <span className="text-2xl font-bold text-blue-600">{service.pricing}</span>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link href={service.link} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">
-                    Learn More
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our services can help you achieve your goals.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -892,8 +576,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Learn More
                   </Link>
@@ -941,11 +623,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   );
 };
 export default ServicesIndex;
-<<<<<<< HEAD
-      </div>
-    </>
-=======
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -1217,9 +894,7 @@ export default ServicesIndex;
           </div>;
         </section>;
       </div>;
-    </>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  );
+    </>;  );
 }
 ursor/fix-syntax-push-and-merge-to-main-40de
       </main>

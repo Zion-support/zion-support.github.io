@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { suspiciousPhrases } from './constants',
 import { AnalysisResult } from './types',
@@ -26,9 +22,7 @@ import { AnalysisResult } from './types',
   // Check for excessive capitalization (potential scam)
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-// Content analysis functionality
+=======// Content analysis functionality
 import { suspiciousPhrases  } from './constants';
 import { AnalysisResult } from './types';
 import { suspiciousPhrases } from './constants',
@@ -37,54 +31,14 @@ import { AnalysisResult } from './types',
  * Analyzes text content for suspicious patterns
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const analyzeContent = (content: string): AnalysisResult => {;
-  const contentLower = content.toLowerCase();
-export const analyzeContent = (content: string): AnalysisResult => {
-  const contentLower = content.toLowerCase();
-  const reasons: string[] = []
-  const contentLower = content.toLowerCase(),
-  const reasons: string[] = [],
-  
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
   const contentLower = content && content.toLowerCase();
   const reasons: string[] = [],
-  
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  // Check for suspicious phrases
+    // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
     if (contentLower.includes(phrase.toLowerCase())) {
       reasons.push(`Contains suspicious phrase: "${phrase}"`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
-  }
-  // Check for links (simplified check)
-  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
-  if (hasExternalLinks && (
-    contentLower.includes('payment') |
-    contentLower.includes('money') |
-    contentLower.includes('deal')
-  )) {
-    reasons.push('Contains external payment links')
-  }
-  // Check for excessive capitalization (potential scam)
-  const capitalRatio = (content.match(/[A-Z]/g) |[]).length / content.length;
-  if (capitalRatio > 0.3 && content.length > 20) {
-    reasons.push('Excessive capitalization')
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-// Content analysis functionality;
+=======// Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
 /**;
@@ -114,16 +68,7 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;
     reasons.push('Excessive capitalization');
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const capitalRatio = (content && content.match(/[A-Z]/g) || []).length / content && content.length;
-  if (capitalRatio > 0 && 0.3 && content && content.length > 20) {
-    reasons && reasons.push('Excessive capitalization')
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -136,10 +81,6 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   return {
 
     isSuspicious: reasons && reasons.length > 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    reasons
-
 // Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
@@ -224,9 +165,7 @@ export const analyze_content = (content: string): AnalysisResult => {
 =======
 
     reasons
-  }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}
+  }}
       reasons.push (`Contains suspicious phrase: "${phrase}"`);
     }
   }
@@ -261,12 +200,7 @@ if ( {) {
 }
 ;
 
-<<<<<<< HEAD
-=======
-
 };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 };

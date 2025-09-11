@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,21 +20,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-<<<<<<< HEAD
-
-"use client";
-<<<<<<< HEAD
-"use client";
 =======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client";
 =======
 =======
@@ -52,13 +32,6 @@ class ErrorBoundary extends React.Component {
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  Menu,
-
 'use client';
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -71,16 +44,10 @@ import {
   Phone, 
   Mail, 
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 "use client";
 ;
 import React, { useState, useEffect } from './react';
 import Link from './next / link';
-<<<<<<< HEAD
-import {
-'use client';
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -96,38 +63,13 @@ MapPin,
 origin/main
 
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-=======
-;
-import React, { useState, useEffect } from './react';
-import Link from './next / link';
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import {
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-<<<<<<< HEAD
-Instagram,
-  ChevronDown, 
-  Menu, 
-
-origin/automation-improvements-final
-=======
-
 import {
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
   Instagram, 
   ChevronDown, 
   Menu, 
-origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  X,
+origin/automation-improvements-final  X,
   ChevronDown,
   Code,
   Smartphone,
@@ -142,70 +84,19 @@ origin/automation-improvements-final
   Factory,
   Truck,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 CreditCard,
 
   CreditCard,
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+==============
 
 
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  Menu
-  X
-  ChevronDown
-  Code
-  Smartphone
-  Cloud
-  Database
-  Shield
-  Zap
-  Building
-  ShoppingCart
-  Heart
-  GraduationCap
-  Factory
-  Truck
-  CreditCard
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Code,;
-  Smartphone,;
-  Cloud,;
-  Database,;
-  Shield,;
-  Zap,;
-  Building,;
-  ShoppingCart,;
-  Heart,;
-  GraduationCap,;
-  Factory,;
-  Truck,;
-  CreditCard,;
-<<<<<<< HEAD
-} from "lucide-react";
 
   CreditCard,;
 
   CreditCard,;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "lucide-react";
 
 export default function Header() {;
@@ -216,11 +107,6 @@ export default function Header() {;
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
 } from './lucide-react';
 ;
 export default /**
@@ -247,132 +133,14 @@ function Header() {
 ;
   const services_dropdown = [;
     {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }, []);
-;
-  const services_dropdown = [;
-    {
-
-<<<<<<< HEAD
-  ];
-  const solutionsDropdown = [
-    {
-      title: "Enterprise Solutions"
-      description: "Comprehensive business technology solutions"
-      href: "/solutions/enterprise"
-      icon: Building
-    }
-    {
-      title: "E-commerce Platforms"
-      description: "Online store development and management"
-      href: "/solutions/ecommerce"
-      icon: ShoppingCart
-    }
-    {
-      title: "Healthcare Technology"
-      description: "Specialized healthcare IT solutions"
-      href: "/solutions/healthcare"
-      icon: Heart
-    }
-    {
-title: "Educational Platforms"
-      description: "Learning management systems"
-      href: "/solutions/education"
-      icon: GraduationCap
-    }
-  ];
-  const industriesDropdown = [
-    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory }
-    { name: "Logistics", href: "/industries/logistics", icon: Truck }
-    { name: "Finance", href: "/industries/finance", icon: CreditCard }
-    { name: "Healthcare", href: "/industries/healthcare", icon: Heart }
-    { name: "Education", href: "/industries/education", icon: GraduationCap }
-    { name: "Retail", href: "/industries/retail", icon: ShoppingCart }
-  ];
-  const navigation = [
-    { name: "Home", href: "/" }
-    {
-      name: "Services"
-      href: "/services"
-      submenu: [
-        { name: "AI Services", href: "/ai-services", icon: Brain }
-        { name: "IT Services", href: "/it-services", icon: Network }
-        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud }
-      ]
-    }
-    { name: "About", href: "/about" }
-    { name: "Services", href: "/services" }
-    { name: "Solutions", href: "/solutions" }
-    { name: "Industries", href: "/industries" }
-    { name: "Contact", href: "/contact" }
 
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-<<<<<<< HEAD
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Zion Tech Group
-            </Link>
-            <Link href="/" className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
-                <Brain className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-            </Link>
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Zion Tech Group
-            </Link>
-          </div>
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-          {/* Desktop CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
-            >
-              Get Started
-            </Link>
-          </div>
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-        {/* Mobile Menu */}
-<Link href="/" className="text-2xl font-bold text-blue-600">
-              Zion Tech Group
-            </Link>
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -384,9 +152,7 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 =======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <Link href="/" className="flex items-center">
+=======            <Link href="/" className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
                 <Brain className="h-5 w-5 text-white" />
               </div>
@@ -394,12 +160,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
             </Link>
 
 
-
-<<<<<<< HEAD
-
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -414,41 +174,13 @@ const Header = () => {
     },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  ];
+=======  ];
   const handleServiceClick = (href: string) => {
     closeMenu();
     window.location.href = href;
   }
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            </div>
-<<<<<<< HEAD
-</div>
-{/* Desktop Navigation */}
-
           </div>
 {/* Desktop Navigation */}
 
@@ -502,8 +234,6 @@ origin/automation-improvements-final
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 
 =======
@@ -647,92 +377,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </Link>;
           </div>;
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <nav className="hidden md:flex space-x-8">
-          <nav className="hidden lg:flex space-x-8">
-origin/main
-            {navigation.map((item) => (
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
 
 
 
 
   useEffect(() => {;
-<<<<<<< HEAD
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-          <div className="hidden lg:flex items-center space-x-8">
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
-                Services <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              <AnimatePresence>
-                {isServicesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                  >
-                    <div className="p-6">
-                      <div className="grid grid-cols-2 gap-4">
-                        {servicesDropdown.map((service) => (
-                          <Link key={service.title} href={service.href} className="group">
-                            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                              <service.icon className="w-6 h-6 text-blue-600 mt-1" />
-                              <div>
-                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
-                                <p className="text-sm text-gray-600">{service.description}</p>
-                              </div>
-                            </div>
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <button
-                  onClick={() => item.dropdown && toggleDropdown(item.name)}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-                >
-                  <Link href={item.href}>{item.name}</Link>
-                  {item.dropdown && (
-                    <ChevronDown 
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  )}
-                </button>
-=======
-          <nav className="hidden lg:flex space-x-8">;
-            {navigation && navigation.map((item) => (;
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              <Link
+=======              <Link
                 key={item && item.name}
                 href={item && item.href}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 {item && item.name}
               </Link>;
             ))}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -756,29 +413,6 @@ origin/main
                       </motion.div>
                     )}
                   </AnimatePresence>
-<<<<<<< HEAD
-                )}
-</AnimatePresence>
-            </div>
-            {/* Solutions Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                onMouseEnter={() => setIsSolutionsOpen(true)}
-                onMouseLeave={() => setIsSolutionsOpen(false)}
-              >
-                Solutions <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              <AnimatePresence>
-                {isSolutionsOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50"
-                    onMouseEnter={() => setIsSolutionsOpen(true)}
-                    onMouseLeave={() => setIsSolutionsOpen(false)}
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -829,9 +463,7 @@ origin/main
                       ))}
                     </div>
                   </div>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                )}
+=======                )}
               </AnimatePresence>
             </div>
             {/* Industries Dropdown */}
@@ -991,43 +623,14 @@ origin/main
                 {item && item.name}
               </Link>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/automation-improvements-final
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
           </div>
 
           </nav>;
 
-
-<<<<<<< HEAD
-
-</div>
-          </nav>;
-          </div>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-          </div>
 
 >>>>>>> origin/automation-improvements-final
 =======
-          </nav>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+          </nav>;=======
 
 =======
 
@@ -1059,26 +662,11 @@ origin/automation-improvements-final
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-<<<<<<< HEAD
-          </nav>
-          </div>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
+==============
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
 origin/main
             >
@@ -1144,19 +732,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           </div>
 
         </div>
-<<<<<<< HEAD
-      </nav>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-=======
-
 =======
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
               Get Started;
             </Link>;
-          </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+          </div>;=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1176,11 +756,6 @@ origin/automation-improvements-final
             ) : (;
               <Menu className="h-6 w-6" />;
             )}
-<<<<<<< HEAD
-      </nav>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
@@ -1188,14 +763,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               {navigation.map((item) => (
                 <div key={item.name}>
 
-<<<<<<< HEAD
-          </button>;
-</button>;
-=======
-
-          </button>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        </div>;
+          </button>;        </div>;
 
 
 
@@ -1207,58 +775,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               {navigation.map((item) => (
                 <div key={item.name}>
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        {/* Mobile Menu */}
+=======        {/* Mobile Menu */}
         <AnimatePresence>;
           {isMenuOpen && (;
             <motion&& motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-              className="lg:hidden bg-white shadow-lg">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-className="lg:hidden bg-white shadow-lg">;
-              <div className="px-4 py-6 space-y-4">;
-                {navigation && navigation.map((item) => (;
-                  <Link
-                    key={item && item.name}
-                    href={item && item.href}
-                    onClick={closeMenu}
-                    className="block text-gray-700 hover:text-blue-600 font-medium">;
-                    {item && item.name}
-                  </Link>;
-<<<<<<< HEAD
-origin/main
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="block text-gray-700 hover:text-blue-600 font-medium"
-                  >
-                    {item.name}
-                  </Link>
-
                 ))}
                 <Link
                   href="/contact"
                   onClick={closeMenu}
-<<<<<<< HEAD
-<<<<<<< HEAD
-className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200">;
-                  Get Started;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          )}
-        </AnimatePresence>;
-      </div>;
-    </header>;
-
                 >
                   Get Started
                 </Link>
@@ -1271,11 +798,7 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
 
   );
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: "Web Development",
       description: "Custom websites and web applications",
       href: "/services / web - development",
@@ -1443,14 +966,8 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
         </AnimatePresence>;
       </div>;
     </header>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+=======                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 
 =======
 
@@ -1467,9 +984,6 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
 
-<<<<<<< HEAD
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   Get Started
@@ -1478,29 +992,4 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
             </motion.div>
           )}
         </AnimatePresence>
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      </div>
-    </header>
-  );
-}
-      </nav>
-    </header>
-  );
-};
-
 export default Header;
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -121,15 +121,5 @@ quote, onViewDetails, onMarkAsResponded, onToggleArchive ;
   quote.status ;
 }/> </div> </CardHeader> <CardContent> </div> <div className="flex justify-between items-center mt-4" > <Button > <Eye className="h-4 w-4" /> View Details </Button> onClick={;"  () => onMarkAsResponded (quote.id) ";"}className="flex items-center gap-1" > <MessageSquare className="h-4 w-4" /> Mark Responded </Button>) ";"}<Button) : (<ArchiveIcon className="h-4 w-4" />) ;
 }</Button> </div> </div> </CardContent> </Card>) ;
-<<<<<<< HEAD
-:temp_broken_files/quotes/QuoteRequestCard.tsx
-};""
 };
 "
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/QuoteRequestCard.tsx
-=======
-
-};
-"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

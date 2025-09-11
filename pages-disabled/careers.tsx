@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,25 +15,6 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-=======
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React from 'react';
-=======
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -47,9 +22,6 @@ import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-<<<<<<< HEAD
-=======
-
 import Head from 'next / head';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Atom, Shield, Cloud, ArrowRight, MapPin, Clock, DollarSign, Star, Zap} from 'lucide-react';
@@ -60,513 +32,7 @@ export default /**
 function CareersPage() {
   const open_positions = [;
 
-<<<<<<< HEAD
-    {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",;
-
-
-      location: "San Francisco, CA / Remote";
-
-export default function CareersPage() {;
-  const openPositions = [;
-    {;
-      title: "Senior AI Engineer",;
-      department: "AI & Machine Learning",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "5+ years",;
-      salary: "$150,000 - $200,000";
-      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",;
-      requirements: [;
-
-<<<<<<< HEAD
-export default function CareersPage() {
-  const openPositions = [
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    {
-
-
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",;
-
-
-      location: "San Francisco, CA / Remote";
-
-export default function CareersPage() {;
-  const openPositions = [;
-    {;
-      title: "Senior AI Engineer",;
-      department: "AI & Machine Learning",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "5+ years",;
-      salary: "$150,000 - $200,000";
-      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",;
-      requirements: [;
-
-        "Advanced degree in Computer Science, AI, or related field";
-        "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
-        "Experience with large-scale AI model deployment";
-        "Strong background in machine learning algorithms"
-      ];
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Brain
-      color: "from-purple-500 to-pink-500"
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-=======
-
-      type: "Full - time",
-      experience: "5+ years",
-      salary: "$150, 000 - $200, 000";
-      description: "Lead the development of cutting - edge AI solutions and neural networks for enterprise clients",
-      requirements: [;
-        "Advanced degree in Computer Science, AI, or related field";
-        "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
-        "Experience with large - scale AI model deployment";
-        "Strong background in machine learning algorithms";
-      ];
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
-      icon: Brain,
-      color: "from - purple - 500 to - pink - 500";
-
-    }
-    {
-      title: "Quantum Computing Researcher"
-      department: "Quantum Computing"
-      location: "San Francisco, CA / Remote";
-
-      icon: Brain,;
-      color: "from-purple-500 to-pink-500";
-    };
-    {;
-      title: "Quantum Computing Researcher",;
-      department: "Quantum Computing",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "3+ years",;
-      salary: "$120,000 - $180,000";
-      description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions",;
-      requirements: [;
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      type: "Full - time",
-      experience: "3+ years",
-      salary: "$120, 000 - $180, 000";
-      description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
-      requirements: [;
-        "PhD in Physics, Computer Science, or related field";
-        "Experience with quantum computing frameworks (Qiskit, Cirq)";
-        "Knowledge of quantum algorithms and cryptography";
-        "Strong mathematical and analytical skills";
-      ];
-      benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"];
-<<<<<<< HEAD
-      icon: Atom,
-      color: "from - blue - 500 to - cyan - 500";
-=======
-
-      icon: Atom,
-      color: "from - blue - 500 to - cyan - 500";
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    }
-    {
-      title: "Cybersecurity Architect"
-      department: "Cybersecurity"
-      location: "San Francisco, CA / Remote";
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      type: "Full - time",
-      experience: "7+ years",
-      salary: "$160, 000 - $220, 000";
-      description: "Design and implement enterprise - level security architectures and zero - trust solutions",
-      requirements: [;
-        "Bachelor's degree in Computer Science or related field";
-        "Expertise in security frameworks and compliance standards";
-        "Experience with zero - trust architecture implementation";
-        "Strong knowledge of threat detection and response";
-      ],
-      benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
-      icon: Shield,
-      color: "from - red - 500 to - orange - 500";
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    }
-    {
-      title: "Cloud Infrastructure Engineer"
-      department: "Cloud Infrastructure"
-      location: "San Francisco, CA / Remote";
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      icon: Atom,;
-      color: "from-blue-500 to-cyan-500";
-    };
-    {;
-      title: "Cybersecurity Architect",;
-      department: "Cybersecurity",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "7+ years",;
-      salary: "$160,000 - $220,000";
-      description: "Design and implement enterprise-level security architectures and zero-trust solutions",;
-      requirements: [;
-        "Bachelor's degree in Computer Science or related field";
-        "Expertise in security frameworks and compliance standards";
-        "Experience with zero-trust architecture implementation";
-        "Strong knowledge of threat detection and response";
-      ],;
-      benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
-      icon: Shield,;
-      color: "from-red-500 to-orange-500";
-    };
-    {;
-      title: "Cloud Infrastructure Engineer",;
-      department: "Cloud Infrastructure",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "4+ years",;
-      salary: "$130,000 - $180,000";
-      description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",;
-      requirements: [;
-        "Bachelor's degree in Computer Science or related field",;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        "Expertise in AWS, Azure, or GCP";
-        "Experience with Kubernetes, Docker, and CI/CD";
-        "Strong knowledge of infrastructure as code";
-      ];
-      benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      type: "Full - time",
-      experience: "4+ years",
-      salary: "$130, 000 - $180, 000";
-      description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",
-      requirements: [;
-        "Bachelor's degree in Computer Science or related field",
-        "Expertise in AWS, Azure, or GCP";
-        "Experience with Kubernetes, Docker, and CI / CD";
-        "Strong knowledge of infrastructure as code";
-      ];
-      benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
-      icon: Cloud,
-      color: "from - emerald - 500 to - teal - 500";
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    }
-    {
-      title: "Data Scientist"
-      department: "Data Analytics"
-      location: "San Francisco, CA / Remote";
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      icon: Cloud,;
-      color: "from-emerald-500 to-teal-500";
-    };
-    {;
-      title: "Data Scientist",;
-      department: "Data Analytics",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "3+ years",;
-      salary: "$110,000 - $160,000";
-      description: "Develop predictive analytics models and data-driven insights for business clients",;
-      requirements: [;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        "Master's degree in Data Science, Statistics, or related field";
-        "Proficiency in Python, R, and SQL";
-        "Experience with machine learning and statistical modeling";
-        "Strong analytical and problem-solving skills";
-      ];
-      benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      type: "Full - time",
-      experience: "3+ years",
-      salary: "$110, 000 - $160, 000";
-      description: "Develop predictive analytics models and data - driven insights for business clients",
-      requirements: [;
-        "Master's degree in Data Science, Statistics, or related field";
-        "Proficiency in Python, R, and SQL";
-        "Experience with machine learning and statistical modeling";
-        "Strong analytical and problem - solving skills";
-      ];
-      benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
-      icon: Zap,
-      color: "from - indigo - 500 to - purple - 500";
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    }
-    {
-      title: "Product Manager"
-      department: "Product"
-      location: "San Francisco, CA / Remote";
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      icon: Zap,;
-      color: "from-indigo-500 to-purple-500";
-    };
-    {;
-      title: "Product Manager",;
-      department: "Product",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "5+ years",;
-      salary: "$140,000 - $190,000";
-      description: "Lead product strategy and development for our technology solutions portfolio",;
-      requirements: [;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      type: "Full - time",
-      experience: "5+ years",
-      salary: "$140,000 - $190,000",
-=======
-
-      type: "Full - time",
-      experience: "5+ years",
-      salary: "$150, 000 - $200, 000";
-      description: "Lead the development of cutting - edge AI solutions and neural networks for enterprise clients",
-      requirements: [;
-        "Advanced degree in Computer Science, AI, or related field";
-        "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
-        "Experience with large - scale AI model deployment";
-        "Strong background in machine learning algorithms";
-      ];
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
-      icon: Brain,
-      color: "from - purple - 500 to - pink - 500";
-
-    }
-    {
-      title: "Quantum Computing Researcher"
-      department: "Quantum Computing"
-      location: "San Francisco, CA / Remote";
-
-      icon: Brain,;
-      color: "from-purple-500 to-pink-500";
-    };
-    {;
-      title: "Quantum Computing Researcher",;
-      department: "Quantum Computing",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "3+ years",;
-      salary: "$120,000 - $180,000";
-      description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions",;
-      requirements: [;
-
-=======
-      type: "Full - time",
-      experience: "3+ years",
-      salary: "$120, 000 - $180, 000";
-      description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
-      requirements: [;
-        "PhD in Physics, Computer Science, or related field";
-        "Experience with quantum computing frameworks (Qiskit, Cirq)";
-        "Knowledge of quantum algorithms and cryptography";
-        "Strong mathematical and analytical skills";
-      ];
-      benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"];
-
-      icon: Atom,
-      color: "from - blue - 500 to - cyan - 500";
-
-    }
-    {
-      title: "Cybersecurity Architect"
-      department: "Cybersecurity"
-      location: "San Francisco, CA / Remote";
-
-      type: "Full - time",
-      experience: "7+ years",
-      salary: "$160, 000 - $220, 000";
-      description: "Design and implement enterprise - level security architectures and zero - trust solutions",
-      requirements: [;
-        "Bachelor's degree in Computer Science or related field";
-        "Expertise in security frameworks and compliance standards";
-        "Experience with zero - trust architecture implementation";
-        "Strong knowledge of threat detection and response";
-      ],
-      benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
-      icon: Shield,
-      color: "from - red - 500 to - orange - 500";
-
-    }
-    {
-      title: "Cloud Infrastructure Engineer"
-      department: "Cloud Infrastructure"
-      location: "San Francisco, CA / Remote";
-
-      icon: Atom,;
-      color: "from-blue-500 to-cyan-500";
-    };
-    {;
-      title: "Cybersecurity Architect",;
-      department: "Cybersecurity",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "7+ years",;
-      salary: "$160,000 - $220,000";
-      description: "Design and implement enterprise-level security architectures and zero-trust solutions",;
-      requirements: [;
-        "Bachelor's degree in Computer Science or related field";
-        "Expertise in security frameworks and compliance standards";
-        "Experience with zero-trust architecture implementation";
-        "Strong knowledge of threat detection and response";
-      ],;
-      benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
-      icon: Shield,;
-      color: "from-red-500 to-orange-500";
-    };
-    {;
-      title: "Cloud Infrastructure Engineer",;
-      department: "Cloud Infrastructure",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "4+ years",;
-      salary: "$130,000 - $180,000";
-      description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",;
-      requirements: [;
-        "Bachelor's degree in Computer Science or related field",;
-
-        "Expertise in AWS, Azure, or GCP";
-        "Experience with Kubernetes, Docker, and CI/CD";
-        "Strong knowledge of infrastructure as code";
-      ];
-      benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
-
-      type: "Full - time",
-      experience: "4+ years",
-      salary: "$130, 000 - $180, 000";
-      description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",
-      requirements: [;
-        "Bachelor's degree in Computer Science or related field",
-        "Expertise in AWS, Azure, or GCP";
-        "Experience with Kubernetes, Docker, and CI / CD";
-        "Strong knowledge of infrastructure as code";
-      ];
-      benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
-      icon: Cloud,
-      color: "from - emerald - 500 to - teal - 500";
-
-    }
-    {
-      title: "Data Scientist"
-      department: "Data Analytics"
-      location: "San Francisco, CA / Remote";
-
-      icon: Cloud,;
-      color: "from-emerald-500 to-teal-500";
-    };
-    {;
-      title: "Data Scientist",;
-      department: "Data Analytics",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "3+ years",;
-      salary: "$110,000 - $160,000";
-      description: "Develop predictive analytics models and data-driven insights for business clients",;
-      requirements: [;
-
-        "Master's degree in Data Science, Statistics, or related field";
-        "Proficiency in Python, R, and SQL";
-        "Experience with machine learning and statistical modeling";
-        "Strong analytical and problem-solving skills";
-      ];
-      benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
-
-      type: "Full - time",
-      experience: "3+ years",
-      salary: "$110, 000 - $160, 000";
-      description: "Develop predictive analytics models and data - driven insights for business clients",
-      requirements: [;
-        "Master's degree in Data Science, Statistics, or related field";
-        "Proficiency in Python, R, and SQL";
-        "Experience with machine learning and statistical modeling";
-        "Strong analytical and problem - solving skills";
-      ];
-      benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
-      icon: Zap,
-      color: "from - indigo - 500 to - purple - 500";
-
-    }
-    {
-      title: "Product Manager"
-      department: "Product"
-      location: "San Francisco, CA / Remote";
-
-      icon: Zap,;
-      color: "from-indigo-500 to-purple-500";
-    };
-    {;
-      title: "Product Manager",;
-      department: "Product",;
-      location: "San Francisco, CA / Remote";
-      type: "Full-time",;
-      experience: "5+ years",;
-      salary: "$140,000 - $190,000";
-      description: "Lead product strategy and development for our technology solutions portfolio",;
-      requirements: [;
-
-=======
-      type: "Full - time",
-      experience: "5+ years",
-      salary: "$140, 000 - $190, 000";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      description: "Lead product strategy and development for our technology solutions portfolio",
-      requirements: [;
-        "Bachelor's degree in Business, Engineering, or related field";
-        "Experience in B2B SaaS or technology products";
-        "Strong analytical and strategic thinking skills";
-        "Excellent communication and leadership abilities";
-      ];
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: Rocket,
       color: "from - yellow - 500 to - orange - 500";
     }
@@ -578,26 +44,14 @@ import React from 'react';
       description: "Above - market salaries with equity options and performance bonuses",
       icon: DollarSign,
       color: "from - green - 500 to - emerald - 500";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     {
       title: "Health & Wellness"
       description: "Comprehensive health, dental, and vision insurance for you and your family";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: Star,
       color: "from - blue - 500 to - cyan - 500";
     }
@@ -606,19 +60,11 @@ import React from 'react';
       description: "Remote work options and flexible hours to support work - life balance",
       icon: Clock,
       color: "from - purple - 500 to - pink - 500";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       title: "Professional Growth"
       description: "Continuous learning opportunities, conferences, and career development";
-<<<<<<< HEAD
-=======
-=======
-
     }
     {
       title: "Professional Growth"
@@ -652,8 +98,6 @@ import React from 'react';
       description: "Continuous learning opportunities, conferences, and career development";
       icon: Rocket,;
       color: "from-orange-500 to-red-500";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     }
   ];
   return (
@@ -666,8 +110,6 @@ import React from 'react';
         </Head>;
       <EnhancedNavigation />;
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <UltraAdvancedFuturisticBackground>;
       <div className="min-h-screen">;
         <Head>;
@@ -675,23 +117,12 @@ import React from 'react';
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
         </Head>;
       <EnhancedNavigation />;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
             transition={{ duration: 0 && 0.8 }}
             className="mb-8">;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
@@ -719,8 +150,6 @@ import React from 'react';
       </section>;
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Benefits Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -729,14 +158,8 @@ import React from 'react';
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Why Work at Zion Tech Group?</h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
@@ -747,14 +170,8 @@ import React from 'react';
             {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -774,55 +191,13 @@ import React from 'react';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
 
 
 =======
-<<<<<<< HEAD
-=======
-=======
-          </div>;
-        </div>;
-      </section>;
-=======
-          </div>
-        </div>
-      </section>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
 =======
 
 
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      {/* Open Positions */}
-      <section className="py-20 px-6">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
@@ -833,14 +208,8 @@ import React from 'react';
             {openPositions && openPositions.map((position, index) => (;
               <motion&& motion.div
                 key={position && position.title}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -883,10 +252,6 @@ import React from 'react';
                         {position && position.requirements.map((req, idx) => (;
                           <li key={idx} className="text-sm text-white/80 flex items-center">;
                             <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             {req}
                           </li>;
@@ -966,25 +331,9 @@ import React from 'react';
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      </div>
+=======                      </div>
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
-                  <div className="lg:flex-shrink-0">
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
-                      Apply Now
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
                       </div>;
                     </div>;
                   </div>;
@@ -1044,9 +393,7 @@ import React from 'react';
             whileInView={{ opacity: 1, coordinate_y: 0 }}
                       </div>
                     </div>
-                  </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <div className="lg:flex-shrink-0">
+                  </div>                  <div className="lg:flex-shrink-0">
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       Apply Now
                     </button>
@@ -1170,29 +517,15 @@ import React from 'react';
                   </div>;
                   <div className="lg:flex - shrink - 0">;
                     <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - white transition - all duration - 300 transform hover:scale - 105">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Apply Now;
                     </button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA Section */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -1200,87 +533,12 @@ import React from 'react';
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className="text-4xl font-bold text-white mb-6">;
-              Don't See the Right Role?;
-            </h2>;
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
-                Send Resume;
-              </button>;
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
-                Contact Recruiting;
-              </button>;
-            </div>;
-          </div>;
-        </motion && motion.div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
-  );
-};
-      <EnhancedFooter />;
-    </div>;
-  );
-}
-
       <EnhancedFooter />
     </div>
   )
 }
 }
-<<<<<<< HEAD
-=======
-=======
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Don't See the Right Role?;
-            </h2>;
-            <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
-              We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.;
-            </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105">;
-                Send Resume;
-              </button>;
-              <button className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10">;
-                Contact Recruiting;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
 }
-;
-      <EnhancedFooter />;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

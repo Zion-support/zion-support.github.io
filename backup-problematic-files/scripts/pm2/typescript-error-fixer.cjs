@@ -6,9 +6,6 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class TypeScriptErrorFixer {}
   constructor() {}
@@ -33,8 +30,6 @@ class TypeScriptErrorFixer {}
     };
 <<<<<<< HEAD
 =======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}

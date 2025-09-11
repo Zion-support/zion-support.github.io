@@ -1,7 +1,3 @@
-<<<<<<<< HEAD:fix-all-remaining.cjs
-<<<<<<< HEAD
-const fs = require('fs');
-
 #!/usr/bin/env node
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -313,4 +309,3 @@ fs.writeFileSync('/workspace/pages/industries/education.tsx', educationContent);
 console.log('✅ Fixed industries/education.tsx');
 ;
 console.log('🎉 All remaining syntax errors fixed!');
->>>>>>> main

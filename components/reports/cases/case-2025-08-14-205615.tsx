@@ -1,62 +1,4 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-export default function Page() {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-import Head from 'next/head';
-export default function Page() {
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Case Study — Trigger Homepage</title>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <Head>
-        <title>Case Study — Trigger Homepage</title>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <meta
-          name='description'
-          content='Pragmatic case scenario inspired by live site signals.'
-        />;
-        <meta property='og:title' content='Case Study — Trigger Homepage' />;
-        <meta
-          property='og:description'
-          content='Pragmatic case scenario inspired by live site signals.'
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;
-        <h1 className='text-3xl font-extrabold'>;
-          Case Study — Trigger Homepage;
-        </h1>;
-        <div
-          className='mt-4'
-          dangerouslySetInnerHTML={{
-            __html:
-<<<<<<< HEAD
-<<<<<<< HEAD
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
-=======
-
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -65,13 +7,7 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -88,24 +24,6 @@ export default function Page() {
     </div>;
 
   );export default function Page() {
-  return (
-
-<<<<<<< HEAD
-export default function Page() {
-  return (
-
-<<<<<<< HEAD
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Case Study — Trigger Homepage</title>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-export default function Page() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -151,45 +69,15 @@ function Page() {
   return (
     <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
-        <title > Case Study — Trigger Homepage</title>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+        <title > Case Study — Trigger Homepage</title>;=======
         <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta property="og:title" content="Case Study — Trigger Homepage" />;
         <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 }
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
-        <h1 className="text - 3xl font - extrabold">Case Study — Trigger Homepage</h1>;
-        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Scenario</h2><p > Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;
-      </main>;
-    </div>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
       <Head>
         <title>Case Study — Trigger Homepage</title>
         <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
@@ -221,38 +109,9 @@ function Page() {
 export default function Page() {
   return (
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    <div className="min-h-screen bg-slate-950 text-white">
-      <Head>
-        <title>Case Study — Trigger Homepage</title>
-        <meta name="description" content="Pragmatic case scenario inspired by live site signals." />
-        <meta property="og:title" content="Case Study — Trigger Homepage" />
-        <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">
-        <h1 className="text-3xl font-extrabold">Case Study — Trigger Homepage</h1>
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>" }} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
-      </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-  );
-}
-    </div>;
-  );
-}
 
 }
     </div>
@@ -266,11 +125,7 @@ export default function Page() {
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

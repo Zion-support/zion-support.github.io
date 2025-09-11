@@ -1,12 +1,7 @@
 import React from 'react';
 interface ComprehensiveServicesOverview2025Props {
   // Add props here as needed
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}
+=======}
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function ComprehensiveServicesOverview2025({ }: ComprehensiveServicesOverview2025Props) {
@@ -18,9 +13,6 @@ export default function ComprehensiveServicesOverview2025({ }: ComprehensiveServ
   );
 
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 :src.pages.disabled/ComprehensiveServicesOverview2025.jsx
@@ -39,9 +31,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 :temp_exclude/src.pages.disabled/ComprehensiveServicesOverview2025.jsx
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}
+=======}
 
 =======
 

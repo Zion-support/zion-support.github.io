@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,44 +18,21 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
 import React from 'react';
 
 
 
-<<<<<<< HEAD
-import React from 'react',
-import Layout from '../components/layout/Layout',
-=======
-}
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Layout from '../components/layout/Layout';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import SEO from '../components/SEO';
+=======import SEO from '../components/SEO';
 
 import {motion} from 'framer-motion';
 import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
 
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
     {
@@ -166,10 +137,6 @@ const QuantumServicesPage: React.FC = () => {;
 
 export default function QuantumServices() {;
   return (
-<<<<<<< HEAD
-    <Layout>
-=======
-
 import Layout from '../components / layout / Layout';
 import SEO from '../components / SEO';
 import {motion} from 'framer-motion';
@@ -179,8 +146,6 @@ import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Ey
 =======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
     {
@@ -296,29 +261,9 @@ export default function QuantumServices() {;
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for the future. From neural networks to financial trading, unlock quantum advantage."
         keywords="quantum computing, quantum services, quantum neural networks, quantum financial trading, quantum materials discovery"
-<<<<<<< HEAD
-<<<<<<< HEAD
-      />
-      
-      <main className="relative z-10">
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
       />;
 
       <main className="relative z-10">;
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        {/* Hero Section */}
-        <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">;
@@ -382,35 +327,11 @@ export default function QuantumServices() {;
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
             </div>;
           </div>;
         </section>;
 
 
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Quantum Services */}
         <section className="py-20 px-4">
@@ -440,15 +361,6 @@ export default function QuantumServices() {;
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    service.popular
-                      ? 'border-blue-500 shadow-lg shadow-blue-500/25'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    service.popular 
-                      ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
-
                     service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
 
@@ -465,8 +377,6 @@ export default function QuantumServices() {;
 
                     service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       : 'border-gray-700 hover:border-blue-500'
                   }`}
@@ -727,9 +637,6 @@ function QuantumServices() {
 
                   <a 
                     href="/contact" 
-<<<<<<< HEAD
-=======
-
 
                   <div className="text-center mb-6">;
                     <div className="inline-flex p-3 bg-blue-500/20 rounded-full mb-4">;
@@ -757,8 +664,6 @@ function QuantumServices() {
                   <a 
                     href="/contact" 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -787,18 +692,8 @@ function QuantumServices() {
         </section>;
 
 
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 =======
 
 
@@ -870,99 +765,12 @@ function QuantumServices() {
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export default QuantumServicesPage;
-
 }
 =======
   )
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}
-import React from 'react';
-                      <span className="text - lg text - gray - 400">/{service.period}</span>;
-                    </div>;
-                  </div>;
-                  <ul className="space - y-3 mb - 6">;
-                    {service.features.map ((feature, feature_index) => (
-                      <li key={feature_index} className="flex items - center text - gray - 300">;
-                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0" />;
-                        {feature}
-                      </li>))}
-                  </ul>;
-                  <a;
-                    href="/contact";
-                    className="w - full block text - center px - 6 py - 3 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300";
-                  >;
-                    Get Started;
-                  </a>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py - 20 px - 4 bg - gradient - to - b from - gray - 900 to - black">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 to - purple - 500 bg - clip - text text - transparent">;
-                Ready for the Quantum Future?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-                Join the quantum revolution and solve problems that were previously impossible with classical computing;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Start Your Quantum Journey;
-                </a>;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 border - 2 border - blue - 400 text - blue - 400 font - semibold rounded - lg hover:bg - blue - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Schedule Consultation;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </main>;
-    </Layout>);
-}
-;
-export default QuantumServicesPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-  )
-}
-export default QuantumServicesPage;
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 export default QuantumServicesPage;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

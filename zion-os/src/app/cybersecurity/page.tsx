@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 =======
@@ -9,48 +5,7 @@ import Link from "next/link";
 export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
   description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
   keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
-export default function CybersecurityPage() {return (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
-export const metadata = {;
-  title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",;
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},;
-export default function CybersecurityPage() {;
-  return (;
-<<<<<<< HEAD
-
-
-    <div className="min-h-screen">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    <div className="min-h-screen">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from './next / link';,
-export const metadata = {
-  title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},
-export default /**
- * CybersecurityPage - Function description
- */
-function CybersecurityPage() {
-  return (
-    <div className="min - h-screen">;
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
-export default function CybersecurityPage() {return (;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
+export default function CybersecurityPage() {return (;import Link from "next/link",;
 export const metadata = {;
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
   description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",;
@@ -58,22 +13,6 @@ export const metadata = {;
 export default function CybersecurityPage() {;
   return (;
     <div className="min-h-screen">;
-      {/* Hero Section */}
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
-            <span className="gradient - text">Cybersecurity Services</span>;
-          </h1>;
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
-            Protect your organization from evolving cyber threats with our comprehensive;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-            security solutions. From threat detection to compliance management;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            security solutions. From threat detection to compliance management,;
-
             security solutions. From threat detection to compliance management;
             security solutions. From threat detection to compliance management,;
 =======
@@ -82,8 +21,6 @@ export default function CybersecurityPage() {;
 =======
 
             security solutions. From threat detection to compliance management,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             we secure your digital assets and ensure business continuity.;
           </p>;
@@ -183,10 +120,6 @@ export default function CybersecurityPage() {;
               <p className="text - gray - 400 mb - 4">;
                 Comprehensive security assessments including penetration testing,
 
-<<<<<<< HEAD
-
-                Comprehensive security assessments including penetration testing,;
-
               <h3 className="text - xl font - semibold mb - 3">Security Assessment</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Comprehensive security assessments including penetration testing,
@@ -198,8 +131,6 @@ export default function CybersecurityPage() {;
 =======
 
                 Comprehensive security assessments including penetration testing,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 vulnerability scanning, and risk analysis.;
               </p>;

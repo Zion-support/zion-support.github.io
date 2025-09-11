@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
 files && files.forEach((file) => {
-=======
-
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-let totalFixed = 0;
-files && files.forEach((file) => {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
@@ -22,15 +14,10 @@ files && files.forEach((file) => {
     const matches = content && content.match(importRegex);
 
 
-<<<<<<< HEAD
-    // Fix import statements missing semicolons
-
     // Fix import statements missing semicolons;
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
     const matches = content && content.match(importRegex);
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    if (matches) {
+=======    if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
           const fixedMatch = match && match.trim() + ";";
@@ -70,15 +57,8 @@ if (.ends_with (") {
         }
       });
     }
-<<<<<<< HEAD
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-=======
-
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -125,16 +105,10 @@ if (&&) {
         return match;
       }
     );
-<<<<<<< HEAD
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-=======
-
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
+=======;
     // Check condition
 if ( {) {
   $2

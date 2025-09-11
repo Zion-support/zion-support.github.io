@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Head from "next/head"
-import React, { useState } from "react"
-const Head = dynamic(() => import("next/head"), { "ssr": false })
-
 import Head from "next/head"
 import React, { useState } from "react"
 const Head = dynamic(() => import("next/head"), { "ssr": false })
@@ -26,8 +20,6 @@ class ErrorBoundary extends React.Component {
   }
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 import Head from "next/head";
 import React, { useState } from "react";
@@ -39,9 +31,6 @@ const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr"
 }
 const Footer = dynamic(() => import("../src/components/Footer"), { "ssr": false });
 }
-
-<<<<<<< HEAD
-
 
 import Head from "next/head";
 import React, { useState } from "react";
@@ -62,8 +51,6 @@ const Head = dynamic(() => import("next/head"), { "ssr": false })
 =======
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const demos = []
 },
     {"

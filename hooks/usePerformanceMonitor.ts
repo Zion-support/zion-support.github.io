@@ -1,13 +1,5 @@
 ;
 interface PerformanceMetrics {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  loadTime: number, firstContentfulPaint: number
-  largestContentfulPaint: number, firstInputDelay: number
-  cumulativeLayoutShift: number
-}
-export function usePerformanceMonitor() {
-
 export function usePerformanceMonitor() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
@@ -23,9 +15,7 @@ export function usePerformanceMonitor() {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const entries = list && list.getEntries();
@@ -39,58 +29,11 @@ export function usePerformanceMonitor() {;
           }));
         }
         if (entry && entry.entryType === 'paint') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          const paintEntry = entry as PerformancePaintTiming;
-          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              ...prev,
-              firstContentfulPaint: paintEntry && paintEntry.startTime,
-            }));
-          }
-        }
-        if (entry && entry.entryType === 'largest-contentful-paint') {
-          const lcpEntry = entry as PerformanceEntry;
-          setMetrics(prev => ({
-            ...prev,
-            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
-          }));
-        }
-        if (entry && entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({
-            ...prev,
-            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
-          }));
-        }
-        if (entry && entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
-          setMetrics(prev => ({
-            ...prev,
-            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  load_time: number, firstContentfulPaint: number,
+=======  load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
 }
@@ -176,20 +119,10 @@ if ( {) {
         }
       });
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-      observer && observer.disconnect();
-    };
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
       observer && observer.disconnect();
     };
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+<<<<<<< HEAD=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
   return { metrics, isSupported }

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { CheckCircle } from 'lucide-react';
-import { Check } from 'lucide-react';
-
 
           </div>
         </div>
@@ -156,4 +152,3 @@ export function TrustIndicatorsCompact({ className }) {
         <span>99.9% Uptime</span>
       </div>
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

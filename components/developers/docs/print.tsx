@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   return {
     props: {
       docs: content as DocsContent,
@@ -25,37 +19,11 @@ type DocsContent = {
 }
 ;
 type PageProps = {
-<<<<<<< HEAD
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  docs: DocsContent
-};
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   docs: DocsContent;
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
- export const getStaticProps: GetStaticProps<PageProps> = async () => {
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
- export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  return {
-    props: {
-      docs: content as DocsContent,
-    },;
-  };};import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content.json';
-export type Section = {
-  id: string,
-  title: string,;
-  html?: string;
-  code?: { language?: string, content: string }[]
-};
-
 type DocsContent = {
   title: string,
   sections: Section[]
@@ -67,11 +35,7 @@ type PageProps = {
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     props: {
       docs: content as DocsContent
@@ -96,25 +60,14 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -161,57 +114,15 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
 export default function PrintDocs(): any ({ docs }: PageProps) {;
   useEffect(() => {;
     const id = setTimeout(() => window && window.print(), 500);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+==============
 
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {;
-    const id = setTimeout(() => window.print(), 500);
-    return () => clearTimeout(id);
-  }, []);
-  return (
-    <div className='p-8 max-w-4xl mx-auto'>;
-      <h1 className='text-3xl font-bold mb-6'>{docs && docs.title}</h1>;
-      <div className='space-y-8'>;
-        {docs && docs.sections.map(s => (;
-          <section key={s && s.id}>;
-            <h2 className='text-2xl font-semibold mb-2'>{s && s.title}</h2>;
-            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
-            {s && s.code &&;
-              s && s.code.map((c, i) => (;
-                <pre
-                  key={i}
-                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
-                  {c && c.content}
-                </pre>;
-              ))}          </section>  }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-};
+=======};
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -227,26 +138,13 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </section>
-        ))}
-=======
-
 
         ))}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  );
+=======  );
 }
 export default /**
  * PrintDocs - Function description
@@ -328,9 +226,6 @@ export default function PrintDocs({ docs }: PageProps) {
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
 );
@@ -339,9 +234,7 @@ export default function PrintDocs({ docs }: PageProps) {
 }
 
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+==============
 
   );
 }

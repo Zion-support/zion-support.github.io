@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-#!/""usr/bin/env"" node;
-class $1 {
-  constructor() {
-
   this.workspacePath = process.cwd();
     this.logsPath = path.join(this.workspacePath, "logs");
     this.reportsPath = path.join(this.workspacePath, "automation-reports");
@@ -649,4 +641,3 @@ if (require.main === module) {
 module.exports = TypeScriptErrorMonitor
 =======
 module.exports = TypeScriptErrorMonitor
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -7,9 +7,6 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ErrorDetectionService {}
   constructor() {}
@@ -21,9 +18,7 @@ class ErrorDetectionService {}
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
 <<<<<<< HEAD
 =======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    this.errorTypes = {}
+        this.errorTypes = {}
       "syntax": [],
       "typescript": [],
       "eslint": [],
@@ -42,9 +37,6 @@ class ErrorDetectionService {}
       data,
       "service": 'error-detection-service'
     };
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
@@ -73,9 +65,7 @@ class ErrorDetectionService {}
       this.log('info', 'Error Detection Service started successfully');
 <<<<<<< HEAD
 =======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      // Keep the process alive;
+            // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
           this.performFullScan()};
@@ -89,9 +79,6 @@ class ErrorDetectionService {}
       'backups',
       'temp'
     ];
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
@@ -243,8 +230,6 @@ class ErrorDetectionService {}
       ];
 <<<<<<< HEAD
 =======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -275,9 +260,6 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
@@ -319,9 +301,7 @@ class ErrorDetectionService {}
     const closeComments = (content.match(/\*\//g) || []).length;
 <<<<<<< HEAD
 =======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    if (openComments !== closeComments) {}
+        if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
     const lines = content.split('\n');

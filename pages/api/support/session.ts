@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
   return res.status(200).json({ ok: true })
 }
 
@@ -78,8 +74,6 @@ export default async function handler(req, res) {
   const entry = { ts: Date.now(), sessionId, eventType, payload };
   log.push(entry);
   writeJson('support/sessions.json', log);
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   await logSupportEventToOperator({ type: eventType, sessionId, payload });
   return res.status(200).json({ ok: true });
   } catch (error) {
@@ -90,15 +84,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
-
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any };
   if (!sessionId || !eventType) return res.status(400).json({ error: 'sessionId and eventType required' });
@@ -109,8 +94,6 @@ export default async function handler(req, res) {
   await logSupportEventToOperator({ type: eventType, sessionId, payload });
   return res.status(200).json({ ok: true })
 }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

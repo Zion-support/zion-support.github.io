@@ -1,33 +1,12 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  description?: string;
-  className?: string;
-}
-export function Step(): any ({;
-  status;
-  label;
-  description;
-  className}: StepProps) {;
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-import { cn } from "@/lib/utils";
-import { CheckIcon } from "lucide-react";
-interface StepProps {
-
   status: "incomplete" | "current" | "complete"
   label: string
 
@@ -35,9 +14,7 @@ interface StepProps {
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface StepProps {;
+=======interface StepProps {;
   status: "incomplete" | "current" | "complete",;
   label: string,;
 
@@ -53,46 +30,12 @@ export function Step(): any ({;
   description;
   className}: StepProps) {;
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface StepProps {
-  status: "incomplete" | "current" | "complete",
-  label: string,
-  description?: string,
-  className?: string
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function Step({;
-  status;
-  label;
-  description;
-export function Step({
-  status,
-  label,
-  description,
-
 
   className}: StepProps) {
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
   className}: StepProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
-    <li
-      className={cn(
-        "relative flex items-center"
-        {
-
-
           "opacity-60": status === "incomplete"},
 
 
@@ -104,9 +47,7 @@ export function Step({
         "relative flex items-center"
         {
           "opacity-60": status === "incomplete"}
-          "opacity-60": status === "incomplete"},
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        className
+          "opacity-60": status === "incomplete"},        className
       )}>;
       <div
         className={cn(
@@ -118,12 +59,6 @@ export function Step({
               status === "current"
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  className}: StepProps) {
-  return (
-    <li
 
       className={cn(
         "relative flex items-center",
@@ -143,9 +78,7 @@ export function Step({
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
       >
@@ -153,14 +86,8 @@ export function Step({
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React from "react",;
+=======import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from "lucide-react",;
 interface StepProps {;
@@ -196,27 +123,13 @@ export function Step({;
               status === "complete"}
         )}
       >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {/* Step number would go here */}
-          </span>
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Step number would go here */}
           </span>;
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -229,18 +142,6 @@ export function Step({;
             "text-white": status === "current" |status === "complete"})}
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
-<<<<<<< HEAD
-        >
-          {label}
-        </h3>
-        {description && (
-          <p className="text-sm text-zion-slate-light">{description}</p>
-        )}
-      </div>
-    </li>
-  )
-}
-
 
 interface StepsProps {
   currentStep: number
@@ -250,8 +151,6 @@ interface StepsProps {
 =======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Step number would go here */}
           </span>;
         )}
@@ -263,12 +162,6 @@ interface StepsProps {
 
 
         >
-<<<<<<< HEAD
-      </div>;
-=======
-=======
-      </div>;
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
@@ -276,16 +169,11 @@ interface StepsProps {
         >
 =======
       </div>;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="ml-4 min-w-0">;
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from "lucide-react",;
@@ -337,9 +225,7 @@ export function Step({;
             "text-zion-slate-light":status === "incomplete",;
             "text-white":status === "current" || status === "complete"})}
         >;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -350,15 +236,10 @@ export function Step({;
         )}
       </div>;
     </li>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 interface StepsProps {;
   currentStep: number,;
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  );
+=======  );
 }
 
 
@@ -372,27 +253,8 @@ interface StepsProps {
 interface StepsProps {;
   currentStep: number,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  className?: string;
-  children: React && React.ReactNode;
-}
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export function Steps({ currentStep, className, children }: StepsProps) {;
-
 
   const childrenArray = React.Children.toArray(children);
-<<<<<<< HEAD
-export function Steps({ currentStep, className, children }: StepsProps) {
-
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children);
 ;
@@ -405,47 +267,20 @@ interface StepsProps {;
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
   
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
-  
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
+    return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          if (!React.isValidElement(child)) return null;
-          let status: "incomplete" | "current" | "complete" = "incomplete"
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          return React.cloneElement(child as React.ReactElement<StepProps>, {
+=======          return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
@@ -454,12 +289,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
-  const childrenArray = React && React.Children.toArray(children);
-  return (
 
 
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
@@ -471,8 +300,6 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 }
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React && React.Children.toArray(children);
 
@@ -481,49 +308,6 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-;
-export function Steps({ currentStep, className, children }: StepsProps) {;
-  const childrenArray = React.Children.toArray(children),;
-  return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0 && 0.5 bg-zion-blue-light">;
-          <div
-            className="h-full bg-zion-purple transition-all"
-            style={{
-              width: `${(currentStep / (childrenArray && childrenArray.length - 1)) * 100}%`}}
-  ),;}
-;
-interface StepsProps {;
-  currentStep:number,;
-  className?:string,;
-  children:React.ReactNode;
-}
-;
-export function Steps({ currentStep, className, children } StepsProps) {;
-  const childrenArray = React.Children.toArray(children),;
-  ;
-  return (;
-    <div className={cn("w-full", className)}>;
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
-        {React.Children.map(childrenArray, (child, index) => {;
-          if (!React.isValidElement(child)) return null,;
-          let status: "incomplete" | "current" | "complete" = "incomplete",;
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          return React.cloneElement(child as React.ReactElement<StepProps>, {;
-            status});
-        })}
-      </ol>;
-      <div className="hidden md:flex md:mt-4">;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     <div className={cn("w-full", className)}>;
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
         {React && React.Children.map(childrenArray, (child, index) => {;
@@ -540,30 +324,14 @@ export function Steps({ currentStep, className, children } StepsProps) {;
 
       <div className="hidden md:flex md:mt-4">;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
-          <div;
-            className="h-full bg-zion-purple transition-all";
-            style={{;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
               width:`${(currentStep / (childrenArray.length - 1)) * 100}%`}}
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
-
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

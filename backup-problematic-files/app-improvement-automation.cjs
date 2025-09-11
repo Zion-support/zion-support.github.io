@@ -1,9 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class AppImprovementAutomation {}
   constructor() {}
@@ -98,8 +95,6 @@ class AppImprovementAutomation {}
     };
 <<<<<<< HEAD
 =======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const reportPath = path.join(this.projectRoot, 'improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Improvement report generated: ${reportPath}`);

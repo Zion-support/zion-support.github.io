@@ -161,17 +161,9 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
-<<<<<<< HEAD
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-=======
-
-  // Rate response;
-  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
-    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return ()
     <>
       {/* Chat Toggle Button */};

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function PrivacyPage() {;
   return (;
@@ -9,9 +5,7 @@ export default function PrivacyPage() {;
     <div className="min-h-screen bg-white">;
 <<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 export default function PrivacyPage() {return (;
 export default function PrivacyPage() {;
   return (;

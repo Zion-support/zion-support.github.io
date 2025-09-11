@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
 
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth',;
@@ -47,9 +43,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+==============
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

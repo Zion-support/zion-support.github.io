@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function RegisterPage() {;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
-import Layout from "../components/Layout";
-<<<<<<< HEAD
-export default function RegisterPage() {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-export default function RegisterPage() {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+export default function RegisterPage() {;=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
@@ -33,9 +15,6 @@ export default function RegisterPage() {;
     agreeToTerms: false,;
     subscribeNewsletter: false,;
   });
-<<<<<<< HEAD
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [passwordRequirements, setPasswordRequirements] = useState({;
     length: false,;
@@ -44,63 +23,8 @@ export default function RegisterPage() {;
     number: false,;
     special: false,;
   });
-<<<<<<< HEAD
 =======
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    // Handle registration logic here;
-  };
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const handleChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value, type, checked } = e && e.target;
-    setFormData((prev) => ({;
-      ...prev,;
-      [name]: type === "checkbox" ? checked : value,;
-    }));
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    // Check password requirements;
-    if (name === "password") {;
-      setPasswordRequirements({;
-        length: value && value.length >= 8,;
-        uppercase: /[A-Z]/.test(value),;
-        lowercase: /[a-z]/.test(value),;
-        number: /\d/.test(value),;
-        special: /[!@#$%^&*(),.?":{}|<>]/.test(value),;
-      });
-    }
-  };
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const isPasswordValid = Object && Object.values(passwordRequirements).every(Boolean);
-  const isFormValid =;
-    formData && formData.firstName &&;
-    formData && formData.lastName &&;
-    formData && formData.email &&;
-    formData && formData.password &&;
-    formData && formData.confirmPassword &&;
-    formData && formData.password === formData && formData.confirmPassword &&;
-    isPasswordValid &&;
-    formData && formData.agreeToTerms;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -111,14 +35,8 @@ export default function RegisterPage() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -131,17 +49,10 @@ export default function RegisterPage() {;
               Join Zion Tech Group and start your digital transformation journey;
             </p>;
           </motion && motion.div>;
-<<<<<<< HEAD
-          <motion&& motion.div
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
           <motion&& motion.div
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -167,28 +78,16 @@ export default function RegisterPage() {;
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     />;
                   </div>;
                 </div>;
                 <div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
                     />;
                   </div>;
                 </div>;
 
                 <div>;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-300 mb-2">;
@@ -203,28 +102,16 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
               </div>;
               <div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
                   />;
                 </div>;
               </div>;
 
               <div>;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -244,28 +131,16 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
               </div>;
               <div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
                   />;
                 </div>;
               </div>;
 
               <div>;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <label
                   htmlFor="company"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -279,18 +154,9 @@ export default function RegisterPage() {;
                   onChange={handleChange}
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
-<<<<<<< HEAD
-<<<<<<< HEAD
                 />;
               </div>;
               <div>;
-=======
-
-                />;
-              </div>;
-              <div>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
                 />;
@@ -329,301 +195,11 @@ export default function RegisterPage() {;
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </button>;
-                </div>;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
                   </button>;
                 </div>;
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                {/* Password Requirements */}
-                <div className="mt-2 space-y-1">;
-                  {Object && Object.entries(passwordRequirements).map(;
-                    ([key, isValid]) => (;
-                      <div key={key} className="flex items-center text-xs">;
-                        <Check
-                          className={`h-3 w-3 mr-2 ${isValid ? "text-green-400" : "text-gray-500"}`}
-                        />;
-                        <span
-                          className={
-                            isValid ? "text-green-400" : "text-gray-400"
-                          }>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React, { useState } from './react';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check  } from './lucide-react';
-import Layout from "../components / Layout";
-;
-export default /**
- * RegisterPage - Function description
- */
-function RegisterPage() {
-  const [show_password, setShowPassword] = useState (false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState (false);
-  const [form_data, setFormData] = useState ({
-    first_name: "",
-    last_name: "",
-    email: "",
-    password: "",
-    confirm_password: "",
-    company: "",
-    agreeToTerms: false,
-    subscribe_newsletter: false,
-  });
-;
-  const [password_requirements, setPasswordRequirements] = useState ({
-    length: false,
-    uppercase: false,
-    lowercase: false,
-    number: false,
-    special: false,
-  });
-;
-  const handle_submit = (e: React.FormEvent) =>: any {
-    e.prevent_default ();
-    // Handle registration logic here;
-  }
-;
-  const handle_change = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const { name, value, type, checked } = e.target;
-    setFormData ((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-;
-    // Check password requirements;
-    // Check condition
-if ( {) {
-  $2
-}
-      setPasswordRequirements ({
-        length: value.length >= 8,
-        uppercase: /[A - Z]/.test (value),
-        lowercase: /[a - z]/.test (value),
-        number: /\d/.test (value),
-        special: /[!@#$%^&*(), .?":{}|<>]/.test (value),
-      });
-    }
-  }
-;
-  const isPasswordValid = Object.values (password_requirements).every (Boolean);
-  const isFormValid =;
-    form_data.first_name &&;
-    form_data.last_name &&;
-    form_data.email &&;
-    form_data.password &&;
-    form_data.confirm_password &&;
-    form_data.password === form_data.confirm_password &&;
-    isPasswordValid &&;
-    form_data.agreeToTerms;
-;
-  return (
-    <Layout;
-      title="Register - Zion Tech Group";
-      description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources.";
-      keywords="register, sign up, create account, Zion Tech Group, new user";
-    >;
-      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center py - 12 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-md w - full space - y-8">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text - center";
-          >;
-            <div className="mx - auto h - 12 w - 12 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">;
-              <span className="text - white font - bold text - xl">Z</span>;
-            </div>;
-            <h2 className="mt - 6 text - 3xl font - bold text - white">;
-              Create your account;
-            </h2>;
-            <p className="mt - 2 text - sm text - gray - 300">;
-              Join Zion Tech Group and start your digital transformation journey;
-            </p>;
-          </motion.div>;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg - white / 10 backdrop - blur - md rounded - lg shadow - xl p - 8";
-          >;
-            <form className="space - y-6" on_submit={handle_submit}>;
-              <div className="grid grid - cols - 2 gap - 4">;
-                <div>;
-                  <label;
-                    html_for="first_name";
-                    className="block text - sm font - medium text - gray - 300 mb - 2";
-                  >;
-                    First name;
-                  </label>;
-                  <div className="relative">;
-                    <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;
-                      <User className="h - 5 w - 5 text - gray - 400" />;
-                    </div>;
-                    <input;
-                      id="first_name";
-                      name="first_name";
-                      type="text";
-                      required;
-                      value={form_data.first_name}
-                      on_change={handle_change}
-                      className="block w - full pl - 10 pr - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-                      placeholder="First name";
-                    />;
-                  </div>;
-                </div>;
-                <div>;
-                  <label;
-                    html_for="last_name";
-                    className="block text - sm font - medium text - gray - 300 mb - 2";
-                  >;
-                    Last name;
-                  </label>;
-                  <input;
-                    id="last_name";
-                    name="last_name";
-                    type="text";
-                    required;
-                    value={form_data.last_name}
-                    on_change={handle_change}
-                    className="block w - full px - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-                    placeholder="Last name";
-                  />;
-                </div>;
-              </div>;
               <div>;
-                <label;
-                  html_for="email";
-                  className="block text - sm font - medium text - gray - 300 mb - 2";
-                >;
-                  Email address;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;
-                    <Mail className="h - 5 w - 5 text - gray - 400" />;
-                  </div>;
-                  <input;
-                    id="email";
-                    name="email";
-                    type="email";
-                    auto_complete="email";
-                    required;
-                    value={form_data.email}
-                    on_change={handle_change}
-                    className="block w - full pl - 10 pr - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-                    placeholder="Enter your email";
-                  />;
-                </div>;
-              </div>;
-              <div>;
-                <label;
-                  html_for="company";
-                  className="block text - sm font - medium text - gray - 300 mb - 2";
-                >;
-                  Company (optional);
-                </label>;
-                <input;
-                  id="company";
-                  name="company";
-                  type="text";
-                  value={form_data.company}
-                  on_change={handle_change}
-                  className="block w - full px - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-                  placeholder="Your company name";
-                />;
-              </div>;
-              <div>;
-                <label;
-                  html_for="password";
-                  className="block text - sm font - medium text - gray - 300 mb - 2";
-                >;
-                  Password;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;
-                    <Lock className="h - 5 w - 5 text - gray - 400" />;
-                  </div>;
-                  <input;
-                    id="password";
-                    name="password";
-                    type={show_password ? "text" : "password"}
-                    auto_complete="new - password";
-                    required;
-                    value={form_data.password}
-                    on_change={handle_change}
-                    className="block w - full pl - 10 pr - 12 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-                    placeholder="Create a password";
-                  />;
-                  <button;
-                    type="button";
-                    className="absolute inset - y-0 right - 0 pr - 3 flex items - center";
-                    on_click={() => setShowPassword (!show_password)}
-                  >;
-                    {show_password ? (
-                      <EyeOff className="h - 5 w - 5 text - gray - 400 hover:text - gray - 300" />) : (
-                      <Eye className="h - 5 w - 5 text - gray - 400 hover:text - gray - 300" />)}
-                  </button>;
-                </div>;
-                {/* Password Requirements */}
-                <div className="mt - 2 space - y-1">;
-                  {Object.entries (password_requirements).map (
-                    ([key, is_valid]) => (
-                      <div key={key} className="flex items - center text - xs">;
-                        <Check;
-                          className={`h - 3 w - 3 mr - 2 ${is_valid ? "text - green - 400" : "text - gray - 500"}`}
-                        />;
-                        <span;
-                          className={
-                            is_valid ? "text - green - 400" : "text - gray - 400";
-                          }
-                        >;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                          {key === "length" && "At least 8 characters"}
-                          {key === "uppercase" && "One uppercase letter"}
-                          {key === "lowercase" && "One lowercase letter"}
-                          {key === "number" && "One number"}
-                          {key === "special" && "One special character"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                        </span>;
-                      </div>;
-                    ),;
-                  )}
-                </div>;
-              </div>;
-<<<<<<< HEAD
-              <div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-              <div>;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <label
                   htmlFor="confirmPassword"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -662,26 +238,15 @@ if ( {) {
                       Passwords do not match;
                     </p>;
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>;
               <div className="space-y-4">;
                 <div className="flex items-center">;
 =======
 
               </div>;
-              <div className="space-y-4">;
-                <div className="flex items-center">;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-              </div>;
 
               <div className="space-y-4">;
                 <div className="flex items-center">;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -703,18 +268,12 @@ if ( {) {
                     and{" "}
                     <Link
                       href="/privacy"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="text-blue-400 hover:text-blue-300">;
 =======
 
                       className="text-blue-400 hover:text-blue-300">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                        </span>;
+=======                        </span>;
                       </div>),
                   )}
                 </div>;
@@ -784,34 +343,19 @@ if ( {) {
                       href="/privacy";
                       className="text - blue - 400 hover:text - blue - 300";
                     >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="ml-2 block text-sm text-gray-300">;
                     Subscribe to our newsletter for updates and insights;
                   </label>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div>;
                 <button
@@ -822,9 +366,7 @@ if ( {) {
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />;
 <<<<<<< HEAD
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                <div className="flex items - center">;
+=======                <div className="flex items - center">;
                   <input;
                     id="subscribe_newsletter";
                     name="subscribe_newsletter";
@@ -849,26 +391,14 @@ if ( {) {
                 >;
                   <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
                     <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>;
                   Create account;
                 </button>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -876,37 +406,19 @@ if ( {) {
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </motion.div>;
         </div>;
       </div>;
     </Layout>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-=======
-
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
   "optimizations": [
@@ -17260,8 +17257,6 @@
         "Large files detected: reports.backup/metadata/latest.json, reports.backup/metadata/latest.json.backup.1755991115, reports.backup/metadata/latest.json.backup.1755991115.backup.1756000882, reports.backup/metadata/latest.json.backup.1755991177, reports.backup/metadata/latest.json.backup.1755991177.backup.1756000882, static-reports/reports/metadata/latest.json, static-reports/reports/metadata/latest.json.backup.1755991115, static-reports/reports/metadata/latest.json.backup.1755991177, search/embeddings.json.backup.1756001055, search/embeddings.json.backup.1756001057, search/embeddings.json.backup.1756001082, search/embeddings.json.backup.1756001070, search/embeddings.json.backup.1756001125, search/embeddings.json.backup.1756001098, search/embeddings.json, sitemap.xml.backup.1756000986, reports.backup/metadata/index.html, static-reports/reports/metadata/index.html, reports.backup/metadata/index.html.backup.1755991115, reports.backup/metadata/index.html.backup.1755991115.backup.1756000882, reports.backup/metadata/index.html.backup.1755991177, reports.backup/metadata/index.html.backup.1755991177.backup.1756000882, static-reports/reports/metadata/index.html.backup.1755991115, static-reports/reports/metadata/index.html.backup.1755991177, sitemap.xml.backup.1755991440, sitemap.xml.backup.1755991590, sitemap.xml.backup.1755992033, reports.backup/metadata/latest.json.backup.1755991115.backup.1756000882.backup.1756000935, reports.backup/metadata/latest.json.backup.1755991177.backup.1756000882.backup.1756000935, static-reports/reports/metadata/latest.json.backup.1755991115.backup.1756000938, static-reports/reports/metadata/latest.json.backup.1755991177.backup.1756000938, reports.backup/alignment/chat-latest.json, static-reports/reports/alignment/chat-latest.json, sitemap.xml.backup.1755991628, sitemap.xml.backup.1755991600, reports.backup/metadata/index.html.backup.1755991115.backup.1756000882.backup.1756000935, reports.backup/metadata/index.html.backup.1755991177.backup.1756000882.backup.1756000935, static-reports/reports/metadata/index.html.backup.1755991115.backup.1756000938, static-reports/reports/metadata/index.html.backup.1755991177.backup.1756000938, sitemap.xml.backup.1755991602, search/embeddings.json.backup.1756000913, assets/router-DO9GA1Oe.js.map, assets/vendor-DEQ385Nk.js.map, reports.backup/link-health/index.html, static-reports/reports/link-health/index.html, reports.backup/link-health/latest.json, static-reports/reports/link-health/latest.json, assets/vendor-DEQ385Nk.js, search/index.json.backup.1756001079, search/meta.json.backup.1756001055, search/meta.json.backup.1756001057, search/index.json.backup.1756000910, search/index.json.backup.1756001115, search/meta.json.backup.1756001070, search/meta.json.backup.1756000913, search/meta.json.backup.1756001125, search/meta.json.backup.1756001098, search/index.json.backup.1756000925, search/meta.json.backup.1756001082, search/index.json, search/meta.json, search/index.json.backup.1756000864, search/index.json.backup.1756001060",
         "Consider consolidating JavaScript files"
       ]
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {
       "type": "image-optimization",
@@ -17289,63 +17284,6 @@
       ]
     }
   ]
-<<<<<<< HEAD
-  "timestamp": "2025-09-06T04:57:30.817Z",
-  "issues": [],
-  "optimizations": [
-    {
-      "file": "/workspace/pages_minimal/_app.tsx",
-      "type": "memo_optimization",
-      "message": "Consider using React.memo for performance"
-    },
-    "imageOptimization": {
-      "success": true,
-      "optimized": 0,
-      "recommendations": ["No images found to optimize"]
-    },
-    "codeSplitting": {
-      "success": true,
-      "chunks": 3,
-      "recommendations": [
-        "Implement route-based code splitting",
-        "Use React.lazy() for component-based splitting",
-        "Split vendor libraries into separate chunks",
-        "Implement dynamic imports for heavy components",
-        "Consider using loadable-components for SSR compatibility"
-      ]
-    },
-    "caching": {
-      "success": true,
-      "strategies": ["static", "dynamic", "api"],
-      "recommendations": [
-        "Implement service worker for offline caching",
-        "Use HTTP caching headers appropriately",
-        "Implement client-side caching with React Query or SWR",
-        "Cache API responses with appropriate TTL",
-        "Use CDN for static asset caching"
-      ]
-    },
-    "compression": {
-      "success": true,
-      "ratio": 0.7,
-      "recommendations": [
-        "Enable gzip compression on the server",
-        "Implement Brotli compression for better ratios",
-        "Minify CSS and JavaScript files",
-        "Remove unused CSS and JavaScript",
-        "Optimize font loading and subsetting"
-      ]
-    }
-  },
-  "summary": {
-    "bundleOptimized": false,
-    "imagesOptimized": true,
-    "codeSplittingImplemented": true,
-    "cachingConfigured": true,
-    "compressionSetup": true
-=======
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
@@ -17394,7 +17332,5 @@
   }
 =======
 
-  }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

@@ -18,12 +18,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
-import { TALENT_PROFILES } from '../data/talent';
-export default function RequestToHirePage() {
-
 
 export default function RequestToHirePage() {;
   const router = useRouter();
@@ -32,9 +26,7 @@ export default function RequestToHirePage() {;
     () => TALENT_PROFILES.find(t => t.slug === talent)
     [talent]
   );export default function RequestToHirePage() {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
@@ -44,56 +36,9 @@ export default function RequestToHirePage() {;
 
 
   const [form, setForm] = useState({
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
-  const [form, setForm] = useState({
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-import { use_router } from 'next / router';
-import { TALENT_PROFILES } from '../data / talent';
-;
-export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (
-    () => TALENT_PROFILES.find (t => t.slug === talent),
-    [talent]);export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (() => TALENT_PROFILES.find (t => t.slug === talent), [talent]);
-  const [form, set_form] = useState ({
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    name: '',
-    email: '',
-    budget: '',
-    timeline: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -124,13 +69,7 @@ export default function RequestToHirePage() {;
     if (!form && form.name || !form && form.email || !form && form.description) {;
       setError('Please fill in name, email, and description.');
       return;    }      return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -138,85 +77,20 @@ export default function RequestToHirePage() {;
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in name, email, and description.');
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-          ...form;
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null})}),
-    name: ''
-    email: ''
-    budget: ''
-    timeline: ''
-    description: ''
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string; message: string }>(
-    null
-  );  const [error, setError] = useState<string | null>(null);    description: ''})
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string, message: string }>(null)
-  const [error, setError] = useState<string | null>(null);
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null)
-    if (!form.name |!form.email |!form.description) {
-      setError('Please fill in name, email, and description.');
-      return;    }      return
-    }
-    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
-    setSubmitting(true);
-    try {
-      const res = await fetch('/api/requests/create', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          ...form
-          budget: normalizedBudget
-          talentSlug: selected?.slug |null
-        })
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error |'Failed to submit');
-      setResult({ id: data.id, message: 'Request submitted successfully.' });
-    } catch (err: any) {
-      setError(err.message |'Something went wrong');
-    } finally {
-      setSubmitting(false);    }          budget: normalizedBudget
-          talentSlug: selected?.slug |null})})
-=======
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
           ...form;
           budget: normalizedBudget,
           talentSlug: selected?.slug || null})}),
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error |'Failed to submit');
-      setResult({ id: data.id, message: 'Request submitted successfully.' })
-    } catch (err: any) {
-      setError(err.message |'Something went wrong')
-    } finally {
-      setSubmitting(false)
-<<<<<<< HEAD
 
 =======
     }
   }
   };
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
+=======    }
 
   };
 
@@ -249,12 +123,6 @@ export default function RequestToHirePage() {;
       setError(err && err.message || 'Something went wrong');
     } finally {;
       setSubmitting(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
@@ -332,42 +200,15 @@ export default function RequestToHirePage() {;
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  };
-
     }
   };
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 =======
     }
   };
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  if (result) {
-    return (
-      <div className="max-w-xl mx-auto py-12">
-        <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
-        <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
-        <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-</div>
-    )
-=======
-      </div>
-    )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
       </div>
     )
 
@@ -399,26 +240,13 @@ export default function RequestToHirePage() {;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
           {submitting ? 'Submitting…' : 'Submit Request'}
-=======
-
-          {submitting ? 'Submitting…' : 'Submit Request'}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </button>;
       </form>;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>
@@ -620,15 +448,6 @@ if ( {) {
         </div>
         {error && <div className=&quot;text-sm text-red-600&quot;>{error}</div>}
         <button disabled={submitting} className=&quot;px-4 py-2 rounded bg-black text-white&quot;>
-<<<<<<< HEAD
-    }
-  }
-=======
-=======
-    }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  };
-
   if (result) {
     return (
       <div className='max-w-xl mx-auto py-12'>
@@ -734,21 +553,14 @@ if ( {) {
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 );
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+==============
 
   );
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 

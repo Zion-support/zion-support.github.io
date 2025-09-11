@@ -1,28 +1,7 @@
 
 
-<<<<<<< HEAD
 
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-<<<<<<< HEAD
-origin/main
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-=======
-=======
-=======
-
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import React from 'react';
+=======import React from 'react';
 import Layout from '../components/layout/Layout';
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { motion } from 'framer-motion';
@@ -200,10 +179,6 @@ export default function MicroSaasPage() {
   Database,
   Sprout;
 } from 'lucide-react';
-<<<<<<< HEAD
-
-origin/automation-improvements-final
-
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -311,9 +286,7 @@ export default function MicroSaasPage() {
 =======
 origin/automation-improvements-final
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from 'next/link';
+=======import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
@@ -463,9 +436,6 @@ export default function MicroSaaS(req, res) {
     ? products
     : products.filter(product => product.category === selectedCategory),
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -680,8 +650,6 @@ export default function MicroSaaS(req, res) {
                 <Link href="/demo" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
                   View Demo;
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -700,68 +668,9 @@ export default function MicroSaaS() {
   Zap,
   BarChart3,
 
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-242d
-</Link>
-origin/main
-</Link>;
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Cloud
-  Zap
-  BarChart3
-  Leaf
-  Truck
-  FileText
-  Target
-  Users
-  Shield
-  Globe
-  Smartphone
-  Laptop
-  Monitor
-  Database
-  Camera
-  HardDrive
-  ArrowRight
-  CheckCircle
-  Star
-  Award
-  Clock
-  DollarSign
-  TrendingUp
-  Building
-  ShoppingCart
-  BookOpen
-  Heart
-  Car
-  Cpu
-  Settings
-  Lock
-  Wifi
-  Network
-  Server
-  Code
-  Package
-  GraduationCap
-  Atom
-  AlertTriangle
-  Link as LinkIcon
-  Award as AwardIcon
-  Star as StarIcon
-  Home;
-} from 'lucide-react';
-import Layout from '../components/Layout';
-
 export default function MicroSaaS() {
 =======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+==============
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
@@ -770,192 +679,21 @@ export default function MicroSaaS() {
 
 =======
 =======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-</Link>
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-</Link>;
-import React from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
-
-<<<<<<< HEAD
-    return () => clearTimeout(timer);
-=======
-=======
-
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export default function MicroSaaS() {
+=======export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+  }, []);>>>>>>> origin/automation-improvements-final
 
 =======
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-  Cloud,
-  Zap,
-  BarChart3,
-=======
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { 
-  Cloud, 
-  Zap, 
-  BarChart3, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  Leaf,
-  Truck,
-  FileText,
-  Target,
-  Users,
-  Shield,
-  Globe,
-  Smartphone,
-  Laptop,
-  Monitor,
-  Database,
-  Camera,
-  HardDrive,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Award,
-  Clock,
-  DollarSign,
-  TrendingUp,
-  Building,
-  ShoppingCart,
-  BookOpen,
-  Heart,
-  Car,
-  Cpu,
-  Settings,
-  Lock,
-  Wifi,
-  Network,
-  Server,
-  Code,
-  Package,
-  GraduationCap,
-  Atom,
-  AlertTriangle,
-  Link as LinkIcon,
-  Award as AwardIcon,
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Layout from '../components / Layout';
-export default /**
- * MicroSaaS - Function description
- */
-function MicroSaaS() {
-  const [is_loaded, setIsLoaded] = useState (false);
-  const [selected_category, setSelectedCategory] = useState ('all');
-;
-  useEffect (() => {
-    const timer = set_timeout (() => setIsLoaded (true), 100);
-    return () => clear_timeout (timer);  }, []);
-;
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-site: 'https://ziontechgroup.com',  }
-;
-  const categories = [;
-    { id: 'all', name: 'All Products', count: 150 },
-    { id: 'ai', name: 'AI - Powered', count: 45 },
-    { id: 'analytics', name: 'Analytics', count: 30 },
-    { id: 'automation', name: 'Automation', count: 25 },
-    { id: 'security', name: 'Security', count: 20 },
-    { id: 'productivity', name: 'Productivity', count: 15 },
-{/* Hero Section */}
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                Discover our comprehensive collection of micro SaaS products;
-                designed to solve specific business challenges with focused,;
-                efficient, and cost-effective solutions.              </p>;
-            </div>;
-          </section>;
-          {/* Category Filter */}
-          <section className='py-8 px-4'>;
-            <div className='max-w-6xl mx-auto'>;
-              <div className='flex flex-wrap justify-center gap-4 mb-8'>;
-                {categories && categories.map(category => (                  <button
-                    key={category && category.id}
-                    onClick={() => setSelectedCategory(category && category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      selectedCategory === category && category.id;
-                        ? 'bg-blue-600 text-white';
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
-          <section className="py-20 px-4 text-center" role="banner">
-            <div className="max-w-4xl mx-auto">
-              <h1 
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                Micro SaaS Products
-              </h1>
-              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                150+ Innovative Solutions for Modern Businesses
-              </p>
-              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                Discover our comprehensive collection of micro SaaS products designed to solve specific business challenges 
-                with focused, efficient, and cost-effective solutions.
-              </p>
-            </div>
-          </section>
-          {/* Category Filter */}
-          <section className="py-8 px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {categories.map((category) => (
-                  <button
-  Star as StarIcon,;
-  Home;
-} from 'lucide-react';
-import Layout from '../components/Layout';
-export default function MicroSaaS() {;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  Star as StarIcon,
-  Home;
-} from 'lucide-react';
-
-import Layout from '../components/Layout';
-export default function MicroSaaS() {;
-<<<<<<< HEAD
-
         {/* Categories Filter */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1203,11 +941,7 @@ export default function MicroSaaS() {
 
 
 =======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const contact: ContactInfo = {
 
@@ -1567,68 +1301,6 @@ export default function MicroSaas() {;
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 Discover our comprehensive collection of micro SaaS products designed to solve specific business challenges 
                 with focused, efficient, and cost-effective solutions.
-<<<<<<< HEAD
-      <ErrorBoundary level='page'>
-        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
-          {/* Hero Section */}
-          <section className='py-20 px-4 text-center' role='banner'>
-            <div className='max-w-4xl mx-auto'>
-              <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                Micro SaaS Products
-              </h1>
-              <p
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                150+ Innovative Solutions for Modern Businesses
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              </p>
-              <p
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                Discover our comprehensive collection of micro SaaS products
-                designed to solve specific business challenges with focused
-                efficient, and cost-effective solutions.              </p>
-            </div>
-          </section>
-          {/* Category Filter */}
-<<<<<<< HEAD
-          <section className='py-8 px-4'>
-            <div className='max-w-6xl mx-auto'>
-              <div className='flex flex-wrap justify-center gap-4 mb-8'>
-                {categories.map(category => (                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                    }`}
-          <section className=&quot;py-8 px-4&quot;>
-            <div className=&quot;max-w-6xl mx-auto&quot;>
-              <div className=&quot;flex flex-wrap justify-center gap-4 mb-8&quot;>
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={_() => setSelectedCategory(category.id)}
-                    className={_`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}
-                  >
-                    {_category.name} ({_category.count})
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </div>
-          </section>
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
           {/* Products Grid */}
           <section className='py-16 px-4' role='main'>
@@ -1721,34 +1393,6 @@ export default function MicroSaas() {;
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0"></span>
                             {feature}
-
-<<<<<<< HEAD
-
-          {/* Products Grid */}
-          <section className=&quot;py-16 px-4&quot; role=&quot;main&quot;>
-            <div className=&quot;max-w-7xl mx-auto&quot;>
-              <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-                {filteredProducts.map((product, index) => (
-                  <div 
-                    key={product.id}
-                    className={_`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={_{ transitionDelay: `${index * 100}ms` }}
-                  >
-                    {product.popular && (
-                      <div className=&quot;absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full&quot;>
-                        Popular
-                      </div>
-                    )}
-                    
-                    <h3 className=&quot;text-xl font-bold mb-3&quot;>{product.name}</h3>
-                    <p className=&quot;text-slate-300 mb-4 text-sm&quot;>{product.description}</p>
-                    
-                    <div className=&quot;mb-4&quot;>
-                      <h4 className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>Key Features:</h4>
-                      <ul className=&quot;text-slate-400 text-sm space-y-1&quot;>
-                        {product.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className=&quot;flex items-center&quot;>
-                            <span className=&quot;w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0&quot;></span>
 
                             {feature}
 
@@ -1860,17 +1504,10 @@ export default function MicroSaas() {;
                         {product.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className='flex items-center'>
                             <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                          </li>
+=======                          </li>
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
-                    <div className='flex items-center justify-between mb-4'>
-                      <span className='text-2xl font-bold text-green-400'>
-=======
-
     { id: 'marketing', name: 'Marketing', count: 15 },  ];
 ;
   const products = [;
@@ -2151,47 +1788,20 @@ function MicroSaas() {
                     </div>;
                     <div className='flex items - center justify - between mb - 4'>;
                       <span className='text - 2xl font - bold text - green - 400'>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {product.price}
                       </span>;
                       <span className='text - xs text - slate - 500 capitalize'>;
                         {product.category}
-<<<<<<< HEAD
-=======
-
-                    
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    <div className="flex items-center justify-between mb-4">
+                                        <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{product.price}</span>
                       <span className="text-xs text-slate-500 capitalize">{product.category}</span>
-                    </div>
-<<<<<<< HEAD
-                    <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
-=======
-<<<<<<< HEAD
-                    <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                      Learn More
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    </button>
+                    </div>                    </button>
                   </div>
                 ))}
               </div>
             </div>
           </section>
           {/* Features Section */}
-<<<<<<< HEAD
-          <section className='py-16 px-4 bg-slate-900/40'>
-            <div className='max-w-6xl mx-auto'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
-                Why Choose Our Micro SaaS Products?
-              </h2>
-              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-=======
-
 
                     <h3 className='text-xl font-bold mb-3'>{product && product.name}</h3>;
                     <p className='text-slate-300 mb-4 text-sm'>;
@@ -2233,8 +1843,6 @@ function MicroSaas() {
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2315,50 +1923,6 @@ function MicroSaas() {
                 </div>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
-<<<<<<< HEAD
-                      />
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <h3 className="text-xl font-bold mb-3">{product.name}</h3>
-                    <p className="text-slate-300 mb-4 text-sm">{product.description}</p>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
-                      <ul className="text-slate-400 text-sm space-y-1">
-                        {product.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center">
-                            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0"></span>
-                            {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          </li>;
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </ul>
-                    </div>
-                    <div className='flex items-center justify-between mb-4'>
-                      <span className='text-2xl font-bold text-green-400'>
-                        {product.price}
-                      </span>
-                      <span className='text-xs text-slate-500 capitalize'>
-                        {product.category}
-                      </span>
-                    </div>
-                    <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Features Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -2413,8 +1977,6 @@ function MicroSaas() {
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2448,28 +2010,7 @@ function MicroSaas() {
                   </p>;
                 </div>;
                 <div className='text-center'>;
-                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
-<<<<<<< HEAD
-                        d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1'
-                      />
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>Cost Effective</h3>
-                  <p className='text-slate-400'>
-                    Affordable pricing with no hidden costs or long-term
-                    contracts
-                  </p>
-                </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    <svg
+                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;                    <svg
                       className='w-8 h-8 text-white'
                       fill='none'
                       stroke='currentColor'
@@ -2501,40 +2042,6 @@ function MicroSaas() {
                 </div>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
-<<<<<<< HEAD
-                      />
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>Focused Solutions</h3>
-                  <p className='text-slate-400'>
-                    Specialized tools that solve specific business problems
-                  </p>
-                </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    <svg
-                      className='w-8 h-8 text-white'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'>;
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-<<<<<<< HEAD
-
-
-              </div>
-            </div>
-          </section>
-
 
 
 
@@ -2620,20 +2127,12 @@ function MicroSaas() {
 
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Ready to Get Started?
               </h2>
               <p className='text-lg text-slate-300 mb-8'>
                 Contact our experts to discuss which micro SaaS products are
                 right for your business and get started with a free trial.
               </p>
-<<<<<<< HEAD
-              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-=======
-
 
                         d='M4 && M4.318 6 && 6.318a4.5 4 && 4.5 0 000 6 && 6.364L12 20 && 20.364l7.682-7 && 7.682a4.5 4 && 4.5 0 00-6 && 6.364-6 && 6.364L12 7 && 7.636l-1 && 1.318-1 && 1.318a4.5 4 && 4.5 0 00-6 && 6.364 0z'
                       />;
@@ -2658,12 +2157,8 @@ function MicroSaas() {
               </p>;
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link
                   href='/contact'
@@ -2672,28 +2167,6 @@ function MicroSaas() {
                   <ArrowRight className="ml-2 w-4 h-4" />;
                 </Link>;
                 <a
-<<<<<<< HEAD
-                  href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
-                  className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
-                >
-                  Call {contact.phone}
-                </a>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
-                  Email Us
-                </a>
-              </div>
-=======
-<<<<<<< HEAD
-                  href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
-                  className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'>;
-                  Call {contact && contact.phone}
-                </a>;
-                <a
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion.div>
           </div>
         </section>
@@ -3743,22 +3216,11 @@ origin/automation-improvements-final
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-            </motion.div>
-          </div>
-        </section>
-
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 =======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
@@ -3771,40 +3233,13 @@ origin/automation-improvements-final
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-        {/* Solutions Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Micro SaaS Solutions</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Focused, powerful solutions that address specific business challenges with AI and automation.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={solution.id}
-                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 =======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              className="text-center mb-16">;
+=======              className="text-center mb-16">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Our Micro SaaS Products;
               </h2>;
@@ -3817,8 +3252,6 @@ origin/automation-improvements-final
                 <motion&& motion.div
                   key={product && product.id}
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
@@ -3869,219 +3302,6 @@ origin/automation-improvements-final
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <product.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                      </span>;
-                    </div>;
-                    <button className='w - full py - 2 bg - blue - 600 hover:bg - blue - 700 rounded - lg font - semibold transition - colors'>                      Learn More;
-                    </button>;
-                  </div>))}
-              </div>;
-            </div>;
-          </section>;
-          {/* Features Section */}
-          <section className='py - 16 px - 4 bg - slate - 900 / 40'>;
-            <div className='max - w-6xl mx - auto'>;
-              <h2 className='text - 3xl md:text - 4xl font - bold text - center mb - 12'>;
-                Why Choose Our Micro SaaS Products?;
-              </h2>;
-              <div className='grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-                <div className='text - center'>;
-                  <div className='w - 16 h - 16 bg - blue - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <svg;
-                      className='w - 8 h - 8 text - white';
-                      fill='none';
-                      stroke='current_color';
-                      view_box='0 0 24 24';
-                    >;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M13 10V3L4 14h7v7l9 - 11h - 7z';
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text - xl font - bold mb - 2'>Lightning Fast</h3>;
-                  <p className='text - slate - 400'>;
-                    Quick setup and deployment in minutes, not months;
-                  </p>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='w - 16 h - 16 bg - purple - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <svg;
-                      className='w - 8 h - 8 text - white';
-                      fill='none';
-                      stroke='current_color';
-                      view_box='0 0 24 24';
-                    >;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M12 8c - 1.657 0 - 3 .895 - 3 2s1.343 2 3 2 3 .895 3 2 - 1.343 2 - 3 2m0 - 8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0 - 1c - 1.11 0 - 2.08-.402 - 2.599 - 1';
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text - xl font - bold mb - 2'>Cost Effective</h3>;
-                  <p className='text - slate - 400'>;
-                    Affordable pricing with no hidden costs or long - term;
-                    contracts;
-                  </p>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='w - 16 h - 16 bg - green - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <svg;
-                      className='w - 8 h - 8 text - white';
-                      fill='none';
-                      stroke='current_color';
-                      view_box='0 0 24 24';
-                    >;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M9 12l2 2 4 - 4m6 2a9 9 0 11 - 18 0 9 9 0 0118 0z';
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text - xl font - bold mb - 2'>Focused Solutions</h3>;
-                  <p className='text - slate - 400'>;
-                    Specialized tools that solve specific business problems;
-                  </p>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='w - 16 h - 16 bg - orange - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <svg;
-                      className='w - 8 h - 8 text - white';
-                      fill='none';
-                      stroke='current_color';
-                      view_box='0 0 24 24';
-                    >;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682 - 7.682a4.5 4.5 0 00 - 6.364 - 6.364L12 7.636l - 1.318 - 1.318a4.5 4.5 0 00 - 6.364 0z';
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text - xl font - bold mb - 2'>Easy Integration</h3>;
-                  <p className='text - slate - 400'>;
-                    Seamless integration with your existing tools and workflows;
-                  </p>                </div>;
-              </div>;
-            </div>;
-          </section>;
-          {/* CTA Section */}
-          <section className='py - 16 px - 4'>;
-            <div className='max - w-4xl mx - auto text - center'>;
-              <h2 className='text - 3xl md:text - 4xl font - bold mb - 8'>;
-                Ready to Get Started?;
-              </h2>;
-              <p className='text - lg text - slate - 300 mb - 8'>;
-                Contact our experts to discuss which micro SaaS products are;
-                right for your business and get started with a free trial.;
-              </p>;
-              <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
-                <Link;
-                  href='/contact';
-                  className='px - 8 py - 3 bg - blue - 600 hover:bg - blue - 700 rounded - lg font - semibold transition - colors';
-                >;
-                  Get Started;
-                  <ArrowRight className="ml - 2 w - 4 h - 4" />;
-                </Link>;
-                <a;
-                  href={`tel:${contact.phone.replace (/[^\d+]/g, '')}`}
-                  className='px - 8 py - 3 bg - purple - 600 hover:bg - purple - 700 rounded - lg font - semibold transition - colors';
-                >;
-                  Call {contact.phone}
-                </a>;
-                <a;
-                  href={`mailto:${contact.email}`}
-                  className='px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors'                >;
-                  Email Us;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Products Grid */}
-        <section className="py - 20 bg - gray - 50">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Our Micro SaaS Products;
-              </h2>;
-              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
-                Each product is designed to solve a specific business challenge with powerful, easy - to - use tools;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {microSaasProducts.map ((product, index) => (
-                <motion.div;
-                  key={product.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <product.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
-=======
-                  className="bg - white rounded - lg shadow - lg p - 6 hover:shadow - xl transition - shadow";
-                >;
-                  <div className="flex items - center mb - 4">;
-                    <product.icon className="w - 8 h - 8 text - blue - 600 mr - 3" />;
-                    <span className="text - sm font - semibold text - blue - 600 bg - blue - 100 px - 3 py - 1 rounded - full">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                      {product.category}
-                    </span>;
-                  </div>;
-                  <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
-                    {product.title}
-                  </h3>;
-                  <p className="text - gray - 600 mb - 4">;
-                    {product.description}
-                  </p>;
-                  <div className="mb - 4">;
-                    <span className="text - 2xl font - bold text - green - 600">;
-                      {product.pricing}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -4108,55 +3328,20 @@ origin/automation-improvements-final
                     {product && product.features.slice(0, 3).map((feature, idx) => (;
                       <div key={idx} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         {feature}
                       </div>;
                     ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </span>
-                  </div>
-                  <div className="space-y-2 mb-6">
-                    {product.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-                  </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                >
+                  </div>                >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <solution.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{solution.title}</h3>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
-<<<<<<< HEAD
-=======
-                  
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <div className="mb-4">
-                    <span className="text-2xl font-bold text-blue-600">{solution.pricing}</span>
-                    {solution.marketPrice && (
-                      <span className="text-gray-500 ml-2">(Market: {solution.marketPrice})</span>
-                    )}
-                  </div>
-<<<<<<< HEAD
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -4169,29 +3354,15 @@ origin/automation-improvements-final
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
 
 =======
 
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -4201,23 +3372,6 @@ origin/automation-improvements-final
                   >
 
 
-<<<<<<< HEAD
-
-                    Get Started
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                    Learn More
-                    Learn More
-                    Get Started
-                    <ArrowRight className="ml-2 w-4 h-4" />
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -4228,14 +3382,8 @@ origin/automation-improvements-final
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                   <Link
                     href="/contact"
@@ -4248,202 +3396,11 @@ origin/automation-improvements-final
           </div>;
         </section>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/main
-origin/automation-improvements-final
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 
 
 =======
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        {/* Categories */}
-        <section className="py-20 bg-white">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-
-
-<<<<<<< HEAD
-        {/* Industries Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              className="text-center mb-16">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Solution Categories;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                We cover a wide range of business domains with specialized micro SaaS solutions;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">;
-              {categories && categories.map((category, index) => (;
-                <motion&& motion.div
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    </span>;
-                  </div>;
-                  <div className="space - y-2 mb - 6">;
-                    {product.features.slice (0, 3).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center text - sm text - gray - 600">;
-                        <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2" />;
-                        {feature}
-                      </div>))}
-                  </div>;
-                  <Link;
-                    href="/contact";
-                    className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - lg font - semibold hover:bg - blue - 700 transition - colors text - center block";
-                  >;
-                    Learn More;
-                  </Link>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Categories */}
-        <section className="py - 20 bg - white">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Solution Categories;
-              </h2>;
-              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
-                We cover a wide range of business domains with specialized micro SaaS solutions;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 4">;
-              {categories.map ((category, index) => (
-                <motion.div;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  key={category}
-                  initial={{ opacity: 0, scale: 0 && 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.05 }}
-                  viewport={{ once: true }}
-<<<<<<< HEAD
-            </div>;
-          </div>;
-        </section>;
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
-        {/* Industries Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-
-
-              className="text-center mb-16">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Solution Categories;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                We cover a wide range of business domains with specialized micro SaaS solutions;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">;
-              {categories && categories.map((category, index) => (;
-                <motion&& motion.div
-
-
-=======
-                    </span>;
-                  </div>;
-                  <div className="space - y-2 mb - 6">;
-                    {product.features.slice (0, 3).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center text - sm text - gray - 600">;
-                        <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2" />;
-                        {feature}
-                      </div>))}
-                  </div>;
-                  <Link;
-                    href="/contact";
-                    className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - lg font - semibold hover:bg - blue - 700 transition - colors text - center block";
-                  >;
-                    Learn More;
-                  </Link>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Categories */}
-        <section className="py - 20 bg - white">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Solution Categories;
-              </h2>;
-              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
-                We cover a wide range of business domains with specialized micro SaaS solutions;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 4">;
-              {categories.map ((category, index) => (
-                <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={category}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -4457,12 +3414,6 @@ origin/automation-improvements-final
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
 =======
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -4476,9 +3427,7 @@ Ready to Transform Your Business?
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Get Started Today
-                </Link>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                </Link>                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Schedule Demo
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Schedule Demo
@@ -4489,15 +3438,7 @@ Ready to Transform Your Business?
                   View IT Services
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+origin/automation-improvements-final=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Link>
               </div>
@@ -4508,28 +3449,15 @@ origin/automation-improvements-final
     </Layout>;
   );
 
-<<<<<<< HEAD
 =======
-=======
-
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
+=======                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
 }
-<<<<<<< HEAD
 
-
-
-
-<<<<<<< HEAD
-
-            </div>
 
             </div>
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
@@ -4537,56 +3465,16 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-ursor/integrate-build-improve-and-re-verify-8f7d
+=======ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 }
             </div>
 origin/automation-improvements-final
-<<<<<<< HEAD
-=======
-          <section className="py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg text-slate-300 mb-8">
-                Contact our experts to discuss which micro SaaS products are right for your business 
-                and get started with a free trial.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
-                  href="/contact" 
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                >
-                  Get Free Trial
-                </Link>
-                <a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
-                >
-                  Call {contact.phone}
-                </a>
-                <a 
-                  href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                >
-                  Email Us
-                </a>
-                >
-                  Email Us
-                </Link>
-
               </div>
 
-            </div>
->>>>>>> origin/automation-improvements-final
-=======
+            </div>=======
 
             </div>
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
@@ -4596,16 +3484,11 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
       </ErrorBoundary>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
               transition={{ duration: 0 && 0.8 }}
 
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -4629,157 +3512,16 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
       </div>;
     </Layout>;
   );
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-
 
 }
 
 
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  className="bg - gray - 50 rounded - lg p - 4 text - center hover:bg - blue - 50 transition - colors";
-                >;
-                  <span className="text - sm font - medium text - gray - 700">;
-                    {category}
-                  </span>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py - 20 bg - blue - 600 text - white">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl mb - 8 max - w-3xl mx - auto">;
-                Discover how our micro SaaS solutions can solve your specific business challenges;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link href="/contact" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors">;
-                  Get Started Today;
-                </Link>;
-                <Link href="/demo" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
-                  Schedule Demo;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
-}
-          </section>;
-        </main>;
-      </ErrorBoundary>;
-    </>);
-}
-}
-<<<<<<< HEAD
-}
-}
-          <section className="py-16 px-4 bg-slate-900/40">;
-            <div className="max-w-6xl mx-auto">;
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
-                Why Choose Our Micro SaaS Products?;
-              </h2>;
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
-                    </svg>;
-                  </div>;
-                  <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>;
-                  <p className="text-slate-400">Quick setup and deployment in minutes, not months</p>;
-                </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />;
-                    </svg>;
-                  </div>;
-                  <h3 className="text-xl font-bold mb-2">Cost Effective</h3>;
-                  <p className="text-slate-400">Affordable pricing with no hidden costs or long-term contracts</p>;
-                </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
-                    </svg>;
-                  </div>;
-                  <h3 className="text-xl font-bold mb-2">Focused Solutions</h3>;
-                  <p className="text-slate-400">Specialized tools that solve specific business problems</p>;
-                </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />;
-                    </svg>;
-                  </div>;
-                  <h3 className="text-xl font-bold mb-2">Easy Integration</h3>;
-                  <p className="text-slate-400">Seamless integration with your existing tools and workflows</p>;
-                </div>;
-              </div>;
-            </div>;
-          </section>;
-          {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-ursor/integrate-build-improve-and-re-verify-b76c
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-origin/cursor/integrate-build-improve-and-re-verify-242d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-origin/main
-                </a>;
-                <a;
-                  href={`mailto:${contact.email}`} ;
-                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors";
-                >;
-                  Email Us;
-                </a>;
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </ErrorBoundary>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
-}
-
-
 =======
 
 =======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
+==============
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======

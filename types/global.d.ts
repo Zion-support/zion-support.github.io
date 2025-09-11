@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-  // Define Performance interface if not available;
-
   interface Performance {
     getEntriesByType (type: string): PerformanceEntry[];
     now (): number;
@@ -23,128 +19,17 @@
     attributes: NamedNodeMap;
     children: HTMLCollection;
     parent_element: HTMLElement | null;
-<<<<<<< HEAD
-// Global type declarations for DOM types
-declare global {
-  interface Window {
-    performance: Performance;
-  }
-  // Define Performance interface if not available
-  interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[];
-    now(): number;
-  }
-  // Define PerformanceEntry interface if not available
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
-  // Define HTML element types if not available
-  interface Element {
-    tagName: string;
-    attributes: NamedNodeMap;
-    children: HTMLCollection;
-    parentElement: HTMLElement | null;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }
-  interface CSSStyleDeclaration {
-    [key: string]: string;
-  }
-  interface HTMLElement extends Element {
-<<<<<<< HEAD
-    className: string;
-    id: string;
-    innerHTML: string;
-    textContent: string | null;
-=======
-    class_name: string;
-    id: string;
-    innerHTML: string;
-    text_content: string | null;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    style: CSSStyleDeclaration;
-  }
-  interface HTMLDivElement extends HTMLElement {}
-  interface HTMLParagraphElement extends HTMLElement {}
-  interface HTMLHeadingElement extends HTMLElement {}
-  interface HTMLAnchorElement extends HTMLElement {
-    href: string;
-    target: string;
-  }
-<<<<<<< HEAD
-  // Define MessageEvent if not available
-  interface MessageEvent<T = any> extends Event {
-=======
-
-  // Define MessageEvent if not available;
-  interface MessageEvent < T = any> extends Event {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    data: T;
-    origin: string;
-    lastEventId: string;
-    source: MessageEventSource | null;
-<<<<<<< HEAD
-    ports: ReadonlyArray<MessagePort>;
-  }
-  // Define RequestInit if not available
-=======
-    ports: ReadonlyArray < MessagePort>;
-  }
-
-  // Define RequestInit if not available;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  interface RequestInit {
-    body?: BodyInit | null;
-    cache?: RequestCache;
-    credentials?: RequestCredentials;
-    headers?: HeadersInit;
-    integrity?: string;
-    keepalive?: boolean;
-    method?: string;
-    mode?: RequestMode;
-    redirect?: RequestRedirect;
-    referrer?: string;
-<<<<<<< HEAD
-    referrerPolicy?: ReferrerPolicy;
-=======
-    referrer_policy?: ReferrerPolicy;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    signal?: AbortSignal | null;
-    window?: any;
-    timeout?: number;
-  }
-<<<<<<< HEAD
-  // Define AbortController if not available
-  interface AbortController {
-    signal: AbortSignal;
-    abort(): void;
-  }
-  // Define AbortSignal if not available
-=======
-
-  // Define AbortController if not available;
-
   interface AbortController {
     signal: AbortSignal;
     abort (): void;
   }
 
   // Define AbortSignal if not available;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   interface AbortSignal extends EventTarget {
     aborted: boolean;
     onabort: ((this: AbortSignal, ev: Event) => any) | null;
   }
 }
-
-
-<<<<<<< HEAD
 
 
 
@@ -204,9 +89,7 @@ declare namespace NodeJS {
 }
 
 =======
-// Global type declarations for DOM types
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-declare global {
+// Global type declarations for DOM typesdeclare global {
   interface Window {
     performance: Performance;
   }
@@ -295,14 +178,9 @@ declare global {
   }
 }
 
-<<<<<<< HEAD
-=======
-
 export {};
 export {};
 ursor/integrate-build-improve-and-re-verify-8f7d
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Re-export DOM types that might not be available
 export {};
 export {};
@@ -310,28 +188,6 @@ declare module "*.svg" { const content: 'string; export default content;' } decl
 declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
 declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
 declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-<<<<<<< HEAD
-// Re-export DOM types that might not be available
-export {}
-// Re-export DOM types that might not be available
-export {}
-// Re - export DOM types that might not be available;
-export {}
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-// Re-export DOM types that might not be available
-export {}
-origin/main
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-// Re-export DOM types that might not be available
-export {}
-<<<<<<< HEAD
-
 export {};
 // Re-export DOM types that might not be available;
 
@@ -346,13 +202,9 @@ export {};
 
 
 =======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 // Re-export DOM types that might not be available
-export {}
->>>>>>> origin/main
-=======
+export {}=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

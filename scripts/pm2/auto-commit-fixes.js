@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-class AutoCommitFixes {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'); this.startTime = Date.now(); this.commitsMade = 0; this.filesChanged = 0}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}
-;
-class AutoCommitFixes {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'); this.startTime = Date.now(); this.commitsMade = 0; this.filesChanged = 0};
-; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
-; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)};
-;
-
 
 }
 }
@@ -39,8 +26,6 @@ class AutoCommitFixes {,;
       console.error('Error writing to log: file:', error.message);
     },;
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 =======
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -48,57 +33,12 @@ class AutoCommitFixes {,;
 const fs = require ('fs');
 const path = require ('path');
 const { exec_sync } = require ('child_process');
-<<<<<<< HEAD
-
-
 ;
 class AutoCommitFixes { constructor () { this.project_root = process.cwd (); this.log_file = path.join (this.project_root, 'logs / pm2 / auto - commit - fixes.log'); this.start_time = Date.now (); this.commits_made = 0; this.files_changed = 0}
 ; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`;
 ; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}
 ;
 ;
-
-<<<<<<< HEAD
-;
-#!/usr/bin/env node,;
-const fs = require('fs'),;
-const path = require('path'),;
-const { execSync } = require('child_process'),;
-,;
-class AutoCommitFixes {,;
-  constructor() {,;
-    this.projectRoot = process.cwd(),;
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'),;
-    this.startTime = Date.now(),;
-    this.commitsMade = 0,;
-    this.filesChanged = 0,;
-  };
-,;
-  log(message) {,;
-    const timestamp = new Date().toISOString(),;
-    const logMessage = `[${timestamp}] ${message}\n`,;
-,;
-    try {,;
-      fs.appendFileSync(this.logFile, logMessage),;
-    } catch (error) {,;
-      console.error('Error writing to log:file:', error.message),;
-    };
-;#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-;
-class AutoCommitFixes {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log');
-    this.startTime = Date.now();
-    this.commitsMade = 0;
-    this.filesChanged = 0;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 ;
 class AutoCommitFixes { constructor () { this.project_root = process.cwd (); this.log_file = path.join (this.project_root, 'logs / pm2 / auto - commit - fixes.log'); this.start_time = Date.now (); this.commits_made = 0; this.files_changed = 0}
@@ -107,12 +47,6 @@ class AutoCommitFixes { constructor () { this.project_root = process.cwd (); thi
 ;
 
 
-
-<<<<<<< HEAD
-      return { hasChanges: true, files };
-    } catch (error) {
-      this.log(`Error checking git status: ${error.message}`);
-      return { hasChanges: false, files: [] };
 
   async getStagedFiles() {
     try {
@@ -179,7 +113,4 @@ class AutoCommitFixes { constructor () { this.project_root = process.cwd (); thi
     files.forEach(file => {
       const status = file.status;
       const fileName = file.file;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -10,8 +7,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
@@ -25,13 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
   if (format === 'gslides') {
     // TODO: integrate Google Slides API and return created deck URL
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -45,48 +33,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"`)
   res.status(200).send(html)
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 function escapeHtml(str: string) {
   return String(str)
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-}
-function escapeHtml(str: string) {
-  return String(str)
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-.replace(/&/g, '&amp,')
-    .replace(/</g, '&lt,')
-    .replace(/>/g, '&gt,')
-    .replace(/"/g, '&quot,')
-    .replace(/'/g, '&#039,')
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    .replace(/'/g, '&#039,')
-}
-
 
 ;
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     .replace(/'/g, '&#039,');
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
     if (req.method === 'POST') {
       const { slides, format, version } = req.body || {};
@@ -110,11 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 =======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+==============
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

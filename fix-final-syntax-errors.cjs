@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-
 console.log('🔧 Fixing final syntax errors...');
 
 // Function to fix specific syntax issues
@@ -140,12 +136,6 @@ if (require.main === module) {
 module.exports = { fixFinalSyntax };
 =======
 #!/usr/bin/env node
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 console.log('🔧 Fixing final syntax errors...');
 
 // Function to fix specific syntax issues
@@ -377,4 +367,3 @@ const report = {
 };
 fs.writeFileSync('/workspace/final-syntax-errors-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to final-syntax-errors-fix-report.json');
->>>>>>> main

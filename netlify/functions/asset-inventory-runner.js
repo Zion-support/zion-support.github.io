@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 
 function runNode(relPath, args = []) {
 
@@ -26,9 +23,7 @@ exports && exports.handler = async () => {
 
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const path = require ('path');
+=======const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
 /**

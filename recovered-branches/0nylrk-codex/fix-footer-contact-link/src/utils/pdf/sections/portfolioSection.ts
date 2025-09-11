@@ -1,26 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { jsPDF  } from 'jspdf';
-import { PortfolioProject  } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-export function addPortfolioSection(
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -32,46 +16,6 @@ export function addPortfolioSection(;
 
   maxProjects: number = 2
 ): number {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  yPos += 8;
-  // Limit the number of projects shown based on maxProjects parameter
-  const displayProjects = projects && projects.slice(0, maxProjects);
-  for (const project of displayProjects) {
-    // Check if we need to add a new page
-    if (yPos > 260) {
-      doc && doc.addPage();
-      yPos = 20
-    }
-    doc && doc.setFontSize(14);
-    doc && doc.setTextColor(colors && colors.subheading);
-    doc && doc.text(project && project.title, 20, yPos);
-    yPos += 6;
-    if (project && project.technologies && project && project.technologies.length > 0) {
-      doc && doc.setFontSize(10);
-      doc && doc.setTextColor(colors && colors.text);
-      doc && doc.text(`Technologies: ${project && project.technologies.join()}`, 20, yPos);
-      yPos += 5
-    }
-    if (project && project.description) {
-      doc && doc.setFontSize(10);
-      const descriptionLines = doc && doc.splitTextToSize(project && project.description, 170);
-      doc && doc.text(descriptionLines, 20, yPos);
-      yPos += (descriptionLines && descriptionLines.length * 5)
-    }
-    // Add links if available
-    if (project && project.github_url || project && project.demo_url) {
-      yPos += 5;
-      doc && doc.setFontSize(9);
-      doc && doc.setTextColor(colors && colors.accent);
-      if (project && project.github_url) {
-        doc && doc.text(`GitHub: ${project && project.github_url}`, 20, yPos);
-        yPos += 4
-      }
-      if (project && project.demo_url) {
-        doc && doc.text(`Demo: ${project && project.demo_url}`, 20, yPos);
-        yPos += 4
-
   if (projects.length === 0) return startY;
   let yPos = startY;
   // Check if we need to add a new page
@@ -190,8 +134,6 @@ export function addPortfolioSection(;
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   if (projects && projects.length === 0) return startY;
   
 
@@ -257,45 +199,15 @@ export function addPortfolioSection(;
       }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      }
-    }
-    yPos += 10, // Add space between projects
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   
 
 
   // If there are more projects than we're displaying
 
-<<<<<<< HEAD
-  // If there are more projects than we're displaying
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  if (projects && projects.length > maxProjects) {
-    doc && doc.setFontSize(10);
-    doc && doc.setTextColor(colors && colors.text);
-    doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
-<<<<<<< HEAD
     yPos += 6
-  }
-  return yPos + 5
-=======
-
-    yPos += 6
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -318,31 +230,16 @@ if ( {) {
 }
     doc.add_page (),
     y_pos = 20;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-  
-  // If there are more projects than we're displaying
-  if (projects.length > maxProjects) {
-    doc.setFontSize(10);
-    doc.setTextColor(colors.text);
-    doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
-
     yPos += 6
   }
   return yPos + 5
 }
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 =======
 
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-;
+=======;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
     doc.setFontSize(10),;
@@ -351,12 +248,7 @@ if ( {) {
     yPos += 6;
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662  }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);
   doc.text ('Portfolio Projects', 20, y_pos);
@@ -383,64 +275,6 @@ if ( {) {
     doc.text (project.title, 20, y_pos);
     y_pos += 6;
 ;
-<<<<<<< HEAD
-    // Check condition
-if ( {) {
-  $2
-}
-      doc.setFontSize (10);
-      doc.setTextColor (colors.text);
-      doc.text (`Technologies: ${project.technologies.join ()}`, 20, y_pos);
-      y_pos += 5;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      doc.setFontSize (10);
-      const description_lines = doc.splitTextToSize (project.description, 170);
-      doc.text (description_lines, 20, y_pos);
-      y_pos += (description_lines.length * 5);
-    }
-    // Add links if available;
-    // Check condition
-if ( {) {
-  $2
-}
-      y_pos += 5;
-      doc.setFontSize (9);
-      doc.setTextColor (colors.accent);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        doc.text (`GitHub: ${project.github_url}`, 20, y_pos);
-        y_pos += 4;
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        doc.text (`Demo: ${project.demo_url}`, 20, y_pos);
-        y_pos += 4;
-      }
-    }
-    y_pos += 10, // Add space between projects;
-  }
-  // If there are more projects than we're displaying;
-  // Check condition
-if ( {) {
-  $2
-}
-    doc.setFontSize (10);
-    doc.setTextColor (colors.text);
-    doc.text (`+ ${projects.length - max_projects} more projects not shown`, 20, y_pos);
-    y_pos += 6;
-  }
-  return y_pos + 5;
-<<<<<<< HEAD
-
 import { jsPDF } from 'jspdf',;
 import { PortfolioProject } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -556,9 +390,7 @@ yPos += 4
   return yPos + 5;
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
+=======}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

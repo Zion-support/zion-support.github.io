@@ -1,52 +1,3 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class GitAutomation {
-  constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'git-automation.log');
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] [${level}] ${message};`;
-    const logFile = path.join(this.logDir, 'git-automation.log';);
-    fs.appendFileSync(logFile, logMessage + '\n')}
-  async runCommand(command, description, timeout = 300000) {
-    this.log(`🔧 ${description}`);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-  async runCommand(command, options = {}) {
-    try {
-      this.log(`Running: ${description}`);
-      const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-      this.results.operations.push({
-        command,
-        description,
-        status: 'success',
-        output: result.substring(0, 200)
-      });
-      this.log(`✅ ${description} completed`);
-      return true;
-    } catch (error) {
-      this.results.operations.push({
-        command,
-        description,
-        status: 'failed',
-        error: error.message
-      });
-      this.log(`❌ ${description} failed: ${error.message}`);
-      return false;
-    }
-  }
-
   async runAllOperations() {
     this.log('🚀 Starting Git Automation...\n');
 
@@ -120,4 +71,3 @@ const path = require('path')
       this.log(" Git automation workflow "failed": ${error.message}")
 =======
       this.log(" Git automation workflow "failed": ${error.message}")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-:src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
-
 :src.disabled/components/analytics/AnalyticsContainer.jsx
 =======
 
@@ -16,8 +12,6 @@
 :src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 

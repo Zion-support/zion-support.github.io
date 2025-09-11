@@ -1,13 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { _Button } from '@/components/ui/button';
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Badge } from '@/components/ui/badge';
-import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { _CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
-import { _SEO } from '@/components/SEO';
-import { _PRICING_TIERS } from '@/data/advancedServices';
-
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import { CheckCircle } from 'lucide-react';
@@ -239,8 +230,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-
->>>>>>> origin/clean-error-fixing-automation
       {/* Pricing Tiers Overview */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">

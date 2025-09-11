@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-"}}
-
-<<<<<<< HEAD
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '' }) => {
-    const sizeClasses = {
-  sm: 'w-4 h-4',
-        md: 'w-8 h-8',
-        lg: 'w-12 h-12',
-  xl: 'w-16 h-16'
-    
-
 };
     const renderBars = () => (<div className="flex space-x-1">
       {[0, 1, 2, 3].map((i) => (<motion.div key={i} className={`w-1 ${size === 'sm' ? 'h-3' : size === 'md' ? 'h-6' : size === 'lg' ? 'h-8' : 'h-12'} bg-blue-400 rounded-full`} animate = {
@@ -50,7 +33,5 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
           {text}
         </motion.p>)}
     </div>)};
-export default EnhancedLoading;
->>>>>>> origin/clean-error-fixing-automation
-=======
+export default EnhancedLoading;=======
 >>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

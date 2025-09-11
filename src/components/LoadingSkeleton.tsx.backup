@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-
 
     return <div className={classes}  />}  
   return ()
@@ -334,4 +331,3 @@ export const shimmerAnimation = `
       transform: translateX(100%)}
   }
 `;
->>>>>>> origin/clean-error-fixing-automation

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 =======
@@ -9,48 +5,7 @@ import Link from "next/link";
 export const metadata = {title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services";
   description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
   keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
-export default function SpaceTechPage() {return (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
-export const metadata = {;
-  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
-  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",;
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
-export default function SpaceTechPage() {;
-  return (;
-<<<<<<< HEAD
-
-
-    <div className="min-h-screen">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    <div className="min-h-screen">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from './next / link';,
-export const metadata = {
-  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
-  description: "Explore Zion Tech Group's cutting - edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},
-export default /**
- * SpaceTechPage - Function description
- */
-function SpaceTechPage() {
-  return (
-    <div className="min - h-screen">;
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services";
-  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
-export default function SpaceTechPage() {return (;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
+export default function SpaceTechPage() {return (;import Link from "next/link",;
 export const metadata = {;
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
   description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",;
@@ -58,91 +13,6 @@ export const metadata = {;
 export default function SpaceTechPage() {;
   return (;
     <div className="min-h-screen">;
-      {/* Hero Section */}
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
-            <span className="gradient - text">Space Technology Solutions</span>;
-          </h1>;
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
-            Pioneering the future of space exploration and satellite technology.;
-            From advanced communications to space infrastructure, we're building;
-            the technologies that will connect Earth and beyond.;
-          </p>;
-        </div>;
-      </section>;
-      {/* Space Overview */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="card bg - gradient - to - r from - yellow - 600 / 20 to - orange - 600 / 20 border - yellow - 500 / 30">;
-            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
-              <div>;
-                <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                  Advancing Humanity's Reach into Space;
-                </h2>;
-                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-                  Space technology represents the pinnacle of human innovation and;
-                  engineering. Our solutions enable global connectivity, Earth;
-                  observation, and the foundation for future space exploration;
-                  missions.;
-                </p>;
-                <div className="space - y-4 mb - 6">;
-                  <div className="flex items - center">;
-                    <div className="w - 6 h - 6 bg - yellow - 500 rounded - full mr - 3"></div>;
-                    <span className="text - gray - 300">Global satellite communications</span>;
-                  </div>;
-                  <div className="flex items - center">;
-                    <div className="w - 6 h - 6 bg - yellow - 500 rounded - full mr - 3"></div>;
-                    <span className="text - gray - 300">Earth observation & monitoring</span>;
-                  </div>;
-                  <div className="flex items - center">;
-                    <div className="w - 6 h - 6 bg - yellow - 500 rounded - full mr - 3"></div>;
-                    <span className="text - gray - 300">Space infrastructure development</span>;
-                  </div>;
-                  <div className="flex items - center">;
-                    <div className="w - 6 h - 6 bg - yellow - 500 rounded - full mr - 3"></div>;
-                    <span className="text - gray - 300">Next - generation space systems</span>;
-                  </div>;
-                </div>;
-                <Link href="/contact" className="btn - primary">;
-                  Explore Space Solutions;
-                </Link>;
-              </div>;
-              <div className="relative">;
-                <div className="w - full h - 80 bg - gradient - to - br from - yellow - 500 / 20 to - orange - 500 / 20 rounded - xl flex items - center justify - center">;
-                  <svg className="w - 32 h - 32 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M12 19l9 2 - 9-18 - 9 18 9 - 2zm0 0v - 8" />;
-                  </svg>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Core Space Services */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="text - center mb - 16">;
-            <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-              Core Space Services;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-              Comprehensive space technology solutions for modern applications;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {/* Satellite Communications */}
-            <div className="card group hover:bg - yellow - 500 / 10 transition - colors">;
-              <div className="w - 16 h - 16 bg - yellow - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - yellow - 500 / 30">;
-                <svg className="w - 8 h - 8 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                  <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m - 7.08 - 7.071c3.904 - 3.905 10.236 - 3.905 14.141 0M1.394 9.393c5.857 - 5.857 15.355 - 5.857 21.213 0" />;
-                </svg>;
-              </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Satellite Communications</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                High - speed satellite internet, global connectivity solutions,
-
 <<<<<<< HEAD
 
                 High-speed satellite internet, global connectivity solutions,;
@@ -157,11 +27,7 @@ export default function SpaceTechPage() {;
 =======
 =======
 
-                High-speed satellite internet, global connectivity solutions,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                and communication infrastructure for remote regions.;
+                High-speed satellite internet, global connectivity solutions,;                and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
                 <li>• High - speed satellite internet</li>;

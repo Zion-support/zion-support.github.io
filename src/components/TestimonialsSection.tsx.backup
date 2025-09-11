@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-
-export default function Page(props: any) {
-,
-  {
-    id: 4,"
-    name: "James Thompson","
-    position: "CEO","
-    company: "FinTech Innovations","
-    avatar: "/images/testimonials/james-thompson.jpg",
-    rating: 5,"
-    content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.","
-    industry: "Finance","
-    results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],
-    verified: tru e
-  },
-  {
-    id: 5,"
-    name: "Lisa Park","
-    position: "Head of Marketing","
-    company: "E-commerce Dynamics","
-    avatar: "/images/testimonials/lisa-park.jpg",
-    rating: 5,"
-    content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.","
-    industry: "E-commerce","
-    results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
-    verified: tru e
-  }"
-    company: "Healthcare Innovations",;"
-import React, { useState } from 'react';
-export const TestimonialsSection: React.FC = () => {;
-import { _motion, AnimatePresence  } from 'framer-motion';
-
 import { motion } from 'framer-motion';
 const testimonials = [];
 ;
@@ -265,4 +232,3 @@ export const TestimonialsSection = () => {
         </div>
       </div>
     </section>)};
->>>>>>> origin/clean-error-fixing-automation

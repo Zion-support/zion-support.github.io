@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"export\": const OptimizedImage = ({ ;
-export: const OptimizedImage = ({ ;""
-:src.disabled/components/OptimizedImage.jsx
-"export\": const OptimizedImage = ({ ;
-export: const OptimizedImage = ({ ;""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-"export\": const OptimizedImage = ({ ;
-export: const OptimizedImage = ({ ;""
-:temp_exclude/src.disabled/components/OptimizedImage.jsx
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 =======
 "export\": const OptimizedImage = ({ ;
-export: const OptimizedImage = ({ ;""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/OptimizedImage.jsx
-<<<<<<< HEAD
+export: const OptimizedImage = ({ ;""<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

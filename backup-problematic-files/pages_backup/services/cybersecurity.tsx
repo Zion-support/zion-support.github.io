@@ -636,10 +636,6 @@ export default function CybersecurityServices() {;
       </div>
     </>
     </>
-<<<<<<< HEAD
-  );
-};
-
 export default Cybersecurity;
 =======
 <<<<<<< HEAD
@@ -648,4 +644,3 @@ export default Cybersecurity;
 };
 
 export default Cybersecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 "use client";
@@ -291,9 +287,7 @@ const microSAASServices: MicroSAASService[] = [;
     deployment: "Enterprise cloud with compliance features";
   }
 ];
-export default function MicroSAASPage() {return (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
+export default function MicroSAASPage() {return (;"use client",;
 import { useState } from "react",;
 interface MicroSAASService {;
   id: string,;

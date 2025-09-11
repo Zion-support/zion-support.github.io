@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React from "react";
+=======import React from "react";
 import { format } from "date-fns";
 interface DateDividerProps {
 
@@ -14,9 +8,6 @@ interface DateDividerProps {
 import React from 'react';
 import { format } from 'date-fns';
 
-<<<<<<< HEAD
-  date: Date;
-
 }
 
 import React from "react";
@@ -25,37 +16,16 @@ import { format } from "date-fns";
 =======
   date: Date;
 
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface DateDividerProps {;
+}interface DateDividerProps {;
   date: Date;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function DateDivider(): any ({ date }: DateDividerProps) {;
-  return (
-    <div className="flex items-center my-4">;
-      <div className="flex-1 border-t border-zion-purple/20"></div>;
-      <div className="px-3 text-xs text-zion-slate">;
-        {format(date, "MMM d, yyyy")}
-      </div>;
-      <div className="flex-1 border-t border-zion-purple/20"></div>;
-    </div>;
-  );
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { format  } from './date - fns';
 interface DateDividerProps {
   date: Date;
-<<<<<<< HEAD
-
-
 
 }
 export /**
@@ -70,9 +40,6 @@ function DateDivider() {
       </div>;
       <div className="flex - 1 border - t border - zion - purple / 20"></div>;
     </div>);
-<<<<<<< HEAD
-}
-
 import React from 'react',;
 import { format } from 'date-fns',;
 ;
@@ -121,11 +88,7 @@ interface DateDividerProps {;
 
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======}=======
 =======
 
 

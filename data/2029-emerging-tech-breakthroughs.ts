@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface EmergingTechBreakthrough2029 {;
-export interface EmergingTechBreakthrough2029 {
-export interface EmergingTechBreakthrough2029 {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-
     address: string;
   }
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
@@ -77,8 +59,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
       "Emerging tech breakthroughs";
       "Innovation platform";
@@ -92,9 +72,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 export interface EmergingTechBreakthrough2029 {;
 
 =======
@@ -112,9 +89,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Emerging tech breakthroughs",
       "Innovation platform",
       "Future capabilities",
-      "Advanced features",
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      "Expert insights"
+      "Advanced features",      "Expert insights"
     ],
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
@@ -122,21 +97,12 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     contactInfo: {
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
-  }
-
 ];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
+=======;
     }
   }
 ];
@@ -181,26 +147,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Innovation platform";
       "Future capabilities";
       "Advanced features";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string;
-  }
-}
-
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
   {
     id: "2029-emerging-tech-breakthrough",
@@ -227,8 +173,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
+=======    }
   }
 ];

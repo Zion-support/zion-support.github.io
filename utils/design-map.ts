@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type UIKitKind = 'ios' | 'android' | 'web';
-export interface TokenSet {
-
 export interface TokenSet {;
   colors: Record<string, string>;
   typography: Record<string, any>;
@@ -36,8 +31,6 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       lg: 24
       xl: 32
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   tokens: TokenSet;
 }
@@ -126,14 +119,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-<<<<<<< HEAD
-
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662    };
   }
   if (kind === 'chakra') {
     return {
@@ -162,21 +148,6 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   } catch {
     return null;
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-// Design mapping utilities
-export interface DesignElement {
-  id: string;
-  type: 'component' | 'layout' | 'style' | 'asset';
-  name: string;
-  figmaId?: string;
-  properties: Record<string, any>;
-  children?: DesignElement[];
-  parent?: string;
-}
 
 export interface DesignSystem {
   id: string;
@@ -233,19 +204,6 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
 
   const tokens = await buildTokenSet(fileId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  }
-}
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    };
-  };
-}
-
 
 
 
@@ -255,18 +213,6 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
   const tokens = await buildTokenSet(fileId);
   return {
-<<<<<<< HEAD
-    components: {
-      button: {
-        primary: {
-          backgroundColor: tokens.colors.primary
-          padding: tokens.spacing.md
-        }
-      }
-    }
-    tokens
-  }
-
 =======
 
     id,
@@ -282,26 +228,16 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
   };
 }
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
-      }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    },
+      }    },
     tokens;
   }
 }
-<<<<<<< HEAD
-
-  };
-
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======

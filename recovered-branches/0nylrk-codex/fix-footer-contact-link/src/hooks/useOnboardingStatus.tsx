@@ -1,21 +1,7 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {useAuth} from "./useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import { useState, useEffect } from "react",
-import { useAuth } from "./useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "./useAuth",
-import { supabase } from "@/integrations/supabase/client",
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -35,18 +21,6 @@ interface OnboardingStatus {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function useOnboardingStatus() {;
-  const { user } = useAuth();
-export function useOnboardingStatus() {
-  const { user } = useAuth(),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const [status, setStatus] = useState<OnboardingStatus>({
-
     profileCompleted: false
     skillsAdded: false
     availabilitySet: false
@@ -55,15 +29,6 @@ export function useOnboardingStatus() {
     inviteSent: false
 
     responseReceived: false
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }),
-  
-
   useEffect(() => {
 
     const fetchOnboardingStatus = async () => {
@@ -71,110 +36,11 @@ export function useOnboardingStatus() {
       if (!user) return,
       
 
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  });
-  }),
-  
-  useEffect(() => {
 
     const fetchOnboardingStatus = async () => {
       if (!user) return;
       if (!user) return,
       
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      try {
-        // Get user onboarding progress from database
-        const { data, error } = await supabase
-          .from('user_onboarding')
-          .select('*')
-          .eq('user_id', user.id)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-          .single(),
-          
-
-
-        if (error) {
-          console.error("Error fetching onboarding status:", error);
-          return
-
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          .single();
-          .single(),
-          
-        if (error) {
-<<<<<<< HEAD
-          console.error("Error fetching onboarding status:", error),
-          return
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-          console.error("Error fetching onboarding status:", error);
-          return
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { useState, useEffect } from "react",;
-import { useAuth } from "./useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-interface OnboardingStatus {;
-  profileCompleted: boolean,;
-  skillsAdded: boolean,;
-  availabilitySet: boolean,;
-  matchReceived: boolean,;
-  jobPosted: boolean,;
-  inviteSent: boolean,;
-  responseReceived: boolean;
-}
-;
-export function useOnboardingStatus() {;
-  const { user } = useAuth(),;
-  const [status, setStatus] = useState<OnboardingStatus>({;
-    profileCompleted: false,;
-    skillsAdded: false,;
-    availabilitySet: false,;
-    matchReceived: false,;
-    jobPosted: false,;
-    inviteSent: false,;
-    responseReceived: false;
-  }),;
-  useEffect(() => {;
-    const fetchOnboardingStatus = async () => {;
-      if (!user) return,;
-      try {;
-        // Get user onboarding progress from database;
-        const { data, error } = await supabase;
-          .from('user_onboarding');
-          .select('*');
-          .eq('user_id', user.id);
-          .single(),;
-        if (error) {;
-          console.error("Error fetching onboarding status:", error),;
-          return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         if (data) {
           setStatus({
@@ -186,9 +52,6 @@ export function useOnboardingStatus() {;
             inviteSent: data.talent_invited |false
             responseReceived: data.quote_received |false
           })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { useState, useEffect } from "react",;
 import { useAuth } from "./useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -220,9 +83,7 @@ export function useOnboardingStatus() {;
       if (!user) return,;
       ;
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+==============
 import {useState, useEffect} from "react";
 import {useAuth} from "./useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -252,20 +113,6 @@ export function useOnboardingStatus() {;
     const fetchOnboardingStatus = async () => {;
       if (!user) return;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      try {;
-        // Get user onboarding progress from database;
-        const { data, error } = await supabase;
-          .from('user_onboarding');
-          .select('*');
-<<<<<<< HEAD
-<<<<<<< HEAD
-      } catch (err) {
-        console.error("Error in onboarding status hook:", err)
-
         }
 =======
           .eq('user_id', user && user.id);
@@ -276,9 +123,7 @@ export function useOnboardingStatus() {;
           return;
         }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      } catch (err) {
+=======      } catch (err) {
         console.error("Error in onboarding status hook:", err)
       }
     }
@@ -290,26 +135,9 @@ export function useOnboardingStatus() {;
       } catch (err) {;
         console.error("Error in onboarding status hook:", err);
       }
-<<<<<<< HEAD
-        if (data) {;
-          setStatus({;
-            profileCompleted: data && data.profile_completed || false,;
-            skillsAdded: data && data.skills_added || false,;
-            availabilitySet: data && data.availability_set || false,;
-            matchReceived: data && data.match_received || false,;
-            jobPosted: data && data.job_posted || false,;
-            inviteSent: data && data.talent_invited || false,;
-            responseReceived: data && data.quote_received || false;
-          });
-=======
-          .eq('user_id', user && user.id);
-          .single();
-
         if (error) {;
           console && console.error("Error fetching onboarding status:", error);
-          return;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        }
+          return;        }
       } catch (err) {;
         console && console.error("Error in onboarding status hook:", err);
       }
@@ -400,41 +228,6 @@ if ( {) {
   }, [user]);
 ;
   return status;
-<<<<<<< HEAD
-          .eq('user_id', user.id);
-          .single(),;
-          ;
-        if (error) {;
-          console.error("Error fetching onboarding status:", error),;
-          return,;
-        }
-        ;
-        if (data) {;
-          setStatus({;
-            profileCompleted:data.profile_completed || false,;
-            skillsAdded:data.skills_added || false,;
-            availabilitySet:data.availability_set || false,;
-            matchReceived:data.match_received || false,;
-            jobPosted:data.job_posted || false,;
-            inviteSent:data.talent_invited || false,;
-            responseReceived:data.quote_received || false;
-          }),;
-        }
-      } catch (err) {;
-        console.error("Error in onboarding status hook:", err),;
-      }
-    },;
-    ;
-    fetchOnboardingStatus(),;
-  }, [user]),;
-  ;
-  return status,;}
-}catch (err) {
-  
-  useEffect(() => {
-    const fetchOnboardingStatus = async () => {
-      if (!user) return,
-
 interface OnboardingStatus {profileCompleted: boolean,
   skillsAdded: boolean,
   availabilitySet: boolean,
@@ -490,21 +283,6 @@ const { data, error} = await supabase
 }
 ;
 
-<<<<<<< HEAD
-};
-}, [user]);
-return status;
-}
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-
 =======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

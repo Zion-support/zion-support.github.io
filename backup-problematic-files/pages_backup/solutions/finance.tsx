@@ -654,10 +654,6 @@ export default function FinanceSolutions() {;
       </div>
     </>
     </>
-<<<<<<< HEAD
-  );
-};
-
 export default Finance;
 =======
 <<<<<<< HEAD
@@ -666,4 +662,3 @@ export default Finance;
 };
 
 export default Finance;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

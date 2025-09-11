@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
             </div>
           </div>
@@ -12,9 +7,6 @@
   )
 
 }
-
-
-<<<<<<< HEAD
 
 
 import React from 'react';
@@ -56,9 +48,7 @@ export default function BiotechAIResearchPlatformPage() {
     </Layout>
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+==============
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
@@ -66,11 +56,6 @@ export default function BiotechAIResearchPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-;
-
 ;
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 import React from './react';
 ;
-=======
-
-import React from './react';
-;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SwitchProps {
 interface SwitchProps {;
   checked?: boolean;
@@ -14,9 +7,6 @@ interface SwitchProps {;
   disabled?: boolean;
   class_name?: string;
 }
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const Switch: React.FC < SwitchProps> = ({
   checked = false,
@@ -25,8 +15,6 @@ const Switch: React.FC < SwitchProps> = ({
   class_name = "",
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }) => {
 const Switch: React.FC<SwitchProps> = ({;
   checked = false,;
@@ -40,9 +28,6 @@ const Switch: React.FC<SwitchProps> = ({;
       role="switch";
       aria - checked={checked}
       disabled={disabled}
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       on_click={() => onCheckedChange?.(!checked)}
       className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 ${
@@ -61,5 +46,3 @@ export { Switch }
 ;
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

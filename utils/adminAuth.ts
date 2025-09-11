@@ -1,69 +1,29 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest } from 'next';
-export interface Session {
-
 export interface Session {;
   userId: string;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  email: string;
+=======  email: string;
   role: 'admin' | 'user' | 'guest';
 }
-<<<<<<< HEAD
-export function getSessionFromReq(req: NextApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic;
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return null;
-  }
-  
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { userId: 'admin-1', email: 'admin@zion.os', role: 'admin' };
-  }
-  
-  return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
-}
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
 
 
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
-<<<<<<< HEAD
-  
-  return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent));
-}
-
 =======
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export const isAdmin = () => {
+=======export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-// Admin authentication utilities
-import { NextApiRequest, NextApiResponse } from 'next';
 
 export interface AdminUser {
   id: string;
@@ -176,78 +136,6 @@ export async function authenticateAdmin(email: string, password: string): Promis
 export function getAdminUser(id: string): AdminUser | null {
   return adminUsers.find(u => u.id === id) || null;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export function getSessionFromReq (req: NextApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic;
-  const auth_header = req.headers.authorization;
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  // Simple mock for admin users;
-  if () {) {
-  $2
-}
-    return { user_id: 'admin - 1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { user_id: 'user - 1', email: 'user@zion.os', role: 'user' }
-}
-export function isInternalAgentRequest (req: NextApiRequest): boolean {
-  // Check for internal agent headers or IPs;
-  const user_agent = req.headers['user - agent'] || '';
-  const internal_agents = ['zion - bot', 'internal - agent', 'automation'];
-;
-  return internal_agents.some (agent => user_agent.toLowerCase ().includes (agent));
-}
-export const is_admin = () =>: any {
-<<<<<<< HEAD
-  // Placeholder implementation;
-  return true;
 
 
-
-
-<<<<<<< HEAD
-export function isInternalAgentRequest(req: NextApiRequest): boolean {
-  // Check for internal agent headers or IPs
-  const userAgent = req.headers['user-agent'] |'';
-  // Check for internal agent headers or IPs;
-  const userAgent = req.headers['user-agent'] || '';
-  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
-  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
-}
-export const isAdmin = () => {
-  // Placeholder implementation;
-  return true;
-}
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-};
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  // Placeholder implementation;
-  return true;
-
-
-
-
-=======
-};
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

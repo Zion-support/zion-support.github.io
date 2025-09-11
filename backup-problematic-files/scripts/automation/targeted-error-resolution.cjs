@@ -3,9 +3,6 @@
  * Targeted Error Resolution Automation;
  * Focuses on specific error patterns and provides targeted error fixing;
  */
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs')
 const path = require('path')
@@ -32,4 +29,3 @@ const { execSync } = require('child_process')
     console.error(' Targeted error resolution interval "failed")
 =======
     console.error(' Targeted error resolution interval "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

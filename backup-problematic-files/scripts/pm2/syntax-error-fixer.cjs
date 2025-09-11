@@ -6,9 +6,6 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class SyntaxErrorFixer {}
   constructor() {}
@@ -24,9 +21,7 @@ class SyntaxErrorFixer {}
     this.fixedFiles = new Set();
 <<<<<<< HEAD
 =======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    this.syntaxPatterns = {}
+        this.syntaxPatterns = {}
       unterminatedStrings: []
         /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\n|$)/g,`
         /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\s*[,)\]}])/g;
@@ -57,9 +52,6 @@ class SyntaxErrorFixer {}
       data,
       service: 'syntax-error-fixer'
     };
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
@@ -88,9 +80,7 @@ class SyntaxErrorFixer {}
       this.log('info', 'Syntax Error Fixer Service started successfully');
 <<<<<<< HEAD
 =======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      // Keep the process alive;
+            // Keep the process alive;
       setInterval(async () => {}
         await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start Syntax Error Fixer Service', error);
@@ -103,9 +93,6 @@ class SyntaxErrorFixer {}
       'temp',
       'fixed-files'
     ];
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
@@ -122,8 +109,6 @@ class SyntaxErrorFixer {}
       this.fixedFiles.clear();
 <<<<<<< HEAD
 =======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       // Find files with syntax issues;
       const filesWithIssues = await this.findFilesWithSyntaxIssues();
       if (filesWithIssues.length === 0) {}
@@ -135,26 +120,6 @@ class SyntaxErrorFixer {}
       for (let i = 0; i < filesWithIssues.length; i += batchSize) {}
         const batch = filesWithIssues.slice(i, i + batchSize);
         await Promise.all(batch.map(file => this.fixFileSyntax(file)));
-<<<<<<< HEAD
-=======
-        
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        // Small delay between batches;
-        if (i + batchSize < filesWithIssues.length) {}
-          await new Promise(resolve => setTimeout(resolve, 1000))};
-      };
-      // Generate report;
-      await this.generateFixReport();
-      this.log('info', `Syntax fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {`}
-      this.log('error', 'Error during syntax fixing process', error)};
-  };
-  async findFilesWithSyntaxIssues() {}
-    const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
-    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
-    const filesWithIssues = [];
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     for (const dir of sourceDirs) {}
       const fullPath = path.join(this.projectRoot, dir);
@@ -201,9 +166,7 @@ class SyntaxErrorFixer {}
     const backticks = (content.match(/`/g) || []).length;
 <<<<<<< HEAD
 =======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
+        if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
       return true};
     // Check for unterminated comments;
     const openComments = (content.match(/\/\*/g) || []).length;

@@ -1,40 +1,19 @@
-<<<<<<< HEAD
-
-
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 
 
 
 
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-import { cva, type, VariantProps } from "class-variance-authority";
-import * as React from "react"
-import * as LabelPrimitive from "@radix-ui/react-label"
-<<<<<<< HEAD
-import {cva, type, VariantProps} from "class-variance-authority"
-
-import {cn} from "@/lib/utils"
-import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
 import { cn } from "@/lib/utils";
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const labelVariants = cva(
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70"
@@ -54,11 +33,6 @@ import { cva, type, VariantProps  } from './class - variance - authority';
 import { cn  } from '@/lib / utils';
 const label_variants = cva (
   "text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70",
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
@@ -68,32 +42,14 @@ Label.displayName = LabelPrimitive.Root.displayName
 
 export { Label };
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+==============
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import * as React from "react";
+=======import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 const labelVariants = cva(;
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ref={ref}
-    className={cn (label_variants (), class_name)}
-    {...props}
-import React from 'react';
-import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-  <LabelPrimitive&& LabelPrimitive.Root
-
 import { cva, type VariantProps } from "class-variance-authority";
 ;
 import { cn } from "@/lib/utils";
@@ -122,8 +78,6 @@ export { Label }
 ;
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 );
 ;
 const Label = React.forward_ref<;
@@ -157,24 +111,8 @@ export { Label }
 
 =======
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    ref={ref}
-    className={cn(labelVariants(), className)}
-    {...props}
-  />;
-));
-Label && Label.displayName = LabelPrimitive && LabelPrimitive.Root.displayName;
-<<<<<<< HEAD
-export { Label }
-=======
-
   <LabelPrimitive.Root;
-export { Label }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+export { Label }=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   />));
 Label.display_name = LabelPrimitive.Root.display_name;

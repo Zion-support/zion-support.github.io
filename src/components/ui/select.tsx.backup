@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-
 export function Select({ children, className = '', value, onValueChange, disabled = false }) {
   const _baseClasses = `
     flex h-10 w-full items-center justify-between rounded-md border 
@@ -88,4 +85,3 @@ export function SelectItem({ children, className = '', value, ...props }) {
       `} data-value={value} {...props}>
       {children}
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

@@ -1,17 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-<<<<<<< HEAD
-    }
 
-
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-const p = path.join(
+=======const p = path.join(
   process.cwd()
   'data'
   'reports'
@@ -37,46 +28,17 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message || 'Failed to read uptime' });
   }
 if (req.method === 'POST') {
-    try {
-<<<<<<< HEAD
-      const data = fs.readFileSync (p, 'utf8');
-      const uptime = JSON.parse (data);
-      return res.status (200).json (uptime);
-    } catch (error) {
-      return res.status (500).json ({ error: 'Failed to read uptime report' });
-    }
-  if (req && req.method === 'POST') {
-    try {
-      const { uptime, downtime, incidents } = req && req.body;
-=======
-  if (req && req.method === 'POST') {
-    try {
+    try {=======
       const { uptime, downtime, incidents } = req && req.body;
       
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-      const { uptime, downtime, incidents } = req && req.body;
-      
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const report = {
         uptime: uptime |0
         downtime: downtime |0
         incidents: incidents |[]
         generatedAt: new Date().toISOString()
-<<<<<<< HEAD
-<<<<<<< HEAD
       };
       fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
       return res && res.status(201).json(report);
-=======
-
-      };
-      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
-      return res && res.status(201).json(report);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
       };
@@ -89,9 +51,6 @@ if (req.method === 'POST') {
       return res && res.status(500).json({ error: 'Failed to update uptime report' });
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
@@ -146,8 +105,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 }
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
@@ -164,17 +121,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       fs.writeFileSync (p, JSON.stringify (report, null, 2));
       return res.status (201).json (report);
     } catch (error) {
-<<<<<<< HEAD
-      return res.status (500).json ({ error: 'Failed to update uptime report' });
-    }
-  }
-  res.set_header ('Allow', 'GET, POST');
-  res.status (405).end ('Method Not Allowed');
-  }
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

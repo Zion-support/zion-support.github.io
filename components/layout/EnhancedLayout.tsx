@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-  }, []);
-;
-  return (
 
 
 import i18n, { is_rtl } from '../../utils / i18n';
@@ -49,8 +40,6 @@ import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
 
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -91,15 +80,10 @@ import EnhancedFooter from './EnhancedFooter';
       </header>;
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
         {children}
-<<<<<<< HEAD
-
-
   }, []);
 ;
   return (
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
       <footer>
@@ -121,20 +105,12 @@ import EnhancedFooter from './EnhancedFooter';
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
       </footer>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
@@ -144,10 +120,6 @@ import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
   );
 
 }
-<<<<<<< HEAD
-  );
-}
-
   );
 }
 =======
@@ -161,33 +133,11 @@ import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
 
   );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
   );
 }
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    <div className="min - h-screen flex flex - col">;
-        <EnhancedNavigation />;
-        <LanguageSwitchPrompt />;
-      </header>;
-      <main id='main' className='flex - 1 container mx - auto px - 4 py - 6'>;
-        {children}
-      </main>      <main id="main" className="flex - 1 container mx - auto px - 4 py - 6">{children}</main>;
-      <footer>;
-        <EnhancedFooter />;
-      </footer>;
-    </div>);
-}
-}
-  );
-<<<<<<< HEAD
 
   return (
     <div className=&quot;min-h-screen flex flex-col&quot;>
@@ -214,19 +164,6 @@ export type EnhancedLayoutProps = {
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 }
-
-<<<<<<< HEAD
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {
-    const lng = i18n.resolvedLanguage |i18n.language;
-export type EnhancedLayoutProps = {;
-export type EnhancedLayoutProps = {
-  children: React.ReactNode;};
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
-  children: React.ReactNode;
-};
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {;
@@ -265,11 +202,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   );
 }
 =======
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 }
 

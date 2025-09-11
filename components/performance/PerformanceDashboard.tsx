@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-interface PerformanceMetrics {;
-=======
-
 
 interface PerformanceMetrics {;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   loadTime: number;
 import React, { useState, useEffect } from './react';
 ;
@@ -17,11 +11,6 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   timeToInteractive: number;
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const PerformanceDashboard: React.FC = () => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -66,9 +55,6 @@ const PerformanceDashboard: React.FC = () => {;
   ) => {;
     if (value <= thresholds && thresholds.good) return "text-green-600";
     if (value <= thresholds && thresholds.needsImprovement) return "text-yellow-600";
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return "text-red-600";
   }
@@ -77,90 +63,36 @@ const PerformanceDashboard: React.FC = () => {;
     <div className="fixed bottom-4 right-4 z-50">;
       <button
         onClick={() => setIsVisible(!isVisible)}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors";
-      >;
-        📊 Performance;
-      </button>;
-      {isVisible && (;
-        <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl p-6 w-80 border">;
-          <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>;
-          <div className="space-y-3">;
-            {metrics && metrics.loadTime && (;
-              <div className="flex justify-between items-center">;
-                <span className="text-sm font-medium">Load Time:</span>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                <span
-                  className={`text-sm font-mono ${getScoreColor(metrics && metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}>;
-                  {metrics && metrics.loadTime.toFixed(0)}ms;
-                </span>;
-              </div>;
-            )}
-<<<<<<< HEAD
-            {metrics && metrics.firstContentfulPaint && (;
-              <div className="flex justify-between items-center">;
-                <span className="text-sm font-medium">FCP:</span>;
-=======
-
 
             {metrics && metrics.firstContentfulPaint && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">FCP:</span>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>;
                   {metrics && metrics.firstContentfulPaint.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
-<<<<<<< HEAD
-            {metrics && metrics.largestContentfulPaint && (;
-              <div className="flex justify-between items-center">;
-                <span className="text-sm font-medium">LCP:</span>;
-=======
-
 
             {metrics && metrics.largestContentfulPaint && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">LCP:</span>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.largestContentfulPaint.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
-<<<<<<< HEAD
-            {metrics && metrics.cumulativeLayoutShift && (;
-              <div className="flex justify-between items-center">;
-                <span className="text-sm font-medium">CLS:</span>;
-=======
-
 
             {metrics && metrics.cumulativeLayoutShift && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">CLS:</span>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.cumulativeLayoutShift, { good: 0 && 0.1, needsImprovement: 0 && 0.25 })}`}>;
                   {metrics && metrics.cumulativeLayoutShift.toFixed(3)}
                 </span>;
               </div>;
-            )}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          </div>;
+            )}          </div>;
           <div className="mt-4 pt-4 border-t">;
             <div className="text-xs text-gray-500">;
               Core Web Vitals monitoring in real-time;
@@ -169,8 +101,6 @@ const PerformanceDashboard: React.FC = () => {;
         </div>;
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
     </div>;
   );

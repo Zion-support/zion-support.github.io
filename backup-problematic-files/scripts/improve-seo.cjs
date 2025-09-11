@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs');
 const path = require('path');
@@ -66,9 +63,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
 <<<<<<< HEAD
 =======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      console.log('SEO improvements completed')} catch (error) {}
+            console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
   };
 };

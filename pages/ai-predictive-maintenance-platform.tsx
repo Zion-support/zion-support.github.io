@@ -2,18 +2,6 @@
 
 
 
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-import React from 'react',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPredictiveMaintenancePlatform() {
-	return (
-		<ServiceLanding
-
 			title="AI Predictive Maintenance Platform"
 			description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models."
 			subtitle="Reliability at lower cost"
@@ -41,8 +29,6 @@ import ServiceLanding from '../components/sections/ServiceLanding',
 
 =======
 }
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
@@ -71,16 +57,8 @@ return (
     industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
     canonical="https: //ziontechgroup.com / ai - predictive - maintenance - platform";
   />);
-<<<<<<< HEAD
-		/>
-	)
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+}>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+==============
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -91,27 +69,8 @@ export default function AIPredictiveMaintenancePlatform() {
 			title="AI Predictive Maintenance Platform"
 			description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models."
 			subtitle="Reliability at lower cost"
-<<<<<<< HEAD
-<<<<<<< HEAD
-			pricePerMonthUSD={499}
-			pricePerMonthUSD={499  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -127,64 +86,8 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Edge and cloud deployment",
 				"Visualizations and alerting",
 				"APIs and event webhooks"
-<<<<<<< HEAD
-<<<<<<< HEAD
-			]}
-			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
-			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
-		/>
-	)
-};
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 

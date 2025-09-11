@@ -1,28 +1,11 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-"export\": function TalentSkeleton() { return() <div className=\'grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6\'> {Array.from({ length: 6}).map((_,i) => ( <\"div\": key={i}\' className=\'p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg\' >\' <div className=\'flex items-center space-x-4\'>\' <Skeleton className=\'w-16 h-16 rounded-full bg-zion-blue-light/20\' />\' <div className=\'flex-1 space-y-2\'>\' <Skeleton className=\'h-4 w-3/4 bg-zion-blue-light/20\' />\' <Skeleton className=\'h-3 w-1/2 bg-zion-blue-light/20\' /> </div> </div>\' <Skeleton className=\'h-24 w-full bg-zion-blue-light/20\' /> </div> ))} </div> ) } \''\';\'"\";
+
+=======
+"export\": function TalentSkeleton() { return() <div className=\'grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6\'> {Array.from({ length: 6}).map((_,i) => ( <\"div\": key={i}\' className=\'p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg\' >\' <div className=\'flex items-center space-x-4\'>\' <Skeleton className=\'w-16 h-16 rounded-full bg-zion-blue-light/20\' />\' <div className=\'flex-1 space-y-2\'>\' <Skeleton className=\'h-4 w-3/4 bg-zion-blue-light/20\' />\' <Skeleton className=\'h-3 w-1/2 bg-zion-blue-light/20\' /> </div> </div>\' <Skeleton className=\'h-24 w-full bg-zion-blue-light/20\' /> </div> ))} </div> ) } \''\';\'"\";>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export: function TalentSkeleton() { return() <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6"> {Array.from({ length: 6}).map((_,i) => ( <div: key={i}" className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg" >" <div className="flex items-center space-x-4">" <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />" <div className="flex-1 space-y-2">" <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />" <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" /> </div> </div>" <Skeleton className="h-24 w-full bg-zion-blue-light/20" /> </div> ))} </div> ) } """;""";"""
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
-
-=======
-"export\": function TalentSkeleton() { return() <div className=\'grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6\'> {Array.from({ length: 6}).map((_,i) => ( <\"div\": key={i}\' className=\'p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg\' >\' <div className=\'flex items-center space-x-4\'>\' <Skeleton className=\'w-16 h-16 rounded-full bg-zion-blue-light/20\' />\' <div className=\'flex-1 space-y-2\'>\' <Skeleton className=\'h-4 w-3/4 bg-zion-blue-light/20\' />\' <Skeleton className=\'h-3 w-1/2 bg-zion-blue-light/20\' /> </div> </div>\' <Skeleton className=\'h-24 w-full bg-zion-blue-light/20\' /> </div> ))} </div> ) } \''\';\'"\";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/talent/TalentSkeleton.js.jsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export: function TalentSkeleton() { return() <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6"> {Array.from({ length: 6}).map((_,i) => ( <div: key={i}" className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg" >" <div className="flex items-center space-x-4">" <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />" <div className="flex-1 space-y-2">" <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />" <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" /> </div> </div>" <Skeleton className="h-24 w-full bg-zion-blue-light/20" /> </div> ))} </div> ) } """;""";"""
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"export\": function TalentSkeleton() { return () <div className=\'grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6\'> {Array && Array.from({ length: 6}).map((_,i) => ( <\"div\": key={i}\' className=\'p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg\' >\' <div className=\'flex items-center space-x-4\'>\' <Skeleton className=\'w-16 h-16 rounded-full bg-zion-blue-light/20\' />\' <div className=\'flex-1 space-y-2\'>\' <Skeleton className=\'h-4 w-3/4 bg-zion-blue-light/20\' />\' <Skeleton className=\'h-3 w-1/2 bg-zion-blue-light/20\' /> </div> </div>\' <Skeleton className=\'h-24 w-full bg-zion-blue-light/20\' /> </div> ))} </div> ) } \''\';\'"\";
-
 export: function TalentSkeleton() { return () <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6"> {Array && Array.from({ length: 6}).map((_,i) => ( <div: key={i}" className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg" >" <div className="flex items-center space-x-4">" <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />" <div className="flex-1 space-y-2">" <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />" <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" /> </div> </div>" <Skeleton className="h-24 w-full bg-zion-blue-light/20" /> </div> ))} </div> ) } """;""";"""
 
 <<<<<<< HEAD
@@ -33,7 +16,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export\": function TalentSkeleton() { return() <div className=\'grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6\'> {Array.from({ length: 6}).map((_,i) => ( <\"div\": key={i}\' className=\'p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg\' >\' <div className=\'flex items-center space-x-4\'>\' <Skeleton className=\'w-16 h-16 rounded-full bg-zion-blue-light/20\' />\' <div className=\'flex-1 space-y-2\'>\' <Skeleton className=\'h-4 w-3/4 bg-zion-blue-light/20\' />\' <Skeleton className=\'h-3 w-1/2 bg-zion-blue-light/20\' /> </div> </div>\' <Skeleton className=\'h-24 w-full bg-zion-blue-light/20\' /> </div> ))} </div> ) } \''\';\'"\";
 :temp_exclude/src.disabled/components/talent/TalentSkeleton.js.jsx
 export: function TalentSkeleton() { return() <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6"> {Array.from({ length: 6}).map((_,i) => ( <div: key={i}" className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg" >" <div className="flex items-center space-x-4">" <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />" <div className="flex-1 space-y-2">" <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />" <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" /> </div> </div>" <Skeleton className="h-24 w-full bg-zion-blue-light/20" /> </div> ))} </div> ) } """;""";"""
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

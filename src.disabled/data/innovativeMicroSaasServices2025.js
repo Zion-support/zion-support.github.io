@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-export: const innovativeMicroSaasServices2025 = [{
-export: const innovativeMicroSaasServices2025 = [{
-export: const innovativeMicroSaasServices2025 = [{
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "export": const innovativeMicroSaasServices2025 = [{
 export: const innovativeMicroSaasServices2025 = [{"export": const innovativeMicroSaasServices2025 = [{
     id: 1,

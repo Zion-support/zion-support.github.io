@@ -84,12 +84,6 @@ const router = useRouter ();
 }size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> </Button>) ;
 }{;
   /* Support panel */ ;
-<<<<<<< HEAD
-:temp_broken_files/support/SupportWidget.tsx
-}{;"  isOpen && (<div className= {";"  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) ;
-}</>) ;"}"
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }{;
   isOpen && (<div className= {";
@@ -99,5 +93,3 @@ const router = useRouter ();
 <<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/SupportWidget.tsx
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

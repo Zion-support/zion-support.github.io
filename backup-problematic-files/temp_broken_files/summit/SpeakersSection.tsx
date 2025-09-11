@@ -87,15 +87,5 @@ export function SpeakersSection () {;
 }{;
   sp.linkedin && (<a href= {;"  sp.linkedin ";"}aria-label="LinkedIn" target="blank" rel="noopener noreferrer" className="flex items-center" > <Linkedin className="h-4 w-4" aria-hidden="true" /> <span className="sr-only" >LinkedIn</span> </Link>) ;
 }</div> </div>) ) ;
-<<<<<<< HEAD
-:temp_broken_files/summit/SpeakersSection.tsx
-}</div> </div> </section>) ;"}'"
 }</div> </div> </section>) ;
 }'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/summit/SpeakersSection.tsx
-=======
-
-}</div> </div> </section>) ;
-}'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

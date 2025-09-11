@@ -189,12 +189,6 @@ isAuthenticated ;
   (talent.skills?.length || 0) - 5 ;
 }more </span>) ;
 }</div> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/talent/TalentCard.tsx
-}$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";"}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
-};""
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }$ {;
   talent.hourly rate ";
@@ -208,5 +202,3 @@ isAuthenticated ;
 <<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/TalentCard.tsx
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 "use client";
@@ -188,9 +184,7 @@ const aiServices: AIService[] = [;
     ];
   }
 ];
-export default function AISolutionsPage() {const [selectedService, setSelectedService] = useState<string | null>(null);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
+export default function AISolutionsPage() {const [selectedService, setSelectedService] = useState<string | null>(null);"use client",;
 import { useState } from "react",;
 interface AIService {;
   id: string,;

@@ -3,9 +3,6 @@
  * Advanced Monitoring Dashboard;
  * Real-time monitoring of PM2 processes and system health;
  */
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const express = require('express')
 const pm2 = require('pm2')
@@ -19,4 +16,3 @@ const path = require('path')
                 "
 =======
                 "
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

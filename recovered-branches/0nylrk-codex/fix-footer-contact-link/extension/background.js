@@ -1,30 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const OPENAI_API_KEY = ''
-// Base URL for opening Zion pages in a new tab
-=======
-const BASE_URL = 'https: //zionai && zionai.com',
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 const BASE_URL = 'https: //zionai && zionai.com',
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const BASE_URL = 'https: //zionai.com'
 async function askZionGPT(prompt) {
   if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
 
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
     const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
     const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
 =======
@@ -95,12 +80,6 @@ if ( {) {
 
   }
 
-<<<<<<< HEAD
-    const res = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${OPENAI_API_KEY}`
-
       }
       body: JSON.stringify({
         model: 'gpt-3.5-turbo'
@@ -137,19 +116,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 }),;
 
-<<<<<<< HEAD
-
-});
-
 }),;
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 }),;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}),
+=======}),
 ;
 }),;

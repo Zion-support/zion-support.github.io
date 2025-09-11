@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Stub talent data - placeholder for missing functionality;
-export const TALENT_PROFILES = [;
-
   {
 
 
@@ -100,8 +95,6 @@ export const TALENT_PROFILES = [;
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 // Stub talent data - placeholder for missing functionality;
 export const TALENT_PROFILES = [;
 
@@ -124,18 +117,7 @@ export const TALENT_PROFILES = [;
     createdAt: new Date().toISOString(), originalLanguage: 'en',
     translations: {}
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

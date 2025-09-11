@@ -60,15 +60,5 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
   education.is current ? 'Present' : (education.end date ? (typeof education.end date === 'string' ? education.end date : format (education.end date, 'MMM yyyy') ) : '') ;
 }</p>) ;
 }</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/education/EducationItem.tsx
-}</CardContent> </Card>) ;"}'"
 }</CardContent> </Card>) ;
 }'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationItem.tsx
-=======
-
-}</CardContent> </Card>) ;
-}'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

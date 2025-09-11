@@ -3,9 +3,6 @@
  * Intelligent Code Refactor;
  * Automatically refactors and improves code quality;
  */
-<<<<<<< HEAD
-=======
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs')
 const path = require('path')
@@ -43,4 +40,3 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
     console.error('Intelligent Code Refactor "failed")
 =======
     console.error('Intelligent Code Refactor "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

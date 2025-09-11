@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const { execSync } = require('child_process');
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 =======
 
 console.log('Testing Next.js installation...'),;
@@ -22,8 +15,6 @@ const { execSync } = require('child_process'),;
 const { execSync } = require('child_process');
 =======
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;

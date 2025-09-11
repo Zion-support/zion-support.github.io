@@ -28,11 +28,6 @@ export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
  export function SearchFilter ({;
   searchTerm, setSearchTerm ;
 }: SearchFilterProps) {;
-<<<<<<< HEAD
-:temp_broken_files/talent/filters/SearchFilter.tsx
-  return (<div className="mb-6" > <div className="relative" > <label htmlFor="talent-search" className="sr-only" > absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"aria-hidden=" true"/> <Input id=" talent-search"type=" text"placeholder=" Search talents..."value= {;"  searchTerm ";"}/> <p id=" talent-search-help"className=" sr-only" > Type a name or skill to filter results </p> </div> </div>) ;"}"
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (<div className="mb-6" > <div className="relative" > <label htmlFor="talent-search" className="sr-only" > absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"aria-hidden=" true"/> <Input id=" talent-search"type=" text"placeholder=" Search talents..."value= {;
   searchTerm ";
@@ -41,5 +36,3 @@ export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
 <<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/SearchFilter.tsx
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

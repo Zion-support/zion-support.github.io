@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -11,8 +8,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 
 =======
 =======
@@ -27,15 +22,8 @@ interface CloudfinopsProps {
 }
 }
 
-<<<<<<< HEAD
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Cloudfinops({ }: CloudfinopsProps) {
   return (
@@ -44,22 +32,11 @@ export default function Cloudfinops({ }: CloudfinopsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-
 =======
 
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
 }
-
-<<<<<<< HEAD
-
 
 
 
@@ -72,8 +49,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-
 =======
 
 

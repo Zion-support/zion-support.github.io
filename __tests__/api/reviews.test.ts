@@ -6,72 +6,12 @@ import productReviewsHandler from '@/pages/api/reviews/[productId]'
 import { supabase } from '@/integrations/supabase/client'
 } from '@supabase/supabase-js'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
-
-<<<<<<< HEAD
-jest.mock('@prisma/client'
-          this.name = 'PrismaClientKnownRequestError'
-jest.mock('@/integrations/supabase/client'
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-describe('/api/reviews API Endpoint'
-  describe('POST /api/reviews'
-    it('should successfully create a review (201)'
-        "email"
-        "name"
-        "passwordHash"
-        "role"
-        "userType"
-        "productId"
-        "comment"'"
-        user: { id: 'supaUserId', "email"
-        "access_token"
-        "refresh_token"
-        "token_type"
-        "method"'"body": { productId: 'prod1', "rating": 5, "comment"
-          "comment"'"
-        user: { id: 'supaUserId', "email"
-        "access_token"
-        "refresh_token"
-        "token_type"
-        "email"
-            "target"
-        "method"
-          "comment"
-        "error"
-        "method"'"body": { productId: 'prod1', "rating": 6, "comment"
-        "error"
-        "method"
-        "error"
-        "method"
-        "error"
-        "access_token"
-        "refresh_token"
-        "token_type"
-        "method"
-        "error"
-        "access_token"
-        "refresh_token"
-        "token_type"
-        "method"
-        "error"
-          "id"
-        "method"
-          "where"
-        "method"
-        "method"
-
-<<<<<<< HEAD
-        "error"
-=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock Prisma Client
@@ -439,6 +379,3 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
         "error"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

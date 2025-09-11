@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect, useMemo } from 'react',
 import {
@@ -276,52 +273,16 @@ const relevance_levels = [;
     setSelectedDateRange ('all'),
     setSelectedRelevance ('all');
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
-    <div className=&quot;space - y-6 & quot;>;
-      {/* Search and Advanced Filters */}
-      <div className=&quot;space - y-4 & quot;>;
-        {/* Search Bar */}
-        <div className=&quot;relative & quot;>;
-          <Search className=&quot;absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - white / 50 w - 5 h - 5&quot; />;
-          <input;
-            type=&quot;text & quot;
-            placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            value={search_term}
-            on_change={(e) => setSearchTerm (e.target.value)}
-            className=&quot;w - full pl - 10 pr - 4 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white placeholder - white / 50 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot;
-          />;
-        </div>;
-<<<<<<< HEAD
         {/* Advanced Filter Controls */}
         <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4&quot;>;
           {/* Category Filter */}
-=======
-
-        {/* Advanced Filter Controls */}
-        <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4&quot;>;
-          {/* Category Filter */}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div>;
             <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Category</label>;
             <select;
               value={selected_category}
               on_change={(e) => {
                 setSelectedCategory (e.target.value),
-                setSelectedSubcategory ('all');
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              }}
+                setSelectedSubcategory ('all');              }}
 className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot;
             >;
               {categories.map (category => (
@@ -399,8 +360,6 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
           <button;
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             on_click={clearAllFilters}
 className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white / 70 hover:text - white hover:bg - white / 10 transition - all duration - 200 & quot;
           >;
@@ -408,9 +367,6 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Category Pills */}
       <div>;
@@ -420,16 +376,11 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
               key={category.id}
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               on_click={() => setSelectedCategory (category.id)}
               className={`flex items - center gap - 2 px - 4 py - 2 rounded - full border transition - all duration - 200 ${
                 selected_category === category.id;
                   ? 'border - cyan - 500 bg - cyan - 500 / 20 text - cyan - 300';
                   : 'border - white / 10 bg - white / 5 text - white / 70 hover:border - white / 20 hover:bg - white / 10';
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }`}
 >;
@@ -725,15 +676,10 @@ export default ContentCategorizer;
 
               {/* Title and Description */}
               <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                {item.title}
+=======                {item.title}
               </h3>
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
-<<<<<<< HEAD
-              </p>
-
               {/* Tags */}
               <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -784,26 +730,10 @@ export default ContentCategorizer;
                   {item.relevance} priority;
                 </span>;
               </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
               {/* Source and Action */}
               <div className=&quot;flex items-center justify-between&quot;>
                 <span className=&quot;text-xs text-white/40&quot;>
                   Source: {item.source}
-<<<<<<< HEAD
-                </span>
-                <a 
-                  href={item.href} 
-                >
-                  Open Content
-                  <span aria-hidden>→</span>
-                </a>
-              </div>
-            </div>
-          )
-        })}
-      </div>
-
       {/* No Results */}
       {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>
@@ -854,4 +784,3 @@ export default ContentCategorizer
 },
 
 export default ContentCategorizer;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

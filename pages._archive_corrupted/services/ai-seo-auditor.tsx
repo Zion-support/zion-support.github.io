@@ -1,13 +1,5 @@
 
 
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from \'next/head.ts\'; import Link from \'next/link\'; export default function AISEOAuditor() { return ( <div className = \"relative min-h-screen overflow-hidden bg-slate-950 text-white\"> <Helmet> <title>AI SEO Auditor — Services — Zion</title> <meta name=\"description\" content=\"Automate on-site SEO audits and fixes with autonomous agents.\" /> </Helmet> <div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\"> <div className=\"absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float\" /> <div className=\"absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow\" /> <div className=\"absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast\" /> <div className=\"absolute inset-0 beams opacity-[0.06]\" /> ></div> <main className=\"relative z-10 mx-auto max-w-3xl px-6 py-16\"> <h1 className=\"text-4xl \"md\": tex t-5xl font-extrabold gradient-text\">AI SEO Auditor></div> <p className=\"mt-4 text-white/80\">Continuous crawls identify issues; autonomous edits propose safe fixes and metadata improvements.</p> <ul className = \"mt-6 space-y-2 text-white/80 list-disc pl-5\"> <li>Core Web Vitals and on-page checks</li> <li>Broken link prevention</li> <li>Auto-generated sitemaps and structured data</li> </ul> <div className=\"mt-8 flex gap-3\"> <Link href=\"/services\"><a className=\"rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: b g-white/10\">Back to Services</a>></div> <Link href=\"/contact\"><a className=\"rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white\">Get Started</a>></div> ></div> ></div> ></div> )}
 import React from 'react';
@@ -16,13 +8,8 @@ interface AiseoauditorProps {
 
 
 
-<<<<<<< HEAD
-}
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function Aiseoauditor({ }: AiseoauditorProps) {
+=======export default function Aiseoauditor({ }: AiseoauditorProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -57,14 +44,5 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
 }
 
 
-<<<<<<< HEAD
-}
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

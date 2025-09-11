@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-
 export default function Page() {
 
   return (
@@ -62,8 +58,6 @@ export default function Page() {
 ;
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 

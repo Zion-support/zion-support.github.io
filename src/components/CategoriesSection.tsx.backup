@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { Cloud } from 'lucide-react';
-const services = [];
-const solutions = [];
-
 * CategoriesSection function;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
@@ -309,4 +304,3 @@ export function CategoriesSection({ showTitle = true }) {
         </motion.div>
       </div>
     </section>)}
->>>>>>> origin/clean-error-fixing-automation

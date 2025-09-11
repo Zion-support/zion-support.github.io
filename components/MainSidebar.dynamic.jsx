@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 const MainSidebar.dynamic = () => {
@@ -13,6 +10,4 @@ const MainSidebar.dynamic = () => {
 ;
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default MainSidebar.dynamic;

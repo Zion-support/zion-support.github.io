@@ -1,17 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { render, RenderOptions } from '@testing-library/react';
-import { ThemeProvider } from 'next-themes';
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-=======
-
 import { render, RenderOptions } from '@testing - library / react';
 import { ThemeProvider } from 'next - themes';
 ;
 const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
       {children}
@@ -67,43 +58,6 @@ export const mockNextRouter = () =>: any ({
 export const createMockProps = (overrides = {}) => ({
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    </ThemeProvider>;
-  );
-},;
-const customRender = (;
-  ui: React.ReactElement,;
-  options?: Omit<RenderOptions, 'wrapper'>;
-) => render(ui, { wrapper: AllTheProviders, ...options }),;
-export * from '@testing-library/react',;
-export { customRender as render },;
-export const mockNextRouter = () => ({;
-  push: jest.fn(),;
-  replace: jest.fn(),;
-  prefetch: jest.fn(),;
-  back: jest.fn(),;
-  beforePopState: jest.fn(),;
-  events: {;
-    on: jest.fn(),;
-    off: jest.fn(),;
-    emit: jest.fn();
-  },;
-  isFallback: false,;
-  isLocale: false,;
-  isReady: true,;
-  defaultLocale: 'en',;
-  domainLocales: [],;
-  isPreview: false;
-
-<<<<<<< HEAD
-});
-;
-export const createMockProps = (overrides = {}) =>: any ({
-  ...overrides;
-
 
 
 
@@ -114,9 +68,7 @@ export const createMockProps = (overrides = {}) =>: any ({
 const customRender = (
 =======
 ;
-const custom_render = (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  ui: React.ReactElement,
+const custom_render = (  ui: React.ReactElement,
   options?: Omit < RenderOptions, 'wrapper'>) =>: any render (ui, { wrapper: AllTheProviders, ...options });
 ;
 export * from '@testing - library / react';
@@ -184,17 +136,7 @@ export const mockNextRouter = () => ({;
 });
 export const createMockProps = (overrides = {}) => ({;
   ...overrides;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-});
+<<<<<<< HEAD=======});

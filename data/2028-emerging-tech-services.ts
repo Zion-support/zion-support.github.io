@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface EmergingTechService2028 {
-
 export interface EmergingTechService2028 {
   id: string;
 export interface EmergingTechService2028 {  id: string;
 =======
 
 export interface EmergingTechService2028 {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 export interface EmergingTechService2028 {
@@ -26,76 +20,25 @@ export interface EmergingTechService2028 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    address: string;
-  };
-    address: string;
-  };
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
     address: string;
   };
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export interface EmergingTechService2028 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    address: string;
-  }
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
 
 =======
     address: string;
   }
 }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     address: string;
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    address: string;
-  }
-}
-
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    address: string;
+=======    address: string;
   }
 ;
 export const emergingTech2028Services: EmergingTechService2028[] = [;
@@ -117,28 +60,16 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
     category: 'Emerging Tech Services 2028',
     real_implementation: true,
     contact_info: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 =======
 
       email: "kleber@ziontechgroup.com";
@@ -163,17 +94,7 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
     category: "Emerging Tech Services 2028",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
-
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];

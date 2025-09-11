@@ -1,31 +1,13 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { SEO  } from '@/components/SEO';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { DisputeDetail  } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {DisputeDetail} from '@/components/disputes';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -37,13 +19,7 @@ import { DisputeDetail } from '@/components/disputes',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -54,9 +30,6 @@ function DisputeDetailPage() {
 
         <SEO
           title="Dispute Details | Zion AI Marketplace"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React from 'react',;
 import { SEO } from '@/components/SEO',;
 import { AppHeader } from '@/layout/AppHeader',;
@@ -72,9 +45,7 @@ function DisputeDetailPage() {;
           title="Dispute Details | Zion AI Marketplace" ;
           description="View and manage dispute details";
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+==============
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -106,19 +77,6 @@ function DisputeDetailPage() {
           title="Dispute Details | Zion AI Marketplace";
           description="View and manage dispute details";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        />;
-        <AppHeader />;
-        <DisputeDetail />;
-        <Footer />;
-      </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-
 
 export default DisputeDetailPage;
 
@@ -142,21 +100,13 @@ export default DisputeDetailPage,; <ProtectedRoute> <> <SEO title="Dispute Detai
 ;
 export default DisputeDetailPage;
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 ;
 export default DisputeDetailPage;
-<<<<<<< HEAD
-=======
-=======
-
 
 
 =======
 ;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default DisputeDetailPage;
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
@@ -164,12 +114,5 @@ export default DisputeDetailPage;
     </ProtectedRoute>);
 }
 export default DisputeDetailPage;
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
 ;
 export default DisputeDetailPage;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -99,15 +99,5 @@ quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create 
 }> <Download size= {;
   16 ;
 }/> Export CSV </Button>) ;
-<<<<<<< HEAD
-:temp_broken_files/quotes/ExportToCSV.tsx
-};"'"
 };
 '"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/ExportToCSV.tsx
-=======
-
-};
-'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

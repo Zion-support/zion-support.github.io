@@ -5,33 +5,16 @@ import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
+=======
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
 
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
-
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 
 export default async function handler(
-<<<<<<< HEAD
-<<<<<<< HEAD
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-} from "../../../../utils/auth";
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -42,21 +25,11 @@ export default async function handler(
 } from "../../../../utils/auth";
 
 export default async function handler(
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  req: NextApiRequest,
+==============  req: NextApiRequest,
   res: NextApiResponse,
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -66,13 +39,7 @@ export default async function handler(
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -101,14 +68,7 @@ export default async function handler(
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res && res.status(400).json({ error: "Invalid parameters" });
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -117,56 +77,16 @@ import fs from 'fs';
 import path from 'path';
 import { getDisputeById } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-<<<<<<< HEAD
-=======
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  }
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
-  } catch (e: any) {
-    return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
-  }
-  const att = dispute.attachments.find((a) => a.fileName === fileName);
-  if (!att) return res.status($1).json({ $2 });
-  const stat = fs.statSync(att.path);
-    return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
-  }
-  const att = dispute && dispute.attachments.find((a) => a && a.fileName === fileName);
-  if (!att) return res && res.status($1).json({ $2 });
-  const stat = fs && fs.statSync(att && att.path);
-  res && res.setHeader("Content-Type", att && att.mimeType);
-  res && res.setHeader("Content-Length", String(stat && stat.size));
-  res && res.setHeader(
-    "Content-Disposition",
-    `attachment; filename="${path && path.basename(att && att.fileName)}"`,
-  );
-  const stream = fs && fs.createReadStream(att && att.path);
-  stream && stream.pipe(res);
-}
-  if (!dispute) return res && res.status($1).json({ $2 });
-  try {
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -287,10 +207,6 @@ export default async function handler(req, res) {
   }
 }
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 

@@ -1,35 +1,14 @@
 import React from 'react';
 
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Link>
         </main>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-=======
-  );
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
   );
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -37,10 +16,6 @@ export default /**
  * Custom404 - Function description
  */
 function Custom404() {
-<<<<<<< HEAD
-
-}
-
 
   } catch (error) {
     console.error("Error:", error);
@@ -56,9 +31,6 @@ const NotFoundPage: NextPage = () => {
       <Head>;
           </Link>;
         </div>;
-<<<<<<< HEAD
-}
-
 
       </div>;
     </>);
@@ -144,8 +116,6 @@ export default function Custom404(req, res) {
           </Link>;
         </div>;
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 
@@ -167,8 +137,6 @@ const NotFoundPage: NextPage = () => {
       <Head>;
           </Link>;
         </div>;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </main>;
     </>;
   );
@@ -176,18 +144,8 @@ const NotFoundPage: NextPage = () => {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

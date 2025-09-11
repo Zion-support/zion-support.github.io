@@ -18,10 +18,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
@@ -167,29 +163,14 @@ import React from 'react';
 
 export default Resources;
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React from 'react';
+=======import React from 'react';
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
 
-<<<<<<< HEAD
-
 };
-=======
-=======
-export default ResourcesPage;
-import React from 'react';
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default ResourcesPage;
 

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { listPipelineForVendor } from '../../../utils/vendor-store';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
   const vendorId = String(req.query.vendorId |"");
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listPipelineForVendor } from "../../../utils/vendor-store";
@@ -25,8 +19,6 @@ import { listPipelineForVendor } from '../../../utils/vendor-store';
   const items = listPipelineForVendor(vendorId);
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 =======
 import type { NextApiRequest, NextApiResponse } from './next';

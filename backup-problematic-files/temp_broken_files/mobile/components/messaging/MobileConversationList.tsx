@@ -124,12 +124,6 @@ onSelectConversation ;
   conversation.name.charAt (0) .toUpperCase () ;
 }</AvatarFallback> </Avatar> ? <em>Typing...</em> : conversation.lastMessage ;
 }</p> {;
-<<<<<<< HEAD
-:temp_broken_files/mobile/components/messaging/MobileConversationList.tsx
-  conversation.unreadCount ;"}</Badge>) ";"}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;
-}</div> </div>) ;"}"
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   conversation.unreadCount ;
 }</Badge>) ";
@@ -139,5 +133,3 @@ onSelectConversation ;
 <<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/messaging/MobileConversationList.tsx
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

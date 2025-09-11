@@ -1,25 +1,14 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import {AlertTriangle, RefreshCw} from 'lucide-react';
-<<<<<<< HEAD
 ;
-=======
-
-;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Props {
   children: ReactNode,  fallback?: ReactNode;
 }
 interface State {
-<<<<<<< HEAD
-=======
-
 class: ErrorBoundary extends Component<Props, State> {public state: State: = {hasError: fals,e}
   public: static getDerivedStateFromError(error: Error): State: {
     return { hasError: tru,e, error: }
   }
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Props {;
   children: ReactNode,  fallback?: ReactNode;
 }
@@ -45,9 +34,6 @@ class ErrorBoundary extends Component<Props, State> {;
     if (this && this.state.hasError) {;
       if (this && this.props.fallback) {;
         return this && this.props.fallback;
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       return (
@@ -80,19 +66,12 @@ class ErrorBoundary extends Component<Props, State> {;
             )}
 <<<<<<< HEAD
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       ),;
     }
     return this && this.props.children;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  has_error: boolean,
+=======  has_error: boolean,
   error?: Error;
 }
 class ErrorBoundary extends Component < Props, State> {

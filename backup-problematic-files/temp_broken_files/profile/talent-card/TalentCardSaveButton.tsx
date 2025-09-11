@@ -86,16 +86,11 @@ isAuthenticated ;
  } = useToast ();
 const router = useRouter ();
 //Handle save toggle return;
-<<<<<<< HEAD
-:temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
-
 }variant: "default",
 }) ;
 };
 }/> </button>) ;"}"
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }variant: "default" ;
 }) ;
 };

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-;
-    return res.status(400).json({ error: err.message })
-
 
     return res.status (400).json ({ error: err.message });
   }
@@ -92,36 +86,17 @@ export default function handler(req, res) {
 }
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
   try {
     const tx = feature;
       ? burnForFeature (user_id, feature, metadata);
       : burn_tokens (user_id, Math.floor (amount), reason || "burn", metadata),
     return res.status (200).json ({ tx });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  } catch (err: any) {
-
 }
 
 =======
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-    return res.status(400).json({ error: err.message })
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
+;<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

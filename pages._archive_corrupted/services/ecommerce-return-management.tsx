@@ -1,22 +1,5 @@
 
 
-<<<<<<< HEAD
-
-import Head from 'next/head'
-import Link from 'next/link'
-import Head from 'next/head';
-import Link from 'next/link';
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Head from 'next/head'
-import Link from 'next/link'
-import Head from 'next/head';
-import Link from 'next/link';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ECommerceReturnManagement() {
   return (

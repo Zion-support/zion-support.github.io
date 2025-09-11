@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
@@ -36,8 +33,6 @@ export default function Document() {
         {/* Optimized font loading */}
 
         <linkhref=""https": //fonts && fonts.googleapis.com/css2?family=Inter: wght@300, 400,500600700800&display=swap"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           rel="stylesheet"
         />
         {/* Favicon and manifest */}

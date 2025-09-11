@@ -1,28 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export type ReviewStatus = 'pending' | 'approved' | 'rejected';
+=======export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
 
 export interface Review {
 
 export interface Review {;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-export type ReviewStatus = 'pending' | 'approved' | 'rejected';
-;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  id: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662  id: string;
   project_id: string;
   reviewer_id: string;
   reviewee_id: string;
@@ -40,9 +24,6 @@ export type ReviewStatus = 'pending' | 'approved' | 'rejected';
   report_count: number;
   reviewer_profile?: {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 export interface ReviewReport {;
 
@@ -55,9 +36,7 @@ export interface ReviewReport {
 
 export interface ReviewReport {;
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    display_name: string,
+=======    display_name: string,
     avatar_url?: string;
 
   }
@@ -67,19 +46,6 @@ export interface ReviewReport {;
 
 export interface ReviewReport {;
 
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  id: string;
-  review_id: string;
-  reporter_id: string;
-  reason: string;
-  status: 'pending' | 'resolved' | 'dismissed';
-<<<<<<< HEAD
-<<<<<<< HEAD
-  created_at: string
 
   resolved_at?: string
 }
@@ -122,8 +88,6 @@ export interface ReviewReport {;
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   created_at: string,
   resolved_at?: string;
 

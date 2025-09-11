@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface RealAugmentedService2025Batch3 {
   "id": string;
@@ -91,6 +88,4 @@ export interface RealAugmentedService2025Batch3 { id: string; name: string; tagl
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

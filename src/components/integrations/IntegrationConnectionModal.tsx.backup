@@ -1,11 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import { _Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { _Button } from "@/components/ui/button";
-import { _Label } from "@/components/ui/label";
-import { _Checkbox } from "@/components/ui/checkbox";
-import { _toast } from "sonner";
-
 import { Settings } from 'lucide-react';
 import { Check } from 'lucide-react';
 export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
@@ -15,9 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-export function IntegrationConnectionModal(_{ isOpen, _onClose, _integration }) {
->>>>>>> origin/clean-error-fixing-automation
-    const [isConnecting, setIsConnecting] = useState(false);
+export function IntegrationConnectionModal(_{ isOpen, _onClose, _integration }) {    const [isConnecting, setIsConnecting] = useState(false);
     const [syncSettings, setSyncSettings] = useState({
         autoCreateContacts: true,
         pushNotes: false,

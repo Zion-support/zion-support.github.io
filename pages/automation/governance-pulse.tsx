@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </EnhancedLayout>);
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
-export default function GovernancePulsePage() {
-
   const items: any[] = (data?.items |[]).slice(0, 60)
 
   return (
@@ -61,8 +54,6 @@ export default function GovernancePulsePage() {
 }
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 

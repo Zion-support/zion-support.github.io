@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
@@ -14,8 +9,6 @@ const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
       </Head>
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -27,30 +20,8 @@ const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
     </div>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <main>;
-        <h1>AiPoweredBusinessSolutionsDiscussion</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  ),;
-};
-<<<<<<< HEAD
-export default AiPoweredBusinessSolutionsDiscussion;
-<<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default AiPoweredBusinessSolutionsDiscussion;
@@ -68,9 +39,6 @@ import Head from 'next / head';
 ;
 export default AiPoweredBusinessSolutionsDiscussion;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
 export default AiPoweredBusinessSolutionsDiscussion
@@ -86,9 +54,7 @@ export default AiPoweredBusinessSolutionsDiscussion;
 },
 export default AiPoweredBusinessSolutionsDiscussion,
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 

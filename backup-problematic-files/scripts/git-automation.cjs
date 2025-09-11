@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-async runCommand(command, options = {}) {
-=======
-  async runCommand(command, options = {}) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    try {
-      const { stdout, stderr } = await execAsync(command, { 
-        cwd: process.cwd(), 
-        timeout: 60000, 
-        ...options 
-      });
-      return { success: true, stdout, stderr };
-    } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`);
-      return { 
-        success: false, 
-        stdout: error.stdout || "", 
-        stderr: error.stderr || error.message 
-      };
-    }
-  }
-
   async checkGitStatus() {
     this.log('Checking git status...');
     const result = await this.runCommand('git status --porcelain');
@@ -221,4 +199,3 @@ const path = require('path')
       this.log(" Git automation workflow "failed": ${error.message}")
 =======
       this.log(" Git automation workflow "failed": ${error.message}")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

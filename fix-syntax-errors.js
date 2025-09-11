@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-#!/usr/bin/env node
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 #!/usr / bin / env node;
 import fs from './fs';
@@ -128,29 +121,9 @@ fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-});
-
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
-<<<<<<< HEAD
 }},
-,
-// Run all fixes,
-fixFooter();
-fixAccessibility();
-fixAiServices();
-fixApiDocs();
-fixCareers();
-,
-console.log('🎉 Syntax error fixes completed');
-=======
-
-}},
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -165,13 +138,6 @@ fixAccessibility(),;
 fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),;
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+// // // console.log('🎉 Syntax error fixes completed'),;=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

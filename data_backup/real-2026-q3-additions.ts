@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface Real2026Q3Addition {
   "id": string;
@@ -61,6 +58,4 @@ export interface Real2026Q3Addition { id: string; name: string; tagline: string;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

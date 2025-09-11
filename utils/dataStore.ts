@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Data store utilities
-export const dataStore = {
-  // Add data store functionality here
-  getData: () => []
-  setData: (data: any) => null
-  updateData: (id: string, data: any) => null
-  deleteData: (id: string) => null
-}
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 
@@ -21,30 +7,15 @@ export const dataStore = {
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  getData: () => [],
+=======  getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface Project {
+=======interface Project {
   id: string;
   title: string;
   description: string;
@@ -79,14 +50,8 @@ class DataStore {
     return this.projects.find(project => project.id === id);
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 
 =======
@@ -99,21 +64,6 @@ export const data_store = {
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  createProject(data: Partial<Project>): Project {
-    const project: Project = {
-      id: Math.random().toString(36).substr(2, 9),
-      title: data.title || "",
-      description: data.description || "",
-      status: data.status || "active",
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-    this.projects.push(project);
-    return project;
-  }
-
   // Review methods
   hasExistingReview(projectId: string, fromRole: string, fromId: string): boolean {
     return this.reviews.some(review => 
@@ -176,9 +126,7 @@ export const data_store = {
 
 const store = new DataStore();
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
@@ -193,13 +141,7 @@ export const getReviewsByProject = (projectId: string) => store.getReviewsByProj
 export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

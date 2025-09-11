@@ -1,28 +1,5 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from 'react';
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-import React from 'react';
-
 const features = [
   {
     name: 'AI-Powered Research'
@@ -84,45 +61,7 @@ const solutions = [
   }
 ];
 export default function HomePage() {
-<<<<<<< HEAD
-=======
-=======
-  LightBulbIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons / react / 24 / outline';
-;
-const features = [;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React from 'react';
-=======
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const features = [
   {
     name: 'AI-Powered Research'
@@ -284,17 +223,6 @@ export default /**
  */
 function HomePage() {
   return (
-<<<<<<< HEAD
-    <div className="bg - black">;
-      {/* Hero section */}
-      <div className="relative isolate px - 6 pt - 14 lg:px - 8">;
-        <div className="mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56">;
-          <div className="text - center">;
-            <h1 className="text - 4xl font - bold tracking - tight text - white sm:text - 6xl">;
-              Leading the Future of{' '}
-<<<<<<< HEAD
-=======
-
 
 =======
     <div className="bg-black">
@@ -309,9 +237,7 @@ function HomePage() {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
+              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
 
 
               Join the revolution that's reshaping industries worldwide.
@@ -322,45 +248,19 @@ function HomePage() {
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
-<<<<<<< HEAD
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 =======
               </a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
-              </a>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-              </Link>
+              </a>              </Link>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </Link>
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Features section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Everything you need to accelerate innovation
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-<<<<<<< HEAD
-
 
 =======
-            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
+            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
 
 
             and maintain competitive advantage in the digital age.
@@ -379,16 +279,11 @@ function HomePage() {
                   <p className="mt-6">
                     <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
                       Learn more <span aria-hidden="true">→</span>
-<<<<<<< HEAD
-
-
                     </Link>
 
 =======
                     </a>
                     </Link>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
@@ -402,11 +297,6 @@ function HomePage() {
         </div>;
       </div>;
 
-
-<<<<<<< HEAD
-          </dl>;
-        </div>;
-      </div>;
 
 
       {/* Stats section */}
@@ -427,12 +317,6 @@ function HomePage() {
                 <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
               </div>
             ))}
-
-<<<<<<< HEAD
-
-          </dl>;
-        </div>;
-      </div>;
 
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 AI & Technology
@@ -516,11 +400,7 @@ function HomePage() {
 
           </dl>;
         </div>;
-      </div>;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      </div>;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8"> 
         <div className="mx - auto max - w-2xl lg:text-center"> 
@@ -552,16 +432,11 @@ function HomePage() {
                     <a href={solution.href}>;
                       <span className="absolute inset - 0" />;
                       {solution.name}
-<<<<<<< HEAD
-=======
-
 
           </div>;
         </div>;
       </div>;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -586,52 +461,6 @@ function HomePage() {
 
 
   );
-<<<<<<< HEAD
-=======
-=======
-                    </a>;
-                  </h3>;
-                  <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300">{solution.description}</p>;
-                </div>;
-                <div className="relative mt - 8 flex items - center gap - x-4">;
-                  <div className="text - sm leading - 6">;
-                    <p className="font - semibold text - white">;
-                      <a href={solution.href} className="hover:text - blue - 400 transition - colors duration - 200">;
-                        <span className="absolute inset - 0" />;
-                        Learn more;
-                      </a>;
-                    </p>;
-                  </div>;
-                </div>;
-              </article>))}
-          </div> 
-        </div> 
-      </div> 
-      {/* CTA section */}
-      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8"> 
-        <div className="mx - auto max - w-2xl text-center"> 
-          <h2 className="text - 3xl font - bold tracking - tight text - white sm:text-4xl"> 
-            Ready to transform your business? 
-          </h2> 
-          <p className="mx - auto mt - 6 max - w-xl text - lg leading - 8 text - gray-300"> 
-            Join the AI revolution and discover how our cutting - edge technology can accelerate your growth and innovation. 
-          </p> 
-          <div className="mt - 10 flex items - center justify - center gap-x-6"> 
-            <a 
-              href="/contact" 
-              className="rounded - md bg - white px - 3.5 py - 2.5 text - sm font - semibold text - gray - 900 shadow - sm hover:bg - gray - 100 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - white transition - all duration - 200 hover:scale-105" 
-            > 
-              Get Started 
-            </a> 
-            <a href="/solutions" className="text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200"> 
-              View Solutions <span aria - hidden="true">→</span> 
-            </a> 
-          </div> 
-        </div> 
-      </div> 
-    </div>) 
-}
-
                     </a>
 
                   </h3>
@@ -655,9 +484,7 @@ function HomePage() {
           </div>;
         </div>;
       </div>;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {/* Stats section */}
+=======      {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
@@ -821,18 +648,6 @@ function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-    </div>
-          </div>
-        </div>
-      </div>
-    </div>;
-  );
-=======
-
 
   );
 =======
@@ -876,9 +691,7 @@ function HomePage() {
           </div>;
         </div>;
       </div>;
-    </div>);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}
+    </div>);}
 =======
                     </a>
                   </h3>

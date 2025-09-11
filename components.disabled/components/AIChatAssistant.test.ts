@@ -14,21 +14,9 @@ import { render, screen  } from "@testing-library/react";",
   it("displays correct content", () => {;"}
 
 <<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    render(<AIChatAssistant />);
-    // Add specific content checks based on component functionality});,
-  it("handles user interactions", () => {;"}
-    render(<AIChatAssistant />);
-import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => {; render(<AIChatAssistant />); it("handles user interactions",() => {; render(<AIChatAssistant />)})
-
-<<<<<<< HEAD
 =======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  it('displays correct content', () => {;
+=======  it('displays correct content', () => {;
   it('handles user interactions', () => {;
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatAssistant />); it("handles user interactions"
 

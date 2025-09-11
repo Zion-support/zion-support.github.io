@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-:backup-problematic-files/ui/InteractiveNavigation.tsx
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { ChevronDown, Menu, X } from 'lucide-react';
-
 interface NavItem {
   label: string;
   href: string;
@@ -148,8 +142,6 @@ export default function InteractiveNavigation() {
 const InteractiveNavigation = () => {},;
 export default InteractiveNavigation;
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from 'react';
 import Link from 'next/link';

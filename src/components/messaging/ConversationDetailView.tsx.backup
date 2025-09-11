@@ -1,7 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-<<<<<<< HEAD
-import { _format } from 'date-fns';
-
     await sendMessage(activeConversation.id", messageText);export default function Page(props: any) {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
   useEffect(() => {
@@ -186,4 +183,3 @@ export function ConversationDetailView() {
       </div>
     </div>);
 }
->>>>>>> origin/clean-error-fixing-automation

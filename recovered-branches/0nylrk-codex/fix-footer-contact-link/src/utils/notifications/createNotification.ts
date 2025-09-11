@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-import { CreateNotificationParams, CreateNotificationResult } from './types';
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -22,81 +14,27 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client",
-import { CreateNotificationParams, CreateNotificationResult } from './types',
-
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 =======
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
 
 
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-/**
- * Creates a notification for a user and optionally sends an email notification
- */
-export async function createNotification({
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  userId;
-  title;
-  message;
-  type;
 
   relatedId = null;
   sendEmail = false;
-  actionUrl = null;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  userId,
+  actionUrl = null;=======  userId,
   title,
   message,
   type,
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  actionText = null
-}: CreateNotificationParams): Promise<CreateNotificationResult> {
-  void actionUrl,
-  void actionText,
-  try {
-    // Call the create_notification database function
-    const { data, error } = await supabase.rpc('create_notification', {
-      _user_id: userId;
-      _title: title;
-      _message: message;
-      _type: type
-      _related_id: relatedId
-    });
-    if (error) throw error;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
@@ -105,46 +43,13 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
-<<<<<<< HEAD
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-      _user_id: userId;
-      _title: title;
-      _message: message;
-      _type: type
-      _related_id: relatedId
-    });
-    if (error) throw error;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      _user_id: userId,
-      _title: title,
-      _message: message,
-      _type: type,
-      _related_id: relatedId
-    }),
-    
-    if (error) throw error,
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    // If sendEmail is true, call the edge function to send an email
+=======    // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { supabase } from "@/integrations/supabase/client",;
+=======import { supabase } from "@/integrations/supabase/client",;
 import { CreateNotificationParams, CreateNotificationResult } from './types',;
 /**;
  * Creates a notification for a user and optionally sends an email notification;
@@ -175,12 +80,6 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
@@ -191,10 +90,6 @@ export async function createNotification({;
       })
     }
     return { success: true, notificationId: data }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   } catch (error) {;
@@ -207,8 +102,6 @@ export async function createNotification({;
   } catch (error) {
   } catch (error) {;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     console.error('Error creating notification:', error);
 
 =======
@@ -260,30 +153,17 @@ if ( {) {
     return { success: true, notification_id: data }
   } catch (error) {
     console.error ('Error creating notification:', error);
-<<<<<<< HEAD
-    return { success: false, error }
-  }
-
 
 }
 ;
 
 
-<<<<<<< HEAD
-  } catch (error) {
-  } catch (error) {;
-    console.error('Error creating notification:', error);
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return { success: false, error }
   }
 }
 }
 ;
 <<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

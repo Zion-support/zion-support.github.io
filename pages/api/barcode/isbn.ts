@@ -1,11 +1,5 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-const bwipjs = require('bwip-js'),
-
 const bwipjs = require('bwip-js')
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string) |''
@@ -68,9 +62,7 @@ export default async function handler(req, res) {
   }
 }
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+==============
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

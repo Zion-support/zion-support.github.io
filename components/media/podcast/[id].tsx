@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 export default function EpisodePage() {
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,98 +24,16 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useState } from 'react';
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function EpisodePage() {
-=======
-export default function EpisodePage() {
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const router = useRouter();
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export default function EpisodePage() {;
-  const router = useRouter();
-  const { id } = router && router.query as { id?: string };
-  const [episode, setEpisode] = useState<any>(null);
-  useEffect(() => {;
-    if (!id) return;
-    (async () => {;
-      const res = await fetch('/api/podcast/get?id=' + id);
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const data = await res.json();
-      setEpisode(data.episode)
-    })()
-  }, [id]);
-  if (!episode) return <div>Loading…</div>;
-  return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-bold">{episode.title}</h1>
-      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
-      {episode.audio?.mp3Url && (
-        <audio controls className="w-full">
-          <source src={episode.audio.mp3Url} type="audio/mpeg" />
-        </audio>
-      )}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
   }, [id]);
   if (!episode) return <div>Loading…</div>;
   return (
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <div>
-        <h2 className="text-xl font-semibold">Transcript</h2>
-        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
-      </div>
-    </div>
-);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <div>;
-        <h2 className="text-xl font-semibold">Transcript</h2>;
-        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode && episode.transcript}</pre>;
-      </div>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { use_router } from 'next / router';
 export default /**
  * EpisodePage - Function description
@@ -192,11 +105,6 @@ if (return <div > Loading…</div>) {
   )
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-
 export default function EpisodePage() {
 export default function EpisodePage() {;
 
@@ -220,9 +128,7 @@ export default function EpisodePage() {
   if (!episode) return <div>Loading…</div>;
 
   return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+==============
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -246,13 +152,7 @@ export default function EpisodePage() {
         </pre>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  );      {episode.audio?.mp3Url && (
+=======  );      {episode.audio?.mp3Url && (
         <audio controls className="w-full">
           <source src={episode.audio.mp3Url} type="audio/mpeg" />
         </audio>
@@ -265,12 +165,7 @@ export default function EpisodePage() {
 );
 }
   );
-<<<<<<< HEAD
-=======
-
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======

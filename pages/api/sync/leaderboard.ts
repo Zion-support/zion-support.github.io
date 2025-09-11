@@ -1,56 +1,17 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  if (!state.config.optIn |state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
-  }
-  const { subjectId, score, category, period, rank } = req.body as {
-    subjectId: string, score: number, category: string, period?: string, rank?: number
-  }
-  if (!subjectId |typeof score !== "number" |!category) {
-    return res.status(400).json({ error: "subjectId, score, category required" })
-  }
-  const entityKey = `${subjectId}:${period |"global"}:${category}`
-  const version = nextVersionFor(state, entityKey)
-  const event = {
-
     eventId: uuidv4(), type: "leaderboard_entry" as const,
     payload: {
        id: entityKey, subjectId, score, category, period, rank 
     },
     originInstanceId: state.config.instanceId, version,
     timestamp: Date.now()};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     eventId: uuidv4(),
     type: "leaderboard_entry" as const,
     payload: { id: entityKey, subjectId, score, category, period, rank },
@@ -62,28 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   upsertEvent(state, event);
   writeState(state);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  upsertEvent(state, event);
-  writeState(state);
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const body = { ...event, propagate: false };
-  const headers: Record<string, string> = {};
-  const sig = signPayload(body);
-  if (sig) headers["x-zion-signature"] = sig;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -97,70 +36,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
-
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Leaderboard updated' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
-import { signPayload } from "../../../utils/sync/signature",
-import axios from "axios",
-import { v4 as uuidv4 } from "uuid",
-import { nextVersionFor } from "../../../utils/sync/versioning",
-export default async function handler(req, res) {
-  try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const { subjectId, score, category, period, rank } = req.body as {
-    subjectId: string, score: number, category: string, period?: string, rank?: number
-  },
-  if (!subjectId || typeof score !== "number" || !category) {
-    return res.status(400).json({ error: "subjectId, score, category required" })
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const entityKey = `${subjectId}:${period || "global"}:${category}`,
-  const version = nextVersionFor(state, entityKey),
-  const event = {
-    eventId: uuidv4(),
-    type: "leaderboard_entry" as const,
-    payload: { id: entityKey, subjectId, score, category, period, rank },
-    originInstanceId: state.config.instanceId,
-    version,
-    timestamp: Date.now()},
-  upsertEvent(state, event),
-  writeState(state),
-  const body = { ...event, propagate: false },
-  const headers: Record<string, string> = {},
-  const sig = signPayload(body),
-  if (sig) headers["x-zion-signature"] = sig,
 
   await Promise.all(
     state.config.peers
@@ -220,29 +95,16 @@ if (headers["x - zion - signature"] = sig, ) {
       .filter ((p) => !p.paused);
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
-<<<<<<< HEAD
-        try {
-          await axios.post (url, body, { headers, timeout: 5000 });
-        } catch {}
-}
-=======
-
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
 
 }
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      })),
+=======      })),
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
 }
 ;
-<<<<<<< HEAD
-
-  }
-
   const { subjectId, score, category, period, rank } = req.body as {
     subjectId: string, score: number, category: string, period?: string, rank?: number
   },
@@ -375,9 +237,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import type { NextApiRequest, NextApiResponse } from 'next';
+=======import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Leaderboard updated' });
@@ -450,17 +310,7 @@ export default async function handler(req, res) {
       })
   )
 
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })=======        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {  } catch (error) {
@@ -571,15 +421,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-}
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
