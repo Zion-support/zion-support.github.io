@@ -9,7 +9,8 @@
     "esModuleInterop": true
   },
   "files": [
-    "src/AppMinimal.tsx"
+    "src/AppMinimal.tsx",
+    "types/global.d.ts"
   ]
 }
 
