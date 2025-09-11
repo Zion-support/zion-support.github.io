@@ -70,6 +70,7 @@ function buildToolsSection(functionNames) {
   ].join('\n');
 }
 
+<<<<<<< HEAD
 function ensureMarkers(content) {
   if (content.includes(START) && content.includes(END)) return content;
   // Insert before HOME_UPDATER_START if present, else before closing main
@@ -110,6 +111,26 @@ function discoverNetlifyTools() {
     log(`Error discovering Netlify tools: ${err.message}`);
   }
   return items;
+=======
+function discoverKeyWorkflows() {
+  // Replace GitHub Actions links with internal automation hubs and Netlify function logs
+  const internal = [
+    { href: '/automation', label: 'Automation Hub', tagline: 'Factories & live agents' },
+    { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, links' },
+    { href: '/newsroom', label: 'Newsroom', tagline: 'Autonomous updates' },
+  ];
+
+  // If Netlify function endpoints are exposed for logs, surface them as external links
+  const netlifyLogs = [
+    { href: process.env.NETLIFY_FRONT_UPGRADER_URL || '', label: 'Front Upgrader', tagline: 'Scheduled enhancements' },
+    { href: process.env.NETLIFY_HOMEPAGE_ENHANCER_URL || '', label: 'Homepage Enhancer', tagline: 'Explore section freshness' },
+  ].filter((x) => !!x.href);
+
+  return [
+    ...internal.map((i) => ({ type: 'internal', ...i })),
+    ...netlifyLogs.map((n) => ({ type: 'external', ...n })),
+  ];
+>>>>>>> origin/chore/futuristic-home-and-netlify-automations
 }
 
 function buildCard(item) {
