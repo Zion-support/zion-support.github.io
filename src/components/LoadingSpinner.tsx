@@ -12,12 +12,27 @@ interface LoadingSpinnerProps {
   showText?: boolean;
 }
 
+<<<<<<< HEAD
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  text = 'Loading…',
+}) => (
+  <div
+    className='flex items-center justify-center p-4'
+    role='status'
+    aria-live='polite'
+  >
+    <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600' />
+    <span className='ml-2 text-gray-600'>{text}</span>
+  </div>
+);
+=======
 const sizeClasses = {
   sm: 'w-4 h-4',
   md: 'w-6 h-6',
   lg: 'w-8 h-8',
   xl: 'w-12 h-12',
 };
+>>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
 
 const colorClasses = {
   primary: 'text-zion-purple',

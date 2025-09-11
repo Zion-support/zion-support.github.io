@@ -59,6 +59,10 @@
       "sizes": "384x384",
       "type": "image/png"
     }
+<<<<<<< HEAD
+  ]
+}
+=======
   ],
   "screenshots": [
     {
@@ -193,3 +197,4 @@
     "url": "https://ziontechgroup.com"
   }
 }
+>>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1

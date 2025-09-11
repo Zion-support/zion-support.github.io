@@ -32,6 +32,20 @@ export function PerformanceMonitor({
     fmp: null,
   });
 
+<<<<<<< HEAD
+    const collectMetrics = () => {
+      const newMetrics: PerformanceMetrics = {};
+
+      // Get navigation timing
+      if (performance.getEntriesByType) {
+        const navigationEntries = performance.getEntriesByType(
+          'navigation'
+        ) as PerformanceNavigationTiming[];
+        if (navigationEntries.length > 0) {
+          const nav = navigationEntries[0];
+          newMetrics.ttfb = nav.responseStart - nav.requestStart;
+        }
+=======
   // Measure First Contentful Paint (FCP)
   const measureFCP = () => {
     const paintEntries = performance.getEntriesByType('paint');
@@ -40,10 +54,19 @@ export function PerformanceMonitor({
       metricsRef.current.fcp = fcpEntry.startTime;
       if (logToConsole) {
         console.log('FCP:', fcpEntry.startTime, 'ms');
+>>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
       }
     }
   };
 
+<<<<<<< HEAD
+      // Get paint timing
+      if (performance.getEntriesByType) {
+        const paintEntries = performance.getEntriesByType('paint');
+        paintEntries.forEach(entry => {
+          if (entry.name === 'first-contentful-paint') {
+            newMetrics.fcp = entry.startTime;
+=======
   // Measure Largest Contentful Paint (LCP)
   const measureLCP = () => {
     if ('PerformanceObserver' in window) {
@@ -56,6 +79,7 @@ export function PerformanceMonitor({
             if (logToConsole) {
               console.log('LCP:', lastEntry.startTime, 'ms');
             }
+>>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
           }
         });
         observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -65,6 +89,30 @@ export function PerformanceMonitor({
     }
   };
 
+<<<<<<< HEAD
+      // Get LCP
+      if ('PerformanceObserver' in window) {
+        try {
+          const lcpObserver = new PerformanceObserver(list => {
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1];
+            newMetrics.lcp = lastEntry.startTime;
+          });
+          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        } catch (e) {
+          // LCP not supported
+        }
+      }
+
+      // Get CLS
+      if ('PerformanceObserver' in window) {
+        try {
+          let clsValue = 0;
+          const clsObserver = new PerformanceObserver(list => {
+            for (const entry of list.getEntries()) {
+              if (!(entry as any).hadRecentInput) {
+                clsValue += (entry as any).value;
+=======
   // Measure First Input Delay (FID)
   const measureFID = () => {
     if ('PerformanceObserver' in window) {
@@ -78,6 +126,7 @@ export function PerformanceMonitor({
               metricsRef.current.fid = fid;
               if (logToConsole) {
                 console.log('FID:', fid, 'ms');
+>>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
               }
             }
           });
@@ -259,6 +308,69 @@ export function PerformanceMonitor({
     };
   }, [onMetrics, logToConsole, sendToAnalytics, analyticsEndpoint]);
 
+<<<<<<< HEAD
+  if (
+    !isVisible ||
+    (process.env.NODE_ENV !== 'development' && !showInDevelopment)
+  ) {
+    return null;
+  }
+
+  const getScoreColor = (metric: string, value?: number) => {
+    if (value === undefined) return 'metric--unknown';
+
+    switch (metric) {
+      case 'fcp':
+        return value <= 1800
+          ? 'metric--good'
+          : value <= 3000
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
+      case 'lcp':
+        return value <= 2500
+          ? 'metric--good'
+          : value <= 4000
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
+      case 'fid':
+        return value <= 100
+          ? 'metric--good'
+          : value <= 300
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
+      case 'cls':
+        return value <= 0.1
+          ? 'metric--good'
+          : value <= 0.25
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
+      case 'ttfb':
+        return value <= 800
+          ? 'metric--good'
+          : value <= 1800
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
+      default:
+        return 'metric--unknown';
+    }
+  };
+
+  const formatValue = (metric: string, value?: number) => {
+    if (value === undefined) return 'N/A';
+
+    switch (metric) {
+      case 'fcp':
+      case 'lcp':
+      case 'ttfb':
+        return `${Math.round(value)}ms`;
+      case 'fid':
+        return `${Math.round(value)}ms`;
+      case 'cls':
+        return value.toFixed(3);
+      default:
+        return value.toString();
+    }
+=======
   // This component doesn't render anything
   return null;
 }
@@ -281,9 +393,40 @@ export function usePerformanceMonitoring(options?: Omit<PerformanceMonitorProps,
         onMetrics={handleMetrics}
       />
     ),
+>>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
   };
 }
 
+<<<<<<< HEAD
+  return (
+    <div className='performance-monitor'>
+      <div className='performance-monitor__header'>
+        <h4>Performance Metrics</h4>
+        <button
+          className='performance-monitor__close'
+          onClick={() => setIsVisible(false)}
+          aria-label='Close performance monitor'
+        >
+          ×
+        </button>
+      </div>
+      <div className='performance-monitor__metrics'>
+        {Object.entries(metrics).map(([key, value]) => (
+          <div
+            key={key}
+            className={`performance-monitor__metric ${getScoreColor(key, value)}`}
+          >
+            <span className='metric-label'>{key.toUpperCase()}</span>
+            <span className='metric-value'>{formatValue(key, value)}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+=======
 // Utility function to get current performance metrics
 export function getCurrentPerformanceMetrics(): PerformanceMetrics {
   const paintEntries = performance.getEntriesByType('paint');
@@ -298,3 +441,4 @@ export function getCurrentPerformanceMetrics(): PerformanceMetrics {
     fmp: paintEntries[paintEntries.length - 1]?.startTime || null,
   };
 }
+>>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
