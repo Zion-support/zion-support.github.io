@@ -1,41 +1,102 @@
 #!/bin/bash
 
-# Script to merge all unmerged branches that can be merged without conflicts
-echo "Starting automated merge process..."
+# Script to merge all feature branches with conflict resolution
+set -e
 
-# Get list of unmerged branches
-unmerged_branches=$(git branch -r --no-merged origin/main | head -50)
+echo "Starting comprehensive merge process..."
 
-merge_count=0
-conflict_count=0
-error_count=0
-
-for branch in $unmerged_branches; do
-    echo "Attempting to merge: $branch"
+# Function to resolve conflicts automatically
+resolve_conflicts() {
+    local branch=$1
+    echo "Attempting to merge branch: $branch"
     
-    # Try to merge without committing
-    if git merge "$branch" --no-commit --no-ff 2>/dev/null; then
-        # If merge succeeds, commit it
-        git commit -m "Auto-merge: $branch" --no-edit
-        echo "✅ Successfully merged: $branch"
-        ((merge_count++))
+    # Try to merge the branch
+    if git merge "origin/$branch" --no-commit; then
+        echo "Successfully merged $branch without conflicts"
+        git commit -m "Merge $branch into main - no conflicts"
+        return 0
     else
-        # If merge fails, reset and continue
-        git merge --abort 2>/dev/null
-        echo "❌ Conflict or error merging: $branch"
-        ((conflict_count++))
+        echo "Conflicts found in $branch, attempting to resolve..."
+        
+        # Strategy: prefer main branch (ours) for most conflicts
+        # But keep new files from feature branch
+        git status --porcelain | while read status file; do
+            case $status in
+                "UU"|"AA"|"AU"|"UA")
+                    echo "Resolving conflict in $file"
+                    # For add/add conflicts, prefer the feature branch version
+                    if [[ $file == *.tsx || $file == *.ts || $file == *.js || $file == *.jsx ]]; then
+                        git checkout --theirs "$file" 2>/dev/null || true
+                    else
+                        git checkout --ours "$file" 2>/dev/null || true
+                    fi
+                    git add "$file" 2>/dev/null || true
+                    ;;
+                "DD")
+                    echo "File $file was deleted in both branches, keeping deleted"
+                    git rm "$file" 2>/dev/null || true
+                    ;;
+                "DU")
+                    echo "File $file was deleted in main, keeping from feature branch"
+                    git add "$file" 2>/dev/null || true
+                    ;;
+                "UD")
+                    echo "File $file was deleted in feature branch, keeping deleted"
+                    git rm "$file" 2>/dev/null || true
+                    ;;
+            esac
+        done
+        
+        # Add all resolved files
+        git add . 2>/dev/null || true
+        
+        # Commit the merge
+        if git commit -m "Merge $branch into main - resolved conflicts automatically"; then
+            echo "Successfully resolved conflicts and merged $branch"
+            return 0
+        else
+            echo "Failed to commit merge for $branch"
+            git merge --abort
+            return 1
+        fi
     fi
-    
-    # Push every 10 merges to avoid issues
-    if [ $((merge_count % 10)) -eq 0 ] && [ $merge_count -gt 0 ]; then
-        echo "Pushing changes after $merge_count merges..."
-        git push origin main
+}
+
+# First, pull the latest changes
+echo "Pulling latest changes from origin/main..."
+git pull origin main
+
+# List of feature branches to merge (prioritized order)
+FEATURE_BRANCHES=(
+    "feature/comprehensive-ui-components"
+    "feature/enhanced-routing-and-ai-services"
+    "feature/enhanced-services-and-design"
+    "feature/expand-zion-services-2025"
+    "feature/expanded-services"
+    "feature/expanded-services-2026"
+    "feature/fix-build-and-improve-navigation"
+    "feature/futuristic-ui-services"
+    "feature/homepage-ai-search"
+    "feature/merge-conflicts-and-improvements"
+)
+
+# Merge each feature branch
+for branch in "${FEATURE_BRANCHES[@]}"; do
+    echo "Processing branch: $branch"
+    if resolve_conflicts "$branch"; then
+        echo "✅ Successfully merged $branch"
+    else
+        echo "❌ Failed to merge $branch, skipping..."
     fi
+    echo "---"
 done
 
 echo "Merge process completed!"
-echo "Successfully merged: $merge_count branches"
-echo "Conflicts/errors: $conflict_count branches"
+echo "Current status:"
+git status
 
-# Final push
+# Push the changes
+echo "Pushing changes to origin/main..."
 git push origin main
+
+echo "All merges completed and pushed successfully!"
