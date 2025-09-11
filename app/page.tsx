@@ -330,8 +330,7 @@ export default function HomePage() {
               🚀 Fresh Insights & Expert Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: AI Procurement Playbook 2025 and Agent Safety & Guardrails 2025.
-              Practical guidance to buy faster, reduce risk, and ship reliable agentic systems.
+              New this week: AI Customer Support Automation, LLM Guardrails in Production, and Edge AI Privacy by Design.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -351,39 +350,39 @@ export default function HomePage() {
 
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-procurement-playbook-2025' className='group'>
+            <Link href='/blog/ai-customer-support-automation-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛒</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Procurement Playbook 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Buy fast, avoid regret</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎧</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Support Automation 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Resolve faster, cut costs</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>10 min read</span>
+                  <span>9 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
             
-            <Link href='/blog/agent-safety-guardrails-2025' className='group'>
+            <Link href='/blog/llm-guardrails-in-production-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
-                <h3 className='text-lg font-semibold mb-2'>Agent Safety & Guardrails 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Reliable agentic systems in production</p>
+                <h3 className='text-lg font-semibold mb-2'>LLM Guardrails in Production</h3>
+                <p className='text-sm opacity-90 mb-3'>Safety without blocking delivery</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>11 min read</span>
+                  <span>8 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
             
-            <Link href='/blog/ai-roadmap-2026' className='group'>
+            <Link href='/blog/edge-ai-privacy-by-design-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧭</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Roadmap 2026</h3>
-                <p className='text-sm opacity-90 mb-3'>Ship impactful features with guardrails</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔐</div>
+                <h3 className='text-lg font-semibold mb-2'>Edge AI: Privacy by Design</h3>
+                <p className='text-sm opacity-90 mb-3'>On-device intelligence for instant, compliant CX</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>12 min read</span>
+                  <span>7 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
