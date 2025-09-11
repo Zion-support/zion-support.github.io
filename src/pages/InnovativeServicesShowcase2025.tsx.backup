@@ -5,7 +5,6 @@ const services = [];
 const solutions = [];
 const implementation = [];
 const _InnovativeServicesShowcase2025 = () => {
-=======
 import EnhancedComprehensiveServicesShowcase from "../components/EnhancedComprehensiveServicesShowcase";
 const InnovativeServicesShowcase2025 = () => {    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -284,10 +283,6 @@ const InnovativeServicesShowcase2025 = () => {    return (<div className="min-h-
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>);
 };
-=======
-    </div>)};
->>>>>>> origin/clean-error-fixing-automation
 export default InnovativeServicesShowcase2025;

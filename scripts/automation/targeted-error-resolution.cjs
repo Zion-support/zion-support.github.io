@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -20,7 +19,3 @@ const { execSync } = require('child_process')
       newContent = newContent.replace(/from ['"]\.\/([^'"]+)['"]/g, "
       newContent = newContent.replace(/([^"'])([a-zA-Z_$][a-zA-Z0-9_$]*):\s*([^"'])/g, '$1"$2"
   console.error(' Targeted error resolution "failed")
-<<<<<<< HEAD
-    console.error(' Targeted error resolution interval "failed")
-=======
-    console.error(' Targeted error resolution interval "failed")

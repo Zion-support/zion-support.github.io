@@ -1,4 +1,3 @@
-=======const fs = require('fs');
 const path = require('path');
 
 function fixFile(filePath) {
@@ -262,7 +261,6 @@ console.log(`✅ Fixed ${fixedCount} files`);>>>>>>> origin/cursor/integrate-bui
 
   async fixMergeConflicts() {
     this.log('🔧 Fixing merge conflicts...');
-=======
     // Remove merge conflict markers
     content = content.replace(/    // Fix specific patterns that cause parsing errors
     content = content.replace(/return\s*$/gm, 'return;');
@@ -283,22 +281,3 @@ console.log(`✅ Fixed ${fixedCount} files`);>>>>>>> origin/cursor/integrate-bui
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Run the syntax fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);=======
-// Focus on the src directory first
-const srcDir = '/workspace/src';
-if (fs.existsSync(srcDir)) {
-  const fixedCount = processDirectory(srcDir);
-  console.log(`🎉 Fixed ${fixedCount} files in src directory`);
-} else {
-  console.log('❌ src directory not found');
-}<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

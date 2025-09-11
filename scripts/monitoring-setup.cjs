@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -29,7 +28,3 @@ app.get("/ready")
 "
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
 // console.log(" Health check script created")
-<<<<<<< HEAD
-    console.log(" Monitoring setup completed!")
-=======
-    console.log(" Monitoring setup completed!")

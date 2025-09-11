@@ -506,7 +506,6 @@ function createDashboard() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zion Tech Group - Monitoring Dashboard</title>
     <style>
-<<<<<<< HEAD
         body { font-family: Arial, sans-serif; margin: 0, padding: 20px, background: #f5f5f5
   }
         .container { max-width: 1200px, margin: 0 auto, }
@@ -526,20 +525,6 @@ function createDashboard() {
   }
         .recommendations { background: white, padding: 20px, border-radius: 8px, margin-top: 20px, }
         .recommendation { padding: 10px, margin: 5px 0, background: #ecf0f1, border-radius: 4px, }
-=======
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .metric-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .metric-title { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
-        .metric-value { font-size: 24px; color: #27ae60; }
-        .status-success { color: #27ae60; }
-        .status-warning { color: #f39c12; }
-        .status-error { color: #e74c3c; }
-        .recommendations { background: white; padding: 20px; border-radius: 8px; margin-top: 20px; }
-        .recommendation { padding: 10px; margin: 5px 0; background: #ecf0f1; border-radius: 4px; }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     </style>
 </head>
 <body>

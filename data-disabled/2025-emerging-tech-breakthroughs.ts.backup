@@ -38,11 +38,3 @@ export interface EmergingTechBreakthrough2025 {
   rating: number;
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
   // Brain-Computer Interface Platform;
-<<<<<<< HEAD:data-disabled/2025-emerging-tech-breakthroughs.ts
-  {
-    id: "brain-computer-interface-platform",;
-    name: "Brain-Computer Interface Platform",;
-    tagline: "Direct neural interface for human-computer interaction",;
-    price: "$25,000",;
-    period: "/month",;
-    description: "Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.",;

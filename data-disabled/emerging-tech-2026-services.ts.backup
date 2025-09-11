@@ -92,11 +92,3 @@ export interface EmergingTech2026Service {;
 ;
 export const emergingTech2026Services: EmergingTech2026Service[] = [;
   // Neural Interface Development Platform;
-<<<<<<< HEAD:data-disabled/emerging-tech-2026-services.ts
-  {
-    id: "neural-interface-dev-platform",;
-    name: "Neural Interface Development Platform",;
-    tagline: "Build brain-computer interfaces with AI-powered neural networks",;
-    price: "$599",;
-    period: "/month",;
-    description: "Revolutionary platform for developing brain-computer interfaces (BCIs) that enable direct communication between the human brain and computers, opening new possibilities for accessibility and human augmentation.",;

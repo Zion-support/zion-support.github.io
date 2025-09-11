@@ -8,7 +8,6 @@ import { Icon } from 'lucide-react';
 const services = [];
 const solutions = [];
 const implementation = [];
-=======
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -20,7 +19,6 @@ import { SEO } from '@/components/SEO';export default function ComprehensiveServ
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
-=======
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
@@ -258,12 +256,3 @@ import { SEO } from '@/components/SEO';export default function ComprehensiveServ
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}
-=======
-<<<<<<< HEAD:src/pages/ComprehensiveServicesPage.jsx
-    </div>);
-</Card></Card></Card></Card>}}}
-=======
-    </div>)}>>>>>>> origin/clean-error-fixing-automation

@@ -26,7 +26,6 @@ Allow: /contact"
   "twitter": {card: "summary_large_image","title": "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions."}
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
-<<<<<<< HEAD
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js"), metaConfig)
     }
   async run() {
@@ -40,8 +39,3 @@ improver.run().catch(console.error)
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
-=======
-    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
-// console.log(" Meta tags configuration created")
-    console.log(" SEO improvement completed!")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

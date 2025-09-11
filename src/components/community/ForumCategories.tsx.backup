@@ -1,10 +1,6 @@
 import React from 'react';
 export default function ForumCategories() {
-<<<<<<< HEAD
     const _categories = [
-=======
-    const categories = [
->>>>>>> origin/clean-error-fixing-automation
         {
             id: '1',
             name: 'General Discussion',
@@ -41,9 +37,5 @@ export default function ForumCategories() {
             {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)}
           </div>
         </div>))}
-<<<<<<< HEAD
     </div>);
 }
-=======
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation

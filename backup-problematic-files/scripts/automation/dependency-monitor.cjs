@@ -144,8 +144,4 @@ class $1 {}
 
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
 monitor.run().catch(console.error);
-=======
-monitor.run().catch(console.error);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
