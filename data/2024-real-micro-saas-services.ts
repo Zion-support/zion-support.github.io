@@ -5,51 +5,15 @@ export interface RealMicroSaasService2024 {
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  variant: string;
   features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
   rating: number;
-  reviews: number;
+  customers: string;
 }
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   // AI-Powered Business Intelligence
   {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  }
-];
 =======
     id: 'ai-content-generator-2024',
     name: 'AI Content Generator 2024',
