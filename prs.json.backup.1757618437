@@ -1,5 +1,15 @@
 [
   {
+<<<<<<< HEAD
+    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/6493",
+    "id": 2769814017,
+    "node_id": "PR_kwDOOuOFAc6lGAIB",
+    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/6493",
+    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/6493.diff",
+    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/6493.patch",
+    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/6493",
+    "number": 6493,
+=======
     "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/9292",
     "id": 2775468566,
     "node_id": "PR_kwDOOuOFAc6lbkoW",
@@ -355,6 +365,7 @@
     "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/9291.patch",
     "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/9291",
     "number": 9291,
+>>>>>>> origin/backup-main-20250826-150138
     "state": "open",
     "locked": false,
     "title": "Enhance app with new services and futuristic design",
@@ -498,8 +509,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -519,8 +535,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -529,7 +556,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -627,8 +658,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -648,8 +684,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -658,7 +705,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -845,8 +896,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -866,8 +922,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -876,7 +943,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -974,8 +1045,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -995,8 +1071,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -1005,7 +1092,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -1551,8 +1642,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -1572,8 +1668,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -1582,7 +1689,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -1680,8 +1791,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -1701,8 +1817,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -1711,7 +1838,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -2257,8 +2388,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -2278,8 +2414,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -2288,7 +2435,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -2386,8 +2537,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -2407,8 +2563,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -2417,7 +2584,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -2604,8 +2775,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -2625,8 +2801,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -2635,7 +2822,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -2733,8 +2924,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -2754,8 +2950,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -2764,7 +2971,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -2951,8 +3162,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -2972,8 +3188,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -2982,7 +3209,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -3080,8 +3311,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -3101,8 +3337,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -3111,7 +3358,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -4016,8 +4267,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -4037,8 +4293,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -4047,7 +4314,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
@@ -4145,8 +4416,13 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
+<<<<<<< HEAD
+        "updated_at": "2025-08-26T12:04:59Z",
+        "pushed_at": "2025-08-26T12:05:03Z",
+=======
         "updated_at": "2025-08-26T15:00:55Z",
         "pushed_at": "2025-08-26T15:01:04Z",
+>>>>>>> origin/backup-main-20250826-150138
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
@@ -4166,8 +4442,19 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
+<<<<<<< HEAD
+        "open_issues_count": 2623,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+=======
         "open_issues_count": 2781,
         "license": null,
+>>>>>>> origin/backup-main-20250826-150138
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
@@ -4176,7 +4463,11 @@
         ],
         "visibility": "public",
         "forks": 0,
+<<<<<<< HEAD
+        "open_issues": 2623,
+=======
         "open_issues": 2781,
+>>>>>>> origin/backup-main-20250826-150138
         "watchers": 0,
         "default_branch": "main"
       }
