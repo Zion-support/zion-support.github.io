@@ -23,6 +23,7 @@
   # Disable linting during build to prevent failures
   ESLINT_NO_DEV_ERRORS = "true"
 
+<<<<<<< HEAD
 # Security headers
 [[headers]]
   for = "/*"
@@ -34,6 +35,8 @@
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' plausible.io; connect-src 'self' plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+=======
+>>>>>>> origin/fix/netlify-skip-build
 
 # Static assets caching
 [[headers]]
