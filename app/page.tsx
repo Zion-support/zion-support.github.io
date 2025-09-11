@@ -227,6 +227,24 @@ export default function HomePage() {
               description='Repeatable channels to land the first 100–500 customers efficiently.'
               icon='📈'
             />
+            <Card
+              title='AI Consciousness Breakthrough 2025'
+              href='/blog/ai-consciousness-breakthrough-2025'
+              description='The dawn of machine self-awareness and what it means for the future of technology.'
+              icon='🧠'
+            />
+            <Card
+              title='Quantum AI Fusion 2025'
+              href='/blog/quantum-ai-fusion-2025'
+              description='Discover how quantum computing is revolutionizing artificial intelligence.'
+              icon='⚛️'
+            />
+            <Card
+              title='Enterprise AI Transformation'
+              href='/blog/enterprise-ai-transformation-2025'
+              description='Complete guide to transforming your enterprise with AI solutions.'
+              icon='🏢'
+            />
           </div>
         </div>
       </section>
@@ -247,6 +265,33 @@ export default function HomePage() {
             <div className='w-full max-w-2xl'>
               <ROICalculator />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between mb-8'>
+            <div>
+              <h2 className='text-3xl font-bold text-gray-900 mb-2'>Success Stories</h2>
+              <p className='text-gray-600'>Real results from our AI transformations.</p>
+            </div>
+            <Link href='/case-studies' className='text-blue-600 font-semibold hover:underline'>View all</Link>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            <Card
+              title='AI Healthcare Transformation'
+              href='/case-studies/ai-healthcare-transformation'
+              description='40% efficiency gains and $12M annual savings through AI-powered patient care optimization.'
+              icon='🏥'
+            />
+            <Card
+              title='Enterprise AI Revolution'
+              href='/case-studies/enterprise-ai-transformation'
+              description='How we transformed a Fortune 500 company with comprehensive AI solutions.'
+              icon='🚀'
+            />
           </div>
         </div>
       </section>
