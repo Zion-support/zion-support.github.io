@@ -1,12 +1,3 @@
-import React, { Suspense, lazy, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
-const ServiceComparisonPage = React.lazy(() => import('./pages/ServiceComparisonPage'));
-const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculatorPage'));
-const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesOverviewPage'));
-const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/ServiceAnalyticsDashboard'));
-const ServiceMarketplace = React.lazy(() => import('./pages/ServiceMarketplace'));
-=======
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
@@ -145,18 +136,31 @@ const baseRoutes = [
   { path: '/help', element: <HelpCenterPage /> },
   { path: '/cookies', element: <CookiesPage /> },
 ];
+=======
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { ToastProvider, ToastViewport } from "./components/ui/toast";
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+import Home from './pages/Home';
 
 const App = () => {
   // Ensure each navigation starts at the top of the page
   useScrollToTop();
   return (
-const Home = React.lazy(() => import('./pages/Home'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
-const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-=======
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -846,6 +850,26 @@ const App = () => {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
+=======
+    <ThemeProvider defaultTheme="dark">
+      <ToastProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth/*" element={<AuthRoutes />} />
+        <Route path="/dashboard/*" element={<DashboardRoutes />} />
+        <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+        <Route path="/talent/*" element={<TalentRoutes />} />
+        <Route path="/admin/*" element={<AdminRoutes />} />
+        <Route path="/mobile/*" element={<MobileAppRoutes />} />
+        <Route path="/content/*" element={<ContentRoutes />} />
+        <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+        <Route path="/community/*" element={<CommunityRoutes />} />
+        <Route path="/developers/*" element={<DeveloperRoutes />} />
+        <Route path="*" element={<ErrorRoutes />} />
+      </Routes>
+      <ToastViewport />
+      </ToastProvider>
+    </ThemeProvider>
   );
 };
 

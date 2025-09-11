@@ -1,13 +1,4 @@
 import React from 'react';
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-=======
 import { ComprehensiveServicesShowcase } from "@/components/home/ComprehensiveServicesShowcase";
 =======
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
@@ -1459,3 +1450,13 @@ export default function Home() {
     </>
   );
 }
+=======
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Home</h1>
+    </div>
+  );
+}
+
