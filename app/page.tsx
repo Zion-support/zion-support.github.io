@@ -363,6 +363,19 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+
+            <Link href='/blog/ai-go-to-market-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📈</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Go-To-Market 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>From zero to traction playbook</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>12 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
             
             <Link href='/resources' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
@@ -549,6 +562,44 @@ export default function HomePage() {
                       <span className='text-sm text-gray-600'>Zion Tech Group</span>
                     </div>
                     <span className='text-green-600 font-medium group-hover:underline'>
+                      Read Article →
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </Link>
+
+            <Link href='/blog/ai-go-to-market-2025' className='group'>
+              <article className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100'>
+                <div className='aspect-video bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center relative'>
+                  <div className='text-8xl'>📈</div>
+                  <div className='absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
+                    NEW
+                  </div>
+                </div>
+                <div className='p-8'>
+                  <div className='flex items-center gap-3 mb-4'>
+                    <span className='bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full'>
+                      Growth & Marketing
+                    </span>
+                    <span className='text-gray-500 text-sm'>12 min read</span>
+                    <span className='text-gray-500 text-sm'>•</span>
+                    <span className='text-gray-500 text-sm'>Sep 11, 2025</span>
+                  </div>
+                  <h3 className='text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors'>
+                    AI Go-To-Market 2025: From Zero to Traction
+                  </h3>
+                  <p className='text-gray-600 mb-6 leading-relaxed'>
+                    Positioning, pricing, and distribution strategies that work for AI products in 2025.
+                  </p>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2'>
+                      <div className='w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center'>
+                        <span className='text-purple-600 font-bold text-sm'>ZT</span>
+                      </div>
+                      <span className='text-sm text-gray-600'>Zion Tech Group</span>
+                    </div>
+                    <span className='text-purple-600 font-medium group-hover:underline'>
                       Read Article →
                     </span>
                   </div>
