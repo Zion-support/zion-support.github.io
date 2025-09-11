@@ -37,6 +37,28 @@ export default function BlogPage() {
 	    image: '/api/placeholder/600/400',
 	  },
 	  // New posts (2025-09)
+	  {
+	    id: 'ai-procurement-playbook-2025',
+	    title: 'AI Procurement Playbook 2025: Buy Fast, Avoid Regret',
+	    excerpt:
+	      'Evaluate, pilot, and buy AI software without lock-in, with clear ROI and risk controls.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'Procurement',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'agent-safety-guardrails-2025',
+	    title: 'Agent Safety & Guardrails 2025: Ship Reliable Agentic Systems',
+	    excerpt:
+	      'Controls, budgets, approvals, and observability to keep agent systems safe and affordable.',
+	    date: '2025-09-11',
+	    readTime: '11 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
  	  {
  	    id: 'ai-productivity-playbook-2025',
  	    title: 'AI Productivity Playbook 2025: Ship Faster Without Breaking Things',
