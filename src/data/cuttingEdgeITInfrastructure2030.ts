@@ -1,12 +1,8 @@
-import { _ProductListing  } from '../types/listings';
+import { ProductListing } from "@/types/listings";
 
-import { Cloud } from 'lucide-react';
-import { Check } from 'lucide-react';
-const integrations = [];
-const applications = [];
-const solutions = [];
 // Cutting Edge IT Infrastructure Services 2030 - Zion Tech Group
 // Advanced infrastructure solutions for modern enterprises
+
 export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   // Zero-Trust Network Access Platform
   {
@@ -19,7 +15,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     currency: "$",
     tags: ["Zero Trust", "Network Security", "Identity Management", "Access Control", "Cybersecurity"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/zero-trust-platform.jpg"],
+    images: ["https://ziontechgroup.com/images/zero-trust-platform.jpg"],
     createdAt: "2024-04-01T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 78,
@@ -39,6 +35,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "6-8 weeks",
     integrations: ["Active Directory", "SAML/SSO", "Multi-Factor Authentication", "SIEM Systems", "Identity Providers"]
   },
+
   // Edge Computing Orchestration Platform
   {
     id: "edge-computing-orchestration-platform",
@@ -50,7 +47,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     currency: "$",
     tags: ["Edge Computing", "Distributed Systems", "Low Latency", "Performance Optimization", "Cloud Native"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/edge-computing-platform.jpg"],
+    images: ["https://ziontechgroup.com/images/edge-computing-platform.jpg"],
     createdAt: "2024-04-05T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 56,
@@ -70,6 +67,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "8-10 weeks",
     integrations: ["Kubernetes", "Docker", "Cloud Platforms", "IoT Devices", "Monitoring Tools"]
   },
+
   // Quantum-Safe Cryptography Infrastructure
   {
     id: "quantum-safe-cryptography-infrastructure",
@@ -81,7 +79,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     currency: "$",
     tags: ["Quantum Safe", "Cryptography", "Post-Quantum", "Security", "Future Proof"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/quantum-cryptography.jpg"],
+    images: ["https://ziontechgroup.com/images/quantum-cryptography.jpg"],
     createdAt: "2024-04-10T10:00:00.000Z",
     rating: 5.0,
     reviewCount: 34,
@@ -101,6 +99,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "12-16 weeks",
     integrations: ["PKI Systems", "Certificate Authorities", "Hardware Security Modules", "Key Management", "Security Protocols"]
   },
+
   // Autonomous Data Center Management
   {
     id: "autonomous-data-center-management",
@@ -112,7 +111,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     currency: "$",
     tags: ["Data Center", "Autonomous Management", "Energy Optimization", "Predictive Maintenance", "AI Operations"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/autonomous-data-center.jpg"],
+    images: ["https://ziontechgroup.com/images/autonomous-data-center.jpg"],
     createdAt: "2024-04-15T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 45,
@@ -132,6 +131,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "10-14 weeks",
     integrations: ["Building Management Systems", "Power Management", "Cooling Systems", "Monitoring Tools", "IoT Sensors"]
   },
+
   // Software-Defined Network Fabric
   {
     id: "software-defined-network-fabric",
@@ -143,7 +143,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     currency: "$",
     tags: ["SDN", "Network Fabric", "Programmable Networks", "Network Automation", "Cloud Networking"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/sdn-fabric.jpg"],
+    images: ["https://ziontechgroup.com/images/sdn-fabric.jpg"],
     createdAt: "2024-04-20T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 67,
@@ -163,6 +163,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "8-12 weeks",
     integrations: ["Network Controllers", "Virtual Switches", "Load Balancers", "Firewalls", "Monitoring Systems"]
   },
+
   // Hyperconverged Infrastructure Platform
   {
     id: "hyperconverged-infrastructure-platform",
@@ -174,7 +175,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     currency: "$",
     tags: ["Hyperconverged", "Infrastructure", "Converged Systems", "Scalability", "Simplified Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/hyperconverged-platform.jpg"],
+    images: ["https://ziontechgroup.com/images/hyperconverged-platform.jpg"],
     createdAt: "2024-04-25T10:00:00.000Z",
     rating: 4.7,
     reviewCount: 89,
@@ -194,6 +195,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "10-12 weeks",
     integrations: ["Virtualization Platforms", "Storage Systems", "Network Equipment", "Management Tools", "Backup Solutions"]
   },
+
   // Intelligent Cloud Cost Optimization
   {
     id: "intelligent-cloud-cost-optimization",
@@ -205,7 +207,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     currency: "$",
     tags: ["Cloud Optimization", "Cost Management", "Resource Optimization", "AI Analytics", "Cloud FinOps"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/cloud-cost-optimization.jpg"],
+    images: ["https://ziontechgroup.com/images/cloud-cost-optimization.jpg"],
     createdAt: "2024-04-30T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 123,
