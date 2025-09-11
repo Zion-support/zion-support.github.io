@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 
 import { Link } from 'react-router-dom';
 import { Code } from 'lucide-react';
@@ -10,10 +9,6 @@ const services = [];
 const solutions = [];
 const _AccessibilityAuditor = () => {
     const _features = [
-=======
-const AccessibilityAuditor = () => {
-    const features = [
->>>>>>> origin/clean-error-fixing-automation
         {
             title: "Automated Testing",
             description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
@@ -35,18 +30,13 @@ const AccessibilityAuditor = () => {
             icon: "📋"
         }
     ];
-<<<<<<< HEAD
     const _complianceStandards = [
-=======
-    const complianceStandards = [
->>>>>>> origin/clean-error-fixing-automation
         "WCAG 2.1 AA",
         "Section 508",
         "ADA Title III",
         "EN 301 549",
         "ISO 9241-171"
     ];
-<<<<<<< HEAD
     const _testingAreas = [
         {
             category: "Visual Accessibility",
@@ -59,20 +49,6 @@ const AccessibilityAuditor = () => {
         {
             category: "Technical Accessibility",
             items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-=======
-    const testingAreas = [
-        {
-            category: "Visual Accessibility",
-            items["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
-        },
-        {
-            category: "Content Accessibility",
-            items["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
-        },
-        {
-            category: "Technical Accessibility",
-            items["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
->>>>>>> origin/clean-error-fixing-automation
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -240,10 +216,6 @@ const AccessibilityAuditor = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>);
 };
-=======
-    </div>)};
->>>>>>> origin/clean-error-fixing-automation
 export default AccessibilityAuditor;

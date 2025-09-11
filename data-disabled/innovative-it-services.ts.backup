@@ -36,11 +36,3 @@ export interface InnovativeITService {
   customers: number;
   rating: number;
 export const innovativeITServices: InnovativeITService[] = [;
-<<<<<<< HEAD:data-disabled/innovative-it-services.ts
-  {
-    id: "quantum-cloud-orchestrator",;
-    name: "Quantum Cloud Orchestrator",;
-    tagline: "Autonomous cloud infrastructure management with quantum optimization",;
-    price: "$18,999",;
-    period: "/month",;
-    description: "Revolutionary quantum AI platform that autonomously manages, optimizes, and scales cloud infrastructure across multiple providers with quantum-level efficiency and cost optimization.",;

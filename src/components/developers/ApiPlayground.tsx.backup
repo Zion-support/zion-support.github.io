@@ -1,6 +1,5 @@
 import { Code } from 'lucide-react';
 export function ApiPlayground({ method, path, params = [] }) {
-=======
 import { useState } from "react";
 import { useLocalStorage } from "@/hooks";
 import { Input } from "@/components/ui/input";
@@ -16,12 +15,7 @@ export function ApiPlayground(_{ method, _path, _params = [] }) {    const [apiK
       <Button onClick={sendRequest} disabled={loading}>
         {loading ? "Sending..." : "Send Request"}
       </Button>
-<<<<<<< HEAD
       {response && <CodeBlock code={response} language="json"/>}
     </div>);
 }
-=======
-      {response && <CodeBlock code={response} language="json"      />}
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation
 export default ApiPlayground;

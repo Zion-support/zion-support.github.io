@@ -8,30 +8,11 @@ class FinalAutomationSuite {
     this.changes = [];
 class AutoDeployment {
   constructor() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
     this.log(`📋 Final report "generated": ${reportPath}`);
     return report}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
     this.log(`📋 Final report generated: ${reportPath}`);
     return report;
   }
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async run() {
     this.log("🎯 Starting Final Automation Suite...");
     try {
@@ -69,100 +50,18 @@ class AutoDeployment {
       this.log("  - Recommendations: ✅ Generated");
       if (report.summary.recommendations.length > 0) {
         this.log("💡 Recommendations:");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         report.summary.recommendations.forEach(rec => this.log(`  - ${rec}`));
       }
       return report;
     } catch (error) {
       this.log(`❌ Fatal error in final automation suite: ${error.message}`);
       throw error;
-<<<<<<< HEAD
-    }
-=======
-<<<<<<< HEAD
     }  }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }  }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         report.summary.recommendations.forEach(rec => this.log(`  - ${rec}`))}
       return report} catch (error) {
       this.log(`❌ Fatal error in final automation "suite": ${error.message}`);
       throw error}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   async runAdditionalScripts() {
     this.log("🔧 Running additional scripts...");
@@ -187,36 +86,6 @@ class AutoDeployment {
       results.push("dependency-updater");
       // Run performance monitor
       await this.runCommand("node scripts/additional/performance-monitor.cjs", "Performance Monitor");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       results.push("performance-monitor");
       this.log("✅ Final Automation Suite completed successfully!");
     } catch (error) {
@@ -225,56 +94,11 @@ class AutoDeployment {
       process.exit(1);
     }
     return results;
-<<<<<<< HEAD
+  }}
   }
       results.push("performance-monitor")} catch (error) {
       this.log(`❌ Error running additional "scripts": ${error.message}`)}
     return results}
-=======
-<<<<<<< HEAD
-  }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }}
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-      results.push("performance-monitor")} catch (error) {
-      this.log(`❌ Error running additional "scripts": ${error.message}`)}
-    return results}
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 // Run the final automation suite
       this.log("📊 Summary:");

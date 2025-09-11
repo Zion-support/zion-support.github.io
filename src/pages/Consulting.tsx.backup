@@ -13,7 +13,6 @@ const solutions = [];
 const implementation = [];
 const _Consulting = () => {
     const _consultingServices = [
-=======
 import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
 const Consulting = () => {
     const consultingServices = [        {
@@ -158,8 +157,3 @@ const Consulting = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-=======
-    </div>)};export default Consulting;

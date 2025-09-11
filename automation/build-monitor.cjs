@@ -9,7 +9,6 @@ const execAsync = promisify(exec);
   };
   log(message) {}
     const timestamp = new Date().toISOString();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.lastBuild = {
         timestamp: new Date().toISOString(),
         success: true,
@@ -25,7 +24,6 @@ const execAsync = promisify(exec);
         this.buildHistory.shift();
       this.lastBuildTime = new Date();`;
       this.log(`Build completed successfully in ${duration}ms`);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     try {
   // TODO: Implement
 }
@@ -51,11 +49,9 @@ const execAsync = promisify(exec);
       projectRoot: this.projectRoot,
       nodeVersion: process.version,
       platform: process.platform,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5      fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
       this.log('Build failure reported');
     } catch (_) {}
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         await this.optimizeBuild();
       24 * 60 * 60 * 1000;
 // Start the monitor if this script is run directly;
@@ -65,22 +61,6 @@ if (require.main === module) {}
 
     process.exit(1);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-});
-};
-module.exports = BuildMonitor;
-=======
-<<<<<<< HEAD=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {
@@ -89,26 +69,7 @@ monitor.start().catch(error => {
 });
 });
 };
-<<<<<<< HEAD
 module.exports = BuildMonitor;
-=======
-<<<<<<< HEAD
-module.exports = BuildMonitor;
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 });
 };
 module.exports = BuildMonitor;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

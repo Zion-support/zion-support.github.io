@@ -745,7 +745,6 @@ export default function MainFrontIndex() {
   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Catalog</h2>
   <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Auto‑discovered features, capabilities, and resources. Kept fresh by in‑repo Node tools.</p>
   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-=======
               <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
   <div className="text-base font-semibold">Automation Hub</div>
   <div className="mt-1 text-sm text-white/75">Live agents & workflows</div>
@@ -810,38 +809,6 @@ export default function MainFrontIndex() {
   <div className="text-base font-semibold">AI Changelog — highlights</div>
   <div className="mt-1 text-sm text-white/75">Summarized updates</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD=======
->>>>>>> origin/automation/git-sync/2025-08-15T06-04-36-803Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T06-17-04-803Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T06-46-12-117Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T06-50-28-159Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T07-02-20-681Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T07-34-43-563Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T08-17-37-407Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T08-19-18-394Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T08-34-06-284Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T08-43-12-067Z
-=======
->>>>>>> origin/automation/git-sync/2025-08-15T09-23-12-795Z
   </div>
 </section>
 /* AUTO:FRONT_INDEX_DIRECTORY_END */}

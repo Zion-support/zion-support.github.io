@@ -1,10 +1,6 @@
 import React from 'react';
 export function TrustedBySection() {
-<<<<<<< HEAD
     const _companies = [
-=======
-    const companies = [
->>>>>>> origin/clean-error-fixing-automation
         'Microsoft', 'Google', 'Amazon', 'Meta', 'Apple', 'Netflix'
     ];
     return (<section className="py-16 bg-white/5">
