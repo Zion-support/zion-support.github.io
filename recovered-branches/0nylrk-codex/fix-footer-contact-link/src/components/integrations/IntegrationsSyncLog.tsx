@@ -1,20 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import { Card } from "@/components/ui/card";
@@ -29,12 +18,6 @@ import { Badge } from "@/components/ui/badge";
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Card } from "@/components/ui/card",
 import {
@@ -47,16 +30,7 @@ import {
 import { Badge } from "@/components/ui/badge",
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -67,24 +41,14 @@ const syncLogs = [
     status: "success"
     timestamp: "2024-05-20T12:30:45Z"
     details: "Successfully synced contact data for Job #1234"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  },
-
 
   }
   },
-=======
 
   },
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "2"
     integration: "Greenhouse"
@@ -92,24 +56,14 @@ const syncLogs = [
     status: "success"
     timestamp: "2024-05-20T10:15:22Z"
     details: "New applicant created in Greenhouse from Zion application"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  },
-
 
   }
   },
-=======
 
   },
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "3"
     integration: "HubSpot"
@@ -117,24 +71,14 @@ const syncLogs = [
     status: "error"
     timestamp: "2024-05-19T16:45:12Z"
     details: "Failed to update deal - API rate limit exceeded"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  },
-
 
   }
   },
-=======
 
   },
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "4"
     integration: "Zoho CRM"
@@ -142,24 +86,14 @@ const syncLogs = [
     status: "warning"
     timestamp: "2024-05-19T14:22:33Z"
     details: "Job synced but some fields were skipped due to mapping issues"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  },
-
 
   }
   },
-=======
 
   },
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   }
   },
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "5"
     integration: "Lever"
@@ -168,16 +102,6 @@ const syncLogs = [
     timestamp: "2024-05-18T09:10:05Z"
     details: "Updated candidate status to 'Interview Scheduled'"
   }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-import {Card} from "@/components/ui/card";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 ],
 
 
@@ -186,12 +110,6 @@ export function IntegrationsSyncLog() {
 
     switch (status) {
       case "success": return <Badge className="bg-green-500">Success</Badge>,
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-];
-],
 
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
@@ -199,39 +117,11 @@ export function IntegrationsSyncLog() {
       case "success": return <Badge className="bg-green-500">Success</Badge>;
     switch (status) {
       case "success": return <Badge className="bg-green-500">Success</Badge>,
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      case "error":
-        return <Badge variant="destructive">Error</Badge>,
-      case "warning":
-        return <Badge className="bg-amber-500">Warning</Badge>
-      default:
-        return <Badge variant="outline">Unknown</Badge>
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-  
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  }
 
   },
   
-<<<<<<< HEAD
-=======
-
   },
   
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
     <Card>
       <div className="p-4">
         <Table>
@@ -256,23 +146,7 @@ export function IntegrationsSyncLog() {
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-    </Card>
-  )
-}
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -283,14 +157,6 @@ import {;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample data for integration sync logs;
 const syncLogs = [;
   {;
@@ -300,79 +166,6 @@ const syncLogs = [;
     status: "success",;
     timestamp: "2024-05-20T12:30:45Z",;
     details: "Successfully synced contact data for Job #1234";
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },;
-=======
-  };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  {;
-    id: "2",;
-    integration: "Greenhouse",;
-    event: "applicant_created",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    status: "success",;
-    timestamp: "2024-05-20T10:15:22Z",;
-    details: "New applicant created in Greenhouse from Zion application";
-  },;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    status: "success", ;
-    timestamp: "2024-05-20T10:15:22Z",;
-    details: "New applicant created in Greenhouse from Zion application";
-  };
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  {;
-    id: "3",;
-    integration: "HubSpot",;
-    event: "deal_updated",;
-    status: "error",;
-    timestamp: "2024-05-19T16:45:12Z",;
-    details: "Failed to update deal - API rate limit exceeded";
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },;
-=======
-  };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  {;
-    id: "4",;
-    integration: "Zoho CRM",;
-    event: "job_synced",;
-    status: "warning",;
-    timestamp: "2024-05-19T14:22:33Z",;
-    details: "Job synced but some fields were skipped due to mapping issues";
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },;
-=======
-  };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  {;
-    id: "5",;
-    integration: "Lever",;
-    event: "candidate_status_changed",;
-    status: "success",;
-    timestamp: "2024-05-18T09:10:05Z",;
-    details: "Updated candidate status to 'Interview Scheduled'";
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -434,96 +227,17 @@ export function IntegrationsSyncLog() {;
       case "success":return <Badge className="bg-green-500">Success</Badge>,;
       case "error":;
         return <Badge variant="destructive">Error</Badge>,;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-];
 
 export function IntegrationsSyncLog() {;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":;
         return <Badge variant="destructive">Error</Badge>;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      case "warning":;
-        return <Badge className="bg-amber-500">Warning</Badge>,;
-      default:;
-        return <Badge variant="outline">Unknown</Badge>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
-  };
-
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
-    <Card>;
-      <div className="p-4">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Integration</TableHead>;
-              <TableHead>Event</TableHead>;
-              <TableHead>Status</TableHead>;
-              <TableHead>Time</TableHead>;
-              <TableHead className="hidden md:table-cell">Details</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {syncLogs && syncLogs.map((log) => (;
-              <TableRow key={log && log.id}>;
-                <TableCell className="font-medium">{log && log.integration}</TableCell>;
-                <TableCell>;
-                  {log && log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l && l.toUpperCase())}
-                </TableCell>;
-                <TableCell>{getStatusBadge(log && log.status)}</TableCell>;
-                <TableCell>{new Date(log && log.timestamp).toLocaleString()}</TableCell>;
-                <TableCell className="hidden md:table-cell">{log && log.details}</TableCell>;
-              </TableRow>;
 
 
 
-<<<<<<< HEAD
-            ))}
-
-<<<<<<< HEAD
-            ))}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            ))}
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          </TableBody>;
-        </Table>;
-      </div>;
-    </Card>;
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -572,7 +286,6 @@ const sync_logs = [;
   }
 ];
 ;
-<<<<<<< HEAD
 export /**
  * IntegrationsSyncLog - Function description
  */
@@ -671,12 +384,6 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 }</TableCell> </TableRow>) ) 
 }</TableBody> </Table> </div> </Card>) 
 }
-<<<<<<< HEAD
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

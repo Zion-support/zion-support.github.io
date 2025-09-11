@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("child_process")
 const path = require("path")
     console.log("� Generating sitemap...")
@@ -33,8 +29,3 @@ Allow: /contact"
 "
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
-<<<<<<< HEAD
-    console.log(" SEO improvement completed!")
-=======
-    console.log(" SEO improvement completed!")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

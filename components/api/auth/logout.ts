@@ -9,45 +9,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-<<<<<<< HEAD
-const cookie = clearSessionCookie();
-  res && res.setHeader('Set-Cookie', cookie);
-  res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const cookie = clearSessionCookie();
-  res.setHeader('Set-Cookie', cookie);
-
   res.status(200).json({ ok: true })
 
 
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+==============
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { clearSessionCookie } from '../../../utils / auth - utils';
+=======import { clearSessionCookie } from '../../../utils / auth - utils';
 ;
 export default /**
  * handler - Function description
@@ -64,9 +38,6 @@ function handler() {
   res.status (200).json ({ ok: true });
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 import { clearSessionCookie } from '../../../utils/auth-utils';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -83,9 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+==============
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

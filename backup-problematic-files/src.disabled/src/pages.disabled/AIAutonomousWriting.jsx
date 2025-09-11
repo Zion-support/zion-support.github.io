@@ -9,8 +9,4 @@ const AIAutonomousWriting = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousWriting;
-=======
-export default AIAutonomousWriting;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const AdminLayout.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AdminLayout.js;
-=======
-export default AdminLayout.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

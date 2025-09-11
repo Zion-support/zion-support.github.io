@@ -17,12 +17,6 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-<<<<<<< HEAD
-      isFallback: false
-    };
-  },
-}));
-
 // Mock Next.js Image component
 jest.mock("next/image", () => ({
   __esModule: true,
@@ -51,12 +45,9 @@ jest.mock('next/image', () => ({
 }));
 
 :backup-problematic-files/jest.setup.js
-=======
         emit: jest.fn()
       },
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     };
   },
 }));
@@ -67,9 +58,6 @@ jest.mock("next/image", () => {
     return <img src={src} alt={alt} {...props} />;
   };
 });
-<<<<<<< HEAD
-:jest.setup.js
-
 // Mock Next.js Link component
 jest.mock("next/link", () => {
   return function MockedLink({ children, href, ...props }) {
@@ -81,28 +69,17 @@ jest.mock("next/link", () => {
   };
 });
 main:jest.setup.js
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
-<<<<<<< HEAD
-:backup-problematic-files/jest.setup.js
-    return <a href={href} {...props}>{children}</a>
-  }
-
   },
 main:jest.setup.js
-=======
 
 
   },
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }));
 
 // Mock window.matchMedia
@@ -136,7 +113,6 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
-<<<<<<< HEAD
 // Global test setup
 beforeEach(() => {
   jest.clearAllMocks();
@@ -144,6 +120,3 @@ beforeEach(() => {
 };
 };
 :backup-problematic-files/jest.setup.js
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

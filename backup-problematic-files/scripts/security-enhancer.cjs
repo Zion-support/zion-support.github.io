@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-    this.reportFile = path.join(__dirname, '../logs/security-enhancement-report.json')
-    console.log('� Enhancing security...')
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
-        const content = fs.readFileSync(file, 'utf8')
-    if (content.includes('eval(')
-      issues.push('Use of eval() - potential security risk'
-    if (content.includes('innerHTML')
-      issues.push('Use of innerHTML - consider using textContent for security')
-    if (content.includes('document.write')
-      issues.push('Use of document.write - potential XSS risk')
-    if (content.includes('localStorage.setItem')
-      issues.push('Use of localStorage - ensure sensitive data is not stored')
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
-      // Skip directories that can'
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
 class SecurityEnhancer {
   constructor() {
     this.securityChecks = [];
@@ -135,7 +109,3 @@ class SecurityEnhancer {
 
 const enhancer = new SecurityEnhancer();
 enhancer.generateReport();
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

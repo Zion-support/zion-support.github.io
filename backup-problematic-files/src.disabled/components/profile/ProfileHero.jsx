@@ -59,8 +59,4 @@ export default function ProfileHero({ }: ProfileHeroProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default ProfileHero;
-=======
-export default ProfileHero;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

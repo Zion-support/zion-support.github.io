@@ -9,8 +9,4 @@ const AIChatbot.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIChatbot.js;
-=======
-export default AIChatbot.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

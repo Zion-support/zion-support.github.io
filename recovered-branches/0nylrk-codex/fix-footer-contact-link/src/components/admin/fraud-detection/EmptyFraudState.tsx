@@ -1,28 +1,13 @@
 
-<<<<<<< HEAD
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { ShieldAlert  } from './lucide-react';
-interface EmptyFraudStateProps {
-  has_filters: boolean;
-<<<<<<< HEAD
-
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React from "react",
+=======import React from "react",
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 interface EmptyFraudStateProps {
-<<<<<<< HEAD
-  hasFilters: boolean;
-  onResetFilters: () => void
-}
-
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
@@ -31,8 +16,6 @@ import { ShieldAlert } from "lucide-react",
 =======
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
   has_filters: boolean;
 =======
@@ -58,10 +41,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
 );
@@ -81,40 +60,12 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>;
 );
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+=======        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from "lucide-react",;
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  onResetFilters: () => void;
-}
-export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
-  has_filters,
-  onResetFilters,
-<<<<<<< HEAD
-}) => {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}) => {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
-  hasFilters,;
-  onResetFilters,;
-}) => {;
-<<<<<<< HEAD
-  return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return (
-
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="text - center py - 12">;
       <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
@@ -131,11 +82,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
     </div>);
 }
 ;
-
-<<<<<<< HEAD
-
-};
-<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -176,11 +122,7 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
 
   );
 };
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 =======
 
 

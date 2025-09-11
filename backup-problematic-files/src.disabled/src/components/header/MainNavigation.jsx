@@ -9,8 +9,4 @@ const MainNavigation = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default MainNavigation;
-=======
-export default MainNavigation;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const QuantumEdgeComputingPlatform = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default QuantumEdgeComputingPlatform;
-=======
-export default QuantumEdgeComputingPlatform;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

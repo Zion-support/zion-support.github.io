@@ -9,8 +9,4 @@ const Consulting = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Consulting;
-=======
-export default Consulting;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

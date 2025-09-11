@@ -1,7 +1,6 @@
 
 import React from 'react';
 
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Profile.tsx
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -85,4 +84,3 @@ export default function Profile() {
       <Footer />
 
 
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Profile.tsx

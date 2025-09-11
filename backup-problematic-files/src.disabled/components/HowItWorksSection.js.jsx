@@ -9,8 +9,4 @@ const HowItWorksSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default HowItWorksSection.js;
-=======
-export default HowItWorksSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

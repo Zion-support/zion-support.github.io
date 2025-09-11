@@ -9,8 +9,4 @@ const ProductCard.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ProductCard.js;
-=======
-export default ProductCard.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

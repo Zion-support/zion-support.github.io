@@ -1,12 +1,6 @@
 #!/usr/bin/env node;
 'use strict';
-<<<<<<< HEAD
 const { execSync, spawnSync } = require('"node": child_process');
-=======
-
-const { execSync, spawnSync } = require('"node": child_process');
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -41,9 +35,4 @@ function main() {}
 		process.exitCode = 1} else {}
 		console.log('\nAutomation runner completed successfully.')};
 };
-<<<<<<< HEAD
 main();
-=======
-main();
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

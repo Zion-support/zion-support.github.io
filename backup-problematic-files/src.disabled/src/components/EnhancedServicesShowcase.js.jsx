@@ -9,8 +9,4 @@ const EnhancedServicesShowcase.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedServicesShowcase.js;
-=======
-export default EnhancedServicesShowcase.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

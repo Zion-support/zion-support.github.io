@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 "use client";
 import { useState } from "react";
 interface MicroSAASService {id: string;
@@ -291,9 +285,7 @@ const microSAASServices: MicroSAASService[] = [;
     deployment: "Enterprise cloud with compliance features";
   }
 ];
-export default function MicroSAASPage() {return (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
+export default function MicroSAASPage() {return (;"use client",;
 import { useState } from "react",;
 interface MicroSAASService {;
   id: string,;
@@ -590,17 +582,9 @@ const microSAASServices: MicroSAASService[] = [;
 ],;
 export default function MicroSAASPage() {;
   return (;
-<<<<<<< HEAD
 
     <div className="space-y-8">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
     <div className="space-y-8">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import { useState  } from './react';,
 interface MicroSAASService {
@@ -615,7 +599,6 @@ interface MicroSAASService {
   icon: string,
   benefits: string[],
   integrations: string[],
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface MicroSAASService {id: string;
@@ -910,12 +893,6 @@ const microSAASServices: MicroSAASService[] = [;
   }
 ];
 export default function MicroSAASPage() {return (;
-=======
-=======
-];
-export default function MicroSAASPage() {return (;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import { useState } from "react",;
 interface MicroSAASService {;

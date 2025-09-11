@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD:automation/backups/20250819_182504/functions/functions-manifest.json
   "generatedAt": "2025-08-15T04:23:45.590Z",
-=======
-  "generatedAt": "2025-08-11T23:58:18.084Z",
->>>>>>> origin/chore/gh-actions-autonomous-docs-topics:netlify/functions/functions-manifest.json
   "functions": [
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
@@ -95,10 +91,7 @@
     "stale-content-auditor-runner",
     "todo-scanner-runner",
     "todo-summary-runner",
-<<<<<<< HEAD:automation/backups/20250819_182504/functions/functions-manifest.json
     "topic-cluster-builder-runner",
-=======
->>>>>>> origin/chore/gh-actions-autonomous-docs-topics:netlify/functions/functions-manifest.json
     "topics-map-runner",
     "trigger-all-and-commit",
     "ui-enhancer",

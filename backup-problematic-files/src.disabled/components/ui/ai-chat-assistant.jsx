@@ -59,8 +59,4 @@ export default function Aichatassistant({ }: AichatassistantProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default Ai-chat-assistant;
-=======
-export default Ai-chat-assistant;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const MetaTags = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default MetaTags;
-=======
-export default MetaTags;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

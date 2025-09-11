@@ -9,8 +9,4 @@ const MicroSaasServicesPage = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default MicroSaasServicesPage;
-=======
-export default MicroSaasServicesPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

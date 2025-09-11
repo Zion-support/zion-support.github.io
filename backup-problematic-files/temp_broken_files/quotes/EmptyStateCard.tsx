@@ -45,15 +45,5 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({;
   const isActive = type === 'active';
 bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent> <div className=" mx-auto w-16 h-16 bg-zion-blue-light opacity-60 rounded-full flex items-center justify-center mb-4">{";"  isActive ? (<MessageSquare className=" h-8 w-8 text-white"/>) : (<ArchiveIcon className=" h-8 w-8 text-white" />) ;
 }</div> </p> </CardContent> </Card>) ;
-<<<<<<< HEAD
-:temp_broken_files/quotes/EmptyStateCard.tsx
-};"'"
 };
 '"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/EmptyStateCard.tsx
-=======
-
-};
-'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

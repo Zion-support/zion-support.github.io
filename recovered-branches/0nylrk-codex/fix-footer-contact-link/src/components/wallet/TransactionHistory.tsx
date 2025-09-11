@@ -9,9 +9,6 @@ import {formatDistanceToNow} from "date-fns";
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   if (loading) {
     return (
 
@@ -29,9 +26,7 @@ export function TransactionHistory() {;
   if (loading) {;
     return (;
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  if (loading) {;
+=======  if (loading) {;
 
 =======
 
@@ -39,32 +34,6 @@ export function TransactionHistory() {;
   if (loading) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Transaction History</CardTitle>;
-          <CardDescription>Loading transactions...</CardDescription>;
-        </CardHeader>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { Badge } from "@/components/ui/badge";
-import { formatDistanceToNow } from "date-fns";
-export function TransactionHistory() {
-  const { transactions, loading } = useWallet();
-import { Badge } from "@/components/ui/badge",
-import { formatDistanceToNow } from "date-fns",
-export function TransactionHistory() {
-  const { transactions, loading } = useWallet(),
-
   if (loading) {
     return (
       <Card>
@@ -84,8 +53,6 @@ export function TransactionHistory() {
 
   const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
   const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   return (
     <Card>
       <CardHeader>
@@ -116,19 +83,12 @@ export function TransactionHistory() {
                         +{tx.amount} ZION$
                       </Badge>
                     </div>
-<<<<<<< HEAD
-=======
-    );
-  }
-
   const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
   const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
 
   return (
 
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
@@ -154,14 +114,8 @@ export function TransactionHistory() {;
   const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
   const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardHeader>;
         <CardTitle>Transaction History</CardTitle>;
@@ -175,45 +129,7 @@ export function TransactionHistory() {;
           </TabsList>;
           <TabsContent value="earned">;
             <ScrollArea className="h-64">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              {earnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
-              ) : (;
-                <div className="space-y-2 mt-2">;
-                  {earnTransactions.map(tx => (;
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">;
-                      <div>;
-                        <p className="font-medium">{tx.reason || "Token reward"}</p>;
-                        <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg-green-100 text-green-800">;
-                        +{tx.amount} ZION$;
-                      </Badge>;
-                    </div>;
-=======
-              {earnTransactions && earnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
-              ) : (;
-                <div className="space-y-2 mt-2">;
-                  {earnTransactions && earnTransactions.map(tx => (;
-                    <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;
-                      <div>;
-                        <p className="font-medium">{tx && tx.reason || "Token reward"}</p>;
-                        <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx && tx.created_at), { addSuffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg-green-100 text-green-800">;
-                        +{tx && tx.amount} ZION$;
-                      </Badge>;
-                    </div>;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
                 </div>
@@ -247,9 +163,6 @@ export function TransactionHistory() {;
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-
-
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -297,9 +210,7 @@ export function TransactionHistory() {;
                   ))}
               {earnTransactions.length === 0 ? (;
 =======
-              {earnTransactions && earnTransactions.length === 0 ? (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
+              {earnTransactions && earnTransactions.length === 0 ? (;                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
               ) :(;
                 <div className="space-y-2 mt-2">;
                   {earnTransactions.map(tx => (;
@@ -442,10 +353,6 @@ return (<Card> <CardHeader> <CardTitle>Transaction History</CardTitle> <CardDesc
 }</ScrollArea> </TabsContent> </Tabs> </CardContent> </Card>) 
 }
 }
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

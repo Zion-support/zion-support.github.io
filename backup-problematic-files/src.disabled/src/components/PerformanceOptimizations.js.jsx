@@ -9,8 +9,4 @@ const PerformanceOptimizations.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default PerformanceOptimizations.js;
-=======
-export default PerformanceOptimizations.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

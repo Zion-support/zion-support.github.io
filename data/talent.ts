@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-// Stub talent data - placeholder for missing functionality;
-export const TALENT_PROFILES = [;
-
+// Stub talent data - placeholder for missing functionality
+export const TALENT_PROFILES = [
+  {
+=======
   {
 
 
@@ -43,6 +43,7 @@ export const TALENT_PROFILES = [
 translations: {}
 export const TALENT_PROFILES = [
   {
+>>>>>>> main
     id: '1',
     slug: 'sample-talent',
     name: 'Sample Talent',
@@ -51,7 +52,10 @@ export const TALENT_PROFILES = [
     location: 'Remote',
     timezone: 'UTC',
     region: 'Global',
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
     skills: ['React', 'Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -66,6 +70,11 @@ export const TALENT_PROFILES = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
+<<<<<<< HEAD
+    translations: {}
+  }
+];
+=======
 translations: {},
   },;
 ];
@@ -98,10 +107,6 @@ export const TALENT_PROFILES = [;
   }
 ];
 
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 // Stub talent data - placeholder for missing functionality;
 export const TALENT_PROFILES = [;
 
@@ -124,19 +129,4 @@ export const TALENT_PROFILES = [;
     createdAt: new Date().toISOString(), originalLanguage: 'en',
     translations: {}
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> main

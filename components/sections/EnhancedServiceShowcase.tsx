@@ -1,75 +1,29 @@
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-interface Service {
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Shield,
-  Rocket,
-  Brain,
-  Globe,
-  Lock,
-  Code,
-  Database,
-  Cloud,
-import Button from '../ui / Button';
-interface Service {
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, ExternalLink, Star, Users, TrendingUp, 
+  Shield, Zap, Brain, Rocket, Dna, Globe, Cpu,
+  CheckCircle, Clock, DollarSign, Target
+} from 'lucide-react';
+import { innovativeAIServices } from '../../data/innovative-ai-services';
+import { quantumSpaceServices } from '../../data/quantum-space-services';
+import { enterpriseITServices } from '../../data/enterprise-it-services';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { nextGenerationAIServices } from '../../data/next-generation-ai-services';
+import { emergingTechnologyServices } from '../../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../../data/comprehensive-it-solutions';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { newRealInnovations } from '../../data/new-real-innovations';
+import { realMarketServices } from '../../data/real-market-services';
+import { realOperationalServices } from '../../data/real-operational-services';
+import { realVerifiedServices } from '../../data/real-verified-services';
+=======
+>>>>>>> main
 
 
 interface Service {
 =======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import {;
-  Star,;
-  Users,;
-  TrendingUp,;
-  DollarSign,;
-  Clock,;
-  CheckCircle,;
-  ArrowRight,;
-  Zap,;
-  Shield,;
-  Rocket,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Code,;
-  Database,;
-  Cloud,;
-
 
 
 import Button from '../ui/Button';
@@ -100,38 +54,15 @@ interface Service {;
   market_size: string;
   growth_rate: string;
   variant: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   contact_info: {
 =======
 
   contact_info: {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-  contact_info: {
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     mobile: string;
     email: string;
     address: string;
     website: string;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-;
-interface EnhancedServiceShowcaseProps {
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -143,25 +74,7 @@ interface EnhancedServiceShowcaseProps {
 ;
 interface EnhancedServiceShowcaseProps {
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  title: string;
-  subtitle: string;
-  show_filters?: boolean;
-  services?: Service[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { 
+=======import { 
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket;
   Brain, Globe, Lock, Code, Database, Cloud
@@ -216,26 +129,13 @@ interface EnhancedServiceShowcaseProps {
 }
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   subtitle;
   showFilters = false;
   services = []
   maxServices = 12
-<<<<<<< HEAD
-<<<<<<< HEAD
 }) => {
-=======
-
-}) => {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 }) => {
@@ -245,13 +145,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
   const categories = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
 
 =======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
@@ -272,31 +166,16 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
   const [sort_by, setSortBy] = useState < string>('popular');
 ;
   const categories = [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { id: 'all', name: 'All Services', icon: '🚀' },
     { id: 'ai', name: 'AI & ML', icon: '🧠' },
     { id: 'quantum', name: 'Quantum', icon: '⚛️' },
     { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  ];
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  ];
+=======  ];
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { id: 'all', name: 'All Prices' },
@@ -304,39 +183,9 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
     { id: 'medium', name: '$1K - $5K/month' },
     { id: 'high', name: '$5K - $20K/month' },
     { id: 'premium', name: '$20K+/month' }
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-  const sortOptions = [
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
   ];
   const sortOptions = [
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    { id: 'popular', name: 'Most Popular' },
-    { id: 'rating', name: 'Highest Rated' },
-    { id: 'roi', name: 'Best ROI' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' }
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-=======
-  ];
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  ];
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const filteredServices = useMemo(() => {
     const filtered = services.filter(service => {
       const matchesCategory = selectedCategory === 'all' |
@@ -362,14 +211,8 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
         break;
       case 'roi':
         filtered.sort((a, b) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
   title,;
   subtitle,;
@@ -587,14 +430,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       default:;
         break;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
           return bROI - aROI
@@ -604,45 +441,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 ;
   const stats = [;
     {
-<<<<<<< HEAD
-      label: 'Total Services',
-      value: services.length,
-      icon: Rocket,
-      color: 'text - blue - 400',
-    },
-    {
-      label: 'Active Customers',
-      value: services.reduce ((sum, s) => sum + (s.customers || 0), 0),
-      icon: Users,
-      color: 'text - green - 400',
-    },
-    {
-      label: 'Average Rating',
-      value: (
-        services.reduce ((sum, s) => sum + (s.rating || 0), 0) / services.length).to_fixed (1),
-      icon: Star,
-      color: 'text - yellow - 400',
-    },
-    {
-      label: 'Market Growth',
-      value: '300%+',
-      icon: TrendingUp,
-      color: 'text - purple - 400',
-    },
-  ];
-;
-  return (
-    <section className='py - 20 px - 4 sm:px - 6 lg:px - 8'>;
-      <div className='max - w-7xl mx - auto'>;
-        {/* Header */}
-        <div className='text - center mb - 16'>          <motion.h2;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text - 4xl md:text - 5xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'          >        });
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         break;
       case 'price - low':;
@@ -651,16 +449,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       case 'price - high':;
         filtered.sort ((a, b) => parse_float (b.price.replace (/[$]/g, '')) - parse_float (a.price.replace (/[$]/g, '')));
         break;
-<<<<<<< HEAD
-    return filtered && filtered.slice(0, maxServices);
-  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
-=======
-
 
     return filtered && filtered.slice(0, maxServices);
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const stats = [;
     {;
       label: 'Total Services',;
@@ -687,12 +478,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       value: '300%+',;
       icon: TrendingUp,;
       color: 'text-purple-400',;
-    },;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  ];
+    },;  ];
   ];
 
 
@@ -715,35 +501,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         break;
       default: break;
     }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return filtered && filtered.slice(0, maxServices);
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
   const stats = [;
     { label: 'Total Services', value: services && services.length, icon: Rocket, color: 'text-blue-400' },;
     { label: 'Active Customers', value: services && services.reduce((sum, s) => sum + (s && s.customers || 0), 0), icon: Users, color: 'text-green-400' },;
-    { label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + (s && s.rating || 0), 0) / services && services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
+    { label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + (s && s.rating || 0), 0) / services && services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },;    { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
   ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
-<<<<<<< HEAD
-        <div className="text-center mb-16">
-                             (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
-                             (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-                             (selectedCategory === 'blockchain' && (service.category.includes('Blockchain') || service.category.includes('DeFi') || service.category.includes('NFT'))) ||
-                             (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-                             (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech'))),
-
       const matchesPrice = selectedPriceRange === 'all' ||
                           (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 1000) ||
                           (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
@@ -995,9 +763,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
   const stats = [
     {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      label: 'Total Services'
+=======      label: 'Total Services'
       value: services.length
       icon: Rocket
       color: 'text-blue-400'
@@ -1026,44 +792,218 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
   return (
 <<<<<<< HEAD
-    <section className='py-20 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-cyan-900/5" />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className='text-center mb-16'>          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'          >        });
-        break;
-      case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
-        break;
-      case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
-        break;
-      default: break
-    }
-    return filtered.slice(0, maxServices)
-  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
-  const stats = [
-    { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' }
-    { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers |0), 0), icon: Users, color: 'text-green-400' }
-    { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating |0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' }
-    { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
-  ];
-  return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-=======
-    <section className='py - 20 px - 4 sm:px - 6 lg:px - 8'>;
-      <div className='max - w-7xl mx - auto'>;
-        {/* Header */}
-        <div className='text - center mb - 16'>          <motion.h2;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text - 4xl md:text - 5xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'          >        });
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              {title}
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            {subtitle}
+          </p>
+        </motion.div>
 
+        {/* Featured Services */}
+        {featuredServices.length > 0 && (
+          <div className="mb-20">
+            <motion.h3
+              className="text-2xl font-bold text-white mb-8 text-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                ⭐ Featured Services
+              </span>
+            </motion.h3>
+            
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {featuredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  className="relative group cursor-pointer"
+                  variants={itemVariants}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {/* Glow Effect */}
+                  <div className={`absolute -inset-1 rounded-2xl bg-gradient-to-r ${service.color} opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75`} />
+                  
+                  {/* Service Card */}
+                  <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden">
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                      <div className={`absolute inset-0 bg-gradient-to-r ${service.color.replace('from-', 'from-').replace('to-', 'to-')}/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    </div>
+
+                    {/* Popular Badge */}
+                    {service.popular && (
+                      <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                        <Star className="w-3 h-3 inline mr-1" />
+                        POPULAR
+                      </div>
+                    )}
+
+                    {/* Service Header */}
+                    <div className="relative z-10">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex items-center space-x-3">
+                          <div className={`text-4xl ${service.textColor}`}>
+                            {service.icon}
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                              {service.name}
+                            </h3>
+                            <p className="text-gray-400 text-sm">{service.tagline}</p>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-white">{service.price}</div>
+                          <div className="text-gray-400 text-sm">{service.period}</div>
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        {service.description}
+                      </p>
+
+                      {/* Stats Grid */}
+                      <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="flex items-center space-x-2 text-sm">
+                          <Users className="w-4 h-4 text-cyan-400" />
+                          <span className="text-gray-300">{service.customers}+ users</span>
+                        </div>
+                        <div className="flex items-center space-x-2 text-sm">
+                          <Star className="w-4 h-4 text-yellow-400" />
+                          <span className="text-gray-300">{service.rating}/5 ({service.reviews})</span>
+                        </div>
+                        <div className="flex items-center space-x-2 text-sm">
+                          <TrendingUp className="w-4 h-4 text-green-400" />
+                          <span className="text-gray-300">{service.growthRate}</span>
+                        </div>
+                        <div className="flex items-center space-x-2 text-sm">
+                          <Shield className="w-4 h-4 text-blue-400" />
+                          <span className="text-gray-300">{service.trialDays} day trial</span>
+                        </div>
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="flex space-x-3 mt-6">
+                        <Link
+                          href={service.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group/btn"
+                        >
+                          <span>Get Started</span>
+                          <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                        </Link>
+                        <button className="px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5">
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Floating Particles */}
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                      <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }} />
+                      <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }} />
+                      <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }} />
+                      <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }} />
+                      <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }} />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        )}
+
+        {/* Regular Services Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {regularServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              className="relative group cursor-pointer"
+              variants={itemVariants}
+              whileHover={{ y: -3, scale: 1.01 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Service Card */}
+              <div className="relative bg-black/60 backdrop-blur-xl border border-white/10 rounded-xl p-4 overflow-hidden hover:border-cyan-400/30 transition-all duration-300">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 rounded-xl overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color.replace('from-', 'from-').replace('to-', 'to-')}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                </div>
+
+                {/* Service Content */}
+                <div className="relative z-10">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className={`text-2xl ${service.textColor}`}>
+                      {service.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                        {service.name}
+                      </h4>
+                      <p className="text-gray-400 text-sm">{service.tagline}</p>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-300 text-sm mb-3 line-clamp-2">
+                    {service.description}
+                  </p>
+
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold text-white">{service.price}</div>
+                    <Link
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Service Statistics */}
+        {showStats && (
+          <motion.div
+            className="mt-20 text-center"
+            initial={{ opacity: 0, y: 20 }}
+=======
         break;
       case 'price - low':;
         filtered.sort ((a, b) => parse_float (a.price.replace (/[$]/g, '')) - parse_float (b.price.replace (/[$]/g, '')));
@@ -1109,8 +1049,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   ];
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
@@ -1142,17 +1080,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        {/* Header */}
+      <div className="max-w-7xl mx-auto">;        {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
+>>>>>>> main
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-
 
 
 
@@ -1162,8 +1096,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
             {title}
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
             {subtitle}
 
@@ -1171,36 +1103,22 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-            className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
-          >
-
 
 =======
 
 
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
             {subtitle}
 
           </motion && motion.p>;
 
 
 =======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
@@ -1216,59 +1134,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           </motion.p>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-          >
-            {subtitle}
-          </motion && motion.p>;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          {/* Stats */}
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          >
-            {stats.map((stat, index) => (
-=======
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
           >
             {stats.map((stat, index) => (
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          </motion.h2>
+=======          </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-          >
-            {subtitle}
-          </motion.p>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
-
           >
 
             {subtitle}
@@ -1299,34 +1175,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
-<<<<<<< HEAD
-
-          </motion && motion.div>;
-        </div>;
-
 
 =======
             ))}
           </motion.div>
         </div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
             ))}
           </motion.div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ))}
-          </motion.div>
-        </div>
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1336,18 +1195,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             transition={{ duration: 0.8, delay: 0.6 }}
             className='mb-12'
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+==============
             transition={{ duration: 0.8, delay: 0.6 }}
             className='mb-12'
 
@@ -1358,80 +1211,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                {/* Category Filter */}
-                <div>
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>
-                    Category
-                  </label>
-                  <select
-                    value={selectedCategory}
-<<<<<<< HEAD
-
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-12"
           >
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    onChange={e => setSelectedCategory(e.target.value)}
-                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                  >
-                    {categories.map(category => (                      <option key={category.id} value={category.id}>          >
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                {/* Category Filter */}
-                <div>;
-                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
-                  <select
-                    value={selectedCategory}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-                        {category.icon} {category.name}
-                      </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                    ))}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  </select>;
-                </div>;
-
-
-<<<<<<< HEAD
-
-
-
-                {/* Price Range Filter */}
-
-
-=======
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Price Range Filter */}
 
 
@@ -1443,16 +1228,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 </div>;
 
 
-<<<<<<< HEAD
-
-
 
 =======
 =======
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Sort Options */}
@@ -1460,26 +1240,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                         {option.name}
                       </option>
-<<<<<<< HEAD
-                    ))}
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    onChange={(e) => setSelectedCategory(e.target.value)}
+=======                    onChange={(e) => setSelectedCategory(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
                     {categories.map(category => (                      <option key={category.id} value={category.id}>
 
-<<<<<<< HEAD
-                      <option key={category.id} value={category.id}>
-
                         {category.icon} {category.name}
                       </option>
 =======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                         {category.icon} {category.name}
                       </option>
@@ -1489,123 +1259,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   </select>
                 </div>
 
-<<<<<<< HEAD
-                {/* Price Range Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Price Range">Price Range</label>
-                  <select
-      default: break;
-    }
-    return filtered.slice (0, max_services);
-  }, [services, selected_category, selectedPriceRange, sort_by, max_services]);
-;
-  const stats = [;
-    { label: 'Total Services', value: services.length, icon: Rocket, color: 'text - blue - 400' },
-    { label: 'Active Customers', value: services.reduce ((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text - green - 400' },
-    { label: 'Average Rating', value: (services.reduce ((sum, s) => sum + (s.rating || 0), 0) / services.length).to_fixed (1), icon: Star, color: 'text - yellow - 400' },
-    { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text - purple - 400' }
-  ];
-;
-  return (
-    <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-7xl mx - auto">;
-        {/* Header */}
-        <div className="text - center mb - 16">;
-          <motion.h2;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text - 4xl md:text - 5xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'            className="text - 4xl md:text - 5xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6";
-          >;
-            {title}
-          </motion.h2>;
-          <motion.p;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'          >            className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto";
-          >;
-            {subtitle}
-          </motion.p>;
-          {/* Stats */}
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto';
-          >;
-            {stats.map ((stat, index) => (
-              <div key={index} className='text - center'>;
-                <div className={`${stat.color} mb - 2 flex justify - center`}>;
-                  <stat.icon className='w - 8 h - 8' />;
-                </div>;
-                <div className='text - 2xl font - bold text - white'>;
-                  {stat.value}
-                </div>;
-                <div className='text - sm text - gray - 400'>{stat.label}</div>              </div>          >;
-            {stats.map ((stat, index) => (
-              <div key={index} className="text - center">;
-                <div className={`${stat.color} mb - 2 flex justify - center`}>;
-                  <stat.icon className="w - 8 h - 8" />;
-                </div>;
-                <div className="text - 2xl font - bold text - white">{stat.value}</div>;
-                <div className="text - sm text - gray - 400">{stat.label}</div>;
-              </div>))}
-          </motion.div>;
-        </div>;
-        {/* Filters */}
-        {show_filters && (
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className='mb - 12';
-          >;
-            <div className='bg - gray - 900 / 50 backdrop - blur - sm rounded - 2xl p - 6 border border - gray - 700 / 50'>;
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
-                {/* Category Filter */}
-                <div>;
-                  <label className='block text - sm font - medium text - gray - 300 mb - 3'>;
-                    Category;
-                  </label>;
-                  <select;
-                    value={selected_category}
-                    on_change={e => setSelectedCategory (e.target.value)}
-                    className='w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
-                  >;
-                    {categories.map (category => (                      <option key={category.id} value={category.id}>          >;
-            <div className="bg - gray - 900 / 50 backdrop - blur - sm rounded - 2xl p - 6 border border - gray - 700 / 50">;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-                {/* Category Filter */}
-                <div>;
-                  <label className="block text - sm font - medium text - gray - 300 mb - 3" html_for="input - Category">Category</label>;
-                  <select;
-                    value={selected_category}
-                    on_change={(e) => setSelectedCategory (e.target.value)}
-                    className="w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
-                  >;
-                    {categories.map ((category) => (
-                      <option key={category.id} value={category.id}>;
-                        {category.icon} {category.name}
-                      </option>))}
-                  </select>;
-                </div>;
-                {/* Price Range Filter */}
-                <div>;
-                  <label className='block text - sm font - medium text - gray - 300 mb - 3'>;
-                    Price Range;
-                  </label>;
-                  <select;
-=======
-                  </select>;
-                </div>;
-
 
 =======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -1626,12 +1283,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <option key={range.id} value={range.id}>
                     {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
-<<<<<<< HEAD
-                      <option key={range.id} value={range.id}>
-
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {range.name}
                       </option>
@@ -1639,20 +1291,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   </select>
                 </div>
 
-<<<<<<< HEAD
-                {/* Sort Options */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Sort By">Sort By</label>
-=======
-                  </select>;
-                </div>;
-
 
 =======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Sort Options */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -1673,15 +1315,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <option key={option.id} value={option.id}>
                     {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
 
-<<<<<<< HEAD
-                      <option key={option.id} value={option.id}>
-
                         {option.name}
                       </option>
                     ))}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -1715,68 +1352,32 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         {option.name}
                       </option>))}
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  </select>;
-                </div>;
-              </div>;
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
                   </select>
                 </div>
               </div>
             </div>
           </motion.div>
         )}
-
 <<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
+      </div>
+    </section>
+=======
 
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
-
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                  </select>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
 
         {/* Services Grid */}
         <motion.div
 =======
         {/* Services Grid */}
-        <motion&& motion.div
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          initial={{ opacity: 0, y: 30 }}
+        <motion&& motion.div          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -1796,13 +1397,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-
-=======
-                whileHover={{ y: -5, scale: 1.02 }}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                className='group'
-
 
 
 
@@ -1811,12 +1405,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   {/* Popular Badge */}
                   {service.popular && (
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
                       ⭐ Most Popular
 
@@ -1846,235 +1434,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <div className='text - 3xl'>{service.icon}</div>;
                       <div className='text - right'>;
                         <div className='text - 2xl font - bold text - white'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-                className='group'
-
-              >
-                <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular              >
-                <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      ⭐ Most Popular
-                    </div>
-                  )}
-                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
-
-                      ⭐ Most Popular
-
-                    </div>
-                  )}
-
-                  {/* Header */}
-                  <div className='mb-6'>
-                    <div className='flex items-center justify-between mb-4'>
-                      <div className='text-3xl'>{service.icon}</div>
-                      <div className='text-right'>
-                        <div className='text-2xl font-bold text-white'>
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                          {service.price}
-                        </div>;
-                        <div className='text - sm text - gray - 400'>;
-                          {service.period}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        </div>
-
-                      </div>
-                    </div>
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
-                      {service.name}
-                    </h3>
-                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}                      </div>
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-                  <div className="mb-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-3xl">{service.icon}</div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-white">{service.price}</div>
-                        <div className="text-sm text-gray-400">{service.period}</div>
-                      </div>
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    </h3>;
-                    <p className='text - gray - 300 text - sm leading - relaxed'>                      {service.tagline}                      </div>;
-                    </div>;
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
-                      {service.name}
-                    </h3>;
-                    <p className="text - gray - 300 text - sm leading - relaxed">;
-                      {service.tagline}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-                  <div className='mb-6'>;
-                    <div className='flex items-center justify-between mb-4'>;
-                      <div className='text-3xl'>{service && service.icon}</div>;
-                      <div className='text-right'>;
-                        <div className='text-2xl font-bold text-white'>;
-                          {service && service.price}
-                        </div>;
-                        <div className='text-sm text-gray-400'>;
-                          {service && service.period}
-                        </div>;
-                      </div>;
-                    </div>;
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
-                      {service && service.name}
-                    </h3>;
-                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service && service.tagline}                      </div>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
-                      {service && service.name}
-                    </h3>;
-                    <p className="text-gray-300 text-sm leading-relaxed">;
-                      {service && service.tagline}
-                    </p>;
-                  </div>;
-
-
-                  {/* Features */}
-
-                        </div>
-<<<<<<< HEAD
-
-=======
-                        <div className='text-sm text-gray-400'>
-                          {service.period}
-                        </div>
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-
-                      </div>
-                    </div>
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
-                      {service.name}
-                    </h3>
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
-                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                      {service.name}
-                    </h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      {service.tagline}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
-
-                      {service.tagline}
-
-
-<<<<<<< HEAD
-=======
-                    </p>
-                  </div>
-                  {/* Features */}
-                  <div className='mb-6'>
-                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
-                      <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                      Key Features
-                    </h4>
-                    <ul className='space-y-2'>
-                      {service.features.slice(0, 4).map((feature, idx) => (
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                        <li
-                          key={idx}
-                          className='text-sm text-gray-400 flex items-start'>;
-                          <span className='text-cyan-400 mr-2'>•</span>                          {feature}                      Key Features;
-                    </h4>;
-                    <ul className="space-y-2">;
-                      {service && service.features.slice(0, 4).map((feature, idx) => (;
-                        <li key={idx} className="text-sm text-gray-400 flex items-start">;
-                          <span className="text-cyan-400 mr-2">•</span>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  {/* Features */}
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-=======
-=======
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
-
-                      {service.tagline}
-
-                    </p>
-                  </div>
-                  {/* Features */}
-                  <div className='mb-6'>
-                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
-                      <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
-
-                      Key Features
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {feature}
                         </li>;
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                          {feature}
-                        </li>;
-                      ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
 
                   {/* Stats */}
@@ -2082,121 +1446,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
-                  {/* Stats */}
-                  <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
-
-<<<<<<< HEAD
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    <div>
-                      <div className='text-lg font-bold text-white'>
-                        {service.rating}
-                      </div>
-                      <div className='text-xs text-gray-400'>Rating</div>
-                    </div>
-                    <div>
-                      <div className='text-lg font-bold text-white'>
-                        {service.customers?.toLocaleString() |'0'}
-                      </div>
-                      <div className='text-xs text-gray-400'>Customers</div>
-                    </div>
-                    <div>
-                      <div className='text-lg font-bold text-white'>
-                        {service.trialDays}
-                      </div>
-                      <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
-                  </div>
-                  {/* ROI Highlight */}                    <div>
-                      <div className="text-lg font-bold text-white">{service.rating}</div>
-                      <div className="text-xs text-gray-400">Rating</div>
-                    </div>
-                    <div>
-                      <div className="text-lg font-bold text-white">{service.customers?.toLocaleString() |'0'}</div>
-                      <div className="text-xs text-gray-400">Customers</div>
-                    </div>
-                    <div>
-                      <div className="text-lg font-bold text-white">{service.trialDays}</div>
-                      <div className="text-xs text-gray-400">Trial Days</div>
-                    </div>
-                  </div>
-                  {/* ROI Highlight */}
-<<<<<<< HEAD
-
-                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
-
-<<<<<<< HEAD
-                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
-                    <div className='text-sm text-green-400 font-semibold mb-1'>
-                      🚀 ROI Promise
-                    </div>
-                    <div className='text-xs text-gray-300 leading-relaxed'>                      {service.roi}                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
-                    <div className="text-xs text-gray-300 leading-relaxed">
-                      {service.roi}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      {service.roi}
-
-                    </div>
-                  </div>
-                  {/* Market Position */}
-                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-                      {service.roi}
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                    </div>
-                  </div>
-                  {/* Market Position */}
-
-                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
-                    <div className="text-xs text-gray-300 leading-relaxed">
-                      {service.marketPosition}
-                    </div>
-                  </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </ul>;
                   </div>;
                   {/* Stats */}
@@ -2254,60 +1507,20 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service && service.marketPosition}
                     </div>;
                   </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
                   {/* CTA */}
 
                   {/* CTA */}
                   <div className='mt-auto'>
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-
 =======
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       href={service && service.link}
                       variant='primary'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  {/* CTA */}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                      className='w-full group-hover:bg-cyan-500 transition-colors'>;
-                      Get Started;
-                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>;
-                  </div>;
-
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  {/* Contact Info */}                    <Button
-                      href={service && service.link}
-                  <div className="mt-auto">
-                  <div className='mt-auto'>
-
-<<<<<<< HEAD
-                    <Button
-                      href={service.link}
-                      variant="primary"
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
@@ -2315,23 +1528,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     <Button
                       href={service.link}
                       variant="primary"
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="w-full group-hover:bg-cyan-500 transition-colors">;
                       Get Started;
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />;
                     </Button>;
                   </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>;
                     <div className='text-xs text-gray-500'>;
@@ -2354,16 +1557,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 </div>;
               </motion && motion.div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Contact Info */}
                   <div className="mt-4 text-center">
                     <div className="text-xs text-gray-500">
@@ -2371,119 +1567,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>
                     <div className="text-xs text-gray-500">
                       Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-            ))}
-          </AnimatePresence>
-        </motion.div>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
           </AnimatePresence>;
         </motion && motion.div>;
 
 
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of companies already achieving breakthrough results with our cutting-edge AI, quantum, and blockchain solutions. 
-              Get started today and see the future of business technology.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
-Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button href="/pricing" variant="secondary" className="text-lg px-8 py-4">
-                View Pricing Plans
-                <DollarSign className="ml-2 w-5 h-5" />
-              </Button>
-            </div>
-            <div className="mt-6 text-sm text-gray-400">
-              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
-              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
-                Schedule a Consultation
-                <ArrowRight className=&quot;ml-2 w-5 h-5&quot; />
-              </Button>
-              <Button href=&quot;/pricing&quot; variant=&quot;secondary&quot; className=&quot;text-lg px-8 py-4&quot;>
-                View Pricing Plans
-                <DollarSign className=&quot;ml-2 w-5 h-5&quot; />
-              </Button>
-            </div>
-            <div className=&quot;mt-6 text-sm text-gray-400&quot;>
-              <p>📞 Call us: <span className=&quot;text-cyan-400&quot;>+1 302 464 0950</span></p>
-              <p>📧 Email: <span className=&quot;text-cyan-400&quot;>kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className=&quot;text-cyan-400&quot;>https://ziontechgroup.com</span></p>
-
-            </div>
-          </AnimatePresence>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className='text-center mt-16'
-
-        >
-          <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Ready to Transform Your Business?
-            </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Join thousands of companies already achieving breakthrough results
-              with our cutting-edge AI, quantum, and blockchain solutions. Get
-              started today and see the future of business technology.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className='text-center mt-16'
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
               <Button
                 href='/contact'
@@ -2520,281 +1612,13 @@ Schedule a Consultation
         </motion && motion.div>;
       </div>;
     </section>;
+>>>>>>> main
   );
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Button
-                href='/contact'
-                variant='primary'
-                className='text-lg px-8 py-4'
-              >
-                Schedule a Consultation
-                <ArrowRight className='ml-2 w-5 h-5' />
-              </Button>
-              <Button
-                href='/pricing'
-                variant='secondary'
-                className='text-lg px-8 py-4'
-              >
-                View Pricing Plans
-                <DollarSign className='ml-2 w-5 h-5' />
-              </Button>
-            </div>
-            <div className='mt-6 text-sm text-gray-400'>
-              <p>
-                📞 Call us:{' '}
-                <span className='text-cyan-400'>+1 302 464 0950</span>
-              </p>
-              <p>
-                📧 Email:{' '}
-                <span className='text-cyan-400'>kleber@ziontechgroup.com</span>
-              </p>
-              <p>
-                🌐 Visit:{' '}
-                <span className='text-cyan-400'>https://ziontechgroup.com</span>
-              </p>            </div>            <div className="mt-6 text-sm text-gray-400">
-              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
-              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-};
-export default EnhancedServiceShowcase;  );
-};
-export default EnhancedServiceShowcase;
-
 
 =======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    </p>;
-                  </div>;
-                  {/* Features */}
-                  <div className='mb - 6'>;
-                    <h4 className='text - sm font - semibold text - gray - 300 mb - 3 flex items - center'>;
-                      <CheckCircle className='w - 4 h - 4 mr - 2 text - green - 400' />;
-                      Key Features;
-                    </h4>;
-                    <ul className='space - y-2'>;
-                      {service.features.slice (0, 4).map ((feature, idx) => (
-                        <li;
-                          key={idx}
-                          className='text - sm text - gray - 400 flex items - start';
-                        >;
-                          <span className='text - cyan - 400 mr - 2'>•</span>                          {feature}                      Key Features;
-                    </h4>;
-                    <ul className="space - y-2">;
-                      {service.features.slice (0, 4).map ((feature, idx) => (
-                        <li key={idx} className="text - sm text - gray - 400 flex items - start">;
-                          <span className="text - cyan - 400 mr - 2">•</span>;
-                          {feature}
-                        </li>))}
-                    </ul>;
-                  </div>;
-                  {/* Stats */}
-                  <div className='grid grid - cols - 3 gap - 4 mb - 6 text - center'>;
-                    <div>;
-                      <div className='text - lg font - bold text - white'>;
-                        {service.rating}
-                      </div>;
-                      <div className='text - xs text - gray - 400'>Rating</div>;
-                    </div>;
-                    <div>;
-                      <div className='text - lg font - bold text - white'>;
-                        {service.customers?.toLocaleString () || '0'}
-                      </div>;
-                      <div className='text - xs text - gray - 400'>Customers</div>;
-                    </div>;
-                    <div>;
-                      <div className='text - lg font - bold text - white'>;
-                        {service.trial_days}
-                      </div>;
-                      <div className='text - xs text - gray - 400'>Trial Days</div>                    </div>;
-                  </div>;
-                  {/* ROI Highlight */}                    <div>;
-                      <div className="text - lg font - bold text - white">{service.rating}</div>;
-                      <div className="text - xs text - gray - 400">Rating</div>;
-                    </div>;
-                    <div>;
-                      <div className="text - lg font - bold text - white">{service.customers?.toLocaleString () || '0'}</div>;
-                      <div className="text - xs text - gray - 400">Customers</div>;
-                    </div>;
-                    <div>;
-                      <div className="text - lg font - bold text - white">{service.trial_days}</div>;
-                      <div className="text - xs text - gray - 400">Trial Days</div>;
-                    </div>;
-                  </div>;
-                  {/* ROI Highlight */}
-                  <div className='mb - 6 p - 4 bg - gradient - to - r from - green - 900 / 20 to - blue - 900 / 20 rounded - lg border border - green - 500 / 20'>;
-                    <div className='text - sm text - green - 400 font - semibold mb - 1'>;
-                      🚀 ROI Promise;
-                    </div>;
-                    <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.roi}                  <div className="mb - 6 p - 4 bg - gradient - to - r from - green - 900 / 20 to - blue - 900 / 20 rounded - lg border border - green - 500 / 20">;
-                    <div className="text - sm text - green - 400 font - semibold mb - 1">🚀 ROI Promise</div>;
-                    <div className="text - xs text - gray - 300 leading - relaxed">;
-                      {service.roi}
-                    </div>;
-                  </div>;
-                  {/* Market Position */}
-                  <div className='mb - 6 p - 4 bg - gray - 800 / 30 rounded - lg'>;
-                    <div className='text - sm text - cyan - 400 font - semibold mb - 2'>;
-                      📊 Market Position;
-                    </div>;
-                    <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.market_position}                  <div className="mb - 6 p - 4 bg - gray - 800 / 30 rounded - lg">;
-                    <div className="text - sm text - cyan - 400 font - semibold mb - 2">📊 Market Position</div>;
-                    <div className="text - xs text - gray - 300 leading - relaxed">;
-                      {service.market_position}
-                    </div>;
-                  </div>;
-                  {/* CTA */}
-                  <div className='mt - auto'>;
-                    <Button;
-                      href={service.link}
-                      variant='primary';
-                      className='w - full group - hover:bg - cyan - 500 transition - colors';
-                    >;
-                      Get Started;
-                      <ArrowRight className='ml - 2 w - 4 h - 4 group - hover:translate - x-1 transition - transform' />                    </Button>;
-                  </div>;
-                  {/* Contact Info */}                    <Button;
-                      href={service.link}
-                      variant="primary";
-                      className="w - full group - hover:bg - cyan - 500 transition - colors";
-                    >;
-                      Get Started;
-                      <ArrowRight className="ml - 2 w - 4 h - 4 group - hover:translate - x-1 transition - transform" />;
-                    </Button>;
-                  </div>;
-                  {/* Contact Info */}
-                  <div className='mt - 4 text - center'>;
-                    <div className='text - xs text - gray - 500'>;
-                      Contact:{' '}
-                      <span className='text - cyan - 400'>;
-                        {service.contact_info.mobile}
-                      </span>;
-                    </div>;
-                    <div className='text - xs text - gray - 500'>;
-                      Email:{' '}
-                      <span className='text - cyan - 400'>;
-                        {service.contact_info.email}
-                      </span>                    </div>                  <div className="mt - 4 text - center">;
-                    <div className="text - xs text - gray - 500">;
-                      Contact: <span className="text - cyan - 400">{service.contact_info.mobile}</span>;
-                    </div>;
-                    <div className="text - xs text - gray - 500">;
-                      Email: <span className="text - cyan - 400">{service.contact_info.email}</span>;
-                  </div>;
-                </div>;
-              </motion.div>))}
-          </AnimatePresence>;
-        </motion.div>;
-        {/* Call to Action */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className='text - center mt - 16';
-          <div className='bg - gradient - to - r from - cyan - 900 / 20 to - purple - 900 / 20 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 20'>;
-            <h3 className='text - 2xl font - bold text - white mb - 4'>;
-              Ready to Transform Your Business?;
-            </h3>;
-            <p className='text - gray - 300 mb - 6 max - w-2xl mx - auto'>;
-              Join thousands of companies already achieving breakthrough results;
-              with our cutting - edge AI, quantum, and blockchain solutions. Get;
-              started today and see the future of business technology.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <Button;
-                href='/contact';
-                variant='primary';
-                className='text - lg px - 8 py - 4';
-              >;
-                Schedule a Consultation;
-                <ArrowRight className='ml - 2 w - 5 h - 5' />;
-              </Button>;
-              <Button;
-                href='/pricing';
-                variant='secondary';
-                className='text - lg px - 8 py - 4';
-              >;
-                View Pricing Plans;
-                <DollarSign className='ml - 2 w - 5 h - 5' />;
-              </Button>;
-            </div>;
-            <div className='mt - 6 text - sm text - gray - 400'>;
-              <p>;
-                📞 Call us:{' '}
-                <span className='text - cyan - 400'>+1 302 464 0950</span>;
-              </p>;
-              <p>;
-                📧 Email:{' '}
-                <span className='text - cyan - 400'>kleber@ziontechgroup.com</span>;
-              </p>;
-              <p>;
-                🌐 Visit:{' '}
-                <span className='text - cyan - 400'>https://ziontechgroup.com</span>;
-              </p>            </div>            <div className="mt - 6 text - sm text - gray - 400">;
-              <p>📞 Call us: <span className="text - cyan - 400">+1 302 464 0950</span></p>;
-              <p>📧 Email: <span className="text - cyan - 400">kleber@ziontechgroup.com</span></p>;
-              <p>🌐 Visit: <span className="text - cyan - 400">https://ziontechgroup.com</span></p>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>);
-}
-;
-export default EnhancedServiceShowcase);
-}
-;
-export default EnhancedServiceShowcase;
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  );
-
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-};
-
-export default EnhancedServiceShowcase;  )
-}
-export default EnhancedServiceShowcase;
-
-export default EnhancedServiceShowcase;
-
-}
-}
-}
-}
-}
-}
-export default EnhancedServiceShowcase;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

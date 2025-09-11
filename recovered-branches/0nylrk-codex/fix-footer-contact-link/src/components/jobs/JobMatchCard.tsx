@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
-import {formatDistanceToNow} from "date-fns";
-import {JobMatch} from "@/types/jobs";
-import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
-import { formatDistanceToNow } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-interface JobMatchProps {
-
   matchId: string
   talentId: string
   name: string
@@ -171,12 +151,7 @@ export function JobMatchCard({;
       onInvite(matchId);
     }
   },
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -264,9 +239,6 @@ import React from 'react';
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   // Generate a formatted date for display
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
@@ -342,12 +314,6 @@ import React from 'react';
     </Card>
   )
 }
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </CardContent>;
@@ -356,22 +322,7 @@ import React from 'react';
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-import React from 'react';
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}=======
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -407,7 +358,6 @@ if ( {) {
     }
   }
 ;
-<<<<<<< HEAD
   const handleViewDetails = () =>: any {
     // Check condition
 if ( {) {
@@ -618,7 +568,6 @@ onInvite
   if (onApply) {
   onApply (matchId) 
 }
-<<<<<<< HEAD
 };
 const handleViewDetails = () => {
   if (onViewDetails) {
@@ -652,8 +601,3 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 ;
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

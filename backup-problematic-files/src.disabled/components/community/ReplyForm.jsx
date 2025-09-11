@@ -9,8 +9,4 @@ const ReplyForm = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ReplyForm;
-=======
-export default ReplyForm;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

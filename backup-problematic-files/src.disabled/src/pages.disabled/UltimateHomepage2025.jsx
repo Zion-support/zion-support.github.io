@@ -9,8 +9,4 @@ const UltimateHomepage2025 = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default UltimateHomepage2025;
-=======
-export default UltimateHomepage2025;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

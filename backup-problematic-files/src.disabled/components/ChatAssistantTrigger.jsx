@@ -9,8 +9,4 @@ const ChatAssistantTrigger = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ChatAssistantTrigger;
-=======
-export default ChatAssistantTrigger;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

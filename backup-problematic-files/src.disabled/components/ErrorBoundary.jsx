@@ -9,8 +9,4 @@ const ErrorBoundary = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ErrorBoundary;
-=======
-export default ErrorBoundary;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

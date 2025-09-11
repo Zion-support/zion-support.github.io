@@ -1,419 +1,172 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Eye,
-  EyeOff,
-  Volume2,
-  VolumeX,
-  ZoomIn,
-  ZoomOut,
-  RotateCcw,
-  Keyboard,
-  MousePointer,
-  Monitor,
-  Smartphone,
-  Sun,
-  Moon,
-  Contrast,
-  Type,
-  Accessibility
-} from 'lucide-react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  fontSize: 'small' | 'medium' | 'large' | 'xlarge';
-  reducedMotion: boolean;
-  highContrastMode: 'default' | 'high' | 'ultra';
-  focusIndicator: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-}
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-export function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    fontSize: 'medium',
-    reducedMotion: false,
-    highContrastMode: 'default',
-    focusIndicator: true,
-    screenReader: false,
-    keyboardNavigation: true,
-    colorBlindness: 'none'
-  });
+export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(1);
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Load settings from localStorage
   useEffect(() => {
-    const savedSettings = localStorage.getItem('zion-accessibility-settings');
-    if (savedSettings) {
-      try {
-        const parsed = JSON.parse(savedSettings);
-        setSettings(prev => ({ ...prev, ...parsed }));
-      } catch (error) {
-        console.warn('Failed to parse accessibility settings:', error);
+    // Check for high contrast mode
+    const checkHighContrast = () => {
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      setIsHighContrast(mediaQuery.matches);
+    };
+
+    // Check for reduced motion preference
+    const checkReducedMotion = () => {
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      setIsReducedMotion(mediaQuery.matches);
+    };
+
+    // Check for font size preference
+    const checkFontSize = () => {
+      const savedFontSize = localStorage.getItem('accessibility-font-size');
+      if (savedFontSize) {
+        setFontSize(parseFloat(savedFontSize));
       }
-    }
+    };
+
+    // Initial checks
+    checkHighContrast();
+    checkReducedMotion();
+    checkFontSize();
+
+    // Listen for changes
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    highContrastQuery.addEventListener('change', checkHighContrast);
+    reducedMotionQuery.addEventListener('change', checkReducedMotion);
+
+    return () => {
+      highContrastQuery.removeEventListener('change', checkHighContrast);
+      reducedMotionQuery.removeEventListener('change', checkReducedMotion);
+    };
   }, []);
 
-  // Save settings to localStorage
   useEffect(() => {
-    localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
-  }, [settings]);
-
-  // Apply accessibility settings
-  useEffect(() => {
+    // Apply accessibility styles
     const root = document.documentElement;
     
-    // Font size
-    const fontSizeMap = {
-      small: '0.875rem',
-      medium: '1rem',
-      large: '1.125rem',
-      xlarge: '1.25rem'
-    };
-    root.style.fontSize = fontSizeMap[settings.fontSize];
-
-    // High contrast
-    if (settings.highContrast) {
+    if (isHighContrast) {
       root.classList.add('high-contrast');
-      if (settings.highContrastMode === 'ultra') {
-        root.classList.add('ultra-high-contrast');
-      }
     } else {
-      root.classList.remove('high-contrast', 'ultra-high-contrast');
+      root.classList.remove('high-contrast');
     }
 
-    // Reduced motion
-    if (settings.reducedMotion) {
+    if (isReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
 
-    // Focus indicator
-    if (settings.focusIndicator) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
+    // Apply font size
+    root.style.fontSize = `${fontSize}rem`;
+  }, [isHighContrast, isReducedMotion, fontSize]);
 
-    // Color blindness simulation
-    if (settings.colorBlindness !== 'none') {
-      root.classList.add(`color-blind-${settings.colorBlindness}`);
-    } else {
-      root.classList.remove('color-blind-protanopia', 'color-blind-deuteranopia', 'color-blind-tritanopia');
-    }
-  }, [settings]);
+  const increaseFontSize = () => {
+    const newSize = Math.min(fontSize + 0.1, 1.5);
+    setFontSize(newSize);
+    localStorage.setItem('accessibility-font-size', newSize.toString());
+  };
 
-  // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
-    if (settings.screenReader) {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.textContent = message;
-      document.body.appendChild(announcement);
-      
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-    }
-  }, [settings.screenReader]);
+  const decreaseFontSize = () => {
+    const newSize = Math.max(fontSize - 0.1, 0.8);
+    setFontSize(newSize);
+    localStorage.setItem('accessibility-font-size', newSize.toString());
+  };
 
-  // Update setting helper
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
-    
-    // Announce changes to screen reader
-    const keyNames = {
-      highContrast: 'high contrast',
-      fontSize: 'font size',
-      reducedMotion: 'reduced motion',
-      highContrastMode: 'high contrast mode',
-      focusIndicator: 'focus indicator',
-      screenReader: 'screen reader',
-      keyboardNavigation: 'keyboard navigation',
-      colorBlindness: 'color blindness simulation'
-    };
-    
-    announceToScreenReader(`${keyNames[key]} ${value === true ? 'enabled' : value === false ? 'disabled' : 'set to ' + value}`);
-  }, [announceToScreenReader]);
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!settings.keyboardNavigation) return;
-
-      // Ctrl/Cmd + H: Toggle high contrast
-      if ((e.ctrlKey || e.metaKey) && e.key === 'h') {
-        e.preventDefault();
-        updateSetting('highContrast', !settings.highContrast);
-      }
-
-      // Ctrl/Cmd + L: Toggle large text
-      if ((e.ctrlKey || e.metaKey) && e.key === 'l') {
-        e.preventDefault();
-        const sizes = ['small', 'medium', 'large', 'xlarge'] as const;
-        const currentIndex = sizes.indexOf(settings.fontSize);
-        const nextIndex = (currentIndex + 1) % sizes.length;
-        updateSetting('fontSize', sizes[nextIndex]);
-      }
-
-      // Ctrl/Cmd + M: Toggle reduced motion
-      if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
-        e.preventDefault();
-        updateSetting('reducedMotion', !settings.reducedMotion);
-      }
-
-      // Escape: Close accessibility panel
-      if (e.key === 'Escape' && isOpen) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [settings.keyboardNavigation, isOpen, updateSetting]);
-
-  // Show accessibility panel after a delay
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 5000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isVisible) return null;
+  const resetFontSize = () => {
+    setFontSize(1);
+    localStorage.removeItem('accessibility-font-size');
+  };
 
   return (
     <>
       {children}
       
-      {/* Floating Accessibility Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label="Accessibility settings"
-        aria-expanded={isOpen}
-        aria-controls="accessibility-panel"
-      >
-        <Accessibility className="w-6 h-6" />
-      </motion.button>
-
-      {/* Accessibility Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            id="accessibility-panel"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-6 z-50 w-80 bg-zion-slate-dark border border-zion-slate-light/20 rounded-xl shadow-2xl backdrop-blur-sm"
-            role="dialog"
-            aria-labelledby="accessibility-title"
-            aria-describedby="accessibility-description"
-          >
-            <div className="p-6 space-y-6">
-              {/* Header */}
-              <div className="flex items-center justify-between">
-                <h3 id="accessibility-title" className="text-lg font-semibold text-white flex items-center space-x-2">
-                  <Accessibility className="w-5 h-5" />
-                  <span>Accessibility</span>
-                </h3>
+      {/* Accessibility Controls */}
+      <div className="fixed bottom-4 right-4 z-50">
+        <div className="bg-white shadow-lg rounded-lg p-4 border border-gray-200">
+          <h3 className="text-sm font-medium text-gray-900 mb-3">Accessibility</h3>
+          
+          <div className="space-y-2">
+            <div className="flex items-center space-x-2">
+              <label className="text-xs text-gray-600">Font Size:</label>
+              <div className="flex items-center space-x-1">
                 <button
-                  onClick={() => setIsOpen(false)}
-                  className="text-zion-slate-light hover:text-white transition-colors"
-                  aria-label="Close accessibility panel"
+                  onClick={decreaseFontSize}
+                  className="w-6 h-6 flex items-center justify-center text-xs bg-gray-100 hover:bg-gray-200 rounded"
+                  aria-label="Decrease font size"
                 >
-                  <EyeOff className="w-5 h-5" />
+                  A-
                 </button>
-              </div>
-
-              {/* Font Size Control */}
-              <div className="space-y-3">
-                <h4 className="text-white font-semibold flex items-center space-x-2">
-                  <Type className="w-4 h-4" />
-                  <span>Text Size</span>
-                </h4>
-                <div className="grid grid-cols-2 gap-2">
-                  {(['small', 'medium', 'large', 'xlarge'] as const).map((size) => (
-                    <button
-                      key={size}
-                      onClick={() => updateSetting('fontSize', size)}
-                      className={`px-3 py-2 rounded-lg text-sm transition-colors ${
-                        settings.fontSize === size
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate-light/20 text-white hover:bg-zion-slate-light/30'
-                      }`}
-                    >
-                      {size.charAt(0).toUpperCase() + size.slice(1)}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* High Contrast */}
-              <div className="space-y-3">
-                <h4 className="text-white font-semibold flex items-center space-x-2">
-                  <Contrast className="w-4 h-4" />
-                  <span>High Contrast</span>
-                </h4>
-                <div className="space-y-2">
-                  <label className="flex items-center space-x-3">
-                    <input
-                      type="checkbox"
-                      checked={settings.highContrast}
-                      onChange={(e) => updateSetting('highContrast', e.target.checked)}
-                      className="rounded border-zion-slate-light/30 text-zion-cyan focus:ring-zion-cyan/30"
-                    />
-                    <span className="text-white">Enable High Contrast</span>
-                  </label>
-                  
-                  {settings.highContrast && (
-                    <div className="ml-6 space-y-2">
-                      {(['default', 'high', 'ultra'] as const).map((mode) => (
-                        <label key={mode} className="flex items-center space-x-3">
-                          <input
-                            type="radio"
-                            name="contrastMode"
-                            checked={settings.highContrastMode === mode}
-                            onChange={(e) => updateSetting('highContrastMode', mode)}
-                            className="border-zion-slate-light/30 text-zion-cyan focus:ring-zion-cyan/30"
-                          />
-                          <span className="text-white capitalize">{mode}</span>
-                        </label>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Reduced Motion */}
-              <div className="space-y-3">
-                <h4 className="text-white font-semibold flex items-center space-x-2">
-                  <RotateCcw className="w-4 h-4" />
-                  <span>Motion</span>
-                </h4>
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="checkbox"
-                    checked={settings.reducedMotion}
-                    onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-                    className="rounded border-zion-slate-light/30 text-zion-cyan focus:ring-zion-cyan/30"
-                  />
-                  <span className="text-white">Reduce Motion</span>
-                </label>
-              </div>
-
-              {/* Focus Indicator */}
-              <div className="space-y-3">
-                <h4 className="text-white font-semibold flex items-center space-x-2">
-                  <Keyboard className="w-4 h-4" />
-                  <span>Focus</span>
-                </h4>
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="checkbox"
-                    checked={settings.focusIndicator}
-                    onChange={(e) => updateSetting('focusIndicator', e.target.checked)}
-                    className="rounded border-zion-slate-light/30 text-zion-cyan focus:ring-zion-cyan/30"
-                  />
-                  <span className="text-white">Enhanced Focus Indicators</span>
-                </label>
-              </div>
-
-              {/* Screen Reader */}
-              <div className="space-y-3">
-                <h4 className="text-white font-semibold flex items-center space-x-2">
-                  <Volume2 className="w-4 h-4" />
-                  <span>Screen Reader</span>
-                </h4>
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="checkbox"
-                    checked={settings.screenReader}
-                    onChange={(e) => updateSetting('screenReader', e.target.checked)}
-                    className="rounded border-zion-slate-light/30 text-zion-cyan focus:ring-zion-cyan/30"
-                  />
-                  <span className="text-white">Enable Screen Reader Support</span>
-                </label>
-              </div>
-
-              {/* Color Blindness Simulation */}
-              <div className="space-y-3">
-                <h4 className="text-white font-semibold flex items-center space-x-2">
-                  <Eye className="w-4 h-4" />
-                  <span>Color Vision</span>
-                </h4>
-                <div className="space-y-2">
-                  {(['none', 'protanopia', 'deuteranopia', 'tritanopia'] as const).map((type) => (
-                    <label key={type} className="flex items-center space-x-3">
-                      <input
-                        type="radio"
-                        name="colorBlindness"
-                        checked={settings.colorBlindness === type}
-                        onChange={(e) => updateSetting('colorBlindness', type)}
-                        className="border-zion-slate-light/30 text-zion-cyan focus:ring-zion-cyan/30"
-                      />
-                      <span className="text-white capitalize">
-                        {type === 'none' ? 'Normal' : type}
-                      </span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Keyboard Shortcuts Help */}
-              <div className="pt-4 border-t border-zion-slate-light/20">
-                <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
-                  <Keyboard className="w-4 h-4" />
-                  <span>Keyboard Shortcuts</span>
-                </h4>
-                <div className="text-xs text-zion-slate-light space-y-1">
-                  <div>Ctrl/Cmd + H: Toggle High Contrast</div>
-                  <div>Ctrl/Cmd + L: Cycle Text Size</div>
-                  <div>Ctrl/Cmd + M: Toggle Reduced Motion</div>
-                  <div>Tab: Navigate Elements</div>
-                  <div>Escape: Close Panel</div>
-                </div>
-              </div>
-
-              {/* Reset Button */}
-              <div className="pt-4 border-t border-zion-slate-light/20">
+                <span className="text-xs text-gray-600 w-8 text-center">
+                  {Math.round(fontSize * 100)}%
+                </span>
                 <button
-                  onClick={() => {
-                    const defaultSettings: AccessibilitySettings = {
-                      highContrast: false,
-                      fontSize: 'medium',
-                      reducedMotion: false,
-                      highContrastMode: 'default',
-                      focusIndicator: true,
-                      screenReader: false,
-                      keyboardNavigation: true,
-                      colorBlindness: 'none'
-                    };
-                    setSettings(defaultSettings);
-                    announceToScreenReader('Accessibility settings reset to default');
-                  }}
-                  className="w-full px-4 py-2 bg-zion-slate-light/20 hover:bg-zion-slate-light/30 text-white rounded-lg transition-colors flex items-center justify-center space-x-2"
+                  onClick={increaseFontSize}
+                  className="w-6 h-6 flex items-center justify-center text-xs bg-gray-100 hover:bg-gray-200 rounded"
+                  aria-label="Increase font size"
                 >
-                  <RotateCcw className="w-4 h-4" />
-                  <span>Reset to Default</span>
+                  A+
+                </button>
+                <button
+                  onClick={resetFontSize}
+                  className="w-6 h-6 flex items-center justify-center text-xs bg-gray-100 hover:bg-gray-200 rounded"
+                  aria-label="Reset font size"
+                >
+                  A
                 </button>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            
+            <div className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id="high-contrast"
+                checked={isHighContrast}
+                onChange={(e) => {
+                  setIsHighContrast(e.target.checked);
+                  if (e.target.checked) {
+                    document.documentElement.classList.add('high-contrast');
+                  } else {
+                    document.documentElement.classList.remove('high-contrast');
+                  }
+                }}
+                className="rounded"
+              />
+              <label htmlFor="high-contrast" className="text-xs text-gray-600">
+                High Contrast
+              </label>
+            </div>
+            
+            <div className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id="reduced-motion"
+                checked={isReducedMotion}
+                onChange={(e) => {
+                  setIsReducedMotion(e.target.checked);
+                  if (e.target.checked) {
+                    document.documentElement.classList.add('reduced-motion');
+                  } else {
+                    document.documentElement.classList.remove('reduced-motion');
+                  }
+                }}
+                className="rounded"
+              />
+              <label htmlFor="reduced-motion" className="text-xs text-gray-600">
+                Reduced Motion
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
-}
+};

@@ -9,8 +9,4 @@ const AIAutonomousLearningSystem.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousLearningSystem.js;
-=======
-export default AIAutonomousLearningSystem.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

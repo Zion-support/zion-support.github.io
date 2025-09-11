@@ -410,16 +410,9 @@ export default function CloudDevOpsPage() {
       </div>
     </>
     </>
-<<<<<<< HEAD
-  );
-};
-
 export default Cloud-devops;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };
 
 export default Cloud-devops;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

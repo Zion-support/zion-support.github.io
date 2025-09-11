@@ -9,8 +9,4 @@ const BundleAnalyzer.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default BundleAnalyzer.js;
-=======
-export default BundleAnalyzer.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

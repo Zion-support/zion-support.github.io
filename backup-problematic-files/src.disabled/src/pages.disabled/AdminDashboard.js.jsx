@@ -9,8 +9,4 @@ const AdminDashboard.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AdminDashboard.js;
-=======
-export default AdminDashboard.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

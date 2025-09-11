@@ -9,8 +9,4 @@ const ModeToggle = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ModeToggle;
-=======
-export default ModeToggle;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

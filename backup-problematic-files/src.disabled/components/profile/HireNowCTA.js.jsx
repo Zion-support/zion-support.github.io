@@ -9,8 +9,4 @@ const HireNowCTA.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default HireNowCTA.js;
-=======
-export default HireNowCTA.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

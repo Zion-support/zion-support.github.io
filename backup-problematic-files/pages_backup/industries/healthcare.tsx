@@ -672,8 +672,4 @@ export default function HealthcarePage() {
   );
 };
 
-<<<<<<< HEAD
 export default Healthcare;
-=======
-export default Healthcare;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

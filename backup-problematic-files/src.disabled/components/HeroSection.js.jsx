@@ -9,8 +9,4 @@ const HeroSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default HeroSection.js;
-=======
-export default HeroSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

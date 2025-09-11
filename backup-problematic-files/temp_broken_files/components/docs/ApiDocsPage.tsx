@@ -5,19 +5,6 @@ import EndpointDetail from './EndpointDetail',;
 import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
-<<<<<<< HEAD
-:components/docs/ApiDocsPage.tsx
-        onChangeVisibility={setVisibility}
-      />
-      <main className="p-6 space-y-6">
-        <header className="flex items-center justify-between">
-        onChangeVisibility={setVisibility}      />
-      <main className=&quot;p-6 space-y-6&quot;>
-        <header className=&quot;flex items-center justify-between&quot;>
-:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
-:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
-=======
-
 import React, { useMemo, useState } from 'react';
 import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
@@ -29,9 +16,7 @@ import Sidebar from './Sidebar',;
 import EndpointDetail from './EndpointDetail',;
 import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function ApiDocsPage() {
+;export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
   const [visibility, setVisibility] = useState<Visibility | 'all'>('all')
@@ -70,14 +55,7 @@ export default function ApiDocsPage() {
 
 
         {_activeEndpoint ? (
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
-:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <EndpointDetail endpoint={activeEndpoint} />
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4          <EndpointDetail endpoint={activeEndpoint} />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
         )}
@@ -111,23 +89,10 @@ function ChangelogWidget() {
         <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
         {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
       </div>
-<<<<<<< HEAD
-:components/docs/ApiDocsPage.tsx
-      <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
-    </div>
-  )
-}
-      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
-  )}
-:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
-=======
-
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  );
+=======  );
 };
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}

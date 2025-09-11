@@ -9,8 +9,4 @@ const TrustIndicators.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TrustIndicators.js;
-=======
-export default TrustIndicators.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

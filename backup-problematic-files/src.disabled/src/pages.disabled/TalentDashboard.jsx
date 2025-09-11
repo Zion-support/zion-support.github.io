@@ -9,8 +9,4 @@ const TalentDashboard = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TalentDashboard;
-=======
-export default TalentDashboard;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

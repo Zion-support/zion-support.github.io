@@ -9,8 +9,4 @@ const AIAutonomousGovernance = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousGovernance;
-=======
-export default AIAutonomousGovernance;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

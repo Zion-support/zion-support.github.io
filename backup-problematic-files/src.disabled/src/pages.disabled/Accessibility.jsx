@@ -9,8 +9,4 @@ const Accessibility = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Accessibility;
-=======
-export default Accessibility;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const Header.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Header.js;
-=======
-export default Header.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,25 +1,12 @@
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
 #!/usr / bin / env node;
-=======
-
-#!/usr / bin / env node;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
 import fs from 'fs';
 import path from 'path';
 import {exec_sync} from 'child_process';
 import {fileURLToPath} from 'url';
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-const __filename = fileURLToPath(import && import.meta.url);
-const __dirname = path && path.dirname(__filename);
-=======
-
 
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
 class ComprehensiveErrorPrevention {
   constructor() {
     this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'error-prevention && prevention.log');
@@ -30,15 +17,9 @@ class ComprehensiveErrorPrevention {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-    console && console.log(logMessage && logMessage.trim());
-=======
-
     
     console && console.log(logMessage && logMessage.trim());
     
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
     try {
       fs && fs.appendFileSync(this && this.logFile, logMessage);
     } catch (error) {
@@ -47,10 +28,6 @@ class ComprehensiveErrorPrevention {
   }
   async cleanCorruptedFiles() {
     try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Cleaning corrupted files...');
       const corruptedDirs = [
         'pages && pages.disabled',
@@ -99,14 +76,6 @@ class ComprehensiveErrorPrevention {
         'src.broken',
         'solutions.disabled',
         'scripts.disabled',
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-        'automation_backup',
-        'data_backup'
-      ];
-      this && this.fixedCount++;
-      this && this.log('Corrupted files cleanup completed.');
-=======
-
         'automation_backup',
         'data_backup'
       ];
@@ -115,20 +84,13 @@ class ComprehensiveErrorPrevention {
       this && this.fixedCount++;
       this && this.log('Corrupted files cleanup completed.');
       
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`Error cleaning corrupted files: ${error && error.message}`, 'ERROR');
     }
   }
   async runLintFix() {
-    try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
-      this && this.log('Running lint fix...');
+    try {      this && this.log('Running lint fix...');
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
         cwd: process && process.cwd(),
@@ -136,22 +98,6 @@ class ComprehensiveErrorPrevention {
       });
       this && this.fixedCount++;
       this && this.log('Lint fix completed successfully.');
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-      
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
-    } catch (error) {
-      this && this.errorCount++;
-      this && this.log(`Lint fix failed: ${error && error.message}`, 'ERROR');
-    }
-  }
-  async runBuild() {
-    try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Running build...');
       const result = execSync('npm run build', { 
         encoding: 'utf8', 
@@ -160,22 +106,6 @@ class ComprehensiveErrorPrevention {
       });
       this && this.fixedCount++;
       this && this.log('Build completed successfully.');
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-      
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
-    } catch (error) {
-      this && this.errorCount++;
-      this && this.log(`Build failed: ${error && error.message}`, 'ERROR');
-    }
-  }
-  async checkTypeScript() {
-    try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Checking TypeScript...');
       const result = execSync('npx tsc --noEmit', { 
         encoding: 'utf8', 
@@ -184,22 +114,6 @@ class ComprehensiveErrorPrevention {
       });
       this && this.fixedCount++;
       this && this.log('TypeScript check passed.');
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-      
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
-    } catch (error) {
-      this && this.errorCount++;
-      this && this.log(`TypeScript check failed: ${error && error.message}`, 'ERROR');
-    }
-  }
-  async runComprehensiveCheck() {
-    try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Starting comprehensive error prevention...');
       // Clean corrupted files
       await this && this.cleanCorruptedFiles();
@@ -211,163 +125,3 @@ class ComprehensiveErrorPrevention {
       await this && this.runBuild();
       this && this.lastRun = new Date();
       this && this.log(`Comprehensive check completed. Fixed ${this && this.fixedCount} issues, found ${this && this.errorCount} errors.`);
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-=======
-      
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
-    } catch (error) {
-      this && this.errorCount++;
-      this && this.log(`Comprehensive check failed: ${error && error.message}`, 'ERROR');
-    }
-  }
-  async run() {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-    this && this.log('Starting Comprehensive Error Prevention System...');
-=======
-
-    this && this.log('Starting Comprehensive Error Prevention System...');
-    
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
-    // Create logs directory if it doesn't exist
-    const logsDir = path && path.join(process && process.cwd(), 'logs');
-    if (!fs && fs.existsSync(logsDir)) {
-      fs && fs.mkdirSync(logsDir, { recursive: true });
-    }
-    // Run initial comprehensive check
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-    await this && this.runComprehensiveCheck();
-=======
-
-    await this && this.runComprehensiveCheck();
-    
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/scripts/comprehensive-error-prevention.js
-    // Set up interval for continuous error prevention
-    setInterval(async () => {
-      await this && this.runComprehensiveCheck();
-    }, 900000); // Run every 15 minutes
-  }
-}
-// Run the system
-const system = new ComprehensiveErrorPrevention();
-system && system.run().catch(console && console.error);
-;
-      for (const dir of corrupted_dirs) {
-        const dir_path = path.join (process.cwd (), dir);
-        if () {) {
-  $2
-}
-          fs.rm_sync (dir_path, { recursive: true, force: true });
-          this.log (`Removed corrupted directory: ${dir}`);
-        }
-      }
-      this.fixed_count++;
-      this.log ('Corrupted files cleanup completed.');
-;
-    } catch (error) {
-      this.error_count++;
-      this.log (`Error cleaning corrupted files: ${error.message}`, 'ERROR');
-    }
-  }
-  async runLintFix () {
-    try {
-      this.log ('Running lint fix...');
-;
-      const result = exec_sync ('npm run lint:fix', {
-        encoding: 'utf8',
-        cwd: process.cwd (),
-        stdio: 'pipe';
-      });
-;
-      this.fixed_count++;
-      this.log ('Lint fix completed successfully.');
-;
-    } catch (error) {
-      this.error_count++;
-      this.log (`Lint fix failed: ${error.message}`, 'ERROR');
-    }
-  }
-  async run_build () {
-    try {
-      this.log ('Running build...');
-;
-      const result = exec_sync ('npm run build', {
-        encoding: 'utf8',
-        cwd: process.cwd (),
-        stdio: 'pipe';
-      });
-;
-      this.fixed_count++;
-      this.log ('Build completed successfully.');
-;
-    } catch (error) {
-      this.error_count++;
-      this.log (`Build failed: ${error.message}`, 'ERROR');
-    }
-  }
-  async checkTypeScript () {
-    try {
-      this.log ('Checking TypeScript...');
-;
-      const result = exec_sync ('npx tsc --no_emit', {
-        encoding: 'utf8',
-        cwd: process.cwd (),
-        stdio: 'pipe';
-      });
-;
-      this.fixed_count++;
-      this.log ('TypeScript check passed.');
-;
-    } catch (error) {
-      this.error_count++;
-      this.log (`TypeScript check failed: ${error.message}`, 'ERROR');
-    }
-  }
-  async runComprehensiveCheck () {
-    try {
-      this.log ('Starting comprehensive error prevention...');
-;
-      // Clean corrupted files;
-      await this.cleanCorruptedFiles ();
-;
-      // Run lint fix;
-      await this.runLintFix ();
-;
-      // Check TypeScript;
-      await this.checkTypeScript ();
-;
-      // Run build;
-      await this.run_build ();
-;
-      this.last_run = new Date ();
-      this.log (`Comprehensive check completed. Fixed ${this.fixed_count} issues, found ${this.error_count} errors.`);
-;
-    } catch (error) {
-      this.error_count++;
-      this.log (`Comprehensive check failed: ${error.message}`, 'ERROR');
-    }
-  }
-  async run () {
-    this.log ('Starting Comprehensive Error Prevention System...');
-;
-    // Create logs directory if it doesn't exist;
-    const logs_dir = path.join (process.cwd (), 'logs');
-    if () {) {
-  $2
-}
-      fs.mkdir_sync (logs_dir, { recursive: true });
-    }
-    // Run initial comprehensive check;
-    await this.runComprehensiveCheck ();
-;
-    // Set up interval for continuous error prevention;
-    set_interval (async () => {
-      await this.runComprehensiveCheck ();
-    }, 900000); // Run every 15 minutes;
-  }
-}
-// Run the system;
-const system = new ComprehensiveErrorPrevention ();
-system.run ().catch (console.error);

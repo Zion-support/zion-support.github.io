@@ -1,22 +1,4 @@
 {
-<<<<<<< HEAD
-"timestamp": "2025-09-06T10:42:44.767Z",
-  "timestamp": "2025-09-06T10:42:44.767Z",
-  "totalDuration": 17470,
-  "successfulTasks": 3,
-  "totalTasks": 7,
-  "results": {
-    "buildOptimization": true,
-    "codeQuality": false,
-    "performanceOptimization": false,
-    "securityEnhancement": true,
-    "accessibilityImprovement": false,
-    "seoOptimization": false,
-    "monitoringSetup": true
-  }
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "timestamp": "2025-09-06T01:31:58.924Z",
   "duration": 151,
   "improvements": [
@@ -28,9 +10,4 @@
   ],
   "errors": [],
   "success": true
-<<<<<<< HEAD
 }
-=======
-
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

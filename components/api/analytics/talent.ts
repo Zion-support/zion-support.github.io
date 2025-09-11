@@ -1,8 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { createServerClient } from '../../../utils/supabase/server';
-
 =======
 
 export default async function handler(
@@ -12,9 +8,7 @@ export default async function handler(
   try {;
     const supabase = createServerClient();
     const talentId = (req.query.talentId as string) |null
-    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      supabase
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([      supabase
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -47,74 +41,6 @@ export default async function handler(
       tagsR.status === 'fulfilled' && tagsR.value.data
         ? (tagsR.value.data as any[])
         : [];
-<<<<<<< HEAD
-    const profileViews = views && views.length || 27;
-    const quoteInvites = invites && invites.length || 6;
-    const jobApplications = apps && apps.length || 9;
-    const successRate =
-      ((apps && apps.filter(a => a && a.status === 'accepted').length || 3) /
-        Math && Math.max(jobApplications, 1)) *
-      100;
-    const tagCounts: Record<string, number> = {};
-    (tags && tags.length
-      ? tags
-      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
-    ).forEach(t => {
-      tagCounts[t && t.tag] = (tagCounts[t && t.tag] || 0) + 1;
-    });
-    res && res.status(200).json({
-      profileViews,
-      quoteInvites,
-      jobApplications,
-      successRate,
-topTags: Object && Object.entries(tagCounts)
-=======
-    const profileViews = views.length |27;
-    const quoteInvites = invites.length |6;
-    const jobApplications = apps.length |9;
-    const successRate =
-      ((apps.filter(a => a.status === 'accepted').length |3) /
-        Math.max(jobApplications, 1)) *
-      100;
-    const tagCounts: Record<string, number> = {}
-    (tags.length
-      ? tags
-      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
-    ).forEach(t => {
-      tagCounts[t.tag] = (tagCounts[t.tag] |0) + 1;
-    });
-    res.status(200).json({
-      profileViews
-      quoteInvites
-      jobApplications
-      successRate
-      topTags: Object.entries(tagCounts)
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 5)
-        .map(([label, value]) => ({ label, value }))
-    });
-  } catch (e) {
-<<<<<<< HEAD
-    res && res.status(200).json({
-      profileViews: 27,
-      quoteInvites: 6,
-      jobApplications: 9,
-      successRate: 33 && 33.3,
-=======
-    res.status(200).json({
-      profileViews: 27
-      quoteInvites: 6
-      jobApplications: 9
-      successRate: 33.3
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      topTags: [
-        { label: 'react', value: 2 }
-        { label: 'node', value: 1 }
-        { label: 'ai', value: 1 }
-      ]
-<<<<<<< HEAD
-
     });
 
 
@@ -219,24 +145,13 @@ function handler() {
 
     });
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
   }
 }
 
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    });
-
   }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+}=======
 
 
   }

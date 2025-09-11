@@ -9,8 +9,4 @@ const EnhancedSEO = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedSEO;
-=======
-export default EnhancedSEO;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

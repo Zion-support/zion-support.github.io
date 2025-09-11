@@ -17,8 +17,4 @@ const Custom: React.FC<CustomProps> = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Custom;
-=======
-export default Custom;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

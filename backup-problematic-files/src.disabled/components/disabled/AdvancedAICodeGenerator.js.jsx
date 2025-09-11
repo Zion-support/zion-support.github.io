@@ -9,8 +9,4 @@ const AdvancedAICodeGenerator.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedAICodeGenerator.js;
-=======
-export default AdvancedAICodeGenerator.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

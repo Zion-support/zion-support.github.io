@@ -17,23 +17,6 @@ class BuildMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
-<<<<<<< HEAD
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    console.log('Build Monitor started successfully')};
-  async runBuildCheck() {}
-    try {}
-      console.log('Running build check...');
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      const child = spawn('npm', ['run', 'build'], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
-
       let output = ;';';
       let errorOutput = ;';';
 
@@ -44,41 +27,6 @@ class BuildMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      child.on('close', (code) => {}
-        if ( {})
-          console.log('Build check passed ✓')) {}
-     {}
-          console.log('Build check passed ✓')};
-          this.lastBuildTime = new Date()} else {}
-          console.log('Build check failed ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
-          
-          // Attempt to fix common build issues;
-          this.attemptBuildFix()};
-      })} catch (error) {}
-      console.error('Error running build "check": ', error.message)};
-  };
-  async attemptBuildFix() {}
-    try {}
-      console.log('Attempting to fix build issues...');
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      // Clean build directory;
-      const cleanChild = spawn('npm', ['run', 'clean'], {})
-        "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -118,8 +66,3 @@ if ( {})
 });
   
   monitor.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = BuildMonitor;
-=======
-module.exports = BuildMonitor;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

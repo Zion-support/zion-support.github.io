@@ -9,8 +9,4 @@ const ComprehensiveServices = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ComprehensiveServices;
-=======
-export default ComprehensiveServices;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

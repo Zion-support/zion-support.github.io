@@ -9,8 +9,4 @@ const ManufacturingSolutions.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ManufacturingSolutions.js;
-=======
-export default ManufacturingSolutions.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

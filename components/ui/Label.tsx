@@ -1,32 +1,16 @@
-<<<<<<< HEAD
 import React from './react';
 ;
-=======
-
-import React from './react';
-;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LabelProps {
   children: React.ReactNode;
   class_name?: string;
   html_for?: string;
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LabelProps {;
   children: React && React.ReactNode;
   className?: string;
   htmlFor?: string;
 }
 const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <label
       htmlFor={htmlFor}

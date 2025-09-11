@@ -193,10 +193,6 @@ const CaseStudies: NextPage = () => {
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
 
-<<<<<<< HEAD:temp_backup/case-studies.tsx
-=======
-=======
-
 const CaseStudies: NextPage = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedService, setSelectedService] = useState('All');
@@ -384,8 +380,6 @@ const CaseStudies: NextPage = () => {
   });
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
-
->>>>>>> origin/chore/stabilize-build-minimal-index:pages_disabled/case-studies.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Head>
@@ -651,11 +645,6 @@ export default function CaseStudiesPage() {
 		</>
 	);
 }
-<<<<<<< HEAD:temp_backup/case-studies.tsx
 export default CaseStudies;
-=======
-=======
 export default CaseStudies;
-=======
 export default CaseStudies;
->>>>>>> origin/chore/stabilize-build-minimal-index:pages_disabled/case-studies.tsx

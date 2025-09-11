@@ -1,13 +1,7 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 =======
@@ -15,9 +9,6 @@
 export const advancedMicroSaasExpansion2025V2 = [
   {
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export const advancedMicroSaasExpansion2025V2 = [
   {
@@ -258,9 +249,7 @@ export const advancedMicroSaasExpansion2025V2 = [
   }
 ];
 =======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    name: 'AI Content Factory Pro',
+=======    name: 'AI Content Factory Pro',
     description: 'Advanced AI - powered content creation and management platform',
     category: 'AI & Data',
     pricing: '$299 / month',
@@ -475,26 +464,6 @@ export const advancedMicroSaasExpansion2025V2 = [
     ],
   },
   {
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    name: 'AI Threat Detection',
-    description: 'Advanced AI threat detection system',
-    category: 'Cybersecurity',
-    pricing: '$549 / month',
-    features: [;
-      'Real - time monitoring',
-      'Threat intelligence',
-      'Automated response',
-      'Incident management',
-    ],
-  },
-
-<<<<<<< HEAD
-];      'Real - time monitoring_threat intelligence_automated response_incident management';
-    ];
-
 =======
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
@@ -507,9 +476,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
     ];
 =======
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export const advancedMicroSaasExpansion2025V2 = [;
+=======export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
     description: 'Advanced AI-powered content creation and management platform',;
@@ -680,9 +647,6 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
-<<<<<<< HEAD
-
-
   }
 ];
 ;
@@ -860,9 +824,5 @@ export const advancedMicroSaasExpansion2025V2 = [;
     ];
 =======
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

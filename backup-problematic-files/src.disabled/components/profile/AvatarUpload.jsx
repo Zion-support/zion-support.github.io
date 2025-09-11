@@ -9,8 +9,4 @@ const AvatarUpload = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AvatarUpload;
-=======
-export default AvatarUpload;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

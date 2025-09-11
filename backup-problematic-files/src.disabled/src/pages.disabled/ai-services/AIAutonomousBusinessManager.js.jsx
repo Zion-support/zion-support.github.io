@@ -9,8 +9,4 @@ const AIAutonomousBusinessManager.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousBusinessManager.js;
-=======
-export default AIAutonomousBusinessManager.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

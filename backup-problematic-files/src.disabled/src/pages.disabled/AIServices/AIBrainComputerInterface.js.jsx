@@ -9,8 +9,4 @@ const AIBrainComputerInterface.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIBrainComputerInterface.js;
-=======
-export default AIBrainComputerInterface.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

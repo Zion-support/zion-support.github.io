@@ -9,8 +9,4 @@ const AIAutonomousVirtualAssistant = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousVirtualAssistant;
-=======
-export default AIAutonomousVirtualAssistant;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const CommunityDiscussion = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default CommunityDiscussion;
-=======
-export default CommunityDiscussion;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

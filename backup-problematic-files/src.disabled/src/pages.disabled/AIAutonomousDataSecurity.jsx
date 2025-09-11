@@ -9,8 +9,4 @@ const AIAutonomousDataSecurity = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousDataSecurity;
-=======
-export default AIAutonomousDataSecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

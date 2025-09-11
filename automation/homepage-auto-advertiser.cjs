@@ -70,17 +70,6 @@ function buildToolsSection(functionNames) {
   ].join('\n');
 }
 
-<<<<<<< HEAD
-function ensureMarkers(content) {
-  if (content.includes(START) && content.includes(END)) return content;
-  // Insert before HOME_UPDATER_START if present, else before closing main
-  const updaterStart = content.indexOf('/* AUTO-GENERATED: HOME_UPDATER_START */');
-  const mainClose = content.lastIndexOf('</main>');
-  const insertAt = updaterStart !== -1 ? updaterStart : (mainClose !== -1 ? mainClose : content.length);
-  const section = [START, END].join('\n');
-  return content.slice(0, insertAt) + '\n' + section + '\n' + content.slice(insertAt);
-}
-
 // New: discover Netlify scheduled functions and tools
 function discoverNetlifyTools() {
   const fnDir = path.join(ROOT, 'netlify', 'functions');
@@ -129,9 +118,7 @@ function discoverKeyWorkflows() {
   return [
     ...internal.map((i) => ({ type: 'internal', ...i })),
     ...netlifyLogs.map((n) => ({ type: 'external', ...n })),
-  ];
->>>>>>> origin/chore/futuristic-home-and-netlify-automations
-}
+  ];}
 
 function discoverNetlifyFunctions() {
   const functionsDir = path.join(ROOT, 'netlify', 'functions');
@@ -189,19 +176,11 @@ function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
   return `${before}\n${replacement}\n${after}`;
 }
 
-<<<<<<< HEAD
-(function main() {
-=======
-(async function main() {
-  log('Homepage Auto Advertiser started');
-
   const internal = discoverInternalPages();
   const workflows = discoverKeyWorkflows();
   const netlifyFns = discoverNetlifyFunctions();
   const combined = [...internal, ...netlifyFns, ...workflows].slice(0, 12);
   const tsxBlock = generateSectionTSX(combined);
-
->>>>>>> origin/chore/netlify-automations-futuristic-home
   if (!fs.existsSync(INDEX_PAGE)) {
     console.error('index.tsx not found');
     process.exit(0);

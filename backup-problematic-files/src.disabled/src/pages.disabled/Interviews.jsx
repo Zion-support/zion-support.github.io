@@ -9,8 +9,4 @@ const Interviews = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Interviews;
-=======
-export default Interviews;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

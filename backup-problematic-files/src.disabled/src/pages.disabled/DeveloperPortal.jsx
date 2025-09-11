@@ -9,8 +9,4 @@ const DeveloperPortal = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default DeveloperPortal;
-=======
-export default DeveloperPortal;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

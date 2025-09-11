@@ -9,8 +9,4 @@ const MobileMenu.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default MobileMenu.js;
-=======
-export default MobileMenu.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

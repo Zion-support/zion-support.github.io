@@ -206,15 +206,8 @@ export default function CloudServicesPage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
+export default Cloud;
   );
 };
 
 export default Cloud;
-=======
-<<<<<<< HEAD
-  );
-};
-
-export default Cloud;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

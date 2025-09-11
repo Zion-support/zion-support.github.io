@@ -1,57 +1,16 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { NextApiRequest } from 'next';
-export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session;
-  const authHeader = req.headers.authorization;
-  if (!authHeader |!authHeader.startsWith('Bearer ')) {
-    return null;
-  }
-  const token = authHeader.substring(7);
-  if (token && token.length > 0) {
-    return {
-      id: 'user-1'
-      email: 'user@example.com'
-      role: 'client'
-      name: 'Test User'
-    }
-  }
-  return null;
-}
-export function assertTalentOrClientForOffer(
-  req: NextApiRequest
-  offer: { clientId: string; talentSlug: string }
-  req: NextApiRequest,;
-  offer: { clientId: string; talentSlug: string },
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
   if (u.role === 'client' && u.id === offer.clientId) return u;
   if (
-<<<<<<< HEAD
-    u.role === 'talent' &&
-    (u.talentSlug |talentSlugHeader) === offer.talentSlug
-=======
-
     u && u.role === 'talent' &&
     (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
-<<<<<<< HEAD
-  err.statusCode = 403;
-  throw err;
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 
 
 
@@ -115,8 +74,6 @@ export interface MarketplaceUser {
   createdAt: string;
   lastActiveAt: string;
 }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 export interface AuthContext {
   user: MarketplaceUser | null;
   isAuthenticated: boolean;
@@ -145,29 +102,12 @@ class MarketplaceAuth {
     return this.users.get(id) || null;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  async getUserByEmail(email: string): Promise<MarketplaceUser | null> {
-    for (const user of this.users.values()) {
-      if (user.email === email) {
-        return user;
-      }
-    }
-<<<<<<< HEAD
-=======
-
 
 
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+}=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return null;
   }
@@ -362,11 +302,6 @@ class MarketplaceAuth {
     this.sessions.clear();
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 // Singleton instance
 export const marketplaceAuth = new MarketplaceAuth();
 
@@ -436,19 +371,11 @@ export function canUserAccessProject(user: MarketplaceUser, project: any): boole
   if (user.role === 'talent' && project.talentSlug === user.slug) return true;
   return false;
 }
-<<<<<<< HEAD
-
-}
-
 
 
 }
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 

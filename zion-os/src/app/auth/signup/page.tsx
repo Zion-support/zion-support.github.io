@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -28,9 +22,7 @@ export default function SignUpPage() {const [name, setName] = useState("");
     } catch (error) {setError(error instanceof Error ? error.message : "Registration failed");
     } finally {setIsLoading(false);
     }
-  }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
+  }"use client",;
 import { useState } from "react",;
 import Link from "next/link",;
 import { useAuth } from "@/contexts/AuthContext",;
@@ -60,167 +52,18 @@ export default function SignUpPage() {;
       setIsLoading(false);
     }
   };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
         <div className="text-center">;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",
-import { useState  } from './react';,
-import Link from './next / link';,
-import { use_auth  } from '@/contexts / AuthContext';,
-export default /**
- * SignUpPage - Function description
- */
-function SignUpPage() {
-  const [name, set_name] = useState (""),
-  const [email, set_email] = useState (""),
-  const [password, set_password] = useState (""),
-  const [confirm_password, setConfirmPassword] = useState (""),
-  const [is_loading, setIsLoading] = useState (false),
-  const [error, set_error] = useState (""),
-  const { register } = use_auth (),
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default (),
-    setIsLoading (true),
-    set_error (""),
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ("Passwords do not match"),
-      setIsLoading (false);
-<<<<<<< HEAD
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
-export default function SignUpPage() {const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { register } = useAuth();
-  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
-    setIsLoading(true);
-    setError("");
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match");
-      setIsLoading(false);
-      return;
-    }
-    try {
-      await register (name, email, password);
-    } catch (error) {
-      set_error (error instanceof Error ? error.message : "Registration failed");
-    } finally {
-      setIsLoading (false);
-    }
-  }
-=======
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client",;
-import { useState } from "react",;
-import Link from "next/link",;
-import { useAuth } from "@/contexts/AuthContext",;
-export default function SignUpPage() {;
-  const [name, setName] = useState(""),;
-  const [email, setEmail] = useState(""),;
-  const [password, setPassword] = useState(""),;
-  const [confirmPassword, setConfirmPassword] = useState(""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState(""),;
-  const { register } = useAuth(),;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setIsLoading(true),;
-    setError(""),;
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match"),;
-      setIsLoading(false);
-      return;
-    }
-;
-    try {;
-      await register(name, email, password);
-    } catch (error) {;
-      setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {;
-      setIsLoading(false);
-    }
-  };
-  return (;
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
-      <div className="max-w-md w-full space-y-8 p-8">;
-        <div className="text-center">;
-          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
-          <p className="text-zinc-400 mb-4">;
-            Start your free trial and launch sovereign AI-powered digital economies;
-          </p>;
-          {/* Free Trial Badge */}
-          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
-            <span className="text - green - 400 text - sm font - medium">;
-              🚀 Free Trial Available;
-            </span>;
-          </div>;
-        </div>;
-        {/* What You Get Section */}
-        <div className="bg - zinc - 800 / 30 rounded - lg p - 4 border border - zinc - 700 / 30">;
-          <h3 className="text - sm font - semibold text - zinc - 300 mb - 3">What you'll get:</h3>;
-          <ul className="space - y-2 text - sm text - zinc - 400">;
-            <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
-              Launch new instances in minutes;
-            </li>;
-            <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
-              Access to marketplace templates;
-            </li>;
-            <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
-              Governance and identity tools;
-            </li>;
-            <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
-              Full admin dashboard access;
-            </li>;
-          </ul>;
-        </div>;
-        <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">;
-          <form onSubmit={handleSubmit} className="space-y-6">;
-            {error && (;
-              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">;
-                <p className="text-red-400 text-sm">{error}</p>;
-              </div>;
-            )}
-=======
-
         <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
           <form on_submit={handle_submit} className="space - y-6">;
             {error && (
               <div className="bg - red - 500 / 10 border border - red - 500 / 20 rounded - lg p - 3">;
                 <p className="text - red - 400 text - sm">{error}</p>;
               </div>)}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
         <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
           <form on_submit={handle_submit} className="space - y-6">;
             {error && (
@@ -231,12 +74,8 @@ export default function SignUpPage() {;
 
 ;
 
-<<<<<<< HEAD
 ;
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

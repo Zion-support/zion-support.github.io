@@ -131,20 +131,5 @@ function main() {};
 };
         fixedCount++}
     } catch (error) {_;
-<<<<<<< HEAD
       errorCount++}
 }
-=======
-  
-      errorCount++}
-}
-
-  };
-};
-        fixedCount++};
-    } catch (error) {,
-  console.error(`Error processing ${file}:`, error.message),
-      errorCount++};
-  };
-,
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};

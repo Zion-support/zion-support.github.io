@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
-
 
   try {
     // Authentication would normally be checked here
@@ -10,8 +6,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { withErrorLogging } = require(
   './withErrorLogging.cjs')';
 "async": function handler(req, res) {
@@ -34,15 +28,8 @@ const { withErrorLogging } = require(
   try {;
     // Authentication would normally be checked here;
 
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+=======const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;

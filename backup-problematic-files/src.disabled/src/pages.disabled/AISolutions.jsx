@@ -9,8 +9,4 @@ const AISolutions = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AISolutions;
-=======
-export default AISolutions;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

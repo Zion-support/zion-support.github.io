@@ -1,56 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
 import Link from "next/link";
 export const metadata = {title: "Events - Zion Tech Group | Conferences, Webinars & Workshops";
   description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.";
   keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"}
-export default function EventsPage() {return (;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
-export const metadata = {;
-  title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
-  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",;
-  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},;
-export default function EventsPage() {;
-  return (;
-<<<<<<< HEAD
-
-
-    <div className="min-h-screen">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    <div className="min-h-screen">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from './next / link';,
-export const metadata = {
-  title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
-  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",
-  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},
-export default /**
- * EventsPage - Function description
- */
-function EventsPage() {
-  return (
-    <div className="min - h-screen">;
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Events - Zion Tech Group | Conferences, Webinars & Workshops";
-  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.";
-  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"}
-export default function EventsPage() {return (;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Link from "next/link",;
+export default function EventsPage() {return (;import Link from "next/link",;
 export const metadata = {;
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
   description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",;
@@ -58,183 +11,6 @@ export const metadata = {;
 export default function EventsPage() {;
   return (;
     <div className="min-h-screen">;
-      {/* Hero Section */}
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
-            <span className="gradient - text">Events</span>;
-          </h1>;
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
-            Join us at industry - leading events, conferences, and workshops to discover;
-            the future of technology and connect with innovation leaders;
-          </p>;
-        </div>;
-      </section>;
-      {/* Featured Event */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30">;
-            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
-              <div>;
-                <div className="flex items - center mb - 4">;
-                  <span className="bg - red - 500 text - white text - xs font - bold px - 3 py - 1 rounded - full mr - 3">;
-                    FEATURED EVENT;
-                  </span>;
-                  <span className="text - gray - 400 text - sm">January 15 - 17, 2025</span>;
-                </div>;
-                <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-                  Zion Tech Summit 2025;
-                </h2>;
-
-                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-                  Our flagship annual conference bringing together technology leaders, innovators,
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
-<<<<<<< HEAD
-
-=======
-                  Our flagship annual conference bringing together technology leaders, innovators;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  Our flagship annual conference bringing together technology leaders, innovators,;
-
-<<<<<<< HEAD
-                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-                  Our flagship annual conference bringing together technology leaders, innovators,
-                <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
-                  Our flagship annual conference bringing together technology leaders, innovators;
-                  Our flagship annual conference bringing together technology leaders, innovators,;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  and visionaries to explore the future of AI, quantum computing, and enterprise;
-                  technology solutions.;
-                </p>;
-                <div className="flex flex - wrap gap - 3 mb - 6">;
-                  <span className="bg - blue - 500 / 20 text - blue - 400 px - 3 py - 1 rounded - full text - sm">AI & ML</span>;
-                  <span className="bg - purple - 500 / 20 text - purple - 400 px - 3 py - 1 rounded - full text - sm">Quantum Computing</span>;
-                  <span className="bg - green - 500 / 20 text - green - 400 px - 3 py - 1 rounded - full text - sm">Cybersecurity</span>;
-                </div>;
-                <div className="space - y-2 mb - 6 text - sm">;
-                  <div className="flex items - center text - gray - 300">;
-                    <svg className="w - 4 h - 4 mr - 2" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                      <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01 - 2.827 0l - 4.244 - 4.243a8 8 0 1111.314 0z" />;
-                      <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M15 11a3 3 0 11 - 6 0 3 3 0 016 0z" />;
-                    </svg>;
-                    San Francisco, CA;
-                  </div>;
-                  <div className="flex items - center text - gray - 300">;
-                    <svg className="w - 4 h - 4 mr - 2" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                      <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M12 8v4l3 3m6 - 3a9 9 0 11 - 18 0 9 9 0 0118 0z" />;
-                    </svg>;
-                    3 Days;
-                  </div>;
-                  <div className="flex items - center text - gray - 300">;
-                    <svg className="w - 4 h - 4 mr - 2" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                      <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z" />;
-                    </svg>;
-                    1, 000+ Attendees;
-                  </div>;
-                </div>;
-                <div className="flex flex - col sm:flex - row gap - 4">;
-                  <Link href="/events / zion - tech - summit - 2025" className="btn - primary">;
-                    Register Now;
-                  </Link>;
-                  <Link href="/events / zion - tech - summit - 2025 / agenda" className="btn - secondary">;
-                    View Agenda;
-                  </Link>;
-                </div>;
-              </div>;
-              <div className="relative">;
-                <div className="w - full h - 64 lg:h - 80 bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 rounded - xl flex items - center justify - center">;
-                  <svg className="w - 24 h - 24 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
-                  </svg>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Event Categories */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="text - center mb - 16">;
-            <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-              Event Types;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-              Discover different types of events we host and participate in;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            <div className="card text - center group hover:bg - blue - 500 / 10 transition - colors">;
-              <div className="w - 20 h - 20 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb - 6 group - hover:bg - blue - 500 / 30">;
-                <svg className="w - 10 h - 10 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                  <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
-                </svg>;
-              </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Conferences</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Large - scale industry events featuring keynote speakers, panel discussions,
-
-<<<<<<< HEAD
-
-                Large-scale industry events featuring keynote speakers, panel discussions,;
-
-              <h3 className="text - xl font - semibold mb - 3">Conferences</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Large - scale industry events featuring keynote speakers, panel discussions,
-              <h3 className="text-xl font-semibold mb-3">Conferences</h3>;
-              <p className="text-gray-400 mb-4">;
-                Large-scale industry events featuring keynote speakers, panel discussions;
-                Large-scale industry events featuring keynote speakers, panel discussions,;
-=======
-=======
-
-                Large-scale industry events featuring keynote speakers, panel discussions,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                and networking opportunities;
-              </p>;
-              <Link href="/events / category / conferences" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                View Conferences →;
-              </Link>;
-            </div>;
-            <div className="card text - center group hover:bg - purple - 500 / 10 transition - colors">;
-              <div className="w - 20 h - 20 bg - purple - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb - 6 group - hover:bg - purple - 500 / 30">;
-                <svg className="w - 10 h - 10 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                  <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M15 10l4.553 - 2.276A1 1 0 0121 8.618v6.764a1 1 0 01 - 1.447.894L15 14M5 18h8a2 2 0 002 - 2V8a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v8a2 2 0 002 2z" />;
-                </svg>;
-              </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Webinars</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Online educational sessions covering specific topics, technologies,
-
-<<<<<<< HEAD
-
-                Online educational sessions covering specific topics, technologies,;
-
-              <h3 className="text - xl font - semibold mb - 3">Webinars</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Online educational sessions covering specific topics, technologies,
-              <h3 className="text-xl font-semibold mb-3">Webinars</h3>;
-              <p className="text-gray-400 mb-4">;
-                Online educational sessions covering specific topics, technologies;
-                Online educational sessions covering specific topics, technologies,;
-=======
-=======
-
-                Online educational sessions covering specific topics, technologies,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and industry trends;
               </p>;
               <Link href="/events / category / webinars" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
@@ -321,27 +97,13 @@ export default function EventsPage() {;
               <p className="text - gray - 400 mb - 4 leading - relaxed">;
                 Hands - on workshop covering the basics of quantum computing, qubits,
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <p className="text-gray-400 mb-4 leading-relaxed">;
-<<<<<<< HEAD
+                Hands-on workshop covering the basics of quantum computing, qubits;                Hands-on workshop covering the basics of quantum computing, qubits,;
 
-=======
-                Hands-on workshop covering the basics of quantum computing, qubits;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                Hands-on workshop covering the basics of quantum computing, qubits,;
-
-<<<<<<< HEAD
               <p className="text - gray - 400 mb - 4 leading - relaxed">;
                 Hands - on workshop covering the basics of quantum computing, qubits,
               <p className="text-gray-400 mb-4 leading-relaxed">;
                 Hands-on workshop covering the basics of quantum computing, qubits;
                 Hands-on workshop covering the basics of quantum computing, qubits,;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and quantum algorithms for beginners and intermediate developers.;
               </p>;
               <div className="flex items - center text - sm text - gray - 400 mb - 4">;

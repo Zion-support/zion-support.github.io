@@ -59,8 +59,4 @@ export default function TestimonialsSection({ }: TestimonialsSectionProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default TestimonialsSection;
-=======
-export default TestimonialsSection;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const ForumCategories = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ForumCategories;
-=======
-export default ForumCategories;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

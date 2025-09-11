@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-}
-
 
 
   return (
@@ -26,9 +22,7 @@
       <p className="text - white / 80 mt - 2">External link status report is written to <code className="text - white / 90">data / reports / broken - links.json</code>.</p>;
       <p className="text - white / 70 mt - 2">This runs twice daily and auto - PRs updates.</p>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+}=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

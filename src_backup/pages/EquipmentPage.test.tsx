@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
-
   const [selectedService, setSelectedService] = useState(''),
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
   const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -84,16 +79,9 @@
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
-<<<<<<< HEAD
-            
-            
-=======
-
 
             
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -127,16 +115,9 @@
                   />
                 </div>
               </div>
-<<<<<<< HEAD
-              
-              
-=======
-
 
               
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -221,16 +202,9 @@
                   ))}
                 </select>
               </div>
-<<<<<<< HEAD
-              
-              
-=======
-
 
               
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -348,33 +322,6 @@
               </div>
             </div>
             {/* Business Hours */}
-<<<<<<< HEAD
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Monday - Friday</span>
-                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Saturday</span>
-                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Sunday</span>
-                  <span className="font-semibold">Closed</span>
-                </div>
-                <div className="pt-3 border-t border-gray-200">
-                  <p className="text-sm text-gray-600">
-                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues
-                  </p>
-                </div>
-              </div>
-            </div>
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="bg-white rounded-xl shadow-lg p-8">;
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
               <div className="space-y-3">;
@@ -397,11 +344,6 @@
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -461,16 +403,7 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-}
-  );
-};
-=======
-
 
   );
 };
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

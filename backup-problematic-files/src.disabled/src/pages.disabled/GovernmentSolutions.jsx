@@ -9,8 +9,4 @@ const GovernmentSolutions = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default GovernmentSolutions;
-=======
-export default GovernmentSolutions;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

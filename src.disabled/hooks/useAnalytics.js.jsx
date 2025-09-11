@@ -1,8 +1,5 @@
 
 
-<<<<<<< HEAD
-const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("", ") const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
-
 :src.disabled/hooks/useAnalytics.js.jsx
 import { useState,useEffect,useCallback,useRef } from\';react\' \"export\": const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef(\'';\';) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)\'';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -14,23 +11,11 @@ import { useState,useEffect,useCallback,useRef } from\';react\' \"export\": cons
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("", ") const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
 :temp_exclude/src.disabled/hooks/useAnalytics.js.jsx
-=======
-=======
-const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
+const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""=======
 
 import { useState,useEffect,useCallback,useRef } from\';react\' \"export\": const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef(\'';\';) const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)\'';
 
-=======
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 
-=======
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("", ") const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/hooks/useAnalytics.js.jsx
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

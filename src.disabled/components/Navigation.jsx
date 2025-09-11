@@ -1,25 +1,10 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [\' \''\';\'"\";
-const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
-:src.disabled/components/Navigation.jsx
-import { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [\' \''\';\'"\";
-const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [\' \''\';\'"\";
-const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
-:temp_exclude/src.disabled/components/Navigation.jsx
-=======
-
 =======
 
 =======
 import { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [\' \''\';\'"\";
-const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/Navigation.jsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";""">>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 

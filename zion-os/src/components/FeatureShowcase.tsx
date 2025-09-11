@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
 import { useState, useEffect } from "react",;
@@ -104,212 +99,6 @@ export function FeatureShowcase() {;
       <div className="max-w-7xl mx-auto">;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-"use client",
-import { useState, useEffect  } from './react';,
-interface Feature {
-  id: string,
-  title: string,
-  description: string,
-  icon: React.ReactNode,
-  color: string,
-  details: string[],
-  demo?: string;
-}
-const features: Feature[] = [;
-  {
-    id: "marketplace",
-    title: "Marketplace & Jobs",
-    description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",
-    icon: (
-      <svg className="w - 8 h - 8" fill="none" stroke="current_color" view_box="0 0 24 24">;
-        <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
-      </svg>),
-    color: "blue",
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-"use client";
-import { useState, useEffect } from "react";
-interface Feature {id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-  details: string[];
-  demo?: string;
-}
-const features: Feature[] = [;
-  {id: "marketplace";
-    title: "Marketplace & Jobs";
-    description: "Complete marketplace infrastructure with job posting, talent matching, and project management.";
-"use client",;
-import { useState, useEffect } from "react",;
-interface Feature {;
-  id: string,;
-  title: string,;
-  description: string,;
-  icon: React.ReactNode,;
-  color: string,;
-  details: string[],;
-  demo?: string;
-}
-;
-const features: Feature[] = [;
-  {;
-    id: "marketplace",;
-    title: "Marketplace & Jobs",;
-    description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",;
-    icon: (;
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
-      </svg>;
-    );
-    color: "blue";
-    details: [;
-<<<<<<< HEAD
-      "Smart job matching algorithms",
-      "Escrow payment systems",
-      "Project milestone tracking",
-      "Rating and review systems",
-      "Multi - currency support";
-    ];
-  },
-  {
-    id: "governance",
-    title: "AI Governance",
-    description: "Intelligent governance systems with DAO voting, proposal management, and automated decision - making.",
-    icon: (
-      <svg className="w - 8 h - 8" fill="none" stroke="current_color" view_box="0 0 24 24">;
-        <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
-      </svg>),
-    color: "purple",
-    details: [;
-      "AI - powered proposal analysis",
-      "Automated voting systems",
-      "Smart contract governance",
-      "Transparency reporting",
-      "Multi - signature wallets";
-    ];
-  },
-  {
-    id: "tokens",
-    title: "Token Systems",
-    description: "Flexible token economics with rewards, staking, and multi - currency support for your economy.",
-    icon: (
-      <svg className="w - 8 h - 8" fill="none" stroke="current_color" view_box="0 0 24 24">;
-        <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M12 8c - 1.657 0 - 3 .895 - 3 2s1.343 2 3 2 3 .895 3 2 - 1.343 2 - 3 2m0 - 8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0 - 1c - 1.11 0 - 2.08-.402 - 2.599 - 1" />;
-      </svg>),
-    color: "green",
-    details: [;
-      "Custom token creation",
-      "Staking and rewards",
-      "Liquidity pools",
-      "Token burning mechanisms",
-      "Cross - chain bridges";
-    ];
-  }
-],
-export /**
- * FeatureShowcase - Function description
- */
-function FeatureShowcase() {
-  const [active_feature, setActiveFeature] = useState < string | null>(null),
-  const [is_visible, setIsVisible] = useState (false),
-  useEffect (() => {
-    setIsVisible (true);
-  }, []),
-  const getColorClasses = (color: string) =>: any {
-    const color_map = {
-      blue: "from - blue - 500 to - blue - 600",
-      purple: "from - purple - 500 to - purple - 600",
-      green: "from - green - 500 to - green - 600",
-      red: "from - red - 500 to - red - 600",
-      yellow: "from - yellow - 500 to - yellow - 600",
-      indigo: "from - indigo - 500 to - indigo - 600";
-    }
-    return color_map[color as keyof typeof color_map] || "from - blue - 500 to - blue - 600";
-  }
-=======
-      "Smart job matching algorithms";
-      "Escrow payment systems";
-      "Project milestone tracking";
-      "Rating and review systems";
-      "Multi-currency support";
-    ];
-  }
-  {id: "governance";
-    title: "AI Governance";
-    description: "Intelligent governance systems with DAO voting, proposal management, and automated decision-making.";
-    icon: (;
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />;
-      </svg>;
-    );
-    color: "purple";
-    details: [;
-      "AI-powered proposal analysis";
-      "Automated voting systems";
-      "Smart contract governance";
-      "Transparency reporting";
-      "Multi-signature wallets";
-    ];
-  }
-  {id: "tokens";
-    title: "Token Systems";
-    description: "Flexible token economics with rewards, staking, and multi-currency support for your economy.";
-    icon: (;
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />;
-      </svg>;
-    );
-    color: "green";
-    details: [;
-      "Custom token creation";
-      "Staking and rewards";
-      "Liquidity pools";
-      "Token burning mechanisms";
-      "Cross-chain bridges";
-    ];
-  }
-];
-export function FeatureShowcase() {const [activeFeature, setActiveFeature] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {;
-    setIsVisible(true);
-  }, []);
-  const getColorClasses = (color: string) => {const colorMap = {;
-      blue: "from-blue-500 to-blue-600";
-      purple: "from-purple-500 to-purple-600";
-      green: "from-green-500 to-green-600";
-      red: "from-red-500 to-red-600";
-      yellow: "from-yellow-500 to-yellow-600";
-      indigo: "from-indigo-500 to-indigo-600";
-    }
-    return colorMap[color as keyof typeof colorMap] |"from-blue-500 to-blue-600";
-  }
-    ),;
-    color: "blue",;
-    details: [;
-      "Smart job matching algorithms",;
-      "Escrow payment systems",;
-      "Project milestone tracking",;
-      "Rating and review systems",;
-      "Multi-currency support";
-    ];
-  },;
-  {;
-    id: "governance",;
-    title: "AI Governance",;
-    description: "Intelligent governance systems with DAO voting, proposal management, and automated decision-making.",;
-
-    icon: (;
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />;
-      </svg>;
-
     ),;
     color: "purple",;
     details: [;
@@ -363,7 +152,6 @@ export function FeatureShowcase() {;
       <div className="max-w-7xl mx-auto">;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
-=======
 "use client",
 import { useState, useEffect  } from './react';,
 interface Feature {
@@ -385,7 +173,6 @@ const features: Feature[] = [;
         <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
       </svg>),
     color: "blue",
-=======
 "use client",;
 import { useState, useEffect } from "react",;
 interface Feature {;
@@ -407,9 +194,6 @@ const features: Feature[] = [;
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
       </svg>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    ),;
     color: "blue",;
     details: [;
       "Smart job matching algorithms",;
@@ -490,102 +274,30 @@ export function FeatureShowcase() {;
             {features.map ((feature, index) => (
               <div;
                 key={feature.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${;
                   activeFeature === feature.id;
 
 
-=======
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${;
-                  activeFeature === feature.id;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                    ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
+                  activeFeature === feature.id;                    ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
                     : 'hover:bg-white/10';
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                className={`card cursor - pointer transform transition - all duration - 300 hover:scale - 105 ${
-                  active_feature === feature.id;
-                    ? `ring - 2 ring-${feature.color}-500 / 50 bg - white / 10`;
-                    : 'hover:bg - white / 10';
-                } ${is_visible ? 'opacity - 100 translate - x-0' : 'opacity - 0 translate - x-10'}`}
-                style={{ transition_delay: `${index * 100}ms` }}
-                on_click={() => setActiveFeature (active_feature === feature.id ? null : feature.id)}
-<<<<<<< HEAD
-                className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${;
-                  activeFeature === feature.id;
-                    ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
-                    : 'hover:bg-white/10';
-                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-                onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
-              >;
-                <div className="flex items - start space - x-4">;
-                  <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;
-                    {feature.icon}
-                  </div>;
-                  <div className="flex - 1">;
-                    <h3 className="text - xl font - semibold mb - 2 text - white">;
-                      {feature.title}
-                    </h3>;
-                    <p className="text - gray - 400 mb - 3">;
-                      {feature.description}
-                    </p>;
-                    {active_feature === feature.id && (
-                      <div className="space - y-2 animate - fade - in">;
-                        {feature.details.map ((detail, idx) => (
-                          <div key={idx} className="flex items - center space - x-2 text - sm text - gray - 300">;
-                            <div className={`w - 1.5 h - 1.5 bg-${feature.color}-500 rounded - full`}></div>;
-                            <span>{detail}</span>;
-                          </div>))}
-                      </div>)}
-                  </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className={`transform transition - transform duration - 300 ${
-                    active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';
-
-=======
 
                   <div className={`transform transition - transform duration - 300 ${
                     active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-=======
                   <div className={`transform transition-transform duration-300 ${activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className={`transform transition-transform duration-300 ${;
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
 
-<<<<<<< HEAD
                   <div className={`transform transition - transform duration - 300 ${
                     active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';
                   <div className={`transform transition-transform duration-300 ${activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
                   <div className={`transform transition-transform duration-300 ${;
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }`}>;
                     <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                       <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;

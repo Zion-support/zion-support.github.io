@@ -9,8 +9,4 @@ const AIClimatePredictionPlatform = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIClimatePredictionPlatform;
-=======
-export default AIClimatePredictionPlatform;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

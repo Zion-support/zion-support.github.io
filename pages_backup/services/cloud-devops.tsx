@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import Layout from '../../components/Layout';
-import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
-const features = [;
-  {}
-    icon: Cloud,
-    title: 'Cloud Migration,',
-    description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
-import Layout from '../../components/Layout';
-import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -39,14 +21,6 @@ import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const features = [
@@ -55,9 +29,6 @@ const features = [
     title: 'Cloud Migration',
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
-<<<<<<< HEAD
-=======
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -70,8 +41,6 @@ const features = [;
     title: 'Cloud Migration',;
     description: 'Seamless migration to cloud platforms with zero downtime';
   },;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {}
     icon: Server,
     title: 'Infrastructure as Code,',
@@ -83,19 +52,10 @@ const features = [;
     description: 'Optimize database performance, implement backup strategies, and ensure data integrity.',
   },
   {}
-<<<<<<< HEAD
-    icon: Shield,
-    title: 'Security & Compliance,',
-    description: 'Implement robust security measures and maintain compliance with industry standards.'';
-  },
-=======
-
     icon: Shield,;
     title: 'Security & Compliance,',;
     description: 'Implement robust security measures and maintain compliance with industry standards.'',;
   },;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {}
     icon: Zap,
     title: 'CI/CD Pipelines,',
@@ -103,24 +63,6 @@ const features = [;
   }
 ;];
 const services = [;
-<<<<<<< HEAD
-  'Cloud Architecture Design',',
-  'Container Orchestration (Kubernetes)',',
-  'Microservices Implementation',',
-  'Monitoring & Logging Setup',',
-  'Disaster Recovery Planning',',
-  'Performance Optimization',',
-  'Cost Optimization',',
-  'Security Hardening'';
-;];
-export default function CloudDevOpsPage() {
-  return (;
-    <Layout );
-      title="Cloud & DevOps Services - Zion Tech Group"";
-      description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure.""
-    >;
-=======
-
 
   'Cloud Architecture Design',',;
   'Container Orchestration (Kubernetes)',',;
@@ -137,21 +79,12 @@ export default function CloudDevOpsPage() {;
     <Layout)
       title="Cloud & DevOps Services - Zion Tech Group""
       description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure."">;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">"
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto text-center">";
-<<<<<<< HEAD
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
-                Cloud & DevOps;
-=======
-
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">", Cloud & DevOps,;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";
                   Solutions;
                 </span>;
@@ -160,23 +93,11 @@ export default function CloudDevOpsPage() {;
                 Accelerate your digital transformation with our comprehensive cloud migration, 
                 infrastructure automation, and DevOps expertise. Build, deploy, and scale with confidence.,
               </p>;
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">";
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />";
-                </button>;
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium">";
-                  View Case Studies;
-=======
-
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">",;
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />";
                 </button>;
                 <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover: bg-gray-800 transition-colors font-medium">", View Case Studies,;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </button>;
               </div>;
             </div>;
@@ -194,17 +115,6 @@ export default function CloudDevOpsPage() {;
                 that modernize your infrastructure and accelerate your development cycles.;
               </p>;
             </div>;
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features.map((feature, index) => (,
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
-                    <feature.icon className="w-6 h-6 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
-                  <p className="text-gray-300">{feature.description}</p>"
-=======
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
               {features && features.map((feature, index) => (,;
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";
@@ -213,8 +123,6 @@ export default function CloudDevOpsPage() {;
                   </div>,;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";
                   <p className="text-gray-300">{feature && feature.description}</p>";
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
               ))}
             </div>,
@@ -227,17 +135,9 @@ export default function CloudDevOpsPage() {;
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Cloud & DevOps Expertise;
               </h2>;
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {services.map((service, index) => (,
-                  <div key={index} className="flex items-center space-x-3">"
-=======
-
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
                 {services && services.map((service, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{service}</span>"
                   </div>;
@@ -257,21 +157,10 @@ export default function CloudDevOpsPage() {;
                 Let our cloud and DevOps experts help you build a scalable, secure, 
                 and efficient infrastructure that grows with your business.;
               </p>;
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
-                  Schedule Consultation;
-                </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Whitepaper;
-=======
-
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
                   Schedule Consultation;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Whitepaper,;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </button>;
               </div>;
             </div>;
@@ -279,18 +168,6 @@ export default function CloudDevOpsPage() {;
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-    title: 'Infrastructure as Code',
-    description: 'Automated infrastructure provisioning and management'
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
 
@@ -468,24 +345,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated alerts', 'Performance metrics']
   }
 ];
-<<<<<<< HEAD
-const benefits = [
-  'Reduced infrastructure costs by up to 50%',
-  'Improved deployment speed and reliability',
-  'Enhanced security and compliance',
-  'Automated scaling and resource management',
-  'Better disaster recovery capabilities',
-  'Faster time-to-market for applications'
-];
-export default function CloudDevOpsServices() {  return (
-    <>
-      <Head>
-        <title>Cloud & DevOps Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cloud and DevOps services including migration, infrastructure as code, CI/CD pipelines, and monitoring solutions." />
-      </Head>
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -498,13 +357,6 @@ const tools = [
   { name: 'Prometheus', description: 'Monitoring and alerting' }
 ];
 
-<<<<<<< HEAD
-export default function CloudDevOpsPage() {
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -514,11 +366,6 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function CloudDevOpsPage() {;
@@ -532,20 +379,6 @@ const benefits = [;
 ];
 export default function CloudDevOpsServices() {;
 
-
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
-    <Layout
-      title="Cloud & DevOps Services - Zion Tech Group"
-      description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
-<<<<<<< HEAD
-      keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization"
-=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
@@ -727,21 +560,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
-<<<<<<< HEAD
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Your Infrastructure?</h3>
-                <p className="text-lg mb-6">
-                  Let our cloud and DevOps experts help you transform your infrastructure
-                  and accelerate your development processes.
-                </p>
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -749,10 +567,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>

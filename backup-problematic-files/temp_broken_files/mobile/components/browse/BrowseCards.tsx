@@ -161,20 +161,9 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
   item.timePosted ;
 }</span> </div>) ;
 }{;
-<<<<<<< HEAD
-:temp_broken_files/mobile/components/browse/BrowseCards.tsx
-  item.match ;"}% match </div>) ";"}</div> </div> <div className="border-t border-border p-3 flex justify-end" > <Button > View Details <ChevronRight className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
-}</div>) ;"}"
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   item.match ;
 }% match </div>) ";
 }</div> </div> <div className="border-t border-border p-3 flex justify-end" > <Button > View Details <ChevronRight className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }"
-<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/browse/BrowseCards.tsx
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

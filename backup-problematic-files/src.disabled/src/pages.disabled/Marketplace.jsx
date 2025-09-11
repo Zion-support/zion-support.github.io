@@ -9,8 +9,4 @@ const Marketplace = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Marketplace;
-=======
-export default Marketplace;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

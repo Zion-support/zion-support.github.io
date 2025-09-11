@@ -7,8 +7,4 @@ import React from\';react\' const TalentCardComponent = ({ talent,onBook,onMessa
 const React from";react" const TalentCardComponent = ({ talent,onBook,onMessage,isAuthenticated}) => { const navigate = useNavigate() const handleMessage = e => { e && e.preventDefault() e && e.stopPropagation() if (onMessage) { onMessage(talent) } else { navigate(`/messages?talentId=${talent && talent.id}`) } } const handleBook = e => { e && e.preventDefault() e && e.stopPropagation() if (onBook) { onBook(talent) } } const handleViewProfile = () => { " navigate("/talent/${talent && talent.id}") }";"""`"`
 import _React from';react' const TalentCardComponent = ({ talent,onBook,onMessage,isAuthenticated}) => { const navigate = useNavigate() const handleMessage = e => { e && e.preventDefault() e && e.stopPropagation() if (onMessage) { onMessage(talent) } else { navigate(`/messages?talentId=${talent && talent.id}`) } } const handleBook = e => { e && e.preventDefault() e && e.stopPropagation() if (onBook) { onBook(talent) } } const handleViewProfile = () => { " navigate("/talent/${talent && talent.id}") }';"
 
-<<<<<<< HEAD
 export default TalentCard;
-=======
-export default TalentCard;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

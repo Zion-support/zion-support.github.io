@@ -9,8 +9,4 @@ const HiringTracker = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default HiringTracker;
-=======
-export default HiringTracker;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -66,7 +66,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
                 <Github className="h-4 w-4" />;
               </Button>;
             </a>;
-<<<<<<< HEAD
           )}
           ;
           {project.demo_url && (;

@@ -27,8 +27,4 @@ const AutonomousBusinessOperationsPlatform = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AutonomousBusinessOperationsPlatform;
-=======
-export default AutonomousBusinessOperationsPlatform;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

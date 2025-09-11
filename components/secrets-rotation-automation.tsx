@@ -18,40 +18,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
-<<<<<<< HEAD
-
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
-export default function SecretsRotationAutomationPage() {;
-  const features = [;
-    "Automated key and secret rotation",;
-    "JIT credentials with expirations",;
-    "Policy approvals and audit trails",;
-    "CI/CD integration (GitHub Actions, CircleCI)",;
-    "Cloud KMS and Vault support",;
-  ];
-import React from 'react',
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export default function SecretsRotationAutomationPage() {
+=======export default function SecretsRotationAutomationPage() {
 
   const features = [
     "Automated key and secret rotation"
@@ -64,10 +36,6 @@ export default function SecretsRotationAutomationPage() {
 
 export default function SecretsRotationAutomationPage() {
   const features = [
-<<<<<<< HEAD
-=======
-=======
-
 
 import React from "react";
 import SEO from "../components/SEO";
@@ -81,11 +49,7 @@ export default /**
  * SecretsRotationAutomationPage - Function description
  */
 function SecretsRotationAutomationPage() {
-  const features = [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    "Automated key and secret rotation",
+  const features = [;=======    "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
     "CI / CD integration (GitHub Actions, CircleCI)",
@@ -145,25 +109,12 @@ function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </a>;
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    </>);
-=======
-
-return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
+return (  return (
     <>;
       <SEO;
         title="Secrets Rotation Automation";
@@ -181,28 +132,6 @@ return (
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    <>
-      <SEO
-        title="Secrets Rotation Automation"
-        description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs."
-      />
-      <main id="main" className="container mx-auto px-4 py-24">
-        <section className="max-w-5xl mx-auto">
-          <h1 className="text-4xl font-extrabold tracking-tight">
-            Secrets Rotation Automation
-          </h1>
-          <p className="mt-4 text-lg text-gray-300">
-            Keep credentials short-lived and compliant. Automate rotations
-            across providers with full auditability.
-          </p>
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
-            {features.map((f) => (
-              <div
-
                 key={f}
                 className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
               >;
@@ -242,9 +171,6 @@ return (
           </div>;
         </section>;
       </main>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
@@ -419,11 +345,7 @@ return (
 
 =======
     </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 }

@@ -9,8 +9,4 @@ const AIAutonomousLogistics.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousLogistics.js;
-=======
-export default AIAutonomousLogistics.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

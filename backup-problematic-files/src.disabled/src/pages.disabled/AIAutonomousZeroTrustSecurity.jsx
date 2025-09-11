@@ -9,8 +9,4 @@ const AIAutonomousZeroTrustSecurity = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousZeroTrustSecurity;
-=======
-export default AIAutonomousZeroTrustSecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

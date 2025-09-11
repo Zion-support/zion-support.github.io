@@ -7,10 +7,6 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -19,33 +15,6 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
-<<<<<<< HEAD
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    this.errorTypes = {}
-      "syntax": [],
-      "typescript": [],
-      "eslint": [],
-      "build": [],
-      "dependency": [],
-      "configuration": [];
-    };
-    this.fixAttempts = new Map();
-    this.isRunning = false};
-  log(level, message, data = null) {}
-    const timestamp = new Date().toISOString();
-    const logEntry = {}
-      timestamp,
-      level,
-      message,
-      data,
-      "service": 'error-detection-service'
-    };
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -71,28 +40,6 @@ class ErrorDetectionService {}
       // Start file watching for real-time detection;
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      // Keep the process alive;
-      setInterval(() => {}
-        if (!this.isRunning) {}
-          this.performFullScan()};
-      }, this.scanInterval)} catch (error) {}
-      this.log('error', 'Failed to start Error Detection Service', error);
-      process.exit(1)};
-  };
-  ensureDirectories() {}
-    const dirs = ['logs/pm2',]
-      'error-reports',
-      'backups',
-      'temp'
-    ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -241,44 +188,6 @@ class ErrorDetectionService {}
         'vite.config.ts',
         'tailwind.config.js'
       ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      for (const configFile of configFiles) {}
-        const filePath = path.join(this.projectRoot, configFile);
-        if (fs.existsSync(filePath)) {}
-          try {}
-            const content = fs.readFileSync(filePath, 'utf8');
-            if (this.hasConfigurationIssues(content, configFile)) {}
-              this.errorTypes.configuration.push({})
-                "file": configFile,
-                "type": 'configuration',
-                "severity": 'medium',
-                "description": 'Configuration file has issues',
-                "issues": this.extractConfigurationIssues(content, configFile);
-              })};
-          } catch (error) {}
-            this.errorTypes.configuration.push({})
-              "file": configFile,
-              "type": 'configuration',
-              "severity": 'high',
-              "description": 'Configuration file cannot be parsed',
-              "error": error.message;
-            })};
-        };
-      };
-      this.log('info', `Configuration scan completed. Found ${this.errorTypes.configuration.length} errors`)} catch (error) {`}
-      this.log('error', 'Error during configuration scan', error)};
-  };
-  findSourceFiles() {}
-    const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
-    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
-    const files = [];
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -317,210 +226,6 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-<<<<<<< HEAD
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    if (openComments !== closeComments) {}
-      return true};
-    // Check for missing semicolons in certain contexts;
-    const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {}
-      const line = lines[i].trim();
-      if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') && 
-          !line.endsWith('[') && !line.endsWith(']') && !line.endsWith('(') && !line.endsWith(')') &&
-          !line.startsWith('//') && !line.startsWith('/*') && !line.startsWith('*') &&
-          !line.includes('function') && !line.includes('class') && !line.includes('const') &&
-          !line.includes('let') && !line.includes('var') && !line.includes('import') &&
-          !line.includes('export') && !line.includes('return') && !line.includes('if') &&
-          !line.includes('for') && !line.includes('while') && !line.includes('switch')) {}
-        // This might be a missing semicolon;
-        return true};
-    };
-    return false};
-  extractLineNumber(content) {}
-    // Try to find the line with the issue;
-    const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {}
-      if (this.hasSyntaxIssues(lines[i], '')) {}
-        return i + 1};
-    };
-    return 1};
-  runTypeScriptCheck() {}
-    try {}
-      const result = execSync('npx tsc --noEmit --json', { })
-        "cwd": this.projectRoot, 
-        "encoding": 'utf8',
-        "stdio": 'pipe'
-      }
-});
-      if (result) {}
-        return JSON.parse(result)};
-      return { "errors": [] }} catch (error) {}
-      // TypeScript check failed, extract errors from stderr;
-      const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseTypeScriptErrors(stderr)};
-  };
-  runESLintCheck() {}
-    try {}
-      const result = execSync('npx eslint . --format json', { })
-        "cwd": this.projectRoot, 
-        "encoding": 'utf8',
-        "stdio": 'pipe'
-      }
-});
-      if (result) {}
-        return JSON.parse(result)};
-      return { "errors": [] }} catch (error) {}
-      // ESLint check failed, extract errors from stderr;
-      const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseESLintErrors(stderr)};
-  };
-  runBuildCheck() {}
-    try {}
-      const result = execSync('npm run build', { })
-        "cwd": this.projectRoot, 
-        "encoding": 'utf8',
-        "stdio": 'pipe'
-      }
-});
-      return { "errors": [] }} catch (error) {}
-      // Build failed, extract errors from stderr;
-      const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseBuildErrors(stderr)};
-  };
-  runDependencyCheck() {}
-    try {}
-      const result = execSync('npm audit --json', { })
-        "cwd": this.projectRoot, 
-        "encoding": 'utf8',
-        "stdio": 'pipe'
-      }
-});
-      if (result) {}
-        const audit = JSON.parse(result);
-        return this.parseDependencyErrors(audit)};
-      return { "errors": [] }} catch (error) {}
-      return { "errors": [] }};
-  };
-  parseTypeScriptErrors(stderr) {}
-    const errors = [];
-    const lines = stderr.split('\n');
-    lines.forEach(line => {})
-      const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
-      if (match) {}
-        errors.push({})
-          "file": match[1].trim(),
-          "line": parseInt(match[2]),
-          "column": parseInt(match[3]),
-          "message": match[4].trim(),
-          "code": 'TS_ERROR'
-        })};
-    }
-});
-    return { errors }};
-  parseESLintErrors(stderr) {}
-    const errors = [];
-    const lines = stderr.split('\n');
-    lines.forEach(line => {})
-      const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
-      if (match) {}
-        errors.push({})
-          "filePath": match[1].trim(),
-          "line": parseInt(match[2]),
-          "column": parseInt(match[3]),
-          "message": match[4].trim(),
-          "ruleId": 'ESLINT_ERROR',
-          "severity": 2,
-          "fix": false;
-        })};
-    }
-});
-    return { errors }};
-  parseBuildErrors(stderr) {}
-    const errors = [];
-    const lines = stderr.split('\n');
-    lines.forEach(line => {})
-      if (line.includes('"Error": ') || line.includes('error:')) {}
-        errors.push({})
-          file: 'build',
-          "message": line.trim(),
-          "phase": 'build',
-          "severity": 'high'
-        })};
-    }
-});
-    return { errors }};
-  parseDependencyErrors(audit) {}
-    const errors = [];
-    if (audit.vulnerabilities) {}
-      Object.keys(audit.vulnerabilities).forEach(pkg => {})
-        const vuln = audit.vulnerabilities[pkg];
-        errors.push({})
-          "package": pkg,
-          "severity": vuln.severity,
-          "message": vuln.title,
-          "version": vuln.installedVersion,
-          "resolution": vuln.recommendation;
-        })})};
-    return { errors }};
-  categorizeTypeScriptSeverity(error) {}
-    if (error.message.includes('Cannot find module') || 
-        error.message.includes('Module not found')) {}
-      return 'critical'} else if (error.message.includes('Type') || 
-               error.message.includes('Interface')) {}
-      return 'medium'} else {}
-      return 'low'};
-  };
-  hasConfigurationIssues(content, filename) {}
-    try {}
-      if (filename.endsWith('.json')) {}
-        JSON.parse(content)} else if (filename.endsWith('.js') || filename.endsWith('.ts')) {}
-        // Basic syntax check for JS/TS config files;
-        if (content.includes('export default') || content.includes('module.exports')) {}
-          return false; // Looks like valid config;
-        };
-      };
-      return false} catch (error) {}
-      return true};
-  };
-  extractConfigurationIssues(content, filename) {}
-    const issues = [];
-    try {}
-      if (filename.endsWith('.json')) {}
-        JSON.parse(content)};
-    } catch (error) {}
-      issues.push({})
-        "type": 'json_parse_error',
-        "message": error.message,
-        "position": error.message.match(/position (\d+)/)?.[1] || 'unknown'
-      })};
-    return issues};
-  async generateErrorReport() {}
-    const report = {}
-      "timestamp": new Date().toISOString(),
-      "summary": {}
-        totalErrors: 0,
-        "errorsByType": {},
-        "severityBreakdown": {}
-          critical: 0,
-          "high": 0,
-          "medium": 0,
-          "low": 0;
-        };
-      },
-      "errors": this.errorTypes,
-      "recommendations": this.generateRecommendations();
-    };
-    // Calculate totals;
-    Object.keys(this.errorTypes).forEach(type => {})
-      const count = this.errorTypes[type].length;
-      report.summary.totalErrors += count;
-      report.summary.errorsByType[type] = count;
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -669,8 +374,4 @@ process.on('unhandledRejection', (reason, promise) => {}
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

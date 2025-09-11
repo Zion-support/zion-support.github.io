@@ -9,8 +9,4 @@ const Category = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Category;
-=======
-export default Category;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

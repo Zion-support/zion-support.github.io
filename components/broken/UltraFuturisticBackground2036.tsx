@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useRef } from 'react',
 interface UltraFuturisticBackground2036Props {
   variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',
@@ -100,17 +96,9 @@ Math.max (canvas.width, canvas.height) / 2),
       gradient.addColorStop (1, 'rgba (0, 0, 0, 0.8)'),
       ctx.fill_style = gradient,
       ctx.fill_rect (0, 0, canvas.width, canvas.height),
-<<<<<<< HEAD
       // Update and draw particles;
       particles.for_each ((particle, index) => {
         // Update position;
-=======
-
-      // Update and draw particles;
-      particles.for_each ((particle, index) => {
-        // Update position;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         particle.x += particle.vx,
         particle.y += particle.vy,
         // Wrap around edges;
@@ -274,20 +262,11 @@ if ( {) {
   $2
 }
         cancelAnimationFrame (animation_ref.current);
-<<<<<<< HEAD
-      }
-      window.removeEventListener ('resize', resize_canvas);
-    }
-}, [variant, intensity]),
-=======
-
       }
       window.removeEventListener ('resize', resize_canvas);
     }
 
 }, [variant, intensity]),
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot;>;
       <canvas;
@@ -299,13 +278,7 @@ if ( {) {
 <div className=&quot;absolute inset - 0 pointer - events - none & quot;>;
         {/* Grid overlay for cyber variant */}
         {variant === 'cyber' && (
-<<<<<<< HEAD
           <div className=&quot;absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]&quot; />)}
-=======
-
-          <div className=&quot;absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]&quot; />)}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset - 0&quot;>;
@@ -313,12 +286,7 @@ if ( {) {
               <motion.div;
                 key={i}
                 className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
-                style={{
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  left: `${(i + 1) * 12.5}%`,
+                style={{                  left: `${(i + 1) * 12.5}%`,
                   transform: 'translate_x (-50%)';
                 }}
                 animate={{
@@ -329,174 +297,8 @@ if ( {) {
                   delay: i * 0.5}}
               />))}
           </div>)}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {/* AI neural network overlay */}
-{variant === 'ai' && (
-          <div className=&quot;absolute inset - 0&quot;>;
-            {[...Array (6)].map ((_, i) => (
-              <motion.div;
-                key={i}
-                className=&quot;absolute w - full h - px bg - gradient - to - r from - transparent via - green - 400 / 20 to - transparent & quot;
-                style={{
-                  top: `${(i + 1) * 16.67}%`}}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 animate={{
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  delay: i * 0.8}}
-              />))}
-          </div>)}
-      </div>;
-<<<<<<< HEAD
-    </div>);
-}
-export default UltraFuturisticBackground2036;
-
-      animationRef.current = requestAnimationFrame(animate)
-    },
-
-    const drawQuantumShapes = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
-      const time = Date.now() * 0.001
-        
-        ctx.beginPath(),
-        ctx.moveTo(-size, -size),
-        ctx.lineTo(size, -size),
-        ctx.lineTo(size, size),
-        ctx.lineTo(-size, size),
-        ctx.closePath(),
-        ctx.stroke(),
-        
-        // Draw inner quantum dots
-        ctx.fillStyle = `rgba(0, 255, 255, ${0.6 * multiplier})`,
-        ctx.beginPath(),
-        ctx.arc(0, 0, size * 0.3, 0, Math.PI * 2),
-        ctx.fill(),
-
-        ctx.restore()
-      }
-    },
-
-    const drawDataStreams = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
-      const time = Date.now() * 0.001
-        
-        ctx.beginPath(),
-        ctx.moveTo(x, startY),
-        ctx.lineTo(x, streamY),
-        ctx.stroke(),
-        
-        // Data packets
-        ctx.fillStyle = `rgba(0, 255, 0, ${0.8 * multiplier})`,
-        ctx.fillRect(x - 3, streamY - 3, 6, 6),
-
-        ctx.restore()
-      }
-    },
-
-    const drawSpaceElements = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
-      const time = Date.now() * 0.001
-      }
-      
-      // Draw nebula
-      const _nebulaGradient = ctx.createRadialGradient(
-        canvas.width * 0.7, canvas.height * 0.3, 0,
-        canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier
-      ),
-      
-      nebulaGradient.addColorStop(0, 'rgba(255, 0, 255, 0.1)'),
-      nebulaGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.05)'),
-      nebulaGradient.addColorStop(1, 'transparent'),
-      
-      ctx.fillStyle = nebulaGradient,
-      ctx.beginPath(),
-      ctx.arc(canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier, 0, Math.PI * 2),
-      ctx.fill()
-    },
-
-    animate(),
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
-      window.removeEventListener('resize', resizeCanvas)
-    }
-  }, [variant, intensity]),
-
-  return (
-    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
-      <canvas
-        ref={canvasRef}
-        className=&quot;w-full h-full&quot;
-        style={{ display: 'block' }}
-      />
-      
-      {/* Additional overlay effects */}
-      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
-        {/* Grid overlay for cyber variant */}
-        {variant === 'cyber' && (
-          <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot; />
-        )}
-        
-        {/* Quantum field lines */}
-        {variant === 'quantum' && (
-          <div className=&quot;absolute inset-0&quot;>
-            {[...Array(8)].map((_, i) => (
-              <motion.div
-                key={i}
-                className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
-                style={{
-                  left: `${(i + 1) * 12.5}%`,
-                  transform: 'translateX(-50%)'
-                }}
-                animate={_{
-                  opacity: [0.3, _0.8, _0.3]}}
-                transition={_{
-                  duration: 3, _repeat: Infinity, _delay: i * 0.5}}
-              />
-            ))}
-          </div>
-        )}
-        
-        {/* AI neural network overlay */}
-        {variant === 'ai' && (
-          <div className=&quot;absolute inset-0&quot;>
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
-                style={{
-                  top: `${(i + 1) * 16.67}%`}}
-                animate={_{
-                  opacity: [0.2, _0.6, _0.2]}}
-                transition={_{
-                  duration: 4, _repeat: Infinity, _delay: i * 0.8}}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  )
-},
-
-export default UltraFuturisticBackground2036
-
-=======
-
-    </div>);
-
-}
-export default UltraFuturisticBackground2036;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

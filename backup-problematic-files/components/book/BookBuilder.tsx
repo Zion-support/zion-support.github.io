@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import React, { useMemo, useState } from 'react',;
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react',;
-import { buildPrintableHtml } from '../../utils/export/buildHtml',;
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes',;
-import { defaultChapters } from '../../utils/book/defaultOutline',;
-const initialProject: BookProject = {;
-  meta: {;
-    title: 'Zion OS: Building the Civilization Protocol',;
-    subtitle: 'AI. Talent. Trust.',;
-    author: 'Founder Name',;
-    isbn: '',;
-    publisher: 'Zion Tech Solutions'},;
-  chapters: defaultChapters,;
-  visuals: {;
-    timelineImages: [],;
-    daoVoteCharts: [],;
-    uiScreens: [],;
-    quoteCallouts: [;
-      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}},;
-function fileToBase64(file: File): Promise<string> {;
-  return new Promise((resolve, reject) => {;
-    const reader = new FileReader(),;
-    reader.onload = () => resolve(reader.result as string),;
-    reader.onerror = reject,;
-    reader.readAsDataURL(file);
-  });
-}
-
 export default function BookBuilder() {
   const [project, setProject] = useState<BookProject>(initialProject),
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
@@ -550,6 +521,4 @@ if (return, ) {
         </div>;
       </section>;
     </div>);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

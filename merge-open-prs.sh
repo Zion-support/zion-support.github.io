@@ -27,22 +27,32 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "/d' "$file"
-            sed -i '/
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "⚠️  Found conflicts in $file, resolving..."
+        
+        # Create a backup of the conflicted file
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Strategy: Keep both versions where possible, prefer main branch for critical files
+        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+            echo "📦 Critical file detected, keeping main version and merging dependencies..."
+            # For package files, we'll need special handling
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
             echo "📚 Documentation file, keeping both versions where possible..."
             # Remove conflict markers but try to preserve content
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         else
             echo "📝 Regular file, attempting to merge both versions..."
             # Remove conflict markers and try to keep both versions
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         fi
         
         echo "✅ Resolved conflicts in $file"
@@ -55,6 +65,12 @@ merge_branch() {
     local branch="$1"
     
     echo "🔄 Attempting to merge $branch..."
+    
+    # Check if branch exists remotely
+    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        echo "❌ Branch $branch doesn't exist remotely, skipping..."
+        return 1
+    fi
     
     # Fetch the latest version of the branch
     git fetch origin "$branch"
@@ -74,6 +90,7 @@ merge_branch() {
         if [ -n "$CONFLICTED_FILES" ]; then
             echo "📋 Conflicted files: $CONFLICTED_FILES"
             
+            # Resolve conflicts in each file
             for file in $CONFLICTED_FILES; do
                 if [ -f "$file" ]; then
                     resolve_conflicts "$file" "$branch"
@@ -166,5 +183,6 @@ echo "🧹 Cleanup recommendations:"
 echo "   1. Review the merged changes: git log --oneline -20"
 echo "   2. Test the application thoroughly"
 echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
-echo "   4. Consider cleaning up old feature branches"
-echo "   5. Run tests to ensure everything works correctly"
+echo "   4. Close the merged PRs on GitHub"
+echo "   5. Consider cleaning up old feature branches"
+echo "   6. Run tests to ensure everything works correctly"

@@ -31,15 +31,5 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   resultCount !== 1 ? 's' : '' ;
 }`) ;
 }</span>) ;
-<<<<<<< HEAD
-:temp_broken_files/talent/ResultsHeader.tsx
-}</div>) ;"}'"
 }</div>) ;
 }'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ResultsHeader.tsx
-=======
-
-}</div>) ;
-}'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

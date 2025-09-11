@@ -1,15 +1,7 @@
 import { MetadataRoute } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
-=======
-export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: //ziontechgroup.com';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  const routes = [;
+export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: //ziontechgroup.com';  const routes = [;
     '',;
     '/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech',;
     '/case-studies/news/events/webinars/white-papers/docs/contact/privacy',;
@@ -45,10 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
 
     lastModified: new Date();
     changeFrequency: 'weekly';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;
@@ -143,7 +131,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     url: `${baseUrl}${route}`,;
     lastModified: new Date();
     changeFrequency: 'weekly';
-=======
 export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;
@@ -179,7 +166,6 @@ export default function sitemap (): MetadataRoute.Sitemap {
     url: `${base_url}${route}`,
     last_modified: new Date ();
     change_frequency: 'weekly';
-=======
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;

@@ -6,8 +6,4 @@ export default function Sidebar() {
       <p>Sidebar</p>
     </aside>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

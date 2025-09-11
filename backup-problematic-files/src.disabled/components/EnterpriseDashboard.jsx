@@ -9,8 +9,4 @@ const EnterpriseDashboard = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default EnterpriseDashboard;
-=======
-export default EnterpriseDashboard;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

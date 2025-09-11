@@ -10,8 +10,4 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
-<<<<<<< HEAD
 export default ImageWithRetry;
-=======
-export default ImageWithRetry;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

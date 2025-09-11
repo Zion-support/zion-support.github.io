@@ -9,8 +9,4 @@ const WhitePapers = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default WhitePapers;
-=======
-export default WhitePapers;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

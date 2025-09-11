@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,12 +23,8 @@ class ErrorBoundary extends React.Component {
 }
 
 
-<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';

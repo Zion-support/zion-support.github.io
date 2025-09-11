@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 const OptimizedImage.dynamic = () => {
   return (
@@ -11,8 +7,3 @@ const OptimizedImage.dynamic = () => {
     </div>);
 }
 ;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default OptimizedImage.dynamic;

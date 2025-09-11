@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
-
 
 
 
 
 =======
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,16 +23,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useRef, useEffect } from 'react';
-<<<<<<< HEAD
-
-import Link from 'next / link';
-;
-
 =======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 import Link from 'next/link';
@@ -54,14 +40,8 @@ interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const SearchBar: React.FC = () => {
   const [query, set_query] = useState ('');
   const [results, set_results] = useState < SearchResult[]>([]);
@@ -81,65 +61,6 @@ const SearchBar: React.FC = () => {
     {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-<<<<<<< HEAD
-<<<<<<< HEAD
-url: '/ai - services',
-=======
-      url: '/ai - services',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-      url: '/ai - services',
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      type: 'category',
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-<<<<<<< HEAD
-<<<<<<< HEAD
-url: '/it - services',
-      type: 'category',
-    },
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      url: '/it - services',
-      type: 'category',
-    },
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    {
-      title: 'Cloud Cost Guard'
-      description: 'FinOps Assistant for anomaly detection and cost optimization'
-      url: '/services'
-      type: 'service'
-    }
-    {
-      title: 'Contact Us'
-      description: 'Get in touch with our experts for consultation and quotes'
-      url: '/contact'
-      type: 'page'
-    }
-    {
-      title: 'Pricing'
-      description: 'View our transparent pricing for all services'
-      url: '/pricing'
-      type: 'page'
-    }
-  ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [;
     {;
@@ -184,52 +105,11 @@ url: '/it - services',
       setResults([]);
       setIsOpen(false);
       return,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
     }
     setIsLoading(true);
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    // Simulate API delay;
-    await new Promise(resolve => setTimeout(resolve, 300));
-    const filteredResults = searchData && searchData.filter(item =>;
-      item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    );
-    setResults(filteredResults);
-    setIsOpen(true);
-    setIsLoading(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
   };
-=======
-
-  };
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-  };
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const value = e && e.target.value;
     setQuery(value);
@@ -244,42 +124,6 @@ url: '/it - services',
     setIsOpen(false),;
     inputRef && inputRef.current?.blur();
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const handleResultClick = () => {
-    setIsOpen(false)
-    setQuery('')
-  }
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-    setIsOpen(false)
-    inputRef.current?.blur()
-  }
-  }
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false)
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-=======
-<<<<<<< HEAD
-  };
-  useEffect(() => {;
-    const handleClickOutside = (event: MouseEvent) => {;
-      if (searchRef && searchRef.current && !searchRef && searchRef.current.contains(event && event.target as Node)) {;
-        setIsOpen(false),;
-      }
-    };
-    document && document.addEventListener('mousedown', handleClickOutside);
-    return () => {;
-      document && document.removeEventListener('mousedown', handleClickOutside);
-    };
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, []);
   return (
@@ -313,16 +157,6 @@ url: '/it - services',
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
           </div>;
         )}
-<<<<<<< HEAD
-      </div>;
-      {/* Search Results Dropdown */}
-      {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
-          {results.length > 0 ? (
-            <div className="py-2">
-              {results.map((result, index) => (
-=======
-
       </div>;
 
 
@@ -331,76 +165,10 @@ url: '/it - services',
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">;
           {results && results.length > 0 ? (;
             <div className="py-2">;
-              {results && results.map((result, index) => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                <Link
+              {results && results.map((result, index) => (;                <Link
                   key={index}
                   href={result && result.url}
                   onClick={handleResultClick}
-<<<<<<< HEAD
-
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"
-                >
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0">
-                      <div className={`w-2 h-2 rounded-full mt-2 ${
-                        result.type === 'service' ? 'bg-blue-500' :
-                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
-                      }`}></div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate">
-                        {result.title}
-                      </p>
-                      <p className="text-sm text-gray-500 truncate">
-                        {result.description}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : query && !isLoading ? (
-            <div className="px-4 py-3 text-sm text-gray-500">
-              No results found for &quot;{query}&quot;
-            </div>
-          ) : null}
-        </div>;
-      )}
-    </div>
-  );
-}
-=======
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors">;
-                  <div className="flex items-start space-x-3">;
-                    <div className="flex-shrink-0">;
-                      <divclassName={`w-2 h-2 rounded-full mt-2 ${
-                        result && result.type === 'service' ? 'bg-blue-500' :
-                        result && result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
-                      }`}></div>;
-                    </div>;
-                    <div className="flex-1 min-w-0">;
-                      <p className="text-sm font-medium text-gray-900 truncate">;
-                        {result && result.title}
-                      </p>;
-                      <p className="text-sm text-gray-500 truncate">;
-                        {result && result.description}
-                      </p>;
-                    </div>;
-                  </div>;
-                </Link>;
-              ))}
-            </div>;
-          ) : query && !isLoading ? (;
-            <div className="px-4 py-3 text-sm text-gray-500">;
-              No results found for &quot;{query}&quot;
-            </div>;
-          ) : null}
-        </div>;
-      )}
-    </div>;
-  );
-
 ;
   const handle_search = async (search_query: string) => {
     if () {) {
@@ -531,23 +299,12 @@ if ( {) {
 ;
 
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 };
 
-
-<<<<<<< HEAD
-export default SearchBar;
-export default SearchBar;
-};
 
 export default SearchBar;
 };
 
 export default SearchBar;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default SearchBar;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+=======export default SearchBar;=======
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-const EnhancedLayout = ({ children }) => {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,44 +20,20 @@ import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="min - h-screen flex flex - col">;
       <EnhancedNavigation />;
       <main className="flex - 1">;
         {children}
-<<<<<<< HEAD
-      </main>;
-      <EnhancedFooter />;
-    </div>);
-},
-export default EnhancedLayout;
-;
-      <EnhancedNavigation />
-      <main className="flex-1">
-        {children}
-      </main>
-      <EnhancedFooter />
-    </div>
-
   );
 }
 export default EnhancedLayout;
 
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      </main>;
       <EnhancedFooter />;
     </div>);
 },
 export default EnhancedLayout;
 ;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

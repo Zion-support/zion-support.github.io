@@ -9,8 +9,4 @@ const AgenticRagHelpdesk = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AgenticRagHelpdesk;
-=======
-export default AgenticRagHelpdesk;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,61 +1,92 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isSlow: boolean;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+export const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isSlow: false
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
   });
 
   useEffect(() => {
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      
-      const memory = (performance as any).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
-      
-      const isSlow = loadTime > 3000 || memoryUsage > 50; // 3s or 50MB threshold
-      
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(performance.now()),
-        memoryUsage: Math.round(memoryUsage * 100) / 100,
-        isSlow
-      });
-    };
+    // Only run in production and if PerformanceObserver is available
+    if (process.env.NODE_ENV !== 'production' || !('PerformanceObserver' in window)) {
+      return;
+    }
 
-    // Measure performance after component mounts
-    const timer = setTimeout(measurePerformance, 1000);
-    
-    return () => clearTimeout(timer);
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        switch (entry.entryType) {
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+            break;
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+            break;
+          case 'first-input':
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+            }
+            break;
+          case 'navigation':
+            setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
+            break;
+        }
+      }
+    });
+
+    // Observe different types of performance entries
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch (e) {
+      // Fallback for browsers that don't support all entry types
+      observer.observe({ entryTypes: ['paint', 'navigation'] });
+    }
+
+    return () => observer.disconnect();
   }, []);
 
-  // Only show in development or if performance is poor
-  if (process.env.NODE_ENV !== 'development' && !metrics.isSlow) {
-    return null;
-  }
+  // Log metrics to console in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(v => v !== null)) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
-      <div className="space-y-1">
-        <div>Load: {metrics.loadTime}ms</div>
-        <div>Render: {metrics.renderTime}ms</div>
-        <div>Memory: {metrics.memoryUsage}MB</div>
-        {metrics.isSlow && (
-          <div className="text-red-400 font-bold">⚠️ Slow Performance</div>
-        )}
-      </div>
-    </div>
-  );
+  // Send metrics to analytics in production
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production' && Object.values(metrics).every(v => v !== null)) {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          value: Math.round(metrics.lcp || 0),
+          custom_map: {
+            fcp: metrics.fcp,
+            lcp: metrics.lcp,
+            fid: metrics.fid,
+            cls: metrics.cls,
+            ttfb: metrics.ttfb,
+          }
+        });
+      }
+    }
+  }, [metrics]);
+
+  return null; // This component doesn't render anything
 };
-
-export default PerformanceMonitor;

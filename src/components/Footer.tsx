@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronUp } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = memo(() => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -91,6 +91,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;

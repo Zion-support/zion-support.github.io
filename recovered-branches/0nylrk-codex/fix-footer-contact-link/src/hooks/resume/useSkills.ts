@@ -1,34 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Skill  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useSkills() {
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -39,19 +17,7 @@ export function useSkills() {;
       return false
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -67,106 +33,18 @@ export function useSkills() {;
       return false;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     setIsLoading(true),
     setError(null),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    try {
-      const { error } = await supabase
-        .from('resume_skills')
-        .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name: skill && skill.name;
           proficiency: skill && skill.proficiency;
           category: skill && skill.category,
           years_experience: skill && skill.years_experience
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          resume_id: resumeId;
-          name: skill.name;
-          proficiency: skill.proficiency;
-          category: skill.category
-          years_experience: skill.years_experience
-        });
-      if (error) throw error;
-<<<<<<< HEAD
-=======
-        });
-      if (error) throw error;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          resume_id: resumeId,
-          name: skill.name,
-          proficiency: skill.proficiency,
-          category: skill.category,
-          years_experience: skill.years_experience
-        }),
-      
-      if (error) throw error,
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      return showSuccessToast("Skill added", "Your skill has been added to your resume")
-    } catch (e: any) {
-      return handleResumeError(e, 'Could not add skill')
-    } finally {
-      setIsLoading(false)
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  }
-  const deleteSkill = async (skillId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete skills')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-;
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -193,22 +71,11 @@ export function useSkills() {;
       return false;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     setIsLoading(true),
     setError(null),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -273,85 +140,22 @@ export function useSkills() {;
       setIsLoading(false),;
     }
     
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
-<<<<<<< HEAD
-
-<<<<<<< HEAD
         .eq('id', skillId);
-      if (error) throw error;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-        .eq('id', skillId);
-      if (error) throw error;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        .eq('id', skillId),
+      if (error) throw error;        .eq('id', skillId),
       
       if (error) throw error,
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
 
 
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
-  }
-  return {
-    isLoading;
-    error;
-    addSkill;
-
-<<<<<<< HEAD
-    deleteSkill
-  }
-}
-;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      const { error } = await supabase;
-        .from('resume_skills');
-        .delete();
-        .eq('id', skillId),;
-      if (error) throw error,;
-      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not delete skill');
-    } finally {;
-      setIsLoading(false);
-    }
-=======
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
@@ -374,29 +178,9 @@ if ( {) {
       return false;
     }
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  },;
-  return {;
-    isLoading,;
-    error;
-    addSkill;
-    deleteSkill;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
   }
 }
-<<<<<<< HEAD
 ;
     try {
       const { error } = await supabase;
@@ -499,16 +283,9 @@ deleteSkill
 }
 }
   }
-<<<<<<< HEAD
 }
 ;
   }
 }
 ;
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

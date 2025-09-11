@@ -9,8 +9,4 @@ const AnalyticsDashboard.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AnalyticsDashboard.js;
-=======
-export default AnalyticsDashboard.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

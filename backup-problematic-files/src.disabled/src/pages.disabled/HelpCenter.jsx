@@ -9,8 +9,4 @@ const HelpCenter = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default HelpCenter;
-=======
-export default HelpCenter;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

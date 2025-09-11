@@ -3,22 +3,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-class ComprehensiveAutomationRunner {
-  // TODO: Implement
-}
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
-    this.results = [];
-
 
   async runScript(scriptPath, scriptName) {
     this.log(`\n🚀 Running ${scriptName}`);
@@ -35,17 +19,6 @@ class ComprehensiveAutomationRunner {
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-=======
-=======
-console.log('🚀 Starting Comprehensive Automation Runner...');
-
-
-
 
 
 
@@ -91,26 +64,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    }
+=======    }
   }
 
   async runAllAutomations() {
-<<<<<<< HEAD
-this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-    this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('==========================================');
-
     const scripts = [
       { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
       { path: 'enhanced-automation-suite.cjs', name: 'Enhanced Automation Suite' },
@@ -194,7 +151,5 @@ this.log('🎯 Starting Comprehensive Automation Runner');
 // Run all automations
 const runner = new ComprehensiveAutomationRunner();
 runner.runAllAutomations().catch(console.error);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

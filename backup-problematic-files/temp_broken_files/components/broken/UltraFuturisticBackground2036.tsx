@@ -689,31 +689,14 @@ const nebulaGradient = ctx.createRadialGradient(
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
-<<<<<<< HEAD
-      }
-      window.removeEventListener('resize', resizeCanvas)
-    }
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-      }
-      window.removeEventListener('resize', resizeCanvas)
-    }
   }, [variant, intensity]),
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-:components/broken/UltraFuturisticBackground2036.tsx
-}, [variant, intensity]),
 
-  }, [variant, intensity]),
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       window.removeEventListener('resize', resizeCanvas)
     }
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       <canvas,
@@ -727,18 +710,8 @@ ref={canvasRef}
         {variant === 'cyber' && (
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)1px,transparent1px),linear-gradient(90deg,rgba(0,255,255,0.1)1px,transparent1px)] bg-[size:50px50px]&quot; />
         )}
-<<<<<<< HEAD
-        ;
-:components/broken/UltraFuturisticBackground2036.tsx
-        ;
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
-
         ;
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
         ;
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
         {/* Quantum field lines */}
@@ -748,45 +721,6 @@ ref={canvasRef}
               <motion.div,
 key={i}
                 className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
-<<<<<<< HEAD
-:components/broken/UltraFuturisticBackground2036.tsx
-                style={{
-                  left: `${(i + 1) * 12.5}%`
-                  transform: 'translateX(-50%)'
-                }}
-                animate={{opacity: [0.3, 0.8, 0.3]}}
-                transition={{duration: 3;
-                  repeat: Infinity;
-:components/broken/UltraFuturisticBackground2036.tsx
-                animate={{;
-                  opacity: [0.3, 0.8, 0.3]}}
-                transition={{;
-                  duration: 3,;
-                  repeat: Infinity,;
-                  delay: i * 0.5}}
-              />;
-            ))}
-          </div>;
-        )}
-                style={{                  left: `${(i + 1) * 12.5}%`,
-                  transform: 'translateX(-50%)'
-                }}
-;
-                animate={_{
-                  opacity: [0.3, 0.8, 0.3]}}
-                transition={_{
-                  duration: 3, repeat: Infinity, delay: i * 0.5}}
-              />
-            ))}
-          </div>;
-        )}
-        ;
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -794,31 +728,14 @@ key={i}
               <motion.div,
 key={i}
                 className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
-<<<<<<< HEAD
-:components/broken/UltraFuturisticBackground2036.tsx
-                style={{
-                  top: `${(i + 1) * 16.67}%`}}
-                animate={{opacity: [0.2, 0.6, 0.2]}}
-                transition={{duration: 4;
-                  repeat: Infinity;
-                  delay: i * 0.8}}
-              />;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 style={{                  top: `${(i + 1) * 16.67}%`}}
                 animate={_{
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={_{
                   duration: 4, repeat: Infinity, delay: i * 0.8}}
               />
-<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
           </div>;
         )}

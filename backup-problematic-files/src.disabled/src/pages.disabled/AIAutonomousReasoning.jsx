@@ -9,8 +9,4 @@ const AIAutonomousReasoning = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousReasoning;
-=======
-export default AIAutonomousReasoning;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -28,10 +28,5 @@ export default function _app(): any ({ }: _appProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }

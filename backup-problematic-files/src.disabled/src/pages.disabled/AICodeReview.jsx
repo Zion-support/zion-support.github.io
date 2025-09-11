@@ -9,8 +9,4 @@ const AICodeReview = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AICodeReview;
-=======
-export default AICodeReview;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

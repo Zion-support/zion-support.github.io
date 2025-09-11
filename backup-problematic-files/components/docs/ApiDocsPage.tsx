@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useMemo, useState } from 'react',
-import Sidebar from './Sidebar',
-import EndpointDetail from './EndpointDetail',
-import v1 from '../../data/api-docs/v1',
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',
-
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion),
@@ -166,6 +159,4 @@ function save() {
       </div>;
       <textarea className="w - full h - 40 px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary text - sm" value={content} on_change={(e) => set_content (e.target.value)} placeholder="Add changelog entries here..." />;
     </div>);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

@@ -9,8 +9,4 @@ const NotFound = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default NotFound;
-=======
-export default NotFound;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const Footer = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Footer;
-=======
-export default Footer;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

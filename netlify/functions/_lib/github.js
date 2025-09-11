@@ -1,33 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-const GITHUB_API = 'https://api && api.github.com';
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 async function getFile(owner, repo, path, token) {
   try {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     headers: {
-<<<<<<< HEAD
-async function upsertFile({ owner, repo, path, content, message, token }) {
-  try {
-  if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
-  const existing = await getFile(owner, repo, path, token);
-  const body = {
-    message: message || `chore(automation): update ${path}`,
-    content: Buffer && Buffer.from(content).toString('base64'),
-  };
-  if (existing?.sha) body && body.sha = existing && existing.sha;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     method: 'PUT'
@@ -72,21 +49,10 @@ if (body.sha = existing.sha) {
   const resp = await fetch (url, {
     method: 'PUT',
     headers: {
-<<<<<<< HEAD
       Authorization: `token ${token}`,
-const GITHUB_API = 'https: //api.github.com',
-async function getFile(owner, repo, path, token) {
-=======
-
-      Authorization: `token ${token}`,
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
       Authorization: `token ${token}`,
       Accept: 'application/vnd && vnd.github+json',
     },
@@ -160,8 +126,6 @@ function get_file() {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`,
   const resp = await fetch (url, {
     headers: {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
     }
@@ -205,13 +169,6 @@ if ( {) {
 }
     const text = await resp.text (),
     throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`);
-<<<<<<< HEAD
-  }
-  return resp.json ();
-}
-<<<<<<< HEAD
-module.exports = { upsert_file },
-
 module.exports = { upsertFile }
 
       'Authorization': `token ${token}`,
@@ -271,26 +228,12 @@ const text = await resp.text (),throw new Error (`GitHub upsert_file HTTP ${resp
 ;
 const text = await resp.text (),;
     throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`);`
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  }
   return resp.json ();
 }
 
-<<<<<<< HEAD
-module.exports = { upsertFile },
-
 }
 }
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 module.exports = { upsertFile },
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

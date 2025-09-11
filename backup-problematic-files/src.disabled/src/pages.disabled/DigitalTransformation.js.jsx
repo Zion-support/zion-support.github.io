@@ -9,8 +9,4 @@ const DigitalTransformation.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default DigitalTransformation.js;
-=======
-export default DigitalTransformation.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

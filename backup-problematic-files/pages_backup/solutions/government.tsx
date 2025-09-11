@@ -642,16 +642,9 @@ export default function GovernmentSolutions() {;
       </div>
     </>
     </>
-<<<<<<< HEAD
-  );
-};
-
 export default Government;
-=======
-<<<<<<< HEAD
     </Layout>
   );
 };
 
 export default Government;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

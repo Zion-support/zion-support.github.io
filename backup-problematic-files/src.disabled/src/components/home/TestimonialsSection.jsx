@@ -27,8 +27,4 @@ const TestimonialsSection = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TestimonialsSection;
-=======
-export default TestimonialsSection;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

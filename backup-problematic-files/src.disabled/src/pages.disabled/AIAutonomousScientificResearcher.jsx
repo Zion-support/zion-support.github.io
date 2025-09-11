@@ -9,8 +9,4 @@ const AIAutonomousScientificResearcher = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousScientificResearcher;
-=======
-export default AIAutonomousScientificResearcher;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -13,8 +13,4 @@ const TalentDetail.test: React.FC<TalentDetail.testProps> = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TalentDetail.test;
-=======
-export default TalentDetail.test;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

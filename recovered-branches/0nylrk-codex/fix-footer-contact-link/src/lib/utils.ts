@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import clsx, { type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
@@ -20,7 +16,6 @@ export /**
 function cn() {
   return tw_merge (clsx (inputs));
 }
-<<<<<<< HEAD
 import clsx, { type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
  ;
@@ -37,6 +32,3 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 };
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

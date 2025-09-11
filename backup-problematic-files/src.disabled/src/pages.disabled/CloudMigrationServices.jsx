@@ -9,8 +9,4 @@ const CloudMigrationServices = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default CloudMigrationServices;
-=======
-export default CloudMigrationServices;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

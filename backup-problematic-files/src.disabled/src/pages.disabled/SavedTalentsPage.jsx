@@ -27,8 +27,4 @@ const SavedTalentsPage = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default SavedTalentsPage;
-=======
-export default SavedTalentsPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

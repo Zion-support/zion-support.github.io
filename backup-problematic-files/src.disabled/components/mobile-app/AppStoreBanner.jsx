@@ -59,8 +59,4 @@ export default function AppStoreBanner({ }: AppStoreBannerProps) {
     </div>
   );
 
-<<<<<<< HEAD
 export default AppStoreBanner;
-=======
-export default AppStoreBanner;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

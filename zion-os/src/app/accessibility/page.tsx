@@ -1,34 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AccessibilityPage() {;
   return (;
 
     <div className="min-h-screen bg-white">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-export default function AccessibilityPage() {return (;
-export default function AccessibilityPage() {;
-  return (;
-    <div className="min-h-screen bg-white">;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * AccessibilityPage - Function description
  */
 function AccessibilityPage() {
   return (
     <div className="min - h-screen bg - white">;
-<<<<<<< HEAD
 export default function AccessibilityPage() {return (;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AccessibilityPage() {;
   return (;
     <div className="min-h-screen bg-white">;

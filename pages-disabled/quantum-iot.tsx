@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,28 +31,6 @@ import {;
   ArrowRight,;
   Shield,;
   Star,;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-} from "lucide-react";
-import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
-import Button from "../components/ui/Button";
-import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-<<<<<<< HEAD
-export default function QuantumInternetSecurityPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
-    s && s.link.endsWith("/quantum-internet-security-platform"),;
-=======
-
-export default function QuantumInternetSecurityPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
-    s && s.link.endsWith("/quantum-internet-security-platform"),;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  );
-  if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -209,6 +184,4 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-    </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
+    </UltraAdvancedFuturisticBackground>);}

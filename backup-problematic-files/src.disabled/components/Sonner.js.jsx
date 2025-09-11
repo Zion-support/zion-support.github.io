@@ -9,8 +9,4 @@ const Sonner.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Sonner.js;
-=======
-export default Sonner.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

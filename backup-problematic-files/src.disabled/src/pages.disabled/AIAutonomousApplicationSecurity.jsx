@@ -9,8 +9,4 @@ const AIAutonomousApplicationSecurity = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousApplicationSecurity;
-=======
-export default AIAutonomousApplicationSecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

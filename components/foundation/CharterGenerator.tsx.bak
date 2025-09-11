@@ -1,8 +1,4 @@
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-export type LegalStructure = any;
-=======
-
 export type LegalStructure = 'Cayman Foundation' | 'Swiss Verein' | 'US 501(c)(6)' | 'DAO-native Wrapper';
 
 export default function CharterGenerator() {
@@ -46,19 +42,9 @@ export default function CharterGenerator() {
 
     const amendments = `10. Amendments\n- Amendable via DAO supermajority or Foundation supermajority plus DAO simple majority.\n- All amendments versioned and time-stamped on IPFS and Git repositories.`;
 
-<<<<<<< HEAD
-    const liability = `11. Limitations and Disclaimers\n- No warranties, the ${name} Protocol is experimental.\n- The Foundation does not offer securities and does not guarantee token value.\n- Jurisdictional compliance: local obligations remain with individual actors.`;
-    
     return [header, '', preamble, '', registry, '', mission, '', neutrality, '', treasury, '', contributors, '', dao, '', grants, '', governance, '', transparency, '', amendments, '', liability]
       .filter(Boolean)
-      .join('\n');
-=======
-
-    return [header, '', preamble, '', registry, '', mission, '', neutrality, '', treasury, '', contributors, '', dao, '', grants, '', governance, '', transparency, '', amendments, '', liability]
-      .filter(Boolean)
-      .join('\n')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-  }, [legalStructure, protocolName, tokenSymbol, includeContributorRules, includeGrants, includeDAOIntegration]);
+      .join('\n')  }, [legalStructure, protocolName, tokenSymbol, includeContributorRules, includeGrants, includeDAOIntegration]);
 
   return (
     <div className="space-y-6">
@@ -103,9 +89,7 @@ export default function CharterGenerator() {
                 const a = document.createElement('a');
                 a.href = url;
                 a.download = `${protocolName || 'zion'}-foundation-charter.md`;
-                a.click();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                URL.revokeObjectURL(url)
+                a.click();                URL.revokeObjectURL(url)
               }}
             >
               Download .md
@@ -125,16 +109,4 @@ export default function CharterGenerator() {
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

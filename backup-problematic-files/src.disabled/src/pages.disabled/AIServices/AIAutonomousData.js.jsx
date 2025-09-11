@@ -9,8 +9,4 @@ const AIAutonomousData.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousData.js;
-=======
-export default AIAutonomousData.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

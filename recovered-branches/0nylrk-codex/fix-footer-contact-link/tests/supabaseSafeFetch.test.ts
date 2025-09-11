@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
-import { vi } from 'vitest',;
-
 import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
 import { vi } from 'vitest',;
 ;
@@ -69,10 +64,6 @@ it('safeFetch throws when fetch rejects', async () => {;
   vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error')),;
   await expect(safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase');
 });
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import { check_online, safe_fetch } from '@/integrations / supabase / client';
 import { vi } from 'vitest';
 // Test that check_online returns false when navigator is offline;
 it ('check_online returns false when navigator is offline', async () => {
@@ -89,13 +80,7 @@ it ('safe_fetch throws when fetch rejects', async () => {
   await expect (safe_fetch ('https: //example.com')).rejects.to_throw ('Failed to connect to Supabase');
 ;
 
-=======
 
 import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
 import { vi } from 'vitest',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

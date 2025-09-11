@@ -9,8 +9,4 @@ const WebsiteImprovementDashboard.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default WebsiteImprovementDashboard.js;
-=======
-export default WebsiteImprovementDashboard.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

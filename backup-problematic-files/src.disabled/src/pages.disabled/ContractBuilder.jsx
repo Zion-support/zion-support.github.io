@@ -9,8 +9,4 @@ const ContractBuilder = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ContractBuilder;
-=======
-export default ContractBuilder;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,8 +9,4 @@ const ContactSection.js = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ContactSection.js;
-=======
-export default ContactSection.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

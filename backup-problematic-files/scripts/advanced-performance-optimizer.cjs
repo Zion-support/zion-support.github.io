@@ -29,8 +29,4 @@ const { execSync } = require('child_process')
           "missing"
       "status"
     console.log('\n Performance Optimization "Summary")
-<<<<<<< HEAD
     console.error('Performance optimization "failed")
-=======
-    console.error('Performance optimization "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

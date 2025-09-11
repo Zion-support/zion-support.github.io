@@ -7,14 +7,6 @@ import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -23,17 +15,7 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -53,19 +35,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "New"
       colors: "bg-green-500/20 text-green-400"}
     "top-rated": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      icon: Award
-      text: "Top Rated"
-      colors: "bg-purple-500/20 text-purple-400"}}
-  const { icon: Icon, text, colors } = badgeConfig[type];
-  return (
-    <div className={cn(
-      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
-      colors;
-
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
@@ -78,63 +47,28 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     <div className={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
       colors,
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      className
     )}>
       <Icon className="w-3 h-3" />
       <span>{text}</span>
     </div>
   )
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProfileBadgeProps {;
   type: BadgeType,;
   className?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
-=======
+export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;=======
 
 export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const badgeConfig = {;
     verified: {;
       icon: BadgeCheck,;
@@ -152,27 +86,13 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       icon: Award,;
       text: "Top Rated",;
       colors: "bg-purple-500/20 text-purple-400"}},;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <divclassName={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
       colors
       className
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -216,31 +136,16 @@ export function ProfileBadge({ type, className } ProfileBadgeProps) {;
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
       colors;
       className;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     )}>;
       <Icon className="w-3 h-3" />;
       <span>{text}</span>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  );
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+}=======
 import React from './react';
 import { BadgeCheck, Star, Clock, Award } from './lucide-react';
 import { cn } from '@/lib / utils';
 type BadgeType = 'verified' | 'featured' | 'new' | 'top - rated';
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ProfileBadgeProps {
   type: BadgeType,
   class_name?: string;
@@ -277,7 +182,6 @@ function ProfileBadge() {
       <span>{text}</span>;
     </div>);
 }
-<<<<<<< HEAD
   ),;}
  type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
   type, className 
@@ -298,8 +202,3 @@ className)
   );
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

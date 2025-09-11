@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-
 
 =======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,38 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Cloud, 
-  Shield, 
-  Zap, 
-  CheckCircle,
-  ArrowRight,
-  BarChart3,
-  Users,
-  Settings,
-  Database,
-  Globe,
-  Lock,
-  Smartphone,
-  Brain;
-} from 'lucide-react';
-import Layout from "../../components/Layout";";
 
 const phases = [;
 import { motion } from 'framer-motion';
@@ -324,8 +287,6 @@ export default function CloudMigrationPage() {
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features: </h4>", <ul className="space-y-2">",;
                       {service && service.features.map((feature, featureIndex) => (,;
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                           {feature}
                         </li>,
@@ -379,39 +340,17 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Move to the Cloud?;
-=======
-
               transition={{ duration: 0 && 0.8 }}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Move to the Cloud?,;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our cloud migration experts help you seamlessly transition to the cloud;
                 with minimal downtime and maximum security.;
               </p>;
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                  Start Your Cloud Migration;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
-=======
-
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Start Your Cloud Migration;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;
@@ -421,15 +360,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>;
 
 
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

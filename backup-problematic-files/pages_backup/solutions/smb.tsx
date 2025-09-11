@@ -211,15 +211,8 @@ export default function SMBSolutionsPage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
+export default Smb;
   );
 };
 
 export default Smb;
-=======
-<<<<<<< HEAD
-  );
-};
-
-export default Smb;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

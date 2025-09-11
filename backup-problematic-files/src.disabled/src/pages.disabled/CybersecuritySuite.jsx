@@ -9,8 +9,4 @@ const CybersecuritySuite = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default CybersecuritySuite;
-=======
-export default CybersecuritySuite;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
