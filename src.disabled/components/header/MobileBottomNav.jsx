@@ -1,1 +1,21 @@
-" " " " export function MobileBottomNav({ unreadCount = 0 }) { const location = useLocation() const { user } = useAuth() const isAuthenticated = !!user const { count: favoritesCount} = useFavorites() const { items } = useCart() const cartCount = items.reduce((sum, i) => sum + i.quantity, 0) const navItems = [ { " name: "Home,", " href: "/,", icon: Hom,e, " matches: (path) => path: === "/"}, { " name: "Browse,"," href: "/talent,", icon: Searc,h," matches: (path) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")}, { " name: "Community,"," href: "/community,", icon: MessageCircl,e," matches: (path) => path.startsWith("/community") || path.startsWith("/forum")}, { " name: "Messages,"," href: "/messages,", icon: MessageSquar,e," matches: (path) => path.startsWith("/messages") || path.startsWith("/inbox"), badge: unreadCoun,t, authRequired: true}, { " name: "Cart,"," href: "/cart,", icon: ShoppingCar,t," matches: (path) => path.startsWith("/cart"), badge: cartCount}, { " name: "Dashboard,", " href: "/dashboard,", icon: Use,r, " matches: (path) => path.startsWith("/dashboard"), authRequired: true ]',"}}
+import React from 'react';
+interface MobileBottomNavProps {
+  // Add props here as needed
+
+
+
+export default function MobileBottomNav({ }: MobileBottomNavProps) {
+  return (
+    <div>
+      <h1>MobileBottomNav</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+}
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/header/MobileBottomNav.jsx

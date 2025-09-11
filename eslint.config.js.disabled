@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-// eslint.config.js
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-// import cypressPlugin from "eslint-plugin-cypress/flat"; // Corrected import for flat config
-
 // Cleaned global objects
 const browserGlobals = Object.fromEntries(
   Object.entries(globals.browser).map(([key, value]) => [key.trim(), value])
@@ -144,60 +135,9 @@ export default [
     },
   },
   {
-<<<<<<< HEAD
-    files: ['**/*.js'],
-    languageOptions: {
-      globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly'
-      }
-    },
-    rules: {
-      'no-console': 'off'
-    }
-  }
-<<<<<<< HEAD:eslint.config.js.disabled
 ];
-=======
-<<<<<<< HEAD:_conflicted_disabled/eslint.config.js.disabled
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:eslint.config.js.disabled
 ];
-=======
 ];
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb:eslint.config.js
-=======
-=======
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
-<<<<<<< HEAD:eslint.config.js
-];
-=======
-];
->>>>>>> cursor/integrate-build-improve-and-re-verify-3ee7:eslint.config.js.disabled
-<<<<<<< HEAD
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-=======
-<<<<<<< HEAD:eslint.config.js.disabled
-];
-=======
-];
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb:eslint.config.js
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
-=======
-];
->>>>>>> merged-prs-20250907-203621:eslint.config.js.disabled
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:_conflicted_disabled/eslint.config.js.disabled
-=======
     ignores: [
       'node_modules/**',
       '.next/**',
@@ -215,6 +155,4 @@ export default [
       'zion_os/**',
       'zion/**'
     ],
-  },>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 ];
->>>>>>> d874679f20143977455f26e6149d9817fe790262

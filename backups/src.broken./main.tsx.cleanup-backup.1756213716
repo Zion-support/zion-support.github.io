@@ -1,50 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-console.log("main.tsx: Start");
-import React from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n'; // Adjust the path if your i18n.js is elsewhere
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { showApiError } from '@/utils/apiErrorHandler';
-import './utils/globalFetchInterceptor';
-import './utils/consoleErrorToast';
-import ToastProvider from './components/ToastProvider';
-
 // Import i18n configuration
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-<<<<<<< HEAD
-=======
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { WhitelabelProvider } from '@/context/WhitelabelContext';
-import { AppLayout } from '@/layout/AppLayout';
-
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
-<<<<<<< HEAD
-import { NotificationProvider } from './components/ui/notification';
-
 // Providers trimmed for build
 // import { AnalyticsProvider } from './context/AnalyticsContext';
-=======
 import { NotificationProvider } from './context/notifications/NotificationContext';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { ViewModeProvider } from './context/ViewModeContext';import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
-=======
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
@@ -54,9 +21,7 @@ import App from './App'
 import { AppWrapper } from './AppWrapper'
 import './index.css'
 
-// Create a client
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-const queryClient = new QueryClient({
+// Create a clientconst queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       retry: 1,
@@ -64,10 +29,6 @@ const queryClient = new QueryClient({
     },
   },
 })
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const rootElement = document.getElementById('root');
 
 function renderApp() {
   const app = (
@@ -93,7 +54,6 @@ function renderApp() {
       </HelmetProvider>
     </React.StrictMode>
   );
-=======
 // Performance monitoring setup
 if (import.meta.env.DEV) {
   console.log('🚀 Zion Tech Group - Development Mode')
@@ -105,9 +65,6 @@ if (import.meta.env.DEV) {
 window.addEventListener('unhandledrejection', (event) => {
   console.error('Unhandled promise rejection:', event.reason)
   // In production, you might want to send this to an error reporting service
-})
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 const rootElement = document.getElementById('root');
 
 function renderApp() {
@@ -137,7 +94,6 @@ function renderApp() {
       </HelmetProvider>
     </React.StrictMode>
   );
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // Error handling for uncaught errors
 window.addEventListener('error', (event) => {
@@ -174,17 +130,6 @@ if ('serviceWorker' in navigator) {
   })
 }
 
-<<<<<<< HEAD
-function displayFatalError(message: string) {
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="padding:20px;text-align:center;font-family:sans-serif;">
-        <h1>Application Error</h1>
-        <p>${message}</p>
-      </div>`;
-  }
-}
-
 try {
   renderApp();
 } catch (error) {
@@ -198,51 +143,30 @@ window.addEventListener('error', (e) => {
 });
 
 // Render the app with proper provider structure
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <WhitelabelProvider>
           <Router>
             <AuthProvider>
               <NotificationProvider>
-<<<<<<< HEAD
-                
-=======
                 <AnalyticsProvider>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <AppLayout>
                       <App />
                     </AppLayout>
-<<<<<<< HEAD
-                  </LanguageProvider>
-                
-=======
                     <LanguageDetectionPopup />
                   </LanguageProvider>
                 </AnalyticsProvider>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </NotificationProvider>
             </AuthProvider>
           </Router>
         </WhitelabelProvider>
-<<<<<<< HEAD
-=======
         <BrowserRouter>
           <AppWrapper>
             <App />
           </AppWrapper>
         </BrowserRouter>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,

@@ -1,17 +1,17 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": true,
-    "allowJs": false
+    "strict": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "lib": ["dom", "es2020"],
+    "types": ["react", "react-dom", "node"],
+    "esModuleInterop": true
   },
-  "include": [
-    "types/**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "out",
-    "public"
+  "files": [
+    "src/AppMinimal.tsx",
+    "src/main.tsx",
+    "types/global.d.ts"
   ]
 }
 

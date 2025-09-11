@@ -1,15 +1,4 @@
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
 export {};
-
 interface PerformanceData {
   url: string;
   timestamp: number;
@@ -25,34 +14,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })}
 
-module.exports = {};
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-module.exports = {};
-module.exports = {};
+=======module.exports = {};
 module.exports = {};
 
-    // Validate the data
-    if (!data.url || !data.timestamp || !data.metrics) {
-      return res.status(400).json({ error: 'Invalid data format' })}
+=======
 
-    // Log performance metrics (in production, you might want to send to a database or analytics service)
-    console.log('Performance Metrics:' {
-      url: data.url,
-      timestamp: new Date(data.timestamp).toISOString(),
-      metrics: data.metrics
-    });
+module.exports = {};
+
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
-    // For now, we'll just acknowledge receipt
-    res.status(200).json({ 
-      success: true, 
-      message: 'Performance metrics recorded',
-      timestamp: Date.now()
-    })} catch (error) {
-    console.error('Error processing performance data:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}

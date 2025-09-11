@@ -1,8 +1,8 @@
-export default function AIQACopilot() {; return (; <Article; title=\"AI QA Copilot\"; subtitle=\"Autogenerates tests from user flows and PR diffs\"; price=\"from $99/mo\"; bullets={[; \'Watches PRs and generates Playwright/Cypress tests automatically\',; \'Finds flaky tests; groups by root cause and suggests fixes\',; \'CI integrations for GitHub Actions,GitLab,CircleCI\',; \'Tracks coverage and critical-path user flows\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );}  
-import React from 'react' 
-import Head from 'next/head' 
-import Link from 'next/link' 
-import { motion } from 'framer-motion' 
+export default function AIQACopilot() {; return (; <Article; title=\"AI QA Copilot\"; subtitle=\"Autogenerates tests from user flows and PR diffs\"; price=\"from $99/mo\"; bullets={[; \'Watches PRs and generates Playwright/Cypress tests automatically\',; \'Finds flaky tests; groups by root cause and suggests fixes\',; \'CI integrations for GitHub Actions,GitLab,CircleCI\',; \'Tracks coverage and critical-path user flows\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 export default function Aiqa() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -65,5 +65,5 @@ export default function Aiqa() {
         </div>
       </section>
     </div>
-  ) 
+  );
 }

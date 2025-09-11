@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  Settings, 
-  Users, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
-  BarChart3,
-  ChevronDown,
-  ChevronRight,
-  Home,
-  Briefcase,
-  Globe,
-  Shield,
-  Cloud,
-  Cpu,
-  Database,
-  Zap,
-  Target,
-  TrendingUp,
-  BookOpen,
-  Calendar,
-  MessageSquare,
-  Star,
-  Award,
-  Users2,
-  Handshake,
-  Newspaper,
-  DollarSign,
-  Headphones,
-  FileCode,
-  Code2,
-  BookMarked,
-  Users3
-} from 'lucide-react';
-
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [expandedSections, setExpandedSections] = useState({
@@ -258,4 +219,3 @@ const Sidebar = () => {
 export default Sidebar;
 =======
 export {};
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

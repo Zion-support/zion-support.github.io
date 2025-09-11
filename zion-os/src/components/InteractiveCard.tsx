@@ -1,67 +1,86 @@
+'use client',
+import React, { useState } from 'react',
+import Link from 'next / link',
+interface InteractiveCardProps {
+  title: string,
+  description: string,
+  icon: string,
+  href: string,
+  color?: string,
+  class_name?: string,
   children?: React.ReactNode;
 }
-export default function InteractiveCard({title;
-  description;
-  icon;
-  href;
-  color = 'from-purple-500 to-blue-500';
-  className = '';
-  children;
-}: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
-'use client',;
-import React, { useState } from 'react',;
-
-import Link from 'next/link',;
-interface InteractiveCardProps {;
-  title: string,,
-  description: string,;
-  icon: string,;
-  href: string,;
-  color?: string,;
-  className?: string,;
-  children?: React.ReactNode;
-}
-pr-12325
-;
-export default function InteractiveCard({;
-  title,;
-  description,;
-  icon,;
-  href,;
-  color = 'from-purple-500 to-blue-500',;
-  className = '',;
-  children;
-}: InteractiveCardProps) {;
-  const [isHovered, setIsHovered] = useState(false),;    <Link;
+export default /**
+ * InteractiveCard - Function description
+ */
+function InteractiveCard() {
+  const [is_hovered, setIsHovered] = useState (false),
+  return (
+  return (;
+    <Link;
       href={href}
-      className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
-      onMouseEnter={() => setIsHovered (true)}
-      onMouseLeave={() => setIsHovered (false)}
-      aria - label={`Navigate to ${title} page`}
->;
-      <div className="relative & quot;>;
+      className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      aria-label={`Navigate to ${title} page`}
+>
+      <div className=&quot;relative&quot;>
+    >
+      <div className="relative">
+
+    >
+      <div className="relative">>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>
+      <div className=&quot;relative&quot;>
+    >
+      <div className="relative">
+
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
+        <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+
+
+        <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+          {icon}
+        </div>;
+        {/* Content */}
+        <div className="relative z-10">
+          <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
+
             {title}
           </h3>;
-          <p className="text - gray - 400 leading - relaxed text - lg mb - 6">;
+          <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
 
+
 {children || (
 
-            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
+
           {children || (
-            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">              <span>Learn More</span>
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+
+
+
+              <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
+
+
+                }`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+
+
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; />
               </svg>
             </div>
           )}
@@ -69,28 +88,96 @@ export default function InteractiveCard({;
         {/* Hover effect overlay */}
         <div;
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+
+{children || (
+            <div className=&quot;flex items - center text - purple - 400 font - medium group - hover:text - purple - 300 transition - colors duration - 300 & quot;>;
+              <span > Learn More</span>;
+              <svg;
+                className={`ml - 2 w - 5 h - 5 transition - all duration - 300 ${
+                  is_hovered ? 'translate - x-2' : '';
+                }`}
+                fill=&quot;none & quot; ;
+                stroke=&quot;current_color & quot; ;
+                view_box=&quot;0 0 24 24 & quot;
+              >;
+                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M13 7l5 5m0 0l - 5 5m5 - 5H6 & quot; />;
+              </svg>;
+            </div>)}
+        </div>;
+        {/* Hover effect overlay */}
+        <div;
+          className={`absolute inset - 0 border - 2 border - transparent rounded - xl bg - gradient - to - r ${color} opacity - 0 group - hover:opacity - 20 transition - opacity duration - 500`}
+          style={{
+            background: `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;
+
+          {icon}
+        </div>;
+        {/* Content */}
+<div className=&quot;relative z-10&quot;>
+          <h3 className=&quot;text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300&quot;>
+        <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+          {icon}
+        </div>;
+        {/* Content */}
+        <div className="relative z-10">
+          <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
+
+
+            {title}
+          </h3>;
+          <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
+            {description}
+          </p>;
+          {/* Custom children or default arrow */}
+
+
+{children || (
+
+            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
+          {children || (
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+
+
+
+              <span>Learn More</span>
+              <svg
+                className={`ml-2 w-5 h-5 transition-all duration-300 ${
+                  isHovered ? 'translate-x-2' : ''
+                }`}
+                fill=&quot;none&quot;
+                stroke=&quot;currentColor&quot;
+                viewBox=&quot;0 0 24 24&quot;
+                }`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; />
+              </svg>
+            </div>
+          )}
+        </div>;
+        {/* Hover effect overlay */}
+        <div;
+          className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+          style={{background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+          style={{;
+            background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+
+          style={{;
+            background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+
           }}
         />;
       </div>;
     </Link>);
 }
-    <InteractiveCard;
-      title={title}
-      description={description}
-      icon={icon}
-      href={href}
-      className={class_name}
->;
-      {stats && (
-          </div>;
-        </div>)}
-    </InteractiveCard>);
-}
-<div className="text-4xl mb-4">💬</div>
-      <div className="text-4xl mb-4">💬</div>
-      
+export /**
+ * FeatureCard - Function description
+ */
+function FeatureCard() {
+  return (
 
-      {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
           <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -99,7 +186,24 @@ export default function InteractiveCard({;
         ))}
       </div>;
       {/* Quote */}
-      </blockquote>      </blockquote>      </blockquote>
+      </blockquote>
+        "{quote}"
+
+
+      </blockquote>
+<blockquote className=&quot;text-gray-300 text-lg leading-relaxed mb-6 italic&quot;>
+        &quot;{quote}&quot;
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+
+
+      </blockquote>
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+      </blockquote>
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
         <div className="font-semibold text-white">{author}</div>

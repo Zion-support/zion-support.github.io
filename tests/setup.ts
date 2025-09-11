@@ -1,138 +1,144 @@
-// Test setup and configuration
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+const "@testing-library/jest-dom"; jest.mock("next/router",() => ({ useRouter() { return { route: "/",pathname: "/",query: {},asPath: "/",push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn(),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()}} }})) Object.defineProperty(window,"matchMedia",{ writable: "true",value: jest.fn().mockImplementation((query: string) => ({ matches: false,media: "query",onchange: "null",addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))}) global.IntersectionObserver = class IntersectionObserver { disconnect() { return; } observe() { return; } unobserve() { return; } } as any global.ResizeObserver = class ResizeObserver { disconnect() { return; } observe() { return; } unobserve() { return; } } as any'"'"
+import React from 'react';
+interface SetupProps {
+  // Add props here as needed
+}
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+ // Mock window.scrollTo global.window.scrollTo = vi.fn (), // vi should be globally available // Ensure React Testing Library cleans up and mocks are restored between tests // ----------------------------------------------------------------------------- // Jest-compatibility shim ------------------------------------------------------ // ----------------------------------------------------------------------------- // A lot of legacy test files still call `jest.fn () `, `jest.mock () ` etc. Rather // than refactor them all at once we map those calls to Vitest's equivalent // (`vi`) . The shim only runs in the test environment and has no effect on // production bundles. // deliberately attaching to global for test environment setup // We expose it so imports compile even if we don't use it. SnapshotSerializer: () => {
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
 import '@testing-library/jest-dom';
-import { configure } from '@testing-library/react';
-import { TextEncoder, TextDecoder } from 'util';
+import { cleanup } from '@testing-library/react';
+import { vi, afterEach } from 'vitest';
 
-// Configure testing library
-configure({ testIdAttribute: 'data-testid' });
+<<<<<<< HEAD
+=======
+// Mock window.scrollTo
+global.window.scrollTo = vi.fn(); // vi should be globally available
 
-// Polyfills for Node.js environment
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as any;
-
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
-
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock performance API
-Object.defineProperty(window, 'performance', {
-  value: {
-    now: jest.fn(() => Date.now()),
-    mark: jest.fn(),
-    measure: jest.fn(),
-    getEntriesByType: jest.fn(() => []),
-    getEntriesByName: jest.fn(() => []),
-  },
-});
-
-// Mock crypto API
-Object.defineProperty(global, 'crypto', {
-  value: {
-    getRandomValues: jest.fn((arr) => {
-      for (let i = 0; i < arr.length; i++) {
-        arr[i] = Math.floor(Math.random() * 256);
-      }
-      return arr;
-    }),
-  },
-});
-
-// Mock fetch
-global.fetch = jest.fn();
-
-// Mock localStorage
-const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-global.localStorage = localStorageMock;
-
-// Mock sessionStorage
-const sessionStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-global.sessionStorage = sessionStorageMock;
-
-// Mock console methods to reduce noise in tests
-const originalConsoleError = console.error;
-const originalConsoleWarn = console.warn;
-
-beforeEach(() => {
-  // Reset all mocks before each test
-  jest.clearAllMocks();
-  
-  // Reset localStorage and sessionStorage
-  localStorageMock.getItem.mockClear();
-  localStorageMock.setItem.mockClear();
-  localStorageMock.removeItem.mockClear();
-  localStorageMock.clear.mockClear();
-  
-  sessionStorageMock.getItem.mockClear();
-  sessionStorageMock.setItem.mockClear();
-  sessionStorageMock.removeItem.mockClear();
-  sessionStorageMock.clear.mockClear();
-});
-
+// Ensure React Testing Library cleans up and mocks are restored between tests
 afterEach(() => {
-  // Restore console methods
-  console.error = originalConsoleError;
-  console.warn = originalConsoleWarn;
+  cleanup();
+  vi.restoreAllMocks(); // Changed from jest to vi
 });
 
-// Global test utilities
-export const mockFetch = (response: any, ok = true) => {
-  (global.fetch as jest.Mock).mockResolvedValueOnce({
-    ok,
-    json: jest.fn().mockResolvedValueOnce(response),
-    text: jest.fn().mockResolvedValueOnce(JSON.stringify(response)),
-  });
-};
+// -----------------------------------------------------------------------------
+// Jest-compatibility shim ------------------------------------------------------
+// -----------------------------------------------------------------------------
+// A lot of legacy test files still call `jest.fn()`, `jest.mock()` etc.  Rather
+// than refactor them all at once we map those calls to Vitest's equivalent
+// (`vi`).  The shim only runs in the test environment and has no effect on
+// production bundles.
 
-export const mockFetchError = (error: string) => {
-  (global.fetch as jest.Mock).mockRejectedValueOnce(new Error(error));
+// deliberately attaching to global for test environment setup
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment, @typescript-eslint/no-explicit-any
+(globalThis as any).jest = {
+  // Core mocking utilities
+  fn: vi.fn.bind(vi),
+  mock: vi.mock.bind(vi),
+  spyOn: vi.spyOn.bind(vi),
+  // Timing helpers
+  useFakeTimers: vi.useFakeTimers.bind(vi),
+  useRealTimers: vi.useRealTimers.bind(vi),
+  advanceTimersByTime: vi.advanceTimersByTime.bind(vi),
+  runAllTimers: vi.runAllTimers.bind(vi),
+  // Reset / clear mocks
+  resetAllMocks: vi.resetAllMocks.bind(vi),
+  restoreAllMocks: vi.restoreAllMocks.bind(vi),
+  clearAllMocks: vi.clearAllMocks.bind(vi),
+  // Snapshot placeholder (no-op) – Vitest has its own snapshot system.
+  // We expose it so imports compile even if we don't use it.
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  SnapshotSerializer: () => {},
 };
-
-// Custom matchers
-expect.extend({
-  toBeInTheDocument: require('@testing-library/jest-dom/matchers').toBeInTheDocument,
-  toHaveClass: require('@testing-library/jest-dom/matchers').toHaveClass,
-  toHaveTextContent: require('@testing-library/jest-dom/matchers').toHaveTextContent,
-  toBeVisible: require('@testing-library/jest-dom/matchers').toBeVisible,
-  toBeDisabled: require('@testing-library/jest-dom/matchers').toBeDisabled,
-  toBeEnabled: require('@testing-library/jest-dom/matchers').toBeEnabled,
-  toHaveValue: require('@testing-library/jest-dom/matchers').toHaveValue,
-  toHaveAttribute: require('@testing-library/jest-dom/matchers').toHaveAttribute,
-  toHaveStyle: require('@testing-library/jest-dom/matchers').toHaveStyle,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import '@testing-library/jest-dom',;
+import { cleanup } from '@testing-library/react',;
+import { vi, afterEach } from 'vitest',;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {observe() { /* do nothing */ }
+  unobserve() { /* do nothing */ }
+  disconnect() { /* do nothing */ }
+}
+// Mock window.scrollTo;
+global.window.scrollTo = vi.fn(), // vi should be globally available;
+// Ensure React Testing Library cleans up and mocks are restored between tests;
+afterEach(() => {cleanup();
+  vi.restoreAllMocks(), // Changed from jest to vi;
 });
+=======
+import '@testing - library / jest - dom',
+import { cleanup } from '@testing - library / react',
+import { vi, after_each } from 'vitest',
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {
+  observe () { /* do nothing */ }
+  unobserve () { /* do nothing */ }
+  disconnect () { /* do nothing */ }
+},
+// Mock window.scroll_to;
+global.window.scroll_to = vi.fn (), // vi should be globally available;
+// Ensure React Testing Library cleans up and mocks are restored between tests;
+after_each (() => {
+  cleanup (),
+  vi.restoreAllMocks (), // Changed from jest to vi;
+}),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+// -----------------------------------------------------------------------------;
+// Jest - compatibility shim ------------------------------------------------------;
+// -----------------------------------------------------------------------------;
+// A lot of legacy test files still call `jest.fn ()`, `jest.mock ()` etc.  Rather;
+// than refactor them all at once we map those calls to Vitest's equivalent;
+// (`vi`).  The shim only runs in the test environment and has no effect on;
+// production bundles.;
+// deliberately attaching to global for test environment setup;
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+  SnapshotSerializer: () => {}}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+// eslint - disable - next - line @typescript - eslint / no - explicit - any;
+(global_this as any).jest = {
+  // Core mocking utilities;
+  fn: vi.fn.bind (vi),
+  mock: vi.mock.bind (vi),
+  spy_on: vi.spy_on.bind (vi),
+  // Timing helpers;
+  useFakeTimers: vi.useFakeTimers.bind(vi);
+  useRealTimers: vi.useRealTimers.bind(vi);
+  advanceTimersByTime: vi.advanceTimersByTime.bind(vi);
+  runAllTimers: vi.runAllTimers.bind(vi);
+  // Reset / clear mocks;
+  resetAllMocks: vi.resetAllMocks.bind(vi);
+  restoreAllMocks: vi.restoreAllMocks.bind(vi);
+  clearAllMocks: vi.clearAllMocks.bind(vi);
+  // Snapshot placeholder (no-op) – Vitest has its own snapshot system.;
+  // We expose it so imports compile even if we don't use it.;
+<<<<<<< HEAD
+  SnapshotSerializer: () => {}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  SnapshotSerializer: () => {}};
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

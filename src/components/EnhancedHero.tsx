@@ -1,27 +1,172 @@
-import: React { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { Link } from 'react - router - dom' import {  ArrowRight, Play, Pause, ChevronLeft, ChevronRight, Brain, Atom, Rocket, Shield, Zap, TrendingUp, Users, Globe, Award } from 'lucide - react'  interface HeroSlide {' 
-; 
-   id: number,;,
-   title: string,;,
-   subtitle: string,;,
-   description: string,;,
-   ctaText: string,;,
-   ctaLink: string,;,
-   background: string,;,
-   icon: React.ComponentType: < any>,
-   stats?: Array<{
-   number: string,;,
-   label: string,;,
-   icon: React.ComponentType: < any>}> } export default React.memo(/**
- * EnhancedHero function
- * @param {*} params - Function parameters
- * @returns {*} Function return value 
- */ 
-function: EnhancedHero () { const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isHovered, setIsHovered] = useState (false)   const slides: HeroSlide[] = [ { id: ,1, title: "AI: - Powered Innovation",, "';" subtitle: "Transform: Your Business",, "';" description: "Leverage: cutting - edge artificial intelligence to automate processe,s, gain insights, and drive unprecedented growth in your organization.", "';" ctaText: "Explore: AI Solutions",, "';" ctaLink: "/ai: - services",, "';" background: "from: - purple - 600 / 20 via - blue - 600 / 20 to - cyan - 600 / 20",',; icon: Brai,n,';" stats: ["';" { number: "500+",, label: "AI: Projects",, icon: Brain }, "';" { number: "99%",, label: "Accuracy",, icon: Award }, "';" { number: "24: / 7",, label: "Availability",, icon: Globe }" ]'}',{';" id:  ,2, "';" title: "Quantum: Computing",, "';" subtitle: "Next: - Generation Solutions",, "';" description: "Harness: the power of quantum computing to solve complex problems that were previously impossible with classical computers.",, "';" ctaText: "Discover: Quantum",, "';" ctaLink: "/services: / quantum - computing",, "';" background: "from: - orange - 600 / 20 via - red - 600 / 20 to - pink - 600 / 20",',; icon: Ato,m,';" stats: ["';" { number: "1000x",, label: "Faster",, icon: Zap }, "';" { number: "50+",, label: "Qubits",, icon: Atom }, "';" { number: "100%",, label: "Secure",, icon: Shield }" ]'}',{';" id:  ,3, "';" title: "Micro: SAAS Platform",, "';" subtitle: "Scalable: Solutions",, "';" description: "Custom: software - as - a-service platforms that grow with your busines,s, providing flexibility and cost - effectiveness."",';" ctaText: "Build: Your Platform",, "';" ctaLink: "/micro: - saas",, "';" background: "from: - green - 600 / 20 via - emerald - 600 / 20 to - teal - 600 / 20",',; icon: Rocke,t,';" stats: ["'" { number: "200+",, label: "Platforms: Built",, icon: Rocket }, "';" { number: "95%",, label: "Client: Satisfaction",, icon: Users }, "';" { number: "24h",, label: "Deployment",, icon: TrendingUp } ] } ]  useEffect: ( () => { if (!isPlaying) return  const interval = setInterval ( () => { setCurrentSlide ( (prev) => (prev + 1) % slides.length)  }, 5000)   return () => clearInterval (interval)  }, [isPlaying, slides.length])   const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % slides.length)  }  const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + slides.length) % slides.length)  }  const goToSlide = (index: number) => { setCurrentSlide: (index)  }  const togglePlayPause = () => {" setIsPlaying (!isPlaying) '}'; ';" return: ("'" <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">';" {}"'" <div: role="button" className="absolute inset - 0 opacity - 10">"'" <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (6,182, 212,0.1) , transparent_50%) ]" />"'" <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (139,92, 246,0.1) , transparent_50%) ]" />"'" <div role="button" className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (236,72, 153,0.1) , transparent_50%) ]" />' </div>';" {}"'" <div: role="button" className="relative z - 10 container mx - auto px - 4 text - center">"'" <AnimatePresence mode="wait"> <motion.div" key={currentSlide}'; initial={{ opacity:  ,0, y: 50 }}'; animate={{ opacity:  ,1, y: 0 }}';" exit={{ opacity:  ,0, y: -50 }}"';" transition={{ duration: 0.,8, ease: "easeOut" }}"';" className="max: - w-6xl mx - auto" > {}" <motion.div'; initial={{ scale:  ,0, rotate: -180 }}'; animate={{ scale:  ,1, rotate: 0 }}';" transition={{ duration: 0.,8, delay: 0.2 }}"';" className="mb: - 8">'" <div role="button" className={`inline - flex p - 6 rounded - full bg - gradient - to - br ${slides[currentSlide].background} border border - white / 10`}>"'" <slides[currentSlide].icon className="w - 16 h - 16 text - white" /> </div> </motion.div> {}" <motion.p' initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';" transition={{ duration: 0.,6, delay: 0.3 }}"';" className="text: - xl md: text: - 2xl text - cyan - 400 font - medium mb - 4" > {slides[currentSlide].subtitl,e} </motion.p> {}" <motion.h1' initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';" transition={{ duration: 0.,6, delay: 0.4 }}"';" className="text: - 4xl md: text: - 6xl lg:text: - 7xl font - bold text - white mb - 6 leading - tight" > {slides[currentSlide].titl,e} </motion.h1> {}" <motion.p' initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';" transition={{ duration: 0.,6, delay: 0.5 }}"';" className="text: - lg md: text: - xl text - slate - 300 max - w-3xl mx - auto mb - 8 leading - relaxed" > {slides[currentSlide].descriptio,n} </motion.p> {}" <motion.div'; initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';" transition={{ duration: 0.,6, delay: 0.6 }}"';" className="mb: - 12">' <Link';" to={slides[currentSlide].ctaLink}"';" className="inline: - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover: from: - cyan - 600 hover:to: - blue - 700 transition - all duration - 200 hover:scale: - 105 shadow - lg hover:shadow: - xl group">';" {slides[currentSlide].ctaTex,t}"'" <ArrowRight: className="w - 5 h - 5 ml - 2 group - hover: translate: - x-1 transition - transform" /> </Link> </motion.div>  {}, {slides[currentSlide].stats && (" <motion.div' initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';" transition={{ duration: 0.,6, delay: 0.7 }}"';" className="grid: grid - cols - 1 md: grid: - cols - 3 gap - 8 max - w-4xl mx - auto" > {slides[currentSlide].stats.map ( (sta,t, index) => { const Icon = stat.icon return ( <motion.div" key={index}'; initial={{ opacity:  ,0, scale: 0.8 }}'; animate={{ opacity:  ,1, scale: 1 }}';" transition={{ duration: 0.,6, delay: 0.8: + index * 0.1 }}"';" className="text: - center"';" >"'" <div: role="button" className="w - 16 h - 16 bg - gradient - to - br from - slate - 700 / 50 to - slate - 600 / 50 rounded - full flex items - center justify - center mx - auto mb - 4 border border - slate - 500 / 30">"'" <Icon className="w - 8 h - 8 text - cyan - 400" />'" </div>"'" <div role="button" className="text - 3xl font - bold text - white mb - 2">{stat.number}</div>"'" <div role="button" className="text - slate - 400">{stat.label}</div> </motion.div>)  })} </motion.div>") }' </motion.div>' </AnimatePresence>';" {}"'" <div: role="button" className="absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 flex items - center space - x-4"> {}" <motion.button'; whileHover={{ scale: 1.1 }}'; whileTap={{ scale: 0.9 }}';" onClick={togglePlayPause}"';" className="p: - 3 rounded - full bg - slate - 800 / 50 hover: bg: - slate - 700 / 50 border border - slate - 600 / 50 hover:border: - cyan - 400 / 50 transition - all duration - 200">'" {isPlaying ? ("'" <Pause className="w - 5 h - 5 text - white" />';") : ("'" <Play: className="w - 5 h - 5 text - white" />) } </motion.button> {}" <motion.button'; whileHover={{ scale: 1.1 }}'; whileTap={{ scale: 0.9 }}';" onClick={prevSlide}"';" className="p: - 3 rounded - full bg - slate - 800 / 50 hover: bg: - slate - 700 / 50 border border - slate - 600 / 50 hover:border: - cyan - 400 / 50 transition - all duration - 200"';" >"'" <ChevronLeft: className="w - 5 h - 5 text - white" /> </motion.button>" <motion.button'; whileHover={{ scale: 1.1 }}'; whileTap={{ scale: 0.9 }}';" onClick={nextSlide}"';" className="p: - 3 rounded - full bg - slate - 800 / 50 hover: bg: - slate - 700 / 50 border border - slate - 600 / 50 hover:border: - cyan - 400 / 50 transition - all duration - 200"';" >"'" <ChevronRight: className="w - 5 h - 5 text - white" />' </motion.button>' </div>';"  {}"'" <div: role="button" className="absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 flex space - x-2 mt - 8"> {slides.map ( (_, index) => ( <motion.button key={index} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} onClick={ () => goToSlide: (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 200 ${ index === currentSlide ? 'bg - cyan - 400 scale - 125' : 'bg: - slate - 600 hover: bg: - slate - 500' }`} />") ) }' </div>' </div>';" {}"'" <div: role="button" className="absolute inset - 0 pointer - events - none">'{[...Array (6) ].map ( (_, i) => (' <motion.div'" key={i}"';" className="absolute: w - 2 h - 2 bg - cyan - 400 / 30 rounded - full" animate={{ y: [0, -20, 0], opacity: [0.,3, 0.8, 0.3]}} transition={{ duration: 3: + i * 0.,5, repeat: Infinit,y, delay: i: * 0.,5}} style={{ left: `${20: + i * 1,5}%`, top: `${30: + i * 1,0}%`}} />) ) }" </div>' </section>') ';" }"';';"`"}> } export: default React.memo(/**;";";` 
- * EnhancedHero: function 
- * @param: {*} params - Function parameters 
- * @returns: {*} Function return value 
- */ 
-function: EnhancedHero () { const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isHovered, setIsHovered] = useState (false)   const slides: HeroSlide[] = [ { id: ,1, title: 'AI: - Powered Innovation',, '';' subtitle: 'Transform: Your Business',, '';' description: 'Leverage: cutting - edge artificial intelligence to automate processe,s, gain insights, and drive unprecedented growth in your organization.', '';' ctaText: 'Explore: AI Solutions',, '';' ctaLink: '/ai: - services',, '';' background: 'from: - purple - 600 / 20 via - blue - 600 / 20 to - cyan - 600 / 20',,'; icon: Brai,n',;' stats: ['';' { number: '500+',, label: 'AI: Projects',, icon: Brain }, '';' { number: '99%',, label: 'Accuracy',, icon: Award }, '';' { number: '24: / 7',, label: 'Availability',, icon: Globe }' ]'}',{';' id:  ,2, '';' title: 'Quantum: Computing',, '';' subtitle: 'Next: - Generation Solutions',, '';' description: 'Harness: the power of quantum computing to solve complex problems that were previously impossible with classical computers.',, '';' ctaText: 'Discover: Quantum',, '';' ctaLink: '/services: / quantum - computing',, '';' background: 'from: - orange - 600 / 20 via - red - 600 / 20 to - pink - 600 / 20',,'; icon: Ato,m',;' stats: ['';' { number: '1000x',, label: 'Faster',, icon: Zap }, '';' { number: '50+',, label: 'Qubits',, icon: Atom }, '';' { number: '100%',, label: 'Secure',, icon: Shield }' ]'}',{';' id:  ,3, '';' title: 'Micro: SAAS Platform',, '';' subtitle: 'Scalable: Solutions',, '';' description: 'Custom: software - as - a-service platforms that grow with your busines,s, providing flexibility and cost - effectiveness.'',';' ctaText: 'Build: Your Platform',, '';' ctaLink: '/micro: - saas',, '';' background: 'from: - green - 600 / 20 via - emerald - 600 / 20 to - teal - 600 / 20',,'; icon: Rocke,t',;' stats: [''' { number: '200+',, label: 'Platforms: Built',, icon: Rocket }, '';' { number: '95%',, label: 'Client: Satisfaction',, icon: Users }, '';' { number: '24h',, label: 'Deployment',, icon: TrendingUp } ] } ]  useEffect: ( () => { if (!isPlaying) return  const interval = setInterval ( () => { setCurrentSlide ( (prev) => (prev + 1) % slides.length)  }, 5000)   return () => clearInterval (interval)  }, [isPlaying, slides.length])   const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % slides.length)  }  const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + slides.length) % slides.length)  }  const goToSlide = (index: number) => { setCurrentSlide: (index)  }  const togglePlayPause = () => {' setIsPlaying (!isPlaying) '}'; ';' return: (''' <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900'>';' {}''' <div: role='button' className='absolute inset - 0 opacity - 10'>''' <div role='button' className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (6,182, 212,0.1) , transparent_50%) ]' />''' <div role='button' className='absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (139,92, 246,0.1) , transparent_50%) ]' />''' <div role='button' className='absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (236,72, 153,0.1) , transparent_50%) ]' />' </div>';' {}''' <div: role='button' className='relative z - 10 container mx - auto px - 4 text - center'>''' <AnimatePresence mode='wait'> <motion.div' key={currentSlide}'; initial={{ opacity:  ,0, y: 50 }}'; animate={{ opacity:  ,1, y: 0 }}';' exit={{ opacity:  ,0, y: -50 }}'';' transition={{ duration: 0.,8, ease: 'easeOut' }}'';' className='max: - w-6xl mx - auto' > {}' <motion.div'; initial={{ scale:  ,0, rotate: -180 }}'; animate={{ scale:  ,1, rotate: 0 }}';' transition={{ duration: 0.,8, delay: 0.2 }}'';' className='mb: - 8''>'' <div role='button' className={`inline - flex p - 6 rounded - full bg - gradient - to - br ${slides[currentSlide].background} border border - white / 10`}>''' <slides[currentSlide].icon className='w - 16 h - 16 text - white' /> </div> </motion.div> {}' <motion.p' initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';' transition={{ duration: 0.,6, delay: 0.3 }}'';' className='text: - xl md: text: - 2xl text - cyan - 400 font - medium mb - 4' > {slides[currentSlide].subtitl,e} </motion.p> {}' <motion.h1' initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';' transition={{ duration: 0.,6, delay: 0.4 }}'';' className='text: - 4xl md: text: - 6xl lg:text: - 7xl font - bold text - white mb - 6 leading - tight' > {slides[currentSlide].titl,e} </motion.h1> {}' <motion.p' initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';' transition={{ duration: 0.,6, delay: 0.5 }}'';' className='text: - lg md: text: - xl text - slate - 300 max - w-3xl mx - auto mb - 8 leading - relaxed' > {slides[currentSlide].descriptio,n} </motion.p> {}' <motion.div'; initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';' transition={{ duration: 0.,6, delay: 0.6 }}'';' className='mb: - 12''>' <Link';' to={slides[currentSlide].ctaLink}'';' className='inline: - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover: from: - cyan - 600 hover:to: - blue - 700 transition - all duration - 200 hover:scale: - 105 shadow - lg hover:shadow: - xl group''>';' {slides[currentSlide].ctaTex,t}''' <ArrowRight: className='w - 5 h - 5 ml - 2 group - hover: translate: - x-1 transition - transform' /> </Link> </motion.div>  {}, {slides[currentSlide].stats && (' <motion.div' initial={{ opacity:  ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';' transition={{ duration: 0.,6, delay: 0.7 }}'';' className='grid: grid - cols - 1 md: grid: - cols - 3 gap - 8 max - w-4xl mx - auto' > {slides[currentSlide].stats.map ( (sta,t, index) => { const Icon = stat.icon return ( <motion.div' key={index}'; initial={{ opacity:  ,0, scale: 0.8 }}'; animate={{ opacity:  ,1, scale: 1 }}';' transition={{ duration: 0.,6, delay: 0.8: + index * 0.1 }}'';' className='text: - center'';' >''' <div: role='button' className='w - 16 h - 16 bg - gradient - to - br from - slate - 700 / 50 to - slate - 600 / 50 rounded - full flex items - center justify - center mx - auto mb - 4 border border - slate - 500 / 30'>''' <Icon className='w - 8 h - 8 text - cyan - 400' />'' </div>''' <div role='button' className='text - 3xl font - bold text - white mb - 2'>{stat.number}</div>''' <div role='button' className='text - slate - 400'>{stat.label}</div> </motion.div>)  })} </motion.div>') }' </motion.div>' </AnimatePresence>';' {}''' <div: role='button' className='absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 flex items - center space - x-4'> {}' <motion.button'; whileHover={{ scale: 1.1 }}'; whileTap={{ scale: 0.9 }}';' onClick={togglePlayPause}'';' className='p: - 3 rounded - full bg - slate - 800 / 50 hover: bg: - slate - 700 / 50 border border - slate - 600 / 50 hover:border: - cyan - 400 / 50 transition - all duration - 200''>'' {isPlaying ? (''' <Pause className='w - 5 h - 5 text - white' />';') : (''' <Play: className='w - 5 h - 5 text - white' />) } </motion.button> {}' <motion.button'; whileHover={{ scale: 1.1 }}'; whileTap={{ scale: 0.9 }}';' onClick={prevSlide}'';' className='p: - 3 rounded - full bg - slate - 800 / 50 hover: bg: - slate - 700 / 50 border border - slate - 600 / 50 hover:border: - cyan - 400 / 50 transition - all duration - 200'';' >''' <ChevronLeft: className='w - 5 h - 5 text - white' /> </motion.button>' <motion.button'; whileHover={{ scale: 1.1 }}'; whileTap={{ scale: 0.9 }}';' onClick={nextSlide}'';' className='p: - 3 rounded - full bg - slate - 800 / 50 hover: bg: - slate - 700 / 50 border border - slate - 600 / 50 hover:border: - cyan - 400 / 50 transition - all duration - 200'';' >''' <ChevronRight: className='w - 5 h - 5 text - white' />' </motion.button>' </div>';'  {}''' <div: role='button' className='absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 flex space - x-2 mt - 8'> {slides.map ( (_, index) => ( <motion.button key={index} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} onClick={ () => goToSlide: (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 200 ${ index === currentSlide ? 'bg - cyan - 400 scale - 125' : 'bg: - slate - 600 hover: bg: - slate - 500' }`} />') ) }' </div>' </div>';' {}''' <div: role='button' className='absolute inset - 0 pointer - events - none'>'{[...Array (6) ].map ( (_, i) => (' <motion.div'' key={i}'';' className='absolute: w - 2 h - 2 bg - cyan - 400 / 30 rounded - full' animate={{ y: [0, -20, 0], opacity: [0.,3, 0.8, 0.3]}} transition={{ duration: 3: + i * 0.,5, repeat: Infinit,y, delay: i: * 0.,5}} style={{ left: `${20: + i * 1,5}%`, top: `${30: + i * 1,0}%`}} />) ) }' </div>' </section>') ';' }'' 
-;`"";";` 
-  ) 
-} 
+import React, { useState, useEffect } from 'react';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
+const _EnhancedHero = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(true);
+    const [isMuted, setIsMuted] = useState(false);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const _heroSlides = [
+        {
+            id: 1,
+            title: "Transform Your Business",
+            subtitle: "With Zion Tech Group",
+            description: "Discover our cutting-edge micro SAAS solutions designed to scale your business operations and drive growth.",
+            ctaText: "Explore Services",
+            ctaLink: "/micro-saas-services",
+            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            icon: "🚀"
+        },
+        {
+            id: 2,
+            title: "AI-Powered Solutions",
+            subtitle: "For Modern Enterprises",
+            description: "Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.",
+            ctaText: "Learn More",
+            ctaLink: "/ai-solutions",
+            background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+            icon: "🤖"
+        },
+        {
+            id: 3,
+            title: "Cloud-Native Architecture",
+            subtitle: "Built for Scale",
+            description: "Enterprise-grade cloud solutions that grow with your business, ensuring reliability and performance.",
+            ctaText: "Get Started",
+            ctaLink: "/cloud-solutions",
+            background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+            icon: "☁️"
+        }
+    ];
+    useEffect(() => {
+        if (!isAutoPlaying)
+            return;
+        const _interval = setInterval(() => {
+            if (isPlaying) {
+                setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+            }
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [isPlaying, isAutoPlaying, heroSlides.length]);
+    const _nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    };
+    const _prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    };
+    const _goToSlide = (index) => {
+        setCurrentSlide(index);
+    };
+    const _togglePlayPause = () => {
+        setIsPlaying(!isPlaying);
+    };
+    const _toggleMute = () => {
+        setIsMuted(!isMuted);
+    };
+    const _toggleAutoPlay = () => {
+        setIsAutoPlaying(!isAutoPlaying);
+        if (!isAutoPlaying) {
+            setIsPlaying(true);
+        }
+    };
+    return (<div className="relative w-full h-screen overflow-hidden">
+      {/* Background Video/Image Placeholder */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="absolute inset-0 bg-black/50"/>
+      </div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-6xl mx-auto">
+          <AnimatePresence mode="wait">
+            <motion.div key={currentSlide} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.5 }} className="space-y-6">
+              {/* Icon */}
+              <motion.div initial={{ scale: 0, rotate: -180 }} animate={{ scale: 1, rotate: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-8xl mb-6">
+                {heroSlides[currentSlide].icon}
+              </motion.div>
+
+              {/* Title */}
+              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+                {heroSlides[currentSlide].title}
+              </motion.h1>
+
+              {/* Subtitle */}
+              <motion.h2 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-300 leading-tight">
+                {heroSlides[currentSlide].subtitle}
+              </motion.h2>
+
+              {/* Description */}
+              <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }} className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                {heroSlides[currentSlide].description}
+              </motion.p>
+
+              {/* CTA Button */}
+              <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="pt-6">
+                <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
+                  {heroSlides[currentSlide].ctaText}
+                  <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="ml-2">
+                    →
+                  </motion.div>
+                </a>
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Navigation Controls */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="flex items-center space-x-4">
+          {/* Play/Pause Button */}
+          <button onClick={togglePlayPause} className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}>
+            {isPlaying ? <Pause className="w-5 h-5 text-white"/> : <Play className="w-5 h-5 text-white"/>}
+          </button>
+
+          {/* Mute Button */}
+          <button onClick={toggleMute} className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label={isMuted ? "Unmute" : "Mute"}>
+            {isMuted ? <VolumeX className="w-5 h-5 text-white"/> : <Volume2 className="w-5 h-5 text-white"/>}
+          </button>
+
+          {/* Auto-play Toggle */}
+          <button onClick={toggleAutoPlay} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isAutoPlaying
+            ? "bg-green-500/20 text-green-300 border border-green-500/30"
+            : "bg-white/10 text-white border border-white/20"}`}>
+            Auto-play {isAutoPlaying ? "ON" : "OFF"}
+          </button>
+        </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="flex space-x-2">
+          {heroSlides.map((_, index) => (<button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+                ? "bg-white scale-125"
+                : "bg-white/30 hover:bg-white/50"}`} aria-label={`Go to slide ${index + 1}`}/>))}
+        </div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label="Previous slide">
+        <ChevronLeft className="w-6 h-6 text-white"/>
+      </button>
+
+      <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label="Next slide">
+        <ChevronRight className="w-6 h-6 text-white"/>
+      </button>
+
+      {/* Keyboard Navigation Instructions */}
+      <div className="absolute top-4 right-4 z-20">
+        <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">
+          <p>Use ← → keys or click to navigate</p>
+        </div>
+      </div>
+    </div>);
+};
+export default EnhancedHero;

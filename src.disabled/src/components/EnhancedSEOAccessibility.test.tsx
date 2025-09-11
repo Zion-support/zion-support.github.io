@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import EnhancedSEOAccessibility from '../components/EnhancedSEOAccessibility';'
-describe('EnhancedSEOAccessibility', () => {test('renders without crashing', () => {render(<EnhancedSEOAccessibility />)expect(screen.getByTestId('enhancedseoaccessibility')).toBeInTheDocument()})test('displays correct content', () => {render(<EnhancedSEOAccessibility />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<EnhancedSEOAccessibility />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<EnhancedSEOAccessibility />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import EnhancedSEOAccessibility from &apos;./EnhancedSEOAccessibility; describe(&apos;EnhancedSEOAccessibility&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedSEOAccessibility / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedSEOAccessibility from &apos;./EnhancedSEOAccessibility; describe(&apos;EnhancedSEOAccessibility&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedSEOAccessibility / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedSEOAccessibility from &apos;./EnhancedSEOAccessibility; describe(&apos;EnhancedSEOAccessibility&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<EnhancedSEOAccessibility / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

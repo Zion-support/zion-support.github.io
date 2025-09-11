@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import ApiDemo from '../components/ApiDemo';'
-describe('ApiDemo', () => {test('renders without crashing', () => {render(<ApiDemo />)expect(screen.getByTestId('apidemo')).toBeInTheDocument()})test('displays correct content', () => {render(<ApiDemo />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<ApiDemo />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<ApiDemo />)// Add styling tests here;'
-  })})
+import React from \"react\"; import { SEO } from \"@/components/SEO\"; export default function ApiDemo.test() {return (; <div className = \"min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950\">\"; <SEO title=\"ApiDemo.test - Zion Tech Group\" description=\"Professional ApiDemo.test services by Zion Tech Group\" />\"; <div className=\"container mx-auto px-4 py-20\">\"; <h1 className=\"text-4xl font-bold text-white mb-8\">ApiDemo.test</h1>\"; <p className=\"text-gray-300 text-lg\"> Professional ApiDemo.test services to help your business grow.; ></div> ></div> );\"}\";
+const React from "react"; import { SEO } from "@/components/SEO"; export default function ApiDemo.test() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="ApiDemo.test - Zion Tech Group" description="Professional ApiDemo.test services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">ApiDemo.test</h1>"; <p className="text-gray-300 text-lg"> Professional ApiDemo.test services to help your business grow.; ></div> ></div> );"}";""
+import _React from "react"; import { SEO } from "@/components/SEO"; export default function ApiDemo.test() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="ApiDemo.test - Zion Tech Group" description="Professional ApiDemo.test services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">ApiDemo.test</h1>"; <p className="text-gray-300 text-lg"> Professional ApiDemo.test services to help your business grow.; ></div> ></div> );"}";

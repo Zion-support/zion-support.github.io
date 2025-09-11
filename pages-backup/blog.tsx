@@ -1,8 +1,10 @@
 import React from "react";
 import type { NextPage } from "next";
-const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false })}
-const Link = dynamic(() => import("next/link"), { ssr: false })}
-const Blog: NextPage = () => {
+const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false });
+}
+const Link = dynamic(() => import("next/link"), { ssr: false });
+}
+const Blog: NextPage = () => {;
   const blogPosts = []";
 
   return (";
@@ -14,9 +16,9 @@ const Blog: NextPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">";
             <div className="max-w-4xl mx-auto text-center">";
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">;
-                Technology Insights & Innovation,;
+                Technology Insights & Innovation,
               </h1>";
-              <p className="text-lg sm:text-xl text-gray-200 leading-relaxed">,;
+              <p className="text-lg sm:text-xl text-gray-200 leading-relaxed">,
                 Stay ahead with the latest trends in AI, cloud technology, micro SaaS, and digital transformation.;
               </p>;
             </div>;
@@ -26,66 +28,14 @@ const Blog: NextPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">";
             <div className="max-w-6xl mx-auto">";
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {blogPosts.map((post) => (",;
+                {blogPosts.map((post) => (",
                   <article key="{post.id}" className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow duration-300">";
                     <div className="p-6 md:p-8">";
                       <div className="flex items-center gap-2 mb-4">";
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">,;
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">,
                           {post.category}
 
                         </span>;
                       </div>;
                       ";
-                      <h2 className="text-xl md: text-2xl font-bold text-gray-900 mb-4 leading-tight">,;
-                        {post.title}
-
-                      </h2>;
-                      ";
-                      <p className="text-gray-600 mb-6 leading-relaxed">;
-                        {post.excerpt}
-
-                      </p>;
-                      ";
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-6">";
-                        <div className="flex items-center gap-1">";
-                          <User className="w-4 h-4"  />;
-                          <span>{post.author}</span>;
-                        </div>";
-                        <div className="flex items-center gap-1">";
-                          <Calendar className="w-4 h-4"  />;
-                          <span>{new Date(post.date).toLocaleDateString()}</span>;
-                        </div>;
-                      ";
-                      <Link href="{"/blog/${post.id}"}" className="inline-flex items-center text-blue-600 hover: text-blue-700 font-medium">;
-                        Read More";
-                        <ArrowRight className="ml-1 w-4 h-4"  />;
-                      </Link>;
-                    </div>;
-                  </article>,;
-                ))}
-
-              </div>;
-        </section>;
-        {/* comment */}";
-        <section className="py-16 bg-white">";
-          <div className="container mx-auto px-4 sm: px-6 lg:px-8 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-              Ready to Transform Your Business?;
-            </h2>";
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">";
-              Let's discuss how our innovative solutions can help your business grow and succeed.;
-            </p>";
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">;
-                Get Started Today";
-                <ArrowRight className="ml-2 w-5 h-5"  />;
-              </Link>";
-              <Link href="/services" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">;
-                Explore Services,;
-              </Link>;
-            </div>;
-        </section>;
-      </div>;
-    </MainLayout>;,;
-  ),;
-"export default Blog
+                      <h2 className="text-xl md: text-2xl font-bold text-gray-900 mb-4 leading-tight">,

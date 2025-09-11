@@ -1,7 +1,6 @@
 const Component = () => {
 import React from "react";
-import type { NextPage } from "next";
-  ];
+import type { NextPage } from "next" ];
 
   return (;
 <Layout title = "E-commerce Return Management - Zion Tech Group;
@@ -11,35 +10,34 @@ import type { NextPage } from "next";
         <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto text-center">";
             <h1 className="text-5xl md: text-6xl font-bold mb-6">;
-              E-commerce Return Management,;
+              E-commerce Return Management,
             </h1>";
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">,;
-              Streamline your e-commerce returns with automated workflows, return label generation,;
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">,
+              Streamline your e-commerce returns with automated workflows, return label generation,
               and comprehensive tracking. Reduce costs and improve customer satisfaction.;
             </p>";
             <div className="flex flex-col sm: flex-row justify-center gap-6">";
               <Link href="/contact"><a className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">;
-                Start Free Trial,;
+                Start Free Trial,
               </a></Link>";
               <Link href="#pricing"><a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-teal-900 px-8 py-4 rounded-lg font-semibold transition-colors">;
-                View Pricing,;
+                View Pricing,
               </a></Link>;
             </div>;
       </section>;
-,;
       {/* comment */}";
       <section className="py-20 bg-white">";
         <div className="container mx-auto px-4">";
           <div className="text-center mb-16">";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Return Management Features</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Complete solution for managing e-commerce returns efficiently,;
+              Complete solution for managing e-commerce returns efficiently,
             </p>;
           </div>;
           ";
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,;
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (";
-              <div key="{index}" className="bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow">",;
+              <div key="{index}" className="bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow">",
                 <div className="text-4xl mb-4">{feature.icon}</div>";
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{feature.title}</h3>";
                 <p className="text-gray-600">{feature.description}</p>;
@@ -54,8 +52,8 @@ import type { NextPage } from "next";
           <div className="grid lg: grid-cols-2 gap-12 items-center">;
             <div>";
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Our Return Management?</h2>";
-              <p className="text-xl text-gray-600 mb-8">,;
-                Our platform automates the entire return process, from initial request to final refund,;
+              <p className="text-xl text-gray-600 mb-8">,
+                Our platform automates the entire return process, from initial request to final refund,
                 helping you reduce costs while improving customer experience.;
               </p>";
               <ul className="space-y-4">;
@@ -92,17 +90,17 @@ import type { NextPage } from "next";
           <div className="text-center mb-16">";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Pricing Plans</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Choose the plan that best fits your return volume and business needs,;
+              Choose the plan that best fits your return volume and business needs,
             </p>;
           </div>;
           ";
-          <div className="{"grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto">,;
+          <div className="{"grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {pricing.map((plan, index) => (";
               <div key="{index}" className="{"bg-white" rounded-xl p-8 shadow-lg border-2 ${plan.popular ? "border-teal-500 relative" : "border-gray-200"}"}>;
                 {plan.popular && (";
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>";
                     <span className="bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                      Most Popular,;
+                      Most Popular,
                     </span>;
                   </div>;
                 )}";
@@ -121,40 +119,3 @@ import type { NextPage } from "next";
                       </svg>";
                       <span className="text-gray-700">{feature}</span>;
                     </li>;
-                  ))}
-
-                </ul>";
-                <Link href="{"/contact"" ";
-                  className="{"w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${;
-                    plan.popular ";
-                      ? "bg-teal-600 hover: bg-teal-700 text-white" ">;
-                      : "bg-gray-100 hover:bg-gray-200 text-gray-900"}"}
-
-                >;
-                  Get Started,;
-                </Link>;
-              </div>;
-            ))}
-
-          </div>;
-      </section>;
-      {/* comment */}";
-      <section className=""py-20" bg-gradient-to-r from-teal-600 to-blue-600 text-white"}>";
-        <div className="container mx-auto px-4 text-center">";
-          <h2 className="text-4xl font-bold mb-6">Ready to Streamline Your Returns?</h2>";
-          <p className="text-xl mb-8 max-w-2xl mx-auto">;
-            Start reducing return processing time and improving customer satisfaction today.;
-          </p>";
-          <div className="flex flex-col sm: flex-row justify-center gap-6">";
-            <Link href="/contact"><a className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">;
-              Start Free Trial,;
-            </a></Link>";
-            <Link href="tel:+13024640950"><a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
-              Call +1 302 464 0950,;
-            </a></Link>;
-          </div>;
-      </section>;
-    </Layout>;,;
-  )}
-
-"export default EcommerceReturns

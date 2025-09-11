@@ -1,1 +1,19 @@
-export function TalentSkeleton() { return() <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6"> {Array.from({ length 6}).map((_, i) => ( <div: key={i}" className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg">" <div className="flex items-center space-x-4">" <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />" <div className="flex-1 space-y-2">" <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />" <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" /> </div> </div>" <Skeleton className="h-24 w-full bg-zion-blue-light/20" /> </div> ))} </div> ) } "";"'
+import React from 'react';
+interface TalentSkeletonProps {
+  // Add props here as needed
+
+
+
+export default function TalentSkeleton({ }: TalentSkeletonProps) {
+  return (
+    <div>
+      <h1>TalentSkeleton</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+}
+
+==============
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/talent/TalentSkeleton.jsx

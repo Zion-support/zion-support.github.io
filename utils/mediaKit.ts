@@ -1,81 +1,103 @@
-    ok: true,
+
+export function createMediaAsset(asset: Omit<MediaAsset, 'id' | 'createdAt'>): MediaAsset {
+  return {
+    ok: true
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
-};
-
-  const brandGuidelines: MediaAsset = { path: '', filename: 'brand/brand-guidelines.md', type: 'text', content: buildBrandGuidelines() },
-  const colors: MediaAsset = { path: '', filename: 'brand/colors-typography.json', type: 'text', content: JSON.stringify(buildColorsAndTypography(), null, 2) },
-
-  return [...common, ...social, brandGuidelines, colors, ...legalByBundle[bundle]]
-}
-
   }
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
+
+
+
+      path: '',
+      filename: 'legal/jurisdictional-disclosures.md',
+      type: 'text',
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
+    },;
+  ];
+  const web3Extras: MediaAsset[] = [
+    {
+      path: ''
+      filename: 'legal/token-sale-notice.md'
+      type: 'text'
+      content: `# Token Sale Notice (if applicable)\n\nThis document outlines token sale terms. Not an offer to sell securities.`
+    }
+    {
+      path: ''
+      filename: 'legal/dao-disclaimer.md'
+      type: 'text'
+      content: `# DAO Disclaimer\n\nThis is not investment advice. Participation involves risks.`
+    }
+  ];
+  if (kind === 'web3') return [...base, ...web3Extras];
+  return base;
+
+  };
+
+
 
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
-      path: ''
-      filename: 'legal/jurisdictional-disclosures.md'
-      type: 'text'
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
-    }
-  }
-}
 
-  const base: MediaAsset[] = [
+
+
+      path: '',
+
+      filename: 'legal / terms - of - use.md',
+
+      type: 'text',
+
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
+    },;
+
+  ];
+  const web3Extras: MediaAsset[] = [
+
     {
-  type: PressReleaseType
+      path: '',
+
+      filename: 'legal / privacy - policy.md',
+
+      type: 'text',
+      content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
+    },
+    {
+      path: '',
+
+      filename: 'legal / jurisdictional - disclosures.md',
+
+      type: 'text',
+      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
+    },
+  ];
+
 ;
-  // Check condition
-if (return [...base, ...web3Extras]) {
-  $2
-}
-  return base;
-;
-export function buildPressRelease (
+  const web3Extras: MediaAsset[] = [;
+
+    {
+
+      path: '',
+
+  ];
+
+
   type: PressReleaseType,
+  params: {;
+
+    companyName: string;
+  type: PressReleaseType
   params: {
   type: PressReleaseType,
   params: {;
-  type: PressReleaseType
-;
-  // Check condition
-if (return [...base, ...web3Extras]) {
-  $2
-}
-  return base;
-;
-export function buildPressRelease (
-  type: PressReleaseType,
-  params: {    date: string;
-    raiseAmount?: string;
-    tokenName?: string;
-    anchors?: string[];
-  }
-): string {  return [
-    { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
-    { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
-    {
-      label: 'Week 3: Token Airdrop Snapshot'
-      date: fmt(addDays(startDate, 14))
-    }
-    { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
-  ];
 
-function titleCase(s: string) {
-  return s.replace(
-    /\w\S*/g
-    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+    companyName: string;  const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;
+  const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`;
 
-function titleCase(s: string) {
 
-function titleCase(s: string) {
+
 
 }
-    return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
-  }
-  // Check condition
-if ( {) {
-  $2
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces the ${params.token_name ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\n_distribution:\n- Community: 40%\n- Treasury: 20%\n\n_about ${params.company_name}:\n${boilerplate}`;
   }

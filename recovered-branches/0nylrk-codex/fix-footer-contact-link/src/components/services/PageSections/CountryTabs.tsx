@@ -1,28 +1,41 @@
-            .map(country => (  filteredCountries, ;
-  handleCountrySelect, ;
-  searchQuery, ;
-  setSearchQuery ;    <Tabs defaultValue="featured" className="w-full">;
-      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
 
-        <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">;
-          Featured Countries;
-        </TabsTrigger>;"
-        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">;
-          All Countries;
-        </TabsTrigger>;
-      </TabsList>;      <TabsContent value="featured" className="mt-0">;
-        <div className="mb-6">;
-          <h2 className="text-2xl font-bold text-white text-center">Featured Service Locations</h2>;
 
-          <p className="text-zion-slate-light text-center mt-2">;
-            Browse our most popular service destinations;
-          </p>;
-        </div>;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",
+import { CountryPricing } from "@/data/onsiteServicePricing",
+=======
+=======
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {filteredCountries;
-            .filter(country => popularCountries && popularCountries.includes(country && country.country));
-            .map(country => (;              <CountryServiceCard
-                key={country && country.country} 
-                country={country} 
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  popularCountries: string[]
+  filteredCountries: CountryPricing[]
+  handleCountrySelect: (country: CountryPricing) => void
+  searchQuery: string
+
+  setSearchQuery: (query: string) => void
+}
+  filteredCountries
+  handleCountrySelect
+  searchQuery
+  setSearchQuery
+=======
+export function CountryTabs({
+  popularCountries;
+
+
+export function CountryTabs({ ;
+  popularCountries;
+export function CountryTabs({ 
+  popularCountries,
+  filteredCountries, 
+  handleCountrySelect, 
+  searchQuery, 
+  setSearchQuery 
+
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

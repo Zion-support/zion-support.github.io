@@ -2,8 +2,7 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { DollarSign, Shield, Database, Users, CheckCircle, Zap, Globe, Lock, TrendingUp, BarChart3 } from 'lucide-react';
-
-const FinanceSolutions: NextPage = () => {
+const FinanceSolutions: NextPage = () => {;
   return (;
     <Layout;
       title="Financial Services Solutions - Zion Tech Group";
@@ -19,7 +18,6 @@ const FinanceSolutions: NextPage = () => {
             Transform financial services with secure, compliant, and innovative technology solutions. ;
             We help financial institutions modernize their operations and enhance customer experience.;
           </p>;
-
           <div className="flex flex-col sm:flex-row justify-center gap-4">;
             <Link href="/contact">;
               <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
@@ -44,7 +42,6 @@ const FinanceSolutions: NextPage = () => {
               Comprehensive solutions designed to meet the complex needs of financial institutions, ensuring compliance, security, and operational excellence.;
             </p>;
           </div>;
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">;
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
@@ -192,137 +189,3 @@ const FinanceSolutions: NextPage = () => {
           </div>;
         </div>;
       </section>;
-
-      {/* Compliance & Security */}
-      <section className="py-20 bg-white">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Financial Compliance & Security</h2>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Ensuring your financial technology solutions meet all regulatory requirements and security standards.;
-            </p>;
-          </div>;
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">;
-            <div>;
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Regulatory Compliance</h3>;
-              <div className="space-y-4">;
-                <div className="flex items-start">;
-                  <Lock className="w-6 h-6 text-blue-600 mr-3 mt-1" />;
-                  <div>;
-                    <h4 className="font-semibold text-gray-900">PCI DSS Compliance</h4>;
-                    <p className="text-gray-600">Payment card industry data security standards for secure payment processing.</p>;
-                  </div>;
-                </div>;
-                <div className="flex items-start">;
-                  <Lock className="w-6 h-6 text-green-600 mr-3 mt-1" />;
-                  <div>;
-                    <h4 className="font-semibold text-gray-900">SOX Compliance</h4>;
-                    <p className="text-gray-600">Sarbanes-Oxley Act compliance for financial reporting and controls.</p>;
-                  </div>;
-                </div>;
-                <div className="flex items-start">;
-                  <Lock className="w-6 h-6 text-purple-600 mr-3 mt-1" />;
-                  <div>;
-                    <h4 className="font-semibold text-gray-900">Basel III</h4>;
-                    <p className="text-gray-600">International banking regulations for risk management and capital adequacy.</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-
-            <div className="bg-gray-50 rounded-lg p-8">;
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Security Features</h3>;
-              <ul className="space-y-3">;
-                <li className="flex items-center">;
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />;
-                  <span className="text-gray-700">Multi-layer encryption</span>;
-                </li>;
-                <li className="flex items-center">;
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />;
-                  <span className="text-gray-700">Biometric authentication</span>;
-                </li>;
-                <li className="flex items-center">;
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />;
-                  <span className="text-gray-700">Transaction monitoring</span>;
-                </li>;
-                <li className="flex items-center">;
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />;
-                  <span className="text-gray-700">Audit trail management</span>;
-                </li>;
-                <li className="flex items-center">;
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />;
-                  <span className="text-gray-700">Disaster recovery</span>;
-                </li>;
-                <li className="flex items-center">;
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />;
-                  <span className="text-gray-700">Penetration testing</span>;
-                </li>;
-              </ul>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Financial Metrics */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-green-50">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Financial Performance Metrics</h2>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Track and optimize key financial metrics with our advanced analytics and reporting solutions.;
-            </p>;
-          </div>;
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
-              <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-4" />;
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">ROI Tracking</h3>;
-              <p className="text-gray-600">Monitor return on investment across all financial products and services.</p>;
-            </div>;
-
-            <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
-              <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-4" />;
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Risk Analysis</h3>;
-              <p className="text-gray-600">Advanced risk assessment and management tools for financial institutions.</p>;
-            </div>;
-
-            <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
-              <DollarSign className="w-12 h-12 text-purple-600 mx-auto mb-4" />;
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Cost Optimization</h3>;
-              <p className="text-gray-600">Identify opportunities to reduce operational costs and improve efficiency.</p>;
-            </div>;
-
-            <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
-              <Users className="w-12 h-12 text-indigo-600 mx-auto mb-4" />;
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Customer Analytics</h3>;
-              <p className="text-gray-600">Deep insights into customer behavior and financial product usage.</p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">;
-        <div className="container mx-auto px-4 text-center">;
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Financial Services?</h2>;
-          <p className="text-xl mb-8 max-w-3xl mx-auto">;
-            Let's work together to create innovative financial technology solutions that drive growth and enhance customer experience.;
-          </p>;
-          <div className="flex flex-col sm:flex-row justify-center gap-4">;
-            <Link href="/contact">;
-              <a className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
-                Get Started Today;
-              </a>;
-            </Link>;
-            <Link href="/solutions">;
-              <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
-                View All Solutions;
-              </a>;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
-    </Layout>;
-  )}
-export default FinanceSolutions;

@@ -10,35 +10,34 @@ import type { NextPage } from "next";
         <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto text-center">";
             <h1 className="text-5xl md: text-6xl font-bold mb-6">;
-              AI Content Creation,;
+              AI Content Creation,
             </h1>";
             <p className="text-xl md:text-2xl mb-8 text-gray-200">;
-              Transform your content strategy with AI-powered content generation tools. ,;
+              Transform your content strategy with AI-powered content generation tools. ,
               Create engaging, high-quality content at scale while maintaining your brand voice.;
             </p>";
             <div className="flex flex-col sm: flex-row justify-center gap-6">";
               <Link href="/contact"><a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">;
-                Get Started,;
+                Get Started,
               </a></Link>";
               <Link href="#pricing"><a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors">;
-                View Pricing,;
+                View Pricing,
               </a></Link>;
             </div>;
       </section>;
-,;
       {/* comment */}";
       <section className="py-20 bg-white">";
         <div className="container mx-auto px-4">";
           <div className="text-center mb-16">";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Content Creation Features</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Our AI-powered platform can generate various types of content to meet your business needs,;
+              Our AI-powered platform can generate various types of content to meet your business needs,
             </p>;
           </div>;
           ";
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,;
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (";
-              <div key="{index}" className="bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow">",;
+              <div key="{index}" className="bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow">",
                 <div className="text-4xl mb-4">{feature.icon}</div>";
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{feature.title}</h3>";
                 <p className="text-gray-600">{feature.description}</p>;
@@ -53,8 +52,8 @@ import type { NextPage } from "next";
           <div className="grid lg: grid-cols-2 gap-12 items-center">;
             <div>";
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Our AI Content Creation?</h2>";
-              <p className="text-xl text-gray-600 mb-8">,;
-                Our advanced AI technology understands context, tone, and brand voice to create content,;
+              <p className="text-xl text-gray-600 mb-8">,
+                Our advanced AI technology understands context, tone, and brand voice to create content,
 that resonates with your audience and drives results.;
               </p>";
               <ul className="space-y-4">;
@@ -91,17 +90,17 @@ that resonates with your audience and drives results.;
           <div className="text-center mb-16">";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Pricing Plans</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Choose the plan that best fits your content creation needs,;
+              Choose the plan that best fits your content creation needs,
             </p>;
           </div>;
           ";
-          <div className="{"grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto">,;
+          <div className="{"grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {pricing.map((plan, index) => (";
               <div key="{index}" className="{"bg-white" rounded-xl p-8 shadow-lg border-2 ${plan.popular ? "border-blue-500 relative" : "border-gray-200"}"}>;
                 {plan.popular && (";
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>";
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                      Most Popular,;
+                      Most Popular,
                     </span>;
                   </div>;
                 )}";
@@ -120,40 +119,3 @@ that resonates with your audience and drives results.;
                       </svg>";
                       <span className="text-gray-700">{feature}</span>;
                     </li>;
-                  ))}
-
-                </ul>";
-                <Link href="{"/contact"" ";
-                  className="{"w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${;
-                    plan.popular ";
-                      ? "bg-blue-600 hover: bg-blue-700 text-white" ">;
-                      : "bg-gray-100 hover:bg-gray-200 text-gray-900"}"}
-
-                >;
-                  Get Started,;
-                </Link>;
-              </div>;
-            ))}
-
-          </div>;
-      </section>;
-      {/* comment */}";
-      <section className=""py-20" bg-gradient-to-r from-blue-600 to-purple-600 text-white"}>";
-        <div className="container mx-auto px-4 text-center">";
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Content Strategy?</h2>";
-          <p className="text-xl mb-8 max-w-2xl mx-auto">;
-            Start creating high-quality content at scale with our AI-powered platform.;
-          </p>";
-          <div className="flex flex-col sm: flex-row justify-center gap-6">";
-            <Link href="/contact"><a className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">;
-              Start Free Trial,;
-            </a></Link>";
-            <Link href="tel:+13024640950"><a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
-              Call +1 302 464 0950,;
-            </a></Link>;
-          </div>;
-      </section>;
-    </Layout>;,;
-  )}
-
-"export default AIContentCreation

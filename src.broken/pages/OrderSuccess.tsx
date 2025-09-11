@@ -1,8 +1,10 @@
-import React from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import React from 'react',
+import { useSearchParams, Link } from 'react-router-dom',
+
 export default function OrderSuccess() {
-  const [params] = useSearchParams($2);
-  const sessionId = params.get($2);
+  const [params] = useSearchParams(),
+  const sessionId = params.get('session_id'),
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6">
       <h1 className="text-2xl font-bold mb-4">Payment Successful</h1>
@@ -11,3 +13,4 @@ export default function OrderSuccess() {
     </div>
   )
 }
+;

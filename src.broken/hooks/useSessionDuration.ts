@@ -1,4 +1,5 @@
-// Hook for useSessionDuration,
-export const useUseSessionDuration: unknown = $2;
+// Hook for useSessionDuration,;
+export const useUseSessionDuration: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

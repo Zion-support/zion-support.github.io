@@ -7,7 +7,6 @@ interface DataPoint {
   timestamp: string;
   change?: number;
   changeType?: "increase" | "decrease";
-}
 interface ChartData {
   id: string;
   name: string;
@@ -15,16 +14,14 @@ interface ChartData {
   type: "line" | "bar" | "pie" | "area";
   color: string;
   description: string;
-}
 interface AdvancedDataVisualizationProps {
   data: ChartData[];
   title?: string;
   description?: string;
-}
 const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
-  data,
-  title = "Advanced Data Visualization",
-  description = "Interactive data visualization with real-time updates",
+  data;
+  title = "Advanced Data Visualization"
+  description = "Interactive data visualization with real-time updates"
 }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
@@ -46,11 +43,11 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
                       {point.value.toLocaleString()}
                     </span>
                     {point.change && (
-                      <span className={`text-xs px-2 py-1 rounded ${
-                        point.changeType === "increase"
+                      <span className={"text-xs px-2 py-1 rounded ${
+                        point.changeType === "increase" 
                           ? "bg-green-100 text-green-800"
                           : "bg-red-100 text-red-800"
-                      }`}>
+                      }"}>
                         {point.changeType === "increase" ? "+" : "-"}{Math.abs(point.change)}%
                       </span>
                     )}
@@ -63,5 +60,4 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
       </div>
     </div>
   );
-}
-export default AdvancedDataVisualization;
+};

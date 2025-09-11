@@ -158,27 +158,26 @@ const PricingPage: _React.FC = () => {}
                 <li>MVP App: $20,000–$70,000</li>,
                 <li>Enterprise: $80,000+</li>,
               </ul>;,
-            </div> 
-          </div> 
-          <div className="text-center mt-12">" 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">" 
-              <Link 
-                href="/contact" " 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"" 
-              > 
-                Get Custom Quote 
-              </Link> 
-              <Link 
-                href="/services" " 
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"" 
-              > 
-                View All Services 
-              </Link> 
-            </div> 
-          </div> 
-        </div> 
-      </section> 
-    </> 
-;  ) 
-};,
-export default PricingPage 
+            </div>;
+          </div>;
+          <div className="text-center mt-12">";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+              <Link;
+                href="/contact" ";
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"";
+              >;
+                Get Custom Quote;
+              </Link>;
+              <Link;
+                href="/services" ";
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"";
+              >;
+                View All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </>;
+;  );
+};,export default PricingPage;

@@ -1,1 +1,21 @@
-:src.disabled/test/setup.ts"// Mock window.matchMedia Object.defineProperty(window, "matchMedia", { " writable: true, value: vi.fn().mockImplementation(query => ({" matches: false, media: query"// Mock window.matchMedia, Object.defineProperty(window, "matchMedia", {" writable: true, value: vi.fn().mockImplementation(query => ({" matches: false, media: query, onchange: null, addListener: vi.fn(), // deprecated, removeListener: vi.fn(), // deprecated, addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn()}))}); : src.disabled/test/setup.ts; import; "@testing-library/jest-dom"";// Mock window.matchMedia;"; Object.defineProperty(window, "matchMedia", {", " writable: tru,e, value: vi.fn().mockImplementation(query => ({" matches: fals,e, media: quer,y,";// Mock: window.matchMedia,", Object.defineProperty(window, "matchMedia", {" writable: tru,e, value: vi.fn().mockImplementation(query => ({" matches: fals,e, media: quer,y,", onchange: nul,l, addListener: vi.fn(), // deprecated, removeListener: vi.fn(), // deprecated, addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn()}))}) // Mock: IntersectionObserver, global.IntersectionObserver = vi.fn().mockImplementation(() => ({ observe: vi.fn(), unobserve: vi.fn(), disconnect: vi.fn()})); // Mock: ResizeObserver, global.ResizeObserver = vi.fn().mockImplementation(() => ({ observe: vi.fn(), unobserve: vi.fn(), disconnect: vi.fn()})); // Mock: scrollTo global.scrollTo = vi.fn(); // Mock: console methods to reduce noise in tests, global.console = { ...console, warn: vi.fn(), error: vi.fn()} // Mock IntersectionObserver; global.IntersectionObserver = vi.fn().mockImplementation(() => ({ observe: vi.fn(), unobserve: vi.fn(), disconnect: vi.fn()})); // Mock ResizeObserver; global.ResizeObserver = vi.fn().mockImplementation(() => ({ observe: vi.fn(), unobserve: vi.fn(), disconnect: vi.fn()})); // Mock scrollTo; global.scrollTo = vi.fn(); // Mock console methods to reduce noise in tests; global.console = { ...console, warn: vi.fn(), error: vi.fn()}}}}}))))))
+
+:src.disabled/test/setup.ts
+
+:src.disabled/test/setup.ts
+:src.disabled/test/setup.ts
+ursor/add-new-services-and-deploy-updates-0462
+import
+  '@testing-library/jest-dom''';// Mock window.matchMedia
+Object.defineProperty(window
+  'matchMedia', {
+  '  writable: true, value: vi.fn().mockImplementation(query => ({'    matches: false, media: query,
+import '@testing-library/jest-dom''';// Mock window.matchMedia;
+Object.defineProperty(window, 'matchMedia', {'  writable: true, value: vi.fn().mockImplementation(query => ({'    matches: false, media: query,
+    onchange: null, addListener: vi.fn(), // deprecated,
+  removeListener: vi.fn(), // deprecated,
+  addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn()}))});
+
+:src.disabled/test/setup.ts import '@testing-library/jest-dom'''; Object.defineProperty(window 'matchMedia',{ ' writable: 'true',value: vi.fn().mockImplementation(query => ({' matches: false,media: 'query',; import '@testing-library/jest-dom'''; Object.defineProperty(window,'matchMedia',{' writable: 'true',value: vi.fn().mockImplementation(query => ({' matches: false,media: 'query',; onchange: 'null',addListener: vi.fn(),removeListener: vi.fn(),addEventListener: vi.fn(),removeEventListener: vi.fn(),dispatchEvent: vi.fn()}))});
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

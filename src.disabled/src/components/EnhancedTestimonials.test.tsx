@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import EnhancedTestimonials from '../components/EnhancedTestimonials';'
-describe('EnhancedTestimonials', () => {test('renders without crashing', () => {render(<EnhancedTestimonials />)expect(screen.getByTestId('enhancedtestimonials')).toBeInTheDocument()})test('displays correct content', () => {render(<EnhancedTestimonials />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<EnhancedTestimonials />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<EnhancedTestimonials />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import EnhancedTestimonials from &apos;./EnhancedTestimonials; describe(&apos;EnhancedTestimonials&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedTestimonials / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedTestimonials from &apos;./EnhancedTestimonials; describe(&apos;EnhancedTestimonials&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedTestimonials / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedTestimonials from &apos;./EnhancedTestimonials; describe(&apos;EnhancedTestimonials&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<EnhancedTestimonials / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

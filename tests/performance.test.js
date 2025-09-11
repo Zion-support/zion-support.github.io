@@ -17,4 +17,72 @@ test('Performance test - Page load time', async ({ page }) => {
   await page.waitForLoadState(networkidle');
   expect(consoleErrors.length).toBe(0)});
 
+export default function Performance.test({ }: Performance.testProps) {
 
+<:tests/performance.test.js
+=
+
+}
+
+>export default function Performance.test({ }: Performance.testProps) {
+<:src.pages.disabled/PricingGuidePage.jsx
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface PricingGuidePageProps {
+  // Add props here as needed
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function PricingGuidePage({ }: PricingGuidePageProps) {
+=
+import React from 'react';
+interface Performance.testProps {
+  // Add props here as needed
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function Performance.test({ }: Performance.testProps) {
+>  return (
+    <div>
+      <h1>Performance.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

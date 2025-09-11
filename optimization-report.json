@@ -1,2 +1,52 @@
 {
-
+  "timestamp": "2025-09-05T22:26:08.665Z",
+  "duration": 10733,
+  "optimizations": {
+    "bundleSize": {
+      "before": 79.9,
+      "after": 0,
+      "improvement": 0
+    },
+    "buildTime": {
+      "before": 0,
+      "after": 0,
+      "improvement": 0
+    },
+    "performance": {
+      "score": 85,
+      "improvements": [
+        "Enable gzip compression",
+        "Optimize images",
+        "Minify CSS and JavaScript",
+        "Use CDN for static assets"
+      ]
+    },
+    "security": {
+      "vulnerabilities": 0,
+      "fixes": []
+    },
+    "seo": {
+      "score": 78,
+      "improvements": [
+        "Add meta descriptions",
+        "Optimize heading structure",
+        "Add alt text to images",
+        "Improve page titles"
+      ]
+    },
+    "accessibility": {
+      "score": 82,
+      "improvements": [
+        "Add ARIA labels",
+        "Improve color contrast",
+        "Add keyboard navigation",
+        "Ensure proper heading hierarchy"
+      ]
+    }
+  },
+  "recommendations": [
+    "Focus on performance improvements",
+    "Improve SEO optimization",
+    "Enhance accessibility features"
+  ]
+}

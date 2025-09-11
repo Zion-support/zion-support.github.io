@@ -1,17 +1,17 @@
 import { describe, it, expect } from 'vitest';
 import { fetchPostsByCategory } from './community';
-
-describe('fetchPostsByCategory', () => {
-  it('should handle normal input', () => {
+describe('fetchPostsByCategory', () => {;
+  it('should handle normal input', () => {;
     // Add test cases based on utility function behavior;
     const result = fetchPostsByCategory('test input');
-    expect(result).toBeDefined()});
-
-  it('should handle edge cases', () => {
+    expect(result).toBeDefined();
+});
+  it('should handle edge cases', () => {;
     // Add edge case tests;
     const result = fetchPostsByCategory(null);
-    expect(result).toBeDefined()});
-
-  it('should handle error cases', () => {
+    expect(result).toBeDefined();
+});
+  it('should handle error cases', () => {;
     // Add error handling tests;
-    expect(() => fetchPostsByCategory(undefined)).not.toThrow()})});
+    expect(() => fetchPostsByCategory(undefined)).not.toThrow();
+});

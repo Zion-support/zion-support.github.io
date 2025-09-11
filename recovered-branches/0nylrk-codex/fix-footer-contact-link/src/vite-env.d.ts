@@ -1,4 +1,5 @@
-;
+
+interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -23,11 +24,11 @@ declare module 'path' {export function resolve(...paths: string[]): string;
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
-// Add Node.js globals;    key?: number | string;
-  }
-}
-// ListingScoreCard type fixes;
-
+// Add Node.js globals;
+declare let __dirname: string;
+declare let process: {env: {;
+    [key: string]: string | undefined;
+    NODE_ENV: 'development' | 'production' | 'test';
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   // add more env variables as needed;
@@ -76,87 +77,23 @@ declare let process: {;
     PORT?: string;
   }
 }
-// Badge component type fixes'
-declare module '@/components/ui/badge' {}
-interface ImportMetaEnv {}
-    PORT?: string;
-  }
-}
 // Badge component type fixes
 declare module '@/components/ui/badge' {
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   // add more env variables as needed;
-
 }
-interface ImportMeta {}
+interface ImportMeta {
   readonly env: ImportMetaEnv;
-
-
-}
-// Global type declarations;
-declare namespace React {}
-
-// Removed custom lucide-react stub;
-// Create a replacement stub for LiveKit components;
-declare module '@livekit/components-react' {export interface VideoCallProps {;
-    room?: string;
-    token?: string;
-    serverUrl?: string;
-    onDisconnect?: () => void;
-    className?: string;
-
-// Type declarations for modules used in Vite configuration;
-declare module 'vitest / config' {
-  export { define_config } from 'vite';
-declare module '@vitejs/plugin-react - swc' {
-  import { Plugin } from 'vite',;
-  export default function reactSWC (): Plugin;
-}
-
-declare module 'path' {
-  export function resolve (...paths: string[]): string,
-  export function join (...paths: string[]): string,
-  export function dirname (path: string): string;
-declare module 'lovable - tagger' {
-  export function component_tagger (): Plugin;
-
-
-}
-// Add Node.js globals;
-declare let __dirname: string,
-declare let process: {,
-  env: {
-    [key: string]: string | undefined,
-    NODE_ENV: 'development' | 'production' | 'test',
-    PORT?: string;
-},
-
-// Badge component type fixes;
-declare module '@/components / ui / badge' {
-  export interface BadgeProps {
-  }
-
-  export const Badge: React.FC < BadgeProps>;
-// FeatureCard type fixes;
-declare module '@/components / FeatureCard' {
-  export interface FeatureCardProps {
-  // TODO: Implement
-    title: string,
-    description: string,
-    icon: React.ReactNode,
-    className?: string,
-    key?: number | string
+    key?: number | string;
   }
 }
+// ListingScoreCard type fixes;
 
-// ListingScoreCard type fixes
-declare module '@/components/ListingScoreCard' {
+declare module '@/components / ListingScoreCard' {
   export interface ListingScoreCardProps {
     title: string,
     description: string,
-  // TODO: Implement
-pr-12325
     category: string,
     image?: string,
     tags?: string[],
@@ -176,16 +113,35 @@ declare module '@/components / ChatAssistant / ChatMessage' {
     role: 'user' | 'assistant',
     message: string,
     timestamp?: Date,
-    key?: string | number;
 
+    key?: string | number;
+  }
+}
+// ProductListingCard type fixes;
+
+
+
+
+  }
+  export const VideoCall: React.FC<VideoCallProps>;
+  export const LiveKitRoom: React.FC<any>;
+}
+declare module '@/components / ProductListingCard' {
+  export interface ProductListingCardProps {
+    listing: any,
+    view?: any,  // Made optional to fix the errors;
+    onRequestQuote: (listing_id: string) => void,
+    key?: string | number;
+  }
+  export const ProductListingCard: React.FC < ProductListingCardProps>;
 }
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
+declare module '@livekit / components - react' {
   export interface VideoCallProps {
-
     room?: string,
     token?: string,
-    server_url?: string,;
+    server_url?: string,
     on_disconnect?: () => void;
     class_name?: string;
   }
@@ -193,18 +149,3 @@ declare module '@/components / ChatAssistant / ChatMessage' {
   export const LiveKitRoom: React.FC < any>;
 }
 declare module '@livekit / components - styles' {
-
-;
-'
-declare module '@livekit/components-styles' {;
-  // Empty stub for the styles;
-
-}
-}}
-  export const VideoCall: React.FC < VideoCallProps>;
-  export const LiveKitRoom: React.FC < any>;
-declare module '@livekit / components - styles' {
-
-declare module '@livekit/components-styles' {;
-  // Empty stub for the styles;
-}}

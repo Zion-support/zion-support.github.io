@@ -1,3 +1,6 @@
+
+
+
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -6,53 +9,54 @@ import {ProjectCard} from './ProjectCard';
 import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {;  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-  const [showAddProject, setShowAddProject] = useState(false);
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
-    null,
-  );
+export function PortfolioBuilder() {;
 
-  useEffect(() => {}
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+  const [showAddProject, setShowAddProject] = useState(false);
+
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
+    null
+  );
+  useEffect(() => {
     fetchProjects();
   }, [fetchProjects]);
-
-import { useState, useEffect } from 'react',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { FilePlus, Loader2 } from 'lucide-react';;
-import { ProjectCard } from './ProjectCard',;
-import { ProjectForm } from './ProjectForm',;
-import { PortfolioProject } from '@/types/resume',;
-import { usePortfolio } from '@/hooks/usePortfolio',;
-export function PortfolioBuilder() {;
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
-  const [showAddProject, setShowAddProject] = useState(false),;
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
-  useEffect(() => {;
+  const handleAddSuccess = () => {
+    setShowAddProject(false);
     fetchProjects();
-  }, [fetchProjects]),;
-  const handleAddSuccess = () => {;
-    setShowAddProject(false),;
+  }
+  const handleEditSuccess = () => {
+    setEditingProject(null);
     fetchProjects();
-  },;
-  const handleEditSuccess = () => {;
-    setEditingProject(null),;
-    fetchProjects();
-  },;
-  const handleDeleteProject = async (projectId: string) => {;
-    const success = await deleteProject(projectId),;
-    if (success) {;
+  }
+  const handleDeleteProject = async (projectId: string) => {
+    const success = await deleteProject(projectId);
+    if (success) {
       fetchProjects();
     }
-  },
-    if (isLoading) {
+  };
+
+}
+
+  }
+  };
+
+  };
+
+  
+  
+
+
+  >>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
+
+
+  
+  if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     );
   }
-
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -71,19 +75,130 @@ export function PortfolioBuilder() {;
           Add Project
         </Button>
       </div>
-
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-              {editingProject ? "Edit Project" : "Add New Project"}
-            </h2>
+
+import { useState, useEffect } from 'react',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { FilePlus, Loader2 } from 'lucide-react',;
+import { ProjectCard } from './ProjectCard',;
+import { ProjectForm } from './ProjectForm',;
+import { PortfolioProject } from '@/types/resume',;
+import { usePortfolio } from '@/hooks/usePortfolio',;
+;
+export function PortfolioBuilder() {;
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
+  const [showAddProject, setShowAddProject] = useState(false),;
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
+  ;
+  useEffect(() => {;
+    fetchProjects(),;
+  }, [fetchProjects]),;
+  ;
+  const handleAddSuccess = () => {;
+    setShowAddProject(false),;
+    fetchProjects(),;
+  },;
+  ;
+  const handleEditSuccess = () => {;
+    setEditingProject(null),;
+    fetchProjects(),;
+  },;
+  ;
+  const handleDeleteProject = async (projectId:string) => {;
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {FilePlus, Loader2} from 'lucide-react';
+import {ProjectCard} from './ProjectCard';
+import {ProjectForm} from './ProjectForm';
+import {PortfolioProject} from '@/types/resume';
+import {usePortfolio} from '@/hooks/usePortfolio';
+export function PortfolioBuilder() {;
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+  const [showAddProject, setShowAddProject] = useState(false);
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null);
+
+  useEffect(() => {;
+    fetchProjects();
+  }, [fetchProjects]);
+
+  const handleAddSuccess = () => {;
+    setShowAddProject(false);
+    fetchProjects();
+  };
+
+  const handleEditSuccess = () => {;
+    setEditingProject(null);
+    fetchProjects();
+  };
+
+  const handleDeleteProject = async (projectId: string) => {;
+  if (isLoading) {;
+    return (
+      <div className="flex justify-center items-center h-64">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+
+  return (
+
+
+
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>;
 
             <ProjectForm
+              project={editingProject || undefined}              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
 
+            <ProjectForm 
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null)
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+
+
+
+
+
+      {/* Projects List */}
+      {projects && projects.length > 0 ? (;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          {projects && projects.map((project) => (;
+            <ProjectCard
+              key={project && project.id}
+              project={project}
+              onEdit={() => setEditingProject(project)}
+        </div>;
+      ) : (;
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>;
+            <ProjectForm;
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+            <ProjectForm 
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null)
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
@@ -94,11 +209,16 @@ export function PortfolioBuilder() {;
       )}
 
       {/* Projects List */}
-      {projects && projects.length > 0 ? (;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {projects && projects.map((project) => (;
+      {projects.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
             <ProjectCard
-              key={project && project.id}
+              key={project.id}
+              project={project}
+              onEdit={() => setEditingProject(project)}
+              onDelete={handleDeleteProject}
+            />
+          ))}
         </div>
       ) : (
         !showAddProject && (
@@ -129,4 +249,7 @@ export function PortfolioBuilder() {;
     </div>
   );
 }
-                  className="mt-2";
+          </Card>))}
+    </div>);
+}
+

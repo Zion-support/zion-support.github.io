@@ -9,29 +9,29 @@ console.log('🚀 Starting complete merge process...');
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if file has merge conflict markers
     if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts in this file
     }
-    
+
     console.log(`🔧 Resolving conflicts in: ${filePath}`);
-    
+
     // Remove all merge conflict markers and keep the incoming changes (after )
     let resolvedContent = content;
-    
+
     // Pattern 1: Conflicts with file paths - keep incoming changes
     resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n(.*?)\n>>>>>>>[^\n]*\n?/gs, '$1');
-    
+
     // Pattern 2: Simple conflicts without file paths - keep incoming changes
     resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n(.*?)\n>>>>>>>[^\n]*\n?/gs, '$1');
-    
+
     // Pattern 3: Handle any remaining conflict markers
     resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
-    
+
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
-    
+
     // Write resolved content back to file
     fs.writeFileSync(filePath, resolvedContent);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -45,15 +45,15 @@ function resolveMergeConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findConflictFiles(dir) {
   const conflictFiles = [];
-  
+
   function scanDirectory(currentDir) {
     try {
       const items = fs.readdirSync(currentDir);
-      
+
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           // Skip certain directories
           if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
@@ -75,7 +75,7 @@ function findConflictFiles(dir) {
       // Skip directories that can't be read
     }
   }
-  
+
   scanDirectory(dir);
   return conflictFiles;
 }
@@ -84,18 +84,18 @@ function findConflictFiles(dir) {
 try {
   console.log('🔍 Scanning for files with merge conflicts...');
   const conflictFiles = findConflictFiles('/workspace');
-  
+
   console.log(`📊 Found ${conflictFiles.length} files with merge conflicts`);
-  
+
   let resolvedCount = 0;
   for (const file of conflictFiles) {
     if (resolveMergeConflicts(file)) {
       resolvedCount++;
     }
   }
-  
+
   console.log(`✅ Successfully resolved conflicts in ${resolvedCount} files`);
-  
+
   // Create a comprehensive summary
   const summary = {
     timestamp: new Date().toISOString(),
@@ -111,14 +111,14 @@ try {
       'Merge any remaining PRs into main branch'
     ]
   };
-  
+
   fs.writeFileSync('/workspace/conflict-resolution-summary.json', JSON.stringify(summary, null, 2));
-  
+
   console.log('🎉 Complete merge process finished!');
   console.log('📄 Summary saved to conflict-resolution-summary.json');
   console.log('📋 Next steps:');
   summary.nextSteps.forEach(step => console.log(`   ${step}`));
-  
+
 } catch (error) {
   console.error('❌ Error during merge process:', error.message);
   process.exit(1);

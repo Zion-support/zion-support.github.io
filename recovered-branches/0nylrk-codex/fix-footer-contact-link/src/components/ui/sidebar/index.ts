@@ -1,11 +1,8 @@
 // Export components from their respective files
 export * from "./Sidebar.tsx";
-
 // Export components from their respective files;
 export * from "./Sidebar.tsx";
 
-// Export components from their respective files
-export * from "./Sidebar.tsx";
 // Export components from their respective files
 export * from "./Sidebar.tsx",
 export * from "./SidebarItem",
@@ -32,8 +29,11 @@ export * from "./SidebarMenuItem",;
 export * from "./SidebarMenuButton",;
 export * from "./SidebarProvider",;
 export * from "./SidebarTrigger";
-export * from "./SidebarTrigger";
+
 
 export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
+export * from "./SidebarTrigger";
+
+
 export * from "./SidebarTrigger";

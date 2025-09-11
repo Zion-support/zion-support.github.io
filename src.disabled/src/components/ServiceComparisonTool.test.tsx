@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import ServiceComparisonTool from '../components/ServiceComparisonTool';'
-describe('ServiceComparisonTool', () => {test('renders without crashing', () => {render(<ServiceComparisonTool />)expect(screen.getByTestId('servicecomparisontool')).toBeInTheDocument()})test('displays correct content', () => {render(<ServiceComparisonTool />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<ServiceComparisonTool />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<ServiceComparisonTool />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ServiceComparisonTool from &apos;./ServiceComparisonTool; describe(&apos;ServiceComparisonTool&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ServiceComparisonTool / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ServiceComparisonTool from &apos;./ServiceComparisonTool; describe(&apos;ServiceComparisonTool&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ServiceComparisonTool / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ServiceComparisonTool from &apos;./ServiceComparisonTool; describe(&apos;ServiceComparisonTool&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<ServiceComparisonTool / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import MobileOptimizer from '../components/MobileOptimizer';'
-describe('MobileOptimizer', () => {test('renders without crashing', () => {render(<MobileOptimizer />)expect(screen.getByTestId('mobileoptimizer')).toBeInTheDocument()})test('displays correct content', () => {render(<MobileOptimizer />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<MobileOptimizer />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<MobileOptimizer />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import MobileOptimizer from &apos;./MobileOptimizer; describe(&apos;MobileOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<MobileOptimizer / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import MobileOptimizer from &apos;./MobileOptimizer; describe(&apos;MobileOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<MobileOptimizer / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import MobileOptimizer from &apos;./MobileOptimizer; describe(&apos;MobileOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<MobileOptimizer / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

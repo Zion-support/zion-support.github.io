@@ -1,79 +1,57 @@
+<<<<<<< HEAD
 
+=======
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 export interface Service {
   id: string;
   name: string;
   description: string;
   category: string;
   price?: number;
-  features?: string[];
-  tags?: string[];
-  [key: string]: any}
+  features: string[];
+}
+export const findService = (query: string, services: Service[]): Service[] => {
+  const searchTerm = query.toLowerCase();
+  return services.filter(service => 
+    service.name.toLowerCase().includes(searchTerm) ||
+    service.description.toLowerCase().includes(searchTerm) ||
+    service.category.toLowerCase().includes(searchTerm)
+  );
+};
+export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
+  return services.filter(service => 
+    service.category.toLowerCase() === category.toLowerCase()
+  );
+};
+export default {
+  findService,
+  getServicesByCategory
+};
+// Service finder utility
+export const findService = ("_serviceName": string) => {
+  // Implementation placeholder
+  return null;
+};
 
-export function findServicesByCategory(;
-  allServiceArrays: Service[][],;
-  categoryIncludes: string;
-): Service[] {
-  const results: Service[] = [];
 
-  for (const arr of allServiceArrays) {
-    for (const s of arr) {
-      if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
-        results.push(s)}
-    }
-  }
-  return results}
 
-export function findServicesByTag(;
-  allServiceArrays: Service[][],;
-  tagIncludes: string;
-): Service[] {
-  const results: Service[] = [];
+=======
 
-  for (const arr of allServiceArrays) {
-    for (const s of arr) {
-      if (s && s.tags && Array.isArray(s.tags)) {
-        const hasTag = s.tags.some(tag =>;
-          typeof tag === 'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase());
-        );
-        if (hasTag) {
-          results.push(s)}
-      }
-    }
-  }
-  return results}
-
-export function findServicesByPriceRange(;
-  allServiceArrays: Service[][],;
-  minPrice: number,;
-  maxPrice: number;
-): Service[] {
-  const results: Service[] = [];
-
-  for (const arr of allServiceArrays) {
-    for (const s of arr) {
-      if (s && typeof s.price === 'number' && s.price >= minPrice && s.price <= maxPrice) {
-        results.push(s)}
-    }
-  }
-  return results}
-
-export function searchServices(;
-  allServiceArrays: Service[][],;
-  searchTerm: string;
-): Service[] {
-  const results: Service[] = [];
-  const term = searchTerm.toLowerCase();
-
-  for (const arr of allServiceArrays) {
-    for (const s of arr) {
-      if (s) {
-        const nameMatch = s.name && s.name.toLowerCase().includes(term);
-        const descMatch = s.description && s.description.toLowerCase().includes(term);
-        const categoryMatch = s.category && s.category.toLowerCase().includes(term);
-
-        if (nameMatch || descMatch || categoryMatch) {
-          results.push(s)}
-      }
-    }
-  }
-  return results}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+export const findService = (_serviceName: string) => { return null};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

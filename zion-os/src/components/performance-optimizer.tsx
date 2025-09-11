@@ -1,76 +1,94 @@
-  [key: string]: any;
-}) => (;
-  <Suspense fallback={fallback}>;
-    <Component {...props} />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+"use client",
+import { Suspense, lazy, Component, ReactNode  } from './react';,
+import { useState, useEffect  } from './react';,
+// Lazy load components for better performance;
+const LazyComponent = ({ component: Component, fallback, ...props }: {
+  component: React.ComponentType < any>,
+  fallback: ReactNode,
+  </Suspense>;
+=======
+
+  </Suspense>;
+);
+// Error boundary for better error handling;
+interface ErrorBoundaryState {hasError: boolean;
+  error?: Error;
+}
+interface ErrorBoundaryProps {children: ReactNode;
+  fallback?: ReactNode;
+}
+export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {constructor(props: ErrorBoundaryProps) {;
+    super(props);
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {console.error("Error caught by boundary:", error, errorInfo);
   }
+  render() {if (this.state.hasError) {;
+      return this.props.fallback |(;),;
 // Error boundary for better error handling;
-interface ErrorBoundaryState {}
-  has_error: boolean,
+interface ErrorBoundaryState {;
+  hasError: boolean,;
   error?: Error;
 }
-interface ErrorBoundaryProps {}
-  children: ReactNode,
+;
+interface ErrorBoundaryProps {;
+  children: ReactNode,;
   fallback?: ReactNode;
 }
-// Error boundary for better error handling;
-interface ErrorBoundaryState {
-  has_error: boolean,
-  error?: Error;
-}
-interface ErrorBoundaryProps {
-  children: ReactNode,
-  fallback?: ReactNode;
-}
-export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryState> {
-
-    <Component {...props} />;
-
-export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryState> {)
-pr-12325
-  constructor (props: ErrorBoundaryProps) {
-
-    super (props),
-    this.state = { has_error: false }
+;
+export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {;
+  constructor(props: ErrorBoundaryProps) {;
+    super(props),;
+    this.state = { hasError: false }
   }
-  static getDerivedStateFromError (error: Error): ErrorBoundaryState {}
-    return { has_error: true, error }
+;
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {;
+    return { hasError: true, error }
   }
-  componentDidCatch (error: Error, error_info: React.ErrorInfo) {";
-    console.error ("Error caught by boundary:", error, error_info);
-  }}
-// Skeleton loading component;
-export /**
- * Skeleton - Function description
- */
-function Skeleton() {
-  return (
-    <div className={`animate - pulse ${class_name}`}>;
-      {Array.from ({ length: lines }).map ((_, i) => (    <div className={`animate-pulse ${className}`}>;
-      {Array.from({ length: lines }).map((_, i) => (;
-        <div;
-          key={i}
-          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb-0";
-          style={{ width: `${Math.random () * 40 + 60}%` }}
-        />))}
-    </div>);
-}      // Log performance metrics in development;
+;
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
+    console.error("Error caught by boundary:", error, errorInfo);
+  }
+;
+  render() {;
+    if (this.state.hasError) {;
+      return this.props.fallback || (;
+        <div className="p-6 text-center">;
+          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
+;
+    return this.props.children;
+  }
+}
+;
+// Loading spinner component;
       // Check condition
 if ( {) {
   $2
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
-        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
-      }
-    }
-  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+      // Send to analytics in production;
+      if (process.env.NODE_ENV === "production" && duration > 100) {// Could send to analytics service here;;
+      // Send to analytics in production;
+      if (process.env.NODE_ENV === "production" && duration > 100) {;
+        // Could send to analytics service here;
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
 }
-    }
-  }, [value, delay]);
-  return debounced_value;
+// Debounced search hook for better performance;
 }
+// Debounced search hook for better performance;
+
+export function useDebounce<T>(value: T, delay: number): T {;
+  const [debouncedValue, setDebouncedValue] = useState<T>(value),;
+  useEffect(() => {;
+    const handler = setTimeout(() => {;
+      setDebouncedValue(value);
+    }, delay),;
+    return () => {;
+      clearTimeout(handler);

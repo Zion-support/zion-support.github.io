@@ -1,15 +1,4 @@
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
 export {};
-
 interface ContactFormData {
   name: string;
   email: string;
@@ -25,47 +14,20 @@ export default async function handler(
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' })}
 
-module.exports = {};
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-module.exports = {};
-module.exports = {};
+=======module.exports = {};
 module.exports = {};
 
-    // Validate required fields
-    if (!formData.name || !formData.email || !formData.message) {
-      return res.status(400).json({ 
-        message: 'Missing required fields: name, email, and message are required' 
-      })}
+=======
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      return res.status(400).json({ 
-        message: 'Invalid email format' 
-      })}
+module.exports = {};
 
-    // TODO: Integrate with email service (SendGrid, AWS SES, etc.)
-    // For now, we'll just log the data and return success
-    console.log('Contact form submission:' {
-      ...formData,
-      timestamp: new Date().toISOString(),
-      ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
-    });
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-    // Simulate email sending delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
 
-    res.status(200).json({ 
-      message: 'Thank you for your message! We will get back to you soon.',
-      success: true 
-    })} catch (error) {
-    console.error('Contact form error:', error);
-    res.status(500).json({ 
-      message: 'Internal server error. Please try again later.',
-      success: false 
-    })}
-}

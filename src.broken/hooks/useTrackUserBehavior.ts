@@ -1,4 +1,5 @@
-// Hook for useTrackUserBehavior,
-export const useUseTrackUserBehavior: unknown = $2;
+// Hook for useTrackUserBehavior,;
+export const useUseTrackUserBehavior: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

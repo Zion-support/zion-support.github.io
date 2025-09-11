@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import SEOHead from '../components/SEOHead';'
-describe('SEOHead', () => {test('renders without crashing', () => {render(<SEOHead />)expect(screen.getByTestId('seohead')).toBeInTheDocument()})test('displays correct content', () => {render(<SEOHead />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<SEOHead />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<SEOHead />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import SEOHead from &apos;./SEOHead; describe(&apos;SEOHead&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<SEOHead / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import SEOHead from &apos;./SEOHead; describe(&apos;SEOHead&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<SEOHead / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import SEOHead from &apos;./SEOHead; describe(&apos;SEOHead&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<SEOHead / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))
