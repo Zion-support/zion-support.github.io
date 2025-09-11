@@ -27,6 +27,11 @@
   # Enable build caching
   NETLIFY_CACHE_DIR = ".netlify/cache"
 
+# IMPORTANT: This is a Vite project, NOT a Next.js project
+# The @netlify/plugin-nextjs plugin is NOT needed and should NOT be installed
+# This plugin is specifically for Next.js projects and will cause build failures
+# if configured incorrectly (e.g., with invalid inputs like "skip: true")
+
 # SPA routing redirects for Vite build
 [[redirects]]
   from = "/*"
@@ -82,4 +87,45 @@
 [[redirects]]
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
+  status = 301
+
+# Additional legacy route redirects
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-materials-discovery"
+  to = "/quantum-materials-discovery-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator"
+  status = 301
+
+[[redirects]]
+  from = "/ai-customer-success-automation"
+  to = "/ai-customer-success-platform"
+  status = 301
+
+[[redirects]]
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
   status = 301
