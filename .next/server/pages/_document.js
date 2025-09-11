@@ -1,16 +1,1 @@
-"use strict";
-(() => {
-var exports = {};
-exports.id = 733220;
-exports.ids = [733220];
-exports.modules = {};
-;
-
-// load runtime
-var __webpack_require__ = require("../webpack-runtime.js");
-__webpack_require__.C(exports);
-var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [472076], () => (__webpack_exec__(833932)));
-module.exports = __webpack_exports__;
-
-})();
+"use strict";(()=>{var a={};a.id=839,a.ids=[839],a.modules={361:a=>{a.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},2015:a=>{a.exports=require("react")},6472:a=>{a.exports=require("@opentelemetry/api")},8732:a=>{a.exports=require("react/jsx-runtime")},9902:a=>{a.exports=require("path")}};var b=require("../webpack-runtime.js");b.C(a);var c=b.X(0,[611],()=>b(b.s=5611));module.exports=c})();
