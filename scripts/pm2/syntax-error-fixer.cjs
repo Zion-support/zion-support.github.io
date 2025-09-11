@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 class SyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -11,7 +10,6 @@ class SyntaxErrorFixer {}
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
     this.fixedFiles = new Set();
-<<<<<<< HEAD
     this.syntaxPatterns = {
       unterminatedStrings: [
         /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\n|$)/g,
@@ -38,39 +36,6 @@ class SyntaxErrorFixer {}
   log(level, message, data = null) {
     const timestamp = new Date().toISOString();
     const logEntry = {
-=======
-        this.syntaxPatterns = {}
-      unterminatedStrings: []
-        /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\n|$)/g,`
-        /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\s*[,)\]}])/g;
-      ],
-      unterminatedComments: []
-        /\/\*([^*]|\*[^/])*$/gm,
-        /\/\*([^*]|\*[^/])*$/gm;
-      ],
-      missingSemicolons: []
-        /^(\s*)([^;{}[\]]+?)(\s*)$/gm,
-        /^(\s*)([^;{}[\]]+?)(\s*)(?=\n)/gm;
-      ],
-      malformedImports: []
-        /import\s+([^]+?)(?=\n|$)/g,
-        /export\s+([^]+?)(?=\n|$)/g;
-      ],
-      unclosedBrackets: []
-        /(\{|\[|\(|`)(?![^}[\]]*[}\]\)`])/g,`
-        /(\{|\[|\(|`)(?![^}[\]]*[}\]\)`])/g;
-      ];
-    }};
-  log(level, message, data = null) {}
-    const timestamp = new Date().toISOString();
-    const logEntry = {}
-      timestamp,
-      level,
-      message,
-      data,
-      service: 'syntax-error-fixer'
-    };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -96,7 +61,6 @@ class SyntaxErrorFixer {}
       // Listen for signals to trigger fixes;
       this.setupSignalHandlers();
       this.log('info', 'Syntax Error Fixer Service started successfully');
-<<<<<<< HEAD
       // Keep the process alive
       setInterval(async () => {
         await this.performSyntaxFixes();
@@ -108,21 +72,6 @@ class SyntaxErrorFixer {}
   }
   ensureDirectories() {
     const dirs = [
-=======
-            // Keep the process alive;
-      setInterval(async () => {}
-        await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
-      this.log('error', 'Failed to start Syntax Error Fixer Service', error);
-      process.exit(1)};
-  };
-  ensureDirectories() {}
-    const dirs = []
-      'logs/pm2',
-      'backups',
-      'temp',
-      'fixed-files'
-    ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -136,7 +85,6 @@ class SyntaxErrorFixer {}
       this.fixesFailed = 0;
       this.fixesSkipped = 0;
       this.fixedFiles.clear();
-<<<<<<< HEAD
       // Find files with syntax issues
       const filesWithIssues = await this.findFilesWithSyntaxIssues();
       if (filesWithIssues.length === 0) {
@@ -147,19 +95,6 @@ class SyntaxErrorFixer {}
       // Process files in batches to avoid overwhelming the system
       const batchSize = Math.min(10, Math.ceil(filesWithIssues.length / 4));
       for (let i = 0; i < filesWithIssues.length; i += batchSize) {
-=======
-      // Find files with syntax issues;
-      const filesWithIssues = await this.findFilesWithSyntaxIssues();
-      if (filesWithIssues.length === 0) {}
-        this.log('info', 'No files with syntax issues found');
-        return};
-      this.log('info', `Found ${filesWithIssues.length} files with syntax issues`);
-      // Process files in batches to avoid overwhelming the system;
-      const batchSize = Math.min(10, Math.ceil(filesWithIssues.length / 4));
-      for (let i = 0; i < filesWithIssues.length; i += batchSize) {}
-        const batch = filesWithIssues.slice(i, i + batchSize);
-        await Promise.all(batch.map(file => this.fixFileSyntax(file)));
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     for (const dir of sourceDirs) {}
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -203,34 +138,6 @@ class SyntaxErrorFixer {}
     const singleQuotes = (content.match(/'/g) || []).length;
     const doubleQuotes = (content.match(/"/g) || []).length;
     const backticks = (content.match(/`/g) || []).length;
-<<<<<<< HEAD
-    if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {
-      return true;
-    }
-    // Check for unterminated comments
-    const openComments = (content.match(/\/\*/g) || []).length;
-    const closeComments = (content.match(/\*\//g) || []).length;
-    if (openComments !== closeComments) {
-      return true;
-    }
-    // Check for unclosed brackets
-    const openBraces = (content.match(/\{/g) || []).length;
-=======
-        if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
-      return true};
-    // Check for unterminated comments;
-    const openComments = (content.match(/\/\*/g) || []).length;
-    const closeComments = (content.match(/\*\//g) || []).length;
-    if (openComments !== closeComments) {}
-      return true};
-    // Check for unclosed brackets;
-    const openBraces = (content.match(/\{/g) || []).length;}
-    const closeBraces = (content.match(/\}/g) || []).length;
-    const openBrackets = (content.match(/\[/g) || []).length;
-    const closeBrackets = (content.match(/\]/g) || []).length;
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-<<<<<<< HEAD
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {
       return true;
     }
@@ -257,9 +164,6 @@ class SyntaxErrorFixer {}
       const fixedContent = await this.applySyntaxFixes(content, filePath);
       if (fixedContent !== content) {
         // Write fixed content
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {}
       return true};
     // Check for malformed imports/exports;
@@ -286,7 +190,6 @@ class SyntaxErrorFixer {}
         this.fixesApplied++;
         this.fixedFiles.add(filePath);
         this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
-<<<<<<< HEAD
         // Verify the fix
         if (await this.verifyFix(filePath)) {
           this.log('info', `Fix verification passed for: ${filePath}`);
@@ -309,9 +212,6 @@ class SyntaxErrorFixer {}
       if (!fs.existsSync(backupDir)) {
         fs.mkdirSync(backupDir, { recursive: true });
       }
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}
           this.log('info', `Fix verification passed for: ${filePath}`)} else {`}
@@ -333,7 +233,6 @@ class SyntaxErrorFixer {}
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       fs.copyFileSync(filePath, backupPath);
-<<<<<<< HEAD
       this.log('debug', `Backup created: ${backupPath}`);
     } catch (error) {
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message);
@@ -430,8 +329,6 @@ class SyntaxErrorFixer {}
           !line.endsWith('{') && 
           !line.endsWith('}') && 
           !line.endsWith('[') && 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
   };
@@ -533,7 +430,6 @@ class SyntaxErrorFixer {}
           !line.includes('switch') &&
           !line.includes('try') && 
           !line.includes('catch') && 
-<<<<<<< HEAD
           !line.includes('finally')) {
         lines[i] = lines[i] + ';';
         fixes.push({ type: 'missing_semicolon', line: i + 1, action: 'added_semicolon' });
@@ -565,8 +461,6 @@ class SyntaxErrorFixer {}
     let fixed = content;
     // Count brackets and add missing ones
     const openBraces = (fixed.match(/\{/g) || []).length;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
           !line.includes('finally')) {}
         lines[i] = lines[i] + ';';
         fixes.push({ type: 'missing_semicolon', line: i + 1, action: 'added_semicolon' })};
@@ -600,7 +494,6 @@ class SyntaxErrorFixer {}
     const closeBrackets = (fixed.match(/\]/g) || []).length;
     const openParens = (fixed.match(/\(/g) || []).length;
     const closeParens = (fixed.match(/\)/g) || []).length;
-<<<<<<< HEAD
     // Add missing closing braces
     if (openBraces > closeBraces) {
       const missing = openBraces - closeBraces;
@@ -689,9 +582,6 @@ class SyntaxErrorFixer {}
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Add missing closing braces;
     if (openBraces > closeBraces) {}
       const missing = openBraces - closeBraces;
@@ -773,15 +663,12 @@ class SyntaxErrorFixer {}
         fixesApplied: this.fixesApplied,
         fixesFailed: this.fixesFailed,
         fixesSkipped: this.fixesSkipped,
-<<<<<<< HEAD
         successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100
       },
       fixedFiles: Array.from(this.fixedFiles),
       recommendations: this.generateRecommendations()
     };
     // Write report to file
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100;
       },
       fixedFiles: Array.from(this.fixedFiles),
@@ -791,7 +678,6 @@ class SyntaxErrorFixer {}
     const reportPath = path.join(this.projectRoot, 'error-reports', `syntax-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log('info', `Syntax fix report generated: ${reportPath}`);
-<<<<<<< HEAD
     return report;
   }
   generateRecommendations() {
@@ -859,9 +745,6 @@ fixer.start().catch(error => {
   fixer.log('error', 'Failed to start service', error);
   process.exit(1);
 });
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return report};
   generateRecommendations() {}
     const recommendations = [];
@@ -921,8 +804,4 @@ process.on('unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

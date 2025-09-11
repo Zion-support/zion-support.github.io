@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -26,7 +25,3 @@ const { execSync } = require('child_process')
       "action"
         "type"
       this.log(` Learning model update "failed"`)
-<<<<<<< HEAD
-      this.log(` Fatal "error"`)
-=======
-      this.log(` Fatal "error"`)

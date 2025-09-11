@@ -200,6 +200,10 @@ interface Service {
 
 
         {/* Services Grid */}
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index) => (
+=======
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>;
 
 
@@ -207,6 +211,7 @@ interface Service {
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices && filteredServices.map((service, index) => (;
+>>>>>>> main
             <div
               key={service && service.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -399,7 +404,10 @@ interface Service {
         {/* Services Grid */}
 
                     Popular
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
                   </div>
                 </div>
               )}

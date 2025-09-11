@@ -232,13 +232,10 @@
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ComponentReplacer();
-<<<<<<< HEAD
   automation.run()
     .then(() => {
       process.exit(0)})
     .catch(error => {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   automation.run();
     .then(() => {}
       console.log('Component Replacer completed successfully!');
@@ -247,8 +244,4 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = ComponentReplacer;
-=======
-module.exports = ComponentReplacer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

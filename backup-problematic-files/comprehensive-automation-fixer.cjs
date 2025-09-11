@@ -81,7 +81,6 @@ class ComprehensiveAutomationFixer {
         this.log('✅ Fixed index.html', 'SUCCESS');
         this.fixes.push('index.html');
       }
-=======const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
@@ -164,7 +163,6 @@ class ComprehensiveAutomationFixer {
         this.log('✅ Fixed index.html', 'SUCCESS');
         this.fixes.push('index.html');
       }
-=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     } catch (error) {
       this.log(`❌ Error fixing index.html: ${error.message}`, 'ERROR');
     }
@@ -731,30 +729,10 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAutomationFixer;
-<<<<<<< HEAD<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
       .replace(/script1\."async")
       .replace(/script1\."src")
       .replace(/['"]react;['"]/g, ")
       .replace(/['"]framer-motion;['"]/g, ")
-<<<<<<< HEAD
       .replace(/['"]lucide-react;['"]/g, ")
-=======
-<<<<<<< HEAD
-      .replace(/['"]lucide-react;['"]/g, ")
-=======
-      .replace(/['"]lucide-react;['"]/g, ")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

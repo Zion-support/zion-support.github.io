@@ -1,70 +1,74 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage?: number;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+  });
 
   useEffect(() => {
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') return;
+    // Only run in production and if PerformanceObserver is available
+    if (process.env.NODE_ENV !== 'production' || !('PerformanceObserver' in window)) {
+      return;
+    }
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      
-      // Get memory usage if available
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize;
-
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage
-      });
-    };
-
-    // Measure after component mount
-    const timer = setTimeout(measurePerformance, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Toggle visibility with Ctrl+Shift+P
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        switch (entry.entryType) {
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+            break;
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+            break;
+          case 'first-input':
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+            }
+            break;
+          case 'navigation':
+            setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
+            break;
+        }
       }
-    };
+    });
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    // Observe different types of performance entries
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch (e) {
+      // Fallback for browsers that don't support all entry types
+      observer.observe({ entryTypes: ['paint', 'navigation'] });
+    }
+
+    return () => observer.disconnect();
   }, []);
 
-  if (!isVisible || !metrics) return null;
+  // Send metrics to analytics (placeholder)
+  useEffect(() => {
+    if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
+      // In a real app, you would send this to your analytics service
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
 
-  return (
-    <div className="fixed bottom-4 left-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <div className="mb-2 font-bold">Performance Metrics</div>
-      <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
-      {metrics.memoryUsage && (
-        <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
-      )}
-      <div className="mt-2 text-gray-400 text-xs">
-        Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
-  );
+  return null; // This component doesn't render anything
 };
 
 export default PerformanceMonitor;

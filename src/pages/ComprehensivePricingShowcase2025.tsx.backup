@@ -9,7 +9,6 @@ const _ComprehensivePricingShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const _allServices = [
-=======
 import { Link } from 'react-router-dom';
 import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
 const ComprehensivePricingShowcase2025 = () => {
@@ -40,7 +39,6 @@ const ComprehensivePricingShowcase2025 = () => {
         </div>
       </section>
 
-=======
 
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -249,10 +247,6 @@ const ComprehensivePricingShowcase2025 = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>);
 };
-=======
-    </div>)};
->>>>>>> origin/clean-error-fixing-automation
 export default ComprehensivePricingShowcase2025;

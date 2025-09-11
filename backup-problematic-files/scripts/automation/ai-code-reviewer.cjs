@@ -196,8 +196,4 @@ this.log(" AI Review Report "generated": ${reportPath}")
   this.log(" AI Code Reviewer starting...")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
-<<<<<<< HEAD
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-=======
-  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

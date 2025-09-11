@@ -14,7 +14,6 @@ echo "$conflict_files"
 # For each conflict file, resolve by accepting main branch version
 for file in $conflict_files; do
     echo "Resolving conflicts in: $file"
-=======
 # Script to resolve merge conflicts by accepting HEAD version
 echo "Resolving merge conflicts by accepting HEAD version..."
 
@@ -35,7 +34,3 @@ for file in $files_with_conflicts; do
     # Create a backup
     cp "$file" "$file.backup"
     
-<<<<<<< HEAD
-echo "All conflicts resolved!"
-=======
-echo "Merge conflict resolution completed."

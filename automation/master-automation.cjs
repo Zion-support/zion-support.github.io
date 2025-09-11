@@ -26,7 +26,6 @@
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
       fs.mkdirSync(this.logsDir, { recursive: true });
@@ -118,81 +117,16 @@ if (require.main === module) {}
   const command = process.argv[2];
 
   switch (command) {}
-=======    case 'start':
       automation.start().catch(error => {})
         console.error('Master Automation "failed": ', error);        process.exit(1);
       });
       break;
     case 'status':
 module.exports = MasterAutomation;
-<<<<<<< HEAD
-=======
-=======    case 'start':
-      automation
-        .start()
-        .then(report => {
-          console.log('Automation completed:', report.summary);
-          process.exit(0);
-        })
-        .catch(error => {
-          console.error('Automation failed:', error);
-          process.exit(1);
-        });
-      break;
-    case 'status':
-      automation
-        .status()
-        .then(status => {
-          console.log('Status:', status);
-          process.exit(0);
-        })
-        .catch(error => {
-          console.error('Status check failed:', error);
-          process.exit(1);
-        });
-      break;
-    default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
-  }
-}
-module.exports = MasterAutomation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-module.exports = MasterAutomation;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
       process.exit(1);
   };
 };
-<<<<<<< HEAD
 module.exports = MasterAutomation;
-=======
-module.exports = MasterAutomation;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

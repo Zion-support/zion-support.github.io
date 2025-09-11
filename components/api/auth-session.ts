@@ -1,4 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+=======
+>>>>>>> main
 
 
 import {
@@ -10,10 +14,16 @@ import {
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
+<<<<<<< HEAD
+  const internal = isInternalAgentRequest(req);
+  if (!session && !internal) {
+    res.status(401).json({ error: 'Unauthorized' });
+=======
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
 
 =======
+>>>>>>> main
     return;
   }
   res && res.status(200).json({ message: 'OK' });    return

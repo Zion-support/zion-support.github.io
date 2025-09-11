@@ -278,8 +278,4 @@ if (require.main === module) {}
   process.on("SIGINT", () => {}
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
-<<<<<<< HEAD
 module.exports = ErrorMonitor;
-=======
-module.exports = ErrorMonitor;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
