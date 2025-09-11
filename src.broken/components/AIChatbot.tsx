@@ -1,21 +1,22 @@
-import React, { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react';
+import React, { useState, useRef, useEffect, SetStateAction, Dispatch } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
+
 interface ChatMessage {
-  id: string,
-  type: 'user' | 'bot',
-  content: string,
-  timestamp: Date,
-  isTyping?: boolean
+  id: string;
+  type: 'user' | 'bot';
+  content: string;
+  timestamp: Date;
+  isTyping?: boolean;
 }
 
 interface AIChatbotProps {
-  className?: string
+  className?: string;
 }
 
 const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
-  const [isOpen, setIsOpen] = useState($2);
-  const [isMinimized, setIsMinimized] = useState($2);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: '1',
@@ -23,23 +24,29 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       content: 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons',
       timestamp: new Date()
     }
-  ]),
-  const [inputValue, setInputValue] = useState($2);
-  const [isTyping, setIsTyping] = useState($2);
-  const messagesEndRef = $2;
-  const inputRef = $2;
-  const scrollToBottom = $2;
+  ]);
+  const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   useEffect(() => {
-    scrollToBottom()
-  }, [messages]),
+    scrollToBottom();
+  }, [messages]);
 
   // AI response simulation
   const generateAIResponse = async (userMessage: string): Promise<string> => {
-    setIsTyping($2);
-    // Simulate AI processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
+    setIsTyping(true);
     
-    const responses = $2;
+    // Simulate AI processing time
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    
+    const responses = [
+      "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",
       "I understand you're interested in our services. We offer cutting-edge AI, quantum computing, and autonomous solutions that can revolutionize your business.",
       "Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.",
       "I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.",
@@ -47,10 +54,10 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."
     ];
     
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0];
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
     
     // Add some context-aware responses
-    let finalResponse: string = randomResponse;
+    let finalResponse = randomResponse;
     if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {
       finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?";
     } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
@@ -59,7 +66,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?";
     }
     
-    return finalResponse!;
+    return finalResponse || "I'm here to help! Please let me know how I can assist you with our services.";
   };
 
   const handleSendMessage = async () => {
@@ -72,7 +79,8 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       timestamp: new Date()
     };
 
-    setMessages([...messages, userMessage]);
+    const newMessages = [...messages, userMessage];
+    setMessages(newMessages);
     setInputValue('');
     
     // Generate AI response
@@ -85,54 +93,39 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       timestamp: new Date()
     };
 
-    setMessages([...messages, botMessage]);
+    setMessages([...newMessages, botMessage]);
     setIsTyping(false);
-  },;
-  const handleKeyPress = ("e": React.KeyboardEvent) => {;
-    }
-    if (e.key === 'Enter' && !e.shiftKey) {;'
-      }
-      e.preventDefault(),;
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
       handleSendMessage();
-
     }
-  },
+  };
 
-  const quickReplies = $2;
+  const quickReplies = [
+    "Tell me about AI services",
     "Quantum computing pricing",
     "Business solutions",
     "Contact sales team",
     "Technical support"
-  ],
+  ];
 
   const handleQuickReply = (reply: string) => {
-    setInputValue($2);
-    setTimeout(() => handleSendMessage(), 100)
-  },
-
-return (;
-    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>`  },;
-    "Tell me about AI services",;"
-    "Quantum computing pricing",;"
-    "Business solutions",;"
-    "Contact sales team",;"
-    "Technical support";"
-  ],;
-  const handleQuickReply = ("reply": string) => {;
-    }
-    setInputValue(reply),;
+    setInputValue(reply);
     setTimeout(() => handleSendMessage(), 100);
-  },;
-  return (;
-    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>;`      {/* Chat Toggle Button */}
-      {!isOpen && (;
-        <motion.button;
-          }
-          initial={{ "scale": 0 }}
-          animate={{ "scale": 1 }}
-          whileHover={{ "scale": 1.1 }}
-          whileTap={{ "scale": 0.95 }}
+  };
 
+  return (
+    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
+      {/* Chat Toggle Button */}
+      {!isOpen && (
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(true)}
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center"
         >
@@ -144,9 +137,9 @@ return (;
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20}}
-            animate={{ opacity: 1, scale: 1, y: 0}}
-            exit={{ opacity: 0, scale: 0.8, y: 20}}
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
             className="absolute bottom-16 right-0 w-96 bg-gray-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Chat Header */}
@@ -188,8 +181,8 @@ return (;
                   {messages.map((message) => (
                     <motion.div
                       key={message.id}
-                      initial={{ opacity: 0, y: 10}}
-                      animate={{ opacity: 1, y: 0}}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
                       className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       {message.type === 'bot' && (
@@ -224,8 +217,8 @@ return (;
                   {/* Typing Indicator */}
                   {isTyping && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10}}
-                      animate={{ opacity: 1, y: 0}}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
                       className="flex gap-3 justify-start"
                     >
                       <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
@@ -254,5 +247,45 @@ return (;
                     <div className="flex flex-wrap gap-2">
                       {quickReplies.map((reply, index) => (
                         <button
-                          key = $2;
-export default AIChatbot,
+                          key={index}
+                          onClick={() => handleQuickReply(reply)}
+                          className="px-3 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-xs text-gray-300 hover:text-white transition-all duration-200"
+                        >
+                          {reply}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Chat Input */}
+                <div className="p-4 border-t border-white/10">
+                  <div className="flex gap-2">
+                    <input
+                      ref={inputRef}
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      placeholder="Type your message..."
+                      className="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200"
+                    />
+                    <button
+                      onClick={handleSendMessage}
+                      disabled={!inputValue.trim() || isTyping}
+                      className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
+                    >
+                      <Send className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+export default AIChatbot;
