@@ -72,6 +72,7 @@
     "improve:accessibility": "node scripts/accessibility-improver.cjs",
     "improve:monitoring": "node scripts/monitoring-improver.cjs",
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
+    "improve:safe": "node scripts/safe-improvements.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
