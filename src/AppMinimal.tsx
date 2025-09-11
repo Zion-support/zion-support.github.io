@@ -7,6 +7,8 @@ import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import ThemeToggle from './components/ThemeToggle';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import ProgressBar from './components/ProgressBar';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 // Lazy load components for better performance
@@ -35,6 +37,8 @@ export default function AppMinimal() {
         </Helmet>
         
         <div className="app">
+          <ProgressBar />
+          
           <header className="app-header">
             <nav className="main-navigation">
               <div className="nav-brand">
@@ -73,6 +77,8 @@ export default function AppMinimal() {
               </div>
             </div>
           </footer>
+          
+          <ScrollToTop />
         </div>
         
         {/* Performance Monitor - Development Only */}

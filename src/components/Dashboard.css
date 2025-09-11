@@ -1,0 +1,196 @@
+/* Dashboard.css - Dashboard component styling */
+
+.dashboard {
+  min-height: 100vh;
+  background: var(--background-color);
+  color: var(--text-primary);
+}
+
+.dashboard-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--background-color);
+}
+
+.dashboard-loading__content {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.dashboard-loading__content p {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+.dashboard__header {
+  position: sticky;
+  top: 0;
+  background: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.stat-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.stat-card__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.stat-card__label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dashboard__content {
+  padding: 2rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .dashboard__stats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .stat-card {
+    padding: 0.75rem;
+  }
+  
+  .stat-card__value {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard__header {
+    padding: 0.75rem 0;
+  }
+  
+  .dashboard__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0 0.75rem;
+  }
+  
+  .stat-card {
+    padding: 0.625rem;
+  }
+  
+  .stat-card__value {
+    font-size: 1.125rem;
+  }
+  
+  .stat-card__label {
+    font-size: 0.75rem;
+  }
+  
+  .dashboard__content {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard__stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .stat-card {
+    padding: 0.5rem;
+  }
+  
+  .stat-card__value {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode adjustments */
+.dark .dashboard__header {
+  background: var(--surface-color);
+  border-color: var(--border-color);
+}
+
+.dark .stat-card {
+  background: var(--background-color);
+  border-color: var(--border-color);
+}
+
+.dark .stat-card:hover {
+  border-color: var(--primary-color);
+}
+
+/* Animation enhancements */
+.stat-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stat-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .stat-card {
+    animation: none;
+  }
+  
+  .stat-card:hover {
+    transform: none;
+  }
+}
