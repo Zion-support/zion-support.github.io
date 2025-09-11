@@ -35,6 +35,34 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2025-09-05',
     tags: ['MicroSaaS', 'Product']
   }
+  ,
+  {
+    slug: 'edge-ai-on-prem-breakthroughs',
+    title: 'Edge AI On‑Prem: Breakthroughs That Cut Latency by 80%+',
+    excerpt: 'Why moving inference to the edge slashes costs and accelerates mission‑critical apps.',
+    content:
+      'Placing inference close to the data eliminates round‑trip latency and reduces egress. With compact GPU/TPU form factors and quantization‑aware models, teams can deploy resilient, low‑latency pipelines for vision, voice, and anomaly detection... ',
+    publishedAt: '2025-09-11',
+    tags: ['AI', 'Edge', 'Latency']
+  },
+  {
+    slug: 'zero-trust-starter-pack',
+    title: 'Zero‑Trust Starter Pack: 7 Controls for Week One',
+    excerpt: 'Pragmatic, high‑impact steps to reduce blast radius without slowing delivery.',
+    content:
+      'Adopt identity‑aware proxies, short‑lived credentials, device posture checks, and default‑deny segmentation. Instrument production with continuous verification and automate drift detection to keep least‑privilege policies enforceable at scale... ',
+    publishedAt: '2025-09-09',
+    tags: ['Security', 'Zero Trust']
+  },
+  {
+    slug: 'serverless-cost-optimization',
+    title: 'Serverless Cost Optimization: From Spikes to Smooth Sailing',
+    excerpt: 'Tame cold starts, right‑size memory, and cache hot paths to slash bills.',
+    content:
+      'Profile invocations to pick optimal memory/CPU, pre‑warm critical paths, and push static responses to the edge. Use async queues for bursty workloads and adopt idempotent retries to keep SLOs tight without overprovisioning... ',
+    publishedAt: '2025-09-07',
+    tags: ['Cloud', 'Serverless', 'FinOps']
+  }
 ];
 
 export function getLatestPosts(limit: number = 3): BlogPost[] {
