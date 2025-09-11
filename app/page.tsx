@@ -1,20 +1,54 @@
 // @ts-nocheck
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-import ROICalculator from '../components/ROICalculator';
-import StructuredData from '../components/StructuredData';
+import SEO from '../components/SEO';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+
+// Lazy load heavy components
+const ROICalculator = lazy(() => import('../components/ROICalculator'));
+const StructuredData = lazy(() => import('../components/StructuredData'));
 
 export default function HomePage() {
   return (
-    <div className='min-h-screen bg-white'>
-      <StructuredData 
-        type="Organization" 
-        data={{}} 
+    <ErrorBoundary>
+      <SEO
+        title="Zion Tech Group - AI & Technology Solutions"
+        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
+        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
+        url="/"
       />
-      <StructuredData 
-        type="WebSite" 
-        data={{}} 
-      />
+      
+      <div className='min-h-screen bg-white'>
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
+          <StructuredData 
+            type="Organization" 
+            data={{
+              name: "Zion Tech Group",
+              description: "Transforming businesses through cutting-edge technology solutions",
+              url: "https://zion.app",
+              logo: "https://zion.app/images/zion-tech-group-logo.png",
+              sameAs: [
+                "https://twitter.com/ZionTechGroup",
+                "https://linkedin.com/company/zion-tech-group"
+              ]
+            }} 
+          />
+          <StructuredData 
+            type="WebSite" 
+            data={{
+              name: "Zion Tech Group",
+              url: "https://zion.app",
+              potentialAction: {
+                "@type": "SearchAction",
+                "target": "https://zion.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }} 
+          />
+        </Suspense>
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -308,7 +342,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href='/resources'
-                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
               >
                 📋 Download Free Resources
               </Link>
@@ -336,3 +370,14 @@ export default function HomePage() {
                 </div>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Performance and Accessibility Components */}
+      <PerformanceMonitor />
+      <AccessibilityEnhancer />
+    </div>
+    </ErrorBoundary>
+  );
+}
