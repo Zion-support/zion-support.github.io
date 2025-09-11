@@ -172,30 +172,30 @@ export default function ContentShowcase({
 // Predefined content collections for easy use
 export const featuredContent = [
   {
-    title: "AI Productivity Revolution 2025",
-    description: "10x your team's output with proven AI strategies that deliver 300% productivity gains",
-    href: "/blog/ai-2025-productivity-revolution",
-    icon: "🚀",
-    readTime: "15 min read",
-    category: "AI & Automation",
+    title: "AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
+    href: "/blog/ai-2026-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI",
     isNew: true
   },
   {
-    title: "AI Startup Funding 2025",
-    description: "Master the AI funding landscape with insider strategies and pitch templates",
-    href: "/blog/ai-startup-funding-2025",
-    icon: "💰",
+    title: "AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    href: "/blog/ai-2026-breakthrough-predictions",
+    icon: "🔮",
+    readTime: "22 min read",
+    category: "AI Predictions",
+    isNew: true
+  },
+  {
+    title: "AI Healthcare Diagnosis Breakthrough",
+    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
+    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    icon: "🏥",
     readTime: "18 min read",
-    category: "Growth & Funding",
-    isNew: true
-  },
-  {
-    title: "AI Retail Transformation",
-    description: "300% revenue growth case study: How AI transformed a major retail chain",
-    href: "/case-studies/ai-retail-transformation-2025",
-    icon: "🛍️",
-    readTime: "12 min read",
-    category: "Case Study",
+    category: "Healthcare AI",
     isNew: true
   },
   {
@@ -211,57 +211,57 @@ export const featuredContent = [
 
 export const trendingContent = [
   {
-    title: "AI Productivity Revolution 2025",
-    description: "10x your team's output with proven AI strategies that deliver 300% productivity gains",
-    href: "/blog/ai-2025-productivity-revolution",
-    icon: "🚀",
-    readTime: "15 min read",
-    category: "AI & Automation",
+    title: "AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    href: "/blog/ai-2026-breakthrough-predictions",
+    icon: "🔮",
+    readTime: "22 min read",
+    category: "AI Predictions",
     isTrending: true
   },
   {
-    title: "AI Startup Funding 2025",
-    description: "Master the AI funding landscape with insider strategies and pitch templates",
-    href: "/blog/ai-startup-funding-2025",
-    icon: "💰",
+    title: "AI Healthcare Diagnosis Breakthrough",
+    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
+    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    icon: "🏥",
     readTime: "18 min read",
-    category: "Growth & Funding",
+    category: "Healthcare AI",
     isTrending: true
   },
   {
-    title: "AI Retail Transformation",
-    description: "300% revenue growth case study: How AI transformed a major retail chain",
-    href: "/case-studies/ai-retail-transformation-2025",
-    icon: "🛍️",
-    readTime: "12 min read",
-    category: "Case Study",
+    title: "AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
+    href: "/blog/ai-2026-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI",
     isTrending: true
   }
 ];
 
 export const latestContent = [
   {
-    title: "AI Implementation Master Guide 2026",
-    description: "Complete 200-page playbook with templates, checklists, and case studies",
-    href: "/resources/ai-implementation-master-guide-2026",
-    icon: "📚",
-    readTime: "Free Download",
-    category: "Resources"
-  },
-  {
-    title: "AI Productivity Revolution 2025",
-    description: "10x your team's output with proven AI strategies that deliver 300% productivity gains",
-    href: "/blog/ai-2025-productivity-revolution",
-    icon: "🚀",
-    readTime: "15 min read",
-    category: "AI & Automation"
-  },
-  {
-    title: "AI Startup Funding 2025",
-    description: "Master the AI funding landscape with insider strategies and pitch templates",
-    href: "/blog/ai-startup-funding-2025",
-    icon: "💰",
+    title: "AI Healthcare Diagnosis Breakthrough",
+    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
+    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    icon: "🏥",
     readTime: "18 min read",
-    category: "Growth & Funding"
+    category: "Healthcare AI"
+  },
+  {
+    title: "AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    href: "/blog/ai-2026-breakthrough-predictions",
+    icon: "🔮",
+    readTime: "22 min read",
+    category: "AI Predictions"
+  },
+  {
+    title: "AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
+    href: "/blog/ai-2026-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI"
   }
 ];
