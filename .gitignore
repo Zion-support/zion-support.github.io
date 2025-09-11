@@ -39,3 +39,7 @@ core
 core
 =======
 >>>>>>> cursor/check-fix-push-and-merge-to-main-e10e
+
+# Ignore core dumps
+core
+core.*
