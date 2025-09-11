@@ -348,35 +348,98 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+      {/* Interactive Features Section */}
+      <section className='py-20 bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-30'></div>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>⚡ CUTTING-EDGE FEATURES</span>
+            </div>
+            <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
               Why Choose Zion Tech Group?
             </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               We combine technical expertise with business acumen to deliver
-              solutions that drive real results.
+              solutions that drive real results. Experience the future of technology today.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <FeatureCard
-              title='Fast Delivery'
-              description='Rapid prototyping and deployment with modern tools and practices.'
-            />
-            <FeatureCard
-              title='Scalable Architecture'
-              description='Built for growth with cloud-native, microservices architecture.'
-            />
-            <FeatureCard
-              title='24/7 Support'
-              description='Round-the-clock monitoring and support for your critical systems.'
-            />
-            <FeatureCard
-              title='Cost Effective'
-              description='Optimized solutions that reduce operational costs and improve efficiency.'
-            />
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='group relative p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 hover:border-blue-200'>
+              <div className='absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              <div className='relative z-10'>
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
+                  <span className='text-2xl'>🚀</span>
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300'>
+                  Fast Delivery
+                </h3>
+                <p className='text-gray-600 leading-relaxed'>
+                  Rapid prototyping and deployment with modern tools and practices. 
+                  Get to market 3x faster than traditional development.
+                </p>
+                <div className='mt-4 flex items-center text-blue-600 font-medium text-sm group-hover:translate-x-2 transition-transform duration-300'>
+                  Learn more <span className='ml-1'>→</span>
+                </div>
+              </div>
+            </div>
+
+            <div className='group relative p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 hover:border-green-200'>
+              <div className='absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              <div className='relative z-10'>
+                <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
+                  <span className='text-2xl'>⚡</span>
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300'>
+                  Scalable Architecture
+                </h3>
+                <p className='text-gray-600 leading-relaxed'>
+                  Built for growth with cloud-native, microservices architecture. 
+                  Scale from startup to enterprise seamlessly.
+                </p>
+                <div className='mt-4 flex items-center text-green-600 font-medium text-sm group-hover:translate-x-2 transition-transform duration-300'>
+                  Learn more <span className='ml-1'>→</span>
+                </div>
+              </div>
+            </div>
+
+            <div className='group relative p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 hover:border-purple-200'>
+              <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              <div className='relative z-10'>
+                <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
+                  <span className='text-2xl'>🛡️</span>
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300'>
+                  24/7 Support
+                </h3>
+                <p className='text-gray-600 leading-relaxed'>
+                  Round-the-clock monitoring and support for your critical systems. 
+                  Never worry about downtime again.
+                </p>
+                <div className='mt-4 flex items-center text-purple-600 font-medium text-sm group-hover:translate-x-2 transition-transform duration-300'>
+                  Learn more <span className='ml-1'>→</span>
+                </div>
+              </div>
+            </div>
+
+            <div className='group relative p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 hover:border-orange-200'>
+              <div className='absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              <div className='relative z-10'>
+                <div className='w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
+                  <span className='text-2xl'>💰</span>
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300'>
+                  Cost Effective
+                </h3>
+                <p className='text-gray-600 leading-relaxed'>
+                  Optimized solutions that reduce operational costs and improve efficiency. 
+                  Average 40% cost reduction for our clients.
+                </p>
+                <div className='mt-4 flex items-center text-orange-600 font-medium text-sm group-hover:translate-x-2 transition-transform duration-300'>
+                  Learn more <span className='ml-1'>→</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -517,35 +580,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Social Proof & Trust Indicators */}
-      <section className='py-16 bg-white'>
+      {/* Interactive Stats & Social Proof */}
+      <section className='py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10'></div>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6'>
+              <span className='text-sm font-medium'>📊 LIVE METRICS</span>
+            </div>
+            <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
               Trusted by Industry Leaders
             </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Join thousands of professionals who rely on our expertise and resources
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Join thousands of professionals who rely on our expertise and resources. 
+              Real-time impact metrics from our global community.
             </p>
           </div>
           
-          {/* Stats Grid */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-12'>
-            <div className='text-center'>
-              <div className='text-4xl font-bold text-blue-600 mb-2'>500+</div>
-              <div className='text-gray-600'>Projects Delivered</div>
+          {/* Animated Stats Grid */}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>
+            <div className='group text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20'>
+              <div className='text-5xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300'>500+</div>
+              <div className='text-gray-600 font-medium'>Projects Delivered</div>
+              <div className='text-sm text-gray-500 mt-1'>Across 50+ countries</div>
             </div>
-            <div className='text-center'>
-              <div className='text-4xl font-bold text-blue-600 mb-2'>25K+</div>
-              <div className='text-gray-600'>Resource Downloads</div>
+            <div className='group text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20'>
+              <div className='text-5xl font-bold text-green-600 mb-2 group-hover:scale-110 transition-transform duration-300'>25K+</div>
+              <div className='text-gray-600 font-medium'>Resource Downloads</div>
+              <div className='text-sm text-gray-500 mt-1'>This month alone</div>
             </div>
-            <div className='text-center'>
-              <div className='text-4xl font-bold text-blue-600 mb-2'>98%</div>
-              <div className='text-gray-600'>Client Satisfaction</div>
+            <div className='group text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20'>
+              <div className='text-5xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300'>98%</div>
+              <div className='text-gray-600 font-medium'>Client Satisfaction</div>
+              <div className='text-sm text-gray-500 mt-1'>5-star average rating</div>
             </div>
-            <div className='text-center'>
-              <div className='text-4xl font-bold text-blue-600 mb-2'>15+</div>
-              <div className='text-gray-600'>Years Experience</div>
+            <div className='group text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20'>
+              <div className='text-5xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform duration-300'>15+</div>
+              <div className='text-gray-600 font-medium'>Years Experience</div>
+              <div className='text-sm text-gray-500 mt-1'>Industry expertise</div>
             </div>
           </div>
 
@@ -1305,6 +1377,68 @@ export default function HomePage() {
       <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
         <PerformanceMetrics />
       </Suspense>
+
+      {/* Interactive Technology Showcase */}
+      <section className='py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-50'></div>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white/10 backdrop-blur-sm text-white rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🔧 CUTTING-EDGE TECH STACK</span>
+            </div>
+            <h2 className='text-4xl md:text-5xl font-bold mb-6'>
+              Powered by Modern Technology
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              We leverage the latest technologies and frameworks to build 
+              scalable, performant, and future-proof solutions.
+            </p>
+          </div>
+
+          {/* Tech Stack Grid */}
+          <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16'>
+            {[
+              { name: 'Next.js', icon: '⚛️', color: 'from-blue-500 to-blue-600' },
+              { name: 'React', icon: '⚛️', color: 'from-cyan-500 to-cyan-600' },
+              { name: 'TypeScript', icon: '🔷', color: 'from-blue-600 to-blue-700' },
+              { name: 'Tailwind CSS', icon: '🎨', color: 'from-teal-500 to-teal-600' },
+              { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-600' },
+              { name: 'Python', icon: '🐍', color: 'from-yellow-500 to-yellow-600' },
+              { name: 'AWS', icon: '☁️', color: 'from-orange-500 to-orange-600' },
+              { name: 'Docker', icon: '🐳', color: 'from-blue-500 to-blue-600' },
+              { name: 'Kubernetes', icon: '⚙️', color: 'from-blue-600 to-blue-700' },
+              { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-700 to-blue-800' },
+              { name: 'Redis', icon: '🔴', color: 'from-red-500 to-red-600' },
+              { name: 'GraphQL', icon: '🔺', color: 'from-pink-500 to-pink-600' }
+            ].map((tech, index) => (
+              <div key={tech.name} className='group text-center p-4 bg-white/5 backdrop-blur-sm rounded-xl hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20'>
+                <div className={`w-12 h-12 bg-gradient-to-br ${tech.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                  <span className='text-xl'>{tech.icon}</span>
+                </div>
+                <div className='text-sm font-medium text-white group-hover:text-blue-300 transition-colors duration-300'>
+                  {tech.name}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Performance Metrics */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10'>
+              <div className='text-3xl font-bold text-green-400 mb-2'>< 100ms</div>
+              <div className='text-gray-300'>Average Response Time</div>
+            </div>
+            <div className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10'>
+              <div className='text-3xl font-bold text-blue-400 mb-2'>99.9%</div>
+              <div className='text-gray-300'>Uptime Guarantee</div>
+            </div>
+            <div className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10'>
+              <div className='text-3xl font-bold text-purple-400 mb-2'>A+</div>
+              <div className='text-gray-300'>Security Rating</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Technology Stack Section */}
       <Suspense fallback={<LoadingSpinner size="md" text="Loading tech stack..." />}>
