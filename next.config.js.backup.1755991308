@@ -901,8 +901,6 @@ const nextConfig = {
       },
     ];
   },
-<<<<<<< HEAD
-=======
   
   // Skip ESLint during build for faster deployment  
   eslint: {

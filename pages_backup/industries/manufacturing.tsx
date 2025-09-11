@@ -1,20 +1,36 @@
-import * as React from 'react';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import {
-  Settings,
-  Brain,
-  Shield,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Cpu,
-  Wrench,
-  Activity,
-  Database,
-  FileText,
+import { Settings, ;
+  Brain, ;
+  Shield, ;
+  BarChart3, ;
+import {;
+  Settings,;
+  Brain,;
+  Shield,;
+  BarChart3,;
+  CheckCircle,;
+  ArrowRight,;
+  Cpu,;
+  Wrench,;
+  Activity,;
+  Database,;
+  FileText,;
   Users;
 } from 'lucide-react';
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import Layout from '../../components/Layout';';
+const services = [;
+  {}
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -83,12 +99,21 @@ const services = [
       'Scenario planning'';
     ];
   }
-];
-import Layout from '../../components/Layout';';
-const services = [;
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+;];
+const benefits = [;
   {}
-    title: 'Smart Factory Solutions,',
-    description: 'IoT-enabled manufacturing systems for intelligent production management.,',];
+    title: 'Increased Efficiency,',
+    description: 'Automated processes and AI optimization improve production efficiency.,',
+    icon: Activity;
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+];
 const benefits = [
   {
     title: 'Increased Efficiency',
@@ -110,56 +135,8 @@ const benefits = [
     description: 'Optimized operations and reduced waste lower manufacturing costs.,',
     icon: BarChart3;
   }
-];
-export default function ManufacturingPage() {
-  return (
-    <Layout
-      title="Manufacturing Technology Solutions - Zion Tech Group"
-      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
-      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <Settings className="w-12 h-12 text-blue-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Manufacturing
-                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Technology Solutions
-                  </span>
-                </h1>
-              </div>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize manufacturing with Industry 4.0 technologies including smart factories,
-                IoT networks, predictive maintenance, and digital twin solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Manufacturing Consultation
-                </Link>
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View Manufacturing Case Studies
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Services Section */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;];
 export default function ManufacturingPage() {
   return (;
@@ -181,6 +158,52 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto""
+            >;
+              <div className="flex items-center justify-center mb-6">";
+                <Settings className="w-12 h-12 text-blue-400 mr-4" />";
+                <h1 className="text-5xl md: text-6xl font-bold">", Manufacturing,;
+                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
+                    Technology Solutions;
+                  </span>;
+                </h1>;
+              </div>;
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
+                Revolutionize manufacturing with Industry 4.0 technologies including smart factories, 
+                IoT networks, predictive maintenance, and digital twin solutions.,
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
+                  Get Manufacturing Consultation;
+                </Link>;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Manufacturing Case Studies,;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+];
+export default function ManufacturingPage() {
+  return (
+    <Layout
+      title="Manufacturing Technology Solutions - Zion Tech Group"
+      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
+      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
               className="text-center max-w-4xl mx-auto""
             >;
@@ -311,6 +334,35 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Manufacturing?;
+              </h2>;
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
+                Let our manufacturing technology experts help you implement Industry 4.0 solutions;
+                that improve efficiency and reduce costs.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Start Your Manufacturing Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?
@@ -333,4 +385,3 @@ export default function ManufacturingPage() {
       </div>
     </Layout>
   );
-}

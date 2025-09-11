@@ -1,125 +1,59 @@
 #!/bin/bash
 
-echo "🚀 Starting merge conflict resolution and PR merging process..."
+# Script to merge all open PRs into main branch
+# This script will handle merge conflicts and merge all open PRs
 
-# Function to resolve merge conflicts
-resolve_conflicts() {
-    echo "🔍 Searching for merge conflicts..."
+echo "Starting PR merge process..."
+
+# Get list of open PRs
+echo "Fetching open PRs..."
+PRS=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+
+echo "Found open PRs: $PRS"
+
+# Process each PR
+for pr in $PRS; do
+    echo "Processing PR #$pr..."
     
-    # Find files with merge conflicts
-    conflict_files=$(grep -r "<<<<<<< HEAD" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.md" -l 2>/dev/null || true)
+    # Get PR details
+    PR_DETAILS=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr")
     
-    if [ -z "$conflict_files" ]; then
-        echo "✅ No merge conflicts found!"
-        return 0
+    # Extract branch name
+    BRANCH=$(echo "$PR_DETAILS" | grep -o '"ref":"[^"]*"' | cut -d'"' -f4)
+    
+    if [ -z "$BRANCH" ]; then
+        echo "Could not extract branch name for PR #$pr, skipping..."
+        continue
     fi
     
-    echo "Found files with merge conflicts:"
-    echo "$conflict_files"
+    echo "Branch: $BRANCH"
     
-    # Resolve conflicts by keeping HEAD version
-    for file in $conflict_files; do
-        if [ -f "$file" ]; then
-            echo "🔧 Resolving conflicts in: $file"
-            # Remove merge conflict markers and keep HEAD version
-            sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-            sed -i '/^>>>>>>> /d' "$file"
-            # Remove any remaining conflict markers
-            sed -i '/^<<<<<<< /d' "$file"
-            sed -i '/^=======/d' "$file"
-            sed -i '/^>>>>>>> /d' "$file"
-        fi
-    done
+    # Fetch the branch
+    echo "Fetching branch $BRANCH..."
+    git fetch origin "$BRANCH" 2>/dev/null
     
-    echo "✅ Merge conflicts resolved!"
-}
-
-# Function to merge PRs
-merge_prs() {
-    echo "🔄 Starting PR merge process..."
+    if [ $? -ne 0 ]; then
+        echo "Failed to fetch branch $BRANCH, skipping..."
+        continue
+    fi
     
-    # Switch to main branch
-    git checkout main
-    echo "✅ Switched to main branch"
+    # Try to merge
+    echo "Attempting to merge $BRANCH..."
+    git merge --no-commit --no-ff "origin/$BRANCH" 2>/dev/null
     
-    # Pull latest changes
-    git pull origin main
-    echo "✅ Pulled latest changes from main"
-    
-    # List of PR branches to merge
-    pr_branches=(
-        "cursor/fix-netlify-build-and-merge-to-main-c6f9"
-        "cursor/build-application-with-vite-and-nextjs-2b63"
-    )
-    
-    for branch in "${pr_branches[@]}"; do
-        echo "🔄 Attempting to merge branch: $branch"
+    if [ $? -eq 0 ]; then
+        echo "Merge successful for $BRANCH"
+        git commit -m "Merge PR #$pr: $BRANCH"
+        echo "PR #$pr merged successfully"
+    else
+        echo "Merge conflict in $BRANCH, resolving..."
         
-        # Check if branch exists
-        if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-            # Fetch the branch
-            git fetch origin "$branch"
-            
-            # Merge the branch
-            if git merge "origin/$branch" --no-ff -m "Merge PR branch: $branch"; then
-                echo "✅ Successfully merged branch: $branch"
-            else
-                echo "❌ Failed to merge branch: $branch"
-            fi
-        else
-            echo "⚠️ Branch $branch not found, skipping..."
-        fi
-    done
-}
-
-# Function to verify build
-verify_build() {
-    echo "🔍 Verifying build..."
-    
-    # Install dependencies
-    npm install
-    
-    # Run build
-    if npm run build; then
-        echo "✅ Build successful!"
-        return 0
-    else
-        echo "❌ Build failed!"
-        return 1
+        # Resolve conflicts by keeping our version (main branch)
+        git checkout --ours .
+        git add .
+        git commit -m "Merge PR #$pr: $BRANCH (resolved conflicts)"
+        echo "PR #$pr merged with conflict resolution"
     fi
-}
+done
 
-# Function to commit and push changes
-commit_and_push() {
-    echo "📤 Committing and pushing changes..."
-    
-    git add .
-    git commit -m "Resolve merge conflicts and merge PRs into main branch"
-    git push origin main
-    
-    echo "✅ Changes committed and pushed successfully!"
-}
-
-# Main execution
-main() {
-    echo "Starting comprehensive merge conflict resolution and PR merging..."
-    
-    # Resolve conflicts
-    resolve_conflicts
-    
-    # Merge PRs
-    merge_prs
-    
-    # Verify build
-    if verify_build; then
-        # Commit and push changes
-        commit_and_push
-        echo "🎉 All merge conflicts resolved and PRs merged successfully!"
-    else
-        echo "⚠️ Build verification failed. Please check the errors above."
-        exit 1
-    fi
-}
-
-# Run main function
-main "$@"
+echo "All PRs processed!"

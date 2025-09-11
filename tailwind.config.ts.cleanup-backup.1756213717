@@ -76,88 +76,6 @@ const config: Config = {
           light: "#451582",
           dark: "#000000",
         },
-<<<<<<< HEAD
-        // Additional service category colors
-        "zion-green": {
-          DEFAULT: "#10b981",
-          light: "#34d399",
-          dark: "#059669",
-        },
-        "zion-orange": {
-          DEFAULT: "#f59e0b",
-          light: "#fbbf24",
-          dark: "#d97706",
-        },
-        "zion-red": {
-          DEFAULT: "#ef4444",
-          light: "#f87171",
-          dark: "#dc2626",
-        },
-        "zion-pink": {
-          DEFAULT: "#ec4899",
-          light: "#f472b6",
-          dark: "#db2777",
-        },
-        "zion-indigo": {
-          DEFAULT: "#6366f1",
-          light: "#818cf8",
-          dark: "#4f46e5",
-        },
-        "zion-emerald": {
-          DEFAULT: "#10b981",
-          light: "#34d399",
-          dark: "#059669",
-        },
-        "zion-teal": {
-          DEFAULT: "#14b8a6",
-          light: "#2dd4bf",
-          dark: "#0d9488",
-        },
-        "zion-amber": {
-          DEFAULT: "#f59e0b",
-          light: "#fbbf24",
-          dark: "#d97706",
-        },
-        "zion-yellow": {
-          DEFAULT: "#eab308",
-          light: "#facc15",
-          dark: "#ca8a04",
-        },
-        "zion-lime": {
-          DEFAULT: "#84cc16",
-          light: "#a3e635",
-          dark: "#65a30d",
-        },
-        "zion-rose": {
-          DEFAULT: "#f43f5e",
-          light: "#fb7185",
-          dark: "#e11d48",
-        },
-        "zion-violet": {
-          DEFAULT: "#8b5cf6",
-          light: "#a78bfa",
-          dark: "#7c3aed",
-        },
-        "zion-fuchsia": {
-          DEFAULT: "#d946ef",
-          light: "#e879f9",
-          dark: "#c026d3",
-        },
-        "zion-sky": {
-          DEFAULT: "#0ea5e9",
-          light: "#38bdf8",
-          dark: "#0284c7",
-        },
-        "zion-blue-light": {
-          DEFAULT: "#3b82f6",
-          light: "#60a5fa",
-          dark: "#2563eb",
-        },
-        "zion-cyan-light": {
-          DEFAULT: "#06b6d4",
-          light: "#22d3ee",
-          dark: "#0891b2",
-=======
         "zion-neon": {
           DEFAULT: "#22ddd2",
           light: "#7aeae4",
@@ -169,7 +87,6 @@ const config: Config = {
           light: "#b971f2",
           dark: "#530c8b",
           neon: "#b971f2",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
         },
       },
       borderRadius: {
@@ -189,25 +106,6 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-<<<<<<< HEAD
-        "float-slow": {
-          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
-          "33%": { transform: "translateY(-20px) translateX(10px)" },
-          "66%": { transform: "translateY(-10px) translateX(-15px)" },
-        },
-        "float-medium": {
-          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
-          "50%": { transform: "translateY(-15px) translateX(20px)" },
-        },
-        "float-fast": {
-          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
-          "25%": { transform: "translateY(-25px) translateX(-10px)" },
-          "75%": { transform: "translateY(-5px) translateX(15px)" },
-        },
-        "fade-in-up": {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-=======
         "fade-in": {
           from: { opacity: "0", transform: "translateY(10px)" },
           to: { opacity: "1", transform: "translateY(0)" },
@@ -233,18 +131,11 @@ const config: Config = {
         "gradient-shift": {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-<<<<<<< HEAD
-        "float-slow": "float-slow 6s ease-in-out infinite",
-        "float-medium": "float-medium 4s ease-in-out infinite",
-        "float-fast": "float-fast 3s ease-in-out infinite",
-        "fade-in-up": "fade-in-up 0.8s ease-out forwards",
-=======
         "fade-in": "fade-in 0.5s ease-out",
         "slide-in": "slide-in 0.3s ease-out",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
@@ -267,7 +158,6 @@ const config: Config = {
         "glow": "0 0 40px rgba(34, 221, 210, 0.3)",
         "glow-purple": "0 0 40px rgba(140, 21, 233, 0.3)",
         "glow-blue": "0 0 40px rgba(46, 115, 234, 0.3)",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
       },
     },
   },

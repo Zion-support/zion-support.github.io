@@ -133,7 +133,6 @@ h2 {
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
-=======
 /* Animations */
 @keyframes fadeIn {
   from { 
@@ -393,7 +392,6 @@ h3 {
 ::selection {
   background: rgba(59, 130, 246, 0.3);
   color: white;
-=======
 /* Performance optimizations */
 .will-change-transform {
   will-change: transform;
@@ -411,14 +409,6 @@ h3 {
     --border-hover: rgba(255, 255, 255, 0.5);
   }
   
-<<<<<<< HEAD
-  .btn-primary {
-    @apply border-2 border-white;
-  }
-  
-  .btn-secondary {
-    @apply border-2 border-white;
-=======
   .card {
     border-width: 2px;
   }

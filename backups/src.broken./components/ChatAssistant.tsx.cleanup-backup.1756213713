@@ -130,13 +130,6 @@ export function ChatAssistant({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-<<<<<<< HEAD
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-1 hover:bg-white/20 rounded transition-colors"
-              >
-                <X className="w-4 h-4" />
-=======
 import React, { useState } from 'react';
 
 export const ChatAssistant: React.FC = () => {
@@ -192,7 +185,6 @@ export const ChatAssistant: React.FC = () => {
           <div className="bg-zion-blue p-3 rounded-t-lg">
             <div className="flex items-center justify-between">
               <h3 className="text-white font-semibold">Zion Tech Assistant</h3>
-=======              <button
                 onClick={() => setIsOpen(false)}
                 className="text-zion-slate-light hover:text-white"
               >
@@ -289,7 +281,6 @@ export const ChatAssistant: React.FC = () => {
     </AnimatePresence>
   );
 }
-=======
       )}
     </>
   );

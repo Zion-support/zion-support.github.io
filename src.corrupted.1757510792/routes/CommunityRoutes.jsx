@@ -1,1 +1,0 @@
-import React from 'react'; import CommunityPage from '@/pages/CommunityPage'; export default function CommunityRoutes(props: any) { return (<> <Route path="" element={<CommunityPage />}/> </>)}

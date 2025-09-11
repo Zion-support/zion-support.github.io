@@ -21,6 +21,9 @@ const InnovativeServicesShowcase = ("props": "any) => {;
             "default":;
                 return []"}
     };
+    const handleServiceClick = ("props": "any) => {setSelectedService(service)"};
+    const closeModal = ("props": "any) => {setSelectedService(null)"};
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
     const handleServiceClick = (props: any) => {setSelectedService(service)};
     const closeModal = (props: any) => {setSelectedService(null)};
     return (
@@ -113,7 +116,114 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                       {activeTab === "microsaas" && service.pricingModel}""";
                       {activeTab === "it" && "Professional"}""";
                       {activeTab === "ai" && service.pricingModel}
-
+;
+                    </div>";
+                  </div>"";
+                </div>""""";
+"""";
+                <h3 className="text-xl font-semibold text-white mb-3 group-"hover": "text-blue-400 transition-colors">"",;
+                  {service.name}"";
+                </h3>""""";
+"""";
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">";
+                  {service.description}"";
+                </p>""""";
+""""";
+                <div className="mb-4">"""";
+                  <h4 className="text-sm font-semibold text-blue-400 mb-2">"";
+                    Key "Features": """"";
+                  </h4>"""";
+                  <div className="flex flex-wrap gap-1">",;
+                    {service.features.slice(0, 3).map((feature, idx) => ("";
+                      <span""""";
+                        key={idx}"""";
+                        className="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded-full ">;
+                        {feature}";
+                      </span>"";
+                    ))}""""";
+                    {service.features.length > 3 && ("""";
+                      <span className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full">;
+                        +{service.features.length-3} more,;
+                      </span>;
+                    )}";
+                  </div>"";
+                </div>""""";
+""""";
+                <div className="flex justify-between items-center">"""";
+                  <div className="text-sm text-gray-400">""";
+                    {activeTab === "microsaas" && service.userLimit}"""""";
+                    {activeTab === "it" && service.deliveryTime}"""""""";
+                    {activeTab === "ai" && "${service.aiScore}% AI Score"}""""";
+                  </div>"""";
+                  <div className="text-blue-400 text-sm font-semibold group-"hover": "text-blue-300 transition-colors">;
+                    Learn More →;
+                  </div>;
+              </div>",;
+            ))}
+;
+          </div>;
+        </div>";
+      </section>"";
+      {/* comment */}""""";
+      {selectedService && (""""";
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">"""";
+          <div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">"""";
+            <div className="p-6">"""";
+              <div className="flex justify-between items-start mb-6">"""";
+                <h2 className="text-3xl font-bold text-white">;
+                  {selectedService.name}";
+                </h2>"";
+                <button""""";
+                  onClick={closeModal}""""";
+                  className="text-gray-400 "hover": "text-white transition-colors ">""""";
+                  <svg """";
+                    className="w-6 h-6""""";
+                    fill="none"""""";
+                    stroke="currentColor"""""";
+                    viewBox="0 0 24 24""" >""""";
+                    className="w-6 h-6"";
+                    fill="none""""";
+                    stroke="currentColor""""";
+                    viewBox="0 0 24 24""" >"""";
+                    <path """"";
+                      strokeLinecap="round"""""";
+                      strokeLinejoin="round"""""">;
+                      strokeWidth={2"}""""";
+                      d="M6 18L18 6M6 6l12 12""";
+                    /" >";
+                  </svg>";
+                </button>"";
+              </div>""""";
+""""";
+              <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-8">""""";
+                <div>"""";
+                  <h3 className="text-xl font-semibold text-blue-400 mb-3">"";
+                    Description""""";
+                  </h3>"""";
+                  <p className="text-gray-300 mb-6">"",;
+                    {selectedService.description}"";
+                  </p>""""";
+"""";
+                  <h3 className="text-xl font-semibold text-blue-400 mb-3">"";
+                    Features""""";
+                  </h3>""""";
+                  <ul className="space-y-2 mb-6">""""";
+                    {selectedService.features.map((feature, idx) => ("""";
+                      <li key="{idx}" className="text-gray-300 flex items-center">"""";
+                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>;
+                        {feature}
+;
+                      </li>";
+                    ))}"";
+                  </ul>""""";
+"""";
+                  <h3 className="text-xl font-semibold text-blue-400 mb-3">"";
+                    Benefits""""";
+                  </h3>""""";
+                  <ul className="space-y-2 mb-6">""""";
+                    {selectedService.benefits.map((benefit, idx) => ("""";
+                      <li key="{idx}" className="text-gray-300 flex items-center">"""";
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>;
                     </div>"
                   </div>""
                 </div>"""""
@@ -157,7 +267,6 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                   </div>
               </div>,
             ))}
-
           </div>
         </div>"
       </section>""
@@ -209,7 +318,6 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                       <li key="{idx}" className="text-gray-300 flex items-center">""""
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {feature}
-
                       </li>"
                     ))}""
                   </ul>"""""
@@ -225,7 +333,44 @@ const InnovativeServicesShowcase = ("props": "any) => {;
 ;
                       </li>;
                     ))}
-
+;
+                  </ul>";
+                </div>"";
+""""";
+                <div>""""";
+                  <div className="bg-white/10 rounded-lg p-6 mb-6">"""";
+                    <h3 className="text-xl font-semibold text-blue-400 mb-4">"";
+                      Pricing & Details""""";
+                    </h3>""""";
+                    <div className="space-y-3">"""";
+                      <div className="flex justify-between">"""";
+                        <span className="text-gray-300">"Price": "</span>"""""";
+                        <span className="text-white font-semibold">"""""";
+                          {activeTab === "microsaas" &&""""""",;
+                            "$${selectedService.price}/${selectedService.pricingModel}"}"""""";
+                          {activeTab === "it" &&"""""";
+                            "$${selectedService.hourlyRate}/hour"}""""""";
+                          {activeTab === "ai" &&"";
+                            "$${selectedService.price}/${selectedService.pricingModel}"}";
+                        </span>"";
+                      </div>""";
+                      {activeTab === "microsaas" && (""""";
+                        <>""""";
+                          <div className="flex justify-between">"""";
+                            <span className="text-gray-300">User "Limit": "</span>"""";
+                            <span className="text-white">"",;
+                              {selectedService.userLimit}"";
+                            </span>""""";
+                          </div>""""";
+                          <div className="flex justify-between">"""";
+                            <span className="text-gray-300">Market "Price": "</span>"""";
+                            <span className="text-white">"",;
+                              {selectedService.marketPrice}"";
+                            </span>""""";
+                          </div>""""";
+                          <div className="flex justify-between">"""";
+                            <span className="text-gray-300">"ROI": "</span>"""";
+                            <span className="text-white text-green-400">",;
                   </ul>"
                 </div>""
 """""
@@ -312,7 +457,79 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                             <span className="text-gray-300">Market "Price": "</span>"""";
                             <span className="text-white">",;
                               {selectedService.marketPrice}
-
+;
+                            </span>;
+                          </div>;
+</>;
+                      )}";
+                    </div>"";
+                  </div>""""";
+""""";
+                  <div className="bg-white/10 rounded-lg p-6">"""";
+                    <h3 className="text-xl font-semibold text-blue-400 mb-4">"";
+                      Contact Information""""";
+                    </h3>""""";
+                    <div className="space-y-3">"""";
+                      <div className="flex items-center">""""";
+                        <svg """";
+                          className="w-5 h-5 text-blue-400 mr-3""""";
+                          fill="none"""""";
+                          stroke="currentColor"""""";
+                          viewBox="0 0 24 24""" >""""";
+                          className="w-5 h-5 text-blue-400 mr-3"";
+                          fill="none""""";
+                          stroke="currentColor""""";
+                          viewBox="0 0 24 24""" >"""";
+                          <path """"";
+                            strokeLinecap="round"""""";
+                            strokeLinejoin="round"""""";
+                            strokeWidth={2}""""";
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z""";
+                          /" >"""";
+                        </svg>"""";
+                        <span className="text-white">";
+                          {selectedService.contactInfo.phone}"";
+                        </span>""""";
+                      </div>""""";
+                      <div className="flex items-center">""""";
+                        <svg """";
+                          className="w-5 h-5 text-blue-400 mr-3""""";
+                          fill="none"""""";
+                          stroke="currentColor"""""";
+                          viewBox="0 0 24 24""" >""""";
+                          className="w-5 h-5 text-blue-400 mr-3"";
+                          fill="none""""";
+                          stroke="currentColor""""";
+                          viewBox="0 0 24 24""" >"""";
+                          <path """"";
+                            strokeLinecap="round"""""";
+                            strokeLinejoin="round"""""";
+                            strokeWidth={2}""""";
+                            d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z""";
+                          /" >"""";
+                        </svg>"""";
+                        <span className="text-white">";
+                          {selectedService.contactInfo.email}"";
+                        </span>""""";
+                      </div>""""";
+                      <div className="flex items-center">""""";
+                        <svg """";
+                          className="w-5 h-5 text-blue-400 mr-3""""";
+                          fill="none"""""";
+                          stroke="currentColor"""""";
+                          viewBox="0 0 24 24""" >""""";
+                          className="w-5 h-5 text-blue-400 mr-3"";
+                          fill="none""""";
+                          stroke="currentColor""""";
+                          viewBox="0 0 24 24""" >"""";
+                          <path """"";
+                            strokeLinecap="round"""""";
+                            strokeLinejoin="round"""""";
+                            strokeWidth={2}""""";
+                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9""";
+                          /" >"""";
+                        </svg>"""";
+                        <span className="text-white">;
                             </span>
                           </div>
 </>

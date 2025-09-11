@@ -64,15 +64,18 @@ class MimeTypeFallback {;
     const lastDot = filename.lastIndexOf('.');
     if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase();
+  "}
+  async checkAndFixMimeType("url": "string): Promise<any> {;
+    try {;
+      const response = await fetch(url", { "method": 'HEAD' });
+      ;
+      if (!response.ok) {;
   }
-
   async checkAndFixMimeType(url: string): Promise<any> {
     try {
       const response = await fetch(url, { method: 'HEAD' }
     );
-      
       if (!response.ok) {
-        
         return false;
       }
       const contentType = response.headers.get('content-type');
@@ -93,10 +96,12 @@ class MimeTypeFallback {;
   }
   private async tryFallbackUrl("originalUrl": "string): Promise<any> {;
     const fallbackUrl = this.fallbackUrls.get(originalUrl);
-    
+    ;
+    if (fallbackUrl) {;
+      try {;
+        const response = await fetch(fallbackUrl", { "method": 'HEAD' });
+        if (response.ok) {;
     if (fallbackUrl) {
-      
-      
       try {
         const response = await fetch(fallbackUrl, { method: 'HEAD' }
     );
@@ -120,15 +125,18 @@ class MimeTypeFallback {;
     const scripts = document.querySelectorAll(`script[src="${originalUrl"}"]`);
     scripts.forEach(script => {;
       (script as HTMLScriptElement).src = fallbackUrl;
-      
+      ;
+    });
+;
+    // Replace stylesheet links;
     }
     );
-
     // Replace stylesheet links
     const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
     links.forEach(link => {;
       (link as HTMLLinkElement).href = fallbackUrl;
-      
+      ;
+    });
     }
     );
   }

@@ -1,72 +1,52 @@
-import React from 'react',;';';
-    ';';';
-import { Loader2;
-  } from 'lucide-react',';';
-    ';';';
-interface LoadingProps {;
-  ;: "any;
-  size?: 'sm' | 'md' | 'lg';';
-  text?: string;';';
+import React from 'react';
+import { motion } from 'framer-motion';
+
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
   fullScreen?: boolean;
-"}';';';
-export default function Loading("props": "any) {';';';
-  const sizeClasses = {'",';';
-    ';';';
-    "sm": 'w-4 h-4',',';';
-    ';';';
-    "md": 'w-8 h-8',',';';
-    ';';';
-    "lg": 'w-12 h-12'};
-  const content = (;
-    <div className={`flex flex-col items-center justify-center space-y-4`>;
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`}  />;
-      {text && (;
-        <p className=`text-gray-600 text-sm font-medium`}>{text}</p>;
-      );
-      )}
-    </div>;
-  );
 }
-    </div>;
-  );
-}
-  );
-  if (fullScreen) {;
-    return (;
-    <div className="min-h-screen bg-white">;  return (
-        <div className="min-h-screen bg-white">
-      {content}
-    </div>
-    );
-}
-// Skeleton loading components
-export function SkeletonCard(props: any) {
+
+const Loading: React.FC<LoadingProps> = ({ 
+  size = 'md', 
+  text = 'Loading...', 
+  fullScreen = false 
+}) => {
+  const sizeClasses = {
+    sm: 'w-6 h-6',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  const containerClasses = fullScreen 
+    ? 'fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50'
+    : 'flex items-center justify-center p-4';
+
   return (
-        <div className="min-h-screen bg-white">
-      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>
-      <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div>
-      <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>
+    <div className={containerClasses}>
+      <div className="flex flex-col items-center space-y-4">
+        <motion.div
+          className={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        {text && (
+          <motion.p
+            className="text-gray-600 font-medium"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            {text}
+          </motion.p>
+        )}
+      </div>
     </div>
-    );
-}
-export function SkeletonText(props: any) {
-  return (
-        <div className="min-h-screen bg-white">
-      {Array.from({ length: line s';
-  }).map((_, i) => (';';
-        <div key={i}';';';
-          className={`h-3 bg-gray-200 rounded ${',';';
-    ';';';
-            i === lines - 1 ? 'w-2/3' : 'w-full';
-}`}
-        ></di></div>;
-      ));
-      )}
-    </div>;
   );
-    </div>
-    );
-}';
-    </div>';';
-  );';';';
-}";
+};
+
+export default Loading;

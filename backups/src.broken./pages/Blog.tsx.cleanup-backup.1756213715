@@ -261,7 +261,6 @@ const Blog: React.FC = () => {
   ];
 
   const blogPosts = [
-=======
 export default function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([    {
       id: 1,
@@ -737,11 +736,4 @@ export default function Blog() {
 };
 
 export default Blog;
-<<<<<<< HEAD=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
-=======
 }
->>>>>>> origin/cursor/build-and-fix-errors-e276
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

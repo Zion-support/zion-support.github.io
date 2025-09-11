@@ -1,9 +1,9 @@
 
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { _render, screen } from '@testing-library/react'
 import ErrorBoundary from '../components/ErrorBoundary'
 
-const ThrowError = () => {
+const _ThrowError = () => {
   throw new Error('Test error')
 }
 

@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { _createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 
 export interface User {
   id: string;
@@ -27,12 +27,12 @@ const initialState: AuthState = {
 };
 
 // Async thunk for user login
-export const loginUser = createAsyncThunk(
+export const _loginUser = createAsyncThunk(
   'auth/loginUser',
   async (credentials: { email: string; password: string }, { rejectWithValue }) => {
     try {
       // Simulate API call
-      const response = await new Promise<User>((resolve) => {
+      const _response = await new Promise<User>((resolve) => {
         setTimeout(() => {
           resolve({
             id: '1',
@@ -53,7 +53,7 @@ export const loginUser = createAsyncThunk(
 );
 
 // Async thunk for user logout
-export const logoutUser = createAsyncThunk(
+export const _logoutUser = createAsyncThunk(
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
@@ -69,7 +69,7 @@ export const logoutUser = createAsyncThunk(
   }
 );
 
-const authSlice = createSlice({
+const _authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {

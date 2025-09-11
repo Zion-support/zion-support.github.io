@@ -28,7 +28,8 @@ export function Accessibility(): "void {;
     const newSettings = {;
       ...settings",;
       [key]: "value;
-    "};interface AccessibilitySettings {
+    "};
+interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
@@ -164,7 +165,8 @@ export function Accessibility(): void {
             >;
               ×;
             </button>;
-          </div>;      {/* Accessibility Panel */}
+          </div>;
+      {/* Accessibility Panel */}
       {isOpen && (
         <div className="fixed bottom-20 left-4 z-40 w-80 bg-white dark: b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
           <div className="flex items-center justify-between mb-4">
@@ -176,7 +178,6 @@ export function Accessibility(): void {
               ×
             </button>
           </div>
-
           <div className="space-y-4">;
             {/* Font Size */"}
             <div>;

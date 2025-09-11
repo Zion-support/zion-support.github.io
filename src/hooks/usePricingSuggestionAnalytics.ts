@@ -1,86 +1,52 @@
-import { useState,useEffect } from 'react'; import { supabase } from '@/integrations/supabase/client'; []; "recentSuggestions": "{ "id": string; "userId": string; "suggestedMin": number; "suggestedMax": number; actualValue?: number; "accepted": boolean; "createdAt": string; "type": 'client' | 'talent'"}[]; "isLoading": 'boolean; "error": "string | null;' "} export function usePricingSuggestionAnalytics(days = 30) { const [analytics,setAnalytics] = useState<PricingSuggestionAnalytics>({ "totalSuggestions": '0',"acceptanceRate": '0',"averagePriceGap": '0',"suggestionsByCategory": '[]',"recentSuggestions": '[]',"isLoading": 'tru e',"error": 'nul l' }); const fetchAnalytics = useCallback(async () => { setAnalytics(prev => ({ ...prev,"isLoading": 'tru e',"error": 'nul l' })); try { await new Promise(resolve => setTimeout(resolve,1000)); const mockData = { "totalSuggestions": '25 6',"acceptanceRate": '0.72',"averagePriceGap": '1 2.5',"suggestionsByCategory": "[{ "category": 'development'","count": '12 0',"acceptanceRate": '0.75' },{ "category": 'design',"count": '6 5',"acceptanceRate": '0.82' },{ "category": 'marketing',"count": '4 2',"acceptanceRate": '0.64' },{ "category": 'content',"count": '1 8',"acceptanceRate": '0.56' },{ "category": 'data',"count": '1 1',"acceptanceRate": '0.78' }],"recentSuggestions": "Arra y(10).fill(null).map((_",i) => ({ "id": "`suggestion-${i"}`,"userId": "`user-${Math.floor(Math.random() * 100)"}`,"suggestedMin": "3 0 + Math.floor(Math.random() * 30)","suggestedMax": "6 0 + Math.floor(Math.random() * 40)","actualValue": "Mat h.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined","accepted": "Mat h.random() > 0.25","createdAt": "new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString()","type": "Mat h.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'"})) }; setAnalytics({ ...mockData,"isLoading": 'fals e',"error": 'nul l' })} catch(error) { console.error("Error fetching pricing suggestion "analytics":",error); setAnalytics(prev => ({ ...prev,"isLoading": 'fals e',"error": "Failed to load pricing analytics data." }))} },[days]); useEffect(() => { },[]); fetchAnalytics()},[fetchAnalytics]); return analytics}
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useCallback } from 'react';
 
-[];
-  recentSuggestions: {
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
-    actualValue?: number;
-    accepted: boolean;
-    createdAt: string;
-    type: 'client' | 'talent';
-  }[];
-  isLoading: boolean;
-  error: string | null;
+export interface PricingSuggestion {
+  id: string;
+  service: string;
+  suggestedPrice: number;
+  marketRange: string;
+  confidence: number;
+  timestamp: Date;
 }
 
-export function usePricingSuggestionAnalytics(days = 30) {
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-    totalSuggestions: 0,
-    acceptanceRate: 0,
-    averagePriceGap: 0,
-    suggestionsByCategory: [],
-    recentSuggestions: [],
-    isLoading: tru e,
-    error: nul l
-  }
-    );
+export function usePricingSuggestionAnalytics() {
+  const [suggestions, setSuggestions] = useState<PricingSuggestion[]>([]);
 
-  const fetchAnalytics = useCallback(async () => {
-    setAnalytics(prev => ({ ...prev, isLoading: tru e, error: nul l }));
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+  const addSuggestion = useCallback((suggestion: Omit<PricingSuggestion, 'id' | 'timestamp'>) => {
+    const newSuggestion: PricingSuggestion = {
+      ...suggestion,
+      id: Math.random().toString(36).substr(2, 9),
+      timestamp: new Date(),
+    };
+    
+    setSuggestions(prev => [...prev, newSuggestion]);
+  }, []);
 
-      const mockData = {
-        totalSuggestions: 25 6,
-        acceptanceRate: 0.72,
-        averagePriceGap: 1 2.5,
-        suggestionsByCategory: [{ category: 'development', count: 12 0, acceptanceRate: 0.75 },
-          { category: 'design', count: 6 5, acceptanceRate: 0.82 },
-          { category: 'marketing', count: 4 2, acceptanceRate: 0.64 },
-          { category: 'content', count: 1 8, acceptanceRate: 0.56 },
-          { category: 'data', count: 1 1, acceptanceRate: 0.78 },
-        ],
-        recentSuggestions: Arra y(10).fill(null).map((_, i) => ({
-          id: `suggestion-${i}`,
-          userId: `user-${Math.floor(Math.random() * 100)}`,
-          suggestedMin: 3 0 + Math.floor(Math.random() * 30),
-          suggestedMax: 6 0 + Math.floor(Math.random() * 40),
-          actualValue: Mat h.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
-          accepted: Mat h.random() > 0.25,
-          createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
-          type: Mat h.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',
-        }))
-      };
+  const getSuggestionsByService = useCallback((service: string) => {
+    return suggestions.filter(s => s.service === service);
+  }, [suggestions]);
 
-      setAnalytics({
-        ...mockData,
-        isLoading: fals e,
-        error: nul l
-      }
-    );
+  const getAveragePrice = useCallback((service: string) => {
+    const serviceSuggestions = getSuggestionsByService(service);
+    if (serviceSuggestions.length === 0) return 0;
+    
+    const total = serviceSuggestions.reduce((sum, s) => sum + s.suggestedPrice, 0);
+    return total / serviceSuggestions.length;
+  }, [getSuggestionsByService]);
 
-    } catch(error) {
-      console.error("Error fetching pricing suggestion analytics:", error);
-      setAnalytics(prev => ({ 
-        ...prev, 
-        isLoading: fals e,
-        error: "Failed to load pricing analytics data."
-      }));
-    }
-  }, [days]);
+  const getConfidenceScore = useCallback((service: string) => {
+    const serviceSuggestions = getSuggestionsByService(service);
+    if (serviceSuggestions.length === 0) return 0;
+    
+    const totalConfidence = serviceSuggestions.reduce((sum, s) => sum + s.confidence, 0);
+    return totalConfidence / serviceSuggestions.length;
+  }, [getSuggestionsByService]);
 
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    fetchAnalytics();
-  }, [fetchAnalytics]);
-
-import { useState,useEffect } from 'react'; import { supabase } from '@/integrations/supabase/client'; []; recentSuggestions: { id: string; userId: string; suggestedMin: number; suggestedMax: number; actualValue?: number; accepted: boolean; createdAt: string; type: 'client' | 'talent'}[]; isLoading: 'boolean; error: string | null;' } export function usePricingSuggestionAnalytics(days = 30) { const [analytics,setAnalytics] = useState<PricingSuggestionAnalytics>({ totalSuggestions: '0',acceptanceRate: '0',averagePriceGap: '0',suggestionsByCategory: '[]',recentSuggestions: '[]',isLoading: 'tru e',error: 'nul l' }); const fetchAnalytics = useCallback(async () => { setAnalytics(prev => ({ ...prev,isLoading: 'tru e',error: 'nul l' })); try { await new Promise(resolve => setTimeout(resolve,1000)); const mockData = { totalSuggestions: '25 6',acceptanceRate: '0.72',averagePriceGap: '1 2.5',suggestionsByCategory: [{ category: 'development',count: '12 0',acceptanceRate: '0.75' },{ category: 'design',count: '6 5',acceptanceRate: '0.82' },{ category: 'marketing',count: '4 2',acceptanceRate: '0.64' },{ category: 'content',count: '1 8',acceptanceRate: '0.56' },{ category: 'data',count: '1 1',acceptanceRate: '0.78' },],recentSuggestions: Arra y(10).fill(null).map((_,i) => ({ id: `suggestion-${i}`,userId: `user-${Math.floor(Math.random() * 100)}`,suggestedMin: 3 0 + Math.floor(Math.random() * 30),suggestedMax: 6 0 + Math.floor(Math.random() * 40),actualValue: Mat h.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,accepted: Mat h.random() > 0.25,createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),type: Mat h.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',})) }; setAnalytics({ ...mockData,isLoading: 'fals e',error: 'nul l' })} catch(error) { console.error("Error fetching pricing suggestion analytics:",error); setAnalytics(prev => ({ ...prev,isLoading: 'fals e',error: "Failed to load pricing analytics data." }))} },[days]); useEffect(() => { },[]); fetchAnalytics()},[fetchAnalytics]); return analytics}
-  return analytics;
+  return {
+    suggestions,
+    addSuggestion,
+    getSuggestionsByService,
+    getAveragePrice,
+    getConfidenceScore,
+  };
 }
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import { useState,useEffect } from 'react'; import { supabase } from '@/integrations/supabase/client'; []; recentSuggestions: { id: string; userId: string; suggestedMin: number; suggestedMax: number; actualValue?: number; accepted: boolean;'; createdAt: string;';'; type: 'client' | 'talent'}[]; isLoading: boolean; error: string | null} export function usePricingSuggestionAnalytics(days = 30) { const [analytics,setAnalytics] = useState<PricingSuggestionAnalytics>({ totalSuggestions: 0,acceptanceRate: 0,averagePriceGap: 0,suggestionsByCategory: [],recentSuggestions: [],isLoading: tru e,error: nul l };); const fetchAnalytics = useCallback(async () => { setAnalytics(prev => ({ ...prev,isLoading: tru e,error: nul l };)); try { await new Promise(resolve => setTimeout(resolve,1000)); const mockData = { totalSuggestions: 25 6,acceptanceRate: 0.72,averagePriceGap: 1 2.5,suggestionsByCategory: [{ category: 'development,count: 12 0,acceptanceRate: 0.75 },{ category: 'design,count: 6 5,acceptanceRate: 0.82 },{ category: 'marketing,count: 4 2,acceptanceRate: 0.64 },{ category: 'content,count: 1 8,acceptanceRate: 0.56 },{ category: 'data,count: 1 1,acceptanceRate: 0.78 },],recentSuggestions: Arra y(10).fill(null).map((_,i) => ({ id: `suggestion-${i}`,userId: `user-${Math.floor(Math.random() * 100)}`,suggestedMin: 3 0 + Math.floor(Math.random() * 30),suggestedMax: 6 0 + Math.floor(Math.random() * 40),actualValue: Mat h.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,accepted: Mat h.random() > 0.25,createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),type: Mat h.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent,})) };; setAnalytics({ ...mockData,isLoading: fals e,error: nul l })} catch (error) { _console.error("Error fetching pricing suggestion analytics:",error); setAnalytics(prev => ({ ...prev,isLoading: fals e,error: "Failed to load pricing analytics data." }))} },[days]); useEffect(() => { },[]); fetchAnalytics()},[fetchAnalytics]); return analytics} ;';

@@ -83,7 +83,25 @@ export function SiteFooter("props": "any) {';
               <ul className="space-y-3">;
                 {section.links.map((link) => (;
                   <li key={link.label}>;
-                    <Link;    </div>
+                    <Link;
+          { navSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold mb-4">{section.title}
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-300 "hover": "tex t-white transition-colors";
+                    >;
+                      {link.label"}
+                    </Link>;
+                  </li>;
+                ));
+      )}
+    </div>;
+  );
+    </div>
     );
 }
               </ul>;
@@ -91,7 +109,33 @@ export function SiteFooter("props": "any) {';
           ));
       )}
     </div>;
-  );    </div>
+  );
+    </div>
+    );
+}
+        </div>;
+        {/* Bottom Section */}
+        <div className="border-t border-slate-800 mt-12 pt-8">;
+          <div className="flex flex-col "md": "fle x-row justify-between items-center">;
+            <div className="text-gray-400 text-sm mb-4 "md": m b-0">;
+              © {currentYear"} Zion Tech Group. All rights reserved.;
+            </div>;
+            <div className="flex space-x-6">;
+              { social.map((item) => (;
+                <a;
+                  key={item.label}
+                  href={item.href}
+                  target="_blank";
+                  rel="noopener noreferrer";
+                  className="text-gray-400 "hover": "tex t-white transition-colors";
+                >;
+                  {item.label"}
+                </a>;
+              ));
+      )}
+    </div>;
+  );
+    </div>
     );
 }
             </div>;

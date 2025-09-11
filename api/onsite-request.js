@@ -1,43 +1,44 @@
 const { withSentry } = require('./withSentry.cjs');
-const fs = require('fs');
-const path = require('path');
 
-async function handler(req, res) {
+const handler = async (req, res) => {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
     res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.status(405).end('Method Not Allowed');
     return;
   }
 
-  const { name, email, phone: _phone, company: _company, location, details: _details } = req.body || {};
-  if (!name || !email || !location) {
-    res.statusCode = 400;
-    res.json({ error: 'Missing required fields' });
-    return;
-  }
-
-  const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
-  let existing = [];
   try {
-    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    if (!Array.isArray(existing)) existing = [];
-  } catch {
-    // File doesn't exist or is invalid, use empty array
+    const { name, email, phone, service, location, description } = req.body;
+
+    if (!name || !email || !service || !location) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
+    }
+
+    const response = await fetch('/functions/v1/onsite-service-request', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        service,
+        location,
+        description,
+      }),
+    });
+
+    if (response.ok) {
+      res.status(200).json({ success: true, message: 'Request submitted successfully' });
+    } else {
+      res.status(500).json({ error: 'Failed to submit request' });
+    }
+  } catch (err) {
+    console.error('Onsite request API error:', err);
+    res.status(500).json({ error: 'Failed to process request' });
   }
-  existing.push({
-    name,
-    email,
-    phone: _phone,
-    company: _company,
-    location,
-    details: _details,
-    createdAt: new Date().toISOString(),
-  });
-  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+};
 
-  res.statusCode = 200;
-  res.json({ success: true });
-}
-
-module.exports = withSentry(handler);
+export default withSentry(handler);
