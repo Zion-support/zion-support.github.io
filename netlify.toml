@@ -165,6 +165,89 @@ VITE_LEGACY_BUILD = "false"
   schedule = "0 4 * * *" # daily 04:00 UTC
 
 [[scheduled.functions]]
+<<<<<<< HEAD
   name = "front-index-scheduler"
   schedule = "*/20 * * * *" # every 20 minutes
 >>>>>>> origin/chore/futuristic-front-and-netlify-automations
+=======
+  name = "a11y-alt-text-runner"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "metadata-optimizer-runner"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "seo-audit-runner"
+  schedule = "0 */2 * * *"
+
+[[scheduled.functions]]
+  name = "ai-trends-radar-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "stale-content-auditor-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "deps-auto-upgrade-runner"
+  schedule = "0 3 * * *"
+
+# New autonomous cloud scanners
+[[scheduled.functions]]
+  name = "unused-media-scanner"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "orphan-pages-detector"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "component-size-report"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "license-compliance-auditor"
+  schedule = "0 2 * * 1"
+
+[[scheduled.functions]]
+  name = "pagespeed-insights-runner"
+  schedule = "11 */6 * * *" # every 6 hours, offset
+
+[[scheduled.functions]]
+  name = "knowledge-pack-runner"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "adaptive-orchestrator"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "site-404-map-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "component-coupling-graph-runner"
+  schedule = "29 */6 * * *"
+
+[[scheduled.functions]]
+  name = "content-freshness-score-runner"
+  schedule = "7 */12 * * *"
+
+# Newly added intelligent automations
+[[scheduled.functions]]
+  name = "anchor-links-auto-fixer"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "internal-link-graph-runner"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "component-props-docs-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "topics-map-runner"
+  schedule = "*/20 * * * *"
+>>>>>>> origin/chore/gh-actions-autonomous-docs-topics
