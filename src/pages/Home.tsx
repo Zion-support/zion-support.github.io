@@ -58,6 +58,7 @@ import {
   Zap as ZapIcon2
 } from 'lucide-react';
 
+<<<<<<< HEAD
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() => 
@@ -69,8 +70,27 @@ const FuturisticBackground = React.memo(() => {
       duration: 5 + i * 0.3
     })), []
   );
+=======
+import React from 'react';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import { ServicesShowcase } from "@/components/ServicesShowcase";
+import { EnhancedServicesOverview } from "@/components/home/EnhancedServicesOverview";
+import { EnhancedComprehensiveServicesShowcase } from "@/components/EnhancedComprehensiveServicesShowcase";
+import { ContactSection } from "@/components/ContactSection";
+>>>>>>> origin/enhanced-app-improvements
 
   return (
+<<<<<<< HEAD
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
@@ -101,6 +121,15 @@ const FuturisticBackground = React.memo(() => {
     </div>
   );
 });
+=======
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Zion Tech Group - Comprehensive Tech Services & AI Solutions" 
+        description="Transform your business with Zion Tech Group's comprehensive technology solutions. AI, SAAS, IT services with enterprise-grade quality and startup pricing. Contact us at +1 302 464 0950."
+        keywords="AI services, SAAS solutions, IT services, technology consulting, digital transformation, AI strategy, cloud migration, cybersecurity, Zion Tech Group, kleber@ziontechgroup.com"
+        canonical="https://ziontechgroup.com/"
+      />
+>>>>>>> origin/enhanced-app-improvements
 
 FuturisticBackground.displayName = 'FuturisticBackground';
 
@@ -422,6 +451,7 @@ const Home = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <FuturisticBackground />
       
+<<<<<<< HEAD
       <HeroSection onGetStarted={handleGetStarted} />
       <StatsSection />
       <FeaturedServices />
@@ -474,6 +504,29 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+=======
+      <QuickAccess />
+      
+      <FeatureCTAs />
+      
+      <FeatureHighlights />
+      
+      <ServicesShowcase />
+      
+      {/* Enhanced Comprehensive Services Showcase */}
+      <EnhancedComprehensiveServicesShowcase />
+      
+      <EnhancedServicesOverview />
+      
+      <CategoriesSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <NewsletterSection />
+      
+      {/* Contact Section */}
+      <ContactSection />
+>>>>>>> origin/enhanced-app-improvements
     </div>
   );
 }
