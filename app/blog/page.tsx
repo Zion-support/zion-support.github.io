@@ -3,6 +3,40 @@ import Link from 'next/link';
 
 export default function BlogPage() {
 	const blogPosts = [
+	  // New posts (2025-09)
+	  {
+	    id: 'ai-content-strategy-2025',
+	    title: 'AI Content Strategy 2025: From Idea to Distribution',
+	    excerpt:
+	      'Plan, generate, and distribute high-quality content with AI guardrails and measurable outcomes.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'Content Strategy',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'llm-evals-in-production-2025',
+	    title: 'LLM Evals in Production: What Actually Works',
+	    excerpt:
+	      'CI evals, judge models, and budgets tied to outcomes and risk—without slowing teams.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'AI Evaluation',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'customer-stories-ai-automation',
+	    title: 'Customer Stories: Real ROI from AI Automation',
+	    excerpt:
+	      'Three concise case studies across support, finance, and operations showing clear ROI.',
+	    date: '2025-09-11',
+	    readTime: '7 min read',
+	    category: 'Case Studies',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
 	  {
 	    id: 'ai-transforming-business-2025',
 	    title: 'How AI is Transforming Business Operations in 2025',
@@ -113,7 +147,7 @@ export default function BlogPage() {
 	    featured: false,
 	    image: '/api/placeholder/600/400',
 	  },
-	  // New posts (2025-09)
+	  // Keep existing September entries below for continuity
 	  {
 	    id: 'ai-cost-optimization-2025',
 	    title: 'AI Cost Optimization in 2025: Ship Faster, Spend Less',
