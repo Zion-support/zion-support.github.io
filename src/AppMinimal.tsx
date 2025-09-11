@@ -17,6 +17,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+// Blog routes temporarily disabled until content is present
 
 export default function AppMinimal() {
   return (

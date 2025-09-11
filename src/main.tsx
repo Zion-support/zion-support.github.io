@@ -22,8 +22,17 @@ if ('serviceWorker' in navigator) {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+<<<<<<< HEAD
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
+=======
+    <Router>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </Router>
+  </React.StrictMode>,
+>>>>>>> 8558569a3be6 (feat(content): add Q4 services data and homepage promo; wire into services index; fix conflicts; clean build)
 );
