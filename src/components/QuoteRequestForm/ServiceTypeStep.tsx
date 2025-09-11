@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import type { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import { useEffect, useState, useCallback } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Search } from 'lucide-react';
-
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import api from '@/lib/api';
 
@@ -15,21 +16,30 @@ interface ServiceTypeStepProps {
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
-  const debouncedQuery = useDebounce(searchQuery, 300);
   const [listings, setListings] = useState<ListingItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const isMounted = useIsMounted();
 
-  // Fetch services when the service type or query changes
-  useEffect(() => {
-    if (!formData.serviceType) {
-      setListings([]);
-      return;
+  const fetchServices = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch('/api/services');
+      if (!response.ok) throw new Error('Failed to fetch');
+      const data = await response.json();
+      setListings(data as ListingItem[]);
+    } catch (err) {
+      console.error('Failed to fetch services', err);
+      setError('Failed to load services');
+      setListings(SAMPLE_SERVICES);
+    } finally {
+      setLoading(false);
     }
+  }, []);
 
     const fetchServices = async () => {
       setLoading(true);
+      setError(null);
       try {
         const response = await api.get(
           `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
@@ -46,7 +56,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     };
 
     fetchServices();
-  }, [formData.serviceType, debouncedQuery, isMounted]);
+  }, [fetchServices]);
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
@@ -60,7 +70,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     });
   };
   
-  const sourceListings = listings;
+  const sourceListings = listings.length > 0 ? listings : SAMPLE_SERVICES;
 
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
@@ -132,10 +142,10 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </div>
 
           {error && (
-            <div className="text-center text-red-400 text-sm">{error}</div>
+            <div className="text-center text-red-400 text-sm">{error}. Showing sample data.</div>
           )}
           
-          <div className="grid grid-cols-1 gap-4 mt-4" aria-busy={loading}>
+          <div className="grid grid-cols-1 gap-4 mt-4">
             {loading ? (
               <>
                 <Skeleton className="h-[120px] w-full" />

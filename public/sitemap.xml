@@ -49276,7 +49276,13 @@
     <loc>https://ziontechgroup.com/login</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/signup</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/signup</loc>
@@ -49329,6 +49335,9 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ziontechgroup.com/blog/ai-talent-acquisition</loc>
+    <lastmod>2025-01-17</lastmod>
+=======
     <loc>https://ziontechgroup.com/blog/ai-talent-acquisition</loc>
     <lastmod>2025-03-22</lastmod>
     <changefreq>monthly</changefreq>

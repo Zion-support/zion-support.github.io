@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
+=======
+import React from 'react';
+import { Logo } from './Logo';
+import { UserMenu } from './UserMenu';
+import { LanguageSelector } from './LanguageSelector';
 import { MainNavigation } from '@/layout/MainNavigation';
 import { MobileMenu } from './MobileMenu';
 import { useAuth } from '@/hooks/useAuth';
@@ -17,7 +22,6 @@ import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
 
 export interface HeaderProps {
   hideLogin?: boolean;
-  customLogo?: string;
   customTheme?: {
     primaryColor: string;
     backgroundColor: string;
@@ -25,8 +29,7 @@ export interface HeaderProps {
   };
 }
 
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
-  const { user } = useAuth();
+export function Header({ hideLogin = false, customTheme }: HeaderProps) {
   const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
@@ -77,12 +80,41 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
       
       <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-blue-dark/90 to-zion-slate-dark/95 backdrop-blur-xl"
+      style={headerStyle}
+    >
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 via-zion-cyan/5 to-zion-purple/5 animate-pulse"></div>
+      
+      <div className="relative container flex h-16 items-center px-4 sm:px-6">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+=======
+        <Logo customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
 
-        {/* Search Bar */}
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+        {/* Desktop Navigation */}
+        <div className="ml-6 flex-1 hidden lg:block">
+          <MainNavigation />
+        </div>
+
+        {/* Enhanced Search */}
+        <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-4">
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md shadow-lg"
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/30 bg-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
+      style={headerStyle}
+    >
+      <div className="container flex h-20 items-center px-4 sm:px-6">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+
+        <div className="ml-8 flex-1">
+          <MainNavigation />
+        </div>
+        
+        <form onSubmit={handleSubmit} className="hidden lg:block w-72 mx-6">
+=======
         <div className="ml-6 flex-1 hidden md:block">
           <MainNavigation />
         </div>
@@ -100,22 +132,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           />
         </form>
 
-      </div>
-      
-      {/* Animated Header Border */}
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
-        {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-3">
-          <Button 
-            asChild 
-            variant="outline" 
-            className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"
-          >
-            <Link to="/pricing">
-              <Sparkles className="h-4 w-4 mr-2" />
-              Pricing
-            </Link>
-          </Button>
         {/* Desktop Actions */}
         <div className="flex items-center gap-2 hidden md:flex">
           <LanguageSelector />

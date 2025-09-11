@@ -7,10 +7,10 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { EnhancedNavigation } from "./components/EnhancedNavigation";
-import { EnhancedFooter } from "./components/EnhancedFooter";
-import { PerformanceOptimizedLoader } from "./components/PerformanceOptimizedLoader";
+import { FloatingCTA } from "./components/FloatingCTA";
+import { PageLoader } from "./components/ui/PageLoader";
 import { AuthRoutes, DashboardRoutes, MarketplaceRoutes, TalentRoutes, AdminRoutes, MobileAppRoutes, ContentRoutes, ErrorRoutes, EnterpriseRoutes, CommunityRoutes, DeveloperRoutes } from './routes';
+// Lazy load pages for better performance
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -32,6 +32,12 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
+const ServiceComparisonPage = React.lazy(() => import('./pages/ServiceComparisonPage'));
+const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculatorPage'));
+const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesOverviewPage'));
+const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/ServiceAnalyticsDashboard'));
+const ServiceMarketplace = React.lazy(() => import('./pages/ServiceMarketplace'));
 const baseRoutes = [
     { path: '/', element: _jsx(Home, {}) },
     { path: '/match', element: _jsx(AIMatcherPage, {}) },
@@ -40,6 +46,12 @@ const baseRoutes = [
     { path: '/talent', element: _jsx(TalentDirectory, {}) },
     { path: '/talents', element: _jsx(TalentsPage, {}) },
     { path: '/services', element: _jsx(ServicesPage, {}) },
+    { path: '/expanded-services', element: _jsx(ExpandedServicesPage, {}) },
+    { path: '/all-services', element: _jsx(AllServicesOverviewPage, {}) },
+    { path: '/service-comparison', element: _jsx(ServiceComparisonPage, {}) },
+    { path: '/service-calculator', element: _jsx(ServiceCalculatorPage, {}) },
+    { path: '/service-analytics', element: _jsx(ServiceAnalyticsDashboard, {}) },
+    { path: '/service-marketplace', element: _jsx(ServiceMarketplace, {}) },
     { path: '/it-onsite-services', element: _jsx(ITOnsiteServicesPage, {}) },
     { path: '/categories', element: _jsx(Categories, {}) },
     { path: '/equipment', element: _jsx(EquipmentPage, {}) },
@@ -56,6 +68,29 @@ const baseRoutes = [
     { path: '/blog', element: _jsx(Blog, {}) },
     { path: '/blog/:slug', element: _jsx(BlogPost, {}) },
 ];
+// Enhanced loading component with better UX
+function EnhancedSuspenseFallback() {
+    return (_jsx(PageLoader, { text: "Loading Zion Tech Group...", className: "bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark" }));
+}
+// Error Boundary Component
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
+    static getDerivedStateFromError(error) {
+        return { hasError: true, error };
+    }
+    componentDidCatch(error, errorInfo) {
+        console.error('Error caught by boundary:', error, errorInfo);
+    }
+    render() {
+        if (this.state.hasError) {
+            return (_jsx("div", { className: "min-h-screen flex items-center justify-center bg-background", children: _jsxs("div", { className: "text-center space-y-4", children: [_jsx("h1", { className: "text-2xl font-bold text-destructive", children: "Something went wrong" }), _jsx("p", { className: "text-muted-foreground", children: "We're sorry, but something unexpected happened. Please try refreshing the page." }), _jsx("button", { onClick: () => window.location.reload(), className: "px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90", children: "Refresh Page" })] }) }));
+        }
+        return this.props.children;
+    }
+}
 const App = () => {
     // Ensure each navigation starts at the top of the page
     useScrollToTop();

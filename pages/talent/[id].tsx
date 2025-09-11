@@ -42,45 +42,8 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <ProfileErrorState error={error} />;
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 
-  const { data, error, isLoading } = useSWR<TalentProfile | null>(
-    id ? `/api/talent/${id}` : null,
-    async (url: string) => {
-      const result: TalentProfileResponse = await fetch(url).then(handleApiResponse);
-      return result.profile;
-    }
-  );
-
-  if (isLoading || !router.isReady || !id) {
-    return <TalentProfileSkeleton />;
-  }
-
-  // Specific 404 error from API
-  if (error && (error as any).status === 404) {
-    return <NotFound />;
-  }
-
-  // Next.js router typing in this project doesn't include `isFallback`.
-  // Cast to any to access the property during static builds.
-  if ((router as any).isFallback) {
-    return (
-      <div className="flex flex-col items-center justify-center py-20 text-center">
-        <h2 className="text-2xl font-semibold mb-2">Error</h2>
-        <p>Failed to load talent profile.</p>
-        {err.status && <p>Status: {err.status}</p>}
-        <p>Message: {err.info?.error || err.info?.message || err.message}</p>
-      </div>
-    );
-  }
-
-  // API call was successful (no error thrown) but no profile found
-  // This also implies !isLoading at this point.
-  if (!data) {
-    return <NotFound />;
-  }
-
-  // If we reach here, talent data is available
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">
       <div className="container mx-auto px-4 space-y-4">
@@ -102,7 +65,7 @@ const TalentProfilePage: React.FC = () => {
         )}
       </div>
     </main>
-  );
+    );
 };
 
 export default TalentProfilePage;

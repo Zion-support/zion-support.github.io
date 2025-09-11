@@ -1,34 +1,51 @@
+console.log("main.tsx: Start");
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n'; // Adjust the path if your i18n.js is elsewhere
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { showApiError } from '@/utils/apiErrorHandler';
+import './utils/globalFetchInterceptor';
+import { ErrorBoundary } from 'react-error-boundary';
+import { SnackbarProvider } from 'notistack';
+import { captureException } from '@/utils/sentry';
+import { useTranslation } from 'react-i18next';
+import { ToastInitializer } from '@/hooks/use-toast';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+// Import i18n configuration
+import './i18n';
+import { LanguageProvider } from '@/context/LanguageContext';
+import { CurrencyProvider } from '@/context/CurrencyContext';
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+import { WhitelabelProvider } from '@/context/WhitelabelContext';
+import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
 import { AuthProvider } from '@/context/auth/AuthProvider';
 import { NotificationProvider } from './context';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
+import { CartProvider } from './context/CartContext';
+import { UnitProvider } from './context/UnitContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      onError: (error) => showApiError(error),
-    },
-    mutations: {
-      onError: (error) => showApiError(error),
+      retry: 1,
+      refetchOnWindowFocus: false,
     },
   },
-});
+})
 
 function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   const { t } = useTranslation();
@@ -101,4 +118,49 @@ try {
   }
 }
 
-registerServiceWorker();
+try {
+  renderApp();
+} catch (error) {
+  console.error('Global error caught in main.tsx:', error);
+  displayFatalError((error as Error).message);
+}
+
+window.addEventListener('error', (e) => {
+  console.error('Unhandled error:', e.error || e.message);
+  displayFatalError(e.message);
+});
+
+initGA();
+// Render the app with proper provider structure
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <Provider store={store}>
+          <WhitelabelProvider>
+            <Router>
+              <AuthProvider>
+                <NotificationProvider>
+                  <AnalyticsProvider>
+                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <ViewModeProvider>
+                        <UnitProvider>
+                          <CartProvider>
+                            <AppLayout>
+                              <App />
+                            </AppLayout>
+                          </CartProvider>
+                        </UnitProvider>
+                      </ViewModeProvider>
+                      <LanguageDetectionPopup />
+                    </LanguageProvider>
+                  </AnalyticsProvider>
+                </NotificationProvider>
+              </AuthProvider>
+            </Router>
+          </WhitelabelProvider>
+        </Provider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </React.StrictMode>,
+);

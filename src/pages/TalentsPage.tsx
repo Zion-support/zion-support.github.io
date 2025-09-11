@@ -12,146 +12,33 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';
 
-// Market insights component for talents
-const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-  <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
-        <TrendingUp className="h-5 w-5 text-green-400" />
-        <h3 className="text-lg font-semibold">Talent Market Insights</h3>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">${Math.round(stats.averageHourlyRate)}/hr</div>
-          <div className="text-sm text-muted-foreground">Avg Hourly Rate</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averageMonthlySalary / 1000)}k/mo</div>
-          <div className="text-sm text-muted-foreground">Avg Monthly</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-yellow-400">{stats.averageRating.toFixed(1)}</div>
-          <div className="text-sm text-muted-foreground">Avg Rating</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-purple-400">{Math.round(stats.averageExperience)}yr</div>
-          <div className="text-sm text-muted-foreground">Avg Experience</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-orange-400">{stats.totalTalents}</div>
-          <div className="text-sm text-muted-foreground">Total Talents</div>
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-);
-
-// Filter and sort controls for talents
-const TalentFilterControls: React.FC<{
-  sortBy: string;
-  setSortBy: (sort: string) => void;
-  filterSpecialization: string;
-  setFilterSpecialization: (spec: string) => void;
-  filterAvailability: string;
-  setFilterAvailability: (avail: string) => void;
-  specializations: string[];
-  showRecommended: boolean;
-  setShowRecommended: (show: boolean) => void;
-  loading: boolean;
-}> = ({
-  sortBy,
-  setSortBy,
-  filterSpecialization,
-  setFilterSpecialization,
-  filterAvailability,
-  setFilterAvailability,
-  specializations,
-  showRecommended,
-  setShowRecommended,
-  loading
-}) => (
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
-      <select
-        value={filterSpecialization}
-        onChange={(e) => setFilterSpecialization(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Specializations</option>
-        {specializations.map(spec => (
-          <option key={spec} value={spec}>{spec}</option>
-        ))}
-      </select>
-    </div>
-
-    <div className="flex items-center gap-2">
-      <Users className="h-4 w-4 text-muted-foreground" />
-      <select
-        value={filterAvailability}
-        onChange={(e) => setFilterAvailability(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Availability</option>
-        <option value="full_time">Full Time</option>
-        <option value="part_time">Part Time</option>
-        <option value="project">Project Based</option>
-        <option value="consulting">Consulting</option>
-      </select>
-    </div>
-    
-    <div className="flex items-center gap-2">
-      <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select
-        value={sortBy}
-        onChange={(e) => setSortBy(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="newest">Newest First</option>
-        <option value="hourly-rate-low">Rate: Low to High</option>
-        <option value="hourly-rate-high">Rate: High to Low</option>
-        <option value="rating">Highest Rated</option>
-        <option value="experience">Most Experienced</option>
-        <option value="verified">Verified First</option>
-      </select>
-    </div>
-
-    <Button
-      variant={showRecommended ? "default" : "outline"}
-      size="sm"
-      onClick={() => setShowRecommended(!showRecommended)}
-      className="flex items-center gap-2"
-    >
-      <Star className="h-4 w-4" />
-      {showRecommended ? "All Talents" : "Recommended"}
-    </Button>
-  </div>
-);
-
-// Talent card component
-const TalentCard: React.FC<{ talent: TalentProfile; onHire: () => void }> = ({ talent, onHire }) => (
-  <Card className="h-full hover:shadow-lg transition-shadow">
-    <CardHeader className="pb-3">
-      <div className="flex items-start justify-between">
-        <div className="flex items-start gap-3">
-          <img
-            src={talent.profile_picture_url || `https://api.dicebear.com/6.x/initials/svg?seed=${talent.full_name}`}
-            alt={talent.full_name}
-            className="w-12 h-12 rounded-full object-cover"
-            loading="lazy"
-          />
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2">
-              <h3 className="font-semibold text-lg truncate">{talent.full_name}</h3>
-              {talent.is_verified && (
-                <Verified className="h-4 w-4 text-blue-500 flex-shrink-0" />
-              )}
-            </div>
-            <p className="text-sm text-muted-foreground truncate">{talent.professional_title}</p>
-            <div className="flex items-center gap-1 mt-1">
-              <MapPin className="h-3 w-3 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">{talent.location}</span>
+const TalentsPage: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="Talents - Zion Tech Group" 
+        description="Browse our curated selection of top tech talent and AI experts."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Talents
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Browse our curated selection of top tech talent and AI experts.
+              Find the perfect professional for your next project.
+            </p>
+          </div>
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our talents page is currently under development.
+              </p>
             </div>
           </div>
         </div>

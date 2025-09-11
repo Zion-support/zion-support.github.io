@@ -1,49 +1,39 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 
-export default function ITOnsiteServicesPage() {
+const ITOnsiteServicesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">IT Onsite Services</h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Professional IT support and consulting services delivered directly to your location
-          </p>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold mb-6">Our Onsite IT Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 border border-gray-200 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Network Setup & Maintenance</h3>
-              <p className="text-gray-600">Complete network infrastructure setup, configuration, and ongoing maintenance</p>
-            </div>
-            <div className="p-6 border border-gray-200 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Hardware Installation</h3>
-              <p className="text-gray-600">Server setup, workstation configuration, and peripheral installation</p>
-            </div>
-            <div className="p-6 border border-gray-200 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Security Audits</h3>
-              <p className="text-gray-600">Comprehensive security assessments and vulnerability testing</p>
-            </div>
-            <div className="p-6 border border-gray-200 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Emergency Support</h3>
-              <p className="text-gray-600">24/7 emergency response for critical IT issues</p>
-            </div>
+    <>
+      <SEO 
+        title="IT Onsite Services - Zion Tech Group" 
+        description="Professional IT services delivered directly to your location for maximum convenience and efficiency."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              IT Onsite Services
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Professional IT services delivered directly to your location for maximum 
+              convenience and efficiency. Our expert technicians come to you.
+            </p>
           </div>
           
-          <div className="mt-8 text-center">
-            <h3 className="text-xl font-semibold mb-4">Contact Us for Onsite Services</h3>
-            <div className="space-y-2 text-sm">
-              <p><strong>Mobile:</strong> +1 302 464 0950</p>
-              <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
-              <p><strong>Address:</strong> 364 E Main St STE 1008 Middletown DE 19709</p>
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our IT onsite services page is currently under development.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default ITOnsiteServicesPage;

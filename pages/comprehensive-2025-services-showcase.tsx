@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
-  Search, Grid, List,
-  ArrowRight, Check,
-  Building, Globe, Zap, Users
+  ArrowRight, CheckCircle, ExternalLink,
+  Search, Grid, List, Star as StarIcon
 } from 'lucide-react';
 
 // Import our new service data
@@ -228,6 +227,17 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
                   <List className="w-4 h-4" />
                 </button>
               </div>
+
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as 'popularity' | 'price' | 'rating' | 'newest')}
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              >
+                <option value="popularity">Most Popular</option>
+                <option value="price">Price: Low to High</option>
+                <option value="rating">Highest Rated</option>
+                <option value="newest">Newest First</option>
+              </select>
             </div>
           </div>
         </div>
@@ -236,14 +246,28 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
       {/* Services Grid */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-center mb-4">
-              {filteredServices.length} Services Available
-            </h2>
-            <p className="text-gray-400 text-center">
-              Discover innovative solutions across AI automation, IT infrastructure, micro SAAS, and cutting-edge AI services
-            </p>
-          </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+          >
+                            {filteredServices.map((service) => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                className={`group relative ${
+                  viewMode === 'grid' 
+                    ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                    : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
+                }`}
+              >
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold rounded-full">
+                    POPULAR
+                  </div>
+                )}
 
           {viewMode === 'grid' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

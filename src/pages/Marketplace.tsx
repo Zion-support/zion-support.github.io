@@ -1,11 +1,5 @@
-import { useRouter } from 'next/router';
-import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
-import ProductCard from '@/components/ProductCard';
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import { AuthModal } from '@/components/auth/AuthModal';
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import React, { useState, useEffect, useMemo } from "react";
 import { useTranslation } from 'react-i18next';
@@ -23,7 +17,7 @@ import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
 import styles from './Marketplace.module.css';
-import { useViewMode } from '@/context/ViewModeContext';
+import { useViewMode, ViewMode } from '@/context/ViewModeContext';
 import {
   Pagination,
   PaginationContent,
@@ -32,6 +26,41 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+
+interface ProductContainerProps {
+  listings: ProductListing[];
+  onRequestQuote: (id: string) => void;
+}
+
+function ProductGrid({ listings, onRequestQuote }: ProductContainerProps) {
+  return (
+    <div className={`${styles.grid} gap-6 product-grid`}>
+      {listings.map(listing => (
+        <ProductListingCard
+          key={listing.id}
+          listing={listing}
+          onRequestQuote={onRequestQuote}
+          view="grid"
+        />
+      ))}
+    </div>
+  );
+}
+
+function ProductList({ listings, onRequestQuote }: ProductContainerProps) {
+  return (
+    <div className={`${styles.list} gap-4 product-list`}>
+      {listings.map(listing => (
+        <ProductListingCard
+          key={listing.id}
+          listing={listing}
+          onRequestQuote={onRequestQuote}
+          view="list"
+        />
+      ))}
+    </div>
+  );
+}
 
 interface ProductContainerProps {
   listings: ProductListing[];
@@ -245,6 +274,7 @@ export default function Marketplace() {
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [isLoading, setIsLoading] = useState(false);
   const { viewMode, setViewMode } = useViewMode();
+  const createViewModeHandler = <T extends ViewMode>(mode: T) => () => setViewMode(mode);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -374,26 +404,31 @@ export default function Marketplace() {
                 placeholder={t('marketplace.search_placeholder')}
                 searchSuggestions={searchSuggestions}
               />
-              
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (
-                <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">
-                  <Sparkles className="h-3 w-3 mr-1" />
-                  AI {product.aiScore}
-                </Badge>
-              )}
-              
-              {/* Featured Badge */}
-              {product.featured && (
-                <Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10">
-                  <Star className="h-3 w-3 mr-1" />
-                  Featured
-                </Badge>
-              )}
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
+            </div>
+            <div className="flex gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={createViewModeHandler('grid')}
+                aria-label="Grid view"
+                aria-pressed={viewMode === 'grid'}
+                className="text-zion-slate-light"
+              >
+                <Grid3X3 className="h-4 w-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={createViewModeHandler('list')}
+                aria-label="List view"
+                aria-pressed={viewMode === 'list'}
+                className="text-zion-slate-light"
+              >
+                <ListFilter className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
 
       {/* Loading More Indicator */}
       {(isFetching || loading) && (
@@ -420,28 +455,8 @@ export default function Marketplace() {
           <div className="text-muted-foreground text-lg mb-2">
             🎉 You've explored all available products!
           </div>
-          <div className="text-sm text-muted-foreground">
-            Showing {products.length} AI-powered solutions
-          </div>
-        </motion.div>
-      )}
-
-      {/* Scroll to Top Button */}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    </div>
+        </div>
+      </main>
+    
   );
 }

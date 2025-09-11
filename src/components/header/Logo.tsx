@@ -1,7 +1,12 @@
+import { Link } from 'react-router-dom';
 
-import React from 'react';
+interface LogoProps {
+  customColor?: string;
+}
 
-export const Logo: React.FC = () => {
+export function Logo({ customColor }: LogoProps) {
+  const logoColor = customColor || '#3b82f6'; // Default blue color
+  
   return (
     <Link to="/" className="flex items-center group">
       <div className="flex items-center space-x-2">

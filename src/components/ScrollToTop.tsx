@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export function ScrollToTop() {
 import React, { useState, useEffect } from 'react';
@@ -22,6 +24,10 @@ const ScrollToTop: React.FC = () => {
   }
 
   return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.button
+          onClick={scrollToTop}
           className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
           aria-label="Back to top"
           initial={{ opacity: 0, scale: 0, y: 20 }}
@@ -61,7 +67,7 @@ const ScrollToTop: React.FC = () => {
               d="M5 10l7-7m0 0l7 7m-7-7v18" 
             />
           </svg>
-        </button>
+        </motion.button>
       )}
     </>
   );

@@ -14,6 +14,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+        React: 'readonly',
         process: 'readonly',
         console: 'readonly',
         module: 'readonly',
@@ -31,99 +32,16 @@ export default [
         }
       }
     },
-    rules: {
-      // React rules
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off", // We use TypeScript
-      "react/display-name": "warn",
-      // Enable react-hooks rules for React 19 compatibility
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-      
-      // Basic accessibility rules
-      "jsx-a11y/alt-text": "error",
-      "jsx-a11y/aria-props": "error",
-    },
-    settings: {
-      react: {
-        version: "detect"
-      }
-    }
-  },
-
-  // Test files configuration
-  {
-    files: [
-      "**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "**/tests/**/*.{js,jsx,ts,tsx}",
-      "**/*.test.{js,jsx,ts,tsx}",
-      "**/*.spec.{js,jsx,ts,tsx}"
-    ],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-        ...globals.node,
-        ...globals.browser,
-        vi: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        describe: "readonly",
-        it: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly"
-      }
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh
     },
     rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "no-console": "off"
-    }
-  },
-
-  // Node.js specific files
-  {
-    files: [
-      "**/*.cjs",
-      "scripts/**/*.js",
-      "api/**/*.js",
-      "server/**/*.js",
-      "backend/**/*.js",
-      "token/**/*.js",
-      "hardhat.config.js"
-    ],
-    languageOptions: {
-      sourceType: "commonjs",
-      globals: {
-        ...globals.node
-      }
-    },
-    rules: {
-      "@typescript-eslint/no-require-imports": "off"
-    }
-  },
-
-  // Cypress files
-  {
-    files: ["cypress/**/*.{js,ts,jsx,tsx}"],
-    languageOptions: {
-      globals: {
-        ...globals.node,
-        cy: "readonly",
-        Cypress: "readonly",
-        context: "readonly",
-        assert: "readonly",
-        describe: "readonly",
-        it: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        before: "readonly",
-        after: "readonly"
-      }
-    },
-    rules: {
-      "@typescript-eslint/no-explicit-any": "off"
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off'
     }
   },
 

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 interface User {
   id: string;
   email: string;
-  name?: string;
+  name: string;
 }
 
 export function useAuth() {
@@ -33,8 +33,7 @@ export function useAuth() {
   return {
     user,
     loading,
-    signIn,
-    signOut,
-    isAuthenticated: !!user,
+    login,
+    logout
   };
-}
+};
