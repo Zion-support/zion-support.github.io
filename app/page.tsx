@@ -129,6 +129,86 @@ export default function HomePage() {
               description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'
               icon='🎧'
             />
+            <Card
+              title='AI Automation for Businesses: Complete Guide'
+              href='/blog/ai-automation-for-businesses'
+              description='Transform your business operations with AI automation. Learn strategies that achieve 40% efficiency gains.'
+              icon='🤖'
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Success Stories</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              See how we've helped companies achieve remarkable results with our technology solutions.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>
+            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
+              <div className='text-3xl font-bold text-green-600 mb-2'>60%</div>
+              <div className='text-sm text-gray-600 mb-2'>Cost Reduction</div>
+              <div className='text-sm text-gray-800 font-semibold'>E-commerce Platform</div>
+              <div className='text-xs text-gray-500 mt-1'>AI automation & cloud migration</div>
+            </div>
+            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
+              <div className='text-3xl font-bold text-blue-600 mb-2'>50%</div>
+              <div className='text-sm text-gray-600 mb-2'>Supply Chain Savings</div>
+              <div className='text-sm text-gray-800 font-semibold'>Manufacturing Company</div>
+              <div className='text-xs text-gray-500 mt-1'>Blockchain implementation</div>
+            </div>
+            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
+              <div className='text-3xl font-bold text-purple-600 mb-2'>70%</div>
+              <div className='text-sm text-gray-600 mb-2'>Faster Processing</div>
+              <div className='text-sm text-gray-800 font-semibold'>Financial Services</div>
+              <div className='text-xs text-gray-500 mt-1'>AI-powered automation</div>
+            </div>
+          </div>
+          <div className='text-center'>
+            <Link
+              href='/case-studies'
+              className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+            >
+              View All Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className='py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Cutting-Edge Technology Stack</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              We leverage the latest technologies to deliver innovative solutions that drive real business value.
+            </p>
+          </div>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+            <div className='text-center'>
+              <div className='text-4xl mb-4'>🤖</div>
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>AI & Machine Learning</h3>
+              <p className='text-sm text-gray-600'>GPT-4, Claude, custom models, RAG systems</p>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl mb-4'>☁️</div>
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Cloud Platforms</h3>
+              <p className='text-sm text-gray-600'>AWS, Azure, GCP, hybrid solutions</p>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl mb-4'>⛓️</div>
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Blockchain</h3>
+              <p className='text-sm text-gray-600'>Ethereum, smart contracts, DeFi protocols</p>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl mb-4'>⚡</div>
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Automation</h3>
+              <p className='text-sm text-gray-600'>RPA, workflow automation, AI agents</p>
+            </div>
           </div>
         </div>
       </section>
