@@ -1,184 +1,149 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and merge all open PRs
-set -e
+echo "🚀 Starting PR Resolution and Merge Process"
+echo "==========================================="
 
-echo "=== Starting PR Resolution and Merge Process ==="
-
-# List of open PRs and their branches
-declare -A PR_BRANCHES=(
-    ["12987"]="cursor/fix-netlify-build-and-merge-to-main-22b3"
-    ["12986"]="cursor/check-fix-push-and-merge-to-main-a4a5"
-    ["12985"]="cursor/fix-netlify-build-and-merge-to-main-77fd"
-    ["12984"]="cursor/fix-netlify-build-and-merge-to-main-ddeb"
-    ["12983"]="cursor/fix-netlify-build-and-merge-to-main-4f62"
-)
-
-# Function to resolve conflicts in netlify.toml
-resolve_netlify_conflicts() {
-    echo "Resolving netlify.toml conflicts..."
+# Function to run git commands with error handling
+run_git() {
+    local cmd="$1"
+    local description="$2"
     
-    # Keep the current main branch version as it's more comprehensive
-    cat > netlify.toml << 'EOF'
-[build]
-  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn && pnpm build"
-  publish = "dist"
-  command_timeout = "30m"
-
-[build.environment]
-  NODE_VERSION = "22.12.0"
-  NODE_OPTIONS = "--max-old-space-size=6144"
-  # Skip Sharp postinstall to avoid NAPI issues
-  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
-  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
-  # Force Vite build
-  VITE_BUILD = "true"
-  # Ensure proper build environment
-  NODE_ENV = "production"
-  CI = "true"
-  # Disable linting during build to prevent failures
-  ESLINT_NO_DEV_ERRORS = "true"
-  # Optimize build performance
-  VITE_LEGACY_BUILD = "false"
-  NETLIFY_USE_PNPM = "true"
-  SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
-  PNPM_VERSION = "9.12.1"
-  # Additional NPM flags for better performance
-  NPM_FLAGS = "--no-audit --no-fund --prefer-offline"
-
-# API functions (disabled for Vite SPA)
-# [functions]
-# directory = "netlify/functions"
-
-# Security headers for all pages
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-origin"
-    X-Permitted-Cross-Domain-Policies = "none"
-    Origin-Agent-Cluster = "?1"
-
-# Long-term caching for static assets
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[redirects]]
-  from = "/ai-financial-planning-platform"
-  to = "/services/ai-financial-planning-platform/"
-  status = 301
-
-[[redirects]]
-  from = "/ai-powered-decision-engine"
-  to = "/services/ai-powered-decision-engine/"
-  status = 301
-
-[[redirects]]
-  from = "/intelligent-content-automation-platform"
-  to = "/services/intelligent-content-automation-platform/"
-  status = 301
-
-[[redirects]]
-  from = "/intelligent-hr-analytics-platform"
-  to = "/services/intelligent-hr-analytics-platform/"
-  status = 301
-
-[[redirects]]
-  from = "/smart-crm-intelligence-suite"
-  to = "/services/smart-crm-intelligence-suite/"
-  status = 301
-
-[[redirects]]
-  from = "/affiliate-attribution-suite"
-  to = "/services/affiliate-attribution-suite/"
-  status = 301
-
-# SPA fallback for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-EOF
-}
-
-# Function to merge a PR branch
-merge_pr_branch() {
-    local pr_num=$1
-    local branch_name=$2
-    
-    echo "=== Processing PR #$pr_num: $branch_name ==="
-    
-    # Fetch the latest changes
-    git fetch origin
-    
-    # Try to merge the branch
-    if git merge --no-commit --no-ff "origin/$branch_name" 2>/dev/null; then
-        echo "✅ No conflicts found for PR #$pr_num"
-        git commit -m "Merge PR #$pr_num: $branch_name"
-        echo "✅ Successfully merged PR #$pr_num"
+    echo "🔄 $description"
+    if git $cmd; then
+        echo "✅ $description completed"
+        return 0
     else
-        echo "⚠️  Conflicts found for PR #$pr_num, resolving..."
-        
-        # Check if netlify.toml has conflicts
-        if git status --porcelain | grep -q "netlify.toml"; then
-            resolve_netlify_conflicts
-            git add netlify.toml
-        fi
-        
-        # Add any other conflicted files (use main branch version)
-        git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-            if [ -f "$file" ]; then
-                echo "Resolving conflict in $file (keeping main branch version)"
-                git checkout --ours "$file"
-                git add "$file"
-            fi
-        done
-        
-        # Commit the merge
-        git commit -m "Merge PR #$pr_num: $branch_name (conflicts resolved)"
-        echo "✅ Successfully merged PR #$pr_num with conflicts resolved"
+        echo "❌ $description failed"
+        return 1
     fi
 }
 
-# Main execution
-echo "Current branch: $(git branch --show-current)"
-echo "Current commit: $(git rev-parse HEAD)"
+# Function to resolve merge conflicts
+resolve_conflicts() {
+    local file="$1"
+    echo "🔧 Resolving conflicts in: $file"
+    
+    # Strategy: Keep our changes (HEAD) for most files
+    if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+        # For package files, prefer incoming changes
+        git checkout --theirs "$file"
+    else
+        # For other files, keep our changes
+        git checkout --ours "$file"
+    fi
+    
+    git add "$file"
+    echo "✅ Resolved conflicts in: $file"
+}
 
-# Process each PR
-for pr_num in "${!PR_BRANCHES[@]}"; do
-    branch_name="${PR_BRANCHES[$pr_num]}"
-    merge_pr_branch "$pr_num" "$branch_name"
-done
+# Main process
+main() {
+    # Ensure we're in the right directory
+    cd /workspace || exit 1
+    
+    # Check if we're in a git repository
+    if ! git rev-parse --git-dir > /dev/null 2>&1; then
+        echo "❌ Not in a git repository"
+        exit 1
+    fi
+    
+    echo "✅ Git repository detected"
+    
+    # Get current branch
+    current_branch=$(git branch --show-current)
+    echo "📍 Current branch: $current_branch"
+    
+    # Switch to main branch
+    if [ "$current_branch" != "main" ]; then
+        run_git "checkout main" "Switching to main branch"
+    fi
+    
+    # Pull latest changes
+    run_git "pull origin main" "Pulling latest changes from main"
+    
+    # Get list of remote branches (excluding main)
+    echo "📋 Getting remote branches..."
+    remote_branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | sed 's/origin\///' | head -20)
+    
+    if [ -z "$remote_branches" ]; then
+        echo "✅ No remote branches to process"
+        exit 0
+    fi
+    
+    echo "Found branches to process:"
+    echo "$remote_branches"
+    
+    merged_count=0
+    conflict_count=0
+    
+    # Process each branch
+    for branch in $remote_branches; do
+        echo ""
+        echo "🔄 Processing branch: $branch"
+        
+        # Checkout the branch
+        if ! run_git "checkout $branch" "Checking out $branch"; then
+            echo "⚠️  Could not checkout $branch, skipping..."
+            continue
+        fi
+        
+        # Try to merge main into the branch
+        if run_git "merge main --no-ff -m 'Merge main into $branch'" "Merging main into $branch"; then
+            echo "✅ Successfully merged main into $branch"
+        else
+            echo "⚠️  Merge conflicts detected in $branch"
+            conflict_count=$((conflict_count + 1))
+            
+            # Get list of conflicted files
+            conflict_files=$(git diff --name-only --diff-filter=U)
+            
+            if [ -n "$conflict_files" ]; then
+                echo "🔧 Resolving conflicts in $conflict_count files..."
+                
+                # Resolve each conflicted file
+                for file in $conflict_files; do
+                    resolve_conflicts "$file"
+                done
+                
+                # Commit the resolved conflicts
+                if run_git "commit -m 'Resolve merge conflicts in $branch'" "Committing resolved conflicts"; then
+                    echo "✅ Successfully resolved conflicts in $branch"
+                else
+                    echo "❌ Failed to commit resolved conflicts in $branch"
+                    run_git "merge --abort" "Aborting merge"
+                    continue
+                fi
+            else
+                echo "❌ No conflict files found, aborting merge"
+                run_git "merge --abort" "Aborting merge"
+                continue
+            fi
+        fi
+        
+        # Push the updated branch
+        run_git "push origin $branch" "Pushing updated $branch"
+        
+        # Switch back to main and merge
+        run_git "checkout main" "Switching back to main"
+        run_git "merge $branch --no-ff -m 'Merge $branch into main'" "Merging $branch into main"
+        run_git "push origin main" "Pushing updated main"
+        
+        merged_count=$((merged_count + 1))
+        echo "✅ Successfully merged $branch into main"
+        
+        # Delete the remote branch
+        if run_git "push origin --delete $branch" "Deleting remote branch $branch"; then
+            echo "🗑️  Deleted remote branch $branch"
+        else
+            echo "⚠️  Could not delete remote branch $branch"
+        fi
+    done
+    
+    echo ""
+    echo "🎉 Process completed!"
+    echo "✅ Successfully merged: $merged_count branches"
+    echo "⚠️  Conflicts resolved: $conflict_count branches"
+}
 
-echo "=== All PRs processed ==="
-
-# Push changes to main
-echo "Pushing changes to main branch..."
-git push origin main
-
-echo "=== Process completed successfully ==="
+# Run the main process
+main "$@"

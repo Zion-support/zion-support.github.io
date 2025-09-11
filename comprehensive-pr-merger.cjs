@@ -164,6 +164,9 @@ class ComprehensivePRMerger {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
+        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g,
+        '$1'
+      )
 
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent)
@@ -238,12 +241,8 @@ class ComprehensivePRMerger {
     fs.writeFileSync('comprehensive-pr-merger-report.json', JSON.stringify(report, null, 2))
 
     // Display summary
-<<<<<<< HEAD
     console.log('\n🎉 Comprehensive PR Processing Complete!')
     console.log('========================================')
-=======
-    console.log('\n🎉 Comprehensive PR Merge Complete!')
->>>>>>> f486c088f70cf83d108c340ae5c03420e8c8e219
     console.log(`Total branches processed: ${this.processedBranches.length}`)
     console.log(`Successfully merged: ${this.mergedBranches.length}`)
     console.log(`Failed branches: ${this.failedBranches.length}`)
