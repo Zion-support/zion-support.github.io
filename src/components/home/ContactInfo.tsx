@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
 import { 
   Phone, 
@@ -185,12 +185,12 @@ export function ContactInfo() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                <Link to="/request-quote">
+                <Link href="/request-quote">
                   Request Free Quote
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                <Link to="/contact">
+                <Link href="/contact">
                   Schedule Consultation
                 </Link>
               </Button>

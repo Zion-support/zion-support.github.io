@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
 import { 
   Brain, 
@@ -194,7 +194,7 @@ export function ServicesShowcase() {
               
               <div className="px-6 pb-6">
                 <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                  <Link to={service.link}>
+                  <Link href={service.link}>
                     <span>Get Started</span>
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
@@ -243,7 +243,7 @@ export function ServicesShowcase() {
                   {service.price}
                 </div>
                 <Button asChild size="sm" className="w-full">
-                  <Link to={service.link}>
+                  <Link href={service.link}>
                     Learn More
                   </Link>
                 </Button>
@@ -264,12 +264,12 @@ export function ServicesShowcase() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                <Link to="/services">
+                <Link href="/services">
                   Explore All Services
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                <Link to="/request-quote">
+                <Link href="/request-quote">
                   Request Custom Quote
                 </Link>
               </Button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export function ITServiceRequestHero() {
   return (
@@ -13,13 +13,13 @@ export function ITServiceRequestHero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            to="/request-quote"
+            href="/request-quote"
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Request Quote
           </Link>
           <Link
-            to="/marketplace"
+            href="/marketplace"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
           >
             Explore Marketplace

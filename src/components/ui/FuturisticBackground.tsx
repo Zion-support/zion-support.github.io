@@ -324,25 +324,33 @@ export function FuturisticCard({
   );
 }
 
-// Add CSS animations
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes neon-pulse {
-    from {
-      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-    }
-    to {
-      text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
-    }
+// Add CSS animations - moved to useEffect to avoid SSR issues
+useEffect(() => {
+  if (typeof document !== 'undefined') {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes neon-pulse {
+        from {
+          text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+        }
+        to {
+          text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+        }
+      }
+      
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
   }
-  
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-`;
-document.head.appendChild(style);
+}, []);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export function FeaturedListingsSection() {
   const featuredListings = [
@@ -40,7 +40,7 @@ export function FeaturedListingsSection() {
                 <span className="text-lg font-bold text-blue-600">{listing.price}</span>
               </div>
               <Link
-                to={`/listing/${listing.id}`}
+                href={`/listing/${listing.id}`}
                 className="block mt-4 text-center bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
               >
                 View Details

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export function CategoriesSection() {
   const categories = [
@@ -19,7 +19,7 @@ export function CategoriesSection() {
           {categories.map((category) => (
             <Link
               key={category.name}
-              to={category.link}
+              href={category.link}
               className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
             >
               <div className="text-4xl mb-4">{category.icon}</div>

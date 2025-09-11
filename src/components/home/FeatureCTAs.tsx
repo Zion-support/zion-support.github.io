@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { 
   ArrowRight, 
   Users, 
@@ -359,7 +359,7 @@ export function FeatureCTAs() {
               </CardContent>
               <CardFooter>
                 <Button asChild className="w-full gap-1 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                  <Link to={feature.link}>
+                  <Link href={feature.link}>
                     <span>Explore {feature.title}</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
