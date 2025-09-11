@@ -54,7 +54,6 @@ export default function PrivacyPage() {
                 <li>• The right to object to processing</li>
               </ul>
               <p className="text-white/80">
-=======
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
@@ -160,49 +159,6 @@ export default function PrivacyPage() {
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Children's Privacy</h2>
-              <p className="text-white/80">
-                Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us immediately.
-              </p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">International Transfers</h2>
-              <p className="text-white/80">
-                Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards to protect your information.
-              </p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Changes to This Policy</h2>
-              <p className="text-white/80 mb-4">
-                We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:
-              </p>
-              <ul className="text-white/70 space-y-2 mb-4">
-                <li>• Posting the updated policy on our website</li>
-                <li>• Sending you an email notification</li>
-                <li>• Displaying a prominent notice on our website</li>
-              </ul>
-              <p className="text-white/80">
-                We encourage you to review this policy periodically to stay informed about how we protect your information.
-              </p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
-              <p className="text-white/80 mb-4">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
-              </p>
-              <div className="space-y-2 text-white/70">
-                <p><strong>Email:</strong> privacy@ziontechgroup.com</p>
-                <p><strong>Phone:</strong> +1 (302) 464-0950</p>
-                <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>
-              </div>
-              <p className="text-white/80 mt-4">
-                We will respond to your inquiry within 30 days of receipt.
-=======
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">International Data Transfers</h2>
               <p className="text-gray-600 mb-4">
@@ -266,26 +222,6 @@ export default function PrivacyPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Questions About Privacy?</h2>
-          <p className="text-xl text-white/70 mb-8">
-            We're committed to transparency and protecting your privacy. Contact us if you need clarification on any aspect of our privacy practices.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
-            >
-              Contact Us
-            </a>
-            <a
-              href="/terms"
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-200"
-            >
-              Terms of Service
-=======
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

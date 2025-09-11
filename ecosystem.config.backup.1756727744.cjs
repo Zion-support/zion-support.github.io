@@ -225,5 +225,3 @@ module.exports = {
       'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',
       'pre-setup': 'mkdir -p /var/www/zion.app/logs';
 }
-  }
-}

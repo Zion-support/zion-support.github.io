@@ -15,11 +15,9 @@ export const useAuth = () => {
     user: null,
     isAuthenticated: false,
     isLoading: true,
-  });=======
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
@@ -43,9 +41,6 @@ export function useAuth() {
     localStorage.removeItem('zion_user');
   };
 
-<<<<<<< HEAD
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return {
     user,
     loading,
@@ -55,12 +50,5 @@ export function useAuth() {
     isAuthenticated: !!user,
     isAdmin: user?.role === 'admin'
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

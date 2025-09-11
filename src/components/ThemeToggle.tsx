@@ -1,203 +1,26 @@
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';';
-';';
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
-;
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
-type Theme = 'dark' | 'light' | 'system';
-;
-interface ThemeToggleProps {;
-  // Add your props here: any;
-  className?: string
-}';
-';';
-export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => {;';';  // Add your props "here": "any;
-;
-  className?: string;
-"}
-;
-export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;  useEffect(() => {
-  // TODO: Add dependencies if needed
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!mounted) return;';
-';';
-    if(!mounted) return;      root.classList.toggle('dark', theme === 'dark') ;
-    }
-    localStorage.setItem('theme', theme) ;
-  }, [theme, mounted]) ;
-  if(!mounted) {;
-    return ();
-      <div className="w-32 h-10 rounded-lg bg-gray-200 "dark": "b g-gray-700 animate-pulse"  />;
-    )"}
-;
-  const "themes": "{ "value": Them e; "label": string; "icon": React.ComponentType<any> "}[] = [';
-    { "value": 'light', "label": 'Light', "icon": "Su n "},;
-    { "value": 'dark', "label": 'Dark', "icon": "Moo n "},;
-    { "value": 'system', "label": 'System', "icon": "Monito r "}
-  ];
-;
-  return (";
-    <div className="relative">;
-      <button;
-        onClick={() => setIsOpen(!isOpen)}";
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 "dark": "b g-gray-800 border border-gray-200 "dark": borde r-gray-700 text-gray-700 "dark": tex t-gray-300 "hover": b g-gray-200 "dark": hove "r":bg-gray-700 transition-colors";
-        aria-expanded={isOpen"}";
-        aria-haspopup="true";
-      >;
-        {themes.find(t => t.value === theme)?.icon({ "className": 'w-4 h-4' })}";
-        <span className="text-sm font-medium">{themes.find(t => t.value === theme)?.label}</span>;
-      </button>;
-      <AnimatePresence>;
-        {isOpen && (<motion.div;
-            initial={{ "opacity": "0", "y": "-10", "scale": "0.95 "}}
-            animate={{ "opacity": "1", "y": "0", "scale": "1 "}}
-            exit={{ "opacity": "0", "y": "-10", "scale": "0.95 "}}
-            transition={{ "duration": "0.15 "}}";
-            className="absolute top-full right-0 mt-2 w-32 bg-white "dark": "b g-gray-800 border border-gray-200 "dark": borde r-gray-700 rounded-lg shadow-lg z-50";
-          >;
-            {themes.map((themeOption) => (<button      key={themeOption.value"}
-                onClick={ () => {;
-                  setTheme(themeOption.value) ;
-                  setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": "b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value';
-                    ? 'bg-blue-50 "dark": b g-blue-900/20 text-blue-600 "dark": tex t-blue-400'';
-                    : 'text-gray-700 "dark": tex t-gray-300'`;
-                "}`}
-              >";
-                <themeOption.icon className="w-4 h-4" />;
-                <span>{themeOption.label}</span>;            initial={{ opacity: 0, y: -10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -10, scale: 0.95 }}
-            transition={{ duration: 0.15 }}"
-            className="absolute top-full right-0 mt-2 w-32 bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700 rounded-lg shadow-lg z-50"
-          >
-            {themes.map((themeOption) => (<button      key={themeOption.value}
-                onClick={ () => {';
-                  setTheme(themeOption.value) ;';';
-                  setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors ${theme === themeOption.value'';';
-                    ? 'bg-blue-50 dark: b g-blue-900/20 text-blue-600 dark: tex t-blue-400''';';
-                    : 'text-gray-700 dark: tex t-gray-300'`                onClick={ () => {
-                  setTheme(themeOption.value) ;
-                  setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors ${theme === themeOption.value'
-                    ? 'bg-blue-50 dark: b g-blue-900/20 text-blue-600 dark: tex t-blue-400''
-                    : 'text-gray-700 dark: tex t-gray-300'`
-                }`}
-              >"
-                <themeOption.icon className="w-4 h-4" />
-                <span>{themeOption.label}</span>
-              </button>) ) }
-          </motion.div>) }
-      </AnimatePresence>;
-    </div>) ;
-};';
-    const root = document.documentElement;';';
-    const systemTheme = window.matchMedia(' (prefers - color - scheme: dar k) ') .matches ? 'dark' : 'light';';';
-    const effectiveTheme = theme === 'system' ? systemTheme : theme;';
-';';
-    root.classList.remove('light', 'dark') ;
-    root.classList.add(effectiveTheme) ;
-    // Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme);';
-    ';';
-    // Update CSS custom properties for smooth transitions'';';
-    if(effectiveTheme === 'dark') {';
-';';
-      root.style.setProperty('--zion-bg-primary',#0f172a');';';
-      root.style.setProperty('--zion-bg-secondary',#1e293b');';';
-      root.style.setProperty('--zion-text-primary',#f8fafc');';';
-      root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {';
-';';
-      root.style.setProperty('--zion-bg-primary',#ffffff');';';
-      root.style.setProperty('--zion-bg-secondary',#f1f5f9');';';
-      root.style.setProperty('--zion-text-primary',#0f172a');';';
-      root.style.setProperty('--zion-text-secondary',#475569')}';
-';';
-    localStorage.setItem('zion-theme', theme)}, [theme, mounted])};';';
-  const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['';';
-    { value: 'light', label: 'Light theme', icon: Su n },';';
-    { value: 'dark', label: 'Dark theme', icon: Moo n },';';      </AnimatePresence>
-    </div>
-    );
-};
-    const root = document.documentElement;
-    const systemTheme = window.matchMedia(' (prefers - color - "scheme": "dar k) ') .matches ? 'dark' : 'light';
-    const effectiveTheme = theme === 'system' ? systemTheme : theme;
-;
-    root.classList.remove('light'", 'dark') ;    root.classList.remove('light', 'dark') ;
-    root.classList.add(effectiveTheme) ;
-    // Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme);
-    // Update CSS custom properties for smooth transitions'
-    if(effectiveTheme === 'dark') {
-      root.style.setProperty('--zion-bg-primary',#0f172a');
-      root.style.setProperty('--zion-bg-secondary',#1e293b');
-      root.style.setProperty('--zion-text-primary',#f8fafc');
-      root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {
-      root.style.setProperty('--zion-bg-primary',#ffffff');
-      root.style.setProperty('--zion-bg-secondary',#f1f5f9');
-      root.style.setProperty('--zion-text-primary',#0f172a');
-      root.style.setProperty('--zion-text-secondary',#475569')}
-    localStorage.setItem('zion-theme', theme)}, [theme, mounted])};
-  const themes: { value: Them e; label: string; icon: React.ComponentType<any> }[] = [';
-    { value: 'light', label: 'Light theme', icon: Su n },;
-    { value: 'dark', label: 'Dark theme', icon: Moo n },;
-    { value: 'system', label: 'System theme', icon: Monito r }
-  const "themes": "{ "value": Them e; "label": string; "icon": React.ComponentType<any> "}[] = [';
-    { "value": 'light', "label": 'Light theme', "icon": "Su n "},;
-    { "value": 'dark', "label": 'Dark theme', "icon": "Moo n "},;
-    { "value": 'system', "label": 'System theme', "icon": "Monito r "}
-  ];
-;
-  if(!mounted) {;
-    return ()`;
-      <div className={`w-12 h-12 bg-gray-200 "dark": "b g-gray-700 rounded-lg animate-pulse ${className"}`}  />;
-    )}
-;
-  return ()`;
-    <div className={`relative ${className}`}>;
-      <motion.div";
-        className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1";
-        initial={{ "opacity": "0", "scale": "0.9 "}}
-        animate={{ "opacity": "1", "scale": "1 "}}
-        transition={{ "duration": "0.3 "}}
-      >;
-        {themes.map((themeOption) => {;                  : 'text-gray-300 "hover": "tex t-white "hover": b g-white/10'`;
-              "}`}
-              whileHover={{ "scale": "1.05 "}}
-              whileTap={{ "scale": "0.95 "}}
-              aria-label={themeOption.label}
-              title={themeOption.label}
-            >";
-              <Icon className="w-4 h-4"   />              {isActive && (;
-                <motion.div";
-                  className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500";
-                  layoutId="activeTheme";
-                  transition={{ "type": "spring", "bounce": "0.2", "duration": "0.6 "}}
-              onClick={() => handleThemeChange(themeOption.value)}`
-              className={`relative p-2 rounded-lg transition-all duration-200 ${isActive'
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg''
-                  : 'text-gray-300 hover: tex t-white hover: b g-white/10'`
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              aria-label={themeOption.label}
-              title={themeOption.label}
-            >"
-              <Icon className="w-4 h-4"   />              {isActive && (
-                <motion.div"
-                  className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
-                  layoutId="activeTheme"
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                />) }
-            </motion.button>) }) }
-      </motion.div>
-    </div>) };
+import React, { useState, useEffect } from 'react';
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+const ThemeToggle = () => {
+    const [isDark, setIsDark] = useState(true);
+    useEffect(() => {
+        // Check for saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('zion-theme');
+        if (savedTheme) {
+            setIsDark(savedTheme === 'dark')}
+    }, []);
+    const toggleTheme = () => {
+        const newTheme = !isDark;
+        setIsDark(newTheme);
+        localStorage.setItem('zion-theme', newTheme ? 'dark' : 'light');
+        // Apply theme to document
+        if (newTheme) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light')}
+        else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark')}
+    };
+    return (<button onClick={toggleTheme} className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 group" aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}>
+      {isDark ? (<SunIcon className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300"/>) : (<MoonIcon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300"/>)}
+    </button>)};
 export default ThemeToggle;
-'"`
-</motion>
-</motion>
-</motion>
-</any>
-</motion>
-</any>
-</Theme>';
-</ThemeToggleProps>;';;';

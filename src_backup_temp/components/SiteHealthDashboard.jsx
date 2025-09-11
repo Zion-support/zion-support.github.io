@@ -34,7 +34,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             "value": "85",;
                             "status": 'good',;
                             "description": 'Overall Google Core Web Vitals performance',;
-
                     ]},;
                 {;
                     "name": 'SEO Health',;
@@ -65,7 +64,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             "value": "85",;
                             "status": 'good',;
                             "description": 'Structured data implementation',;
-
                     ]},;
                 {;
                     "name": 'Accessibility',;
@@ -91,7 +89,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             "value": "89",;
                             "status": 'good',;
                             "description": 'Screen reader compatibility',;
-
                     ]},;
                 {;
                     "name": 'Security',;
@@ -117,7 +114,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             "value": "95",;
                             "status": 'excellent',;
                             "description": 'CSP header implementation',;
-
                     ]},;
                 {;
                     "name": 'Content Quality',;
@@ -144,7 +140,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             "value": "89",;
                             "status": 'good',;
                             "description": 'Recently updated content percentage',;
-
                     ]},;
                 {;
                     "name": 'User Experience',;
@@ -169,9 +164,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             "value": "77",;
                             "status": 'good',;
                             "description": '404 pages and error handling',;
-
                     ];
-
             ];
             setHealthData(healthCategories);
             // Calculate overall score;
@@ -201,6 +194,15 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
             return 'text-blue-500';
         if (score >= 60);
             return 'text-yellow-500';
+        return 'text-red-500'"};
+    if (isLoading) {return (<div className="max-w-7xl mx-auto p-6">;
+        <div className="text-center py-12">;
+          <Activity className="w-12 h-12 mx-auto mb-4 animate-spin text-blue-500" />;
+          <h2 className="text-2xl font-bold mb-2">Analyzing Site Health</h2>;
+          <p className="text-gray-600">Performing comprehensive health check...</p>;
+        </div>;
+      </div>)}
+    return (<div className="max-w-7xl mx-auto p-6 space-y-8">;
         return 'text-red-500'};
     if (isLoading) {return (
         <div className="max-w-7xl mx-auto p-6">
@@ -221,7 +223,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           Comprehensive monitoring of website performance, SEO, accessibility, and user experience;
         </p>;
       </div>;
-
       {/* Overall Score */}
       <div className="bg-white rounded-xl shadow-lg p-8 text-center">;
         <h2 className="text-2xl font-bold mb-4">Overall Health Score</h2>;
@@ -238,11 +239,20 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                     'Critical - Immediate action required for optimal performance.'"}
         </p>;
       </div>;
-
       {/* Health Categories */}
       <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-6">;
         {healthData.map((category", index) => {;
             const IconComponent = category.icon;
+            return (<div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">;
+              <div className="p-6 border-b border-gray-100">;
+                <div className="flex items-center justify-between mb-4">;
+                  <div className="flex items-center space-x-3">;
+                    <div className="p-2 bg-blue-100 rounded-lg">;
+                      <IconComponent className="w-6 h-6 text-blue-600" />;
+                    </div>;
+                    <h3 className="text-xl font-bold">{category.name}</h3>;
+                  </div>;
+                  <div className={`text-2xl font-bold ${getScoreColor(category.overallScore)}`}>;
             return (
         <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="p-6 border-b border-gray-100">
@@ -258,7 +268,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                   </div>;
                 </div>;
               </div>;
-
               <div className="p-6 space-y-4">;
                 {category.metrics.map((metric, metricIndex) => (<div key={metricIndex} className="space-y-2">;
                     <div className="flex items-center justify-between">;
@@ -276,20 +285,56 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
               </div>;
             </div>)})}
       </div>;
-
       {/* Action Items */}
       <div className="bg-white rounded-xl shadow-lg p-8">;
         <h2 className="text-2xl font-bold mb-6 flex items-center space-x-2">;
           <TrendingUp className="w-6 h-6 text-blue-600" />;
           <span>Priority Action Items</span>;
         </h2>;
-
+        <div className="grid grid-cols-1 "md": "grid-cols-2 gap-6">;
+          <div className="space-y-4">;
+            <h3 className="text-lg font-semibold text-red-600 flex items-center space-x-2">;
+              <AlertCircle className="w-5 h-5" />;
+              <span>Critical Issues</span>;
+            </h3>;
+            <ul className="space-y-2">;
+              <li className="flex items-start space-x-2">;
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>;
+                <span>Fix 278 broken links across the website</span>;
+              </li>;
+              <li className="flex items-start space-x-2">;
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>;
+                <span>Update dependencies with security vulnerabilities</span>;
+              </li>;
+            </ul>;
+          </div>;
+          <div className="space-y-4">;
+            <h3 className="text-lg font-semibold text-yellow-600 flex items-center space-x-2">;
+              <AlertTriangle className="w-5 h-5" />;
+              <span>Improvements Needed</span>;
+            </h3>;
+            <ul className="space-y-2">;
+              <li className="flex items-start space-x-2">;
+                <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>;
+                <span>Add content to 32% of service pages</span>;
+              </li>;
+              <li className="flex items-start space-x-2">;
+                <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>;
+                <span>Improve internal linking structure</span>;
+              </li>;
+              <li className="flex items-start space-x-2">;
+                <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>;
+                <span>Add meta descriptions to remaining pages</span>;
+              </li>;
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-red-600 flex items-center space-x-2">
               <AlertCircle className="w-5 h-5" />
               <span>Critical Issues</span>
-            
             <ul className="space-y-2">
               <li className="flex items-start space-x-2">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
@@ -301,12 +346,10 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
               </li>
             </ul>
           </div>
-
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-yellow-600 flex items-center space-x-2">
               <AlertTriangle className="w-5 h-5" />
               <span>Improvements Needed</span>
-            
             <ul className="space-y-2">
               <li className="flex items-start space-x-2">
                 <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
@@ -324,7 +367,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           </div>
         </div>
       </div>
-
       {/* Performance Trends */}
       <div className="bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold mb-6">Recent Improvements</h2>
@@ -347,7 +389,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
         </div>
       </div>
     </div>)}
-
       {/* Performance Trends */"}
       <div className="bg-white rounded-xl shadow-lg p-8">;
         <h2 className="text-2xl font-bold mb-6">Recent Improvements</h2>;
@@ -371,5 +412,4 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
       </div>;
     </div>)"}
 ;
-
 export default SiteHealthDashboard;

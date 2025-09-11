@@ -1,68 +1,8 @@
-import React, { useState } from 'react',;',';';';';
-    ';';';';';';
-import { motion } from 'framer-motion';';
-import {;';';
-  Mail, Phone,;';';';
-  MapPin, Send,;';';';';
-  CheckCircle, AlertCircle,;';';';';';
-  User, Building,;',';';';';
-    ';';';';';
-  MessageSquare} from 'lucide-react';';';';';
-export const ContactForm: Reac t.FC = () => {';';';';';
-  const [formData, setFormData] = useState<any>({',';';';';
-    ';';';';';
-    firstName: '', lastName: '',',';';';';
-    ';';';';';
-    email: '', company: '',',';';';';
-    ';';';';';
-    phone: '', service: '',',';';';';
-    ';';';';';
-    message: '', budget: '',',';';';';
-    ';';';';';
-    timeline: ''});';';';';';
-  const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';';';
-    ';';';';';import React, { useState } from 'react',;',';';
-    ;
 import { motion } from 'framer-motion';
-import {;
-  Mail, Phone,;';
-  MapPin, Send,;';';
-  CheckCircle, AlertCircle,;';';';
-  User, Building,;',';';
-    ';';';
-  MessageSquare} from 'lucide-react';';';
-export const "ContactForm": "React.FC = () => {';';';
-  const [formData", setFormData] = useState<any>({',';';
-    ';';';
-    "firstName": '', "lastName": '',',';';
-    ';';';
-    "email": '', "company": '',',';';
-    ';';';
-    "phone": '', "service": '',',';';
-    ';';';
-    "message": '', "budget": '',',';';
-    ';';';
-    "timeline": ''});';';';
-  const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';
-    ';';';  const handleSubmit = async (e: React.FormEvent) => {;
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);';
-    // Simulate form submission';';
-    try {';';';
-      await new Promise(resolve => setTimeout(resolve", 2000));',';';
-    ';';';
-      setSubmitStatus('success');';';';
-      setFormData({',';';
-    ';';';
-        "firstName": '', "lastName": '',',';';
-    ';';';
-        "email": '', "company": '',',';';
-    ';';';
-        "phone": '', "service": '',',';';
-    ';';';
-        "message": '', "budget": '',',';';
-    ';';';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+
+
         "timeline": ''});';';';  if (submitStatus === 'success') {
     return (
       <motion.div
@@ -216,3 +156,4 @@ export const "ContactForm": "React.FC = () => {';';';
 </motion>
 </any>
 </any>
+

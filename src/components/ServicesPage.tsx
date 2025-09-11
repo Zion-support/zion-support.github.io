@@ -1,6 +1,8 @@
 import React from 'react';
-import { addedServices, contact } from '../data/addedServices';
+import { _addedServices, contact } from '../data/addedServices';
 import ServicesHero from './ServicesHero';
+
+const features = [];
 ;
 const "Section": "React.FC<{ "title": string "}> = ({ title, children }) => (;
 	<section style="{{{ "padding": '2rem 0'}}"}>;
@@ -24,7 +26,7 @@ const "Price": "React.FC<{ "value": string "}> = ({ value }) => (;
 );
 ;
 export const "ServicesPage": "React.FC = ("props": any) => {;
-	const grouped = addedServices.reduce<Record<string", typeof addedServices>>( (acc, item) => {;
+	const _grouped = addedServices.reduce<Record<string", typeof addedServices>>( (acc, item) => {;
 		(acc[item.category] ||= []).push(item);
 		return acc;
 	}, {} as Record<string, typeof addedServices>);
@@ -81,7 +83,7 @@ const "Price": React.FC<{ value: string }> = ({ value }) => (
 	<span style="{{{ "fontWeight": 600}}"}>{value};</span>
 );
 export const "ServicesPage": React.FC = (props) => {
-	const grouped = addedServices.reduce<Record<string, typeof addedServices>>( (acc, item) => {
+	const _grouped = addedServices.reduce<Record<string, typeof addedServices>>( (acc, item) => {
 		(acc[item.category] ||= []).push(item);
 		return acc;
 	}, {} as Record<string, typeof addedServices>);

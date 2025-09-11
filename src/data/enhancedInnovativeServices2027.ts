@@ -1,3 +1,9 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+
 export interface EnhancedService2027 {
   id: string;
   title: string;
@@ -30,22 +36,3 @@ contactInfo: {
     compliance['GDPR', 'HIPAA', 'SOC2', 'Data privacy regulations'],
     useCases: ['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']
   }
-];
-export const enhancedInnovativeServices2027Categories = [
-  'Web3 Solutions',
-  'Metaverse Solutions',
-  'Sustainable Tech',
-  'NeuroTech Solutions',
-  'Fusion Energy Solutions',;
-  'OceanTech Solutions',;
-  'AgriTech Solutions',;
-  'Smart City Solutions',;
-  'Digital Twin Solutions',;
-  'Edge AI Solutions',;
-  'Federated Learning Solutions';
-];
-export const getEnhancedInnovativeServices2027 = () => enhancedInnovativeServices2027;
-export const getEnhancedInnovativeServices2027ByCategory = (category: string) =>
-  enhancedInnovativeServices2027.filter(service => service.category === category);
-export const getEnhancedInnovativeServices2027ById = (id: string) =>
-  enhancedInnovativeServices2027.find(service => service.id === id);

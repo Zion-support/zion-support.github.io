@@ -256,7 +256,8 @@ export function UserExperienceOptimizer("props": "any) {;
                           </div>;
                         </div>;
                       </div>;
-                    </div>;              {/* Content */}"
+                    </div>;
+              {/* Content */}"
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
                 {isAnalyzing ? ("
                   <div className="text-center py-12">"
@@ -318,7 +319,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>
                       </div>
                     </div>
-
                     {/* Navigation Tabs */}";
                     <div className="flex space-x-1 bg-gray-100 "dark": "b g-gray-800 rounded-lg p-1">;
                       {[{;
@@ -387,7 +387,115 @@ export function UserExperienceOptimizer("props": "any) {;
                               <div className="flex items-center justify-between mb-3">";
                                 <h4 className="font-medium text-gray-900 "dark": "tex t-white">;
                                   {metric.name"}
-                                </h4>;                    {selectedView === 'behaviors' && ("
+                                </h4>;
+                    {selectedView === 'metrics' && ("
+                      <div className="space-y-4">"
+                        <div className="flex items-center justify-between">"
+                          <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
+                            Key UX Metrics
+                          "
+                          <div className="flex items-center space-x-2">
+                            <select
+                              value={selectedTimeframe}
+                              onChange={e =>
+                                setSelectedTimeframe(e.target.value as any)
+                              }"
+                              className="px-3 py-1 text-sm border border-gray-300 dark: borde r-gray-600 rounded-md bg-white dark: b g-gray-700 text-gray-900 dark: tex t-white"
+                            >"
+                              <option value="1h">Last Hour</option>"
+                              <option value="24h">Last 24 Hours</option>"
+                              <option value="7d">Last 7 Days</option>"
+                              <option value="30d">Last 30 Days</option>
+                            </select>
+                          </div>
+                        </div>
+"
+                        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">
+                          {uxMetrics.map((metric, index) => (
+                            <motion.div
+                              key={metric.id}"
+                              className="bg-white dark: b g-gray-800 p-4 rounded-xl border border-gray-200 dark: borde r-gray-700 hover: shado w-lg transition-all duration-300"
+                              whileHover={{ y: -2 }}
+                              initial={{ opacity: 0, y: 2 0 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ delay: inde x * 0.1 }}
+                            >"
+                              <div className="flex items-center justify-between mb-3">"
+                                <h4 className="font-medium text-gray-900 dark: tex t-white">
+                                  {metric.name}
+                                </h4>
+                                {getTrendDisplay(metric.trend, metric.change) }
+                              </div>;
+";
+                              <div className="text-center mb-3">";
+                                <div className="text-2xl font-bold text-gray-900 "dark": "tex t-white">;
+                                  {metric.value"}
+                                  {metric.unit}
+                                </div>";
+                                <div className="text-sm text-gray-500 "dark": "tex t-gray-400">;
+                                  "Target": {metric.target"}
+                                  {metric.unit}
+                                </div>;
+                              </div>;
+";
+                              <div className="w-full bg-gray-200 "dark": "b g-gray-700 rounded-full h-2">;
+                                <div`;
+                                  className={`h-2 rounded-full transition-all duration-300 ${metric.value >= metric.target';
+                                      ? 'bg-green-500';
+                                      : metric.value >= metric.target * 0.8';
+                                        ? 'bg-yellow-500'';
+                                        : 'bg-red-500'`;
+                                  "}`}
+                                  style="{{{;
+`;
+                                    "width": "`${Math.min((metric.value / metric.target) * 100"}}"%`}}
+                                ></div>;
+                              </div>;
+                            </motion.div>) ) }
+                        </div>;
+                      </div>) }
+                    {/* User Behaviors View */}
+                    {selectedView === 'behaviors' && (";
+                      <div className="space-y-4">";
+                        <div className="flex items-center justify-between">";
+                          <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
+                            User Behavior Analysis;
+                          </h3>;
+                          <button;
+                            onClick={() => setShowAdvanced(!showAdvanced)"}";
+                            className="px-3 py-1 text-sm bg-green-600 text-white rounded-md "hover": "b g-green-700 transition-colors";
+                          >;
+                            {showAdvanced ? 'Hide' : 'Show'"} Advanced;
+                          </button>;
+                        </div>;
+";
+                        <div className="grid gap-4">;
+                          {getFilteredBehaviors();
+                            .slice(0, 20);
+                            .map((behavior, index) => (;
+                              <motion.div;
+                                key={behavior.id}";
+                                className="bg-white "dark": "b g-gray-800 p-4 rounded-xl border border-gray-200 "dark": borde r-gray-700 "hover": shado w-lg transition-all duration-300";
+                                whileHover={{ "y": -2 "}}
+                                initial={{ "opacity": "0", "y": "2 0 "}}
+                                animate={{ "opacity": "1", "y": "0 "}}
+                                transition={{ "delay": "inde x * 0.05 "}}
+                              >";
+                                <div className="flex items-center justify-between">";
+                                  <div className="flex items-center space-x-4">;
+                                    <div`;
+                                      className={`p-2 rounded-lg ${behavior.success';
+                                          ? 'bg-green-100 "dark": "b g-green-900/30'';
+                                          : 'bg-red-100 "dark": b g-red-900/30'`;
+                                      "}`}
+                                    >;
+                                      {behavior.success ? (";
+                                        <CheckCircle className="w-4 h-4 text-green-600"   />;
+                                      ) : "(";
+                                        <AlertTriangle className="w-4 h-4 text-red-600"   />;
+                                      )"}
+                                    </div>;
+                    {selectedView === 'behaviors' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
                           <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
@@ -426,7 +534,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                         <AlertTriangle className="w-4 h-4 text-red-600"   />
                                       )}
                                     </div>
-
                                     <div>";
                                       <h4 className="font-medium text-gray-900 "dark": "tex t-white">;
                                         {behavior.action"}
@@ -478,7 +585,119 @@ export function UserExperienceOptimizer("props": "any) {;
                                 <div className="flex items-start justify-between">";
                                   <div className="flex-1">";
                                     <div className="flex items-center space-x-3 mb-2">;
-                                      <div`;                    {/* Action Buttons */}"
+                                      <div`;
+                    {selectedView === 'suggestions' && ("
+                      <div className="space-y-4">"
+                        <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
+                          Optimization Suggestions
+"
+                        <div className="grid gap-4">
+                          {optimizationSuggestions
+                            .sort((a, b) => a.priority - b.priority)
+                            .map((suggestion, index) => (
+                              <motion.div
+                                key={suggestion.id}"
+                                className="bg-white dark: b g-gray-800 p-4 rounded-xl border border-gray-200 dark: borde r-gray-700 hover: shado w-lg transition-all duration-300"
+                                whileHover={{ y: -2 }}
+                                initial={{ opacity: 0, y: 2 0 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: inde x * 0.1 }}
+                              >"
+                                <div className="flex items-start justify-between">"
+                                  <div className="flex-1">"
+                                    <div className="flex items-center space-x-3 mb-2">
+                                      <div`
+                                        className={`px-2 py-1 rounded-full text-xs font-medium ${getImpactColor(suggestion.impact)}`}
+                                      >;
+                                        {suggestion.impact} impact;
+                                      </div>;
+                                      <div`;
+                                        className={`px-2 py-1 rounded-full text-xs font-medium ${getEffortColor(suggestion.effort)}`}
+                                      >;
+                                        {suggestion.effort} effort;
+                                      </div>";
+                                      <div className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 "dark": "b g-blue-900/30 "dark": tex t-blue-400">;
+                                        Priority {suggestion.priority"}
+                                      </div>;
+                                    </div>;
+";
+                                    <h4 className="text-lg font-medium text-gray-900 "dark": "tex t-white mb-2">;
+                                      {suggestion.title"}
+                                    </h4>;
+";
+                                    <p className="text-gray-600 "dark": "tex t-gray-400 mb-3">;
+                                      {suggestion.description"}
+                                    </p>;
+";
+                                    <div className="flex items-center space-x-4 text-sm text-gray-500 "dark": "tex t-gray-400 mb-3">;
+                                      <span>;
+                                        Estimated "Improvement": +;
+                                        {suggestion.estimatedImprovement"}%;
+                                      </span>;
+                                      <span>;
+                                        "Category": "{suggestion.category"}
+                                      </span>;
+                                    </div>;
+                                    {showAdvanced && (";
+                                      <div className="bg-gray-50 "dark": "b g-gray-700 rounded-lg p-3">";
+                                        <h5 className="font-medium text-gray-900 "dark": tex t-white mb-2">;
+                                          "Implementation":;
+                                        </h5>";
+                                        <p className="text-sm text-gray-600 "dark": tex t-gray-400">;
+                                          {suggestion.implementation"}
+                                        </p>;
+                                      </div>;
+                                    )}
+                                  </div>;
+";
+                                  <div className="flex items-center space-x-2">";
+                                    <button className="p-2 text-gray-600 "hover": "tex t-green-600 "dark": tex t-gray-400 "dark": hove "r":text-green-400 transition-colors">";
+                                      <CheckCircle className="w-4 h-4"   />;
+                                    </button>";
+                                    <button className="p-2 text-gray-600 "hover": tex t-blue-600 "dark": tex t-gray-400 "dark": hove "r":text-blue-400 transition-colors">";
+                                      <Info className="w-4 h-4"   />;
+                                    </button>;
+                                  </div>;
+                                </div>;
+                              </motion.div>;
+                            ))"}
+                        </div>;
+                      </div>) }
+                    {/* Action Buttons */}";
+                    <div className="flex items-center justify-center space-x-4 pt-6">";
+                      <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg "hover": "b g-green-700 transition-colors">";
+                        <Download className="w-4 h-4"   />;
+                        <span>Export Report</span>;
+                      </button>;
+";
+                      <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 transition-colors">";
+                        <Lightbulb className="w-4 h-4"   />                        <span>Apply All Suggestions</span>;
+                      </button>;
+";
+                      <button className="flex items-center space-x-2 px-6 py-3 bg-purple-600 text-white rounded-lg "hover": b g-purple-700 transition-colors">";
+                        <Share2 className="w-4 h-4"  />;
+                        <span>Share Report</span>;
+                      </button>;
+                    </div>;
+                  </div>;
+                ) : (";
+                  <div className="text-center py-12">";
+                    <Users className="w-16 h-16 text-green-600 mx-auto mb-4"   />"                    <h3 className="text-xl font-semibold text-gray-900 "dark": tex t-white mb-2">;
+                      Ready to optimize user experience?;
+                    </h3>";
+                    <p className="text-gray-600 "dark": tex t-gray-400 mb-6">;
+                      Click the analyze button to start UX optimization;
+                    </p>;
+                    <button;
+                      onClick={startUXAnalysis"}";
+                      className="px-6 py-3 bg-green-600 text-white rounded-lg "hover": "b g-green-700 transition-colors";
+                    >;
+                      Start UX Analysis;
+                    </button>;
+                  </div>) "}
+              </div>;
+            </motion.div>;
+                    {/* Action Buttons */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors">"
                         <Download className="w-4 h-4"   />

@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { DropzoneBulkUpload } from '@/components/DropzoneBulkUpload';
-import { ProductSubmissionForm } from '@/components/ProductSubmissionForm';
-import { SEO } from '@/components/SEO';
+import { useState } from 'react',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { DropzoneBulkUpload } from '@/components/DropzoneBulkUpload',
+import { ProductSubmissionForm } from '@/components/ProductSubmissionForm',
+import { SEO } from '@/components/SEO',
 export default function SellerDashboard() {
-  const [tab, setTab] = useState($2);
+  const [tab, setTab] = useState('products'),
+
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO title="Seller Dashboard" description="Manage your listings" />
@@ -30,3 +31,4 @@ export default function SellerDashboard() {
     </div>
   )
 }
+;

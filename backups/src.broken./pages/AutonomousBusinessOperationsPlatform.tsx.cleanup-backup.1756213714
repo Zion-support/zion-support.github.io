@@ -1,8 +1,5 @@
-==============
 import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { 
   Bot, 
@@ -510,10 +507,6 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                 <li><Link to="/white-papers" className="text-gray-300 hover:text-green-400 transition-colors">White Papers</Link></li>
               </ul>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======          </div>
         </div>
       </section>
     </div>

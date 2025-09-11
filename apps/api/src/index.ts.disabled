@@ -69,7 +69,6 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
   const body = (req.body as any) || {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const role = (body.role as string) || 'Engineer';
   const user_id = getUserId (req)const description = await generateJobPost (openai, role, body)// Check condition;
 if (return { description }) {$2;
@@ -111,75 +110,6 @@ app.get ('/talent / search', async (req: any, reply: any) => {const q = (req.que
       [user_id, role, description, body.location || null, body.tags || null]);
   });
   return { saved: Boolean (user_id), description }
-<<<<<<< HEAD
-
-});
-
-app.get('/talent/search', async (req: any, reply: any) => {
-  const q = (req.query as any).q as string;
-  const country = (req.query as any).country as string | undefined;
-  const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-  const rows = await withUser(userId, async (client) => {
-    const res = await client.query(
-
-      `SELECT id, full_name, country, skills, experience_years FROM talent_profile
-       WHERE ($1::text IS NULL OR country = $1)
-         AND ($2::text IS NULL OR EXISTS (
-              SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
-           ))
-<<<<<<< HEAD
-
-       ORDER BY created_at DESC
-
-
-    );
-    return res && res.rows
-  });
-  return { results: rows }
-
-<<<<<<< HEAD
-});
-
-app.get('/projects/:name/track', async (req: any, reply: any) => {
-  const name = (req.params as any).name as string;
-  const userId = getUserId(req);
-
-
-  const userId = getUserId(req);
-  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
-  const items = await withUser(userId, async client => {    const res = await client && client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
-       WHERE read = false ORDER BY created_at DESC LIMIT 20`
-    );
-    return res && res.rows;
-  });
-  return { items };});  const items = await withUser(userId, async (client) => {
-    const res = await client && client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
-       WHERE read = false ORDER BY created_at DESC LIMIT 20`
-    );
-    return res && res.rows;
-  });
-  return { items };    return res && res.rows
-app.log.error(err);
-  app.log.error(err);
-
-  (process as any).exit(1);
-});  (process as any).exit(1)
-});
-
-app.get('/notifications', async (req: any, reply: any) => {
-  const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-  const items = await withUser(userId, async (client) => {
-    const res = await client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
-       WHERE read = false ORDER BY created_at DESC LIMIT 20`
-    );
-<<<<<<< HEAD
-
-=======
   const body = $2;
   const prompt = $2;
   if (!prompt) return reply.code(400).send($2);

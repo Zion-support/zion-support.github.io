@@ -5,13 +5,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-<<<<<<< HEAD
-Disallow: /private/
-
-# Allow important pages
-Allow: /docs/
-Allow: /multiverse/
-Allow: /community/
-Allow: /contact/
-=======
 Disallow: /private/

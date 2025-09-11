@@ -40,55 +40,6 @@ export default [
     ]
   },
   {
-<<<<<<< HEAD
-    "files": ['**/*.{js,jsx}'],
-    "languageOptions": {
-      ecmaVersion: 2021,
-      "sourceType": 'module',
-      "globals": {
-        window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
-        "setTimeout": 'readonly',
-        "setInterval": 'readonly',
-        "clearTimeout": 'readonly',
-        "clearInterval": 'readonly',
-        "requestAnimationFrame": 'readonly',
-        "cancelAnimationFrame": 'readonly',
-        "fetch": 'readonly',
-        "URL": 'readonly',
-        "URLSearchParams": 'readonly',
-        "Blob": 'readonly',
-        "CustomEvent": 'readonly',
-        "Intl": 'readonly',
-        "performance": 'readonly',
-        "caches": 'readonly',
-        "Notification": 'readonly',
-        "ServiceWorker": 'readonly',
-        "ServiceWorkerRegistration": 'readonly',
-        "PushSubscription": 'readonly',
-        "NotificationPermission": 'readonly',
-        "process": 'readonly',
-        "global": 'readonly',
-        "jest": 'readonly',
-        "describe": 'readonly',
-        "it": 'readonly',
-        "test": 'readonly',
-        "expect": 'readonly',
-        "vi": 'readonly',
-        "Deno": 'readonly',
-        "React": 'readonly',
-        "require": 'readonly',
-        "module": 'readonly',
-        "__dirname": 'readonly',
-        "__filename": 'readonly',
-        "exports": 'readonly'
-      },
-      "parserOptions": {
-=======
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2021,
@@ -136,25 +87,16 @@ export default [
         exports: 'readonly'
       },
       parserOptions: {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
         ecmaFeatures: {
           jsx: true
         }
       }
     },
-<<<<<<< HEAD
-    "plugins": {
-      react,
-      'react-hooks': reactHooks
-    },
-    "rules": {
-=======
     plugins: {
       react,
       'react-hooks': reactHooks
     },
     rules: {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -165,64 +107,6 @@ export default [
     }
   },
   {
-<<<<<<< HEAD
-    "files": ['**/*.{ts,tsx}'],
-    "languageOptions": {
-      parser: tsparser,
-      "ecmaVersion": 2021,
-      "sourceType": 'module',
-      "globals": {
-        window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
-        "setTimeout": 'readonly',
-        "setInterval": 'readonly',
-        "clearTimeout": 'readonly',
-        "clearInterval": 'readonly',
-        "requestAnimationFrame": 'readonly',
-        "cancelAnimationFrame": 'readonly',
-        "fetch": 'readonly',
-        "URL": 'readonly',
-        "URLSearchParams": 'readonly',
-        "Blob": 'readonly',
-        "CustomEvent": 'readonly',
-        "Intl": 'readonly',
-        "performance": 'readonly',
-        "caches": 'readonly',
-        "Notification": 'readonly',
-        "ServiceWorker": 'readonly',
-        "ServiceWorkerRegistration": 'readonly',
-        "PushSubscription": 'readonly',
-        "NotificationPermission": 'readonly',
-        "process": 'readonly',
-        "global": 'readonly',
-        "jest": 'readonly',
-        "describe": 'readonly',
-        "it": 'readonly',
-        "test": 'readonly',
-        "expect": 'readonly',
-        "vi": 'readonly',
-        "Deno": 'readonly',
-        "React": 'readonly',
-        "KeyboardEvent": 'readonly',
-        "HTMLElement": 'readonly',
-        "HTMLButtonElement": 'readonly',
-        "HTMLAnchorElement": 'readonly',
-        "MutationObserver": 'readonly',
-        "RequestInit": 'readonly',
-        "AbortController": 'readonly',
-        "fs": 'readonly',
-        "CodeQualityChecker": 'readonly'
-      }
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      react: react,
-      'jsx-a11y': jsxA11y,
-=======
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsparser,
@@ -279,158 +163,17 @@ export default [
       '@typescript-eslint': tseslint,
       react: react,
       'react-hooks': reactHooks
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
-<<<<<<< HEAD
-  },
-  {
-      'src/**',
-      'automation/**',
-      'automation_backup/**',
-      'data_backup/**',
-      'pm2-automation/**',
-      'scripts/**',
-      'tests/**',
-      'test-results/**',
-      'test-reports/**',
-      '*.test.js',
-      '*.test.jsx',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.jsx',
-      '*.spec.ts',
-      '*.spec.tsx',
-      '*.backup.js',
-      '*.backup.jsx',
-      '*.backup.ts',
-      '*.backup.tsx',
-      '*.broken.js',
-      '*.broken.jsx',
-      '*.broken.ts',
-      '*.broken.tsx',
-      '*.corrupted.js',
-      '*.corrupted.jsx',
-      '*.corrupted.ts',
-      '*.corrupted.tsx',
-      '*.disabled.js',
-      '*.disabled.jsx',
-      '*.disabled.ts',
-      '*.disabled.tsx',
-      '*.old.js',
-      '*.old.jsx',
-      '*.old.ts',
-      '*.old.tsx',
-      '*.temp.js',
-      '*.temp.jsx',
-      '*.temp.ts',
-      '*.temp.tsx',
-      '*.tmp.js',
-      '*.tmp.jsx',
-      '*.tmp.ts',
-      '*.tmp.tsx',
-      '*.bak.js',
-      '*.bak.jsx',
-      '*.bak.ts',
-      '*.bak.tsx',
-      '*.orig.js',
-      '*.orig.jsx',
-      '*.orig.ts',
-      '*.orig.tsx',
-      '*.rej.js',
-      '*.rej.jsx',
-      '*.rej.ts',
-      '*.rej.tsx',
-      '*.swp.js',
-      '*.swp.jsx',
-      '*.swp.ts',
-      '*.swp.tsx',
-      '*.swo.js',
-      '*.swo.jsx',
-      '*.swo.ts',
-      '*.swo.tsx',
-      '*.log',
-      '*.pid',
-      '*.seed',
-      '*.pid.lock',
-      'comprehensive-*.js',
-      'critical-fix.js',
-      'execute-automation.js',
-      'final-*.js',
-      'fix_*.js',
-      'health-endpoint.js',
-      'improve-app.js',
-      'maintenance-scheduler.js',
-      'merge-*.js',
-      'monitoring-system.js',
-      'optimized-*.js',
-      'performance-*.js',
-      'resolve-*.js',
-      'run-*.js',
-      'seo-*.js',
-      'services-broken.tsx',
-      'simple-*.js',
-      'test-*.js',
-      '*.tgz',
-      '*.tar.gz',
-      '*.zip',
-      '*.rar',
-      '*.7z',
-      '*.tar',
-      '*.gz',
-      '*.bz2',
-      '*.xz',
-      '*.lzma',
-      '*.zst',
-      '*.lz4',
-      '*.lzop',
-      '*.lrz',
-      '*.lha',
-      '*.lzh',
-      '*.ace',
-      '*.arj',
-      '*.cab',
-      '*.deb',
-      '*.rpm',
-      '*.msi',
-      '*.dmg',
-      '*.iso',
-      '*.img',
-      '*.bin',
-      '*.exe',
-      '*.app',
-      '*.dll',
-      '*.so',
-      '*.dylib',
-      '*.a',
-      '*.lib',
-      '*.o',
-      '*.obj',
-      '*.pyc',
-      '*.pyo',
-      '*.pyd',
-      '*.class',
-      '*.jar',
-      '*.war',
-      '*.ear',
-      '*.sar',
-      '*.nar'
-    ]
-  }
-];
-=======
-=======
       '@typescript-eslint/no-explicit-any': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off'
     }
   },
   {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
@@ -445,36 +188,13 @@ export default [
         jest: 'readonly',
         fireEvent: 'readonly',
         render: 'readonly',
-<<<<<<< HEAD
-        screen: 'readonly',
-      },
-=======
         screen: 'readonly'
       }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     },
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
-<<<<<<< HEAD
-      '@typescript-eslint/no-unused-vars': 'warn',
-    },
-  },
-  {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      '*.min.js',
-      'build/',
-      'coverage/',
-    ],
-  },
-];
-=======
       '@typescript-eslint/no-unused-vars': 'warn'
     }
   }
 ];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

@@ -589,8 +589,6 @@ export const AI_SERVICE_PRICING_TIERS = [
   { name: "Professional", price: "$699-1,499", features: ["Advanced AI features", "Priority support", "Up to 100,000 API calls"] },
   { name: "Enterprise", price: "$1,499+", features: ["Custom AI models", "24/7 support", "Unlimited API calls"] }
 ];
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   technologies: string[];
   integrations: string[];
   support: string[];
@@ -1137,10 +1135,3 @@ export const getAIServicesByCategory = (category: string): AIService[] => {
 export const getAIServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

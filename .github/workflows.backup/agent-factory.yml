@@ -35,7 +35,7 @@ jobs:
         name: Read queue length
         run: |
           file="state/queue.json"
-          if [ ! -f "$file" ]; then
+          if [ ! -f "$file" ]; then 
             mkdir -p state && echo '[]' > "$file"
           fi
           echo "len=$(jq 'length' "$file")" >> "$GITHUB_OUTPUT"
@@ -72,40 +72,28 @@ jobs:
           NUM_SHARDS: ${{ matrix.num_shards }}
         run: |
           file="state/queue.json"
-          if [ ! -f "$file" ]; then
+          if [ ! -f "$file" ]; then 
             mkdir -p state && echo '[]' > "$file"
           fi
           jq -r --argjson s "$SHARD" --argjson n "$NUM_SHARDS" '
             to_entries | map(select(.key % $n == $s)) | map(.value) | .[]
           ' "$file" > shard_urls.txt || true
           wc -l shard_urls.txt || true
-          if [ ! -s shard_urls.txt ]; then
+          if [ ! -s shard_urls.txt ]; then 
             echo "No URLs for this shard"
             echo '{}' > report.json
             exit 0
           fi
 
-:.github/workflows.backup/agent-factory.yml
-:.github/workflows.backup/agent-factory.yml
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
       - name: Install linkinator
         run: npm install -g linkinator
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-
+<<<<<<< HEAD=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       - name: Run crawler (linkinator) on shard
         run: |
           set -e
           urls=$(paste -sd' ' shard_urls.txt || true)
-          if [ -z "$urls" ]; then
+          if [ -z "$urls" ]; then 
             echo '{}' > report.json
             exit 0
           fi

@@ -10,14 +10,21 @@ export default function Page("props": "any) {;
     generateReport(sampleIssues);
   }, []);
   const generateReport = issues => {;
-
     const totalPages = 79; // From analysis report;
     const pagesWithIssues = issues.length;
     const criticalIssues = issues.filter(i => i.severity === 'high').length;
     const mediumIssues = issues.filter(i => i.severity === 'medium').length;
     const lowIssues = issues.filter(i => i.severity === 'low').length;
     setReport({;
-
+      totalPages,;
+      pagesWithIssues,;
+      criticalIssues,;
+      mediumIssues,;
+      lowIssues,;
+      "averageContentLength": "5000", // Sample data;
+      "pagesWithImages": "45", // Sample data;
+      "pagesWithMetaDescriptions": "32", // Sample data;
+      "lastUpdated": "new Date()"});
       totalPages,
       pagesWithIssues,
       criticalIssues,
@@ -34,9 +41,7 @@ export default function Page("props": "any) {;
     await new Promise(resolve => setTimeout(resolve, 3000));
     setIsAnalyzing(false);};
   const getSeverityIcon = severity => {;
-
     switch(severity) {;
-
       case 'high': ";
         return <AlertTriangle className="w-4 h-4 text-red-400"  />;
       case 'medium':";
@@ -48,9 +53,7 @@ export default function Page("props": "any) {;
     "}
   };
   const getSeverityColor = severity => {;
-
     switch(severity) {;
-
       case 'high':';
         return 'text-red-400';
       case 'medium':';
@@ -62,9 +65,7 @@ export default function Page("props": "any) {;
     }
   };
   const getStatusColor = status => {;
-
     switch(status) {;
-
       case 'resolved':';
         return 'text-green-400';
       case 'in_progress':';
@@ -78,12 +79,12 @@ export default function Page("props": "any) {;
   const filteredIssues = contentIssues.filter(issue => {const matchesSearch =;
       issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       issue.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesFilter && matchesSearch;});
+  const getIssueTypeLabel = type => {;
     return matchesFilter && matchesSearch;}
     );
   const getIssueTypeLabel = type => {
-
     switch(type) {;
-
       case 'missing_title':';
         return 'Missing Title';
       case 'missing_meta':';
@@ -109,7 +110,6 @@ export default function Page("props": "any) {;
       >";
         <FileText className="w-6 h-6"  />;
       </motion.button>;
-
       {/* Modal */}
       {isOpen && (;
         <motion.div;
@@ -146,7 +146,6 @@ export default function Page("props": "any) {;
                 Analyze and improve content quality across all website pages;
               </p>;
             </div>;
-
             {/* Content */"}";
             <div className="p-6 space-y-6">;
               {/* Summary Cards */}
@@ -221,7 +220,6 @@ export default function Page("props": "any) {;
                     Low;
                   </button>;
                 </div>;
-
                 <button;
                   onClick={startAnalysis}
                   disabled={isAnalyzing}";
@@ -237,7 +235,6 @@ export default function Page("props": "any) {;
                   </span>;
                 </button>;
               </div>;
-
               {/* Search */}";
               <div className="relative">";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />;
@@ -249,7 +246,6 @@ export default function Page("props": "any) {;
                   className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 "focus": "outline-none "focus":ring-2 "focus":ring-purple-500 "focus":border-transparent";
                 />;
               </div>;
-
               {/* Issues Table */"}";
               <div className="bg-gray-800 rounded-lg overflow-hidden">";
                 <div className="overflow-x-auto">";
@@ -363,7 +359,23 @@ export default function Page("props": "any) {;
                   </table>;
                 </div>;
               </div>;
-
+              {/* Quick Actions */}";
+              <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">";
+                <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">";
+                  <h3 className="text-lg font-semibold text-green-400 mb-2 flex items-center">";
+                    <CheckCircle className="w-5 h-5 mr-2"  />;
+                    Quick Fixes;
+                  </h3>";
+                  <ul className="text-green-200 text-sm space-y-1">;
+                    <li>• Add missing page titles</li>;
+                    <li>• Include meta descriptions</li>;
+                    <li>• Add proper heading structure</li>;
+                  </ul>;
+                </div>;
+</div>;
+            </div>;
+          </motion.div>;
+        </motion.div>)"}
               {/* Quick Actions */}"
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">"
@@ -395,7 +407,6 @@ export {ContentQualityAnalyzer};
 export {ContentQualityAnalyzer};";
 "";
 }"";
-
 </motion>;
 </motion>;
 </motion>

@@ -16,11 +16,6 @@ export function MobileMenu({ className }: MobileMenuProps) {
     { href: '/categories', label: t('nav.categories'), icon: Store, matches: (path: string) => path.startsWith('/categories') },
     { href: '/equipment', label: t('nav.equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
     { href: '/community', label: t('nav.community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   ];
 
   if (isAuthenticated) {
