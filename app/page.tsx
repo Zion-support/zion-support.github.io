@@ -336,25 +336,25 @@ export default function HomePage() {
           </div>
           {/* New Content Promo */}
           <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <Link href='/blog/ai-automation-enterprise-2025' className='group'>
+            <Link href='/blog/ai-content-strategy-2025' className='group'>
               <div className='rounded-lg border border-blue-200 bg-blue-50 p-6 hover:bg-blue-100 transition-colors'>
                 <div className='text-sm font-medium text-blue-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>AI Automation in Enterprise: Complete 2025 Guide</h3>
-                <p className='text-blue-800 mt-2'>Everything you need to know about implementing AI automation in your enterprise.</p>
+                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>AI Content Strategy 2025: From Idea to Distribution</h3>
+                <p className='text-blue-800 mt-2'>Plan, generate, and distribute high-quality content with AI guardrails.</p>
               </div>
             </Link>
-            <Link href='/blog/startup-funding-ai-era' className='group'>
+            <Link href='/blog/llm-evals-in-production-2025' className='group'>
+              <div className='rounded-lg border border-indigo-200 bg-indigo-50 p-6 hover:bg-indigo-100 transition-colors'>
+                <div className='text-sm font-medium text-indigo-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-indigo-900 group-hover:underline'>LLM Evals in Production: What Actually Works</h3>
+                <p className='text-indigo-800 mt-2'>CI evals, judge models, and budgets tied to outcomes and risk.</p>
+              </div>
+            </Link>
+            <Link href='/blog/customer-stories-ai-automation' className='group'>
               <div className='rounded-lg border border-green-200 bg-green-50 p-6 hover:bg-green-100 transition-colors'>
                 <div className='text-sm font-medium text-green-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>Startup Funding in the AI Era: Complete Guide</h3>
-                <p className='text-green-800 mt-2'>Navigate the new funding landscape and position your AI startup for success.</p>
-              </div>
-            </Link>
-            <Link href='/blog/zero-trust-ai-security-2025' className='group'>
-              <div className='rounded-lg border border-purple-200 bg-purple-50 p-6 hover:bg-purple-100 transition-colors'>
-                <div className='text-sm font-medium text-purple-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>Zero-Trust for AI Systems: Security Guide 2025</h3>
-                <p className='text-purple-800 mt-2'>Practical controls for prompts, tools, retrieval, and outputs in production.</p>
+                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>Customer Stories: Real ROI from AI Automation</h3>
+                <p className='text-green-800 mt-2'>Concise case studies in support, finance, and operations.</p>
               </div>
             </Link>
           </div>
