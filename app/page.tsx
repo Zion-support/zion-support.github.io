@@ -10,6 +10,8 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
+const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
+const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 export default function HomePage() {
   return (
@@ -1023,6 +1025,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Performance Metrics Section */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
+        <PerformanceMetrics />
+      </Suspense>
+
+      {/* Technology Stack Section */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading tech stack..." />}>
+        <TechnologyStack />
+      </Suspense>
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
