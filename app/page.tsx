@@ -309,17 +309,88 @@ export default function HomePage() {
               <div className='text-3xl mb-2'>✅</div>
               <h3 className='text-lg font-semibold mb-2'>AI Implementation Checklist</h3>
               <p className='text-sm opacity-90'>Complete step-by-step guide for successful AI deployment</p>
+              <div className='mt-3 text-xs opacity-75'>25,000+ downloads</div>
             </div>
             <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
               <div className='text-3xl mb-2'>🤖</div>
               <h3 className='text-lg font-semibold mb-2'>Enterprise AI Automation</h3>
               <p className='text-sm opacity-90'>Comprehensive 2025 implementation guide with real case studies</p>
+              <div className='mt-3 text-xs opacity-75'>Featured Article</div>
             </div>
             <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
               <div className='text-3xl mb-2'>💰</div>
               <h3 className='text-lg font-semibold mb-2'>Startup Funding in AI Era</h3>
               <p className='text-sm opacity-90'>Complete guide to securing funding for AI startups</p>
+              <div className='mt-3 text-xs opacity-75'>8,500+ downloads</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Resources Showcase */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              🆕 Latest Resources & Tools
+            </h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Fresh resources added this month to help you implement AI and technology solutions
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/resources/ai-implementation-checklist' className='group'>
+              <div className='bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-6 hover:shadow-lg transition-shadow'>
+                <div className='text-3xl mb-3'>📋</div>
+                <h3 className='text-lg font-semibold text-blue-900 mb-2 group-hover:underline'>AI Implementation Checklist</h3>
+                <p className='text-blue-800 text-sm mb-3'>50-point checklist for successful AI deployment</p>
+                <div className='flex items-center justify-between text-xs text-blue-700'>
+                  <span>25,000+ downloads</span>
+                  <span>★ 4.9</span>
+                </div>
+              </div>
+            </Link>
+            <Link href='/resources/ai-roi-calculator' className='group'>
+              <div className='bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-lg p-6 hover:shadow-lg transition-shadow'>
+                <div className='text-3xl mb-3'>💰</div>
+                <h3 className='text-lg font-semibold text-green-900 mb-2 group-hover:underline'>AI ROI Calculator</h3>
+                <p className='text-green-800 text-sm mb-3'>Calculate potential returns on AI investments</p>
+                <div className='flex items-center justify-between text-xs text-green-700'>
+                  <span>15,000+ downloads</span>
+                  <span>★ 4.8</span>
+                </div>
+              </div>
+            </Link>
+            <Link href='/resources/startup-funding-checklist' className='group'>
+              <div className='bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-lg p-6 hover:shadow-lg transition-shadow'>
+                <div className='text-3xl mb-3'>🚀</div>
+                <h3 className='text-lg font-semibold text-purple-900 mb-2 group-hover:underline'>Startup Funding Checklist</h3>
+                <p className='text-purple-800 text-sm mb-3'>Complete guide for AI startup funding</p>
+                <div className='flex items-center justify-between text-xs text-purple-700'>
+                  <span>8,500+ downloads</span>
+                  <span>★ 4.7</span>
+                </div>
+              </div>
+            </Link>
+            <Link href='/resources/ai-ethics-framework' className='group'>
+              <div className='bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 rounded-lg p-6 hover:shadow-lg transition-shadow'>
+                <div className='text-3xl mb-3'>🛡️</div>
+                <h3 className='text-lg font-semibold text-orange-900 mb-2 group-hover:underline'>AI Ethics Framework</h3>
+                <p className='text-orange-800 text-sm mb-3'>Responsible AI implementation guide</p>
+                <div className='flex items-center justify-between text-xs text-orange-700'>
+                  <span>12,000+ downloads</span>
+                  <span>★ 4.9</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className='text-center mt-8'>
+            <Link
+              href='/resources'
+              className='bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors'
+            >
+              View All Resources
+            </Link>
           </div>
         </div>
       </section>
@@ -390,6 +461,53 @@ export default function HomePage() {
               description='Telemetry that matters across prompts, tools, retrieval, and costs.'
               icon='🔍'
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup with Incentives */}
+      <section className='py-16 bg-gradient-to-r from-green-50 to-blue-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='bg-white border border-gray-200 rounded-xl p-8 text-center'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              🎁 Get Free Resources & Weekly AI Insights
+            </h2>
+            <p className='text-gray-600 mb-6 max-w-2xl mx-auto'>
+              Join 10,000+ professionals who get our weekly newsletter with the latest AI trends, 
+              implementation guides, and exclusive resources.
+            </p>
+            <div className='max-w-md mx-auto mb-6'>
+              <div className='flex gap-4'>
+                <input
+                  type='email'
+                  placeholder='Enter your email'
+                  className='flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                />
+                <button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+                  Subscribe
+                </button>
+              </div>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-6'>
+              <div className='text-center'>
+                <div className='text-2xl mb-2'>📋</div>
+                <div className='text-sm font-medium text-gray-900'>Free AI Checklist</div>
+                <div className='text-xs text-gray-600'>Instant download</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-2xl mb-2'>📊</div>
+                <div className='text-sm font-medium text-gray-900'>Weekly Insights</div>
+                <div className='text-xs text-gray-600'>Latest trends & tips</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-2xl mb-2'>🎯</div>
+                <div className='text-sm font-medium text-gray-900'>Exclusive Resources</div>
+                <div className='text-xs text-gray-600'>Subscriber-only content</div>
+              </div>
+            </div>
+            <p className='text-sm text-gray-500'>
+              No spam. Unsubscribe anytime. We respect your privacy.
+            </p>
           </div>
         </div>
       </section>
