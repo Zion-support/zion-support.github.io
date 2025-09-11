@@ -1,39 +1,67 @@
-import React from 'react';
-// Inline minimal cva/VariantProps to avoid external dependency during build;
-type VariantProps<T> = T extends (...args: any) => any ? Parameters<T>[0] : never;
-function cva(base: string, config: { variants?: Record<string, Record<string, string>>; defaultVariants?: Record<string, string> } = {}) {
-  return (props: Record<string, string> = {}) => {
-    const classes: string[] = [base];
-    const variants = config.variants ?? {}
-    for (const key of Object.keys(variants)) {
-      const val = props[key];
-      if (val && variants[key][val]) classes.push(variants[key][val]);
-      else if (config.defaultVariants && config.defaultVariants[key]) classes.push(variants[key][config.defaultVariants[key]])}
-    return classes.join(' ')}}
-import { cn } from '../../lib/utils';
 
+// Define HTML element types;
+interface HTMLElement {;
+
+
+  tagName: 'DIV';
+}
 const badgeVariants = cva(;
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",;
-  {
-    variants: {
-      variant: {
+  "inline-flex items-center rounded-full border px-2 && 2.5 py-0 && 0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",;
+  {;
+    variants: {;
+      variant: {;
         default:;
           "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",;
         secondary:;
           "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",;
         destructive:;
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",;
-        outline: "text-foreground"}},;
-    defaultVariants: {
-      variant: "default"}}
+        outline: "text-foreground border-border",;
+      },;
+    },;
+    defaultVariants: {;
+      variant: "default",;
+    },;
+  }
 );
-
 export interface BadgeProps;
-  extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof badgeVariants> {}
-
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return (;
+  extends React && React.HTMLAttributes<HTMLDivElement>,;
+    VariantProps<typeof badgeVariants> {}
+function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
+  return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
-  )}
-
+  );
+}
 export { Badge, badgeVariants }
+const badge_variants = cva (
+  "inline - flex items - center rounded - full border px - 2.5 py - 0.5 text - xs font - semibold transition - colors focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2",
+  {
+    variants: {
+      variant: {
+        default:;
+          "border - transparent bg - primary text - primary - foreground hover:bg - primary / 80",
+        secondary:;
+          "border - transparent bg - secondary text - secondary - foreground hover:bg - secondary / 80",
+        destructive:;
+          "border - transparent bg - destructive text - destructive - foreground hover:bg - destructive / 80",
+        outline: "text - foreground border - border",
+      },
+    },
+    default_variants: {
+      variant: "default",
+    },
+  }
+);
+;
+export interface BadgeProps;
+  extends React.HTMLAttributes < HTMLDivElement>,
+    VariantProps < typeof badge_variants> {}
+/**
+ * Badge - Function description
+ */
+function Badge() {
+  return (
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />;
+  );
+}
+export { Badge, badge_variants }

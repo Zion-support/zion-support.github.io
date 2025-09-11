@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import EnhancedSecurity from '../components/EnhancedSecurity';'
-describe('EnhancedSecurity', () => {test('renders without crashing', () => {render(<EnhancedSecurity />)expect(screen.getByTestId('enhancedsecurity')).toBeInTheDocument()})test('displays correct content', () => {render(<EnhancedSecurity />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<EnhancedSecurity />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<EnhancedSecurity />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import EnhancedSecurity from &apos;./EnhancedSecurity; describe(&apos;EnhancedSecurity&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedSecurity / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedSecurity from &apos;./EnhancedSecurity; describe(&apos;EnhancedSecurity&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedSecurity / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedSecurity from &apos;./EnhancedSecurity; describe(&apos;EnhancedSecurity&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<EnhancedSecurity / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

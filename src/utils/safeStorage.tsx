@@ -1,97 +1,74 @@
-// Safe storage wrapper with fallback
-const inMemoryStore: Record<string, string> = {};
-let localStorageAvailable: boolean | null = null;
-let lastAvailabilityCheck = 0;
-const AVAILABILITY_CHECK_INTERVAL = 5000;
+export type SafeStorage = {
+  getItem: (key: string) => string | null;
+  setItem: (key: string, value: string) => boolean;
+  removeItem: (key: string) => boolean;
+  clear: () => boolean;
+  key: (index: number) => string | null;
+  readonly length: number;
+};
 
 function isLocalStorageAvailable(): boolean {
-  const now = Date.now();
-  if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
-    return localStorageAvailable;
-  }
-  
   try {
+    if (typeof window === 'undefined') return false;
     const testKey = '__localStorage_test__';
-    localStorage.setItem(testKey, 'test');
-    localStorage.removeItem(testKey);
-    localStorageAvailable = true;
-  } catch (error) {
-    localStorageAvailable = false;
+    window.localStorage.setItem(testKey, 'test');
+    window.localStorage.removeItem(testKey);
+    return true;
+  } catch {
+    return false;
   }
-  
-  lastAvailabilityCheck = now;
-  return localStorageAvailable;
 }
 
-export const safeStorage = {
-  getItem: (key: string): string | null => {
+export const safeStorage: SafeStorage = {
+  getItem: (key: string) => {
+    if (!isLocalStorageAvailable()) return null;
     try {
-      if (isLocalStorageAvailable()) {
-        return localStorage.getItem(key);
-      }
-      return inMemoryStore[key] || null;
-    } catch (error) {
-      return inMemoryStore[key] || null;
+      return window.localStorage.getItem(key);
+    } catch {
+      return null;
     }
   },
-
-  setItem: (key: string, value: string): void => {
+  setItem: (key: string, value: string) => {
+    if (!isLocalStorageAvailable()) return false;
     try {
-      if (isLocalStorageAvailable()) {
-        localStorage.setItem(key, value);
-      } else {
-        inMemoryStore[key] = value;
-      }
-    } catch (error) {
-      inMemoryStore[key] = value;
+      window.localStorage.setItem(key, value);
+      return true;
+    } catch {
+      return false;
     }
   },
-
-  removeItem: (key: string): void => {
+  removeItem: (key: string) => {
+    if (!isLocalStorageAvailable()) return false;
     try {
-      if (isLocalStorageAvailable()) {
-        localStorage.removeItem(key);
-      } else {
-        delete inMemoryStore[key];
-      }
-    } catch (error) {
-      delete inMemoryStore[key];
+      window.localStorage.removeItem(key);
+      return true;
+    } catch {
+      return false;
     }
   },
-
-  clear: (): void => {
+  clear: () => {
+    if (!isLocalStorageAvailable()) return false;
     try {
-      if (isLocalStorageAvailable()) {
-        localStorage.clear();
-      } else {
-        Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
-      }
-    } catch (error) {
-      Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
+      window.localStorage.clear();
+      return true;
+    } catch {
+      return false;
     }
   },
-
-  key: (index: number): string | null => {
+  key: (index: number) => {
+    if (!isLocalStorageAvailable()) return null;
     try {
-      if (isLocalStorageAvailable()) {
-        return localStorage.key(index);
-      }
-      return Object.keys(inMemoryStore)[index] || null;
-    } catch (error) {
-      return Object.keys(inMemoryStore)[index] || null;
+      return window.localStorage.key(index);
+    } catch {
+      return null;
     }
   },
-
-  get length(): number {
+  get length() {
+    if (!isLocalStorageAvailable()) return 0;
     try {
-      if (isLocalStorageAvailable()) {
-        return localStorage.length;
-      }
-      return Object.keys(inMemoryStore).length;
-    } catch (error) {
-      return Object.keys(inMemoryStore).length;
+      return window.localStorage.length;
+    } catch {
+      return 0;
     }
   }
 };
-
-export default safeStorage;

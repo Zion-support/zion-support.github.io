@@ -5,29 +5,7 @@ export default function AIQACopilot() {
       subtitle="Autogenerates tests from user flows and PR diffs";
       price="from $99/mo";
       bullets={[;
-        'Watches PRs and generates Playwright/Cypress tests automatically',;
-        'Finds flaky tests; groups by root cause and suggests fixes',;
-        'CI integrations for GitHub Actions, GitLab, CircleCI',;
+        'Watches PRs and generates Playwright/Cypress tests automatically',
+        'Finds flaky tests; groups by root cause and suggests fixes',
+        'CI integrations for GitHub Actions, GitLab, CircleCI',
         'Tracks coverage and critical-path user flows';
-      ]}
-      links={{ website: 'https://ziontechgroup.com', contact: 'mailto:kleber@ziontechgroup.com' }}
-    />;
-  )}
-
-function Article({ title, subtitle, price, bullets, links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {
-  return (;
-    <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>;
-      <h1 style={{ marginTop: 0 }}>{title}</h1>;
-      <p><strong>{subtitle}</strong></p>;
-      <p><strong>Pricing:</strong> {price}</p>;
-      <ul>;
-        {bullets.map((b) => (;
-          <li key={b}>{b}</li>;
-        ))}
-      </ul>;
-      <p>;
-        Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> · Email: <a href={links.contact}>kleber@ziontechgroup.com</a>;
-      </p>;
-    </main>;
-  )}
-

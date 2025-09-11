@@ -1,116 +1,119 @@
-import { ProductListing } from "@/types/listings";
-import { REGIONS } from "@/data/filterConstants";
+import { MarketplaceItem } from '@/data/marketplaceData';
 
-// Category definitions with average price ranges
-const categories = [
-  { name: "AI Models & APIs", priceRange: [1000, 3000] },
-  { name: "Services", priceRange: [3000, 8000] },
-  { name: "Content Creation", priceRange: [200, 800] },
-  { name: "Data Analysis", priceRange: [1500, 4000] },
-  { name: "Computer Vision", priceRange: [700, 1500] },
-  { name: "Virtual Assistants", priceRange: [2000, 4000] },
-  { name: "Voice & Speech", priceRange: [1000, 2000] },
-  { name: "Developer Tools", priceRange: [300, 1000] },
-  { name: "Business Solutions", priceRange: [8000, 20000] },
-  { name: "Research", priceRange: [200, 500] },
-  { name: "Robotics", priceRange: [5000, 10000] },
-  { name: "Workstations", priceRange: [4000, 7000] },
-  { name: "Servers", priceRange: [15000, 30000] }
+const sampleTitles = [
+  'AI-Powered Analytics Platform',
+  'Cybersecurity Assessment Tool',
+  'Cloud Migration Service',
+  'IoT Edge Computing Solution',
+  'Quantum Computing Hardware',
+  'Data Science Consulting',
+  'Blockchain Development Service',
+  'Machine Learning Platform',
+  'DevOps Automation Tool',
+  'Network Security Solution'
 ];
 
-const titlePhrases = [
-  "Professional Suite",
-  "Enterprise Package",
-  "Starter Kit",
-  "Integration Service",
-  "Optimization Tools",
-  "Automation Platform",
-  "Consulting Bundle",
-  "Deployment Toolkit",
-  "Managed Solution",
-  "Cloud Edition"
+const sampleDescriptions = [
+  'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',
+  'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',
+  'Professional cloud migration service including planning, execution, and optimization.',
+  'IoT platform with edge computing capabilities for real-time data processing.',
+  'State-of-the-art quantum computing components for research and development.',
+  'Expert data science consulting services for machine learning and analytics projects.',
+  'Blockchain development and implementation services for decentralized applications.',
+  'Machine learning platform with pre-trained models and custom training capabilities.',
+  'DevOps automation tools for continuous integration and deployment pipelines.',
+  'Network security solution with advanced threat detection and prevention.'
 ];
 
-const providers = [
-  "AI Solutions Inc.",
-  "DataMinds",
-  "TechGear Pro",
-  "ContentGenius",
-  "InsightAnalytica",
-  "VisionTech",
-  "AssistantCraft",
-  "VoiceIntelligence",
-  "CodeGenius",
-  "BusinessAI Consultants",
-  "RoboticsMind",
-  "CloudWorks",
-  "DataAnalyticsPro",
-  "AIVault",
-  "DevOps Masters"
+const sampleTags = [
+  ['AI', 'Analytics', 'Business Intelligence'],
+  ['Security', 'Cybersecurity', 'Monitoring'],
+  ['Cloud', 'Migration', 'Enterprise'],
+  ['IoT', 'Edge Computing', 'Real-time'],
+  ['Quantum', 'Research', 'Hardware'],
+  ['Data Science', 'Machine Learning', 'Consulting'],
+  ['Blockchain', 'Development', 'DApps'],
+  ['Machine Learning', 'AI', 'Platform'],
+  ['DevOps', 'Automation', 'CI/CD'],
+  ['Network', 'Security', 'Threat Detection']
 ];
 
-const tags = [
-  "AI",
-  "Machine Learning",
-  "Analytics",
-  "Cloud",
-  "Automation",
-  "GPU",
-  "DevOps",
-  "NLP",
-  "Data",
-  "Security",
-  "Vision",
-  "Robotics"
+const sampleImages = [
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+  'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
 ];
 
-const availabilityOptions = [
-  "Immediate",
-  "1-2 Weeks",
-  "2-4 Weeks",
-  "4-6 Weeks"
+const categories: Array<'products' | 'talent' | 'equipment' | 'services'> = [
+  'products', 'talent', 'equipment', 'services'
 ];
 
-export function generateRandomListing(): ProductListing {
-  const timestamp = Date.now();
-  const category = categories[Math.floor(Math.random() * categories.length)];
-  const provider = providers[Math.floor(Math.random() * providers.length)];
-  const price = Math.floor(
-    (category?.priceRange?.[0] || 100) +
-      Math.random() * ((category?.priceRange?.[1] || 1000) - (category?.priceRange?.[0] || 100))
-  );
+const priceRanges = [
+  '$500', '$1,200', '$2,500', '$5,000', '$8,500', '$15,000', '$25,000', '$50,000'
+];
 
-  const title = `${category?.name || 'Service'} ${
-    titlePhrases[Math.floor(Math.random() * titlePhrases.length)]
-  }`;
+const locations = [
+  'San Francisco, CA', 'New York, NY', 'Austin, TX', 'Seattle, WA', 'Boston, MA', 'Remote'
+];
 
-  const randomTags = Array.from({ length: 3 }, () =>
-    tags[Math.floor(Math.random() * tags.length)] || 'misc'
-  );
+const sellerNames = [
+  'TechCorp Solutions',
+  'SecureNet Professionals',
+  'QuantumTech Labs',
+  'CloudMasters Inc',
+  'IoT Solutions Pro',
+  'DataGenius Consulting',
+  'Innovation Labs',
+  'FutureTech Systems'
+];
 
+export function generateRandomListing(): MarketplaceItem {
+  const randomIndex = Math.floor(Math.random() * sampleTitles.length);
+  const categoryIndex = Math.floor(Math.random() * categories.length);
+  const priceIndex = Math.floor(Math.random() * priceRanges.length);
+  const locationIndex = Math.floor(Math.random() * locations.length);
+  const sellerNameIndex = Math.floor(Math.random() * sellerNames.length);
+  const imageIndex = Math.floor(Math.random() * sampleImages.length);
+  
+  const category = categories[categoryIndex];
+  const price = priceRanges[priceIndex];
+  const location = locations[locationIndex];
+  const sellerName = sellerNames[sellerNameIndex];
+  const image = sampleImages[imageIndex];
+  
   return {
-    id: `auto-${timestamp}`,
-    title,
-    description: `Professional ${title.toLowerCase()} generated on ${new Date(
-      timestamp
-    ).toLocaleDateString()} to accelerate your projects with expert support and modern tooling.`,
-    category: category?.name || 'Service',
-    price,
-    currency: "$",
-    tags: randomTags,
-    author: {
-      name: provider || 'Unknown Provider',
-      id: (provider || 'unknown').toLowerCase().replace(/\s+/g, "-")
+    id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    title: sampleTitles[randomIndex] || 'Default Title',
+    category: category || 'products',
+    description: sampleDescriptions[randomIndex] || 'Default description',
+    price: price || '$1,000',
+    rating: 4.0 + Math.random() * 1.0,
+    reviews: Math.floor(Math.random() * 200) + 10,
+    views: Math.floor(Math.random() * 5000) + 100,
+    likes: Math.floor(Math.random() * 300) + 20,
+    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    tags: sampleTags[randomIndex] || ['Technology', 'Solution'],
+    featured: Math.random() > 0.7,
+    seller: {
+      name: sellerName || 'Default Seller',
+      rating: 4.0 + Math.random() * 1.0,
+      verified: Math.random() > 0.3
     },
-    images: [
-      `https://source.unsplash.com/random/800x500?technology,${(category?.name?.split(" ")[0]) || 'tech'}`
-    ],
-    createdAt: new Date(timestamp).toISOString(),
-    rating: Math.round((4 + Math.random()) * 10) / 10,
-    reviewCount: Math.floor(Math.random() * 50) + 1,
-    featured: Math.random() < 0.3,
-    location: REGIONS[Math.floor(Math.random() * REGIONS.length)],
-    availability: availabilityOptions[Math.floor(Math.random() * availabilityOptions.length)],
-    aiScore: Math.floor(80 + Math.random() * 20)
+    location: location || 'Remote',
+    availability: Math.random() > 0.8 ? 'limited' : 'available',
+    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,
+    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`
   };
+}
+
+export function generateRandomListings(count: number): MarketplaceItem[] {
+  const listings: MarketplaceItem[] = [];
+  for (let i = 0; i < count; i++) {
+    listings.push(generateRandomListing());
+  }
+  return listings;
 }

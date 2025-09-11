@@ -1,90 +1,65 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useNotificationOperations } from './useNotificationOperations';
-import { NotificationContextType } from './types';
-import { subscribeToPush } from '@/utils/pushSubscription';
-import { safeStorage } from '@/utils/safeStorage';
-import { logInfo } from '@/utils/productionLogger';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
+interface Notification {
+  id: string;
+  message: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  duration?: number;
+}
 
-// Default context used when React type definitions are missing. Providing a
-// fully-typed object here avoids TypeScript errors that occur when an untyped
-// `createContext` call returns `{}` instead of the expected shape.
-const defaultContext: NotificationContextType = {
-  notifications: [],
-  filteredNotifications: [],
-  unreadCount: 0,
-  loading: false,
-  filter: 'all',
-  markAsRead: async () => {},
-  markAllAsRead: async () => {},
-  dismissNotification: async () => {},
-  setFilter: () => {},
-  fetchNotifications: async () => {},
-};
+interface NotificationContextType {
+  notifications: Notification[];
+  addNotification: (notification: Omit<Notification, 'id'>) => void;
+  removeNotification: (id: string) => void;
+  clearNotifications: () => void;
+}
 
-// Cast the default context value to avoid issues when React types are missing.
-const NotificationContext = createContext(
-  defaultContext as NotificationContextType
-);
+const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
-export const useNotifications = (): NotificationContextType => {
-  const context = useContext(NotificationContext) as NotificationContextType;
+export const useNotifications = () => {
+  const context = useContext(NotificationContext);
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
 };
 
-export const NotificationProvider = ({ children }: { children: ReactNode }): React.JSX.Element => {
-  const { user } = useAuth();
-  const notificationOps = useNotificationOperations(user?.id);
+interface NotificationProviderProps {
+  children: ReactNode;
+}
 
-  // Load notifications when user changes
-  useEffect(() => {
-    notificationOps.fetchNotifications();
-    
-    // Set up real-time subscription for new notifications
-    if (user) {
-      const channel = supabase
-        .channel('notifications-changes')
-        .on('postgres_changes', 
-          {
-            event: '*', 
-            schema: 'public',
-            table: 'notifications',
-            filter: `user_id=eq.${user.id}`
-          },
-          (payload: unknown) => {
-            logInfo('Notification change received:', { data: payload });
-            notificationOps.fetchNotifications();
-          }
-        )
-        .subscribe();
-        
-      return () => {
-        supabase.removeChannel(channel);
-      };
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+
+  const addNotification = (notification: Omit<Notification, 'id'>) => {
+    const id = Math.random().toString(36).substr(2, 9);
+    const newNotification = { ...notification, id };
+    setNotifications(prev => [...prev, newNotification]);
+
+    if (notification.duration !== 0) {
+      setTimeout(() => {
+        removeNotification(id);
+      }, notification.duration || 5000);
     }
-    return undefined;
-  }, [user]);
+  };
 
-  // Subscribe to push notifications once per user session
-  useEffect(() => {
-    if (!user) return;
-    const alreadySubscribed = safeStorage.getItem('push_subscribed');
-    if (alreadySubscribed === 'true') return;
+  const removeNotification = (id: string) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
+  };
 
-    subscribeToPush()
-      .then(() => safeStorage.setItem('push_subscribed', 'true'))
-      .catch(() => {
-        /* noop */
-      });
-  }, [user]);
-  
+  const clearNotifications = () => {
+    setNotifications([]);
+  };
+
+  const value: NotificationContextType = {
+    notifications,
+    addNotification,
+    removeNotification,
+    clearNotifications,
+  };
+
   return (
-    <NotificationContext.Provider value={notificationOps}>
+    <NotificationContext.Provider value={value}>
       {children}
     </NotificationContext.Provider>
   );

@@ -1,126 +1,68 @@
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-function fixFile(filePath) {
+// Function to fix final errors
+function fixFinalErrors(filePath) {
   try {
-  let content = fs.readFileSync(filePath, "utf8");
-    let originalContent = content;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Fix missing types in function parameters;
-    content = content.replace(
-      /\(key: keyof (\w+), value: \)/g,
-      '(key: keyof $1, value: any)'
-    );
-    content = content.replace(
-      /\(key: keyof (\w+), value: \)/g,
-      '(key: keyof $1, value: any)'
-    );
+    // Fix operator.ts - fix object property syntax
+    if (filePath.includes('operator.ts')) {
+      content = content.replace(/];/g, '];');
+      modified = true;
+    }
 
-    // Fix malformed useState;
-    content = content.replace(/useState<>\(null\)/g, 'useState(null)');
-    content = content.replace(/useState<>\(null\)/g, 'useState(null)');
+    // Fix track.ts - fix import path
+    if (filePath.includes('track.ts')) {
+      content = content.replace(/import { ensureAdmin } from '\.\.\/\.\.\/\.\.\/utils\/auth';/g, 'import { ensureAdmin } from \'../../../utils/auth\';');
+      modified = true;
+    }
 
-    // Fix malformed type annotations;
-    content = content.replace(/:\s*{;/g, ': {');
-    content = content.replace(/:\s*};/g, ': };');
+    // Fix applications.ts - fix import paths
+    if (filePath.includes('applications.ts')) {
+      content = content.replace(/import { rateLimit } from '\.\.\/\.\.\/utils\/rate-limit';/g, 'import { rateLimit } from \'../../utils/rate-limit\';');
+      content = content.replace(/import { readJsonFile, writeJsonFile } from '\.\.\/\.\.\/utils\/file-utils';/g, 'import { readJsonFile, writeJsonFile } from \'../../utils/file-utils\';');
+      modified = true;
+    }
 
-    // Fix malformed object properties;
-    content = content.replace(/(\w+)\s*:\s*{;/g, '$1: {');
-    content = content.replace(/(\w+)\s*:\s*string\s*;/g, '$1: string;');
-    content = content.replace(/(\w+)\s*:\s*number\s*;/g, '$1: number;');
-    content = content.replace(/(\w+)\s*:\s*boolean\s*;/g, '$1: boolean;');
+    // Fix nextauth.ts - remove catch block without try
+    if (filePath.includes('nextauth.ts')) {
+      content = content.replace(/} catch \(error\) \{[\s\S]*?return res\.status\(500\)\.json\(\{ error: "Internal server error" \}\);\s*}/g, '');
+      modified = true;
+    }
 
-    // Fix malformed function parameters;
-    content = content.replace(/\(\s*(\w+)\s*:\s*string\s*\)/g, '($1: string)');
-    content = content.replace(/\(\s*(\w+)\s*:\s*number\s*\)/g, '($1: number)');
-    content = content.replace(
-      /\(\s*(\w+)\s*:\s*boolean\s*\)/g,
-      '($1: boolean)'
-    );
-
-    // Fix malformed JSX;
-    content = content.replace(/<\/([^>]+)>/g, '</$1>');
-
-    // Fix specific patterns;
-    content = content.replace(
-      /:\s*{(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*}/g,
-      ': { $1, $2, $3, $4, $5 }'
-    );
-    content = content.replace(
-      /:\s*{(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*}/g,
-      ': { $1, $2, $3, $4 }'
-    );
-    content = content.replace(
-      /:\s*{(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*}/g,
-      ': { $1, $2, $3 }'
-    );
-    content = content.replace(/:\s*{(\w+)\s*,\s*(\w+)\s*}/g, ': { $1, $2 }');
-
-    // Fix malformed interface declarations;
-    content = content.replace(/interface\s+(\w+)\s*{;/g, 'interface $1 {');
-    content = content.replace(/interface\s+(\w+)\s*{/g, 'interface $1 {');
-
-    // Fix malformed type declarations;
-    content = content.replace(/type\s+(\w+)\s*=\s*{;/g, 'type $1 = {');
-    content = content.replace(/type\s+(\w+)\s*=\s*{/g, 'type $1 = {');
-
-    // Fix malformed function declarations;
-    content = content.replace(
-      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
-      'export function $1() {'
-    );
-    content = content.replace(
-      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
-      'export function $1() {'
-    );
-
-    // Fix malformed const declarations;
-    content = content.replace(
-      /const\s+(\w+)\s*:\s*(\w+)\s*=\s*{;/g,
-      'const $1: $2 = {'
-    );
-    content = content.replace(
-      /const\s+(\w+)\s*:\s*(\w+)\s*=\s*{/g,
-      'const $1: $2 = {'
-    );
-
-    // Fix malformed object literals;
-    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*}/g, "{ $1: $2 }");
-    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*,/g, `{ $1: $2,`);
-    // Write back if changed;
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;}
-
-    return false;} catch (error) {
-  console.error(`Error fixing ${filePath }:`, error.message);
-    return false;}
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed final errors in: ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+  return false;
 }
 
-function getAllFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-  const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-  files.push(...getAllFiles(fullPath));} else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {
-  files.push(fullPath);}
+// List of files with final errors
+const filesToFix = [
+  'pages/api/ai/operator.ts',
+  'pages/api/analytics/events/track.ts',
+  'pages/api/applications.ts',
+  'pages/api/auth/[...nextauth].ts'
+];
+
+let fixedCount = 0;
+
+console.log('Fixing final errors...');
+
+filesToFix.forEach(file => {
+  const filePath = path.join(process.cwd(), file);
+  if (fs.existsSync(filePath)) {
+    if (fixFinalErrors(filePath)) {
+      fixedCount++;
+    }
+  } else {
+    console.log(`File not found: ${filePath}`);
   }
+});
 
-  return files;}
-
-// Main execution;
-const srcDir = path.join(process.cwd(), `src`);
-if (fs.existsSync(srcDir)) {
-  const files = getAllFiles(srcDir);
-  let fixedCount = 0;
-  for (const file of files) {
-  if (fixFile(file)) {
-  fixedCount++;}
-  }
-
-  console.log(`\nFixed ${fixedCount} files.`);} else {
-  console.log(`src directory not found`);}
-}}}}}}}}}}}}}}}}}}
+console.log(`Fixed final errors in ${fixedCount} files.`);========
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs

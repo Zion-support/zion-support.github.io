@@ -1,137 +1,56 @@
-<<<<<<< HEAD
-import React, { memo } from 'react';
-=======
 import React from 'react';
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
->>>>>>> origin/chore/fix-links-and-build
+import { cn } from '../../utils/cn';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'white' | 'gray';
   className?: string;
+  showText?: boolean;
   text?: string;
 }
 
-<<<<<<< HEAD
-const LoadingSpinner = memo(function LoadingSpinner({ 
-=======
-export function LoadingSpinner({
-  size = 'md',
-  color = 'primary',
-  customColor,
-  className,
-  text = 'Loading...',
-  showText = false
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  };
-
-  const colorClasses = {
-    primary: 'border-zion-purple',
-    secondary: 'border-zion-cyan',
-    white: 'border-white',
-    custom: ''
-  };
-
-  const borderColor = customColor || colorClasses[color];
-
-  return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
-      <motion.div
-        className={cn(
-          'border-2 border-t-transparent rounded-full animate-spin',
-          sizeClasses[size],
-          borderColor
-        )}
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        role="status"
-        aria-label="Loading"
-export function LoadingSpinner({ 
->>>>>>> origin/chore/fix-links-and-build
+export default function LoadingSpinner({ 
   size = 'md', 
-  className = '', 
-  text = 'Loading...' 
+  color = 'primary',
+  className = '',
+  showText = false,
+  text = 'Loading...'
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const colorClasses = {
+    primary: 'border-cyan-400 border-t-transparent',
+    white: 'border-white border-t-transparent',
+    gray: 'border-gray-400 border-t-transparent'
   };
 
   return (
-<<<<<<< HEAD
-    <div className={`flex flex-col items-center justify-center min-h-[200px] ${className}`}>
-      <div 
-        className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-cyan-400 border-t-transparent`}
-        role="status"
-        aria-label={text}
-      ></div>
-      {text && (
-        <p className="mt-2 text-sm text-gray-300 animate-pulse">{text}</p>
-=======
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <motion.div
-        className={`${sizeClasses[size]} ${colorClasses[color]} border-2 rounded-full animate-spin`}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        style={{
-          borderTopColor: customColor && color === 'custom' ? customColor : undefined
-        }}
-      />
-      
+    <div className={cn('flex flex-col items-center justify-center', className)}>
+      <div className={cn(
+        'animate-spin rounded-full border-2',
+        sizeClasses[size],
+        colorClasses[color]
+      )} />
       {showText && (
         <motion.p
-          className="mt-3 text-sm text-zion-slate-light text-center"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.3 }}
-          className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="mt-2 text-sm text-gray-500"
         >
           {text}
         </motion.p>
->>>>>>> origin/chore/fix-links-and-build
       )}
     </div>
   );
-});
+}
 
-<<<<<<< HEAD
-export default LoadingSpinner;
-=======
-// Skeleton loading component for content
-export function SkeletonLoader({
-  className,
-  lines = 3,
-  height = 'h-4'
-}: {
-  className?: string;
-  lines?: number;
-  height?: string;
-}) {
-  return (
-    <div className={cn('space-y-3', className)}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <motion.div
-          key={index}
-          className={cn(
-            'bg-zion-slate-light/20 rounded animate-pulse',
-            height
-          )}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.1 }}
 // Optimized skeleton loader
 export function SkeletonLoader({ 
   className = '', 
@@ -157,23 +76,6 @@ export function SkeletonLoader({
   );
 }
 
-// Page loading component
-export function PageLoader({
-  text = 'Loading page...',
-  className
-}: {
-  text?: string;
-  className?: string;
-}) {
-  return (
-    <div className={cn('min-h-screen flex items-center justify-center', className)}>
-      <div className="text-center">
-        <LoadingSpinner size="xl" color="primary" showText text={text} />
-      </div>
-    </div>
-  );
-}
-
 // Button loading state
 export function ButtonLoader({
   size = 'sm',
@@ -186,8 +88,12 @@ export function ButtonLoader({
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
+    </div>
+  );
+}
+
 // Page loading overlay
-export function PageLoader({ 
+export function PageLoaderOverlay({ 
   text = 'Loading page...',
   showSpinner = true 
 }: { 
@@ -207,7 +113,7 @@ export function PageLoader({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className="mt-4 text-lg text-zion-slate-light font-medium"
+          className="mt-4 text-lg text-gray-300 font-medium"
         >
           {text}
         </motion.p>
@@ -240,30 +146,26 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.3 }}
-            className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+            transition={{ delay: index * 0.1 }}
+            className="bg-white/5 rounded-lg p-6 border border-white/10"
           >
-            <div className="w-16 h-16 bg-white/10 rounded-xl mb-4 animate-pulse" />
-            <div className="h-6 bg-white/10 rounded-lg mb-3 animate-pulse" />
-            <div className="h-4 bg-white/10 rounded-lg mb-2 animate-pulse" />
-            <div className="h-4 bg-white/10 rounded-lg w-3/4 animate-pulse" />
+            <div className="h-4 bg-white/10 rounded mb-3 animate-pulse" />
+            <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
+            <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
           </motion.div>
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: 5 }).map((_, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.05, duration: 0.3 }}
-            className="flex items-center space-x-4"
+            transition={{ delay: index * 0.1 }}
+            className="flex items-center space-x-3"
           >
-            <div className="w-12 h-12 bg-white/10 rounded-full animate-pulse" />
-            <div className="flex-1 space-y-2">
-              <div className="h-4 bg-white/10 rounded-lg animate-pulse" />
-              <div className="h-3 bg-white/10 rounded-lg w-2/3 animate-pulse" />
-            </div>
+            <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />
+            <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>
         ))
       ) : variant === 'grid' ? (
@@ -273,12 +175,11 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1, duration: 0.3 }}
-            className="bg-white/5 rounded-xl p-4 border border-white/10"
+            transition={{ delay: index * 0.1 }}
+            className="bg-white/5 rounded-lg p-4 border border-white/10"
           >
-            <div className="w-full h-24 bg-white/10 rounded-lg mb-3 animate-pulse" />
-            <div className="h-4 bg-white/10 rounded-lg mb-2 animate-pulse" />
-            <div className="h-3 bg-white/10 rounded-lg w-2/3 animate-pulse" />
+            <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
+            <div className="h-2 bg-white/10 rounded w-3/4 animate-pulse" />
           </motion.div>
         ))
       ) : (
@@ -288,12 +189,91 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.3 }}
-            className="h-4 bg-white/10 rounded-lg animate-pulse"
-          />
+            transition={{ delay: index * 0.1 }}
+            className="h-4 bg-white/10 rounded animate-pulse" />
         ))
       )}
     </div>
   );
 }
->>>>>>> origin/chore/fix-links-and-build
+
+// Enhanced app loading spinner for main app loading
+export function AppLoadingSpinner() {
+  const icons = ['🤖', '☁️', '🔒', '💡'];
+  
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="relative">
+        {/* Main spinning ring */}
+        <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
+          <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
+          <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
+        </div>
+        
+        {/* Floating icons */}
+        {icons.map((icon, index) => (
+          <motion.div
+            key={index}
+            className="absolute text-2xl"
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+            animate={{
+              rotate: [0, 360],
+              scale: [0.8, 1.2, 0.8],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: index * 0.5,
+              ease: "easeInOut"
+            }}
+          >
+            <span 
+              style={{
+                position: 'absolute',
+                top: `${Math.cos(index * Math.PI / 2) * 60}px`,
+                left: `${Math.sin(index * Math.PI / 2) * 60}px`,
+              }}
+            >
+              {icon}
+            </span>
+          </motion.div>
+        ))}
+      </div>
+      
+      {/* Loading text */}
+      <motion.div
+        className="mt-8 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
+        <p className="text-gray-400">Preparing your futuristic experience...</p>
+      </motion.div>
+      
+      {/* Progress dots */}
+      <div className="flex gap-2 mt-6">
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={i}
+            className="w-2 h-2 bg-cyan-400 rounded-full"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              delay: i * 0.2,
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

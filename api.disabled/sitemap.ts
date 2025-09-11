@@ -1,20 +1,8 @@
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
 export {};
-
 module.exports = {};
 
 module.exports = {};
-
-module.exports = {};
+=======module.exports = {};
 module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
 module.exports = {};
@@ -23,41 +11,17 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+module.exports = {};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+=======module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
-
-  const allPages = [
-    ...staticPages,
-    ...blogPages,
-    ...servicePages,
-    ...categoryPages,
-    ...chatContentPages ];
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
-  ${allPages
-    .map((page) => {
-      const priority = page === '' ?
-  '1.0' : page.includes(
-  '/blog/') ?
-  '0.8' :
-  '0.9';
-      const changefreq = page === '/' ? 'daily' : page.includes('/blog/') ? 'weekly' : 'monthly';
-      
-      return `
-    <url>
-      <loc>${baseUrl}${page}</loc>
-      <lastmod>${new Date().toISOString()}</lastmod>
-      <changefreq>${changefreq}</changefreq>
-      <priority>${priority}</priority>
-    </url>`})
-    .join('')}
-</urlset>`;
-
-  res.setHeader(
-  'Content-Type',
-  'text/xml');
-  res.setHeader(
-  'Cache-Control',
-  'public, max-age=86400, s-maxage=86400');
-  res.status(200).send(sitemap)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,489 +1,422 @@
-export const innovativeMicroSaasServices2025 = [
-    // Quantum AI & Machine Learning Services
-    {
-        id: 'quantum-ai-research-platform',
-        name: 'Quantum AI Research Platform',
-        tagline: 'Next-generation quantum machine learning for research institutions',
-        description: 'Advanced quantum computing platform that enables researchers to run quantum machine learning algorithms, simulate quantum systems, and accelerate scientific discoveries. Features quantum error correction, hybrid quantum-classical workflows, and real-time collaboration tools.',
-        price: '$2,499',
-        period: '/month',
-        features: [
-            'Quantum error correction with 99.9% fidelity',
-            'Hybrid quantum-classical algorithm support',
-            'Real-time quantum circuit visualization',
-            'Advanced quantum simulation capabilities',
-            'Multi-qubit system support (up to 1000+ qubits)',
-            'Quantum machine learning model training',
-            'Collaborative research workspace',
-            'API access for custom integrations',
-            'Quantum algorithm library with 500+ algorithms',
-            'Performance analytics and optimization tools'
-        ],
-        category: 'Quantum AI & Research',
-        marketSize: '$8.7B',
-        targetAudience: 'Research institutions, universities, pharmaceutical companies, quantum computing startups, government labs',
-        competitiveAdvantage: 'Industry-leading quantum error correction, largest quantum algorithm library, real-time collaboration features, and hybrid quantum-classical workflow support',
-        useCases: [
-            'Drug discovery and molecular simulation',
-            'Climate modeling and prediction',
-            'Financial risk assessment',
-            'Cryptography and security research',
-            'Material science research'
-        ],
-        integrations: ['Jupyter Notebooks', 'TensorFlow Quantum', 'Qiskit', 'Cirq', 'PennyLane', 'GitHub'],
-        compliance: ['ISO 27001', 'SOC2', 'GDPR', 'HIPAA', 'FISMA'],
-        website: 'https://ziontechgroup.com/quantum-ai-research-platform',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 30,
-        setupTime: '1-2 weeks',
-        competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
-        roi: 'Average research institution sees 1000% ROI through accelerated discoveries',
-        launchDate: '2024-06-15',
-        customers: 85,
-        rating: 4.9,
-        reviews: 42,
-        quantumFeatures: [
-            'Quantum error correction',
-            'Multi-qubit systems',
-            'Quantum algorithm optimization',
-            'Quantum simulation capabilities'
-        ]
-    },
-    // Edge AI & IoT Services
-    {
-        id: 'edge-ai-iot-orchestrator',
-        name: 'Edge AI IoT Orchestrator',
-        tagline: 'Intelligent edge computing for IoT device management',
-        description: 'Comprehensive edge AI platform that enables real-time processing, analytics, and decision-making at the edge. Manages IoT devices, processes sensor data, and provides intelligent automation for industrial and smart city applications.',
-        price: '$399',
-        period: '/month',
-        features: [
-            'Real-time edge AI processing with <10ms latency',
-            'IoT device management and monitoring',
-            'Predictive maintenance algorithms',
-            'Edge-to-cloud data synchronization',
-            'Advanced sensor fusion and analytics',
-            'Automated device provisioning',
-            'Edge security and encryption',
-            'Custom AI model deployment',
-            'Multi-protocol IoT support',
-            'Real-time dashboard and alerts'
-        ],
-        category: 'Edge AI & IoT',
-        marketSize: '$12.3B',
-        targetAudience: 'Manufacturing companies, smart cities, utilities, logistics companies, healthcare facilities',
-        competitiveAdvantage: 'Lowest latency edge processing, comprehensive IoT protocol support, advanced predictive maintenance, and seamless cloud integration',
-        useCases: [
-            'Industrial IoT monitoring',
-            'Smart city infrastructure',
-            'Predictive maintenance',
-            'Real-time quality control',
-            'Energy management systems'
-        ],
-        integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP', 'OPC UA'],
-        compliance: ['ISO 27001', 'SOC2', 'GDPR', 'NIST', 'IEC 62443'],
-        website: 'https://ziontechgroup.com/edge-ai-iot-orchestrator',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 21,
-        setupTime: '2-4 weeks',
-        competitors: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn'],
-        roi: 'Average customer sees 400% ROI through reduced downtime and improved efficiency',
-        launchDate: '2024-07-20',
-        customers: 320,
-        rating: 4.8,
-        reviews: 156,
-        edgeComputing: [
-            'Edge AI processing',
-            'Real-time analytics',
-            'IoT device management',
-            'Predictive maintenance'
-        ]
-    },
-    // Blockchain & Web3 Services
-    {
-        id: 'decentralized-ai-marketplace',
-        name: 'Decentralized AI Marketplace',
-        tagline: 'Web3-powered AI model marketplace with tokenized rewards',
-        description: 'Revolutionary decentralized marketplace where AI developers can monetize their models, users can access AI services, and contributors earn tokens for participation. Built on blockchain with smart contracts ensuring fair compensation and quality control.',
-        price: '$199',
-        period: '/month',
-        features: [
-            'Smart contract-based AI model licensing',
-            'Tokenized reward system for contributors',
-            'Decentralized quality control mechanisms',
-            'Multi-blockchain support (Ethereum, Polygon, Solana)',
-            'AI model versioning and updates',
-            'Decentralized governance voting',
-            'Cross-chain AI model interoperability',
-            'Automated payment processing',
-            'Community-driven model curation',
-            'Advanced analytics and insights'
-        ],
-        category: 'Blockchain & Web3',
-        marketSize: '$15.8B',
-        targetAudience: 'AI developers, data scientists, blockchain companies, enterprises, research institutions',
-        competitiveAdvantage: 'First decentralized AI marketplace, multi-blockchain support, tokenized rewards, and community governance',
-        useCases: [
-            'AI model monetization',
-            'Decentralized AI services',
-            'Community-driven AI development',
-            'Cross-chain AI interoperability',
-            'Tokenized AI collaboration'
-        ],
-        integrations: ['Ethereum', 'Polygon', 'Solana', 'MetaMask', 'WalletConnect', 'OpenZeppelin'],
-        compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
-        website: 'https://ziontechgroup.com/decentralized-ai-marketplace',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 14,
-        setupTime: '1-2 days',
-        competitors: ['Ocean Protocol', 'SingularityNET', 'Fetch.ai', 'Numerai'],
-        roi: 'Average AI developer earns 300% more through decentralized marketplace',
-        launchDate: '2024-08-10',
-        customers: 1250,
-        rating: 4.7,
-        reviews: 680,
-        blockchainFeatures: [
-            'Smart contracts',
-            'Tokenized rewards',
-            'Multi-blockchain support',
-            'Decentralized governance'
-        ]
-    },
-    // Sustainable AI Services
-    {
-        id: 'green-ai-optimizer',
-        name: 'Green AI Optimizer',
-        tagline: 'AI-powered sustainability optimization for enterprises',
-        description: 'Comprehensive AI platform that helps organizations optimize their operations for sustainability, reduce carbon footprint, and achieve ESG goals. Provides real-time monitoring, predictive analytics, and automated optimization recommendations.',
-        price: '$299',
-        period: '/month',
-        features: [
-            'Carbon footprint tracking and analysis',
-            'Energy consumption optimization',
-            'Sustainable supply chain management',
-            'ESG reporting automation',
-            'Predictive sustainability analytics',
-            'Green procurement recommendations',
-            'Waste reduction algorithms',
-            'Renewable energy integration',
-            'Sustainability score tracking',
-            'Regulatory compliance monitoring'
-        ],
-        category: 'Sustainable AI',
-        marketSize: '$9.2B',
-        targetAudience: 'Large enterprises, manufacturing companies, logistics firms, retail chains, government agencies',
-        competitiveAdvantage: 'Comprehensive sustainability optimization, real-time monitoring, predictive analytics, and automated ESG reporting',
-        useCases: [
-            'Carbon footprint reduction',
-            'Energy efficiency optimization',
-            'Sustainable supply chain management',
-            'ESG compliance and reporting',
-            'Green procurement optimization'
-        ],
-        integrations: ['SAP', 'Oracle', 'Salesforce', 'Microsoft Dynamics', 'Tableau', 'Power BI'],
-        compliance: ['ISO 14001', 'ISO 50001', 'GRI Standards', 'SASB', 'TCFD'],
-        website: 'https://ziontechgroup.com/green-ai-optimizer',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 30,
-        setupTime: '3-6 weeks',
-        competitors: ['Watershed', 'Normative', 'Persefoni', 'CarbonChain'],
-        roi: 'Average enterprise saves $2.3M annually through sustainability optimization',
-        launchDate: '2024-09-05',
-        customers: 180,
-        rating: 4.9,
-        reviews: 95,
-        sustainabilityMetrics: [
-            'Carbon footprint tracking',
-            'Energy optimization',
-            'ESG reporting',
-            'Sustainable procurement'
-        ]
-    },
-    // Healthcare AI Services
-    {
-        id: 'ai-healthcare-diagnostics-pro',
-        name: 'AI Healthcare Diagnostics Pro',
-        tagline: 'Advanced medical imaging and diagnostic support platform',
-        description: 'State-of-the-art AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through advanced machine learning algorithms.',
-        price: '$599',
-        period: '/month',
-        features: [
-            'Medical image analysis with 98.5% accuracy',
-            'Multi-modality imaging support (X-ray, MRI, CT, ultrasound)',
-            'Real-time diagnostic recommendations',
-            'Patient risk assessment algorithms',
-            'Automated report generation',
-            'Integration with PACS and EHR systems',
-            'Clinical decision support tools',
-            'Quality assurance monitoring',
-            'Continuing medical education modules',
-            'Research data analytics platform'
-        ],
-        category: 'Healthcare AI',
-        marketSize: '$18.5B',
-        targetAudience: 'Hospitals, imaging centers, radiologists, healthcare systems, research institutions',
-        competitiveAdvantage: 'Highest diagnostic accuracy, multi-modality support, real-time recommendations, and comprehensive clinical integration',
-        useCases: [
-            'Medical image interpretation',
-            'Diagnostic support and validation',
-            'Patient risk assessment',
-            'Clinical research and trials',
-            'Quality assurance monitoring'
-        ],
-        integrations: ['Epic', 'Cerner', 'GE Healthcare', 'Siemens Healthineers', 'Philips Healthcare'],
-        compliance: ['HIPAA', 'FDA 510(k)', 'CE Mark', 'ISO 13485', 'SOC2'],
-        website: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 45,
-        setupTime: '4-8 weeks',
-        competitors: ['Aidoc', 'Zebra Medical Vision', 'Enlitic', 'Butterfly Network'],
-        roi: 'Average hospital improves diagnostic accuracy by 35% and reduces errors by 40%',
-        launchDate: '2024-10-15',
-        customers: 95,
-        rating: 4.9,
-        reviews: 52,
-        aiCapabilities: [
-            'Medical image analysis',
-            'Diagnostic support',
-            'Risk assessment',
-            'Clinical decision support'
-        ]
-    },
-    // Financial AI Services
-    {
-        id: 'ai-financial-intelligence-suite',
-        name: 'AI Financial Intelligence Suite',
-        tagline: 'Comprehensive AI-powered financial analysis and risk management',
-        description: 'Advanced financial AI platform that provides real-time market analysis, risk assessment, portfolio optimization, and regulatory compliance monitoring. Helps financial institutions make data-driven decisions and manage risk effectively.',
-        price: '$799',
-        period: '/month',
-        features: [
-            'Real-time market sentiment analysis',
-            'Advanced risk modeling and assessment',
-            'Portfolio optimization algorithms',
-            'Regulatory compliance monitoring',
-            'Fraud detection with 99.2% accuracy',
-            'Predictive market analytics',
-            'Automated trading strategies',
-            'Credit risk assessment',
-            'ESG investment analysis',
-            'Real-time regulatory reporting'
-        ],
-        category: 'Financial AI',
-        marketSize: '$22.1B',
-        targetAudience: 'Banks, investment firms, hedge funds, insurance companies, fintech startups',
-        competitiveAdvantage: 'Real-time market analysis, highest fraud detection accuracy, comprehensive risk modeling, and automated regulatory compliance',
-        useCases: [
-            'Market analysis and prediction',
-            'Risk management and assessment',
-            'Portfolio optimization',
-            'Fraud detection and prevention',
-            'Regulatory compliance monitoring'
-        ],
-        integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'FactSet', 'Refinitiv', 'S&P Global'],
-        compliance: ['Basel III', 'Dodd-Frank', 'SOX', 'GDPR', 'SOC2', 'ISO 27001'],
-        website: 'https://ziontechgroup.com/ai-financial-intelligence-suite',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 30,
-        setupTime: '2-4 weeks',
-        competitors: ['Palantir', 'SAS', 'IBM Watson', 'Oracle Financial Services'],
-        roi: 'Average financial institution sees 600% ROI through improved risk management and compliance',
-        launchDate: '2024-11-20',
-        customers: 145,
-        rating: 4.8,
-        reviews: 78,
-        aiCapabilities: [
-            'Market analysis',
-            'Risk modeling',
-            'Fraud detection',
-            'Portfolio optimization'
-        ]
-    },
-    // Cybersecurity AI Services
-    {
-        id: 'ai-cybersecurity-defense-platform',
-        name: 'AI Cybersecurity Defense Platform',
-        tagline: 'Next-generation AI-powered threat detection and response',
-        description: 'Advanced cybersecurity platform that uses AI and machine learning to detect, analyze, and respond to cyber threats in real-time. Provides comprehensive protection against evolving threats with automated incident response and threat intelligence.',
-        price: '$449',
-        period: '/month',
-        features: [
-            'Real-time threat detection with 99.8% accuracy',
-            'AI-powered behavioral analysis',
-            'Automated incident response',
-            'Threat intelligence and sharing',
-            'Advanced malware detection',
-            'Network traffic analysis',
-            'Endpoint protection and monitoring',
-            'Vulnerability assessment',
-            'Compliance reporting',
-            '24/7 security operations center'
-        ],
-        category: 'Cybersecurity AI',
-        marketSize: '$16.7B',
-        targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions',
-        competitiveAdvantage: 'Highest threat detection accuracy, real-time response, comprehensive threat intelligence, and automated incident handling',
-        useCases: [
-            'Threat detection and prevention',
-            'Incident response automation',
-            'Vulnerability management',
-            'Compliance monitoring',
-            'Security operations optimization'
-        ],
-        integrations: ['Splunk', 'ServiceNow', 'Jira', 'Slack', 'Microsoft Teams', 'Slack'],
-        compliance: ['ISO 27001', 'SOC2', 'NIST', 'GDPR', 'HIPAA', 'PCI DSS'],
-        website: 'https://ziontechgroup.com/ai-cybersecurity-defense-platform',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 21,
-        setupTime: '2-3 weeks',
-        competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
-        roi: 'Average enterprise reduces security incidents by 75% and response time by 90%',
-        launchDate: '2024-12-10',
-        customers: 280,
-        rating: 4.9,
-        reviews: 145,
-        aiCapabilities: [
-            'Threat detection',
-            'Behavioral analysis',
-            'Incident response',
-            'Vulnerability assessment'
-        ]
-    },
-    // Logistics & Supply Chain AI
-    {
-        id: 'ai-logistics-optimization-engine',
-        name: 'AI Logistics Optimization Engine',
-        tagline: 'Intelligent supply chain optimization and logistics management',
-        description: 'Advanced AI platform that optimizes supply chain operations, route planning, inventory management, and logistics efficiency. Provides real-time insights, predictive analytics, and automated optimization recommendations.',
-        price: '$349',
-        period: '/month',
-        features: [
-            'Real-time route optimization',
-            'Predictive demand forecasting',
-            'Inventory optimization algorithms',
-            'Supply chain risk assessment',
-            'Automated warehouse management',
-            'Last-mile delivery optimization',
-            'Cost optimization analysis',
-            'Sustainability tracking',
-            'Real-time tracking and visibility',
-            'Performance analytics dashboard'
-        ],
-        category: 'Logistics & Supply Chain AI',
-        marketSize: '$14.3B',
-        targetAudience: 'Logistics companies, e-commerce businesses, manufacturers, retailers, distribution centers',
-        competitiveAdvantage: 'Real-time optimization, predictive analytics, comprehensive supply chain visibility, and automated decision-making',
-        useCases: [
-            'Route optimization',
-            'Inventory management',
-            'Demand forecasting',
-            'Supply chain risk management',
-            'Warehouse optimization'
-        ],
-        integrations: ['SAP', 'Oracle', 'Salesforce', 'Shopify', 'WooCommerce', 'Magento'],
-        compliance: ['ISO 28000', 'C-TPAT', 'GDPR', 'SOC2', 'ISO 27001'],
-        website: 'https://ziontechgroup.com/ai-logistics-optimization-engine',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 30,
-        setupTime: '3-5 weeks',
-        competitors: ['Flexport', 'Convoy', 'FourKites', 'Project44'],
-        roi: 'Average logistics company reduces costs by 25% and improves delivery efficiency by 40%',
-        launchDate: '2025-01-15',
-        customers: 195,
-        rating: 4.8,
-        reviews: 98,
-        aiCapabilities: [
-            'Route optimization',
-            'Demand forecasting',
-            'Inventory optimization',
-            'Risk assessment'
-        ]
-    },
-    // Education AI Services
-    {
-        id: 'ai-education-personalization-platform',
-        name: 'AI Education Personalization Platform',
-        tagline: 'Personalized learning experiences powered by artificial intelligence',
-        description: 'Revolutionary AI platform that personalizes education for students of all ages, providing adaptive learning paths, intelligent tutoring, and comprehensive progress tracking. Enhances learning outcomes through data-driven personalization.',
-        price: '$89',
-        period: '/month',
-        features: [
-            'Adaptive learning algorithms',
-            'Personalized curriculum design',
-            'Intelligent tutoring systems',
-            'Progress tracking and analytics',
-            'Multi-subject support',
-            'Real-time performance assessment',
-            'Parent and teacher dashboards',
-            'Accessibility features',
-            'Gamification elements',
-            'Collaborative learning tools'
-        ],
-        category: 'Education AI',
-        marketSize: '$11.9B',
-        targetAudience: 'K-12 schools, universities, online learning platforms, corporate training, homeschooling families',
-        competitiveAdvantage: 'Most advanced adaptive learning, comprehensive personalization, real-time assessment, and multi-subject support',
-        useCases: [
-            'K-12 education',
-            'Higher education',
-            'Corporate training',
-            'Online learning',
-            'Special education support'
-        ],
-        integrations: ['Canvas', 'Blackboard', 'Moodle', 'Google Classroom', 'Microsoft Teams', 'Zoom'],
-        compliance: ['FERPA', 'COPPA', 'GDPR', 'SOC2', 'ISO 27001'],
-        website: 'https://ziontechgroup.com/ai-education-personalization-platform',
-        contact: {
-            phone: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        trialDays: 14,
-        setupTime: '1-2 weeks',
-        competitors: ['Duolingo', 'Khan Academy', 'Coursera', 'edX'],
-        roi: 'Average school improves student performance by 30% and engagement by 50%',
-        launchDate: '2025-02-20',
-        customers: 1250,
-        rating: 4.9,
-        reviews: 680,
-        aiCapabilities: [
-            'Adaptive learning',
-            'Personalized curriculum',
-            'Intelligent tutoring',
-            'Progress tracking'
-        ]
-    }
+export const INNOVATIVE_MICRO_SAAS_2025 = [
+  // Emerging Technology Solutions
+  {
+    id: "metaverse-platform",
+    title: "Metaverse Business Platform",
+    description: "Comprehensive platform for businesses to establish presence in the metaverse with virtual offices, events, and commerce",
+    category: "Metaverse",
+    price: "$8,500/month",
+    features: [
+      "Virtual office creation",
+      "3D event hosting",
+      "Virtual commerce",
+      "Avatar management",
+      "Cross-platform compatibility",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "Early metaverse adoption",
+      "Virtual customer engagement",
+      "Cost-effective events",
+      "Global reach"
+    ],
+    link: "/services/metaverse-platform",
+    image: "/images/metaverse-platform.jpg",
+    technology: "VR/AR + 3D + AI",
+    marketSize: "$3.8B by 2025",
+    targetIndustry: "Retail, Events, Real Estate, Education"
+  },
+  {
+    id: "web3-infrastructure",
+    title: "Web3 Infrastructure Platform",
+    description: "Complete Web3 infrastructure for decentralized applications, NFTs, and blockchain integration",
+    category: "Web3",
+    price: "$12,500/month",
+    features: [
+      "Smart contract deployment",
+      "NFT marketplace",
+      "DeFi integration",
+      "Wallet management",
+      "Cross-chain bridges",
+      "Security auditing"
+    ],
+    benefits: [
+      "Decentralized infrastructure",
+      "NFT monetization",
+      "DeFi capabilities",
+      "Future-proof technology"
+    ],
+    link: "/services/web3-infrastructure",
+    image: "/images/web3-infrastructure.jpg",
+    technology: "Blockchain + Web3 + DeFi",
+    marketSize: "$4.2B by 2025",
+    targetIndustry: "Finance, Gaming, Art, Real Estate"
+  },
+  
+  // AI-Powered Business Solutions
+  {
+    id: "ai-customer-success",
+    title: "AI Customer Success Platform",
+    description: "Intelligent platform that predicts customer churn and automates retention strategies",
+    category: "Customer Success",
+    price: "$6,500/month",
+    features: [
+      "Churn prediction",
+      "Automated retention",
+      "Customer health scoring",
+      "Personalized engagement",
+      "Success metrics tracking",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Reduce churn by 30%",
+      "Automated retention",
+      "Improved customer satisfaction",
+      "Data-driven insights"
+    ],
+    link: "/services/ai-customer-success",
+    image: "/images/ai-customer-success.jpg",
+    technology: "AI + ML + Analytics",
+    marketSize: "$2.8B by 2025",
+    targetIndustry: "SaaS, E-commerce, Services"
+  },
+  {
+    id: "ai-sales-optimization",
+    title: "AI Sales Optimization Platform",
+    description: "Comprehensive platform for optimizing sales processes, lead scoring, and revenue forecasting",
+    category: "Sales",
+    price: "$7,500/month",
+    features: [
+      "Lead scoring AI",
+      "Revenue forecasting",
+      "Sales process optimization",
+      "Pipeline analytics",
+      "Performance tracking",
+      "CRM integration"
+    ],
+    benefits: [
+      "Increase conversion rates",
+      "Accurate forecasting",
+      "Process optimization",
+      "Revenue growth"
+    ],
+    link: "/services/ai-sales-optimization",
+    image: "/images/ai-sales-optimization.jpg",
+    technology: "AI + Analytics + CRM",
+    marketSize: "$3.5B by 2025",
+    targetIndustry: "B2B, Enterprise, Sales Teams"
+  },
+  
+  // Data & Analytics Solutions
+  {
+    id: "real-time-analytics",
+    title: "Real-Time Business Analytics Platform",
+    description: "Live analytics platform for instant business insights and decision-making",
+    category: "Analytics",
+    price: "$5,500/month",
+    features: [
+      "Real-time dashboards",
+      "Live data streaming",
+      "Instant alerts",
+      "Predictive analytics",
+      "Custom metrics",
+      "Mobile access"
+    ],
+    benefits: [
+      "Instant insights",
+      "Real-time decisions",
+      "Proactive alerts",
+      "Competitive advantage"
+    ],
+    link: "/services/real-time-analytics",
+    image: "/images/real-time-analytics.jpg",
+    technology: "Real-time + Analytics + AI",
+    marketSize: "$2.4B by 2025",
+    targetIndustry: "E-commerce, Finance, Manufacturing"
+  },
+  {
+    id: "data-governance-platform",
+    title: "AI Data Governance Platform",
+    description: "Intelligent platform for automated data governance, compliance, and quality management",
+    category: "Data Governance",
+    price: "$9,500/month",
+    features: [
+      "Automated compliance",
+      "Data quality monitoring",
+      "Privacy protection",
+      "Audit trails",
+      "Policy enforcement",
+      "Regulatory reporting"
+    ],
+    benefits: [
+      "Automated compliance",
+      "Data quality improvement",
+      "Risk reduction",
+      "Regulatory adherence"
+    ],
+    link: "/services/data-governance",
+    image: "/images/data-governance.jpg",
+    technology: "AI + Compliance + Data",
+    marketSize: "$3.1B by 2025",
+    targetIndustry: "Enterprise, Healthcare, Finance"
+  },
+  
+  // Security & Compliance
+  {
+    id: "zero-trust-security",
+    title: "Zero Trust Security Platform",
+    description: "Comprehensive zero trust security platform for modern enterprise environments",
+    category: "Security",
+    price: "$11,500/month",
+    features: [
+      "Identity verification",
+      "Device trust scoring",
+      "Network segmentation",
+      "Continuous monitoring",
+      "Threat detection",
+      "Compliance reporting"
+    ],
+    benefits: [
+      "Enhanced security",
+      "Reduced attack surface",
+      "Compliance adherence",
+      "Modern security model"
+    ],
+    link: "/services/zero-trust-security",
+    image: "/images/zero-trust-security.jpg",
+    technology: "Zero Trust + AI + Security",
+    marketSize: "$4.8B by 2025",
+    targetIndustry: "Enterprise, Government, Healthcare"
+  },
+  {
+    id: "ai-compliance-automation",
+    title: "AI Compliance Automation Platform",
+    description: "Intelligent platform that automates regulatory compliance across multiple industries",
+    category: "Compliance",
+    price: "$8,500/month",
+    features: [
+      "Regulatory monitoring",
+      "Automated reporting",
+      "Compliance scoring",
+      "Risk assessment",
+      "Audit preparation",
+      "Multi-regulation support"
+    ],
+    benefits: [
+      "Automated compliance",
+      "Reduced manual work",
+      "Risk mitigation",
+      "Cost savings"
+    ],
+    link: "/services/ai-compliance",
+    image: "/images/ai-compliance.jpg",
+    technology: "AI + Compliance + Automation",
+    marketSize: "$2.9B by 2025",
+    targetIndustry: "Finance, Healthcare, Legal"
+  },
+  
+  // Collaboration & Productivity
+  {
+    id: "ai-collaboration-platform",
+    title: "AI Collaboration Platform",
+    description: "Intelligent platform that enhances team collaboration with AI-powered insights and automation",
+    category: "Collaboration",
+    price: "$4,500/month",
+    features: [
+      "Smart meeting scheduling",
+      "Task automation",
+      "Team analytics",
+      "Knowledge management",
+      "Workflow optimization",
+      "Integration tools"
+    ],
+    benefits: [
+      "Improved productivity",
+      "Better collaboration",
+      "Automated workflows",
+      "Team insights"
+    ],
+    link: "/services/ai-collaboration",
+    image: "/images/ai-collaboration.jpg",
+    technology: "AI + Collaboration + Automation",
+    marketSize: "$3.2B by 2025",
+    targetIndustry: "Enterprise, Remote Teams, Startups"
+  },
+  {
+    id: "virtual-reality-meetings",
+    title: "VR Meeting Platform",
+    description: "Immersive virtual reality platform for remote meetings and collaboration",
+    category: "VR Collaboration",
+    price: "$6,500/month",
+    features: [
+      "VR meeting rooms",
+      "3D presentations",
+      "Virtual whiteboards",
+      "Avatar customization",
+      "Spatial audio",
+      "Cross-platform support"
+    ],
+    benefits: [
+      "Immersive meetings",
+      "Better engagement",
+      "3D collaboration",
+      "Remote team building"
+    ],
+    link: "/services/vr-meetings",
+    image: "/images/vr-meetings.jpg",
+    technology: "VR + Collaboration + 3D",
+    marketSize: "$2.1B by 2025",
+    targetIndustry: "Enterprise, Education, Design"
+  },
+  
+  // Marketing & Growth
+  {
+    id: "ai-marketing-automation",
+    title: "AI Marketing Automation Platform",
+    description: "Intelligent marketing platform that automates campaigns and personalizes customer experiences",
+    category: "Marketing",
+    price: "$7,500/month",
+    features: [
+      "Campaign automation",
+      "Personalization engine",
+      "Customer segmentation",
+      "A/B testing",
+      "ROI optimization",
+      "Multi-channel support"
+    ],
+    benefits: [
+      "Automated campaigns",
+      "Personalized experiences",
+      "Improved ROI",
+      "Scalable marketing"
+    ],
+    link: "/services/ai-marketing",
+    image: "/images/ai-marketing.jpg",
+    technology: "AI + Marketing + Automation",
+    marketSize: "$4.5B by 2025",
+    targetIndustry: "E-commerce, B2B, SaaS"
+  },
+  {
+    id: "voice-search-optimization",
+    title: "Voice Search Optimization Platform",
+    description: "Platform for optimizing content and SEO for voice search and virtual assistants",
+    category: "Voice SEO",
+    price: "$4,500/month",
+    features: [
+      "Voice keyword research",
+      "Content optimization",
+      "Schema markup",
+      "Voice analytics",
+      "Performance tracking",
+      "Multi-language support"
+    ],
+    benefits: [
+      "Voice search visibility",
+      "Improved rankings",
+      "Mobile optimization",
+      "Future-ready SEO"
+    ],
+    link: "/services/voice-seo",
+    image: "/images/voice-seo.jpg",
+    technology: "Voice + SEO + AI",
+    marketSize: "$1.8B by 2025",
+    targetIndustry: "E-commerce, Content, Local Business"
+  },
+  
+  // Financial Technology
+  {
+    id: "ai-accounting-platform",
+    title: "AI Accounting Platform",
+    description: "Intelligent accounting platform with automated bookkeeping and financial insights",
+    category: "FinTech",
+    price: "$5,500/month",
+    features: [
+      "Automated bookkeeping",
+      "Expense categorization",
+      "Financial insights",
+      "Tax preparation",
+      "Compliance monitoring",
+      "Integration tools"
+    ],
+    benefits: [
+      "Automated accounting",
+      "Real-time insights",
+      "Cost savings",
+      "Compliance assurance"
+    ],
+    link: "/services/ai-accounting",
+    image: "/images/ai-accounting.jpg",
+    technology: "AI + Accounting + Automation",
+    marketSize: "$2.6B by 2025",
+    targetIndustry: "Small Business, Freelancers, Startups"
+  },
+  {
+    id: "crypto-payment-platform",
+    title: "Crypto Payment Platform",
+    description: "Complete platform for accepting and processing cryptocurrency payments",
+    category: "Crypto",
+    price: "$8,500/month",
+    features: [
+      "Multi-crypto support",
+      "Instant settlements",
+      "Fiat conversion",
+      "Security protocols",
+      "Compliance tools",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "Crypto acceptance",
+      "Global payments",
+      "Lower fees",
+      "Instant settlements"
+    ],
+    link: "/services/crypto-payments",
+    image: "/images/crypto-payments.jpg",
+    technology: "Blockchain + Crypto + Payments",
+    marketSize: "$3.4B by 2025",
+    targetIndustry: "E-commerce, Online Services, Gaming"
+  }
 ];
-export default innovativeMicroSaasServices2025;
+
+export const INNOVATIVE_CATEGORIES = [
+    "Business Intelligence",
+    "Customer Experience",
+    "Project Management",
+    "Marketing",
+    "Human Resources",
+    "Sales",
+    "Financial Services",
+    "Data Privacy",
+    "Supply Chain",
+    "Business Automation"
+];
+
+export const INNOVATIVE_PRICING = {
+    basic: {
+        price: 199,
+        currency: "$",
+        period: "month",
+        features: ["Core platform access", "Basic AI features", "Standard support"]
+    },
+    professional: {
+        price: 449,
+        currency: "$",
+        period: "month",
+        features: ["Advanced AI features", "Custom integrations", "Priority support", "Advanced analytics"]
+    },
+    enterprise: {
+        price: 999,
+        currency: "$",
+        period: "month",
+        features: ["Full platform access", "White-label options", "24/7 support", "Custom development"]
+    }
+};
+
+export const INNOVATIVE_CONTACT = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008, Middletown DE 19709",
+    website: "https://ziontechgroup.com",
+    supportHours: "24/7",
+    responseTime: "< 2 hours"
+};

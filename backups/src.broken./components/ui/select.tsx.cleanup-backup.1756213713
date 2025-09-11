@@ -1,0 +1,42 @@
+import React from 'react';
+
+interface SelectProps {
+  children: React.ReactNode;
+  className?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  disabled?: boolean;
+}
+
+interface SelectItemProps {
+  children: React.ReactNode;
+  value: string;
+}
+
+export function SelectItem({ children, value }: SelectItemProps) {
+  return (
+export function SelectValue({ placeholder }: { placeholder?: string }) {
+  return <span className="text-sm">{placeholder || 'Select an option'}</span>;
+}
+
+interface SelectItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  value: string;
+}
+
+export function SelectItem({ children, className = '', value, ...props }: SelectItemProps) {
+  return (
+    <div
+      className={`
+        relative flex w-full cursor-pointer select-none items-center 
+        rounded-sm px-3 py-2 text-sm text-white outline-none 
+        hover:bg-zion-blue/20 focus:bg-zion-blue/20 
+        focus:text-white transition-colors
+        ${className}
+      `}
+      data-value={value}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+export function SelectContent({ children }: { children: React.ReactNode }) {

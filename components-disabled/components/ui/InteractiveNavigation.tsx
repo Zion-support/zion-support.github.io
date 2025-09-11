@@ -1,6 +1,4 @@
 
-
-
 export default Component}
 ;
 export default Component}

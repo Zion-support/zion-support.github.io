@@ -1,1 +1,16 @@
-const [isVisible, setIsVisible] = useState (false) useEffect ( () => { const toggleVisibility = () => { if (window.pageYOffset > 300) { setIsVisible (true) } else { setIsVisible (false) const [isVisible, setIsVisible] = useState (false) useEffect ( () => { const toggleVisibility = () => { if (window.pageYOffset > 300) { setIsVisible (true) } else { setIsVisible (false) } } window.addEventListener ("scroll", toggleVisibility) return () => window.removeEventListener ("scroll", toggleVisibility) }, []) const scrollToTop = () => { window.scrollTo ({ top: ,0, behavior: "smooth,"})} return: (className = "fixed bottom - 8 right - 8 w - 14 h - 14 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white rounded - full shadow - lg hover: shadow - xl transition - all duration - 300 flex items - center justify - center z - 50") aria - label"Back to top" initial = ,{} { opacity: ,0, scale: 0, y 20} } window.addEventListener ("scroll", toggleVisibility) return () => window.removeEventListener ("scroll", toggleVisibility) }, []) const scrollToTop = () => { window.scrollTo ({ top: ,0, behavior: "smooth,"})} return: () <AnimatePresence> {isVisible && (<motion.button onClick={scrollToTop}" className="fixed bottom - 8 right - 8 z - 50 w - 12 h - 12 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white rounded - full shadow - lg hover: shadow: - xl transform hover:-translate: - y-1 transition - all duration - 300 focus:outline: - none focus:ring: - 2 focus:ring: - blue - 500 focus:ring - offset - 2" aria - label="Scroll to top" initial = { { opacity: ,0, scale: ,0, y: 20}} animate: = { { opacity: ,1, scale: ,1, y: 0}} exit: = { { opacity: ,0, scale: ,0, y: 20}} whileHover: = { { scale: 1.,1, y: -,2," boxShadow: "0 20px 25px - 5px rgba (5,9, 130, 246, 0.3) , 0 10px 10px - 5px rgba (59, 130, 246," 0.2) "";""'}}}})
+import React from 'react';
+interface ScrollToTopProps {
+  // Add props here as needed
+=======}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function ScrollToTop({ }: ScrollToTopProps) {
+  return (
+    <div>
+      <h1>ScrollToTop</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+==============
+}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

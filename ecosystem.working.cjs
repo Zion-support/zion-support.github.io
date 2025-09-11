@@ -1,38 +1,21 @@
-module.exports = {
-  apps: [;
-    // AI-Powered Code Analyzer - Intelligent code analysis and auto-fixing;
-    {
-      name: 'ai-code-analyzer',;
-      script: './scripts/automation/ai-code-analyzer.cjs',;
-      instances: 1,;
-      autorestart: true,;
-      watch: false,;
-      max_memory_restart: '512M',;
-      env: {
-        NODE_ENV: 'production',;
-        AI_ANALYSIS_MODE: 'true'},;
-      log_file: './logs/ai-code-analyzer.log',;
-      error_file: './logs/ai-code-analyzer-error.log',;
-      out_file: './logs/ai-code-analyzer-out.log',;
-      merge_logs: true,;
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
-
     // Smart Performance Optimizer - Bundle and runtime optimization;
-    {
-      name: 'smart-performance-optimizer',;
-      script: './scripts/automation/smart-performance-optimizer.cjs',;
-      instances: 1,;
-      autorestart: true,;
-      watch: false,;
-      max_memory_restart: '1G',;
-      env: {
-        NODE_ENV: 'production',;
-        PERFORMANCE_OPTIMIZATION_MODE: 'true'},;
-      log_file: './logs/smart-performance-optimizer.log',;
-      error_file: './logs/smart-performance-optimizer-error.log',;
-      out_file: './logs/smart-performance-optimizer-out.log',;
-      merge_logs: true,;
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+    {;
+      name: 'smart-performance-optimizer',
+      script: './scripts/automation/smart-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {;
+        NODE_ENV: 'production',
+        PERFORMANCE_OPTIMIZATION_MODE: 'true',,
+},
+      log_file: './logs/smart-performance-optimizer.log',
+      error_file: './logs/smart-performance-optimizer-error.log',
+      out_file: './logs/smart-performance-optimizer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',,
+},
 
     // Intelligent Dependency Manager - Dependency analysis and management;
     {
@@ -154,19 +137,21 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
     // Console Error Fixer - Runtime error automation;
-    {
-      name: 'console-error-fixer',;
-      script: './scripts/automation/console-error-fixer.cjs',;
-      instances: 1,;
-      autorestart: true,;
-      watch: false,;
-      max_memory_restart: '256M',;
-      env: {
-        NODE_ENV: 'production',;
-        ERROR_FIXING_MODE: 'true'},;
-      log_file: './logs/console-error-fixer.log',;
-      error_file: './logs/console-error-fixer-error.log',;
-      out_file: './logs/console-error-fixer-out.log',;
-      merge_logs: true,;
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
-  ]}
+    {;
+      name: 'console-error-fixer',
+      script: './scripts/automation/console-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {;
+        NODE_ENV: 'production',
+        ERROR_FIXING_MODE: 'true',,
+},
+      log_file: './logs/console-error-fixer.log',
+      error_file: './logs/console-error-fixer-error.log',
+      out_file: './logs/console-error-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',,
+},
+  ],,};

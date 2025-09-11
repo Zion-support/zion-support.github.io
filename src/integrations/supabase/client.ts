@@ -1,87 +1,101 @@
-<<<<<<< HEAD
-// Mock Supabase client for build
-export const isSupabaseConfigured = () => {
-  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-};
-=======
-import { createClient } from '@supabase/supabase-js';
-import { supabaseStorageAdapter } from './safeStorageAdapter';
-// Mock Supabase client for development
-// In production, this would be the actual Supabase client
->>>>>>> origin/chore/fix-links-and-build
-
-const supabaseUrl =
-  process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
+import { _createClient } from '@supabase/supabase-js';
+;
+const _supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const _supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+;
+if (!supabaseUrl || !supabaseAnonKey) {;
 }
-
-// Create Supabase client with proper configuration
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    persistSession: true,
-    autoRefreshToken: true,
-    storage: supabaseStorageAdapter,
-  },
-  global: {
-    headers: {
-      'apikey': supabaseAnonKey
-    }
-  }
+export const _supabase = createClient(supabaseUrl, supabaseAnonKey, {;
+  "auth": "{;
+    "autoRefreshToken": true;
+    "persistSession": true;
+    "detectSessionInUrl": true;
+  "}
 });
+;
+// Helper functions for common operations;
+export const _supabaseHelpers = {;
+  // User management;
+  async getUser() {;
+    const { "data": "{ user "}, error } = await supabase.auth.getUser();
+const _supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || &apos;&quot;https&quot;: //placeholder.supabase.co
+const _supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;placeholder-key
 
-// Helper function to access profiles table
-export const getFromProfiles = () => supabase.from('profiles');
-
-// Check if the browser is online. Gracefully handle environments where
-// `navigator` is undefined such as server side rendering or tests.
-export async function checkOnline(): Promise<boolean> {
-  try {
-    return typeof navigator !== 'undefined' && navigator.onLine;
-  } catch {
-    return false;
+    if (error) throw error;
+    return user;
   }
-}
-
-// Helper function for safe fetching with retries. Adds the Supabase API key
-// header while preserving any existing Headers instance passed in `options`.
-// Throws a consistent error message when the request ultimately fails.
-export async function safeFetch(url: string, options: RequestInit = {}) {
-  if (!(await checkOnline())) {
-    throw new Error('Failed to connect to Supabase');
+  async getSession() {;
+    const { "data": "{ session "}, error } = await supabase.auth.getSession();
+    if (error) throw error;
+    return session;
   }
-
-  // Ensure 'fetchHeaders' is compatible with the global fetch
-  const fetchHeaders = new Headers(options.headers as HeadersInit);
-
-  if (!fetchHeaders.has('apikey')) {
-    fetchHeaders.set('apikey', supabaseAnonKey);
+  async signOut() {;
+    const { error } = await supabase.auth.signOut();
+    if (error) throw error;
   }
-
-  const maxRetries = 3;
-  let lastError: unknown;
-
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      const response = await fetch(url, {
-        ...options,
-        headers: fetchHeaders, // Use the new 'fetchHeaders' variable
-      });
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+  // Database operations;
+  async fetchData("table": "string", query?: "any) {;
+    let _queryBuilder = supabase.from(table).select('*');
+    ;
+    if (query) {;
+      Object.entries(query).forEach(([key", value]) => {;
+        if (value !== undefined && value !== null) {;
+          queryBuilder = queryBuilder.eq(key, value);
+        }
       }
-      
-      return response;
-    } catch (error) {
-      lastError = error;
-      // Wait before retrying (exponential backoff)
-      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+    );
     }
-  }
+    const { data, error } = await queryBuilder;
+    if (error) throw error;
+    return data;
+  },
 
-  throw new Error('Failed to connect to Supabase');
-}
+  async insertData(table: string, data: an y) {
+    const { data: resul t, error } = await supabase
+      .from(table)
+      .insert(data)
+      .select();
+    ;
+    if (error) throw error;
+    return result;
+  },
+
+  async updateData(table: string, id: string, data: any) {
+    const { data: result, error } = await supabase
+      .from(table)
+      .update(data)
+  async updateData(table: string, id: string, data: an y) {
+    const { data: resul t, error } = await supabase
+      .from(table)
+      .update(data)
+      .eq('id', id)
+      .select();
+    
+    if (error) throw error;
+    return result;
+  },
+
+  async deleteData(table: string, id: string) {
+    const { error } = await supabase
+      .from(table)
+      .delete()
+      .eq('id', id);
+      .select();
+    ;
+    if (error) throw error;
+    return result;
+  }
+  async deleteData("table": "string", "id": "string) {;
+    const { error "} = await supabase;
+      .from(table);
+      .delete();
+      .eq('id', id);
+    ;
+    if (error) throw error;
+  }
+};
+
+export default supabase;
+import { _createClient } from '@supabase/supabase-js
+const _supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '"https": //placeholder.supabase.co
+const _supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) { } export const _supabase = createClient(supabaseUrl,supabaseAnonKey,{ auth: { autoRefreshToken: true,persistSession: true,detectSessionInUrl: true } };); export const _supabaseHelpers = { async getUser() { const { data: { user },error }; = await supabase.auth.getUser(); if (error) throw error; return user},async getSession() { const { data: { session },error } = await supabase.auth.getSession(); if (error) throw error; return session},async signOut() { const { error } = await supabase.auth.signOut(); if (error) throw error},async fetchData($1) { let _queryBuilder = supabase.from(table).select('*'); if (query) { Object.entries(query).forEach(([key,value]) => { if (value !== undefined && value !== null) { queryBuilder = queryBuilder.eq(key,value)} })} const { data,error } = await queryBuilder; if (error) throw error; return data},async insertData($1) { const { data: result,error } = await supabase .from(table) .insert(data) .select(); if (error) throw error; return result},async updateData(table: string,id: string,data: an y) { const { data: resul t,error } = await supabase .from(table)'; .update(data)';'; .eq('id',id) .select(); if (error) throw error; return result},async deleteData(table: string,id: string) { const { error } = await supabase .from(table)'; .delete() .eq('id',id); if (error) throw error} }; export default supabase;';';

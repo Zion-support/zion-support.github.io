@@ -488,20 +488,17 @@ function walkDirectory(dir) {
   return fixedCount}
     let fixes = 0;
 
+
+
+
+console.log(`\n📊 Summary:`);
+console.log(`   Files processed: ${filesToFix.length}`);
+console.log(`   Total fixes applied: ${totalFixes}`);
 if (totalFixes > 0) {
     
 } else {
     
 }
-    
-} else {
-    
-}
-
-
-
-main
-
 #!/usr/bin/env node;
     console.log('\n✅ Final syntax error fixing completed!');
 } else {

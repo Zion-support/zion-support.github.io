@@ -1,88 +1,74 @@
-export interface ProductListing {
+export interface Listing {
   id: string;
   title: string;
   description: string;
   price: number;
   currency: string;
   category: string;
+  subcategory?: string;
   tags: string[];
-  rating?: number;
-  reviewCount?: number;
-  featured?: boolean;
-  image?: string;
-  images?: string[];
-  seller?: {
+  images: string[];
+  seller: {
     id: string;
     name: string;
-    avatar: string;
     rating: number;
     reviews: number;
   };
-  location?: {
-    city: string;
-    country: string;
-    coordinates?: [number, number];
-  };
-  status?: 'active' | 'sold' | 'expired' | 'draft';
-  createdAt: Date;
-  updatedAt: Date;
+  location: string;
+  createdAt: string;
+  updatedAt: string;
+  status: 'active' | 'inactive' | 'sold' | 'pending';
+  views: number;
+  likes: number;
+  shares: number;
 }
 
-export type ListingView = "grid" | "list";
-
-export interface ListingFilter {
-  category?: string;
-  priceRange?: {
-    min: number;
-    max: number;
-  };
-  location?: string;
-  condition?: string;
-  tags?: string[];
-  sellerRating?: number;
-  sortBy?: 'price' | 'date' | 'rating' | 'views';
-  sortOrder?: 'asc' | 'desc';
-}
-
-export interface ListingSearchResult {
-  listings: Listing[];
-  total: number;
-  page: number;
-  limit: number;
-  hasMore: boolean;
-}
-
-export interface ListingFormData {
-  title: string;
-  description: string;
-  price: number;
-  currency: string;
-  category: string;
-  tags: string[];
-  images: File[];
-  condition: string;
-  specifications: Record<string, any>;
+export interface ProductListing extends Listing {
+  brand?: string;
+  model?: string;
+  condition: 'new' | 'used' | 'refurbished';
+  warranty?: string;
   shipping: {
-    available: boolean;
     cost: number;
     method: string;
     estimatedDays: number;
   };
-  returns: {
-    allowed: boolean;
-    days: number;
-    cost: number;
-  };
 }
 
-export interface ListingStats {
-  totalListings: number;
-  activeListings: number;
-  totalViews: number;
-  totalFavorites: number;
-  averagePrice: number;
-  categoryDistribution: Record<string, number>;
-  availability?: string;
-  aiScore?: number;
-  pricingTier?: string;
+export interface ServiceListing extends Listing {
+  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
+  duration?: string;
+  availability: string[];
+  experience: number;
+  certifications: string[];
+  portfolio?: string[];
+}
+
+export interface TalentListing extends Listing {
+  skills: string[];
+  experience: number;
+  education: string[];
+  certifications: string[];
+  languages: string[];
+  availability: string[];
+  hourlyRate: number;
+  portfolio?: string[];
+  references?: string[];
+}
+
+export interface CartItem {
+  id: string;
+  title: string;
+  price: number;
+  quantity: number;
+  type: 'product' | 'service' | 'talent';
+  image?: string;
+}
+
+export interface WishlistItem {
+  id: string;
+  userId: string;
+  listingId: string;
+  type: 'product' | 'service' | 'talent';
+  addedAt: string;
 }

@@ -1,8 +1,12 @@
-// Routes have been converted to Next.js pages structure
-// This component is no longer needed since Next.js uses file-based routing
+import { Route } from "react-router-dom";
+import TalentDirectory from "../pages/TalentDirectory";
+import TalentsPage from "../pages/TalentsPage";
 
-const TalentRoutes = () => {
-  return null;
-};
-
-export default TalentRoutes;
+export default function TalentRoutes() {
+  return (
+    <>
+      <Route path="directory" element={<TalentDirectory />} />
+      <Route path="list" element={<TalentsPage />} />
+    </>
+  );
+}

@@ -69,14 +69,15 @@ function cleanMergeConflicts(content) {
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
-<<<<<<< HEAD
-=======
-
 
     
-    if (cleaned !== content) {
-      fs.writeFileSync(filePath, cleaned);
-      return true;
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+  
+      if (content.includes('') || content.includes('') || content.includes('        conflictedFiles.push(filePath);
+      }
     }
     return false;
   } catch (error) {
@@ -99,24 +100,14 @@ function findConflictedFiles(dir, conflictedFiles = []) {
 
 
   
-  // Clean up any remaining artifacts
+  // Remove merge conflict markers and keep HEAD version
+  content = content.replace(/\n?/g, '');
+  content = content.replace(/.*?\n?/g, '');
+  content = content.replace(/  content = content.replace(/  content = content.replace(/    // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   // Remove any remaining conflict markers
-
-
-
-
-
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      findConflictedFiles(filePath, conflictedFiles);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
-      const content = fs.readFileSync(filePath, 'utf8');
-  content = content.replace(/[a-f0-9]+\n?/g, '');
-  content = content.replace(/origin\/[^\n]+\n?/g, '');
-  content = content.replace(/ursor\/[^\n]+\n?/g, '');
-
 
 
 
@@ -137,5 +128,4 @@ function findConflictedFiles(dir, conflictedFiles = []) {
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   // Remove any remaining conflict markers;
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
+console.log('All merge conflicts cleaned!');

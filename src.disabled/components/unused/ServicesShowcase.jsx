@@ -1,1 +1,20 @@
-export function ServicesShowcase() { const services = [ { icon: CpuChipIco,n, title: "AI & Machine Learning,"," description: "Advanced AI solutions for automatio,n, decision-making, and predictive analytics", " color: "from-zion-cyan to-zion-blue,"," href: "/ai-solutions"}, { icon: CloudIco,n," title: "Cloud & DevOps,", " description: "Scalable cloud infrastructure and automated deployment pipelines,"," color: "from-zion-purple to-zion-cyan,", " href: "/cloud-devops"}, { icon: ShieldCheckIco,n, " title: "Cybersecurity,"," description: "Comprehensive security solutions for threat detection and prevention,", " color: "from-zion-purple to-zion-blue,"," href: "/cybersecurity"}, { icon: LightBulbIco,n," title: "Digital Transformation,", " description: "End-to-end digital strategy and implementation services,"," color: "from-zion-cyan to-zion-purple,", " href: "/digital-transformation"}, { icon: RocketLaunchIco,n, " title: "Micro SaaS Solutions,"," description: "Custom SaaS platforms for specific business needs,", " color: "from-zion-blue to-zion-cyan,"," href: "/micro-saas"}, { icon: ChartBarIco,n," title: "Business Intelligence,", " description: "Data analytics and insights for informed decision-making,"," color: "from-zion-purple to-zion-blue,", " href: "/business-intelligence" ] const containerVariants = { hidden: { opacity 0}, visible: { opacity ,1, transition: { staggerChildren 0.1} const itemVariants = { hidden: { y 2,0, opacity: 0}, visible: { y ,0, opacity: ,1, transition: { duration 0.5}";""'}}}}}}
+import React from 'react';
+interface ServicesShowcaseProps {
+  // Add props here as needed
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function ServicesShowcase({ }: ServicesShowcaseProps) {
+  return (
+    <div>
+      <h1>ServicesShowcase</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/unused/ServicesShowcase.jsx

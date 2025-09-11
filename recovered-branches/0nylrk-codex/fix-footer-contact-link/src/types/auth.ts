@@ -1,66 +1,47 @@
-export interface UserDetails {
-  id?: string;
-  name?: string;
-  email?: string;
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
-  headline?: string;
-  profileComplete?: boolean;
-  role?: string;
-  permissions?: string[];
-  companyId?: string;
-  bio?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
-
   permissions?: string[];
   company_id?: string;
-export interface UserDetails {
-export interface UserDetails {;
-  id?: string;
-  name?: string;
-  email?: string;
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
-  headline?: string;
-  profileComplete?: boolean;
-  role?: string;
-  permissions?: string[],
-  companyId?: string;
-  bio?: string;
-  createdAt?: string;
-  updatedAt?: string
-}
-
   permissions?: string[];
   company_id?: string;
-  created_at?: string;
-  updated_at?: string;
-}
 
+export interface UserProfile {;
   id?: string;
-  display_name?: string;
+  displayName?: string;
   email: string;
-  user_type: string;
-  profile_complete: boolean;
-  created_at: string;
-  updated_at: string;
+  userType: string;
+  profileComplete: boolean;
+  createdAt: string;
+  updatedAt: string;
   avatar_url?: string;
   bio?: string;
-  avatar_url?: string;
+  avatarUrl?: string;
   headline?: string;
   role?: string;
-  permissions?: string[];
-  companyId?: string;
+
+  permissions?: string[]
+
+  companyId?: string
 }
+// Update AuthContextType definition to match implementation
+export interface AuthContextType {;
+  user: UserDetails | null;
+  isLoading: boolean;
 
-  permissions?: string[],
-  company_id?: string;}
+  isAuthenticated: boolean
+  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
+  signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
+  logout: () => Promise<void>
+  resetPassword: (email: string) => Promise<{ error?: any }>;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
+  loginWithGoogle: () => Promise<void>;
+  loginWithFacebook: () => Promise<void>;
+  loginWithTwitter: () => Promise<void>;
+  loginWithWeb3: () => Promise<void>
+  signIn?: (email: string, password: string) => Promise<{ error: any }>;
+  signOut?: () => Promise<void>;
+
+  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+}
 export interface UserDetails {;
-
   id?: string,;
   name?: string,;
   email?: string,;
@@ -75,9 +56,10 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
+  permissions?: string[],
+  company_id?: string;
 }
 ;
-
 export interface UserProfile {;
   id?: string,;
   displayName?: string,;
@@ -93,8 +75,32 @@ export interface UserProfile {;
   role?: string,;
   permissions?: string[],;
   companyId?: string;
+}
+;
+// Update AuthContextType definition to match implementation;
+export interface AuthContextType {;
+  user: UserDetails | null,;
+  isLoading: boolean,;
+  isAuthenticated: boolean,;
+  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>,;
+  signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>,;
+  logout: () => Promise<void>,;
+  resetPassword: (email: string) => Promise<{ error?: any }>,;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>,;
+  loginWithGoogle: () => Promise<void>,;
+  loginWithFacebook: () => Promise<void>,;
+  loginWithTwitter: () => Promise<void>,;
+  loginWithWeb3: () => Promise<void>,;
+  signIn?: (email: string, password: string) => Promise<{ error: any }>,;
+  signOut?: () => Promise<void>;
+  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
+  permissions?: string[],
+  company_id?: string;
+}
+}
+;
+}
 export interface UserDetails {;
-
   id?:string,;
   name?:string,;
   email?:string,;
@@ -113,8 +119,6 @@ export interface UserDetails {;
 export interface UserProfile {;
   id?:string,;
   displayName?:string,;
-
-pr-12325
   email:string,;
   userType:string,;
   profileComplete:boolean,;
@@ -131,10 +135,6 @@ pr-12325
 ;
 // Update AuthContextType definition to match implementation;
 export interface AuthContextType {;
-
-  companyId?:string;
-// Update AuthContextType definition to match implementation;
-pr-12325
   user:UserDetails | null,;
   isLoading:boolean,;
   isAuthenticated:boolean,;
@@ -143,9 +143,6 @@ pr-12325
   logout:() => Promise<void>,;
   resetPassword:(email:string) => Promise<{ error?:any }>,;
   updateProfile:(data:Partial<UserDetails>) => Promise<{ error?:any }>,;
-
-
-pr-12325
   loginWithGoogle:() => Promise<void>,;
   loginWithFacebook:() => Promise<void>,;
   loginWithTwitter:() => Promise<void>,;
@@ -157,6 +154,5 @@ pr-12325
 }
 }
 ;
-
 }
 ;

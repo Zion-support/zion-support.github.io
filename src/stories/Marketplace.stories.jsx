@@ -5,36 +5,20 @@ const meta = {
     component: Marketplace,
     decorators: [
         (Story) => (<MemoryRouter>
-        <Story       />
+        <Story />
       </MemoryRouter>)
     ]
 };
 export default meta;
 export const Grid = {
-  render: () => {
-        localStorage.setItem('marketplaceView',
-  'grid');
-        return <Marketplace       />;
-    
-
-
-
-
-
-
-}
+    render: () => {
+        localStorage.setItem('marketplaceView', 'grid');
+        return <Marketplace />;
+    }
 };
 export const List = {
-  render: () => {
-        localStorage.setItem('marketplaceView',
-  'list');
-        return <Marketplace       />;
-    
-
-
-
-
-
-
-}
+    render: () => {
+        localStorage.setItem('marketplaceView', 'list');
+        return <Marketplace />;
+    }
 };

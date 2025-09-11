@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import ContactCTA from '../components/ContactCTA';'
-describe('ContactCTA', () => {test('renders without crashing', () => {render(<ContactCTA />)expect(screen.getByTestId('contactcta')).toBeInTheDocument()})test('displays correct content', () => {render(<ContactCTA />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<ContactCTA />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<ContactCTA />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ContactCTA from &apos;./ContactCTA; describe(&apos;ContactCTA&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ContactCTA / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ContactCTA from &apos;./ContactCTA; describe(&apos;ContactCTA&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ContactCTA / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ContactCTA from &apos;./ContactCTA; describe(&apos;ContactCTA&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<ContactCTA / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

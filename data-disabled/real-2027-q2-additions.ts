@@ -15,4 +15,3 @@ export const real2027Q2Additions: Real2027Q2Addition[] = [;
       "Mid-year innovations",;
       "Advanced solutions",;
     ]},;
-]

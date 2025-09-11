@@ -6,10 +6,19 @@ export const metadata = {
 
 // eslint-disable-next-line react-refresh/only-export-components
 
-export const metadata = {
-  title: 'Ai Powered Tools - Zion Tech Group',
-  description: 'Advanced ai powered tools solutions for modern businesses.',
-};
+        {/* AI Tool Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <AIToolCategory
+            title="Content Generation"
+            icon="✍️"
+            description="AI-powered content creation and optimization tools"
+            tools={[
+              'AI Blog Writer Pro',
+              'Social Media Content Generator',
+              'Email Marketing AI',
+              'SEO Content Optimizer',
+              'Video Script Generator',
+              'Product Description AI',
             ]}
           />
           <AIToolCategory"
@@ -511,8 +520,8 @@ function AIPricingPlan({}
   popular: boolean;
 }) {}
   return (
-    <div"
-      className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? "border-purple-500" : "border-gray-200"} relative`}
+    <div
+      className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-purple-500' : 'border-gray-200'} relative`}
     >
       {popular && ("
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">"
@@ -532,12 +541,12 @@ function AIPricingPlan({}
           </li>
         ))}
       </ul>
-      <a"
-        href="tel:+13024640950"`
-        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${}
-          popular"
-            ? "bg-purple-600 text-white hover:bg-purple-700""
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
+      <a
+        href="tel:+13024640950"
+        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
+          popular
+            ? 'bg-purple-600 text-white hover:bg-purple-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >
         Get Started;

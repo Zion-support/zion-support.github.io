@@ -1,15 +1,14 @@
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe, Stripe } from '@stripe/stripe-js';
 
-let stripePromise: Promise<unknown>;
+let stripePromise: Promise<Stripe | null>;
 
-export const getStripe = () => {
+export function getStripe() {
   if (!stripePromise) {
-    stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY || "");
+    const key =
+      import.meta.env.PROD
+        ? (import.meta.env['VITE_STRIPE_PUBLISHABLE_KEY'] as string)
+        : (import.meta.env['VITE_STRIPE_TEST_KEY'] as string);
+    stripePromise = loadStripe(key, { advancedFraudSignals: false });
   }
   return stripePromise;
-};
-
-export const isProdDomain = () => {
-  return window.location.hostname === 'ziontechgroup.com' || 
-         window.location.hostname === 'www.ziontechgroup.com';
-};
+}

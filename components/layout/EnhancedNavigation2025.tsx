@@ -7,12 +7,11 @@ export default function EnhancedNavigation2025() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleClickOutside = () => setActiveDropdown(null);
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
+	useEffect(() => {
+		const handleScroll = () => setIsScrolled(window.scrollY > 20);
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 
 	const navigation = [
 		{
@@ -85,12 +84,22 @@ export default function EnhancedNavigation2025() {
 				</div>
 			</div>
 
-  const getBadgeText = (item: NavigationItem) => {
-    if (item.isPremium) return 'Premium';
-    if (item.isHot) return 'Hot';
-    if (item.isNew) return 'New';
-    return item.badge || '';
-  };
+			{/* Main Navigation */}
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex items-center justify-between h-16">
+					{/* Logo */}
+					<Link href="/" className="flex items-center gap-3 group">
+						<div className="relative">
+							<div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+								<Zap className="w-6 h-6 text-white" />
+							</div>
+							<div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+						</div>
+						<div className="hidden sm:block">
+							<div className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">Zion Tech Group</div>
+							<div className="text-xs text-gray-400">Future Technology Solutions</div>
+						</div>
+					</Link>
 
 					{/* Desktop Navigation */}
 					<div className="hidden lg:flex lg:items-center lg:space-x-8">

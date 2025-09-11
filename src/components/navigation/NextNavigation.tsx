@@ -1,188 +1,166 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react',;',';';
+    ;
+import Link from 'next/link',;';';
+    ;
+import { _useRouter } from 'next/router',;',';';
+    ;
+import { _motion, AnimatePresence } from 'framer-motion';
+import {;
 
-const NextNavigation = () => {};
-};
-  const [isOpen, setIsOpen] = useState(false);,
-}
-  const [isScrolled, setIsScrolled] = useState(false);,
-}
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);,
-}
-  const router = useRouter();,
-}
-  useEffect(() => {};
-};
-      setIsScrolled(window.scrollY > 20);,
-}
-    }";
-";
-    window.addEventListener()}
-    return () => window.removeEventListener("scroll", handleScroll)}
-  }, [])}
-  const navigationItems = [] },";
-    { name: "About", href: "/about" },";
-    { name: "Contact", href: "/contact" }
-
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Code } from 'lucide-react';
+const services = [];
+const solutions = [];
+  Menu;
+  X;
+  ChevronDown;
+  Globe;
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Users;
+  Phone;
+  Mail,;
+  MapPin,;';
+  Code,;';';
+  Database,;';';';
+  Network,;',';';
+    ';';';
+  Settings} from 'lucide-react';
+const _NextNavigation = ("props": "any) => {;
+  const [isOpen", setIsOpen] = useState<any>(false);
+  const [isScrolled, setIsScrolled] = useState<any>(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const _router = useRouter();
+  useEffect(() => {';
+    const _handleScroll = ("props": "any) => {';';
+      setIsScrolled(window.scrollY > 20);';';';
+    "};',';';
+    ';';';
+    window.addEventListener('scroll', handleScroll);',';';
+    ';';';
+    return () => window.removeEventListener('scroll', handleScroll);';';
+  }, []);';';';
+  const _navigationItems = [',';';
+    ';';' { "name": 'Home', "href": '/' },';';' {',';';
+    ';';';
+      "name": 'Services',',';';
+    ';';';
+      "href": '/services',';';
+      "dropdown": "[';';' {'",';';
+    ';';';
+          "name": 'AI Services',',';';
+    ';';';
+          "href": '/ai-services',';';';
+          "icon": "Brai n",',';';
+    ';';';
+          "description": 'Cutting-edge AI solutions' },';';' {',';';
+    ';';';
+          "name": 'IT Services',',';';
+    ';';';
+          "href": '/it-services',';';';
+          "icon": "Clou d",',';';
+    ';';';
+          "description": 'Enterprise IT infrastructure' },';';' {',';';
+    ';';';
+          "name": 'Micro SaaS',',';';
+    ';';';
+          "href": '/micro-saas',';';';
+          "icon": "Cod e",',';';
+    ';';';
+          "description": 'Custom software solutions' },';';' {',';';
+    ';';';
+          "name": 'Cybersecurity',',';';
+    ';';';
+          "href": '/services#cybersecurity',';';';
+          "icon": "Shiel d",',';';
+    ';';';
+          "description": 'Advanced security solutions' },';';' {',';';
+    ';';';
+          "name": 'Cloud & DevOps',',';';
+    ';';';
+          "href": '/services#cloud',';';';
+          "icon": "Databas e",',';';
+    ';';';
+          "description": 'Scalable cloud infrastructure' },';';' {',';';
+    ';';';
+          "name": 'Digital Transformation',',';';
+    ';';';
+          "href": '/services#ai',';';';
+          "icon": "Za p",',';';
+    ';';';
+          "description": 'Business transformation' }';';
+      ] ;';';';
+},',';';
+    ';';' { "name": 'About', "href": '/about' },',';';
+    ';';' { "name": 'Contact', "href": '/contact' }
+  ]';
+  const _contactInfo = [';' {';';';
+      "icon": "Phon e",',';';
+    ';';';
+      "text": '+1 302 464 0950',',';';
+    ';';';
+      "href": '"tel": "+13024640950' "},';' {';';';
+      "icon": "Mai l",',';';
+    ';';';
+      "text": 'kleber@ziontechgroup.com',',';';
+    ';';';
+      "href": '"mailto": "klebe r@ziontechgroup.com' "},';' {';';';
+      "icon": "MapPi n",',';';
+    ';';';
+      "text": '364 E Main St STE 1008, Middletown DE 19709',',';';
+    ';';';
+      "href": '#' }
   ];
-
-  const contactInfo = [];
-  const toggleDropdown = (name: string) => {};
-    setActiveDropdown(activeDropdown === name ? null : name)}
-;
-  const closeMobileMenu = () => {};
-};
-    setIsOpen(false);,
-}
-    setActiveDropdown(null);,
-}
-;
-  return (;
-    <div>Broken JSX</div>
-      isScrolled ? "bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20" : "bg-transparent>;,
-}"}>";
-      <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-        <div className="flex items-center justify-between h-16 lg:h-20">,;
-          {/* comment */}";
-          <Link href="/" className="flex items-center space-x-2 group">";
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-300">";
+  const _toggleDropdown = ("props": "any) => {;
+    setActiveDropdown(activeDropdown === name ? null : name)"};
+  const _closeMobileMenu = ("props": "any) => {;
+    setIsOpen(false);
+    setActiveDropdown(null);';
+  "};';';
+  return (';';';
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${',';';
+    ';';';
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent';
+}`}>;
+      <div className="max-w-7xl mx-auto px-4 "sm": "p x-6 "lg": p x-8">;
+        <div className="flex items-center justify-between h-16 "lg":h-20">;
+          {/* Logo */"}
+          <Link href="/" className="flex items-center space-x-2 group">;
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-"hover": "scal e-110 transition-transform duration-300">;
               <Globe className="w-6 h-6 text-white"  />;
-            </div>";
-            <span className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">;
-              Zion Tech Group,;
+            </div>;
+            <span className="text-xl font-bold text-white group-"hover": tex t-cyan-300 transition-colors">;
+              Zion Tech Group;
             </span>;
           </Link>;
-,;
-          {/* comment */}";
-          <div className="hidden lg: flex items-center space-x-8">;
-            {};
-              <div key="{item.name}" className="relative">;
-                {};
-                    <button onClick="{()" => toggleDropdown(item.name)}";
-                      className="{};
-                      <span>{item.name}</span>";
-                      <ChevronDown className="{};
-}"} />;
-                    </button>;
-                    <AnimatePresence>;
-                      {};
-                                onClick="{()" => setActiveDropdown(null)}";
-                                className="flex items-start space-x-3 p-3 rounded-lg hover: bg-gray-800/50 transition-colors duration-200 group">";
-                                <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/30 group-hover:to-blue-400/30 transition-all duration-200">";
+          {/* Desktop Navigation */"}
+          <div className="hidden "lg": "flex items-center space-x-8">;
+            { navigationItems.map((item) => (;
+              <div key={item.name"} className="relative">;
+                {item.dropdown ? (;
+                  <div className="relative">;
+                    <button;
+                      onClick={() => toggleDropdown(item.name);
+      )}
+    </div>;
+  );    </div>
+    );
+}
+                                className="flex items-start space-x-3 p-3 rounded-lg "hover": "b g-gray-800/50 transition-colors duration-200 group";
+                              >;
+                                <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-"hover": fro m-cyan-400/30 group-"hover": t o-blue-400/30 transition-all duration-200">;
                                   <dropdownItem.icon className="w-5 h-5 text-cyan-400" />;
-                                </div>";
-                                <div className="flex-1 min-w-0">";
-                                  <p className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors">,;
-                                    {dropdownItem.name}
-
-                                  </p>";
-                                  <p className="{};
-                                    {dropdownItem.description}
-
-                                  </p>;
                                 </div>;
-                              </Link>;
-                            ))}
-
-                          </div>;
-                        </motion.div>;
-                      )}
-
-                    </AnimatePresence>;
-                  </div>;
-                ) : (";
-                  <div>Broken JSX</div>
-                    className="{};
-                      router.pathname === item.href ? "text-cyan-400" : ""}"}
-
-                  >;
-                    {item.name}
-
-                  </Link>;
-                )}
-
-              </div>;
-            ))}
-
-          </div>;
-          {/* comment */}";
-          <div className=""hidden" lg:block"}>";
-            <div>Broken JSX</div>
-              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
-              Get Started,;
-            </Link>;
-          </div>;
-,;
-          {/* comment */}";
-          <button onClick="{()" => setIsOpen(!isOpen)}";
-            className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200;
-            aria-label="Toggle mobile menu">",;
-            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
-
-          </button>;
-        </div>;
-      {/* comment */}
-
-      <AnimatePresence>;
-        {};
-              {/* comment */}";
-              <div className="pb-4 border-b border-gray-700">";
-                <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wide">;
-                  Contact Information,;
-                </h3>";
-                <div className="space-y-2">;
-                  {};
-                      <span>{contact.text}</span>;
-                    </a>;
-                  ))}
-
-                </div>;
-              {/* comment */}";
-              <div className="space-y-2">;
-                {};
-                  <div key="{item.name}">;
-                    {};
-                        <button onClick="{()" => toggleDropdown(item.name)}";
-                          className="{};
-                          <span>{item.name}</span>";
-                          <ChevronDown className="{};
-}"} />;
-                        </button>;
-                        <AnimatePresence>;
-                          {};
-                                  <span>{dropdownItem.name}</span>;
-                                </Link>;
-                              ))}
-
-                            </motion.div>;
-                          )}
-
-                        </AnimatePresence>;
-                      </div>;
-                    ) : (";
-                      <div>Broken JSX</div>
-                      >;
-                        {item.name}
-
-                      </Link>;
-                    )}
-
-                  </div>;
-                ))}
-
-              </div>;
-              {/* comment */}";
-              <div className=""pt-4" border-t border-gray-700"}>";
-                <div>Broken JSX</div>
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
-                  Get Started Today,;
-                </Link>;
-              </div>;
-          </motion.div>,;
-        )}
-
-      </AnimatePresence>;
-    </nav>;
-  )}
-";
-);
-export default NextNavigation;"
+                                <div className="flex-1 min-w-0">;
+                                  <p className="text-sm font-medium text-white group-"hover": tex t-cyan-300 transition-colors">;
+                                    {dropdownItem.name"}
+                                  </p>;
+                                  <p className={`text-xs text-gray-400 mt-1`>;

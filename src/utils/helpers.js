@@ -1,8 +1,5 @@
-// helpers utility
-export const helpers = {
-  // Placeholder utility functions
-  init: () => {
-    // // console.log('helpers initialized');
-  },
-};
+// comment;
+export const helpers = {}
+
+
 export default helpers;

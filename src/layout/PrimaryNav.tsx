@@ -1,7 +1,5 @@
-import { useState } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -16,22 +14,20 @@ import { slugify } from '@/lib/slugify';
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X } from 'lucide-react';
-
-
+import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { CartDrawer } from '@/components/cart/CartDrawer';
-import { LoginModal } from '@/components/auth/LoginModal';
+import { useSelector } from 'react-redux';
+import type { RootState } from '@/store';
+import { ModeToggle } from '@/components/ModeToggle';
 
 export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
   const isLoggedIn = !!user;
   const isMobile = useIsMobile();
   const { t } = useTranslation();
-  const router = useRouter();
-  const [query, setQuery] = useState('');
+  const router = useLocation();
+  const [query, setQuery] = React.useState('');
   const suggestions = generateSearchSuggestions();
 
   let unreadCount = 0;
@@ -42,43 +38,44 @@ export function PrimaryNav() {
     // context not available
   }
 
+  const cartCount = useSelector((s: RootState) =>
+    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
+  );
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmed = query.trim();
-    if (trimmed) {
-      logDebug('PrimaryNav search submit:', { query: trimmed });
-      router
-        .push(`/search?q=${encodeURIComponent(trimmed)}`)
-        .then(() => setQuery(''))
-        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
+    if (query.trim()) {
+      console.log('PrimaryNav search submit:', query);
+      router.push(`/search/${slugify(query)}`);
+      setQuery('');
     }
   };
 
   return (
     <>
       <header
-        className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
+        className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
         role="navigation"
         aria-label="Primary"
         data-testid="header"
       >
-        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
+        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
           
-          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className="hidden lg:block order-1 flex-shrink-0">
-            <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
+          {/* Navigation - hidden on mobile, shown on desktop */}
+          <div className="hidden md:block order-1 flex-shrink-0">
+            <ResponsiveNavigation />
           </div>
           
           {/* Actions container with responsive layout */}
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+          <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg });
+                  console.log('PrimaryNav search suggestion selected:', sugg);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -90,8 +87,8 @@ export function PrimaryNav() {
                     // Blog posts navigate to blog detail page
                     router.push(`/blog/${sugg.slug}`);
                   } else {
-                    // Default: search results page with query parameter
-                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
+                    // Default: search results page with slug
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
                   }
                   setQuery('');
                   
@@ -111,7 +108,25 @@ export function PrimaryNav() {
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
               <PointsBadge />
-              <CartDrawer />
+              <HoverCard openDelay={100}>
+                <HoverCardTrigger asChild>
+                  <Link
+                    href="/cart"
+                    className="relative p-1"
+                    aria-label={t('nav.cart', 'Cart')}
+                  >
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
+                    {cartCount > 0 && (
+                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+                        {cartCount}
+                      </span>
+                    )}
+                  </Link>
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <MiniCartPreview />
+                </HoverCardContent>
+              </HoverCard>
             </div>
             
             {/* Compact controls group */}
@@ -128,10 +143,6 @@ export function PrimaryNav() {
                     href="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setLoginOpen(true);
-                    }}
                   >
                     {t('auth.login')}
                   </Link>
@@ -143,33 +154,13 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-              {isLoggedIn && <UserMenu />}
-            </div>
-          </div>
-          
-          {/* Tablet view (md to lg) - simplified controls */}
-          <div className="hidden md:flex lg:hidden items-center gap-2 order-2">
-            <ModeToggle />
-            <LanguageSelector />
-            {!isLoggedIn && (
-              <Link
-                href="/auth/login"
-                className="text-sm hover:text-primary"
-                data-testid="login-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setLoginOpen(true);
-                }}
-              >
-                {t('auth.login')}
-              </Link>
-            )}
             {isLoggedIn && <UserMenu />}
+            </div>
           </div>
           
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
+            className="md:hidden p-2 rounded focus:outline-none flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
@@ -183,7 +174,7 @@ export function PrimaryNav() {
         </div>
       </header>
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
+        <div className="md:hidden fixed inset-0 z-60 pt-16">
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
@@ -193,13 +184,11 @@ export function PrimaryNav() {
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={(returnToPath) => setLoginOpen(true)}
             />
           </div>
         </div>
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
 }

@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-export const quantumSpaceTechServices2026 = [] as any[];
-=======
-export interface QuantumSpaceTechService2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
-}
-
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
     id: "2026-quantum-space-tech",
@@ -42,6 +22,4 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     }
   }
 ];
-=======
 export const quantumSpaceTech2026Services: Array<Record<string, any>> = []
->>>>>>> 5d0d9b33be30b5e0e084636034f4596aec3e9abd

@@ -1,5 +1,6 @@
-import React from 'react';
+
+import { Toaster as HotToaster } from "react-hot-toast"
 
 export function Toaster() {
-  return null; // Placeholder component
+  return <HotToaster />
 }

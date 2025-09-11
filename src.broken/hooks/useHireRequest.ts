@@ -1,4 +1,5 @@
-// Hook for useHireRequest,
-export const useUseHireRequest: unknown = $2;
+// Hook for useHireRequest,;
+export const useUseHireRequest: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

@@ -1,43 +1,21 @@
-name: Search Index Autogen
-'on':
-  schedule:
-    - cron: 0 0 * * *
-  workflow_dispatch: {}
-permissions:
-  contents: write
-  pull-requests: write
+name: Search Index Autogen (DISABLED - Migrated to PM2)
 
-concurrency:
-  group: search-index
-  cancel-in-progress: true
+on:
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling search index auto-generation
+  # Now handled by PM2 processes: performance-monitor, quality-checks
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
+
 jobs:
-  build-search-index:
-    name: Build Search Index
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-      - name: Install dependencies (minimal)
-        run: npm ci --omit=dev || npm ci
-      - name: Generate search index
-        run: node scripts/generate-search-index.js | cat
-      - name: Commit and push changes
+      - name: Workflow Disabled
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add public/search/index.json
-            git commit -m "chore(search): auto-update search index [skip ci]"
-            git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)
-          else
-            echo "No changes to push"
-          fi
-    runs_on: ubuntu-latest
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Search index auto-generation is now handled by:"
+          echo "- performance-monitor PM2 process (every 2 hours)"
+          echo "- quality-checks PM2 process (every 3 hours)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0

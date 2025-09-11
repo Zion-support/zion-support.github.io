@@ -1,52 +1,24 @@
 import React from 'react';
-import { Inter } from 'next/font/google';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Link from 'next/link';
 import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  metadataBase: new URL('https://ziontechgroup.com'),
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
   authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI and Technology Solutions',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
-    images: ['/og-image.jpg'],
-  },
-  verification: {
-    google: 'your-google-verification-code',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
   },
   robots: {
     index: true,
@@ -61,18 +33,69 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+function Header() {
+  return (
+    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
+      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
+        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+          Zion Tech Group
+        </Link>
+        <div className="hidden md:flex gap-6">
+          <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
+          <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+          <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
+        </div>
+      </nav>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
+            <div className="space-y-2">
+              <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
+              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
+              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
+              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
+            <div className="space-y-2">
+              <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
+              <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-3">Contact</h3>
+            <div className="space-y-2 text-gray-600">
+              <p>+1 302 464 0950</p>
+              <p>kleber@ziontechgroup.com</p>
+              <p>Middletown, DE 19709</p>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-gray-200 mt-6 pt-6 text-center text-gray-600">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0f172a" />
-      </head>
-      <body className={inter.className}>
-        <PerformanceMonitor />
+      <body className="min-h-screen bg-gray-50">
         <Header />
         <main>{children}</main>
         <Footer />

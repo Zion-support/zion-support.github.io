@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 const LanguageContext = createContext(undefined);
-export function LanguageProvider(_{ children }) {
+export function LanguageProvider({ children }) {
     const [language, setLanguage] = useState('en');
     const translations = {
         en: {
@@ -20,7 +20,9 @@ export function LanguageProvider(_{ children }) {
         return translations[language]?.[key] || key;
     };
     const isRTL = language === 'ar' || language === 'he';
-    return React.createElement(LanguageContext.Provider, { value: { language, setLanguage, t, isRTL } }, children);
+    return (<LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
+      {children}
+    </LanguageContext.Provider>);
 }
 export function useLanguage() {
     const context = useContext(LanguageContext);

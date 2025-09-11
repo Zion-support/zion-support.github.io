@@ -67,7 +67,7 @@
 🎉 Master Automation Orchestrator completed successfully!
 [2025-09-04T23:24:14.837Z] 📄 Final report saved to: automation-reports/master-automation-report.json
 [2025-09-04T23:24:14.837Z] 📝 Detailed log saved to: master-automation-log.txt
-[2025-09-05T14:29:59.638Z] 🚀 Starting Master Automation Orchestrator...
+[2025-09-05T14:44:36.403Z] 🚀 Starting Master Automation Orchestrator...
 
 [2025-09-05T14:29:59.640Z] 🔍 Phase 1: Running Health Check...
 [2025-09-05T14:29:59.640Z] ✅ Package.json exists
@@ -76,4 +76,44 @@
 [2025-09-05T14:29:59.640Z] 📊 Phase 2: Running Performance Monitor...
 [2025-09-05T14:29:59.640Z] 🚀 Running: Performance Monitor
 [2025-09-05T14:29:59.663Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
+SyntaxError: Unexpected token '<<'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:29:59.663Z] 🚀 Running: Performance Monitor
+[2025-09-05T14:29:59.685Z] ❌ Failed: Performance Monitor - Command failed: node performance-optimizer.cjs
+/workspace/performance-optimizer.cjs:1
+SyntaxError: Unexpected token '<<'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:29:59.685Z] 🚀 Running: Performance Monitor
+[2025-09-05T14:29:59.704Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-optimizer.cjs
+/workspace/scripts/performance-optimizer.cjs:1
+=======
 /workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

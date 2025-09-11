@@ -1,1 +1,9 @@
-const LoadingSpinner = dynamic(() => import("./LoadingSpinner"), {'; loading: () => <p>Loading...</p,>}) export: default LoadingSpinner ,
+import React from 'react';
+;
+const LoadingSpinner.dynamic = () => {
+  return (
+    <div data - testid="loadingspinner.dynamic">;
+      <h1 > LoadingSpinner.dynamic</h1>;
+    </div>);
+}
+;

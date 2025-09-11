@@ -1,62 +1,21 @@
-name: Build and Deploy
+name: Build and Deploy (DISABLED - Migrated to PM2)
 
 on:
-  push:
-    branches: [ main ]
-  workflow_dispatch: {}
-
-permissions:
-  contents: read
-  packages: write
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling build and deployment tasks
+  # Now handled by PM2 processes: daily-build-test, continuous-improvement
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 jobs:
-  build:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Log in to GHCR
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: ghcr.io/${{ github.repository }}:latest
-
-  deploy-fly:
-    if: ${{ secrets.FLY_API_TOKEN != '' }}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only --image ghcr.io/${{ github.repository }}:latest
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-
-  deploy-render:
-    if: ${{ secrets.RENDER_API_KEY != '' && secrets.RENDER_SERVICE_ID != '' }}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger Render deploy
+      - name: Workflow Disabled
         run: |
-          curl -s -X POST "https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/deploys" \
-            -H 'accept: application/json' \
-            -H 'authorization: Bearer ${{ secrets.RENDER_API_KEY }}'
-
-  deploy-railway:
-    if: ${{ secrets.RAILWAY_TOKEN != '' && secrets.RAILWAY_SERVICE_ID != '' }}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger Railway deploy
-        run: |
-          curl -s -X POST https://backboard.railway.app/graphql \
-            -H 'Content-Type: application/json' \
-            -H 'Authorization: ${{ secrets.RAILWAY_TOKEN }}' \
-            --data '{"query":"mutation{ deploymentCreate(input:{serviceId:\"'"${{ secrets.RAILWAY_SERVICE_ID }}"'\"}){ id }}"}'
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Build and deploy tasks are now handled by:"
+          echo "- daily-build-test PM2 process (every hour)"
+          echo "- continuous-improvement PM2 process (every 2 hours)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0

@@ -1,78 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { _SEO } from "../components/SEO";
 
-const LanguageDetectionPopup: React.FC = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    // Check if user has already made a language choice
-    const hasChosenLanguage = localStorage.getItem('languageChosen');
-    
-    if (!hasChosenLanguage) {
-      setShowPopup(true);
-    }
-  }, []);
-
-  const handleLanguageChoice = (language: string) => {
-    localStorage.setItem('languageChosen', 'true');
-    localStorage.setItem('preferredLanguage', language);
-    setShowPopup(false);
-  };
-
-  if (!showPopup) return null;
-
-  return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      zIndex: 9999
-    }}>
-      <div style={{
-        backgroundColor: 'white',
-        padding: '20px',
-        borderRadius: '8px',
-        textAlign: 'center',
-        maxWidth: '400px'
-      }}>
-        <h3>Choose Your Language</h3>
-        <p>Please select your preferred language:</p>
-        <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '20px' }}>
-          <button
-            onClick={() => handleLanguageChoice('en')}
-            style={{
-              padding: '10px 20px',
-              backgroundColor: '#007bff',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
-          >
-            English
-          </button>
-          <button
-            onClick={() => handleLanguageChoice('es')}
-            style={{
-              padding: '10px 20px',
-              backgroundColor: '#28a745',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
-          >
-            Español
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export { LanguageDetectionPopup };
+import SEO from '../components/SEO';
+const services = [];
+export default function LanguageDetectionPopup("props": "any) {return (;
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
+      <SEO title="LanguageDetectionPopup - Zion Tech Group" description="Professional LanguageDetectionPopup services by Zion Tech Group"   />";
+      <div className="container mx-auto px-4 py-20">";
+        <h1 className="text-4xl font-bold text-white mb-8">LanguageDetectionPopup</h1>";
+        <p className="text-gray-300 text-lg">;
+          Professional LanguageDetectionPopup services to help your business grow.;
+        </p>;
+      </div>;
+  );""}";</div>

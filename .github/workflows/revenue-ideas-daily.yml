@@ -1,50 +1,21 @@
-name: Revenue Ideas Daily
-'on':
-  schedule:
-    - cron: 30 2 * * *
-  workflow_dispatch: null
-concurrency:
-  group: revenue-ideas-daily
-  cancel-in-progress: true
-permissions:
-  contents: read
-  actions: read
+name: Revenue Ideas Daily (DISABLED - Migrated to PM2)
+
+on:
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling daily revenue idea generation
+  # Now handled by PM2 processes: front-maximizer, continuous-improvement
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
+
 jobs:
-  revenue_ideas:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
-        continue-on-error: true
-      - name: Run revenue ideas orchestrator (single cycle)
-        if: always()
-        run: node automation/revenue-ideas-orchestrator.cjs once | cat
-        continue-on-error: true
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-          retention-days: 30
-        with:
-          retention-days: 30
-          name: revenue-ideas-artifacts
-          path: |
-            data/reports/revenue-ideas/**/*
-            automation/logs/**/*.log
-          if-no-files-found: ignore
-          retention-days: 7
-        if: always()
-      - name: Create summary
-        if: always()
+      - name: Workflow Disabled
         run: |
-          echo "## Revenue Ideas Daily Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Status:** Revenue ideas daily process completed" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Daily revenue idea generation is now handled by:"
+          echo "- front-maximizer PM2 process (every 4 hours)"
+          echo "- continuous-improvement PM2 process (every 2 hours)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0

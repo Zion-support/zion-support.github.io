@@ -1,44 +1,21 @@
-name: Netlify Deploy Status Check
+name: Netlify Deploy Status Check (DISABLED - Migrated to PM2)
 
 on:
-  push:
-  pull_request:
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling netlify deploy status checks
+  # Now handled by PM2 processes: daily-build-test, continuous-improvement
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 jobs:
-  check-netlify-status:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Netlify Deploy Status
-        id: netlify_status
-         - uses: actions/checkout@v2
-      - uses: amondnet/now-deployment@v2
-        with:
-          netlify_token: ${{ secrets.NETLIFY_TOKEN }}
-          site_id: "ziontechgroup"
-
-      - name: Comment on PR if Deploy Failed
-        if: failure() && github.event_name == 'pull_request'
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const prNumber = context.issue.number;
-            const netlifyLogsUrl = `https://app.netlify.com/sites/ziontechgroup/deploys`; // Replace with actual site name if different
-            const commentBody = `🚨 Netlify deployment failed. Please check the [Netlify logs](${netlifyLogsUrl}) for more details.`;
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-              body: commentBody
-            });
-
-      - name: Slack Notification on Failure
-        if: failure() # Only run if a previous step failed
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }} # Make sure this secret is set in repo
-          SLACK_CHANNEL: "#devops"
-          SLACK_USERNAME: "Netlify Deploy Bot"
-          SLACK_ICON_EMOJI: ":netlify:"
-          SLACK_COLOR: "danger"
-          SLACK_MESSAGE: "🚨 Netlify deployment for ziontechgroup.com failed. <https://app.netlify.com/sites/ziontechgroup/deploys|View Logs>"
+      - name: Workflow Disabled
+        run: |
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Netlify deploy status checks are now handled by:"
+          echo "- daily-build-test PM2 process (every hour)"
+          echo "- continuous-improvement PM2 process (every 2 hours)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0

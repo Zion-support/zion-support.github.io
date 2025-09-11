@@ -1,10 +1,9 @@
-const CACHE_NAME = 'zion-tech-v1';
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const urlsToCache = [
   '/',
+  '/offline.html',
   '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json',
-  '/offline.html'
+  '/static/css/main.css'
 ];
 
 // Install event - cache resources
@@ -27,13 +26,9 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response;
         }
-        return fetch(event.request).catch(() => {
-          // If both cache and network fail, show offline page
-          if (event.request.destination === 'document') {
-            return caches.match('/offline.html');
-          }
-        });
-      })
+        return fetch(event.request);
+      }
+    )
   );
 });
 
@@ -53,14 +48,9 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Background sync for offline form submissions
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
+// Handle skip waiting
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
   }
 });
-
-async function doBackgroundSync() {
-  // Handle offline form submissions or other background tasks
-  console.log('Background sync triggered');
-}

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { supabase, getFromProfiles } from "../../integrations/supabase/client";
+import { useAuthOperations } from "../../hooks/useAuthOperations";
 import { AuthContext } from "./AuthContext";
 import { cleanupAuthState } from "../../utils/authUtils";
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -6,13 +8,10 @@ import { useAuthState } from "./useAuthState";
 import { useAuthEventHandlers } from "./useAuthEventHandlers";
 import { mapProfileToUser } from "./profileMapper";
 import { loginUser, registerUser } from "@/services/authService";
-import { safeLocalStorage } from "@/utils/safeStorage";
-import { toast } from "@/hooks/use-toast";
+import { safeStorage } from "@/utils/safeStorage";
+import { toast } from "@/hooks/use-toast"; // Import toast
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
-import { supabase } from '@/lib/supabase';
-import { getFromProfiles } from '@/lib/supabase';
-import { useAuthOperations } from './useAuthOperations';
 export const AuthProvider = ({ children }) => {
     const { user, setUser, isLoading, setIsLoading, onboardingStep, setOnboardingStep, tokens, setTokens } = useAuthState();
     const navigate = useNavigate();
@@ -54,7 +53,7 @@ export const AuthProvider = ({ children }) => {
         if (clientLoginResult?.error) {
             // useEmailAuth.login already shows a toast on error.
             // We just need to return the error to the caller of AuthProvider.login
-            // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+            console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();
@@ -72,14 +71,12 @@ export const AuthProvider = ({ children }) => {
             if (!res.ok || !data?.token || !data?.user) {
                 return { error: data?.message || 'Registration failed' };
             }
-            const storage = safeLocalStorage();
-            if (storage) {
-                storage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
-            }
+            safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
             setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
             setUser(data.user);
             return { error: null };
-        } catch (err) {
+        }
+        catch (err) {
             return { error: err?.message || 'Registration failed' };
         }
     };
@@ -132,12 +129,12 @@ export const AuthProvider = ({ children }) => {
                         }
                     }
                     else if (error) {
-                        // // console.error("Error fetching user profile:", error);
+                        console.error("Error fetching user profile:", error);
                         setUser(null);
                     }
                 }
                 catch (error) {
-                    // // console.error("Error fetching user profile:", error);
+                    console.error("Error fetching user profile:", error);
                     setUser(null);
                 }
             }
@@ -172,9 +169,7 @@ export const AuthProvider = ({ children }) => {
         onboardingStep,
         tokens
     };
-    return (
-        <AuthContext.Provider value={authContextValue}>
-            {children}
-        </AuthContext.Provider>
-    );
+    return (<AuthContext.Provider value={authContextValue}>
+      {children}
+    </AuthContext.Provider>);
 };

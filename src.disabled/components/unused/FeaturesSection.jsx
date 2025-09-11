@@ -1,1 +1,16 @@
-export function FeaturesSection() { const features = [ { icon: CheckCircleIco,n, title: "Proven Track Record,"," description: "500+ successful projects delivered across various industries with measurable results,", " color: "text-zion-cyan"}, { icon: ClockIco,n, " title: "Rapid Delivery,"," description: "Fast turnaround times with agile methodologies and efficient development processes,", " color: "text-zion-purple"}, { icon: UserGroupIco,n, " title: "Expert Team,"," description: "Certified professionals with deep expertise in cutting-edge technologies,", " color: "text-zion-cyan"}, { icon: ShieldCheckIco,n, " title: "Enterprise Security,"," description: "SOC 2 compliant with industry-leading security practices and protocols,", " color: "text-zion-purple"}, { icon: RocketLaunchIco,n, " title: "Scalable Solutions,"," description: "Architected for growth with cloud-native and microservices approaches,", " color: "text-zion-cyan"}, { icon: CogIco,n, " title: "24/7 Support,"," description: "Round-the-clock technical support and maintenance services,", " color: "text-zion-purple" ] const containerVariants = { hidden: { opacity 0}, visible: { opacity ,1, transition: { staggerChildren 0.1} const itemVariants = { hidden: { y 2,0, opacity: 0}, visible: { y ,0, opacity: ,1, transition: { duration 0.5}";""'}}}}}}
+import React from 'react';
+interface FeaturesSectionProps {
+  // Add props here as needed
+=======}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function FeaturesSection({ }: FeaturesSectionProps) {
+  return (
+    <div>
+      <h1>FeaturesSection</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+==============
+}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

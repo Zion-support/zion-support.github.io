@@ -1,18 +1,19 @@
-  FormField,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FormField,
 FormField,
+=======
+
+  FormField,  FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-interface PersonalInfoFieldsProps {}
-  form: UseFormReturn<FormValues>;
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { UseFormReturn  } from './react - hook - form';
+import { FormValues  } from './useHireRequestForm';
 
-}
+=======
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -22,19 +23,93 @@ import {FormValues} from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { UseFormReturn } from "react-hook-form",
-import { FormValues } from "./useHireRequestForm",
+import { UseFormReturn } from "react-hook-form";
 
+}
+=======
+=======import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
-  form: UseFormReturn<FormValues>
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { UseFormReturn } from "react-hook-form",;  return (
+  form: UseFormReturn<FormValues>;
+
+export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
+=======}
+
+export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  return (
+    <>;
+      <FormField
+        control={form && form.control}
+        name="requesterName"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+              />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
+        )}
+      />;
+
+
+      <FormField
+        control={form && form.control}
+        name="requesterEmail"
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel className="text-white">Your Email</FormLabel>;
+            <FormControl>;
+                type="email"
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white"              />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
+        )}
+
+      />;
+    </>;
+=======export /**
+ * PersonalInfoFields - Function description
+ */
+function PersonalInfoFields() {
+  return (
     <>;
       <FormField;
-        control={form && form.control}"
-        name="requesterName"
-  );
-};
+        control={form.control}
+        name="requester_name";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel className="text - white">Your Name</FormLabel>;
+            <FormControl>;
+              <Input;
+                placeholder="Enter your full name";
+                {...field}
+                className="bg - zion - blue - light / 20 border - zion - blue - light text - white";
+              />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>)}
+      />;
+      <FormField;
+        control={form.control}
+        name="requester_email";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel className="text - white">Your Email</FormLabel>;
+            <FormControl>;
+              <Input;
+                placeholder="Enter your email address";
+                type="email";
+                {...field}
+                className="bg - zion - blue - light / 20 border - zion - blue - light text - white";
+              />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>)}
+      />;
+    </>);
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

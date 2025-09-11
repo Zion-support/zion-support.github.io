@@ -1,21 +1,9 @@
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Customer Insights | Zion Tech Group',
-  description: 'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.',
-  keywords: 'AI customer insights, customer analytics, behavior analysis, data insights',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Customer Insights | Zion Tech Group',
-    description: 'Transform customer data into actionable insights with AI-powered analytics.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Customer Insights | Zion Tech Group',
-    description: 'Transform customer data into actionable insights with AI-powered analytics.',
-  },
+  description:
+    'Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. Drive growth with data-driven decisions.',
 };
 
 export default function ServicePage() {

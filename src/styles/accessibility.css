@@ -1,117 +1,64 @@
 /* Accessibility Enhancements */
 
-/* High Contrast Mode */
+/* High contrast mode */
 .high-contrast {
   --bg-primary: #000000;
   --bg-secondary: #ffffff;
   --text-primary: #ffffff;
   --text-secondary: #000000;
-  --border-color: #ffffff;
-  --accent-color: #ffff00;
+  --accent: #ffff00;
+  --border: #ffffff;
 }
 
 .high-contrast * {
   background-color: var(--bg-primary) !important;
   color: var(--text-primary) !important;
-  border-color: var(--border-color) !important;
+  border-color: var(--border) !important;
 }
 
 .high-contrast button,
-.high-contrast input,
-.high-contrast select,
-.high-contrast textarea {
+.high-contrast a {
   background-color: var(--bg-secondary) !important;
   color: var(--text-secondary) !important;
-  border: 2px solid var(--border-color) !important;
+  border: 2px solid var(--border) !important;
 }
 
-.high-contrast a {
-  color: var(--accent-color) !important;
-  text-decoration: underline !important;
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: var(--accent) !important;
+  color: var(--text-secondary) !important;
 }
 
-.high-contrast a:visited {
-  color: #ff00ff !important;
-}
-
-.high-contrast a:hover,
-.high-contrast a:focus {
-  background-color: var(--accent-color) !important;
-  color: var(--bg-primary) !important;
-}
-
-/* Reduced Motion */
-.reduced-motion *,
-.reduced-motion *::before,
-.reduced-motion *::after {
+/* Reduced motion */
+.reduced-motion * {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
 }
 
-/* Font Size Variations */
-.font-small {
-  font-size: 0.875rem;
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-delay: 0s !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.01ms !important;
 }
 
-.font-medium {
-  font-size: 1rem;
-}
-
-.font-large {
-  font-size: 1.125rem;
-}
-
-.font-small h1 { font-size: 1.5rem; }
-.font-small h2 { font-size: 1.25rem; }
-.font-small h3 { font-size: 1.125rem; }
-
-.font-large h1 { font-size: 2.5rem; }
-.font-large h2 { font-size: 2rem; }
-.font-large h3 { font-size: 1.75rem; }
-
-/* Enhanced Focus Indicators */
-.focus-visible *:focus {
-  outline: 3px solid #3b82f6 !important;
+/* Focus indicators */
+*:focus {
+  outline: 2px solid #3b82f6 !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
 }
 
-.focus-visible button:focus,
-.focus-visible input:focus,
-.focus-visible select:focus,
-.focus-visible textarea:focus {
-  outline: 3px solid #f59e0b !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.5) !important;
+.high-contrast *:focus {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px !important;
 }
 
-/* Screen Reader Only Content */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.sr-only:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: inherit;
-  margin: inherit;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-/* Skip Links */
+/* Skip links */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -128,164 +75,92 @@
   top: 6px;
 }
 
-/* ARIA Live Regions */
-[aria-live] {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* High Contrast Focus for High Contrast Mode */
-.high-contrast .focus-visible *:focus {
-  outline: 3px solid var(--accent-color) !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5) !important;
-}
-
-/* Reduced Motion for prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* High Contrast for prefers-contrast: high */
-@media (prefers-contrast: high) {
-  :root {
-    --bg-primary: #000000;
-    --bg-secondary: #ffffff;
-    --text-primary: #ffffff;
-    --text-secondary: #000000;
-    --border-color: #ffffff;
-    --accent-color: #ffff00;
-  }
-}
-
-/* Focus Management */
-.focus-trap {
-  position: relative;
-}
-
-.focus-trap::before,
-.focus-trap::after {
-  content: '';
+/* Screen reader only content */
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }
 
-/* Button States */
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+/* High contrast for images */
+.high-contrast img {
+  filter: contrast(200%) brightness(150%);
 }
 
-button:disabled:focus {
-  outline: none;
+/* High contrast for form elements */
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border) !important;
 }
 
-/* Form Accessibility */
-input:invalid {
-  border-color: #ef4444;
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
+  outline: 3px solid var(--accent) !important;
+  outline-offset: 2px !important;
 }
 
-input:invalid:focus {
-  outline-color: #ef4444;
+/* High contrast for buttons */
+.high-contrast button {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border) !important;
+  font-weight: bold !important;
 }
 
-/* Loading States */
-.loading {
+.high-contrast button:hover,
+.high-contrast button:focus {
+  background-color: var(--accent) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* High contrast for links */
+.high-contrast a {
+  color: var(--accent) !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+.high-contrast a:hover,
+.high-contrast a:focus {
+  background-color: var(--accent) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Reduced motion for animations */
+.reduced-motion .animate-spin,
+.reduced-motion .animate-pulse,
+.reduced-motion .animate-bounce {
+  animation: none !important;
+}
+
+.reduced-motion .transition-all,
+.reduced-motion .transition-transform,
+.reduced-motion .transition-opacity {
+  transition: none !important;
+}
+
+/* Focus trap for modals */
+.focus-trap {
   position: relative;
-  pointer-events: none;
 }
 
-.loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.focus-trap:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Reduced motion for loading animation */
-.reduced-motion .loading::after {
-  animation: none;
-  border: 2px solid #3498db;
-}
-
-/* Error States */
-.error {
-  border-color: #ef4444 !important;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
-}
-
-.error-message {
-  color: #ef4444;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-/* Success States */
-.success {
-  border-color: #10b981 !important;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
-}
-
-.success-message {
-  color: #10b981;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-/* Print Styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  .print-only {
-    display: block !important;
-  }
-  
-  * {
-    background: transparent !important;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
+/* High contrast focus trap */
+.high-contrast .focus-trap:focus-within {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }

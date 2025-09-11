@@ -1,13 +1,8 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import ModernNavigation from &apos;./ModernNavigation;
-describe(&apos;ModernNavigation&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<ModernNavigation / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { _render, screen  } from '@testing-library/reactimport ModernNavigation from ./ModernNavigationdescribe(ModernNavigation, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<ModernNavigation  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<ModernNavigation  />)';
+    // Add specific test assertions based on component content})});';;';
+import { _render,screen } from '@testing-library/reactimport ModernNavigation from ./ModernNavigationdescribe(ModernNavigation,() => {' it(renders without crashing',() => {' render(<ModernNavigation />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ModernNavigation />)

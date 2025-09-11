@@ -17,9 +17,9 @@
 Create a `.env.local` file in your project root with the following template:
 
 ```bash
-# ==============================================
+# ====
 # AUTH0 CONFIGURATION (REQUIRED)
-# ==============================================
+# ====
 
 # Your Auth0 domain (from Auth0 Dashboard)
 AUTH0_ISSUER_BASE_URL=https://your-tenant.us.auth0.com
@@ -34,9 +34,9 @@ AUTH0_CLIENT_SECRET=your_auth0_client_secret_here
 # Session encryption secret (generate new one)
 AUTH0_SECRET=your_64_character_hex_secret_here
 
-# ==============================================
+# ====
 # OPTIONAL CONFIGURATION
-# ==============================================
+# ====
 
 # Sentry error monitoring
 NEXT_PUBLIC_SENTRY_DSN=https://your-sentry-dsn@sentry.io/project-id
@@ -59,7 +59,7 @@ NEXT_PUBLIC_REOWN_PROJECT_ID=your_reown_project_id_here
    - Technology: **Next.js**
 
 3. **Configure Application Settings**
-   
+
    In your Auth0 application settings, configure:
 
    **Allowed Callback URLs:**

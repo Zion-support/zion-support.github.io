@@ -1,8 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-
-const APIReference: NextPage = () => {
+const APIReference: NextPage = () => {;
   return (;
     <MainLayout;
       title="API Reference - Zion Tech Group";
@@ -15,5 +14,5 @@ const APIReference: NextPage = () => {
         </p>;
       </div>;
     </MainLayout>;
-  )}
-export default APIReference;
+  );
+};

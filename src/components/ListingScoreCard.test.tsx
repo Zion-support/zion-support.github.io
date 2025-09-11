@@ -1,13 +1,8 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import ListingScoreCard from &apos;./ListingScoreCard;
-describe(&apos;ListingScoreCard&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<ListingScoreCard / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { _render, screen  } from '@testing-library/reactimport ListingScoreCard from ./ListingScoreCarddescribe(ListingScoreCard, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<ListingScoreCard  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<ListingScoreCard  />)';
+    // Add specific test assertions based on component content})});';;';
+import { _render,screen } from '@testing-library/reactimport ListingScoreCard from ./ListingScoreCarddescribe(ListingScoreCard,() => {' it(renders without crashing',() => {' render(<ListingScoreCard />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ListingScoreCard />)

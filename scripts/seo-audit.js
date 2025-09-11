@@ -22,23 +22,23 @@ class SEOAuditor {
 
   async runAudit() {
     console.log('🔍 Starting SEO Audit...');
-    
+
     try {
       // Ensure reports directory exists
       this.ensureReportsDirectory();
-      
+
       // Analyze various SEO aspects
       await this.analyzeSEO();
-      
+
       // Generate report
       const report = this.generateReport();
-      
+
       // Save report
       this.saveReport(report);
-      
+
       console.log('✅ SEO audit completed successfully');
       return report;
-      
+
     } catch (error) {
       console.error('❌ SEO audit failed:', error.message);
       throw error;
@@ -53,14 +53,14 @@ class SEOAuditor {
 
   async analyzeSEO() {
     console.log('📊 Analyzing SEO metrics...');
-    
+
     // Simulate analyzing various SEO aspects
     this.seoMetrics.metaTags = this.analyzeMetaTags();
     this.seoMetrics.headings = this.analyzeHeadings();
     this.seoMetrics.images = this.analyzeImages();
     this.seoMetrics.links = this.analyzeLinks();
     this.seoMetrics.performance = this.analyzePerformance();
-    
+
     console.log('📈 SEO metrics collected:', this.seoMetrics);
   }
 
@@ -105,7 +105,7 @@ class SEOAuditor {
       Object.values(this.seoMetrics).reduce((sum, score) => sum + score, 0) / 
       Object.values(this.seoMetrics).length
     );
-    
+
     const report = {
       timestamp,
       overallScore,
@@ -113,14 +113,14 @@ class SEOAuditor {
       summary: this.generateSummary(overallScore),
       recommendations: this.generateRecommendations()
     };
-    
+
     return report;
   }
 
   generateSummary(overallScore) {
     let status = 'excellent';
     let grade = 'A';
-    
+
     if (overallScore < 80) {
       status = 'good';
       grade = 'B';
@@ -133,7 +133,7 @@ class SEOAuditor {
       status = 'poor';
       grade = 'D';
     }
-    
+
     return {
       status,
       grade,
@@ -143,47 +143,47 @@ class SEOAuditor {
 
   generateRecommendations() {
     const recommendations = [];
-    
+
     if (this.seoMetrics.metaTags < 80) {
       recommendations.push('Optimize meta titles and descriptions for better click-through rates');
       recommendations.push('Ensure all pages have unique meta tags');
     }
-    
+
     if (this.seoMetrics.headings < 80) {
       recommendations.push('Improve heading structure (H1, H2, H3 hierarchy)');
       recommendations.push('Ensure each page has only one H1 tag');
     }
-    
+
     if (this.seoMetrics.images < 80) {
       recommendations.push('Optimize images with proper alt text and compression');
       recommendations.push('Implement lazy loading for images');
     }
-    
+
     if (this.seoMetrics.links < 80) {
       recommendations.push('Fix broken internal links');
       recommendations.push('Improve internal linking structure');
     }
-    
+
     if (this.seoMetrics.performance < 80) {
       recommendations.push('Optimize page load speed');
       recommendations.push('Implement Core Web Vitals improvements');
     }
-    
+
     if (recommendations.length === 0) {
       recommendations.push('Maintain current SEO standards');
       recommendations.push('Continue monitoring for SEO opportunities');
     }
-    
+
     return recommendations;
   }
 
   saveReport(report) {
     const filename = `seo-audit-${Date.now()}.json`;
     const filepath = path.join(this.reportsDir, filename);
-    
+
     fs.writeFileSync(filepath, JSON.stringify(report, null, 2));
     console.log(`📄 SEO report saved to: ${filepath}`);
-    
+
     // Also create an HTML report
     this.createHTMLReport(report);
   }
@@ -213,7 +213,7 @@ class SEOAuditor {
         <div class="score">${report.summary.grade}</div>
         <p>Overall Score: ${report.overallScore}/100</p>
     </div>
-    
+
     <div class="metrics">
         <div class="metric">
             <h3>Meta Tags</h3>
@@ -236,35 +236,35 @@ class SEOAuditor {
             <p>${report.metrics.performance}/100</p>
         </div>
     </div>
-    
+
     <div class="recommendations">
         <h2>Recommendations</h2>
         ${report.recommendations.map(rec => `<div class="rec-item">• ${rec}</div>`).join('')}
     </div>
 </body>
 </html>`;
-    
+
     const htmlFilename = `seo-audit-${Date.now()}.html`;
     const htmlFilepath = path.join(this.reportsDir, htmlFilename);
-    
+
     fs.writeFileSync(htmlFilepath, htmlContent);
     console.log(`🌐 HTML report saved to: ${htmlFilepath}`);
   }
 
   printReport(report) {
     console.log('\n📊 SEO Audit Report');
-    console.log('====================');
+    console.log('======');
     console.log(`Timestamp: ${report.timestamp}`);
     console.log(`Overall Score: ${report.overallScore}/100`);
     console.log(`Grade: ${report.summary.grade} (${report.summary.status})`);
-    
+
     console.log('\n📈 Metrics:');
     console.log(`  Meta Tags: ${report.metrics.metaTags}/100`);
     console.log(`  Headings: ${report.metrics.headings}/100`);
     console.log(`  Images: ${report.metrics.images}/100`);
     console.log(`  Links: ${report.metrics.links}/100`);
     console.log(`  Performance: ${report.metrics.performance}/100`);
-    
+
     console.log('\n💡 Recommendations:');
     report.recommendations.forEach((rec, index) => {
       console.log(`  ${index + 1}. ${rec}`);

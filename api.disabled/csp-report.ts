@@ -1,15 +1,4 @@
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
 export {};
-
 interface CSPReport {
   'csp-report': {
     'document-uri': string;
@@ -29,6 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })}
 
+=======module.exports = {};
 module.exports = {};
 module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
@@ -38,30 +28,17 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+module.exports = {};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+=======module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-    // Validate the CSP report
-    if (!report['csp-report']) {
-      return res.status(400).json({ error: 'Invalid CSP report format' })}
 
-
-    // Log the CSP violation (in production, you might want to send to a monitoring service)
-    console.warn('CSP Violation:' {
-      documentUri: cspData['document-uri'],
-      violatedDirective: cspData['violated-directive'],
-      blockedUri: cspData['blocked-uri'],
-      sourceFile: cspData['source-file'],
-      lineNumber: cspData['line-number'],
-      columnNumber: cspData['column-number'],
-      timestamp: new Date().toISOString()
-    });
-
-    // Here you could send the violation to:
-    // - A monitoring service (Sentry, LogRocket, etc.)
-    // - A security monitoring system
-    // - A database for analysis
-
-    // Return a 204 No Content response as per CSP reporting spec
-    res.status(204).end()} catch (error) {
-    console.error('Error processing CSP report:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

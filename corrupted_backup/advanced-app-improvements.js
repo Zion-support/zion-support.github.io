@@ -135,16 +135,6 @@ export class ErrorTracker {
         .slice(0, 10)
 
 export const errorTracker = new ErrorTracker();
-export const errorTracker = new ErrorTracker();`;
-`
-
-  Object.entries(monitoringFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-    fs.writeFileSync(fullPath, content);`;
-    console.log(`Created ${filename}`);
-  });
-}
 
 // Call the monitoring function
 createAdvancedMonitoring();
@@ -219,9 +209,6 @@ export class MemoryCache {
   clear() {
     this.cache.clear();
 
-  size() {
-    return this.cache.size;
-}`
 export const redisCache = new RedisCache();
   `,
     'cache/memory-cache.js': `// Memory-based caching system
@@ -281,8 +268,6 @@ export const memoryCache = new MemoryCache();
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-    console.log(`Created ${filename}`);
-  });
     console.log(`[OK] Created ${filename}`);
   });
 });
@@ -352,8 +337,6 @@ export class ResponseCache {
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
 
     fs.writeFileSync(fullPath, content);
-    console.log(`Created ${filename}`);
-  });
     console.log(`[OK] Created ${filename}`);
   });
 });

@@ -1,60 +1,16 @@
-// Mock test for signup
-describe("Signup", () => {
-  it("should render without crashing", () => {
-    expect(true).toBe(true);
-  });
-});
-describe('Signup', () => {
-  test('renders signup', () => {
-    // Add signup tests here
-    expect(true).toBe(true);
-  });
-});
-import { describe, it, expect } from '@jest/globals';
 
-describe('signup', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-
-
-
-
-
-// Mock test for signup
-// Mock test for signup;
-describe('Signup', () => {
+=======// Mock test for signup
+describe('Signup', () => {'
   it('should render without crashing', () => {
     expect(true).toBe(true);
-
+  });
 });
-});
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/automate-test-improve-and-merge-code-2480
+=======
+=======
 
-
-
-
-
-
-
-export {};
-module.exports = {};
-
-
-module.exports = {};
-
-
-
-module.exports = {};
-
-// Mock test for signup
-describe('Signup', () => {
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
-
-});
-module.exports = {};
-
-module.exports = {};
-module.exports = {};
-module.exports = {};
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

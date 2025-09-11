@@ -2,7 +2,7 @@
 export interface OperatorSession {
   id: string;
   name: string;
-  status: "active" | "inactive" | "busy";
+  status: 'active' | 'inactive' | 'busy';
   currentSessions: string[];
   tags: string[];
   createdAt: Date;
@@ -16,41 +16,14 @@ export interface SupportEvent {
   timestamp: Date;
 }
 
-  getEvents: () => []
-  getEventById: (id: string) => null
-}
 
   logEvent: (event: any) => null,
   getEvents: () => [],
-  getEventById: (id: string) => null
+  getEventById: (id: string) => null;
 };
 
-  tagOperatorSession(sessionId: string, tag: string): void {
-    // Simple implementation - in a real app this would update a database
-    console.log(`Tagging session ${sessionId} with tag: ${tag}`);
-  }
-
-  logSupportEvent(event: SupportEvent): void {
-    this.events.push(event);
-    console.log("Support event logged:", event);
-  }
-
-  getOperatorSessions(): OperatorSession[] {
-    return Array.from(this.sessions.values());
-  }
-
-  getSupportEvents(): SupportEvent[] {
-    return [...this.events];
-  }
-}
-
-const operatorManager = new OperatorManager();
-
-export const tagOperatorSession = (sessionId: string, tag: string) =>
-  operatorManager.tagOperatorSession(sessionId, tag);
-
-export const logSupportEventToOperator = (event: SupportEvent) =>
-  operatorManager.logSupportEvent(event);
-
-export const getOperatorSessions = () => operatorManager.getOperatorSessions();
-export const getSupportEvents = () => operatorManager.getSupportEvents();
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

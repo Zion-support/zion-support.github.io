@@ -1,18 +1,15 @@
-import React from 'react';
 
-export const BrowserRouter = ({ children }: { children: unknown }) => children;
-export const Routes = ({ children }: { children: unknown }) => children;
-export const Route = ({ element }: { element: unknown }) => element;
-export const Link = (props: unknown) => { return React.createElement('a', props); };
-export const NavLink = Link;
-export const Navigate = ({ to }: { to: string }) => null;
-export const MemoryRouter = BrowserRouter;
+
+export const BrowserRouter = ({ children }: { children: any }) => children
+export const Routes = ({ children }: { children: any }) => children
+export const Route = ({ element }: { element: any }) => element
+export const Link = (props: any) => {
 export const Outlet = () => null;
 export const useNavigate = () => (url: string) => {};
 export const useLocation = () => ({ pathname: '/' });
-export const useParams = () => ({ });
-export const useSearchParams = () => [new URLSearchParams(), () => {}] as any;
-export default {
+export const useParams = () => ({});
+
+export const useSearchParams = () => [new URLSearchParams(), () => {}] as any;export default {
   BrowserRouter,
   Routes,
   Route,
@@ -26,3 +23,15 @@ export default {
   useParams,
   useSearchParams,
 };
+
+  useSearchParams};
+;
+
+import React from 'react';
+export const BrowserRouter = ({ children }: { children: any }) =>: any children;
+export const Routes = ({ children }: { children: any }) =>: any children;
+export const Route = ({ element }: { element: any }) =>: any element;
+export const Link = (props: any) =>: any {
+  return React.create_element ('a', props);
+}
+

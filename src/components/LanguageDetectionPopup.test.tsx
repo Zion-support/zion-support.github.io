@@ -1,13 +1,8 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import LanguageDetectionPopup from &apos;./LanguageDetectionPopup;
-describe(&apos;LanguageDetectionPopup&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<LanguageDetectionPopup / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { _render, screen  } from '@testing-library/reactimport LanguageDetectionPopup from ./LanguageDetectionPopupdescribe(LanguageDetectionPopup, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<LanguageDetectionPopup  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<LanguageDetectionPopup  />)';
+    // Add specific test assertions based on component content})});';;';
+import { _render,screen } from '@testing-library/reactimport LanguageDetectionPopup from ./LanguageDetectionPopupdescribe(LanguageDetectionPopup,() => {' it(renders without crashing',() => {' render(<LanguageDetectionPopup />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<LanguageDetectionPopup />)

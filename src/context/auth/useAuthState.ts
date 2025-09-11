@@ -16,30 +16,50 @@ interface AuthTokens {
   refreshToken: string | null;
 }
 
-export const useAuthState = (): [User | null, React.Dispatch<React.SetStateAction<User | null>>] => {
+export const useAuthState = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<AuthTokens>({
     accessToken: null,
-    refreshToken: null,
+    refreshToken: null
   });
 
   useEffect(() => {
-    // Initialize auth state from localStorage
-    const savedUser = localStorage.getItem('user');
-    const savedTokens = localStorage.getItem('tokens');
-    
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
-    
-    if (savedTokens) {
-      setTokens(JSON.parse(savedTokens));
-    }
-    
-    setIsLoading(false);
+    // Check for existing auth state on mount
+    const checkAuthState = async () => {
+      try {
+        if (typeof window !== 'undefined') {
+          const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+          if (auth) {
+            const parsed = JSON.parse(auth);
+            if (parsed.user && parsed.token) {
+              setUser(parsed.user);
+              setTokens({
+                accessToken: parsed.token,
+                refreshToken: parsed.refreshToken || null
+              });
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error checking auth state:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    checkAuthState();
   }, []);
 
-  return [user, setUser];
+  return {
+    user,
+    setUser,
+    isLoading,
+    setIsLoading,
+    onboardingStep,
+    setOnboardingStep,
+    tokens,
+    setTokens
+  };
 };

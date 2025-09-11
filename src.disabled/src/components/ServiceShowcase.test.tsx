@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import ServiceShowcase from '../components/ServiceShowcase';'
-describe('ServiceShowcase', () => {test('renders without crashing', () => {render(<ServiceShowcase />)expect(screen.getByTestId('serviceshowcase')).toBeInTheDocument()})test('displays correct content', () => {render(<ServiceShowcase />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<ServiceShowcase />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<ServiceShowcase />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ServiceShowcase from &apos;./ServiceShowcase; describe(&apos;ServiceShowcase&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ServiceShowcase / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ServiceShowcase from &apos;./ServiceShowcase; describe(&apos;ServiceShowcase&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ServiceShowcase / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ServiceShowcase from &apos;./ServiceShowcase; describe(&apos;ServiceShowcase&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<ServiceShowcase / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

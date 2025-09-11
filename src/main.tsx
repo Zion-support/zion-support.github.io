@@ -1,21 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import App from './App';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import App from './App'
+import './index.css'
+import { registerServiceWorker } from './utils/serviceWorker'
+import { ErrorBoundary } from './components/ErrorBoundary'
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error('Root element not found');
-}
-
-ReactDOM.createRoot(rootElement).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>
-);
+    <Router>
+      <HelmetProvider>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
+      </HelmetProvider>
+    </Router>
+  </React.StrictMode>,
+)
+
+// Register service worker with error handling
+try {
+  registerServiceWorker().catch(error => {
+    console.warn('Service worker registration failed:', error);
+  });
+} catch (error) {
+  console.warn('Service worker registration error:', error);
+}

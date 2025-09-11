@@ -2,12 +2,11 @@ import React from 'react';
 
 interface PageTransitionProps {
   children: React.ReactNode;
-  className?: string;
 }
 
-const PageTransition: React.FC<PageTransitionProps> = ({ children, className = '' }) => {
+const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   return (
-    <div className={`transition-all duration-300 ease-in-out ${className}`}>
+    <div className="animate-fade-in-up">
       {children}
     </div>
   );

@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import SkipLink from '../components/SkipLink';'
-describe('SkipLink', () => {test('renders without crashing', () => {render(<SkipLink />)expect(screen.getByTestId('skiplink')).toBeInTheDocument()})test('displays correct content', () => {render(<SkipLink />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<SkipLink />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<SkipLink />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import SkipLink from &apos;./SkipLink; describe(&apos;SkipLink&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<SkipLink / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import SkipLink from &apos;./SkipLink; describe(&apos;SkipLink&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<SkipLink / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import SkipLink from &apos;./SkipLink; describe(&apos;SkipLink&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<SkipLink / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

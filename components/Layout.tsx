@@ -1,15 +1,15 @@
 import React from 'react';
-import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedNavigation2025 from './layout/EnhancedNavigation2025';
 import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation />
+      <EnhancedNavigation2025 />
       <main className="flex-grow">
         {children}
       </main>

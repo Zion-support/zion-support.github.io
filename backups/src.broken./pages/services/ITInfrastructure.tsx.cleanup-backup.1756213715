@@ -1,0 +1,80 @@
+import React from 'react';
+const ITInfrastructure: React.FC = () => {
+  const services = [
+    {
+      title: "Network Infrastructure",
+      description: "Design and implement robust network solutions for optimal performance",
+      icon: "🌐",
+      features: ["LAN/WAN Setup", "Wireless Networks", "VPN Solutions", "Network Security"]
+    },
+    {
+      title: "Server Management",
+      description: "Comprehensive server infrastructure management and optimization",
+      icon: "🖥️",
+      features: ["Server Deployment", "Performance Tuning", "Monitoring", "Backup & Recovery"]
+    },
+    {
+      title: "Storage Solutions",
+      description: "Scalable storage infrastructure for growing data needs",
+      icon: "💾",
+      features: ["Storage Arrays", "Backup Systems", "Cloud Storage", "Data Protection"]
+    },
+    {
+      title: "Security Infrastructure",
+      description: "Multi-layered security solutions to protect your IT assets",
+      icon: "🔒",
+      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"]
+const ITInfrastructure: React.FC = () => {
+  const features = [
+    {
+  const benefits = [
+    "99.9% uptime guarantee",
+    "Scalable infrastructure solutions",
+    "Reduced operational costs",
+    "Enhanced performance and reliability",
+    "Expert support and maintenance"
+      description: "Comprehensive network infrastructure design, implementation, and maintenance",
+      features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
+      icon: "🌐"
+    },
+    {
+      title: "System Administration",
+      description: "Expert management of servers, operating systems, and enterprise applications",
+      features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],
+      icon: "🖥️"
+    },
+    {
+      title: "Data Center Operations",
+      description: "Professional data center management and optimization services",
+      features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],
+      icon: "🏢"
+    },
+    {
+      title: "Performance Optimization",
+      description: "System and network performance analysis and improvement",
+      features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],
+      icon: "⚡"
+    }
+  ];
+
+  const infrastructureFeatures = [
+    { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
+    { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
+    { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
+    { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="IT Infrastructure - Zion Tech Group"
+        description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
+        keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
+        canonical="https://ziontechgroup.com/services/infrastructure"
+      />
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default ITInfrastructure;

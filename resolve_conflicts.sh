@@ -1,22 +1,36 @@
 #!/bin/bash
 
+# Find all files with conflict markers
+conflict_files=$(find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "^<<<<<<<\|^=======\|^>>>>>>>" 2>/dev/null)
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+if [ -z "$conflict_files" ]; then
+    echo "No conflict files found"
+    exit 0
+fi
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
-    git add "$file"
-done
+echo "Found conflict files:"
+echo "$conflict_files"
 
-# Handle modify/delete conflicts by removing the files
-git status --porcelain | grep "^DU" | cut -c4- | while read file; do
-    echo "Removing deleted file: $file"
-    git rm "$file"
-done
+# For each conflict file, resolve by accepting main branch version
+for file in $conflict_files; do
+    echo "Resolving conflicts in: $file"
+# Script to resolve merge conflicts by accepting HEAD version
+echo "Resolving merge conflicts by accepting HEAD version..."
 
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11928: Fix Netlify build and merge to main - Resolved conflicts by choosing main branch version"
+# Find all files with merge conflicts
+files_with_conflicts=$(find src/ -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+
+if [ -z "$files_with_conflicts" ]; then
+    echo "No files with merge conflicts found."
+    exit 0
+fi
+
+echo "Found files with merge conflicts:"
+echo "$files_with_conflicts"
+
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing: $file"    
+    # Create a backup
+    cp "$file" "$file.backup"
+    

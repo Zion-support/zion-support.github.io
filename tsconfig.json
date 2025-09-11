@@ -2,67 +2,75 @@
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "module": "ESNext",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "axios": [
-        "./src/lib/axios.ts"
-      ]
-    },
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "allowJs": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "strict": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
-    "allowJs": true,
-    "incremental": true,
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@layout/*": ["src/layout/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@types/*": ["src/types/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@data/*": ["src/data/*"],
+      "@services/*": ["src/services/*"],
+      "@context/*": ["src/context/*"],
+      "@constants/*": ["src/constants/*"]
+    },
+    "types": ["vite/client", "node"],
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
   "include": [
-    "next-env.d.ts", 
-    "app/**/*.ts", 
-    "app/**/*.tsx", 
-    ".next/types/**/*.ts",
     "src/**/*",
-    "pages/**/*",
-    "*.ts",
-    "*.tsx"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "tailwind.config.js",
+    "postcss.config.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ],
+  "references": [
+    { "path": "./tsconfig.node.json" }
   ]
 }

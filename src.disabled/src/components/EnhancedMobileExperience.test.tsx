@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import EnhancedMobileExperience from '../components/EnhancedMobileExperience';'
-describe('EnhancedMobileExperience', () => {test('renders without crashing', () => {render(<EnhancedMobileExperience />)expect(screen.getByTestId('enhancedmobileexperience')).toBeInTheDocument()})test('displays correct content', () => {render(<EnhancedMobileExperience />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<EnhancedMobileExperience />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<EnhancedMobileExperience />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import EnhancedMobileExperience from &apos;./EnhancedMobileExperience; describe(&apos;EnhancedMobileExperience&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedMobileExperience / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedMobileExperience from &apos;./EnhancedMobileExperience; describe(&apos;EnhancedMobileExperience&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedMobileExperience / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedMobileExperience from &apos;./EnhancedMobileExperience; describe(&apos;EnhancedMobileExperience&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<EnhancedMobileExperience / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

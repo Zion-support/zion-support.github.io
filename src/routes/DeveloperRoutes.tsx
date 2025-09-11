@@ -1,8 +1,9 @@
-// Routes have been converted to Next.js pages structure
-// This component is no longer needed since Next.js uses file-based routing
+// Developer routes - imports removed as pages are not found
 
-const DeveloperRoutes = () => {
-  return null;
-};
-
-export default DeveloperRoutes;
+export default function DeveloperRoutes() {
+  return (
+    <>
+      {/* Developer portal routes can be added here */}
+    </>
+  );
+}

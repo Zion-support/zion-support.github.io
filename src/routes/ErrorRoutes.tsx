@@ -1,8 +1,12 @@
-// Routes have been converted to Next.js pages structure
-// This component is no longer needed since Next.js uses file-based routing
+import { Route, Routes } from "react-router-dom";
+import NotFound from "@/pages/NotFound";
 
 const ErrorRoutes = () => {
-  return null;
-};
+  return (
+    <Routes>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
 
 export default ErrorRoutes;

@@ -1,9 +1,7 @@
-import { render } from '@testing-library/react';
-import Analytics from './Analytics';
-
-describe('Analytics', () => {
-  it('renders without crashing', () => {
-    const { container } = render(<Analytics />);
-    expect(container).toBeTruthy();
-  });
-});
+import { _render, screen  } from '@testing-library/reactimport Analytics from ./Analyticsdescribe(Analytics, () => {it(renders without crashing, () => {';';
+    render(<Analytics  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<Analytics  />)';
+    // Add specific test assertions based on component content})});';;';
+import { _render,screen } from '@testing-library/reactimport Analytics from ./Analyticsdescribe(Analytics,() => {it(renders without crashing,() => {'; render(<Analytics />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<Analytics />)

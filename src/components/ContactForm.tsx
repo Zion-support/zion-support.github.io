@@ -1,211 +1,159 @@
-import React, { useState } from 'react';
-import {};
-} from 'lucide-react';
-;
-export const ContactForm: React.FC = () => {};
-});
-;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-;
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
-    const { name, value } = e.target;
-    setFormData(prev => ({};
-}));,
-};
-;
-  const handleSubmit = async (e: React.FormEvent) => {};
-});,
-} catch (error) {};
-} finally {};
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+
+
+        "timeline": ''});';';';  if (submitStatus === 'success') {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text-center py-12"
+      >
+        <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <CheckCircle className="w-10 h-10 text-white"  />';
+        </div>';';
+        <h3 className="text-2xl font-bold text-white mb-4">Thank You!';';';
+        <p className="text-zion-slate-light mb-6">',';';
+    ';';';
+          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''';';
+        </p>';';';
+        <button',';';
+    ';';';
+          onClick={() => setSubmitStatus('idle');
+          onClick={() => setSubmitStatus('idle')
+      )}
+    </div>;
+  );
 }
-  };
-;
-  const services = [;
-    'AI Solutions',;
-    'Quantum Computing',;
-    'Cybersecurity',;
-    'Digital Transformation',;
-    'Cloud Services',;
-    'DevOps',;
-    'Machine Learning',;
-    'Space Technology';
-  ];
-
-  const budgets = [;
-    'Under $10,000',;
-    '$10,000 - $50,000',;
-    '$50,000 - $100,000',;
-    '$100,000 - $500,000',;
-    'Over $500,000';
-  ];
-
-  const timelines = [;
-    'ASAP',;
-    '1-3 months',;
-    '3-6 months',;
-    '6-12 months',;
-    '12+ months';
-  ];
-;
-  if (submitStatus === 'success') {};
-          onClick={() => setSubmitStatus('idle')}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
+          className="px-6 py-3 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/90 transition-colors";
+        >;
           Send Another Message;
         </button>;
-      </div>;
-    )}
-
-  return (;
-    <div className="bg-white/10 backdrop-blur-md border border-purple-200 rounded-2xl p-8">;
-      <div className="text-center mb-8">;
-        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>;
-        <p className="text-gray-300">;
-          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.;
+      </motion.div>;
+    );
+      )"}
+    </div>;
+  );
+}';
+  return (';';
+    <div className="min-h-screen bg-white">';';';
+      <div className="text-center mb-8">';';';';
+        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>';';';';';
+        <p className="text-zion-slate-light">',';';';';
+    ';';';';';
+          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.''
+        </p>
+      </div>
+      <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-8">    </div>
+    );
+}
+          className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/90 transition-colors"
+        >
+          Send Another Message
+        </button>
+      </motion.div>
+    )
+      )}
+    </div>
+    );
+}
+  return (
+        <div className="min-h-screen bg-white">';
+      <div className="text-center mb-8">';';
+        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>';';';
+        <p className="text-zion-slate-light">',';';
+    ';';';
+          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.'';
         </p>;
       </div>;
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">;
-        <div className="space-y-6">;
-          <div className="flex items-center gap-4">;
-            <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">;
-              <Mail className="w-6 h-6 text-blue-400" />;
-            </div>;
-            <div>;
-              <div className="text-white font-semibold">Email</div>;
-              <div className="text-gray-300">kleber@ziontechgroup.com</div>;
-            </div>;
-          </div>;
-
-          <div className="flex items-center gap-4">;
-            <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">;
-              <Phone className="w-6 h-6 text-blue-400" />;
-            </div>;
-            <div>;
-              <div className="text-white font-semibold">Phone</div>;
-              <div className="text-gray-300">+1 (302) 464-0950</div>;
-            </div>;
-          </div>;
-
-          <div className="flex items-center gap-4">;
-            <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">;
-              <MapPin className="w-6 h-6 text-blue-400" />;
-            </div>;
-            <div>;
-              <div className="text-white font-semibold">Location</div>;
-              <div className="text-gray-300">Delaware, United States</div>;
-            </div>;
-          </div>;
-
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg p-4">;
-            <h4 className="text-white font-semibold mb-2">Response Time</h4>;
-            <p className="text-gray-300 text-sm">;
-              We typically respond to all inquiries within 2 hours during business hours.;
-            </p>;
-          </div>;
-        </div>;
-
-        <form onSubmit={handleSubmit} className="space-y-4">;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <div>;
-              <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">;
-                First Name *;
-              </label>;
-              <div>Broken JSX</div>
-              />;
-            </div>;
-            <div>;
-              <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">;
-                Last Name *;
-              </label>;
-              <div>Broken JSX</div>
-              />;
-            </div>;
-          </div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <div>;
-              <label htmlFor="email" className="block text-sm font-medium text-white mb-2">;
-                Email *;
-              </label>;
-              <div>Broken JSX</div>
-              />;
-            </div>;
-            <div>;
-              <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">;
-                Phone;
-              </label>;
-              <div>Broken JSX</div>
-              />;
-            </div>;
-          </div>;
-
-          <div>;
-            <label htmlFor="company" className="block text-sm font-medium text-white mb-2">;
-              Company;
-            </label>;
-            <div>Broken JSX</div>
-            />;
-          </div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <div>;
-              <label htmlFor="service" className="block text-sm font-medium text-white mb-2">;
-                Service Interest *;
-              </label>;
-              <div>Broken JSX</div>
-                className="w-full px-4 py-3 bg-white/10 border border-purple-200 rounded-lg text-white focus:outline-none focus:border-blue-400 transition-colors">;
-                <option value="">Select a service</option>;
-                {};
-                  <option key={service} value={service}>{service}</option>;
-                ))}
-              </select>;
-            </div>;
-            <div>;
-              <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">;
-                Budget Range;
-              </label>;
-              <div>Broken JSX</div>
-                className="w-full px-4 py-3 bg-white/10 border border-purple-200 rounded-lg text-white focus:outline-none focus:border-blue-400 transition-colors">;
-                <option value="">Select budget range</option>;
-                {};
-                  <option key={budget} value={budget}>{budget}</option>;
-                ))}
-              </select>;
-            </div>;
-          </div>;
-
-          <div>;
-            <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">;
-              Project Timeline;
-            </label>;
-            <div>Broken JSX</div>
-              className="w-full px-4 py-3 bg-white/10 border border-purple-200 rounded-lg text-white focus:outline-none focus:border-blue-400 transition-colors">;
+      <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-8">;
+        {/* Contact Information */}                className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors"
+              >
+                <option value="">Select budget range</option>
+                { budgets.map((budget) => (
+                  <option key={budget} value={budget}>{budget}</option>
+                ))
+      )}
+    </div>
+    );
+}
+              </select>
+            </div>
+          </div>
+          <div>
+            <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
+              Project Timeline
+            </label>
+            <select
+              id="timeline"
+              name="timeline"
+              value={formData.timeline}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white "focus": "outlin e-none "focus": borde r-zion-cyan/50 transition-colors";
+            >;
               <option value="">Select timeline</option>;
-              {};
-                <option key={timeline} value={timeline}>{timeline}</option>;
-              ))}
-            </select>;
-          </div>;
-
-          <div>;
-            <label htmlFor="message" className="block text-sm font-medium text-white mb-2">;
-              Message *;
-            </label>;
-            <div>Broken JSX</div>
-            />;
-          </div>;
-
-          {};
-          )}
-;
-          <div>Broken JSX</div>
-            className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">;
-            {};
-            )}
-          </button>;
-        </form>;
-      </div>;
+              { timelines.map((timeline) => (;
+                <option key={timeline"} value={timeline}>{timeline}</option>;
+              ));              required;
+              required
+              rows={4}
+              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light "focus": "outlin e-none "focus": borde r-zion-cyan/50 transition-colors resize-none"';
+              placeholder="Tell us about your project and how we can help..."';';
+             />';';';
+          </div>'",';';
+    ';';' {submitStatus === 'error' && (;
+            <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">;
+              <AlertCircle className="w-5 h-5"  />;
+              <span>There was an error sending your message. Please try again.</span>;
+            </div>;
+          );          </div>',';';
+    ';';' {submitStatus === 'error' && (
+            <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">
+              <AlertCircle className="w-5 h-5"  />
+              <span>There was an error sending your message. Please try again.</span>
+            </div>
+          )
+      )}
+    </div>
+    );
+}
+          <motion.button
+            type="submit"
+            disabled={isSubmitting}
+            whileHover={{ "scale": "1.02 "}}
+            whileTap={{ "scale": "0.98 "}}
+            className="w-full px-6 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": "fro m-zion-cyan/90 "hover": t o-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2 "disabled": opacit y-50 "disabled": curso r-not-allowed";
+          >;
+            {isSubmitting ? (;
+              <>;
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;
+                Sending Message...;
+</>;
+            ) : (;
+              <>;
+                <Send className="w-5 h-5"  />;
+                Send Message;
+</>;
+            );
+      )"}
     </div>;
-  )}
-export default ContactForm;
+  );          </motion.button>;
+        </form>;
+          </motion.button>
+        </form>
+      </div>';
+    </div>';';
+  );';';';
+};";
+</motion>;
+</textarea>;
+</motion>;
+</any>;
+</any>;};"';';';';
+</motion>
+</textarea>
+</motion>
+</any>
+</any>
+

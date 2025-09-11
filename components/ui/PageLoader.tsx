@@ -1,136 +1,173 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Cloud, Shield, Zap } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import LoadingSpinner from './LoadingSpinner';
 
 interface PageLoaderProps {
-  message?: string;
-  variant?: 'default' | 'tech' | 'minimal';
-  className?: string;
+  isLoading?: boolean;
+  loadingText?: string;
+  minDisplayTime?: number;
+  onLoadingComplete?: () => void;
 }
 
-export default function PageLoader({ 
-  message = 'Loading...', 
-  variant = 'default',
-  className = '' 
-}: PageLoaderProps) {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
+const PageLoader: React.FC<PageLoaderProps> = ({
+  isLoading = true,
+  loadingText = 'Loading Zion Tech Group...',
+  minDisplayTime = 1000,
+  onLoadingComplete
+}) => {
+  const [showLoader, setShowLoader] = useState(true);
+  const [progress, setProgress] = useState(0);
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
+  useEffect(() => {
+    if (!isLoading) {
+      // Ensure minimum display time
+      const timer = setTimeout(() => {
+        setShowLoader(false);
+        onLoadingComplete?.();
+      }, minDisplayTime);
 
-  const iconVariants = {
-    hidden: { rotate: 0, scale: 0.8 },
-    visible: {
-      rotate: 360,
-      scale: 1,
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "linear"
-      }
+      return () => clearTimeout(timer);
     }
-  };
+  }, [isLoading, minDisplayTime, onLoadingComplete]);
 
-  const getLoaderContent = () => {
-    switch (variant) {
-      case 'tech':
-        return (
-          <div className="text-center">
-            <div className="flex justify-center space-x-4 mb-6">
-              {[Star, Cloud, Shield, Zap].map((Icon, index) => (
-                <motion.div
-                  key={index}
-                  variants={iconVariants}
-                  className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center"
-                >
-                  <Icon className="w-6 h-6 text-blue-400" />
-                </motion.div>
-              ))}
-            </div>
-            <motion.h2 variants={itemVariants} className="text-2xl font-bold text-white mb-2">
-              Zion Tech Group
-            </motion.h2>
-            <motion.p variants={itemVariants} className="text-gray-400 mb-6">
-              Loading amazing technology...
-            </motion.p>
-            <motion.div variants={itemVariants} className="w-32 h-1 bg-gray-700 rounded-full mx-auto overflow-hidden">
-              <motion.div
-                className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
-                animate={{
-                  x: ['-100%', '100%']
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-            </motion.div>
-          </div>
-        );
-      
-      case 'minimal':
-        return (
-          <div className="text-center">
-            <motion.div
-              variants={iconVariants}
-              className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"
-            />
-            <motion.p variants={itemVariants} className="text-gray-400">
-              {message}
-            </motion.p>
-          </div>
-        );
-      
-      default:
-        return (
-          <div className="text-center">
-            <motion.div
-              variants={iconVariants}
-              className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <Star className="w-10 h-10 text-white" />
-            </motion.div>
-            <motion.h2 variants={itemVariants} className="text-2xl font-bold text-white mb-2">
-              {message}
-            </motion.h2>
-            <motion.div variants={itemVariants} className="flex justify-center space-x-2">
-              <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" />
-              <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
-            </motion.div>
-          </div>
-        );
+  useEffect(() => {
+    if (isLoading) {
+      // Simulate progress
+      const interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 90) return prev;
+          return prev + Math.random() * 15;
+        });
+      }, 200);
+
+      return () => clearInterval(interval);
+    } else {
+      // Complete progress
+      setProgress(100);
     }
-  };
+  }, [isLoading]);
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 flex items-center justify-center ${className}`}>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="max-w-md w-full"
-      >
-        {getLoaderContent()}
-      </motion.div>
-    </div>
+    <AnimatePresence>
+      {showLoader && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+        >
+          <div className="text-center">
+            {/* Logo/Brand */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="mb-8"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Zion Tech Group
+              </h1>
+            </motion.div>
+
+            {/* Loading Spinner */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-8"
+            >
+              <LoadingSpinner 
+                size="lg" 
+                color="primary" 
+                variant="spinner"
+                showText={false}
+              />
+            </motion.div>
+
+            {/* Loading Text */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-xl text-gray-300 mb-8"
+            >
+              {loadingText}
+            </motion.p>
+
+            {/* Progress Bar */}
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              className="w-64 md:w-96 mx-auto mb-4"
+            >
+              <div className="bg-gray-800 rounded-full h-2 overflow-hidden">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${progress}%` }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                />
+              </div>
+            </motion.div>
+
+            {/* Progress Percentage */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="text-sm text-gray-400"
+            >
+              {Math.round(progress)}%
+            </motion.p>
+
+            {/* Loading Tips */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.5 }}
+              className="mt-12 text-center"
+            >
+              <div className="inline-block p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
+                <p className="text-sm text-gray-400">
+                  <span className="text-cyan-400 font-medium">Tip:</span> We're preparing the future of technology for you
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Background Animation */}
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            <motion.div
+              className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-full blur-3xl"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.1, 0.2, 0.1]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: 'easeInOut'
+              }}
+            />
+            <motion.div
+              className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-full blur-3xl"
+              animate={{
+                scale: [1.2, 1, 1.2],
+                opacity: [0.1, 0.2, 0.1]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: 'easeInOut',
+                delay: 2
+              }}
+            />
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
-}
+};
+
+export default PageLoader;

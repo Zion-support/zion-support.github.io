@@ -1,28 +1,21 @@
-name: Auto PR on Push
+name: Auto PR on Push (DISABLED - Migrated to PM2)
 
 on:
-  push:
-    branches:
-      - 'feat/**'
-      - 'ci/**'
-
-permissions:
-  contents: write
-  pull-requests: write
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling automatic PR creation on push
+  # Now handled by PM2 processes: continuous-improvement, daily-build-test
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 jobs:
-  open-pr:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: main
-          branch: ${{ github.ref_name }}
-          title: 'Auto PR: ${{ github.ref_name }}'
-          body: 'Automated PR created on push to branch. This keeps changes flowing to main quickly.'
-          labels: automations
+      - name: Workflow Disabled
+        run: |
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Auto PR on push functionality is now handled by:"
+          echo "- continuous-improvement PM2 process (every 2 hours)"
+          echo "- daily-build-test PM2 process (every hour)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0

@@ -1,36 +1,4 @@
-
-import { NewsletterForm } from '@/components/NewsletterForm';
-import * as toastHook from @/hooks/use-toast';
-import api from '@/services/apiClient;
-import { vi, expect, test } from 'vitest';
-
-const mockedApi = api as unknown as { post: any }
-test(,
-  shows success toast when subscription succeeds', async () => {
-  mockedApi.post.mockResolvedValue({});
-  render(<NewsletterForm />);
-  fireEvent.input(screen.getByPlaceholderText(/enter your email/i) {
-
-  'test@example.com }})
-  fireEvent.submit(screen.getByRole('
-  'button' { name: /subscribe/i }))
-  await waitFor(() => {
-    expect(toastHook.toast.success).toHaveBeenCalledWith('
-  '¡Gracias por suscribirte!')})})
-
-const mockedApi = api as unknown as { post: any }
-test(
-  shows success toast when subscription succeeds', async () => {'
-  mockedApi.post.mockResolvedValue({})
-  render(<NewsletterForm  />)
-  fireEvent.input(screen.getByPlaceholderText(/enter your email/i) {
-    target: { value:
-  'test@example.com }})'
-  fireEvent.submit(screen.getByRole(
-  'button' { name: /subscribe/i });
-  await waitFor(() => {
-    expect(toastHook.toast.success).toHaveBeenCalledWith(
-  '¡Gracias por suscribirte!')})})'
-
-
-
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

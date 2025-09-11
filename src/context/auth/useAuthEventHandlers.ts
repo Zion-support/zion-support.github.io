@@ -11,29 +11,22 @@ interface User {
   updatedAt?: string;
 }
 
-interface AuthTokens {
-  accessToken: string | null;
-  refreshToken: string | null;
-}
+export const useAuthEventHandlers = (
+  setUser: (user: User | null) => void,
+  setOnboardingStep: (step: number) => void
+) => {
+  const handleSignedIn = useCallback((user: User) => {
+    setUser(user);
+    setOnboardingStep(1); // Start onboarding process
+  }, [setUser, setOnboardingStep]);
 
-export const useAuthEventHandlers = () => {
-  const handleLogin = useCallback((user: User, tokens: AuthTokens) => {
-    localStorage.setItem('user', JSON.stringify(user));
-    localStorage.setItem('tokens', JSON.stringify(tokens));
-  }, []);
-
-  const handleLogout = useCallback(() => {
-    localStorage.removeItem('user');
-    localStorage.removeItem('tokens');
-  }, []);
-
-  const handleTokenRefresh = useCallback((newTokens: AuthTokens) => {
-    localStorage.setItem('tokens', JSON.stringify(newTokens));
-  }, []);
+  const handleSignedOut = useCallback(() => {
+    setUser(null);
+    setOnboardingStep(0); // Reset onboarding
+  }, [setUser, setOnboardingStep]);
 
   return {
-    handleLogin,
-    handleLogout,
-    handleTokenRefresh,
+    handleSignedIn,
+    handleSignedOut
   };
 };

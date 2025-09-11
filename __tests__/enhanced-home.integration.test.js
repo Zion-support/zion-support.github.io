@@ -1,9 +1,1 @@
-
-
-  });
-
-  test('page loads with correct data', () => {
-    render(<enhanced-home />);
-    // Test data loading and display})});
-
-
+=======

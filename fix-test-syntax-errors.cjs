@@ -1,88 +1,135 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-const fs = require("fs");
-const path = require("path");
-// Common syntax fixes for test files;
-const fixes = [;
-  // Fix unterminated string literals and malformed imports;
-  {
-  pattern: /import\s+(\w+)\s+from\s+"([^"]*);";/g,;
-    replacement: "import $1 from "$2";";},;
-  {
-  pattern: /describe\("([^"]*);",\s*\(\)\s*=>\s*{";/g,;
-    replacement: "describe("$1", () => {";},;
-  {
-  pattern: /test\("([^"]*);",\s*\(\)\s*=>\s*{";/g,;
-    replacement: "test("$1", () => {";},;
-  {
-  pattern: /expect\(([^)]*)\)\.toBeInTheDocument\(\)\}\);"/g,;
-    replacement: "expect($1).toBeInTheDocument();";},;
-  {
-  pattern: /}\);"/g,;
-    replacement: "});";},;
-  {
-  pattern: /}\);"/g,;
-    replacement: "});";},;
-  // Fix malformed JSX;
-  {
-  pattern: /<(\w+)\s+(\w+)\s*\/>/g,;
-    replacement: "<$1 $2 />";},;
-  // Fix trailing semicolons in wrong places;
-  {
-  pattern: /;\s*$/gm,;
-    replacement: "";},;
-  {
-  pattern: /,\s*$/gm,;
-    replacement: "";}
-];
-function fixFile(filePath) {
-  try {
-  let content = fs.readFileSync(filePath, "utf8");
-    let originalContent = content;
-    // Apply all fixes;
-    fixes.forEach(fix => {
-  content = content.replace(fix.pattern, fix.replacement);});
-    // Additional specific fixes;
-    content = content;
-      .replace(/";/g, """);
-      .replace(/";/g, """);
-      .replace(/,\s*}/g, "}");
-      .replace(/,\s*]/g, "]");
-      .replace(/,\s*\)/g, ")");
-      .replace(/\s+from\s+"([^"]*);";/g, " from "$1";");
-      .replace(/import\s+(\w+)\s+from\s+"([^"]*);";/g, "import $1 from "$2";");
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Fixed: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message);
-    return false;}
-}
+class TestSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = [];
+  }
 
-function findTestFiles(dir) {
-  const testFiles = [];
-  function traverse(currentDir) {
-  const files = fs.readdirSync(currentDir);
-    for (const file of files) {
-  const filePath = path.join(currentDir, file);
-      const stat = fs.statSync(filePath);
-      if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
-  traverse(filePath);} else if (file.endsWith(".test.js") || file.endsWith(".test.tsx") || file.endsWith(".test.ts")) {
-  testFiles.push(filePath);}
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  fixFile(filePath) {
+    try {
+      if (!fs.existsSync(filePath)) {
+        this.log(`⚠️ File not found: ${filePath}`);
+        return false;
+      }
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+
+      // Fix trailing commas in import statements
+      content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;');
+      
+      // Fix other common syntax issues
+      content = content.replace(/,\s*}/g, '}');
+      content = content.replace(/,\s*]/g, ']');
+      content = content.replace(/,\s*\)/g, ')');
+      
+      // Fix function declarations with trailing commas
+      content = content.replace(/function\s+([^(]+)\([^)]*,\s*\)/g, (match, funcName) => {
+        return match.replace(/,\s*\)$/, ')');
+      });
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        this.log(`✅ Fixed syntax in: ${filePath}`);
+        this.fixedFiles.push(filePath);
+        return true;
+      } else {
+        this.log(`ℹ️ No changes needed: ${filePath}`);
+        return false;
+      }
+    } catch (error) {
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
     }
   }
-  traverse(dir);
-  return testFiles;}
 
-// Main execution;
-console.log("🔧 Fixing test file syntax errors...");
-const testFiles = findTestFiles(__dirname);
-let fixedCount = 0;
-testFiles.forEach(file => {
-  if (fixFile(file)) {
-  fixedCount++;}
-});
+  findTestFiles() {
+    const testFiles = [];
+    
+    // Find test files in various directories
+    const searchPaths = [
+      '__tests__',
+      'src_backup',
+      'recovered-branches',
+      'tests'
+    ];
 
-console.log(`✅ Fixed ${fixedCount} out of ${testFiles.length} test files`);
-console.log('🎉 Test syntax error fixes completed!');
+    for (const searchPath of searchPaths) {
+      if (fs.existsSync(searchPath)) {
+        this.findFilesRecursively(searchPath, testFiles);
+      }
+    }
+
+    return testFiles;
+  }
+
+  findFilesRecursively(dir, files) {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        this.findFilesRecursively(fullPath, files);
+      } else if (stat.isFile() && (item.endsWith('.test.js') || item.endsWith('.test.ts') || item.endsWith('.test.tsx') || item.endsWith('.test.jsx'))) {
+        files.push(fullPath);
+      }
+    }
+  }
+
+  async run() {
+    this.log('🔧 Starting Test Syntax Fixer');
+    
+    const testFiles = this.findTestFiles();
+    this.log(`📁 Found ${testFiles.length} test files`);
+
+    let fixedCount = 0;
+    for (const file of testFiles) {
+      if (this.fixFile(file)) {
+        fixedCount++;
+      }
+    }
+
+    this.log(`✅ Fixed ${fixedCount} files`);
+    
+    if (this.errors.length > 0) {
+      this.log(`❌ ${this.errors.length} errors encountered:`);
+      this.errors.forEach(error => {
+        this.log(`   - ${error.file}: ${error.error}`);
+      });
+    }
+
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalFiles: testFiles.length,
+      fixedFiles: fixedCount,
+      errors: this.errors,
+      fixedFileList: this.fixedFiles
+    };
+
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'test-syntax-fix-report.json'),
+      JSON.stringify(report, null, 2)
+    );
+
+    this.log('📊 Report saved to test-syntax-fix-report.json');
+    return report;
+  }
+}
+
+// Run the fixer
+if (require.main === module) {
+  const fixer = new TestSyntaxFixer();
+  fixer.run().catch(console.error);

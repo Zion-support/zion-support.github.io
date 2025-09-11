@@ -1,2 +1,1 @@
-module.exports = {
-  // This file is disabled}
+module.exports = {;

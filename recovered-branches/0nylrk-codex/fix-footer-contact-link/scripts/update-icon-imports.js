@@ -1,88 +1,68 @@
- * 
- * Usage: * 1. Run: node scripts/update-icon-imports && imports.js      'import {$1} from "@/components/icons"'
-    )
-    // Only write if changes were made
-    if (content !== updatedContent) { * updateIconImportsInFile - Function description
- */
-function updateIconImportsInFile() {}
-  try {'
-    const content = fs.readFileSync (file_path, 'utf8'),
-    // Replace direct lucide imports with our custom icons;
-    const updated_content = content.replace ('"
-      /import\s+{([^}]*)}\s + from\s+['"]lucide-react['"]/g,'
-      'import { $1 } from '@/components / icons';'),
-    // Only write if changes were made;
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      fs.writeFileSync (file_path, updated_content, 'utf8'),`
-      console.log (`✅ Updated imports in ${file_path}`),
-      return true;
-    }
-    return false;
-  } catch (err) {}`
-    console.error (`❌ Error processing ${file_path}:`, err),
-    return false;
-  }
-}
-// Find all TypeScript / JavaScript / JSX / TSX files;'
-const files = glob.sync ('src/**/*.{js, jsx, ts, tsx}'),
-let updated_files = 0,
-files.for_each (file => {}
-  const updated = updateIconImportsInFile (file),
-  // Check condition;
-if (updated_files++) {}
-  $2;
-}
-}),`
-console.log (`\n🎉 Updated icon imports in ${updated_files} files`),'`
-console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
-;
-console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
-;
-
-// // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
-
-/**;
- * Helper script to update icon imports across the codebase;
- * ;
- * Usage:* 1. Run:node scripts/update-icon-imports.js;
- * 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
- */;
-;
-const fs = require('fs'),;
-const path = require('path'),;
-const glob = require('glob'),;
-;
+/**
+ * Helper script to update icon imports across the codebase
+ *
+ * Usage: * 1. Run: node scripts/update-icon-imports.js
+=======
+=======/**;
+* Helper script to update icon imports across the codebase;
+*;
+* Usage: * 1. Run: node scripts / update - icon - imports.js;
+* 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
+*/;
+const fs = require ('fs'),
+const path = require ('path'),
+const glob = require ('glob'),
 // Helper to replace imports in a file;
-function updateIconImportsInFile(filePath) {;
-  try {;
-    const content = fs.readFileSync(filePath, 'utf8'),;
-    ;
-    // Replace direct lucide imports with our custom icons;
-    const updatedContent = content.replace(;
-      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,;
-      'import {$1} from "@/components/icons"';
-    ),;
-    ;
-    // Only write if changes were made;
-    if (content !== updatedContent) {;
-      fs.writeFileSync(filePath, updatedContent, 'utf8'),;
-      // // // console.log(`✅ Updated imports in ${filePath}`),;
-      return true,;
+/**
+
+ * 
+ * Usage: * 1. Run: node scripts/update-icon-imports && imports.js
+
+const fs = require('fs')
+const path = require('path')
+const glob = require('glob')
+// Helper to replace imports in a file
+function updateIconImportsInFile(filePath) {
+  try {
+
+      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      console && console.log(`✅ Updated imports in ${filePath}`),=======
+      fs.writeFileSync(filePath, updatedContent, 'utf8')
+      console.log(`✅ Updated imports in ${filePath}`)
+      return true
+      fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      // // // console.log(`✅ Updated imports in ${filePath}`),
+      return true
+
+      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      console && console.log(`✅ Updated imports in ${filePath}`),
+
+      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      console && console.log(`✅ Updated imports in ${filePath}`),
+      return true
+      fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      // // // console.log(`✅ Updated imports in ${filePath}`),
+      return true
+
     }
-    ;
-    return false,;
-  } catch (err) {;
-    console.error(`❌ Error processing ${filePath} `, err),;
-    return false,;
+    return false
+  } catch (err) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    }
+    return false
+  } catch (err) {
+
+    return false
   }
 }
 
-console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
-;
-// // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
