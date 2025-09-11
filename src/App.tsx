@@ -17,9 +17,9 @@ const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 
 // Service pages
-const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
-const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
-const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
+const CloudDevOpsServices = lazy(() => import('./pages/services/CloudDevOpsServices'));
+const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation'));
 const AIEmailResponder = lazy(() => import('./pages/services/ai-email-responder'));
 const MobileSurveyTool = lazy(() => import('./pages/services/mobile-survey-tool'));
 const AITalentMatching = lazy(() => import('./pages/services/ai-talent-matching'));
@@ -41,9 +41,9 @@ const App = () => {
               <Route path="/contact" element={<Contact />} />
               
               {/* Service routes */}
-              <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
-              <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
-              <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+              <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+              <Route path="/services/cloud-devops-services" element={<CloudDevOpsServices />} />
+              <Route path="/services/ai-customer-service-automation" element={<AICustomerServiceAutomation />} />
               <Route path="/services/ai-email-responder" element={<AIEmailResponder />} />
               <Route path="/services/mobile-survey-tool" element={<MobileSurveyTool />} />
               <Route path="/services/ai-talent-matching" element={<AITalentMatching />} />
