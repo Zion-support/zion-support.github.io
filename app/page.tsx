@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -95,6 +96,38 @@ export default function HomePage() {
             <FeatureCard
               title='Cost Effective'
               description='Optimized solutions that reduce operational costs and improve efficiency.'
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Articles */}
+      <section className='py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Latest Articles</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Fresh insights from our team on AI, cloud, and automation.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <Card
+              title='GenAI Evals in Production: What Actually Works'
+              href='/blog/genai-evals-in-production'
+              description='Continuous eval loops that keep quality, safety, and costs in check.'
+              icon='🧪'
+            />
+            <Card
+              title='Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs'
+              href='/blog/edge-ai-in-manufacturing-2025'
+              description='Sub-100ms decisions, resilience, and bandwidth savings with on-device inference.'
+              icon='🏭'
+            />
+            <Card
+              title='Startup Micro SaaS Playbook: From Idea to $10k MRR'
+              href='/blog/startup-micro-saas-playbook'
+              description='A pragmatic blueprint to launch and grow a Micro SaaS efficiently.'
+              icon='📈'
             />
           </div>
         </div>
