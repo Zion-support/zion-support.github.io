@@ -21,6 +21,7 @@
     "test:coverage": "vitest --coverage",
     "test:integration": "jest --testPathPattern=integration",
     "test:e2e": "cypress run",
+    "test:smoke": "vitest run",
     "test:build": "npm run build && npm run test",
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
@@ -79,7 +80,8 @@
     "security:headers": "node scripts/security-headers.js",
     "automation:ultimate": "node automation/ultimate-automation-suite.cjs",
     "automation:fix": "node simple-automation-fixer.cjs",
-    "test:a11y": "node scripts/accessibility-tests.js"
+    "test:a11y": "node scripts/accessibility-tests.js",
+    "perf:monitor": "node utils/performance-monitor.js"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
