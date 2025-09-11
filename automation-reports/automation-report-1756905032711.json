@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-09-03T13:10:32.711Z",
+  "summary": {
+    "totalAutomationScripts": 7,
+    "successfulAutomationScripts": 2,
+    "failedAutomationScripts": 5,
+    "totalTests": 3,
+    "successfulTests": 0,
+    "failedTests": 3
+  },
+  "automationResults": [
+    {
+      "script": "Comprehensive Automation Orchestrator",
+      "success": false,
+      "error": "Command failed: node scripts/comprehensive-automation-orchestrator.cjs\n/workspace/scripts/comprehensive-automation-orchestrator.cjs:30\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "script": "Error Prevention Automation",
+      "success": false,
+      "error": "Command failed: node scripts/error-prevention-automation.cjs\n/workspace/scripts/error-prevention-automation.cjs:8\nconst { execSync, spawn } = require(\"$1\")\n      ^\n\nSyntaxError: Unexpected token '{'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "script": "Performance Monitor",
+      "success": false,
+      "error": "Command failed: node scripts/performance-monitor.cjs\n/workspace/scripts/performance-monitor.cjs:19\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "script": "Security Audit",
+      "success": false,
+      "error": "Command failed: node scripts/security-audit.cjs\n/workspace/scripts/security-audit.cjs:10\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "script": "Syntax Fixer",
+      "success": false,
+      "error": "Command failed: node scripts/syntax-fixer.cjs\n/workspace/scripts/syntax-fixer.cjs:12\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "script": "Build Optimizer",
+      "success": true,
+      "output": "[2025-09-03T13:09:20.123Z] 🚀 Starting Build Optimizer\n[2025-09-03T13:09:20.124Z] 📊 Generating build optimization report...\n[2025-09-03T13:09:20.124Z] 🔍 Analyzing build configuration...\n[2025-09-03T13:09:20.125Z] ✅ Found 2 build configuration files\n[2025-09-03T13:09:20.125Z] 🔨 Running build...\n[2025-09-03T13:10:11.876Z] ❌ Build failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarn  - Invalid next.config.js options detected: \n  - The value at .experimental has an unexpected property, optimizePackageImports, which is not in the list of allowed properties (adjustFontFallbacks, allowMiddlewareResponseBody, amp, appDir, browsersListForSwc, cpus, craCompat, disableOptimizedLoading, disablePostcssPresetEnv, esmExternals, externalDir, fallbackNodePolyfills, forceSwcTransforms, fullySpecified, gzipSize, incrementalCacheHandlerPath, isrFlushToDisk, isrMemoryCacheSize, largePageDataBytes, legacyBrowsers, manualClientBasePath, modularizeImports, newNextLinkBehavior, nextScriptWorkers, optimizeCss, optimisticClientCache, outputFileTracingRoot, pageEnv, profiling, proxyTimeout, runtime, scrollRestoration, serverComponents, sharedPool, skipMiddlewareUrlNormalize, skipTrailingSlashRedirect, sri, swcFileReading, swcMinify, swcMinifyDebugOptions, swcPlugins, swcTraceProfiling, urlImports, workerThreads).\n\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\nwarn  - You have enabled experimental feature (optimizePackageImports) in next.config.js.\nwarn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.\n\nerror - ESLint: Cannot read config file: /workspace/.eslintrc.js Error: module is not defined\nFailed to compile.\n\n./components/Analytics.tsx:6:5\nType error: Cannot find name 'script1'.\n\n\u001b[0m \u001b[90m 4 | \u001b[39m  trackingId\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m}\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m    script1\u001b[33m.\u001b[39m\u001b[36masync\u001b[39m\u001b[33m:\u001b[39m \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 | \u001b[39m    script1\u001b[33m.\u001b[39msrc\u001b[33m:\u001b[39m \u001b[33m=\u001b[39m \u001b[32m\"https: // comment\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 8 | \u001b[39m    document\u001b[33m.\u001b[39mhead\u001b[33m.\u001b[39mappendChild(script1)\u001b[0m\n\u001b[0m \u001b[90m 9 | \u001b[39m}\u001b[0m\n\n[2025-09-03T13:10:11.877Z] 📊 Analyzing build output...\n[2025-09-03T13:10:11.878Z] ⚡ Checking build performance...\n[2025-09-03T13:10:11.878Z] ✅ Performance checks completed\n[2025-09-03T13:10:11.878Z] 📄 Report saved to: /workspace/build-reports/build-optimization-report-1756905011878.json\n\n🔨 BUILD OPTIMIZER SUMMARY\nNaN\nBuild Status: ❌ Failed\nOutput Size: N/A\nFile Count: N/A\nLarge Files: N/A\nSource Maps: ❌ Disabled\nMinification: ❌ Disabled\nReport: /workspace/build-reports/build-optimization-report-1756905011878.json\n[2025-09-03T13:10:11.879Z] ✅ Build optimization completed\n"
+    },
+    {
+      "script": "Dependency Manager",
+      "success": true,
+      "output": "[2025-09-03T13:10:11.905Z] 🚀 Starting Dependency Manager\n[2025-09-03T13:10:11.907Z] 📊 Generating dependency management report...\n[2025-09-03T13:10:11.907Z] 📦 Analyzing dependencies...\n[2025-09-03T13:10:15.139Z] ✅ Found 107 total dependencies\n[2025-09-03T13:10:15.139Z] 📊 16 packages have updates available\n[2025-09-03T13:10:15.139Z] 🛡️ 4 packages have security vulnerabilities\n[2025-09-03T13:10:15.139Z] 🔍 Auditing dependencies for security issues...\n[2025-09-03T13:10:16.115Z] ⚠️ Security audit found issues: Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n[2025-09-03T13:10:16.115Z] 📄 Report saved to: /workspace/dependency-reports/dependency-report-1756905016115.json\n\n📦 DEPENDENCY MANAGER SUMMARY\nNaN\nTotal Dependencies: 107\nOutdated Packages: 16\nSecurity Vulnerabilities: 4\nSecurity Audit: ❌ Issues Found\nReport: /workspace/dependency-reports/dependency-report-1756905016115.json\n[2025-09-03T13:10:16.116Z] ✅ Dependency management completed\n"
+    }
+  ],
+  "testResults": [
+    {
+      "test": "Linting Tests",
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "test": "TypeScript Type Checking",
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "test": "Unit Tests",
+      "success": false,
+      "error": "Command failed: npm test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+    }
+  ]
+}

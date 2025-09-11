@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-08-29T20:38:33.828Z",
+  "summary": {
+    "totalOutdated": 0,
+    "totalVulnerabilities": 0,
+    "totalUnused": 0,
+    "totalConflicts": 0,
+    "totalHeavy": 1
+  },
+  "details": {
+    "outdatedPackages": [],
+    "securityVulnerabilities": [],
+    "unusedDependencies": [],
+    "duplicateDependencies": [],
+    "heavyDependencies": [
+      {
+        "name": "date-fns",
+        "impact": "high",
+        "alternatives": ["Check for lighter alternatives"],
+        "recommendation": "Consider using lighter alternatives or implementing tree-shaking for date-fns"
+      }
+    ],
+    "updateRecommendations": [],
+    "compatibilityIssues": []
+  },
+  "nextActions": ["⚡ Optimize bundle size by reviewing heavy dependencies"],
+  "status": "completed"
+}

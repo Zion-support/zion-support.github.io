@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-09-10T18:02:09.925Z",
+  "metrics": {
+    "buildTime": 295,
+    "bundleSize": 1984,
+    "lighthouseScore": 76,
+    "testCoverage": 90
+  },
+  "summary": {
+    "status": "warning",
+    "issues": [
+      "Build time is longer than 3 minutes",
+      "Bundle size is larger than 1.5MB",
+      "Lighthouse score is below 80"
+    ],
+    "score": 83
+  },
+  "recommendations": [
+    "Optimize build process and consider build caching",
+    "Implement code splitting and tree shaking",
+    "Analyze and remove unused dependencies",
+    "Optimize Core Web Vitals",
+    "Implement lazy loading for images and components"
+  ]
+}

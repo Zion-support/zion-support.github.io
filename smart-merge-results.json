@@ -1,0 +1,43 @@
+{
+  "successful": ["0smfo8-codex/fix-404-error-for-non-existent-route"],
+  "failed": [
+    {
+      "branch": "0nylrk-codex/fix-footer-contact-link",
+      "error": "Command failed: git checkout -b temp-merge-0nylrk-codex/fix-footer-contact-link origin/0nylrk-codex/fix-footer-contact-link\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    },
+    {
+      "branch": "0parff-codex/centralize-api-error-handling-and-add-errorboundary",
+      "error": "Command failed: git checkout -b temp-merge-0parff-codex/centralize-api-error-handling-and-add-errorboundary origin/0parff-codex/centralize-api-error-handling-and-add-errorboundary\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    },
+    {
+      "branch": "0t8m4m-codex/update-project-color-palette",
+      "error": "Command failed: git checkout -b temp-merge-0t8m4m-codex/update-project-color-palette origin/0t8m4m-codex/update-project-color-palette\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    },
+    {
+      "branch": "0une71-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "error": "Command failed: git checkout -b temp-merge-0une71-codex/fix-unsupported-shell-syntax-in-setup.sh origin/0une71-codex/fix-unsupported-shell-syntax-in-setup.sh\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    },
+    {
+      "branch": "14gqd5-codex/implement-checkout-flow-with-auth-redirect",
+      "error": "Command failed: git checkout -b temp-merge-14gqd5-codex/implement-checkout-flow-with-auth-redirect origin/14gqd5-codex/implement-checkout-flow-with-auth-redirect\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    },
+    {
+      "branch": "1dcwqi-codex/implement-global-pricing-with-currency-selection",
+      "error": "Command failed: git checkout -b temp-merge-1dcwqi-codex/implement-global-pricing-with-currency-selection origin/1dcwqi-codex/implement-global-pricing-with-currency-selection\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    },
+    {
+      "branch": "1fjs4s-codex/implement-instant-messaging-for-negotiations",
+      "error": "Command failed: git checkout -b temp-merge-1fjs4s-codex/implement-instant-messaging-for-negotiations origin/1fjs4s-codex/implement-instant-messaging-for-negotiations\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    },
+    {
+      "branch": "1m9jcs-codex/fix-client-side-rendering-and-javascript-errors",
+      "error": "Command failed: git checkout -b temp-merge-1m9jcs-codex/fix-client-side-rendering-and-javascript-errors origin/1m9jcs-codex/fix-client-side-rendering-and-javascript-errors\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    },
+    {
+      "branch": "1nc0kn-codex/fix-blank-screen-on-app-load",
+      "error": "Command failed: git checkout -b temp-merge-1nc0kn-codex/fix-blank-screen-on-app-load origin/1nc0kn-codex/fix-blank-screen-on-app-load\nerror: The following untracked working tree files would be overwritten by checkout:\n\tmerge-all-branches.cjs\nPlease move or remove them before you switch branches.\nAborting\n"
+    }
+  ],
+  "conflicts": [],
+  "total": 20
+}

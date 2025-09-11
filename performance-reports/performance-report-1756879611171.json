@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-09-03T06:06:51.171Z",
+  "systemInfo": {
+    "platform": "linux",
+    "arch": "x64",
+    "nodeVersion": "v22.16.0",
+    "memoryUsage": {
+      "rss": 47931392,
+      "heapTotal": 5570560,
+      "heapUsed": 4378512,
+      "external": 1554631,
+      "arrayBuffers": 10515
+    },
+    "uptime": 0.017052317,
+    "cpuUsage": {
+      "user": 11762,
+      "system": 7841
+    }
+  },
+  "buildPerformance": {
+    "success": false,
+    "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: vite: not found\n",
+    "timestamp": "2025-09-03T06:06:51.170Z"
+  },
+  "bundleSize": {
+    "success": false,
+    "error": "Dist directory not found. Run build first.",
+    "timestamp": "2025-09-03T06:06:51.171Z"
+  },
+  "dependencies": {
+    "success": true,
+    "dependencies": 27,
+    "devDependencies": 22,
+    "totalDependencies": 49,
+    "timestamp": "2025-09-03T06:06:51.171Z"
+  },
+  "summary": {
+    "buildSuccessful": false,
+    "bundleSizeMB": null,
+    "totalDependencies": 49
+  }
+}
