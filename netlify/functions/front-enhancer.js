@@ -8,7 +8,11 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
+<<<<<<< HEAD
   schedule: '*/20 * * * *', // every 20 minutes
+=======
+  schedule: '*/45 * * * *', // every 45 minutes
+>>>>>>> origin/chore/front-automation
 };
 
 exports.handler = async () => {
