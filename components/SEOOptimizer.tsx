@@ -1,17 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  ogImage?: string;
+  canonicalUrl?: string;
+  structuredData?: object;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -59,89 +55,95 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'https://github.com/ziontechgroup',
       'https://youtube.com/ziontechgroup'
     ],
-    founder: {
-      '@type': 'Person',
-      name: 'Kleber',
-      jobTitle: 'CEO & Founder',
-      email: 'kleber@ziontechgroup.com'
-    },
-    foundingDate: '2020',
-    industry: 'Technology',
-    numberOfEmployees: '50-200',
-    serviceArea: 'Worldwide',
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Technology Services',
-      itemListElement: [
+    offers: {
+      '@type': 'AggregateOffer',
+      offers: [
         {
           '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'AI & Machine Learning Solutions',
-            description: 'Advanced artificial intelligence and machine learning services'
+          name: 'AI & Machine Learning Solutions',
+          description: 'Advanced artificial intelligence solutions for modern businesses',
+          price: '999',
+          priceCurrency: 'USD',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '999',
+            priceCurrency: 'USD',
+            billingIncrement: 'P1M'
           }
         },
         {
           '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Quantum Computing Services',
-            description: 'Next-generation quantum technology solutions'
+          name: 'Quantum Computing Solutions',
+          description: 'Next-generation computing solutions for complex problems',
+          price: '1999',
+          priceCurrency: 'USD',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '1999',
+            priceCurrency: 'USD',
+            billingIncrement: 'P1M'
           }
         },
         {
           '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Space Technology Solutions',
-            description: 'Innovative space exploration and mining solutions'
+          name: 'Process Automation Solutions',
+          description: 'Intelligent automation to streamline your operations',
+          price: '799',
+          priceCurrency: 'USD',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '799',
+            priceCurrency: 'USD',
+            billingIncrement: 'P1M'
           }
         }
       ]
-    }
-  };
+    };
 
-  // Structured data for website
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: siteName,
-    url: siteUrl,
-    description: description,
-    publisher: {
-      '@type': 'Organization',
-      name: siteName,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteUrl}/logo.png`
-      }
-    },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteUrl}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string'
-    }
-  };
+    // Inject structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
 
-  // Breadcrumb structured data
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: siteUrl
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: section,
-        item: `${siteUrl}/${section.toLowerCase().replace(/\s+/g, '-')}`
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.text = JSON.stringify(breadcrumbData);
+    document.head.appendChild(breadcrumbScript);
+
+    const faqScript = document.createElement('script');
+    faqScript.type = 'application/ld+json';
+    faqScript.text = JSON.stringify(faqData);
+    document.head.appendChild(faqScript);
+
+  // Merge custom structured data with default
+  const finalStructuredData = structuredData || defaultStructuredData;
+
+  // Add page-specific structured data
+  useEffect(() => {
+    // Add WebPage structured data
+    const webPageData = {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: title,
+      description: description,
+      url: canonicalUrl,
+      mainEntity: {
+        '@type': 'Organization',
+        name: 'Zion Tech Group'
       }
-    ]
-  };
+    };
+
+    // Inject structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(webPageData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [title, description, canonicalUrl]);
 
   return (
     <Head>
@@ -160,9 +162,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -173,120 +177,45 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={twitterHandle} />
-      <meta name="twitter:creator" content={twitterHandle} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={`${url}${image}`} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#06b6d4" />
       <meta name="msapplication-TileColor" content="#06b6d4" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content={siteName} />
       
-      {/* Favicon and App Icons */}
+      {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
       
-      {/* Preconnect to external domains for performance */}
+      {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
       
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema)
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema)
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema)
-        }}
-      />
+      {/* Critical CSS and Fonts Preload */}
+      <link rel="preload" href="/logo.png" as="image" type="image/png" />
+      <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
       
       {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content={siteName} />
+      <meta name="application-name" content="Zion Tech Group" />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
+      <meta name="format-detection" content="telephone=no" />
       
       {/* Security Meta Tags */}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="referrer" content="strict-origin-when-cross-origin" />
       
       {/* Performance Meta Tags */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="format-detection" content="date=no" />
-      <meta name="format-detection" content="address=no" />
-      <meta name="format-detection" content="email=no" />
-      
-      {/* Social Media Meta Tags */}
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${siteName} - ${description}`} />
-      
-      {/* Additional Open Graph Tags */}
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:secure_url" content={image} />
-      
-      {/* Twitter Additional Tags */}
-      <meta name="twitter:image:alt" content={`${siteName} - ${description}`} />
-      <meta name="twitter:domain" content="ziontechgroup.com" />
-      
-      {/* Business Information */}
-      <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
-      <meta name="business:contact_data:locality" content="Middletown" />
-      <meta name="business:contact_data:region" content="DE" />
-      <meta name="business:contact_data:postal_code" content="19709" />
-      <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-302-464-0950" />
-      <meta name="business:contact_data:email" content="kleber@ziontechgroup.com" />
-      
-      {/* Verification Meta Tags */}
-      <meta name="google-site-verification" content="your-verification-code" />
-      <meta name="msvalidate.01" content="your-verification-code" />
-      <meta name="yandex-verification" content="your-verification-code" />
-      
-      {/* Additional Performance Optimizations */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="modulepreload" href="/_next/static/chunks/pages/_app.js" />
-      
-      {/* PWA Meta Tags */}
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content={siteName} />
-      <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
-      <meta name="msapplication-TileColor" content="#06b6d4" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      
-      {/* Accessibility Meta Tags */}
-      <meta name="accessibility-control" content="full" />
-      <meta name="accessibility-feature" content="high-contrast, large-text, screen-reader" />
-      <meta name="accessibility-hazard" content="none" />
-      <meta name="accessibility-mode" content="full" />
-      <meta name="accessibility-requirement" content="WCAG2.1" />
-      <meta name="accessibility-standard" content="WCAG2.1" />
-      <meta name="accessibility-support" content="full" />
+      <meta name="renderer" content="webkit" />
+      <meta name="force-rendering" content="webkit" />
     </Head>
   );
 };

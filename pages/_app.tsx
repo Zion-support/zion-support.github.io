@@ -107,5 +107,16 @@ import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+	const renderedRef = useRef(false);
+	return (
+		<SEOContext.Provider value={{ renderedRef }}>
+			<Analytics />
+			<div className={inter.className}>
+				<Layout>
+					<Component {...pageProps} />
+					<DefaultSEO />
+				</Layout>
+			</div>
+		</SEOContext.Provider>
+	);
 }

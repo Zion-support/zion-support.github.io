@@ -1,5 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Zap, 
+  TrendingUp, 
+  Clock, 
+  Database, 
+  Network, 
+  Cpu, 
+  Memory,
+  HardDrive,
+  Activity,
+  Gauge,
+  Target,
+  CheckCircle,
+  AlertCircle,
+  Info
+} from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -7,39 +23,55 @@ interface PerformanceMetrics {
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  memoryUsage?: number;
+  networkRequests: number;
+  cacheHitRate: number;
 }
 
-// Performance entry types for Core Web Vitals
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: any;
+interface PerformanceOptimizerProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  showMetrics?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
-  children, 
-  onMetricsUpdate 
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  onMetricsUpdate,
+  showMetrics = false
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    domContentLoaded: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
+    timeToInteractive: 0,
+    networkRequests: 0,
+    cacheHitRate: 0
+  });
+
   const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizationHistory, setOptimizationHistory] = useState<Array<{
+    timestamp: Date;
+    action: string;
+    improvement: number;
+  }>>([]);
 
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined' || !window.performance) return;
+  const observerRef = useRef<PerformanceObserver | null>(null);
+  const metricsRef = useRef<PerformanceMetrics>(metrics);
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    const layoutShiftEntries = performance.getEntriesByType('layout-shift');
+  useEffect(() => {
+    metricsRef.current = metrics;
+  }, [metrics]);
 
-    const newMetrics: PerformanceMetrics = {
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + (entry as PerformanceLayoutShift).value, 0)
-    };
+  useEffect(() => {
+    initializePerformanceMonitoring();
+    return () => cleanupPerformanceMonitoring();
+  }, []);
 
-    // Measure LCP if supported
+  const initializePerformanceMonitoring = () => {
+    // Monitor Core Web Vitals
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -55,89 +87,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     onMetricsUpdate?.(newMetrics);
   }, [onMetricsUpdate]);
 
-  // Optimize images and resources
-  const optimizeResources = useCallback(() => {
-    setIsOptimizing(true);
-    
-    // Lazy load images
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-
-    // Preload critical resources
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/css/critical.css'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-      document.head.appendChild(link);
-    });
-
-    setIsOptimizing(false);
-  }, []);
-
-  // Monitor performance
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Measure initial performance
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    // Optimize resources after initial load
-    const timer = setTimeout(optimizeResources, 1000);
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-      clearTimeout(timer);
-    };
-  }, [measurePerformance, optimizeResources]);
-
-  // Performance warning component
-  const PerformanceWarning = () => {
-    if (!metrics) return null;
-
-    const isSlow = metrics.loadTime > 3000 || metrics.firstContentfulPaint > 2000;
-    
-    if (!isSlow) return null;
-
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="fixed top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-lg z-50"
-      >
-        <div className="text-sm font-medium">Performance Notice</div>
-        <div className="text-xs">Page load time: {Math.round(metrics.loadTime)}ms</div>
-      </motion.div>
-    );
+  const getPerformanceGrade = (score: number): string => {
+    if (score >= 90) return 'A';
+    if (score >= 80) return 'B';
+    if (score >= 70) return 'C';
+    if (score >= 60) return 'D';
+    return 'F';
   };
+
+  const performanceScore = getPerformanceScore();
+  const performanceGrade = getPerformanceGrade(performanceScore);
 
   return (
     <>
-      {children}
-      <PerformanceWarning />
-      
-      {/* Performance Debug Panel (only in development) */}
-      {process.env.NODE_ENV === 'development' && metrics && (
+      {/* Performance Metrics Display */}
+      {showMetrics && (
         <motion.div
           initial={{ opacity: 0, x: 300 }}
           animate={{ opacity: 1, x: 0 }}
@@ -156,6 +120,83 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           )}
         </motion.div>
       )}
+
+      {/* Performance Optimization Button */}
+      <motion.button
+        onClick={optimizePerformance}
+        disabled={isOptimizing}
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
+        aria-label="Optimize performance"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <AnimatePresence mode="wait">
+          {isOptimizing ? (
+            <motion.div
+              key="loading"
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            >
+              <Activity className="w-6 h-6" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="ready"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+            >
+              <Zap className="w-6 h-6" />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.button>
+
+      {/* Optimization History */}
+      <AnimatePresence>
+        {optimizationHistory.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            className="fixed bottom-24 right-6 z-40 bg-gray-900/95 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg border border-gray-700 max-w-sm"
+          >
+            <div className="flex items-center gap-2 mb-3">
+              <TrendingUp className="w-5 h-5 text-green-400" />
+              <h3 className="font-semibold">Recent Optimizations</h3>
+            </div>
+            
+            <div className="space-y-2 text-sm max-h-32 overflow-y-auto">
+              {optimizationHistory.slice(-3).map((item, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <div className="flex-1">
+                    <div className="text-xs text-gray-400">
+                      {item.timestamp.toLocaleTimeString()}
+                    </div>
+                    <div className="text-xs">
+                      {item.action} (+{item.improvement.toFixed(1)}%)
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Performance Tips */}
+      <div className="sr-only">
+        <h2>Performance Optimization Tips</h2>
+        <ul>
+          <li>Enable lazy loading for images</li>
+          <li>Use WebP format for images</li>
+          <li>Minimize JavaScript bundle size</li>
+          <li>Implement proper caching strategies</li>
+          <li>Use CDN for static assets</li>
+          <li>Optimize critical rendering path</li>
+        </ul>
+      </div>
     </>
   );
 };

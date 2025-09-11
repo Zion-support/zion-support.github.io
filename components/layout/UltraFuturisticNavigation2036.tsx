@@ -205,6 +205,19 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
     }
   }, []);
 
+  // Close search when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as HTMLElement)) {
+        setIsSearchOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -260,6 +273,19 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                     activeDropdown === item.name ? 'rotate-180' : ''
                   }`} />
                 </button>
+              </div>
+
+              {/* Mobile Search */}
+              <div className="p-4 border-b border-white/10">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
 
                 {/* Dropdown Menu */}
                 <AnimatePresence>
@@ -362,53 +388,113 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
             </motion.button>
           </div>
         </div>
+
+        {/* Search Bar */}
+        <AnimatePresence>
+          {isSearchOpen && (
+            <motion.div
+              ref={searchRef}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="py-4 border-t border-cyan-400/20"
+            >
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search services, solutions, and more..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/5 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  aria-label="Search"
+                />
+              </div>
+              
+              {/* Search Results */}
+              {searchQuery && (
+                <div className="mt-4 max-h-96 overflow-y-auto">
+                  <div className="grid gap-2">
+                    {filteredItems.map((item) => (
+                      <div key={item.name} className="p-3 bg-white/5 rounded-lg border border-cyan-400/20">
+                        <Link
+                          href={normalizeHref(item.href)}
+                          className="block text-white hover:text-cyan-400 transition-colors"
+                          onClick={() => {
+                            setIsSearchOpen(false);
+                            setSearchQuery('');
+                          }}
+                        >
+                          <div className="flex items-center space-x-3">
+                            {item.icon}
+                            <div>
+                              <p className="font-medium">{item.name}</p>
+                              <p className="text-sm text-gray-400">{item.description}</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Enhanced Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            ref={mobileMenuRef}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
+            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
           >
-            <div className="px-4 py-6 space-y-4">
-              {/* Mobile Search */}
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 pl-10 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
-                />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <div className="px-4 py-6 space-y-6">
+              {/* Contact Info */}
+              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-lg p-4">
+                <h3 className="text-sm font-medium text-cyan-400 mb-3">Contact Information</h3>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-4 h-4 text-cyan-400" />
+                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
+                      {contactInfo.mobile}
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-4 h-4 text-cyan-400" />
+                    <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors">
+                      {contactInfo.email}
+                    </a>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+                    <span>{contactInfo.address}</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Mobile Navigation Items */}
+              {/* Navigation Items */}
               {navigationItems.map((item) => (
                 <div key={item.name} className="space-y-2">
                   <button
-                    onClick={() => handleDropdownToggle(item.name)}
-                    className="flex items-center justify-between w-full px-4 py-3 text-left text-white hover:bg-gray-800/50 rounded-xl transition-colors duration-200"
+                    onClick={() => toggleDropdown(item.name)}
+                    className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-200"
                   >
                     <div className="flex items-center space-x-3">
                       {item.icon}
                       <span className="font-medium">{item.name}</span>
-                      {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
-
-                  {/* Mobile Dropdown */}
+                  
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
@@ -416,37 +502,17 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="ml-4 space-y-2"
+                        className="ml-8 space-y-2"
                       >
                         {item.children?.map((child) => (
                           <Link
                             key={child.name}
                             href={normalizeHref(child.href)}
                             onClick={closeAllDropdowns}
-                            className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 ${
-                              child.featured
-                                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30'
-                                : 'hover:bg-gray-800/50'
-                            }`}
+                            className="flex items-center space-x-3 p-3 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
                           >
-                            <div className={`flex-shrink-0 ${
-                              child.featured ? 'text-cyan-400' : 'text-gray-400'
-                            }`}>
-                              {child.icon}
-                            </div>
-                            <div className="flex-1">
-                              <p className={`text-sm font-medium ${
-                                child.featured ? 'text-cyan-400' : 'text-white'
-                              }`}>
-                                {child.name}
-                              </p>
-                              <p className="text-xs text-gray-400">
-                                {child.description}
-                              </p>
-                            </div>
-                            {child.featured && (
-                              <Star className="w-4 h-4 text-cyan-400" />
-                            )}
+                            {child.icon}
+                            <span>{child.name}</span>
                           </Link>
                         ))}
                       </motion.div>
@@ -454,15 +520,11 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                   </AnimatePresence>
                 </div>
               ))}
-
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-800/50">
-                <motion.button
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-                >
+              
+              <div className="pt-4 border-t border-gray-700/50">
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                   Get Started
-                </motion.button>
+                </button>
               </div>
             </div>
           </motion.div>
