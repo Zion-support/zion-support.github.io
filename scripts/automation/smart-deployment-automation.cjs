@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Smart Deployment Automation
@@ -277,10 +278,11 @@ class SmartDeploymentAutomation {
       for (let i = 0; i < maxInstances; i++) {
         await this.deployInstance(environment, i, deployment);
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");class SmartDeploymentAutomation { constructor() { this.projectRoot = process.cwd();" this.logFile = path.join(this.projectRoot, "logs", "smart-deployment-automation.log");" this.reportFile = path.join(this.projectRoot, "deployment-automation-report.json"); this.ensureLogsDirectory()} ensureLogsDirectory() {" const logsDir = path.join(this.projectRoot, "logs";); if (true) { fs.mkdirSync(logsDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString() { ) {" fs.mkdirSync(logsDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; fs.appendFileSync(this.logFile, logMessage); console.log(message)} preDeploymentChecks() {" this.log("Running pre-deployment checks."); const checks = {" lint: this.runLintCheck()," typeCheck: this.runTypeCheck()," build: this.runBuildCheck()," test: this.runTestCheck() }; " const allPassed = Object.values(checks).every(check => check.status === "success";); "` this.log(`Pre-deployment checks ${allPassed ? "passed" : "failed"}`); return { checks, allPassed }} runLintCheck() { try {" execSync("npm run lint", { " cwd: this.projectRoot, "" stdio: "pipe" });"" return { status: "success", message: "Lint check passed" }} catch (error) {"" return { status: "failed", message: error.message }} } runTypeCheck() { try {" execSync("npm run type-check", { " cwd: this.projectRoot, "" stdio: "pipe" });"" return { status: "success", message: "Type check passed" }} catch (error) {"" return { status: "failed", message: error.message }} } runBuildCheck() { try {" execSync("npm run build", { " cwd: this.projectRoot, "" stdio: "pipe" });"" return { status: "success", message: "Build check passed" }} catch (error) {"" return { status: "failed", message: error.message }} } runTestCheck() { try {" execSync("npm test", { " cwd: this.projectRoot, "" stdio: "pipe" });"" return { status: "success", message: "Test check passed" }} catch (error) {" / Tests might not be configured, so we"ll mark as warning"" return { status: "warning", message: "No tests configured or tests failed" }} } generateBuild() {" this.log("Generating production build."); try {" execSync("npm run build", { " cwd: this.projectRoot, "" stdio: "pipe" }); " this.log("Production build generated successfully");"" return { status: "success", message: "Build completed" }} catch (error) {"` this.log(`Build failed: ${error.message}`);"" return { status: "failed", message: error.message }} } optimizeBuild() {" this.log("Optimizing build."); try { / Check if build optimization is available" const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8";);); if ( {"" execSync("npm run build: production", { " cwd: this.projectRoot, "" stdio: "pipe" })) { {"" execSync("npm run build: production", { " cwd: this.projectRoot, "" stdio: "pipe" })}" this.log("Production build optimization completed")} else {" this.log("No production build optimization script found")} "" return { status: "success", message: "Build optimization completed" }} catch (error) {"` this.log(`Build optimization failed: ${error.message}`);"" return { status: "failed", message: error.message }} } checkDeploymentReadiness() {" this.log("Checking deployment readiness."); const readiness = {"" buildExists: fs.existsSync(path.join(this.projectRoot, ".next")),"" packageJsonExists: fs.existsSync(path.join(this.projectRoot, "package.json")),"" nodeModulesExists: fs.existsSync(path.join(this.projectRoot, "node_modules")),"" logsDirectoryExists: fs.existsSync(path.join(this.projectRoot, "logs")) }; const isReady = Object.values(readiness).every(Boolean;); ""` this.log(`Deployment readiness: ${isReady ? "ready" : "not ready"}`); return { .readiness, isReady }} generateDeploymentReport() {" this.log("Generating deployment automation report."); const report = {" timestamp: new Date().toISOString()," project: this.projectRoot," preDeploymentChecks: this.preDeploymentChecks()," build: this.generateBuild()," optimization: this.optimizeBuild()," readiness: this.checkDeploymentReadiness()," recommendations: this.generateDeploymentRecommendations() }; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));` this.log(`Deployment report saved to ${this.reportFile}`); return report} generateDeploymentRecommendations() { return [;" "Implement automated testing in CI/CD pipeline"," "Use environment-specific configuration files"," "Implement blue-green deployment strategy"," "Set up monitoring and alerting for deployments"," "Use containerization for consistent deployments"," "Implement rollback mechanisms"," "Set up automated health checks post-deployment" ]} async run() {" this.log("Smart Deployment Automation started"); try { const report = this.generateDeploymentReport(;);" this.log("Smart Deployment Automation completed successfully"); return report} catch (error) {"` this.log(`Smart Deployment Automation failed: ${error.message}`); throw error} }}/ Run the automation if this script is executed directlyif ( { const automation = new SmartDeploymentAutomation) { { const automation = new SmartDeploymentAutomation}(;); automation.run().catch(console.error)}module.exports = SmartDeploymentAutomation;'"`'"`
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node;
 /**
  * Smart Deployment Automation;
-<<<<<<< HEAD
  * Handles intelligent deployment processes;
  */
 const fs = require('fs');
@@ -307,8 +309,11 @@ class SmartDeploymentAutomation {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
         }
     preDeploymentChecks() {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         console.log(message)};
     preDeploymentChecks() {}
         this.log('Running pre-deployment checks...');
@@ -318,11 +323,16 @@ class SmartDeploymentAutomation {}
             "build": this.runBuildCheck(),
             "test": this.runTestCheck();
        };
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
+<<<<<<< HEAD
         // Wait between deployments
         await this.sleep(5000);
       }
@@ -654,6 +664,9 @@ if (require.main === module) {
   });
 }
 module.exports = SmartDeploymentAutomation;
+=======
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -782,260 +795,8 @@ if ( {})
      {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = SmartDeploymentAutomation;
 =======
- * Automatically handles deployment with comprehensive checks and rollback capabilities;
- */;
-
-/**;
- * Smart Deployment Automation;
- * Automatically handles deployment with comprehensive checks and rollback capabilities;
- */;
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd()
-    this.logFile = path.join(this.projectRoot, `automation/logs/deployment.log`)
-    this.ensureLogDirectory()
-    this.deploymentSteps = []
-    this.startTime = Date.now()
-    this.environment = process.env.NODE_ENV || `development`;
-}
-  ensureLogDirectory() {
-  const logDir = path.dirname(this.logFile)
-    if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir, { recursive: true }),
-}
-  }
-  log(message) {
-  const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`)
-    fs.appendFileSync(this.logFile, `[${timestamp}] ${message}\n`),
-}
-  async runStep(stepName, stepFunction) {
-  this.log(`🔄 Running step: ${stepName}`)
-    const stepStartTime = Date.now()
-
-    try {
-  await stepFunction()
-      const duration = Date.now() - stepStartTime;
-      this.deploymentSteps.push({
-  name: stepName,
-        status: `success`,
-        duration: duration;
-})
-      this.log(`✅ Step completed: ${stepName} (${duration}ms)`),
-} catch (error) {
-  const duration = Date.now() - stepStartTime;
-      this.deploymentSteps.push({
-  name: stepName,
-        status: `failed`,
-        duration: duration,
-        error: error.message;
-})
-      this.log(`❌ Step failed: ${stepName} - ${error.message}`)
-      throw error;
-}
-  }
-  async preDeploymentChecks() {
-  this.log(`🔍 Running pre-deployment checks...`)
-    // Check if git is clean;
-    try {
-  const gitStatus = execSync(`git status --porcelain`, { encoding: `utf8` })
-      if (gitStatus.trim()) {
-  throw new Error(`Git working directory is not clean. Please commit or stash changes.`),
-}
-    } catch (error) {
-  throw new Error(`Git check failed: ${error.message  }`),
-}
-    // Check if tests pass;
-    try {
-  execSync(`npm run test: ci`, { stdio: `pipe` }),
-} catch (error) {
-  throw new Error("Tests are failing. Please fix tests before deployment."),
-}
-    // Check if build succeeds;
-    try {
-  execSync("npm run build", { stdio: "pipe" }),
-} catch (error) {
-  throw new Error("Build is failing. Please fix build issues before deployment."),
-}
-
-  async preDeploymentChecks() {
-  this.log("🔍 Running pre-deployment checks...")
-
-    // Check if git is clean;
-    try {
-  const gitStatus = execSync("git status --porcelain", { encoding: "utf8" })
-      if (gitStatus.trim()) {
-  throw new Error("Git working directory is not clean. Please commit or stash changes."),
-}
-    } catch (error) {
-  throw new Error(`Git check failed: ${error.message}`),
-}
-    // Check if tests pass;
-    try {
-  execSync("npm run test: ci", { stdio: "pipe" }),
-} catch (error) {
-  throw new Error("Tests are failing. Please fix tests before deployment."),
-}
-    // Check if build succeeds;
-    try {
-  execSync("npm run build", { stdio: "pipe" }),
-} catch (error) {
-  throw new Error("Build is failing. Please fix build issues before deployment."),
-}
-    this.log("✅ Pre-deployment checks passed"),
-}
-  async backupCurrentDeployment() {
-  this.log("💾 Creating backup of current deployment...")
-    const backupDir = path.join(this.projectRoot, `deployment-backups`)
-    if (!fs.existsSync(backupDir)) {
-  fs.mkdirSync(backupDir, { recursive: true }),
-}
-    const timestamp = new Date().toISOString().replace(/[:.]/g, `-`)
-    const backupPath = path.join(backupDir, `backup-${timestamp}`)
-    // Create backup of current build;
-    if (fs.existsSync(`.next`)) {
-  execSync(`cp -r .next ${backupPath}`, { stdio: `pipe` }),
-}
-    this.log(`✅ Backup created at: ${backupPath}`)
-    return backupPath;
-}
-  async runSecurityAudit() {
-  this.log(`🔒 Running security audit...`)
-    try {
-  execSync(`npm audit --audit-level high`, { stdio: "pipe" })
-      this.log("✅ Security audit passed"),
-} catch (error) {
-  async runSecurityAudit() {
-  this.log("🔒 Running security audit...")
-
-    try {
-  execSync("npm audit --audit-level high", { stdio: "pipe" })
-      this.log("✅ Security audit passed"),
-} catch (error) {
-  this.log("⚠️ Security audit found issues, but continuing deployment"),
-}
-  }
-  async optimizeForProduction() {
-  this.log("⚡ Optimizing for production...")
-    // Set production environment variables;
-    process.env.NODE_ENV = "production";
-    process.env.NEXT_TELEMETRY_DISABLED = "1";
-    // Run production build;
-    execSync("npm run build: production", { stdio: `pipe` })
-    this.log(`✅ Production optimization completed`),
-}
-  async deployToEnvironment() {
-  this.log(`🚀 Deploying to ${this.environment} environment...`)
-    if (this.environment === `production`) {
-  // Production deployment logic;
-      this.log(`Deploying to production...`)
-      // Add your production deployment commands here;
-      // Example: execSync("vercel --prod", { stdio: "pipe" }),
-} else {
-  if (this.environment === "production") {
-  // Production deployment logic;
-      this.log("Deploying to production...")
-      // Add your production deployment commands here;
-      // Example: execSync("vercel --prod", { stdio: "pipe" }),
-} else {
-  // Development/staging deployment logic;
-      this.log("Deploying to staging...")
-      // Add your staging deployment commands here;
-      // Example: execSync("vercel", { stdio: "pipe" }),
-}
-    this.log("✅ Deployment completed"),
-}
-  async postDeploymentChecks() {
-  this.log("🔍 Running post-deployment checks...")
-    // Health check;
-    try {
-  // Add your health check logic here;
-      // Example: fetch(`https://your-app.com/health`)
-      this.log(`✅ Health check passed`),
-} catch (error) {
-  throw new Error(`Health check failed: ${error.message  }`),
-}
-    // Performance check;
-    try {
-  // Add your performance check logic here;
-      this.log(`✅ Performance check passed`),
-} catch (error) {
-  this.log(`⚠️ Performance check failed, but deployment is functional`),
-}
-  }
-  async rollback(backupPath) {
-  this.log(`🔄 Rolling back deployment...`)
-    try {
-  if (fs.existsSync(backupPath)) {
-  execSync(`rm -rf .next && cp -r ${backupPath} .next`, { stdio: `pipe` })
-        this.log(`✅ Rollback completed`),
-} else {
-  this.log(`❌ Backup not found, cannot rollback`),
-}
-    } catch (error) {
-  this.log(`❌ Rollback failed: ${error.message  }`),
-}
-  }
-  async generateDeploymentReport() {
-  this.log(`📊 Generating deployment report...`)
-    const report = {
-  timestamp: new Date().toISOString(),
-      environment: this.environment,
-      steps: this.deploymentSteps,
-      totalDuration: Date.now() - this.startTime,
-      success: this.deploymentSteps.every(step => step.status === `success`),
-}
-    const reportPath = path.join(this.projectRoot, `automation/logs`, `deployment-report.json`)
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    this.log(`Report saved to: ${reportPath}`)
-    return report;
-}
-  async deploy() {
-  this.log(`🚀 Starting smart deployment...`)
-    let backupPath = null;
-    try {
-  await this.runStep(`Pre-deployment checks`, () => this.preDeploymentChecks())
-
-  async deploy() {
-  this.log("🚀 Starting smart deployment...")
-    let backupPath = null;
-
-    try {
-  await this.runStep("Pre-deployment checks", () => this.preDeploymentChecks())
-      backupPath = await this.runStep("Backup current deployment", () => this.backupCurrentDeployment())
-      await this.runStep("Security audit", () => this.runSecurityAudit())
-      await this.runStep("Production optimization", () => this.optimizeForProduction())
-      await this.runStep("Deploy to environment", () => this.deployToEnvironment())
-      await this.runStep(`Post-deployment checks`, () => this.postDeploymentChecks())
-      const report = await this.generateDeploymentReport()
-      this.log(`✅ Smart deployment completed successfully!`)
-      this.log(`Total deployment time: ${report.totalDuration}ms`)
-
-} catch (error) {
-  this.log(`❌ Deployment failed: ${error.message  }`)
-      if (backupPath) {
-  await this.rollback(backupPath),
-}
-      const report = await this.generateDeploymentReport()
-      this.log(`❌ Deployment failed and rollback attempted`)
-      this.log("❌ Deployment failed and rollback attempted")
-
-      process.exit(1),
-}
-  }
-}
-// Run deployment if called directly;
-if (require.main === module) {
-  const deployment = new SmartDeploymentAutomation()
-  deployment.deploy().catch(error => {
-  console.error(`❌ Deployment failed: `, error)    process.exit(1),
-}),
-}
-module.exports = SmartDeploymentAutomation}}}}}}
->>>>>>> origin/automation-fixes
+module.exports = SmartDeploymentAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

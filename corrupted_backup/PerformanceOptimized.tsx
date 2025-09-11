@@ -17,7 +17,6 @@ export const: LazyLoadWrapper: React.FC<{,;
   threshold?: number,;
   rootMargin?: string';'
 }> = ({ children, fallback = null,  threshold = 0.1, rootMargin = '50px' }) => {,;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PerformanceOptimized.tsx
   const [isVisible, setIsVisible] = React.useState(false),;
   const [hasLoaded, setHasLoaded] = React.useState(false),;
   const ref = React.useRef<HTMLDivElement>(null),;
@@ -120,7 +119,6 @@ export const: OptimizedImage: React.FC<{,;
   loading?: 'lazy' | 'eager',;
   placeholder?: string';'
 }> = ({ src, alt, width, height, className,  loading = 'lazy', placeholder }) => {,;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PerformanceOptimized.tsx
   const [isLoaded, setIsLoaded] = React.useState(false),;
   const [hasError, setHasError] = React.useState(false),;
 ,;
@@ -153,7 +151,6 @@ export const: OptimizedImage: React.FC<{,;
       />,;
       {hasError && (,";"
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">, ;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PerformanceOptimized.tsx
           Failed to load image,;
         </div>)},;
     </div>,;
@@ -196,4 +193,3 @@ export const usePerformanceMetrics = () => {,;
 ,;
   return { metrics, recordRender };
 };'""'
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PerformanceOptimized.tsx

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export class SitemapGenerator {} export const \"defaultSitemapConfig\": SitemapConfig = {} export function generator = new SitemapGenerator(config) ; export function generator = new SitemapGenerator(config) ; interface SitemapUrl {} \"url\": string; lastmod?: string; changefreq?: \"always\" | \"hourly\" | \"daily\" | \"weekly\" | \"monthly\" | \"yearly\" | \"never\"; :src/utils/sitemapGenerator.tsx; priority?: number} priority?: number} interface SitemapConfig {} \"baseUrl\": \'string; urls: SitemapUrl[]; :src/utils/sitemapGenerator.tsx; outputPath?: string; outputPath?: string\'} private \"config\": SitemapConfig; constructor(config: SitemapConfig) {} :src/utils/sitemapGenerator.tsx; this.config = config} this.config = config} generateXML(): string {} const { baseUrl,urls } = this.config; :src/utils/sitemapGenerator.tsx const xmlUrls = urls.map(url => {};
 module.exports = class SitemapGenerator { constructor() { return; } } export const defaultSitemapConfig: SitemapConfig = {} export function generator = new SitemapGenerator(config) ; export function generator = new SitemapGenerator(config) ; interface SitemapUrl {} url: string; lastmod?: string; changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"; :src/utils/sitemapGenerator.tsx; priority?: number} priority?: number} interface SitemapConfig {} baseUrl: "string; urls: SitemapUrl[]; :src/utils/sitemapGenerator.tsx; outputPath?: string; outputPath?: string"} private config: SitemapConfig; constructor(config: SitemapConfig) {} :src/utils/sitemapGenerator.tsx; this.config = config} this.config = config} generateXML(): string {} const { baseUrl,urls } = this.config; :src/utils/sitemapGenerator.tsx const xmlUrls = urls.map(url => {};'"'"
 import React from 'react';
@@ -14,4 +12,3 @@ export default function SitemapGenerator({ }: SitemapGeneratorProps) {
     </div>
   );
 }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

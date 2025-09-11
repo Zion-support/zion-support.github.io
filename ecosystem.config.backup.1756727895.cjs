@@ -335,5 +335,3 @@ module.exports = {
       path: '/var/www/production',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production';
 }
-  }
-}

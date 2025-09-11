@@ -10,18 +10,11 @@ let content = fs.readFileSync(yarnLockPath, 'utf8');
 
 // Remove all merge conflict markers and keep the content
 let resolved = content
-  .replace(/<<<<<<< HEAD[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '')
-  .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
-  .replace(/[\s\S]*?>>>>>>> [^\n]+/g, '')
-  .replace(/<<<<<<< HEAD[\s\S]*?/g, '')
-  .replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-
+  .replace(/  .replace(/  .replace(/[\s\S]*?  .replace(/  .replace(/[\s\S]*?
 // Clean up any remaining merge markers
 resolved = resolved
-  .replace(/<<<<<<< HEAD[\s\S]*?/g, '')
-  .replace(/[\s\S]*?/g, '')
-  .replace(/>>>>>>> [^\n]+/g, '');
-
+  .replace(/  .replace(/[\s\S]*?/g, '')
+  .replace(/
 // Remove empty lines that might be left
 resolved = resolved.replace(/\n\s*\n\s*\n/g, '\n\n');
 

@@ -1,8 +1,12 @@
-export type ProposalStatus = $2;
-export type ProposalIndexItem = $2;
+
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
+export type ProposalIndexItem = {
+  id: string,
   title: string,
-  targetInstitution: string,
-  regionalScope: string,
+  target_institution: string,
+  regional_scope: string,
   type: string,
   status: ProposalStatus,
-  createdAt: string},
+  created_at: string;
+
+}

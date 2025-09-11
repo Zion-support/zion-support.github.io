@@ -10,7 +10,7 @@ console.log('🚀 Starting comprehensive merge conflict resolution...');
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if file has merge conflict markers
     if (!content.includes('')) {
         conflictType = 'current';
@@ -20,7 +20,7 @@ function resolveMergeConflicts(filePath) {
         conflictType = '';
         continue;
       }
-      
+
       if (inConflict) {
         // For most conflicts, prefer the incoming changes (after )
         if (conflictType === 'current') {
@@ -31,7 +31,7 @@ function resolveMergeConflicts(filePath) {
         resolvedLines.push(line);
       }
     }
-    
+
     // Write resolved content back to file
     fs.writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -45,14 +45,14 @@ function resolveMergeConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findConflictFiles(dir) {
   const conflictFiles = [];
-  
+
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         // Skip certain directories
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
@@ -71,7 +71,7 @@ function findConflictFiles(dir) {
       }
     }
   }
-  
+
   scanDirectory(dir);
   return conflictFiles;
 }
@@ -80,33 +80,33 @@ function findConflictFiles(dir) {
 try {
   console.log('🔍 Scanning for files with merge conflicts...');
   const conflictFiles = findConflictFiles('/workspace');
-  
+
   console.log(`📊 Found ${conflictFiles.length} files with merge conflicts`);
-  
+
   let resolvedCount = 0;
   for (const file of conflictFiles) {
     if (resolveMergeConflicts(file)) {
       resolvedCount++;
     }
   }
-  
+
   console.log(`✅ Successfully resolved conflicts in ${resolvedCount} files`);
-  
+
   // Try to add and commit the resolved files
   try {
     console.log('📝 Adding resolved files to git...');
     execSync('git add .', { cwd: '/workspace', stdio: 'inherit' });
-    
+
     console.log('💾 Committing resolved conflicts...');
     execSync('git commit -m "Resolve merge conflicts automatically"', { cwd: '/workspace', stdio: 'inherit' });
-    
+
     console.log('✅ Successfully committed resolved conflicts');
   } catch (error) {
     console.log('⚠️  Git operations failed, but conflicts were resolved:', error.message);
   }
-  
+
   console.log('🎉 Merge conflict resolution completed!');
-  
+
 } catch (error) {
   console.error('❌ Error during conflict resolution:', error.message);
   process.exit(1);

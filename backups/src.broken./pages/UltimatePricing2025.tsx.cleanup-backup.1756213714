@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
-import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
-
 interface Service {
   id: string;
   title: string;
@@ -47,9 +37,7 @@ interface Service {
 }
 =======
 import React from 'react';
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+import { Link } from 'react-router-dom';>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 const UltimatePricing2025: React.FC = () => {
   const pricingTiers = [

@@ -1,29 +1,16 @@
-import React from \"react\"; export function DisputeDashboard() { return () <div className=\"bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className=\"text-xl font-bold text-white mb-4\">Dispute Overview</h3> <div className=\"grid\" grid-cols-1 \"md\": grid-cols-2 gap-4\">\" <div className=\"text-center\">\" <div className=\"text-2xl font-bold text-zion-cyan>8</div> <div className=\"text-zion-slate-light text-sm\">Active Disputes</div> </div> <div className=text-center\">\" <div className=\"text-2xl\" font-bold text-green-400>16</div>\" <div className=\"text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className=\"mt-4 text-center\"> <div className=\"text-lg\" font-semibold text-white\"> Average Resolution Time </div>\" <div className=\"text-2xl\" font-bold text-zion-purple>3.2 days</div> </div> </div> )} \";\");} ); \"export default ComponentName;\"
-const React from "react"; export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3> <div className="grid" grid-cols-1 md: grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan>8</div> <div className="text-zion-slate-light text-sm">Active Disputes</div> </div> <div className=text-center">" <div className="text-2xl" font-bold text-green-400>16</div>" <div className="text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className="mt-4 text-center"> <div className="text-lg" font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl" font-bold text-zion-purple>3.2 days</div> </div> </div> )} ";");} ); "export default ComponentName;"""
-import _React from "react"; export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3> <div className="grid" grid-cols-1 "md": grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan>8</div> <div className="text-zion-slate-light text-sm">Active Disputes</div> </div> <div className=text-center">" <div className="text-2xl" font-bold text-green-400>16</div>" <div className="text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className="mt-4 text-center"> <div className="text-lg" font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl" font-bold text-zion-purple>3.2 days</div> </div> </div> )} ";");} ); "export default ComponentName;"
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
@@ -31,13 +18,3 @@ import React from \"react\"; export function DisputeDashboard() { return () <div
 const React from "react"; export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3> <div className="grid" grid-cols-1 md: grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan>8</div> <div className="text-zion-slate-light text-sm">Active Disputes</div> </div> <div className=text-center">" <div className="text-2xl" font-bold text-green-400>16</div>" <div className="text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className="mt-4 text-center"> <div className="text-lg" font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl" font-bold text-zion-purple>3 && 3.2 days</div> </div> </div> )} ";");} ); "export default ComponentName;"""
 
 import _React from "react"; export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3> <div className="grid" grid-cols-1 "md": grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan>8</div> <div className="text-zion-slate-light text-sm">Active Disputes</div> </div> <div className=text-center">" <div className="text-2xl" font-bold text-green-400>16</div>" <div className="text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className="mt-4 text-center"> <div className="text-lg" font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl" font-bold text-zion-purple>3 && 3.2 days</div> </div> </div> )} ";");} ); "export default ComponentName;"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from \"react\"; export function DisputeDashboard() { return () <div className=\"bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className=\"text-xl font-bold text-white mb-4\">Dispute Overview</h3> <div className=\"grid\" grid-cols-1 \"md\": grid-cols-2 gap-4\">\" <div className=\"text-center\">\" <div className=\"text-2xl font-bold text-zion-cyan>8</div> <div className=\"text-zion-slate-light text-sm\">Active Disputes</div> </div> <div className=text-center\">\" <div className=\"text-2xl\" font-bold text-green-400>16</div>\" <div className=\"text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className=\"mt-4 text-center\"> <div className=\"text-lg\" font-semibold text-white\"> Average Resolution Time </div>\" <div className=\"text-2xl\" font-bold text-zion-purple>3.2 days</div> </div> </div> )} \";\");} ); \"export default ComponentName;\"
-const React from "react"; export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3> <div className="grid" grid-cols-1 md: grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan>8</div> <div className="text-zion-slate-light text-sm">Active Disputes</div> </div> <div className=text-center">" <div className="text-2xl" font-bold text-green-400>16</div>" <div className="text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className="mt-4 text-center"> <div className="text-lg" font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl" font-bold text-zion-purple>3.2 days</div> </div> </div> )} ";");} ); "export default ComponentName;"""
-import _React from "react"; export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3> <div className="grid" grid-cols-1 "md": grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan>8</div> <div className="text-zion-slate-light text-sm">Active Disputes</div> </div> <div className=text-center">" <div className="text-2xl" font-bold text-green-400>16</div>" <div className="text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className="mt-4 text-center"> <div className="text-lg" font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl" font-bold text-zion-purple>3.2 days</div> </div> </div> )} ";");} ); "export default ComponentName;"
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-import _React from "react"; export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6> <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3> <div className="grid" grid-cols-1 "md": grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan>8</div> <div className="text-zion-slate-light text-sm">Active Disputes</div> </div> <div className=text-center">" <div className="text-2xl" font-bold text-green-400>16</div>" <div className="text-zion-slate-light text-sm> Resolved This Month </div> </div> </div> <div className="mt-4 text-center"> <div className="text-lg" font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl" font-bold text-zion-purple>3 && 3.2 days</div> </div> </div> )} ";");} ); "export default ComponentName;"
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/components/DisputeDashboard.jsx

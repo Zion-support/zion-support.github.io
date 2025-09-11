@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from \'react\'; export default function Contact() {; return(; <div className=\"container mx-auto px-4 py-12\">\";\" <h1 className=\"text-2xl font-bold mb-2\">Contact</h1>\";\" <p className=\"text-gray-300\">\"Email\": kleber@ziontechgroup.com</p>;\" </div>;\";\" );\";\" };\";\";
 const React from "react"; export default function Contact() {; return(; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">Contact</h1>";" <p className="text-gray-300">Email: kleber@ziontechgroup.com</p>;" </div>;";" );";" };";";'"'"
 import _React from 'react'; export default function Contact() {; return(; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">Contact</h1>";" <p className="text-gray-300">"Email": kleber@ziontechgroup.com</p>;" </div>;";" );";" };";";
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

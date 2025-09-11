@@ -45,23 +45,23 @@ class BuildPerformanceOptimizer {
 
   public async analyzeBuildOutput(buildDir: string = '.next'): Promise<PerformanceMetrics> {
     // // console.log('🔍 Starting build performance analysis...');
-    
+
     try {
       // Analyze static chunks
       await this.analyzeStaticChunks(buildDir);
-      
+
       // Analyze bundle composition
       await this.analyzeBundleComposition();
-      
+
       // Identify optimization opportunities
       this.identifyOptimizations();
-      
+
       // Generate recommendations
       this.generateRecommendations();
-      
+
       // // console.log('✅ Build performance analysis complete');
       return this.performanceMetrics;
-      
+
     } catch (error) {
       // // console.error('❌ Error during build analysis:', error);
       throw error;
@@ -71,21 +71,21 @@ class BuildPerformanceOptimizer {
   private async analyzeStaticChunks(buildDir: string): Promise<void> {
     const fs = await import('fs');
     const path = await import('path');
-    
+
     const staticDir = path.join(buildDir, 'static', 'chunks');
-    
+
     if (!fs.existsSync(staticDir)) {
       // // console.warn('⚠️ Static chunks directory not found');
       return;
     }
 
     const files = fs.readdirSync(staticDir, { recursive: true }) as string[];
-    
+
     for (const file of files) {
       if (typeof file === 'string' && file.endsWith('.js')) {
         const filePath = path.join(staticDir, file);
         const stats = fs.statSync(filePath);
-        
+
         const analysis: BundleAnalysis = {
           file: file,
           size: stats.size,
@@ -96,7 +96,7 @@ class BuildPerformanceOptimizer {
 
         // Estimate gzipped size (roughly 30% of original)
         analysis.gzippedSize = Math.round(stats.size * 0.3);
-        
+
         this.bundleAnalysis.push(analysis);
         this.performanceMetrics.totalBundleSize += stats.size;
       }
@@ -114,11 +114,11 @@ class BuildPerformanceOptimizer {
       const match = filename.match(/pages\/(.+?)-[a-f0-9]+\.js$/);
       return match ? match[1] : undefined;
     }
-    
+
     if (filename.includes('vendors')) return 'vendor';
     if (filename.includes('common')) return 'common';
     if (filename.includes('runtime')) return 'runtime';
-    
+
     return undefined;
   }
 
@@ -127,7 +127,7 @@ class BuildPerformanceOptimizer {
     const vendorChunks = this.bundleAnalysis.filter(chunk => 
       chunk.file.includes('vendor') || chunk.file.includes('node_modules')
     );
-    
+
     const pageChunks = this.bundleAnalysis.filter(chunk => 
       chunk.route && !['vendor', 'common', 'runtime'].includes(chunk.route)
     );
@@ -189,7 +189,7 @@ class BuildPerformanceOptimizer {
     // Check for compression opportunities
     const uncompressedSize = this.performanceMetrics.totalBundleSize;
     const estimatedGzippedSize = uncompressedSize * 0.3;
-    
+
     if (estimatedGzippedSize > 500000) { // > 500KB gzipped
       opportunities.push({
         type: 'compression',
@@ -267,7 +267,7 @@ class BuildPerformanceOptimizer {
   public generateReport(): string {
     const report = [`
 🚀 BUILD PERFORMANCE ANALYSIS REPORT
-====================================
+=
 
 📊 BUNDLE OVERVIEW
 ------------------
@@ -314,22 +314,22 @@ Estimated Gzipped: ${this.formatSize(this.performanceMetrics.totalBundleSize * 0
 
   private calculatePerformanceScore(): number {
     let score = 100;
-    
+
     // Deduct points based on bundle size
     const sizeMB = this.performanceMetrics.totalBundleSize / (1024 * 1024);
     if (sizeMB > 5) score -= 30;
     else if (sizeMB > 3) score -= 20;
     else if (sizeMB > 2) score -= 10;
-    
+
     // Deduct points for large chunks
     const largeChunks = this.bundleAnalysis.filter(chunk => chunk.size > 500000);
     score -= largeChunks.length * 5;
-    
+
     // Deduct points for high-impact optimization opportunities
     const highImpactOpportunities = this.performanceMetrics.optimizationOpportunities
       .filter(op => op.impact === 'high');
     score -= highImpactOpportunities.length * 15;
-    
+
     return Math.max(0, Math.min(100, score));
   }
 
@@ -350,19 +350,19 @@ Estimated Gzipped: ${this.formatSize(this.performanceMetrics.totalBundleSize * 0
   // Static method to run analysis from command line
   public static async runAnalysis(buildDir?: string): Promise<void> {
     const optimizer = new BuildPerformanceOptimizer();
-    
+
     try {
       await optimizer.analyzeBuildOutput(buildDir);
       const report = optimizer.generateReport();
-      
+
       // // console.log(report);
-      
+
       // Save report to file
       const fs = await import('fs');
       const reportPath = 'build-performance-report.md';
       fs.writeFileSync(reportPath, report);
       // // console.log(`\n📄 Detailed report saved to: ${reportPath}`);
-      
+
     } catch (error) {
       // // console.error('❌ Analysis failed:', error);
       process.exit(1);

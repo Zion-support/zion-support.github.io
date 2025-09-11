@@ -97,9 +97,7 @@ function fixSyntaxAndConflicts() {
     try {
       let content = fs.readFileSync(file, 'utf8');
       let originalContent = content;
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-      content = content.replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-      content = content.replace(/=======/g, '');
+      content = content.replace(/      content = content.replace(/[\s\S]*?      content = content.replace(//g, '');
       content = content.replace(/import React from \"react\",/g, 'import React from \"react\";');
       content = content.replace(/import Head from 'next\\/head',/g, "import Head from 'next/head';");
       content = content.replace(/import Link from 'next\\/link',/g, "import Link from 'next/link';");

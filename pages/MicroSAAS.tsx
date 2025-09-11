@@ -1,65 +1,77 @@
-import React from 'react';
-import Head from 'next/head';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/MicroSAAS.tsx
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
-import { 
-  Video, 
-  Palette, 
-  QrCode, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-
-const microSaasServices = [
-  {
-    title: 'Video Analytics Platform',
-    description: 'AI-powered video analysis for business insights and security monitoring.',
-    icon: Video,
-    features: ['Real-time analysis', 'Object detection', 'Behavior tracking', 'Custom dashboards'],
-    price: '$299/month',
-    benefits: ['Enhanced security', 'Business insights', 'Automated monitoring', 'Cost savings']
-  },
-  {
-    title: 'Design System Builder',
-    description: 'Create and manage consistent design systems for your products.',
-    icon: Palette,
-    features: ['Component library', 'Style guide', 'Version control', 'Team collaboration'],
-    price: '$199/month',
-    benefits: ['Consistent design', 'Faster development', 'Team efficiency', 'Brand consistency']
-  },
-  {
-    title: 'QR Code Generator Pro',
-    description: 'Advanced QR code generation and analytics for marketing campaigns.',
-    icon: QrCode,
-    features: ['Custom designs', 'Analytics tracking', 'Bulk generation', 'API integration'],
-    price: '$99/month',
-    benefits: ['Marketing insights', 'Easy tracking', 'Professional appearance', 'Scalable solution']
-  }
-];
-
-export default function MicroSAASPage() {
+export default function MicroSAAS() {
   return (
     <Layout
-      title="Micro SAAS Services - Zion Tech Group"
-      description="Innovative micro SAAS solutions designed to boost productivity and streamline business operations with AI-powered tools."
+      title="Micro SaaS Solutions - Zion Tech Group"
+      description="Innovative micro SaaS solutions for modern businesses across all industries."
+=======
+import { Star } from 'lucide-react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+export default function MicroSAAS() {
+  const microSAASServices = [
+    {
+      name: "AI Invoice Generator Pro",
+      description: "Intelligent invoice creation and payment tracking platform with AI-powered templates, automated follow-ups, and multi-currency support.",
+      price: "$29/month",
+      features: [
+        "AI-powered invoice generation",
+        "Automated payment reminders",
+        "Multi-currency support",
+        "Client management system",
+        "Payment tracking dashboard",
+        "Custom branding options",
+        "Tax calculation automation",
+        "Integration with accounting software"
+      ],
+      benefits: [
+        "Save 80% time on invoicing",
+        "Reduce payment delays by 60%",
+        "Professional invoice templates",
+        "Automated follow-up system"
+      ],
+      marketPrice: "$49-79/month",
+      savings: "Save up to $50/month",
+      category: "Financial Tools"
+    },
+    {
+      name: "Smart Meeting Scheduler AI",
+      description: "AI-powered meeting scheduling that automatically finds optimal times, sends reminders, and handles rescheduling conflicts.",
+      price: "$19/month",
+      features: [
+        "AI-powered time optimization",
+        "Calendar integration",
+        "Automated reminders",
+        "Conflict resolution",
+        "Multi-timezone support",
+        "Custom meeting templates",
+        "Follow-up automation",
+        "Analytics dashboard"
+      ],
+      benefits: [
+        "Save 90% scheduling time",
+        "Reduce no-shows by 70%",
+        "Optimize meeting efficiency",
+        "Professional scheduling"
+      ],
+      marketPrice: "$39-59/month",
+      savings: "Save up to $40/month",
+      category: "Productivity"
+    }
+  ];
+  
     >
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SAAS Services
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Innovative micro SAAS solutions for modern businesses
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Innovative micro SaaS solutions for modern businesses.
             </p>
           </div>
-        </section>
+          <div className="text-center">
+            <p className="text-gray-600">Micro SaaS page is under construction.</p>
+          </div>
+        </div>
       </div>
     </Layout>
-  );
-}

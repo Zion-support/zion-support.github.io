@@ -1,12 +1,6 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-  title: "Documentation - Zion Tech Group",
-  description: "Comprehensive documentation, API references, and technical resources for Zion Tech Group's AI, quantum computing, and technology solutions.",
-  keywords: "documentation, API reference, technical docs, developer resources, Zion Tech Group",
-};
-
 export default function DocsPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -506,9 +500,7 @@ export default function DocumentationPage() {
               <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30">
                 <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-              </div>
+                </svg>              </div>
               <h3 className="text-xl font-semibold mb-3">Enterprise IT</h3>
               <p className="text-gray-400 mb-4">
                 Infrastructure and enterprise solutions guides
@@ -524,51 +516,6 @@ export default function DocumentationPage() {
                 View Documentation →
               </Link>
             </div>
-<<<<<<< HEAD
-            <div className="card">
-              <h3 className="text-xl font-bold mb-4">Integration Guides</h3>
-              <div className="space-y-3">
-                <Link href="/docs/webhook-integration" className="text-gray-300 hover:text-green-400 block">
-                  • Webhook Integration
-                </Link>
-                <Link href="/docs/sdk-integration" className="text-gray-300 hover:text-green-400 block">
-                  • SDK Integration
-                </Link>
-                <Link href="/docs/third-party-apis" className="text-gray-300 hover:text-green-400 block">
-                  • Third-Party API Integration
-                </Link>
-                <Link href="/docs/webhook-security" className="text-gray-300 hover:text-green-400 block">
-                  • Webhook Security
-                </Link>
-=======
-            
-            {/* Space Technology */}
-            <div className="card group hover:bg-yellow-500/10 transition-colors">
-              <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/30">
-                <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Space Technology</h3>
-              <p className="text-gray-400 mb-4">
-                Satellite and space technology documentation
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-400">
-                <li>• Satellite Systems</li>
-                <li>• Ground Station Setup</li>
-                <li>• Communication Protocols</li>
-                <li>• Data Processing</li>
-                <li>• System Maintenance</li>
-              </ul>
-              <Link href="/docs/space-technology" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">
-                View Documentation →
-              </Link>
-            </div>
-          </div>
-<<<<<<< HEAD
-        </section>
-
         {/* Support & Community */}
         <section className="mb-20">
           <div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30 text-center p-8">
@@ -854,8 +801,6 @@ export default function DocumentationPage() {
             </div>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-    </div>
+      </section>    </div>
   );
 }

@@ -56,13 +56,24 @@ export default function App() {
   };
 
 export default function App(): JSX.Element {
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   return (
-    <main>
-
-    </main>
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Header />
+          <Sidebar />
+          <main className="flex-1 lg:ml-80">
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

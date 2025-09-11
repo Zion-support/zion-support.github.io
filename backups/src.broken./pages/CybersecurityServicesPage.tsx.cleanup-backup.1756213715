@@ -6,66 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-<<<<<<< HEAD
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { QuoteFormSection } from '@/components/QuoteFormSection';
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-<<<<<<< HEAD
-  service.category.includes('Cybersecurity') || 
-  service.category.includes('Security') || 
-=======
-  AlertTriangle, 
-  Users, 
-  Globe, 
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Zap,
-  Brain,
-  Network,
-  Smartphone,
-  CreditCard,
-  Clock,
-  Award,
-  BarChart3,
-  FileText,
-  Server,
-  Database,
-  Key,
-  Search,
-  Monitor,
-  AlertCircle,
-  TrendingUp,
-  DollarSign
-} from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service => 
   service.category.includes('Cybersecurity') || 
@@ -95,9 +35,7 @@ import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
 
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
-  service.category === 'Cybersecurity'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-);
+  service.category === 'Cybersecurity');
 
 const SECURITY_SERVICE_CATEGORIES = [
   {
@@ -135,37 +73,6 @@ export default function CybersecurityServicesPage() {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
-          <div className="flex items-center justify-center mb-6">
-            <Shield className="h-16 w-16 text-zion-cyan mr-4" />
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Cybersecurity Services
-            </h1>
-          </div>
-          <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">
-            Protect Your Business with Enterprise-Grade Security Solutions
-          </p>
-          <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto">
-            From threat detection to compliance management, we provide comprehensive cybersecurity that keeps your business safe in an evolving digital landscape.
-          </p>
-          
-          {/* Contact CTA */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white px-8 py-3">
-              <Phone className="mr-2 h-5 w-5" />
-              +1 302 464 0950
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <Mail className="mr-2 h-5 w-5" />
-              kleber@ziontechgroup.com
-            </Button>
-          </div>
-
           {/* Security Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
@@ -955,58 +862,11 @@ export default function CybersecurityServicesPage() {
       </main>
       
       <Footer />
-    </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  );
+    </>  );
 }
 
 // Security Service Card Component
 function SecurityServiceCard({ service }: { service: any }) {
-<<<<<<< HEAD
-  return (
-    <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
-      <CardHeader>
-        <div className="flex items-start justify-between mb-2">
-          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-            {service.category}
-          </Badge>
-          {service.featured && (
-            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
-              Featured
-            </Badge>
-          )}
-        </div>
-        <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
-        <CardDescription className="text-zion-cyan-light">
-          {service.description}
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-zion-cyan">
-              {service.currency}{service.price?.toLocaleString()}
-            </div>
-            <div className="flex items-center gap-1">
-              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-white">{service.rating}</span>
-              <span className="text-zion-cyan-light">({service.reviewCount})</span>
-            </div>
-          </div>
-          
-          <div className="flex items-center justify-between">
-            <span className="text-zion-cyan-light">Security Score:</span>
-            <div className="flex items-center gap-2">
-              <div className="w-16 bg-zion-blue-light rounded-full h-2">
-                <div 
-                  className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
-                  style={{ width: `${service.aiScore}%` }}
-                ></div>
-              </div>
-              <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
-            </div>
-          </div>
-
           <div className="flex flex-wrap gap-2">
             {service.tags.slice(0, 3).map((tag: string) => (
               <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light">
@@ -1443,9 +1303,7 @@ export default function CybersecurityServicesPage() {
 
   const getPricingModelText = (model: string) => {
 =======
-  const getPricingModelLabel = (model: string) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    switch (model) {
+  const getPricingModelLabel = (model: string) => {    switch (model) {
       case 'one-time': return 'One-time';
       case 'monthly': return 'Monthly';
       case 'hourly': return 'Hourly';
@@ -1553,9 +1411,6 @@ export default function CybersecurityServicesPage() {
             Learn More
           </Button>
         </div>
-<<<<<<< HEAD
-      </section>
-
       {/* Search and Filters */}
       <section className="py-8 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -2721,4 +2576,3 @@ export default CybersecurityServicesPage;
     </Card>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

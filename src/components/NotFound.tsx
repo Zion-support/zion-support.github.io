@@ -1,5 +1,7 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
+import SEO from '../components/SEO';
+const services = [];
+
+
 export default function NotFound("props": "any) {return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="NotFound - Zion Tech Group" description="Professional NotFound services by Zion Tech Group"   />";
@@ -10,3 +12,4 @@ export default function NotFound("props": "any) {return (;
         </p>;
       </div>;
   );""}";</div>
+

@@ -132,7 +132,6 @@
   ],
   "recommendations": [
     {
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       "type": "file_permissions",
       "message": "package.json is world-readable",
       "severity": "medium"
@@ -278,10 +277,6 @@
   ],
   "recommendations": [
     {
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       "priority": "high",
       "category": "dependencies",
       "message": "Update dependencies with known vulnerabilities",
@@ -326,8 +321,4 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,5 +1,4 @@
 import {  import { motion  } from 'framer-motion';
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
 export default function Page("props": "any) {;
 ",;
       {;
@@ -26,38 +25,9 @@ export default function Page("props": "any) {;
 ;
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
-=======
-export default function Page() {;
-      {;
-
-        name: 'Error Rate',
-        value: Math.random() * 2,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
-        icon: AlertTriangle;
-},
-      {;
-
-        name: 'Response Time',
-        value: Math.random() * 500 + 100,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : 'warning',
-        icon: Zap;
-
-    ];
-      'High memory usage detected on server-01',
-      'Network latency increased by 15%',
-      'Error rate spike detected in last 5 minutes';
-    ];
-
-      'Consider implementing lazy loading for images',
-      'Optimize database queries for better performance',
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
       'Enable CDN for static assets delivery';    ];
+;
     return {;
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
       "timestamp": "no w",;
       metrics,;
       alerts,;
@@ -66,36 +36,21 @@ export default function Page() {;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
-=======
-
-      timestamp: now,
-      metrics,
-      alerts,
-      recommendations;
-}}, []) ;
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-}, []);
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
     if(isMonitoring) {;
         setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds;
       return () => clearInterval(interval) }
   }, [isMonitoring, generateMockData]) ;
+;
     switch(status) {;
       case 'good': "return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
       "default": retur n 'text-gray-400'"};
 ;
-=======
-      default: return 'text-gray-400'};
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
     switch(status) {;
       case 'good': "return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
       "default": retur n 'bg-gray-500/20'"};
 ;
     switch(trend) {;
@@ -103,15 +58,9 @@ export default function Page() {;
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400"   />;";
       "default": retur n <Activity className="w-4 h-4 text-blue-400"   />"};
 ;
-=======
-      default: return 'bg-gray-500/20'};
-    switch(trend) {;
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;'";
-      case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;";
-      default: return <Activity className="w-4 h-4 text-blue-400"  />};
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
     setIsMonitoring(true) ;
     setPerformanceData(generateMockData () ) };
+;
     setIsMonitoring(false) };
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">";
@@ -119,7 +68,6 @@ export default function Page() {;
         {/* Header */}
         <motion.div;
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -130,19 +78,6 @@ export default function Page() {;
           className="text-center mb-12";
         >";
           <h1 className="text-4xl "md": "tex t-6xl font-bold text-white mb-4">;
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-          animate = {;
-
-  { opacity: 1,
-  y: 0;
-}}";
-          className="text-center mb-12">";
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">;
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
             Performance Analytics;
           </h1>";
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -152,7 +87,6 @@ export default function Page() {;
         {/* Controls */"}
         <motion.div;
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -163,32 +97,14 @@ export default function Page() {;
           transition={{ "delay": "0.2 "}}";
           className="flex flex-col "sm": "fle x-row gap-4 justify-center items-center mb-8";
         >";
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-          animate = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          transition={{ delay: 0.2 }}";
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">";
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
           <div className="flex gap-2">;
             <button;
               onClick={startMonitoring"}
               disabled={isMonitoring}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring';
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed'';
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
                   : 'bg-green-600 "hover": "b g-green-700 text-white'`;
               "}`}
-=======
-                  : 'bg-green-600 hover:bg-green-700 text-white'`;
-}`}
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
             >";
               <Activity className="w-5 h-5"   />              Start Monitoring;
             </button>;
@@ -197,13 +113,8 @@ export default function Page() {;
               disabled={!isMonitoring}`;
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring';
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed'';
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
                   : 'bg-red-600 "hover": "b g-red-700 text-white'`;
               "}`}
-=======
-                  : 'bg-red-600 hover:bg-red-700 text-white'`;
-}`}
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
             >";
               <Monitor className="w-5 h-5"   />              Stop Monitoring;
             </button>;
@@ -222,7 +133,6 @@ export default function Page() {;
         {/* Performance Metrics Grid */"}
         {performanceData && (<motion.div;
             initial = {;
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -246,40 +156,14 @@ export default function Page() {;
                 transition={{ "delay": "0.4 + index * 0.1 "}}";
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 "hover": "borde r-blue-500/50 transition-all duration-300";
               >";
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-            animate = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-            transition={{ delay: 0.3 }}";
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">;
-            {performanceData.metrics.map((metric, index) => (<motion.div;
-                key={metric.name}
-                initial = {;
-
-  { opacity: 0,
-  y: 20;
-}}
-                animate = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-                transition={{ delay: 0.4 + index * 0.1 }}";
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">";
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
                 <div className="flex items-center justify-between mb-4">";
                   <div className="flex items-center gap-3">`;
                     <div className={`p-2 rounded-lg ${getStatusBgColor(metric.status)"}`}>`;
                       <metric.icon className={`w-6 h-6 ${getStatusColor(metric.status)}`} />;
                     </div>";
                     <h3 className="text-lg font-semibold text-white">{metric.name}</h3>;
-                  </div>;}}
+                  </div>;
+}}
                 transition={{ delay: 0.4 + index * 0.1 }}"
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300"
               >"
@@ -304,11 +188,10 @@ export default function Page() {;
                 </div>;
               </motion.div>) ) }
           </motion.div>) }
-
+;
         {/* Alerts and Recommendations */}
         {performanceData && (<motion.div;
             initial = {;
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -320,20 +203,6 @@ export default function Page() {;
             className="grid grid-cols-1 "lg": "gri d-cols-2 gap-8 mb-12";
           >;
             {/* Alerts */"}";
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-            animate = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-            transition={{ delay: 0.5 }}";
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">;
-            {/* Alerts */}";
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">";
               <div className="flex items-center gap-3 mb-4">";
                 <AlertTriangle className="w-6 h-6 text-yellow-400"   />"                <h3 className="text-xl font-semibold text-white">Active Alerts</h3>;
@@ -343,7 +212,8 @@ export default function Page() {;
                   <div key={index} className="flex items-start gap-3 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">";
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>";
                     <p className="text-sm text-gray-300">{alert}</p>;
-                  </div>;}}
+                  </div>;
+}}
             transition={{ delay: 0.5 }}"
             className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-12"
           >
@@ -371,7 +241,8 @@ export default function Page() {;
                   <div key={index} className="flex items-start gap-3 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">";
                     <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>";
                     <p className="text-sm text-gray-300">{recommendation}</p>;
-                  </div>;            {/* Recommendations */}"
+                  </div>;
+            {/* Recommendations */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
                 <CheckCircle className="w-6 h-6 text-green-400"   />"                <h3 className="text-xl font-semibold text-white">Recommendations
@@ -386,11 +257,10 @@ export default function Page() {;
               </div>;
             </div>;
           </motion.div>) }
-
+;
         {/* Performance Chart Placeholder */}
         <motion.div;
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -402,24 +272,11 @@ export default function Page() {;
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center";
         >;
           <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4"  />;
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-          animate = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          transition={{ delay: 0.6 }}
-          className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center">;
-          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4" />;
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
           <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>;
           <p className="text-gray -400">;
             {isMonitoring;
-              ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data';}}
+              ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data';
+}}
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
         >
@@ -429,9 +286,6 @@ export default function Page() {;
             {isMonitoring
               ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'
             }
-=======
-}
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
           </p>;
           {isMonitoring && (";
             <div className="mt-4 text-sm text-green-400">";
@@ -441,7 +295,6 @@ export default function Page() {;
         {/* Status Summary */}
         {performanceData && (<motion.div;
             initial = {;
-<<<<<<< HEAD:src_backup_temp/components/PerformanceAnalytics.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -452,19 +305,6 @@ export default function Page() {;
             transition={{ "delay": "0.7 "}}";
             className="mt-8 text-center";
           >";
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-            animate = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-            transition={{ delay: 0.7 }}";
-            className="mt-8 text-center">";
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">";
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>";
               <span className="text-sm text-gray-300">;
@@ -475,6 +315,7 @@ export default function Page() {;
       </div>;
     </div>;) ;
 </div>};
+;
 export default PerformanceAnalytics}}}}}}}}'"`;
 </motion>;
 </motion>;

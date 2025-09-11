@@ -59,8 +59,6 @@ const mockSupportRequests: SupportRequest[] = [
     updatedAt: '2025-01-14T16:45:00Z',
     assignedTo: 'support_agent_2',
     response: 'Thank you for your suggestion! We have added dark mode to our roadmap and will implement it in the next update.'
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/support-requests.tsx
   }
 ] 
 
@@ -137,13 +135,12 @@ const AdminSupportRequestsPage: React.FC = () => {
       </Head>
       <main className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Support Requests</h1>
-        
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Total Requests</h3>
             <p className="text-2xl font-bold">{requests.length}</p>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Open</h3>
@@ -175,7 +172,6 @@ const AdminSupportRequestsPage: React.FC = () => {
                 <option value="resolved">Resolved</option>
                 <option value="closed">Closed</option>
               </select>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/support-requests.tsx
             </div>
             {r.status !== 'resolved' && (
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
@@ -186,4 +182,3 @@ const AdminSupportRequestsPage: React.FC = () => {
     </div>;
   );
 };
-

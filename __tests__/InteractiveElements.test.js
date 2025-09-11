@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import InteractiveElements from '../components/InteractiveElements" describe('InteractiveElements',() => {' test('renders without crashing',() => {' render(<InteractiveElements / / />) expect(screen.getByTestId("interactiveelements")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveElements / / />) }) test('handles user interactions',() => {' render(<InteractiveElements / / />) }) test('applies correct styling',() => {' render(<InteractiveElements / / />) }) })
-=======
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import InteractiveElements from "./components/InteractiveElements" describe("InteractiveElements",() => {" test("renders without crashing",() => {" render(<InteractiveElements / / />) expect(screen.getByTestId("interactiveelements")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<InteractiveElements / / />) }) test("handles user interactions",() => {" render(<InteractiveElements / / />) }) test("applies correct styling",() => {" render(<InteractiveElements / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import InteractiveElements from '../components/InteractiveElements" describe('InteractiveElements',() => {' test('renders without crashing',() => {' render(<InteractiveElements / / />) expect(screen.getByTestId("interactiveelements")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveElements / / />) }) test('handles user interactions',() => {' render(<InteractiveElements / / />) }) test('applies correct styling',() => {' render(<InteractiveElements / / />) }) })
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+
+=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

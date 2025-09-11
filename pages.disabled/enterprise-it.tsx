@@ -6,7 +6,6 @@ import {
   Shield, Cloud, Server, ShieldCheck, Settings, Database, 
   Zap, Building, ArrowRight, Star, CheckCircle, 
   Lock, Network, Cpu, BarChart3
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
 } from 'lucide-react' 
 
 const enterpriseServices = [
@@ -15,7 +14,6 @@ const enterpriseServices = [
     href: '/quantum-cloud-infrastructure-pro',
     description: 'Quantum-enhanced cloud computing with advanced security and performance optimization',
     features: ['Quantum Processing', 'Cloud Security', 'Performance Optimization', 'Scalable Infrastructure'],
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
     isNew: true,
     badge: 'New',
     color: 'from-blue-500 to-cyan-600'
@@ -25,7 +23,6 @@ const enterpriseServices = [
     href: '/edge-computing-orchestrator-pro',
     description: 'Advanced edge computing platform for distributed processing and real-time analytics',
     features: ['Edge Processing', 'Real-time Analytics', 'Distributed Computing', 'Low Latency'],
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
     isHot: true,
     badge: 'Hot',
     color: 'from-green-500 to-emerald-600'
@@ -35,7 +32,6 @@ const enterpriseServices = [
     href: '/zero-trust-security-platform',
     description: 'Comprehensive zero trust security framework for enterprise-grade protection',
     features: ['Zero Trust Architecture', 'Identity Verification', 'Continuous Monitoring', 'Threat Detection'],
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
     isNew: true,
     badge: 'New',
     color: 'from-purple-500 to-pink-600'
@@ -54,7 +50,6 @@ const enterpriseServices = [
     href: '/quantum-data-center-platform',
     description: 'Quantum data center management with advanced resource optimization',
     features: ['Quantum Management', 'Resource Optimization', 'Energy Efficiency', 'Advanced Analytics'],
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
     isPremium: true,
     badge: 'Premium',
     color: 'from-yellow-500 to-orange-600'
@@ -81,7 +76,6 @@ const benefits = [
     icon: <Building className="w-8 h-8 text-purple-400" />,
     title: 'Enterprise Ready',
     description: 'Built for large-scale deployments with enterprise-grade reliability'
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
 ] 
 
@@ -91,7 +85,6 @@ export default function EnterpriseIT() {
       <Head>
         <title>Enterprise IT Services - Zion Tech Group</title>
         <meta name="description" content="Advanced enterprise infrastructure and security solutions. Quantum cloud infrastructure, edge computing, zero trust security, and AI-powered DevOps." />
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
         <meta name="keywords" content="enterprise IT, cloud infrastructure, edge computing, zero trust security, DevOps, data center" />
         <link rel="canonical" href="https://ziontechgroup.com/enterprise-it" />
       </Head>
@@ -283,12 +276,10 @@ export default function EnterpriseIT() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-blue-500/5 to-cyan-500/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]" />
-          
+
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -303,13 +294,11 @@ export default function EnterpriseIT() {
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Advanced enterprise infrastructure and security solutions designed for large-scale deployments. 
                 Experience enterprise-grade reliability with cutting-edge technology.
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-xl font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-200 hover:scale-105"
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
                 >
                   Get Started
                 </Link>
@@ -319,11 +308,11 @@ export default function EnterpriseIT() {
                 <Building2 className="w-4 h-4 mr-2" />
                 Enterprise IT
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
                 Enterprise IT Solutions
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Transform your enterprise with cutting-edge IT solutions. From infrastructure management 
                 to digital transformation, we deliver scalable, secure, and efficient technology solutions.
@@ -342,7 +331,7 @@ export default function EnterpriseIT() {
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Enterprise IT Services</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                   <motion.div
@@ -355,10 +344,10 @@ export default function EnterpriseIT() {
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4`}>
                       {service.icon}
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
-                    
+
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-400">
@@ -367,19 +356,17 @@ export default function EnterpriseIT() {
                         </li>
                       ))}
                     </ul>
-                    
+
                     <Link href={service.link} className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </motion.div>
                 ))}
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
                   className="px-8 py-4 border border-green-500/40 text-green-300 rounded-xl font-semibold hover:bg-green-500/10 transition-all duration-200"
                 >
                   View All Services
                 </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </div>
             </motion.div>
           </div>
@@ -388,11 +375,9 @@ export default function EnterpriseIT() {
         {/* Enterprise Solutions */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
         {/* Services Grid */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -434,7 +419,7 @@ export default function EnterpriseIT() {
                         {service.badge}
                       </span>
                     )}
-                    
+
                     <div className="mb-6">
                       <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         <Shield className="w-8 h-8 text-white" />
@@ -515,7 +500,7 @@ export default function EnterpriseIT() {
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Enterprise Solutions</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {solutions.map((solution, index) => (
                   <motion.div
@@ -531,9 +516,9 @@ export default function EnterpriseIT() {
                       </div>
                       <h3 className="text-xl font-bold text-white">{solution.title}</h3>
                     </div>
-                    
+
                     <p className="text-gray-300 mb-4">{solution.description}</p>
-                    
+
                     <div className="space-y-2">
                       {solution.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
@@ -552,7 +537,6 @@ export default function EnterpriseIT() {
         {/* Industry Solutions */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -560,7 +544,7 @@ export default function EnterpriseIT() {
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Industry Solutions</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {industries.map((industry, index) => (
                   <motion.div
@@ -573,9 +557,9 @@ export default function EnterpriseIT() {
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       {industry.icon}
                     </div>
-                    
+
                     <h3 className="text-lg font-bold text-white mb-4">{industry.name}</h3>
-                    
+
                     <div className="space-y-2">
                       {industry.solutions.map((solution, solutionIndex) => (
                         <div key={solutionIndex} className="text-sm text-gray-400">
@@ -600,7 +584,7 @@ export default function EnterpriseIT() {
               className="text-center"
             >
               <h2 className="text-3xl font-bold text-white mb-8">Why Choose Our Enterprise IT Solutions?</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {enterpriseBenefits.map((benefit, index) => (
                   <motion.div
@@ -619,18 +603,15 @@ export default function EnterpriseIT() {
                 ))}
               </div>
             </motion.div>
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -644,7 +625,6 @@ export default function EnterpriseIT() {
               <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 Join the future of enterprise IT with our cutting-edge infrastructure and security solutions. 
                 Scale your business with enterprise-grade reliability and performance.
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -656,7 +636,7 @@ export default function EnterpriseIT() {
                 Partner with us to build a future-ready IT infrastructure that drives innovation, 
                 security, and operational excellence across your organization.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
                   Get Started
@@ -664,6 +644,5 @@ export default function EnterpriseIT() {
                 </Link>
                 <Link href="/case-studies" className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                   View Case Studies
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-xl font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-200 hover:scale-105"
                   Explore All Services

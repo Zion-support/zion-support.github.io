@@ -1,9 +1,8 @@
+=======
 
+module.exports = {};
 
+export {};
 
-// Mock test for utils
-describe('Utils', () => {
-  it('should work correctly', () => {
-    expect(true).toBe(true);
-  });
-});
+export {};'
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

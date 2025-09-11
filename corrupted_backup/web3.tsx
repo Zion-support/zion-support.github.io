@@ -47,7 +47,6 @@ const AdminWeb3Page: React.FC = () => {
   const [projects, setProjects] = useState<Web3Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'active' | 'inactive' | 'development'>('all');
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/web3.tsx
 
   useEffect(() => {
     const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null,
@@ -80,7 +79,6 @@ const AdminWeb3Page: React.FC = () => {
   const activeProjects = projects.filter(p => p.status === 'active').length;
   const developmentProjects = projects.filter(p => p.status === 'development').length;
   const totalProjects = projects.length;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
   return (
     <>
@@ -90,7 +88,7 @@ const AdminWeb3Page: React.FC = () => {
       </Head>
       <main className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Web3 Project Management</h1>
-        
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
@@ -167,9 +165,9 @@ const AdminWeb3Page: React.FC = () => {
                         {project.blockchain}
                       </span>
                     </div>
-                    
+
                     <p className="text-gray-700 mb-3">{project.description}</p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                       <div>
                         <p><strong>Created:</strong> {new Date(project.createdAt).toLocaleDateString()}</p>
@@ -184,7 +182,7 @@ const AdminWeb3Page: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="flex gap-2 ml-4">
                     <button className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700">
                       Deploy
@@ -198,8 +196,6 @@ const AdminWeb3Page: React.FC = () => {
                   </div>
                 </div>
               </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/web3.tsx
             ))}
           </ul>;
         </div>;
@@ -209,5 +205,3 @@ const AdminWeb3Page: React.FC = () => {
 };
 
 export default AdminWeb3Page;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/web3.tsx

@@ -29,9 +29,6 @@ export interface InnovativeAIService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<<< HEAD:data.disabled/innovative-ai-services.ts
-========
-
   {
 
       'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99 && 99.99% safety record.',
@@ -70,8 +67,6 @@ export interface InnovativeAIService {
       'Performance analytics',
     ],
     popular: true,
-
->>>>>>>> pr-12866:data-disabled/innovative-ai-services.ts
     website: string;
   }
 

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import Footer from '../components/Footer" describe('Footer',() => {' test('renders without crashing',() => {' render(<Footer / / />) expect(screen.getByTestId("footer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Footer / / />) }) test('handles user interactions',() => {' render(<Footer / / />) }) test('applies correct styling',() => {' render(<Footer / / />) }) })
-=======
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Footer from "./components/Footer" describe("Footer",() => {" test("renders without crashing",() => {" render(<Footer / / />) expect(screen.getByTestId("footer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Footer / / />) }) test("handles user interactions",() => {" render(<Footer / / />) }) test("applies correct styling",() => {" render(<Footer / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import Footer from '../components/Footer" describe('Footer',() => {' test('renders without crashing',() => {' render(<Footer / / />) expect(screen.getByTestId("footer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Footer / / />) }) test('handles user interactions',() => {' render(<Footer / / />) }) test('applies correct styling',() => {' render(<Footer / / />) }) })
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+
+=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

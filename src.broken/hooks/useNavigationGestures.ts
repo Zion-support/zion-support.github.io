@@ -1,4 +1,5 @@
-// Hook for useNavigationGestures,
-export const useUseNavigationGestures: unknown = $2;
+// Hook for useNavigationGestures,;
+export const useUseNavigationGestures: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

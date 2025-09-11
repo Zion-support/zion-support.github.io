@@ -1,12 +1,12 @@
-import React,{ useState,useRef,useEffect } from\';react\' import { Button } from \'../ui/Button\''\';\' import { Send } from \'lucide-react\' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(\'';\';) const inputRef = useRef(null) useEffect(() => {\'';
-const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
->>>>>>>> main:corrupted_backup/ChatInput.js.jsx
-import React,{ useState,useRef,useEffect } from\';react\' import { Button } from \'../ui/Button\''\';\' import { Send } from \'lucide-react\' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(\'';\';) const inputRef = useRef(null) useEffect(() => {\'';
-const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''"
+
 import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
+=======
+import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('', ') const inputRef = useRef(null) useEffect(() => {'';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/components/ChatAssistant/ChatInput.js.jsx
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

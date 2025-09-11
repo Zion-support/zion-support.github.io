@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-import { Leaf, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
 export default function GreenIT() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -54,10 +49,6 @@ export default function GreenIT() {
             <a href="#services" className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-green-900 font-semibold rounded-lg transition-all duration-300">
               Learn More
             </a>
-=======
-<<<<<<< HEAD
-import { Leaf, Zap, Globe, Cpu, Database, Server, TrendingUp, Target, Shield, Users, Lightbulb, Recycle } from 'lucide-react';
-
 const GreenIT: React.FC = () => {
   const greenServices = [
     {
@@ -180,91 +171,10 @@ const GreenIT: React.FC = () => {
               >
                 Get Started
               </a>
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-          </div>
+            </div>          </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Green IT Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300">
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-      {/* Green Services Grid */}
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Green IT Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive sustainable technology solutions that help organizations 
-              achieve their environmental goals while maintaining operational excellence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {greenServices.map((service, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-gray-400 flex items-start">
-                      <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-      {/* Contact Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Ready to Go Green?</h2>
-          <p className="text-gray-300 mb-8">Contact us today to discuss your sustainable IT needs</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="flex items-center justify-center gap-3 text-gray-300">
-              <Phone className="w-5 h-5 text-green-400" />
-              <span>{contactInfo.mobile}</span>
-            </div>
-            <div className="flex items-center justify-center gap-3 text-gray-300">
-              <Mail className="w-5 h-5 text-green-400" />
-              <span>{contactInfo.email}</span>
-            </div>
-            <div className="flex items-center justify-center gap-3 text-gray-300">
-              <MapPin className="w-5 h-5 text-green-400" />
-              <span>{contactInfo.address}</span>
-            </div>
-          </div>
-          <a href="/contact" className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300">
-            Contact Us Today
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </a>
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -433,10 +343,6 @@ const GreenIT: React.FC = () => {
               View Solutions
             </a>
           </div>
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 
 const $service: React.FC = () => {
@@ -461,29 +367,6 @@ const $service: React.FC = () => {
           >
             Contact Us for More Information
           </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        </div>
-      </section>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-};
-
-<<<<<<< HEAD
-export default GreenIT;
-=======
-export default $service;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 };
 
 export default $service;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
@@ -150,14 +143,6 @@ if (typeof window !== 'undefined') {
 }
 
 export default PerformanceOptimizer;
-<<<<<<< HEAD
-=======
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { AlertTriangle, CheckCircle, Clock, Zap } from 'lucide-react';
-
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -309,7 +294,4 @@ export function PerformanceOptimizer() {
       </CardContent>
     </Card>
   );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+}=======

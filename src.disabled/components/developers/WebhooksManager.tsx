@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 "export\": function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState<string | null>(null) const [showTestDialog,setShowTestDialog] = useState<string | null>(null) const [showTestResult,setShowTestResult] = useState(false)
 export: function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState<string | null>(null) const [showTestDialog,setShowTestDialog] = useState<string | null>(null) const [showTestResult,setShowTestResult] = useState(false)""
 "export": function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState<string | null>(null) const [showTestDialog,setShowTestDialog] = useState<string | null>(null) const [showTestResult,setShowTestResult] = useState(false)"
 </string>"
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

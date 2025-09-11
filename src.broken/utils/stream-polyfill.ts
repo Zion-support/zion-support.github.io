@@ -1,4 +1,4 @@
-// Utility functions for stream-polyfill,
-export const stream-polyfill = $2;
-  // TODO: Implement utility functions
-},
+// Utility functions for stream-polyfill,;
+export const stream-polyfill = {,;
+  // TODO: Implement utility functions;
+};

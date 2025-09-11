@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 export /**;
 import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
+;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-<<<<<<< HEAD:src_backup_temp/components/FeaturedListingsSection.tsx
 function FeaturedListingsSection("props": "any) {          initial = {;
   { "opacity": 0",;
   "y": "2 0;
@@ -19,20 +19,6 @@ function FeaturedListingsSection("props": "any) {          initial = {;
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
-=======
-function FeaturedListingsSection () {          initial = {;
-
-  { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
->>>>>>> origin/automation-fixes:src/components/FeaturedListingsSection.tsx
         >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Featured Services;
@@ -117,7 +103,6 @@ function FeaturedListingsSection () {          initial = {;
         </div>;
         <motion.div;
           className="mt-16 text-center"          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/FeaturedListingsSection.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -130,23 +115,6 @@ function FeaturedListingsSection () {          initial = {;
   { "duration": "0.6",;
   "delay": "0.4;
 "}}
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition = {;
-
-  { duration: 0.6,
-  delay: 0.4;
-}}
->>>>>>> origin/automation-fixes:src/components/FeaturedListingsSection.tsx
         >;
           <Link            to="/services";
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg "hover": "fro m-blue-700 "hover": t o-purple-700 transition-all duration-200 "hover": scal e-105";

@@ -123,14 +123,6 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-<<<<<<< HEAD
-/* Typography enhancements */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
-}
-
 h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
@@ -141,7 +133,6 @@ h2 {
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
-=======
 /* Animations */
 @keyframes fadeIn {
   from { 
@@ -264,9 +255,7 @@ h3 {
 }
 
 .input-field {
-  @apply w-full bg-gray-900/50 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:border-white/30;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-}
+  @apply w-full bg-gray-900/50 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:border-white/30;}
 
 /* Gradient text utility */
 .gradient-text {
@@ -275,17 +264,9 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 200% 200%;
-<<<<<<< HEAD
-  animation: shimmer 3s ease-in-out infinite;
-=======
-  animation: gradient-shift 3s ease-in-out infinite;
-}
-
 @keyframes gradient-shift {
   0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-}
+  50% { background-position: 100% 50%; }}
 
 /* Enhanced button styles */
 .btn-primary {
@@ -380,12 +361,6 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-<<<<<<< HEAD
-/* Enhanced focus states */
-.focus-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black;
-}
-
 /* Responsive text utilities */
 .text-responsive {
   font-size: clamp(1rem, 2.5vw, 1.125rem);
@@ -417,40 +392,16 @@ h3 {
 ::selection {
   background: rgba(59, 130, 246, 0.3);
   color: white;
-=======
 /* Performance optimizations */
 .will-change-transform {
   will-change: transform;
 }
 
 .will-change-opacity {
-  will-change: opacity;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-}
+  will-change: opacity;}
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-<<<<<<< HEAD
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  html {
-    scroll-behavior: auto;
-=======
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-  }
-}
-
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   :root {
@@ -458,14 +409,6 @@ h3 {
     --border-hover: rgba(255, 255, 255, 0.5);
   }
   
-<<<<<<< HEAD
-  .btn-primary {
-    @apply border-2 border-white;
-  }
-  
-  .btn-secondary {
-    @apply border-2 border-white;
-=======
   .card {
     border-width: 2px;
   }
@@ -489,7 +432,5 @@ h3 {
   
   .gradient-text {
     color: black !important;
-    background: none !important;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-  }
+    background: none !important;  }
 }

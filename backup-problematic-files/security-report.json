@@ -1,9 +1,4 @@
 {
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:security-report.json
   "timestamp": "2025-09-05T02:59:20.583Z",
   "overallStatus": "secure",
   "checks": {

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-
 export default function QuantumNeuralNetworkPlatformPage() {
   const platformFeatures = [
     {
@@ -715,8 +712,6 @@ export default function QuantumNeuralNetworkPlatformPage() {
             </div>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-ce0d
-    </div>
+      </section>    </div>
   );
 }

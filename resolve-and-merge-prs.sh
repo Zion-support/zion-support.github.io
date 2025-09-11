@@ -1,155 +1,184 @@
 #!/bin/bash
 
-# Comprehensive PR merge and conflict resolution script
+# Script to resolve merge conflicts and merge all open PRs
 set -e
 
-echo "🚀 Starting comprehensive PR merge process..."
+echo "=== Starting PR Resolution and Merge Process ==="
 
-# Function to safely execute git commands
-safe_git() {
-    local cmd="$1"
-    echo "Executing: git $cmd"
-    if timeout 30 git $cmd; then
-        echo "✅ Success: git $cmd"
-        return 0
-    else
-        echo "❌ Failed: git $cmd"
-        return 1
-    fi
+# List of open PRs and their branches
+declare -A PR_BRANCHES=(
+    ["12987"]="cursor/fix-netlify-build-and-merge-to-main-22b3"
+    ["12986"]="cursor/check-fix-push-and-merge-to-main-a4a5"
+    ["12985"]="cursor/fix-netlify-build-and-merge-to-main-77fd"
+    ["12984"]="cursor/fix-netlify-build-and-merge-to-main-ddeb"
+    ["12983"]="cursor/fix-netlify-build-and-merge-to-main-4f62"
+)
+
+# Function to resolve conflicts in netlify.toml
+resolve_netlify_conflicts() {
+    echo "Resolving netlify.toml conflicts..."
+    
+    # Keep the current main branch version as it's more comprehensive
+    cat > netlify.toml << 'EOF'
+[build]
+  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn && pnpm build"
+  publish = "dist"
+  command_timeout = "30m"
+
+[build.environment]
+  NODE_VERSION = "22.12.0"
+  NODE_OPTIONS = "--max-old-space-size=6144"
+  # Skip Sharp postinstall to avoid NAPI issues
+  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
+  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
+  # Force Vite build
+  VITE_BUILD = "true"
+  # Ensure proper build environment
+  NODE_ENV = "production"
+  CI = "true"
+  # Disable linting during build to prevent failures
+  ESLINT_NO_DEV_ERRORS = "true"
+  # Optimize build performance
+  VITE_LEGACY_BUILD = "false"
+  NETLIFY_USE_PNPM = "true"
+  SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
+  PNPM_VERSION = "9.12.1"
+  # Additional NPM flags for better performance
+  NPM_FLAGS = "--no-audit --no-fund --prefer-offline"
+
+# API functions (disabled for Vite SPA)
+# [functions]
+# directory = "netlify/functions"
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+
+# Long-term caching for static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+EOF
 }
 
-# Function to resolve merge conflicts
-resolve_conflicts() {
-    echo "🔧 Resolving merge conflicts..."
-    
-    # Check for conflict files
-    local conflicts=$(git status --porcelain | grep -E '^(UU|AA|DD)' | awk '{print $2}' || true)
-    
-    if [ -z "$conflicts" ]; then
-        echo "No conflicts found"
-        return 0
-    fi
-    
-    echo "Found conflicts in: $conflicts"
-    
-    # Resolve each conflict
-    echo "$conflicts" | while read -r file; do
-        if [ -n "$file" ]; then
-            echo "  Resolving conflict in: $file"
-            
-            case "$file" in
-                "package.json"|"package-lock.json")
-                    echo "    Using version from feature branch for $file"
-                    git checkout --theirs "$file" || git checkout --ours "$file"
-                    ;;
-                "*.ts"|"*.tsx"|"*.js"|"*.jsx")
-                    echo "    Using version from feature branch for $file"
-                    git checkout --theirs "$file" || git checkout --ours "$file"
-                    ;;
-                *)
-                    echo "    Using version from feature branch for $file"
-                    git checkout --theirs "$file" || git checkout --ours "$file"
-                    ;;
-            esac
-            
-            git add "$file"
-        fi
-    done
-    
-    # Commit the resolution
-    if git commit --no-edit; then
-        echo "✅ Conflicts resolved successfully"
-        return 0
-    else
-        echo "❌ Failed to commit conflict resolution"
-        return 1
-    fi
-}
-
-# Main merge function
+# Function to merge a PR branch
 merge_pr_branch() {
-    local branch="$1"
-    local pr_number="$2"
+    local pr_num=$1
+    local branch_name=$2
     
-    echo "📋 Processing PR #$pr_number: $branch"
+    echo "=== Processing PR #$pr_num: $branch_name ==="
     
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        echo "❌ Branch $branch does not exist, skipping..."
-        return 1
-    fi
+    # Fetch the latest changes
+    git fetch origin
     
-    # Fetch the branch
-    echo "📥 Fetching branch $branch..."
-    if ! safe_git "fetch origin $branch"; then
-        echo "❌ Failed to fetch $branch"
-        return 1
-    fi
-    
-    # Attempt merge
-    echo "🔄 Attempting to merge $branch into main..."
-    if safe_git "merge origin/$branch --no-ff -m \"Merge PR #$pr_number: $branch into main\""; then
-        echo "✅ Successfully merged $branch"
-        return 0
+    # Try to merge the branch
+    if git merge --no-commit --no-ff "origin/$branch_name" 2>/dev/null; then
+        echo "✅ No conflicts found for PR #$pr_num"
+        git commit -m "Merge PR #$pr_num: $branch_name"
+        echo "✅ Successfully merged PR #$pr_num"
     else
-        echo "⚠️  Merge conflict detected in $branch"
+        echo "⚠️  Conflicts found for PR #$pr_num, resolving..."
         
-        # Resolve conflicts
-        if resolve_conflicts; then
-            echo "✅ Successfully resolved conflicts and merged $branch"
-            return 0
-        else
-            echo "❌ Failed to resolve conflicts for $branch"
-            safe_git "merge --abort"
-            return 1
+        # Check if netlify.toml has conflicts
+        if git status --porcelain | grep -q "netlify.toml"; then
+            resolve_netlify_conflicts
+            git add netlify.toml
         fi
+        
+        # Add any other conflicted files (use main branch version)
+        git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
+            if [ -f "$file" ]; then
+                echo "Resolving conflict in $file (keeping main branch version)"
+                git checkout --ours "$file"
+                git add "$file"
+            fi
+        done
+        
+        # Commit the merge
+        git commit -m "Merge PR #$pr_num: $branch_name (conflicts resolved)"
+        echo "✅ Successfully merged PR #$pr_num with conflicts resolved"
     fi
 }
 
 # Main execution
-main() {
-    # Ensure we're on main
-    echo "🔄 Switching to main branch..."
-    safe_git "checkout main"
-    
-    # Pull latest changes
-    echo "📥 Pulling latest changes..."
-    safe_git "pull origin main"
-    
-    # List of PRs to merge
-    declare -a prs=(
-        "cursor/fix-netlify-build-and-merge-to-main-74ad:12714"
-        "cursor/fix-netlify-build-and-merge-to-main-9e6a:12713"
-        "cursor/fix-netlify-build-and-merge-to-main-34e4:12712"
-    )
-    
-    local success_count=0
-    local total_count=${#prs[@]}
-    
-    # Process each PR
-    for pr_info in "${prs[@]}"; do
-        IFS=':' read -r branch pr_number <<< "$pr_info"
-        
-        if merge_pr_branch "$branch" "$pr_number"; then
-            ((success_count++))
-        fi
-        
-        echo "---"
-    done
-    
-    echo "🎉 Processed $success_count/$total_count PRs successfully!"
-    
-    # Push changes
-    echo "📤 Pushing changes to main..."
-    if safe_git "push origin main"; then
-        echo "✅ Successfully pushed all changes to main!"
-    else
-        echo "❌ Failed to push changes to main"
-        return 1
-    fi
-    
-    echo "🎉 All PRs have been processed and merged!"
-}
+echo "Current branch: $(git branch --show-current)"
+echo "Current commit: $(git rev-parse HEAD)"
 
-# Run main function
-main "$@"
+# Process each PR
+for pr_num in "${!PR_BRANCHES[@]}"; do
+    branch_name="${PR_BRANCHES[$pr_num]}"
+    merge_pr_branch "$pr_num" "$branch_name"
+done
+
+echo "=== All PRs processed ==="
+
+# Push changes to main
+echo "Pushing changes to main branch..."
+git push origin main
+
+echo "=== Process completed successfully ==="

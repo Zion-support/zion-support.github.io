@@ -1,31 +1,17 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noEmit": true
+    "noEmit": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "lib": ["dom", "es2020"],
+    "types": ["react", "react-dom", "node"],
+    "esModuleInterop": true
   },
-  "include": [
+  "files": [
     "src/AppMinimal.tsx",
-    "src/main.tsx"
-  ],
-  "exclude": [
-    "src/hooks/**",
-    "src/pages/**",
-    "src/integrations/**",
-    "src/layout/**",
-    "src/routes/**",
-    "src/services/**",
-    "src/mobile/**",
-    "src/store/wishlistSlice.ts",
-    "src/store/authSlice.tsx",
-    "src/store/cartSlice.ts",
-    "src/test/**",
-    "src/tests/**",
-    "src/types/**",
-    "src/utils/generateRandomListing.ts",
-    "src/utils/linkChecker.ts",
-    "src/utils/performance.ts",
-    "src/utils/**",
-    "src/pages.disabled/**"
+    "src/main.tsx",
+    "types/global.d.ts"
   ]
 }
 

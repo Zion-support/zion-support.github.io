@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"use client";
-
 import { useState } from "react";
 import { services, getServicesByCategory, getCategories, type Service } from "@/data/services";
 
@@ -557,8 +554,6 @@ export default function ServicesPage() {
             </Link>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ac8e
-    </div>
+      </section>    </div>
   );
 }

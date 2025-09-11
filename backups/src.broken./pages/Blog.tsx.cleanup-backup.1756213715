@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -238,14 +233,6 @@ export default function Blog() {
     </>
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -274,11 +261,8 @@ const Blog: React.FC = () => {
   ];
 
   const blogPosts = [
-=======
 export default function Blog() {
-  const [posts, setPosts] = useState<BlogPost[]>([
->>>>>>> origin/cursor/website-audit-and-enhancement-bc98
-    {
+  const [posts, setPosts] = useState<BlogPost[]>([    {
       id: 1,
       title: 'The Future of AI: Autonomous Business Operations in 2025',
       excerpt: 'Explore how autonomous AI systems are revolutionizing business operations and what this means for the future of work.',
@@ -516,8 +500,6 @@ export default function Blog() {
         return 0;
     }
   });
-
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -526,22 +508,6 @@ export default function Blog() {
       day: 'numeric' 
     });
   };
-
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Our Blog
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Insights, analysis, and thought leadership on the latest trends in technology, 
-            AI, and digital transformation.
-          </p>
-        </div>
-      </section>
 
       {/* Search and Filter */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -770,13 +736,4 @@ export default function Blog() {
 };
 
 export default Blog;
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
-=======
 }
->>>>>>> origin/cursor/build-and-fix-errors-e276
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

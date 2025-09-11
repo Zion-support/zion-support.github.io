@@ -1,9 +1,0 @@
-automations:
-  - changed-files:
-      - any-glob-to-any-file: ['automation/**', '.github/workflows/**']
-ci:
-  - changed-files:
-      - any-glob-to-any-file: ['.github/workflows/**']
-content:
-  - changed-files:
-      - any-glob-to-any-file: ['pages/**', 'components/**', 'styles/**']

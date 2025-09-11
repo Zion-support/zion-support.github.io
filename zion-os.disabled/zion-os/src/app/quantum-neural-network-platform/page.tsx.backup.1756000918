@@ -2,39 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Quantum Neural Network Platform - Zion Tech Group",
-<<<<<<< HEAD
-  description: "Harness the power of quantum computing with our advanced neural network platform. Solve complex problems with quantum-enhanced AI that outperforms classical computing.",
-  keywords: "quantum neural networks, quantum computing, quantum AI, quantum machine learning, Zion Tech Group",
-=======
-  description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.",
-  keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-};
-
 export default function QuantumNeuralNetworkPlatformPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen py-20">
-      {/* Hero Section */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Quantum Neural Network Platform</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionize AI with quantum-enhanced neural networks that solve previously intractable problems and unlock new computational frontiers.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-              Get Access
-            </Link>
-              <Link href="/quantum-services" className="btn-secondary text-lg px-8 py-4">
-                Explore Quantum Services
-              </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Platform Overview */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -153,7 +122,6 @@ export default function QuantumNeuralNetworkPlatformPage() {
                 <li>• Protein structure prediction</li>
                 <li>• Drug-target interaction modeling</li>
                 <li>• Quantum chemistry calculations</li>
-=======
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -322,26 +290,10 @@ export default function QuantumNeuralNetworkPlatformPage() {
                 <li>• Molecular dynamics simulation</li>
                 <li>• Protein folding prediction</li>
                 <li>• Drug-target interaction modeling</li>
-                <li>• Toxicity prediction</li>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-              </ul>
+                <li>• Toxicity prediction</li>              </ul>
             </div>
 
             {/* Financial Modeling */}
-<<<<<<< HEAD
-            <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
-              <h3 className="text-2xl font-bold mb-4">Financial Modeling & Risk</h3>
-              <p className="text-gray-300 mb-6">
-                Revolutionize financial analysis with quantum-powered risk assessment and portfolio optimization.
-              </p>
-              <ul className="text-gray-300 space-y-2 mb-6">
-                <li>• Portfolio optimization</li>
-                <li>• Risk assessment models</li>
-                <li>• Monte Carlo simulations</li>
-                <li>• Market prediction algorithms</li>
-              </ul>
-            </div>
-
             {/* Climate Modeling */}
             <div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30">
               <h3 className="text-2xl font-bold mb-4">Climate & Weather Prediction</h3>
@@ -437,7 +389,6 @@ export default function QuantumNeuralNetworkPlatformPage() {
                 Get Platform Access
               </Link>
               <Link href="/quantum-services" className="btn-secondary text-lg px-8 py-4">
-=======
             <div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30">
               <h3 className="text-2xl font-bold mb-4">Financial Modeling</h3>
               <p className="text-gray-300 mb-4">
@@ -581,19 +532,11 @@ export default function QuantumNeuralNetworkPlatformPage() {
               <Link href="/contact" className="btn-primary">
                 Get Platform Access
               </Link>
-              <Link href="/quantum-services" className="btn-secondary">
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-                Explore All Quantum Services
+              <Link href="/quantum-services" className="btn-secondary">                Explore All Quantum Services
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-=======
         </section>
-      </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-    </div>
+      </div>    </div>
   );
 }
