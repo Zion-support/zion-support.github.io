@@ -29,6 +29,13 @@ import {
   Building,
   Award,
   Clock,
+<<<<<<< HEAD
+  CheckCircle
+} from 'lucide-react';
+
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+=======
   CheckCircle,
   Send,
   ArrowRight,
@@ -126,6 +133,7 @@ const footerNavigation = {
     ],
   },
 };
+>>>>>>> origin/backup-main-20250827-023409
 
   const socialLinks = [
     { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },

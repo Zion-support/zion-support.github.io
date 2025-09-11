@@ -169,6 +169,8 @@ const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
 const Login = React.lazy(() => import('./pages/Login'));
+<<<<<<< HEAD
+=======
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const Solutions = React.lazy(() => import('./pages/Solutions'));
@@ -189,6 +191,7 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 
 // Import the new pages
+>>>>>>> origin/backup-main-20250827-023409
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
@@ -234,6 +237,9 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/services" element={<ServicesPage />} />
+<<<<<<< HEAD
+              <Route path="/innovative-services" element={<InnovativeServicesShowcase />} />
+=======
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
               <Route path="/case-studies" element={<CaseStudies />} />
@@ -252,6 +258,7 @@ function App() {
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
+>>>>>>> origin/backup-main-20250827-023409
             </Routes>
           </Suspense>
         </main>

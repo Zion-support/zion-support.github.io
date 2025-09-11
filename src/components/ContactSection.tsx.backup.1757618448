@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card.jsx";
 import { Button } from "./ui/button.jsx";
+>>>>>>> origin/backup-main-20250827-023409
 import { 
   Phone, 
   Mail, 
@@ -17,7 +23,11 @@ import {
   CheckCircle,
   ArrowRight
 } from "lucide-react";
+<<<<<<< HEAD
+import Link from "next/link";
+=======
 import { Link } from "react-router-dom";
+>>>>>>> origin/backup-main-20250827-023409
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -102,14 +112,22 @@ export function ContactSection() {
                     <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                       Full Name *
                     </label>
+<<<<<<< HEAD
+                    <Input
+=======
                     <input
+>>>>>>> origin/backup-main-20250827-023409
                       type="text"
                       id="name"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
+<<<<<<< HEAD
+                      className="bg-white/10 border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan"
+=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan rounded-lg"
+>>>>>>> origin/backup-main-20250827-023409
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -117,14 +135,22 @@ export function ContactSection() {
                     <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                       Email Address *
                     </label>
+<<<<<<< HEAD
+                    <Input
+=======
                     <input
+>>>>>>> origin/backup-main-20250827-023409
                       type="email"
                       id="email"
                       name="email"
                       required
                       value={formData.email}
                       onChange={handleChange}
+<<<<<<< HEAD
+                      className="bg-white/10 border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan"
+=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan rounded-lg"
+>>>>>>> origin/backup-main-20250827-023409
                       placeholder="Enter your email"
                     />
                   </div>
@@ -135,13 +161,21 @@ export function ContactSection() {
                     <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
                       Company Name
                     </label>
+<<<<<<< HEAD
+                    <Input
+=======
                     <input
+>>>>>>> origin/backup-main-20250827-023409
                       type="text"
                       id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
+<<<<<<< HEAD
+                      className="bg-white/10 border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan"
+=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan rounded-lg"
+>>>>>>> origin/backup-main-20250827-023409
                       placeholder="Enter company name"
                     />
                   </div>

@@ -27,6 +27,9 @@ import {
   Video,
   FileText,
   Heart,
+<<<<<<< HEAD
+  PanelLeft
+=======
   PanelLeft,
   ShoppingCart,
   Settings,
@@ -34,6 +37,7 @@ import {
   HelpCircle,
   BookOpen,
   FlaskConical
+>>>>>>> origin/backup-main-20250827-023409
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
