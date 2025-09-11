@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-09-11T14:32:37.895Z",
+  "timestamp": "2025-09-11T14:41:15.876Z",
   "bundleSize": {
-    "totalBytes": 6996822,
-    "totalSize": "6.67 MB",
-    "gzippedEstimate": 2099046,
-    "gzippedSize": "2.00 MB",
-    "fileCount": 201,
+    "totalBytes": 7070616,
+    "totalSize": "6.74 MB",
+    "gzippedEstimate": 2121184,
+    "gzippedSize": "2.02 MB",
+    "fileCount": 205,
     "recommendations": [
       "Consider code splitting to reduce initial bundle size",
       "Consider consolidating small files",
