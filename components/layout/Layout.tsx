@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
 import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
@@ -133,16 +134,6 @@ export default function Layout({ children, seo }: LayoutProps) {
         />
       </Head>
 
-export default function Layout({ children, seo }: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [showEnhancements, setShowEnhancements] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* Futuristic Background */}
-      <UltraAdvancedFuturisticBackground2035 />
-      
-=======
       {/* Skip to content link for accessibility */}
       <a 
         href="#main" 
@@ -152,7 +143,7 @@ export default function Layout({ children, seo }: LayoutProps) {
       </a>
 
       {/* Enhanced Futuristic Background */}
-      <UltraFuturisticBackground2038 intensity="medium" theme="quantum-neon" />
+      <UltraAdvancedFuturisticBackground2035 />
 
       {/* Loading State */}
       <AnimatePresence>
@@ -176,7 +167,7 @@ export default function Layout({ children, seo }: LayoutProps) {
         <TopContactBar />
         
         {/* Navigation */}
-        <UltraAdvancedNavigation2035 />
+        <UltraFuturisticNavigation2035 />
         
         {/* Sidebar and Main Content */}
         <div className="flex">
@@ -207,7 +198,7 @@ export default function Layout({ children, seo }: LayoutProps) {
         </div>
         
         {/* Footer */}
-        <UltraAdvancedFooter2035 />
+        <UltraFuturisticFooter2035 />
       </div>
 
       {/* Back to top button */}
