@@ -22,7 +22,7 @@ const CloudMigration = React.lazy(() => import('./pages/CloudMigrationServices')
 const DevOps = React.lazy(() => import('./pages/CloudDevOpsServices').catch(() => ({ default: () => <div>Error loading DevOps page</div> })));
 const MobileDevelopment = React.lazy(() => import('./pages/MobileAppPage').catch(() => ({ default: () => <div>Error loading Mobile Development page</div> })));
 
-// Additional service pages (only existing ones)
+// Additional service pages with error handling
 const AIEmailResponder = lazy(() => import('./pages/services/ai-email-responder').catch(() => ({ default: () => <div>Error loading AI Email Responder</div> })));
 const MobileSurveyTool = lazy(() => import('./pages/services/mobile-survey-tool').catch(() => ({ default: () => <div>Error loading Mobile Survey Tool</div> })));
 const AITalentMatching = lazy(() => import('./pages/services/ai-talent-matching').catch(() => ({ default: () => <div>Error loading AI Talent Matching</div> })));
@@ -30,6 +30,7 @@ const EcommerceReturnManagement = lazy(() => import('./pages/services/ecommerce-
 const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation').catch(() => ({ default: () => <div>Error loading AI Content Creation</div> })));
 const CloudDevOpsServices = lazy(() => import('./pages/services/CloudDevOpsServices').catch(() => ({ default: () => <div>Error loading Cloud DevOps Services</div> })));
 const CybersecurityServices = lazy(() => import('./pages/services/CybersecurityServices').catch(() => ({ default: () => <div>Error loading Cybersecurity Services</div> })));
+const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation').catch(() => ({ default: () => <div>Error loading AI Customer Service Automation</div> })));
 
 const App = () => {
   return (
@@ -46,7 +47,7 @@ const App = () => {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
               
-              {/* Original service routes */}
+              {/* Service routes */}
               <Route path="/cybersecurity" element={<Cybersecurity />} />
               <Route path="/cloud-migration" element={<CloudMigration />} />
               <Route path="/devops" element={<DevOps />} />
@@ -60,6 +61,7 @@ const App = () => {
               <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
               <Route path="/services/cloud-devops-services" element={<CloudDevOpsServices />} />
               <Route path="/services/cybersecurity-services" element={<CybersecurityServices />} />
+              <Route path="/services/ai-customer-service-automation" element={<AICustomerServiceAutomation />} />
             </Routes>
           </Suspense>
           <Footer />
