@@ -1,19 +1,14 @@
 {
-  "healthChecks": {
-    "enabled": true,
+  "healthCheck": {
+    "interval": 30000,
+    "endpoints": ["/api/health"]
+  },
+  "performance": {
     "interval": 60000,
-    "endpoints": [
-      "/health",
-      "/api/status"
-    ]
+    "metrics": ["responseTime", "memoryUsage"]
   },
-  "logging": {
-    "level": "info",
-    "format": "json",
-    "rotation": true
-  },
-  "alerts": {
-    "errorThreshold": 10,
-    "responseTimeThreshold": 5000
+  "errorTracking": {
+    "enabled": true,
+    "logLevel": "error"
   }
 }

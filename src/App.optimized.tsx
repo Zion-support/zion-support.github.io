@@ -17,7 +17,7 @@ import { _EnhancedHeader } from ./components/EnhancedHeaderexport default functi
 export default function Page(props: any) {
   import { _EnhancedFooter } from ./components/EnhancedFooterexport default function Page(props: any) {
 
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Helmet } from 'react-helmet-async';
 import { Cloud } from 'lucide-react';
 const securityServices = [];

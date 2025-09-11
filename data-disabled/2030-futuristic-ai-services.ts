@@ -38,7 +38,6 @@ export interface FuturisticAIService2030 {
   rating: number;
 export const futuristicAIServices2030: FuturisticAIService2030[] = [;
   // AI Consciousness & Evolution 2030;
-<<<<<<< HEAD:data-disabled/2030-futuristic-ai-services.ts
   {
     id: "ai-consciousness-evolution-2030",;
     name: "AI Consciousness Evolution 2030",;

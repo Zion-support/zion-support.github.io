@@ -1,10 +1,16 @@
 /* App.css - Main application styles */
 
 .app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #282c34;
   padding: 20px;
   color: white;
@@ -12,6 +18,16 @@
 
 .app-link {
   color: #61dafb;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-footer {
+  margin-top: auto;
 }
 
 /* Futuristic theme styles */
@@ -36,10 +52,32 @@
   100% { transform: rotate(360deg); }
 }
 
+/* Loading states */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Error states */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  text-align: center;
+  padding: 2rem;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .app-header {
     padding: 10px;
+  }
+  .app-main {
+    padding: 0;
   }
 }
 
@@ -48,9 +86,19 @@
   color-scheme: dark;
 }
 
+.dark .app {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   .loading-spinner {
     animation: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

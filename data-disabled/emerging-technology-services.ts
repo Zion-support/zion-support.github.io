@@ -12,7 +12,6 @@ export interface EmergingTechnologyService {
     mobile: string;
     email: string;
 export const emergingTechnologyServices: EmergingTechnologyService[] = [;
-<<<<<<< HEAD:data-disabled/emerging-technology-services.ts
   {
     id: "blockchain-platform",;
     name: "Blockchain Development Platform",;

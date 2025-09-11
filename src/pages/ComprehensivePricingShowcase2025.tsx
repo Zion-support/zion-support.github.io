@@ -1,35 +1,15 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { _Link } from 'react-router-dom';
-import { _advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
-
-import { Link } from 'react-router-dom';
-import { Icon } from 'lucide-react';
-const features = [];
-const benefits = [];
-const services = [];
-const solutions = [];
-const _ComprehensivePricingShowcase2025 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [priceRange, setPriceRange] = useState('all');
-    const _allServices = [
-=======
 import { Link } from 'react-router-dom';
 import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
 const ComprehensivePricingShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const allServices = [
->>>>>>> origin/clean-error-fixing-automation
         ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
         ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
         ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
     ];
-<<<<<<< HEAD
-    const _categories = [
-=======
     const categories = [
->>>>>>> origin/clean-error-fixing-automation
         'all',
         'Legal Tech & Compliance',
         'Quantum Computing & Security',
@@ -46,45 +26,17 @@ const ComprehensivePricingShowcase2025 = () => {
         'AI & Analytics',
         'AI & Customer Experience'
     ];
-<<<<<<< HEAD
-    const _priceRanges = [
-=======
     const priceRanges = [
->>>>>>> origin/clean-error-fixing-automation
         { value: 'all', label: 'All Prices' },
         { value: 'low', label: 'Under $500/month', max: 500 },
         { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },
         { value: 'high', label: 'Over $2,000/month', min: 2000 }
     ];
-<<<<<<< HEAD
-    const _filteredServices = allServices
-=======
     const filteredServices = allServices
->>>>>>> origin/clean-error-fixing-automation
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => {
         if (priceRange === 'all')
             return true;
-<<<<<<< HEAD
-        const _range = priceRanges.find(r => r.value === priceRange);
-        if (!range)
-            return true;
-        if (service.price) {
-            const _price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
-            if (range.min && range.max) {
-                return price >= range.min && price <= range.max;
-            }
-            else if (range.max) {
-                return price <= range.max;
-            }
-            else if (range.min) {
-                return price >= range.min;
-            }
-        }
-        return true;
-    });
-    const _getServiceTypeColor = (type) => {
-=======
         const range = priceRanges.find(r => r.value === priceRange);
         if (!range)
             return true;
@@ -99,7 +51,6 @@ const ComprehensivePricingShowcase2025 = () => {
         }
         return true});
     const getServiceTypeColor = (type) => {
->>>>>>> origin/clean-error-fixing-automation
         switch (type) {
             case 'Micro SAAS':
                 return 'bg-blue-100 text-blue-800 border-blue-200';
@@ -108,20 +59,11 @@ const ComprehensivePricingShowcase2025 = () => {
             case 'AI Service':
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:
-<<<<<<< HEAD
-                return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
-    };
-    const _getCategoryIcon = (category) => {
-        const _icons = {
-            'Legal Tech & Compliance': '⚖️',
-=======
                 return 'bg-gray-100 text-gray-800 border-gray-200'}
     };
     const getCategoryIcon = (category) => {
         const icons = {
   'Legal Tech & Compliance': '⚖️',
->>>>>>> origin/clean-error-fixing-automation
             'Quantum Computing & Security': '🔐',
             'Healthcare & Biotech': '🏥',
             'Energy & Sustainability': '🌱',
@@ -134,52 +76,27 @@ const ComprehensivePricingShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
-<<<<<<< HEAD
-            'AI & Customer Experience': '💬'
-        };
-        return icons[category] || '🚀';
-    };
-    const _getPriceDisplay = (service) => {
-=======
   'AI & Customer Experience': '💬'
         
 
 };
         return icons[category] || '🚀'};
     const getPriceDisplay = (service) => {
->>>>>>> origin/clean-error-fixing-automation
         if (service.price) {
             return (<div className="text-3xl font-bold text-blue-400">
           {service.price}
           {service.period && (<span className="text-sm text-gray-400 font-normal"> {service.period}</span>)}
-<<<<<<< HEAD
-        </div>);
-        }
-=======
         </div>)}
->>>>>>> origin/clean-error-fixing-automation
         else if (service.hourlyRate) {
             return (<div className="text-3xl font-bold text-green-400">
           ${service.hourlyRate}
           <span className="text-sm text-gray-400 font-normal">/hour</span>
-<<<<<<< HEAD
-        </div>);
-        }
-        else if (service.pricing) {
-            return (<div className="text-3xl font-bold text-purple-400">
-          {service.pricing}
-        </div>);
-        }
-        return null;
-    };
-=======
         </div>)}
         else if (service.pricing) {
             return (<div className="text-3xl font-bold text-purple-400">
           {service.pricing}
         </div>)}
         return null};
->>>>>>> origin/clean-error-fixing-automation
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -218,7 +135,6 @@ const ComprehensivePricingShowcase2025 = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -235,24 +151,6 @@ const ComprehensivePricingShowcase2025 = () => {
         </div>
       </section>
 
-=======
-
-          {/* Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Link to="/advanced-innovative-services-showcase-2025" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
-              🚀 Advanced Services
-            </Link>
-            <Link to="/comprehensive-services-marketing-2025" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
-              💡 Service Marketing
-            </Link>
-            <Link to="/contact" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
-              📞 Get Quote
-            </Link>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/clean-error-fixing-automation
       {/* Filters Section */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -446,10 +344,5 @@ const ComprehensivePricingShowcase2025 = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-=======
     </div>)};
->>>>>>> origin/clean-error-fixing-automation
 export default ComprehensivePricingShowcase2025;

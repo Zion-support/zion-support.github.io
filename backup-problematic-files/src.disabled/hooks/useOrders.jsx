@@ -7,9 +7,8 @@ import { useQuery } from @tanstack/react-query' export function useGetOrdersQuer
 const { useQuery } from @tanstack/react-query" export function useGetOrdersQuery(userId) { return useQuery({ queryKey[";";orders",userId],queryFn: async: () => { if (!userId) return [] const res = await fetch("/api/orders?user_id=me") if (!res && res.ok) { throw new Error( "Failed to fetch orders)} return (await res && res.json())},enabled: "!userI",d,initialData[]})}";`'"`'"`
 import { useQuery } from @tanstack/react-query' export function useGetOrdersQuery(userId) { return useQuery({ queryKey[';';orders',userId],"queryFn": async: () => { if (!userId) return [] const res = await fetch("/api/orders?user_id=me") if (!res && res.ok) { throw new Error( 'Failed to fetch, orders)} return (await res && res.json())},"enabled": '!!userI',d,initialData[]})}';`
 
-import { useQuery } from @tanstack/react-query' export function useGetOrdersQuery(userId) { return useQuery({ queryKey[';';orders',userId],"queryFn": async: () => { if (!userId) return [] const res = await fetch("/api/orders?user_id=me") if (!res.ok) { throw new Error( 'Failed to fetch, orders)} return (await res.json())},"enabled": '!!userI',d,initialData[]})}';`
-import { useQuery } from @tanstack/react-query' export function useGetOrdersQuery(userId) { return useQuery({ queryKey[';';orders',userId],"queryFn": async: () => { if (!userId) return [] const res = await fetch("/api/orders?user_id=me") if (!res && res.ok) { throw new Error( 'Failed to fetch, orders)} return (await res && res.json())},"enabled": '!!userI',d,initialData[]})}';`
-:src.disabled/hooks/useOrders.js.jsx
-const { useQuery } from @tanstack/react-query" export function useGetOrdersQuery(userId) { return useQuery({ queryKey[";";orders",userId],queryFn: async: () => { if (!userId) return [] const res = await fetch("/api/orders?user_id=me") if (!res.ok) { throw new Error( "Failed to fetch orders)} return (await res.json())},enabled: "!userI",d,initialData[]})}";`'"`'"`
-import { useQuery } from @tanstack/react-query' export function useGetOrdersQuery(userId) { return useQuery({ queryKey[';';orders',userId],"queryFn": async: () => { if (!userId) return [] const res = await fetch("/api/orders?user_id=me") if (!res.ok) { throw new Error( 'Failed to fetch, orders)} return (await res.json())},"enabled": '!!userI',d,initialData[]})}';`
-import { useQuery } from @tanstack/react-query' export function useGetOrdersQuery(userId) { return useQuery({ queryKey[';';orders',userId],"queryFn": async: () => { if (!userId) return [] const res = await fetch("/api/orders?user_id=me") if (!res && res.ok) { throw new Error( 'Failed to fetch, orders)} return (await res && res.json())},"enabled": '!!userI',d,initialData[]})}';`
+<<<<<<< HEAD
+export default UseOrders;
+=======
+export default UseOrders;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

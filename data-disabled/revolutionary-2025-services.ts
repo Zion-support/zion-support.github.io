@@ -44,7 +44,6 @@ export interface Revolutionary2025Service {;
   rating: number;
 export const revolutionary2025Services: Revolutionary2025Service[] = [;
   // Revolutionary AI Services 2025;
-<<<<<<< HEAD:data-disabled/revolutionary-2025-services.ts
   {
     id: "ai-consciousness-simulator",;
     name: "AI Consciousness Simulator",;

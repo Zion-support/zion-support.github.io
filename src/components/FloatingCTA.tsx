@@ -1,36 +1,187 @@
+import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Cloud } from 'lucide-react';
-const services = [];
-const solutions = [];
 
 
-  "};export default function Page(props: any) {
- from 'lucide-react';
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState<any>(false);
-  const [isVisible, setIsVisible] = useState<any>(false);
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+=======
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+
+
+=======
+
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+import { X } from 'lucide-react'
+
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
+import { Button } from '@/components / ui / button';
+import Link from 'next / link';
+import { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
+  const [is_visible, setIsVisible] = useState (false);
+  useEffect (() => {
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
-}, []);, []);
+    // Cleanup function;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return () => {
+    // Cleanup function;
+};
+}, []); [])
     // Show CTA after 5 seconds
-      setIsVisible(true) }, 5000) ;
-    return () => clearTimeout(timer) }, []) };
-  ];
+      setIsVisible(true) }, 5000)
+    return () => clearTimeout(timer) }, []) }
+  ]
+  const quickServices = ["
+    { name: "AI Solutions", icon: Brain, link: "/ai-services" },"
+    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },"
+    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },"
+    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" }
+  ]
+  if(!isVisible) return null
+                    to="/services"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
+                    onClick={() => setIsExpanded(false)}
+                  >"
+                    <span className="text-xl">🚀</span>
+                    <div>"
+                      <div className="font-semibold">Our Services</div>"
+                      <div className="text-sm text-gray-400">Explore solutions</div>
+                    </div>
+                  </Link>
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { useState, useEffect } from "react"
+export function FloatingCTA() {
+  const [ isVisible, setIsVisible ] = useState(false)
+  const [ isClosed, setIsClosed ] = useState(false)
+  useEffect((,) => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const threshold = 600; // Show CTA after scrolling 600px
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}
+
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+export function FloatingCTA() {
+
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+import { useState, useEffect } from "react",
+import { X } from 'lucide-react'
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+export function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState(false),
+  const [isClosed, setIsClosed] = useState(false),
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+xport function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState(false),
+  const [isClosed, setIsClosed] = useState(false),
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  const [ isVisible, setIsVisible ] = useState(false),
+  const [ isClosed, setIsClosed ] = useState(false),
 ;
-  const _quickServices = [";
-    { "name": "AI Solutions", "icon": "Brai n", "link": "/ai-services" },";
-    { "name": "Cybersecurity", "icon": "Shiel d", "link": "/cybersecurity" },";
-    { "name": "Cloud Services", "icon": "Clou d", "link": "/cloud-solutions" },;";
-    { "name": "Digital Transformation", "icon": "Za p", "link": "/digital-transformation" };  const _quickServices = ["
-    { name: "AI Solutions", icon: Brai n, link: "/ai-services" },"
-    { name: "Cybersecurity", icon: Shiel d, link: "/cybersecurity" },"
-    { name: "Cloud Services", icon: Clou d, link: "/cloud-solutions" },;"
-    { name: "Digital Transformation", icon: Za p, link: "/digital-transformation" };
+  useEffect((,) => {;
+    const handleScroll = () => {;
+      const scrollPosition = window.scrollY;
+      const threshold = 600; // Show CTA after scrolling 600px
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY,
+      const threshold = 600, // Show CTA after scrolling 600px
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    } }, [isClosed])
+  const handleClose = () => {
+    setIsClosed(true)
+    setIsVisible(false) };      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [isClosed])
+  const handleClose = () => {
+    setIsClosed(true)
+    setIsVisible(false);    setIsVisible(false)
+  }
+  if (!isVisible) return null
+}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true)
+}, []); []);
+    // Show CTA after 5 seconds;
+      setIsVisible (true) }, 5000);
+    return () => clear_timeout (timer) }, []) }
   ];
   if(!isVisible) return null;
                     to="/services";
@@ -43,25 +194,160 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div className="text-sm text-gray-400">Explore solutions</div>;
                     </div>;
                   </Link>;
-                  <Link                    to="/quote";
-                    className="flex items-center gap-3 p-3 rounded-lg "hover": "b g-slate-700 transition-colors duration-200 text-white";
-                    onClick={() => setIsExpanded(false)"}
-                  >";
-                    <span className="text-xl">💰</span>;
-                    <div>";
-                      <div className="font-semibold">Get Quote</div>";
-                      <div className="text-sm text-gray-400">Request pricing</div>;
-                    </div>;
-                  </Link>;
-                  <div  className="border-t border-slate - 600 pt -3">;
-                    <div  className="text-center text-sm text-gray - 400 mb-2">;
-                      Available 24 / 7;
-                    </div>;
-                    <div  className="flex items - center justify - center gap-2">;
-                      <div  className="w-2 h-2 bg-green - 400 rounded-full animate -pulse"></div>;
-                      <span className="text-green - 400 text-sm font -semibold">Online Now</span>                    </div>;
-                  </div>;
-                </div>;      <AnimatePresence>
+import { Button  } from '@/components / ui / button';
+import Link from './next / link';
+import { useState, useEffect  } from './react';
+export /**
+ * FloatingCTA - Function description
+ */
+function FloatingCTA() {
+  const [ is_visible, setIsVisible ] = useState (false),
+  const [ is_closed, setIsClosed ] = useState (false),
+  useEffect ((, ) => {
+    const handle_scroll = () =>: any {
+      const scroll_position = window.scroll_y;
+      const threshold = 600; // Show CTA after scrolling 600px;
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsVisible (true);
+      } else {
+        setIsVisible (false);
+      }
+
+    },
+
+
+    }
+    window.addEventListener ('scroll', handle_scroll);
+    return () => {
+      window.removeEventListener ('scroll', handle_scroll);
+    } }, [is_closed]);
+  const handle_close = () =>: any {
+    setIsClosed (true);
+    setIsVisible (false) }      // Check condition
+if ( {) {
+  $2
+}
+        setIsVisible (true);
+      } else {
+        setIsVisible (false);
+      }
+    }
+    window.addEventListener ("scroll", handle_scroll);
+    return () => {
+      window.removeEventListener ("scroll", handle_scroll);
+    }
+import { X } from 'lucide-react';
+export function FloatingCTA() {;
+  const [ isVisible, setIsVisible ] = useState(false),;
+  const [ isClosed, setIsClosed ] = useState(false),;
+  useEffect((,) => {;
+    const handleScroll = () => {;
+      const scrollPosition = window && window.scrollY;
+      const threshold = 600; // Show CTA after scrolling 600px;
+      if (scrollPosition > threshold && !isClosed) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    };
+    window && window.addEventListener('scroll', handleScroll);
+    return () => {;
+      window && window.removeEventListener('scroll', handleScroll);
+    };  }, [isClosed]);
+  const handleClose = () => {;
+    setIsClosed(true);
+    setIsVisible(false);  };      if (scrollPosition > threshold && !isClosed) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    };
+    window && window.addEventListener("scroll", handleScroll);
+    return () => {;
+      window && window.removeEventListener("scroll", handleScroll);
+    }
+  }, [isClosed]);
+  const handleClose = () => {;
+    setIsClosed(true);
+    setIsVisible(false)
+  };
+  if (!isVisible) return null;
+  return (
+    },
+
+    window.addEventListener("scroll", handleScroll),
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [isClosed]),
+
+  const handleClose = () => {
+    setIsClosed(true),
+    setIsVisible(false)
+  },
+
+  if (!isVisible) return null,
+
+  return (
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
+        <div className="mr-4">
+          <p className="text-white font-medium">Ready to explore Zion?</p>
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button 
+            variant="default" 
+            size="sm" 
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
+            asChild
+          >
+            <Link href="/signup">Register Now</Link>
+          </Button>
+<<<<<<< HEAD
+          <button
+            onClick={handleClose}
+            className="text-zion-slate hover: text-white p-1"
+            aria-label="Close"
+          >
+            <X className="w-5 h-5" />
+ursor/fix-website-loading-errors-and-merge-6662
+            <X className="w-5 h-5" />
+          <button
+            onClick={handleClose}
+            className='text-zion-slate hover:text-white p-1'
+            aria-label='Close'          >
+            <X className='w-5 h-5' />          </button>
+            <X className="w-5 h-5" />
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <button 
+            onClick={handleClose}
+            className="text-zion-slate hover: text-white p-1"
+            aria-label="Close"
+          >
+
+
+
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+<<<<<<< HEAD
+}
+}, [isClosed])
+return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)
+}'"
+      {/* Backdrop */}
+      <AnimatePresence>
         {isExpanded && (
           <motion.div"
             className="fixed inset-0 bg-black/20 z-40"
@@ -84,213 +370,334 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 </any>;';;';    </>
   )}
 '"
-</motion>
-</any>
-</any>
-
+}
+;
 =======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const [showScrollTop, setShowScrollTop] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => {
-            setShowScrollTop(window.scrollY > 400)};
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll)}, []);
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })};
-    const getPositionClasses = () => {
-        switch (position) {
-            case 'bottom-left':
-                return 'bottom-6 left-6';
-            case 'top-right':
-                return 'top-6 right-6';
-            case 'top-left':
-                return 'top-6 left-6';
-            default:
-                return 'bottom-6 right-6'}
-    };
-    const getExpandedPositionClasses = () => {
-        switch (position) {
-            case 'bottom-left':
-                return 'bottom-6 left-6';
-            case 'top-right':
-                return 'top-6 right-6';
-            case 'top-left':
-                return 'top-6 left-6';
-            default:
-                return 'bottom-6 right-6'}
-    };
-    if (variant === 'minimal') {
-        return (<AnimatePresence>
-        {showScrollTop && (<motion.button onClick={scrollToTop} className={`fixed ${getPositionClasses()} bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40`} initial = {
-  { opacity: 0, scale: 0.8,
-  y: 20 
 
-}} animate = {
-  { opacity: 1, scale: 1,
-  y: 0 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            aria-label='Close'           aria-label="Button">;
+            <X className='w-5 h-5' />          </button>;
+            <X className="w-5 h-5" />;
 
-}} exit = {
-  { opacity: 0, scale: 0.8,
-  y: 20 
+;
 
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <ArrowUp className="w-5 h-5"/>
-          </motion.button>)}
-      </AnimatePresence>)}
-    if (variant === 'featured') {
-        return (<div className={`fixed ${getPositionClasses()} z-40`}>
-        <AnimatePresence>
-          {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-purple/25 transition-all duration-300 group" initial = {
-  { opacity: 0,
-  scale: 0.8 
-
-}} animate = {
-  { opacity: 1,
-  scale: 1 
-
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-              <div className="relative">
-                <Zap className="w-6 h-6"/>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-              </div>
-            </motion.button>) : (<motion.div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80" initial = {
-  { opacity: 0, scale: 0.8,
-  y: 20 
-
-}} animate = {
-  { opacity: 1, scale: 1,
-  y: 0 
-
-}} exit = {
-  { opacity: 0, scale: 0.8,
-  y: 20 
-
-}} transition = {
-  { type: "spring", damping: 25,
-  stiffness: 300 
-
-}}>
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">Quick Actions</h3>
-                <button onClick={() => setIsExpanded(false)} className="text-gray-400 hover:text-gray-600 transition-colors">
-                  <X className="w-5 h-5"/>
-                </button>
-              </div>
-              
-              <div className="space-y-3">
-                <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                  <div className="w-10 h-10 bg-zion-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan/20 transition-colors">
-                    <Star className="w-5 h-5 text-zion-cyan"/>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">Explore Marketplace</div>
-                    <div className="text-sm text-gray-500">Find AI services & talent</div>
-                  </div>
-                </Link>
-                
-                <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                  <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/20 transition-colors">
-                    <MessageCircle className="w-5 h-5 text-zion-purple"/>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">Get Support</div>
-                    <div className="text-sm text-gray-500">24/7 assistance</div>
-                  </div>
-                </Link>
-                
-                <Link to="/signup" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                  <div className="w-10 h-10 bg-zion-cyan-light/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan-light/20 transition-colors">
-                    <Users className="w-5 h-5 text-zion-cyan-light"/>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">Join Zion</div>
-                    <div className="text-sm text-gray-500">Free account setup</div>
-                  </div>
-                </Link>
-              </div>
-              
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <div className="text-xs text-gray-500 text-center">
-                  Need help? <span className="text-zion-cyan cursor-pointer hover:underline">Chat with us</span>
-                </div>
-              </div>
-            </motion.div>)}
-        </AnimatePresence>
-      </div>)}
-    // Default variant
-    return (<div className={`fixed ${getPositionClasses()} z-40`}>
+import { Button } from "@/components/ui/button",;
+import Link from "next/link",;
+import { useState, useEffect } from "react",;
+import { X } from 'lucide-react';
+export function FloatingCTA() {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isClosed, setIsClosed] = useState(false),;
+  useEffect(() => {;
+    const handleScroll = () => {;
+      const scrollPosition = window.scrollY,;
+      const threshold = 600, // Show CTA after scrolling 600px;
+      if (scrollPosition > threshold && !isClosed) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    },;
+    window.addEventListener("scroll", handleScroll),;
+    return () => {;
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [isClosed]),;
+  const handleClose = () => {;
+    setIsClosed(true),;
+    setIsVisible(false);
+  };
+  if (!isVisible) return null;
+  return (;
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
+        <div className="mr-4">;
+          <p className="text-white font-medium">Ready to explore Zion?</p>;
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>;
+        </div>;
+        <div className="flex items-center gap-2">;
+          <Button;
+            variant="default";
+            size="sm";
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap";
+            asChild;
+          >;
+            <Link href="/signup">Register Now</Link>;
+          </Button>;
+          <button;
+            onClick={handleClose}
+            className="text-zion-slate hover: text-white p-1";
+            aria-label="Close";
+          >;
+<<<<<<< HEAD
+}
+}, [isClosed])
+return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)
+}'"
+      {/* Backdrop */}
       <AnimatePresence>
         {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 group" initial = {
   { opacity: 0,
   scale: 0.8 
 
-}} animate = {
-  { opacity: 1,
-  scale: 1 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <X className="w-5 h-5" />;
+          </button>;
+        </div>;
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <div className="relative">
-              <MessageCircle className="w-6 h-6"/>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            </div>
-          </motion.button>) : (<motion.div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80" initial = {
-  { opacity: 0, scale: 0.8,
-  y: 20 
 
-}} animate = {
-  { opacity: 1, scale: 1,
-  y: 0 
+      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true)
+}, []); []);
+    // Show CTA after 5 seconds;
+      setIsVisible (true) }, 5000);
+    return () => clear_timeout (timer) }, []) }
+  ];
+  const quick_services = [";
+    { name: "AI Solutions", icon: Brain, link: "/ai - services" }, ";
+    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" }, ";
+    { name: "Cloud Services", icon: Cloud, link: "/cloud - solutions" }, ";
+    { name: "Digital Transformation", icon: Zap, link: "/digital - transformation" }
+  ];
+  // Check condition
+if (return null) {
+  $2
+}
+                    to="/services";
+                    className="flex items - center gap - 3 p - 3 rounded - lg hover:bg - slate - 700 transition - colors duration - 200 text - white";
+                    on_click={() => setIsExpanded (false)}
+                  >";
+                    <span className="text - xl">🚀</span>;
+                    <div>";
+                      <div className="font - semibold">Our Services</div>";
+                      <div className="text - sm text - gray - 400">Explore solutions</div>;
+                    </div>;
+                  </Link>;
+import { Button  } from '@/components / ui / button';
+import Link from './next / link';
+import { useState, useEffect  } from './react';
+export /**
+ * FloatingCTA - Function description
+ */
+function FloatingCTA() {
+  const [ is_visible, setIsVisible ] = useState (false),
+  const [ is_closed, setIsClosed ] = useState (false),
+  useEffect ((, ) => {
+    const handle_scroll = () =>: any {
+      const scroll_position = window.scroll_y;
+      const threshold = 600; // Show CTA after scrolling 600px;
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsVisible (true);
+      } else {
+        setIsVisible(false)
+      }
 
-}} exit = {
-  { opacity: 0, scale: 0.8,
-  y: 20 
+import { X } from 'lucide-react';
+export function FloatingCTA() {;
 
-}} transition = {
-  { type: "spring", damping: 25,
-  stiffness: 300 
+    },
 
-}}>
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900">How can we help?</h3>
-              <button onClick={() => setIsExpanded(false)} className="text-gray-400 hover:text-gray-600 transition-colors">
-                <X className="w-5 h-5"/>
-              </button>
-            </div>
-            
-            <div className="space-y-3">
-              <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                <div className="w-10 h-10 bg-zion-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan/20 transition-colors">
-                  <Star className="w-5 h-5 text-zion-cyan"/>
-                </div>
-                <div>
-                  <div className="font-medium text-gray-900">Browse Services</div>
-                  <div className="text-sm text-gray-500">Find what you need</div>
-                </div>
-              </Link>
-              
-              <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/20 transition-colors">
-                  <MessageCircle className="w-5 h-5 text-zion-purple"/>
-                </div>
-                <div>
-                  <div className="font-medium text-gray-900">Contact Support</div>
-                  <div className="text-sm text-gray-500">Get help quickly</div>
-                </div>
-              </Link>
-            </div>
-            
-            <div className="mt-4 pt-4 border-t border-gray-100">
-              <div className="text-xs text-gray-500 text-center">
-                Or start a conversation with our AI assistant
-              </div>
-            </div>
-          </motion.div>)}
-      </AnimatePresence>
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation
+
+  const [ isVisible, setIsVisible ] = useState(false),;
+  const [ isClosed, setIsClosed ] = useState(false),;
+
+  useEffect((,) => {;
+    const handleScroll = () => {;
+      const scrollPosition = window && window.scrollY;
+      const threshold = 600; // Show CTA after scrolling 600px;
+
+      if (scrollPosition > threshold && !isClosed) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    };
+
+    window && window.addEventListener('scroll', handleScroll);
+    return () => {;
+      window && window.removeEventListener('scroll', handleScroll);
+    };  }, [isClosed]);
+
+  const handleClose = () => {;
+    setIsClosed(true);
+    setIsVisible(false);  };      if (scrollPosition > threshold && !isClosed) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    };
+
+    window && window.addEventListener("scroll", handleScroll);
+    return () => {;
+      window && window.removeEventListener("scroll", handleScroll);
+    }
+  }, [isClosed]);
+
+  const handleClose = () => {;
+    setIsClosed(true);
+
+
+  };
+
+  const handleClose = () => {
+    setIsClosed(true),
+    setIsVisible(false)
+  },
+
+  if (!isVisible) return null,
+
+  }, [isClosed]),
+
+  const handleClose = () => {
+    setIsClosed(true),
+    setIsVisible(false)
+  },
+
+  if (!isVisible) return null,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  return (
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
+        <div className="mr-4">
+          <p className="text-white font-medium">Ready to explore Zion?</p>
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button 
+            variant="default" 
+            size="sm" 
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
+            asChild
+          >
+            <Link href="/signup">Register Now</Link>
+          </Button>
+          <button
+            onClick={handleClose}
+            className='text-zion-slate hover:text-white p-1'
+            aria-label='Close'          >
+            <X className='w-5 h-5' />          </button>
+            <X className="w-5 h-5" />
+          <button 
+            onClick={handleClose}
+            className="text-zion-slate hover: text-white p-1"
+            aria-label="Close"
+          >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",;
+import Link from "next/link",;
+import { useState, useEffect } from "react",;
+import { X } from 'lucide-react';
+;
+export function FloatingCTA() {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isClosed, setIsClosed] = useState(false),;
+;
+  useEffect(() => {;
+    const handleScroll = () => {;
+      const scrollPosition = window.scrollY,;
+      const threshold = 600, // Show CTA after scrolling 600px;
+;
+      if (scrollPosition > threshold && !isClosed) {;
+        setIsVisible(true),;
+      } else {;
+        setIsVisible(false),;
+      }
+    },;
+;
+    window.addEventListener("scroll", handleScroll),;
+    return () => {;
+      window.removeEventListener("scroll", handleScroll),;
+    },;
+  }, [isClosed]),;
+;
+  const handleClose = () => {;
+    setIsClosed(true),;
+    setIsVisible(false),;
+  },;
+;
+  if (!isVisible) return null,;
+;
+  return (;
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
+        <div className="mr-4">;
+          <p className="text-white font-medium">Ready to explore Zion?</p>;
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>;
+        </div>;
+        <div className="flex items-center gap-2">;
+          <Button ;
+            variant="default" ;
+            size="sm" ;
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap";
+            asChild;
+          >;
+            <Link href="/signup">Register Now</Link>;
+          </Button>;
+          <button ;
+            onClick={handleClose}
+            className="text-zion-slate hover:text-white p-1";
+            aria-label="Close";
+          >;
+            <X className="w-5 h-5" />;
+          </button>;
+        </div>;
+      </div>;
+    </div>;
+  ); import {;
+  {;
+  {;
+  X ;
+}from 'lucide-react' export function FloatingCTA () {;
+  const [isVisible, setIsVisible] = useState (false);
+const [isClosed,  setIsClosed] = useState (false);
+useEffect ( () => {;
+  const handleScroll = () => {;
+  const scrollPosition = window.scrollY;
+const threshold = 600, //Show CTA after scrolling 600px if (scrollPosition > threshold && !isClosed) {;
+  setIsVisible (true) ;
+}else {;
+  setIsVisible (false) ;
+}
+};
+}, [isClosed]);
+return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>) ;
+}'"
+}
+;
+}
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+
+            aria-label='Close'           aria-label="Button">;
+            <X className='w-5 h-5' />          </button>;
+            <X className="w-5 h-5" />;
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

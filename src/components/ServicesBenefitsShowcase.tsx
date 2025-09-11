@@ -2,7 +2,7 @@ import React from 'react';
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { _Button } from './ui/button';
 import { _Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
-import { _CONTACT_INFO } from '@/data/comprehensiveServices';
+import { _CONTACT_INFO } from '../data/comprehensiveServices';
 
 import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';

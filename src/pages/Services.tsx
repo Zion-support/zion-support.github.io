@@ -1,143 +1,83 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
 
 const Services: React.FC = () => {
+  const services = [
+    {
+      title: 'AI Services',
+      description: 'Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision.',
+      icon: '🤖',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'AI Consulting']
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Protect your digital assets with comprehensive security solutions and threat detection systems.',
+      icon: '🔒',
+      features: ['Threat Detection', 'Compliance Management', 'Security Audits', 'Incident Response']
+    },
+    {
+      title: 'Cloud Infrastructure',
+      description: 'Scale your operations with robust, scalable cloud solutions and migration services.',
+      icon: '☁️',
+      features: ['Cloud Migration', 'Infrastructure Optimization', 'Scalable Solutions', 'Cloud Security']
+    },
+    {
+      title: 'DevOps & SRE',
+      description: 'Streamline your development and operations with modern DevOps practices and site reliability engineering.',
+      icon: '⚙️',
+      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting', 'Performance Optimization']
+    },
+    {
+      title: 'Mobile Development',
+      description: 'Create powerful mobile applications for iOS and Android with native and cross-platform solutions.',
+      icon: '📱',
+      features: ['Native Development', 'Cross-Platform Apps', 'UI/UX Design', 'App Store Optimization']
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Unlock insights from your data with advanced analytics, business intelligence, and data visualization.',
+      icon: '📊',
+      features: ['Business Intelligence', 'Data Visualization', 'Predictive Analytics', 'Data Warehousing']
+    }
+  ];
+
   return (
-    <>
-      <SEO 
-        title="Services - Zion Tech Group"
-        description="Explore our comprehensive range of technology services and solutions."
-        keywords="services, technology solutions, AI services, IT services, cloud computing, cybersecurity"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions to drive your business forward
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {/* AI Services */}
-            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold">AI</span>
+    <div className="min-h-screen bg-gray-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We provide comprehensive technology solutions to help your business thrive in the digital age.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="text-center mb-4">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Services</h3>
-              <p className="text-gray-300 mb-4">
-                Advanced artificial intelligence solutions to transform your business operations.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
+              
+              <ul className="space-y-2 mb-6">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
+                    {feature}
+                  </li>
+                ))}
               </ul>
-            </div>
-
-            {/* Cloud Computing */}
-            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
-              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold">☁</span>
+              
+              <div className="text-center">
+                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                  Learn More
+                </button>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Cloud Computing</h3>
-              <p className="text-gray-300 mb-4">
-                Scalable cloud solutions for modern business needs and growth.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Cloud Migration</li>
-                <li>• Multi-Cloud Strategies</li>
-                <li>• Cloud Security</li>
-                <li>• Cost Optimization</li>
-              </ul>
             </div>
-
-            {/* Cybersecurity */}
-            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
-              <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold">🔒</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
-              <p className="text-gray-300 mb-4">
-                Comprehensive security solutions to protect your digital assets.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Security Assessments</li>
-                <li>• Threat Monitoring</li>
-                <li>• Incident Response</li>
-                <li>• Compliance Management</li>
-              </ul>
-            </div>
-
-            {/* Digital Transformation */}
-            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold">DT</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
-              <p className="text-gray-300 mb-4">
-                Complete digital transformation strategies for modern businesses.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Process Automation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Data Strategy Development</li>
-                <li>• Change Management</li>
-              </ul>
-            </div>
-
-            {/* IoT Solutions */}
-            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
-              <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold">IoT</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">IoT Solutions</h3>
-              <p className="text-gray-300 mb-4">
-                Internet of Things solutions for connected devices and smart systems.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• IoT Device Management</li>
-                <li>• Real-time Data Processing</li>
-                <li>• Smart City Solutions</li>
-                <li>• Industrial IoT</li>
-              </ul>
-            </div>
-
-            {/* Blockchain Technology */}
-            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
-              <div className="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold">⛓</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Blockchain Technology</h3>
-              <p className="text-gray-300 mb-4">
-                Secure and transparent blockchain solutions for various industries.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Smart Contract Development</li>
-                <li>• DeFi Solutions</li>
-                <li>• Supply Chain Tracking</li>
-                <li>• Digital Identity Management</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-slate-800 rounded-lg p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">
-              Ready to Get Started?
-            </h2>
-            <p className="text-gray-300 text-center mb-8 max-w-2xl mx-auto">
-              Let us help you leverage the latest technology to drive innovation and growth in your organization.
-            </p>
-            <div className="text-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                Contact Us Today
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { BarChart3, TrendingUp, Database, Brain } from 'lucide-react';
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac
 import SEO from '../../components/SEO';
 
 const DataAnalytics = () => {
@@ -77,10 +73,6 @@ const DataAnalytics = () => {
 };
 
 export default DataAnalytics;
-=======
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target export default function DataAnalyticsServices() {
     const analyticsServices = [
         {
             icon: BarChart3,
@@ -474,4 +466,3 @@ import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target expo
       </section>
     </div>);
 }}}
->>>>>>> origin/clean-error-fixing-automation

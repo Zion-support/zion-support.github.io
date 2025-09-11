@@ -1,51 +1,91 @@
-export type HelpArticle = {;
-  id: string;
-  slug: string;
-  title: string;
-  body: string;
-  category: 'Getting Started' | 'Hiring' | 'Profile Setup' | 'Payments' | 'Disputes';
-  updatedAt: string;
-  keywords?: string[];
+
+
+  logEvent: (event: any) => null,
+  getArticles: () => [],
+  getArticleById: (id: string) => null;
 };
-export type IntentResult = {;
+
+
+
+export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here
+  return null;
+
+
+export interface IntentMatch {
   intentMatched: boolean;
   matchedArticleIds: string[];
-};
-export function matchIntent(query: string, articles: HelpArticle[]): IntentResult {;
-  const q = query.toLowerCase();
-  const matched = new Set<string>();
-  const keywordToArticle = new Map<string string[]>();
-  for (const art of articles) {;
-    for (const kw of art.keywords ?? []) {;
-      const list = keywordToArticle.get(kw) ?? [];
-      list.push(art.id);
-      keywordToArticle.set(kw, list);
-    }
-  }
-;
-  // Simple heuristics;
-  const heuristics: Array<[RegExp, string[]]> = [;
-    [/login|log in|sign in|password|2fa|otp|cannot.*sign/i, []];
-    [/hire|post job|find talent|contract/i, []];
-    [/match|matching|get matched/i, []];
-    [/bill|invoice|payment|refund|charge|card/i, []];
-    [/dispute|issue|complaint|chargeback/i, []];
-    [/profile|setup|verification|kyc|tax/i, []]];
-  let heuristicHit = false;
-  for (const [re] of heuristics) {;
-    if (re.test(q)) {;
-      heuristicHit = true;
-      for (const [kw, ids] of keywordToArticle.entries()) {;
-        if (q.includes(kw)) ids.forEach((id) => matched.add(id));
-      }
-    }
-  }
-;
-  // Keyword fallback;
-  for (const [kw, ids] of keywordToArticle.entries()) {;
-    if (q.includes(kw)) ids.forEach((id) => matched.add(id));
-  }
-;
-  const matchedIds = Array.from(matched);
-  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
+  confidence: number;
 }
+
+export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch {
+  const queryLower = query && query.toLowerCase();
+  const matchedArticles: string[] = [];
+  let confidence = 0;
+
+
+
+    if (titleMatch || contentMatch || tagMatch) {
+      matchedArticles && matchedArticles.push(article && article.id);
+      confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;
+    }
+  }
+
+  return {
+    intentMatched: matchedArticles && matchedArticles.length > 0,
+    matchedArticleIds: matchedArticles,
+    confidence: Math && Math.min(confidence, 1)
+  };
+}
+
+
+}
+<<<<<<< HEAD
+  // Add support functionality here;
+  log_event: (event: any) => null,
+  get_articles: () => [],
+<<<<<<< HEAD
+// Support utilities
+export const support = {
+  // Add support functionality here
+  logEvent: (event: any) => null
+  getArticles: () => []
+  getArticleById: (id: string) => null
+}
+  logEvent: (event: any) => null,
+  getArticles: () => [],
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  // Add support functionality here;
+  log_event: (event: any) => null,
+  get_articles: () => [],
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  getArticleById: (id: string) => null;
+};
+
+export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here;
+  return null;
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+}
+};
+
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

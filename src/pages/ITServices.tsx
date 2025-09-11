@@ -1,52 +1,68 @@
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react'; const ITServices = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> IT Services </h1> <p className="text-xl text-gray-600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Infrastructure Management</h3> <p className="text-gray-600 mb-4">Complete management of your IT infrastructure and systems.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Network Security</h3> <p className="text-gray-600 mb-4">Protect your network with advanced security solutions.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Solutions</h3> <p className="text-gray-600 mb-4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text-sm text-blue-600">Learn More</span> </div> </div> </div> </div> )}; export default ITServices;
+
+<<<<<<< HEAD
+import React from 'react'; const ITServices = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> IT Services </h1> <p className="text - xl text - gray - 600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Infrastructure Management</h3> <p className="text - gray - 600 mb - 4">Complete management of your IT infrastructure and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Network Security</h3> <p className="text - gray - 600 mb - 4">Protect your network with advanced security solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Solutions</h3> <p className="text - gray - 600 mb - 4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default ITServices;
+import React from 'react'; const ITServices = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> IT Services </h1> <p className="text-xl text-gray-600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Infrastructure Management</h3> <p className="text-gray-600 mb-4">Complete management of your IT infrastructure and systems.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Network Security</h3> <p className="text-gray-600 mb-4">Protect your network with advanced security solutions.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Solutions</h3> <p className="text-gray-600 mb-4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text-sm text-blue-600">Learn More</span> </div> </div> </div> </div> )}; export default ITServices;
+import React from 'react'; const ITServices = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> IT Services </h1> <p className="text - xl text - gray - 600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Infrastructure Management</h3> <p className="text - gray - 600 mb - 4">Complete management of your IT infrastructure and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Network Security</h3> <p className="text - gray - 600 mb - 4">Protect your network with advanced security solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Solutions</h3> <p className="text - gray - 600 mb - 4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default ITServices;
+=======
+import React from 'react'; const ITServices = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> IT Services </h1> <p className="text - xl text - gray - 600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Infrastructure Management</h3> <p className="text - gray - 600 mb - 4">Complete management of your IT infrastructure and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Network Security</h3> <p className="text - gray - 600 mb - 4">Protect your network with advanced security solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Solutions</h3> <p className="text - gray - 600 mb - 4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default ITServices;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 import React from 'react';
 import { SEO } from '../components/SEO';
 
-const ITServices: React.FC = () => {
+export default function ITServices() {
   return (
     <>
       <SEO 
-        title="I T Services - Zion Tech Group"
-        description="Professional i t services services and solutions for modern businesses."
-        keywords="i t services, zion tech group, technology services"
+        title="IT Services - Zion Tech Group" 
+        description="Professional IT services and infrastructure solutions" 
+        keywords="IT services, infrastructure, technology solutions"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              I T Services
+      <div className="min-h-screen bg-zion-blue pt-20 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              IT Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional i t services services and solutions for modern businesses.
+            <p className="text-xl text-zion-slate-light mb-8">
+              Professional IT services and infrastructure solutions
             </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-800 rounded-lg p-8 border border-slate-700">
-              <h2 className="text-3xl font-semibold text-white mb-6">Coming Soon</h2>
-              <p className="text-gray-300 mb-6">
-                We're working hard to bring you the best i t services experience. 
-                This page will be available soon with comprehensive information and features.
+            <div className="bg-white rounded-lg p-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold text-zion-slate-dark mb-4">
+                Our IT Services
+              </h2>
+              <p className="text-zion-slate-light">
+                We provide comprehensive IT services to help businesses optimize their technology infrastructure.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href="/contact" 
-                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors"
-                >
-                  Contact Us
-                </a>
-                <a 
-                  href="/services" 
-                  className="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg transition-colors"
-                >
-                  View Services
-                </a>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </>
   );
-};
-
-export default ITServices;
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { SEO } from "../components/SEO";
+import { Card, CardContent } from "../../components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs";
+import { Button } from "../../components/ui/button";
+import { toast } from "../../hooks/use-toast";
+import { supabase } from "../../integrations/supabase/client";
 // Import refactored components
-import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
+import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "../../components/admin/fraud-detection";
 export default function FraudDetection() {
     const [flags, setFlags] = useState([]);
     const [filteredFlags, setFilteredFlags] = useState([]);

@@ -1,36 +1,33 @@
-const { withSentry } = require('./withSentry.cjs');
 const fs = require('fs');
 
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
     res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.status(405).end('Method Not Allowed');
     return;
   }
 
-  const { name, email, phone, details: _details } = req.body || {};
-  if (!name || !email || !phone) {
-    res.statusCode = 400;
-    res.json({ error: 'Missing required fields' });
-    return;
+  try {
+    const { name, email, service, message } = req.body;
+
+    if (!name || !email || !service) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
+    }
+
+    const entry = {
+      timestamp: new Date().toISOString(),
+      name,
+      email,
+      service,
+      message,
+    };
+
+    fs.appendFileSync('service_requests.log', JSON.stringify(entry) + '\n');
+
+    res.status(200).json({ success: true, message: 'Service request submitted successfully' });
+  } catch (error) {
+    console.error('Service request API error:', error);
+    res.status(500).json({ error: 'Failed to submit service request' });
   }
-
-
-  // Store service request locally for review
-  const entry = {
-    timestamp: new Date().toISOString(),
-    name,
-    email,
-    phone,
-    details: _details,
-  };
-  fs.appendFileSync('service_requests.log', JSON.stringify(entry) + '\n');
-
-  // Placeholder for future request processing logic
-
-  res.statusCode = 200;
-  res.json({ success: true });
 }
-
-module.exports = withSentry(handler);

@@ -1,86 +1,101 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and merge feature branches
+# Script to resolve merge conflicts and merge all feature branches
 set -e
 
 echo "Starting merge conflict resolution process..."
 
-# Function to resolve conflicts in a file
-resolve_conflict() {
-    local file="$1"
-    echo "Resolving conflicts in: $file"
+# Function to resolve conflicts automatically
+resolve_conflicts() {
+    local branch=$1
+    echo "Attempting to merge branch: $branch"
     
-    if [[ -f "$file" ]]; then
-        # For content conflicts, we'll accept the incoming version (feature branch)
-        if grep -q "<<<<<<< HEAD" "$file"; then
-            echo "  - Content conflict detected, accepting incoming changes"
-            # Use git checkout to accept the incoming version
-            git checkout --theirs "$file"
+    # Try to merge the branch
+    if git merge "origin/$branch" --no-commit; then
+        echo "Successfully merged $branch without conflicts"
+        git commit -m "Merge $branch into main - resolved conflicts automatically"
+        return 0
+    else
+        echo "Conflicts found in $branch, attempting to resolve..."
+        
+        # Check if we're in a merge state
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD\|^AU\|^UA\|^DU\|^UD"; then
+            echo "Resolving conflicts for $branch..."
+            
+            # Strategy: prefer main branch (ours) for most conflicts
+            # But keep new files from feature branch
+            git status --porcelain | while read status file; do
+                case $status in
+                    "UU"|"AA"|"AU"|"UA")
+                        echo "Resolving conflict in $file"
+                        # For add/add conflicts, prefer the feature branch version
+                        if [[ $file == *.tsx || $file == *.ts || $file == *.js || $file == *.jsx ]]; then
+                            git checkout --theirs "$file" 2>/dev/null || true
+                        else
+                            git checkout --ours "$file" 2>/dev/null || true
+                        fi
+                        git add "$file" 2>/dev/null || true
+                        ;;
+                    "DD")
+                        echo "File $file was deleted in both branches, keeping deleted"
+                        git rm "$file" 2>/dev/null || true
+                        ;;
+                    "DU")
+                        echo "File $file was deleted in main, keeping from feature branch"
+                        git add "$file" 2>/dev/null || true
+                        ;;
+                    "UD")
+                        echo "File $file was deleted in feature branch, keeping deleted"
+                        git rm "$file" 2>/dev/null || true
+                        ;;
+                esac
+            done
+            
+            # Add all resolved files
+            git add . 2>/dev/null || true
+            
+            # Commit the merge
+            if git commit -m "Merge $branch into main - resolved conflicts automatically"; then
+                echo "Successfully resolved conflicts and merged $branch"
+                return 0
+            else
+                echo "Failed to commit merge for $branch"
+                git merge --abort
+                return 1
+            fi
+        else
+            echo "No conflicts detected, but merge failed for $branch"
+            git merge --abort
+            return 1
         fi
-    fi
-}
-
-# Function to handle modify/delete conflicts
-handle_modify_delete() {
-    local file="$1"
-    echo "Handling modify/delete conflict for: $file"
-    
-    # For modify/delete conflicts, we'll keep the file (accept the modification)
-    if [[ -f "$file" ]]; then
-        echo "  - Keeping modified file: $file"
-        git add "$file"
     fi
 }
 
 # List of feature branches to merge
 FEATURE_BRANCHES=(
-    "origin/feature/2025-services-expansion-v2"
-    "origin/feature/add-2028-innovative-services"
-    "origin/feature/advanced-internal-linking"
-    "origin/feature/agents-factory"
-    "origin/feature/apply-improvements"
+    "feature/comprehensive-ui-components"
+    "feature/enhanced-routing-and-ai-services"
+    "feature/enhanced-services-and-design"
+    "feature/expand-zion-services-2025"
+    "feature/expanded-services"
+    "feature/expanded-services-2026"
+    "feature/fix-build-and-improve-navigation"
+    "feature/futuristic-ui-services"
+    "feature/homepage-ai-search"
+    "feature/merge-conflicts-and-improvements"
 )
 
 # Merge each feature branch
 for branch in "${FEATURE_BRANCHES[@]}"; do
     echo "Processing branch: $branch"
-    
-    # Check if branch exists
-    if git show-ref --verify --quiet "refs/remotes/$branch"; then
-        echo "Merging $branch..."
-        
-        # Attempt merge
-        if git merge "$branch" --no-commit --no-ff; then
-            echo "  - Merge successful, committing..."
-            git commit -m "Merge $branch into main"
-        else
-            echo "  - Merge conflicts detected, resolving..."
-            
-            # Get list of conflicted files
-            CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-            MODIFY_DELETE_FILES=$(git status --porcelain | grep "^DU\|^UD" | cut -c4-)
-            
-            # Resolve content conflicts
-            for file in $CONFLICTED_FILES; do
-                resolve_conflict "$file"
-            done
-            
-            # Handle modify/delete conflicts
-            for file in $MODIFY_DELETE_FILES; do
-                handle_modify_delete "$file"
-            done
-            
-            # Add all resolved files
-            git add .
-            
-            # Commit the merge
-            git commit -m "Merge $branch into main - resolved conflicts"
-            
-            echo "  - Conflicts resolved and committed"
-        fi
+    if resolve_conflicts "$branch"; then
+        echo "✅ Successfully merged $branch"
     else
-        echo "  - Branch $branch does not exist, skipping..."
+        echo "❌ Failed to merge $branch, skipping..."
     fi
+    echo "---"
 done
 
-echo "Merge conflict resolution completed!"
+echo "Merge conflict resolution process completed!"
+echo "Current status:"
+git status

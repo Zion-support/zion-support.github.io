@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { Cloud } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Code } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Icon } from 'lucide-react';
 const features = [];
 const industries = [];

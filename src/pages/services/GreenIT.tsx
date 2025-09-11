@@ -1,26 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { CogIcon } from '@heroicons/react/24/outline';
-const $service = () => {
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400"/>
+import { SEO } from '../../components/SEO';
+
+export default function GreenIT() {
+  return (
+    <>
+      <SEO 
+        title="GreenIT - Zion Tech Group" 
+        description="GreenIT service from Zion Tech Group" 
+        keywords="GreenIT, zion tech group, services"
+      />
+      <div className="min-h-screen bg-zion-blue pt-20 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              GreenIT
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Professional GreenIT services
+            </p>
+            <div className="bg-white rounded-lg p-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold text-zion-slate-dark mb-4">
+                GreenIT Service
+              </h2>
+              <p className="text-zion-slate-light">
+                We provide comprehensive GreenIT solutions to help businesses achieve their goals.
+              </p>
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $service
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This service page is under development. Contact us for more information.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
-            Contact Us for More Information
-          </Link>
         </div>
-      </section>
-    </div>);
-};
-export default $service;
+      </div>
+    </>
+  );
+}

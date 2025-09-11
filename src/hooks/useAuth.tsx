@@ -1,7 +1,7 @@
 import { _useState, useEffect } from 'react';
 
 import { Check } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../hooks/useAuth';
 interface User {;
   "id": "string;
   "email": string;
