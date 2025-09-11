@@ -1,21 +1,9 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Zap, 
-  TrendingUp, 
-  Clock, 
-  Database, 
-  Network, 
-  Cpu, 
-  Memory,
-  HardDrive,
-  Activity,
-  Gauge,
-  Target,
-  CheckCircle,
-  AlertCircle,
-  Info
-} from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
+
+interface PerformanceLayoutShift {
+  value: number;
+}
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -23,14 +11,10 @@ interface PerformanceMetrics {
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  timeToInteractive: number;
-  memoryUsage?: number;
-  networkRequests: number;
-  cacheHitRate: number;
 }
 
 interface PerformanceOptimizerProps {
+  children: React.ReactNode;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   showMetrics?: boolean;
 }
@@ -87,12 +71,112 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     onMetricsUpdate?.(newMetrics);
   }, [onMetricsUpdate]);
 
-  const getPerformanceGrade = (score: number): string => {
-    if (score >= 90) return 'A';
-    if (score >= 80) return 'B';
-    if (score >= 70) return 'C';
-    if (score >= 60) return 'D';
-    return 'F';
+  // Optimize images and resources
+  const optimizeResources = useCallback(() => {
+    // Preload critical resources
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/css/critical.css'
+    ];
+    
+    criticalResources.forEach(resource => {
+      if (!document.querySelector(`link[href="${resource}"]`)) {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+        document.head.appendChild(link);
+      }
+    });
+  }, []);
+
+  // Manual optimization trigger
+  const triggerOptimization = useCallback(() => {
+    if (metrics) {
+      analyzeAndOptimize(metrics);
+    }
+  }, [metrics, analyzeAndOptimize]);
+
+  useEffect(() => {
+    if (showMetrics) {
+      setIsVisible(true);
+      measurePerformance();
+      
+      // Set up continuous monitoring
+      const interval = setInterval(measurePerformance, 30000); // Every 30 seconds
+      
+      return () => clearInterval(interval);
+    }
+  }, [showMetrics, measurePerformance]);
+
+  // Enhanced CLS monitoring
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    let clsValue = 0;
+    let clsEntries: PerformanceEntry[] = [];
+    
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const layoutShiftEntry = entry as any;
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value || 0;
+          clsEntries.push(entry);
+        }
+      }
+      
+      if (metrics) {
+        setMetrics(prev => prev ? { ...prev, cls: Math.round(clsValue * 1000) / 1000 } : null);
+      }
+    });
+
+    observer.observe({ entryTypes: ['layout-shift'] });
+
+    return () => observer.disconnect();
+  }, [metrics]);
+
+  // Enhanced FID monitoring
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    let fidValue = 0;
+    
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        fidValue = Math.max(fidValue, (entry as any).processingStart - (entry as any).startTime);
+      }
+      
+      if (metrics) {
+        setMetrics(prev => prev ? { ...prev, fid: Math.round(fidValue) } : null);
+      }
+    });
+
+    observer.observe({ entryTypes: ['first-input'] });
+
+    return () => observer.disconnect();
+  }, [metrics]);
+
+  if (!showMetrics || !isVisible) return null;
+
+  const getPerformanceScore = (metric: keyof PerformanceMetrics) => {
+    if (!metrics) return 0;
+    
+    const thresholds: Record<keyof PerformanceMetrics, { good: number; needsImprovement: number }> = {
+      fcp: { good: 1800, needsImprovement: 3000 },
+      lcp: { good: 2500, needsImprovement: 4000 },
+      fid: { good: 100, needsImprovement: 300 },
+      cls: { good: 0.1, needsImprovement: 0.25 },
+      ttfb: { good: 600, needsImprovement: 1800 },
+      domLoad: { good: 100, needsImprovement: 300 },
+      windowLoad: { good: 200, needsImprovement: 600 }
+    };
+    
+    const value = metrics[metric];
+    const threshold = thresholds[metric];
+    
+    if (value <= threshold.good) return 100;
+    if (value <= threshold.needsImprovement) return 50;
+    return 25;
   };
 
   const performanceScore = getPerformanceScore();

@@ -3,26 +3,6 @@
 []
 =======
 [
-  "ai-autonomous-marketing-platform",
-  "automated-financial-analytics-platform",
-  "entertainment-media-solutions",
-  "industry-solutions",
-  "intelligent-project-management-suite",
-  "marketing-ai-platform",
-  "metaverse-development-studio-pro",
-  "metaverse-digital-reality-platform",
-  "quantum-compliance-automation",
-  "quantum-creativity-studio",
-  "quantum-data-center",
-  "quantum-encryption-gateway",
-  "quantum-identity-verification",
-  "quantum-internet-security",
-  "quantum-internet-security-gateway",
-  "quantum-learning-accelerator",
-  "quantum-materials-discovery",
-  "quantum-network-security",
-  "quantum-networking",
-  "quantum-threat-detection",
-  "real-estate-technology-solutions",
-  "transportation-logistics-solutions"
+  "services/data-contracts-hub",
+  "services/serverless-lakehouse-starter"
 ]

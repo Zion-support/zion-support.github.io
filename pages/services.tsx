@@ -131,154 +131,10 @@ import {
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-  Building, Cpu, Database, Cloud, Lock, ShoppingCart, Lightbulb
+  Building
 } from 'lucide-react';
 import Link from 'next/link';
 
-const Services: React.FC = () => {
-// Import our new innovative 2025 services
-import { realInnovativeMicroSaasServices2025 } from '../data/2025-real-innovative-micro-saas-expansion';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services-expansion';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services-expansion';
-
-// Import our new 2025 advanced services
-import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
-
-// Import our new real services
-import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansion';
-import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
-import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
-
-// Import our new service data
-import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
-import { innovativeMicroSaasSolutions as innovativeMicroSaasSolutions2034 } from '../data/2034-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
-import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
-import { real2029Q3Additions } from '../data/real-2029-q3-additions';
-import { validatedServices2025Q4 } from '../data/real-validated-2025-q4-additions';
-import { real2035Q2Additions } from '../data/real-2035-q2-additions';
-import { real2036ServiceExpansions } from '../data/real-2036-service-expansions';
-import { innovative2036MicroSaasServices } from '../data/innovative-2036-micro-saas-services';
-import { innovative2036ITServices } from '../data/innovative-2036-it-services';
-import { innovative2026MicroSaasExpansions } from '../data/innovative-2026-micro-saas-expansions';
-import { innovative2026ITServicesExpansions } from '../data/innovative-2026-it-services-expansions';
-import { innovative2026AIServicesExpansions } from '../data/innovative-2026-ai-services-expansions';
-
-// Import our new innovative 2038 services
-import { innovative2038MicroSaasExpansions } from '../data/innovative-2038-micro-saas-expansions';
-import { innovative2038ITServicesExpansions } from '../data/innovative-2038-it-services-expansions';
-import { innovative2038AIServicesExpansions } from '../data/innovative-2038-ai-services-expansions';
-
-// Import our new comprehensive services
-import { innovative2038AdvancedServices } from '../data/innovative-2038-advanced-services';
-import { comprehensiveAdvertisingMarketingServices } from '../data/comprehensive-advertising-marketing-services';
-
-// Import our revolutionary 2040-2041 services
-import { revolutionary2041AdvancedServices } from '../data/revolutionary-2041-advanced-services';
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-import { advanced2041EnterpriseServices } from '../data/advanced-2041-enterprise-services';
-import { revolutionary2042MicroSaasServices } from '../data/revolutionary-2042-micro-saas-services';
-
-// Import our new 2025 advanced services
-import { advanced2025MicroSaasExpansion } from '../data/2025-advanced-micro-saas-expansion';
-import { advanced2025ITSolutionsExpansion } from '../data/2025-advanced-it-solutions-expansion';
-import { advanced2025AIServicesExpansion } from '../data/2025-advanced-ai-services-expansion';
-
-// Import our new 2025 advanced services V2
-import { advanced2025MicroSaasExpansionV2 } from '../data/2025-advanced-micro-saas-expansion-v2';
-import { advanced2025ITSolutionsExpansionV2 } from '../data/2025-advanced-it-solutions-expansion-v2';
-import { advanced2025AIServicesExpansionV2 } from '../data/2025-advanced-ai-services-expansion-v2';
-// Import our new 2025 innovative services expansion
-import { innovative2025MicroSaasExpansion } from '../data/innovative-2025-micro-saas-expansion';
-import { innovative2025ITServicesExpansion } from '../data/innovative-2025-it-services-expansion';
-import { innovative2025AIServicesExpansion } from '../data/innovative-2025-ai-services-expansion';
-
-// Import our new innovative 2040 services
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
-// Import our new 2025 advanced enterprise services
-import { advancedEnterpriseServices } from '../data/2025-advanced-enterprise-services-expansion';
-import { innovativeMicroSaasServices } from '../data/innovative-2025-micro-saas-expansions';
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
-
-// Import existing service data
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-import { newRealServices2026 } from '../data/2025-2026-new-real-services';
-import { additionalRealMicroSaas2026 } from '../data/2026-additional-real-micro-saas';
-
-// Helper function to get service category
-const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  if (service.type) return service.type;
-  return 'Other';
-};
-
-// Helper function to get service pricing
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (service.price) return service.price;
-  return 'Contact for pricing';
-};
-
-// Helper function to get service features
-const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};
-
-// Helper function to get service description
-const getServiceDescription = (service: any) => {
-  if (service.description) return service.description;
-  if (service.tagline) return service.tagline;
-  return 'No description available';
-};
-
-// Helper function to get service launch date
-const getServiceLaunchDate = (service: any) => {
-  return service.launchDate || service.releasedAt || service.updatedAt || '2020-01-01';
-};
-
-// Helper function to get service rating
-const getServiceRating = (service: any) => {
-  return service.rating || 0;
-};
-
-// Create unified services array
-const allServices = [
-  ...enterpriseITSolutions,
-  ...innovativeMicroSaasSolutions,
-  ...cuttingEdgeAIServices,
-  ...realMicroSaasServices,
-  ...innovativeAIServices,
-  ...enterpriseITServices,
-  ...emergingTechServices,
-  ...advancedEnterpriseSolutions2025,
-  ...innovativeAIAutomationServices2025,
-  ...innovativeITInfrastructureServices2025,
-  ...innovativeMicroSaasSolutions2025,
-  ...newRealServices,
-  ...realOperationalServices,
-  ...marketReadyServices,
-  ...marketValidatedServices,
-  ...industryRealServices,
-  ...real2025Q4AugmentedBatch,
-  ...real2029Q3Additions,
-  ...validatedServices2025Q4,
-  ...real2035Q2Additions,
-  ...real2036ServiceExpansions,
-  ...innovative2036MicroSaasServices,
-  ...innovative2036ITServices,
-  // New expanded services
-  ...innovative2025MicroSaasExpanded,
-  ...innovative2025ITSolutionsExpanded,
-  ...innovative2025AISolutionsExpanded
-=======
   // New innovative 2037 services
   ...innovative2037MicroSaasServices,
   ...innovative2037ITServices,
@@ -491,6 +347,143 @@ export default function Services() {
       </Head>
 
       <UltraFuturisticNavigation2046 />
+=======
+const ServicesPage: React.FC = () => {
+  const mainServices = [
+    {
+      title: "AI Consciousness Evolution",
+      description: "Revolutionary AI systems that develop self-awareness, emotional intelligence, and autonomous learning capabilities.",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-600",
+      features: [
+        "Emotional intelligence development",
+        "Self-aware learning systems",
+        "Consciousness evolution algorithms",
+        "Human-AI collaboration frameworks"
+      ],
+      benefits: [
+        "Enhanced decision-making capabilities",
+        "Improved human-AI interaction",
+        "Autonomous problem-solving",
+        "Continuous self-improvement"
+      ]
+    },
+    {
+      title: "Quantum Computing Solutions",
+      description: "Next-generation quantum computing platforms that solve previously impossible computational problems.",
+      icon: <Atom className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-600",
+      features: [
+        "Quantum algorithm optimization",
+        "Hybrid quantum-classical systems",
+        "Cryptography and security",
+        "Complex problem solving"
+      ],
+      benefits: [
+        "1000x faster computation",
+        "Breakthrough research capabilities",
+        "Unbreakable encryption",
+        "Optimization solutions"
+      ]
+    },
+    {
+      title: "Advanced Cybersecurity",
+      description: "AI-powered security systems that provide real-time threat detection and autonomous response capabilities.",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-600",
+      features: [
+        "AI threat intelligence",
+        "Zero-trust architecture",
+        "Automated incident response",
+        "Behavioral analysis"
+      ],
+      benefits: [
+        "99.9% threat detection rate",
+        "Real-time protection",
+        "Reduced false positives",
+        "Compliance assurance"
+      ]
+    },
+    {
+      title: "Space Technology",
+      description: "Autonomous space exploration systems and resource intelligence platforms for the final frontier.",
+      icon: <Rocket className="w-8 h-8" />,
+      color: "from-orange-500 to-red-600",
+      features: [
+        "Autonomous exploration systems",
+        "Space resource intelligence",
+        "Satellite network management",
+        "Mission planning and execution"
+      ],
+      benefits: [
+        "Reduced mission costs",
+        "Enhanced safety protocols",
+        "Real-time decision making",
+        "Resource optimization"
+      ]
+    }
+    return sortOrder === 'asc' ? comparison : -comparison;
+  });
+
+  const getCategoryIcon = (serviceName: string) => {
+    if (serviceName.toLowerCase().includes('ai')) return <Users className="w-6 h-6" />;
+    if (serviceName.toLowerCase().includes('quantum')) return <Filter className="w-6 h-6" />;
+    if (serviceName.toLowerCase().includes('infrastructure') || serviceName.toLowerCase().includes('devops') || serviceName.toLowerCase().includes('security')) return <ArrowRight className="w-6 h-6" />;
+    return <Award className="w-6 h-6" />;
+  };
+
+  // Reset to first page when filters/sort change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedCategory, sortBy]);
+
+  const getCategoryIcon = (category: string) => {
+    switch (category.toLowerCase()) {
+      case 'enterprise it':
+      case 'enterprise security':
+      case 'devops & automation':
+      case 'data & analytics':
+      case 'cloud services':
+      case 'cybersecurity':
+        return <Building className="w-6 h-6 text-blue-400" />;
+      case 'ai & consciousness':
+      case 'ai services':
+      case 'artificial intelligence':
+        return <Brain className="w-6 h-6 text-cyan-400" />;
+      case 'quantum':
+      case 'quantum & emerging tech':
+        return <Atom className="w-6 h-6 text-purple-400" />;
+      case 'space':
+      case 'space & metaverse':
+        return <Rocket className="w-6 h-6 text-pink-400" />;
+      case 'micro saas':
+      case 'micro saas solutions':
+        return <Target className="w-6 h-6 text-orange-400" />;
+      case 'creative':
+      case 'creative & media':
+        return <Palette className="w-6 h-6 text-indigo-400" />;
+      case 'healthcare':
+      case 'healthcare & biotech':
+        return <Heart className="w-6 h-6 text-red-400" />;
+      case 'transportation':
+      case 'transportation & logistics':
+        return <Truck className="w-6 h-6 text-blue-400" />;
+      case 'education':
+      case 'education & research':
+        return <GraduationCap className="w-6 h-6 text-yellow-400" />;
+      default:
+        return <Shield className="w-6 h-6 text-gray-400" />;
+    }
+  };
+
+  const toggleSortOrder = () => {
+    setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+  };
+};
+
+const ServicesPage: React.FC = () => {
+  return (
+
       <div className="min-h-screen bg-black text-white pt-24">
         {/* Loading State */}
         <AnimatePresence>
@@ -748,9 +741,54 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-4xl mx-auto text-center">
+        {/* CTA Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-cyan-500/30 rounded-3xl p-12 text-center"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Business</span>?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Join leading businesses that trust Zion Tech Group for their digital transformation. 
+                Our expert team is ready to guide you through your technology journey.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <motion.a
+                  href="/contact"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl shadow-cyan-500/25"
+                >
+                  <span>Get Started Today</span>
+                  <ArrowRight className="w-6 h-6" />
+                </motion.a>
+                
+                <motion.a
+                  href="/enterprise-solutions-showcase"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-500/50 text-cyan-300 font-bold text-lg rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200"
+                >
+                  <Building className="w-6 h-6" />
+                  <span>Enterprise Solutions</span>
+                </motion.a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </div>
+=======
+    <Layout>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
 =======

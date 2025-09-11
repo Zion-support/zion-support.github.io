@@ -1,4 +1,13 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+
+// Extend Window interface for Google Analytics
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
 
 interface AnalyticsTrackerProps {
   pageTitle?: string;

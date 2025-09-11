@@ -1,5 +1,10 @@
-// CRITICAL: Import immediate process polyfill FIRST to prevent process.env errors
-import '../src/utils/immediate-process-polyfill';
+// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
+if (process.env.NODE_ENV === 'development') {
+  console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
+  console.log('- globalThis.__extends:', !!(globalThis as any).__extends);
+  console.log('- globalThis.__assign:', !!(globalThis as any).__assign);
+  console.log('- globalThis.process:', !!(globalThis as any).process);
+}
 
 // CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
 if (typeof process !== 'undefined' && process.env?.NODE_ENV === 'development') {
@@ -103,20 +108,132 @@ if (typeof window !== 'undefined') {
 import React, { useState, useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
-import '../styles/enhanced-design-system.css';
-import '../styles/modern-design-system.css';
+import { useRouter } from 'next/router';
+import { Provider as ReduxProvider } from 'react-redux';
+import { store } from '@/store';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '@/i18n';
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { WhitelabelProvider } from '@/context/WhitelabelContext';
+import { CartProvider } from '@/context/CartContext';
+import { FeedbackProvider } from '@/context/FeedbackContext';
+import { ThemeProvider } from '@/context/ThemeContext';
+import { WalletProvider } from '@/context/WalletContext';
+import { AnalyticsProvider } from '@/context/AnalyticsContext';
+import { ErrorProvider } from '@/context/ErrorContext';
+import { LanguageProvider } from '@/context/LanguageContext';
+import { ChakraProvider } from '@chakra-ui/react';
+import '../src/index.css';
+
+// Simple loading component
+const SimpleLoading = () => (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    fontFamily: 'sans-serif',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    color: 'white'
+  }}>
+    <div style={{ textAlign: 'center' }}>
+      <h1>Zion Tech Marketplace</h1>
+      <p>Loading...</p>
+    </div>
+  </div>
+);
+
+// Simple error boundary
+const SimpleErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <div>
+      {children}
+    </div>
+  );
+};
+
+// Provider wrapper with error handling
+const ProviderWrapper: React.FC<{ children: React.ReactNode; queryClient: QueryClient }> = ({ children, queryClient }) => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ErrorProvider>
+        <ReduxProvider store={store}>
+          <I18nextProvider i18n={i18n}>
+            <LanguageProvider>
+              <AuthProvider>
+                <WhitelabelProvider>
+                  <WalletProvider>
+                    <AnalyticsProvider>
+                      <CartProvider>
+                        <FeedbackProvider>
+                          <ThemeProvider>
+                            <ChakraProvider>
+                              {children}
+                            </ChakraProvider>
+                          </ThemeProvider>
+                        </FeedbackProvider>
+                      </CartProvider>
+                    </AnalyticsProvider>
+                  </WalletProvider>
+                </WhitelabelProvider>
+              </AuthProvider>
+            </LanguageProvider>
+          </I18nextProvider>
+        </ReduxProvider>
+      </ErrorProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default function App({ Component, pageProps }: AppProps) {
-	const renderedRef = useRef(false);
-	return (
-		<SEOContext.Provider value={{ renderedRef }}>
-			<Analytics />
-			<div className={inter.className}>
-				<Layout>
-					<Component {...pageProps} />
-					<DefaultSEO />
-				</Layout>
-			</div>
-		</SEOContext.Provider>
-	);
+  const [queryClient] = useState(() => new QueryClient());
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Show loading immediately
+  useEffect(() => {
+    // Set a timeout to hide loading after 2 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Handle router events for page transitions
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      // Could add route change loading if needed
+    };
+
+    const handleRouteChangeComplete = () => {
+      // Route change completed
+    };
+
+    const handleRouteChangeError = () => {
+      console.error('Route change error');
+    };
+
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    router.events.on('routeChangeError', handleRouteChangeError);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
+      router.events.off('routeChangeError', handleRouteChangeError);
+    };
+  }, [router]);
+
+  // Show loading screen
+  if (isLoading) {
+    return <SimpleLoading />;
+  }
+
+  // Main app render with all providers
+  return (
+    <ProviderWrapper queryClient={queryClient}>
+      <Component {...pageProps} />
+    </ProviderWrapper>
+  );
 }

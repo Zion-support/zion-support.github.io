@@ -33,7 +33,8 @@ interface AccessibilitySettings {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   onSettingsChange
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     fontSize: 'medium',
@@ -46,11 +47,131 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     letterSpacing: 0
   });
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [announcement, setAnnouncement] = useState('');
-  const focusableElements = useRef<HTMLElement[]>([]);
-  const currentFocusIndex = useRef(0);
+  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
+  const [focusHistory, setFocusHistory] = useState<HTMLElement[]>([]);
 
+  // Initialize accessibility features
+  const initializeFeatures = useCallback(() => {
+    const features: AccessibilityFeature[] = [
+      {
+        id: 'high-contrast',
+        name: 'High Contrast',
+        description: 'Increase color contrast for better visibility',
+        enabled: false,
+        category: 'visual',
+        wcagLevel: 'AA'
+      },
+      {
+        id: 'font-size',
+        name: 'Font Size Control',
+        description: 'Adjustable font sizes for better readability',
+        enabled: true,
+        category: 'visual',
+        wcagLevel: 'AA'
+      },
+      {
+        id: 'reduced-motion',
+        name: 'Reduced Motion',
+        description: 'Reduce animations for users with vestibular disorders',
+        enabled: false,
+        category: 'cognitive',
+        wcagLevel: 'A'
+      },
+      {
+        id: 'focus-indicator',
+        name: 'Focus Indicators',
+        description: 'Clear focus indicators for keyboard navigation',
+        enabled: true,
+        category: 'motor',
+        wcagLevel: 'A'
+      },
+      {
+        id: 'skip-links',
+        name: 'Skip Links',
+        description: 'Skip to main content for keyboard users',
+        enabled: true,
+        category: 'motor',
+        wcagLevel: 'A'
+      },
+      {
+        id: 'screen-reader',
+        name: 'Screen Reader Support',
+        description: 'Enhanced ARIA labels and semantic markup',
+        enabled: true,
+        category: 'auditory',
+        wcagLevel: 'AA'
+      },
+      {
+        id: 'keyboard-navigation',
+        name: 'Keyboard Navigation',
+        description: 'Full keyboard accessibility',
+        enabled: true,
+        category: 'motor',
+        wcagLevel: 'A'
+      },
+      {
+        id: 'color-blindness',
+        name: 'Color Blindness Support',
+        description: 'Color-independent information design',
+        enabled: false,
+        category: 'visual',
+        wcagLevel: 'AA'
+      }
+    ];
+    
+    // High contrast
+    if (settings.highContrast) {
+      root.style.setProperty('--bg-primary', '#000000');
+      root.style.setProperty('--bg-secondary', '#1a1a1a');
+      root.style.setProperty('--text-primary', '#ffffff');
+      root.style.setProperty('--text-secondary', '#e5e5e5');
+      root.style.setProperty('--accent-color', '#ffff00');
+      root.style.setProperty('--border-color', '#ffff00');
+    } else {
+      root.style.removeProperty('--bg-primary');
+      root.style.removeProperty('--bg-secondary');
+      root.style.removeProperty('--text-primary');
+      root.style.removeProperty('--text-secondary');
+      root.style.removeProperty('--accent-color');
+      root.style.removeProperty('--border-color');
+    }
+
+    // Large text
+    if (settings.largeText) {
+      root.style.fontSize = '18px';
+      root.style.setProperty('--text-scale', '1.2');
+    } else {
+      root.style.fontSize = '16px';
+      root.style.setProperty('--text-scale', '1');
+    }
+
+    // Reduced motion
+    if (settings.reducedMotion) {
+      root.style.setProperty('--reduced-motion', 'reduce');
+    } else {
+      root.style.removeProperty('--reduced-motion');
+    }
+
+    // Focus indicator
+    if (settings.focusIndicator) {
+      root.style.setProperty('--focus-outline', '3px solid #0066cc');
+    } else {
+      root.style.setProperty('--focus-outline', 'none');
+    }
+
+    // Color scheme
+    if (settings.colorScheme === 'light') {
+      root.classList.remove('dark');
+      root.classList.add('light');
+    } else if (settings.colorScheme === 'dark') {
+      root.classList.remove('light');
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('light', 'dark');
+    }
+  }, [settings]);
+
+  // Track focus changes
   useEffect(() => {
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
@@ -87,7 +208,47 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const target = e.target as HTMLElement;
       if (target) {
         setCurrentFocus(target);
-        announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
+        setFocusHistory(prev => [target, ...prev.slice(0, 9)]);
+        
+        // Add focus indicator
+        if (settings.focusIndicator) {
+          target.style.outline = '3px solid #0066cc';
+          target.style.outlineOffset = '2px';
+        }
+      }
+
+      // Toggle high contrast
+      if (e.key === 'c' && e.ctrlKey && e.altKey) {
+        e.preventDefault();
+        setContrastMode(prev => !prev);
+        announceChange(contrastMode ? 'High contrast disabled' : 'High contrast enabled');
+      }
+
+      // Toggle reduced motion
+      if (e.key === 'm' && e.ctrlKey && e.altKey) {
+        e.preventDefault();
+        setReducedMotion(prev => !prev);
+        announceChange(reducedMotion ? 'Motion restored' : 'Motion reduced');
+      }
+
+      // Font size controls
+      if (e.key === '=' && e.ctrlKey) {
+        e.preventDefault();
+        setFontSize(prev => Math.min(prev + 2, 32));
+        announceChange(`Font size increased to ${fontSize + 2}px`);
+      }
+
+      if (e.key === '-' && e.ctrlKey) {
+        e.preventDefault();
+        setFontSize(prev => Math.max(prev - 2, 12));
+        announceChange(`Font size decreased to ${fontSize - 2}px`);
+      }
+
+      // Reset font size
+      if (e.key === '0' && e.ctrlKey) {
+        e.preventDefault();
+        setFontSize(16);
+        announceChange('Font size reset to default');
       }
     };
 

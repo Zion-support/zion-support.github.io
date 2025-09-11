@@ -4,8 +4,9 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
 export default function Custom404() {
-  const navigate = useNavigate();
-  const [query, setQuery] = useState('');
+  const { user } = useAuth();
+  const { t } = useTranslation();
+  const router = useRouter();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();

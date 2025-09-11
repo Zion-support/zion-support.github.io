@@ -79,73 +79,11 @@ const Solutions: NextPage = () => {
     }
   ];
 
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise',
-      description: 'Deep domain knowledge across sectors',
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    {
-      title: 'Custom Development',
-      description: 'Tailored solutions for unique needs',
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      title: 'Integration Services',
-      description: 'Seamless system integration',
-      icon: <Network className="w-6 h-6" />
-    },
-    {
-      title: 'AI & Automation',
-      description: 'Intelligent automation solutions',
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      title: 'Cloud & Security',
-      description: 'Secure cloud infrastructure',
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Data-driven decision making',
-      icon: <BarChart3 className="w-6 h-6" />
-    }
-  ];
-
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation",
-      industry: "Healthcare",
-      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
-      results: [
-        "30% reduction in administrative overhead",
-        "Improved patient satisfaction scores",
-        "Enhanced data security and compliance"
-      ],
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
-    },
-    {
-      title: "E-commerce Platform Modernization",
-      industry: "Retail",
-      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales.",
-      results: [
-        "45% increase in conversion rates",
-        "60% improvement in page load times",
-        "Enhanced mobile user experience"
-      ],
-      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
-    },
-    {
-      title: "Manufacturing IoT Integration",
-      industry: "Manufacturing",
-      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
-      results: [
-        "25% reduction in unplanned downtime",
-        "15% improvement in production efficiency",
-        "Predictive maintenance cost savings"
-      ],
-      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
-    }
+  const stats = [
+    { label: 'Solutions Deployed', value: '500+', icon: <Rocket className="w-6 h-6" /> },
+    { label: 'Client Satisfaction', value: '99.9%', icon: <Star className="w-6 h-6" /> },
+    { label: 'Global Reach', value: '50+ Countries', icon: <Globe className="w-6 h-6" /> },
+    { label: 'Users Experts', value: '100+', icon: <Users className="w-6 h-6" /> }
   ];
 
   return (

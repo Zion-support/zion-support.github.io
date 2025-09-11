@@ -1,10 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Cpu, Zap, Shield, Globe, BarChart3, Rocket, Users, Target, Award } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import { 
+  Brain, Atom, Shield, Cloud, BarChart, Code, Rocket, Zap, Target, Users, 
+  Heart, DollarSign, Cog, FileText, Calendar, Lightbulb, HelpCircle, Monitor,
+  Star, Award, TrendingUp, Globe, Lock, Server, Database, Network, Palette, Building,
+  CheckCircle, ArrowRight, ShoppingBag
+} from 'lucide-react';
 
-export default function AIServices() {
-  const services = [
+const AIServicesPage: React.FC = () => {
+  const aiServices = [
     {
       icon: Brain,
       title: 'AI Content Automation Platform',
@@ -27,11 +31,13 @@ export default function AIServices() {
       href: '/intelligent-supply-chain-optimization'
     },
     {
-      icon: Cpu,
-      title: 'Quantum AI Brain-Computer Interface',
-      description: 'Next-generation brain-computer interface technology',
-      features: ['Neural signal processing', 'Real-time communication', 'Medical applications', 'Research tools'],
-      href: '/quantum-ai-brain-computer-interface'
+      category: 'AI Content & Creativity',
+      services: [
+        { name: 'AI Content Generator', href: '/ai-content-generator', description: 'Automated content creation' },
+        { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine', description: 'Personalized content delivery' },
+        { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'Creative AI assistance' },
+        { name: 'AI Video Editing', href: '/ai-video-editing', description: 'Automated video editing' }
+      ]
     },
     {
       icon: Rocket,
@@ -49,32 +55,55 @@ export default function AIServices() {
     }
   ];
 
-  const stats = [
-    { number: '50+', label: 'AI Services', icon: Brain },
-    { number: '100+', label: 'AI Models', icon: Cpu },
-    { number: '24/7', label: 'AI Operations', icon: Zap },
-    { number: '99.9%', label: 'Uptime', icon: Shield }
+  const industries = [
+    {
+      name: 'Healthcare',
+      description: 'AI-powered diagnostics, treatment planning, and patient care',
+      icon: <Heart className="w-8 h-8" />,
+      color: 'from-red-500 to-pink-600'
+    },
+    {
+      name: 'Finance',
+      description: 'Intelligent trading, risk assessment, and fraud detection',
+      icon: <DollarSign className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      name: 'Manufacturing',
+      description: 'Predictive maintenance, quality control, and process optimization',
+      icon: <Cog className="w-8 h-8" />,
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
+      name: 'Retail',
+      description: 'Customer personalization, inventory management, and demand forecasting',
+      icon: <ShoppingBag className="w-8 h-8" />,
+      color: 'from-purple-500 to-indigo-600'
+    }
   ];
 
   return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+    <Layout 
+      title="AI Services - Zion Tech Group"
+      description="Revolutionary AI services including consciousness evolution, autonomous business intelligence, and next-generation AI solutions"
+      canonicalUrl="https://ziontechgroup.com/ai-services"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-                AI Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Revolutionary AI solutions that transform businesses and accelerate human progress. 
-                From content automation to quantum brain-computer interfaces.
-              </p>
+              <div className="flex items-center justify-center mb-6">
+                <Brain className="w-16 h-16 text-cyan-400 mr-4" />
+                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  AI Services
+                </h1>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -111,8 +140,8 @@ export default function AIServices() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our AI Services
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Industries We Serve
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Cutting-edge AI solutions designed to solve complex business challenges and drive innovation
@@ -185,4 +214,6 @@ export default function AIServices() {
       </div>
     </Layout>
   );
-}
+};
+
+export default AIServicesPage;

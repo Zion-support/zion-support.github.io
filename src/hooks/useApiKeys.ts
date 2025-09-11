@@ -69,7 +69,7 @@ export function useApiKeys() {
 
       const response = await api.get(`${getApiUrl()}/keys`, {
         headers: {
-          'Authorization': `Bearer ${typeof session === 'object' && session !== null && 'access_token' in session ? (session as { access_token: string }).access_token : ''}`,
+          Authorization: `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         }
       });
@@ -108,13 +108,9 @@ export function useApiKeys() {
         return;
       }
 
-      const response = await fetch(`${getApiUrl()}/create`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${typeof session === 'object' && session !== null && 'access_token' in session ? (session as { access_token: string }).access_token : ''}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
+      const response = await api.post(
+        `${getApiUrl()}/create`,
+        {
           name,
           scopes,
           expiresAt: expiresAt ? expiresAt.toISOString() : null
@@ -173,14 +169,16 @@ export function useApiKeys() {
         return;
       }
 
-      const response = await fetch(`${getApiUrl()}/regenerate`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${typeof session === 'object' && session !== null && 'access_token' in session ? (session as { access_token: string }).access_token : ''}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ keyId })
-      });
+      const response = await api.post(
+        `${getApiUrl()}/regenerate`,
+        { keyId },
+        {
+          headers: {
+            Authorization: `Bearer ${session.access_token}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
 
       if (response.status < 200 || response.status >= 300) {
         throw new Error(response.data.error || 'Failed to regenerate API key');
@@ -230,14 +228,16 @@ export function useApiKeys() {
         return;
       }
 
-      const response = await fetch(`${getApiUrl()}/revoke`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${typeof session === 'object' && session !== null && 'access_token' in session ? (session as { access_token: string }).access_token : ''}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ keyId })
-      });
+      const response = await api.post(
+        `${getApiUrl()}/revoke`,
+        { keyId },
+        {
+          headers: {
+            Authorization: `Bearer ${session.access_token}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
 
       if (response.status < 200 || response.status >= 300) {
         throw new Error(response.data.error || 'Failed to revoke API key');
@@ -288,7 +288,7 @@ export function useApiKeys() {
         `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`,
         {
           headers: {
-            'Authorization': `Bearer ${typeof session === 'object' && session !== null && 'access_token' in session ? (session as { access_token: string }).access_token : ''}`,
+            Authorization: `Bearer ${session.access_token}`,
             'Content-Type': 'application/json'
           }
         }
