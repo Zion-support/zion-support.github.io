@@ -1,55 +1,75 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
-    "useDefineForClassFields": true,
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/App.css",
+    "src/pages/Home.tsx",
+    "src/pages/Services.tsx",
+    "src/vite-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/pages/FAQ.tsx",
+    "src/pages/RequestQuote.tsx",
+    "src/pages/ServicesPricingPage.tsx",
+    "src/pages/Sitemap.tsx",
+    "src/components/conflicted/**/*",
+    "src/components/disabled/**/*",
+    "src/components/Advanced*",
+    "src/components/CategoriesSection.tsx",
+    "src/components/FeaturedListingsSection.tsx",
+    "src/components/home/Enhanced*",
+    "src/components/home/FeatureCTAs.tsx",
+    "src/components/home/HomePageSkeleton.tsx",
+    "src/components/ui/data-visualization.tsx",
+    "src/data/enhancedServicesData.ts",
+    "src/data/microSaasServices.ts",
+    "src/hooks/useBlockchainWeb3.ts",
+    "src/pages/HomePage.tsx"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+=======
+    "target": "es5",
     "lib": [
-      "ES2024",
-      "DOM",
-      "DOM.Iterable",
-      "WebWorker",
-      "WebWorker.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
-    "module": "esnext",
+    "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    /* Modern TypeScript Features */
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "useUnknownInCatchVariables": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    /* Performance optimizations */
-    "assumeChangesOnlyAffectDirectDependencies": true,
-    "disableSourceOfProjectReferenceRedirect": true,
-    "disableSizeLimit": true,
-    "generateCpuProfile": "profile.cpuprofile",
-    "listEmittedFiles": false,
-    "listFiles": false,
-    "traceResolution": false,
-    /* Advanced features */
-    "allowArbitraryExtensions": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "preserveConstEnums": true,
-    "verbatimModuleSyntax": true
+    ]
   },
-  "include": ["src", "src/types/offline-shims.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

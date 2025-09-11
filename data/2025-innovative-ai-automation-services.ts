@@ -328,11 +328,11 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     customers: 234,
     rating: 4.8,
     reviews: 167
-=======
     implementationDetails: 'Complete HR management platform with AI capabilities, comprehensive automation, and compliance features. Includes training and customization services.',
     launchDate: '2024-07-15',
     customers: 189,
     rating: 4.7,
     reviews: 95
+=======
   }
 ];

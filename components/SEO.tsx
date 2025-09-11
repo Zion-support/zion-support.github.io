@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
+import React from 'react';
 
 interface SEOProps {
   title?: string;
@@ -260,7 +259,7 @@ const SEO: React.FC<SEOProps> = ({
   }, [fullTitle, fullUrl, type, section]);
 
   return (
-    <Head>
+    <>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -269,30 +268,27 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="robots" content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name="robots" content="nofollow" />}
       
-      // Analyze description
-      const description = newMetaTags.description || '';
-      const descLength = description.length;
-      const descOptimal = descLength >= 120 && descLength <= 160;
-      const descHasKeywords = newKeywords.some(keyword => 
-        description.toLowerCase().includes(keyword)
-      );
+      {/* Robots Meta */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={openGraph?.title || fullTitle} />
-      <meta property="og:description" content={openGraph?.description || fullDescription} />
-      <meta property="og:image" content={openGraph?.image || image} />
-      <meta property="og:url" content={openGraph?.url || fullUrl} />
-      <meta property="og:type" content={openGraph?.type || type} />
-      <meta property="og:site_name" content={openGraph?.siteName || 'Zion Tech Group'} />
-      <meta property="og:locale" content={openGraph?.locale || 'en_US'} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitter?.card || 'summary_large_image'} />
-      <meta name="twitter:site" content={twitter?.site || '@ziontechgroup'} />
-      <meta name="twitter:creator" content={twitter?.creator || '@ziontechgroup'} />
-      <meta name="twitter:title" content={twitter?.title || fullTitle} />
-      <meta name="twitter:description" content={twitter?.description || fullDescription} />
-      <meta name="twitter:image" content={twitter?.image || image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
       
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -315,51 +311,88 @@ const SEO: React.FC<SEOProps> = ({
         </>
       )}
       
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
-      {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//ziontechgroup.com" />
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="theme-color" content="#000000" />
+      <meta name="msapplication-TileColor" content="#000000" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Structured Data */}
-      {allStructuredData.map((data, index) => (
+      {structuredData && (
         <script
-          key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
         />
-      ))}
+      )}
       
-      {/* Additional SEO optimizations */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="format-detection" content="telephone=no" />
-      
-      {/* Security headers */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      
-      {/* Performance hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* Favicon and app icons */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Verification tokens */}
-      <meta name="google-site-verification" content="your-verification-code" />
-      <meta name="msvalidate.01" content="your-verification-code" />
-      <meta name="yandex-verification" content="your-verification-code" />
-    </Head>
+      {/* Default Structured Data if none provided */}
+      {!structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+              "description": description,
+              "foundingDate": "2020",
+              "sameAs": [
+                "https://www.linkedin.com/company/zion-tech-group",
+                "https://twitter.com/ziontechgroup",
+                "https://github.com/Zion-Holdings"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Technology Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "AI & Machine Learning Solutions"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Quantum Computing Services"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Space Technology Solutions"
+                    }
+                  }
+                ]
+              }
+            })
+          }}
+        />
+      )}
+    </>
   );
 };
 

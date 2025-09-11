@@ -1,12 +1,6 @@
 {
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Leading-edge technology solutions and autonomous innovation platform",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
-=======
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
   "description": "Leading provider of AI, quantum computing, and space technology solutions",
@@ -14,36 +8,38 @@
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#00d4ff",
+=======
+  "description": "Leading-edge technology solutions and autonomous innovation platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/zion-tech-group-logo-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+=======
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/og-image.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpeg",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/og-image.jpg",
-      "sizes": "750x1334",
-      "type": "image/jpeg",
-      "form_factor": "narrow"
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ],
   "shortcuts": [
@@ -62,24 +58,13 @@
     {
       "name": "Services",
       "short_name": "Services",
+=======
       "description": "View our technology services",
       "url": "/services",
       "icons": [
         {
-          "src": "/logo.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Pricing",
-      "short_name": "Pricing",
-      "description": "View service pricing",
-      "url": "/pricing",
-      "icons": [
-        {
-          "src": "/logo.png",
-          "sizes": "96x96"
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
         }
       ]
     },
@@ -90,18 +75,58 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "/logo.png",
-          "sizes": "96x96"
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
         }
       ]
     }
   ],
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
+  "screenshots": [
+    {
   },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
+  "handle_links": "preferred",
+  "capture_links": "existing-client-navigate",
+  "file_handlers": [
+    {
+      "action": "/file-handler",
+      "accept": {
+        "text/*": [".txt", ".md", ".json"],
+        "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/protocol-handler?url=%s"
+=======
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["image/*", "text/*", "application/pdf"]
+        }
+      ]
+    }
   }
 }

@@ -1,4 +1,6 @@
 =======
+
+=======
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of innovators at Zion Tech Group. Explore exciting career opportunities in AI, quantum computing, and technology solutions.',
@@ -311,6 +313,66 @@ export default function CareersPage() {
         </div>
       </section>
 
+      {/* Open Positions */}
+      <section className="py-16">
+        <h2 className="text-3xl font-bold text-center mb-12">Open Positions</h2>
+        <div className="space-y-6">
+          {openPositions.map((position, index) => (
+            <div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{position.title}</h3>
+                  <div className="flex flex-wrap gap-4 text-sm opacity-70">
+                    <span>{position.department}</span>
+                    <span>•</span>
+                    <span>{position.location}</span>
+                    <span>•</span>
+                    <span className="text-blue-400">{position.type}</span>
+                  </div>
+                </div>
+                <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+                  Apply Now
+                </button>
+=======
+              We foster an environment of innovation, collaboration, and continuous learning
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🚀</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Departments */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Join Our Departments</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Find your perfect role in one of our specialized departments
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {departments.map((dept, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">{dept.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{dept.name}</h3>
+                <p className="text-gray-600 mb-4">{dept.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">{dept.positions} open positions</span>
+                  <Link
+                    href="#open-positions"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  >
+                    View Positions →
+                  </Link>
+                </div>
 =======
       {/* Open Positions */}
       <section className="py-16">
@@ -333,12 +395,155 @@ export default function CareersPage() {
                   Apply Now
                 </button>
               </div>
+              <p className="opacity-80 mb-4">{position.description}</p>
+              <div>
+                <h4 className="font-semibold mb-2">Requirements:</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm opacity-70">
+                  {position.requirements.map((req, reqIndex) => (
+                    <li key={reqIndex}>{req}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Benefits */}
+            {benefits.map((category, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
+                <ul className="space-y-2">
+                  {category.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start space-x-2">
+                      <span className="text-blue-600 text-sm">✓</span>
+                      <span className="text-gray-700 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Open Positions */}
+      <section id="open-positions" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Open Positions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our current openings and find your next opportunity
+            </p>
+          </div>
+          
+          <div className="space-y-8">
+            {openPositions.map((position, index) => (
+              <div key={position.id} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                  <div className="mb-4 lg:mb-0">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
+                    <div className="flex flex-wrap gap-3 text-sm">
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">{position.department}</span>
+                      <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full">{position.location}</span>
+                      <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">{position.type}</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full">{position.experience}</span>
+                    </div>
+                  </div>
+                  <Link
+                    href={`/careers/${position.id}`}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 whitespace-nowrap"
+                  >
+                    Apply Now
+                  </Link>
+                </div>
+                
+                <p className="text-gray-600 mb-6">{position.description}</p>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-3">Key Responsibilities:</h4>
+                    <ul className="space-y-2">
+                      {position.responsibilities.map((resp, respIndex) => (
+                        <li key={respIndex} className="flex items-start space-x-2">
+                          <span className="text-blue-600 text-sm">•</span>
+                          <span className="text-gray-700 text-sm">{resp}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-3">Requirements:</h4>
+                    <ul className="space-y-2">
+                      {position.requirements.map((req, reqIndex) => (
+                        <li key={reqIndex} className="flex items-start space-x-2">
+                          <span className="text-blue-600 text-sm">•</span>
+                          <span className="text-gray-700 text-sm">{req}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <h4 className="font-semibold text-gray-800 mb-3">Benefits:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {position.benefits.map((benefit, benefitIndex) => (
+                      <span key={benefitIndex} className="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
+                        {benefit}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Application Process */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Application Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Simple steps to join our team
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Apply</h3>
+              <p className="text-gray-600">Submit your application with resume and cover letter</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Review</h3>
+              <p className="text-gray-600">Our team reviews your application and experience</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Interview</h3>
+              <p className="text-gray-600">Technical and cultural fit discussions</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">4</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Offer</h3>
+              <p className="text-gray-600">Welcome to the Zion Tech Group team!</p>
+            </div>
 =======
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
@@ -383,6 +588,27 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Join Our Team?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Don't see the perfect role? We're always looking for talented individuals 
+            to join our team. Send us your resume and let's explore opportunities together.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+            >
+              Contact Us
+            </Link>
+            <a
+              href="mailto:careers@ziontechgroup.com"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+            >
+              Send Resume
+            </a>
+          </div>
 =======
       <section className="text-center py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>

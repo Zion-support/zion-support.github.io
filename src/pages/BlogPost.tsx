@@ -130,7 +130,7 @@ export default function BlogPost() {
   return (
     <>
       <SEO
-        title={`${post.title} - Zion Tech Group`}
+        title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}

@@ -135,10 +135,77 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-  // New innovative 2037 services
-  ...innovative2037MicroSaasServices,
-  ...innovative2037ITServices,
-  ...innovative2037AIServices
+// Import our new service data
+import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
+import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
+import { real2026Q2Services } from '../data/real-2026-q2-services';
+
+// Import existing service data
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+import { newRealServices2026 } from '../data/2025-2026-new-real-services';
+import { additionalRealMicroSaas2026 } from '../data/2026-additional-real-micro-saas';
+
+// Helper function to get service category
+const getServiceCategory = (service: any) => {
+  if (service.category) return service.category;
+  if (service.type) return service.type;
+  return 'Other';
+};
+
+  // Filter and sort services
+  const filteredServices = React.useMemo(() => {
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+      
+      const matchesCategory = selectedCategory === 'all' || 
+                             service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+                             service.name.toLowerCase().includes(selectedCategory.toLowerCase());
+      
+      return matchesSearch && matchesCategory;
+    });
+
+// Helper function to get service features
+const getServiceFeatures = (service: any) => {
+  if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
+  return [];
+};
+
+// Helper function to get service description
+const getServiceDescription = (service: any) => {
+  if (service.description) return service.description;
+  if (service.tagline) return service.tagline;
+  return 'No description available';
+};
+
+// Helper function to get service launch date
+const getServiceLaunchDate = (service: any) => {
+  return service.launchDate || service.releasedAt || service.updatedAt || '2020-01-01';
+};
+
+// Helper function to get service rating
+const getServiceRating = (service: any) => {
+  return service.rating || 0;
+};
+
+// Create unified services array
+const allServices = [
+  ...enterpriseITSolutions,
+  ...innovativeMicroSaasSolutions,
+  ...cuttingEdgeAIServices,
+  ...realMicroSaasServices2025,
+  ...innovativeAIServices2025,
+  ...innovativeITServices2025,
+  ...emergingTechServices2025,
+  ...newRealServices2026,
+  ...additionalRealMicroSaas2026
 ];
 
 const categories = [
@@ -483,36 +550,83 @@ const ServicesPage: React.FC = () => {
 
 const ServicesPage: React.FC = () => {
   return (
+    <div className="min-h-screen bg-black text-white">
+      <Head>
+        <title>Services - Zion Tech Group | 500+ Revolutionary Micro SaaS Services</title>
+        <meta name="description" content="Explore our comprehensive portfolio of 500+ revolutionary micro SaaS services, quantum AI solutions, and cutting-edge technology platforms." />
+        <meta name="keywords" content="micro SaaS services, AI solutions, quantum computing, blockchain, cybersecurity, space technology, biotech AI, financial trading, metaverse, IoT, cloud computing" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
+      </Head>
 
-      <div className="min-h-screen bg-black text-white pt-24">
-        {/* Loading State */}
-        <AnimatePresence>
-          {isLoading && (
-            <motion.div
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 bg-black flex items-center justify-center"
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="text-cyan-400 text-lg font-medium">Loading Services...</p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
-                  <Zap className="w-8 h-8 text-white" />
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+              Revolutionary Micro SaaS Services
+            </h1>
+            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Discover our comprehensive portfolio of 500+ cutting-edge micro SaaS services powered by quantum AI, 
+              blockchain technology, and revolutionary innovations.
+            </p>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+          >
+            <div className="bg-black/20 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-cyan-400 mb-1">{allServices.length}+</div>
+              <div className="text-sm text-gray-400">Total Services</div>
+            </div>
+            <div className="bg-black/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-purple-400 mb-1">{categories.length - 1}</div>
+              <div className="text-sm text-gray-400">Categories</div>
+            </div>
+            <div className="bg-black/20 backdrop-blur-sm border border-pink-500/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-pink-400 mb-1">30+</div>
+              <div className="text-sm text-gray-400">Day Trials</div>
+            </div>
+            <div className="bg-black/20 backdrop-blur-sm border border-green-500/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-green-400 mb-1">1200%+</div>
+              <div className="text-sm text-gray-400">Average ROI</div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Filters and Search */}
+      <section className="px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-black/20 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-end">
+              {/* Search */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search by name, description, or category..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                  />
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                   Our Services

@@ -1,5 +1,3 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
 
 interface StepsProps {
   children: React.ReactNode;
@@ -65,4 +63,4 @@ export const Step: React.FC<StepProps> = ({ children, className, isActive, isCom
       </div>
     </div>
   );
-};
+}

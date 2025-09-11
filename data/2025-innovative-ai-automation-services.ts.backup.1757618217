@@ -26,11 +26,7 @@ export interface InnovativeAIAutomationService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
-  variant: ServiceVariant;
-=======
   variant: string;
->>>>>>> origin/backup-main-20250823-225110
   contactInfo: {
     mobile: string;
     email: string;
@@ -45,19 +41,8 @@ export interface InnovativeAIAutomationService {
   reviews: number;
 }
 
-<<<<<<< HEAD
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
-=======
 export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[] = [
   // AI-Powered Customer Service Automation
->>>>>>> origin/backup-main-20250823-225110
   {
     id: 'ai-autonomous-code-review',
     name: 'AI Autonomous Code Review',
@@ -139,26 +124,30 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     competitors: ['Zendesk, Intercom, Freshdesk, Help Scout, Zoho Desk'],
     marketSize: '$15B customer service software market',
     growthRate: '22% annual growth',
-<<<<<<< HEAD
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Distributed testing infrastructure with AI-powered test generation and execution orchestration.',
-    launchDate: '2025-01-20',
-    customers: 94,
-=======
     variant: 'ai-automation',
+=======
+    variant: 'ai-autonomous',
+=======
+    variant: 'default',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
+    technology: ['Python, Selenium, Playwright, OpenAI, TensorFlow, Docker'],
+    integrations: ['Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Jira'],
+    useCases: ['Automated testing, CI/CD integration, Quality assurance, Regression testing'],
+    roi: 'Reduce testing time by 80% and increase test coverage by 60%',
+    competitors: ['Selenium, Cypress, Playwright, TestCafe, Katalon'],
+    marketSize: '$4.2B+ test automation market',
+    growthRate: '92% YoY',
+    variant: 'default',
+    contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Production-ready AI customer service platform with natural language processing, sentiment analysis, and comprehensive automation. Includes training and API documentation.',
     launchDate: '2024-07-01',
     customers: 156,
->>>>>>> origin/backup-main-20250823-225110
     rating: 4.8,
     reviews: 67
   },
@@ -181,116 +170,6 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
       'Real-time health monitoring'
     ],
     popular: false,
-<<<<<<< HEAD
-    icon: '⚡',
-    color: 'from-blue-600 to-cyan-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-devops-orchestrator',
-    marketPosition: 'Competes with Terraform, Ansible, and Pulumi; adds AI-powered automation and prediction.',
-    targetAudience: 'DevOps engineers, SRE teams, Platform engineers',
-    trialDays: 30,
-    setupTime: '1 day',
-    category: 'AI & DevOps',
-    realService: true,
-    technology: ['Python, Terraform, Kubernetes, OpenAI, TensorFlow, Prometheus'],
-    integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Jenkins'],
-    useCases: ['Infrastructure automation, Cloud management, DevOps optimization, SRE operations'],
-    roi: 'Reduce infrastructure costs by 30% and improve uptime by 99.9%',
-    competitors: ['Terraform, Ansible, Pulumi, Chef, Puppet'],
-    marketSize: '$8.7B+ DevOps automation market',
-    growthRate: '78% YoY',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Multi-cloud orchestration platform with AI-powered decision making and automated infrastructure management.',
-    launchDate: '2025-01-25',
-    customers: 73,
-    rating: 4.7,
-    reviews: 52
-  },
-  {
-    id: 'ai-autonomous-data-pipeline',
-    name: 'AI Autonomous Data Pipeline',
-    tagline: 'Self-optimizing data workflows with intelligent error handling and quality assurance',
-    price: '$249',
-    period: '/month',
-    description: 'AI-powered data pipeline platform that automatically optimizes data workflows, detects anomalies, and ensures data quality.',
-    features: [
-      'Automated data quality monitoring',
-      'Intelligent error handling and recovery',
-      'Real-time data validation',
-      'Performance optimization automation',
-      'Data lineage tracking',
-      'Compliance and governance automation',
-      'Multi-source data integration',
-      'Predictive maintenance alerts',
-      'Scalable ETL/ELT processing'
-    ],
-    popular: false,
-    icon: '📊',
-    color: 'from-orange-600 to-red-700',
-    textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-data-pipeline',
-    marketPosition: 'Advanced alternative to Apache Airflow, Prefect, and Dagster with AI automation.',
-    targetAudience: 'Data engineers, Data scientists, Analytics teams',
-    trialDays: 14,
-    setupTime: '6 hours',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['Python, Apache Airflow, Apache Spark, OpenAI, TensorFlow, PostgreSQL'],
-    integrations: ['Snowflake, BigQuery, Redshift, Databricks, Apache Kafka'],
-    useCases: ['Data pipeline automation, ETL/ELT processing, Data quality assurance, Analytics workflows'],
-    roi: 'Reduce data pipeline failures by 90% and improve processing speed by 50%',
-    competitors: ['Apache Airflow, Prefect, Dagster, Luigi, Azkaban'],
-    marketSize: '$12.3B+ data pipeline market',
-    growthRate: '88% YoY',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Distributed data processing platform with AI-powered workflow optimization and quality assurance.',
-    launchDate: '2025-02-01',
-    customers: 58,
-    rating: 4.6,
-    reviews: 41
-  },
-  {
-    id: 'ai-autonomous-security-monitor',
-    name: 'AI Autonomous Security Monitor',
-    tagline: 'Intelligent threat detection with automated response and predictive security',
-    price: '$349',
-    period: '/month',
-    description: 'AI-driven security monitoring platform that automatically detects threats, analyzes patterns, and responds to security incidents.',
-    features: [
-      'AI-powered threat detection',
-      'Automated incident response',
-      'Behavioral analysis and anomaly detection',
-      'Real-time security monitoring',
-      'Compliance reporting automation',
-      'Vulnerability assessment and management',
-      'Security orchestration and automation',
-      'Threat intelligence integration',
-      'Predictive security analytics'
-    ],
-    popular: true,
-    icon: '🛡️',
-    color: 'from-red-600 to-pink-700',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-security-monitor',
-    marketPosition: 'Competes with Splunk, ELK Stack, and IBM QRadar; offers AI-powered automation.',
-    targetAudience: 'Security teams, SOC analysts, IT administrators',
-    trialDays: 21,
-    setupTime: '8 hours',
-    category: 'AI & Security',
-    realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'],
-    integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'],
-    useCases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'],
-    roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.',
-    competitors: ['Tableau, Power BI, Looker, Qlik, Domo'],
-    marketSize: '$30B business intelligence market',
-    growthRate: '26% annual growth',
-    variant: 'ai-futuristic',
-=======
     icon: '📄',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
@@ -353,6 +232,15 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Marketing AI',
+=======
+    color: 'from-red-600 via-orange-600 to-yellow-600',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/ai-autonomous-security-monitor',
+    marketPosition: 'Leading AI security monitoring platform with autonomous threat response capabilities.',
+    targetAudience: 'Enterprise IT teams, Security operations centers, Cybersecurity professionals',
+    trialDays: 30,
+    setupTime: '2-4 hours',
+    category: 'AI Security',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Google Analytics'],
     integrations: ['HubSpot, Salesforce, Mailchimp, Facebook Ads, Google Ads, LinkedIn, Twitter'],
@@ -361,8 +249,7 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
     marketSize: '$35B marketing automation market',
     growthRate: '24% annual growth',
-    variant: 'ai-marketing',
->>>>>>> origin/backup-main-20250823-225110
+    variant: 'email-marketing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -371,19 +258,11 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     },
 =======
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.',
-    launchDate: '2025-01-25',
-    customers: 156,
-    rating: 4.7,
-    reviews: 89
-=======
     implementationDetails: 'Complete marketing automation platform with AI capabilities, multi-channel support, and comprehensive analytics. Includes training and campaign setup services.',
     launchDate: '2024-05-01',
     customers: 278,
     rating: 4.8,
     reviews: 156
->>>>>>> origin/backup-main-20250823-225110
   },
 
   // Autonomous Data Analytics Platform
@@ -413,9 +292,16 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     link: 'https://ziontechgroup.com/autonomous-data-analytics',
     marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.',
     targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams, Sales teams',
-    trialDays: 30,
-    setupTime: '2 weeks',
-    category: 'AI & Analytics',
+=======
+    icon: '🛡️',
+    color: 'from-red-600 to-pink-700',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/ai-autonomous-security-monitor',
+    marketPosition: 'Competes with Splunk, ELK Stack, and IBM QRadar; offers AI-powered automation.',
+    targetAudience: 'Security teams, SOC analysts, IT administrators',
+    trialDays: 21,
+    setupTime: '8 hours',
+    category: 'AI & Security',
     realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'],
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'],
@@ -424,7 +310,14 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     competitors: ['Tableau, Power BI, Looker, Qlik, Domo'],
     marketSize: '$30B business intelligence market',
     growthRate: '26% annual growth',
-<<<<<<< HEAD
+    variant: 'ai-analytics',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+=======
     technology: ['Python, TensorFlow, OpenAI, Elasticsearch, Redis, PostgreSQL'],
     integrations: ['SIEM systems, Firewalls, IDS/IPS, Vulnerability scanners'],
     useCases: ['Security monitoring, Threat detection, Incident response, Compliance management'],
@@ -438,7 +331,6 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     implementationDetails: 'Real-time security monitoring platform with AI-powered threat detection and automated response capabilities.',
     launchDate: '2025-02-05',
     customers: 112,
-=======
     variant: 'ai-analytics',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -450,7 +342,7 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     implementationDetails: 'Production-ready analytics platform with AI capabilities, comprehensive data governance, and security features. Includes training and data migration services.',
     launchDate: '2024-08-01',
     customers: 134,
->>>>>>> origin/backup-main-20250823-225110
+=======
     rating: 4.9,
     reviews: 78
     color: 'from-amber-600 to-orange-700',
@@ -470,11 +362,9 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     marketSize: '$20B HR software market',
     growthRate: '20% annual growth',
     variant: 'ai-hr',
-<<<<<<< HEAD
-=======
     variant: 'ai-futuristic',
 =======
->>>>>>> origin/backup-main-20250823-225110
+=======
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -482,8 +372,6 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-=======
 =======
 =======
 =======
@@ -498,6 +386,6 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     customers: 189,
     rating: 4.7,
     reviews: 95
->>>>>>> origin/backup-main-20250823-225110
+=======
   }
 ];
