@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -111,22 +112,22 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='AI-Powered Customer Support Playbooks'
-              href='/blog/ai-customer-support-playbooks'
-              description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'
-              icon='🎧'
+              title='Production-Grade AI Agents: Observability and Safety'
+              href='/blog/production-grade-ai-agents'
+              description='From demos to durable agents with logging, evals, safety and cost controls.'
+              icon='🛡️'
             />
             <Card
-              title='AI Infrastructure Cost Controls That Actually Work'
-              href='/blog/ai-infra-cost-controls'
-              description='Right-size tokens, cache, autoscale, and model tiering for 20–40% savings.'
-              icon='📉'
+              title='Cloud FinOps Automation: 30% Savings With Guardrails'
+              href='/blog/cloud-finops-automation'
+              description='Automation-first FinOps with rightsizing, policies, and continuous verification.'
+              icon='💸'
             />
             <Card
-              title='Enterprise RAG Blueprint: From Pilot to Production'
-              href='/blog/enterprise-rag-blueprint'
-              description='Architecture, hybrid retrieval, and rollout plan for regulated environments.'
-              icon='📘'
+              title='The Modern Data Stack in 2025: Pragmatic Guide'
+              href='/blog/modern-data-stack-2025'
+              description='Simple, reliable data architectures: ingestion, lakehouse, transforms, activation.'
+              icon='📊'
             />
           </div>
         </div>
