@@ -79,13 +79,9 @@ function resolveConflicts() {
 
             // Remove conflict markers and keep both versions where possible
             content = content
-              .replace(/<<<<<<< HEAD\n/g, '')
-              .replace(/=======\n/g, '\n')
-              .replace(/>>>>>>> [^\n]+\n/g, '\n')
-              .replace(/<<<<<<< HEAD/g, '')
-              .replace(/=======/g, '')
-              .replace(/>>>>>>> [^\n]+/g, '');
-
+              .replace(/\n/g, '')
+              .replace(/              .replace(/              .replace(//g, '')
+              .replace(/              .replace(/
             // Clean up any remaining conflict artifacts
             content = content.replace(/\n{3,}/g, '\n\n');
 

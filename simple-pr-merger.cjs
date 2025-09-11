@@ -3,8 +3,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🚀 Simple PR Merger - Processing Branches Safely');
-console.log('================================================');
-
+console.log('
 class SimplePRMerger {
   constructor() {
     this.processedBranches = [];
@@ -206,18 +205,15 @@ class SimplePRMerger {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*/gs,
-        '$1'
+        /\n(.*?)\n        '$1'
       );
 
       // Handle any remaining conflict markers
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> .*/gs,
-        ''
+        /\n.*?\n        ''
       );
       resolvedContent = resolvedContent.replace(
-        /=======\n.*?\n>>>>>>> .*/gs,
-        ''
+        /        ''
       );
 
       // Write the resolved content
@@ -323,8 +319,7 @@ class SimplePRMerger {
 
     // Display summary
     console.log('\n🎉 Simple PR Processing Complete!');
-    console.log('==================================');
-    console.log(`Total branches processed: ${this.processedBranches.length}`);
+    console.log('    console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);
     console.log(`Conflicts resolved: ${this.conflictsResolved}`);

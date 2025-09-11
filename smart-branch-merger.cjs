@@ -4,8 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🚀 Smart Branch Merger - Prioritized Approach');
-console.log('============================================');
-
+console.log('
 // Function to execute shell commands safely
 function exec(cmd, options = {}) {
   try {
@@ -64,9 +63,7 @@ function autoResolveConflicts() {
       
       // Simple conflict resolution - prefer incoming changes
       content = content
-        .replace(/^<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]+$/gm, '$1')
-        .replace(/^<<<<<<< [^\n]+[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]+$/gm, '$1');
-      
+        .replace(/^[\s\S]*?        .replace(/^<<<<<<< [^\n]+[\s\S]*?      
       fs.writeFileSync(file, content);
       exec(`git add "${file}"`, { silent: true });
     } catch (error) {

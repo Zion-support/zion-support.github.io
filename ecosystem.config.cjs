@@ -2,10 +2,6 @@ module.exports = {
   apps: [
     // Main application
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -36,14 +32,9 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       name: 'bolt-zion-app',
-=======
       name: 'ci-cd-pipeline',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
       name: 'ci-cd-pipeline',
->>>>>>> origin/main
       script: 'npm',
       args: 'run build',
       cwd: '/workspace',
@@ -52,10 +43,6 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -68,11 +55,6 @@ module.exports = {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/main
         NODE_ENV: 'production',
       },
       cron_restart: '0 0 * * *', // Daily restart
@@ -90,11 +72,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         NODE_ENV: 'production',
-=======
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
@@ -121,7 +99,6 @@ module.exports = {
       out_file: './logs/automation-out.log',
       log_file: './logs/automation-combined.log',
       time: true,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     },
     {
       name: 'comprehensive-automation',
@@ -142,7 +119,6 @@ module.exports = {
       time: true,
     },
     {
-=======
         NODE_ENV: 'production',      },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
@@ -164,7 +140,6 @@ module.exports = {
 
     // Continuous build and test - runs every hour
     {
->>>>>>> origin/main
       name: 'marketing-automation',
       script: 'node',
       args: 'scripts/linkedin_automation.js',
@@ -188,21 +163,15 @@ module.exports = {
       watch: false,
       max_memory_restart: '512M',
       env: {
-<<<<<<< HEAD
         NODE_ENV: 'production',
       },
-=======
         NODE_ENV: 'production',      },
->>>>>>> origin/main
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
       log_file: './logs/lint-checker-combined.log',
-<<<<<<< HEAD
       time: true,
-=======
       time: true
->>>>>>> origin/main
     },
     {
       name: "zion-app",
@@ -210,8 +179,6 @@ module.exports = {
       args: "start",
       interpreter: "none",
       cwd: __dirname,
-<<<<<<< HEAD
-=======
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '14400000' // 4 hours
       }
@@ -301,7 +268,6 @@ module.exports = {
       }
     }
   ]
->>>>>>> origin/main
       watch: false,
       autorestart: true,
       max_restarts: 10,
@@ -348,8 +314,6 @@ module.exports = {
       env: {
         NODE_ENV: "production"
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       log_file: 'logs/pm2/git-workflow.log',
       error_file: 'logs/pm2/git-workflow-error.log',
@@ -605,20 +569,12 @@ module.exports = {}
       "error_file": 'logs/pm2/type-checker-error.log',
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 };
-=======
-=======
->>>>>>> origin/main
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
     }
-<<<<<<< HEAD
   ]
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
   ];};
->>>>>>> origin/main

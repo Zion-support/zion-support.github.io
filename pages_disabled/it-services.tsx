@@ -1,33 +1,15 @@
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Head from 'next/head';
 
 import Link from 'next/link';
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   Server,
   Shield,
   Cloud,
@@ -65,8 +47,6 @@ import {
   DollarSign,
   Rocket;
 
-
-
 } from 'lucide-react';
 const it_services = [{
     title: 'Cloud Infrastructure Management',
@@ -78,10 +58,6 @@ const it_services = [{
     popular: true;
   },
   {
-<<<<<<< HEAD
-
-=======
-
 
     title: 'Cybersecurity Solutions'
     description: 'Enterprise-grade security services to protect your digital assets and data.'
@@ -90,20 +66,12 @@ const it_services = [{
     pricing: '$5,000 - $40,000/project'
     category: 'Security'
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     title: 'Cybersecurity Solutions',
     description: 'Enterprise-grade security services to protect your digital assets and data.',
     icon: Shield,
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
     pricing: '$5,000 - $40,000/project',
-<<<<<<< HEAD
-=======
-=======
     category: 'Security',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     popular: true
   }
   {
@@ -1662,15 +1630,11 @@ import {
   BookOpen
   Rocket
 
-
-  Rocket,;>>>>>>> cursor/fix-website-loading-errors-and-merge-6662  Laptop;
-} from 'lucide-react';
+  Rocket,;} from 'lucide-react';
 
   Laptop
 } from 'lucide-react'
 import Layout from '../components/Layout'
-
-
 
     title: 'Cybersecurity Solutions',
     description: 'Comprehensive security services to protect your business from cyber threats',
@@ -1680,8 +1644,6 @@ import Layout from '../components/Layout'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-
-
 
     category: 'Security',
     popular: true,
@@ -1697,8 +1659,6 @@ origin/automation-improvements-final
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection']
     marketPrice: '$4,000/month'
 
-
-
     link: '/contact'
 import Head from 'next/head';
 
@@ -1707,7 +1667,6 @@ import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
-
 
   Server,
   Shield,
@@ -1745,8 +1704,6 @@ import { motion } from 'framer-motion';
   Brain,
   DollarSign,
   Rocket;
-
-
 
 } from 'lucide-react';
 const it_services = [{
@@ -3432,25 +3389,12 @@ import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
-=======
-
-=======
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import { 
   Server, 
   Shield, 
@@ -3511,7 +3455,6 @@ import {
   ShoppingCart, 
   BookOpen, 
 
-
 import {
   Server
   Shield
@@ -3550,8 +3493,6 @@ import {
   BookOpen
   Rocket
 
-
-
   Rocket,;
   Laptop;
 } from 'lucide-react';
@@ -3559,7 +3500,6 @@ import {
   Laptop
 } from 'lucide-react'
 import Layout from '../components/Layout'
-
 
 const itServices = [
   {
@@ -3589,27 +3529,13 @@ const it_services = [;
     market_price: '$5, 000 / month',
     link: '/contact';
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
-<<<<<<< HEAD
 
-
->>>>>>> origin/automation-improvements-final
-=======
-
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     title: 'Cybersecurity Solutions',
     description: 'Comprehensive security services to protect your business from cyber threats',
     icon: Shield,
     features: ['Security Assessment', 'Threat Monitoring', 'Incident Response', 'Compliance'],
     pricing: '$1,500 - $8,000/month',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
@@ -3659,7 +3585,6 @@ origin/main
 
 ]
 
-
 const industries = [
   { name: 'Healthcare', icon: Shield, description: 'Secure and compliant IT solutions for healthcare organizations' }
   { name: 'Finance', icon: TrendingUp, description: 'Robust IT infrastructure for financial services' }
@@ -3667,7 +3592,6 @@ const industries = [
   { name: 'Retail', icon: ShoppingCart, description: 'E-commerce and retail technology solutions' }
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' }
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
-
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -3684,13 +3608,9 @@ export default function ITServices() {;
     return () => clearTimeout(timer);  }, []);
   const contact: ContactInfo = {
 
-
-
-
 ];
 
 export default function ITServices() {;
-
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -3984,14 +3904,10 @@ export default function ITServices() {
       : services.filter(service => service.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
 
   const [isLoaded, setIsLoaded] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('all')
 
-=======
-
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -4173,9 +4089,6 @@ export default function ITServices(req, res) {
 
     <>
 
-
-=======
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                   <Head>
                   <title>IT Services - Zion Tech Group</title>
@@ -4400,12 +4313,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-=======
     <Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       <Head>
         <title>IT Services - Zion Tech Group</title>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta
           name='description'
           content='Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.'
@@ -4424,19 +4334,15 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>;
 
           {/* Hero Section */}
-<<<<<<< HEAD
           <section className='py-20 px-4 text-center' role='banner'>;
             <div className='max-w-4xl mx-auto'>;
               <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >;
                 IT Services;
               </h1>;
-=======
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
-<<<<<<< HEAD
               <h1
-=======
       description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
       category: 'quantum',
       features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
@@ -4577,22 +4483,16 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
               <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
->>>>>>> origin/main
               >
                 IT Services
               </h1>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <p
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
                 100+ Comprehensive IT Solutions;
               </p>;
               <p
-<<<<<<< HEAD
 
                 className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
                 Transform your business with our enterprise-grade IT services.;
@@ -4602,7 +4502,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             </div>;
           </section>;
 
-=======
                 className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 Transform your business with our enterprise-grade IT services.
@@ -4610,14 +4509,11 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 cutting-edge technology solutions that scale with your business
                 and drive innovation.              </p>
             </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
                   </div>
-=======
           </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
           {/* Category Filter */}
           <section className='py-8 px-4'>;
@@ -4647,12 +4543,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         Popular
                       </div>
 
-
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-green-400 mb-2'>
                         Key Features:
@@ -4692,12 +4582,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   </div>
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -4707,7 +4593,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-=======
                       </div>;
                     </div>;
 
@@ -4738,7 +4623,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -4771,9 +4655,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-
-
-
 
                     </svg>
                   </div>
@@ -4813,9 +4694,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         strokeWidth={2}
                         d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
 
-
-
-
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>DevOps</h3>
@@ -4846,9 +4724,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         strokeLinejoin='round'
                         strokeWidth={2}
 
-
-
-
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Blockchain</h3>
@@ -4858,9 +4733,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </div>
             </div>
           </section>
-
-
-
 
                 Ready to Transform Your IT Infrastructure?
               </h2>
@@ -4896,8 +4768,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
 
-
-
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>;
@@ -4919,7 +4789,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             </motion && motion.div>;
           </div>;
         </section>;
-
 
           {/* Services Grid */}
           <section className='py-16 px-4' role='main'>
@@ -5056,10 +4925,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
 
-
                   </div>
-
-
 
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
@@ -5132,9 +4998,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         strokeLinejoin='round'
                         strokeWidth={2}
 
-
-
-
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Security</h3>
@@ -5171,9 +5034,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         strokeWidth={2}
                         d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
 
-
-
-
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>DevOps</h3>
@@ -5193,8 +5053,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
 
-
-
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Blockchain</h3>
@@ -5204,9 +5062,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </div>
             </div>
           </section>
-
-
-
 
                 Ready to Transform Your IT Infrastructure?
               </h2>
@@ -5265,8 +5120,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}=======
-              className="text-center mb-12">;
+              viewport={{ once: true }}              className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our IT Services</h2>;
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
                 Comprehensive IT solutions designed to enhance your business operations and security.;
@@ -5282,7 +5136,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
 
 whileHover={{ y: -5 }} ">;
                   <div className="flex items-center justify-between mb-4">;
@@ -5314,8 +5167,6 @@ whileHover={{ y: -5 }} ">;
                   <div className="mb-4">;
                   <span className="text-sm font-semibold text-green-600">{service && service.pricing}</span>;
                   </div>;
-=======
-<<<<<<< HEAD
                 >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <service.icon className="w-8 h-8 text-blue-600" />
@@ -5337,7 +5188,6 @@ whileHover={{ y: -5 }} ">;
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
-=======
 whileHover={{ y: -5 }} ">
                   <div className="flex items-center justify-between mb-4">
                   <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
@@ -5358,18 +5208,13 @@ whileHover={{ y: -5 }} ">
                   <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-<<<<<<< HEAD
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
-=======
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />                          {feature}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/main
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
 
                   <Link
                     href={service.link}
@@ -5455,16 +5300,12 @@ whileHover={{ y: -5 }} ">
         </section>
       </div>
     </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
 
-=======
             </div>
-=======
                   <div className="mb-4">
                   <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   <Link
                     href="/contact"
                     className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm">;
@@ -5581,9 +5422,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-=======
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -5627,11 +5466,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             <div className="max-w-4xl mx-auto">
               <h1 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               >
                 IT Services
               </h1>
@@ -5657,11 +5493,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </p>
             </div>
 
-
-
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-
-
 
 }
           </section>
@@ -6105,11 +5937,7 @@ function ITServices() {
               </p>
             </div>
 
-
-
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-
-
 
 }
 
@@ -6467,7 +6295,6 @@ function ITServices() {
                   {level.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-=======
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}>;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">;
@@ -6483,7 +6310,6 @@ function ITServices() {
                   {level && level.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-600">;
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {feature}
                     </li>;
                   ))}
@@ -6500,8 +6326,6 @@ function ITServices() {
                   </Link>;
                   </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-=======
           <section className='py - 16 px - 4' role='main'>;
             <div className='max - w-7xl mx - auto'>;
               <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
@@ -6890,7 +6714,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   <ArrowRight className="w - 4 h - 4 ml - 2" />;
                   </Link>;
                   </motion.div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
                   </div>;
                   </section>;
@@ -6900,11 +6723,9 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
       </div>
     </Layout>
 
->>>>>>> origin/automation-improvements-final
   );
 }
 
-=======
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -7004,7 +6825,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
             </div>
           </section>
 
-=======
           </div>
                   </div>
                   </section>
@@ -7124,24 +6944,15 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
       </section>
                   </div>
   );
-<<<<<<< HEAD
 }
 
->>>>>>> origin/main
           </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-=======
-
 
   );
 
             </div>
-=======
             </div>
 
-=======
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </section>
         </main>
       </ErrorBoundary>
@@ -7185,9 +6996,7 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   </div>;
   );
 }
-<<<<<<< HEAD
 
-=======
       <section className="py - 20 bg - gradient - to - r from - green - 600 to - emerald - 600 text - white">;
 <div className="container mx - auto px - 4 text - center">;
                   <motion.div;
@@ -7302,7 +7111,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
         </div>;
       </section>;
                   </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
           </section>;
         </main>;
@@ -7310,18 +7118,5 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
     </>);
 }
 
-
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

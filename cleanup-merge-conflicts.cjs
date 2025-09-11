@@ -1,118 +1,96 @@
 #!/usr/bin/env node
-
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🧹 Starting comprehensive merge conflict cleanup...\n');
+console.log('🧹 Starting merge conflict cleanup...');
 
-function runCommand(command, description) {
-  console.log(`📋 ${description}`);
-  try {
-    const result = execSync(command, {
-      cwd: '/workspace',
-      encoding: 'utf8',
-      stdio: 'pipe',
-    });
-    console.log(`✅ ${description} - Success`);
-    return result;
-  } catch (error) {
-    console.log(`❌ ${description} - Error: ${error.message}`);
-    return null;
-  }
-}
-
+// Function to clean merge conflicts from a file
 function cleanMergeConflicts(filePath) {
-  if (!fs.existsSync(filePath)) {
-    return false;
-  }
-
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-
-    // Remove all merge conflict markers
-    content = content
-      .replace(/<<<<<<< HEAD\n?/g, '')
-      .replace(/=======\n?/g, '')
-      .replace(/>>>>>>> [^\n]+\n?/g, '')
-      .replace(/<<<<<<< HEAD/g, '')
-      .replace(/=======/g, '')
-      .replace(/>>>>>>> [^\n]+/g, '');
-
-    // Clean up any remaining artifacts
-    content = content
-      .replace(/\n{3,}/g, '\n\n') // Replace multiple newlines with double newlines
-      .replace(/^\s*\n/gm, '') // Remove empty lines at start
-      .replace(/\n\s*$/g, '\n') // Remove trailing whitespace
-      .trim();
-
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Cleaned merge conflicts in ${filePath}`);
-      return true;
+    
+    // Check if file has merge conflicts
+    if (!content.includes('')) {
+      return false; // No conflicts to clean
     }
-
-    return false;
+    
+    console.log(`🔧 Cleaning conflicts in: ${filePath}`);
+    
+    // Remove merge conflict markers and keep the HEAD version
+    content = content
+      .replace(/\n/g, '')
+      .replace(/      .replace(/      .replace(//g, '')
+      .replace(/      .replace(/    
+    // Clean up any remaining conflict markers
+    content = content
+      .replace(/^$/gm, '')
+      .replace(/^      .replace(/^    
+    // Remove empty lines that might have been left
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    return true;
   } catch (error) {
-    console.log(`❌ Error cleaning ${filePath}: ${error.message}`);
+    console.error(`❌ Error cleaning ${filePath}:`, error.message);
     return false;
   }
 }
 
-function main() {
-  try {
-    // Get list of files with merge conflict markers (excluding backup directories)
-    const conflictedFiles = execSync(
-      'find . -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | ' +
-        'grep -v node_modules | grep -v .git | grep -v pages.bak | grep -v pages.broken | ' +
-        'grep -v pages.disabled | grep -v pages._archive | grep -v pages._quarantine | ' +
-        'grep -v .backup | grep -v temp_exclude | grep -v data.disabled | ' +
-        'xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true',
-      { cwd: '/workspace', encoding: 'utf8' }
-    )
-      .trim()
-      .split('\n')
-      .filter(f => f && f.trim());
-
-    console.log(
-      `📁 Found ${conflictedFiles.length} files with merge conflicts`
-    );
-
-    let cleanedCount = 0;
-    for (const file of conflictedFiles) {
-      if (cleanMergeConflicts(file)) {
-        cleanedCount++;
+// Find all files with merge conflicts
+function findConflictedFiles(dir) {
+  const conflictedFiles = [];
+  
+  function searchDirectory(currentDir) {
+    try {
+      const files = fs.readdirSync(currentDir);
+      
+      for (const file of files) {
+        const filePath = path.join(currentDir, file);
+        const stat = fs.statSync(filePath);
+        
+        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+          searchDirectory(filePath);
+        } else if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.cjs') || file.endsWith('.ts') || file.endsWith('.tsx'))) {
+          try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            if (content.includes('')) {
+              conflictedFiles.push(filePath);
+            }
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
       }
+    } catch (error) {
+      // Skip directories that can't be read
     }
+  }
+  
+  searchDirectory(dir);
+  return conflictedFiles;
+}
 
-    console.log(`\n🎉 Cleaned merge conflicts in ${cleanedCount} files`);
+// Main cleanup process
+const conflictedFiles = findConflictedFiles('.');
+console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts`);
 
-    // Run linting to check for remaining issues
-    console.log('\n🔍 Running linting check...');
-    const lintResult = runCommand('npm run lint', 'Linting check');
-
-    if (lintResult === null) {
-      console.log('⚠️  Linting failed, but merge conflicts have been cleaned');
-    } else {
-      console.log('✅ Linting passed after cleanup');
-    }
-
-    // Test build
-    console.log('\n🔨 Testing build...');
-    const buildResult = runCommand('npm run build', 'Build test');
-
-    if (buildResult === null) {
-      console.log('⚠️  Build failed, but merge conflicts have been cleaned');
-    } else {
-      console.log('✅ Build successful after cleanup');
-    }
-
-    console.log('\n🎉 Merge conflict cleanup completed!');
-  } catch (error) {
-    console.error('❌ Error during cleanup:', error.message);
-    process.exit(1);
+let cleanedCount = 0;
+for (const file of conflictedFiles) {
+  if (cleanMergeConflicts(file)) {
+    cleanedCount++;
   }
 }
 
-main();
+console.log(`✅ Cleaned ${cleanedCount} files with merge conflicts`);
+
+// Verify no more conflicts exist
+const remainingConflicts = findConflictedFiles('.');
+if (remainingConflicts.length === 0) {
+  console.log('🎉 All merge conflicts have been resolved!');
+} else {
+  console.log(`⚠️ ${remainingConflicts.length} files still have conflicts:`);
+  remainingConflicts.forEach(file => console.log(`  - ${file}`));
+}
+
+console.log('🏁 Merge conflict cleanup completed');

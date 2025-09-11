@@ -257,4 +257,4 @@ for (const filePath of syntaxErrorFiles) {
 
 console.log(`🎉 Fixed ${fixedCount} files with syntax errors!`);
 fs.writeFileSync('/workspace/remaining-syntax-errors-fix-report.json', JSON.stringify(report, null, 2));
-console.log('📄 Report saved to remaining-syntax-errors-fix-report.json');<<<<<<< HEAD=======
+console.log('📄 Report saved to remaining-syntax-errors-fix-report.json');

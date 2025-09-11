@@ -182,11 +182,9 @@ class TargetedPRMerger {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-        match => {
+        /[\s\S]*?        match => {
           // Extract the HEAD section (our changes)
-          const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
-          return headMatch ? headMatch[1].trim() : '';
+          const headMatch = match.match(/([\s\S]*?)          return headMatch ? headMatch[1].trim() : '';
         }
       );
 

@@ -58,18 +58,15 @@ class FinalComprehensiveImprovements {
             // Fix common syntax errors
             if (
               content.includes('<<<<<<<') ||
-              content.includes('=======') ||
-              content.includes('>>>>>>>')
+              content.includes('              content.includes('>>>>>>>')
             ) {
               // Remove merge conflict markers
               content = content
                 .replace(
-                  /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-                  ''
+                  /[\s\S]*?                  ''
                 )
                 .replace(
-                  /<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-                  ''
+                  /<<<<<<< [^\n]+[\s\S]*?                  ''
                 );
               modified = true;
             }
@@ -379,8 +376,7 @@ console.log('Accessibility check completed');
       await this.runAllScripts();
 
       this.log('\n📊 FINAL IMPROVEMENTS REPORT');
-      this.log('============================');
-      this.log(`✅ Improvements made: ${this.improvements.length}`);
+      this.log('      this.log(`✅ Improvements made: ${this.improvements.length}`);
       this.improvements.forEach(improvement => this.log(`  - ${improvement}`));
 
       this.log('\n🎉 Final comprehensive improvements completed successfully!');

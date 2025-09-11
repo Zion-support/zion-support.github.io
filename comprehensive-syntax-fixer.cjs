@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 // Files with critical syntax errors that need immediate fixing
 const criticalFiles = [
@@ -64,7 +62,6 @@ function fixMergeConflicts(content) {
     } catch (error) {
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;
-=======
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -79,7 +76,6 @@ function fixSyntaxErrors(filePath) {;
     // Fix shebang issues;
     if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {;
       content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n');
->>>>>>> origin/main
     }
     ;
     // Fix missing commas in object literals;
@@ -160,9 +156,6 @@ for (const file of files) {;
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 }
 
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
@@ -260,4 +253,3 @@ if (require.main === module) {;
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
->>>>>>> origin/main

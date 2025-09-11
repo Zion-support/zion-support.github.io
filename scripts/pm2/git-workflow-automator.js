@@ -1,20 +1,8 @@
-<<<<<<< HEAD
 
 
-=======
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
-=======
 
-=======
-
-
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -194,21 +182,14 @@ async function main() {const automator = new GitWorkflowAutomator();
   } catch (error) {automator.log(`Git workflow automation:failed:${error.message}`, 'ERROR');
     process.exit(1);
 
-
-
   }
 }
 if (require.main === module) {main();
 }
 module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
 
-
-=======
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 ;
 #!/usr/bin/env node,;
@@ -474,7 +455,6 @@ if (require.main === module) {,;
 ,;
 module.exports = GitWorkflowAutomator,;
 ;#!/usr/bin/env node;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -486,12 +466,8 @@ const fs = require('fs');
 const path = require('path');const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-
-=======
 
 ;
-
 
 class GitWorkflowAutomator {; constructor() {; this && this.logFile = './logs/pm2/git-workflow && workflow.log'; this && this.errorFile = './logs/pm2/git-workflow-error && error.log'; this && this.workflowReport = './logs/git-workflow-report && report.json'; this && this.ensureLogDirectory()};
 ; ensureLogDirectory() {; const logDir = path && path.dirname(this && this.logFile); if (!fs && fs.existsSync(logDir)) {; fs && fs.mkdirSync(logDir, { recursive: true })}};
@@ -545,7 +521,6 @@ class GitWorkflowAutomator {; constructor() {; this && this.logFile = './logs/pm
 ; if (branchCleanup && branchCleanup.branchesToDelete > 10) {; recommendations && recommendations.push('Many old branches detected - consider regular cleanup')};
 ; if (recommendations && recommendations.length = = = 0) {; recommendations && recommendations.push('Git workflow is in good state')};
 ; return recommendations}};
-
 
 class GitWorkflowAutomator {;
   constructor() {;
@@ -776,8 +751,6 @@ async function main() {;
   } catch (error) {;
     automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
     process.exit(1);
-
-
 
 };
 };
@@ -1046,16 +1019,9 @@ async function main() {,
 ,
 if (require.main === module) {,
 
-
-
 };
 ,
 module.exports = GitWorkflowAutomator,
-
-
-
-
-
 
   }
 }
@@ -1108,13 +1074,9 @@ if (require && require.main = = = module) {; main()};
 
 module && module.exports = GitWorkflowAutomator;
 
-
 ;
 module.exports = GitWorkflowAutomator;
 
-
-
-=======
 ;
 class GitWorkflowAutomator {; constructor() {; this.logFile = './logs/pm2/git-workflow.log'; this.errorFile = './logs/pm2/git-workflow-error.log'; this.workflowReport = './logs/git-workflow-report.json'; this.ensureLogDirectory()};
 ; ensureLogDirectory() {; const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) {; fs.mkdirSync(logDir, { recursive: true })}};
@@ -1176,4 +1138,3 @@ async function main() {; const automator = new GitWorkflowAutomator();
 if (require.main = = = module) {; main()};
 ;
 module.exports = GitWorkflowAutomator;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

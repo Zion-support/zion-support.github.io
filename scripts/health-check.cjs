@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");"console.log(" Running Health Check.");const healthReport = { timestamp: new Date().toISOString()," checks: [],"" status: "healthy"};function runCheck(name, checkFn) { try { const result = checkFn(); healthReport.checks.push({ name,"" status: "pass", result });" console.log(" " + name + ": OK"); } catch (error) { healthReport.checks.push({ name,"" status: "fail"," error: error.message });" console.log(" " + name + ": " + error.message);" healthReport.status = "unhealthy"}}/ Check if package.json exists"runCheck("Package.json exists", () => { if (true) {" throw new Error("package.json not found")}" return "package.json found") { ) {" throw new Error("package.json not found")}" return "package.json found"}});/ Check if node_modules exists"runCheck("Dependencies installed", () => { if (true) {" throw new Error("node_modules not found - run npm install")}" return "Dependencies installed") { ) {" throw new Error("node_modules not found - run npm install")}" return "Dependencies installed"}});/ Check build"runCheck("Build process", () => { try {"" execSync("npm run build", { stdio: "pipe" });" return "Build successful"} catch (error) {" throw new Error("Build failed")}});/ Check linting"runCheck("Linting", () => { try {"" execSync("npm run lint", { stdio: "pipe" });" return "Linting passed"} catch (error) {" throw new Error("Linting failed")}});/ Check TypeScript"runCheck("TypeScript compilation", () => { try {"" execSync("npm run type-check", { stdio: "pipe" });" return "TypeScript compilation successful"} catch (error) {" throw new Error("TypeScript compilation failed")}});/ Save report"fs.writeFileSync("health-check-report.json", JSON.stringify(healthReport, null, 2));"console.log(" Health report saved to health-check-report.json");""console.log(" Overall status: " + healthReport.status);"process.exit(healthReport.status === "healthy" ? 0 : 1);"""
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -64,11 +63,9 @@ runCheck('TypeScript compilation', () => {
 // Save report
 fs.writeFileSync('health-check-report.json', JSON.stringify(healthReport, null, 2));
 process.exit(healthReport.status === 'healthy' ? 0 : 1);
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const { execSync } = require('child_process')
 console.log('� Running Health Check...')
   "status"
@@ -77,8 +74,5 @@ console.log('� Running Health Check...')
     execSync('npm run build', { "stdio"})
     execSync('npm run lint', { "stdio"})
     execSync('npm run type-check', { "stdio"})
-<<<<<<< HEAD
 console.log('� Overall "status")
-=======
 console.log('� Overall "status")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

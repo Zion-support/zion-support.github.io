@@ -13,10 +13,8 @@ function fixMergeConflicts(filePath) {
 
     // Remove merge conflict markers and keep the HEAD version (first part)
     const conflictRegex = /    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    content = content.replace(/
     // Clean up HTML entities
     content = content.replace(/&apos;/g, "'");
     content = content.replace(/&quot;/g, '"');

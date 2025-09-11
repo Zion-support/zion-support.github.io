@@ -2,8 +2,7 @@
 const { execSync } = require('child_process');
 
 console.log('🚀 Batch 5 Merge Processing - Advanced PR Resolution');
-console.log('=====================================================');
-
+console.log('
 class Batch5Merge {
   constructor() {
     this.processedBranches = [];
@@ -92,8 +91,7 @@ class Batch5Merge {
 
       // Advanced conflict resolution strategy
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*/gs,
-        (match, headContent, incomingContent) => {
+        /\n(.*?)\n        (match, headContent, incomingContent) => {
           // For package.json, merge dependencies
           if (filePath.includes('package.json')) {
             return this.mergePackageJson(headContent, incomingContent);
@@ -105,12 +103,10 @@ class Batch5Merge {
 
       // Handle any remaining conflict markers
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> .*/gs,
-        ''
+        /\n.*?\n        ''
       );
       resolvedContent = resolvedContent.replace(
-        /=======\n.*?\n>>>>>>> .*/gs,
-        ''
+        /        ''
       );
 
       // Write the resolved content
@@ -260,8 +256,7 @@ class Batch5Merge {
     const duration = Math.round((endTime - this.startTime) / 1000);
 
     console.log('\n🎉 Batch 5 Merge Resolution Complete!');
-    console.log('======================================');
-    console.log(`Total branches processed: ${this.processedBranches.length}`);
+    console.log('    console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);
     console.log(`Duration: ${duration} seconds`);

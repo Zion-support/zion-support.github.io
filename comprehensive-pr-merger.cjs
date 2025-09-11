@@ -3,8 +3,7 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 
 console.log('🚀 Comprehensive PR Merger - Processing All Open Branches')
-console.log('========================================================')
-
+console.log('
 class ComprehensivePRMerger {
   constructor() {
     this.processedBranches = []
@@ -238,12 +237,8 @@ class ComprehensivePRMerger {
     fs.writeFileSync('comprehensive-pr-merger-report.json', JSON.stringify(report, null, 2))
 
     // Display summary
-<<<<<<< HEAD
     console.log('\n🎉 Comprehensive PR Processing Complete!')
-    console.log('========================================')
-=======
-    console.log('\n🎉 Comprehensive PR Merge Complete!')
->>>>>>> f486c088f70cf83d108c340ae5c03420e8c8e219
+    console.log('    console.log('\n🎉 Comprehensive PR Merge Complete!')
     console.log(`Total branches processed: ${this.processedBranches.length}`)
     console.log(`Successfully merged: ${this.mergedBranches.length}`)
     console.log(`Failed branches: ${this.failedBranches.length}`)

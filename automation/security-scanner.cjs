@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -47,7 +40,6 @@ class SecurityScanner {
         this.log(`📝 ${check.description}`);
         
         execSync(check.command, { stdio: 'pipe' });
-=======const fs = require('fs');
 const path = require('path');
 const report = {
   timestamp: new Date().toISOString(),
@@ -229,16 +221,6 @@ if (require.main === module) {}
 });
 };
 module.exports = SecurityScanner;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -277,22 +259,14 @@ class SecurityScanner {
     };
   }
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
         const result = checkFunction();
         if (result.status === 'pass') {
@@ -315,10 +289,7 @@ class SecurityScanner {
             });
             console.log(`❌ ${name}: ${result.message}`);
         }
-=======
     
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
         if (!fs.existsSync('package.json')) {
             return {
@@ -354,11 +325,7 @@ class SecurityScanner {
           pattern: /localStorage\.setItem\s*\([^,]+,\s*[^)]*\+/g,
           issue: 'Potential XSS in localStorage',
           fix: 'Sanitize data before storing in localStorage'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         }
-<<<<<<< HEAD
-=======
       ];
 
       // Scan common file types
@@ -393,10 +360,6 @@ class SecurityScanner {
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
-=======
   async runSecurityScan() {
     const securityChecks = [
       { name: 'NPM Audit', command: 'npm audit', description: 'Checking for vulnerable dependencies' },
@@ -414,8 +377,6 @@ class SecurityScanner {
         this.log(`📝 ${check.description}`);
         
         execSync(check.command, { stdio: 'pipe' });
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         
         console.log(`✅ ${check.name} completed successfully`);
         results.push({ 
@@ -436,11 +397,6 @@ class SecurityScanner {
       }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   async setupSecurityHeaders() {
     this.log('\n🛡️ SETTING UP SECURITY HEADERS');
     
@@ -612,15 +568,6 @@ export function securityHeaders(req, res, next) {
     });
 
     // Save detailed report
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     const report = {
       timestamp: new Date().toISOString(),
       totalDuration,
@@ -634,7 +581,6 @@ export function securityHeaders(req, res, next) {
       }
     };
     
-<<<<<<< HEAD
     fs.writeFileSync(
       'security-scanner-report.json',
       JSON.stringify(report, null, 2)
@@ -646,12 +592,9 @@ export function securityHeaders(req, res, next) {
     this.log('🚀 Starting Security Scanner');
     this.log('='.repeat(60));
     
-<<<<<<< HEAD
-=======
     this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
     this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
     
-<<<<<<< HEAD
     return report;
   }
 }
@@ -659,29 +602,18 @@ export function securityHeaders(req, res, next) {
 // Run security scan
 const scanner = new SecurityScanner();
 scanner.runSecurityScan().catch(console.error);
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     try {
       await this.auditDependencies();
       await this.scanCodeSecurity();
       await this.setupSecurityHeaders();
       await this.setupContentSecurityPolicy();
       await this.checkAuthenticationSecurity();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     } catch (error) {
         return {
             status: 'fail',
             message: 'Could not check HTTPS configuration'
         };
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 });
 // Check for file permissions
 runSecurityCheck('File Permissions', () => {
@@ -697,7 +629,6 @@ runSecurityCheck('File Permissions', () => {
                     issues.push(`${file} is world-readable`);
                 }
             }
-=======
   }
 
   log(message) {
@@ -729,7 +660,6 @@ runSecurityCheck('File Permissions', () => {
           status: 'passed', 
           description: check.description,
           error: null 
->>>>>>> origin/main
         });
         passedChecks++;
       } catch (error) {
@@ -761,7 +691,6 @@ runSecurityCheck('File Permissions', () => {
     return report;
   }
 }
-<<<<<<< HEAD
 // Save security report
 const reportPath = 'security-scan-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
@@ -790,11 +719,8 @@ if (securityReport.status === 'vulnerable') {
     process.exit(2);
 } else {
     process.exit(0);
-<<<<<<< HEAD
 }
-=======
 }
-=======
   }
 }
 
@@ -805,28 +731,13 @@ if (require.main === module) {
   }
 
 module.exports = SecurityScanner;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
-=======
     this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
     this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
     
     return report;
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 // Run security scan
 const scanner = new SecurityScanner();
 scanner.runSecurityScan().catch(console.error);
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

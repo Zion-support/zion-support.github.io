@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -21,8 +20,6 @@ class GitAutomation {
     fs.appendFileSync(logFile, logMessage + '\n')}
   async runCommand(command, description, timeout = 300000) {
     this.log(`🔧 ${description}`);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, { 
@@ -187,8 +184,5 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
-<<<<<<< HEAD
       this.log(" Git automation workflow "failed": ${error.message}")
-=======
       this.log(" Git automation workflow "failed": ${error.message}")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process")"console.log(" Merge Conflict Resolver")"console.log("=====")class MergeConflictResolver { constructor() { this.resolvedFiles = [] this.errors = [] } async resolveConflicts() { try { / Get list of files with conflicts" const conflictFiles = execSync("git diff --name-only --diff-filter=U", {" encoding: "utf8"" }).trim().split("\n").filter(f => f) console.log(`Found ${conflictFiles.length} files with conflicts`) for (const file of conflictFiles) { if (file) { await this.resolveFileConflicts(file) } }` console.log(`\n Resolved conflicts in ${this.resolvedFiles.length} files`)` console.log(` Errors in ${this.errors.length} files`) if (this.errors.length > 0) {"" console.log("\nErrors: ")` this.errors.forEach(error => console.log(` - ${error}`)) } } catch (error) {"" console.error("Error resolving conflicts: ", error.message) } } async resolveFileConflicts(filePath) { try {" const content = fs.readFileSync(filePath, "utf8") let resolvedContent = content" / Strategy: Keep our changes (HEAD) for most conflicts / Remove conflict markers and keep the HEAD version resolvedContent = resolvedContent.replace('"`'"`
 #!/usr/bin/env node
 const fs = require('fs');
@@ -66,23 +54,10 @@ files.forEach(file => {
 });
 console.log(`✅ Fixed ${totalFixed} files`);
 console.log('🎉 Merge conflict resolver completed!');
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = []
@@ -142,23 +117,5 @@ const resolver = new MergeConflictResolver()
 resolver.resolveConflicts().then(() => {
   })
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -2,8 +2,7 @@
 const { execSync } = require('child_process');
 
 console.log('🚀 Batch 4 Merge Processing - Continuing PR Resolution');
-console.log('=======================================================');
-
+console.log('
 class Batch4Merge {
   constructor() {
     this.processedBranches = [];
@@ -92,18 +91,15 @@ class Batch4Merge {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*/gs,
-        '$1'
+        /\n(.*?)\n        '$1'
       );
 
       // Handle any remaining conflict markers
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> .*/gs,
-        ''
+        /\n.*?\n        ''
       );
       resolvedContent = resolvedContent.replace(
-        /=======\n.*?\n>>>>>>> .*/gs,
-        ''
+        /        ''
       );
 
       // Write the resolved content
@@ -227,8 +223,7 @@ class Batch4Merge {
     const duration = Math.round((endTime - this.startTime) / 1000);
 
     console.log('\n🎉 Batch 4 Merge Resolution Complete!');
-    console.log('======================================');
-    console.log(`Total branches processed: ${this.processedBranches.length}`);
+    console.log('    console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);
     console.log(`Duration: ${duration} seconds`);

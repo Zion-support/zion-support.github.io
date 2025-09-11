@@ -3,8 +3,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🚀 Efficient PR Merger - Processing Critical Branches First');
-console.log('============================================================');
-
+console.log('
 class EfficientPRMerger {
   constructor() {
     this.processedBranches = [];
@@ -201,18 +200,15 @@ class EfficientPRMerger {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*/gs,
-        '$1'
+        /\n(.*?)\n        '$1'
       );
 
       // Handle any remaining conflict markers
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> .*/gs,
-        ''
+        /\n.*?\n        ''
       );
       resolvedContent = resolvedContent.replace(
-        /=======\n.*?\n>>>>>>> .*/gs,
-        ''
+        /        ''
       );
 
       // Write the resolved content
@@ -307,8 +303,7 @@ class EfficientPRMerger {
 
     // Display summary
     console.log('\n🎉 Efficient PR Merge Complete!');
-    console.log('================================');
-    console.log(`Total branches processed: ${this.processedBranches.length}`);
+    console.log('    console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);
     console.log(`Conflicts resolved: ${this.conflictsResolved}`);

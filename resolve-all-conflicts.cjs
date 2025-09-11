@@ -60,25 +60,17 @@ function resolveContentConflicts() {
           const originalContent = content;
 
           // Remove merge conflict markers and keep HEAD version
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
-            return headMatch ? headMatch[1].trim() : '';
+          content = content.replace(/[\s\S]*?            const headMatch = match.match(/([\s\S]*?)            return headMatch ? headMatch[1].trim() : '';
           });
 
           // Handle conflicts without proper closing markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, (match) => {
-            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
-            return headMatch ? headMatch[1].trim() : '';
+          content = content.replace(/[\s\S]*?            const headMatch = match.match(/([\s\S]*?)            return headMatch ? headMatch[1].trim() : '';
           });
 
           // Remove any remaining conflict markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-          content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-
+          content = content.replace(/[\s\S]*?          content = content.replace(/
           // Handle incomplete conflicts
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*$/g, (match) => {
-            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
-            return headMatch ? headMatch[1].trim() : '';
+          content = content.replace(/[\s\S]*?            const headMatch = match.match(/([\s\S]*?)            return headMatch ? headMatch[1].trim() : '';
           });
 
           // Clean up extra whitespace

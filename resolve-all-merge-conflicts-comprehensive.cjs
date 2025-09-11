@@ -76,8 +76,7 @@ class ComprehensiveMergeConflictResolver {
       // Check if file has merge conflict markers
       if (
         !content.includes('<<<<<<<') &&
-        !content.includes('=======') &&
-        !content.includes('>>>>>>>')
+        !content.includes('        !content.includes('>>>>>>>')
       ) {
         this.log(`File ${filePath} has no merge conflict markers, skipping...`);
         return;
@@ -86,26 +85,20 @@ class ComprehensiveMergeConflictResolver {
       // Strategy 1: Try to resolve by keeping HEAD version (our changes)
       content = content
         .replace(
-          /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-          match => {
-            const parts = match.split('=======');
-            return parts[0].replace('<<<<<<< HEAD', '').trim();
+          /[\s\S]*?          match => {
+            const parts = match.split('            return parts[0].replace('', '').trim();
           }
         )
         .replace(
-          /<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-          match => {
-            const parts = match.split('=======');
-            return parts[0].replace(/<<<<<<< [^\n]+/, '').trim();
+          /<<<<<<< [^\n]+[\s\S]*?          match => {
+            const parts = match.split('            return parts[0].replace(/<<<<<<< [^\n]+/, '').trim();
           }
         );
 
       // Strategy 2: Remove any remaining markers
       content = content
-        .replace(/<<<<<<< HEAD/g, '')
-        .replace(/=======/g, '')
-        .replace(/>>>>>>> [^\n]+/g, '');
-
+        .replace(//g, '')
+        .replace(/        .replace(/
       // Clean up any extra whitespace
       content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
@@ -177,8 +170,7 @@ class ComprehensiveMergeConflictResolver {
       await this.addResolvedFiles();
 
       this.log('\n📊 MERGE CONFLICT RESOLUTION REPORT');
-      this.log('=====================================');
-      this.log(`✅ Resolved files: ${this.resolvedFiles.length}`);
+      this.log('      this.log(`✅ Resolved files: ${this.resolvedFiles.length}`);
       this.resolvedFiles.forEach(file => this.log(`  - ${file}`));
       this.log(`❌ Failed files: ${this.failedFiles.length}`);
       this.failedFiles.forEach(file => this.log(`  - ${file}`));
