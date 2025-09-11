@@ -95,6 +95,13 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="blog-card">
                   <h3>
+                    <a href="/blog/ai-infrastructure-blueprint-2025">AI Infrastructure Blueprint 2025</a>
+                  </h3>
+                  <p>Design a cost-aware, reliable, and safe AI platform end-to-end.</p>
+                  <a className="service-link" href="/blog/ai-infrastructure-blueprint-2025">Read more →</a>
+                </div>
+                <div className="blog-card">
+                  <h3>
                     <a href="/blog/generative-ai-security-best-practices">Generative AI Security Best Practices</a>
                   </h3>
                   <p>Secure LLM apps with guardrails, governance, and continuous evals.</p>

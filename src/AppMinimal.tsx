@@ -22,6 +22,7 @@ const BlogGenerativeAISecurity = lazy(() => import('./pages/blog/GenerativeAISec
 const BlogEdgePersonalization = lazy(() => import('./pages/blog/EdgePersonalizationPatterns2025'));
 const BlogLLMCostOptimization = lazy(() => import('./pages/blog/LLMCostOptimizationPlaybook'));
 const BlogAIGovernanceChecklist = lazy(() => import('./pages/blog/AIGovernanceChecklist2025'));
+const BlogAIInfrastructureBlueprint = lazy(() => import('./pages/blog/AIInfrastructureBlueprint2025'));
 
 export default function AppMinimal() {
   return (
@@ -53,6 +54,7 @@ export default function AppMinimal() {
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/services">Services</a></li>
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Contact</a></li>
               </ul>
               <div className="nav-actions">
@@ -73,6 +75,7 @@ export default function AppMinimal() {
                 <Route path="/blog/edge-personalization-patterns-2025" element={<BlogEdgePersonalization />} />
                 <Route path="/blog/llm-cost-optimization-playbook" element={<BlogLLMCostOptimization />} />
                 <Route path="/blog/ai-governance-checklist-2025" element={<BlogAIGovernanceChecklist />} />
+                <Route path="/blog/ai-infrastructure-blueprint-2025" element={<BlogAIInfrastructureBlueprint />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>

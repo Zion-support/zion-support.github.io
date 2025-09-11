@@ -29,6 +29,9 @@ export default function BlogIndex() {
           <li>
             <a href="/blog/ai-governance-checklist-2025">AI Governance Checklist 2025</a>
           </li>
+          <li>
+            <a href="/blog/ai-infrastructure-blueprint-2025">AI Infrastructure Blueprint 2025</a>
+          </li>
         </ul>
       </div>
     </>
