@@ -92,7 +92,7 @@ const tsHelpers = {;
     function __extends_helper(_this: unknown) { this.constructor = d;}
     d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)());
   },
-  
+
   __assign: function() {_return Object.assign || function (_t: unknown) {
       for (var s, _i = 1, _n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -101,7 +101,7 @@ const tsHelpers = {;
       return t;
     };
   }(),
-  
+
   __rest: function (_s: unknown, _e: string[]) {_let t: unknown = {};
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
       t[p] = s[p];
@@ -256,7 +256,9 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
 }return new (P || (P = Promise) ) (function (resolve: any, reject: any) {;
   step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
 });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
+=======
+
 }
 };
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
@@ -274,6 +276,11 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
   return Object.values (checks) .every (Boolean);
 };
+  ;"}, // Ensure this can be imported as a module'"
   ;
 }, // Ensure this can be imported as a module'"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
+=======
+
+  ;
+}, // Ensure this can be imported as a module'"

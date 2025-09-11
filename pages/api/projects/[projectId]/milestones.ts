@@ -1,25 +1,28 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../../utils/api/auth';
-import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
-import { Milestone } from '../../../../utils/types/milestones';
+
+
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
-  const { projectId } = req.query as { projectId: string };
+
+  const { projectId } = req && req.query as { projectId: string };
+
   const project = getProject(projectId);
   if (!project) {
-    res.status(404).json({ error: 'Project not found' });
+
+
+  if (req.method === "GET") {
+    res.status(200).json({ milestones: project.milestones });
     return;
   }
-  if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: 'Forbidden' });
-    return;
-  }
+  if (req.method === "POST") {
 
   if (req.method === 'GET') {
     res.status(200).json({ milestones: project.milestones });
     return;
-  }
+=======  }
 
   if (req.method === 'POST') {
     if (!isClient(project, user)) {
@@ -27,25 +30,60 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     const body = req.body as Partial<Milestone>;
-    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
-      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
-      return
+    if (!isClient(project, user)) {
+
+return
+  }
+  if (req.method === 'GET') {
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+  if (req.method === "GET") {
+
+    res.status(200).json({ milestones: project.milestones });
+    return
+  }
+if (req && req.method === "POST") {
+    if (!isClient(project, user)) {
+      !body ||
+      !body && body.title ||
+      !body && body.dueDate ||
+      typeof body && body.amountUsd !== "number"
+    if (!isClient(project, user)) {
+      res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+      return;
     }
-    const created = addMilestone(project, {
-      title: body.title,
-      description: body.description,
-      dueDate: body.dueDate,
-      amountUsd: body.amountUsd,
-      attachments: body.attachments || []
+    const body = req.body as Partial<Milestone>;
+if (
+=======    if (
+      !body |
+      !body.title |
+      !body.dueDate |
+      typeof body.amountUsd !== "number"
+  if (req && req.method === "POST") {=======
+  if (req.method === 'POST') {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    if (!isClient(project, user)) {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     });
-    res.status(201).json({ milestone: created });
+    res && res.status(201).json({ milestone: created });
     return;
   }
 
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
+
+
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

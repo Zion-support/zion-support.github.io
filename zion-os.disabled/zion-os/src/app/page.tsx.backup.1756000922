@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
 import { useState, useEffect } from 'react';
 import Button from '@/components/Button';
 import InteractiveCard, { TestimonialCard } from '@/components/InteractiveCard';
@@ -10,7 +7,6 @@ export default function HomePage() {
 
   useEffect(() => {
     setIsVisible(true);
-=======
 "use client";
 
 import Link from "next/link";
@@ -29,56 +25,10 @@ export default function HomePage() {
       setActiveFeature((prev) => (prev + 1) % 6);
     }, 3000);
     
-    return () => clearInterval(interval);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
-  }, []);
+    return () => clearInterval(interval);  }, []);
 
   const features = [
     {
-<<<<<<< HEAD
-      title: 'AI Autonomous Systems',
-      description: 'Revolutionary AI agents that operate independently, making decisions and executing complex tasks without human intervention.',
-      icon: '🤖',
-      href: '/ai-autonomous-systems',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Quantum Neural Networks',
-      description: 'Next-generation quantum computing platforms that leverage quantum mechanics for unprecedented AI processing power.',
-      icon: '⚛️',
-      href: '/quantum-neural-network-platform',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Enterprise Security',
-      description: 'AI-powered security solutions that protect your business with intelligent threat detection and response.',
-      icon: '🔒',
-      href: '/ai-powered-enterprise-security',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Business Intelligence',
-      description: 'Advanced analytics and insights powered by AI to drive data-driven decision making.',
-      icon: '📊',
-      href: '/ai-business-intelligence',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      title: 'Content Generation',
-      description: 'AI-powered content creation tools that generate high-quality, engaging content at scale.',
-      icon: '✍️',
-      href: '/ai-content-generator',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      title: 'Research Automation',
-      description: 'Autonomous research assistants that accelerate discovery and innovation across all domains.',
-      icon: '🔬',
-      href: '/ai-autonomous-research-assistant',
-      color: 'from-teal-500 to-blue-500'
-    }
-  ];
-
   const stats = [
     { number: '500+', label: 'AI Models Deployed', icon: '🚀' },
     { number: '50+', label: 'Enterprise Clients', icon: '🏢' },
@@ -104,7 +54,6 @@ export default function HomePage() {
       author: "Lisa Thompson",
       position: "Security Director",
       company: "Global Finance Corp"
-=======
       icon: (
         <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -174,9 +123,7 @@ export default function HomePage() {
       description: "Pick and choose the features you need. Deploy only what matters for your specific use case.",
       color: "indigo",
       bgColor: "bg-indigo-500/20",
-      hoverBgColor: "group-hover:bg-indigo-500/30"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
-    }
+      hoverBgColor: "group-hover:bg-indigo-500/30"    }
   ];
 
   return (
@@ -186,36 +133,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-<<<<<<< HEAD
-              <span className="gradient-text">Zion Tech Group</span>
-=======
-              <span className="gradient-text animate-pulse">Zion OS</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Leading provider of AI automation, quantum computing, cybersecurity, and enterprise IT solutions. 
-              Transform your business with cutting-edge technology that drives innovation and growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<<<<<<< HEAD
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Started Today
-              </Link>
-              <Link href="/services" className="btn-secondary text-lg px-8 py-4">
-                Explore Services
-=======
-              <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
-                🚀 Launch Your Economy
-              </Link>
-              <Link href="/docs" className="btn-secondary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
-                📚 View Documentation
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
-              </Link>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -284,7 +201,6 @@ export default function HomePage() {
       </section>
 
       {/* Services Overview */}
-=======
         
         {/* Enhanced Background Elements */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -294,9 +210,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Features Grid */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Enhanced Features Grid */}      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -308,25 +222,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {/* AI & Automation */}
-            <div className="card group">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">AI & Automation</h3>
-              <p className="text-gray-400 mb-4">
-                Intelligent automation solutions that streamline operations and enhance productivity across your organization.
-              </p>
-              <div className="space-y-2 text-sm">
-                <Link href="/ai-automation-services" className="block text-blue-400 hover:text-blue-300 transition-colors">→ AI Automation Services</Link>
-                <Link href="/ai-business-intelligence" className="block text-blue-400 hover:text-blue-300 transition-colors">→ Business Intelligence</Link>
-                <Link href="/ai-content-generation" className="block text-blue-400 hover:text-blue-300 transition-colors">→ Content Generation</Link>
-              </div>
-            </div>
-
             {/* Quantum Computing */}
             <div className="card group">
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
@@ -463,7 +358,6 @@ export default function HomePage() {
                   All Quantum Services
                 </Link>
               </div>
-=======
             {features.map((feature, index) => (
               <div 
                 key={index}
@@ -506,24 +400,13 @@ export default function HomePage() {
             </div>
             <div className="card bg-transparent border-0">
               <div className="text-4xl font-bold gradient-text mb-2">24/7</div>
-              <div className="text-gray-400">Support</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
-            </div>
+              <div className="text-gray-400">Support</div>            </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
-=======
-      {/* Feature Showcase */}
-      <FeatureShowcase />
-
       {/* Enhanced CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">        <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 transform hover:scale-105 transition-all duration-300">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform Your Business?
@@ -533,19 +416,11 @@ export default function HomePage() {
               Our cutting-edge solutions are designed to drive innovation and accelerate your digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Start Your Journey
-              </Link>
-              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-                View Success Stories
-=======
               <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
                 🚀 Start Deployment
               </Link>
               <Link href="/admin/instances" className="btn-secondary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
                 👀 View Examples
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
               </Link>
             </div>
           </div>

@@ -52,6 +52,3 @@ of the use or inability to use the materials on our website.;
                 </p>;
               </div>;
     </MainLayout>;
-  )}
-";
-export default TermsOfService

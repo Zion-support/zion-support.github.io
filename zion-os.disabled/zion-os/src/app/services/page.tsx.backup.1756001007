@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-
 export const metadata = {
   title: 'Services - Zion Tech Group',
   description: 'Comprehensive AI automation, quantum computing, cybersecurity, and blockchain solutions for enterprise digital transformation.',
@@ -950,8 +947,6 @@ export default function ServicesPage() {
             </a>
           </div>
         </div>
-      </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-231d
-    </div>
+      </div>    </div>
   );
 }

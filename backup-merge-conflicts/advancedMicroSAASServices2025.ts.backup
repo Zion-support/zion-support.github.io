@@ -1,13 +1,3 @@
-<<<<<<< HEAD:backup-merge-conflicts/advancedMicroSAASServices2025.ts.backup
-<<<<<<< HEAD:src/data/advancedMicroSAASServices2025.ts
-=======
-<<<<<<< HEAD
-export interface AdvancedMicroSaasService { "id": "string; "title": string; "description": string; "category": string; "subcategory": string; "price": number; "currency": string; "pricingModel": string; "features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "tags": string[]; "estimatedDelivery": string; "supportLevel": string; "marketPrice": string; "roi": string; "innovationLevel": string; "contactInfo": { "phone": string; "email": string; "website": string "}; technicalSpecs?: "{ "technology": 'string[]; "integrations": string[]; "apiEndpoints": number; "uptime": string; "security": string[]' "}; competitors?: "string[]; marketSize?: string"}; ;export const "ADVANCED_MICRO_SAAS_SERVICES_2025": "AdvancedMicroSaasServic e[] = [;"
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/data/advancedMicroSAASServices2025.ts
 export interface AdvancedMicroSaasService {
   "id": string;
   title: string;
@@ -33,11 +23,5 @@ export interface AdvancedMicroSaasService {
   marketSize?: string;
 }
 export const "ADVANCED_MICRO_SAAS_SERVICES_2025": AdvancedMicroSaasService[] = [];
-<<<<<<< HEAD:backup-merge-conflicts/advancedMicroSAASServices2025.ts.backup
->>>>>>> main
->>>>>>> main:src_backup_temp/data/advancedMicroSAASServices2025.ts
 export interface AdvancedMicroSaasService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string }; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] }; competitors?: string[]; marketSize?: string} export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [];
->>>>>>> main
-=======
 export interface AdvancedMicroSaasService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string }; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] }; competitors?: string[]; marketSize?: string} export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/data/advancedMicroSAASServices2025.ts

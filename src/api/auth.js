@@ -28,7 +28,7 @@ export async function resetPassword(token, password) {}
 ''
 '''
     method: 'PUT','''
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' }
     body: JSON.stringify({ token, password })'
   }
     );''

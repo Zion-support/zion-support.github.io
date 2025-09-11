@@ -1,8 +1,8 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityPanel.tsx
 function EnhancedAccessibilityPanel("props": "any) {;
   Accessibility",;
   Eye,;
@@ -47,53 +47,6 @@ interface AccessibilityIssue {;
   "id": "string;
   "type": 'error' | 'warning' | 'info';
   "message": string;
-=======
-function EnhancedAccessibilityPanel () {;
-
-  Accessibility,
-  Eye,
-  EyeOff,
-  Volume2,
-  VolumeX,
-  Type,
-  Contrast,
-  ZoomIn,
-  ZoomOut,  RotateCcw,
-  CheckCircle,
-  AlertTriangle,
-  XCircle,
-  Info,
-  Keyboard,
-  MousePointer,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Settings,
-  X,
-  ChevronDown,
-  ChevronUp,
-  Play,
-  Pause,
-  SkipBack,
-  SkipForward,
-  Volume1} from 'lucide-react';
-interface AccessibilitySettings {
-
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  fontSize: number;
-  lineHeight: number;
-  letterSpacing: number;
-  wordSpacing: number}
-interface AccessibilityIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  message: string;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityPanel.tsx
   element?: string;
   "recommendation": string;
   "severity": 'low' | 'medium' | 'high';
@@ -110,7 +63,8 @@ export function EnhancedAccessibilityPanel("props": any) {;
     "fontSize": "1 6",;
     "lineHeight": "1.5",;
     "letterSpacing": "0",;
-    "wordSpacing": "0"});    highContrast: fals e,
+    "wordSpacing": "0"});
+    highContrast: fals e,
     largeText: fals e,
     reducedMotion: fals e,
     screenReader: boolean,
@@ -121,64 +75,50 @@ export function EnhancedAccessibilityPanel("props": any) {;
     letterSpacing: 0,
     wordSpacing: 0}
     );
-=======
-
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: boolean,
-    focusIndicator: true,
-    colorBlindness: 'none',
-    fontSize: 16,
-    lineHeight: 1.5,
-    letterSpacing: 0,
-    wordSpacing: 0});
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityPanel.tsx
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
   const [isScanning, setIsScanning] = useState<any>(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityPanel.tsx
   const [keyboardMode, setKeyboardMode] = useState<any>(false);
 ;
-=======
-  const [keyboardMode, setKeyboardMode] = useState(false);
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityPanel.tsx
   // Apply accessibility settings;
+  ;
       setSettings(updatedSettings);
+;
       // Apply high contrast;
       if(updatedSettings.highContrast) {;
         document.documentElement.classList.add('high-contrast')} else {;
         document.documentElement.classList.remove('high-contrast')}
-
+;
       // Apply large text;
       if(updatedSettings.largeText) {;
         document.documentElement.style.fontSize = '18px'} else {;
         document.documentElement.style.fontSize = '16px'}
-
+;
       // Apply reduced motion;
       if(updatedSettings.reducedMotion) {;
         document.documentElement.style.setProperty(';
           '--reduced-motion',reduce';
         )} else {;
         document.documentElement.style.removeProperty('--reduced-motion')}
-
+;
       // Apply focus indicator;
       if(updatedSettings.focusIndicator) {;
         document.documentElement.classList.add('focus-visible')} else {;
         document.documentElement.classList.remove('focus-visible')}
-
+;
       // Apply color blindness simulation;
       document.documentElement.style.setProperty(';
-        '--color-blindness',
+        '--color-blindness',;
         updatedSettings.colorBlindness;
       );
+;
       // Apply typography settings;
       document.documentElement.style.setProperty(';
-        '--font-size',
+        '--font-size',;
         `${updatedSettings.fontSize}px`;
       );
       document.documentElement.style.setProperty(';
-        '--line-height',
+        '--line-height',;
         updatedSettings.lineHeight.toString();
       );
       document.documentElement.style.setProperty(';
@@ -189,15 +129,16 @@ export function EnhancedAccessibilityPanel("props": any) {;
         '--word-spacing',`;
         `${updatedSettings.wordSpacing}px`;
       );
+;
       // Save to localStorage;
       localStorage.setItem(';
-        'accessibility-settings',
+        'accessibility-settings',;
         JSON.stringify(updatedSettings);
-      )},
+      )},;
     [settings];
   );
+;
   // Load settings from localStorage;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityPanel.tsx
   useEffect(() => {;
 // "TODO": "Add dependencies if needed;
   return () => {;
@@ -212,13 +153,3 @@ export function EnhancedAccessibilityPanel("props": any) {;
 </AccessibilitySettings>;
 </any>;
 </any>
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;
-};
-}, []); []);
-}}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityPanel.tsx

@@ -24,7 +24,8 @@ export default function Layout("props": "any) {;
       </footer>;
     </div>;
   );
-"}type LayoutProps = {
+"}
+type LayoutProps = {
   children: React.ReactNode;
 };
 export default function Layout(props: any) {

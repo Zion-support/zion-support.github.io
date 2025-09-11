@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 module.exports = {
   "apps": [// Main application
     {

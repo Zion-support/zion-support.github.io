@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function AddToCart.test({ }: AddToCart.testProps) {
 
-
 <:tests/AddToCart.test.tsx
 =
 
@@ -16,20 +15,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
@@ -53,12 +52,7 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
     </div>
   );
 
-
 >
-
-
-
-
 
 }
 ><:src.pages.disabled/FiveGSolutions.jsx
@@ -91,11 +85,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 
-
->>>>>>>> main:tests/AddToCart.test.tsx
-
-
+>
 
 =
 >
-

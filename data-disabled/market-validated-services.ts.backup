@@ -1,0 +1,20 @@
+import { ServiceVariant  } from "../types/service-variants";
+export interface MarketValidatedService {
+	id: string;
+	name: string;
+	tagline: string;
+	price: string;
+	period: string,
+  description: string;
+	features: string[];
+	category: string;
+	link: string;
+	variant?: ServiceVariant;
+	rating?: number;
+	customers?: number;
+	trialDays?: number;
+	setupTime?: string;
+	contactInfo: {
+		mobile: string;
+		email: string;
+		address: string;

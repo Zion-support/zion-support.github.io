@@ -1,4 +1,5 @@
 import {  import { motion  } from 'framer-motion';
+;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -17,11 +18,7 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
             Innovation & Research;
           </h2>";
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-<<<<<<< HEAD:src_backup_temp/components/InnovationResearchSection.tsx
             Pushing the boundaries of technology through cutting-edge research",;
-=======
-            Pushing the boundaries of technology through cutting-edge research,
->>>>>>> origin/automation-fixes:src/components/InnovationResearchSection.tsx
             breakthrough innovations, and collaborative partnerships with leading institutions.</p>;
         </motion.div>;
         {/* Innovation Metrics */}
@@ -72,7 +69,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
         {/* Research Areas */}
         <motion.div;
           className="mb-16";          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovationResearchSection.tsx
   { "opacity": "0",;
   "y": "3 0;
 "}}
@@ -85,36 +81,17 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
   { "duration": "0.6",;
   "delay": "0.4;
 "}}
-=======
-
-  { opacity: 0,
-  y: 30;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition = {;
-
-  { duration: 0.6,
-  delay: 0.4;
-}}
->>>>>>> origin/automation-fixes:src/components/InnovationResearchSection.tsx
         >";
           <h3 className="text-3xl font-bold text-white text-center mb-12">;
             Active Research Areas;
-          </h3>;}}
+          </h3>;
+}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas
-          
-
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 gap-8">;
             {researchAreas.map((area", index) => (<motion.div;
                 key={area.title}
-<<<<<<< HEAD:src_backup_temp/components/InnovationResearchSection.tsx
                 className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 "hover": "borde r-blue - 500 / 50 transition - all duration - 300 "hover": shado w-lg "hover": shado w-blue -500 / 25"                initial = {;
   { "opacity": 0",;
   "y": "3 0;
@@ -128,24 +105,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
   { "duration": "0.6",;
   "delay": "0.6 + index * 0.1;
 "}}
-=======
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-blue -500 / 25"                initial = {;
-
-  { opacity: 0,
-  y: 30;
-}}
-                whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-                viewport={{ once: true }}
-                transition = {;
-
-  { duration: 0.6,
-  delay: 0.6 + index * 0.1;
-}}
->>>>>>> origin/automation-fixes:src/components/InnovationResearchSection.tsx
               >";
                 <div className="flex items-start gap-4">;
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0`}>";
@@ -165,16 +124,9 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
                           whileInView={{ "width": "`${area.progress"}%` }}
                           viewport={{ "once": "tru e "}}
                           transition = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovationResearchSection.tsx
   { "duration": "1",;
   "delay": "0.8 + index * 0.1;
 "}}
-=======
-
-  { duration: 1,
-  delay: 0.8 + index * 0.1;
-}}
->>>>>>> origin/automation-fixes:src/components/InnovationResearchSection.tsx
                         />;
                       </div>;
                     </div>;
@@ -185,7 +137,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
         {/* Research Highlights */}
         <motion.div;
           className="mb-12"          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovationResearchSection.tsx
   { "opacity": "0",;
   "y": "3 0;
 "}}
@@ -198,34 +149,16 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
   { "duration": "0.6",;
   "delay": "0.8;
 "}}
-=======
-
-  { opacity: 0,
-  y: 30;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition = {;
-
-  { duration: 0.6,
-  delay: 0.8;
-}}
->>>>>>> origin/automation-fixes:src/components/InnovationResearchSection.tsx
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-6">;
               Latest Research Breakthroughs;
-            </h3>;}}
+            </h3>;
+}}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Latest Research Breakthroughs
-            
-
             <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-6">;
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - pink - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
@@ -252,7 +185,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
         </motion.div>;
         <motion.div;
           className="text-center"          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovationResearchSection.tsx
   { "opacity": 0",;
   "y": "2 0;
 "}}
@@ -265,23 +197,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
   { "duration": "0.6",;
   "delay": "1.0;
 "}}
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition = {;
-
-  { duration: 0.6,
-  delay: 1.0;
-}}
->>>>>>> origin/automation-fixes:src/components/InnovationResearchSection.tsx
         >";
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">";
             <h3 className="text-2xl font-bold mb-4">;
@@ -300,7 +215,8 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
                 <BookOpen className="ml-2 h-5 w-5"   />              </button>;
             </div>;
           </div>;
-        </motion.div>;}}
+        </motion.div>;
+}}
         >"
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
@@ -321,12 +237,8 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
           </div>
         </motion.div>
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/InnovationResearchSection.tsx
     </section>;) "};
 ;
-=======
-    </section>;) };
->>>>>>> origin/automation-fixes:src/components/InnovationResearchSection.tsx
 export default InnovationResearchSection;";
             <span className="text-2xl">→</span>;
           </div>;

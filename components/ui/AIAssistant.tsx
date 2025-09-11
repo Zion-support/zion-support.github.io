@@ -1,84 +1,45 @@
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-export type AIAssistantProps = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-=======
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-export type AIAssistantProps = {
-
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+=======
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-class ErrorBoundary extends React.Component {
+=======class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
-    
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-=======
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-
 export type AIAssistantProps = {;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+export type AIAssistantProps = {;
+
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-<<<<<<< HEAD
 
 };
 
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   buttonLabel = "Generate with AI"
   title = "AI Writing Assistant"
   defaultPrompt
@@ -86,11 +47,13 @@ export type AIAssistantProps = {;
   onAccept
   authorizationToken
 }: AIAssistantProps) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+==============
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -98,50 +61,22 @@ export type AIAssistantProps = {;
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-};
-export default function AIAssistant({
-  buttonLabel = 'Generate with AI',
-  title = 'AI Writing Assistant',
-  defaultPrompt,
-  systemPrompt,
-  onAccept,
-authorizationToken
-}: AIAssistantProps) {
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-    } catch {}
-}, [output]);
-  const onOpen = useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-  const onOpen = useCallback(() => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
   const onOpen = useCallback(() => {
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
@@ -152,8 +87,6 @@ authorizationToken
 
 
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
 setPrompt(defaultPrompt)
   }, [defaultPrompt]);
@@ -312,130 +245,57 @@ if ( {) {
   }, []);
   const onClose = useCallback(() => setIsOpen(false), []);
   const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
-    <>;
-      <button
-        type="button"
-        onClick={onOpen}
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
+    } catch {}
+}, [output]);
+  const onOpen = useCallback(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
 
 
+
+  const onOpen = useCallback(() => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    setIsOpen(true);
+    setOutput("");
+    setIsEditing(false);
+
+
+  }, []);
+  const onClose = useCallback(() => setIsOpen(false), []);
+
+
+
 =======
-        className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
-      >
-        {buttonLabel}
-      </button>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
-<<<<<<< HEAD
-=======
       </button>;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isOpen && (;
         <div className="fixed inset-0 z-50 flex items-center justify-center">;
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />;
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">;
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">;
               <h3 className="text-base font-semibold">{title}</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={onClose}
                 className="text-sm opacity-70 hover:opacity-100">;
                 Close;
               </button>{" "}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>;
-
             <div className="p-4 space-y-3">;
               <div>;
-<<<<<<< HEAD
 
                 <label
                   className="block text-xs font-medium mb-1"
                   htmlFor="input-Operator prompt">;
-=======
-                <label
-                  className="block text-xs font-medium mb-1"
-htmlFor="input-Operator prompt">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  Operator prompt;
-                </label>;
-                <textarea
-                  value={prompt}
-                  onChange={(e) => setPrompt(e && e.target.value)}
-                  rows={4}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
-                />;
-              </div>;
-              <div className="flex items-center gap-2">;
-
-=======
-className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
-                />;
-              </div>;
-              <div className="flex items-center gap-2">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                <button
-                  onClick={callOperator}
-                  disabled={loading}
-                  className="rounded-md bg-blue-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60">;
-                  {loading ? "Generating…" : "Generate"}
-                </button>;
-                <button
-                  onClick={callOperator}
-                  disabled={loading}
-                  className="rounded-md border px-3 py-1 && 1.5 text-sm">;
-                  {loading ? "…" : "Regenerate"}
-                </button>;
-                <button
-                  onClick={() => setIsEditing((v) => !v)}
-                  className="rounded-md border px-3 py-1 && 1.5 text-sm";
-                >;
-                  {isEditing ? "Preview" : "Edit"}
-                </button>;
-                <button
-                  onClick={onCopy}
-                  disabled={!output}
-                  className="rounded-md border px-3 py-1 && 1.5 text-sm disabled: opacity-60">;
-                  Copy;
-                </button>;
-                <button
-                  onClick={() => {;
-                    (onAccept(output), onClose());
-                  }}
-                  disabled={!canAccept}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
-=======
-className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   const on_open = useCallback (() => {
     setIsOpen (true);
@@ -519,70 +379,28 @@ className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm d
                   }}
                   disabled={!can_accept}
                   className="ml - auto rounded - md bg - green - 600 text - white px - 3 py - 1.5 text - sm disabled:opacity - 60";
-<<<<<<< HEAD
-
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   Accept;
                 </button>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
               {error && (
                 <div className="text-red-600 text-sm">{error}</div>
               )}
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-              {error && (
-                <div className="text-red-600 text-sm">{error}</div>
-              )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              {error && <div className="text-red-600 text-sm">{error}</div>}
-              <div>;
-                <label
-                  className="block text-xs font-medium mb-1"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  htmlFor="input-Output (markdown)">;
-=======
-htmlFor="input-Output (markdown)">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  Output (markdown);
-                </label>;
-                {isEditing ? (;
-                  <textarea
-                    value={output}
-                    onChange={(e) => setOutput(e && e.target.value)}
-                    rows={12}
-<<<<<<< HEAD
-<<<<<<< HEAD
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";=======
 
                     className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
-=======
-className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 ) : (;
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">;
                     {output || "No content yet. Click Generate."}
                   </pre>;
-<<<<<<< HEAD
-
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 )}
               </div>;
             </div>;
@@ -592,7 +410,6 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
     </>;
   );
 }
-=======
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
                 )}
               </div>
@@ -601,22 +418,40 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
         </div>
       )}
     </>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              {error && <div className="text - red - 600 text - sm">{error}</div>}
+              <div>;
+                <label;
+                  className="block text - xs font - medium mb - 1";
+                  html_for="input - Output (markdown)";
+                >;
+                  Output (markdown);
+                </label>;
+                {is_editing ? (
+                  <textarea;
+                    value={output}
+                    on_change={(e) => set_output (e.target.value)}
+                    rows={12}
+                    className="w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 p - 2 text - sm";
+                  />) : (
+                  <pre className="w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 900 p - 3 text - sm whitespace - pre - wrap">;
+                    {output || "No content yet. Click Generate."}
+                  </pre>)}
+              </div>;
+            </div>;
+          </div>;
+        </div>)}
+    </>);
+}
   );
 }
+}
+=======
 
 =======
 
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-
-}
-
+}=======
   );
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

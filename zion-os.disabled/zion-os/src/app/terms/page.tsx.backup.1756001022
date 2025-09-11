@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-export const metadata = {
-  title: "Terms of Service - Zion Tech Group",
-  description: "Read Zion Tech Group's terms of service and conditions for using our website and services.",
-  keywords: "terms of service, terms and conditions, Zion Tech Group terms, service agreement",
-};
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1e9c
-export default function TermsPage() {
+=======export default function TermsPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Terms of Service</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </p>
-        </div>
-
         {/* Content */}
         <div className="prose prose-invert max-w-none">
           <section className="mb-12">
@@ -437,9 +419,7 @@ export default function TermsPage() {
                 <p><strong>Address:</strong> Delaware, United States</p>
               </div>
             </div>
-          </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1e9c
-        </div>
+          </div>        </div>
       </div>
     </div>
   );

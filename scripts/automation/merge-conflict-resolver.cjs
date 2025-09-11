@@ -1,8 +1,7 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
 const fs = require("fs");
-const path = require("path`);
-const { execSync } = require(`child_process`);
+const path = require("path");
+const { execSync } = require("child_process");
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -17,58 +16,26 @@ const { execSync } = require("child_process");
 class MergeConflictResolver {
   constructor() {
   this.projectRoot = process.cwd();
-=======
-const fs = require("fs")
-const path = require("path`)
-const { execSync } = require(`child_process`)
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd()
     this.conflictsResolved = 0;
-    this.conflictsFound = []
-    this.logFile = path.join(
-      this.projectRoot,merge-conflict-resolver-report.json`;
-#!/"usr/bin/env" node;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-
-class MergeConflictResolver {
-  constructor() {
-  this.projectRoot = process.cwd()
->>>>>>> origin/automation-fixes
-    this.conflictsResolved = 0;
-    this.conflictsFound = []
-    this.logFile = path.join(
+    this.conflictsFound = [];
+    this.logFile = path.join(;
       this.projectRoot,merge-conflict-resolver-report.json";
-    )
+    );
     this.isRunning = false;
-<<<<<<< HEAD
     this.checkInterval = 2 * 60 * 1000; // Check every 2 minutes}
 ;
   log(message) {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);}
-
+    }
+;
   async start() {
   this.log("🚀 Starting Merge Conflict Resolver...");
-=======
-    this.checkInterval = 2 * 60 * 1000; // Check every 2 minutes;
-}
-  log(message) {
-  const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`),
-}
-  async start() {
-  this.log(`🚀 Starting Merge Conflict Resolver...`)
->>>>>>> origin/automation-fixes
     this.isRunning = true;
     // Initial check;
     await this.checkAndResolveConflicts();
     // Set up continuous monitoring;
     this.monitorInterval = setInterval(async () => {
   if (this.isRunning) {
-<<<<<<< HEAD
   await this.checkAndResolveConflicts()}
     }, this.checkInterval)}
 ;
@@ -118,65 +85,11 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`)} else {
   const markers = [];
     // Find all conflict markers;
     const lines = content.split("\n");
-=======
-  await this.checkAndResolveConflicts(),
-}
-    }, this.checkInterval),
-}
-  stop() {
-  this.log(`🛑 Stopping Merge Conflict Resolver...`)
-
-  stop() {
-  this.log(`🛑 Stopping Merge Conflict Resolver...`);
-
-      if (conflicts.length > 0) {this.log(`⚠️ Found ${conflicts.length} merge conflicts`)
-        this.conflictsFound = conflicts;
-
-        for (const conflict of conflicts) {
-  await this.resolveConflict(conflict),
-}
-this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
-} else {
-  this.log(`✅ No merge conflicts found`),
-} else {
-  this.log("✅ No merge conflicts found"),
-}
-      this.saveReport(),
-} catch (error) {  this.log(`❌ Error during conflict resolution: ${error.message  }`),
-}
-  }
-  async findMergeConflicts() {
-  const conflicts = []
-    const files = this.findFiles(`.ts,.tsx,.js,.jsx,.json,.md,.yml,.yaml`)
-    for (const file of files) {
-  try {
-  const content = fs.readFileSync(file, `utf8`)
-        if (
-          content.includes("`) ||;
-          content.includes(`        ) {
-  conflicts.push({
-  file,
-            type: `merge_conflict`,
-            markers: this.extractConflictMarkers(content),,
-}),
-}
-      } catch (error) {  this.log(`⚠️ Could not read ${file  }: ${error.message}`),
-}
-    }
-    return conflicts;
-}
-  extractConflictMarkers(content) {
-  const markers = []
-    // Find all conflict markers;
-    const lines = content.split(`\n`)
-
->>>>>>> origin/automation-fixes
     // Find all conflict markers;
     const lines = content.split("\n");
     let inConflict = false;
     let conflictStart = 0;
     let conflictEnd = 0;
-<<<<<<< HEAD
     for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
       if (line.includes("") && inConflict) {
@@ -220,61 +133,6 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
   const ext = path.extname(filePath);
     switch (ext) {
   case ".ts":;
-=======
-
-    for (let i = 0; i < lines.length; i++) {
-  const line = lines[i]
-      if (line.includes(``) && inConflict) {
-  // Middle marker;
-} else if (line.includes(`        inConflict = false;
-        conflictEnd = i;
-        markers.push({
-  start: conflictStart,
-          end: conflictEnd,
-          content: lines.slice(conflictStart, conflictEnd + 1).join(`\n`),,
-}),
-}
-    }
-    return markers;
-}
-  async resolveConflict(conflict) {
-  try {this.log(`🔧 Resolving conflict in ${conflict.file}`)
-      const content = fs.readFileSync(conflict.file, `utf8`)
-      let resolvedContent = content;
-      // Try to auto-resolve based on file type and content;
-      resolvedContent = await this.autoResolveConflict(
-        conflict.file,
-
-      const content = fs.readFileSync(conflict.file, "utf8")
-      let resolvedContent = content;
-
-      // Try to auto-resolve based on file type and content;
-      resolvedContent = await this.autoResolveConflict(
-        conflict.file,
-        resolvedContent;
-      )
-
-      if (resolvedContent !== content) {
-  fs.writeFileSync(conflict.file, resolvedContent);this.log(`✅ Auto-resolved conflict in ${conflict.file}`);
-        this.conflictsResolved++;
-        // Stage the resolved file;
-        try {execSync(`git add "${conflict.file}`, { stdio: `pipe` })this.log(`📝 Staged resolved file ${conflict.file}`),
-} catch (error) {  this.log(`⚠️ Could not stage ${conflict.file  }: ${error.message}`),
-}
-      } else {this.log(`⚠️ Could not auto-resolve conflict in ${conflict.file}`),
-}
-    } catch (error) {
-  this.log(❌ Error resolving conflict in ${conflict.file  }: ${error.message}`;
-} catch (error) {
-  this.log(❌ Error resolving conflict in ${conflict.file}: ${error.message}";
-      ),
-}
-  }
-  async autoResolveConflict(filePath, content) {
-  const ext = path.extname(filePath)
-    switch (ext) {
-  case `.ts":;
->>>>>>> origin/automation-fixes
       case ".tsx":;
         return this.resolveTypeScriptConflict(content);
       case ".js":;
@@ -283,24 +141,15 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
       case ".json":;
         return this.resolveJsonConflict(content);
       case ".md":;
-<<<<<<< HEAD
         return this.resolveMarkdownConflict(content);
       "default": ;
         return this.resolveGenericConflict(content)}
   }
 ;
-=======
-        return this.resolveMarkdownConflict(content)
-      default:;
-        return this.resolveGenericConflict(content),
-}
-  }
->>>>>>> origin/automation-fixes
   resolveTypeScriptConflict(content) {
   // For TypeScript files, prefer the HEAD version but merge imports;
     let resolved = content;
     // Remove all conflict markers;
-<<<<<<< HEAD
     resolved = resolved.replace(/\n?/g, "");
     resolved = resolved.replace(/;
     // Clean up any duplicate imports;
@@ -308,56 +157,25 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
   resolveTypeScriptConflict(content) {
   // For TypeScript files, prefer the HEAD version but merge imports;
     let resolved = content;
-=======
-    resolved = resolved.replace(/\n?/g, ``)
-    resolved = resolved.replace(/;
-    // Clean up any duplicate imports;
-    resolved = this.cleanupDuplicateImports(resolved)
-
-  resolveTypeScriptConflict(content) {
-  // For TypeScript files, prefer the HEAD version but merge imports;
-    let resolved = content;
-
->>>>>>> origin/automation-fixes
     // Remove all conflict markers;
     resolved = resolved.replace(/\n?/g, ");
     resolved = resolved.replace(/;
     // Clean up any duplicate imports;
-<<<<<<< HEAD
     resolved = this.cleanupDuplicateImports(resolved);
     // Fix any syntax issues;
     resolved = this.fixTypeScriptSyntax(resolved);
     return resolved}
 ;
-=======
-    resolved = this.cleanupDuplicateImports(resolved)
-
-    // Fix any syntax issues;
-    resolved = this.fixTypeScriptSyntax(resolved)
-
-    return resolved;
-}
->>>>>>> origin/automation-fixes
   resolveJavaScriptConflict(content) {
   // Similar to TypeScript but without type-specific fixes;
     let resolved = content;
     // Remove all conflict markers;
-<<<<<<< HEAD
     resolved = resolved.replace(/\n?/g, "");
     resolved = resolved.replace(/;
     // Clean up any duplicate imports;
     resolved = this.cleanupDuplicateImports(resolved);
     return resolved}
 ;
-=======
-    resolved = resolved.replace(/\n?/g, ``)
-    resolved = resolved.replace(/;
-    // Clean up any duplicate imports;
-    resolved = this.cleanupDuplicateImports(resolved)
-
-    return resolved;
-}
->>>>>>> origin/automation-fixes
   resolveJsonConflict(content) {
   // For JSON files, try to merge the objects;
     try {
@@ -365,7 +183,6 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
       const headMatch = content.match(/\n/);
       const incomingMatch = content.match(/\n([\s\S]*?)\n;
       if (headMatch && incomingMatch) {
-<<<<<<< HEAD
   const headJson = JSON.parse(headMatch[1].trim());
         const incomingJson = JSON.parse(incomingMatch[1].trim());
         // Merge the objects, preferring incoming for conflicts;
@@ -373,16 +190,6 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
         // Remove conflict markers and replace with merged content;
         let resolved = content.replace(;
           /\n[\s\S]*?          JSON.stringify(merged, null, 2);
-=======
-  const headJson = JSON.parse(headMatch[1].trim())
-        const incomingJson = JSON.parse(incomingMatch[1].trim())
-        // Merge the objects, preferring incoming for conflicts;
-        const merged = { ...headJson, ...incomingJson }
-        // Remove conflict markers and replace with merged content;
-        let resolved = content.replace(
-          /\n[\s\S]*?          JSON.stringify(merged, null, 2)
-
->>>>>>> origin/automation-fixes
   resolveJsonConflict(content) {
   // For JSON files, try to merge the objects;
     try {
@@ -390,19 +197,12 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
       const headMatch = content.match(/\n/);
       const incomingMatch = content.match(/\n([\s\S]*?)\n;
       if (headMatch && incomingMatch) {
-<<<<<<< HEAD
   const headJson = JSON.parse(headMatch[1].trim());
         const incomingJson = JSON.parse(incomingMatch[1].trim());
-=======
-  const headJson = JSON.parse(headMatch[1].trim())
-        const incomingJson = JSON.parse(incomingMatch[1].trim())
-
->>>>>>> origin/automation-fixes
         // Merge the objects, preferring incoming for conflicts;
         const merged = { ...headJson, ...incomingJson }
-
+;
         // Remove conflict markers and replace with merged content;
-<<<<<<< HEAD
         let resolved = content.replace(;
           /\n[\s\S]*?          JSON.stringify(merged, null, 2);
         );
@@ -416,28 +216,9 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
   this.log("⚠️ Could not parse JSON in "conflict": ${error.message}")}
 ;
     // "Fallback": remove conflict markers and keep HEAD;
-=======
-        let resolved = content.replace(
-          /\n[\s\S]*?          JSON.stringify(merged, null, 2)
-        )
-
-        return resolved;
-}
-    } catch (error) {
-  this.log(`⚠️ Could not parse JSON in conflict: ${error.message  }`),
-}
-    // Fallback: remove conflict markers and keep HEAD;
     return content;
-      .replace(/\n?/g, ``),
-} catch (error) {
-  this.log(`⚠️ Could not parse JSON in conflict: ${error.message}`),
-}
-    // Fallback: remove conflict markers and keep HEAD;
->>>>>>> origin/automation-fixes
-    return content;
-      .replace(/\n?/g, ")
+      .replace(/\n?/g, ");
       .replace(/  }
-<<<<<<< HEAD
       .replace(/\n?/g, "");
       .replace(/  }
 resolveMarkdownConflict(content) {
@@ -467,51 +248,9 @@ resolveMarkdownConflict(content) {
     }
 ;
     // "Fallback": remove conflict markers;
-=======
-      .replace(/\n?/g, ``)
-      .replace(/  }
-
-  resolveMarkdownConflict(content) {
-  // For markdown, prefer the longer version (more content)
-    const headMatch = content.match(/\n/)
-    const incomingMatch = content.match(/\n([\s\S]*?)\n;
-    if (headMatch && incomingMatch) {
-  const headContent = headMatch[1]
-      const incomingContent = incomingMatch[1]
-      // Choose the longer version;
-      if (incomingContent.length > headContent.length) {
-  return content.replace(
-          /\n[\s\S]*?          incomingContent;
-        ),
-} else {
-  return content.replace(
-    if (headMatch && incomingMatch) {
-  const headContent = headMatch[1]
-      const incomingContent = incomingMatch[1]
-
-      // Choose the longer version;
-      if (incomingContent.length > headContent.length) {
-  return content.replace(
-          /\n[\s\S]*?          incomingContent;
-        ),
-} else {
-  return content.replace(
-          /\n[\s\S]*?          headContent;
-        ),
-}
-    }
-
-    // Fallback: remove conflict markers;
     return content;
-      .replace(/\n?/g, ``)
+      .replace(/\n?/g, "");
       .replace(/  }
-  resolveGenericConflict(content) {
-  // Generic resolution: remove conflict markers and keep HEAD;
->>>>>>> origin/automation-fixes
-    return content;
-      .replace(/\n?/g, "")
-      .replace(/  }
-<<<<<<< HEAD
 ;
   resolveGenericConflict(content) {
   // Generic "resolution": remove conflict markers and keep HEAD;
@@ -534,61 +273,24 @@ resolveMarkdownConflict(content) {
 ;
     return cleanedLines.join("\n")}
 ;
-=======
-  cleanupDuplicateImports(content) {
-  const lines = content.split("\n")
-    const imports = new Set()
-    const cleanedLines = []
-
-    for (const line of lines) {
-  if (line.trim().startsWith("import ")) {
-  if (!imports.has(line.trim())) {
-  imports.add(line.trim())
-          cleanedLines.push(line),
-}
-      } else {
-  cleanedLines.push(line),
-}
-    }
-    return cleanedLines.join("\n"),
-}
->>>>>>> origin/automation-fixes
-  fixTypeScriptSyntax(content) {
-  // Fix common TypeScript syntax issues;
-    let fixed = content;
-    // Fix missing type annotations;
-<<<<<<< HEAD
-    fixed = fixed.replace(/} catch \("error": \)/g, "} catch ("error": any)");
-    fixed = fixed.replace(/\(([^)]+): \)/g, "($"1": any)");
-=======
-    fixed = fixed.replace(/} catch \(error: \)/g, "} catch (error: any)")
-    fixed = fixed.replace(/\(([^)]+): \)/g, "($1: any)")
->>>>>>> origin/automation-fixes
-    // Fix JSX syntax;
-    fixed = fixed.replace(
-      /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>";
-<<<<<<< HEAD
   fixTypeScriptSyntax(content) {
   // Fix common TypeScript syntax issues;
     let fixed = content;
     // Fix missing type annotations;
     fixed = fixed.replace(/} catch \("error": \)/g, "} catch ("error": any)");
     fixed = fixed.replace(/\(([^)]+): \)/g, "($"1": any)");
-=======
-
-  fixTypeScriptSyntax(content) {
-  // Fix common TypeScript syntax issues;
-    let fixed = content;
-
-    // Fix missing type annotations;
-    fixed = fixed.replace(/} catch \(error: \)/g, "} catch (error: any)")
-    fixed = fixed.replace(/\(([^)]+): \)/g, "($1: any)")
-
->>>>>>> origin/automation-fixes
     // Fix JSX syntax;
     fixed = fixed.replace(;
       /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>";
-<<<<<<< HEAD
+  fixTypeScriptSyntax(content) {
+  // Fix common TypeScript syntax issues;
+    let fixed = content;
+    // Fix missing type annotations;
+    fixed = fixed.replace(/} catch \("error": \)/g, "} catch ("error": any)");
+    fixed = fixed.replace(/\(([^)]+): \)/g, "($"1": any)");
+    // Fix JSX syntax;
+    fixed = fixed.replace(;
+      /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>";
     );
     return fixed}
 ;
@@ -626,34 +328,10 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
   const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         if (;
-=======
-    )
-
-  fixTypeScriptSyntax(content) {
-  // Fix common TypeScript syntax issues;
-    let fixed = content;
-
-    // Fix missing type annotations;
-    fixed = fixed.replace(/} catch \(error: \)/g, "} catch (error: any)");
-    fixed = fixed.replace(/\(([^)]+): \)/g, "($1: any)");
-
-  findFiles(extensions) {
-  const exts = extensions.split(",")
-    const files = []
-
-    const walkDir = dir => {
-  const items = fs.readdirSync(dir)
-
-      for (const item of items) {
-  const fullPath = path.join(dir, item)
-        const stat = fs.statSync(fullPath)
-        if (
->>>>>>> origin/automation-fixes
           stat.isDirectory() &&;
-          !item.startsWith(`.`) &&;
+          !item.startsWith(".`) &&;
           item !== "node_modules";
         ) {
-<<<<<<< HEAD
   walkDir(fullPath)} else if (stat.isFile()) {
   const ext = path.extname(item);
           if (exts.some(e => e.trim() === ext)) {
@@ -681,66 +359,28 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
       "conflictsFound": this.conflictsFound.length,
       "lastCheck": new Date().toISOString(),
       "logFile": this.logFile}
-=======
-  walkDir(fullPath),
-} else if (stat.isFile()) {
-  const ext = path.extname(item)
-          if (exts.some(e => e.trim() === ext)) {
-  files.push(fullPath),
-}
-        }
-      }
-    }
-    walkDir(this.projectRoot)
-    return files;
-}
-  saveReport() {
-  const report = {
-  timestamp: new Date().toISOString(),
-      conflictsResolved: this.conflictsResolved,
-      conflictsFound: this.conflictsFound,
-      status: "completed",,
-}
-    fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2)),
-}
-  getStatus() {
-  return {
-  isRunning: this.isRunning,
-      conflictsResolved: this.conflictsResolved,
-      conflictsFound: this.conflictsFound.length,
-      lastCheck: new Date().toISOString(),
-      logFile: this.logFile,,
-}
->>>>>>> origin/automation-fixes
   }
 }
-
+;
 // Export for use in other modules;
 module.exports = MergeConflictResolver;
 // If run directly, start the conflict resolver;
 if (require.main === module) {
-<<<<<<< HEAD
   const conflictResolver = new MergeConflictResolver();
-=======
-  const conflictResolver = new MergeConflictResolver()
->>>>>>> origin/automation-fixes
   // Handle graceful shutdown;
   process.on("SIGINT", () => {
   // Export for use in other modules;
 module.exports = MergeConflictResolver;
-<<<<<<< HEAD
 // If run directly, start the conflict resolver;
 if (require.main === module) {
   const conflictResolver = new MergeConflictResolver();
-
   // Handle graceful shutdown;
   process.on("SIGINT", () => {
   conflictResolver.stop();
-    process.exit(0);});
-
+    process.exit(0)});
   process.on("SIGTERM', () => {
   conflictResolver.stop();
-    process.exit(0);});
+    process.exit(0)});
   // Start the conflict resolver;
   conflictResolver.start()}
 #!/usr/bin/env node/""usr/bin/env"" node;"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class $1 { constructor() { this.projectRoot = process.cwd(); this.conflictsResolved = 0; this.conflictsFound = []; this.logFile = path.join(;" this.projectRoot,merge-conflict-resolver-report.json";#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class MergeConflictResolver { constructor() { this.projectRoot = process.cwd(); this.conflictsResolved = 0; this.conflictsFound = []; this.logFile = path.join(;" this.projectRoot,merge-conflict-resolver-report.json"; ); this.isRunning = false; this.checkInterval = 2 * 60 * 1000; / Check every 2 minutes}; log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)}; async start() {" this.log(" Starting Merge Conflict Resolver."); this.isRunning = true; / Initial check; await this.checkAndResolveConflicts(); / Set up continuous monitoring; this.monitorInterval = setInterval(async () => { if (this.isRunning) { await this.checkAndResolveConflicts()} }, this.checkInterval)}; stop() {" this.log(" Stopping Merge Conflict Resolver."); stop() {" this.log(" Stopping Merge Conflict Resolver."); this.isRunning = false; if (this.monitorInterval) { clearInterval(this.monitorInterval)} }; async checkAndResolveConflicts() { try {" this.log(" Checking for merge conflicts."); const conflicts = await this.findMergeConflicts();` if (conflicts.length > 0) {this.log(` Found ${conflicts.length} merge conflicts`); this.conflictsFound = conflicts; for (const conflict of conflicts) { await this.resolveConflict(conflict)}`this.log(` Resolved ${this.conflictsResolved} conflicts`)} else {" this.log(" No merge conflicts found")} else {" this.log(" No merge conflicts found")};"` this.saveReport()} catch (error) { this.log(` Error during conflict resolution: ${error.message }`)} }; async findMergeConflicts() { const conflicts = [];" const files = this.findFiles(".ts,.tsx,.js,.jsx,.json,.md,.yml,.yaml"); for (const file of files) { try {" const content = fs.readFileSync(file, "utf8"); if (;" content.includes("") |;" content.includes(" ) { conflicts.push({ file," type: "merge_conflict"," markers: this.extractConflictMarkers(content)})}` } catch (error) { this.log(` Could not read ${file }: ${error.message}`)} }; return conflicts}; extractConflictMarkers(content) { const markers = []; / Find all conflict markers;" const lines = content.split("\n"); / Find all conflict markers;" const lines = content.split("\n"); let inConflict = false; let conflictStart = 0; let conflictEnd = 0; for (let i = 0; i < lines.length; i++) { const line = lines[i];" if (line.includes("") && inConflict) {" / Middle marker} else if (line.includes(" inConflict = false; conflictEnd = i; markers.push({" start: conflictStart," end: conflictEnd," content: lines.slice(conflictStart, conflictEnd + 1).join("\n")})} }; return markers}; async resolveConflict(conflict) {" try {this.log(" Resolving conflict in ${conflict.file}");" const content = fs.readFileSync(conflict.file, "utf8"); let resolvedContent = content; / Try to auto-resolve based on file type and content; resolvedContent = await this.autoResolveConflict(; conflict.file," const content = fs.readFileSync(conflict.file, "utf8"); let resolvedContent = content; / Try to auto-resolve based on file type and content; resolvedContent = await this.autoResolveConflict(; conflict.file, resolvedContent; ); if (resolvedContent !== content) {" fs.writeFileSync(conflict.file, resolvedContent);this.log(" Auto-resolved conflict in ${conflict.file}"); this.conflictsResolved++; / Stage the resolved file;" try {execSync("git add "${conflict.file}", { stdio: "pipe" });this.log(" Staged resolved file ${conflict.file}")} catch (error) { this.log(" Could not stage ${conflict.file }: ${error.message}")}"` } else {this.log(" Could not auto-resolve conflict in ${conflict.file}`)} } catch (error) {` this.log( Error resolving conflict in ${conflict.file }: ${error.message}`} catch (error) {" this.log( Error resolving conflict in ${conflict.file}: ${error.message}"; )} }; async autoResolveConflict(filePath, content) { const ext = path.extname(filePath); switch (ext) {" case ".ts":" case ".tsx": return this.resolveTypeScriptConflict(content);" case ".js":" case ".jsx": return this.resolveJavaScriptConflict(content);" case ".json": return this.resolveJsonConflict(content);" case ".md": return this.resolveMarkdownConflict(content);" default: return this.resolveGenericConflict(content)} }; resolveTypeScriptConflict(content) { / For TypeScript files, prefer the HEAD version but merge imports; let resolved = content; / Remove all conflict markers;" resolved = resolved.replace(/\n?/g, ""); resolved = resolved.replace(/; / Clean up any duplicate imports; resolved = this.cleanupDuplicateImports(resolved); resolveTypeScriptConflict(content) { / For TypeScript files, prefer the HEAD version but merge imports; let resolved = content; / Remove all conflict markers;" resolved = resolved.replace(/\n?/g, "); resolved = resolved.replace(/; / Clean up any duplicate imports; resolved = this.cleanupDuplicateImports(resolved); / Fix any syntax issues; resolved = this.fixTypeScriptSyntax(resolved); return resolved}; resolveJavaScriptConflict(content) { / Similar to TypeScript but without type-specific fixes; let resolved = content; / Remove all conflict markers;" resolved = resolved.replace(/\n?/g, ""); resolved = resolved.replace(/; / Clean up any duplicate imports; resolved = this.cleanupDuplicateImports(resolved); return resolved}; resolveJsonConflict(content) { / For JSON files, try to merge the objects; try { / Extract the different versions; const headMatch = content.match(/\n/); const incomingMatch = content.match(/\n([\s\S]*?)\n; if (headMatch && incomingMatch) { const headJson = JSON.parse(headMatch[1].trim()); const incomingJson = JSON.parse(incomingMatch[1].trim()); / Merge the objects, preferring incoming for conflicts; const merged = { .headJson, .incomingJson } / Remove conflict markers and replace with merged content; let resolved = content.replace(; /\n[\s\S]*? JSON.stringify(merged, null, 2); resolveJsonConflict(content) { / For JSON files, try to merge the objects; try { / Extract the different versions; const headMatch = content.match(/\n/); const incomingMatch = content.match(/\n([\s\S]*?)\n; if (headMatch && incomingMatch) { const headJson = JSON.parse(headMatch[1].trim()); const incomingJson = JSON.parse(incomingMatch[1].trim()); / Merge the objects, preferring incoming for conflicts; const merged = { .headJson, .incomingJson }; / Remove conflict markers and replace with merged content; let resolved = content.replace(; /\n[\s\S]*? JSON.stringify(merged, null, 2); ); return resolved} } catch (error) {" this.log(" Could not parse JSON in conflict: ${error.message }")};" / Fallback: remove conflict markers and keep HEAD; return content;" .replace(/\n?/g, "")} catch (error) {" this.log(" Could not parse JSON in conflict: ${error.message}")};" / Fallback: remove conflict markers and keep HEAD; return content;" .replace(/\n?/g, "); .replace(/ }" .replace(/\n?/g, ""); .replace(/ }resolveMarkdownConflict(content) { / For markdown, prefer the longer version (more content); const headMatch = content.match(/\n/); const incomingMatch = content.match(/\n([\s\S]*?)\n; if (headMatch && incomingMatch) { const headContent = headMatch[1]; const incomingContent = incomingMatch[1]; / Choose the longer version; if (incomingContent.length > headContent.length) { return content.replace(; /\n[\s\S]*? incomingContent; )} else { return content.replace(; if (headMatch && incomingMatch) { const headContent = headMatch[1]; const incomingContent = incomingMatch[1]; / Choose the longer version; if (incomingContent.length > headContent.length) { return content.replace(; /\n[\s\S]*? incomingContent; )} else { return content.replace(; /\n[\s\S]*? headContent; )} };" / Fallback: remove conflict markers; return content;" .replace(/\n?/g, ""); .replace(/ }; resolveGenericConflict(content) {" / Generic resolution: remove conflict markers and keep HEAD; return content;" .replace(/\n?/g, ""); .replace(/ }; cleanupDuplicateImports(content) {" const lines = content.split("\n"); const imports = new Set(); const cleanedLines = []; for (const line of lines) {" if (line.trim().startsWith("import ")) { if (!imports.has(line.trim())) { imports.add(line.trim()); cleanedLines.push(line)} } else { cleanedLines.push(line)} };" return cleanedLines.join("\n")}; fixTypeScriptSyntax(content) { / Fix common TypeScript syntax issues; let fixed = content; / Fix missing type annotations;" fixed = fixed.replace(/} catch \(error: \)/g, "} catch (error: any)");" fixed = fixed.replace(/\(([^)]+): \)/g, "($1: any)"); / Fix JSX syntax; fixed = fixed.replace(;" /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>"; fixTypeScriptSyntax(content) { / Fix common TypeScript syntax issues; let fixed = content; / Fix missing type annotations;" fixed = fixed.replace(/} catch \(error: \)/g, "} catch (error: any)");" fixed = fixed.replace(/\(([^)]+): \)/g, "($1: any)"); / Fix JSX syntax; fixed = fixed.replace(;" /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>"; ); return fixed}; async checkGitStatus() { try {" const status = execSync("git status --porcelain", { encoding: "utf8" }); return status; .trim();" .split("\n");" .filter(line => line.length > 0)} catch (error) { this.log(" Could not check git status: ${error.message }"); return []} }; async commitResolvedConflicts() { try { const status = await this.checkGitStatus(); const resolvedFiles = status.filter(;" line => line.startsWith("M ") | line.startsWith("A "); );" if (resolvedFiles.length > 0) {this.log(" Committing ${resolvedFiles.length} resolved files.");"const message = "Auto-resolve merge conflicts: ${resolvedFiles.length} files resolved";execSync("git commit -m ${message}"", { stdio: "pipe" });" this.log(" Conflicts committed successfully"); return true}" } catch (error) { this.log(" Could not commit resolved conflicts: ${error.message }")}; return false}; findFiles(extensions) {" const exts = extensions.split(","); findFiles(extensions) {" const exts = extensions.split(","); const files = []; const walkDir = dir => { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (; stat.isDirectory() &&;"` !item.startsWith(".`) &&;" item !== "node_modules"; ) { walkDir(fullPath)} else if (stat.isFile()) { const ext = path.extname(item); if (exts.some(e => e.trim() === ext)) { files.push(fullPath)} } } }; walkDir(this.projectRoot); return files}; saveReport() { const report = {" timestamp: new Date().toISOString()," conflictsResolved: this.conflictsResolved," conflictsFound: this.conflictsFound," status: "completed"}; fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))}; getStatus() { return {" isRunning: this.isRunning," conflictsResolved: this.conflictsResolved," conflictsFound: this.conflictsFound.length," lastCheck: new Date().toISOString()," logFile: this.logFile} }};/ Export for use in other modules;module.exports = MergeConflictResolver;/ If run directly, start the conflict resolver;if (require.main === module) { const conflictResolver = new MergeConflictResolver(); / Handle graceful shutdown;" process.on("SIGINT", () => { / Export for use in other modules;module.exports = MergeConflictResolver;/ If run directly, start the conflict resolver;if (require.main === module) { const conflictResolver = new MergeConflictResolver(); / Handle graceful shutdown;" process.on("SIGINT", () => { conflictResolver.stop(); process.exit(0)});" process.on("SIGTERM", () => { conflictResolver.stop(); process.exit(0)}); / Start the conflict resolver; conflictResolver.start()}""`"`
@@ -835,24 +475,3 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
   process.on("SIGINT")
   process.on("SIGINT")
   process.on(")
-=======
-
-// If run directly, start the conflict resolver;
-if (require.main === module) {
-  const conflictResolver = new MergeConflictResolver()
-
-  // Handle graceful shutdown;
-  process.on("SIGINT", () => {
-  conflictResolver.stop()
-    process.exit(0),
-})
-
-  process.on("SIGTERM', () => {
-  conflictResolver.stop()
-    process.exit(0),
-})
-  // Start the conflict resolver;
-  conflictResolver.start(),
-}
-}}}}}}))))))))))))))))))
->>>>>>> origin/automation-fixes

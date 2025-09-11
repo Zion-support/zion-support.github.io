@@ -8,9 +8,6 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-<<<<<<< HEAD
-Disallow: /private/
-
 # Allow important pages
 Allow: /about/
 Allow: /services/
@@ -40,4 +37,3 @@ Allow: /careers/
 
 # Crawl delay
 Crawl-delay: 1
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c

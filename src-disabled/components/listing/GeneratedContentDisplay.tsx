@@ -3,7 +3,7 @@
 
 
 
-  content: GeneratedContent;
+  GeneratedContent;
 
 
 

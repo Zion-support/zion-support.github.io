@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
+import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
   'React developers under $50/hr',
   'Part-time DevOps jobs in LATAM',
@@ -8,6 +7,12 @@ const SAMPLE_QUERIES = [
   'Next.js freelancers in Berlin'
 ];
 
+const SKILLS = [
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 const SKILLS = [
   'React',
   'Next.js',
@@ -26,21 +31,30 @@ const SKILLS = [
   'PostgreSQL',
   'Rust'
 ];
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
   "Blockchain developers remote"
@@ -50,56 +64,51 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  "React developers under $50/hr",
-  "Part-time DevOps jobs in LATAM",
-  "AI/ML engineers for startup",
-  "Blockchain developers remote",
-  "UI/UX designers available now",
-  "Full-stack developers with Next && Next.js",
-import type { NextApiRequest, NextApiResponse } from './next';
-const SAMPLE_QUERIES = [;
-  "React developers under $50 / hr",
-  "Part - time DevOps jobs in LATAM",
-  "AI / ML engineers for startup",
-  "Blockchain developers remote",
-  "UI / UX designers available now",
-  "Full - stack developers with Next.js",
-  "Data scientists with Python",
-  "Mobile app developers iOS / Android",
-  "Cloud architects AWS / Azure",
-  "DevOps engineers with Kubernetes",
-];
-
 
   if (req.method !== "GET") {;
 
 
-<<<<<<< HEAD
-    res.setHeader("Allow", "GET");
+  if (req.method !== "GET") {
+  if (req.method !== "GET") {
+  if (req.method !== "GET") {;
     return res.status(405).json({ error: "Method not allowed" });
 
-  const { q = "" } = req.query;
-  const query = String(q).toLowerCase();
-
-  if (!query) {
-    return res.status(200).json({ suggestions: SAMPLE_QUERIES.slice(0, 5) });
-  }
-
-  const suggestions = SAMPLE_QUERIES.filter((s) =>
-    s.toLowerCase().includes(query),
-  ).slice(0, 5);
-
-  return res.status(200).json({ suggestions });
 }
-=======
-];
+  const { q = "" } = req.query;
+  }
+  const { q = "" } = req.query;
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method not allowed" });
+
+
+
+  const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
+    s && s.toLowerCase().includes(query),
+  ).slice(0, 5);
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+}
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+const SAMPLE_QUERIES = [;
+  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin';
+];
+const SKILLS = [;
+  'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust';
+],;
+export default function handler(req, res) {
+  try {
   const q = ((req.query.q as string) || '').toLowerCase();
   const suggestions = new Set<string>();
 
@@ -112,3 +121,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+

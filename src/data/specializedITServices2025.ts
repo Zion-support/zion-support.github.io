@@ -1,3 +1,14 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const technologies = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
+
 export interface SpecializedITService {
   id: string;
   title: string;

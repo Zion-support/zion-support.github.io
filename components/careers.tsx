@@ -1,303 +1,367 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  MapPin,
-  Clock,
-  Users,
-  Heart,
-  Zap,
-  Award,
-  BookOpen,
-  Coffee,
-  Laptop,
-  Globe,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
-const benefits = [
-  {
-    icon: Heart,
-    title: "Health & Wellness",
-    description: "Comprehensive health insurance, mental health support, and wellness programs"
-  },
-  {
-    icon: Zap,
-    title: "Flexible Work",
-    description: "Remote work options, flexible hours, and work-life balance initiatives"
-  },
-  {
-    icon: BookOpen,
-    title: "Learning & Development",
-    description: "Professional development budget, training programs, and conference attendance"
-  },
-  {
-    icon: Award,
-    title: "Career Growth",
-    description: "Clear career paths, mentorship programs, and advancement opportunities"
-  },
-  {
-    icon: Coffee,
-    title: "Great Culture",
-    description: "Inclusive environment, team events, and collaborative atmosphere"
-  },
-  {
-    icon: Laptop,
-    title: "Modern Tools",
-    description: "Latest technology, equipment, and software to do your best work"
-  }
-];
-const openPositions = [
-  {
-    title: "Senior AI Engineer",
-    department: "AI & Machine Learning",
-    location: "Remote / San Francisco",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Lead AI solution development and machine learning model implementation."
-  },
-  {
-    title: "Cloud Solutions Architect",
-    department: "Cloud & Infrastructure",
-    location: "Remote / New York",
-    type: "Full-time",
-    experience: "7+ years",
-    description: "Design and implement scalable cloud solutions for enterprise clients."
-  },
-  {
-    title: "Cybersecurity Specialist",
-    department: "Security",
-    location: "Remote / Austin",
-    type: "Full-time",
-    experience: "4+ years",
-    description: "Protect client systems and implement advanced security measures."
-  },
-  {
-    title: "Frontend Developer",
-    department: "Engineering",
-    location: "Remote / Seattle",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Build beautiful, responsive user interfaces for our applications."
-  },
-  {
-    title: "DevOps Engineer",
-    department: "Infrastructure",
-    location: "Remote / Chicago",
-    type: "Full-time",
-    experience: "4+ years",
-    description: "Automate deployment processes and maintain cloud infrastructure."
-  },
-  {
-    title: "Product Manager",
-    department: "Product",
-    location: "Remote / Boston",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Drive product strategy and work with cross-functional teams."
-  }
-];
-const values = [
-  {
-    title: "Innovation First",
-    description: "We encourage creative thinking and embrace new technologies to solve complex problems."
-  },
-  {
-    title: "Collaboration",
-    description: "We believe in the power of teamwork and diverse perspectives to achieve great results."
-  },
-  {
-    title: "Continuous Learning",
-    description: "We invest in our people's growth and provide opportunities for professional development."
-  },
-  {
-    title: "Client Success",
-    description: "Our success is measured by our clients' success and satisfaction with our solutions."
-  }
-];
-export default function CareersPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Head>
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our innovative team and build the future of technology. Explore career opportunities at Zion Tech Group." />
-      </Head>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">
-              Join Our Team
-            </h1>
-            <p className="text-xl text-blue-100 mb-8">
-              Build the future of technology with a team that values innovation, collaboration, and growth
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5" />
-                <span>50+ Team Members</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="w-5 h-5" />
-                <span>Remote First</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-5 h-5" />
-                <span>Great Benefits</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Why Join Us */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Join Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-600">
-                We're building something special, and we want you to be part of it
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <benefit.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Our Values */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Our Values
-              </h2>
-              <p className="text-xl text-gray-600">
-                The principles that guide everything we do
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {values.map((value, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {value.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Open Positions */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Open Positions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Find your next opportunity with us
-              </p>
-            </div>
-            <div className="space-y-6">
-              {openPositions.map((position, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
-                  whileHover={{ y: -2 }}
-                >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        {position.title}
-                      </h3>
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-3">
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          {position.location}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {position.type}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          {position.experience}
-                        </span>
-                      </div>
-                      <p className="text-gray-600 mb-4">
-                        {position.description}
-                      </p>
-                      <span className="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
-                        {position.department}
-                      </span>
-                    </div>
-                    <div className="mt-4 md:mt-0 md:ml-6">
-                      <Link
-                        href={`/careers/${position.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                      >
-                        Apply Now
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <p className="text-gray-600 mb-4">
-                Don't see a position that fits? We're always looking for talented people.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-block bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors"
-              >
-                Send Us Your Resume
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+
+
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+
+
+
+=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
+  /* Company Culture */
+}<motion.div </div>) )
+}</div> </motion.div> {
+  /* Benefits */
+}<motion.div </div>) )
+}</div> </div> </motion.div> {
+  /* Job Openings */
+}<motion.div > <h2 className="text-3xl font-bold text-white text-center mb-8" >Open Positions</h2> key= {
+  dept.id
+}onClick= {
+  () => setSelectedDepartment (dept.id)
+}className= {
+  `px-4 py-2 rounded-lg font-medium transition-all duration-300 $ {
+  selectedDepartment === dept.id ? 'bg-blue-500 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+}`
+}> {
+  dept.name
+}</button>) )
+}</div> > <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4" > <div> </span> </div> </div> <a > Apply Now <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </li>) )
+}</ul> </div> </motion.div>) )
+}</div> We don't have any open positions in this department at the moment. Check back later or send us your resume for future opportunities. </p> </div>)
+}</motion.div> {
+  /* General Application */
+}<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
 =======
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Users,MapPin,Clock,Briefcase,Heart,Zap,Brain,Shield,Cloud,Rocket } from 'lucide-react'; export default function Careers() { return ( <> <Head> <title>Careers | Zion Tech Group</title> <meta name="description" content="Join Zion Tech Group and help build the future of AI,Micro SaaS,and IT solutions." /> <link rel="canonical" href="https: </Head> <main className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Join Our Team</h1> <p className="text-xl text-center text-gray-600 mb-12"> We're always looking for talented individuals to join our mission of transforming businesses through technology. </p> <div className="text-center"> <a href="mailto:careers@ziontechgroup.com" className="inline-block border border-gray-300 px-6 py-3 rounded-lg">careers@ziontechgroup.com</a> </div> </div> </main> </> ) }
->>>>>>> origin/automation-improvements
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+=======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);=======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);=======
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+=======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39=======
+};export default CareersPage;import React, { useState } from 'react';
+import React, { useState } from 'react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import {motion} from 'framer-motion';
+import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
+
+
+export default function Careers() {;
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const departments = [
+    { id: 'all', name: 'All Departments' }
+    { id: 'engineering', name: 'Engineering' }
+    { id: 'ai-research', name: 'AI Research' }
+    { id: 'quantum', name: 'Quantum Computing' }
+    { id: 'space-tech', name: 'Space Technology' }
+    { id: 'sales', name: 'Sales & Business Development' }
+    { id: 'marketing', name: 'Marketing' }
+    { id: 'operations', name: 'Operations' }
+  ];
+  const jobOpenings = [
+    {
+      id: 1
+      title: 'Senior AI Engineer'
+      department: 'ai-research'
+      location: 'Remote / Middletown, DE';
+      type: 'Full-time'
+      experience: '5+ years'
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.'
+      requirements: [
+        'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
+      ]
+export default function Careers() {;
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const departments = [
+    { id: 'all', name: 'All Departments' }
+    { id: 'engineering', name: 'Engineering' }
+    { id: 'ai-research', name: 'AI Research' }
+    { id: 'quantum', name: 'Quantum Computing' }
+    { id: 'space-tech', name: 'Space Technology' }
+    { id: 'sales', name: 'Sales & Business Development' }
+    { id: 'marketing', name: 'Marketing' }
+==============    { id: 'operations', name: 'Operations' }
+  ];
+;
+  const job_openings = [;
+    {
+      id: 1,
+      title: 'Senior AI Engineer',
+      department: 'ai - research',
+      location: 'Remote / Middletown, DE';
+      type: 'Full - time',
+      experience: '5+ years',
+      description: 'Lead the development of cutting - edge AI solutions and machine learning models.',
+      requirements: [;
+        'Advanced degree in Computer Science, AI, or related field_expertise in Python, TensorFlow, PyTorchExperience with large language models and neural networks_strong problem - solving and analytical skills';
+      ];
+    }
+    {
+      id: 2
+      title: 'Quantum Computing Researcher'
+      department: 'quantum'
+      location: 'Remote / Middletown, DE';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      type: 'Full - time',
+      experience: '3+ years',
+      description: 'Research and develop quantum algorithms and quantum computing solutions.',
+      requirements: [;
+        'PhD in Physics, Computer Science, or related field_experience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theory_strong mathematical and theoretical background';
+      ];
+    }
+    {
+      id: 3,
+      title: 'Space Technology Engineer',
+      department: 'space - tech',
+      location: 'Remote / Middletown, DE';
+      type: 'Full - time',
+      experience: '4+ years',
+      description: 'Design and develop innovative space technology solutions and satellite systems.',
+      requirements: [;
+        'Degree in Aerospace Engineering, Physics, or related field_experience with satellite design and space systems_knowledge of orbital mechanics and space environment_familiarity with space industry standards and regulations';
+      ];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    {
+      id: 4
+      title: 'Full Stack Developer'
+      department: 'engineering'
+      location: 'Remote / Middletown, DE';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      type: 'Full - time',
+      experience: '3+ years',
+      description: 'Build scalable web applications and cloud - based solutions.',
+      requirements: [;
+        'Experience with React, Node.js, and cloud platforms_knowledge of modern web technologies and APIsUnderstanding of software architecture and design patterns_experience with DevOps and CI / CD practices';
+      ];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    {
+      id: 5
+      title: 'Business Development Manager'
+      department: 'sales'
+      location: 'Remote / Middletown, DE';
+
+
+=======
+      type: 'Full-time'
+      experience: '5+ years'
+      description: 'Drive business growth through strategic partnerships and client relationships.'
+      requirements: [
+        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
+      ]
+    }
+  ];
+  const companyValues = [
+    {
+      icon: <Brain className="w-8 h-8" />
+      title: 'Innovation First'
+      description: 'We push boundaries and explore new technologies to solve complex problems.'
+    }
+    {
+      icon: <Heart className="w-8 h-8" />
+      title: 'People Matter'
+      description: 'Our team is our greatest asset, and we invest in their growth and well-being.'
+    }
+    {
+      icon: <Globe className="w-8 h-8" />
+      title: 'Global Impact'
+      description: 'We create solutions that make a difference in the world.'
+    }
+    {
+      icon: <Star className="w-8 h-8" />
+      title: 'Excellence'
+      description: 'We strive for the highest quality in everything we do.'
+    }
+  ];
+  const benefits = [
+    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment'
+  ];
+  const filteredJobs = selectedDepartment === 'all'
+    ? jobOpenings
+    : jobOpenings.filter(job => job.department === selectedDepartment);
+  return (
+    <UltraFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
+          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
+        </Head>
+
+
+
+
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+            Join Our Team
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
+          </p>
+        </motion.div>
+
+
+
+
+export default function Careers() {;
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const departments = [;
+    { id: 'all', name: 'All Departments' },;
+    { id: 'engineering', name: 'Engineering' },;
+    { id: 'ai-research', name: 'AI Research' },;
+    { id: 'quantum', name: 'Quantum Computing' },;
+    { id: 'space-tech', name: 'Space Technology' },;
+    { id: 'sales', name: 'Sales & Business Development' },;
+    { id: 'marketing', name: 'Marketing' },;
+    { id: 'operations', name: 'Operations' }
+  ];
+  const jobOpenings = [;
+    {;
+      id: 1,;
+      title: 'Senior AI Engineer',;
+      department: 'ai-research',;
+      location: 'Remote / Middletown, DE';
+      type: 'Full-time',;
+      experience: '5+ years',;
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',;
+      requirements: [;
+        'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills';
+      ];
+    };
+    {;
+      id: 2,;
+      title: 'Quantum Computing Researcher',;
+      department: 'quantum',;
+      location: 'Remote / Middletown, DE';
+      type: 'Full-time',;
+      experience: '3+ years',;
+      description: 'Research and develop quantum algorithms and quantum computing solutions.',;
+      requirements: [;
+        'PhD in Physics, Computer Science, or related fieldExperience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theoryStrong mathematical and theoretical background';
+      ];
+    };
+    {;
+      id: 3,;
+      title: 'Space Technology Engineer',;
+      department: 'space-tech',;
+      location: 'Remote / Middletown, DE';
+      type: 'Full-time',;
+      experience: '4+ years',;
+      description: 'Design and develop innovative space technology solutions and satellite systems.',;
+      requirements: [;
+        'Degree in Aerospace Engineering, Physics, or related fieldExperience with satellite design and space systemsKnowledge of orbital mechanics and space environmentFamiliarity with space industry standards and regulations';
+      ];
+    };
+    {;
+      id: 4,;
+      title: 'Full Stack Developer',;
+      department: 'engineering',;
+      location: 'Remote / Middletown, DE';
+      type: 'Full-time',;
+      experience: '3+ years',;
+      description: 'Build scalable web applications and cloud-based solutions.',;
+      requirements: [;
+        'Experience with React, Node && Node.js, and cloud platformsKnowledge of modern web technologies and APIsUnderstanding of software architecture and design patternsExperience with DevOps and CI/CD practices';
+      ];
+    };
+    {;
+      id: 5,;
+      title: 'Business Development Manager',;
+      department: 'sales',;
+      location: 'Remote / Middletown, DE';
+      type: 'Full-time',;
+      experience: '5+ years',;
+      description: 'Drive business growth through strategic partnerships and client relationships.',;
+      requirements: [;
+        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends';
+      ];
+    }
+  ];
+  const companyValues = [;
+    {;
+      icon: <Brain className="w-8 h-8" />,;
+      title: 'Innovation First',;
+      description: 'We push boundaries and explore new technologies to solve complex problems.';
+    };
+    {;
+      icon: <Heart className="w-8 h-8" />,;
+      title: 'People Matter',;
+      description: 'Our team is our greatest asset, and we invest in their growth and well-being.';
+    };
+    {;
+      icon: <Globe className="w-8 h-8" />,;
+      title: 'Global Impact',;
+      description: 'We create solutions that make a difference in the world.';
+    };
+    {;
+      icon: <Star className="w-8 h-8" />,;
+      title: 'Excellence',;
+      description: 'We strive for the highest quality in everything we do.';
+    }
+  ];
+  const benefits = [;
+    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment';
+  ];
+  const filteredJobs = selectedDepartment === 'all' ;
+    ? jobOpenings ;
+    : jobOpenings && jobOpenings.filter(job => job && job.department === selectedDepartment);
+  return (
+    <UltraFuturisticBackground>;
+      <div className="min-h-screen">;
+        <Head>;
+          <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
+          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
+        </Head>;
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">;
+        {/* Hero Section */}
+        <motion&& motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6 }}
+          className="text-center mb-16">;
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">;
+            Join Our Team;
+          </h1>;
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+            Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.;
+          </p>;
+        </motion && motion.div>;
+        {/* Company Culture */}
+        <motion&& motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+          className="mb-16">;
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>;
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
+            {companyValues && companyValues.map((value, index) => (;
+              <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">;
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">;
+                  {value && value.icon}
+                </div>;
+                <h3 className="text-lg font-bold text-white mb-3">{value && value.title}</h3>;
+                <p className="text-gray-300 text-sm">{value && value.description}</p>;
+              </div>;
+            ))}
+
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+export default CareersPage;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

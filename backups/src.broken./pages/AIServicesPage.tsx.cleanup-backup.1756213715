@@ -1,30 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { 
-  Brain, 
-  Zap, 
-  BarChart3, 
-  MessageSquare, 
-  Image, 
-  Code, 
-  Shield, 
-  Globe,
-  ArrowRight,
-  Star,
-  Clock,
-  Users,
-  TrendingUp,
-  CheckCircle
-} from "lucide-react";
-
 const AI_SERVICES = [
   {
     id: "ai-content-generation",
@@ -424,39 +398,12 @@ export default function AIServicesPage() {
           </div>
         </div>
       </section>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  Database, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  MessageSquare, 
-  Code, 
-  Globe,
-  Server,
-  Eye,
-  FileText,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Lock,
-  Mic,
-  Video,
-  Search
-} from 'lucide-react';
-
 const AIServices = [
   {
     title: "AI Strategy Consulting",
@@ -615,28 +562,6 @@ export default function AIServicesPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
               Get Consultation
-<<<<<<< HEAD
-=======
-  Bot, 
-  MessageSquare, 
-  Image, 
-  Video, 
-  Code, 
-  Database, 
-  Shield,
-  Zap,
-  TrendingUp,
-  Globe,
-  Users,
-  FileText,
-  BarChart3,
-  Mic,
-  Eye,
-  Network,
-  Lock,
-  Phone
-} from 'lucide-react';
-
 export default function AIServicesPage() {
   const aiServices = [
     {
@@ -947,11 +872,6 @@ export default function AIServicesPage() {
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
-              Contact Sales
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-            </Button>
           </div>
         </div>
       </div>
@@ -961,25 +881,6 @@ export default function AIServicesPage() {
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {categories.map((category) => (
             <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              key={category.value}
-              variant={selectedCategory === category.value ? "default" : "outline"}
-              onClick={() => setSelectedCategory(category.value)}
-              className={`flex items-center gap-2 ${
-                selectedCategory === category.value 
-                  ? "bg-zion-purple text-white" 
-                  : "border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-              }`}
-            >
-              {category.icon}
-              {category.name}
-            </Button>
-          ))}
-        </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredServices.map((service, index) => (
@@ -991,23 +892,6 @@ export default function AIServicesPage() {
                   </div>
                   {service.badge && (
                     <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-<<<<<<< HEAD
-=======
-              key={category}
-              variant={selectedCategory === category ? "default" : "outline"}
-              onClick={() => setSelectedCategory(category)}
-              className={`${
-                selectedCategory === category 
-                  ? 'bg-zion-purple text-white' 
-                  : 'border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-              }`}
-            >
-              {category}
-            </Button>
-          ))}
-        </div>
-      </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1019,11 +903,6 @@ export default function AIServicesPage() {
                     {service.icon}
                   </div>
                   {service.badge && (
-                    <Badge className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white border-0">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-                      {service.badge}
                     </Badge>
                   )}
                 </div>
@@ -1034,82 +913,6 @@ export default function AIServicesPage() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              <CardContent className="pb-4">
-                <div className="mb-4">
-                  <p className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</p>
-                  <p className="text-sm text-zion-slate-light">Starting price</p>
-                </div>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <div className="px-6 pb-6">
-                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white">
-                  <Link to={service.link}>
-                    Get Started
-                  </Link>
-<<<<<<< HEAD
-=======
-              
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-zion-cyan mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, index) => (
-                      <li key={index} className="text-sm text-zion-slate-light flex items-center">
-                        <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mr-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-zion-cyan mb-2">Pricing:</h4>
-                  <div className="space-y-1">
-                    <div className="text-sm text-zion-slate-light">
-                      <span className="font-medium">Starter:</span> {service.pricing.starter}
-                    </div>
-                    <div className="text-sm text-zion-slate-light">
-                      <span className="font-medium">Professional:</span> {service.pricing.professional}
-                    </div>
-                    <div className="text-sm text-zion-slate-light">
-                      <span className="font-medium">Enterprise:</span> {service.pricing.enterprise}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-              
-              <div className="p-6 pt-0 space-y-3">
-                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                  <Globe className="h-4 w-4 mr-2" />
-                  Learn More
-                </Button>
-                <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                  <MessageSquare className="h-4 w-4 mr-2" />
-                  Contact Sales
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-                </Button>
-              </div>
-            </Card>
-          ))}
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
         {/* CTA Section */}
         <div className="text-center py-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -1120,10 +923,6 @@ export default function AIServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white">
-<<<<<<< HEAD
-=======
-      </div>
-
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -1133,26 +932,15 @@ export default function AIServicesPage() {
             Get in touch today for a personalized consultation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              <MessageSquare className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               <Code className="h-5 w-5 mr-2" />
               View Case Studies
             </Button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
               <Phone className="h-5 w-5 mr-2" />
               Call +1 302 464 0950
             </Button>
@@ -1163,10 +951,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </div>
   );
 }

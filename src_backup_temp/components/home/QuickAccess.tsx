@@ -105,7 +105,8 @@ export default function Page("props": "any) {;
                 <h3 className="text-xl font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors">;
                   {link.title"}
                 </h3>";
-                <p className="text-gray-300 text-sm leading-relaxed">;              {/* Content */}"
+                <p className="text-gray-300 text-sm leading-relaxed">;
+              {/* Content */}"
               <div className="mb-4">"
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors">
                   {link.title}
@@ -210,7 +211,65 @@ export default function Page("props": "any) {;
                 </div>";
                 <div className="text-sm font-medium text-white group-"hover": "tex t-cyan-400 transition-colors duration-300">;
                   {category.name"}
-                </div>;        <motion.div
+                </div>;
+        <motion.div
+          initial={{ opacity: 0, y: 2 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: tru e }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >"
+          <div className="text-center mb-8">"
+            <h3 className="text-2xl font-bold text-white mb-2">Service Categories"
+            <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
+          </div>
+"
+          <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-6 gap-4">
+            {categories.map(category: unknow n, index: unknow n (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: inde x * 0.1 }}"
+                className="text-center group cursor-pointer"
+`
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover: scal e-110 transition-transform duration-300`}>"
+                  <span className="text-white font-bold text-lg">{category.count}</span>
+                </div>"
+                <div className="text-sm font-medium text-white group-hover: tex t-cyan-400 transition-colors duration-300">
+                  {category.name}
+                </div>
+              </motion.div>;
+            ))}
+          </div>;
+        </motion.div> {/* CTA Section */}
+        <motion.div;
+          initial={{ "opacity": "0", "y": "2 0 "}}
+          whileInView={{ "opacity": "1", "y": "0 "}}
+          transition={{ "duration": "0.6", "delay": "0.6 "}}";
+          className="text-center mt-12";
+";
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'";
+            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>";
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
+              Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs;
+            </p>";
+            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">;
+              <Link";
+                to="/contact";
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full "hover": fro m-cyan-600 "hover": t o-blue-700 transition-all duration-300 transform "hover": scal e-105 "hover": shado w-lg "hover": shado w-cyan-500/25";
+              >;
+                Contact Our Team;
+              </Link>;
+              <Link";
+                to="/services";
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full "hover": b g-cyan-500 "hover": tex t-white transition-all duration-300";
+              >;
+                Browse All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </motion.div>;
+        <motion.div
           initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}"
@@ -237,7 +296,6 @@ export default function Page("props": "any) {;
             </div>
           </div>
         </motion.div>
-
         {/* Enhanced CTA Section */"}
         <motion.div;
           initial = {;
@@ -269,7 +327,8 @@ export default function Page("props": "any) {;
                 to="/services";
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full "hover": b g-cyan-500 "hover": tex t-white transition-all duration-300";
                 Browse All Services;
-              </Link>;  { duration: 0.8,
+              </Link>;
+  { duration: 0.8,
   delay: 0.4 ;
 }}
           viewport={{ once: tru e }}

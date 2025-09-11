@@ -26,11 +26,22 @@
     "categories": "Categories",
     "talent": "Talent",
     "equipment": "Equipment",
+    "micro-saas": "Micro SAAS",
+    "categories": "Categories",
+    "services": "Services",
+    "micro-saas": "Micro SAAS",
+    "talent": "Talent",
+    "equipment": "Equipment",
+    "community": "Community",
+    "company": "Company",
+    "blog": "Blog",
     "dashboard": "Dashboard",
     "messages": "Messages",
 :public/locales/en-US/common.json
     "post_job": "Post Job",
     "analytics": "Analytics",
+    "faq": "FAQ",
+    "help": "Help Center"
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -147,6 +158,3 @@
     "changes_saved": "Translation changes have been saved"
   }
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json

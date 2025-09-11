@@ -1,0 +1,70 @@
+import React from 'react';
+import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+const technologies = [];
+const applications = [];
+const solutions = [];
+const _Leadership = () => {
+    const _leadershipTeam = [
+import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
+const Leadership = () => {
+    const leadershipTeam = [        {
+            name: "Dr. Sarah Chen",
+            role: "Chief Executive Officer",
+            image: "/leadership/sarah-chen.jpg",
+            bio: "Dr. Sarah Chen is a visionary leader with over 15 years of experience in technology innovation and business transformation. She has led multiple successful startups and has been instrumental in bringing AI and quantum computing solutions to market.",
+            experience: "15+ years in technology leadership",
+            education: "Ph.D. in Computer Science, Stanford University",
+};    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Leadership Team
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+      {/* Vision Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              {vision.title}
+            </h2>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-12">
+              {vision.description}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {vision.goals.map((goal, index) => (<div key={index} className="flex items-start">
+                  <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-white text-sm font-bold">{index + 1}</span>
+                  </div>
+                  <p className="text-slate-700">{goal}</p>
+                </div>))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Executive Leadership
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Our leadership team brings together decades of experience in technology, 
+              business, and innovation.
+            </p>
+          </div>
+          
+          <div className="space-y-16">
+            {leadershipTeam.map((leader, index) => (<div key={index} className={`bg-white rounded-2xl shadow-lg p-8 border border-slate-100 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
+                <div className="grid md:grid-cols-3 gap-8 items-start">
+                  <div className="text-center md:text-left">
+                    <div className="w-48 h-48 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-6">
+                      <Users className="w-24 h-24 text-white"/>

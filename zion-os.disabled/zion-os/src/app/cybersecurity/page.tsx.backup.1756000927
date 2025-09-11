@@ -1,33 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-  title: "Cybersecurity Services - Zion Tech Group",
-  description: "Advanced cybersecurity solutions including threat detection, SOC2 compliance, and AI-powered security systems to protect your digital assets.",
-  keywords: "cybersecurity, threat detection, SOC2 compliance, AI security, digital protection, Zion Tech Group",
-=======
-  title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-};
-
 export default function CybersecurityPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Cybersecurity Services</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Protect your digital assets with advanced cybersecurity solutions that combine cutting-edge technology 
-            with industry best practices to keep your organization secure.
-          </p>
-        </div>
-
         {/* Overview Section */}
         <section className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -92,7 +67,6 @@ export default function CybersecurityPage() {
               <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
                 <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -174,23 +148,10 @@ export default function CybersecurityPage() {
             <div className="card group hover:bg-green-500/10 transition-colors">
               <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30">
                 <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-                </svg>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />                </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Threat Detection & Response</h3>
               <p className="text-gray-400 mb-4">
-<<<<<<< HEAD
-                Advanced threat detection using AI and machine learning to identify and respond to security incidents in real-time.
-              </p>
-              <ul className="text-sm text-gray-300 space-y-1 mb-4">
-                <li>• Real-time monitoring</li>
-                <li>• Behavioral analysis</li>
-                <li>• Automated response</li>
-                <li>• Incident management</li>
-              </ul>
-            </div>
-
             {/* SOC2 Compliance */}
             <div className="card group">
               <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
@@ -357,7 +318,6 @@ export default function CybersecurityPage() {
                 Get Security Assessment
               </Link>
               <Link href="/case-studies" className="btn-secondary">
-=======
                 Advanced threat detection using AI and machine learning with 
                 rapid incident response capabilities.
               </p>
@@ -718,19 +678,11 @@ export default function CybersecurityPage() {
               <Link href="/contact" className="btn-primary text-lg px-8 py-4">
                 Secure Your Organization
               </Link>
-              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-                View Security Case Studies
+              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">                View Security Case Studies
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-      </div>
-=======
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-    </div>
+      </section>    </div>
   );
 }

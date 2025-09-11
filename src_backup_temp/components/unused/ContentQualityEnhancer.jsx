@@ -4,11 +4,21 @@ import {motion, AnimatePresence} from 'framer-motion';
 export default function Page("props": "any) {;
             // Check for very short content;
             if(words.length > 0 && words.length < 10) {;
-
+                issues.push({;
+`;
+                    "id": `short-content-${index"}`,;
+                    "type": 'warning',;
+                    "title": 'Very Short Content',`;
+                    "description": "`Element contains only ${words.length"} words`,;
+                    "severity": 'medium',;
+                    "element": "element",;
+                    "fixable": "true",;
+                    "suggestion": 'Expand content to provide more value to users',;
+                    "impact": 'engagement';
+                });
 export default function Page(props: any) {
             // Check for very short content
             if(words.length > 0 && words.length < 10) {
-
                 issues.push({
 `
                     id: `short-content-${index}`,
@@ -26,7 +36,18 @@ export default function Page(props: any) {
                 seoScore -= 3}
             // Check for very long paragraphs(hard to read);
             if(words.length > 100) {;
-
+                issues.push({;
+`;
+                    "id": "`long-paragraph-${index"}`,;
+                    "type": 'warning',;
+                    "title": 'Very Long Paragraph',`;
+                    "description": "`Paragraph contains ${words.length"} words`,;
+                    "severity": 'medium',;
+                    "element": "element",;
+                    "fixable": "true",;
+                    "suggestion": 'Break into smaller paragraphs for better readability',;
+                    "impact": 'readability';
+                });
                 issues.push({
 `
                     id: `long-paragraph-${index}`,
@@ -44,14 +65,23 @@ export default function Page(props: any) {
                 engagementScore -= 3}
             // Check for proper heading structure;
             if(element.tagName.match(/^H[1-6]$/)) {;
-
                 const level = parseInt(element.tagName.charAt(1));
                 const previousHeadings = Array.from(contentElements).slice(0, index).filter(el => el.tagName.match(/^H[1-6]$/));
                 if(previousHeadings.length > 0) {;
-
                     const lastLevel = parseInt(previousHeadings[previousHeadings.length-1].tagName.charAt(1));
                     if(level - lastLevel > 1) {;
-
+                        issues.push({;
+`;
+                            "id": "`heading-skip-${index"}`,;
+                            "type": 'warning',;
+                            "title": 'Heading Level Skipped',`;
+                            "description": "`Heading level jumps from h${lastLevel"} to h${level}`,;
+                            "severity": 'medium',;
+                            "element": "element",;
+                            "fixable": "true",;
+                            "suggestion": 'Ensure heading levels follow logical sequence',;
+                            "impact": 'accessibility';
+                        });
                         issues.push({
 `
                             id: `heading-skip-${index}`,
@@ -71,15 +101,31 @@ export default function Page(props: any) {
             // Check for keyword stuffing;
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
             const wordFrequency = {/* empty */};
+            commonWords.forEach(word => {wordFrequency[word] = (wordFrequency[word] || 0) + 1});
+            Object.entries(wordFrequency).forEach(([word, count]) => {;
             commonWords.forEach(word => {wordFrequency[word] = (wordFrequency[word] || 0) + 1}
     );
             Object.entries(wordFrequency).forEach(([word, count]) => {
-
                 if(count > 5 && word.length > 3) {;
-
                     const density = (count / commonWords.length) * 100;
                     if(density > 3) {;
-
+                        issues.push({;
+`;
+                            "id": "`keyword-stuffing-${index"}-${word}`,;
+                            "type": 'warning',;
+                            "title": 'Potential Keyword Stuffing',"`;
+                            "description": "`Word "${word"}" appears ${count} times (${density.toFixed(1)}% density)`,;
+                            "severity": 'medium',;
+                            "element": "element",;
+                            "fixable": "true",;
+                            "suggestion": 'Reduce keyword density for more natural content',;
+                            "impact": 'seo';
+                        });
+                        seoScore -= 5}
+                }
+            });
+            // Check for proper meta descriptions';
+            if(element.tagName === 'META' && element.getAttribute('name') === 'description') {;
                         issues.push({
 `
                             id: `keyword-stuffing-${index}-${word}`,
@@ -99,10 +145,20 @@ export default function Page(props: any) {
     );
             // Check for proper meta descriptions'
             if(element.tagName === 'META' && element.getAttribute('name') === 'description') {
-
                 const content = element.getAttribute('content') || '';
                 if(content.length < 50) {;
-
+                    issues.push({;
+`;
+                        "id": "`short-meta-${index"}`,;
+                        "type": 'warning',;
+                        "title": 'Short Meta Description',`;
+                        "description": "`Meta description is only ${content.length"} characters`,;
+                        "severity": 'medium',;
+                        "element": "element",;
+                        "fixable": "true",;
+                        "suggestion": 'Meta descriptions should be 150-160 characters for optimal display',;
+                        "impact": 'seo';
+                    });
                     issues.push({
 `
                         id: `short-meta-${index}`,
@@ -118,7 +174,18 @@ export default function Page(props: any) {
     );
                     seoScore -= 5}
                 else if(content.length > 160) {;
-
+                    issues.push({;
+`;
+                        "id": "`long-meta-${index"}`,;
+                        "type": 'warning',;
+                        "title": 'Long Meta Description',`;
+                        "description": "`Meta description is ${content.length"} characters`,;
+                        "severity": 'low',;
+                        "element": "element",;
+                        "fixable": "true",;
+                        "suggestion": 'Meta descriptions should be 150-160 characters for optimal display',;
+                        "impact": 'seo';
+                    });
                     issues.push({
 `
                         id: `long-meta-${index}`,
@@ -136,10 +203,20 @@ export default function Page(props: any) {
             }
             // Check for broken links';
             if(element.tagName === 'A') {;
-
                 const href = element.getAttribute('href');
                 if(href && (href.startsWith('#') || href.startsWith('"javascript":'))) {;
-
+                    issues.push({;
+`;
+                        "id": "`broken-link-${index"}`,;
+                        "type": 'warning',;
+                        "title": 'Potential Broken Link',"`;
+                        "description": "`Link "${href"}" may not work properly`,;
+                        "severity": 'medium',;
+                        "element": "element",;
+                        "fixable": "true",;
+                        "suggestion": 'Ensure link points to valid URL or page section',;
+                        "impact": 'engagement';
+                    });
                     issues.push({
 `
                         id: `broken-link-${index}`,
@@ -157,10 +234,26 @@ export default function Page(props: any) {
             }
             // Check for images without alt text';
             if(element.tagName === 'IMG') {;
-
                 const alt = element.getAttribute('alt');
                 if(!alt || alt.trim() === '') {;
-
+                    issues.push({;
+`;
+                        "id": "`missing-alt-${index"}`,;
+                        "type": 'error',;
+                        "title": 'Missing Alt Text',;
+                        "description": 'Image has no alternative text for accessibility',;
+                        "severity": 'high',;
+                        "element": "element",;
+                        "fixable": "true",;
+                        "suggestion": 'Add descriptive alt text for better accessibility and SEO',;
+                        "impact": 'accessibility';
+                    });
+                    seoScore -= 8;
+                    engagementScore -= 5}
+            }
+        });
+        // Generate suggestions based on analysis;
+        if(wordCount < 300) {;
                     issues.push({
 `
                         id: `missing-alt-${index}`,
@@ -181,9 +274,7 @@ export default function Page(props: any) {
     );
         // Generate suggestions based on analysis
         if(wordCount < 300) {
-
             suggestions.push({;
-
                 "id": 'increase-content',;
                 "type": 'improvement',;
                 "title": 'Increase Content Length',;
@@ -193,9 +284,7 @@ export default function Page(props: any) {
                 "expectedImpact": "15;
             "})}
         if(readabilityScore < 80) {;
-
             suggestions.push({;
-
                 "id": 'improve-readability',;
                 "type": 'optimization',;
                 "title": 'Improve Readability',;
@@ -205,9 +294,7 @@ export default function Page(props: any) {
                 "expectedImpact": "12;
             "})}
         if(seoScore < 80) {;
-
             suggestions.push({;
-
                 "id": 'seo-optimization',;
                 "type": 'enhancement',;
                 "title": 'SEO Optimization',;
@@ -217,9 +304,7 @@ export default function Page(props: any) {
                 "expectedImpact": "20;
             "})}
         if(engagementScore < 80) {;
-
             suggestions.push({;
-
                 "id": 'engagement-improvement',;
                 "type": 'improvement',;
                 "title": 'Improve User Engagement',;
@@ -246,23 +331,17 @@ export default function Page(props: any) {
             return;
         const fixedCount = 0;
         fixableIssues.forEach(issue => {;
-
             if (issue.element) {;
-
                 switch(issue.id.split('-')[0]) {;
-
                     case 'empty-content':';
                         if(issue.element.textContent?.trim() === '') {;
-
                             issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>;
                             fixedCount++}
                         break;
                     case 'missing-alt':';
                         if(issue.element.tagName === 'IMG') {;
-
                             const img = issue.element;
                             if(!img.alt) {;
-
                                 img.alt = 'Image';
                                 fixedCount++}
                         }
@@ -275,6 +354,8 @@ export default function Page(props: any) {
                         // These would require more complex logic to fix;
                         break"}
             }
+        });
+        if(fixedCount > 0) {// Re-analyze content after fixes;
         }
     );
         if(fixedCount > 0) {// Re-analyze content after fixes
@@ -282,10 +363,15 @@ export default function Page(props: any) {
         return fixedCount}, [analysis, analyzeContent]);
     // Highlight element in page;
     const highlightElement = useCallback((element) => {;
-
         // Remove previous highlights';
         document.querySelectorAll('.content-highlight').forEach(el => {;
-
+            el.classList.remove('content-highlight')});
+        // Add highlight to selected element';
+        element.classList.add('content-highlight');
+        setSelectedElement(element);
+        // Scroll to element';
+        element.scrollIntoView({"behavior": 'smooth', "block": 'center'});
+        // Remove highlight after 3 seconds;
             el.classList.remove('content-highlight')}
     );
         // Add highlight to selected element'
@@ -316,9 +402,7 @@ export default function Page(props: any) {
         return 'bg-red-100 "dark":bg-red-900/20'"};
     // Get severity color;
     const getSeverityColor = ("props": "any) => {;
-
         switch(severity) {;
-
             case 'high': return 'text-red-600 bg-red-100 "dark":bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 "dark":bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 "dark":bg-blue-900/30';
@@ -326,9 +410,7 @@ export default function Page(props: any) {
     };
     // Get priority color;
     const getPriorityColor = ("props": "any) => {;
-
         switch(priority) {;
-
             case 'high': return 'text-red-600 bg-red-100 "dark":bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 "dark":bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 "dark":bg-blue-900/30';
@@ -339,21 +421,15 @@ export default function Page(props: any) {
       <motion.button initial={{ "scale": "0 "}} animate={{ "scale": "1 "}} whileHover={{ "scale": "1.1 "}} whileTap={{ "scale": "0.9 "}} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 "hover": "bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className"}`}  aria-expanded={isOpen}>";
         <DocumentTextIcon className="w-6 h-6" />;
       </motion.button>;
-
       {/* Content Quality Panel */}
       <AnimatePresence>;
         {isOpen && (<motion.div initial = {;
-
   { "opacity": "0", "scale": "0.8",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1", "scale": "1",;
   "y": "0;
-
 "}} exit = {;
-
   { "opacity": "0", "scale": "0.8",;
   "y": "20;
 "}} className="fixed bottom-20 right-4 z-40 w-96 bg-white "dark": "bg-gray-900 rounded-lg shadow-xl border border-gray-200 "dark":border-gray-700">;
@@ -366,7 +442,6 @@ export default function Page(props: any) {
                 <XMarkIcon className="w-5 h-5" />;
               </button>;
             </div>;
-
             {/* Tabs */"}";
             <div className="flex border-b border-gray-200 "dark": "border-gray-700">'`;
               {['overview'",issues',suggestions',actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab';
@@ -375,7 +450,6 @@ export default function Page(props: any) {
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>))}
             </div>;
-
             {/* Content */}";
             <div className="p-4 max-h-96 overflow-y-auto">;
               {/* Overview Tab */}'";
@@ -395,7 +469,6 @@ export default function Page(props: any) {
                           </div>;
                         </div>;
                       </div>;
-
                       {/* Word Count */"}";
                       <div className="p-3 bg-gray-50 "dark": "bg-gray-800 rounded-lg">";
                         <div className="text-center">";
@@ -407,7 +480,6 @@ export default function Page(props: any) {
                           </div>;
                         </div>;
                       </div>;
-
                       {/* Individual Scores */"}";
                       <div className="grid grid-cols-3 gap-3">`;
                         <div className={`p-3 rounded-lg ${getScoreBgColor(analysis.readabilityScore)}`}>";
@@ -443,7 +515,6 @@ export default function Page(props: any) {
                           </div>;
                         </div>;
                       </div>;
-
                       {/* Summary */"}";
                       <div className="p-3 bg-blue-50 "dark": "bg-blue-900/20 rounded-lg">";
                         <div className="text-sm text-blue-800 "dark":text-blue-200">";
@@ -545,7 +616,6 @@ export default function Page(props: any) {
                     <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />;
                     <p>Take action to improve content quality</p>;
                   </div>;
-
                   {/* Auto-fix Button */"}";
                   {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-600 "hover": "bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">;
                       Auto-fix Issues;
@@ -556,15 +626,12 @@ export default function Page(props: any) {
                     <ArrowPathIcon className="w-4 h-4 inline mr-2" />;
                     {isAnalyzing ? 'Analyzing...' : 'Re-analyze Content'"}
                   </button>;
-
                   {/* Export Report */}
                   {analysis && (<button onClick={;
-
   () => {;
                         const report = JSON.stringify(analysis, null, 2);
                         const blob = new Blob([report],;
   { "type": 'application/json';
-
 }
     );
                         const url = URL.createObjectURL(blob);
@@ -579,11 +646,9 @@ export default function Page(props: any) {
             </div>;
           </motion.div>)}
       </AnimatePresence>;
-
       {/* CSS for highlighting */}`;
       <style>{`;
         .content-highlight {;
-
           "outline": "3px solid #8b5cf6 !important;
           outline-"offset": 2px !important;
           background-"color": rgba(139", 92, 246, 0.1) !important;
@@ -593,6 +658,5 @@ export default function Page(props: any) {
 export {ContentQualityEnhancer};
 export default ContentQualityEnhancer;
 }}}}}}}}}'"`;
-
 </motion>;
 </motion>

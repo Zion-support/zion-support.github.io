@@ -24,7 +24,7 @@ describe('Page Crashes Fix - Issue #3', () => {
         'AUTH0_CLIENT_ID',
         'AUTH0_CLIENT_SECRET'
       ];
-      
+
       expect(requiredVars).toHaveLength(5);
       expect(requiredVars).toContain('AUTH0_SECRET');
       expect(requiredVars).toContain('AUTH0_ISSUER_BASE_URL');
@@ -51,7 +51,7 @@ describe('Page Crashes Fix - Issue #3', () => {
     it('should validate Auth0 secret format', () => {
       const validSecret = 'a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456';
       const invalidSecret = 'short';
-      
+
       expect(validSecret).toHaveLength(64);
       expect(validSecret).toMatch(/^[0-9a-f]{64}$/);
       expect(invalidSecret).not.toMatch(/^[0-9a-f]{64}$/);
@@ -65,7 +65,7 @@ describe('Page Crashes Fix - Issue #3', () => {
           <TestComponent />
         </MockPageErrorBoundary>
       );
-      
+
       expect(screen.getByText('Test Page Content')).toBeInTheDocument();
       expect(screen.getByTestId('page-error-boundary')).toHaveAttribute('data-page', 'Test Page');
     });
@@ -76,7 +76,7 @@ describe('Page Crashes Fix - Issue #3', () => {
                                auth0Error.message.includes('AUTH0') ||
                                auth0Error.message.includes('authentication') ||
                                auth0Error.message.includes('environment');
-      
+
       expect(isAuthConfigError).toBe(true);
     });
 
@@ -105,12 +105,10 @@ describe('Page Crashes Fix - Issue #3', () => {
         AUTH0_BASE_URL=http://localhost:3000
         AUTH0_ISSUER_BASE_URL=https://dev-zion.us.auth0.com
       `;
-      
+
       // Should not contain merge conflict markers
-      expect(fileContent).not.toContain('<<<<<<< HEAD');
-      expect(fileContent).not.toContain('=======');
-      expect(fileContent).not.toContain('>>>>>>> ');
-    });
+      expect(fileContent).not.toContain('      expect(fileContent).not.toContain('');
+      expect(fileContent).not.toContain('    });
 
     it('should contain required Auth0 configuration', () => {
       const mockEnvContent = `
@@ -290,7 +288,7 @@ export const isPlaceholderValue = (value: string) => {
     'generate',
     'from Auth0'
   ];
-  
+
   return placeholderPatterns.some(pattern => value.includes(pattern));
 };
 

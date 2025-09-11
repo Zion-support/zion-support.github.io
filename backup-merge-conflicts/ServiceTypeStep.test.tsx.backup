@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-
 interface ServiceTypeStep.testProps {
   // Add props here as needed
 }
@@ -13,9 +9,4 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:backup-merge-conflicts/ServiceTypeStep.test.tsx.backup
 }
->>>>>>> main
-=======
-}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:pages_backup_conflicts/docs.tsx

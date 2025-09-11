@@ -1,44 +1,35 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
 ;
 export default function Page("props": "any) {;
-=======
-export default function Page() {;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
       // Apply large text;
       if(updatedSettings.largeText) {;
         document.documentElement.classList.add('large-text')"} else {;
         document.documentElement.classList.remove('large-text')}
-
+;
       // Apply reduced motion;
       if(updatedSettings.reducedMotion) {;
         document.documentElement.classList.add('reduced-motion')} else {;
         document.documentElement.classList.remove('reduced-motion')}
-
+;
     // Color blindness simulation;
     if(newSettings.colorBlindness !== 'none') {;
       root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {;
       root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
-
+;
       // Store settings in localStorage;
       localStorage.setItem(';
-        'accessibility-settings',
+        'accessibility-settings',;
         JSON.stringify(updatedSettings);
-      )},
+      )},;
     [settings];
   );
+;
   // Load saved settings;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
 ;
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-}, []);
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
     if(savedSettings) {;
       setSettings(parsedSettings);
       applySettings(parsedSettings)}
@@ -48,29 +39,29 @@ export default function Page() {;
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";
     announcement.textContent = message;
+    ;
     document.body.appendChild(announcement);
+    ;
     setTimeout(() => {;
       document.body.removeChild(announcement)}, 1000)}, [settings.screenReader]);
+;
   // Keyboard navigation enhancement;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-}, []);
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
     if(!enabled || !settings.keyboardNavigation) return;
+;
       switch(event.key) {;
         case 'ArrowDown':';
         case 'ArrowRight': ";
           event.preventDefault();
+          ;
           (focusableElements[nextIndex] as HTMLElement)?.focus();
           break;
         case 'ArrowUp':';
         case 'ArrowLeft':;
           event.preventDefault();
+          ;
           (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;
             currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
@@ -86,83 +77,80 @@ export default function Page() {;
           )?.focus();
           break"}
     };
+;
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
+;
   // Enhanced focus management;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
     ;
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-}, []);
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
       setCurrentFocus(target) ;
+;
       if(settings.focusIndicator) {;
         target.style.outline = '3px solid #3b82f6';
         target.style.outlineOffset = '2px'}
     };
+;
       if(settings.focusIndicator) {;
         target.style.outline = '';
         target.style.outlineOffset = '';
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
       }
-=======
-}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
     };
+;
     document.addEventListener('focusin', handleFocusChange);    document.addEventListener('focusout', handleFocusOut);
+;
     return () => {;
       document.removeEventListener('focusin', handleFocusChange);
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
+;
   // Screen reader announcements;
+  ;
         announcement.setAttribute('aria-live',polite');
         announcement.setAttribute('aria-atomic',true');
         announcement.className="sr-only";
         announcement.textContent = message;
         document.body.appendChild(announcement);
+;
         setTimeout(() => {;
           document.body.removeChild(announcement)}, 1000)}
-    },
+    },;
     [settings.screenReader];
   );
+;
   // Toggle settings;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
   ;
       applySettings({ [key]: "newValue "});
 ;
-=======
-      applySettings({ [key]: newValue });
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
       if(key === 'highContrast') {;
         announceToScreenReader();
           newValue';
             ? 'High contrast mode enabled'';
             : 'High contrast mode disabled';
-        )} else if(key === 'largeText') {;  // Toggle settings
+        )} else if(key === 'largeText') {;
+  // Toggle settings
       applySettings({ [key]: newValue }
     );
-
         announceToScreenReader(';
           newValue ? 'Large text mode enabled' : 'Large text mode disabled';
         )}
-    },
+    },;
     [settings, applySettings, announceToScreenReader];
   );
 ;
   // Zoom controls;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
   ;
       applySettings({ "zoomLevel": "newZoo m "});`;
       announceToScreenReader(`Zoom level ${newZoom}%`)},;
-    [settings.zoomLevel, applySettings, announceToScreenReader];  // Zoom controls
+    [settings.zoomLevel, applySettings, announceToScreenReader];
+  // Zoom controls
       applySettings({ zoomLevel: newZoo m }
     );`
       announceToScreenReader(`Zoom level ${newZoom}%`)},
     [settings.zoomLevel, applySettings, announceToScreenReader]
   );
+;
   return ();
     <>;
       {/* Accessibility Toggle Button */}
@@ -172,20 +160,12 @@ export default function Page() {;
         whileHover={{ "scale": 1.1 "}}
         whileTap={{ "scale": "0.9 "}}
         onClick={() => setIsVisible(!isVisible)}";
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
         className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg "hover": "b g-blue-700 transition-all duration-200 "focus": outlin e-none "focus": rin g-2 "focus": rin g-blue-400 "focus": rin g-offset-2";
         ;
         title="Accessibility Options";
       >";
         <Accessibility className="w-5 h-5"   />      </motion.button>;
       {/* Accessibility Panel */"}
-=======
-        className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2";
-        title="Accessibility Options">";
-        <Accessibility className="w-5 h-5"  />      </motion.button>;
-
-      {/* Accessibility Panel */}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
       <AnimatePresence>;
         {isVisible && (<motion.div;
             initial={{ "opacity": "0", "x": "30 0 "}}
@@ -204,7 +184,8 @@ export default function Page() {;
                 ;
               >";
                 <EyeOff className="w-4 h-4"   />              </button>;
-            </div>;      {/* Accessibility Panel */}
+            </div>;
+      {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
             initial={{ opacity: 0, x: 30 0 }}
@@ -223,7 +204,6 @@ export default function Page() {;
               >"
                 <EyeOff className="w-4 h-4"   />              </button>
             </div>
-
             {/* Content */"}";
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">;
               {/* Visual Enhancements */}";
@@ -239,26 +219,16 @@ export default function Page() {;
                       High Contrast;
                     </span>                  </div>;
                   <button';
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                     onClick={() => toggleSetting('highContrast')"}`;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`;
                     }`}'`;
-=======
-                    onClick={() => toggleSetting('highContrast')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`;
-}`}'`;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast mode`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast';
                           ? 'translate-x-6'';
                           : 'translate-x-1'`;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                       }`}
-=======
-}`}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     />;
                   </button>;
                 </div>;
@@ -270,24 +240,14 @@ export default function Page() {;
                       Large Text;
                     </span>                  </div>;
                   <button';
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                     onClick={() => toggleSetting('largeText')"}`;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`;
                     }`}'`;
-=======
-                    onClick={() => toggleSetting('largeText')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`;
-}`}'`;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text mode`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.largeText ? 'translate-x-6' : 'translate-x-1'`;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                       }`}
-=======
-}`}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     />;
                   </button>;
                 </div>;
@@ -299,26 +259,16 @@ export default function Page() {;
                       Focus Indicator;
                     </span>                  </div>;
                   <button';
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                     onClick={() => toggleSetting('focusIndicator')"}`;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`;
                     }`}'`;
-=======
-                    onClick={() => toggleSetting('focusIndicator')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`;
-}`}'`;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator';
                           ? 'translate-x-6'';
                           : 'translate-x-1'`;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                       }`}
-=======
-}`}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     />;
                   </button>;
                 </div>;
@@ -340,22 +290,14 @@ export default function Page() {;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.keyboardNavigation';
                         ? 'bg-blue-600'';
                         : 'bg-slate-300'`;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                     }`}'`;
-=======
-}`}'`;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation';
                           ? 'translate-x-6'';
                           : 'translate-x-1'`;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                       }`}
-=======
-}`}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     />;
                   </button>;
                 </div>;
@@ -367,26 +309,16 @@ export default function Page() {;
                       Reduced Motion;
                     </span>                  </div>;
                   <button';
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                     onClick={() => toggleSetting('reducedMotion')"}`;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`;
                     }`}'`;
-=======
-                    onClick={() => toggleSetting('reducedMotion')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`;
-}`}'`;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion';
                           ? 'translate-x-6'';
                           : 'translate-x-1'`;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                       }`}
-=======
-}`}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     />;
                   </button>;
                 </div>;
@@ -423,6 +355,7 @@ export default function Page() {;
                       <ZoomIn className="w-4 h-4"   />                    </button>;
                   </div>;
                 </div>;
+                ;
                 {accessibilityIssues.length > 0 && (;
                   <div className="space-y-2">;
                     <h5 className="text-zion-purple/80 text-xs font-medium">Issues "Found":</h5>;
@@ -441,7 +374,7 @@ export default function Page() {;
                     </div>;
                   </div>;
                 )}
-
+;
                 <button;
                   onClick={runAccessibilityAudit}
                   className="w-full bg-zion-purple/20 "hover": "b g-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors";
@@ -463,26 +396,16 @@ export default function Page() {;
                     </span>;
                   </div>;
                   <button';
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                     onClick={() => toggleSetting('screenReader')"}`;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`;
                     }`}'`;
-=======
-                    onClick={() => toggleSetting('screenReader')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`;
-}`}'`;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} enhanced screen reader support`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader';
                           ? 'translate-x-6'';
                           : 'translate-x-1'`;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                       }`}
-=======
-}`}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
                     />;
                   </button>;
                 </div>;
@@ -507,7 +430,6 @@ export default function Page() {;
       {/* Screen Reader Only Styles */}`;
       <style jsx>{`;
         .sr-only {;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
           "position": "absolut e;
           "width": 1p x;
           "height": 1p x;
@@ -521,23 +443,6 @@ export default function Page() {;
         .high-contrast {;
           "filter": "contras t(1.5) brightness(1.2)"}
 ;
-=======
-
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0}
-
-        .high-contrast {;
-
-          filter: contrast(1.5) brightness(1.2)}
-
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
         .large-text {;
           font-"size": "1.2em"}
         .reduced-motion * {;
@@ -546,6 +451,7 @@ export default function Page() {;
           transition-"duration": 0.01ms !important"}`      `}</style>;
     </>;
   )};
+;
 export default EnhancedAccessibilityEnhancer;
 '"`;
 </span>;

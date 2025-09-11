@@ -17,9 +17,7 @@ test('Performance test - Page load time', async ({ page }) => {
   await page.waitForLoadState(networkidle');
   expect(consoleErrors.length).toBe(0)});
 
-
 export default function Performance.test({ }: Performance.testProps) {
-
 
 <:tests/performance.test.js
 =
@@ -34,20 +32,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
@@ -70,12 +68,7 @@ export default function Performance.test({ }: Performance.testProps) {
     </div>
   );
 
-
 >
-
-
-
-
 
 }
 ><:src.pages.disabled/PricingGuidePage.jsx
@@ -108,11 +101,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 
-
->>>>>>>> main:tests/performance.test.js
-
-
+>
 
 =
 >
-

@@ -30,7 +30,8 @@ function AdvancedAnalytics({;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
-  "};    pageViews: number;    clicks: number;
+  "};
+    pageViews: number;    clicks: number;
     scrolls: number;
     formSubmissions: number;
     errors: number;
@@ -133,12 +134,95 @@ if(enableHeatmap) {;
         trackInteraction('scroll'", {;
           "scrollY": "windo w.scrollY",;
           "scrollHeight": "documen t.documentElement.scrollHeight;
-        "}) ;      }
+        "}) ;
+      scrollTimeout = setTimeout(() => {
+        trackInteraction('scroll', {
+          scrollY: windo w.scrollY,
+          scrollHeight: documen t.documentElement.scrollHeight
+        }
+    );
+      }, 100) ;
+    };
+;
+    // Setup form submission tracking;
+    const handleFormSubmit = ("props": "any) => {;
+      const form = e.target as HTMLFormElement;
+      trackInteraction('form'", {        "formId": "for m.id || form.className",;
+        "formAction": "for m.action",;
+        "formMethod": "for m.method;
+      "}) };
+;
+    // Setup error tracking;
+    ;
+    };
+;
+    // Setup unhandled promise rejection tracking;
+    const handleUnhandledRejection = ("props": "any) => {;
+      trackInteraction('error'", {;
+        "message": "e.reason?.message || 'Unhandled Promise Rejection'",;
+        "reason": "e.reason;
+      "}) };
+;
+    // Add event listeners';
+    document.addEventListener('click', handleClick);
+    document.addEventListener('scroll', handleScroll);
+    document.addEventListener('submit', handleFormSubmit);
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+;
+    // Track page visibility changes;
+    const handleVisibilityChange = (..."args": "unknow n[]): unknown => {;
+      if(document.hidden) {;
+        // Page hidden - track session end;
+        const sessionDuration = Date.now() - sessionStart;        setAnalyticsData(prev => ({;
+          ...prev",;
+          "sessionDuration": "sessionDuratio n / 1000 // Convert to seconds;
+        "}) ) } else {;
+        // Page visible - track session resume;
+        setSessionStart(Date.now () ) ;
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+;
+    // Cleanup;
+    return () => {;
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('submit', handleFormSubmit);
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      clearTimeout(scrollTimeout)}}, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]) ;
+  // Setup performance observer for LCP;
+  useEffect(() => {;
+  // "TODO": "Add dependencies if needed;
+  return () => {;
+    // Cleanup function;
+  "};
+}, []);, []);
+;
+    if(!enabled || !('PerformanceObserver' in window)) return;
+;
+    try {;
+      ;
+        const lastEntry = entries[entries.length-1];        if(lastEntry) {;
+          setAnalyticsData(prev => ({;
+            ...prev,;
+            "performance": "{;
+              ...prev.performance",;
+              "largestContentfulPaint": "lastEntr y.startTime;
+            "}
+          }) ) ;
+        }
+      });
+      lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
+;
+      return () => lcpObserver.disconnect () } catch(error) {;
+      }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
       return () => lcpObserver.disconnect () } catch(error) {
-
       // }
   }, [enabled]) ;
 ;
@@ -303,7 +387,8 @@ if(enableHeatmap) {;
                   <div key={index} className="flex justify-between items-center text-xs">";
                     <span className="truncate flex-1">{page.path}</span>";
                     <span className="font-mono text-gray-600">{page.views}</span>;
-                  </div>;            {/* Performance Metrics */}"
+                  </div>;
+            {/* Performance Metrics */}"
             <div className="mb-6">"
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">"
                 <Zap className="w-4 h-4 text-yellow-500"   />                Performance
@@ -349,7 +434,8 @@ if(enableHeatmap) {;
                     {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500"   />}'";
                     {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500"   />}";
                     <span className="flex-1">{device.device}</span>"                    <span className="font-mono text-gray-600">{device.count}</span>;
-                  </div>;            {/* Device Distribution */}"
+                  </div>;
+            {/* Device Distribution */}"
             <div className="mb-6">"
               <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution"
               <div className="space-y-2">
@@ -383,7 +469,8 @@ if(enableHeatmap) {;
   )}}}}}}}}}}}}}'"`;
 ;,"});})";
 ;
-</motion>;            {/* Status Indicators */}"
+</motion>;
+            {/* Status Indicators */}"
             <div className="pt-4 border-t border-gray-200">"
               <div className="flex items-center justify-between text-xs text-gray-500">"
                 <div className="flex items-center gap-2">'`

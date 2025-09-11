@@ -1,1 +1,9 @@
-const MainSidebar = dynamic(() => import("./MainSidebar"), {'; loading: () => <p>Loading...</p,>}) export: default MainSidebar ,
+import React from 'react';
+;
+const MainSidebar.dynamic = () => {
+  return (
+    <div data - testid="mainsidebar.dynamic">;
+      <h1 > MainSidebar.dynamic</h1>;
+    </div>);
+}
+;

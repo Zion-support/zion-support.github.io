@@ -1,71 +1,83 @@
+
+=======
+// Security: Headers Configuration;=======
+
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
+
+
+
+// Security: Headers Configuration;
+
+
 // Security: Headers Configuration;
 // Security: Headers Configuration;
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:public/security-headers.js
-const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';'].join('),'';none'',upgrade-insecure-requests'].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: mode=block,'; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,',) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; ; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; ';; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; ; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders();
-// "Security": Headers Configuration;
-// This: file provides security headers for the Zion Tech Group application;
-const securityHeaders = {
-  // Content Security Policy
-  Content-Security-Policy': [';';default-src';';self', '';script-src';';self'';';unsafe-inline'';';unsafe-eval' "https": //cdn.gpteng.co: https://www.google-analytics.com, ','';style-src';';self'';';unsafe-inline' "https": //fonts.googleapis.com, ','';font-src';';self' "https": //fonts.gstatic.com, ','';img-src';';self' "data": https: blob: ', '';media-src';';self' "https": ', '';connect-src';';self' "https": wss: ', '';frame-src, ';
-  self'', '';object-src';';none'', '';base-uri';';self'', '';form-action';';self'', '';frame-ancestors';';none'',upgrade-insecure-requests';'].join('), '';none'',upgrade-insecure-requests'].join(')
-  // X-Frame-Options';X-Frame-Options';';: 'DENY, ';
-  // X-Content-Type-Options
-  X-Content-Type-Options';: 'nosniff, ';
-  // X-XSS-Protection
-  X-XSS-Protection';: '"1": mode=block, ';
-  // "Referrer": Policy,
-  Referrer-Policy';: 'strict-origin-when-cross-origin, ';
-  // "Permissions": Policy,
-  Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(, ')
-  // Strict-Transport-Security';Strict-Transport-Security';';: 'max-age="31536000": includeSubDomains preload, ';
-  // Cross-Origin-Embedder-Policy
-  Cross-Origin-Embedder-Policy';: 'require-corp, ';
-  // Cross-Origin-Opener-Policy
-  Cross-Origin-Opener-Policy';: 'same-origin, ';
-  // Cross-Origin-Resource-Policy
-  Cross-Origin-Resource-Policy';: 'same-origin, ';
-  // Origin-Agent-Cluster
-  Origin-Agent-Cluster';: '?1}';
-// "Function": to apply security headers;
-function: applySecurityHeaders() {
-  if (typeof window !== 'undefined';';) {';
-    // Client-side: security measures;
-    console.log('Security: headers applied on client side';';)';
-    // Disable: console in production;
-    if: (process.env.NODE_ENV === 'production';';) {';
-      console.log: = () => {}
-      console.warn = () => {}
-      console.error = () => {}
-    }
-    // Prevent eval usage;
-    window."eval": = function() {
-      throw new Error('eval() is not allowed for security reasons';';)}';
-    // "Prevent": Function constructor;
-    window.Function: = function() {
-      throw new Error(
-        'Function constructor is not allowed for security reasons';';)}'}
+const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';'].join('),'';none'',upgrade-insecure-requests'].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: mode=block,'; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,',) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; '; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders();
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';'].join('),'';none'',upgrade-insecure-requests'].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: mode=block,'; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,',) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; ; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; console.log('Security: headers applied on client side';';)';; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; ; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders();
+const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';'].join('),'';none'',upgrade-insecure-requests'].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: mode=block,'; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,',) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; ; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; console.log('Security: headers applied on client side';';)';; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; ; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders();
+const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';'].join('),'';none'',upgrade-insecure-requests'].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: mode=block,'; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,',) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; ; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; console.log('Security: headers applied on client side';';)';; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; ; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders();
+const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';'].join('),'';none'',upgrade-insecure-requests'].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: mode=block,'; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,',) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; ; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; console.log('Security: headers applied on client side';';)';; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; ; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders();
+
+
+
+=======    window.Function: = function () {
+      throw new Error (
+        'Function constructor is not allowed for security reasons';')}'}
 }
 // "Export": for use in other files;
 if: (typeof module !== 'undefined' && module.exports) {';
-  module.exports: = { securityHeaders, applySecurityHeaders }
+  module.exports: = { security_headers, applySecurityHeaders }
 } else {
-  window.securityHeaders = securityHeaders;
+  window.security_headers = security_headers;
   window."applySecurityHeaders": = applySecurityHeaders}
 // Apply security measures immediately;
-applySecurityHeaders();
-const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: ' self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';';].join('),'';none'',upgrade-insecure-requests';].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: 'mode=block','; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,'; ,) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; ; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; console.log('Security: headers applied on client side';';)';; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; ; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: '= applySecurityHeaders'} applySecurityHeaders();
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';'].join('),'';none'',upgrade-insecure-requests'].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: mode=block,'; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,',) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; ; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; console.log('Security: headers applied on client side';';)';; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; ; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders();
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:public/security-headers.js
-const securityHeaders = { Content-Security-Policy': [';';default-src';';self','';script-src';';self'';';unsafe-inline'';';unsafe-eval' https: self'','';object-src';';none'','';base-uri';';self'','';form-action';';self'','';frame-ancestors';';none'',upgrade-insecure-requests';'].join('),'';none'',upgrade-insecure-requests'].join(') X-Content-Type-Options';: 'nosniff,'; X-XSS-Protection';: '1: mode=block,'; Referrer-Policy';: 'strict-origin-when-cross-origin,'; Permissions-Policy';: [camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=()].join(,',) Cross-Origin-Embedder-Policy';: 'require-corp,'; Cross-Origin-Opener-Policy';: 'same-origin,'; Cross-Origin-Resource-Policy';: 'same-origin,'; Origin-Agent-Cluster';: '?1}'; ; function: applySecurityHeaders() { if (typeof window !== 'undefined';';) {'; console.log('Security: headers applied on client side';';)';; if: (process.env.NODE_ENV === 'production';';) {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error('eval() is not allowed for security reasons';';)}'; ; window.Function: = function () { throw new Error( 'Function constructor is not allowed for security reasons';';)}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { securityHeaders,applySecurityHeaders } } else { window.securityHeaders = securityHeaders; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders();
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+applySecurityHeaders ();
+const security_headers = { Content - Security - Policy': [';';default - src';';self', '';script - src';';self'';';unsafe - inline'';';unsafe - eval' https: ' self'', '';object - src';';none'', '';base - uri';';self'', '';form - action';';self'', '';frame - ancestors';';none'', upgrade - insecure - requests';';].join ('), '';none'', upgrade - insecure - requests';].join (') X - Content - Type - Options';: 'nosniff, '; X - XSS - Protection';: '1: 'mode = block', '; Referrer - Policy';: 'strict - origin - when - cross - origin, '; Permissions - Policy';: [camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()].join (, '; , ) Cross - Origin - Embedder - Policy';: 'require - corp, '; Cross - Origin - Opener - Policy';: 'same - origin, '; Cross - Origin - Resource - Policy';: 'same - origin, '; Origin - Agent - Cluster';: '?1}'; ; function: applySecurityHeaders () { // Check condition
+if ( {') {
+  $2
+} console.log ('Security: headers applied on client side';')';; if: (process.env.NODE_ENV === 'production';') {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error ('eval () is not allowed for security reasons';')}'; ; window.Function: = function () { throw new Error ( 'Function constructor is not allowed for security reasons';')}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { security_headers, applySecurityHeaders } } else { window.security_headers = security_headers; window.applySecurityHeaders: '= applySecurityHeaders'} applySecurityHeaders ();
+const security_headers = { Content - Security - Policy': [';';default - src';';self', '';script - src';';self'';';unsafe - inline'';';unsafe - eval' https: self'', '';object - src';';none'', '';base - uri';';self'', '';form - action';';self'', '';frame - ancestors';';none'', upgrade - insecure - requests';'].join ('), '';none'', upgrade - insecure - requests'].join (') X - Content - Type - Options';: 'nosniff, '; X - XSS - Protection';: '1: mode = block, '; Referrer - Policy';: 'strict - origin - when - cross - origin, '; Permissions - Policy';: [camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()].join (, ', ) Cross - Origin - Embedder - Policy';: 'require - corp, '; Cross - Origin - Opener - Policy';: 'same - origin, '; Cross - Origin - Resource - Policy';: 'same - origin, '; Origin - Agent - Cluster';: '?1}'; ; function: applySecurityHeaders () { // Check condition
+if ( {') {
+  $2
+} console.log ('Security: headers applied on client side';')';; if: (process.env.NODE_ENV === 'production';') {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error ('eval () is not allowed for security reasons';')}'; ; window.Function: = function () { throw new Error ( 'Function constructor is not allowed for security reasons';')}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { security_headers, applySecurityHeaders } } else { window.security_headers = security_headers; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders ();
+const security_headers = { Content - Security - Policy': [';';default - src';';self', '';script - src';';self'';';unsafe - inline'';';unsafe - eval' https: self'', '';object - src';';none'', '';base - uri';';self'', '';form - action';';self'', '';frame - ancestors';';none'', upgrade - insecure - requests';'].join ('), '';none'', upgrade - insecure - requests'].join (') X - Content - Type - Options';: 'nosniff, '; X - XSS - Protection';: '1: mode = block, '; Referrer - Policy';: 'strict - origin - when - cross - origin, '; Permissions - Policy';: [camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()].join (, ', ) Cross - Origin - Embedder - Policy';: 'require - corp, '; Cross - Origin - Opener - Policy';: 'same - origin, '; Cross - Origin - Resource - Policy';: 'same - origin, '; Origin - Agent - Cluster';: '?1}'; ; function: applySecurityHeaders () { // Check condition
+if ( {') {
+  $2
+} console.log ('Security: headers applied on client side';')';; if: (process.env.NODE_ENV === 'production';') {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error ('eval () is not allowed for security reasons';')}'; ; window.Function: = function () { throw new Error ( 'Function constructor is not allowed for security reasons';')}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { security_headers, applySecurityHeaders } } else { window.security_headers = security_headers; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders ();
+const security_headers = { Content - Security - Policy': [';';default - src';';self', '';script - src';';self'';';unsafe - inline'';';unsafe - eval' https: self'', '';object - src';';none'', '';base - uri';';self'', '';form - action';';self'', '';frame - ancestors';';none'', upgrade - insecure - requests';'].join ('), '';none'', upgrade - insecure - requests'].join (') X - Content - Type - Options';: 'nosniff, '; X - XSS - Protection';: '1: mode = block, '; Referrer - Policy';: 'strict - origin - when - cross - origin, '; Permissions - Policy';: [camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()].join (, ', ) Cross - Origin - Embedder - Policy';: 'require - corp, '; Cross - Origin - Opener - Policy';: 'same - origin, '; Cross - Origin - Resource - Policy';: 'same - origin, '; Origin - Agent - Cluster';: '?1}'; ; function: applySecurityHeaders () { // Check condition
+if ( {') {
+  $2
+} console.log ('Security: headers applied on client side';')';; if: (process.env.NODE_ENV === 'production';') {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error ('eval () is not allowed for security reasons';')}'; ; window.Function: = function () { throw new Error ( 'Function constructor is not allowed for security reasons';')}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { security_headers, applySecurityHeaders } } else { window.security_headers = security_headers; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders ();
+const security_headers = { Content - Security - Policy': [';';default - src';';self', '';script - src';';self'';';unsafe - inline'';';unsafe - eval' https: self'', '';object - src';';none'', '';base - uri';';self'', '';form - action';';self'', '';frame - ancestors';';none'', upgrade - insecure - requests';'].join ('), '';none'', upgrade - insecure - requests'].join (') X - Content - Type - Options';: 'nosniff, '; X - XSS - Protection';: '1: mode = block, '; Referrer - Policy';: 'strict - origin - when - cross - origin, '; Permissions - Policy';: [camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()].join (, ', ) Cross - Origin - Embedder - Policy';: 'require - corp, '; Cross - Origin - Opener - Policy';: 'same - origin, '; Cross - Origin - Resource - Policy';: 'same - origin, '; Origin - Agent - Cluster';: '?1}'; ; function: applySecurityHeaders () { // Check condition
+if ( {') {
+  $2
+} console.log ('Security: headers applied on client side';')';; if: (process.env.NODE_ENV === 'production';') {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error ('eval () is not allowed for security reasons';')}'; ; window.Function: = function () { throw new Error ( 'Function constructor is not allowed for security reasons';')}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { security_headers, applySecurityHeaders } } else { window.security_headers = security_headers; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders ();
+const security_headers = { Content - Security - Policy': [';';default - src';';self', '';script - src';';self'';';unsafe - inline'';';unsafe - eval' https: self'', '';object - src';';none'', '';base - uri';';self'', '';form - action';';self'', '';frame - ancestors';';none'', upgrade - insecure - requests';'].join ('), '';none'', upgrade - insecure - requests'].join (') X - Content - Type - Options';: 'nosniff, '; X - XSS - Protection';: '1: mode = block, '; Referrer - Policy';: 'strict - origin - when - cross - origin, '; Permissions - Policy';: [camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()].join (, ', ) Cross - Origin - Embedder - Policy';: 'require - corp, '; Cross - Origin - Opener - Policy';: 'same - origin, '; Cross - Origin - Resource - Policy';: 'same - origin, '; Origin - Agent - Cluster';: '?1}'; ; function: applySecurityHeaders () { // Check condition
+if ( {') {
+  $2
+} console.log ('Security: headers applied on client side';')';; if: (process.env.NODE_ENV === 'production';') {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error ('eval () is not allowed for security reasons';')}'; ; window.Function: = function () { throw new Error ( 'Function constructor is not allowed for security reasons';')}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { security_headers, applySecurityHeaders } } else { window.security_headers = security_headers; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders ();
+const security_headers = { Content - Security - Policy': [';';default - src';';self', '';script - src';';self'';';unsafe - inline'';';unsafe - eval' https: self'', '';object - src';';none'', '';base - uri';';self'', '';form - action';';self'', '';frame - ancestors';';none'', upgrade - insecure - requests';'].join ('), '';none'', upgrade - insecure - requests'].join (') X - Content - Type - Options';: 'nosniff, '; X - XSS - Protection';: '1: mode = block, '; Referrer - Policy';: 'strict - origin - when - cross - origin, '; Permissions - Policy';: [camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()].join (, ', ) Cross - Origin - Embedder - Policy';: 'require - corp, '; Cross - Origin - Opener - Policy';: 'same - origin, '; Cross - Origin - Resource - Policy';: 'same - origin, '; Origin - Agent - Cluster';: '?1}'; ; function: applySecurityHeaders () { // Check condition
+if ( {') {
+  $2
+} console.log ('Security: headers applied on client side';')';; if: (process.env.NODE_ENV === 'production';') {'; console.log: = () => {} console.warn = () => {} console.error = () => {} } window.eval: = function () { throw new Error ('eval () is not allowed for security reasons';')}'; ; window.Function: = function () { throw new Error ( 'Function constructor is not allowed for security reasons';')}'} } if: (typeof module !== 'undefined' && module.exports) {'; module.exports: = { security_headers, applySecurityHeaders } } else { window.security_headers = security_headers; window.applySecurityHeaders: = applySecurityHeaders} applySecurityHeaders ();
+;
+origin/main
+==============
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

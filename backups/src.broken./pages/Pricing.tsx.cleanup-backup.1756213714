@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  CheckIcon,
-  XMarkIcon,
-  StarIcon,
-  SparklesIcon,
-  RocketLaunchIcon,
-  ShieldCheckIcon,
-  UsersIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
-
 const Pricing: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
 
@@ -159,12 +144,9 @@ const Pricing: React.FC = () => {
       answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times and additional channels.'
     }
   ];
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 const $page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -185,50 +167,6 @@ const $page: React.FC = () => {
             to="/contact"
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
           >
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-4">Add-on Services</h2>
-            <p className="text-xl text-gray-300">Enhance your plan with additional services tailored to your needs</p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {addOns.map((addon, index) => (
-              <motion.div
-                key={addon.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-              >
-                <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{addon.description}</p>
-                
-                <div className="text-center mb-4">
-                  <span className="text-2xl font-bold text-white">${addon.price}</span>
-                  <span className="text-gray-300 text-sm">/{addon.period}</span>
-                </div>
-                
-                <ul className="space-y-2 mb-6">
-                  {addon.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckIcon className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300 text-xs">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <a
-                  href="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-sm"
-                >
-                  Add Service
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -289,14 +227,6 @@ const $page: React.FC = () => {
               </a>
             </div>
           </motion.div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-
 const Pricing: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('price');
@@ -759,7 +689,6 @@ const Pricing: React.FC = () => {
 };
 
 export default Pricing;
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
@@ -785,31 +714,14 @@ const $page: React.FC = () => {
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
           >
             Contact Us for More Information
-          </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
             Contact Us for More Information
-          </Link>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        </div>
+          </Link>        </div>
       </section>
     </div>
   );
 };
 
 export default $page;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText, Heart } from "lucide-react";
-import { Link } from "react-router-dom";
-
 export default function Pricing() {
   const pricingTiers = [
     {
@@ -1199,7 +1111,3 @@ export default function Pricing() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

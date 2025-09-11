@@ -1,38 +1,85 @@
+
+import React from 'react';
+;
+
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'blue' | 'gray' | 'white';
+interface LoadingSpinnerProps {
+interface LoadingSpinnerProps {;
+
+
+interface LoadingSpinnerProps {
+interface LoadingSpinnerProps {
+interface LoadingSpinnerProps {;=======
+
+
+
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'blue' | 'white' | 'gray' | 'slate';
   text?: string;
-  className?: string;
+  full_screen?: boolean;
+  class_name?: string;
 }
 
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'blue', 
-  text,
-  className = '' 
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
 
-  const colorClasses = {
-    blue: 'text-blue-600',
-    gray: 'text-gray-600',
-    white: 'text-white'
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
+  size = 'md',;
+  text = 'Loading...',;
+  className = '',}) => {;
+  const sizeClasses = {;
+    sm: 'w-4 h-4',;
+    md: 'w-8 h-8',;
+    lg: 'w-12 h-12',;
   };
-
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}>
-        <span className="sr-only">Loading...</span>
-      </div>
-      {text && (
-        <p className={`mt-2 text-sm ${colorClasses[color]}`}>
+  const colorClasses = {;
+    blue: 'text-blue-600',;
+    white: 'text-white',;
+    gray: 'text-gray-600',;
+    slate: 'text-slate-600';
+  };
+  const spinner = (;
+    <div className={`flex flex-col items-center justify-center ${className}`}>;
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} />;
+      {text && (;
+        <p className={`mt-2 text-sm ${colorClasses[color]}`}>;
           {text}
-        </p>
+        </p>;
       )}
+
+
+  if (fullScreen) {;
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
+  size = 'md', text,'  className = ; }) => {'  const sizeClasses = {'    sm: 'w-4 h-4',;
+    md: 'w-8 h-8',;
+    md: '    lg: 'w-12 h-12', };
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}}>      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (;
+        <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
+}
+export default LoadingSpinner;
+
+export default LoadingSpinner;
+;
+
+
     </div>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
+  size = 'md', text,'  className = ; }) => {'  const sizeClasses = {'    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    md: '    lg: 'w-12 h-12', };
+  return (;
+    <div className={`flex flex-col items-center justify-center ${className}}>      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (;
+        <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
+};
+export default LoadingSpinner;

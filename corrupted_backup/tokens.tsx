@@ -45,8 +45,6 @@ const mockTransactions: Transaction[] = [
     status: 'completed',
     createdAt: '2025-01-14T15:00:00Z',
     type: 'bonus'
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/tokens.tsx
   }
 ] 
 
@@ -81,7 +79,6 @@ const AdminTokensPage: React.FC = () => {
       setSaving(false);
     }
   };
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/tokens.tsx
 
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
@@ -147,7 +144,7 @@ const AdminTokensPage: React.FC = () => {
           {/* Transactions Panel */}
           <div className="bg-white rounded-lg shadow p-6">
             <h2 className="text-xl font-semibold mb-4">Recent Transactions</h2>
-            
+
             {loading ? (
               <div className="text-center py-8">Loading transactions...</div>
             ) : transactions.length === 0 ? (
@@ -180,7 +177,6 @@ const AdminTokensPage: React.FC = () => {
                   </div>
                 ))}
               </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
             )}
           </div>
         </div>
@@ -260,5 +256,3 @@ const AdminTokensPage: React.FC = () => {
 };
 
 export default AdminTokensPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/tokens.tsx

@@ -1,6 +1,15 @@
-<<<<<<< HEAD
-=======
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from '@/data / innovativeServices2025';
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2025.tsx
 ;
 export default function Page("props": "any) {;
-=======
-export default function Page() {;
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2025.tsx
     if(sortOrder === 'asc') {;
       return aValue > bValue ? 1 : -1"} else {;
       return aValue < bValue ? 1 : "-1"}
   }) ;
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2025.tsx
 ;
-  const getCategoryIcon = ("props": "any) => {;      return aValue > bValue ? 1 : -1} else {
+  const getCategoryIcon = ("props": "any) => {;
+      return aValue > bValue ? 1 : -1} else {
       return aValue < bValue ? 1 : -1}
   }
     );
@@ -22,24 +18,203 @@ export default function Page() {;
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon"}</span> : ";
       <Rocket className="w-6 h-6"  />;
   "};
-=======
-  const getCategoryIcon = (category: anystring) => {;
-    if(category === 'all') return < Rocket className="w-6 h-6" />;
-    return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?;
-      <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :;
-      <Rocket className="w-6 h-6" />;
-};
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2025.tsx
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'};
+;
     setShowModal(true)};
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2025.tsx
 ;
   const closeModal = ("props": "any) => {;
     setShowModal(false) ;
     setSelectedService(null) ;
   "};
 ;
-  return (<div  className="min - h-screen futuristic -bg">;                        </div>
+  return (<div  className="min - h-screen futuristic -bg">;
+  };
+  return (
+        <div  className="min - h-screen futuristic -bg">
+      {/* Matrix Rain Background Effect */}
+      <div  className="matrix -rain"></div>;
+      {/* Hero Section */}
+      <div  className="relative overflow-hidden">;
+        <div  className="absolute inset - 0 bg-gradient - to - r from - blue - 600 / 20 to - purple -600 / 20"></div>;
+        <div  className="relative max - w-7xl mx - auto px-4 "sm": "p x-6 "lg": p x-8 py-24">;
+          <motion.div;
+            className="text-center"            initial={{ "opacity": 0", "y": "5 0 "}}
+            animate={{ "opacity": "1", "y": "0 "}}
+            transition={{ "duration": "0.8 "}}
+          >";
+            <h1 className="futuristic-heading text-5xl "md": "tex t-7xl mb-8">";
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
+                Innovative Services;
+              </span>;
+              <br  />";
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">;
+                2025;
+              </span>;
+            </h1>";
+            <p className="futuristic-subheading text-xl "md": tex t-2xl mb-12 max-w-4xl mx-auto">;
+              Revolutionary AI-powered", quantum-secure, and autonomous business solutions that transform industries and drive unprecedented growth.</p>";
+            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">;
+              <motion.button;
+                whileHover={{ "scale": 1.05 "}}
+                whileTap={{ "scale": "0.95 "}}";
+                className="futuristic-btn inline-flex items-center px-8 py-4"';
+                onClick={() => document.getElementById('services-section')?.scrollIntoView({ "behavior": 'smooth' })}
+              >";
+                <Rocket className="w-5 h-5 mr-2"   />                Explore Services;
+              </motion.button>;
+              <motion.a;
+                href={`"tel": "${INNOVATIVE_CONTACT_INFO_2025.phone"}`}
+                whileHover={{ "scale": "1.05 "}}
+                whileTap={{ "scale": "0.95 "}}";
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg "hover": "b g-cyan-400 "hover": tex t-white transition-all duration-300";
+              >";
+                <Phone className="w-5 h-5 mr-2"   />                Call Now;
+              </motion.a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </div>;
+      {/* Contact Information Banner */"}";
+      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-cyan-400/30">";
+        <div className="max-w-7xl mx-auto px-4 "sm": "p x-6 "lg": p x-8 py-6">";
+          <div className="grid grid-cols-1 "md": gri d-cols-3 gap-6 text-center">";
+            <div className="flex items-center justify-center space-x-3">";
+              <Phone className="w-5 h-5 text-cyan-400"   />;
+              <div>";
+                <p className="text-sm text-gray-300">Phone</p>";
+                <p className="text-cyan-400 font-semibold">{INNOVATIVE_CONTACT_INFO_2025.phone"}</p>;
+              </div>;
+            </div>";
+            <div className="flex items-center justify-center space-x-3">";
+              <Mail className="w-5 h-5 text-cyan-400"   />;
+              <div>";
+                <p className="text-sm text-gray-300">Email</p>";
+                <p className="text-cyan-400 font-semibold">{INNOVATIVE_CONTACT_INFO_2025.email}</p>;
+              </div>;
+            </div>";
+            <div className="flex items-center justify-center space-x-3">";
+              <MapPin className="w-5 h-5 text-cyan-400"   />;
+              <div>";
+                <p className="text-sm text-gray-300">Address</p>"                <p className="text-cyan-400 font-semibold">{INNOVATIVE_CONTACT_INFO_2025.address}</p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Services Section */}";
+      <div id="services-section" className="max-w-7xl mx-auto px-4 "sm": "p x-6 "lg": p x-8 py-16">;
+        {/* Search and Filter Controls */"}";
+        <div className="mb-8">";
+          <div className="flex flex-col "lg": "fle x-row gap-4 items-center justify-between">;
+            {/* Search Bar */"}";
+            <div className="relative flex-1 max-w-md">";
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />;
+              <input";
+                type="text";
+                placeholder="Search services..."                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}";
+                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 "focus": "outlin e-none "focus": borde r-cyan-400 "focus": rin g-2 "focus": rin g-cyan-400/20";
+              />;
+            </div>;
+            {/* Category Filter */"}";
+            <div className="flex gap-2">;
+              {categories.map((category) => (;
+                <motion.button;
+                  key={category}
+                  whileHover={{ "scale": "1.05 "}}
+                  whileTap={{ "scale": "0.95 "}}
+                  onClick={() => setSelectedCategory(category)}`;
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category';
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'';
+                      : 'bg-gray-800/50 text-gray-300 "hover": "b g-gray-700/50'`;
+                  "}`}
+                >";
+                  <div className="flex items-center gap-2">;
+                    {getCategoryIcon(category)}'";
+                    <span className="capitalize">{category === 'all' ? 'All' : "category"}</span>;
+                  </div>;
+                </motion.button>) ) }
+            </div>;
+            {/* View Mode and Sort Controls */}";
+            <div className="flex gap-2">";
+              <div className="flex bg-gray-800/50 rounded-lg p-1">;
+                <button';
+                  onClick={() => setViewMode('grid')}`;
+                  className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 "hover": "tex t-white'`;
+                  "}`}
+                >";
+                  <Grid className="w-5 h-5"   />                </button>;
+                                  <button';
+                    onClick={() => setViewMode('list')}`;
+                    className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 "hover": "tex t-white'`;
+                    "}`}
+                  >";
+                  <List className="w-5 h-5"   />                </button>;
+              </div>;
+              <select`;
+                value={`${sortBy}-${sortOrder}`}
+                onChange={(e) => {;
+                  const [newSortBy, newSortOrder] = e.target.value.split('-');
+                  setSortBy(newSortBy as );
+                  setSortOrder(newSortOrder as )}}"                className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white "focus": "outlin e-none "focus": borde r-cyan-400";
+              >";
+                <option value="name-desc">Name(A-Z)</option>";
+                <option value="name-asc">Name(Z-A)</option>";
+                <option value="price-asc">Price(Low-High)</option>";
+                <option value="price-desc">Price(High-Low)</option>";
+                <option value="rating-desc">Rating(High-Low)</option>";
+                <option value="aiScore-desc">AI Score(High-Low)</option>;
+              </select>;
+            </div>;
+          </div>;
+        </div>;
+        {/* Services Grid/List */"}
+        <div className={viewMode === 'grid' ? 'futuristic-grid' : 'space-y-4'}>;
+          <AnimatePresence>;
+            {sortedServices.map((service, index) => (<motion.div;
+                key={service.id}
+                initial={{ "opacity": "0", "y": "5 0 "}}
+                animate={{ "opacity": "1", "y": "0 "}}
+                exit={{ "opacity": "0", "y": "-50 "}}
+                transition={{ "duration": "0.5", "delay": "inde x * 0.1 "}}
+                className={viewMode === 'grid' ? 'futuristic-card p-6' : 'futuristic-card p-6'}
+              >;
+                {viewMode === 'grid' ? (;
+                  // Grid View";
+                  <div className="h-full flex flex-col">";
+                    <div className="flex items-start justify-between mb-4">";
+                      <div className="flex items-center gap-3">`;
+                        <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>;
+                          {getCategoryIcon(service.category)}
+                        </div>;
+                        <div>";
+                          <span className="text-sm text-gray-400 capitalize">{service.category}</span>";
+                          <p className="text-xs text-gray-500 capitalize">{service.subcategory}</p>;
+                        </div>;
+                      </div>";
+                      <div className="flex items-center gap-2">";
+                        <Star className="w-4 h-4 text-yellow-400 fill-current"   />";
+                        <span className="text-sm text-gray-300">{service.rating}</span>"                        <span className="text-xs text-gray-500">({service.reviewCount})</span>;
+                      </div>;
+                    </div>;
+";
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{service.title}</h3>";
+                    <p className="text-gray-300 mb-4 flex-grow line-clamp-3">{service.description}</p>;
+";
+                    <div className="space-y-3 mb-4">";
+                      <div className="flex items-center justify-between">";
+                        <span className="text-sm text-gray-400">AI "Score": "</span>";
+                        <div className="flex items-center gap-2">";
+                          <div className="w-16 bg-gray-700 rounded-full h-2">;
+                            <div ";
+                              className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"`;
+                              style="{{{ "width": `${service.aiScore"}}"%` }}
+                            ></div>;
+                          </div>";
+                          <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>;
+                        </div>;
+                      </div>;
+                        </div>
                         <div>"
                           <span className="text-sm text-gray-400 capitalize">{service.category}</span>"
                           <p className="text-xs text-gray-500 capitalize">{service.subcategory}</p>
@@ -67,7 +242,6 @@ export default function Page() {;
                           <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>
                         </div>
                       </div>
-
                       <div  className="flex items - center justify -between">;
                         <span className="text-sm text-gray -400">Market "Price": "</span>;
                         <span className="text-sm text-green -400">{service.marketPrice"}</span>;
@@ -111,7 +285,8 @@ export default function Page() {;
                         <span>Market "Price": "<span className="text-green-400">{service.marketPrice"}</span></span>";
                         <span>"ROI": "<span className="text-yellow-400">{service.roi"}</span></span>;
                       </div>;
-                    </div>;                    <div  className="flex -1">
+                    </div>;
+                    <div  className="flex -1">
                       <div  className="flex items - center gap-4 mb-2">
                         <h3 className="text-xl font - bold text-white">{service.title}
                         <span className="text-sm text-gray -400 capitalize">{service.category}</span>
@@ -126,7 +301,6 @@ export default function Page() {;
                         <span>ROI: <span className="text-yellow-400">{service.roi}</span></span>
                       </div>
                     </div>
-
                     <div  className="text-right">;
                       <div  className="text-2xl font - bold text-cyan - 400 mb-3">;
                         {service.currency}{service.price.toLocaleString () }                      </div>;
@@ -149,11 +323,65 @@ export default function Page() {;
             <div className="text-6xl mb-4">🔍</div>";
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>";
             <p className="text-gray-400">Try adjusting your search criteria or category filter</p>;
-          </div>;                <div  className="grid grid - cols - 1 lg: gri d - cols - 2 gap-8">
+          </div>;
+        {sortedServices.length === 0 && ("
+          <div className="text-center py-16">"
+            <div className="text-6xl mb-4">🔍</div>"
+            <h3 className="text-2xl font-bold text-white mb-2">No services found"
+            <p className="text-gray-400">Try adjusting your search criteria or category filter</p>
+          </div>
+        )}
+      </div>;
+      {/* Service Details Modal */}
+      <AnimatePresence>;
+        {showModal && selectedService && (<motion.div;
+            initial={{ "opacity": "0 "}}
+            animate={{ "opacity": "1 "}}
+            exit={{ "opacity": "0 "}}";
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
+            onClick={closeModal}
+          >;
+            <motion.div;
+              initial={{ "scale": "0.9", "opacity": "0 "}}
+              animate={{ "scale": "1", "opacity": "1 "}}
+              exit={{ "scale": "0.9", "opacity": "0 "}}";
+              className="futuristic-card max-w-4xl w-full max-h-[90vh] overflow-y-auto";
+              onClick={(e) => e.stopPropagation()}
+            >";
+              <div className="p-6">";
+                <div className="flex items-start justify-between mb-6">";
+                  <div className="flex items-center gap-4">`;
+                    <div className={`p-4 rounded-lg bg-gradient-to-r ${getCategoryColor(selectedService.category)}`}>;
+                      {getCategoryIcon(selectedService.category)}
+                    </div>;
+                    <div>";
+                      <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>";
+                      <div className="flex items-center gap-4 text-sm text-gray-400">";
+                        <span className="capitalize">{selectedService.category}</span>;
+                        <span>•</span>";
+                        <span className="capitalize">{selectedService.subcategory}</span>;
+                        <span>•</span>";
+                        <div className="flex items-center gap-1">";
+                          <Star className="w-4 h-4 text-yellow-400 fill-current"   />                          <span>{selectedService.rating}</span>;
+                          <span> ({selectedService.reviewCount} reviews) </span>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </div>;
+                  <button;
+                    onClick={closeModal}";
+                    className="text-gray-400 "hover": "tex t-white transition-colors";
+                  >";
+                    <X className="w-6 h-6"   />                  </button>;
+                </div>;
+                <div  className="grid grid - cols - 1 "lg": gri d - cols - 2 gap-8">;
+                  <div>;
+                    <h3 className="text-xl font - bold text-white mb-4">Service Overview</h3>;
+                    <p className="text-gray - 300 mb-6">{selectedService.description"}</p>;
+                <div  className="grid grid - cols - 1 lg: gri d - cols - 2 gap-8">
                   <div>
                     <h3 className="text-xl font - bold text-white mb-4">Service Overview
                     <p className="text-gray - 300 mb-6">{selectedService.description}</p>
-
                     <div  className="space - y-4 mb-6">;
                       <div  className="flex items - center justify -between">;
                         <span className="text-gray -400">AI "Score": "</span>;
@@ -197,7 +425,8 @@ export default function Page() {;
                         {selectedService.currency}{selectedService.price.toLocaleString () }
                       </h3>;
                       <p className="text-gray - 400 mb-4">One - time setup fee</p>;
-                      <p className="text-gray - 400 mb-4">One - time setup fee</p>                      <div  className="space - y-3">                        <motion.button;
+                      <p className="text-gray - 400 mb-4">One - time setup fee</p>
+                      <div  className="space - y-3">                        <motion.button;
                           whileHover={{ "scale": "1.02 "}}
                           whileTap={{ "scale": "0.98 "}}";
                           className="w-full futuristic-btn py-3"'`;
@@ -257,7 +486,8 @@ export default function Page() {;
                 <CheckCircle className="w-8 h-8 text-white"   />;
               </div>";
               <h3 className="text-xl font-bold text-white mb-3">{key}</h3>"              <p className="text-gray-300">{value}</p>;
-            </motion.div>;        <div  className="grid grid - cols - 1 md: anygri d - cols - 2 lg: gri d - cols - 3 gap-6">
+            </motion.div>;
+        <div  className="grid grid - cols - 1 md: anygri d - cols - 2 lg: gri d - cols - 3 gap-6">
           {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025) .map(([key, value]) => (<motion.div              key={key}
               whileHover={{ scale: 1.05 }}"
               className="futuristic-card p-6 text-center"

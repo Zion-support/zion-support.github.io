@@ -12,7 +12,6 @@ interface Review {
   projectId?: string;
   projectName?: string;
 }
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
 const mockReviews: Review[] = [
   {
@@ -109,7 +108,7 @@ const AdminReviewsPage: React.FC = () => {
       </Head>
       <main className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Client Reviews Management</h1>
-        
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
@@ -128,7 +127,6 @@ const AdminReviewsPage: React.FC = () => {
             <h3 className="text-sm font-medium text-gray-500">Rejected</h3>
             <p className="text-2xl font-bold text-red-600">{rejectedReviews.length}</p>
           </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
 
         {/* Filters */}
@@ -168,7 +166,6 @@ const AdminReviewsPage: React.FC = () => {
             </button>
           </div>
         </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/reviews.tsx
 
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-4">Pending Reviews</h2>
@@ -186,9 +183,7 @@ const AdminReviewsPage: React.FC = () => {
         )}
       </main>
     </>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   );
 };
 
 export default AdminReviewsPage;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/reviews.tsx

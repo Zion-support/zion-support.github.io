@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-
 export default function ServicesPage() {
   const services = [
     {
@@ -1554,8 +1551,6 @@ export default function ServicesPage() {
             No credit card required. Start transforming your business today!
           </p>
         </div>
-      </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
-    </div>
+      </div>    </div>
   );
 }

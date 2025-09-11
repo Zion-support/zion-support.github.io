@@ -1,5 +1,6 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
+;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -9,7 +10,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
   const [selectedTestimonial, setSelectedTestimonial] = useState<any>(0);
 ";
   const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
-<<<<<<< HEAD:src_backup_temp/components/InteractiveTestimonials.tsx
     : "testimonials.filter(t => t.category === selectedCategory) ;
 ;
     setSelectedTestimonial((prev) => ;
@@ -19,19 +19,10 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
       prev === 0 ? filteredTestimonials.length-1 : "prev - 1;) ;
   "};
 ;
-=======
-    : testimonials.filter(t => t.category === selectedCategory) ;
-    setSelectedTestimonial((prev) => ;
-      prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
-    setSelectedTestimonial((prev) => ;
-      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
-};
->>>>>>> origin/automation-fixes:src/components/InteractiveTestimonials.tsx
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div  className="max - w-7xl mx - auto px-6">;
         <motion.div;
           className="text-center mb-16"          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InteractiveTestimonials.tsx
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -41,19 +32,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
-=======
-
-  { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
->>>>>>> origin/automation-fixes:src/components/InteractiveTestimonials.tsx
         >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Client Success Stories;
@@ -75,13 +53,8 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
                 setSelectedCategory(category) ;
                 setSelectedTestimonial(0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category';
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'';
-<<<<<<< HEAD:src_backup_temp/components/InteractiveTestimonials.tsx
                   : 'bg-slate-700 text-gray-300 "hover": "b g-slate-600 "hover": tex t-white'`;
               "}`}
-=======
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`;
-}`}
->>>>>>> origin/automation-fixes:src/components/InteractiveTestimonials.tsx
             >;
               {category}
             </button>;
@@ -102,7 +75,121 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
                 <p className="text-blue-600 font-semibold">{currentTestimonial.comp}</p>";
                 <div className="flex items-center justify-center gap-4 mt-3 text-sm text-gray-500">";
                   <span className="flex items-center">";
-                    <Users className="h-4 w-4 mr-1"   />;}}
+                    <Users className="h-4 w-4 mr-1"   />;
+                "
+                <p className="text-gray-600 mb-1">{currentTestimonial.role}</p>"
+                <p className="text-blue-600 font-semibold">{currentTestimonial.comp}</p>"
+                <div className="flex items-center justify-center gap-4 mt-3 text-sm text-gray-500">"
+                  <span className="flex items-center">"
+                    <Users className="h-4 w-4 mr-1"   />
+                    {currentTestimonial.industry}
+                  </span>";
+                  <span className="flex items-center">";
+                    <TrendingUp className="h-4 w-4 mr-1"   />                    {currentTestimonial.projectDuration}
+                  </span>;
+                </div>;
+              </div>;
+";
+              <blockquote className="text-center mb-8">";
+                <Quote className="h-12 w-12 text-blue-200 mx-auto mb-4"   />";
+                <p className="text-xl text-gray-700 italic leading-relaxed">"                  "{currentTestimonial.quote}";
+                </p>;
+              </blockquote>;
+";
+              <div className="grid "md": "gri d-cols-3 gap-6">;
+                {Object.entries(currentTestimonial.metrics).map(([key", value])  => (";
+                  <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">";
+                    <div className="text-2xl font-bold text-blue-600 mb-1">;
+                      {value}
+                    </div>";
+                    <div className="text-sm text-gray-600 capitalize">;
+                      {key.replace(/([A-Z])/g, $1').trim()}
+                    </div>;
+                  </div>) ) }
+              </div>;
+            </motion.div>;
+          </AnimatePresence>;
+          {/* Navigation Arrows */}
+          <button;
+            onClick={previousTestimonial}";
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg "hover": "shado w-xl transition-all duration-200";
+          >";
+            <ChevronLeft className="h-6 w-6 text-gray-600"   />          </button>;
+          <button;
+            onClick={nextTestimonial"}";
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg "hover": "shado w-xl transition-all duration-200";
+          >";
+            <ChevronRight className="h-6 w-6 text-gray-600"   />          </button>;
+        </div>;
+        {/* Testimonial Indicators */"}";
+        <div className="flex justify-center mb-8">;";
+          <div className="flex space-x-2">;
+            {testimonials.map((_, index) => (;
+              <button;
+                key={index}
+                onClick={() => goToTestimonial(index)}`;
+                className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`;
+                }`}
+              />) ) }
+          </div>;
+        </div>;
+        {/* Play/Pause Controls */}";
+        <div className="flex justify-center mb-8">;
+          <button;
+            onClick={togglePlayPause}";
+            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 transition-colors duration-200";
+          >;
+            {isPlaying ? (;
+              <>";
+                <Pause className="h-4 w-4 mr-2"   />;
+                Pause;
+              </>;
+            ) : (;
+              <>";
+                <Play className="h-4 w-4 mr-2"   />                Play;
+              </>) "}
+          </button>;
+        </div>;
+        {/* CTA Section */}
+        <motion.div;
+          initial = {;
+  { "opacity": "0",;
+  "y": "2 0 "}}
+          whileInView = {;
+  { "opacity": "1",;
+  "y": "0 "}}
+        {/* Category Filter */}
+        <motion.div;
+          className="flex flex - wrap justify - center gap-3 mb-12"          initial = {;
+  { "opacity": "0",;
+  "y": "2 0;
+"}}
+          whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
+          transition={{ "duration": "0.6", "delay": "0.2 "}}
+        >";
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
+            <h3 className="text-2xl font-bold mb-4">;
+              Ready to Join Our Success Stories?;
+            </h3>";
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">;
+              Let's discuss how we can transform your business with innovative;
+              technology solutions tailored to your specific needs.</p>";
+            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">";
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 "hover": b g-gray-100 rounded-lg font-medium transition-colors duration-200">;
+                Start Your Project";
+                <Award className="ml-2 h-5 w-5"   />;
+              </button>";
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white "hover": b g-white "hover": tex t-blue-600 rounded-lg font-medium transition-colors duration-200">;
+                Schedule Consultation";
+                <Users className="ml-2 h-5 w-5"   />              </button>;
+            </div>;
+          </div>;
+        </motion.div>;
+}}
           viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >"
@@ -125,12 +212,8 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
           </div>
         </motion.div>
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/InteractiveTestimonials.tsx
     </section>;) "};
 ;
-=======
-    </section>;) };
->>>>>>> origin/automation-fixes:src/components/InteractiveTestimonials.tsx
 export default InteractiveTestimonials;";
             <span className="text-2xl">→</span>;
           </div>;

@@ -1,36 +1,174 @@
-import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function TestPage() {
   return (
     <>
       <Head>
-        <title>Test Page | Zion Tech Group</title>
+        <title>Test Page - Zion App</title>
+        <meta name="description" content="Test page to verify app functionality" />
       </Head>
-
+      
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '2rem',
+        fontFamily: 'Arial, sans-serif',
+        backgroundColor: '#f8f9fa'
+      }}>
+        <div style={{
+          textAlign: 'center',
+          maxWidth: '600px',
+          backgroundColor: 'white',
+          padding: '3rem',
+          borderRadius: '12px',
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+        }}>
+          <h1 style={{ color: '#2563eb', marginBottom: '1rem' }}>
+            ✅ Zion App Test Page
+          </h1>
+          
+          <p style={{ fontSize: '1.1rem', marginBottom: '2rem', color: '#374151' }}>
+            This page confirms that the Zion app is working correctly.
+          </p>
+          
+          <div style={{ marginBottom: '2rem' }}>
+            <h3 style={{ color: '#059669', marginBottom: '1rem' }}>App Status:</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                ✅ Next.js: Working
+              </li>
+              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                ✅ React: Working
+              </li>
+              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                ✅ CSS: Working
+              </li>
+              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                ✅ Routing: Working
+              </li>
+              <li style={{ padding: '0.5rem 0' }}>
+                ✅ Build: Successful
+              </li>
+            </ul>
+          </div>
+          
+          <div style={{ marginBottom: '2rem' }}>
+            <h3 style={{ color: '#dc2626', marginBottom: '1rem' }}>If you see this page:</h3>
+            <p style={{ color: '#6b7280' }}>
+              The app is working correctly! The blank screen issue has been resolved.
+            </p>
+          </div>
+          
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <button 
+              onClick={() => window.location.href = '/'}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#2563eb',
+                color: 'white',
+                border: 'none',
+                borderRadius: '0.5rem',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                fontWeight: '600'
+              }}
+            >
+              Go to Home
+            </button>
+            
+            <button 
+              onClick={() => window.location.href = '/debug'}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#6b7280',
+                color: 'white',
+                border: 'none',
+                borderRadius: '0.5rem',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                fontWeight: '600'
+              }}
+            >
+              Debug Info
+            </button>
+            
+            <button 
+              onClick={() => window.location.reload()}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#059669',
+                color: 'white',
+                border: 'none',
+                borderRadius: '0.5rem',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                fontWeight: '600'
+              }}
+            >
+              Reload Page
+            </button>
+          </div>
+          
+          <div style={{ marginTop: '2rem', padding: '1rem', backgroundColor: '#f3f4f6', borderRadius: '0.5rem' }}>
+            <p style={{ fontSize: '0.9rem', color: '#6b7280', margin: 0 }}>
+              <strong>Timestamp:</strong> {new Date().toLocaleString()}
+            </p>
+            <p style={{ fontSize: '0.9rem', color: '#6b7280', margin: '0.5rem 0 0 0' }}>
+              <strong>Environment:</strong> {process.env.NODE_ENV || 'development'}
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
+=======
 
-export default function TestPage() {;
+
+
+import React from 'react';
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
+import Head from 'next/head';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+
+import Layout from '../components/Layout';
+export default function TestPage() {
+  return (
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+export default function TestPage() {
   return (
 
-    <>
+=======
+=======
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+=======    <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
       </Head>
-      <div className='min-h-screen bg-black text-white flex items-center justify-center'>
-        <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
-      </div>
-export default function TestPage() {;
-  return (
-    <Layout title="Test Page">;
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">;
-        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>;
-      </div>;
-    </Layout>;
 
-  );
-}
+=======
 
     </Layout>;
   );
@@ -39,35 +177,16 @@ import React from 'react'
 import Head from 'next/head'
 export default function TestPage() {
   return (
-ursor/integrate-build-improve-and-re-verify-8f7d
 
-    <>
-      <Head>
-        <title>Test Page | Zion Tech Group</title>
-      </Head>
-      <div className='min-h-screen bg-black text-white flex items-center justify-center'>
-        <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
-      </div>
-    </>
-  );
-}
+
+export default function TestPage() {;
+  return (
+
 =======
-import type { NextPage } from 'next';
-const Test: NextPage = () => {;
-  return (;
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">;
-      <h1 className="text-white text-4xl">Test Page Working!</h1>;
-    </div>;
-  );
-};
-export default Test;
->>>>>>> origin/automation-fixes
+
 =======
-        <title>Test Page | Zion Tech Group</title>
-      </Head>
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
-      </div>
-    </>
-  );
-}
+
+
+=======
+
+>>>>>>> main
