@@ -350,7 +350,7 @@ export default function HomePage() {
 
       {/* Interactive Features Section */}
       <section className='py-20 bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-30'></div>
+        <div className='absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg%20width%3D%2760%27%20height%3D%2760%27%20viewBox%3D%270%200%2060%2060%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20fill%3D%27%23e2e8f0%27%20fill-opacity%3D%270.1%27%3E%3Ccircle%20cx%3D%2730%27%20cy%3D%2730%27%20r%3D%272%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-30'></div>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full px-6 py-2 mb-6'>
@@ -1380,7 +1380,7 @@ export default function HomePage() {
 
       {/* Interactive Technology Showcase */}
       <section className='py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-50'></div>
+        <div className='absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg%20width%3D%2760%27%20height%3D%2760%27%20viewBox%3D%270%200%2060%2060%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20fill%3D%27%23ffffff%27%20fill-opacity%3D%270.05%27%3E%3Ccircle%20cx%3D%2730%27%20cy%3D%2730%27%20r%3D%271%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-50'></div>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white/10 backdrop-blur-sm text-white rounded-full px-6 py-2 mb-6'>
@@ -1425,7 +1425,7 @@ export default function HomePage() {
           {/* Performance Metrics */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <div className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10'>
-              <div className='text-3xl font-bold text-green-400 mb-2'>< 100ms</div>
+              <div className='text-3xl font-bold text-green-400 mb-2'>&lt; 100ms</div>
               <div className='text-gray-300'>Average Response Time</div>
             </div>
             <div className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10'>
