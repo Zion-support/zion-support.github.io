@@ -16,33 +16,33 @@ function log(msg) {
 
 function buildTiles() {
   const items = [
-    { href: '/automation', label: 'Automation Hub', tagline: 'Factories, agents, live workflows' },
-    { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, link integrity' },
+    { href: '/automation', label: 'Automation Hub', tagline: 'Factories, agents, and live workflows' },
+    { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, and link integrity' },
     { href: '/reports/seo', label: 'AI SEO Auditor', tagline: 'Continuous on‑site improvements' },
     { href: '/reports/ai-trends', label: 'AI Trends', tagline: 'Signals for new automations' },
     { href: '/newsroom', label: 'Newsroom', tagline: 'Autonomous updates & highlights' },
-    { href: '/.netlify/functions/docs-index-runner', label: 'Docs', tagline: 'Technical notes & guides' },
-    { href: '/newsroom', label: 'AI Changelog', tagline: 'Summarized autonomous changes' },
-    { href: '/automation/functions-directory', label: 'Autonomy Directory', tagline: 'Browse all cloud functions' }
+    { href: '/main/front', label: 'Front Systems Hub', tagline: 'Curated, futuristic front experience' },
+    { href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', label: 'Docs', tagline: 'Technical notes & guides', external: true },
+    { href: 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md', label: 'AI Changelog', tagline: 'Summarized autonomous changes', external: true },
   ];
 
   return items.map((it) => {
     if (it.external) {
       return `
             <a href="${it.href}" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left text-white/80 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-base font-semibold text-white/90">${it.label}</div>
-              <div className="mt-0.5 text-xs text-white/70">${it.tagline}</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-[11px] text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+              <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\" />
+              <div className=\"text-base font-semibold text-white/90\">${it.label}</div>
+              <div className=\"mt-0.5 text-xs text-white/70\">${it.tagline}</div>
+              <div className=\"mt-3 inline-flex items-center gap-1 text-[11px] text-cyan-300/90\">Open <span aria-hidden>↗</span></div>
             </a>`;
     }
     return `
-            <Link href="${it.href}">
-              <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left text-white/80 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <div className="text-base font-semibold text-white/90">${it.label}</div>
-                <div className="mt-0.5 text-xs text-white/70">${it.tagline}</div>
-                <div className="mt-3 inline-flex items-center gap-1 text-[11px] text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            <Link href=\"${it.href}\">
+              <a className=\"group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left text-white/80 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo\">
+                <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\" />
+                <div className=\"text-base font-semibold text-white/90\">${it.label}</div>
+                <div className=\"mt-0.5 text-xs text-white/70\">${it.tagline}</div>
+                <div className=\"mt-3 inline-flex items-center gap-1 text-[11px] text-cyan-300/90\">Open <span aria-hidden>→</span></div>
               </a>
             </Link>`;
   }).join('\n');
@@ -55,47 +55,7 @@ function ensureImports(tsx) {
   return tsx;
 }
 
-function discoverExternalLinks() {
-  return [
-    { type: 'internal', href: '/.netlify/functions/supreme-orchestrator', label: 'Supreme Orchestrator', tagline: 'Meta trigger (1m)' },
-    { type: 'internal', href: '/.netlify/functions/docs-index-runner', label: 'Docs — technical notes & guides', tagline: 'Documentation' },
-    { type: 'internal', href: '/newsroom', label: 'AI Changelog — highlights', tagline: 'Summarized updates' },
-  ];
-}
-
-function buildCard(item) {
-  const common = 'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo';
-  const inner = `\n  <div className=\"text-base font-semibold\">${item.label}</div>\n  <div className=\"mt-1 text-sm text-white/75\">${item.tagline || ''}</div>\n`;
-  if (item.type === 'external') {
-    return `              <a href=\"${item.href}\" target=\"_blank\" rel=\"noopener\" className=\"${common}\">${inner}  <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90\">Open <span aria-hidden>↗</span></div></a>`;
-  }
-  return `              <Link href=\"${item.href}\"><a className=\"${common}\">${inner}  <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90\">Open <span aria-hidden>→</span></div></a></Link>`;
-}
-
-function generateSection(items) {
-  return [
-    '<section id="auto-promoted" className="mx-auto max-w-7xl px-6 pb-14">',
-    '  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑Promoted Features</h2>',
-    '  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Continuously curated promos linking to live hubs, reports, and docs.</p>',
-    '  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">',
-    items.map(buildCard).join('\n'),
-    '  </div>',
-    '</section>'
-  ].join('\n');
-}
-
-function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
-  const startIdx = source.indexOf(startMarker);
-  const endIdx = source.indexOf(endMarker);
-  if (startIdx === -1 || endIdx === -1 || endIdx < startIdx) {
-    throw new Error('Markers not found or invalid order in front index');
-  }
-  const before = source.slice(0, startIdx + startMarker.length);
-  const after = source.slice(endIdx);
-  return `${before}\n${replacement}\n${after}`;
-}
-
-(function main() {
+function apply() {
   if (!fs.existsSync(FRONT_PAGE)) {
     throw new Error(`Front page not found at ${FRONT_PAGE}`);
   }

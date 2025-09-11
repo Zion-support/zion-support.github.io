@@ -1,12 +1,25 @@
-const { execSync } = require('child_process');
+const path = require('path');
+const { spawnSync } = require('child_process');
 
-exports.handler = async function() {
-  try {
-    execSync('node automation/internal-link-graph.cjs || true', { stdio: 'inherit', shell: true });
-    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(links): internal link graph update [skip ci]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
-    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'internal-link-graph-runner' }) };
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ ok: false, error: e.message }) };
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+exports.handler = async () => {
+  const logs = [];
+  function step(name, fn) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
   }
+
+  step('links:graph', () => runNode('automation/internal-link-graph.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, body: logs.join('\n') };
 };
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96

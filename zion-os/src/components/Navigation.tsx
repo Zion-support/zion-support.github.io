@@ -1,5 +1,6 @@
-"use client";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 
 export function Navigation() {
@@ -176,4 +177,21 @@ export function Navigation() {
       </div>
     </nav>
   );
+=======
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+
+
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+
+;
+
+=======
+>>>>>>> main
 }

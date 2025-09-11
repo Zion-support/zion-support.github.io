@@ -1,21 +1,25 @@
-import type { ReactElement } from react';;
-interface NextApiRequest {
-  body?: unknown;
-  query: Record<string, string | string[] | undefined>;
-  cookies: Record<string, string>;
+import type { ReactElement } from 'react';
+
+export interface NextApiRequest {
+  body?: any;
+  query: any;
+  cookies: any;
   headers?: Record<string, string | string[] | undefined>;
 }
-;
-interface NextApiResponse<T = unknown> {
+
+export interface NextApiResponse<T = any> {
   status(code: number): NextApiResponse<T>;
   json(data: T): void;
 }
-;
-type NextPage<P = object, _IP = P> = (props: P) => ReactElement | null;
-type GetServerSideProps<P = Record<string, unknown>, _Params = Record<string, string | string[] | undefined>> = (
-  context: unknown
+
+export type NextPage<P = {}, IP = P> = (props: P) => ReactElement | null;
+
+export type GetServerSideProps<P = any, Params = any> = (
+  context: any
 ) => Promise<{ props: P }>;
-type GetStaticProps<P = Record<string, unknown>, _Params = Record<string, string | string[] | undefined>> = (
-  context: unknown
+
+export type GetStaticProps<P = any, Params = any> = (
+  context: any
 ) => Promise<{ props: P }>;
-type GetStaticPaths<_T = unknown> = unknown;
+
+export type GetStaticPaths = () => Promise<{ paths: any[]; fallback: boolean }>;

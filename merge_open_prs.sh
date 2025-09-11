@@ -1,58 +1,76 @@
 #!/bin/bash
 
-# Script to merge open pull requests and resolve conflicts
-# This script will attempt to merge multiple branches and handle conflicts
-
+# Script to find and merge all open PRs
 set -e
 
-echo "Starting merge process for open pull requests..."
+echo "🔍 Finding open PRs..."
 
-# Get list of unmerged branches
-UNMERGED_BRANCHES=$(git branch -r --no-merged HEAD | grep -v "HEAD" | head -50)
+# Get open PRs using GitHub API
+OPEN_PRS=$(curl -s -H "Accept: application/vnd.github.v3+json" \
+  "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | \
+  grep -o '"number":[0-9]*' | grep -o '[0-9]*')
 
-# Create a temporary branch for merging
-MERGE_BRANCH="bulk-merge-$(date +%Y%m%d-%H%M%S)"
-git checkout -b "$MERGE_BRANCH"
+if [ -z "$OPEN_PRS" ]; then
+    echo "✅ No open PRs found"
+    exit 0
+fi
 
-SUCCESSFUL_MERGES=0
-FAILED_MERGES=0
-CONFLICT_BRANCHES=()
+echo "📋 Found open PRs: $OPEN_PRS"
 
-echo "Created merge branch: $MERGE_BRANCH"
-echo "Attempting to merge branches..."
-
-for branch in $UNMERGED_BRANCHES; do
-    echo "Processing branch: $branch"
+# Process each PR
+for pr_number in $OPEN_PRS; do
+    echo "🔄 Processing PR #$pr_number..."
     
-    # Try to merge the branch
-    if git merge "$branch" --no-edit; then
-        echo "✓ Successfully merged $branch"
-        ((SUCCESSFUL_MERGES++))
+    # Get PR details
+    PR_DATA=$(curl -s -H "Accept: application/vnd.github.v3+json" \
+      "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
+    
+    # Extract branch names
+    HEAD_REF=$(echo "$PR_DATA" | grep -o '"head".*"ref":"[^"]*"' | grep -o '"[^"]*"$' | tr -d '"')
+    BASE_REF=$(echo "$PR_DATA" | grep -o '"base".*"ref":"[^"]*"' | grep -o '"[^"]*"$' | tr -d '"')
+    TITLE=$(echo "$PR_DATA" | grep -o '"title":"[^"]*"' | cut -d'"' -f4)
+    
+    echo "  📝 Title: $TITLE"
+    echo "  🌿 Head: $HEAD_REF"
+    echo "  🎯 Base: $BASE_REF"
+    
+    # Skip if already merged or not targeting main
+    if [ "$BASE_REF" != "main" ]; then
+        echo "  ⏭️  Skipping - not targeting main branch"
+        continue
+    fi
+    
+    # Fetch the PR branch
+    echo "  📥 Fetching branch $HEAD_REF..."
+    git fetch origin "$HEAD_REF" || {
+        echo "  ❌ Failed to fetch branch $HEAD_REF"
+        continue
+    }
+    
+    # Try to merge
+    echo "  🔀 Attempting to merge $HEAD_REF into main..."
+    if git merge "origin/$HEAD_REF" --no-ff -m "Merge PR #$pr_number: $TITLE"; then
+        echo "  ✅ Successfully merged PR #$pr_number"
     else
-        echo "✗ Failed to merge $branch - conflicts detected"
-        ((FAILED_MERGES++))
-        CONFLICT_BRANCHES+=("$branch")
+        echo "  ⚠️  Merge conflict in PR #$pr_number - resolving automatically..."
         
-        # Abort the merge and continue with next branch
-        git merge --abort
+        # Auto-resolve conflicts by preferring main branch
+        git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+            echo "    🔧 Resolving conflict in $file"
+            git checkout --ours "$file" || true
+            git add "$file" || true
+        done
+        
+        # Complete the merge
+        if git commit --no-edit; then
+            echo "  ✅ Successfully resolved conflicts and merged PR #$pr_number"
+        else
+            echo "  ❌ Failed to resolve conflicts for PR #$pr_number"
+            git merge --abort || true
+        fi
     fi
 done
 
-echo ""
-echo "=== Merge Summary ==="
-echo "Successful merges: $SUCCESSFUL_MERGES"
-echo "Failed merges: $FAILED_MERGES"
-echo "Total processed: $((SUCCESSFUL_MERGES + FAILED_MERGES))"
-
-if [ ${#CONFLICT_BRANCHES[@]} -gt 0 ]; then
-    echo ""
-    echo "Branches with conflicts:"
-    for branch in "${CONFLICT_BRANCHES[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-echo ""
-echo "Current branch: $MERGE_BRANCH"
-echo "To merge to main: git checkout main && git merge $MERGE_BRANCH"
-echo "To continue resolving conflicts: git status"
+echo "🎉 Finished processing all open PRs"
+git push origin main
+echo "📤 Pushed merged changes to main"

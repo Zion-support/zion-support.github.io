@@ -1,34 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zion-app
-  namespace: staging
+  name: zion-tech-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: zion-app
+      app: zion-tech-app
   template:
     metadata:
       labels:
-        app: zion-app
+        app: zion-tech-app
     spec:
       containers:
-        - name: zion-app
-          image: REPLACE_IMAGE
-          ports:
-            - containerPort: 3000
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: zion-app
-  namespace: staging
-spec:
-  selector:
-    app: zion-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-  type: ClusterIP
+      - name: app
+        image: zion-tech-app:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"

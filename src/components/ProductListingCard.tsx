@@ -1,204 +1,590 @@
-import { useNavigate, Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { Star, DollarSign, Heart } from "lucide-react";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
-import { useAuth } from "@/hooks/useAuth";
-import { useLocation } from "react-router-dom";
-import { toast } from "sonner";
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useMemo } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ProductListing } from '@/types/listings';
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from '@/components/RatingStars';
+import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+
+import React, { useState } from 'react';
+import { log_debug, logErrorToProduction } from '@/utils / production_logger';
+import { use_router } from 'next / router';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { ProductListing } from '@/types / listings';
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from '@/components / RatingStars';
+import { FavoriteButton } from '@/components / FavoriteButton'; import { use_dispatch } from 'react - redux';
+import type { AppDispatch } from '@/store';
+import { add_item } from '@/store / cart_slice';
+import { toast } from '@/hooks / use - toast';
+import { use_currency } from '@/hooks / use_currency';
+import Image from 'next / image'; // Import next / image;
 interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
-  /**
-   * Base path for linking to the detail page. Defaults to
-   * `/marketplace/listing` to preserve existing behaviour.
-   */
   detailBasePath?: string;
+import Image from 'next/image'; // Import next/image
+
+import React, { useState } from 'react',
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
+import { useRouter } from 'next/router',
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings",
+import { DollarSign } from 'lucide-react'
+
+import { RatingStars } from "@/components/RatingStars",
+import { FavoriteButton } from "@/components/FavoriteButton",
+import { useDispatch } from 'react-redux',
+import type { AppDispatch } from '@/store',
+import { addItem } from '@/store/cartSlice',
+import { toast } from '@/hooks/use-toast',
+import { useCurrency } from '@/hooks/useCurrency',
+import Image from 'next/image', // Import next/image
+
+interface ProductListingCardProps {
+  listing: ProductListing,
+  view?: 'grid' | 'list',
+  onRequestQuote?: (id: string) => void,
+  detailBasePath?: string
 }
 
-export function ProductListingCard({
+const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { user } = useAuth();
-  const dispatch = useAppDispatch();
-  
-  // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0 
-    ? listing.images[0] 
-    : '/placeholder.svg';
-    
-  // Format price display
-  const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  };
-
-  // Handle image loading errors
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg';
-  };
-  
-  // Handle navigating to listing detail
-  const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
-  };
-  
-  // Handle request quote button click
-  const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    if (onRequestQuote) {
-      onRequestQuote(listing.id);
-    } else {
-      // Default behavior if no handler provided
-      navigate(`/request-quote?listing=${listing.id}`);
-    }
-  };
-
-  const handleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!user) {
-      toast.info('Log in to save favorites');
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
-    }
-    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing }));
-    fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: listing.id, type: 'product' }),
-    }).catch(() => {});
-  };
-  
-  return (
-    <div
-      className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
-      onClick={handleViewListing}
-      tabIndex={0}
-    >
+const ProductListingCardComponent = ({;
+  listing,;
+  view = 'grid',;
+  onRequestQuote,;
       {/* Image */}
-      <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing}>
-        <div className={`relative ${isGrid ? 'h-48' : 'h-32 w-48'}`}>
-          <img
-            src={imageUrl}
-            alt={listing.title}
-            className="w-full h-full object-cover"
-            onError={handleImageError}
-          />
-          {listing.featured && (
-            <Badge className="absolute top-2 right-2 bg-zion-purple text-white border-none">
-              Featured
-            </Badge>
+      <div
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role='button'
+        tabIndex={-1} // Remove from tab order as parent is focusable
+
+        onKeyDown={e => {;
+          if (e && e.key === 'Enter' || e && e.key === ' ') {;
+            e && e.preventDefault();
+            handleViewListing();
+          }  return ();
+      data-testid= "equipment-link"'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick={handleViewListing}
+      tabIndex={0}"
+      onKeyDown={(e) => {;
+        if(e && e.key === 'Enter' || e && e.key === ' ') {;
+          e && e.preventDefault () ;
+
+          handleViewListing () }
+      }}
+      {/* Image */}
+      <div'
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+
+        onClick={handleViewListing} // Keep existing onClick for navigation"
+        tabIndex={-1} // Remove from tab order as parent is focusable
+        onKeyDown={(e) => {;
+          if(e && e.key === 'Enter' || e && e.key === ' ') {;
+            e && e.preventDefault () ;
+
+        // Check condition
+if ( {) {
+  $2
+}
+          e.prevent_default ();
+          handleViewListing ();
+        }      }}
+    >;
+      {/* Image */}
+      <div;
+        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0', }
+        on_click={handleViewListing} // Keep existing on_click for navigation;
+        role='button';
+        tab_index={-1} // Remove from tab order as parent is focusable;
+        onKeyDown={e => {
+          // Check condition
+if ( {) {
+  $2
+}
+            e.prevent_default ();
+            handleViewListing ();
+          }  return ();
+    <div;
+      data - testid= "equipment - link";'`;
+      className={`bg - card / 70 backdrop - blur - md border border - primary / 10 sm:border - primary / 20 rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary hover:animate - glowing - border transition - all duration - 300`}
+      on_click={handleViewListing}
+      tab_index={0}";
+      onKeyDown={(e) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          e.prevent_default ();
+          handleViewListing () }
+      }}
+      {/* Image */}
+      <div';
+        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0'}
+        on_click={handleViewListing} // Keep existing on_click for navigation;";
+        tab_index={-1} // Remove from tab order as parent is focusable;
+        onKeyDown={(e) => {
+          // Check condition
+if ( {) {
+  $2
+}
+            e.prevent_default ();
+            handleViewListing () }
+        }}
+      >;
+        <div className={`relative ${imageContainerClasses}`}>;
+
+          {' '}
+          {/* Ensure this container has dimensions */}
+
+        onKeyDown={(e) => {
+
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            handleViewListing()
+
+            priority={false} // Assuming these are not LCP images
+            sizes={
+              isGrid
+                ? '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                : '192px'
+            } // 192px is w-48
+          />;
+          {listing && listing.featured && (;
+            <Badge className='absolute top-2 right-2 bg-primary text-primary-foreground border-none'>;
+              Featured;
+            </Badge>;
           )}
-        </div>
-      </div>
-      
+
+          {stockStatus && (;
+            <Badge;
+              variant={stockVariant as any}
+              className="absolute top-2 left-2"
+            >
       {/* Content */}
-      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
-        <div>
+      <div
+        className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
+        <div>;
           {/* Category & Rating */}
+
+              {stockStatus}
+            </Badge>;
+          )}
+
+          <FavoriteButton itemId={listing && listing.id} />;
+
+           <FavoriteButton itemId={listing.id} />;
+
+        </div>;
+      </div>;
+
+      {/* Content */}
+      <div
+        className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
+        <div>;
+          {/* Category & Rating */}
+
           <div className="flex justify-between items-center mb-2">
-            <Badge variant="outline" className="bg-zion-blue-light/20 text-zion-slate-light border-zion-blue-light">
+            <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
+
               {listing.category}
             </Badge>
             {listing.rating && (
-              <div className="flex items-center text-zion-slate-light">
-                <Star className="h-4 w-4 fill-zion-cyan text-zion-cyan mr-1" />
-                <span>{listing.rating}</span>
-                {listing.reviewCount && (
-                  <span className="text-xs ml-1">({listing.reviewCount})</span>
-                )}
-              </div>
+              <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
-          </div>
-          
           {/* Title & Description */}
+          <div onClick={handleViewListing} className='block'>
+            {listing.uspHeadline && (
+              <p className='text-primary font-semibold text-sm mb-1'>
+          </div>;
+          {/* Title & Description */}
+          <div on_click={handleViewListing} className='block'>;
+            {listing.usp_headline && (
+              <p className='text - primary font - semibold text - sm mb - 1'>;
+                {listing.usp_headline}
+              </p>)}
+            <h3 className='font - semibold text - foreground mb - 2 hover:text - primary transition - colors text-[clamp (1rem, 2.5vw, 1.125rem)]'>;
+
+              {listing.title}
+            </h3>;
+          </div>;
+          <p className='text - foreground / 80 line - clamp - 2 mb - 4 text-[clamp (0.875rem, 2vw, 1rem)]'>;
+            {listing.description}
+
+            <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2 && 2.5vw,1 && 1.125rem)]'>;
+              {listing && listing.title}
+            </h3>;
+          </div>;
+          <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0 && 0.875rem,2vw,1rem)]'>;
+            {listing && listing.description}
+          </p>;
+
+          {/* Tags */}
+          {listing && listing.tags && listing && listing.tags.length > 0 && (;
+            <div className='flex flex-wrap gap-1 mb-4'>;
+              {listing && listing.tags.map((tag, idx) => (;
+                <span
+                  key={idx}
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
           <div onClick={handleViewListing} className="block">
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
+            {listing.uspHeadline && (
+              <p className="text-primary font-semibold text-sm mb-1">
+                {listing.uspHeadline}
+              </p>
+            )}
+            <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
               {listing.title}
             </h3>
           </div>
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">
+          <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]'>
             {listing.description}
           </p>
-          
+          {/* Tags */}
+          {listing.tags && listing.tags.length > 0 && (
+            <div className='flex flex-wrap gap-1 mb-4'>
+              {listing.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
+          </div>;
+
+          {/* Title & Description */}
+
+          <Image;
+            src = {image_src, }
+            alt = {listing.title, }
+            fill = {true, }
+            style={{ object_fit: 'cover' }}
+            on_error = {handleImageError, }
+            priority={false} // Assuming these are not LCP images;
+            sizes={
+              is_grid;
+                ? '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
+                : '192px';
+            } // 192px is w - 48;
+          />;
+          {listing.featured && (
+            <Badge className='absolute top - 2 right - 2 bg - primary text - primary - foreground border - none'>;
+              Featured;
+            </Badge>)}
+          {stock_status && (
+            <Badge;
+              variant={stock_variant as any}
+              className='absolute top - 2 left - 2'            >;
+              {stock_status}
+            </Badge>)}
+          <FavoriteButton item_id={listing.id} />;
+        </div>;
+      </div>;
+      {/* Content */}
+      <div;
+        className={`flex flex - col justify - between ${is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}
+      >;
+        <div>;
+          {/* Category & Rating */}
+          <div className='flex justify - between items - center mb - 2'>;
+            <Badge;
+              variant='outline';
+              className='bg - background text - foreground / 80 border - primary / 10';
+            >;
+              {listing.category}
+            </Badge>;
+            {listing.rating && (
+              <RatingStars value={listing.rating} count={listing.review_count} />)}
+          </div>;
+          {/* Title & Description */}
+          <div on_click={handleViewListing} className='block'>;
+            {listing.usp_headline && (
+              <p className='text - primary font - semibold text - sm mb - 1'>;
+                {listing.usp_headline}
+              </p>)}
+            <h3 className='font - semibold text - foreground mb - 2 hover:text - primary transition - colors text-[clamp (1rem, 2.5vw, 1.125rem)]'>;
+
+              {listing.title}
+            </h3>;
+          </div>;
+          <p className='text - foreground / 80 line - clamp - 2 mb - 4 text-[clamp (0.875rem, 2vw, 1rem)]'>;
+            {listing.description}
+
+            <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2 && 2.5vw,1 && 1.125rem)]'>;
+              {listing && listing.title}
+            </h3>;
+          </div>;
+          <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0 && 0.875rem,2vw,1rem)]'>;
+            {listing && listing.description}
+          </p>;
+
+          {/* Tags */}
+          {listing && listing.tags && listing && listing.tags.length > 0 && (;
+            <div className='flex flex-wrap gap-1 mb-4'>;
+              {listing && listing.tags.map((tag, idx) => (;
+                <span
+                  key={idx}
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
+          <div onClick={handleViewListing} className="block">
+            {listing.uspHeadline && (
+              <p className="text-primary font-semibold text-sm mb-1">
+
+                {listing.uspHeadline}
+              </p>
+            )}
+
+            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
+              {listing.title}
+            </h3>
+          </div>
+          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
+            {listing.description}
+          </p>;
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
                 <span 
                   key={idx} 
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"
+                  className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
                   {tag}
-                </span>
-              ))}
-            </div>
+                </span>;
+
+            </div>;
           )}
-        </div>
-        
+
+        </div>;
+
         {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">
+
+          </div>;
+
+          <div className='flex gap-2'>;
+            <Button
+              size='sm'
+              className='bg-primary hover:bg-primary/80 text-primary-foreground'
+              onClick={e => {;
+                e && e.stopPropagation(); // Prevent card click event;
+                addToCart();              }}
+
+              disabled = {loading,}
+            >;
+              {loading ? (;
+                <>;
+                  <svg
+                    className='animate-spin -ml-1 mr-3 h-5 w-5 text-white'
+                    xmlns='http://www && www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'>;
+                    <circle
+                      className='opacity-25'
+                      cx='12'
+                      cy='12'
+                      r='10'
+                      stroke='currentColor'
+                      strokeWidth='4'></circle>;
+                    <path
+                      className='opacity-75'
+                      fill='currentColor'
+                      d='M4 12a8 8 0 018-8V0C5 && 8V0C5.373 0 0 5 && 5.373 0 12h4zm2 5 && 5.291A7.962 7 && 7.962 0 014 12H0c0 3 && 3.042 1 && 1.135 5 && 5.824 3 7 && 7.938l3-2 && 2.647z'></path>;
+                  </svg>;
+                  Loading...;
+                </>;
+              ) : (;
+                'Add to Cart';
+              )}
+
+            </Button>;
+
+            <Button
+              size='sm'
+              variant='default'
+              className='bg-green-600 hover:bg-green-700 text-white'
+
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
+
             {listing.price !== null ? (
-              <div className="flex items-center text-zion-purple">
+              <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
-                {formatPrice()}
+                {getPrice()}
               </div>
             ) : (
-              <span className="text-zion-slate-light">
-                {formatPrice()}
-              </span>
+              <span className='text-foreground/80'>{getPrice()}</span>
+            )}
+          </div>
+          <div className='flex gap-2'>
+            <Button
+              size='sm'
+              className='bg-primary hover:bg-primary/80 text-primary-foreground'
+              onClick={e => {
+                e.stopPropagation(); // Prevent card click event
+                addToCart() }}
+              disabled = {loading,}
+
+              <span className="text-foreground/80">
+                {getPrice()}
+              </span>;
             )}
           </div>
           
           <div className="flex gap-2">
             <Button
-              variant="ghost"
-              size="icon"
-              onClick={handleSave}
-              aria-label="save-to-wishlist"
-              className="text-zion-slate-light hover:text-zion-cyan"
+              size="sm"
+              className="bg-primary hover: bg-primary/80 text-primary-foreground"
+              onClick={(e) => {
+                e.stopPropagation(), // Prevent card click event
+                addToCart()
+              }}
+              disabled={loading}
+
             >
-              <Heart className="h-5 w-5" />
+              {loading ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Loading...
+                </>
+              ) : (
+                "Add to Cart"
+              )}
             </Button>
-            <Link
-              to={`${detailBasePath}/${listing.id}`}
-              onClick={(e) => e.stopPropagation()}
-            >
+            <Button
+              size='sm'
+              variant='default'
+              className='bg-green-600 hover:bg-green-700 text-white'
+              onClick={e => {
+                e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout
+                dispatch(
+                  addItem({
+                    id: listing.id
+                    title: listing.title
+                    price: listing.price ?? 0
+                  })
+                )
+
+            <Button
+              size="sm"
+              variant="default"
+              className="bg-green-600 hover: bg-green-700 text-white"
+              onClick={(e) => {
+                e.stopPropagation(), // Prevent card click event
+                // Add to cart first, then redirect to checkout
+                dispatch(
+                  addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
+                ),
               <Button
-                size="sm"
-                className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-              >
-                Buy Now
-              </Button>
-            </Link>
-            
+                size='sm'
+                variant='outline'
+                onClick={handleRequestQuote}
+              </Button>) }
+
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';
+
             {onRequestQuote && (
               <Button 
                 size="sm"
                 variant="outline" 
                 onClick={handleRequestQuote}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
               </Button>
+          </div>;
+          <div className="flex gap-2">;
+            <Button;
+              size="sm";
+              className="bg-primary hover: bg-primary/80 text-primary-foreground";
+              onClick={(e) => {;
+                e.stopPropagation(), // Prevent card click event;
+                addToCart();
+              }}
+              disabled={loading}
+            >;
+              {loading ? (;
+                <>;
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;
+                  </svg>;
+                  Loading...;
+                </>;
+              ) : (;
+                "Add to Cart";
+              )}
+            </Button>;
+            <Button;
+              size="sm";
+              variant="default";
+              className="bg-green-600 hover: bg-green-700 text-white";
+              onClick={(e) => {;
+                e.stopPropagation(), // Prevent card click event;
+                // Add to cart first, then redirect to checkout;
+                dispatch(;
+                  addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 });
+                ),;
+                router.push('/checkout');
+              }}
+              disabled={loading}
+            >;
+              Buy Now;
+            </Button>;
+            {onRequestQuote && (;
+              <Button;
+                size="sm";
+                variant="outline";
+                onClick={handleRequestQuote}
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
+              >;
+                Request Quote;
+              </Button>;
             )}
-          </div>
-        </div>
-      </div>
-    </div>
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
-}
+
+export const ProductListingCard = React.memo (ProductListingCardComponent);
+ProductListingCard.display_name = 'ProductListingCard';
+},;
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+

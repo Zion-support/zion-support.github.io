@@ -1,23 +1,19 @@
-import OpenAI from 'openai';
-
-function getClient(): OpenAI | null {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return null;
-  return new OpenAI({ apiKey });
+export async function generateText(prompt: string): Promise<string> {
+  // Mock AI text generation
+  // In production, this would call OpenAI, Anthropic, or another AI service
+  return `Generated response for: ${prompt}`;
 }
 
-export async function generateText(prompt: string, system?: string): Promise<string> {
-  const client = getClient();
-  if (!client) {
-    return `AI disabled. Mock response for prompt: ${prompt.slice(0, 120)}...`;
-  }
-  const resp = await client.chat.completions.create({
-    model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-    messages: [
-      ...(system ? [{ role: 'system' as const, content: system }] : []),
-      { role: 'user', content: prompt },
-    ],
-    temperature: 0.4,
-  });
-  return resp.choices?.[0]?.message?.content || '';
+export async function generateImage(prompt: string): Promise<string> {
+  // Mock AI image generation
+  return `https://via.placeholder.com/512x512?text=${encodeURIComponent(prompt)}`;
+}
+
+export async function analyzeText(text: string): Promise<any> {
+  // Mock text analysis
+  return {
+    sentiment: 'positive',
+    keywords: ['technology', 'innovation'],
+    confidence: 0.85
+  };
 }

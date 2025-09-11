@@ -7,8 +7,8 @@ const path = require('path');
 
 const ROOT = process.cwd();
 const FRONT_PAGE = path.join(ROOT, 'pages', 'main', 'front', 'index.tsx');
-const START_MARKER = '/* AUTO-GENERATED: FRONT_ADS_START */';
-const END_MARKER = '/* AUTO-GENERATED: FRONT_ADS_END */';
+const START_MARKER = '/* AUTO-GENERATED: FRONT_AD_START */';
+const END_MARKER = '/* AUTO-GENERATED: FRONT_AD_END */';
 
 function titleCase(slug) {
   return slug
@@ -28,11 +28,9 @@ function discoverInternalPages() {
     results.push({ type: 'internal', href, label, tagline });
   }
 
-  // Priority pages
   const priority = [
     { href: '/automation', label: 'Automation Hub', tagline: 'Live agents & workflows' },
     { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, links' },
-    { href: '/reports/link-health', label: 'Link Health', tagline: 'Live link checks' },
     { href: '/reports/seo', label: 'SEO Audit', tagline: 'Continuous improvements' },
     { href: '/reports/ai-trends', label: 'AI Trends', tagline: 'Intelligence signals' },
     { href: '/newsroom', label: 'Newsroom', tagline: 'Latest autonomous updates' },
@@ -46,7 +44,6 @@ function discoverInternalPages() {
     if (fs.existsSync(check)) push(p.href, p.label, p.tagline);
   }
 
-  // Fallback discovery of other top-level pages
   try {
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
     for (const entry of entries) {
@@ -65,12 +62,6 @@ function discoverInternalPages() {
     }
   } catch {}
 
-  // Add anchor deep-links for capabilities and benefits on the same page
-  results.push({ type: 'internal', href: '/main/front#features', label: 'Features', tagline: 'Explore capabilities' });
-  results.push({ type: 'internal', href: '/main/front#capabilities', label: 'Capabilities', tagline: 'What agents can do' });
-  results.push({ type: 'internal', href: '/main/front#benefits', label: 'Benefits', tagline: 'Outcomes & ROI' });
-
-  // Unique by href, limit
   const seen = new Set();
   const unique = [];
   for (const r of results) {
@@ -79,18 +70,16 @@ function discoverInternalPages() {
       unique.push(r);
     }
   }
-  return unique.slice(0, 16);
+  return unique.slice(0, 12);
 }
 
 function discoverExternalLinks() {
-  const links = [
-    { type: 'internal', href: '/.netlify/functions/docs-index-runner', label: 'Docs — technical notes & guides', tagline: 'Documentation' },
-    { type: 'internal', href: '/newsroom', label: 'AI Changelog — highlights', tagline: 'Summarized updates' },
-    { type: 'internal', href: '/.netlify/functions/unused-media-scanner', label: 'Unused Media Scanner', tagline: 'Find and report unreferenced assets' },
-    { type: 'internal', href: '/.netlify/functions/orphan-pages-detector', label: 'Orphan Pages Detector', tagline: 'Discover pages with no inbound links' },
-    { type: 'internal', href: '/.netlify/functions/component-size-report', label: 'Component Size Report', tagline: 'Largest components by lines and bytes' },
+  const repoUrl = 'https://github.com/Zion-Holdings/zion.app';
+  return [
+    { type: 'external', href: repoUrl + '/actions', label: 'Live Pipelines', tagline: 'CI logs & artifacts' },
+    { type: 'external', href: repoUrl + '/tree/main/docs', label: 'Documentation', tagline: 'Technical notes & guides' },
+    { type: 'external', href: repoUrl + '/blob/main/docs/CHANGELOG_AI.md', label: 'AI Changelog', tagline: 'Summarized updates' },
   ];
-  return links;
 }
 
 function buildCard(item) {
@@ -132,7 +121,7 @@ function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
   }
   const internal = discoverInternalPages();
   const external = discoverExternalLinks();
-  const combined = [...internal, ...external].slice(0, 16);
+  const combined = [...internal, ...external].slice(0, 12);
   const block = generateSection(combined);
   const original = fs.readFileSync(FRONT_PAGE, 'utf8');
   let updated;
@@ -148,4 +137,8 @@ function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
   } else {
     console.log('No updates required.');
   }
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> origin/chore/futuristic-front-and-netlify-automations

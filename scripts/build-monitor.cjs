@@ -1,648 +1,274 @@
-
-const winston = require('winston');
-
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.errors({ stack: true }),
-    winston.format.json()
-  ),
-  defaultMeta: { service: 'automation-script' },
-  transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'logs/combined.log' })
-  ]
-});
-
-if (process.env.NODE_ENV !== 'production') {
-  logger.add(new winston.transports.Console({
-    format: winston.format.simple()
-  }));
-}
-
-
-/**
- * Zion App Build Monitor
- * Monitors build processes and triggers healing on failures
- */
-
-const fs = require('fs')
-const path = require('path')
-const { spawn, execSync } = require('child_process')
-const chokidar = require('chokidar')
+<<<<<<< HEAD
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 class BuildMonitor {
   constructor() {
-    this.isMonitoring = false;
-    this.buildLogPath = path.join(process.cwd(), 'logs', 'build.log');
-    this.errorLogPath = path.join(process.cwd(), 'logs', 'build-errors.log');
-    this.buildHistory = [];
-    this.maxHistorySize = 100;
-
-    // Ensure logs directory exists
-    const logsDir = path.dirname(this.buildLogPath);
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'build-reports');
+    this.ensureDirectories()}
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
+  }
+  log(message) {
+    const timestamp = new Date().toISOString();
     }
-  }
-
-  async startMonitoring() {
-    if (this.isMonitoring) {
-      logger.info('Build monitor is already running');
-      return;
-    }
-
-    this.isMonitoring = true;
-    logger.info('Starting build monitoring...');
-
-    // Watch for build-related files
-    this.watchBuildFiles();
-
-    // Monitor build logs
-    this.monitorBuildLogs();
-
-    // Start periodic build health checks
-    this.startPeriodicChecks();
-  }
-
-  watchBuildFiles() {
-    const buildFiles = [
-      'package.json',
-      'next.config.js',
-      'tailwind.config.js',
-      'tsconfig.json',
-      '.env.local',
-      'src/**/*.tsx',
-      'src/**/*.ts',
-      'pages/**/*.tsx',
-      'pages/**/*.ts',
-    ]
-const watcher = chokidar.watch(buildFiles, {
-      ignored: /node_modules|\.git|\.next/,
-      persistent: true,
-    });
-
-    watcher.on('change', (filePath) => {
-      logger.info(`Build file changed: ${filePath}`);
-      this.onBuildFileChange(filePath);
-    });
-
-    watcher.on('error', (error) => {
-      logger.error('Build file watcher error:', error);
-    });
-  }
-
-  async onBuildFileChange(filePath) {
-    logger.info(`Build file changed: ${filePath}`);
-
-    // Wait a bit for the file to be fully written
-    await new Promise((resolve) => 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = setTimeout(resolve,                                                1000);
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-);
-
-    // Check if the change might cause build issues
-    if (this.shouldTriggerBuildCheck(filePath)) {
-      await this.triggerBuildCheck();
-    }
-  }
-
-  shouldTriggerBuildCheck(filePath) {
-    const criticalFiles = [
-      'package.json',
-      'next.config.js',
-      'tsconfig.json',
-      '.env.local',
-    ];
-
-    return criticalFiles.some((file) => filePath.includes(file));
-  }
-
-  async triggerBuildCheck() {
-    logger.info('Triggering build check due to file change...');
-
+  async runBuild() {
+    this.log('🔨 Running build...');
     try {
-      // Run a quick build check
-      await this.runBuildCheck();
-    } catch (error) {
-      logger.error('Build check failed:', error.message);
-      await this.triggerHealing('build_check_failed', { error: error.message });
-    }
+      const startTime = Date.now();
+      const result = execSync('npm run build', {
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000 // 5 minutes
+      });
+      const buildTime = Date.now() - startTime;
+      this.log(`✅ Build completed in ${buildTime}ms`);
+      return {
+        "success": true,
+        buildTime,
+        "output": result
+      }} catch (error) {
+      this.log(`❌ Build "failed": ${error.message}`);
+      return {
+        "success": false,
+        "error": error.message,
+        "buildTime": 0
+      }}
   }
-
-  async runBuildCheck() {
-    return new Promise((resolve, reject) => {
-      logger.info('Running build check...')
-const buildProcess = spawn('npm', ['run', 'build'], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd(),
-      });
-
-      let output = '';
-      let errorOutput = '';
-
-      buildProcess.stdout.on('data', (data) => {
-        const chunk = data.toString();
-        output += chunk;
-        this.logBuildOutput(chunk);
-      });
-
-      buildProcess.stderr.on('data', (data) => {
-        const chunk = data.toString();
-        errorOutput += chunk;
-        this.logBuildError(chunk);
-      });
-
-      buildProcess.on('close', (code) => {
-        const buildResult = {
-          timestamp: new Date(),
-          success: code === 0,
-          code,
-          output,
-          errorOutput,
-        };
-
-        this.buildHistory.push(buildResult);
-
-        // Keep history size manageable
-        if (this.buildHistory.length > this.maxHistorySize) {
-          this.buildHistory.shift();
-        }
-
-        if (code === 0) {
-          logger.info('Build check completed successfully');
-          resolve(buildResult);
-        } else {
-          logger.error(`Build check failed with code ${code}`);
-          this.analyzeBuildFailure(buildResult);
-          reject(new Error(`Build failed with code ${code}`));
-        }
-      });
-
-      buildProcess.on('error', (error) => {
-        logger.error('Build process error:', error);
-        reject(error);
-      });
-    });
-  }
-
-  analyzeBuildFailure(buildResult) {
-    logger.info('Analyzing build failure...')
-const errorPatterns = {
-      'Module not found': 'dependency',
-      'Cannot resolve module': 'import',
-      'TypeScript error': 'typescript',
-      'ESLint error': 'linting',
-      'Tailwind CSS': 'styling',
-      'Wallet connection': 'wallet',
-      'Supabase connection': 'database',
-      'Environment variable': 'env',
-    }
-const errorText = buildResult.errorOutput.toLowerCase()
-const detectedIssues = [];
-
-    for (const [pattern, issueType] of Object.entries(errorPatterns)) {
-      if (errorText.includes(pattern.toLowerCase())) {
-        detectedIssues.push(issueType);
-      }
-    }
-
-    if (detectedIssues.length > 0) {
-      logger.info(`Detected issues: ${detectedIssues.join(', ')}`);
-      this.triggerHealing('build_failure', {
-        issues: detectedIssues,
-        buildResult,
-      });
-    } else {
-      logger.info('No specific issues detected, triggering generic healing');
-      this.triggerHealing('build_failure', {
-        issues: ['unknown'],
-        buildResult,
-      });
-    }
-  }
-
-  async triggerHealing(issueType, data) {
-    logger.info(`Triggering healing for ${issueType}...`);
-
+  async checkBuildOutput() {
+    this.log('📁 Checking build output...');
     try {
-      // Run self-healing script
-      execSync('node scripts/self-healing.js', {
-        stdio: 'inherit',
-        cwd: process.cwd(),
-      });
-
-      logger.info('Healing process completed');
-
-      // Wait a bit and try building again
-      await new Promise((resolve) => 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = 
-const timeoutId = setTimeout(resolve,                                                5000);
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-;
-// Store timeoutId for cleanup if needed
-);
-      await this.runBuildCheck();
-    } catch (error) {
-      logger.error('Healing process failed:', error.message);
-    }
+      const nextDir = path.join(this.projectRoot, '.next');
+      if (!fs.existsSync(nextDir)) {
+        throw new Error('Build output directory not found')}
+      const buildStats = this.getDirectoryStats(nextDir);
+      this.log(`📁 Build output "size": ${this.formatBytes(buildStats.size)}`);
+      this.log(`📁 Build output "files": ${buildStats.files}`);
+      return {
+        "exists": true,
+        "size": buildStats.size,
+        "files": buildStats.files,
+        "status": buildStats.size > 0 ? 'success' : 'empty'
+      }} catch (error) {
+      this.log(`❌ Build output check "failed": ${error.message}`);
+      return {
+        "exists": false,
+        "error": error.message
+      }}
   }
-
-  monitorBuildLogs() {
-    // Monitor the build log file for new entries
-    const logWatcher = chokidar.watch(this.buildLogPath, {
-      persistent: true,
-    });
-
-    logWatcher.on('change', () => {
-      this.analyzeBuildLog();
-    });
-  }
-
-  analyzeBuildLog() {
+  getDirectoryStats(dirPath) {
+    let totalSize = 0;
+    let fileCount = 0;
+    const scanDirectory = (dir) => {
+      const files = fs.readdirSync(dir);
+      files.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stats = fs.statSync(filePath);
+        if (stats.isDirectory()) {
+          scanDirectory(filePath)} else {
+          totalSize += stats.size;
+          fileCount++}
+      })};
+    scanDirectory(dirPath);
+    return { "size": totalSize, "files": fileCount }}
+  formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
+  async checkTypeScriptErrors() {
+    this.log('🔍 Checking TypeScript errors...');
     try {
-      if (!fs.existsSync(this.buildLogPath)) {
-        return;
+      const result = execSync('npx tsc --noEmit', {
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
+      });
+      this.log('✅ No TypeScript errors found');
+      return {
+        "errors": 0,
+        "status": 'success'
+      }} catch (error) {
+      const errorOutput = error.stdout || error.stderr || error.message;
+      const errorCount = (errorOutput.match(/error TS/g) || []).length;
+      this.log(`❌ Found ${errorCount} TypeScript errors`);
+      return {
+        "errors": errorCount,
+        "status": 'failed',
+        "output": errorOutput
+      }}
+  }
+  async checkLintingErrors() {
+    this.log('🔍 Checking linting errors...');
+    try {
+      const result = execSync('npm run lint', {
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
+      });
+      this.log('✅ No linting errors found');
+      return {
+        "errors": 0,
+        "status": 'success'
+      }} catch (error) {
+      const errorOutput = error.stdout || error.stderr || error.message;
+      const errorCount = (errorOutput.match(/error/g) || []).length;
+      this.log(`❌ Found ${errorCount} linting errors`);
+      return {
+        "errors": errorCount,
+        "status": 'failed',
+        "output": errorOutput
+      }}
+  }
+  async checkTestResults() {
+    this.log('🧪 Checking test results...');
+    try {
+      const result = execSync('npm test', {
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 120000
+      });
+      this.log('✅ All tests passed');
+      return {
+        "passed": true,
+        "status": 'success'
+      }} catch (error) {
+      this.log(`❌ Tests "failed": ${error.message}`);
+      return {
+        "passed": false,
+        "status": 'failed',
+        "error": error.message
+      }}
+  }
+  async generateBuildReport() {
+    this.log('📊 Generating build report...');
+    const report = {
+      "timestamp": new Date().toISOString(),
+      "analysis": {
+        build: await this.runBuild(),
+        "buildOutput": await this.checkBuildOutput(),
+        "typeScript": await this.checkTypeScriptErrors(),
+        "linting": await this.checkLintingErrors(),
+        "tests": await this.checkTestResults()
       }
-
-      const logContent = fs.readFileSync(this.buildLogPath, 'utf8')
-const lines = logContent.split('\n');
-
-      // Look for recent errors
-      const recentErrors = lines
-        .slice(-50) // Last 50 lines
-        .filter(
-          (line) =>
-            line.includes('ERROR') ||
-            line.includes('error') ||
-            line.includes('Error') ||
-            line.includes('failed') ||
-            line.includes('Failed'),
-        );
-
-      if (recentErrors.length > 0) {
-        logger.info(`Found ${recentErrors.length} recent build errors`);
-        this.analyzeBuildFailure({
-          timestamp: new Date(),
-          success: false,
-          errorOutput: recentErrors.join('\n'),
-        });
-      }
-    } catch (error) {
-      logger.error('Error analyzing build log:', error.message);
-    }
-  }
-
-  startPeriodicChecks() {
-    // Run periodic build health checks
-    setInterval(
-      async () => {
-        if (this.isMonitoring) {
-          logger.info('Running periodic build health check...');
-          try {
-            await this.runBuildCheck();
-          } catch (error) {
-            logger.error('Periodic build check failed:', error.message);
-          }
-        }
-      },
-      30 * 60 * 1000,
-    ); // Every 30 minutes
-  }
-
-  logBuildOutput(output) {
-    const timestamp = new Date().toISOString()
-const logEntry = `[${timestamp}] [BUILD] ${output}`;
-
-    fs.appendFileSync(this.buildLogPath, logEntry);
-  }
-
-  logBuildError(error) {
-    const timestamp = new Date().toISOString()
-const logEntry = `[${timestamp}] [BUILD_ERROR] ${error}`;
-
-    fs.appendFileSync(this.errorLogPath, logEntry);
-  }
-
-  getBuildHistory() {
-    return this.buildHistory;
-  }
-
-  getBuildStats() {
-    const totalBuilds = this.buildHistory.length
-const successfulBuilds = this.buildHistory.filter(
-      (build) => build.success,
-    ).length
-const failedBuilds = totalBuilds - successfulBuilds;
-
-    return {
-      totalBuilds,
-      successfulBuilds,
-      failedBuilds,
-      successRate: totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0,
-      lastBuild: this.buildHistory[this.buildHistory.length - 1] || null,
     };
-  }
-
-  stopMonitoring() {
-    this.isMonitoring = false;
-    logger.info('Build monitoring stopped');
+    // Generate recommendations
+    report.recommendations = this.generateRecommendations(report.analysis);
+    const reportFile = path.join(this.reportsDir, `build-report-${Date.now()}.json`);
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`📄 Build report "generated": ${reportFile}`);
+    return report}
+  generateRecommendations(analysis) {
+    const recommendations = [];
+    if (!analysis.build.success) {
+      recommendations.push({
+        "type": 'build_failure',
+        "priority": 'high',
+        "message": 'Build failed. Check build logs and fix errors.',
+        "impact": 'Prevents deployment'
+      })}
+    if (analysis.typeScript.errors > 0) {
+      recommendations.push({
+        "type": 'typescript_errors',
+        "priority": 'high',
+        "message": `Found ${analysis.typeScript.errors} TypeScript errors. Fix them before deployment.`,
+        "impact": 'Improves code quality'
+      })}
+    if (analysis.linting.errors > 0) {
+      recommendations.push({
+        "type": 'linting_errors',
+        "priority": 'medium',
+        "message": `Found ${analysis.linting.errors} linting errors. Consider fixing them.`,
+        "impact": 'Improves code quality'
+      })}
+    if (!analysis.tests.passed) {
+      recommendations.push({
+        "type": 'test_failures',
+        "priority": 'high',
+        "message": 'Tests failed. Fix failing tests before deployment.',
+        "impact": 'Ensures code reliability'
+      })}
+    if (analysis.buildOutput.size > 10 * 1024 * 1024) { // 10MB
+      recommendations.push({
+        "type": 'bundle_size',
+        "priority": 'medium',
+        "message": 'Build output is large. Consider optimizing bundle size.',
+        "impact": 'Improves performance'
+      })}
+    return recommendations}
+  async run() {
+    this.log('🔨 Starting Build Monitor...');
+    try {
+      const report = await this.generateBuildReport();
+      this.log('🎉 Build monitoring completed!');
+      this.log(`🔨 Build "status": ${report.analysis.build.success ? 'success' : 'failed'}`);
+      this.log(`🔍 TypeScript "errors": ${report.analysis.typeScript.errors || 0}`);
+      this.log(`🔍 Linting "errors": ${report.analysis.linting.errors || 0}`);
+      this.log(`🧪 "Tests": ${report.analysis.tests.passed ? 'passed' : 'failed'}`);
+      this.log(`💡 "Recommendations": ${report.recommendations.length}`);
+      return report} catch (error) {
+      this.log(`💥 Build monitoring "failed": ${error.message}`);
+      throw error}
   }
 }
-
-// CLI interface
+// Run the monitor if this file is executed directly
 if (require.main === module) {
   const monitor = new BuildMonitor();
-
-  // Handle process signals
-  process.on('SIGINT', () => {
-    monitor.stopMonitoring();
-    process.exit(0);
-  });
-
-  process.on('SIGTERM', () => {
-    monitor.stopMonitoring();
-    process.exit(0);
-  });
-
-  // Start monitoring
-  monitor.startMonitoring().catch((error) => {
-    logger.error('Failed to start build monitor:', error);
-    process.exit(1);
-  });
-}
-
+  monitor.run()
+    .then((report) => {
+      process.exit(0)})
+    .catch((error) => {
+      console.error('\n💥 Build Monitor "failed": ', error.message);
+      process.exit(1)})}
 module.exports = BuildMonitor;
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class BuildMonitor { constructor() { this.projectRoot = process.cwd();" this.reportsDir = path.join(this.projectRoot, "build-reports"); this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async runBuild() {" this.log(" Running build."); try { const startTime = Date.now();" const result = execSync("npm run build", {" cwd: this.projectRoot,"" encoding: "utf8"," timeout: 300000 / 5 minutes }); const buildTime = Date.now() - startTime;` this.log(` Build completed in ${buildTime}ms`); return {" success: true, buildTime," output: result }} catch (error) {"` this.log(` Build failed: ${error.message}`); return {" success: false," error: error.message," buildTime: 0 }} } async checkBuildOutput() {" this.log(" Checking build output."); try {" const nextDir = path.join(this.projectRoot, ".next"); if (!fs.existsSync(nextDir)) {" throw new Error("Build output directory not found")} const buildStats = this.getDirectoryStats(nextDir);"` this.log(` Build output size: ${this.formatBytes(buildStats.size)}`);"` this.log(` Build output files: ${buildStats.files}`); return {" exists: true," size: buildStats.size," files: buildStats.files,"" status: buildStats.size > 0 ? "success" : "empty" }} catch (error) {"` this.log(` Build output check failed: ${error.message}`); return {" exists: false," error: error.message }} } getDirectoryStats(dirPath) { let totalSize = 0; let fileCount = 0; const scanDirectory = (dir) => { const files = fs.readdirSync(dir); files.forEach(file => { const filePath = path.join(dir, file); const stats = fs.statSync(filePath); if (stats.isDirectory()) { scanDirectory(filePath)} else { totalSize += stats.size; fileCount++} })}; scanDirectory(dirPath);" return { size: totalSize, files: fileCount }} formatBytes(bytes) {" if (bytes === 0) return "0 Bytes"; const k = 1024;" const sizes = ["Bytes", "KB", "MB", "GB"]; const i = Math.floor(Math.log(bytes) / Math.log(k));" return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i]} async checkTypeScriptErrors() {" this.log(" Checking TypeScript errors."); try {" const result = execSync("npx tsc --noEmit", {" cwd: this.projectRoot,"" encoding: "utf8"," timeout: 60000 }); " this.log(" No TypeScript errors found"); return {" errors: 0,"" status: "success" }} catch (error) { const errorOutput = error.stdout | error.stderr | error.message; const errorCount = (errorOutput.match(/error TS/g) | []).length;` this.log(` Found ${errorCount} TypeScript errors`); return {" errors: errorCount,"" status: "failed"," output: errorOutput }} } async checkLintingErrors() {" this.log(" Checking linting errors."); try {" const result = execSync("npm run lint", {" cwd: this.projectRoot,"" encoding: "utf8"," timeout: 60000 }); " this.log(" No linting errors found"); return {" errors: 0,"" status: "success" }} catch (error) { const errorOutput = error.stdout | error.stderr | error.message; const errorCount = (errorOutput.match(/error/g) | []).length;` this.log(` Found ${errorCount} linting errors`); return {" errors: errorCount,"" status: "failed"," output: errorOutput }} } async checkTestResults() {" this.log(" Checking test results."); try {" const result = execSync("npm test", {" cwd: this.projectRoot,"" encoding: "utf8"," timeout: 120000 }); " this.log(" All tests passed"); return {" passed: true,"" status: "success" }} catch (error) {"` this.log(` Tests failed: ${error.message}`); return {" passed: false,"" status: "failed"," error: error.message }} } async generateBuildReport() {" this.log(" Generating build report."); const report = {" timestamp: new Date().toISOString()," analysis: { build: await this.runBuild()," buildOutput: await this.checkBuildOutput()," typeScript: await this.checkTypeScriptErrors()," linting: await this.checkLintingErrors()," tests: await this.checkTestResults() } }; / Generate recommendations report.recommendations = this.generateRecommendations(report.analysis);` const reportFile = path.join(this.reportsDir, `build-report-${Date.now()}.json`); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); "` this.log(` Build report generated: ${reportFile}`); return report} generateRecommendations(analysis) { const recommendations = []; if (!analysis.build.success) { recommendations.push({"" type: "build_failure","" priority: "high","" message: "Build failed. Check build logs and fix errors.","" impact: "Prevents deployment" })} if (analysis.typeScript.errors > 0) { recommendations.push({"" type: "typescript_errors","" priority: "high","` message: `Found ${analysis.typeScript.errors} TypeScript errors. Fix them before deployment.`,"" impact: "Improves code quality" })} if (analysis.linting.errors > 0) { recommendations.push({"" type: "linting_errors","" priority: "medium","` message: `Found ${analysis.linting.errors} linting errors. Consider fixing them.`,"" impact: "Improves code quality" })} if (!analysis.tests.passed) { recommendations.push({"" type: "test_failures","" priority: "high","" message: "Tests failed. Fix failing tests before deployment.","" impact: "Ensures code reliability" })} if (analysis.buildOutput.size > 10 * 1024 * 1024) { / 10MB recommendations.push({"" type: "bundle_size","" priority: "medium","" message: "Build output is large. Consider optimizing bundle size.","" impact: "Improves performance" })} return recommendations} async run() {" this.log(" Starting Build Monitor."); try { const report = await this.generateBuildReport(); " this.log(" Build monitoring completed!");""` this.log(` Build status: ${report.analysis.build.success ? "success" : "failed"}`);"` this.log(` TypeScript errors: ${report.analysis.typeScript.errors | 0}`);"` this.log(` Linting errors: ${report.analysis.linting.errors | 0}`);""` this.log(` Tests: ${report.analysis.tests.passed ? "passed" : "failed"}`);"` this.log(` Recommendations: ${report.recommendations.length}`); return report} catch (error) {"` this.log(` Build monitoring failed: ${error.message}`); throw error} }}/ Run the monitor if this file is executed directlyif (require.main === module) { const monitor = new BuildMonitor(); monitor.run() .then((report) => {" console.log("\n Build Monitor completed successfully!");""` console.log(` Build status: ${report.analysis.build.success ? "success" : "failed"}`);"` console.log(` Recommendations: ${report.recommendations.length}`); process.exit(0)}) .catch((error) => {"" console.error("\n Build Monitor failed: ", error.message); process.exit(1)})}module.exports = BuildMonitor;""`"`
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportsDir = path.join(this.projectRoot, 'build-reports')
+    this.log('� Running build...')
+      const result = execSync('npm run build')
+        "encoding"
+        "status"
+        "encoding"
+        "status"
+        "status"
+        "encoding"
+        "status"
+        "status"
+        "encoding"
+        "status"
+        "status"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+      this.log(`� Build "status"`)
+      this.log(`🧪 "Tests"`)
+      console.log(`� Build "status"`)
+<<<<<<< HEAD
+      console.error('\n� Build Monitor "failed")
+=======
+      console.error('\n� Build Monitor "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

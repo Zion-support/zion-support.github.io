@@ -1,188 +1,138 @@
-class Jscjs {
-  constructor() {
-    this.isRunning = false;
-  }
-
-  async start() {
-    this.isRunning = true;
-    console.log('Starting Jscjs...');
-
-    try {
-      const winston = require('winston');
-
-      const logger = winston.createLogger({
-        level: 'info',
-        format: winston.format.combine(
-          winston.format.timestamp(),
-          winston.format.errors({ stack: true }),
-          winston.format.json(),
-        ),
-        defaultMeta: { service: 'automation-script' },
-        transports: [
-          new winston.transports.File({
-            filename: 'logs/error.log',
-            level: 'error',
-          }),
-          new winston.transports.File({ filename: 'logs/combined.log' }),
-        ],
-      });
-
-      if (process.env.NODE_ENV !== 'production') {
-        logger.add(
-          new winston.transports.Console({
-            format: winston.format.simple(),
-          }),
-        );
+<<<<<<< HEAD
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+// Files to fix with their specific issues
+const filesToFix = [{
+    "file": 'pages/docs/api-quick-start.tsx',
+    "fixes": [
+      {
+        search: "background: 'borderRadius', 8,",
+        "replace": "background: '#1e293b', "borderRadius": 8,"
       }
-
-      const fs = require('fs').promises;
-      const path = require('path');
-      const glob = require('glob');
-
-      async function fixAllSyntaxErrors() {
-        logger.info('🔧 Fixing all syntax errors in JavaScript files...');
-
-        try {
-          // Find all JavaScript files
-          const files = glob.sync('**/*.{js,cjs}', {
-            ignore: [
-              'node_modules/**',
-              '.git/**',
-              'dist/**',
-              'build/**',
-              'coverage/**',
-            ],
-          });
-
-          let fixedCount = 0;
-          let errorCount = 0;
-
-          for (const file of files) {
-            try {
-              const content = await fs.readFile(file, 'utf8');
-              let fixedContent = content;
-              let hasChanges = false;
-
-              // Fix missing quotes around string literals
-              const stringPatterns = [
-                // Fix level: info' -> level: 'info'
-                {
-                  pattern: /(\w+):\s*([a-zA-Z_][a-zA-Z0-9_-]*')(?=\s*[,}])/g,
-                  replacement: "$1: '$2",
-                },
-                // Fix filename: logs/error.log' -> filename: 'logs/error.log'
-                {
-                  pattern: /(\w+):\s*([a-zA-Z_][a-zA-Z0-9_\/.-]*')(?=\s*[,}])/g,
-                  replacement: "$1: '$2",
-                },
-                // Fix process.env.NODE_ENV !== production' -> process.env.NODE_ENV !== 'production'
-                {
-                  pattern: /(!==\s*)([a-zA-Z_][a-zA-Z0-9_-]*')(?=\s*[)])/g,
-                  replacement: "$1'$2",
-                },
-                // Fix level === error' -> level === 'error'
-                {
-                  pattern: /(===?\s*)([a-zA-Z_][a-zA-Z0-9_-]*')(?=\s*[)])/g,
-                  replacement: "$1'$2",
-                },
-                // Fix path.join(__dirname, logs' -> path.join(__dirname, 'logs'
-                {
-                  pattern:
-                    /(path\.join\([^)]*,\s*)([a-zA-Z_][a-zA-Z0-9_\/.-]*')(?=\s*[)])/g,
-                  replacement: "$1'$2",
-                },
-                // Fix fs.readFileSync(configPath, utf8' -> fs.readFileSync(configPath, 'utf8'
-                {
-                  pattern:
-                    /(fs\.readFileSync\([^,]*,\s*)([a-zA-Z_][a-zA-Z0-9_-]*')(?=\s*[)])/g,
-                  replacement: "$1'$2",
-                },
-                // Fix level = info' -> level = 'info'
-                {
-                  pattern: /(=\s*)([a-zA-Z_][a-zA-Z0-9_-]*')(?=\s*[,)])/g,
-                  replacement: "$1'$2",
-                },
-              ];
-
-              for (const { pattern, replacement } of stringPatterns) {
-                const newContent = fixedContent.replace(pattern, replacement);
-                if (newContent !== fixedContent) {
-                  fixedContent = newContent;
-                  hasChanges = true;
-                }
-              }
-
-              // Remove shebang lines
-              if (fixedContent.includes('#!/usr/bin/env node')) {
-                fixedContent = fixedContent.replace(
-                  /^#!\/usr\/bin\/env node\n?/g,
-                  '',
-                );
-                fixedContent = fixedContent.replace(
-                  /\n#!\/usr\/bin\/env node\n/g,
-                  '\n',
-                );
-                hasChanges = true;
-              }
-
-              if (hasChanges) {
-                await fs.writeFile(file, fixedContent);
-                logger.info(`✅ Fixed: ${file}`);
-                fixedCount++;
-              }
-            } catch (error) {
-              logger.error(`❌ Error processing ${file}:`, error.message);
-              errorCount++;
-            }
-          }
-
-          logger.info(`\n🎉 Fixed ${fixedCount} files with syntax errors`);
-          if (errorCount > 0) {
-            logger.info(`⚠️  ${errorCount} files had processing errors`);
-          }
-        } catch (error) {
-          logger.error('❌ Error during syntax fix:', error);
+    ]
+  },
+  {
+    "file": 'pages/docs/sdk.tsx',
+    "fixes": [{
+        search: "    }"\n})"}",
+        "replace": "    }\n});"}"
+      },
+      {
+        "search": "]);"\n?>"}",
+        "replace": "]);\n?>"}"
+      },
+      {
+        "search": "  );\n}"",
+        "replace": "  );\n}"
+      }
+    ]
+  },
+  {
+    "file": 'pages/enterprise.tsx',
+    "fixes": [{
+        search: "clients: '50+' solutions: 'Banking Insurance, FinTech'",
+        "replace": "clients: '50+', "solutions": 'Banking Insurance, FinTech'"
+      },
+      {
+        "search": "clients: '75+' solutions: 'Hospitals Pharma, Medical Devices'",
+        "replace": "clients: '75+', "solutions": 'Hospitals Pharma, Medical Devices'"
+      },
+      {
+        "search": "clients: '100+' solutions: 'Automotive Aerospace, Industrial'",
+        "replace": "clients: '100+', "solutions": 'Automotive Aerospace, Industrial'"
+      },
+      {
+        "search": "clients: '80+' solutions: 'Omnichannel Supply Chain, Analytics'",
+        "replace": "clients: '80+', "solutions": 'Omnichannel Supply Chain, Analytics'"
+      }
+    ]
+  },
+  {
+    "file": 'pages/marketplace.tsx',
+    "fixes": [{
+        search: "background: 'color', 'white'",
+        "replace": "background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'"
+      },
+      {
+        "search": "fontSize: 'fontWeight', 800,",
+        "replace": "fontSize: '2.5rem', "fontWeight": 800,"
+      },
+      {
+        "search": "background: 'WebkitBackgroundClip', 'text',>",
+        "replace": "background: 'linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%)',\n              "WebkitBackgroundClip": 'text',"
+      },
+      {
+        "search": "WebkitTextFillColor: 'transparent',>",
+        "replace": "WebkitTextFillColor: 'transparent',"
+      }
+    ]
+  },
+  {
+    "file": 'pages/privacy.tsx',
+    "fixes": [{
+        search: "const PrivacyPage: React.FC = () => {\n  return (<><Head><title>Privacy Policy - Zion Tech Group</title><meta name=\"description\" content=\"How Zion Tech Group collects uses, and protects your data.\" /></Head>\"<section className=\"bg-white\">\"<div className=\"container mx-auto p x-4 py-12\">\"<h1 className=\"text-3xl "md": text-4xl font-bold text-gray-900 mb-6\">Privacy Policy</h1>,\"<p className=\"text-gray-700 mb-6\">Last "updated": '2025-09-03</p>',\n\"<div className=\"prose max-w-none\"><p>We respect your privacy. This policy explains what information we collect and how we use it.</p><h2>Information We Collect</h2><ul><li>Contact details you provide (name, email, phone) via forms</li><li>Usage analytics (pages visited, approximate location, device/browser)</li><li>Business information shared to scope projects</li></ul><h2>How We Use Information</h2><ul><li>To respond to inquiries and provide services</li><li>To improve our website and offerings</li><li>To comply with legal obligations</li></ul><h2>Data Sharing</h2><p>We do not sell personal data. We may share data with service providers under strict agreements (e.g., hosting, analytics) or when required by law.</p><h2>Security</h2><p>We use industry-standard safeguards such as encryption in transit, least-privilege access, and regular security reviews.</p><h2>Your Rights</h2>\"<p>You may request access, correction, or deletion of your data. Contact us at <a href=\""mailto": kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a>.</p>,<h2>Contact</h2><p>Zion Tech Group, 364 E Main St STE 1008, Middletown DE 19709. "Phone": '+1 302 464 0950</p>',</div></div></section></>;\n  )}",
+        "replace": "import React from 'react';\nimport Head from 'next/head';\n\nconst PrivacyPage: React.FC = () => {\n  return (\n    <>\n      <Head>\n        <title>Privacy Policy - Zion Tech Group</title>\n        <meta name="description" content="How Zion Tech Group collects, uses, and protects your data." />\n      </Head>\n      <section className="bg-white">\n        <div className="container mx-auto px-4 py-12">\n          <h1 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-6">Privacy Policy</h1>\n          <p className="text-gray-700 mb-6">Last updated: 2025-09-03</p>\n          <div className="prose max-w-none">\n            <p>We respect your privacy. This policy explains what information we collect and how we use it.</p>\n            <h2>Information We Collect</h2>\n            <ul>\n              <li>Contact details you provide (name, email, phone) via forms</li>\n              <li>Usage analytics (pages visited, approximate location, device/browser)</li>\n              <li>Business information shared to scope projects</li>\n            </ul>\n            <h2>How We Use Information</h2>\n            <ul>\n              <li>To respond to inquiries and provide services</li>\n              <li>To improve our website and offerings</li>\n              <li>To comply with legal obligations</li>\n            </ul>\n            <h2>Data Sharing</h2>\n            <p>We do not sell personal data. We may share data with service providers under strict agreements (e.g., hosting, analytics) or when required by law.</p>\n            <h2>Security</h2>\n            <p>We use industry-standard safeguards such as encryption in transit, least-privilege access, and regular security reviews.</p>\n            <h2>Your Rights</h2>\n            <p>You may request access, correction, or deletion of your data. Contact us at <a href=""mailto": kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>\n            <h2>Contact</h2>\n            <p>Zion Tech Group, 364 E Main St STE 1008, Middletown DE 19709. "Phone": +1 302 464 0950</p>\n          </div>\n        </div>\n      </section>\n    </>\n  );\n}"
+      }
+    ]
+  }
+];
+let fixedCount = 0;
+let errorCount = 0;
+filesToFix.forEach(({ file, fixes }) => {
+  try {
+    const filePath = path.join(process.cwd(), file);
+    if (!fs.existsSync(filePath)) {
+      return}
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    fixes.forEach(({ search, replace }) => {
+      if (content.includes(search)) {
+        content = content.replace(search, replace);
+        modified = true;
         }
-      }
-
-      // Run if called directly
-      if (require.main === module) {
-        fixAllSyntaxErrors().catch(console.error);
-      }
-
-      module.exports = { fixAllSyntaxErrors };
-    } catch (error) {
-      console.error('Error in Jscjs:', error);
-      throw error;
-    }
-  }
-
-  stop() {
-    this.isRunning = false;
-    console.log('Stopping Jscjs...');
-  }
-}
-
-// Start the script
-if (require.main === module) {
-  const script = new Jscjs();
-  script.start().catch((error) => {
-    console.error('Failed to start Jscjs:', error);
-    process.exit(1);
-  });
-}
-
-module.exports = Jscjs;
-
-// Graceful shutdown handling
-process.on('SIGINT', () => {
-  console.log('\n🛑 Received SIGINT, shutting down gracefully...');
-  // Add cleanup logic here
-  process.exit(0);
+    });
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      fixedCount++}
+  } catch (error) {
+    console.error("❌ Error fixing ${file}:", error.message);
+    errorCount++}
 });
-
-process.on('SIGTERM', () => {
-  console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
-  // Add cleanup logic here
-  process.exit(0);
-});
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"console.log(" Starting comprehensive syntax error fixing.");/ Files to fix with their specific issuesconst filesToFix = [{" file: "pages/docs/api-quick-start.tsx"," fixes: [ {"" search: "background: "borderRadius", 8,","" replace: "background: "#1e293b", borderRadius: 8," } ] }, {"" file: "pages/docs/sdk.tsx"," fixes: [{" search: " }"\n})"}"," replace: " }\n});"}" }, {" search: "]);"\n?>"}"," replace: "]);\n?>"}" }, {" search: " );\n}""," replace: " );\n}" } ] }, {"" file: "pages/enterprise.tsx"," fixes: [{"" search: "clients: "50+" solutions: "Banking Insurance, FinTech"","" replace: "clients: "50+", solutions: "Banking Insurance, FinTech"" }, {"" search: "clients: "75+" solutions: "Hospitals Pharma, Medical Devices"","" replace: "clients: "75+", solutions: "Hospitals Pharma, Medical Devices"" }, {"" search: "clients: "100+" solutions: "Automotive Aerospace, Industrial"","" replace: "clients: "100+", solutions: "Automotive Aerospace, Industrial"" }, {"" search: "clients: "80+" solutions: "Omnichannel Supply Chain, Analytics"","" replace: "clients: "80+", solutions: "Omnichannel Supply Chain, Analytics"" } ] }, {"" file: "pages/marketplace.tsx"," fixes: [{"" search: "background: "color", "white"","" replace: "background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"" }, {"" search: "fontSize: "fontWeight", 800,","" replace: "fontSize: "2.5rem", fontWeight: 800," }, {"" search: "background: "WebkitBackgroundClip", "text",>","" replace: "background: "linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%)",\n WebkitBackgroundClip: "text"," }, {"" search: "WebkitTextFillColor: "transparent",>","" replace: "WebkitTextFillColor: "transparent"," } ] }, {"" file: "pages/privacy.tsx"," fixes: [{"" search: "const PrivacyPage: React.FC = () => {\n return (<><Head><title>Privacy Policy - Zion Tech Group</title><meta name=\"description\" content=\"How Zion Tech Group collects uses, and protects your data.\" /></Head>\"<section className=\"bg-white\">\"<div className=\"container mx-auto p x-4 py-12\">\"<h1 className=\"text-3xl md: text-4xl font-bold text-gray-900 mb-6\">Privacy Policy</h1>,\"<p className=\"text-gray-700 mb-6\">Last updated: "2025-09-03</p>",\n\"<div className=\"prose max-w-none\"><p>We respect your privacy. This policy explains what information we collect and how we use it.</p><h2>Information We Collect</h2><ul><li>Contact details you provide (name, email, phone) via forms</li><li>Usage analytics (pages visited, approximate location, device/browser)</li><li>Business information shared to scope projects</li></ul><h2>How We Use Information</h2><ul><li>To respond to inquiries and provide services</li><li>To improve our website and offerings</li><li>To comply with legal obligations</li></ul><h2>Data Sharing</h2><p>We do not sell personal data. We may share data with service providers under strict agreements (e.g., hosting, analytics) or when required by law.</p><h2>Security</h2><p>We use industry-standard safeguards such as encryption in transit, least-privilege access, and regular security reviews.</p><h2>Your Rights</h2>\"<p>You may request access, correction, or deletion of your data. Contact us at <a href=\"mailto: kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a>.</p>,<h2>Contact</h2><p>Zion Tech Group, 364 E Main St STE 1008, Middletown DE 19709. Phone: "+1 302 464 0950</p>",</div></div></section></>;\n )}","" replace: "import React from "react";\nimport Head from "next/head";\n\nconst PrivacyPage: React.FC = () => {\n return (\n <>\n <Head>\n <title>Privacy Policy - Zion Tech Group</title>\n <meta name="description" content="How Zion Tech Group collects, uses, and protects your data." />\n </Head>\n <section className="bg-white">\n <div className="container mx-auto px-4 py-12">\n <h1 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">Privacy Policy</h1>\n <p className="text-gray-700 mb-6">Last updated: 2025-09-03</p>\n <div className="prose max-w-none">\n <p>We respect your privacy. This policy explains what information we collect and how we use it.</p>\n <h2>Information We Collect</h2>\n <ul>\n <li>Contact details you provide (name, email, phone) via forms</li>\n <li>Usage analytics (pages visited, approximate location, device/browser)</li>\n <li>Business information shared to scope projects</li>\n </ul>\n <h2>How We Use Information</h2>\n <ul>\n <li>To respond to inquiries and provide services</li>\n <li>To improve our website and offerings</li>\n <li>To comply with legal obligations</li>\n </ul>\n <h2>Data Sharing</h2>\n <p>We do not sell personal data. We may share data with service providers under strict agreements (e.g., hosting, analytics) or when required by law.</p>\n <h2>Security</h2>\n <p>We use industry-standard safeguards such as encryption in transit, least-privilege access, and regular security reviews.</p>\n <h2>Your Rights</h2>\n <p>You may request access, correction, or deletion of your data. Contact us at <a href="mailto: kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>\n <h2>Contact</h2>\n <p>Zion Tech Group, 364 E Main St STE 1008, Middletown DE 19709. Phone: +1 302 464 0950</p>\n </div>\n </div>\n </section>\n </>\n );\n}" } ] }];let fixedCount = 0;let errorCount = 0;filesToFix.forEach(({ file, fixes }) => { try { const filePath = path.join(process.cwd(), file); if (!fs.existsSync(filePath)) {" console.log(" File not found: ${file}"); return} " let content = fs.readFileSync(filePath, "utf8"); let modified = false; fixes.forEach(({ search, replace }) => { if (content.includes(search)) { content = content.replace(search, replace); modified = true;" console.log(" Fixed issue in ${file}")} }); if (modified) {" fs.writeFileSync(filePath, content, "utf8"); fixedCount++} } catch (error) {" console.error(" Error fixing ${file}:", error.message); errorCount++}});"console.log("\n Syntax error fixing complete!");"console.log(" Files fixed: ${fixedCount}");"console.log(" Errors: ${errorCount}");""console.log("\n Run "npm run build" to test the fixes.`);'"`'"`
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log(' Starting comprehensive syntax error fixing...')
+    "file"
+        search: "
+        "replace": "
+    "file"
+    "file"
+        search: "
+        "replace": "clients: '50+', "solutions"
+        "search": "
+        "replace": "clients: '75+', "solutions"
+        "search": "
+        "replace": "clients: '100+', "solutions"
+        "search": "
+        "replace": "clients: '80+', "solutions"
+    "file"
+        search: "
+        "replace": "
+        "search": "
+        "replace": "
+        "search": "
+        "replace": "background: 'linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%)',\n              "WebkitBackgroundClip"
+        "search": "
+        "replace": "
+    "file"
+        search: "const PrivacyPage: React.FC = () => {\n  return (<><Head><title>Privacy Policy - Zion Tech Group</title><meta name=\"description\" content=\"How Zion Tech Group collects uses, and protects your data.\" /></Head>\"<section className=\"bg-white\">\"<div className=\"container mx-auto p x-4 py-12\">\"<h1 className=\"text-3xl "md": text-4xl font-bold text-gray-900 mb-6\">Privacy Policy</h1>,\"<p className=\"text-gray-700 mb-6\">Last "updated": '2025-09-03</p>',\n\"<div className=\"prose max-w-none\"><p>We respect your privacy. This policy explains what information we collect and how we use it.</p><h2>Information We Collect</h2><ul><li>Contact details you provide (name, email, phone) via forms</li><li>Usage analytics (pages visited, approximate location, device/browser)</li><li>Business information shared to scope projects</li></ul><h2>How We Use Information</h2><ul><li>To respond to inquiries and provide services</li><li>To improve our website and offerings</li><li>To comply with legal obligations</li></ul><h2>Data Sharing</h2><p>We do not sell personal data. We may share data with service providers under strict agreements (e.g., hosting, analytics) or when required by law.</p><h2>Security</h2><p>We use industry-standard safeguards such as encryption in transit, least-privilege access, and regular security reviews.</p><h2>Your Rights</h2>\"<p>You may request access, correction, or deletion of your data. Contact us at <a href=\""mailto": kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a>.</p><h2>Contact</h2><p>Zion Tech Group, 364 E Main St STE 1008, Middletown DE 19709. "Phone"}
+        "replace": "
+<<<<<<< HEAD
+console.log(")
+=======
+console.log(")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

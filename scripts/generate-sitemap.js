@@ -1,4 +1,81 @@
+
+
+
+import { createWriteStream } from 'fs',
+import { join } from 'path',
+
+import { createWriteStream } from 'fs';
+import { join } from 'path';
+;
+const generateSitemap = () => {;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+  <url>;
+    <loc>https://ziontechgroup.com/</loc>;
+    <lastmod>${new Date().toISOString()}</lastmod>;
+    <changefreq>daily</changefreq>;
+    <priority>1.0</priority>;
+  </url>;
+  <url>;
+    <loc>https://ziontechgroup.com/about</loc>;
+    <lastmod>${new Date().toISOString()}</lastmod>;
+    <changefreq>weekly</changefreq>;
+    <priority>0.8</priority>;
+  </url>;
+  <url>;
+    <loc>https://ziontechgroup.com/services</loc>;
+    <lastmod>${new Date().toISOString()}</lastmod>;
+    <changefreq>weekly</changefreq>;
+    <priority>0.8</priority>;
+  </url>;
+  <url>;
+    <loc>https://ziontechgroup.com/contact</loc>;
+    <lastmod>${new Date().toISOString()}</lastmod>;
+    <changefreq>monthly</changefreq>;
+    <priority>0.6</priority>;
+  </url>;
+</urlset>`;
+;
+  const sitemapPath = join(process.cwd(), 'public', 'sitemap.xml');
+  const writeStream = createWriteStream(sitemapPath);
+  writeStream.write(sitemap);
+  writeStream.end();
+;
+  console.log('Sitemap generated successfully at:', sitemapPath);
+};
+;generateSitemap();
+};
+;
+=======
+==============
+
+
+
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+import fs from 'fs'; import path from 'path'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const pages = [ { url: '/',lastmod: new Date().toISOString().split('T')[0],changefreq: 'weekly',priority: '1.0' },{ url: '/about',lastmod: new Date().toISOString().split('T')[0],changefreq: 'monthly',priority: '0.8' },{ url: '/services',lastmod: new Date().toISOString().split('T')[0],changefreq: 'weekly',priority: '0.9' },{ url: '/services-catalog',lastmod: new Date().toISOString().split('T')[0],changefreq: 'weekly',priority: '0.9' },{ url: '/micro-saas',lastmod: new Date().toISOString().split('T')[0],changefreq: 'weekly',priority: '0.9' },{ url: '/ai-services',lastmod: new Date().toISOString().split('T')[0],changefreq: 'weekly',priority: '0.9' },{ url: '/it-services',lastmod: new Date().toISOString().split('T')[0],changefreq: 'weekly',priority: '0.9' },{ url: '/contact',lastmod: new Date().toISOString().split('T')[0],changefreq: 'monthly',priority: '0.8' },{ url: '/pricing',lastmod: new Date().toISOString().split('T')[0],changefreq: 'monthly',priority: '0.8' },{ url: '/faq',lastmod: new Date().toISOString().split('T')[0],changefreq: 'monthly',priority: '0.6' },{ url: '/privacy',lastmod: new Date().toISOString().split('T')[0],changefreq: 'yearly',priority: '0.4' },{ url: '/terms',lastmod: new Date().toISOString().split('T')[0],changefreq: 'yearly',priority: '0.4' } ]; function generateSitemap() { const baseUrl = 'https: let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'; sitemap += '<urlset xmlns="http: pages.forEach(page => { sitemap += ' <url>\n'; sitemap += ` <loc>${baseUrl}${page.url}</loc>\n`; sitemap += ` <lastmod>${page.lastmod}</lastmod>\n`; sitemap += ` <changefreq>${page.changefreq}</changefreq>\n`; sitemap += ` <priority>${page.priority}</priority>\n`; sitemap += ' </url>\n'}); sitemap += '</urlset>'; return sitemap} function generateJsonSitemap() { const baseUrl = 'https: const jsonSitemap = { baseUrl,pages: pages.map(page => ({ ...page,fullUrl: `${baseUrl}${page.url}` })),generatedAt: new Date().toISOString() }; return JSON.stringify(jsonSitemap,null,2)} function generateTextSitemap() { const baseUrl = 'https: return pages.map(page => `${baseUrl}${page.url}`).join('\n')} function writeSitemaps() { const publicDir = path.join(__dirname,'..','public'); fs.writeFileSync( path.join(publicDir,'sitemap.xml'),generateSitemap() ); fs.writeFileSync( path.join(publicDir,'sitemap.json'),generateJsonSitemap() ); fs.writeFileSync( path.join(publicDir,'sitemap.txt'),generateTextSitemap() ); console.log('✅ Sitemaps generated successfully!'); console.log('📄 XML sitemap: public/sitemap.xml'); console.log('📄 JSON sitemap: public/sitemap.json'); console.log('📄 Text sitemap: public/sitemap.txt')} if (import.meta.url === `file: writeSitemaps()} export { generateSitemap,generateJsonSitemap,generateTextSitemap,writeSitemaps,pages };
+=======
+
+
+
+  const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
+  const writeStream = createWriteStream(sitemapPath),
+  writeStream.write(sitemap),
+  writeStream.end(),
 const fs = require('fs');
+const path = require('path');
+// Base URL for the site
+const BASE_URL = 'https://zion.app';
+
+generateSitemap(),
+=======
+=======
+
+
+generateSitemap(),const fs = require('fs');
 const path = require('path');
 
 // Base URL for the site
@@ -112,8 +189,8 @@ const pages = [
 
 // Generate sitemap XML content
 function generateSitemapXML() {
-  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  let xml = '<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>\n';
+  xml += '<urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;>\n';
   
   pages.forEach(page => {
     xml += '  <url>\n';
@@ -146,13 +223,13 @@ function main() {
     const sitemapXML = generateSitemapXML();
     const xmlPath = path.join(publicDir, 'sitemap.xml');
     fs.writeFileSync(xmlPath, sitemapXML, 'utf8');
-    console.log(`✅ Sitemap XML generated: ${xmlPath}`);
+    // console.log(`✅ Sitemap XML generated: ${xmlPath}`);
 
     // Generate and save sitemap.txt
     const sitemapTXT = generateSitemapTXT();
     const txtPath = path.join(publicDir, 'sitemap.txt');
     fs.writeFileSync(txtPath, sitemapTXT, 'utf8');
-    console.log(`✅ Sitemap TXT generated: ${txtPath}`);
+    // console.log(`✅ Sitemap TXT generated: ${txtPath}`);
 
     // Generate robots.txt
     const robotsTXT = `User-agent: *
@@ -167,11 +244,11 @@ Crawl-delay: 1`;
     
     const robotsPath = path.join(publicDir, 'robots.txt');
     fs.writeFileSync(robotsPath, robotsTXT, 'utf8');
-    console.log(`✅ Robots.txt generated: ${robotsPath}`);
+    // console.log(`✅ Robots.txt generated: ${robotsPath}`);
 
-    console.log(`\n🎉 Sitemap generation complete!`);
-    console.log(`📊 Total pages: ${pages.length}`);
-    console.log(`🌐 Base URL: ${BASE_URL}`);
+    // console.log(`\n🎉 Sitemap generation complete!`);
+    // console.log(`📊 Total pages: ${pages.length}`);
+    // console.log(`🌐 Base URL: ${BASE_URL}`);
     
   } catch (error) {
     console.error('❌ Error generating sitemap:', error);
@@ -185,3 +262,62 @@ if (require.main === module) {
 }
 
 module.exports = { generateSitemapXML, generateSitemapTXT, pages };
+=======
+=======
+=======
+module.exports = { generateSitemapXML, generateSitemapTXT, pages };
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+import { createWriteStream } from 'fs',;
+import { join } from 'path',;
+const generateSitemap = () => {;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+  <url>;
+    <loc>https://ziontechgroup.com/</loc>;
+    <lastmod>${new Date().toISOString()}</lastmod>;
+    <changefreq>daily</changefreq>;
+    <priority>1.0</priority>;
+  </url>;
+  <url>;
+    <loc>https://ziontechgroup.com/about</loc>;
+    <lastmod>${new Date().toISOString()}</lastmod>;
+    <changefreq>weekly</changefreq>;
+    <priority>0.8</priority>;
+  </url>;
+  <url>;
+    <loc>https://ziontechgroup.com/services</loc>;
+    <lastmod>${new Date().toISOString()}</lastmod>;
+    <changefreq>weekly</changefreq>;
+    <priority>0.8</priority>;
+  </url>;
+  <url>;
+    <loc>https://ziontechgroup.com/contact</loc>;
+    <lastmod>${new Date().toISOString()}</lastmod>;
+    <changefreq>monthly</changefreq>;
+    <priority>0.6</priority>;
+  </url>;
+</urlset>`,;
+  const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),;
+  const writeStream = createWriteStream(sitemapPath),;
+  writeStream.write(sitemap),;
+  writeStream.end(),;
+  console.log('Sitemap generated successfully at:', sitemapPath);
+},;
+generateSitemap();
+
+=======
+
+
+=======
+
+
+=======
+=======
+=======
+console && console.log('🗺️  Generating sitemap...');
+console && console.log('✅ Sitemap generation completed');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

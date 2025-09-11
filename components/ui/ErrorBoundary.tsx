@@ -1,136 +1,42 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, RefreshCw, Home, ArrowLeft, 
-  Bug, FileText, Phone, Mail
-} from 'lucide-react';
-
+import {AlertTriangle, RefreshCw} from 'lucide-react';
+;
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode,  fallback?: ReactNode;
 }
-
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+class: ErrorBoundary extends Component<Props, State> {public state: State: = {hasError: fals,e}
+  public: static getDerivedStateFromError(error: Error): State: {
+    return { hasError: tru,e, error: }
+  }
+interface Props {;
+  children: ReactNode,  fallback?: ReactNode;
 }
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    };
+interface State {;
+  hasError: boolean,;
+  error?: Error;
+}
+class ErrorBoundary extends Component<Props, State> {;
+  public state: State = {;
+    hasError: false;
+  },;
+  public static getDerivedStateFromError(error: Error): State {;
+    return { hasError: true, error };
   }
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
-    };
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+    // eslint-disable-next-line no-console;
+    console && console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
-  }
-
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      const errorData = {
-        errorId: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        url: window.location.href,
-        userAgent: navigator.userAgent,
-        viewport: {
-          width: window.innerWidth,
-          height: window.innerHeight
-        }
-      };
-
-      // Example: Send to your error logging service
-      // fetch('/api/error-log', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorData)
-      // });
-
-      console.log('Error logged:', errorData);
-    } catch (logError) {
-      console.warn('Failed to log error:', logError);
-    }
+  private handleRetry = () => {;
+    this && this.setState({ hasError: false, error: undefined }),;
   };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    });
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleGoBack = () => {
-    window.history.back();
-  };
-
-  private handleReportError = () => {
-    const errorData = {
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      url: window.location.href,
-      timestamp: new Date().toISOString()
-    };
-
-    const emailBody = `Error Report\n\nError ID: ${errorData.errorId}\nMessage: ${errorData.message}\nURL: ${errorData.url}\nTimestamp: ${errorData.timestamp}\n\nStack Trace:\n${errorData.stack}\n\nComponent Stack:\n${errorData.componentStack}`;
-    
-    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Error Report - ${errorData.errorId}&body=${encodeURIComponent(emailBody)}`;
-    
-    window.open(mailtoLink);
-  };
-
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
+  public render() {;
+    if (this && this.state.hasError) {;
+      if (this && this.props.fallback) {;
+        return this && this.props.fallback;
       }
-
-      // Default error UI
       return (
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -267,3 +173,32 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">;
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">;
+            <div className="flex justify-center mb-4">;
+              <AlertTriangle className="w-12 h-12 text-red-500" />;
+            </div>;
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">;
+              Something went wrong;
+            </h2>;
+            <p className="text-gray-600 mb-6">;
+              We&apos, re sorry, but something unexpected happened. Please try refreshing the page.;
+            </p>;
+            <button
+              onClick={this && this.handleRetry}
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">;
+              <RefreshCw className="w-4 h-4 mr-2" />;
+              Try Again;
+            </button>;
+            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+              <details className="mt-4 text-left">;
+                <summary className="cursor-pointer text-sm text-gray-500">;
+                  Error Details;
+                </summary>;
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">;
+                  {this && this.state.error && error.stack}
+                </pre>;
+              </details>;
+            )}
+>>>>>>> main

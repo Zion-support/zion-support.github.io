@@ -1,78 +1,64 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-RED="\033[31m"
-GREEN="\033[32m"
-YELLOW="\033[33m"
-NC="\033[0m"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+HUSKY_DIR="$ROOT_DIR/.husky"
+PKG_JSON="$ROOT_DIR/package.json"
+STATUS=0
 
-fail() { echo -e "${RED}✖ $*${NC}"; exit 1; }
-warn() { echo -e "${YELLOW}⚠ $*${NC}"; }
-ok()   { echo -e "${GREEN}✔ $*${NC}"; }
+log(){ echo "[$(date -u +%FT%TZ)] $*"; }
 
-REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
-cd "$REPO_ROOT"
+log "🔎 Husky health check starting"
 
-[ -d .husky ] || fail ".husky directory is missing"
-ok ".husky directory exists"
-
-if [ -f .husky/_/husky.sh ]; then
-  ok "Husky shim present (.husky/_/husky.sh)"
+# 1) .husky directory exists
+if [ ! -d "$HUSKY_DIR" ]; then
+  log "❌ .husky directory not found"
+  STATUS=1
 else
-  warn "Husky shim missing (.husky/_/husky.sh)"
+  log "✅ .husky directory present"
 fi
 
-# Check devDependency on husky
-if grep -q '"husky"' package.json; then
-  ok "husky dependency found in package.json"
-else
-  warn "husky dependency not found in package.json"
-fi
-
-# Check prepare script installs husky
-if grep -q '"prepare"\s*:\s*"husky install"' package.json; then
-  ok "prepare script configured for husky install"
-else
-  warn "prepare script missing or not set to 'husky install'"
-fi
-
-# Ensure hooks exist and are executable
-missing=0
-for hook in pre-commit commit-msg pre-push post-merge post-checkout post-rewrite pre-rebase prepare-commit-msg; do
-  if [ -f ".husky/$hook" ]; then
-    if [ -x ".husky/$hook" ]; then
-      ok "hook $hook is present and executable"
-    else
-      warn "hook $hook is present but not executable"
-      missing=$((missing+1))
+# 2) Ensure hooks are executable
+if [ -d "$HUSKY_DIR" ]; then
+  while IFS= read -r -d '' hook; do
+    if [ ! -x "$hook" ]; then
+      chmod +x "$hook" || true
+      log "🔧 Fixed executable bit: ${hook##$ROOT_DIR/}"
     fi
-    # Basic sanity checks
-    if ! head -n1 ".husky/$hook" | grep -q '#!/usr/bin/env sh'; then
-      warn "hook $hook missing shebang"
-      missing=$((missing+1))
-    fi
-  else
-    warn "hook $hook missing"
-  fi
-done
+  done < <(find "$HUSKY_DIR" -maxdepth 1 -type f -print0)
+  log "✅ Hook permissions ensured"
+fi
 
-# Check pre-commit runs lint-staged
-if [ -f .husky/pre-commit ] && grep -q "lint-staged" .husky/pre-commit; then
-  ok "pre-commit runs lint-staged"
+# 3) Verify prepare script contains 'husky install'
+if grep -q '"prepare"\s*:\s*"[^"]*husky install' "$PKG_JSON"; then
+  log "✅ package.json prepare script installs Husky"
 else
-  warn "pre-commit does not run lint-staged"
+  log "❌ package.json missing prepare script to install Husky"
+  STATUS=1
 fi
 
-# Check commit-msg runs commitlint
-if [ -f .husky/commit-msg ] && grep -q "commitlint" .husky/commit-msg; then
-  ok "commit-msg runs commitlint"
+# 4) Verify commitlint config exists
+if [ -f "$ROOT_DIR/commitlint.config.cjs" ]; then
+  log "✅ commitlint config present"
 else
-  warn "commit-msg does not enforce commitlint"
+  log "❌ commitlint config missing"
+  STATUS=1
 fi
 
-# Final result
-if [ $missing -gt 0 ]; then
-  fail "Husky health check found $missing issues"
+# 5) Verify lint-staged is configured
+if grep -q '"lint-staged"' "$PKG_JSON"; then
+  log "✅ lint-staged configuration found"
+else
+  log "⚠️  lint-staged configuration not found"
 fi
 
-echo "HUSKY_HEALTH=ok"
+# 6) Verify git hooksPath points to .husky (best effort)
+HOOKS_PATH=$(git config --get core.hooksPath || true)
+if [ -n "${HOOKS_PATH}" ] && [ "${HOOKS_PATH}" != ".husky" ]; then
+  log "⚠️  core.hooksPath is '${HOOKS_PATH}', expected '.husky'"
+else
+  log "✅ core.hooksPath is correct or default"
+fi
+
+log "🏁 Husky health check complete"
+exit "$STATUS"

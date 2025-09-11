@@ -1,64 +1,19 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { loadWishlistFromDB, removeFromWishlist } from '@/store/wishlistSlice';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
 
-export default function Wishlist() {
-  const dispatch = useAppDispatch();
-  const items = useAppSelector((s) => s.wishlist.items);
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
 
-  useEffect(() => {
-    if (!user) {
-      navigate(`/login?next=${encodeURIComponent(location.pathname)}`);
-      return;
-    }
-    void dispatch(loadWishlistFromDB(user.id!));
-  }, [user, dispatch, navigate, location]);
+;
 
-  const handleRemove = (id: string) => {
-    dispatch(removeFromWishlist({ id }));
-  };
-
-  const pathForItem = (item: { id: string; type: string }) => {
-    switch (item.type) {
-      case 'product':
-        return `/marketplace/listing/${item.id}`;
-      case 'service':
-        return `/services/${item.id}`;
-      case 'talent':
-        return `/talent/${item.id}`;
-      default:
-        return '#';
-    }
-  };
-
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">Your Wishlist</h1>
-      {items.length === 0 ? (
-        <p>No items saved.</p>
-      ) : (
-        <ul className="space-y-4">
-          {items.map((item) => (
-            <li key={`${item.type}-${item.id}`} className="border border-zion-blue-light p-4 rounded-lg flex justify-between items-center">
-              <div>{item.data?.title || item.data?.full_name || item.id}</div>
-              <div className="flex gap-2">
-                <Link to={pathForItem(item)} className="text-zion-cyan underline">
-                  Go to item
-                </Link>
-                <Button size="sm" variant="outline" onClick={() => handleRemove(item.id)}>
-                  Remove
-                </Button>
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+export default /**
+ * WishlistPage - Function description
+ */
+function WishlistPage() {): any {): any {): any {} const { favorites, loading } = use_favorites (); const { user } = use_auth (); // Check condition
+if ( {}) {
+  $2
+} navigate ('/login'); return null} const addToCart: any = (item: { id: string; title?: string; price?: number   }) => {} let cart = stored ? JSON.parse (stored) : []; // Check condition
+if (existing.quantity += 1) {
+  $2
+}'; else cart.push ({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });'; safe_storage.set_item ('guest_cart', JSON.stringify (cart))} return acc}, {}); return acc}, {}); return () <div className="container py - 8">""";" <h1 className="text - 3xl font - bold mb - 6">Wishlist</h1> {loading ? ( <p > Loading...</p>) : favorites.length === 0 ? (" <p > No items saved.</p>";" ) : (""";" <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6"> {favorites.map (fav => {} '; // Check condition
+if ( {}) {
+  $2
+} return talent ? ( <TalentCard; key={fav.item_id} talent={talent} onViewProfile={() => {}} onRequestHire={() => {}} is_authenticated={true} />) : null}" ";" return item ? (""";" <div key={fav.item_id} className="relative">";" <ProductListingCard listing={item} />""";" <Button size="sm" className="absolute bottom - 2 right - 2" on_click={() => addToCart (item)}>; Add to Cart </Button> </div>) : null})} </div>)} </div>;" )}";" '""";";
 }
+

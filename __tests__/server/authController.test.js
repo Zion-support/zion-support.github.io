@@ -1,24 +1,17 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { createRequest, createResponse } from 'node-mocks-http';
-import sgMail from '@sendgrid/mail';
-import { forgotPassword } from '../../server/controllers/authController.js';
+const { describe, it, expect, vi, beforeEach } = require(
 
-vi.mock('@sendgrid/mail', () => ({
-  default: { setApiKey: vi.fn(), send: vi.fn() }
-}));
-
-const mockedSend = sgMail.send;
-
-describe('authController.forgotPassword', () => {
-  beforeEach(() => {
-    mockedSend.mockClear();
-  });
-
-  it('sends an email via SendGrid', async () => {
-    const req = createRequest({ method: 'POST', body: { email: 'test@example.com' } });
-    const res = createResponse();
-    await forgotPassword(req, res);
-    expect(mockedSend).toHaveBeenCalled();
-    expect(res._getStatusCode()).toBe(200);
-  });
-});
+  'vitest')'
+  'node-mocks-http')'
+  '@sendgrid/mail')'
+  '../../server/controllers/authController')'
+  '@sendgrid/mail', () => ({'
+  authController.forgotPassword', () => {'
+  'node-mocks-http')'
+  @sendgrid/mail'
+  '
+  '@sendgrid/mail'
+  '"sends"
+      "method"
+      "body"
+    "await"
+    "await">>>>>>> cursor/expand-services-advertise-and-build-project-4b36

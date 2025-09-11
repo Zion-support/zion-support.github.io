@@ -1,0 +1,69 @@
+import { useState } from 'react';
+
+interface Toast {
+  id: string;
+  title: string;
+  description?: string;
+  type?: 'success' | 'error' | 'warning' | 'info';
+  variant?: 'default' | 'destructive';
+export interface Toast {
+  id: string;
+  title: string;
+  description?: string;
+  variant?: 'default' | 'destructive' | 'success';
+  duration?: number;
+}
+
+export interface ToastOptions {
+  title: string;
+  description?: string;
+  duration?: number;
+}
+
+export function useToast() {
+  const [toasts, setToasts] = useState<Toast[]>([]);
+
+    setToasts(prev => [...prev, newToast]);
+    setToasts(prev => [...prev, newToast]);
+
+    return id;
+  };
+
+  const dismiss = (id: string) => {
+    setToasts(prev => prev.filter(t => t.id !== id));
+  };
+
+  const success = (title: string, description?: string) => {
+    return toast({ title, description, type: 'success' });
+  };
+
+  const error = (title: string, description?: string) => {
+    return toast({ title, description, type: 'error', variant: 'destructive' });
+  };
+
+  const warning = (title: string, description?: string) => {
+    return toast({ title, description, type: 'warning' });
+  };
+
+  const info = (title: string, description?: string) => {
+    return toast({ title, description, type: 'info' });
+  };
+  const dismiss = useCallback((id: string) => {
+    setToasts(prev => prev.filter(toast => toast.id !== id));
+  }, []);
+
+  const dismissAll = useCallback(() => {
+    setToasts([]);
+  return {
+    toasts,
+    toast,
+    dismiss,
+    dismissAll,
+  };
+}
+
+// Export a default toast function for backward compatibility
+export const toast = (options: ToastOptions) => {
+  // This is a simplified version - in a real app, you'd want to use a toast context
+  console.log('Toast:', options);
+};

@@ -1,753 +1,500 @@
-const winston = require('winston');
-
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
-  defaultMeta: { service: 'automation-script' },
-  transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
-
-if (process.env.NODE_ENV !== 'production') {
-  logger.add(
-    new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
-}
-
-const fs = require('fs');
-const path = require('path');
-
-// Configuration
-const CONFIG = {
-  logsDir: path.join(__dirname, '..', 'logs'),
-  additionalDirs: [path.join(__dirname, '..')],
-  maxLogEntries: 1000,
-  retentionDays: 30,
-  criticalKeywords: [
-    'ECONNRESET',
-    'TIMEOUT',
-    'MEMORY',
-    'CRASH',
-    'FATAL',
-    'CRITICAL',
-    'SECURITY',
-    'UNAUTHORIZED',
-    'PERMISSION DENIED',
-    'DATABASE ERROR',
-    'COMPILATION ERROR',
-  ],
-  performanceThresholds: {
-    responseTime: 5000, // 5 seconds
-    memoryUsage: 512 * 1024 * 1024, // 512MB
-    errorRate: 0.05, // 5%
-  },
-};
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("child_process");"const path = require("child_process");"const { execSync } = require("child_process")class ErrorMonitor { constructor() {" this.logDir = path.join(process.cwd(), "logs")" this.reportsDir = path.join(process.cwd(), "error-reports") this.projectRoot = process.cwd() / Ensure directories exist [this.logDir, this.reportsDir].forEach(dir => { if (!fs.existsSync(dir)) {" fs.mkdirSync(dir, { recursive: true })} })} log(level, message) { const timestamp = new Date().toISOString() const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}` console.log(logMessage) / Write to log file" const logFile = path.join(this.logDir, "error-monitor.log")" fs.appendFileSync(logFile, logMessage + "\n")} async checkTypeScriptErrors() { try {" this.log("info", "Checking TypeScript errors.")" const result = execSync("npx tsc --noEmit", {cwd: this.projectRoot,encoding: "utf8";" stdio: "pipe"})" return { status: "clean", errors: [] } } catch (error) { const errors = error.stdout | error.stderr | error.message"` this.log("warn", `TypeScript errors found: ${errors.length} characters`)" return { status: "errors", errors: errors.toString() } } } async checkLintingErrors() { try {" this.log("info", "Checking linting errors.")" const result = execSync("npm run lint", {cwd: this.projectRoot,encoding: "utf8";" stdio: "pipe"})" return { status: "clean", errors: [] } } catch (error) { const errors = error.stdout | error.stderr | error.message"` this.log("warn", `Linting errors found: ${errors.length} characters`)" return { status: "errors", errors: errors.toString() } } } async checkBuildErrors() { try {" this.log("info", "Checking build errors.")" const result = execSync("npm run build", {cwd: this.projectRoot,encoding: "utf8";" stdio: "pipe"})" return { status: "clean", errors: [] } } catch (error) { const errors = error.stdout | error.stderr | error.message"` this.log("warn", `Build errors found: ${errors.length} characters`)" return { status: "errors", errors: errors.toString() } } } async checkTestErrors() { try {" this.log("info", "Checking test errors.")" const result = execSync("npm test", {cwd: this.projectRoot,encoding: "utf8";" stdio: "pipe"})" return { status: "clean", errors: [] } } catch (error) { const errors = error.stdout | error.stderr | error.message"` this.log("warn", `Test errors found: ${errors.length} characters`)" return { status: "errors", errors: errors.toString() } } } async scanLogFiles() {" this.log("info", "Scanning log files for errors.") const logFiles = [] / Find all log files const findLogFiles = (dir) => { if (!fs.existsSync(dir)) return const files = fs.readdirSync(dir) files.forEach(file => { const filePath = path.join(dir, file) const stat = fs.statSync(filePath) if (stat.isDirectory()) {" findLogFiles(filePath)} else if (file.endsWith(".log") | file.endsWith(".txt")) { logFiles.push(filePath)} })} findLogFiles(this.logDir)" findLogFiles(path.join(this.projectRoot, "logs")) const errorPatterns = [/error/i,/exception/i,/failed/i; /fatal/i; /critical/i; /timeout/i; /connection refused/i; /not found/i; /permission denied/i] const foundErrors = [] for (const logFile of logFiles) { try {" const content = fs.readFileSync(logFile, "utf8")" const lines = content.split("\n") lines.forEach((line, index) => { errorPatterns.forEach(pattern => { if (pattern.test(line)) {" foundErrors.push({file: logFile,line: index + 1,content: line.trim(); timestamp: new Date().toISOString()})} })})} catch (error) {"` this.log("warn", `Could not read log file ${logFile}: ${error.message}`)"const fs = require("fs").promises"const path = require("child_process");"const { exec } = require("child_process");"const util = require("child_process");const execAsync = util.promisify(exec)class ErrorMonitor { constructor() {" this.logFile = path.join(__dirname, "./logs/error-monitor.log")" this.reportFile = path.join(__dirname, "./logs/error-report.json") this.lastCheck = new Date()}" async log(message, level = "INFO") { const timestamp = new Date().toISOString()` const logEntry = `[${timestamp}] [${level}] ${message}\n` try { await fs.appendFile(this.logFile, logEntry) console.log(logEntry.trim())} catch (error) {" console.error("Failed to write to log file: ", error)} } async checkBuildErrors() { try {" const { stdout, stderr } = await execAsync(cd /workspace && npm run build 2>&1")" if (stderr | stdout.includes("error") | stdout.includes("Error")) {" await this.log("Build errors detected", "ERROR")" return {type: "build",hasErrors: true,output: stdout + stderr; timestamp: new Date().toISOString()} }" await this.log("Build check passed", "INFO")" return {type: "build",hasErrors: false; timestamp: new Date().toISOString()}"` } catch (error) {await this.log(`Build check failed: ${error.message}`, "ERROR")" return {type: "build",hasErrors: true,error: error.message; timestamp: new Date().toISOString()} } } async checkLintErrors() { try {" const { stdout, stderr } = await execAsync(cd /workspace && npm run lint 2>&1")" if (stderr | stdout.includes("error") | stdout.includes("Error")) {" await this.log("Lint errors detected", "ERROR")" return {type: "lint",hasErrors: true,output: stdout + stderr; timestamp: new Date().toISOString()} }" await this.log("Lint check passed", "INFO")" return {type: "lint",hasErrors: false; timestamp: new Date().toISOString()}"` } catch (error) {await this.log(`Lint check failed: ${error.message}`, "ERROR")" return {type: "lint",hasErrors: true,error: error.message; timestamp: new Date().toISOString()} } } async checkTypeErrors() { try {" const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1")" if (stderr | stdout.includes("error") | stdout.includes("Error")) {" await this.log("TypeScript errors detected", "ERROR")" return {type: "typescript",hasErrors: true,output: stdout + stderr; timestamp: new Date().toISOString()} }" await this.log("TypeScript check passed", "INFO")" return {type: "typescript",hasErrors: false; timestamp: new Date().toISOString()}"` } catch (error) {await this.log(`TypeScript check failed: ${error.message}`, "ERROR")" return {type: "typescript",hasErrors: true,error: error.message; timestamp: new Date().toISOString()} } } async triggerFixes(errorTypes) { for (const errorType of errorTypes) { try { switch (errorType) {" case build:" await this.log("Triggering syntax fixer for build errors", "INFO")" exec("pm2 restart syntax-fixer") break" case lint:" await this.log("Auto-fixing lint errors", "INFO")" await execAsync(cd /workspace && npm run lint -- --fix 2>/dev/null | true") break" case typescript:" await this.log("Triggering TypeScript error fixer", "INFO")" exec("pm2 restart syntax-fixer") break} } catch (error) {" await this.log(Failed to trigger fix for ${errorType}: ${error.message}";" "ERROR")} } return foundErrors} async generateErrorReport() {" this.log("info", "Generating comprehensive error report.") const report = {" timestamp: new Date().toISOString(); typescript: await this.checkTypeScriptErrors(); linting: await this.checkLintingErrors(); build: await this.checkBuildErrors(); tests: await this.checkTestErrors(); logErrors: await this.scanLogFiles();" summary: {totalErrors: 0,criticalIssues: 0; warnings: 0} } / Calculate summary const checks = [report.typescript, report.linting, report.build, report.tests] checks.forEach(check => {" if (check.status === "errors") { report.summary.totalErrors+ report.summary.criticalIssues++} }) report.summary.warnings = report.logErrors.length report.summary.totalIssues = report.summary.totalErrors + report.summary.warnings / Save report const reportFile = path.join( this.reportsDir;"` `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`) fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))"` this.log("info", `Error report saved to ${reportFile}`)"` this.log("info", `Summary: ${report.summary.totalIssues} total issues (${report.summary.criticalIssues} critical, ${report.summary.warnings} warnings)`) return report} async run() {" this.log("info", "Starting error monitoring.") try { const report = await this.generateErrorReport() / If there are critical issues, try to fix them if (report.summary.criticalIssues > 0) {" this.log("warn", "Critical issues detected, attempting to fix.") await this.attemptAutoFix(report)} return report} catch (error) {"` this.log("error", `Error monitoring failed: ${error.message}`) throw error} } async attemptAutoFix(report) {" this.log("info", "Attempting automatic fixes.") / Try to run syntax fixer try {" this.log("info", "Running syntax fixer.")" execSync("node scripts/automation/syntax-error-fixer.cjs", {cwd: this.projectRoot,stdio: "pipe"})" this.log("info", "Syntax fixer completed")} catch (error) {"` this.log("warn", `Syntax fixer failed: ${error.message}`)} / Try to run TypeScript fixer try {" this.log("info", "Running TypeScript fixer.")" execSync("node scripts/automation/typescript-error-fixer.cjs", {cwd: this.projectRoot,stdio: "pipe"})" this.log("info", "TypeScript fixer completed")} catch (error) {"` this.log("warn", `TypeScript fixer failed: ${error.message}`)} }}/ Run error monitoring if this script is executed directlyif (require.main === module) { const errorMonitor = new ErrorMonitor() errorMonitor.run() .then(report => {" console.log("\n=== Error Monitoring Results ===")"` console.log(`Total Issues: ${report.summary.totalIssues}`)"` console.log(`Critical Issues: ${report.summary.criticalIssues}`)"` console.log(`Warnings: ${report.summary.warnings}`) process.exit(report.summary.criticalIssues > 0 ? 1 : 0)}) .catch(error => {" console.error("Error monitoring failed: ", error) process.exit(1)})}module.exports = ErrorMonitor/ Run if called directlyif (require.main === module) { const monitor = new ErrorMonitor() / Run once immediately, then every 5 minutes monitor.run() setInterval(() => monitor.run(), 5 * 60 * 1000) / Keep process alive" process.on("SIGINT", () => {" monitor.log("Error monitor shutting down", "INFO") process.exit(0)})}module.exports = ErrorMonitor""`"`
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+const { execSync } = require("child_process")
 class ErrorMonitor {
   constructor() {
-    this.errors = [];
-    this.warnings = [];
-    this.performance = [];
-    this.summary = {
-      totalEntries: 0,
-      errorCount: 0,
-      warningCount: 0,
-      criticalCount: 0,
-      timeRange: null,
-    };
-  }
-
-  /**
-   * Initialize monitoring by ensuring logs directory exists
-   */
-  init() {
+    this.logDir = path.join(process.cwd(), "logs")
+    this.reportsDir = path.join(process.cwd(), "error-reports")
+    this.projectRoot = process.cwd()
+    // Ensure directories exist
+    [this.logDir, this.reportsDir].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { "recursive": true })}
+    })}
+  log(level, message) {
+    const timestamp = new Date().toISOString()
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
+    // Write to log file
+    const logFile = path.join(this.logDir, "error-monitor.log")
+    fs.appendFileSync(logFile, logMessage + "\n")}
+  async checkTypeScriptErrors() {
     try {
-      if (!fs.existsSync(CONFIG.logsDir)) {
-        fs.mkdirSync(CONFIG.logsDir, { recursive: true });
-        // logger.warn('📁 Created logs directory');
-      }
-      return true;
-    } catch (_error) {
-      logger.error('❌ Failed to initialize error monitor:', error.message);
-      return false;
+      this.log("info", "Checking TypeScript errors...")
+      const result = execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"encoding": "utf8";
+        stdio: "pipe"})
+      return { "status": "clean", "errors": [] }
+    } catch (error) {
+      const errors = error.stdout || error.stderr || error.message
+      this.log("warn", `TypeScript errors "found": ${errors.length} characters`)
+      return { "status": "errors", "errors": errors.toString() }
     }
   }
-
-  /**
-   * Read and parse all log files
-   */
-  async readLogs() {
+  async checkLintingErrors() {
     try {
-      const dirs = [CONFIG.logsDir, ...CONFIG.additionalDirs];
-      let logFiles = [];
-      for (const dir of dirs) {
-        try {
-          const files = fs.readdirSync(dir);
-          const found = files
-            .filter((f) => f.endsWith('.log'))
-            .map((f) => path.join(dir, f));
-          logFiles = logFiles.concat(found);
-        } catch {
-          // ignore directory read errors
-        }
-      }
-
-      // logger.warn(`📋 Found ${logFiles.length} log files`);
-
-      for (const filePath of logFiles) {
-        const file = path.basename(filePath);
-        const content = fs.readFileSync(filePath, 'utf-8');
-        const lines = content.split('\n').filter((line) => line.trim());
-
-        for (const line of lines) {
-          try {
-            const entry = JSON.parse(line);
-            this.processLogEntry(entry);
-          } catch (_parseError) {
-            // Handle non-JSON log entries
-            this.processPlainTextLog(line, file);
-          }
-        }
-      }
-
-      // Sort by timestamp
-      this.errors.sort(
-        (a, b) => new Date(b.timestamp || 0) - new Date(a.timestamp || 0),
-      );
-      this.warnings.sort(
-        (a, b) => new Date(b.timestamp || 0) - new Date(a.timestamp || 0),
-      );
-    } catch (_error) {
-      logger.error('❌ Error reading logs:', error.message);
+      this.log("info", "Checking linting errors...")
+      const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8";
+        stdio: "pipe"})
+      return { "status": "clean", "errors": [] }
+    } catch (error) {
+      const errors = error.stdout || error.stderr || error.message
+      this.log("warn", `Linting errors "found": ${errors.length} characters`)
+      return { "status": "errors", "errors": errors.toString() }
     }
   }
-
-  /**
-   * Process a structured log entry
-   */
-  processLogEntry(entry) {
-    this.summary.totalEntries++;
-
-    // Update time range
-    if (entry.timestamp) {
-      const timestamp = new Date(entry.timestamp);
-      if (!this.summary.timeRange) {
-        this.summary.timeRange = { start: timestamp, end: timestamp };
-      } else {
-        if (timestamp < this.summary.timeRange.start) {
-          this.summary.timeRange.start = timestamp;
-        }
-        if (timestamp > this.summary.timeRange.end) {
-          this.summary.timeRange.end = timestamp;
-        }
-      }
-    }
-
-    // Categorize by level
-    if (entry.level === 'error' || entry.level === 'critical') {
-      this.errors.push(entry);
-      this.summary.errorCount++;
-
-      if (entry.level === 'critical') {
-        this.summary.criticalCount++;
-      }
-    } else if (entry.level === 'warn') {
-      this.warnings.push(entry);
-      this.summary.warningCount++;
-    }
-
-    // Check for critical keywords
-    if (this.containsCriticalKeyword(entry.message)) {
-      this.summary.criticalCount++;
-    }
-
-    // Track performance metrics
-    if (entry.performance) {
-      this.performance.push({
-        timestamp: entry.timestamp,
-        memory: entry.performance.memory,
-        timing: entry.performance.timing,
-        category: entry.category,
-      });
+  async checkBuildErrors() {
+    try {
+      this.log("info", "Checking build errors...")
+      const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "utf8";
+        stdio: "pipe"})
+      return { "status": "clean", "errors": [] }
+    } catch (error) {
+      const errors = error.stdout || error.stderr || error.message
+      this.log("warn", `Build errors "found": ${errors.length} characters`)
+      return { "status": "errors", "errors": errors.toString() }
     }
   }
-
-  /**
-   * Process plain text log entries (fallback)
-   */
-  processPlainTextLog(line, filename) {
-    this.summary.totalEntries++;
-    const entry = {
-      message: line,
-      timestamp: new Date().toISOString(),
-      source: filename,
-      level: this.detectLogLevel(line),
+  async checkTestErrors() {
+    try {
+      this.log("info", "Checking test errors...")
+      const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";
+        stdio: "pipe"})
+      return { "status": "clean", "errors": [] }
+    } catch (error) {
+      const errors = error.stdout || error.stderr || error.message
+      this.log("warn", `Test errors "found": ${errors.length} characters`)
+      return { "status": "errors", "errors": errors.toString() }
+    }
+  }
+  async scanLogFiles() {
+    this.log("info", "Scanning log files for errors...")
+    const logFiles = []
+    // Find all log files
+    const findLogFiles = (dir) => {
+      if (!fs.existsSync(dir)) return
+      const files = fs.readdirSync(dir)
+      files.forEach(file => {
+        const filePath = path.join(dir, file)
+        const stat = fs.statSync(filePath)
+        if (stat.isDirectory()) {
+          findLogFiles(filePath)} else if (file.endsWith(".log") || file.endsWith(".txt")) {
+          logFiles.push(filePath)}
+      })}
+    findLogFiles(this.logDir)
+    findLogFiles(path.join(this.projectRoot, "logs"))
+    const errorPatterns = [/error/i,/exception/i,/failed/i;
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+const { execSync } = require("child_process");
+class ErrorMonitor {}
+  constructor() {}
+    this.logDir = path.join(process.cwd(), "logs");
+    this.reportsDir = path.join(process.cwd(), "error-reports");
+    this.projectRoot = process.cwd();
+    // Ensure directories exist;
+    [this.logDir, this.reportsDir].forEach(dir => {})
+      if (!fs.existsSync(dir)) {}
+        fs.mkdirSync(dir, { "recursive": true })};
+    })};
+  log(level, message) {}
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}
+    console.log(logMessage);
+    // Write to log file;
+    const logFile = path.join(this.logDir, "error-monitor.log");
+    fs.appendFileSync(logFile, logMessage + "\n")};
+  async checkTypeScriptErrors() {}
+    try {}
+      this.log("info", "Checking TypeScript errors...");
+      const result = execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"encoding": "utf8";})
+        stdio: "pipe"}
+});
+      return { "status": "clean", "errors": [] };
+    } catch (error) {}
+      const errors = error.stdout || error.stderr || error.message;
+      this.log("warn", `TypeScript errors "found": ${errors.length} characters`);
+      return { "status": "errors", "errors": errors.toString() };
     };
-
-    if (entry.level === 'error') {
-      this.errors.push(entry);
-      this.summary.errorCount++;
-    } else if (entry.level === 'warn') {
-      this.warnings.push(entry);
-      this.summary.warningCount++;
-    }
-  }
-
-  /**
-   * Detect log level from plain text
-   */
-  detectLogLevel(text) {
-    const upperText = text.toUpperCase();
-
-    // Treat recommendation lines as informational only
-    if (
-      upperText.includes('CONSIDER SETTING UP AUTOMATED ALERTS') ||
-      upperText.startsWith('[ALERT]')
-    ) {
-      return 'info';
-    }
-
-    // Enhanced success indicators (these override error/fail keywords)
-    const successIndicators = [
-      '✅',
-      '✓',
-      'FIXED:',
-      'RESOLVED:',
-      'SUCCESS',
-      'COMPLETE',
-      'PASSED',
-      'ERROR FIXED',
-      'BUILD ERROR FIXED',
-      'CRITICAL BUILD ERROR FIXED',
-      'ISSUE RESOLVED',
-      'PROBLEM FIXED',
-      'SUCCESSFULLY',
-      'ACCOMPLISHED',
-      'RESULT:',
-      'IMPROVEMENTS',
-      'ENHANCED',
-      'OPERATIONAL',
-      'AVAILABLE',
-      'WORKING CORRECTLY',
-      'NOW ACTIVE',
-      'READY',
-      'OPTIMAL',
-      'FIXED',
-      'SOLVING',
-      'COMPLETED',
-      'RESOLVED',
-      'WORKING',
-      'ENABLED',
-      'ACTIVE',
-      'SUCCESSFUL',
-      'PERFECT',
-      'CLEAN',
-      'MAINTAINED',
-      'BUILT',
-      'GENERATED',
-      'CREATED',
-      'ADDED',
-      'IMPROVED',
-      'UPDATED',
-      'DEPLOYED',
-      'INSTALLED',
-      '===',
-      'ACCOMPLISHED',
-      'PROGRESS',
-      'ACHIEVEMENT',
-      'MILESTONE',
-      'COMPILATION SUCCESSFUL',
-      'BUILD SUCCESSFUL',
-      'TESTS PASSED',
-      'NO ISSUES',
-      'ALL CLEAR',
-      'HEALTH CHECK PASSED',
-      'VALIDATION PASSED',
-    ];
-
-    // Check for success context first
-    if (successIndicators.some((indicator) => upperText.includes(indicator))) {
-      return 'info';
-    }
-
-    // Check for session headers and summaries (these are usually info)
-    if (
-      upperText.includes('===') ||
-      upperText.includes('SUMMARY') ||
-      upperText.includes('SESSION') ||
-      upperText.includes('REPORT')
-    ) {
-      return 'info';
-    }
-
-    // Check for actual errors and failures (more specific patterns)
-    const criticalErrorIndicators = [
-      'FATAL ERROR',
-      'CRITICAL ERROR',
-      'SYSTEM CRASH',
-      'COMPILATION FAILED',
-      'BUILD FAILED',
-      'TEST FAILED',
-      'DEPLOYMENT FAILED',
-      'CONNECTION FAILED',
-    ];
-
-    if (
-      criticalErrorIndicators.some((indicator) => upperText.includes(indicator))
-    ) {
-      return 'error';
-    }
-
-    // Check for specific error patterns (but not in success context)
-    const errorPatterns = [
-      /^ERROR:\s/, // Lines starting with "ERROR: "
-      /\bEXCEPTION\b/, // Exception mentions
-      /\bCRASH\b/, // Crash mentions
-      /\bFATAL\b/, // Fatal errors
-      /TIMEOUT.*ERROR/, // Timeout errors
-      /PERMISSION DENIED/, // Permission errors
-      /FILE NOT FOUND.*ERROR/, // File not found errors
-    ];
-
-    // Only flag as error if it matches error patterns and doesn't contain success context
-    const hasErrorPattern = errorPatterns.some((pattern) =>
-      pattern.test(upperText),
-    );
-    const hasSuccessContext =
-      upperText.includes('FIX') ||
-      upperText.includes('RESOLV') ||
-      upperText.includes('SUCCESS') ||
-      upperText.includes('COMPLET');
-
-    if (hasErrorPattern && !hasSuccessContext) {
-      return 'error';
-    }
-
-    // Handle common deprecation noise as informational only
-    if (upperText.includes("THE CJS BUILD OF VITE'S NODE API IS DEPRECATED")) {
-      return 'info';
-    }
-
-    // Check for warnings
-    const warningIndicators = [
-      'WARNING:',
-      'WARN:',
-      'DEPRECATED',
-      'OUTDATED',
-      'SLOW PERFORMANCE',
-      'MEMORY USAGE HIGH',
-      'POTENTIAL ISSUE',
-    ];
-
-    if (warningIndicators.some((indicator) => upperText.includes(indicator))) {
-      return 'warn';
-    }
-
-    // Default to info for everything else
-    return 'info';
-  }
-
-  /**
-   * Check if message contains critical keywords
-   */
-  containsCriticalKeyword(message) {
-    const upperMessage = message.toUpperCase();
-    return CONFIG.criticalKeywords.some((keyword) =>
-      upperMessage.includes(keyword.toUpperCase()),
-    );
-  }
-
-  /**
-   * Analyze patterns in errors and warnings
-   */
-  analyzePatterns() {
-    const patterns = {};
-
-    // Analyze error patterns
-    this.errors.forEach((error) => {
-      const pattern = this.extractPattern(error.message);
-      if (!patterns[pattern]) {
-        patterns[pattern] = { count: 0, level: 'error', examples: [] };
-      }
-      patterns[pattern].count++;
-      if (patterns[pattern].examples.length < 3) {
-        patterns[pattern].examples.push(error.message);
-      }
-    });
-
-    // Analyze warning patterns
-    this.warnings.forEach((warning) => {
-      const pattern = this.extractPattern(warning.message);
-      if (!patterns[pattern]) {
-        patterns[pattern] = { count: 0, level: 'warning', examples: [] };
-      }
-      patterns[pattern].count++;
-      if (patterns[pattern].examples.length < 3) {
-        patterns[pattern].examples.push(warning.message);
-      }
-    });
-
-    return Object.entries(patterns)
-      .sort(([, a], [, b]) => b.count - a.count)
-      .slice(0, 10); // Top 10 patterns
-  }
-
-  /**
-   * Extract pattern from error message
-   */
-  extractPattern(message) {
-    // Simple pattern extraction - remove specific values
-    return message
-      .replace(/\d+/g, 'N') // Replace numbers
-      .replace(
-        /[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/gi,
-        'UUID',
-      ) // Replace UUIDs
-      .replace(/https?:\/\/[^\s]+/g, 'URL') // Replace URLs
-      .replace(/\/[^\s]+/g, 'PATH') // Replace file paths
-      .substring(0, 100); // Limit length
-  }
-
-  /**
-   * Generate performance insights
-   */
-  analyzePerformance() {
-    if (this.performance.length === 0) {
-      return null;
-    }
-
-    const insights = {
-      memoryUsage: {
-        avg: 0,
-        max: 0,
-        min: Infinity,
-        alerts: [],
-      },
-      responseTime: {
-        avg: 0,
-        max: 0,
-        min: Infinity,
-        alerts: [],
-      },
+  };
+  async checkLintingErrors() {}
+    try {}
+      this.log("info", "Checking linting errors...");
+      const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8";})
+        stdio: "pipe"}
+});
+      return { "status": "clean", "errors": [] };
+    } catch (error) {}
+      const errors = error.stdout || error.stderr || error.message;
+      this.log("warn", `Linting errors "found": ${errors.length} characters`);
+      return { "status": "errors", "errors": errors.toString() };
     };
-
-    let totalMemory = 0;
-    let totalTiming = 0;
-    let timingCount = 0;
-
-    this.performance.forEach((metric) => {
-      if (metric.memory) {
-        totalMemory += metric.memory;
-        insights.memoryUsage.max = Math.max(
-          insights.memoryUsage.max,
-          metric.memory,
-        );
-        insights.memoryUsage.min = Math.min(
-          insights.memoryUsage.min,
-          metric.memory,
-        );
-
-        if (metric.memory > CONFIG.performanceThresholds.memoryUsage) {
-          insights.memoryUsage.alerts.push({
-            timestamp: metric.timestamp,
-            value: metric.memory,
-            category: metric.category,
-          });
-        }
-      }
-
-      if (metric.timing) {
-        totalTiming += metric.timing;
-        timingCount++;
-        insights.responseTime.max = Math.max(
-          insights.responseTime.max,
-          metric.timing,
-        );
-        insights.responseTime.min = Math.min(
-          insights.responseTime.min,
-          metric.timing,
-        );
-
-        if (metric.timing > CONFIG.performanceThresholds.responseTime) {
-          insights.responseTime.alerts.push({
-            timestamp: metric.timestamp,
-            value: metric.timing,
-            category: metric.category,
-          });
-        }
-      }
-    });
-
-    insights.memoryUsage.avg = totalMemory / this.performance.length;
-    insights.responseTime.avg = timingCount > 0 ? totalTiming / timingCount : 0;
-
-    return insights;
-  }
-
-  /**
-   * Generate recommendations based on analysis
-   */
-  generateRecommendations() {
-    const recommendations = [];
-
-    // Error rate recommendations
-    const errorRate = this.summary.errorCount / this.summary.totalEntries;
-    if (errorRate > CONFIG.performanceThresholds.errorRate) {
-      recommendations.push({
-        priority: 'HIGH',
-        category: 'Error Rate',
-        issue: `High error rate detected: ${(errorRate * 100).toFixed(2)}%`,
-        recommendation: 'Investigate and fix the most common error patterns',
-        action: 'Review top error patterns and implement fixes',
-      });
-    }
-
-    // Critical errors
-    if (this.summary.criticalCount > 0) {
-      recommendations.push({
-        priority: 'CRITICAL',
-        category: 'Critical Errors',
-        issue: `${this.summary.criticalCount} critical errors found`,
-        recommendation: 'Immediately investigate critical errors',
-        action: 'Check logs for critical keywords and system failures',
-      });
-    }
-
-    // Performance recommendations
-    const perfInsights = this.analyzePerformance();
-    if (perfInsights) {
-      if (perfInsights.memoryUsage.alerts.length > 0) {
-        recommendations.push({
-          priority: 'MEDIUM',
-          category: 'Memory Usage',
-          issue: `${perfInsights.memoryUsage.alerts.length} memory usage alerts`,
-          recommendation: 'Optimize memory usage in affected components',
-          action: 'Profile memory usage and implement optimizations',
-        });
-      }
-
-      if (perfInsights.responseTime.alerts.length > 0) {
-        recommendations.push({
-          priority: 'MEDIUM',
-          category: 'Response Time',
-          issue: `${perfInsights.responseTime.alerts.length} slow response alerts`,
-          recommendation: 'Optimize slow operations and API calls',
-          action: 'Implement caching and optimize database queries',
-        });
-      }
-    }
-
-    return recommendations.sort((a, b) => {
-      const priorityOrder = { CRITICAL: 3, HIGH: 2, MEDIUM: 1, LOW: 0 };
-      return priorityOrder[b.priority] - priorityOrder[a.priority];
-    });
-  }
-
-  /**
-   * Generate and display comprehensive report
-   */
-  generateReport() {
-    // logger.warn('\n🔍 ERROR MONITORING REPORT');
-    // logger.warn('=' .repeat(50));
-
-    // Summary
-    // logger.warn('\n📊 SUMMARY');
-    // logger.warn('-'.repeat(20));
-    // logger.warn(`Total Log Entries: ${this.summary.totalEntries}`);
-    // logger.warn(`Errors: ${this.summary.errorCount}`);
-    // logger.warn(`Warnings: ${this.summary.warningCount}`);
-    // logger.warn(`Critical Issues: ${this.summary.criticalCount}`);
-
-    if (this.summary.timeRange) {
-      // logger.warn(`Time Range: ${this.summary.timeRange.start.toISOString()} to ${this.summary.timeRange.end.toISOString()}`);
-    }
-
-    // Recent critical errors
-    if (this.errors.length > 0) {
-      // logger.warn('\n🚨 RECENT ERRORS (Top 5)');
-      // logger.warn('-'.repeat(20));
-      // this.errors.slice(0, 5).forEach((error, index) => {
-      //   logger.warn(`${index + 1}. [${error.timestamp || 'Unknown'}] ${error.message}`);
-      //   if (error.category) logger.warn(`   Category: ${error.category}`);
-      //   if (error.component) logger.warn(`   Component: ${error.component}`);
-      // });
-    }
-
-    // Error patterns
-    const patterns = this.analyzePatterns();
-    if (patterns.length > 0) {
-      // logger.warn('\n📈 ERROR PATTERNS (Top 5)');
-      // logger.warn('-'.repeat(20));
-      // patterns.slice(0, 5).forEach(([pattern, data], index) => {
-      //   logger.warn(`${index + 1}. Count: ${data.count} | Level: ${data.level}`);
-      //   logger.warn(`   Pattern: ${pattern}`);
-      //   logger.warn(`   Example: ${data.examples[0]}`);
-      //   logger.warn('');
-      // });
-    }
-
-    // Performance insights
-    const perfInsights = this.analyzePerformance();
-    if (perfInsights) {
-      // logger.warn('\n⚡ PERFORMANCE INSIGHTS');
-      // logger.warn('-'.repeat(20));
-      // logger.warn(`Average Memory Usage: ${(perfInsights.memoryUsage.avg / 1024 / 1024).toFixed(2)} MB`);
-      // logger.warn(`Peak Memory Usage: ${(perfInsights.memoryUsage.max / 1024 / 1024).toFixed(2)} MB`);
-      // logger.warn(`Average Response Time: ${perfInsights.responseTime.avg.toFixed(2)} ms`);
-      // logger.warn(`Max Response Time: ${perfInsights.responseTime.max.toFixed(2)} ms`);
-
-      if (perfInsights.memoryUsage.alerts.length > 0) {
-        // logger.warn(`Memory Alerts: ${perfInsights.memoryUsage.alerts.length}`);
-      }
-      if (perfInsights.responseTime.alerts.length > 0) {
-        // logger.warn(`Performance Alerts: ${perfInsights.responseTime.alerts.length}`);
-      }
-    }
-
-    // Recommendations
-    const recommendations = this.generateRecommendations();
-    if (recommendations.length > 0) {
-      // logger.warn('\n💡 RECOMMENDATIONS');
-      // logger.warn('-'.repeat(20));
-      // recommendations.forEach((rec, index) => {
-      //   logger.warn(`${index + 1}. [${rec.priority}] ${rec.category}`);
-      //   logger.warn(`   Issue: ${rec.issue}`);
-      //   logger.warn(`   Recommendation: ${rec.recommendation}`);
-      //   logger.warn(`   Action: ${rec.action}`);
-      //   logger.warn('');
-      // });
-    }
-
-    // Health score
-    const _healthScore = this.calculateHealthScore();
-    // logger.warn('\n🏥 SYSTEM HEALTH SCORE');
-    // logger.warn('-'.repeat(20));
-    // logger.warn(`Score: ${healthScore.score}/100 (${healthScore.grade})`);
-    // logger.warn(`Status: ${healthScore.status}`);
-
-    // logger.warn('\n' + '='.repeat(50));
-    // logger.warn('Report generated at:', new Date().toISOString());
-  }
-
-  /**
-   * Calculate system health score
-   */
-  calculateHealthScore() {
-    let score = 100;
-
-    // Deduct points for errors
-    const errorRate =
-      this.summary.errorCount / Math.max(this.summary.totalEntries, 1);
-    score -= Math.min(errorRate * 100 * 2, 50); // Max 50 points deduction
-
-    // Deduct points for critical issues
-    score -= Math.min(this.summary.criticalCount * 10, 30); // Max 30 points deduction
-
-    // Deduct points for warnings
-    const warningRate =
-      this.summary.warningCount / Math.max(this.summary.totalEntries, 1);
-    score -= Math.min(warningRate * 100, 20); // Max 20 points deduction
-
-    score = Math.max(0, Math.round(score));
-
-    let grade, status;
-    if (score >= 90) {
-      grade = 'A';
-      status = 'Excellent';
-    } else if (score >= 80) {
-      grade = 'B';
-      status = 'Good';
-    } else if (score >= 70) {
-      grade = 'C';
-      status = 'Fair';
-    } else if (score >= 60) {
-      grade = 'D';
-      status = 'Poor';
-    } else {
-      grade = 'F';
-      status = 'Critical';
-    }
-
-    return { score, grade, status };
-  }
-
-  /**
-   * Export report to file
-   */
-  exportReport(filename) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: this.summary,
-      recentErrors: this.errors.slice(0, 10),
-      patterns: this.analyzePatterns(),
-      performance: this.analyzePerformance(),
-      recommendations: this.generateRecommendations(),
-      healthScore: this.calculateHealthScore(),
+  };
+  async checkBuildErrors() {}
+    try {}
+      this.log("info", "Checking build errors...");
+      const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "utf8";})
+        stdio: "pipe"}
+});
+      return { "status": "clean", "errors": [] };
+    } catch (error) {}
+      const errors = error.stdout || error.stderr || error.message;
+      this.log("warn", `Build errors "found": ${errors.length} characters`);
+      return { "status": "errors", "errors": errors.toString() };
     };
-    const reportPath = path.join(
-      CONFIG.logsDir,
-      filename || 'error-report.json',
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    // logger.warn(`📄 Report exported to: ${reportPath}`);
+  };
+  async checkTestErrors() {}
+    try {}
+      this.log("info", "Checking test errors...");
+      const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";})
+        stdio: "pipe"}
+});
+      return { "status": "clean", "errors": [] };
+    } catch (error) {}
+      const errors = error.stdout || error.stderr || error.message;
+      this.log("warn", `Test errors "found": ${errors.length} characters`);
+      return { "status": "errors", "errors": errors.toString() };
+    };
+  };
+  async scanLogFiles() {}
+    this.log("info", "Scanning log files for errors...");
+    const logFiles = [];
+    // Find all log files;
+    const findLogFiles = (dir) => {}
+      if (!fs.existsSync(dir)) return;
+      const files = fs.readdirSync(dir);
+      files.forEach(file => {})
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        if (stat.isDirectory()) {}
+          findLogFiles(filePath)} else if (file.endsWith(".log") || file.endsWith(".txt")) {}
+          logFiles.push(filePath)};
+      })};
+    findLogFiles(this.logDir);
+    findLogFiles(path.join(this.projectRoot, "logs"));
+    const errorPatterns = [/error/i,/exception/i,/failed/i;]
+      /fatal/i;
+      /critical/i;
+      /timeout/i;
+      /connection refused/i;
+      /not found/i;
+      /permission denied/i];
+    const foundErrors = [];
+    for (const logFile of logFiles) {}
+      try {}
+        const content = fs.readFileSync(logFile, "utf8");
+        const lines = content.split("\n");
+        lines.forEach((line, index) => {}
+          errorPatterns.forEach(pattern => {})
+            if (pattern.test(line)) {}
+              foundErrors.push({"file": logFile,"line": index + 1,"content": line.trim();}
+                timestamp: new Date().toISOString()})};
+          })})} catch (error) {}
+        this.log("warn", `Could not read log file ${logFile}: ${error.message}`);
+const fs = require("fs").promises;
+const path = require("child_process");
+const { exec } = require("child_process");
+const util = require("child_process");
+<<<<<<< HEAD
+const execAsync = util.promisify(exec)
+class ErrorMonitor {
+  constructor() {
+    this.logFile = path.join(__dirname, "../logs/error-monitor.log")
+    this.reportFile = path.join(__dirname, "../logs/error-report.json")
+    this.lastCheck = new Date()}
+  async log(message, level = "INFO") {
+    const timestamp = new Date().toISOString()
+    const logEntry = `[${timestamp}] [${level}] ${message}\n`
+    try {
+      await fs.appendFile(this.logFile, logEntry)
+      )} catch (error) {
+      console.error("Failed to write to log "file": ", error)}
+  }
+  async checkBuildErrors() {
+    try {
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run build 2>&1")
+      if (stderr || stdout.includes("error") || stdout.includes("Error")) {
+        await this.log("Build errors detected", "ERROR")
+        return {"type": "build","hasErrors": true,"output": stdout + stderr;
+          timestamp: new Date().toISOString()}
+      }
+      await this.log("Build check passed", "INFO")
+      return {"type": "build","hasErrors": false;
+        timestamp: new Date().toISOString()}
+    } catch (error) {await this.log(`Build check "failed": ${error.message}`, "ERROR")
+      return {"type": "build","hasErrors": true,"error": error.message;
+        timestamp: new Date().toISOString()}
+    }
+  }
+  async checkLintErrors() {
+    try {
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run lint 2>&1")
+      if (stderr || stdout.includes("error") || stdout.includes("Error")) {
+        await this.log("Lint errors detected", "ERROR")
+        return {"type": "lint","hasErrors": true,"output": stdout + stderr;
+          timestamp: new Date().toISOString()}
+      }
+      await this.log("Lint check passed", "INFO")
+      return {"type": "lint","hasErrors": false;
+        timestamp: new Date().toISOString()}
+    } catch (error) {await this.log(`Lint check "failed": ${error.message}`, "ERROR")
+      return {"type": "lint","hasErrors": true,"error": error.message;
+        timestamp: new Date().toISOString()}
+    }
+  }
+  async checkTypeErrors() {
+    try {
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1")
+      if (stderr || stdout.includes("error") || stdout.includes("Error")) {
+        await this.log("TypeScript errors detected", "ERROR")
+        return {"type": "typescript","hasErrors": true,"output": stdout + stderr;
+          timestamp: new Date().toISOString()}
+      }
+      await this.log("TypeScript check passed", "INFO")
+      return {"type": "typescript","hasErrors": false;
+        timestamp: new Date().toISOString()}
+    } catch (error) {await this.log(`TypeScript check "failed": ${error.message}`, "ERROR")
+      return {"type": "typescript","hasErrors": true,"error": error.message;
+        timestamp: new Date().toISOString()}
+    }
+  }
+  async triggerFixes(errorTypes) {
+    for (const errorType of errorTypes) {
+      try {
+        switch (errorType) {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+const execAsync = util.promisify(exec);
+class ErrorMonitor {}
+  constructor() {}
+    this.logFile = path.join(__dirname, "../logs/error-monitor.log");
+    this.reportFile = path.join(__dirname, "../logs/error-report.json");
+    this.lastCheck = new Date()};
+  async log(message, level = "INFO") {}
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${level}] ${message}\n
+    try {}
+      await fs.appendFile(this.logFile, logEntry);
+      console.log(logEntry.trim())} catch (error) {}
+      console.error("Failed to write to log "file": ", error)};
+  };
+  async checkBuildErrors() {}
+    try {}
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run build 2>&1");
+      if (stderr || stdout.includes("error") || stdout.includes("Error")) {}
+        await this.log("Build errors detected", "ERROR");
+        return {"type": "build","hasErrors": true,"output": stdout + stderr;}
+          timestamp: new Date().toISOString()};
+      };
+      await this.log("Build check passed", "INFO");
+      return {"type": "build","hasErrors": false;}
+        timestamp: new Date().toISOString()};
+    } catch (error) {await this.log(`Build check "failed": ${error.message}`, "ERROR");
+      return {"type": "build","hasErrors": true,"error": error.message;}
+        timestamp: new Date().toISOString()};
+    };
+  };
+  async checkLintErrors() {}
+    try {}
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run lint 2>&1");
+      if (stderr || stdout.includes("error") || stdout.includes("Error")) {}
+        await this.log("Lint errors detected", "ERROR");
+        return {"type": "lint","hasErrors": true,"output": stdout + stderr;}
+          timestamp: new Date().toISOString()};
+      };
+      await this.log("Lint check passed", "INFO");
+      return {"type": "lint","hasErrors": false;}
+        timestamp: new Date().toISOString()};
+    } catch (error) {await this.log(`Lint check "failed": ${error.message}`, "ERROR");
+      return {"type": "lint","hasErrors": true,"error": error.message;}
+        timestamp: new Date().toISOString()};
+    };
+  };
+  async checkTypeErrors() {}
+    try {}
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1");
+      if (stderr || stdout.includes("error") || stdout.includes("Error")) {}
+        await this.log("TypeScript errors detected", "ERROR");
+        return {"type": "typescript","hasErrors": true,"output": stdout + stderr;}
+          timestamp: new Date().toISOString()};
+      };
+      await this.log("TypeScript check passed", "INFO");
+      return {"type": "typescript","hasErrors": false;}
+        timestamp: new Date().toISOString()};
+    } catch (error) {await this.log(`TypeScript check "failed": ${error.message}`, "ERROR");
+      return {"type": "typescript","hasErrors": true,"error": error.message;}
+        timestamp: new Date().toISOString()};
+    };
+  };
+  async triggerFixes(errorTypes) {}
+    for (const errorType of errorTypes) {}
+      try {}
+        switch (errorType) {}
+          case "build":
+            await this.log("Triggering syntax fixer for build errors", "INFO");
+            exec("pm2 restart syntax-fixer");
+            break;
+          case "lint":
+            await this.log("Auto-fixing lint errors", "INFO");
+            await execAsync(cd /workspace && npm run lint -- --fix 2>/dev/null || true");
+            break;
+          case "typescript":
+            await this.log("Triggering TypeScript error fixer", "INFO");
+            exec("pm2 restart syntax-fixer");
+            break};
+      } catch (error) {}
+        await this.log(Failed to trigger fix for ${errorType}: ${error.message}";)
+          "ERROR")};
+    };
+    return foundErrors};
+  async generateErrorReport() {}
+    this.log("info", "Generating comprehensive error report...");
+    const report = {}
+      "timestamp": new Date().toISOString();
+      typescript: await this.checkTypeScriptErrors();
+      linting: await this.checkLintingErrors();
+      build: await this.checkBuildErrors();
+      tests: await this.checkTestErrors();
+      logErrors: await this.scanLogFiles();
+      summary: {totalErrors: 0,"criticalIssues": 0;}
+        warnings: 0};
+    };
+    // Calculate summary;
+    const checks = [report.typescript, report.linting, report.build, report.tests];
+    checks.forEach(check => {})
+      if (check.status === "errors") {}
+        report.summary.totalErrors++
+        report.summary.criticalIssues++};
+    }
+});
+    report.summary.warnings = report.logErrors.length;
+    report.summary.totalIssues = report.summary.totalErrors + report.summary.warnings;
+    // Save report;
+    const reportFile = path.join()
+      this.reportsDir;
+<<<<<<< HEAD
+      `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`)
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
+    this.log("info", `Error report saved to ${reportFile}`)
+    this.log("info", `"Summary": ${report.summary.totalIssues} total issues (${report.summary.criticalIssues} critical, ${report.summary.warnings} warnings)`)
+    return report}
+  async run() {
+    this.log("info", "Starting error monitoring...")
+    try {
+      const report = await this.generateErrorReport()
+      // If there are critical issues, try to fix them
+      if (report.summary.criticalIssues > 0) {
+        this.log("warn", "Critical issues detected, attempting to fix...")
+        await this.attemptAutoFix(report)}
+      return report} catch (error) {
+      this.log("error", `Error monitoring "failed": ${error.message}`)
+      throw error}
+  }
+  async attemptAutoFix(report) {
+    this.log("info", "Attempting automatic fixes...")
+    // Try to run syntax fixer
+    try {
+      this.log("info", "Running syntax fixer...")
+      execSync("node scripts/automation/syntax-error-fixer.cjs", {"cwd": this.projectRoot,"stdio": "pipe"})
+      this.log("info", "Syntax fixer completed")} catch (error) {
+      this.log("warn", `Syntax fixer "failed": ${error.message}`)}
+    // Try to run TypeScript fixer
+    try {
+      this.log("info", "Running TypeScript fixer...")
+      execSync("node scripts/automation/typescript-error-fixer.cjs", {"cwd": this.projectRoot,"stdio": "pipe"})
+      this.log("info", "TypeScript fixer completed")} catch (error) {
+      this.log("warn", `TypeScript fixer "failed": ${error.message}`)}
   }
 }
-
-// Main execution
-async function main() {
-  // logger.warn('🚀 Starting Error Monitor...\n')
-  const monitor = new ErrorMonitor();
-
-  if (!monitor.init()) {
-    process.exit(1);
-  }
-
-  await monitor.readLogs();
-  monitor.generateReport();
-
-  // Export report if requested
-  if (process.argv.includes('--export')) {
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    monitor.exportReport(`error-report-${timestamp}.json`);
-  }
-
-  // Exit with appropriate code based on health score
-  const healthScore = monitor.calculateHealthScore();
-  if (healthScore.score < 70) {
-    // logger.warn('\n⚠️  System health is below acceptable threshold');
-    process.exit(1);
-  } else {
-    // logger.warn('\n✅ System health is acceptable');
-    process.exit(0);
-  }
-}
-
+// Run error monitoring if this script is executed directly
+if (require.main === module) {
+  const errorMonitor = new ErrorMonitor()
+  errorMonitor.run()
+    .then(report => {
+      process.exit(report.summary.criticalIssues > 0 ? 1 : 0)})
+    .catch(error => {
+      console.error("Error monitoring "failed": ", error)
+      process.exit(1)})}
+module.exports = ErrorMonitor
 // Run if called directly
 if (require.main === module) {
-  main().catch((error) => {
-    logger.error('❌ Error monitor failed:', error);
-    process.exit(1);
-  });
-}
-
-module.exports = { ErrorMonitor, CONFIG };
-
-// Graceful shutdown handling
-process.on('SIGINT', () => {
-  logger.info('\n🛑 Received SIGINT, shutting down gracefully...');
-  // Add cleanup logic here
-  process.exit(0);
+  const monitor = new ErrorMonitor()
+  // Run once immediately, then every 5 minutes
+  monitor.run()
+  setInterval(() => monitor.run(), 5 * 60 * 1000)
+  // Keep process alive
+  process.on("SIGINT", () => {
+    monitor.log("Error monitor shutting down", "INFO')
+    process.exit(0)})}
+module.exports = ErrorMonitor
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log("info", `Error report saved to ${reportFile}`);
+    this.log("info", `"Summary": ${report.summary.totalIssues} total issues (${report.summary.criticalIssues} critical, ${report.summary.warnings} warnings)`);
+    return report};
+  async run() {}
+    this.log("info", "Starting error monitoring...");
+    try {}
+      const report = await this.generateErrorReport();
+      // If there are critical issues, try to fix them;
+      if (report.summary.criticalIssues > 0) {}
+        this.log("warn", "Critical issues detected, attempting to fix...");
+        await this.attemptAutoFix(report)};
+      return report} catch (error) {}
+      this.log("error", `Error monitoring "failed": ${error.message}`);
+      throw error};
+  };
+  async attemptAutoFix(report) {}
+    this.log("info", "Attempting automatic fixes...");
+    // Try to run syntax fixer;
+    try {}
+      this.log("info", "Running syntax fixer...");
+      execSync("node scripts/automation/syntax-error-fixer.cjs", {"cwd": this.projectRoot,"stdio": "pipe"}
 });
-
-process.on('SIGTERM', () => {
-  logger.info('\n🛑 Received SIGTERM, shutting down gracefully...');
-  // Add cleanup logic here
-  process.exit(0);
+      this.log("info", "Syntax fixer completed")} catch (error) {}
+      this.log("warn", `Syntax fixer "failed": ${error.message}`)};
+    // Try to run TypeScript fixer;
+    try {}
+      this.log("info", "Running TypeScript fixer...");
+      execSync("node scripts/automation/typescript-error-fixer.cjs", {"cwd": this.projectRoot,"stdio": "pipe"}
 });
+      this.log("info", "TypeScript fixer completed")} catch (error) {}
+      this.log("warn", `TypeScript fixer "failed": ${error.message}`)};
+  };
+};
+// Run error monitoring if this script is executed directly;
+if (require.main === module) {}
+  const errorMonitor = new ErrorMonitor();
+  errorMonitor.run();
+    .then(report => {})
+      console.log("\n=== Error Monitoring Results ===");
+      console.log(`Total "Issues": ${report.summary.totalIssues}`);
+      console.log(`Critical "Issues": ${report.summary.criticalIssues}`);
+      console.log(`"Warnings": ${report.summary.warnings}`);
+      process.exit(report.summary.criticalIssues > 0 ? 1 : 0)}
+});
+    .catch(error => {})
+      console.error("Error monitoring "failed": ", error);
+      process.exit(1)})};
+module.exports = ErrorMonitor;
+// Run if called directly;
+if (require.main === module) {}
+  const monitor = new ErrorMonitor();
+  // Run once immediately, then every 5 minutes;
+  monitor.run();
+  setInterval(() => monitor.run(), 5 * 60 * 1000);
+  // Keep process alive;
+  process.on("SIGINT", () => {}
+    monitor.log("Error monitor shutting down", "INFO');
+    process.exit(0)})};
+<<<<<<< HEAD
+module.exports = ErrorMonitor;
+=======
+module.exports = ErrorMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

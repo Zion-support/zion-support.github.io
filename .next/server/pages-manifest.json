@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
@@ -10390,3 +10391,6 @@
   "/zero-trust-security-platform": "pages/zero-trust-security-platform.js",
   "/zion-tech-group": "pages/zion-tech-group.js"
 }
+=======
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/404":"pages/404.html"}
+>>>>>>> main

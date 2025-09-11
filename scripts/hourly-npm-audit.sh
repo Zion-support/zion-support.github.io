@@ -1,254 +1,89 @@
-
-const winston = require('winston');
-
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.errors({ stack: true }),
-    winston.format.json()
-  ),
-  defaultMeta: { service: 'automation-script' },
-  transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'logs/combined.log' })
-  ]
-});
-
-if (process.env.NODE_ENV !== 'production') {
-  logger.add(new winston.transports.Console({
-    format: winston.format.simple()
-  }));
-}
-
-
-class Script {
-  constructor() {
-    this.isRunning = false;
-  }
-
-  async start() {
-    this.isRunning = true;
-    logger.info('Starting Script...');
-    
-    try {
-      #!/bin/bash
-# Runs npm outdated, npm update, npm audit and fixes critical vulnerabilities.
-# Logs actions, commits changes to a new branch, and optionally sends a webhook notification.
-
+#!/bin/bash
 set -euo pipefail
 
 LOG_DIR="$(dirname "$0")/../logs/security"
 LOG_FILE="$LOG_DIR/hourly-fix.log"
-WEBHOOK_URL="${WEBHOOK_URL:-}" # Use environment variable or default to empty
+TEMP_DATA_DIR="${GITHUB_WORKSPACE:-/tmp}/notification_data"
+PATCHED_PACKAGES_FILE="$TEMP_DATA_DIR/patched_packages.json"
 
 mkdir -p "$LOG_DIR"
-touch "$LOG_FILE" # Ensure log file exists
+mkdir -p "$TEMP_DATA_DIR"
 
-echo "=============================================" >> "$LOG_FILE"
-echo "[$(date)] Starting hourly dependency check and audit" >> "$LOG_FILE"
-echo "=============================================" >> "$LOG_FILE"
+# Initialize patched packages file with an empty JSON array
+echo "[]" > "$PATCHED_PACKAGES_FILE"
 
-# 1. Git Configuration
-echo "[$(date)] Configuring git user..." >> "$LOG_FILE"
-git config user.name "Automated Dependency Updater"
-git config user.email "devops@example.com"
-echo "[$(date)] Git user configured." >> "$LOG_FILE"
+echo "[$(date)] Running npm audit" >> "$LOG_FILE"
+# Capture the JSON output for processing.
+AUDIT_JSON_OUTPUT=$(npm audit --json 2>&1) || true # Allow failure, process what we get
+echo "$AUDIT_JSON_OUTPUT" > "$LOG_DIR/audit-result-$(date +%s).json" # Save full audit for records
 
-# 2. NPM Outdated and Update
-echo "[$(date)] Running npm outdated --json..." >> "$LOG_FILE"
-NPM_OUTDATED_JSON=$(npm outdated --json || true)
-echo "[$(date)] Raw npm outdated JSON:" >> "$LOG_FILE"
-echo "$NPM_OUTDATED_JSON" >> "$LOG_FILE"
+# Log the audit output to the main log file as well
+echo "$AUDIT_JSON_OUTPUT" >> "$LOG_FILE"
 
-UPDATED_PACKAGES=()
-PACKAGES_TO_UPDATE=$(echo "$NPM_OUTDATED_JSON" | jq -r 'keys[] as $pkg | .[$pkg] | select(.current != .wanted and (.type == "patch" or .type == "minor")) | "\($pkg)@\(.wanted)"')
+# Check if AUDIT_JSON_OUTPUT is valid JSON before parsing
+if ! echo "$AUDIT_JSON_OUTPUT" | jq empty 2>/dev/null; then
+  echo "[$(date)] npm audit did not return valid JSON. Output was: $AUDIT_JSON_OUTPUT" >> "$LOG_FILE"
+  # Decide on default values or exit if this is critical
+  TOTAL_VULNS=0
+  CRITICAL_VULNS=0
+  # Potentially write an error to PATCHED_PACKAGES_FILE or leave it as []
+  echo '{ "error": "npm audit failed to produce valid JSON" }' > "$PATCHED_PACKAGES_FILE"
+else
+  TOTAL_VULNS=$(echo "$AUDIT_JSON_OUTPUT" | jq '.metadata.vulnerabilities.total // 0')
+  CRITICAL_VULNS=$(echo "$AUDIT_JSON_OUTPUT" | jq '.metadata.vulnerabilities.critical // 0')
+fi
 
-if [ -n "$PACKAGES_TO_UPDATE" ]; then
-    echo "[$(date)] Identified packages for safe updates:" >> "$LOG_FILE"
-    echo "$PACKAGES_TO_UPDATE" >> "$LOG_FILE"
-    OLD_IFS=$IFS
-    IFS=$'\n'
-    for pkg_spec in $PACKAGES_TO_UPDATE; do
-        echo "[$(date)] Updating $pkg_spec..." >> "$LOG_FILE"
-        NPM_UPDATE_OUTPUT=$(npm update "$pkg_spec" 2>&1)
-        NPM_UPDATE_EXIT_CODE=$?
-        echo "$NPM_UPDATE_OUTPUT" >> "$LOG_FILE"
-        if [ $NPM_UPDATE_EXIT_CODE -eq 0 ]; then
-            UPDATED_PACKAGES+=("$pkg_spec")
-            echo "[$(date)] Successfully updated $pkg_spec." >> "$LOG_FILE"
+
+MESSAGE="npm audit: No vulnerabilities found."
+
+if [ "$TOTAL_VULNS" -gt 0 ]; then
+    if [ "$CRITICAL_VULNS" -gt 0 ]; then
+        echo "[$(date)] Critical vulnerabilities detected: $CRITICAL_VULNS (Total: $TOTAL_VULNS)" >> "$LOG_FILE"
+        echo "[$(date)] Attempting to fix critical vulnerabilities with 'npm audit fix --force --json'" >> "$LOG_FILE"
+
+        # Attempt to fix and capture JSON output
+        FIX_JSON_OUTPUT=$(npm audit fix --force --json 2>&1) || true # Allow command to fail without exiting script
+        echo "$FIX_JSON_OUTPUT" >> "$LOG_FILE"
+        echo "$FIX_JSON_OUTPUT" > "$LOG_DIR/audit-fix-result-$(date +%s).json"
+
+        # Extract patched package information
+        # The JSON structure for `npm audit fix --json` has an "actions" array.
+        # Each action has a "type" ("update", "remove", "add") and "module", "version", "oldVersion" (for updates).
+        # We need to filter for "update" actions.
+        # Ensure FIX_JSON_OUTPUT is valid JSON before parsing
+        if echo "$FIX_JSON_OUTPUT" | jq empty 2>/dev/null; then
+            echo "$FIX_JSON_OUTPUT" | jq '[.actions[]? | select(.action=="update") | {name: .module, version: .version, previousVersion: .oldVersion?}] // []' > "$PATCHED_PACKAGES_FILE"
         else
-            echo "[$(date)] WARNING: Failed to update $pkg_spec. Exit code: $NPM_UPDATE_EXIT_CODE" >> "$LOG_FILE"
+            echo "[$(date)] 'npm audit fix --force --json' did not return valid JSON. Output: $FIX_JSON_OUTPUT" >> "$LOG_FILE"
+            # Write error or keep as empty array
+             echo '{ "error": "npm audit fix failed to produce valid JSON" }' > "$PATCHED_PACKAGES_FILE"
         fi
-    done
-    IFS=$OLD_IFS
-else
-    echo "[$(date)] No safe package updates found based on 'wanted' version and type (patch/minor)." >> "$LOG_FILE"
-fi
 
-# 3. NPM Audit and Fix
-echo "[$(date)] Running npm audit --json..." >> "$LOG_FILE"
-NPM_AUDIT_JSON=$(npm audit --json || true) # Allow failure if no vulns or other issues
-echo "[$(date)] Raw npm audit JSON:" >> "$LOG_FILE"
-echo "$NPM_AUDIT_JSON" >> "$LOG_FILE"
+        NEW_CRITICAL_VULNS_MSG_PART="Could not determine new critical count from fix output."
+        if echo "$FIX_JSON_OUTPUT" | jq empty 2>/dev/null; then
+            NEW_AUDIT_METADATA=$(echo "$FIX_JSON_OUTPUT" | jq '.audit // {}') # Check if 'audit' key exists
+            if echo "$NEW_AUDIT_METADATA" | jq empty 2>/dev/null && [ "$(echo "$NEW_AUDIT_METADATA" | jq 'keys | length')" -gt 0 ]; then
+                 NEW_CRITICAL_VULNS=$(echo "$NEW_AUDIT_METADATA" | jq '.metadata.vulnerabilities.critical // -1') # -1 if not found
+                 NEW_CRITICAL_VULNS_MSG_PART="New critical count: $NEW_CRITICAL_VULNS."
+            fi
+        fi
 
-# Extract vulnerability counts, defaulting to 0 if null or not found
-TOTAL_VULNS=$(echo "$NPM_AUDIT_JSON" | jq '.metadata.vulnerabilities.total // 0')
-CRITICAL_VULNS=$(echo "$NPM_AUDIT_JSON" | jq '.metadata.vulnerabilities.critical // 0')
-AUDIT_FIX_PERFORMED="false"
+        MESSAGE="npm audit: $CRITICAL_VULNS critical vulnerabilities found. Fix attempt made. Patched info in $PATCHED_PACKAGES_FILE. $NEW_CRITICAL_VULNS_MSG_PART"
 
-echo "[$(date)] Total vulnerabilities: $TOTAL_VULNS" >> "$LOG_FILE"
-echo "[$(date)] Critical vulnerabilities: $CRITICAL_VULNS" >> "$LOG_FILE"
-
-if [ "$CRITICAL_VULNS" -gt 0 ]; then
-    echo "[$(date)] Critical vulnerabilities detected: $CRITICAL_VULNS. Running npm audit fix --force..." >> "$LOG_FILE"
-    NPM_AUDIT_FIX_OUTPUT=$(npm audit fix --force 2>&1)
-    NPM_AUDIT_FIX_EXIT_CODE=$?
-    echo "$NPM_AUDIT_FIX_OUTPUT" >> "$LOG_FILE"
-    if [ $NPM_AUDIT_FIX_EXIT_CODE -eq 0 ]; then
-        AUDIT_FIX_PERFORMED="true"
-        echo "[$(date)] npm audit fix --force completed successfully." >> "$LOG_FILE"
+        if [ "$(jq 'length' "$PATCHED_PACKAGES_FILE")" -gt 0 ] && ! jq 'any(.[]; .error)' "$PATCHED_PACKAGES_FILE" > /dev/null ; then
+            echo "[$(date)] Packages patched. Details in $PATCHED_PACKAGES_FILE" >> "$LOG_FILE"
+        elif jq 'any(.[]; .error)' "$PATCHED_PACKAGES_FILE" > /dev/null; then
+            echo "[$(date)] Error occurred during patch information extraction. Check $PATCHED_PACKAGES_FILE and logs." >> "$LOG_FILE"
+        else
+            echo "[$(date)] No packages were reported as patched by 'npm audit fix --json'." >> "$LOG_FILE"
+        fi
     else
-        # Note: npm audit fix can exit non-zero even if it fixes some things,
-        # especially if --force is needed or if it cannot fix all.
-        # We'll record it was run, but the commit will depend on file changes.
-        AUDIT_FIX_PERFORMED="true (exit code $NPM_AUDIT_FIX_EXIT_CODE)"
-        echo "[$(date)] npm audit fix --force completed with exit code $NPM_AUDIT_FIX_EXIT_CODE." >> "$LOG_FILE"
+        MESSAGE="npm audit: $TOTAL_VULNS vulnerabilities found, none critical."
+        echo "[$(date)] $MESSAGE" >> "$LOG_FILE"
     fi
 else
-    echo "[$(date)] No critical vulnerabilities detected that require 'npm audit fix --force'." >> "$LOG_FILE"
+    echo "[$(date)] $MESSAGE" >> "$LOG_FILE"
 fi
 
-# 4. Commit Changes
-BRANCH_NAME=""
-COMMIT_PERFORMED="false"
-echo "[$(date)] Checking for changes in package.json or package-lock.json..." >> "$LOG_FILE"
-
-# Check if package files have changed.
-# `git status --porcelain` is more reliable than `git diff --quiet` across different git versions and configurations.
-if git status --porcelain package.json package-lock.json | grep -E '^\s?[MADRCU]'; then
-    echo "[$(date)] Changes detected in package.json or package-lock.json." >> "$LOG_FILE"
-    BRANCH_NAME="maintenance/auto-deps-$(date +'%Y-%m-%d-%H-%M-%S')"
-    echo "[$(date)] Creating and switching to new branch: $BRANCH_NAME" >> "$LOG_FILE"
-    git checkout -b "$BRANCH_NAME" >> "$LOG_FILE" 2>&1
-
-    echo "[$(date)] Staging package.json and package-lock.json..." >> "$LOG_FILE"
-    git add package.json package-lock.json >> "$LOG_FILE" 2>&1
-
-    COMMIT_MESSAGE_SUBJECT="Automated dependency updates and audit fixes"
-    COMMIT_MESSAGE_BODY="Summary of actions:
-- Packages updated by 'npm update': ${UPDATED_PACKAGES[*]:-"None"}
-- Total vulnerabilities found by 'npm audit': $TOTAL_VULNS
-- Critical vulnerabilities found: $CRITICAL_VULNS
-- 'npm audit fix --force' executed: $AUDIT_FIX_PERFORMED
-"
-    echo "[$(date)] Committing changes..." >> "$LOG_FILE"
-    echo "Commit message subject: $COMMIT_MESSAGE_SUBJECT" >> "$LOG_FILE"
-    echo "Commit message body: $COMMIT_MESSAGE_BODY" >> "$LOG_FILE"
-    # Use printf for the body to handle multi-line commit messages properly
-    git commit -m "$COMMIT_MESSAGE_SUBJECT" -m "$(printf "%s" "$COMMIT_MESSAGE_BODY")" >> "$LOG_FILE" 2>&1
-
-    echo "[$(date)] Pushing branch $BRANCH_NAME to origin..." >> "$LOG_FILE"
-    git push origin "$BRANCH_NAME" >> "$LOG_FILE" 2>&1
-    COMMIT_PERFORMED="true"
-    echo "[$(date)] Changes committed and pushed to branch $BRANCH_NAME." >> "$LOG_FILE"
-else
-    echo "[$(date)] No changes to package.json or package-lock.json. No commit needed." >> "$LOG_FILE"
-fi
-
-# 5. Reporting
-REPORT_MESSAGE="Hourly Dependency Check Report:
-- Updated Packages ('npm update'): ${UPDATED_PACKAGES[*]:-"None"}
-- Total Vulnerabilities ('npm audit'): $TOTAL_VULNS
-- Critical Vulnerabilities: $CRITICAL_VULNS
-- 'npm audit fix --force' Executed: $AUDIT_FIX_PERFORMED
-"
-if [ "$COMMIT_PERFORMED" = "true" ]; then
-    REPORT_MESSAGE+="- Changes committed to branch: $BRANCH_NAME"
-else
-    REPORT_MESSAGE+="- No changes committed."
-fi
-
-echo "[$(date)] Preparing to send webhook notification..." >> "$LOG_FILE"
-echo "[$(date)] Report message:" >> "$LOG_FILE"
-echo "$REPORT_MESSAGE" >> "$LOG_FILE"
-
-if [ -n "$WEBHOOK_URL" ]; then
-    # Construct JSON payload for webhook
-    # jq arguments: create (--arg) a string variable, then build an object.
-    # The message is passed as a whole string.
-    PAYLOAD=$(jq -n \
-        --arg msg "$REPORT_MESSAGE" \
-        --argjson updatedPackages "$(echo "${UPDATED_PACKAGES[*]:-"None"}" | jq -R . | jq -s .)" \
-        --argjson totalVulnerabilities "$TOTAL_VULNS" \
-        --argjson criticalVulnerabilities "$CRITICAL_VULNS" \
-        --arg auditFixPerformed "$AUDIT_FIX_PERFORMED" \
-        --arg commitPerformed "$COMMIT_PERFORMED" \
-        --arg branchName "${BRANCH_NAME:-"N/A"}" \
-        '{
-            message: $msg,
-            details: {
-                updatedPackages: $updatedPackages,
-                totalVulnerabilities: $totalVulnerabilities,
-                criticalVulnerabilities: $criticalVulnerabilities,
-                auditFixPerformed: $auditFixPerformed,
-                commitPerformed: $commitPerformed,
-                branchName: $branchName
-            }
-        }')
-
-    echo "[$(date)] Sending webhook notification to $WEBHOOK_URL..." >> "$LOG_FILE"
-    echo "[$(date)] Payload:" >> "$LOG_FILE"
-    echo "$PAYLOAD" >> "$LOG_FILE"
-    curl -fsS -X POST -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL" >> "$LOG_FILE" 2>&1
-    CURL_EXIT_CODE=$?
-    if [ $CURL_EXIT_CODE -eq 0 ]; then
-        echo "[$(date)] Webhook notification sent successfully." >> "$LOG_FILE"
-    else
-        echo "[$(date)] WARNING: Webhook notification failed with exit code $CURL_EXIT_CODE." >> "$LOG_FILE"
-    fi
-else
-    echo "[$(date)] WEBHOOK_URL not set. Skipping notification." >> "$LOG_FILE"
-fi
-
-echo "[$(date)] Hourly dependency check and audit finished." >> "$LOG_FILE"
-echo "=============================================" >> "$LOG_FILE"
-
-exit 0
-    } catch (error) {
-      logger.error('Error in Script:', error);
-      throw error;
-    }
-  }
-
-  stop() {
-    this.isRunning = false;
-    logger.info('Stopping Script...');
-  }
-}
-
-// Start the script
-if (require.main === module) {
-  const script = new Script();
-  script.start().catch(error => {
-    logger.error('Failed to start Script:', error);
-    process.exit(1);
-  });
-}
-
-module.exports = Script;
-
-
-// Graceful shutdown handling
-process.on('SIGINT', () => {
-  console.log('\n🛑 Received SIGINT, shutting down gracefully...');
-  // Add cleanup logic here
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
-  // Add cleanup logic here
-  process.exit(0);
-});
-
+# The direct webhook call is removed. gather-notification-data.sh will handle notifications.
+echo "[$(date)] hourly-npm-audit.sh finished. Message: $MESSAGE" >> "$LOG_FILE"

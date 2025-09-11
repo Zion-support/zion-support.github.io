@@ -1,0 +1,14 @@
+
+
+
+
+  res.status(200).json({ id, url })
+}
+export function getShared(id: string) {
+  return store[id]
+
+
+
+
+
+;

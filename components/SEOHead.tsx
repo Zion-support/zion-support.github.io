@@ -1,134 +1,90 @@
-import React from 'react';
-import Head from 'next/head';
-
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Revolutionary AI & Quantum Technology Solutions',
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
-  keywords = 'AI, quantum computing, cybersecurity, space technology, autonomous solutions, Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  publishedTime,
-  modifiedTime,
-  author = 'Zion Tech Group',
-  section,
-  tags = []
-}) => {
-  const siteName = 'Zion Tech Group';
-  const twitterHandle = '@ziontechgroup';
-  
-  // Structured data for better SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": siteName,
-    "url": url,
-    "logo": `${url}/images/zion-tech-group-logo.png`,
-    "description": description,
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup",
-      "https://youtube.com/ziontechgroup"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "foundingDate": "2020",
-    "knowsAbout": [
-      "Artificial Intelligence",
-      "Quantum Computing",
-      "Cybersecurity",
-      "Space Technology",
-      "Autonomous Systems",
-      "Cloud Infrastructure"
-    ]
-  };
-
-  if (type === 'article') {
-    structuredData["@type"] = "Article";
-    structuredData["headline"] = title;
-    structuredData["description"] = description;
-    if (publishedTime) structuredData["datePublished"] = publishedTime;
-    if (modifiedTime) structuredData["dateModified"] = modifiedTime;
-    if (author) structuredData["author"] = { "@type": "Person", "name": author };
-    if (section) structuredData["articleSection"] = section;
-    if (tags.length > 0) structuredData["keywords"] = tags.join(', ');
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import Head from 'next / head';
+import { use_router } from 'next / router';
+interface SEOHeadProps {
+
+const SEOHead: React.FC<SEOHeadProps> = ({;
+  title = 'Zion Tech Group - Technology Solutions',;
+  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',;
+  keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',}
+const SEOHead: React.FC<SEOHeadProps> = ({;
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',;
+  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',;
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',;
+  canonicalUrl,;
+  ogImage = '/og-image && image.jpg',;
+  ogType = 'website',;
+  twitterCard = 'summary_large_image',;
+  noIndex = false,;
+  structuredData;
+}) => {;
+  const router = useRouter();
+  const baseUrl = 'https://ziontechgroup && ziontechgroup.com';
+  const fullCanonicalUrl = canonicalUrl || `${baseUrl}${router && router.asPath}`;
+  const fullOgImage = ogImage && ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
+  const defaultStructuredData = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'Organization',;
+    name: 'Zion Tech Group',;
+    url: 'https://zion && zion.app',;
+    logo: 'https://zion && zion.app/logo && logo.png',;
+    description: 'Leading provider of AI services, IT solutions, and micro SaaS development',;
+    address: {;
+      '@type': 'PostalAddress',;
+      addressCountry: 'US'    },;
+    "contactPoint": {;
+      "@type": "ContactPoint",;
+      "telephone": "+1 302 464 0950",;
+      "contactType": "customer service",;
+      "email": "kleber@ziontechgroup && ziontechgroup.com";
+    },;
+    sameAs: [;
+      'https://linkedin && linkedin.com/company/zion-tech-group',;
+      'https://twitter && twitter.com/ziontechgroup';
+    ]  };
 
   return (
-    <Head>
+    <Head>;
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={twitterHandle} />
-      <meta name="twitter:creator" content={twitterHandle} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
+
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {/* Open Graph Tags */}
+
       {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData |defaultStructuredData)
+        }}
       />
-      
-      {/* Preconnect to external domains for performance */}
+      {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://images.unsplash.com" />
     </Head>
   );
+}
 };
 
 export default SEOHead;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

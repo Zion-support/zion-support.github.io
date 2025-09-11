@@ -1,318 +1,848 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { 
-  Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
-  Brain, Cpu, Shield, Zap, Star, Users, TrendingUp,
-  Globe, Database, Cloud, Lock, Palette, Target,
-  Layers, Sparkles, Atom, Microscope, Satellite
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const serviceCategories = [
-  {
-    title: 'Revolutionary 2026 AI',
-    icon: Brain,
-    services: [
-      { name: 'AI Predictive Business Intelligence', href: '/ai-predictive-business-intelligence', description: 'Predict market trends with 95% accuracy', price: '$1,299/month' },
-      { name: 'Autonomous AI Healthcare Diagnostics', href: '/autonomous-ai-healthcare-diagnostics', description: 'AI-powered medical diagnostics with 99.2% accuracy', price: '$3,999/month' },
-      { name: 'AI Autonomous Manufacturing', href: '/ai-autonomous-manufacturing-platform', description: 'Fully autonomous manufacturing with AI optimization', price: '$4,999/month' },
-      { name: 'AI Metaverse Development', href: '/ai-metaverse-development-platform', description: 'Create immersive metaverse experiences with AI', price: '$2,499/month' }
-    ]
-  },
-  {
-    title: 'Quantum Computing',
-    icon: Atom,
-    services: [
-      { name: 'Quantum-Secure Financial Trading', href: '/quantum-secure-financial-trading', description: 'Unbreakable quantum encryption for trading', price: '$2,999/month' },
-      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Unbreakable quantum encryption for internet', price: '$1,999/month' },
-      { name: 'Quantum Space Mining Platform', href: '/quantum-space-mining-platform', description: 'Revolutionary space resource exploration', price: '$8,999/month' },
-      { name: 'Quantum Blockchain Infrastructure', href: '/quantum-blockchain-infrastructure', description: 'Quantum-secure blockchain for finance', price: '$1,799/month' }
-    ]
-  },
-  {
-    title: '2026 IT Services',
-    icon: Shield,
-    services: [
-      { name: 'Advanced Cybersecurity Suite', href: '/advanced-cybersecurity-suite', description: 'Next-generation cybersecurity protection for modern businesses', price: '$799/month' },
-      { name: 'Cloud Migration & Optimization', href: '/cloud-migration-optimization', description: 'Seamless cloud migration with intelligent optimization', price: '$1,299/month' },
-      { name: 'DevOps & CI/CD Automation', href: '/devops-cicd-automation', description: 'Accelerate software delivery with intelligent automation', price: '$599/month' },
-      { name: 'Data Analytics & Business Intelligence', href: '/data-analytics-business-intelligence', description: 'Transform data into actionable business insights', price: '$899/month' }
-    ]
-  },
-  {
-    title: '2026 Micro SaaS',
-    icon: Zap,
-    services: [
-      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights with AI', price: '$299/month' },
-      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Automate customer support with intelligent AI agents', price: '$199/month' },
-      { name: 'AI Marketing Automation Suite', href: '/ai-marketing-automation-suite', description: 'Intelligent marketing automation powered by AI', price: '$399/month' },
-      { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform', description: 'Boost sales performance with AI-powered insights', price: '$249/month' }
-    ]
-  },
-  {
-    title: 'Emerging Technologies',
-    icon: Rocket,
-    services: [
-      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$12,999/month' },
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$25,999/month' },
-      { name: 'Photonic Computing Platform', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$18,999/month' },
-      { name: 'Holographic Display Platform', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$6,999/month' }
-    ]
-  },
-  {
-    title: 'Enterprise IT & Security',
-    icon: Shield,
-    services: [
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify security', price: '$15,999/month' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed computing management', price: '$8,999/month' },
-      { name: '5G Private Network Solutions', href: '/5g-private-network-solutions', description: 'High-speed private networks', price: '$12,999/month' },
-      { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform', description: 'Intelligent automation for development', price: '$4,999/month' }
-    ]
-  },
-  {
-    title: 'Autonomous Systems',
-    icon: Target,
-    services: [
-      { name: 'AI Autonomous Supply Chain', href: '/ai-autonomous-supply-chain', description: 'Fully autonomous supply chain optimization', price: '$3,299/month' },
-      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Coordinated multi-robot systems', price: '$9,999/month' },
-      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-platform', description: 'AI-powered autonomous vehicle control', price: '$11,999/month' },
-      { name: 'Quantum Internet Platform', href: '/quantum-internet-platform', description: 'Next-generation quantum communication', price: '$5,999/month' }
-    ]
-  },
-  {
-    title: 'Cloud & Infrastructure',
-    icon: Cloud,
-    services: [
-      { name: 'Cloud Migration & Optimization', href: '/cloud-migration-optimization', description: 'Seamless cloud migration with optimization', price: '$9,999/month' },
-      { name: 'Data Center Modernization', href: '/data-center-modernization', description: 'Transform legacy data centers', price: '$18,999/month' },
-      { name: 'API Management & Security', href: '/api-management-security', description: 'Comprehensive API management', price: '$3,999/month' },
-      { name: 'Identity & Access Management', href: '/identity-access-management', description: 'Comprehensive identity management', price: '$5,999/month' }
-    ]
+export default function UltraAdvancedNavigation() {
+	return (
+		<header className="w-full border-b border-gray-800 bg-black/80 backdrop-blur px-4 py-3">
+			<div className="max-w-7xl mx-auto flex items-center justify-between">
+				<a href="/" className="text-white font-semibold">Zion Tech Group</a>
+				<nav className="hidden md:flex items-center gap-6 text-sm text-gray-300">
+					<a href="/services" className="hover:text-white">Services</a>
+					<a href="/about" className="hover:text-white">About</a>
+					<a href="/contact" className="hover:text-white">Contact</a>
+				</nav>
+			</div>
+		</header>
+	);
+}=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-];
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 
-const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services' },
-  { name: '2026 Services', href: '/2026-services-showcase' },
-  { name: 'All Services', href: '/services' },
-  { name: 'Market Pricing', href: '/market-pricing-2026' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Resources', href: '/resources' }
-];
+import {
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Brain
+  Rocket
+  Dna
+  Globe
+  Shield
+  Wifi
+  Package
+  Bot
+  Car
+  Building2
+  DollarSign
+  Monitor
+  Users
+  Cpu
+  Zap
+  Atom
+  Database
+  Cloud
+  Lock
+  Code;
+} from 'lucide-react';
+import Link from 'next/link';import {
+=======
+==============
+=======
+import Link from 'next/link';import { ;
 
-	const navigationItems: Array<{ name: string; href: string; icon?: React.ComponentType<any>; description?: string }>
-		= [
-			{ name: 'Home', href: '/' },
-			{ name: 'AI', href: '/ai-services', icon: Brain, description: 'AI & ML services' },
-			{ name: 'Quantum', href: '/quantum-cloud-infrastructure', icon: Atom, description: 'Quantum & space' },
-			{ name: 'Enterprise IT', href: '/it-services', icon: Building2, description: 'Cloud, DevOps, Security' },
-			{ name: 'Services', href: '/services', icon: Monitor, description: 'Directory of services' },
-			{ name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits, pricing refs' },
-			{ name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Vendor references' },
-			{ name: 'Contact', href: '/contact' }
-		];
 
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
+  Bot, Car, Building2, DollarSign, Monitor, Users;
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 50);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  const navigationItems = [
+    {
+      name: 'Home'
+      href: '/'
+      icon: null
+    },    {      icon: null
+    }
+=======
+=======
+  Cpu, Zap, Atom, Database, Cloud, Lock, Code;
+} from 'lucide-react';
+
+import Link from 'next/link';
+
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+      setIsScrolled(window.scrollY > 50)
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
-  const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category);
-  };
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: null
+    };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-    setActiveDropdown(null);
-  };
+          name: 'AI Agent Orchestrator',
+          href: '/ai - agents',
+          icon: Bot,
+      description: 'Benchmarks & vendor references'
+    }
+    {
+      name: 'About'
+      href: '/about',          price: '$7,999/month'
+        }
+      ]
+    }
+      name: 'Micro SaaS'
+      href: '/services'
+      icon: Monitor
+      description: '300+ micro SaaS services'
+    },      description: '300+ micro SaaS services'
+    }
+    {
+      name: 'Market Pricing'
+      href: '/market-pricing'
+      icon: DollarSign
+      description: 'Benchmarks & vendor references'
+    },    {
+      name: 'About',
+      href: '/about',
+      icon: null;
+    }
+    {
+      name: 'Contact'
+      href: '/contact'
+      icon: null
+    }
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: null,
+    },  ];      icon: null;
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    }
+  ];
+
+
+
+
+
+  const contactInfo = {
+
+  useEffect(() => {;
+    const handleScroll = () => {;
+      setIsScrolled(window && window.scrollY > 50);
+    };
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 50);
+    };
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);
+  const navigationItems = [;
+    {;
+      name: 'Home',;
+      href: '/',;
+      icon: null,;
+    },    {      icon: null;
+    };
+    {;
+      name: 'AI Services',;
+      href: '#',;
+      icon: Brain,;
+      description: 'Cutting-edge AI solutions',;
+      dropdown: [;
+        {;
+          name: 'AI Agent Orchestrator',;
+          href: '/ai-agents',;
+          icon: Bot,;
+          description: 'Multi-agent workflow automation',;
+          price: '$2,999/month',;
+        },        {          price: '$2,999/month';
+        };
+        {;
+          name: 'AI Cybersecurity',;
+          href: '/security',;
+          icon: Shield,;
+          description: 'AI-powered threat detection',;
+          price: '$4,999/month',;
+        },        {          price: '$4,999/month';
+        };
+        {;
+          name: 'AI Healthcare Analytics',;
+          href: '/ai-data-analytics',;
+          icon: Dna,;
+          description: 'Patient outcome prediction',;
+          price: '$3,999/month',;
+        },        {          price: '$3,999/month';
+        };
+        {;
+          name: 'AI Supply Chain',;
+          href: '/quantum-logistics',;
+          icon: Package,;
+          description: 'End-to-end optimization',;
+          price: '$2,499/month',;
+        },        {          price: '$2,499/month';
+        };
+        {;
+          name: 'AI Financial Risk',;
+          href: '/ai-financial-risk',;
+          icon: DollarSign,;
+          description: 'Advanced risk management',;
+          price: '$5,999/month',;
+        },;
+      ],;
+    },    {          price: '$5,999/month';
+        }
+      ];
+    };
+      name: 'Quantum Computing',;
+      href: '#',;
+      icon: Atom,;
+      description: 'Quantum-powered solutions',;
+      dropdown: [;
+        {;
+          name: 'Quantum AI Supercomputer',;
+          href: '/quantum-ai-cognitive',;
+          icon: Cpu,;
+          description: 'Enterprise quantum computing',;
+          price: '$15,999/month',;
+        },        {          price: '$15,999/month';
+        };
+        {;
+          name: 'Quantum Internet Security',;
+          href: '/quantum-internet-security-platform',;
+          icon: Lock,;
+          description: 'Future-proof encryption',;
+          price: '$8,999/month',;
+        },        {          price: '$8,999/month';
+        };
+        {;
+          name: 'Quantum Drug Discovery',;
+          href: '/biotech-ai',;
+          icon: Dna,;
+          description: 'Accelerated drug development',;
+          price: '$12,999/month',;
+        },        {          price: '$12,999/month';
+        };
+        {;
+          name: 'Quantum Financial Trading',;
+          href: '/quantum-financial-trading',;
+          icon: DollarSign,;
+          description: 'Nanosecond precision trading',;
+          price: '$19,999/month',;
+        },        {          price: '$19,999/month';
+        };
+        {;
+          name: 'Quantum IoT Platform',;
+          href: '/quantum-iot',;
+          icon: Wifi,;
+          description: 'Quantum-secured IoT',;
+          price: '$4,999/month',;
+        },;
+      ],;
+    },    {          price: '$4,999/month';
+        }
+      ];
+    };
+      name: 'Space Technology',;
+      href: '#',;
+      icon: Rocket,;
+      description: 'Space mission management',;
+      dropdown: [;
+        {;
+          name: 'Space Mission Control',;
+          href: '/space-technology',;
+          icon: Rocket,;
+          description: 'Complete mission management',;
+          price: '$25,999/month',;
+        },        {          price: '$25,999/month';
+        };
+        {;
+          name: 'Space Debris Cleanup',;
+          href: '/space-technology',;
+          icon: Package,;
+          description: 'AI-powered debris removal',;
+          price: '$35,999/month',;
+        },;
+      ],;
+    },    {          price: '$35,999/month';
+        }
+      ];
+    };
+      name: 'Enterprise IT',;
+      href: '#',;
+      icon: Building2,;
+      description: 'Enterprise solutions',;
+      dropdown: [;
+        {;
+          name: 'Cloud Migration',;
+          href: '/cloud-platform',;
+          icon: Cloud,;
+          description: 'Zero-downtime migration',;
+          price: '$8,999/month',;
+        },        {          price: '$8,999/month';
+        };
+        {;
+          name: 'DevOps Automation',;
+          href: '/automation',;
+          icon: Code,;
+          description: 'AI-powered automation',;
+          price: '$5,999/month',;
+        },        {          price: '$5,999/month';
+        };
+        {;
+          name: 'Data Analytics',;
+          href: '/ai-data-analytics',;
+          icon: Database,;
+          description: 'AI-powered insights',;
+          price: '$6,999/month',;
+        },        {          price: '$6,999/month';
+        };
+        {;
+          name: 'Security Operations',;
+          href: '/security',;
+          icon: Shield,;
+          description: '24/7 security monitoring',;
+          price: '$12,999/month',;
+        },        {          price: '$12,999/month';
+        };
+        {;
+          name: 'API Management',;
+          href: '/api-observability',;
+          icon: Code,;
+          description: 'Complete lifecycle management',;
+          price: '$4,999/month',;
+        },        {          price: '$4,999/month';
+        };
+        {;
+          name: 'Digital Transformation',;
+          href: '/solutions',;
+          icon: Zap,;
+          description: 'AI-powered transformation',;
+          price: '$15,999/month',;
+        },        {          price: '$15,999/month';
+        };
+        {;
+          name: 'IoT Management',;
+          href: '/it-asset-discovery-agent',;
+          icon: Wifi,;
+          description: 'AI-powered device management',;
+          price: '$7,999/month',;
+        },;
+      ],;
+    },    {;
+      name: 'Micro SaaS',;
+      href: '/services',;
+      icon: Monitor,;
+      description: '300+ micro SaaS services',;
+    },    {;
+      name: 'Market Pricing',;
+      href: '/market-pricing',;
+      icon: DollarSign,;
+      description: 'Benchmarks & vendor references',;
+    },;
+    {;
+      name: 'About',;
+      href: '/about',          price: '$7,999/month';
+        }
+      ];
+    };
+      name: 'Micro SaaS',;
+      href: '/services',;
+      icon: Monitor,;
+      description: '300+ micro SaaS services',;
+    },      description: '300+ micro SaaS services';
+    };
+    {;
+      name: 'Market Pricing',;
+      href: '/market-pricing',;
+      icon: DollarSign,;
+      description: 'Benchmarks & vendor references',;
+    },    {;
+      name: 'About',;
+      href: '/about',;
+      icon: null;
+    };
+    {;
+      name: 'Contact',;
+      href: '/contact',;
+      icon: null,;
+    },;
+    {;
+      name: 'Contact',;
+      href: '/contact',;
+      icon: null,;
+    },  ];      icon: null;
+    }
+  ];
+  const contactInfo = {;
+    mobile: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;  };
+    >;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
+    <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  const _navigationItems = [
+    {_name: 'Home', _href: '/', _icon: null},
+    {_name: 'AI Services', _href: '#', _icon: Brain, _description: 'Cutting-edge AI solutions', _dropdown: [
+        {
+          name: 'AI Agent Orchestrator', _href: '/ai-agents', _icon: Bot, _description: 'Multi-agent workflow automation', _price: '$2, _999/month'},
+        {_name: 'AI Cybersecurity', _href: '/security', _icon: Shield, _description: 'AI-powered threat detection', _price: '$4, _999/month'},
+        {_name: 'AI Healthcare Analytics', _href: '/ai-data-analytics', _icon: Dna, _description: 'Patient outcome prediction', _price: '$3, _999/month'},
+        {_name: 'AI Supply Chain', _href: '/quantum-logistics', _icon: Package, _description: 'End-to-end optimization', _price: '$2, _499/month'},
+        {_name: 'AI Financial Risk', _href: '/ai-financial-risk', _icon: DollarSign, _description: 'Advanced risk management', _price: '$5, _999/month'}
+      ]
+    },
+    {_name: 'Quantum Computing', _href: '#', _icon: Atom, _description: 'Quantum-powered solutions', _dropdown: [
+        {
+          name: 'Quantum AI Supercomputer', _href: '/quantum-ai-cognitive', _icon: Cpu, _description: 'Enterprise quantum computing', _price: '$15, _999/month'},
+        {_name: 'Quantum Internet Security', _href: '/quantum-internet-security-platform', _icon: Lock, _description: 'Future-proof encryption', _price: '$8, _999/month'},
+        {_name: 'Quantum Drug Discovery', _href: '/biotech-ai', _icon: Dna, _description: 'Accelerated drug development', _price: '$12, _999/month'},
+        {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading', _icon: DollarSign, _description: 'Nanosecond precision trading', _price: '$19, _999/month'},
+        {_name: 'Quantum IoT Platform', _href: '/quantum-iot', _icon: Wifi, _description: 'Quantum-secured IoT', _price: '$4, _999/month'}
+      ]
+    },
+    {_name: 'Space Technology', _href: '#', _icon: Rocket, _description: 'Space mission management', _dropdown: [
+        {
+          name: 'Space Mission Control', _href: '/space-technology', _icon: Rocket, _description: 'Complete mission management', _price: '$25, _999/month'},
+        {_name: 'Space Debris Cleanup', _href: '/space-technology', _icon: Package, _description: 'AI-powered debris removal', _price: '$35, _999/month'}
+      ]
+    },
+    {_name: 'Enterprise IT', _href: '#', _icon: Building2, _description: 'Enterprise solutions', _dropdown: [
+        {
+          name: 'Cloud Migration', _href: '/cloud-platform', _icon: Cloud, _description: 'Zero-downtime migration', _price: '$8, _999/month'},
+        {_name: 'DevOps Automation', _href: '/automation', _icon: Code, _description: 'AI-powered automation', _price: '$5, _999/month'},
+        {_name: 'Data Analytics', _href: '/ai-data-analytics', _icon: Database, _description: 'AI-powered insights', _price: '$6, _999/month'},
+        {_name: 'Security Operations', _href: '/security', _icon: Shield, _description: '24/7 security monitoring', _price: '$12, _999/month'},
+        {_name: 'API Management', _href: '/api-observability', _icon: Code, _description: 'Complete lifecycle management', _price: '$4, _999/month'},
+        {_name: 'Digital Transformation', _href: '/solutions', _icon: Zap, _description: 'AI-powered transformation', _price: '$15, _999/month'},
+        {_name: 'IoT Management', _href: '/it-asset-discovery-agent', _icon: Wifi, _description: 'AI-powered device management', _price: '$7, _999/month'}
+      ]
+    },
+    {
+      name: 'Micro SaaS',
+      href: '/services',
+      icon: Monitor,
+      description: '300+ micro SaaS services'
+    },
+    {
+      name: 'Market Pricing',
+      href: '/market-pricing',
+      icon: DollarSign,
+      description: 'Benchmarks & vendor references'
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: null
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: null
+    }
+  ],
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  },
+
+  return (_<nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
       isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
+        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
         : 'bg-transparent'
     }`}>
-      {/* Enhanced Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border-b border-gray-700/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-2">
-            <div className="flex items-center space-x-6 text-sm">
-              <div className="flex items-center space-x-2 text-cyan-300 hover:text-cyan-200 transition-colors">
-                <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">{contactInfo.mobile}</span>
-                <span className="sm:hidden">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2 text-purple-300 hover:text-purple-200 transition-colors">
-                <Mail className="w-4 h-4" />
-                <span className="hidden sm:inline">{contactInfo.email}</span>
-                <span className="sm:hidden">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="hidden lg:flex items-center space-x-2 text-green-300 hover:text-green-200 transition-colors">
-                <MapPin className="w-4 h-4" />
-                <span>{contactInfo.address}</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <a 
-                href="/contact" 
-                className="hidden sm:inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+      name: 'Contact'
+      href: '/contact'
+      icon: null
+    },  ];      icon: null
+    }
+  ];
 
-      {/* Main Navigation */}
-      <div className="bg-gray-900/95 backdrop-blur-2xl border-b border-cyan-500/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <motion.div 
-              className="flex items-center space-x-3"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="relative">
-                  <div className="w-14 h-14 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-cyan-500/30 group-hover:shadow-cyan-500/50 transition-all duration-300 group-hover:scale-110">
-                    <Rocket className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+    >
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50'
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+
+
+            className='flex items-center'
+
+=======
+      isScrolled 
+        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
+        : 'bg-transparent'
+
+==============
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          >
+            <Link href='/' className='flex items-center space-x-3 group'>
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <Zap className='w-6 h-6 text-white' />
+              </div>
+              <div className='hidden sm:block'>
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
+                  Zion Tech Group
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-3xl font-black bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </span>
-                  <span className="text-sm text-gray-300 font-medium">
-                    Revolutionary AI & Quantum Solutions
-                  </span>
+                <div className='text-xs text-gray-400'>
+                  Revolutionary Technology
+                </div>              </div>          >
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div className="hidden sm:block">
+                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Zion Tech Group
                 </div>
-              </Link>
-            </motion.div>
+                <div className="text-xs text-gray-400">Revolutionary Technology</div>
+              </div>
+            </Link>
+          </motion.div>
+            transition={{ duration: 0 && 0.5 }}
+            className='flex items-center'>;
+            <Link href='/' className='flex items-center space-x-3 group'>;
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
+                <Zap className='w-6 h-6 text-white' />;
+              </div>;
+              <div className='hidden sm:block'>;
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
+                  Zion Tech Group;
+                </div>;
+                <div className='text-xs text-gray-400'>;
+                  Revolutionary Technology;
+                </div>              </div>          >;
+            <Link href="/" className="flex items-center space-x-3 group">;
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
+                <Zap className="w-6 h-6 text-white" />;
+              </div>;
+              <div className="hidden sm:block">;
+                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text-xs text-gray-400">Revolutionary Technology</div>;
+              </div>;
+            </Link>;
+          </motion && motion.div>;
+          {/* Desktop Navigation */}
+==============
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {serviceCategories.map((category) => (
-                <div key={category.title} className="relative group">
-                  <button
-                    onClick={() => toggleDropdown(category.title)}
-                    className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-800/50"
-                  >
-                    <category.icon className="w-5 h-5" />
-                    <span className="font-medium">{category.title}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === category.title ? 'rotate-180' : ''
-                    }`} />
-                  </button>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item, index) => (
+              <div key={item.name} className="relative group">
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  }
+;
+    >;
+      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+        <div className='flex justify - between items - center h - 20'>          {/* Logo */}  return (
+    <nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+      is_scrolled;
+        ? 'bg - black / 90 backdrop - blur - xl border - b border - gray - 800 / 50';
+        : 'bg - transparent';
+    }`}>;
+      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className="flex justify - between items - center h - 20">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_x: -20 }}
+            animate={{ opacity: 1, coordinate_x: 0 }}
+            transition={{ duration: 0.5 }}
+            className='flex items - center';
+          >;
+            <Link href='/' className='flex items - center space - x-3 group'>;
+              <div className='w - 10 h - 10 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
+                <Zap className='w - 6 h - 6 text - white' />;
+              </div>;
+              <div className='hidden sm:block'>;
+                <div className='text - xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent'>;
+                  Zion Tech Group;
+                </div>;
+                <div className='text - xs text - gray - 400'>;
+                  Revolutionary Technology;
+                </div>              </div>          >;
+            <Link href="/" className="flex items - center space - x-3 group">;
+              <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">;
+                <Zap className="w - 6 h - 6 text - white" />;
+              </div>;
+              <div className="hidden sm:block">;
+                <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text - xs text - gray - 400">Revolutionary Technology</div>;
+              </div>;
+            </Link>;
+          </motion.div>;
+          {/* Desktop Navigation */}
+          <div className='hidden lg:flex items - center space - x-8'>;
+            {navigation_items.map ((item, index) => (
+              <div key={item.name} className='relative group'>;
+                {item.dropdown ? (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                {item.dropdown ? (
+                  <button;
+                    on_click={() => setActiveDropdown (active_dropdown === item.name ? null : item.name)}
+                    className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 py - 2";
+                  >;
+                    {item.icon && <item.icon className="w - 4 h - 4" />}
+                    <span>{item.name}</span>;
+                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 300 ${
+                      active_dropdown === item.name ? 'rotate - 180' : '';
+                    }`} />;
+                  </button>) : (
+                  <Link;
+                    href={item.href}
 
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>
-                    {activeDropdown === category.title && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+==============
+
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {item && item.dropdown && (;
+                  <AnimatePresence>;
+                    {activeDropdown === item && item.name && (;
+                      <motion&& motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-96 bg-gray-900/98 backdrop-blur-2xl border border-cyan-500/30 rounded-2xl shadow-2xl shadow-cyan-500/20 z-50"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
                       >
-                        <div className="p-6">
-                          <div className="mb-4">
-                            <h3 className="text-xl font-bold text-white mb-3 flex items-center space-x-3">
-                              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                                <category.icon className="w-5 h-5 text-white" />
-                              </div>
-                              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                                {category.title}
-                              </span>
-                            </h3>
-                            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full"></div>
-                          </div>
-                          <div className="space-y-4">
-                            {category.services.map((service) => (
+                        <div className="p-4">
+                          <div className="text-sm text-gray-400 mb-3">{item.description}</div>
+                          <div className="space-y-2">
+                            {item.dropdown.map((dropdownItem) => (
                               <Link
-                                key={service.name}
-                                href={service.href}
-                                className="block p-4 rounded-xl hover:bg-gradient-to-r hover:from-cyan-500/10 hover:to-purple-500/10 border border-transparent hover:border-cyan-500/30 transition-all duration-300 group"
-                                onClick={closeMenu}
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
                               >
-                                <div className="flex items-start justify-between">
-                                  <div className="flex-1">
-                                    <h4 className="font-semibold text-white group-hover:text-cyan-300 transition-colors text-lg">
-                                      {service.name}
-                                    </h4>
-                                    <p className="text-sm text-gray-400 mt-1">{service.description}</p>
+                                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                                  <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
+                                </div>
+                                <div className="flex-1">
+                                  <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
+                                    {dropdownItem.name}
                                   </div>
-                                  <div className="ml-4 text-right">
-                                    <span className="text-xs font-semibold text-cyan-400">{service.price}</span>
+                                  <div className="text-sm text-gray-400">{dropdownItem.description}</div>
+                                </div>
+                                <div className="text-sm font-semibold text-cyan-400">
+=======
+
+=======
+=======
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+
+                      >
+                        <div className='p-4'>
+                          <div className='text-sm text-gray-400 mb-3'>
+                            {item.description}
+                          </div>
+                          <div className='space-y-2'>
+                            {item.dropdown.map(dropdownItem => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group'
+                              >
+                                <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200'>
+                                  <dropdownItem.icon className='w-5 h-5 text-cyan-400' />
+                                </div>
+                                <div className='flex-1'>
+                                  <div className='text-white font-medium group-hover:text-cyan-400 transition-colors duration-200'>
+                                    {dropdownItem.name}
                                   </div>
+                                  <div className='text-sm text-gray-400'>
+                                    {dropdownItem.description}                                  </div>
+                                </div>
+                                <div className='text-sm font-semibold text-cyan-400'>                                  {dropdownItem.price}                                <div className="text-sm font-semibold text-cyan-400">
+                                  {dropdownItem.price}
                                 </div>
                               </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
+          </div>;
 
-              {/* Company Links */}
-              <div className="flex items-center space-x-6">
-                {companyLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
 
-              {/* CTA Button */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
-                >
-                  <Rocket className="w-5 h-5 mr-2" />
-                  Get Started
-                </Link>
-              </motion.div>
-            </div>
 
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          {/* Contact Info & CTA */}
+          <div className='hidden lg:flex items-center space-x-6'>;
+            <div className='flex items-center space-x-4 text-sm text-gray-300'>;
+              <a
+
+
+              </a>
+              <a
+
           </div>
-        </div>
-      </div>
 
+          {/* Contact Info & CTA */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <div className="flex items-center space-x-4 text-sm text-gray-300">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
+                <Phone className="w-4 h-4" />
+                <span className="hidden xl:inline">{contactInfo.mobile}</span>
+              </a>
+
+                href={`tel:${contactInfo && contactInfo.mobile}`}
+                className='flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200'>;
+                <Phone className='w-4 h-4' />;
+                <span className='hidden xl:inline'>{contactInfo && contactInfo.mobile}</span>;
+              </a>;
+              <a
+          </div>
+
+          {/* Contact Info & CTA */}
+          <div className='hidden lg:flex items-center space-x-6'>
+            <div className='flex items-center space-x-4 text-sm text-gray-300'>
+              <a
+=======                href={`tel:${contactInfo.mobile}`}
+                className='flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200'
+              >
+                <Phone className='w-4 h-4' />
+                <span className='hidden xl:inline'>{contactInfo.mobile}</span>
+
+
+
+              </a>>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <a
+
+          </div>
+
+          {/* Contact Info & CTA */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <div className="flex items-center space-x-4 text-sm text-gray-300">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
+                <Phone className="w-4 h-4" />
+                <span className="hidden xl:inline">{contactInfo.mobile}</span>
+              </a>
+
+                href={`mailto:${contactInfo && contactInfo.email}`}
+                className='flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200'>;
+                <Mail className='w-4 h-4' />;
+                <span className='hidden xl:inline'>{contactInfo && contactInfo.email}</span>;
+              </a>;
+            </div>;
+            <motion&& motion.a
+              href='/contact'
+              whileHover={{ scale: 1 && 1.05 }}
+              whileTap={{ scale: 0 && 0.95 }}
+              className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'>              </a>;
+              <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">;
+                <Mail className="w-4 h-4" />;
+                <span className="hidden xl:inline">{contactInfo && contactInfo.email}</span>;
+              </a>;
+            </div>;
+            <motion&& motion.a
+              href="/contact"
+              whileHover={{ scale: 1 && 1.05 }}
+              whileTap={{ scale: 0 && 0.95 }}
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">;
+              Get Started;
+            </motion && motion.a>;
+          </div>;
+
+
+=======
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navigationItems.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
+                      >
+                        <div className="flex items-center space-x-3">
+                          {item.icon && <item.icon className="w-5 h-5" />}
+                          <span>{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      {activeDropdown === item.name && (
+                        <div className="ml-8 mt-2 space-y-2">
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -321,90 +851,262 @@ const companyLinks = [
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
+            className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden'
           >
-            <div className="px-4 py-6 space-y-6">
-              {/* Service Categories */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
-                {serviceCategories.map((category) => (
-                  <div key={category.title} className="space-y-2">
-                    <div className="flex items-center space-x-2 text-cyan-300">
-                      <category.icon className="w-5 h-5" />
-                      <span className="font-medium">{category.title}</span>
-                    </div>
-                    <div className="ml-7 space-y-2">
-                      {category.services.map((service) => (
-                        <Link
-                          key={service.name}
-                          href={service.href}
-                          className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200"
-                          onClick={closeMenu}
-                        >
-                          <div className="flex items-start justify-between">
-                            <div className="flex-1">
-                              <h4 className="font-medium text-white">{service.name}</h4>
-                              <p className="text-sm text-gray-400 mt-1">{service.description}</p>
-                            </div>
-                            <span className="text-xs font-semibold text-cyan-400 ml-4">{service.price}</span>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className='px-4 py-6 space-y-4'>
+              {navigationItems.map(item => (                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <button            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navigationItems.map((item) => (
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() =>
+                          setActiveDropdown(
+                            activeDropdown === item.name ? null : item.name
+                          )
+                        }
+                        className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
+                        <div className='flex items-center space-x-3'>
+                          {item.icon && <item.icon className='w-5 h-5' />}
+                          <span>{item.name}</span>
+                        </div>
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            activeDropdown === item.name ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      {activeDropdown === item.name && (
+                        <div className='ml-8 mt-2 space-y-2'>
+                          {item.dropdown.map(dropdownItem => (                            <Link
+                              key={dropdownItem.name}
+                              href={dropdownItem.href}
+                              onClick={() => setIsOpen(false)}
+                              className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'                            >                        <div className="ml-8 mt-2 space-y-2">
+                          {item.dropdown.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              href={dropdownItem.href}
+                              onClick={() => setIsOpen(false)}
+                              className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'                              className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
+                            >
+                              {dropdownItem.name}
+                            </Link>
 
-              {/* Company Links */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {companyLinks.map((link) => (
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
                     <Link
-                      key={link.name}
-                      href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                      onClick={closeMenu}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      <span>{item.name}</span>
 
-              {/* Contact Info */}
-              <div className="space-y-4 pt-4 border-t border-gray-700/50">
-                <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Phone className="w-5 h-5 text-cyan-400" />
-                    <span>{contactInfo.mobile}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Mail className="w-5 h-5 text-purple-400" />
-                    <span>{contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-5 h-5 text-green-400" />
-                    <span className="text-sm">{contactInfo.address}</span>
-                  </div>
+                  )}
                 </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="pt-4">
-                <Link
+              ))}
+=======
+                    href={`mailto:${contactInfo && contactInfo.email}`}
+                    className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200'>;
+                    <Mail className='w-4 h-4' />;
+                    <span>{contactInfo && contactInfo.email}</span>;
+                  </a>;
+                  <div className='flex items-start space-x-3'>;
+                    <MapPin className='w-4 h-4 mt-0 && 0.5' />;
+                    <span>{contactInfo && contactInfo.address}</span>;
+                  </div>;
+                </div>;
+                <motion&& motion.a
+                  href='/contact'
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{ scale: 0 && 0.95 }}
+                  className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'>              {/* Mobile Contact Info */}
+              <div className="pt-6 border-t border-gray-800/50">;
+                <div className="space-y-3 text-sm text-gray-400">;
+                  <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">;
+                    <Phone className="w-4 h-4" />;
+                    <span>{contactInfo && contactInfo.mobile}</span>;
+                  </a>;
+                  <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">;
+                    <Mail className="w-4 h-4" />;
+                    <span>{contactInfo && contactInfo.email}</span>;
+                  </a>;
+                  <div className="flex items-start space-x-3">;
+                    <MapPin className="w-4 h-4 mt-0 && 0.5" />;
+                    <span>{contactInfo && contactInfo.address}</span>;
+                  </div>;
+                </div>;
+                <motion&& motion.a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
                   href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  onClick={closeMenu}
-                >
-                  Get Started Today
-                </Link>
-              </div>
-            </div>
-          </motion.div>
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{ scale: 0 && 0.95 }}
+                  className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">;
+                  Get Started;
+                </motion && motion.a>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
         )}
-      </AnimatePresence>
-    </nav>
+      </AnimatePresence>;
+    </nav>;
   );
+
+
+
+=======      {/* Mobile Menu */}
+      <AnimatePresence>;
+        {is_open && (
+          <motion.div;
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray - 800 / 50 overflow - hidden';
+          >;
+            <div className='px - 4 py - 6 space - y-4'>;
+              {navigation_items.map (item => (                <div key={item.name}>;
+                  {item.dropdown ? (
+                    <div>;
+                      <button            className="lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray - 800 / 50 overflow - hidden";
+          >;
+            <div className="px - 4 py - 6 space - y-4">;
+              {navigation_items.map ((item) => (
+                  {item.dropdown ? (
+                    <div>;
+                      <button;
+                        on_click={() =>;
+                          setActiveDropdown (
+                            active_dropdown === item.name ? null : item.name);
+                        }
+                        className='flex items - center justify - between w - full text - left text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';
+                        <div className='flex items - center space - x-3'>;
+                          {item.icon && <item.icon className='w - 5 h - 5' />}
+                          <span>{item.name}</span>;
+                        </div>;
+                        <ChevronDown;
+                          className={`w - 4 h - 4 transition - transform duration - 200 ${
+                            active_dropdown === item.name ? 'rotate - 180' : '';
+                          }`}
+                        />;
+                      </button>;
+                      {active_dropdown === item.name && (
+                        <div className='ml - 8 mt - 2 space - y-2'>;
+                          {item.dropdown.map (dropdown_item => (                            <Link;
+                              key={dropdown_item.name}
+                              href={dropdown_item.href}
+                              on_click={() => setIsOpen (false)}
+                              className='block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200'                            >                        <div className="ml - 8 mt - 2 space - y-2">;
+                          {item.dropdown.map ((dropdown_item) => (
+                            <Link;
+                              key={dropdown_item.name}
+                              href={dropdown_item.href}
+                              on_click={() => setIsOpen (false)}
+                              className='block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200'                              className="block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200";
+                            >;
+                              {dropdown_item.name}
+                            </Link>))}
+                        </div>)}
+                    </div>) : (
+                    <Link;
+                      href={item.href}
+                      on_click={() => setIsOpen (false)}
+                      className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';
+                    >;
+                      {item.icon && <item.icon className='w - 5 h - 5' />}                      <span>{item.name}</span>                      className="flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3";
+                    >;
+                      {item.icon && <item.icon className="w - 5 h - 5" />}
+                      <span>{item.name}</span>;
+                    </Link>)}
+                </div>))}
+              {/* Mobile Contact Info */}
+              <div className='pt - 6 border - t border - gray - 800 / 50'>;
+                <div className='space - y-3 text - sm text - gray - 400'>;
+                  <a;
+                    href={`tel:${contact_info.mobile}`}
+                    className='flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200';
+                  >;
+                    <Phone className='w - 4 h - 4' />;
+                    <span>{contact_info.mobile}</span>;
+                  </a>;
+                  <a;
+                    href={`mailto:${contact_info.email}`}
+                    className='flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200';
+                  >;
+                    <Mail className='w - 4 h - 4' />;
+                    <span>{contact_info.email}</span>;
+                  </a>;
+                  <div className='flex items - start space - x-3'>;
+                    <MapPin className='w - 4 h - 4 mt - 0.5' />;
+                    <span>{contact_info.address}</span>;
+                  </div>;
+                </div>;
+                <motion.a;
+                  href='/contact';
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className='block w - full mt - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - center py - 3 rounded - 2xl font - semibold hover:shadow - lg hover:shadow - cyan - 500 / 25 transition - all duration - 300'                >              {/* Mobile Contact Info */}
+              <div className="pt - 6 border - t border - gray - 800 / 50">;
+                <div className="space - y-3 text - sm text - gray - 400">;
+                  <a href={`tel:${contact_info.mobile}`} className="flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200">;
+                    <Phone className="w - 4 h - 4" />;
+                    <span>{contact_info.mobile}</span>;
+                  </a>;
+                  <a href={`mailto:${contact_info.email}`} className="flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200">;
+                    <Mail className="w - 4 h - 4" />;
+                    <span>{contact_info.email}</span>;
+                  </a>;
+                  <div className="flex items - start space - x-3">;
+                    <MapPin className="w - 4 h - 4 mt - 0.5" />;
+                    <span>{contact_info.address}</span>;
+                  </div>;
+                </div>;
+                <motion.a;
+                  href="/contact";
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className="block w - full mt - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - center py - 3 rounded - 2xl font - semibold hover:shadow - lg hover:shadow - cyan - 500 / 25 transition - all duration - 300";
+                >;
+                  Get Started;
+                </motion.a>;
+              </div>;
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
 }
+;
+export default UltraAdvancedNavigation);
+}
+;
+export default UltraAdvancedNavigation;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default UltraAdvancedNavigation;
+
+export default UltraAdvancedNavigation;
+;=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  );
+
+};
+
+
+export default UltraAdvancedNavigation;  )
+}
+export default UltraAdvancedNavigation;
+
+export default UltraAdvancedNavigation;
+export default UltraAdvancedNavigation;
+=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

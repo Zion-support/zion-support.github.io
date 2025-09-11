@@ -1,0 +1,104 @@
+import "./globals.css";
+import type { ReactNode } from "react";
+import { Navigation } from "@/components/Navigation";
+import Link from "next/link";
+
+export const metadata = {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#8b5cf6" },
+    { media: "(prefers-color-scheme: dark)", color: "#1e293b" },
+  ],
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <head>
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": "Leading provider of AI-powered technology solutions, autonomous systems, and quantum computing innovations.",
+              "foundingDate": "2020",
+              "sameAs": [
+                "https://linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https://github.com/ziontechgroup",
+                "https://youtube.com/@ziontechgroup",
+                "https://discord.gg/ziontechgroup"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "info@ziontechgroup.com"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "US"
+              },
+              "serviceType": [
+                "AI Solutions",
+                "Quantum Computing",
+                "Enterprise Security",
+                "Business Intelligence",
+                "Content Generation",
+                "Research Automation"
+              ]
+            })
+          }}
+        />
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#000000" />      </head>
+      <body className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white antialiased">
+        <Header />
+        <main className="min-h-screen" role="main">
+          {children}
+        </main>
+              {/* Services */}
+              <div>
+                <h4 className="font-semibold mb-3">Platform</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li><a href="/zion-os" className="hover:text-white transition-colors">Zion OS</a></li>
+                  <li><a href="/multiverse/launch" className="hover:text-white transition-colors">Launch Wizard</a></li>
+                  <li><a href="/docs" className="hover:text-white transition-colors">Documentation</a></li>
+                  <li><a href="/admin/instances" className="hover:text-white transition-colors">Instances</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
+              <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+              <div className="flex justify-center space-x-6 mt-2">
+                <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+                <a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a>
+                <a href="/accessibility" className="hover:text-white transition-colors">Accessibility</a>              </div>
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>
+  );
+}

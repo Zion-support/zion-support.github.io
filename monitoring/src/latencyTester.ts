@@ -1,14 +1,103 @@
-import * from module';
-interface LatencyResult {
+import axios, { AxiosError, Method } from 'axios';
+
+export interface Endpoint {
+  name: string; // e.g., 'Django Ping'
+  baseURL: string; // This will be resolved by monitor.ts before calling measureLatency
+  path: string;
+  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'OPTIONS'; // Optional method
+  body?: any; // Optional body for POST/PUT
+  headers?: Record<string, string>; // Optional headers
+  serviceName: string; // Added for remediation
+}
+
+export interface EndpointTestResult {
+  name: string;
   url: string;
   responseTime: number;
   success: boolean;
   error?: string;
+  timestamp: string;
+  serviceName: string; // Added
 }
 
-class LatencyTester {
-  private endpoints = [
-    https://api.github.com',https://jsonplaceholder.typicode.com',https://httpbin.org/status/200''  ];
+export async function measureLatency(endpoints: Endpoint[]): Promise<EndpointTestResult[]> {
+  const results: EndpointTestResult[] = [];
+
+  for (const endpoint of endpoints) {
+    const url = `${endpoint.baseURL}${endpoint.path}`;
+    // Ensure method is a valid Axios Method or default to 'GET'
+    const method: Method = (endpoint.method?.toUpperCase() as Method) || 'GET';
+    const startTime = Date.now();
+    const timestamp = new Date().toISOString();
+
+    try {
+      const response = await axios({
+        method: method,
+        url: url,
+        data: endpoint.body, // Add body to request if provided
+        headers: endpoint.headers, // Add headers to request if provided
+        timeout: 10000, // 10 second timeout
+      });
+      const endTime = Date.now();
+      results.push({
+        name: endpoint.name,
+        url: url,
+        method: method,
+        status: response.status,
+        latencyMs: endTime - startTime,
+        timestamp: timestamp,
+        serviceName: endpoint.serviceName, // Pass serviceName
+      });
+    } catch (error) {
+      const endTime = Date.now();
+      const latencyMs = endTime - startTime;
+      if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError;
+        results.push({
+          name: endpoint.name,
+          url: url,
+          method: method,
+          status: axiosError.response?.status,
+          latencyMs: latencyMs,
+          error: axiosError.message,
+          timestamp: timestamp,
+          serviceName: endpoint.serviceName, // Pass serviceName
+        });
+      } else if (error instanceof Error) {
+        results.push({
+          name: endpoint.name,
+          url: url,
+          method: method,
+          latencyMs: latencyMs,
+          error: error.message,
+          timestamp: timestamp,
+          serviceName: endpoint.serviceName, // Pass serviceName
+        });
+      } else {
+        results.push({
+          name: endpoint.name,
+          url: url,
+          method: method,
+          latencyMs: latencyMs,
+          error: 'Unknown error',
+          timestamp: timestamp,
+          serviceName: endpoint.serviceName, // Pass serviceName
+        });
+      }
+    }
+  }
+  return results;
+}
+
+// Example usage (will be moved to the main cron script later)
+/*
+async function main() {
+  const exampleEndpoints: Endpoint[] = [
+    { name: 'Django Ping', baseURL: process.env.DJANGO_API_BASE_URL || 'http://localhost:8000', path: '/api/ping/' },
+    { name: 'Next.js Health', baseURL: process.env.NEXTJS_API_BASE_URL || 'http://localhost:3000', path: '/api/health' },
+    { name: 'Custom Server Health', baseURL: process.env.CUSTOM_SERVER_BASE_URL || 'http://localhost:3001', path: '/healthz' },
+    { name: 'NonExistent Service', baseURL: 'http://localhost:1234', path: '/nonexistent' },
+  ];
 
   async testEndpoint(url: string): Promise<LatencyResult> {
     const startTime = Date.now();
@@ -26,7 +115,8 @@ class LatencyTester {
         });
       });
 
-      request.on('error', (error) => {'        const endTime = Date.now();
+      request.on('error', (error) => {
+        const endTime = Date.now();
         const responseTime = endTime - startTime;
         
         resolve({
@@ -46,18 +136,21 @@ class LatencyTester {
           url,
           responseTime,
           success: false,
-          error: Timeout after 10 seconds''        });
+          error: 'Timeout after 10 seconds'
+        });
       });
     });
   }
 
   async runLatencyTests(): Promise<LatencyResult[]> {
-    logger.info('Starting latency tests for monitoring endpoints');    
+    logger.info('Starting latency tests for monitoring endpoints');
+    
     const results = await Promise.all(
       this.endpoints.map(endpoint => this.testEndpoint(endpoint))
     );
 
-    logger.info('Latency Test Results:', {'      results: results.map(r => ({
+    logger.info('Latency Test Results:', {
+      results: results.map(r => ({
         url: r.url,
         responseTime: r.responseTime,
         success: r.success,
@@ -68,12 +161,14 @@ class LatencyTester {
     // Log any failed tests as warnings
     results.forEach(result => {
       if (!result.success) {
-        logger.warn('Latency test failed', {'          url: result.url,
+        logger.warn('Latency test failed', {
+          url: result.url,
           responseTime: result.responseTime,
           error: result.error
         });
       } else {
-        logger.info('Latency test successful', {'          url: result.url,
+        logger.info('Latency test successful', {
+          url: result.url,
           responseTime: result.responseTime
         });
       }
@@ -82,16 +177,18 @@ class LatencyTester {
     return results;
   }
 }
-;
-default LatencyTester;
+
+export default LatencyTester;
 
 async function main() {
   const tester = new LatencyTester();
   try {
     await tester.runLatencyTests();
   } catch (error) {
-    logger.error('Failed to run latency tests:', error);  }
+    logger.error('Failed to run latency tests:', error);
+  }
 }
 
 if (require.main === module) {
-  main().catch(error => logger.error('Latency test execution failed:', error));}
+  main().catch(error => logger.error('Latency test execution failed:', error));
+}

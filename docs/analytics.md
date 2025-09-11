@@ -8,4 +8,4 @@ Page views and click events are sent to GA4. Use the `DebugView` while running t
 
 ## Sentry Dashboard
 
-Errors reported with `captureException` are visible in the Sentry project configured by the `VITE_SENTRY_DSN` environment variable. In development you can trigger a failing API request to confirm events arrive in Sentry.
+Errors reported with `captureException` are visible in the Sentry project configured by the `SENTRY_DSN` environment variable. In development you can trigger a failing API request to confirm events arrive in Sentry.

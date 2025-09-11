@@ -7,21 +7,19 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = { schedule: '*/10 * * * *' };
-
 exports.handler = async () => {
   const logs = [];
-  const logStep = (name, fn) => {
+  function step(name, fn) {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
-  };
+  }
 
-  logStep('knowledge:pack', () => runNode('automation/knowledge-pack-runner.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  step('knowledge:pack', () => runNode('automation/knowledge-pack.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
 };

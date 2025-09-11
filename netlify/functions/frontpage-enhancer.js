@@ -1,37 +1,60 @@
 // Netlify Scheduled Function: Frontpage Enhancer
 // Runs homepage advertising and updater automations without GitHub Actions.
 
+const { execFile } = require('child_process');
 const path = require('path');
-const { spawnSync } = require('child_process');
 
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+function runNodeScript(scriptRelativePath, args = []) {
+  const cwd = path.resolve(__dirname, '../../');
+  const scriptPath = path.resolve(cwd, scriptRelativePath);
+  return new Promise((resolve) => {
+    const startedAt = Date.now();
+    const child = execFile('node', [scriptPath, ...args], { cwd, env: process.env }, (error, stdout, stderr) => {
+      resolve({
+        script: scriptRelativePath,
+        ok: !error,
+        code: error ? error.code : 0,
+        durationMs: Date.now() - startedAt,
+        stdout: stdout ? stdout.toString() : '',
+        stderr: stderr ? stderr.toString() : '',
+      });
+    });
+    child.on('error', () => {});
+  });
 }
 
-exports.config = {
-  schedule: '*/5 * * * *', // every 5 minutes
-};
+exports.handler = async function () {
+  const steps = [
+    ['automation/homepage-updater.cjs'],
+    ['automation/homepage-promo-orchestrator.cjs', 'once'],
+    ['automation/site-promo-orchestrator.cjs', 'once'],
+    // Optional UI beautification sweep
+    ['automation/ui-evolution-launcher.js', 'beautify'],
+  ];
 
-exports.handler = async () => {
-  const logs = [];
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
+  const results = [];
+  for (const [script, arg] of steps) {
+    try {
+      results.push(await runNodeScript(script, arg ? [arg] : []));
+    } catch (err) {
+      results.push({ script, ok: false, code: -1, durationMs: 0, stdout: '', stderr: String(err) });
+    }
   }
 
-  // Futurize front visuals and content
-  logStep('front:futurize', () => runNode('automation/front-futurizer.cjs'));
-  // Update auto-generated ads section
-  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'));
-  // Best-effort git push to main
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, body: logs.join('\n') };
+  const ok = results.every(r => r.ok);
+  return {
+    statusCode: ok ? 200 : 207,
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      engine: 'frontpage-enhancer',
+      message: ok ? 'Frontpage enhancement completed' : 'Frontpage enhancement completed with warnings',
+      results,
+      timestamp: new Date().toISOString(),
+    }),
+  };
 };
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
+
+exports.config = {
+  // Run every hour
+  schedule: '0 * * * *',
+};

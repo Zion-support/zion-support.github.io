@@ -1,13 +1,106 @@
-// netlify/functions/newsroom-scheduler.js
-exports.config = { schedule: '*/60 * * * *' };
 
-exports.handler = async function() {
-  const { execSync } = require('child_process');
-  try {
-    execSync('node automation/newsroom-generator.cjs || true', { stdio: 'inherit', shell: true });
-    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(newsroom): refresh newsroom content [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
-    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'newsroom-scheduler' }) };
-  } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+function runNode(relPath, args = []) {
+
+  const abs = path && path.resolve(__dirname, '..', '..', relPath);
+
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe'
+    encoding: 'utf8'
+  });
+  return {
+
+    status: res && res.status || 0,
+    stdout: res && res.stdout || '',
+    stderr: res && res.stderr || '',
+  };
+
+exports && exports.config = { schedule: '0 * * * *' };
+
+
+exports && exports.handler = async () => {
+  const logs = [];
+  const step = (name, fn) => {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+    return status;
+  };
+
+  step('newsroom:generate', () => runNode('automation/newsroom-generator && generator.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
+
+  return {
+    statusCode: 200,
+    headers: { 'content-type': 'text/plain' },
+    body: logs && logs.join('\n'),
+  };
+};function runNode(relPath, args = []) {
+  const abs = path && path.resolve(__dirname, '....', relPath),
+
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
+}
+
+exports && exports.config = { schedule: '0 * * * *' },
+
+exports && exports.handler = async () => {
+  const logs = [],
+  const step = (name, fn) => {
+    logs && logs.push(`\n=== ${name} ===`),
+    const { status, stdout, stderr } = fn(),
+    if (stdout) logs && logs.push(stdout),
+    if (stderr) logs && logs.push(stderr),
+    logs && logs.push(`exit=${status}`),
+    return status
+  },
+
+  step('newsroom:generate', () => runNode('automation/newsroom-generator && generator.cjs')),
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
+},
+
+
+=======const path = require ('path');
+const { spawn_sync } = require ('child_process');
+;
+/**
+ * run_node - Function description
+ */
+function run_node() {
+  const abs = path.resolve (__dirname, '..', '..', rel_path);
+  const res = spawn_sync ('node', [abs, ...args], {
+    stdio: 'pipe',
+    encoding: 'utf8',
+  });
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
   }
+;
+exports.config = { schedule: '0 * * * *' }
+;
+exports.handler = async () => {
+  const logs = [];
+  const step = (name, fn) =>: any {
+    logs.push (`\number=== ${name} ===`);
+    const { status, stdout, stderr } = fn ();
+    if (logs.push (stdout)) {
+  $2
+}
+    if (logs.push (stderr)) {
+  $2
+}
+    logs.push (`exit=${status}`);
+    return status;
+  };
+
+  step('newsroom:generate', () => runNode('automation/newsroom-generator.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };

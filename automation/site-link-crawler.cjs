@@ -2,112 +2,160 @@
 
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
+const cheerio = require('cheerio');
+const glob = require('glob');
 
-const ROOT = process.cwd();
-const SCAN_DIRS = [path.join(ROOT, 'pages'), path.join(ROOT, 'components')];
-const REPORT_DIR = path.join(ROOT, 'data', 'reports', 'link-sentinel');
+function ensureDir(p) {
+  fs.mkdirSync(p, { recursive: true });
+}
 
-function* walkFiles(startDir, exts = ['.tsx', '.ts', '.jsx', '.js', '.mdx', '.md']) {
-  if (!fs.existsSync(startDir)) return;
-  const stack = [startDir];
-  while (stack.length) {
-    const current = stack.pop();
-    let entries = [];
-    try { entries = fs.readdirSync(current, { withFileTypes: true }); } catch { continue; }
-    for (const entry of entries) {
-      const full = path.join(current, entry.name);
-      if (entry.isDirectory()) {
-        if (entry.name === 'api' || entry.name === 'node_modules' || entry.name.startsWith('.')) continue;
-        stack.push(full);
-      } else if (entry.isFile()) {
-        if (exts.includes(path.extname(entry.name))) yield full;
-      }
+function readJSONSafe(p, fallback) {
+  try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return fallback; }
+}
+
+function deriveInternalRoutes(pagesDir) {
+  const files = glob.sync('**/*.{tsx,jsx,ts,js}', { cwd: pagesDir, nodir: true, absolute: false });
+  const ignored = new Set(['_app', '_document', '404', '500']);
+  const routes = new Set();
+
+  for (const rel of files) {
+    if (rel.startsWith('api/')) continue;
+    const noExt = rel.replace(/\.(tsx|jsx|ts|js)$/i, '');
+    const parts = noExt.split('/');
+    const leaf = parts[parts.length - 1];
+    if (ignored.has(leaf)) continue;
+
+    // compute route
+    let route;
+    if (leaf === 'index') {
+      const base = parts.slice(0, -1).join('/');
+      route = '/' + (base ? base : '');
+    } else {
+      route = '/' + noExt;
     }
+    route = route.replace(/\\+/g, '/').replace(/\/index$/, '/');
+    route = route.replace(/\[(.*?)\]/g, ':$1'); // dynamic route marker to avoid false negatives
+    routes.add(route);
+  }
+
+  // Normalize: collapse '//' occurrences
+  return new Set([...routes].map(r => r.replace(/\/+/g, '/')));
+}
+
+async function headOrGet(url, timeoutMs = 8000) {
+  try {
+    const res = await axios.head(url, { timeout: timeoutMs, maxRedirects: 3, validateStatus: () => true });
+    if (res.status >= 200 && res.status < 400) return { ok: true, status: res.status };
+    // Some servers block HEAD; fallback to GET lightweight
+    const getRes = await axios.get(url, { timeout: timeoutMs, maxRedirects: 3, validateStatus: () => true });
+    return { ok: getRes.status >= 200 && getRes.status < 400, status: getRes.status };
+  } catch (e) {
+    return { ok: false, status: 0, error: String(e.message || e) };
   }
 }
 
-function extractInternalLinks(text) {
-  const links = new Set();
-  // Match href="/path" or href='/path' or href={`/path`} or <Link href="/path">
-  const regexes = [
-    /href\s*=\s*"(\/[^"]*)"/g,
-    /href\s*=\s*'(\/[^']*)'/g,
-    /href\s*=\s*`(\/[^"]*?)`/g,
-    /href\s*=\s*\{\s*`(\/[^"]*?)`\s*\}/g,
-    /href\s*=\s*\{\s*"(\/[^"]*?)"\s*\}/g,
-    /href\s*=\s*\{\s*'(\/[^']*?)'\s*\}/g,
-    /<Link[^>]*?href=\s*"(\/[^"]*)"/g,
-    /<Link[^>]*?href=\s*'([^']*)'/g,
-  ];
-  for (const rx of regexes) {
-    let m;
-    while ((m = rx.exec(text)) !== null) {
-      const candidate = (m[1] || '').trim();
-      if (!candidate) continue;
-      if (candidate.startsWith('/.netlify/functions')) continue; // not a page route
-      if (candidate.startsWith('/api')) continue; // not a page route
-      if (candidate.startsWith('http')) continue;
-      if (candidate.startsWith('#')) continue;
-      links.add(candidate.replace(/\/?#.*$/, '').replace(/\/$/, '')); // normalize trailing slash
-    }
+async function fetchHTML(url, timeoutMs = 12000) {
+  try {
+    const res = await axios.get(url, { timeout: timeoutMs });
+    return { ok: true, html: res.data };
+  } catch (e) {
+    return { ok: false, html: '', error: String(e.message || e) };
   }
-  return Array.from(links);
 }
 
-function getExistingRoutes() {
-  // Similar to scripts/generate-sitemap.js route discovery
-  const PAGES_DIR = path.join(ROOT, 'pages');
-  function scan(dir, base = '') {
-    if (!fs.existsSync(dir)) return [];
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
-    const routes = [];
-    for (const e of entries) {
-      if (e.name.startsWith('_')) continue;
-      if (e.isDirectory()) {
-        if (e.name === 'api') continue;
-        routes.push(...scan(path.join(dir, e.name), base + '/' + e.name));
-      } else if (e.isFile()) {
-        if (!e.name.match(/\.(tsx|jsx|mdx|js|ts)$/)) continue;
-        const name = e.name.replace(/\.(tsx|jsx|mdx|js|ts)$/, '');
-        if (name === 'index') routes.push(base || '/');
-        else if (!name.startsWith('[')) routes.push(base + '/' + name);
-      }
-    }
-    return routes;
-  }
-  return Array.from(new Set(scan(PAGES_DIR).map(r => r.replace(/\/$/, '')))).sort();
+function loadSitemapUrls(workspaceRoot) {
+  const sitemapPath = path.join(workspaceRoot, 'public', 'sitemap.xml');
+  if (!fs.existsSync(sitemapPath)) return [];
+  const xml = fs.readFileSync(sitemapPath, 'utf8');
+  const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]).filter(Boolean);
+  return urls;
+}
+
+function sameOrigin(href) {
+  try { const u = new URL(href); return false; } catch { return href.startsWith('/'); }
 }
 
 async function main() {
-  fs.mkdirSync(REPORT_DIR, { recursive: true });
-  const allLinks = new Set();
-  const sources = [];
-  for (const dir of SCAN_DIRS) {
-    for (const file of walkFiles(dir)) {
-      sources.push(file);
-      let text = '';
-      try { text = fs.readFileSync(file, 'utf8'); } catch { continue; }
-      for (const l of extractInternalLinks(text)) allLinks.add(l);
-    }
+  const workspaceRoot = path.resolve(__dirname, '..');
+  const pagesDir = path.join(workspaceRoot, 'pages');
+  const reportDir = path.join(workspaceRoot, 'public', 'automation');
+  ensureDir(reportDir);
+
+  const baseUrl = process.env.CANONICAL_URL || process.env.SITE_URL || '';
+
+  const internalRoutes = deriveInternalRoutes(pagesDir);
+
+  // Seed crawl targets
+  const targets = new Set();
+  if (baseUrl) {
+    const sitemapUrls = loadSitemapUrls(workspaceRoot);
+    if (sitemapUrls.length) sitemapUrls.forEach(u => targets.add(u));
+    // Always include base
+    targets.add(new URL('/', baseUrl).toString());
   }
-  const links = Array.from(allLinks).sort();
-  const routes = getExistingRoutes();
-  const missing = links.filter((l) => !routes.includes(l));
-  const data = {
+
+  const discoveredInternalHrefs = new Set();
+  const externalLinks = new Set();
+  const fetchErrors = [];
+
+  // Crawl limited number of pages to avoid excess
+  const maxPages = 100;
+  let count = 0;
+  for (const url of targets) {
+    if (count++ >= maxPages) break;
+    const { ok, html, error } = await fetchHTML(url);
+    if (!ok) { fetchErrors.push({ url, error }); continue; }
+    const $ = cheerio.load(html);
+    $('a[href]').each((_, el) => {
+      const href = String($(el).attr('href') || '').trim();
+      if (!href || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return;
+      if (sameOrigin(href)) {
+        const clean = href.split('#')[0].split('?')[0] || '/';
+        discoveredInternalHrefs.add(clean);
+      } else {
+        externalLinks.add(href);
+      }
+    });
+  }
+
+  // Validate internal links against known routes (filesystem-derived)
+  const internalMissingRoutes = [...discoveredInternalHrefs]
+    .filter(h => !internalRoutes.has(h) && !internalRoutes.has(h.replace(/\/$/, '')));
+
+  // Validate external links with HEAD/GET
+  const externalFailures = [];
+  const externalList = [...externalLinks].slice(0, 200);
+  for (const href of externalList) {
+    const res = await headOrGet(href);
+    if (!res.ok) externalFailures.push({ href, status: res.status, error: res.error || '' });
+  }
+
+  const report = {
     generatedAt: new Date().toISOString(),
-    totalLinks: links.length,
-    totalRoutes: routes.length,
-    missingRoutes: missing,
-    links,
-    routes,
-    scannedFiles: sources,
+    baseUrl: baseUrl || null,
+    totals: {
+      routesKnown: internalRoutes.size,
+      internalLinksDiscovered: discoveredInternalHrefs.size,
+      internalMissingRoutes: internalMissingRoutes.length,
+      externalChecked: externalList.length,
+      externalFailures: externalFailures.length,
+      fetchErrors: fetchErrors.length,
+    },
+    internalMissingRoutes,
+    externalFailures,
+    fetchErrors,
+    internalRoutes: [...internalRoutes],
   };
-  const latestPath = path.join(REPORT_DIR, 'internal-links-latest.json');
-  const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-  const stamped = path.join(REPORT_DIR, `internal-links-${stamp}.json`);
-  fs.writeFileSync(latestPath, JSON.stringify(data, null, 2));
-  fs.writeFileSync(stamped, JSON.stringify(data, null, 2));
-  console.log(`Internal links: ${links.length}. Routes: ${routes.length}. Missing: ${missing.length}. Report: ${latestPath}`);
+
+  fs.writeFileSync(path.join(reportDir, 'link-report.json'), JSON.stringify(report, null, 2));
+  // Convenience JSON for fixer
+  fs.writeFileSync(path.join(reportDir, 'broken-links.json'), JSON.stringify({ internalMissingRoutes }, null, 2));
+
+  console.log('Link crawl complete. Report saved to public/automation/link-report.json');
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+main().catch(err => {
+  console.error('Crawler failed:', err);
+  process.exit(1);
+});

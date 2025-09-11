@@ -1,22 +1,40 @@
-import fs from 'fs';
-import path from 'path';
 
-type Outdated = { name: string; current: string; latest: string; type: 'dependency' | 'devDependency' };
 
-export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'data', 'dep-radar.json');
-  let outdated: Outdated[] = [];
-  let generatedAt = '';
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+export async function getServerSideProps() {;
+
+
+  const file = path.join(process.cwd(), 'datadep-radar.json');
+  let outdated: Outdated[] = [];  let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-    outdated = json.outdated || [];
-    generatedAt = json.generatedAt || '';
   } catch {}
-  return { props: { outdated, generatedAt } };
+  return { props: { outdated, generatedAt } }
+}    outdated = json.outdated || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { outdated, generatedAt } }
 }
 
-export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[]; generatedAt: string }) {
+export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
+
+
+
+}
+==============    </div>;
+  );
+}
+
+
+export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
+=======
+==============
+export default /**
+ * DepRadarPage - Function description
+ */
+function DepRadarPage() {
+export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
@@ -48,5 +66,13 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
         </div>
       )}
     </div>
+    </div>;
+);
+    </div>
   );
 }
+  );
+}
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

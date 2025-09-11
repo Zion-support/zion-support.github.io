@@ -1,285 +1,661 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Cookie, Settings, Eye, BarChart3, Globe, Mail, Phone, MapPin } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function CookiePolicy() {
+
+
+=======
+=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+import React, { useState } from 'react';
+import MainLayout from '../src / components / layout / MainLayout';
+import { motion } from 'framer-motion';
+import {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  Shield,
+  Settings,
+  Info,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+  AlertTriangle;
+
+} from 'lucide-react';
+export default function CookiePolicyPage() {
+  const [cookiePreferences, setCookiePreferences] = useState({
+
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false;
+
+
+  });
   const cookieTypes = [
     {
-      id: 'essential',
-      title: 'Essential Cookies',
-      icon: Settings,
-      description: 'Required for basic website functionality',
-      examples: [
-        'Session management and authentication',
-        'Security and fraud prevention',
-        'Form submission and data validation',
-        'Essential website navigation'
-      ]
+      id: 'necessary'
+      name: 'Necessary Cookies'
+      description: 'Essential cookies required for the website to function properly'
+      required: true
+      examples: ['Session management', 'Security', 'Load balancing']
+    }
+    {
+      id: 'analytics'
+      name: 'Analytics Cookies'
+      description: 'Help us understand how visitors interact with our website'
+      required: false
+      examples: ['Google Analytics', 'Page views', 'User behavior']
+    }
+    {
+      id: 'marketing'
+      name: 'Marketing Cookies'
+      description: 'Used to track visitors across websites for advertising purposes'
+      required: false
+      examples: ['Ad targeting', 'Social media', 'Remarketing']
+    }
+    {
+      id: 'functional'
+      name: 'Functional Cookies'
+      description: 'Enable enhanced functionality and personalization'
+      required: false
+      examples: ['Language preferences', 'User settings', 'Chat widgets']
+    }
+  ];
+  const handleCookieToggle = (cookieId: string) => {
+    if (cookieId === 'necessary') return; // Can't disable necessary cookies
+    setCookiePreferences(prev => ({
+      ...prev
+      [cookieId]: !prev[cookieId]
+    }));
+  }
+  const savePreferences = () => {
+    // In a real implementation, this would save to localStorage and update cookie settings
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+origin/automation-improvements-final
+
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import {
+  Shield
+  Settings
+  Info
+  ExternalLink
+  ArrowRight
+  CheckCircle
+  XCircle
+  AlertTriangle
+  Shield,
+  Settings,
+  Info,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+  AlertTriangle;
+} from 'lucide-react';
+export default function CookiePolicyPage() {
+  const [cookiePreferences, setCookiePreferences] = useState({
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false;
+  });
+=======
+  });
+  const cookieTypes = [;
+    {;
+      id: 'necessary',;
+      name: 'Necessary Cookies',;
+      description: 'Essential cookies required for the website to function properly',;
+      required: true,;
+      examples: ['Session management', 'Security', 'Load balancing'];
+    },;
+    {;
+      id: 'analytics',;
+      name: 'Analytics Cookies',;
+      description: 'Help us understand how visitors interact with our website',;
+      required: false,;
+      examples: ['Google Analytics', 'Page views', 'User behavior'];
+    },;
+    {;
+      id: 'marketing',;
+      name: 'Marketing Cookies',;
+      description: 'Used to track visitors across websites for advertising purposes',;
+      required: false,;
+      examples: ['Ad targeting', 'Social media', 'Remarketing'];
+    },;
+    {;
+      id: 'functional',;
+      name: 'Functional Cookies',;
+      description: 'Enable enhanced functionality and personalization',;
+      required: false,;
+      examples: ['Language preferences', 'User settings', 'Chat widgets'];
+    }
+  ];
+  const handleCookieToggle = (cookieId: string) => {;
+    if (cookieId === 'necessary') return; // Can't disable necessary cookies;
+    setCookiePreferences(prev => ({;
+      ...prev,;
+      [cookieId]: !prev[cookieId];
+    }));
+  };
+  const savePreferences = () => {;
+    // In a real implementation, this would save to localStorage and update cookie settings;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    alert('Cookie preferences saved!');
+  }
+  return (
+    <MainLayout
+      title="Cookie Policy - Zion Tech Group"
+      description="Learn about how Zion Tech Group uses cookies on our website. Understand what cookies we use and how you can manage your preferences."
+      keywords="cookie policy, cookies, privacy, data protection, website cookies">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+        {/* Hero Section */}=======
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+          </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Cookie{' '}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
+                  Policy;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+                Learn about how we use cookies to enhance your experience on our website ;
+                and how you can manage your cookie preferences.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+        {/* Cookie Management */}
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                Manage Your Cookie Preferences;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                You can control which cookies we use on our website. ;
+                Some cookies are necessary for the website to function properly.;
+              </p>;
+            </motion && motion.div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+            <div className="max-w-4xl mx-auto">;
+              <div className="bg-white rounded-lg shadow-lg p-8">;
+                <div className="space-y-6">;
+                  {cookieTypes && cookieTypes.map((cookie, index) => (;
+                    <motion&& motion.div
+                      key={cookie && cookie.id}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+                      className="border border-gray-200 rounded-lg p-6"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                      viewport={{ once: true }}>;
+                      <div className="flex items-center justify-between mb-4">;
+                        <div className="flex items-center">;
+                          <Shield className="w-6 h-6 text-indigo-600 mr-3" />;
+                          <div>;
+                            <h3 className="text-lg font-semibold text-gray-900">;
+                              {cookie && cookie.name}
+                            </h3>;
+                            <p className="text-gray-600 text-sm">;
+                              {cookie && cookie.description}
+                            </p>;
+                          </div>;
+                        </div>;
+                        <div className="flex items-center">;
+                          {cookie && cookie.required ? (;
+                            <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">;
+                              Required;
+                            </span>;
+                          ) : (;
+                            <button
+                              onClick={() => handleCookieToggle(cookie && cookie.id)}
+                              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;
+                                cookiePreferences[cookie && cookie.id as keyof typeof cookiePreferences];
+                                  ? 'bg-indigo-600';
+                                  : 'bg-gray-200';
+                              }`}
+                            >;
+                              <span
+                                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                                  cookiePreferences[cookie && cookie.id as keyof typeof cookiePreferences]
+                                    ? 'translate-x-6'
+                                    : 'translate-x-1'
+                                }`}
+                              />;
+                            </button>;
+                          )}                        </div>;
+                      </div>;
+=======
+
+                        </div>;
+                      </div>;
+                      <div className="ml-9">;
+                        <h4 className="text-sm font-medium text-gray-900 mb-2">Examples:</h4>;
+                        <ul className="text-sm text-gray-600 space-y-1">;
+                          {cookie && cookie.examples.map((example, idx) => (;
+                            <li key={idx} className="flex items-center">;
+                              <ArrowRight className="w-3 h-3 text-gray-400 mr-2" />;
+                              {example}
+                            </li>;
+                          ))}
+                        </ul>;
+                      </div>;
+                    </motion && motion.div>;
+                  ))}
+                </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">;
+                  <button
+                    onClick={() => setCookiePreferences({;
+                      necessary: true,;
+                      analytics: false,;
+                      marketing: false,;
+                      functional: false;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+                    })}
+                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
+                  >;
+                    Reject All;
+                  </button>;
+                  <button=======
+                    onClick={() => setCookiePreferences({;
+                      necessary: true,;
+                      analytics: true,;
+                      marketing: true,;
+                      functional: true;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    })}
+                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
+                  >;
+                    Accept All;
+                  </button>;
+                  <button
+                    onClick={savePreferences}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+=======
+
+                    className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+=======  Shield,
+  Settings,
+  Info,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+  AlertTriangle;
+} from 'lucide-react';
+;
+export default /**
+ * CookiePolicyPage - Function description
+ */
+function CookiePolicyPage() {
+  const [cookie_preferences, setCookiePreferences] = useState ({
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false;
+  });
+;
+  const cookie_types = [;
+    {
+      id: 'necessary',
+      name: 'Necessary Cookies',
+      description: 'Essential cookies required for the website to function properly',
+      required: true,
+      examples: ['Session management', 'Security', 'Load balancing'];
     },
     {
       id: 'analytics',
-      title: 'Analytics Cookies',
-      icon: BarChart3,
-      description: 'Help us understand how visitors use our site',
-      examples: [
-        'Google Analytics for usage statistics',
-        'Page view and click tracking',
-        'User journey and behavior analysis',
-        'Performance monitoring'
-      ]
-    },
-    {
-      id: 'functional',
-      title: 'Functional Cookies',
-      icon: Eye,
-      description: 'Enhance your browsing experience',
-      examples: [
-        'Language and region preferences',
-        'Theme and display settings',
-        'Chat widget functionality',
-        'User preference storage'
-      ]
+      name: 'Analytics Cookies',
+      description: 'Help us understand how visitors interact with our website',
+      required: false,
+      examples: ['Google Analytics', 'Page views', 'User behavior'];
     },
     {
       id: 'marketing',
-      title: 'Marketing Cookies',
-      icon: Globe,
-      description: 'Used for targeted advertising and marketing',
-      examples: [
-        'Social media integration',
-        'Advertising personalization',
-        'Conversion tracking',
-        'Remarketing campaigns'
-      ]
+      name: 'Marketing Cookies',
+      description: 'Used to track visitors across websites for advertising purposes',
+      required: false,
+      examples: ['Ad targeting', 'Social media', 'Remarketing'];
+    },
+    {
+      id: 'functional',
+      name: 'Functional Cookies',
+      description: 'Enable enhanced functionality and personalization',
+      required: false,
+      examples: ['Language preferences', 'User settings', 'Chat widgets'];
     }
   ];
-
+;
+  const handleCookieToggle = (cookie_id: string) =>: any {
+    // Check condition
+if (return) {
+  $2
+} // Can't disable necessary cookies;
+    setCookiePreferences (prev => ({
+      ...prev,
+      [cookie_id]: !prev[cookie_id];
+    }));
+  }
+;
+  const save_preferences = () =>: any {
+    // In a real implementation, this would save to local_storage and update cookie settings;
+    alert ('Cookie preferences saved!');
+  }
+;
   return (
-    <>
-      <Head>
-        <title>Cookie Policy | Zion Tech Group</title>
-        <meta name="description" content="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide better services." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <EnhancedNavigation />
-
+    <MainLayout;
+      title="Cookie Policy - Zion Tech Group";
+      description="Learn about how Zion Tech Group uses cookies on our website. Understand what cookies we use and how you can manage your preferences.";
+      keywords="cookie policy, cookies, privacy, data protection, website cookies";
+    >;
+      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+        <section className="relative bg - gradient - to - br from - indigo - 900 via - purple - 900 to - pink - 900 text - white py - 20 overflow - hidden">;
+          <div className="absolute inset - 0">;
+            <div className="absolute top - 20 left - 10 w - 72 h - 72 bg - indigo - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse"></div>;
+            <div className="absolute top - 40 right - 10 w - 72 h - 72 bg - purple - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 2000"></div>;
+          </div>;
+          <div className="container mx - auto px - 4 relative z - 10">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex items-center justify-center mb-6"
-            >
-              <Cookie className="w-16 h-16 text-cyan-400" />
-            </motion.div>
-            
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6"
-            >
-              Cookie Policy
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-            >
-              Learn about how we use cookies and similar technologies to enhance your experience on our website.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-8 text-sm text-gray-400"
-            >
-              <p>Last updated: December 2024</p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* What Are Cookies Section */}
-        <section className="py-20 px-6">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              className="text - center";
+            >;
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+                Cookie{' '}
+                <span className="bg - gradient - to - r from - indigo - 400 to - purple - 400 bg - clip - text text - transparent">;
+                  Policy;
+                </span>;
+              </h1>;
+              <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
+                Learn about how we use cookies to enhance your experience on our website;
+                and how you can manage your cookie preferences.;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Cookie Management */}
+        <section className="py - 20 bg - gray - 50">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center mb - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6">What Are Cookies?</h2>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Cookies are small text files that are stored on your computer or mobile device when you visit a website. 
-                  They are widely used to make websites work more efficiently and provide information to site owners.
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Cookies help us understand how you use our website, remember your preferences, and improve your overall experience.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Types of Cookies */}
-            <div className="grid gap-8">
-              {cookieTypes.map((type, index) => (
-                <motion.div
-                  key={type.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-slate-800/50 rounded-2xl p-8 border border-white/10"
-                >
-                  <div className="flex items-center mb-6">
-                    <type.icon className="w-8 h-8 text-cyan-400 mr-4" />
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">{type.title}</h3>
-                      <p className="text-gray-400 mt-1">{type.description}</p>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-3">
-                    {type.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-300 leading-relaxed">{example}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Cookie Management */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-16 mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6">Managing Your Cookie Preferences</h2>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  You have control over cookies and can manage your preferences in several ways:
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">Browser Settings</h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Block all cookies</li>
-                      <li>• Delete existing cookies</li>
-                      <li>• Set cookie preferences</li>
-                      <li>• Receive notifications for new cookies</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">Third-Party Tools</h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Google Analytics opt-out</li>
-                      <li>• Network Advertising Initiative</li>
-                      <li>• Digital Advertising Alliance</li>
-                      <li>• European Digital Advertising Alliance</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Cookie Retention */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6">Cookie Retention</h2>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h4 className="text-white font-semibold mb-3 flex items-center">
-                      <Settings className="w-5 h-5 text-cyan-400 mr-2" />
-                      Session Cookies
-                    </h4>
-                    <p className="text-gray-300 leading-relaxed">
-                      Temporary cookies that are deleted when you close your browser. 
-                      Used for essential website functionality during your visit.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-white font-semibold mb-3 flex items-center">
-                      <BarChart3 className="w-5 h-5 text-cyan-400 mr-2" />
-                      Persistent Cookies
-                    </h4>
-                    <p className="text-gray-300 leading-relaxed">
-                      Remain on your device for a set period (typically 1-24 months). 
-                      Used for preferences, analytics, and enhanced functionality.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Mail className="w-8 h-8 text-cyan-400 mr-4" />
-                Questions About Cookies?
-              </h2>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                If you have questions about our use of cookies or need help managing your preferences:
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 text-cyan-400 mr-3" />
-                  <div>
-                    <p className="text-white font-semibold">Email</p>
-                    <p className="text-gray-300">privacy@ziontechgroup.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-cyan-400 mr-3" />
-                  <div>
-                    <p className="text-white font-semibold">Phone</p>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 text-cyan-400 mr-3" />
-                  <div>
-                    <p className="text-white font-semibold">Address</p>
-                    <p className="text-gray-300">San Francisco, CA</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <EnhancedFooter />
-      </div>
-    </>
-  );
+              viewport={{ once: true }}
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+                Manage Your Cookie Preferences;
+              </h2>;
+              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+                You can control which cookies we use on our website.;
+                Some cookies are necessary for the website to function properly.;
+              </p>;
+            </motion.div>;
+            <div className="max - w-4xl mx - auto">;
+              <div className="bg - white rounded - lg shadow - lg p - 8">;
+                <div className="space - y-6">;
+                  {cookie_types.map ((cookie, index) => (
+                    <motion.div;
+                      key={cookie.id}
+                      className="border border - gray - 200 rounded - lg p - 6";
+                      initial={{ opacity: 0, coordinate_y: 30 }}
+                      whileInView={{ opacity: 1, coordinate_y: 0 }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >;
+                      <div className="flex items - center justify - between mb - 4">;
+                        <div className="flex items - center">;
+                          <Shield className="w - 6 h - 6 text - indigo - 600 mr - 3" />;
+                          <div>;
+                            <h3 className="text - lg font - semibold text - gray - 900">;
+                              {cookie.name}
+                            </h3>;
+                            <p className="text - gray - 600 text - sm">;
+                              {cookie.description}
+                            </p>;
+                          </div>;
+                        </div>;
+                        <div className="flex items - center">;
+                          {cookie.required ? (
+                            <span className="px - 3 py - 1 bg - green - 100 text - green - 800 rounded - full text - sm font - medium">;
+                              Required;
+                            </span>) : (
+                            <button;
+                              on_click={() => handleCookieToggle (cookie.id)}
+                              className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
+                                cookie_preferences[cookie.id as keyof typeof cookie_preferences];
+                                  ? 'bg - indigo - 600';
+                                  : 'bg - gray - 200';
+                              }`}
+                            >;
+                              <span;
+                                className={`inline - block h - 4 w - 4 transform rounded - full bg - white transition - transform ${
+                                  cookie_preferences[cookie.id as keyof typeof cookie_preferences];
+                                    ? 'translate - x-6';
+                                    : 'translate - x-1';
+                                }`}
+                              />;
+                            </button>)}
+                        </div>;
+                      </div>;
+                      <div className="ml - 9">;
+                        <h4 className="text - sm font - medium text - gray - 900 mb - 2">Examples:</h4>;
+                        <ul className="text - sm text - gray - 600 space - y-1">;
+                          {cookie.examples.map ((example, idx) => (
+                            <li key={idx} className="flex items - center">;
+                              <ArrowRight className="w - 3 h - 3 text - gray - 400 mr - 2" />;
+                              {example}
+                            </li>))}
+                        </ul>;
+                      </div>;
+                    </motion.div>))}
+                </div>;
+                <div className="mt - 8 flex flex - col sm:flex - row gap - 4 justify - end">;
+                  <button;
+                    on_click={() => setCookiePreferences ({
+                      necessary: true,
+                      analytics: false,
+                      marketing: false,
+                      functional: false;
+                    })}
+                    className="px - 6 py - 3 border border - gray - 300 text - gray - 700 rounded - lg hover:bg - gray - 50 transition - colors";
+                  >;
+                    Reject All;
+                  </button>;
+                  <button;
+                    on_click={() => setCookiePreferences ({
+                      necessary: true,
+                      analytics: true,
+                      marketing: true,
+                      functional: true;
+                    })}
+                    className="px - 6 py - 3 border border - gray - 300 text - gray - 700 rounded - lg hover:bg - gray - 50 transition - colors";
+                  >;
+                    Accept All;
+                  </button>;
+                  <button;
+                    on_click={save_preferences}
+                    className="px - 6 py - 3 bg - gradient - to - r from - indigo - 500 to - purple - 600 text - white rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
+                  >;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    Save Preferences;
+                  </button>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                What Are Cookies?;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                Cookies are small text files that are stored on your device when you visit our website. ;
+                They help us provide you with a better experience and understand how you use our site.;
+              </p>;
+            </motion && motion.div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+            <div className="max-w-4xl mx-auto">;
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+                <motion&& motion.div
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.8 }}
+                  viewport={{ once: true }}>;
+                  <div className="flex items-center mb-4">;
+                    <Info className="w-6 h-6 text-blue-600 mr-3" />;
+                    <h3 className="text-lg font-semibold text-gray-900">How We Use Cookies</h3>;
+                  </div>;
+                  <ul className="space-y-2 text-gray-600">;
+                    <li className="flex items-start">;
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />;
+                      <span>Remember your preferences and settings</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />;
+                      <span>Analyze website traffic and usage patterns</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />;
+                      <span>Improve website performance and functionality</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />;
+                      <span>Provide personalized content and recommendations</span>;
+                    </li>;
+                  </ul>;
+                </motion && motion.div>;
+        canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
+      />;
+      <div className='container mx-auto px-4 py-24 text-white'>;
+        <div className='max-w-3xl mx-auto space-y-6'>;
+          <h1 className='text-4xl md:text-5xl font-bold'>Cookie Policy</h1>;
+          <p className='text-gray-300'>;
+            We use minimal, privacy‑respecting analytics. Some third‑party;
+            embeds may set cookies. You can block non‑essential cookies via your;
+            browser.;
+          </p>;
+          <ul className='list-disc list-inside text-gray-300 space-y-1'>;
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup && ziontechgroup.com/cookies/" />;
+      <div className="container mx-auto px-4 py-24 text-white">;
+        <div className="max-w-3xl mx-auto space-y-6">;
+          <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>;
+          <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>;
+          <ul className="list-disc list-inside text-gray-300 space-y-1">;
+            <li>Purpose: performance and security</li>;
+            <li>Retention: session or short‑term</li>;
+            <li>Opt‑out: browser settings and extensions</li>;
+          </ul>;
+          <p className='text-gray-400 text-sm'>;
+            Questions?{' '}
+            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
+              kleber@ziontechgroup && ziontechgroup.com;
+    </MainLayout>);
 }
+import { motion } from 'framer-motion';
+import Head from 'next / head';
+import Layout from '../components / Layout';
+export default /**
+ * CookiesPage - Function description
+ */
+function CookiesPage() {
+  return (
+    <UltraAdvancedFuturisticBackground>;
+      <SEO;
+        title='Cookie Policy | Zion Tech Group';
+        description='Information about cookies used by Zion Tech Group.';
+        canonical='https://ziontechgroup.com / cookies/';
+      />;
+      <div className='container mx - auto px - 4 py - 24 text - white'>;
+        <div className='max - w-3xl mx - auto space - y-6'>;
+          <h1 className='text - 4xl md:text - 5xl font - bold'>Cookie Policy</h1>;
+          <p className='text - gray - 300'>;
+            We use minimal, privacy‑respecting analytics. Some third‑party;
+            embeds may set cookies. You can block non‑essential cookies via your;
+            browser.;
+          </p>;
+          <ul className='list - disc list - inside text - gray - 300 space - y-1'>;
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com / cookies/" />;
+      <div className="container mx - auto px - 4 py - 24 text - white">;
+        <div className="max - w-3xl mx - auto space - y-6">;
+          <h1 className="text - 4xl md:text - 5xl font - bold">Cookie Policy</h1>;
+          <p className="text - gray - 300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>;
+          <ul className="list - disc list - inside text - gray - 300 space - y-1">;
+<li > Purpose: performance and security</li>;
+            <li > Retention: session or short‑term</li>;
+            <li > Opt‑out: browser settings and extensions</li>;
+          </ul>;
+          <p className='text - gray - 400 text - sm'>;
+            Questions?{' '}
+            <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
+              kleber@ziontechgroup.com;
+            </a>;
+          </p>;
+        </div>;
+      </Layout>;
+
+=======
+
+  );
+
+}
+
+}
+}
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

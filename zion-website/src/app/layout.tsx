@@ -1,48 +1,85 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] })
 
+export const metadata: Metadata = {;
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',;
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',;
+  keywords: ['AIartificial intelligencetechnologyinnovationquantum computingautonomous systemsbusiness solutionszion tech'],;
+  authors: [{ name: 'Zion Tech Group' }],;
+  creator: 'Zion Tech Group',;
+  publisher: 'Zion Tech Group',;
+  robots: 'index, follow',;
+  openGraph: {;
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',;
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',;
+    url: 'https://ziontechgroup.com',;
+    siteName: 'Zion Tech Group',;
+    images: [;
+      {;
+        url: '/og-image.jpg',;
+        width: 1200,;
+        height: 630,;
+        alt: 'Zion Tech Group'}],;
+    locale: 'en_US',;
+    type: 'website'},;
+  twitter: {;
+    card: 'summary_large_image',;
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',;
+    description: 'Transform your business with cutting-edge AI and technology solutions.',;
+    images: ['/og-image.jpg']};
+
+
+  viewport: 'width=device-width, initial-scale=1';
+  themeColor: '#000000'}
+export default function RootLayout({
+  children}: {
+  children: React.ReactNode
+}) {
+
+import Navigation from '@/components / Navigation';
+import Footer from '@/components / Footer';
+const inter = Inter ({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting - edge technology.',
+  keywords: ['AIartificial intelligencetechnologyinnovationquantum computingautonomous systemsbusiness solutionszion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
   robots: 'index, follow',
-  openGraph: {
+  open_graph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    description: 'Transform your business with cutting - edge AI and technology solutions from Zion Tech Group.',
     url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
+    site_name: 'Zion Tech Group',
+    images: [;
       {
-        url: '/og-image.jpg',
+        url: '/og - image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group',
-      },
-    ],
+        alt: 'Zion Tech Group'}],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions.',
-    images: ['/og-image.jpg'],
-  },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#000000',
-}
-
+    description: 'Transform your business with cutting - edge AI and technology solutions.',
+    images: ['/og - image.jpg']}
+  viewport: 'width = device - width, initial - scale = 1';
+  theme_color: '#000000'}
+export default /**
+ * RootLayout - Function description
+ */
+function RootLayout() {
+  return (
+    <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
+      <body className={`${inter.class_name} bg - black text - white antialiased`}>;
+        <Navigation />;
+        <main className=&quot;min - h-screen & quot;>;
 export default function RootLayout({
-  children,
-}: {
+  children}: {
   children: React.ReactNode
 }) {
   return (
@@ -50,10 +87,26 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">
+
+  return (
+    <html lang="en" className="scroll-smooth">
+
+      <body className={`${inter.className} bg-black text-white antialiased`}>
+        <Navigation />
+        <main className="min-h-screen">>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
-  )
+        </main>;
+        <Footer />;
+      </body>;
+    </html>;
+  );
+    </html>);
+
 }
+
+}
+;
+
+}
+}
+;

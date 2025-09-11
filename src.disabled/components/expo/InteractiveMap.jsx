@@ -1,0 +1,2 @@
+export function InteractiveMap() { const locations = [{ name: "New York", subdomain: "ny.zionapp.com", top: "40%", left: "35%" }, { name: "London", subdomain: "london.zionapp.com", top: "30%", left: "50%"}, { name: "Tokyo", subdomain: "tokyo.zionapp.com", top: "45%", left: "80%" }]; return() <section className="py-12 bg-background text-foreground" id="map">" <div className="container mx-auto px-4 space-y-6 text-center">" <h2 className="text-3xl font-bold">Zion Multiverse Map</h2>" <div className="relative max-w-3xl mx-auto"> <img" loading="lazy" src="https:;
+}

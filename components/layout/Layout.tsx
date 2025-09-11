@@ -1,239 +1,256 @@
-import React, { useState } from 'react';
-import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
-import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
-import EnhancedSidebar2025 from './EnhancedSidebar2025';
-import UltraAdvancedFuturisticBackground2035 from './UltraAdvancedFuturisticBackground2035';
-import TopContactBar from './TopContactBar';
-import Head from 'next/head';
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
+
+import React, { ReactNode } from 'react';
+import React from 'react';
+import React from 'react';
+import React, { ReactNode } from 'react';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+import Header from '../Header';
+import Footer from '../Footer';
+
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+
+
+
+=======
+import React from 'react';
+=======
+
+import React, { ReactNode } from 'react';=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+import React from 'react';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+import React from 'react';
+=======
+import React from 'react';
+import React, { ReactNode } from 'react';
+
+>>>>>>> origin/automation-improvements-final
+import Header from '../Header';
+import Footer from '../Footer';
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+=======
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+interface LayoutProps {
+export default function Layout({ children }: LayoutProps) {
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+=======
+=======
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;}
+
+
+=======
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+
+
+
+=======const Layout: React.FC<LayoutProps> = ({ children }) => {
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+
+export default function Layout(): any ({;
+  children,;
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",;
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",;
+  canonical,;
+  ogTitle,;
+  ogDescription,;
+  ogImage,;
+  noIndex = false;
+}: LayoutProps) {;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  return (
+    <div className="min-h-screen bg-white">;
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+    <div className="min - h-screen bg - white">;
+      <Header />;
+      <main>;
+        {children}
+    </div>);
+}
+;
+export default Layout;
+import React from 'react;
+import Header from './Header;
+import Footer from './Footer;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
+  "./Footer"import Footer  from "react./Footer,;
+export default function Layout({ children }: LayoutProps) {;
+  return (;
+
+
+<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
+    </div>;
+  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
+}}
+export: default /**
+ * Layout - Function description
+ */
+function Layout() {
+;
+  return: <div>{children}</div>;
+React from";
+  "react""import Footer from './react';
+  "./Footer"import Footer  from "react./Footer,
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+<div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;
+    </div>)"; type: LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div> } " ;
+}}
+
+==============
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    <div className="min-h-screen bg-gray-50">
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+=======
+import { Menu } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
-  seo?: {
-    title?: string;
-    description?: string;
-    keywords?: string;
-    canonicalUrl?: string;
-    ogImage?: string;
-  };
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
 }
 
-export default function Layout({ children, seo }: LayoutProps) {
+export default function Layout({
+  children,
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  noIndex = false
+}: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [showEnhancements, setShowEnhancements] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape' && sidebarOpen) {
-      setSidebarOpen(false);
-    }
-  };
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
 
-  const title = seo?.title || 'Zion Tech Group - Revolutionary Technology Solutions';
-  const description = seo?.description || 'Leading provider of innovative AI, quantum computing, and enterprise technology solutions. Transform your business with cutting-edge innovations.';
-  const keywords = seo?.keywords || 'AI, quantum computing, enterprise technology, innovation, Zion Tech Group';
-  const canonicalUrl = seo?.canonicalUrl;
-  const ogImage = seo?.ogImage || 'https://ziontechgroup.com/og-image.jpg';
-
-  return (
-    <div 
-      className="min-h-screen bg-black text-white relative overflow-x-hidden"
-      onKeyDown={handleKeyDown}
-      role="application"
-      aria-label="Zion Tech Group Application"
-    >
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta charSet="utf-8" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="theme-color" content="#06b6d4" />
-        
-        {/* Canonical URL */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
-        {/* PWA Manifest */}
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#06b6d4" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-        
-        {/* Favicons */}
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        
-        {/* Additional SEO Meta Tags */}
-        <meta name="application-name" content="Zion Tech Group" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="format-detection" content="telephone=no" />
-        
-        {/* Preload Critical Resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/_next/static/css/app.css" as="style" />
-        
-        {/* DNS Prefetch */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-        
-        {/* Security Headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": description,
-              "foundingDate": "2024",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              }
-            })
-          }}
-        />
-      </Head>
-
-export default function Layout({ children, seo }: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [showEnhancements, setShowEnhancements] = useState(false);
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+      </div>
+    );
+>>>>>>> 6d72fcb6e43ee824c52724609027e0555356221c
+  }
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
       {/* Futuristic Background */}
-      <UltraAdvancedFuturisticBackground2035 />
+      <UltraFuturisticBackground2036 />
       
-=======
-      {/* Skip to content link for accessibility */}
-      <a 
-        href="#main" 
-        className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300"
-      >
-        Skip to main content
-      </a>
-
-      {/* Enhanced Futuristic Background */}
-      <UltraFuturisticBackground2038 intensity="medium" theme="quantum-neon" />
-
-      {/* Loading State */}
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black"
-          >
-            <div className="text-center">
-              <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-cyan-400 text-lg font-semibold">Loading Zion Tech Group</p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Layout Structure */}
       <div className="relative z-10">
         {/* Top Contact Bar */}
         <TopContactBar />
         
         {/* Navigation */}
-        <UltraAdvancedNavigation2035 />
+        <div className="sticky top-0 z-50">
+          <div className="absolute left-4 top-5 lg:hidden">
+            <button
+              aria-label="Open sidebar"
+              onClick={() => setSidebarOpen(true)}
+              className="p-2 rounded-lg bg-gray-900/80 border border-gray-700/60 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-colors"
+            >
+              <Menu className="w-5 h-5 text-gray-300" />
+            </button>
+          </div>
+          <UltraFuturisticNavigation2040 />
+        </div>
         
         {/* Sidebar and Main Content */}
         <div className="flex">
           <EnhancedSidebar2025 
             isOpen={sidebarOpen} 
-            onClose={() => setSidebarOpen(false)}
-            aria-hidden={!sidebarOpen}
-            aria-label="Main navigation menu"
+            onClose={() => setSidebarOpen(false)} 
           />
           
-          <main 
-            id="main" 
-            role="main" 
-            className="flex-1 pt-24 lg:pt-28 min-h-screen"
-            aria-label="Main content"
-          >
-            {/* Announcement for screen readers when sidebar opens/closes */}
-            <div 
-              aria-live="polite" 
-              aria-atomic="true" 
-              className="sr-only"
-            >
-              {sidebarOpen ? 'Sidebar opened' : 'Sidebar closed'}
-            </div>
-            
+          <main id="main" className="flex-1 pt-24 lg:pt-28">
             {children}
           </main>
         </div>
-        
-        {/* Footer */}
-        <UltraAdvancedFooter2035 />
       </div>
 
-      {/* Back to top button */}
-      <motion.button
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300/50"
-        aria-label="Back to top"
-      >
-        <svg 
-          className="w-6 h-6" 
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={2} 
-            d="M5 10l7-7m0 0l7 7m-7-7v18" 
-          />
-        </svg>
-      </motion.button>
+      {/* Performance and Accessibility Enhancements */}
+      <PerformanceMonitor />
+      <AccessibilityEnhancer />
+      <CookieConsentBanner />
     </div>
   );
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 }
+>>>>>>> 6d72fcb6e43ee824c52724609027e0555356221c

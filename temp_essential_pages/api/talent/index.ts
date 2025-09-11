@@ -1,7 +1,10 @@
-import { PrismaClient } from @prisma/client';import type { NextApiRequest, NextApiResponse } from 'next';import * as Sentry from @sentry/nextjs';;
+import { PrismaClient } from '@prisma/client';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import * as Sentry from '@sentry/nextjs';
+
 const prisma = new PrismaClient();
 
-interface _TalentFilters {
+interface TalentFilters {
   specialization?: string;
   minRate?: number;
   maxRate?: number;
@@ -9,29 +12,30 @@ interface _TalentFilters {
   search?: string;
 }
 
-interface WhereClause {
-  specialization?: string;
-  hourlyRate?: {
-    gte?: number;
-    lte?: number;
-  };
-  skills?: {
-    hasSome: string[];
-  };
-  OR?: Array<{
-    name?: { contains: string; mode: insensitive' };    headline?: { contains: string; mode: insensitive' };    bio?: { contains: string; mode: insensitive' };  }>;
-}
-;
-default async function handler(
+export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
+  }
+
   try {
-    const { page = 1, limit = 10, ...filters } = req.query;
-    const skip = (Number(page) - 1) * Number(limit);
+    const page = parseInt((req.query.page as string) || '1', 10);
+    const limit = parseInt((req.query.limit as string) || '20', 10);
+    const skip = (page - 1) * limit;
+
+    const filters: TalentFilters = {
+      specialization: String(req.query.specialization || '').toLowerCase().trim() || undefined,
+      minRate: req.query.minRate ? parseFloat(req.query.minRate as string) : undefined,
+      maxRate: req.query.maxRate ? parseFloat(req.query.maxRate as string) : undefined,
+      skills: req.query.skills ? String(req.query.skills).split(',').map(s => s.trim()) : undefined,
+      search: String(req.query.search || '').toLowerCase().trim() || undefined,
+    };
 
     // Build where clause
-    const where: WhereClause = {};
+    const where: any = {};
     
     if (filters.specialization) {
       where.specialization = filters.specialization;
@@ -49,13 +53,16 @@ default async function handler(
     
     if (filters.skills && filters.skills.length > 0) {
       where.skills = {
-        hasSome: filters.skills
+        hasSome: filters.skills,
       };
     }
     
     if (filters.search) {
       where.OR = [
-        { name: { contains: filters.search, mode: insensitive' } },        { headline: { contains: filters.search, mode: insensitive' } },        { bio: { contains: filters.search, mode: insensitive' } },      ];
+        { name: { contains: filters.search, mode: 'insensitive' } },
+        { headline: { contains: filters.search, mode: 'insensitive' } },
+        { bio: { contains: filters.search, mode: 'insensitive' } },
+      ];
     }
 
     const [profiles, totalCount] = await Promise.all([
@@ -64,7 +71,8 @@ default async function handler(
         skip,
         take: limit,
         orderBy: {
-          createdAt: desc',        },
+          createdAt: 'desc',
+        },
         select: {
           id: true,
           name: true,
@@ -77,10 +85,10 @@ default async function handler(
           rating: true,
           completedProjects: true,
           isAvailable: true,
-          createdAt: true
-        }
+          createdAt: true,
+        },
       }),
-      prisma.talentProfile.count({ where })
+      prisma.talentProfile.count({ where }),
     ]);
 
     return res.status(200).json({
@@ -88,11 +96,13 @@ default async function handler(
       totalCount,
       page,
       limit,
-      hasMore: skip + limit < totalCount
+      hasMore: skip + limit < totalCount,
     });
   } catch (error) {
     Sentry.captureException(error);
-    console.error('Error fetching talent profiles:', error);    return res.status(500).json({ error: Failed to fetch talent profiles' });  } finally {
+    console.error('Error fetching talent profiles:', error);
+    return res.status(500).json({ error: 'Failed to fetch talent profiles' });
+  } finally {
     await prisma.$disconnect();
   }
 }

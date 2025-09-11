@@ -1,194 +1,108 @@
-class Script {
-  constructor() {
-    this.isRunning = false;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes && fixes.forEach(fix => { if (typeof fix && fix.replacement === 'function') { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} else { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value && value.includes('"') && !value && value.includes("'") && !value && value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs && fs.writeFileSync(filePath,content,'utf8');  return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } } if (import && import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+// Common syntax fixes
+const fixes = [// Fix numeric literals in object properties
+  {
+    "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,
+    "replacement": '$1: $2$3'
+  },
+  // Fix missing quotes around string values
+  {
+    "pattern": /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[}])/g,
+    "replacement": '$1: "$2"'
+  },
+  // Fix malformed JSX attributes
+  {
+    "pattern": /(\w+)=\{"([^"]+)"\}/g,
+    "replacement": '$1={"$2"}'
+  },
+  // Fix missing colons in object properties
+  {
+    "pattern": /(\w+)\s+(\d+)/g,
+    "replacement": '$1: $2'
+  },
+  // Fix malformed style objects
+  {
+    "pattern": /style=\{\{\s*([^}]+)\s*\}\}/g,
+    "replacement": (match, content) => {
+      // Fix common style object issues
+      const fixed = content
+        .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g, '$"1": "$2$3"')
+        .replace(/(\w+):\s*([^}]+)(?=\s*[}])/g, (m, prop, value) => {
+          if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) {
+            return "${prop}: "${value}""}
+          return m});
+      return "style={{ ${fixed} }}`}
+  },
+  // Fix unterminated strings
+  {
+    "pattern": /"([^"]*)\n/g,
+    "replacement": '"$1"'
+  },
+  // Fix malformed template literals
+  {
+    "pattern": /\$\{([^}]+)\}/g,
+    "replacement": '${$1}'
   }
-
-  async start() {
-    this.isRunning = true;
-    console.log('Starting Script...');
-
-    try {
-      const winston = require('winston');
-
-      const logger = winston.createLogger({
-        level: 'info',
-        format: winston.format.combine(
-          winston.format.timestamp(),
-          winston.format.errors({ stack: true }),
-          winston.format.json(),
-        ),
-        defaultMeta: { service: 'automation-script' },
-        transports: [
-          new winston.transports.File({
-            filename: 'logs/error.log',
-            level: 'error',
-          }),
-          new winston.transports.File({ filename: 'logs/combined.log' }),
-        ],
-      });
-
-      if (process.env.NODE_ENV !== 'production') {
-        logger.add(
-          new winston.transports.Console({
-            format: winston.format.simple(),
-          }),
-        );
-      }
-
-      const fs = require('fs');
-      const path = require('path');
-      const { execSync } = require('child_process');
-
-      logger.info('🔧 Fixing syntax errors in the codebase...');
-
-      // Function to recursively find all TypeScript files
-      function findTsFiles(dir, files = []) {
-        const items = fs.readdirSync(dir);
-
-        for (const item of items) {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-
-          if (
-            stat.isDirectory() &&
-            !item.startsWith('.') &&
-            item !== 'node_modules' &&
-            item !== '.next'
-          ) {
-            findTsFiles(fullPath, files);
-          } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
-            files.push(fullPath);
-          }
-        }
-
-        return files;
-      }
-
-      // Function to fix syntax errors in a file
-      function fixSyntaxErrors(filePath) {
-        try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          let modified = false;
-
-          // Fix missing quotes in import statements
-          const importRegex = /import\s+(?:type\s+)?\{[^}]+\}\s+from\s+next';/g;
-          if (importRegex.test(content)) {
-            content = content.replace(importRegex, (match) => {
-              return match.replace("next';", "'next';");
-            });
-            modified = true;
-          }
-
-          // Fix missing quotes in method checks
-          const methodRegex = /req\.method\s*!==\s*([A-Z]+)'/g;
-          if (methodRegex.test(content)) {
-            content = content.replace(methodRegex, (match, method) => {
-              return match.replace(`${method}'`, `'${method}'`);
-            });
-            modified = true;
-          }
-
-          // Fix missing quotes in string literals
-          const stringRegex = /message:\s*([A-Za-z\s]+)'/g;
-          if (stringRegex.test(content)) {
-            content = content.replace(stringRegex, (match, message) => {
-              return match.replace(`${message}'`, `'${message}'`);
-            });
-            modified = true;
-          }
-
-          // Fix missing quotes in typeof checks
-          const typeofRegex = /typeof\s+global\s*!==\s*undefined'/g;
-          if (typeofRegex.test(content)) {
-            content = content.replace(
-              typeofRegex,
-              "typeof global !== 'undefined'",
-            );
-            modified = true;
-          }
-
-          // Fix missing quotes in typeof checks for self
-          const selfRegex = /typeof\s*\([^)]+\)\.self\s*===\s*undefined/g;
-          if (selfRegex.test(content)) {
-            content = content.replace(selfRegex, (match) => {
-              return match.replace('undefined', "'undefined'");
-            });
-            modified = true;
-          }
-
-          if (modified) {
-            fs.writeFileSync(filePath, content, 'utf8');
-            logger.info(`✅ Fixed: ${filePath}`);
-            return true;
-          }
-
-          return false;
-        } catch (error) {
-          logger.error(`❌ Error fixing ${filePath}:`, error.message);
-          return false;
-        }
-      }
-
-      // Main execution
-      try {
-        const tsFiles = findTsFiles('.');
-        logger.info(`Found ${tsFiles.length} TypeScript files to check...`);
-
-        let fixedCount = 0;
-        for (const file of tsFiles) {
-          if (fixSyntaxErrors(file)) {
-            fixedCount++;
-          }
-        }
-
-        logger.info(`\n🎉 Fixed syntax errors in ${fixedCount} files!`);
-
-        // Run TypeScript check to verify fixes
-        logger.info('\n🔍 Running TypeScript check...');
-        try {
-          execSync('npx tsc --noEmit', { stdio: 'inherit' });
-          logger.info('✅ TypeScript check passed!');
-        } catch (error) {
-          logger.info(
-            '⚠️  TypeScript check still has issues, but syntax errors should be fixed.',
-          );
-        }
-      } catch (error) {
-        logger.error('❌ Error during syntax fix:', error.message);
-        process.exit(1);
-      }
-
-      // Graceful shutdown handling
-      process.on('SIGINT', () => {
-        console.log('\n🛑 Received SIGINT, shutting down gracefully...');
-        // Add cleanup logic here
-        process.exit(0);
-      });
-
-      process.on('SIGTERM', () => {
-        console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
-        // Add cleanup logic here
-        process.exit(0);
-      });
-    } catch (error) {
-      console.error('Error in Script:', error);
-      throw error;
+];
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    // Apply fixes
+    fixes.forEach(fix => {
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement)} else {
+        content = content.replace(fix.pattern, fix.replacement)}
+    });
+    // Additional specific fixes for common issues
+    content = content
+      // Fix numeric literals in style objects
+      .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g, '$"1": "$2$3"')
+      // Fix missing quotes in object properties
+      .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[}])/g, (match, prop, value) => {
+        if (!value.includes('"') && !value.includes("'") && !value.includes('`')) {
+          return `${prop}: "${value}"`}
+        return match})
+      // Fix malformed JSX
+      .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g, '<$1 $2 />')
+      // Fix unterminated strings in JSX
+      .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g, '$1="$2$3"$4');
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`"Fixed": ${filePath}`);
+      return true}
+    return false} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false}
+}
+async function main() {
+  const patterns = ['pages/**/*.tsx',
+    'components/**/*.tsx',
+    'src/**/*.tsx',
+    'src/**/*.ts'
+  ];
+  let totalFixed = 0;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes.forEach(fix => { if (typeof fix.replacement === 'function') { content = content.replace(fix.pattern,fix.replacement)} else { content = content.replace(fix.pattern,fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value.includes('"') && !value.includes("'") && !value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs.writeFileSync(filePath,content,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed ${totalFixed} files`)} if (import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes.forEach(fix => { if (typeof fix.replacement === 'function') { content = content.replace(fix.pattern,fix.replacement)} else { content = content.replace(fix.pattern,fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value.includes('"') && !value.includes("'") && !value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs.writeFileSync(filePath,content,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed ${totalFixed} files`)} if (import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes.forEach(fix => { if (typeof fix.replacement === 'function') { content = content.replace(fix.pattern,fix.replacement)} else { content = content.replace(fix.pattern,fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value.includes('"') && !value.includes("'") && !value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs.writeFileSync(filePath,content,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed ${totalFixed} files`)} if (import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes.forEach(fix => { if (typeof fix.replacement === 'function') { content = content.replace(fix.pattern,fix.replacement)} else { content = content.replace(fix.pattern,fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value.includes('"') && !value.includes("'") && !value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs.writeFileSync(filePath,content,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed ${totalFixed} files`)} if (import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes.forEach(fix => { if (typeof fix.replacement === 'function') { content = content.replace(fix.pattern,fix.replacement)} else { content = content.replace(fix.pattern,fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value.includes('"') && !value.includes("'") && !value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs.writeFileSync(filePath,content,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed ${totalFixed} files`)} if (import.meta.url === `file: main()} export { fixFile,fixes };
+    const files = await glob(pattern, { "cwd": process.cwd() });
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++}
     }
   }
-
-  stop() {
-    this.isRunning = false;
-    console.log('Stopping Script...');
-  }
-}
-
-// Start the script
-if (require.main === module) {
-  const script = new Script();
-  script.start().catch((error) => {
-    console.error('Failed to start Script:', error);
-    process.exit(1);
-  });
-}
-
-module.exports = Script;
+  console && console.log(`\nFixed ${totalFixed} files`)}
+if (import && import.meta.url === `"file": //${process ;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes && fixes.forEach(fix => { if (typeof fix && fix.replacement === 'function') { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} else { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value && value.includes('"') && !value && value.includes("'") && !value && value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs && fs.writeFileSync(filePath,content,'utf8'); console && console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed ${totalFixed} files`)} if (import && import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes && fixes.forEach(fix => { if (typeof fix && fix.replacement === 'function') { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} else { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value && value.includes('"') && !value && value.includes("'") && !value && value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs && fs.writeFileSync(filePath,content,'utf8'); console && console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed ${totalFixed} files`)} if (import && import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes && fixes.forEach(fix => { if (typeof fix && fix.replacement === 'function') { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} else { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value && value.includes('"') && !value && value.includes("'") && !value && value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs && fs.writeFileSync(filePath,content,'utf8'); console && console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed ${totalFixed} files`)} if (import && import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes && fixes.forEach(fix => { if (typeof fix && fix.replacement === 'function') { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} else { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value && value.includes('"') && !value && value.includes("'") && !value && value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs && fs.writeFileSync(filePath,content,'utf8'); console && console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed ${totalFixed} files`)} if (import && import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes && fixes.forEach(fix => { if (typeof fix && fix.replacement === 'function') { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} else { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value && value.includes('"') && !value && value.includes("'") && !value && value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs && fs.writeFileSync(filePath,content,'utf8'); console && console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed ${totalFixed} files`)} if (import && import.meta.url === `file: main()} export { fixFile,fixes };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes && fixes.forEach(fix => { if (typeof fix && fix.replacement === 'function') { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} else { content = content && content.replace(fix && fix.pattern,fix && fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value && value.includes('"') && !value && value.includes("'") && !value && value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs && fs.writeFileSync(filePath,content,'utf8'); console && console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed ${totalFixed} files`)} if (import && import.meta.url === `file: main()} export { fixFile,fixes };
+origin/cursor/integrate-build-improve-and-re-verify-c7b5

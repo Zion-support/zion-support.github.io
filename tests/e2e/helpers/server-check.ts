@@ -1,22 +1,25 @@
 const fetchFn: typeof fetch = (global as any).fetch;
-const baseURL = process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000';const fallbackURL = baseURL.replace('3000', 3001');let cachedURL: string | null = null;
+
+const baseURL = process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
+const fallbackURL = baseURL.replace('3000', '3001');
+let cachedURL: string | null = null;
+
+function fetchWithTimeout(url: string, options: RequestInit = {}, timeout = 2000) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeout);
+  return fetchFn(url, { ...options, signal: controller.signal }).finally(() => clearTimeout(id));
+}
 
 async function isServerRunning(url: string): Promise<boolean> {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 2000);
   try {
-    const res = await fetchFn(`${url}/api/health`, {
-      method: GET',      signal: controller.signal
-    });
-    return res.ok;
+    const res = await fetchFn(`${url}/api/health`, { method: 'HEAD' });
+    return res.status < 500;
   } catch {
     return false;
-  } finally {
-    clearTimeout(timeout);
   }
 }
-;
-async function getServerURL(): Promise<string | null> {
+
+export async function getServerURL(): Promise<string | null> {
   if (cachedURL) return cachedURL;
   if (await isServerRunning(baseURL)) {
     cachedURL = baseURL;
@@ -25,8 +28,8 @@ async function getServerURL(): Promise<string | null> {
   }
   return cachedURL;
 }
-;
-async function skipIfNoServer(testInfo: unknown): Promise<string | null> {
+
+export async function skipIfNoServer(testInfo: any): Promise<string | null> {
   const url = await getServerURL();
   if (!url) {
     testInfo.skip(`Server not running at ${baseURL} or ${fallbackURL}`);

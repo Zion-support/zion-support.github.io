@@ -1,6 +1,7 @@
-function mockFetch(response: unknown, status = 200) {
-  global.fetch = vi.fn().mockResolvedValue({
+export function mockFetch(response: any, status = 200) {
+  global.fetch = jest.fn().mockResolvedValue({
     status,
-    json: () => Promise.resolve(response)
-  });
+    json: () => Promise.resolve(response),
+  }) as jest.Mock;
 }
+

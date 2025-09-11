@@ -1,0 +1,1 @@
+export const ZION_TOKEN_NETWORK_ID = 1; // Ethereum mainnet

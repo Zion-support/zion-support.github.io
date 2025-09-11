@@ -1,29 +1,34 @@
+const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', env: process.env });
+function runGitSync() {
+  const abs = path.resolve(__dirname, '..', '..', 'automation', 'advanced-git-sync.cjs');
+  const res = spawnSync('node', [abs], { stdio: 'pipe', encoding: 'utf8' });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = { schedule: '11 */6 * * *' };
-
 exports.handler = async () => {
-  const logs = [];
-  const logStep = (name, fn) => {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
-  };
+  const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
+  const apiKey = process.env.PAGESPEED_API_KEY || '';
+  const url = `${baseUrl || 'https://ziontechgroup.com'}`;
+  const endpoint = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}${apiKey ? `&key=${apiKey}` : ''}`;
 
-  process.env.SITE_BASE_URL = process.env.SITE_BASE_URL || process.env.URL || process.env.NETLIFY_BASE_URL || '';
-  logStep('pagespeed:report', () => runNode('automation/pagespeed-insights-runner.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  const logs = [];
+  try {
+    const res = await fetch(endpoint);
+    const json = await res.json();
+    const outDir = path.resolve(__dirname, '..', '..', 'public', 'reports', 'pagespeed');
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.json'), JSON.stringify({ generatedAt: new Date().toISOString(), url, data: json }, null, 2));
+    logs.push('PageSpeed report written.');
+  } catch (e) {
+    logs.push('Error fetching PageSpeed: ' + String(e));
+  }
+
+  const sync = runGitSync();
+  if (sync.stdout) logs.push(sync.stdout);
+  if (sync.stderr) logs.push(sync.stderr);
 
   return { statusCode: 200, body: logs.join('\n') };
 };
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96

@@ -1,28 +1,168 @@
-import React from 'react';
 
-export type KpiBadgeProps = {
-  label: string;
-  value: string | number;
-  hint?: string;
-  tone?: 'default' | 'success' | 'warning' | 'danger' | 'info';
-};
+import {useEffect, useState} from 'react';
 
-const toneToClasses: Record<NonNullable<KpiBadgeProps['tone']>, string> = {
-  default: 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100',
-  success: 'bg-green-100 text-green-900 dark:bg-green-900/40 dark:text-green-200',
-  warning: 'bg-yellow-100 text-yellow-900 dark:bg-yellow-900/40 dark:text-yellow-200',
-  danger: 'bg-red-100 text-red-900 dark:bg-red-900/40 dark:text-red-200',
-  info: 'bg-blue-100 text-blue-900 dark:bg-blue-900/40 dark:text-blue-200',
-};
+=======
+import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-export function KpiBadge({ label, value, hint, tone = 'default' }: KpiBadgeProps) {
+function useCounter(target: number, durationMs: number) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+
+import {useEffect, useState} from 'react';
+
+function useCounter(target: number, durationMs: number) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    let start: number | null = null;
+    let raf: number;    const step = (ts: number) => {;
+    let start: number | null = null,
+    let raf: number,
+    const step = (ts: number) => {
+    }
+
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [target, durationMs]);
+  return value;
+}
+=======
+import {useEffect, useState} from 'react';
+/**
+ * use_counter - Function description
+ */
+function use_counter() {
+  const [value, set_value] = useState (0);
+  useEffect (() => {
+    let start: number | null = null;
+    let raf: number;    const step = (ts: number) =>: any {
+      // Check condition
+if (start = ts) {
+  $2
+}
+      const progress = Math.min (1, (ts - start) / duration_ms);
+      set_value (Math.floor (progress * target));
+      if (raf = requestAnimationFrame (step)) {
+  $2
+}    let start: number | null = null,
+    let raf: number,
+    const step = (ts: number) =>: any {
+      // Check condition
+if (start = ts, ) {
+  $2
+}
+      const progress = Math.min (1, (ts - start) / duration_ms);
+      set_value (Math.floor (progress * target));
+      if (raf = requestAnimationFrame (step)) {
+  $2
+}
+    }
+    raf = requestAnimationFrame (step);
+    return () => cancelAnimationFrame (raf);
+  }, [target, duration_ms]);
+  return value;}
+    }
+    raf = requestAnimationFrame (step);
+    return () => cancelAnimationFrame (raf);
+  }, [target, duration_ms]);
+  return value;
+}
+export default /**
+ * InteractiveStats - Function description
+ */
+function InteractiveStats() {
+  const hires = use_counter (1200, 1200);
+  const experts = use_counter (450, 1200);
+  const partners = use_counter (85, 1200);
+  const satisfaction = use_counter (98, 1200);
   return (
-    <div className={`rounded-xl p-4 border border-black/5 dark:border-white/10 ${toneToClasses[tone]}`}>
-      <div className="text-xs uppercase tracking-wide opacity-70">{label}</div>
-      <div className="text-2xl font-semibold mt-1">{value}</div>
-      {hint && <div className="text-xs opacity-70 mt-1">{hint}</div>}
+    <div className='grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <Stat label='Successful Hires' value={hires} suffix='+' />;
+      <Stat label='AI Experts' value={experts} suffix='+' />;
+      <Stat label='Partners' value={partners} suffix='+' />;
+      <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <Stat label="Successful Hires" value={hires} suffix="+" />
+      <Stat label="AI Experts" value={experts} suffix="+" />
+      <Stat label="Partners" value={partners} suffix="+" />
+      <Stat label="Satisfaction" value={satisfaction} suffix="%" />
     </div>
-  );
+  )
 }
 
-export default KpiBadge;
+  );
+
+
+=======
+
+}
+function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
+  return (
+    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
+      <div className="text-3xl font-bold">{value}{suffix}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+    </div>
+);
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+function Stat({
+  label
+  value
+  suffix = ''
+}: {
+}
+}
+=======
+==============
+
+function Stat(): any ({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {;
+  return (
+    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">;
+      <div className="text-3xl font-bold">{value}{suffix}</div>;
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>;
+    </div>;
+  );
+
+}
+
+=======
+  );
+
+function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
+  return (
+    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
+      <div className="text-3xl font-bold">{value}{suffix}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+    </div>
+);
+  );
+function Stat({
+  label
+  value
+  suffix = ''
+}: {
+  label: string;
+  value: number;
+  suffix?: string;
+}) {
+  return (
+    <div className='p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur'>
+      <div className='text-3xl font-bold'>
+        {value}
+        {suffix}
+==============      </div>
+      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
+    </div>
+  );
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

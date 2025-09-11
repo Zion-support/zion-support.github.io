@@ -1,30 +1,62 @@
 #!/usr/bin/env node
+
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-function writeFile(filepath, content) {
-  const dir = path.dirname(filepath);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(filepath, content, 'utf8');
+const ROOT = process.cwd();
+const DOCS_DIR = path.join(ROOT, 'docs');
+const REPORT_DIR = path.join(ROOT, 'public', 'reports', 'anchor-links');
+
+function ensureDir(p) { if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true }); }
+ensureDir(REPORT_DIR);
+
+function slugify(s) {
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
 }
 
-function scanFile(filePath) {
-  const text = fs.readFileSync(filePath, 'utf8');
-  const anchors = Array.from(text.matchAll(/href=["']#([A-Za-z0-9_-]+)["']/g)).map(m => m[1]);
-  const ids = new Set(Array.from(text.matchAll(/id=["']([A-Za-z0-9_-]+)["']/g)).map(m => m[1]));
-  const headings = Array.from(text.matchAll(/^\s*#+\s+(.+)$/gm)).map(h => h[1].trim().toLowerCase().replace(/[^a-z0-9_-]+/g, '-'));
-  const allTargets = new Set([...ids, ...headings]);
-  const missing = anchors.filter(a => !allTargets.has(a));
-  return { file: filePath, anchors: anchors.length, missing };
+function listMarkdown(dir) {
+  const out = [];
+  if (!fs.existsSync(dir)) return out;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...listMarkdown(full));
+    else if (/\.(md|mdx)$/i.test(entry.name)) out.push(full);
+  }
+  return out;
 }
 
-const files = glob.sync('{pages,docs}/**/*.{md,mdx,ts,tsx,jsx,js}', { nodir: true });
-const results = files.map(scanFile).filter(r => r.missing.length > 0);
-
-const md = ['# Anchor Links Report', '', `Generated: ${new Date().toISOString()}`, '']
-  .concat(results.map(r => `- ${r.file}: missing anchors -> ${r.missing.join(', ')}`))
-  .join('\n');
-
-writeFile(path.resolve(process.cwd(), 'docs/anchor-link-report.md'), md);
-console.log('Anchor links report written to docs/anchor-link-report.md');
+(function main() {
+  const files = listMarkdown(DOCS_DIR);
+  const changes = [];
+  for (const file of files) {
+    const original = fs.readFileSync(file, 'utf8');
+    const lines = original.split(/\r?\n/);
+    let modified = false;
+    for (let i = 0; i < lines.length; i++) {
+      const m = /^(#{1,6})\s+(.+?)(\s*\{#.+\})?$/.exec(lines[i]);
+      if (!m) continue;
+      const hashes = m[1];
+      const title = m[2].replace(/\{#.*\}$/,'').trim();
+      const hasId = /\{#.+\}\s*$/.test(lines[i]);
+      if (!hasId) {
+        const id = slugify(title);
+        lines[i] = `${hashes} ${title} {#${id}}`;
+        modified = true;
+      }
+    }
+    if (modified) {
+      fs.writeFileSync(file, lines.join('\n'));
+      changes.push({ file: path.relative(ROOT, file) });
+    }
+  }
+  const report = { generatedAt: new Date().toISOString(), totalFiles: files.length, changed: changes.length, changes };
+  fs.writeFileSync(path.join(REPORT_DIR, 'report.json'), JSON.stringify(report, null, 2));
+  console.log(`Anchor Links Auto-Fixer updated ${changes.length} files.`);
+})();

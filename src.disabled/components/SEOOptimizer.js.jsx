@@ -1,0 +1,3 @@
+
+import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';<<<<<<< HEAD
+const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""

@@ -1,5 +1,10 @@
-describe('Main navigation links', () => {'  it('navigates to each top link without 404', () => {'    const broken: string[] = [];
-    cy.visit('/');    cy.get('header nav a').each(($link) => {'      const href = $link.attr('href');      if (!href) {
+describe('Main navigation links', () => {
+  it('navigates to each top link without 404', () => {
+    const broken: string[] = [];
+    cy.visit('/');
+    cy.get('header nav a').each(($link) => {
+      const href = $link.attr('href');
+      if (!href) {
         return;
       }
       cy.log(`Checking ${href}`);
@@ -10,9 +15,12 @@ describe('Main navigation links', () => {'  it('navigates to each top link witho
         }
       });
       cy.wrap($link).click();
-      cy.location('pathname').should('include', href === /' ? /' : href);      cy.go('back');    }).then(() => {
+      cy.location('pathname').should('include', href === '/' ? '/' : href);
+      cy.go('back');
+    }).then(() => {
       if (broken.length) {
-        throw new Error('Broken links found:  + broken.join(', ));      }
+        throw new Error('Broken links found: ' + broken.join(', '));
+      }
     });
   });
 });

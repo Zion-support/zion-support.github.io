@@ -1,151 +1,140 @@
 #!/usr/bin/env node
 
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-function collectFiles(root, patterns) {
-  const results = [];
-  for (const p of patterns) {
-    const matches = glob.sync(p, { cwd: root, nodir: true });
-    for (const rel of matches) {
-      const abs = path.join(root, rel);
-      try {
-        const stat = fs.statSync(abs);
-        results.push({ file: rel.replace(/\\/g, '/'), mtimeMs: stat.mtimeMs, size: stat.size });
-      } catch {}
-    }
+function sh(cmd) {
+  try {
+    return execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'], encoding: 'utf8' }).trim();
+  } catch (e) {
+    return '';
   }
-  return results;
 }
 
-function daysSince(date) {
-  const ms = Date.now() - date.getTime();
+function listFiles(rootDir, subdirs) {
+  const files = [];
+  for (const sub of subdirs) {
+    const dir = path.join(rootDir, sub);
+    if (!fs.existsSync(dir)) continue;
+    const walk = (p) => {
+      const entries = fs.readdirSync(p, { withFileTypes: true });
+      for (const ent of entries) {
+        const abs = path.join(p, ent.name);
+        if (ent.isDirectory()) {
+          // skip heavy/binary dirs
+          if (/^\.|node_modules|\.git|out|public\/(images|assets)/.test(ent.name)) continue;
+          walk(abs);
+        } else {
+          if (/\.(png|jpg|jpeg|gif|webp|svg|ico|pdf|zip)$/i.test(ent.name)) continue;
+          files.push(abs);
+        }
+      }
+    };
+    walk(dir);
+  }
+  return files;
+}
+
+function getLastCommitIso(filePath) {
+  const out = sh(`git log -1 --format=%cI -- ${JSON.stringify(filePath)}`);
+  return out || null;
+}
+
+function daysBetween(aIso, bIso) {
+  const a = new Date(aIso);
+  const b = new Date(bIso);
+  const ms = Math.abs(b.getTime() - a.getTime());
   return Math.floor(ms / (1000 * 60 * 60 * 24));
 }
 
-function isTextFile(file) {
-  return /\.(tsx|ts|js|jsx|md|mdx|json|toml|yml|yaml|css|scss|html)$/i.test(file);
-}
-
-function computeReferenceCounts(allFiles, fileToAnalyze) {
-  // Count how many other files reference the basename (route-ish) of the file
-  const baseName = path.basename(fileToAnalyze).replace(/\.(tsx|ts|js|jsx|md|mdx)$/i, '');
-  const needle = new RegExp(`(^|["'` + '`' + `\{\(\s/])${baseName}(["'` + '`' + `\}\)\s/]|$)`, 'i');
-  let refs = 0;
-  for (const f of allFiles) {
-    if (f === fileToAnalyze) continue;
-    if (!isTextFile(f)) continue;
-    try {
-      const content = fs.readFileSync(f, 'utf8');
-      if (needle.test(content)) refs += 1;
-    } catch {}
-  }
-  return refs;
-}
-
 (function main() {
-  const allCandidates = TARGET_DIRS.flatMap(listFiles)
-    // ignore Next.js internals and noisy artifacts
-    .filter((f) => !/\/(\.next|node_modules|\.git|out|public)\//.test(f))
-    .filter((f) => !/\/(\.DS_Store|\.map)$/.test(f));
+  const ROOT = path.resolve(__dirname, '..');
+  const nowIso = new Date().toISOString();
+  const candidates = listFiles(ROOT, ['pages', 'components', 'docs']);
 
-  const now = new Date();
-  const thresholdDays = parseInt(process.env.STALE_DAYS || '90', 10);
-  const maxReport = parseInt(process.env.STALE_MAX || '200', 10);
+  const items = candidates.map((absPath) => {
+    const rel = path.relative(ROOT, absPath).replace(/\\/g, '/');
+    const lastCommit = getLastCommitIso(absPath);
+    const fileMtimeIso = new Date(fs.statSync(absPath).mtimeMs).toISOString();
+    const ageDays = lastCommit ? daysBetween(lastCommit, nowIso) : daysBetween(fileMtimeIso, nowIso);
+    return { path: rel, lastCommitIso: lastCommit, fileMtimeIso, ageDays };
+  }).sort((a, b) => b.ageDays - a.ageDays);
 
-  const items = [];
-  for (const file of allCandidates) {
-    try {
-      const stat = fs.statSync(file);
-      const modified = stat.mtime;
-      const ageDays = daysSince(modified);
-      const references = computeReferenceCounts(allCandidates, file);
-      const isCode = /\.(tsx|ts|js|jsx)$/i.test(file);
-      const isDoc = /\.(md|mdx)$/i.test(file);
-      const isPage = file.includes(path.sep + 'pages' + path.sep);
+  const staleThresholdDays = Number(process.env.STALE_CONTENT_DAYS || 90);
+  const stale = items.filter((i) => i.ageDays >= staleThresholdDays);
 
-      if (ageDays >= thresholdDays || (ageDays >= 45 && references <= 1)) {
-        items.push({ file: path.relative(ROOT, file), ageDays, references, isCode, isDoc, isPage, modified: modified.toISOString() });
-      }
-    } catch {}
-  }
+  const reportDir = path.join(ROOT, 'public', 'reports', 'stale-content');
+  fs.mkdirSync(reportDir, { recursive: true });
 
-  // Sort by most stale, then least referenced
-  items.sort((a, b) => (b.ageDays - a.ageDays) || (a.references - b.references));
-  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-
-  const jsonOutPath = path.join(STALE_DIR, `stale-content-${timestamp}.json`);
-  const latestJsonPath = path.join(STALE_DIR, `latest.json`);
-  const mdOutPath = path.join(ROOT, 'docs', 'reports', 'stale-content.md');
-  ensureDir(path.dirname(mdOutPath));
-
-  const summary = {
-    generatedAt: new Date().toISOString(),
-    thresholdDays,
-    totalAnalyzed: allCandidates.length,
-    totalFlagged: items.length,
-    top: items.slice(0, maxReport),
+  // Write JSON
+  const json = {
+    generatedAt: nowIso,
+    staleThresholdDays,
+    totalScanned: items.length,
+    totalStale: stale.length,
+    top50Stale: stale.slice(0, 50),
   };
+  fs.writeFileSync(path.join(reportDir, 'index.json'), JSON.stringify(json, null, 2));
 
-  fs.writeFileSync(jsonOutPath, JSON.stringify(summary, null, 2));
-  fs.writeFileSync(latestJsonPath, JSON.stringify(summary, null, 2));
+  // Write HTML (simple, lightweight)
+  const rows = stale.slice(0, 200).map((i) => (
+    `<tr><td style="padding:6px 10px;border-bottom:1px solid #223">${i.path}</td><td style="padding:6px 10px;border-bottom:1px solid #223">${i.lastCommitIso || i.fileMtimeIso}</td><td style="padding:6px 10px;border-bottom:1px solid #223;text-align:right">${i.ageDays}</td></tr>`
+  )).join('\n');
 
-  const lines = [];
-  lines.push('# Stale Content Report');
-  lines.push('');
-  lines.push(`- Generated at: ${summary.generatedAt}`);
-  lines.push(`- Threshold: ${thresholdDays} days`);
-  lines.push(`- Files analyzed: ${summary.totalAnalyzed}`);
-  lines.push(`- Flagged: ${summary.totalFlagged}`);
-  lines.push('');
-  lines.push('| File | Age (days) | References | Page | Code | Doc | Last Modified |');
-  lines.push('|---|---:|---:|:--:|:--:|:--:|---|');
-  for (const it of summary.top) {
-    lines.push(`| ${it.file} | ${it.ageDays} | ${it.references} | ${it.isPage ? '✓' : ''} | ${it.isCode ? '✓' : ''} | ${it.isDoc ? '✓' : ''} | ${it.modified} |`);
-  }
-  fs.writeFileSync(mdOutPath, lines.join('\n'));
+  const html = `<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stale Content Report</title>
+  <meta name="description" content="Files that haven't been updated recently across pages, components, and docs." />
+  <style>
+    body{background:#0b1220;color:#e6ebff;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto}
+    a{color:#7dd3fc}
+    .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+    .card{background:#0f172a;border:1px solid #1f2a44;border-radius:12px;padding:16px}
+    h1{font-size:20px;margin:0 0 8px}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    thead td{color:#9fb3ff}
+    tbody tr:hover{background:#111a33}
+    .meta{color:#9fb3ff;font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Stale Content Report</h1>
+    <div class="meta">Generated at ${nowIso}. Threshold = ${staleThresholdDays} days. Scanned ${items.length} files, found ${stale.length} stale.</div>
+    <div class="card" style="margin-top:12px">
+      <table>
+        <thead>
+          <tr><td>Path</td><td>Last change</td><td style="text-align:right">Age (days)</td></tr>
+        </thead>
+        <tbody>
+          ${rows}
+        </tbody>
+      </table>
+      <div class="meta" style="margin-top:8px">Full JSON: <a href="./index.json">index.json</a></div>
+    </div>
+    <div style="margin-top:16px" class="meta">Tip: Reduce threshold via env STALE_CONTENT_DAYS to surface more candidates.</div>
+  </div>
+</body>
+</html>`;
 
-  console.log(`Stale content report written to:\n- ${jsonOutPath}\n- ${latestJsonPath}\n- ${mdOutPath}`);
+  fs.writeFileSync(path.join(reportDir, 'index.html'), html, 'utf8');
+
+  // Update a small public registry summary
+  try {
+    const registryDir = path.join(ROOT, 'public', 'automation');
+    fs.mkdirSync(registryDir, { recursive: true });
+    const registryPath = path.join(registryDir, 'content-registry.json');
+    let reg = {};
+    try { reg = JSON.parse(fs.readFileSync(registryPath, 'utf8')); } catch {}
+    reg.staleContent = { updatedAt: nowIso, totalStale: stale.length, report: '/reports/stale-content/index.html' };
+    fs.writeFileSync(registryPath, JSON.stringify(reg, null, 2));
+  } catch {}
+
+  console.log(`Stale content report generated: ${path.relative(ROOT, reportDir)}`);
 })();
-=======
-function main() {
-  const root = path.resolve(__dirname, '..');
-  const outDir = path.join(root, 'public', 'automation');
-  const outPath = path.join(outDir, 'stale-content.json');
-  fs.mkdirSync(outDir, { recursive: true });
-
-  const patterns = [
-    'pages/**/*.{js,jsx,ts,tsx,md,mdx}',
-    'components/**/*.{js,jsx,ts,tsx}',
-    'docs/**/*.{md,mdx}',
-  ];
-  const files = collectFiles(root, patterns);
-
-  const now = Date.now();
-  const days = (ms) => Math.round(ms / (1000 * 60 * 60 * 24));
-  const annotated = files.map((f) => ({
-    file: f.file,
-    ageDays: days(now - f.mtimeMs),
-    size: f.size,
-  }));
-
-  annotated.sort((a, b) => b.ageDays - a.ageDays || b.size - a.size);
-  const thresholdDays = Number(process.env.STALE_THRESHOLD_DAYS || 30);
-  const stale = annotated.filter((f) => f.ageDays >= thresholdDays).slice(0, 200);
-
-  const report = {
-    generatedAt: new Date().toISOString(),
-    thresholdDays,
-    totalAnalyzed: files.length,
-    staleCount: stale.length,
-    sample: stale,
-  };
-
-  fs.writeFileSync(outPath, JSON.stringify(report, null, 2), 'utf8');
-  console.log('Stale content report written to', outPath);
-}
-
-if (require.main === module) {
-  main();
-}

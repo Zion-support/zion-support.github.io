@@ -1,71 +1,77 @@
 #!/bin/bash
 
-# Script to merge all unmerged branches into main
-# This script will attempt to merge all unmerged branches and resolve conflicts automatically
-
+# Script to merge all branches into main
 set -e
 
-echo "Starting automated branch merging process..."
+echo "Starting branch merge process..."
 
-# Get all unmerged branches
-UNMERGED_BRANCHES=$(git branch -r --no-merged HEAD | grep -v codex | head -50)
+# Get all remote branches
+branches=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -20)
 
-# Counter for successful merges
-SUCCESS_COUNT=0
-FAILED_COUNT=0
+echo "Found branches to process:"
+echo "$branches"
 
-for branch in $UNMERGED_BRANCHES; do
-    echo "Attempting to merge: $branch"
+# Function to merge a branch
+merge_branch() {
+    local branch=$1
+    echo "Processing branch: $branch"
     
-    # Try to merge the branch
-    if git merge "$branch" --no-edit; then
-        echo "✅ Successfully merged: $branch"
-        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+    # Check if branch exists locally
+    if ! git show-ref --verify --quiet refs/heads/$branch; then
+        echo "Creating local branch $branch from origin/$branch"
+        git checkout -b $branch origin/$branch
     else
-        echo "⚠️  Merge failed for: $branch, attempting conflict resolution..."
+        echo "Switching to existing branch $branch"
+        git checkout $branch
+        git pull origin $branch
+    fi
+    
+    # Switch back to main
+    git checkout main
+    
+    # Try to merge
+    echo "Attempting to merge $branch into main..."
+    if git merge --no-ff $branch -m "Merge branch $branch into main"; then
+        echo "✅ Successfully merged $branch"
+        # Push the merge
+        git push origin main
+        echo "✅ Pushed merged main to origin"
+    else
+        echo "❌ Merge conflict in $branch, resolving..."
         
-        # Check if there are conflicts
-        if git status --porcelain | grep -q "^UU"; then
-            echo "Resolving conflicts for: $branch"
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Resolving conflicts in $branch..."
             
-            # Try to resolve conflicts by accepting the feature branch version
-            # This is a simple strategy - in production you might want more sophisticated conflict resolution
-            
-            # Get all conflicted files
-            CONFLICTED_FILES=$(git status --porcelain | grep "^UU" | awk '{print $2}')
-            
-            for file in $CONFLICTED_FILES; do
-                if [ -f "$file" ]; then
-                    echo "Resolving conflicts in: $file"
-                    # Accept the feature branch version (--theirs)
-                    git checkout --theirs "$file" 2>/dev/null || true
-                fi
+            # Auto-resolve simple conflicts
+            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
+                echo "Resolving conflict in $file"
+                # Use main version for most conflicts
+                git checkout --ours "$file"
+                git add "$file"
             done
             
-            # Add all resolved files
-            git add . 2>/dev/null || true
+            # Commit the resolution
+            git commit -m "Resolve merge conflicts in $branch"
+            echo "✅ Resolved conflicts in $branch"
             
-            # Try to commit the merge
-            if git commit -m "Merge $branch: Resolved conflicts by accepting feature branch improvements" --no-edit; then
-                echo "✅ Successfully resolved conflicts and merged: $branch"
-                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-            else
-                echo "❌ Failed to commit merge for: $branch"
-                # Abort the merge and continue
-                git merge --abort 2>/dev/null || true
-                FAILED_COUNT=$((FAILED_COUNT + 1))
-            fi
+            # Push the resolved merge
+            git push origin main
+            echo "✅ Pushed resolved merge to origin"
         else
-            echo "❌ Merge failed for: $branch (no conflicts detected)"
-            git merge --abort 2>/dev/null || true
-            FAILED_COUNT=$((FAILED_COUNT + 1))
+            echo "No conflicts found, continuing..."
+            git merge --continue
+            git push origin main
         fi
     fi
     
+    echo "Completed processing $branch"
     echo "---"
+}
+
+# Process each branch
+for branch in $branches; do
+    merge_branch "$branch"
 done
 
-echo "Merge process completed!"
-echo "Successfully merged: $SUCCESS_COUNT branches"
-echo "Failed to merge: $FAILED_COUNT branches"
-echo "Total processed: $((SUCCESS_COUNT + FAILED_COUNT)) branches"
+echo "All branches processed!"

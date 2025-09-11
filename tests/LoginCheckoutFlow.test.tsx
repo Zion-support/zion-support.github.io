@@ -1,5 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+// use vi types when running under Vitest but fall back to Jest globals
 import { vi } from 'vitest';
 import { LoginForm } from '@/components/auth/login';
 import * as authService from '@/services/authService';

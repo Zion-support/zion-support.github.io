@@ -71,12 +71,12 @@ curl -G 'https://api.zion.fyi/api/talent/search' \
 ### Response Schema
 
 - `results` – Array of talent objects
-  - `id` _(string)_ – unique talent identifier
-  - `name` _(string)_ – display name
-  - `skills` _(array[string])_ – primary skill tags
-  - `location` _(string)_ – base city or region
-  - `rating` _(number)_ – average client rating
-- `count` _(number)_ – total results matching the query
+  - `id` *(string)* – unique talent identifier
+  - `name` *(string)* – display name
+  - `skills` *(array[string])* – primary skill tags
+  - `location` *(string)* – base city or region
+  - `rating` *(number)* – average client rating
+- `count` *(number)* – total results matching the query
 
 ### Common Use Case
 

@@ -1,45 +1,34 @@
 {
-  "timestamp": "2025-07-17T17:35:19.614Z",
-  "version": "0.0.0",
-  "environment": "production",
-  "optimizations": [],
-  "bundleSize": 0,
-  "bundleSizeFormatted": "0 Bytes",
-  "warnings": [],
-  "recommendations": [
+  "timestamp": "2025-09-06T04:27:21.541Z",
+  "status": "partial",
+  "steps": [
     {
-      "type": "monitoring",
-      "priority": "medium",
-      "title": "Setup production monitoring",
-      "description": "Enable performance monitoring in production.",
-      "action": "Configure Sentry alerts and performance budgets"
+      "step": "Build Test",
+      "status": "success",
+      "timestamp": "2025-09-06T04:27:06.863Z"
+    },
+    {
+      "step": "Package Generation",
+      "status": "success",
+      "timestamp": "2025-09-06T04:27:21.541Z"
     }
   ],
-  "deploymentChecklist": [
+  "errors": [
     {
-      "item": "Environment variables configured",
-      "status": "pending",
-      "required": true
+      "step": "Linting",
+      "error": "Command failed: npm run lint:check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+      "timestamp": "2025-09-06T04:27:07.866Z"
     },
     {
-      "item": "Production build successful",
-      "status": "complete",
-      "required": true
-    },
-    {
-      "item": "Bundle size optimized",
-      "status": "complete",
-      "required": false
-    },
-    {
-      "item": "Security audit passed",
-      "status": "complete",
-      "required": false
-    },
-    {
-      "item": "Performance monitoring ready",
-      "status": "manual-check",
-      "required": false
+      "step": "Security Check",
+      "error": "Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+      "timestamp": "2025-09-06T04:27:08.956Z"
     }
+  ],
+  "deploymentReady": false,
+  "nextSteps": [
+    "Fix identified issues",
+    "Re-run deployment process",
+    "Review error logs"
   ]
 }

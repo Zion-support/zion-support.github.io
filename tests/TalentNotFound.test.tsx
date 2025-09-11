@@ -1,7 +1,13 @@
-import { render, screen } from @testing-library/react';import NotFound from @/components/NotFound';import { getStaticProps } from @/src/pages/talent/[id];
-test('unknown talent id shows NotFound page', async () => {'  const result = await getStaticProps({ params: { id: unknown-id' } } as any);  let show404 = false;
+import { render, screen } from '@testing-library/react';
+import NotFound from '@/components/NotFound';
+import { getStaticProps } from '@/pages/talent/[id]';
 
-  if ('notFound' in result && result.notFound) {'    show404 = true;
+test('unknown talent id shows NotFound page', async () => {
+  const result = await getStaticProps({ params: { id: 'unknown-id' } } as any);
+  let show404 = false;
+
+  if ('notFound' in result && result.notFound) {
+    show404 = true;
     render(<NotFound />);
   }
 

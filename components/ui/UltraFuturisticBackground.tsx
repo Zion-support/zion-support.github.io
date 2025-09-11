@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+export default function UltraFuturisticBackground({ children }: { children: React.ReactNode }) {
+	return <div className="min-h-screen bg-gradient-to-br from-slate-950 via-black to-slate-900">{children}</div>
+}
+import React from 'react';
 
 interface UltraFuturisticBackgroundProps {
-  variant?: 'neural' | 'quantum' | 'holographic' | 'cyberpunk';
-  intensity?: 'low' | 'medium' | 'high' | 'extreme';
   children: React.ReactNode;
+<<<<<<< HEAD
   className?: string;
 }
 
@@ -97,232 +99,32 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         }
         ctx.restore();
       }
+=======
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
+  children,
+  const getIntensityClasses = () => {
+    switch (intensity) {
+      case 'low':
+        return 'opacity-30';
+      case 'medium':
+        return 'opacity-60';
+      case 'high':
+        return 'opacity-90';
+      default:
+        return 'opacity-60';
+>>>>>>> main
     }
-
-    // Grid point for holographic effect
-    class GridPoint {
-      x: number;
-      y: number;
-      originalX: number;
-      originalY: number;
-      offset: number;
-
-      constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-        this.originalX = x;
-        this.originalY = y;
-        this.offset = Math.random() * Math.PI * 2;
-      }
-
-      update() {
-        this.x = this.originalX + Math.sin(time * 0.005 + this.offset) * 20;
-        this.y = this.originalY + Math.cos(time * 0.003 + this.offset) * 15;
-      }
-
-      draw() {
-        ctx.save();
-        ctx.globalAlpha = 0.3 + 0.2 * Math.sin(time * 0.01 + this.offset);
-        ctx.strokeStyle = `hsl(${200 + Math.sin(time * 0.01) * 60}, 70%, 60%)`;
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-        ctx.stroke();
-        ctx.restore();
-      }
-    }
-
-    // Initialize particles and grid
-    const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 50; i++) {
-        const type = ['energy', 'data', 'quantum'][Math.floor(Math.random() * 3)] as 'energy' | 'data' | 'quantum';
-        particles.push(new Particle(
-          Math.random() * canvas.width,
-          Math.random() * canvas.height,
-          type
-        ));
-      }
-    };
-
-    const initGrid = () => {
-      holographicGrid = [];
-      const gridSize = 60;
-      for (let x = 0; x <= canvas.width; x += gridSize) {
-        for (let y = 0; y <= canvas.height; y += gridSize) {
-          holographicGrid.push(new GridPoint(x, y));
-        }
-      }
-    };
-
-    // Resize handler
-    const handleResize = () => {
-      if (containerRef.current) {
-        canvas.width = containerRef.current.offsetWidth;
-        canvas.height = containerRef.current.offsetHeight;
-        initGrid();
-      }
-    };
-
-    // Animation loop
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Draw gradient background
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, 'rgba(15, 23, 42, 0.95)');
-      gradient.addColorStop(0.3, 'rgba(30, 41, 59, 0.95)');
-      gradient.addColorStop(0.7, 'rgba(15, 23, 42, 0.95)');
-      gradient.addColorStop(1, 'rgba(30, 41, 59, 0.95)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Draw holographic grid
-      holographicGrid.forEach(point => {
-        point.update();
-        point.draw();
-      });
-    }
-
-      // Draw grid connections
-      ctx.save();
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = 'hsl(200, 70%, 60%)';
-      ctx.lineWidth = 0.5;
-      
-      for (let i = 0; i < holographicGrid.length; i++) {
-        for (let j = i + 1; j < holographicGrid.length; j++) {
-          const dist = Math.sqrt(
-            Math.pow(holographicGrid[i].x - holographicGrid[j].x, 2) +
-            Math.pow(holographicGrid[i].y - holographicGrid[j].y, 2)
-          );
-          if (dist < 100) {
-            ctx.beginPath();
-            ctx.moveTo(holographicGrid[i].x, holographicGrid[i].y);
-            ctx.lineTo(holographicGrid[j].x, holographicGrid[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-      ctx.restore();
-
-      // Update and draw particles
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-      });
-
-      // Draw floating data streams
-      ctx.save();
-      ctx.globalAlpha = 0.3;
-      for (let i = 0; i < 5; i++) {
-        const x = (time * 0.5 + i * 200) % (canvas.width + 200) - 100;
-        const y = canvas.height * 0.3 + Math.sin(time * 0.01 + i) * 100;
-        
-        ctx.strokeStyle = `hsl(${200 + i * 30}, 70%, 60%)`;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(x, y);
-        ctx.lineTo(x + 100, y + Math.sin(time * 0.02 + i) * 50);
-        ctx.stroke();
-      }
-      ctx.restore();
-
-      // Draw quantum wave effects
-      ctx.save();
-      ctx.globalAlpha = 0.2;
-      for (let i = 0; i < 3; i++) {
-        const centerX = canvas.width * 0.5 + Math.cos(time * 0.005 + i) * 200;
-        const centerY = canvas.height * 0.5 + Math.sin(time * 0.003 + i) * 150;
-        const radius = 50 + Math.sin(time * 0.01 + i) * 30;
-        
-        ctx.strokeStyle = `hsl(${120 + i * 60}, 90%, 60%)`;
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-        ctx.stroke();
-        
-        // Inner quantum particles
-        for (let j = 0; j < 8; j++) {
-          const angle = (time * 0.02 + j * Math.PI / 4) % (Math.PI * 2);
-          const px = centerX + Math.cos(angle) * (radius * 0.6);
-          const py = centerY + Math.sin(angle) * (radius * 0.6);
-          
-          ctx.fillStyle = `hsl(${120 + i * 60}, 90%, 60%)`;
-          ctx.beginPath();
-          ctx.arc(px, py, 2, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-      ctx.restore();
-
-      // Draw neural network connections
-      ctx.save();
-      ctx.globalAlpha = 0.15;
-      ctx.strokeStyle = 'hsl(280, 80%, 70%)';
-      ctx.lineWidth = 1;
-      
-      for (let i = 0; i < 20; i++) {
-        const x1 = Math.sin(time * 0.01 + i * 0.5) * canvas.width * 0.4 + canvas.width * 0.5;
-        const y1 = Math.cos(time * 0.008 + i * 0.3) * canvas.height * 0.4 + canvas.height * 0.5;
-        const x2 = Math.sin(time * 0.012 + i * 0.7) * canvas.width * 0.3 + canvas.width * 0.5;
-        const y2 = Math.cos(time * 0.015 + i * 0.4) * canvas.height * 0.3 + canvas.height * 0.5;
-        
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
-        ctx.stroke();
-      }
-      ctx.restore();
-
-      time++;
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
-    // Initialize and start animation
-    initParticles();
-    initGrid();
-    handleResize();
-    animate();
-
-    // Event listeners
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
+  };
 
   return (
-    <div 
-      ref={containerRef}
-      className={`relative min-h-screen overflow-hidden ${className}`}
-    >
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          background: variant === 'cyberpunk' 
-            ? 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%)'
-            : variant === 'quantum'
-            ? 'linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%)'
-            : variant === 'holographic'
-            ? 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #0f3460 100%)'
-            : 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%)'
-        }}
-      />
-      
-      {/* Overlay gradient for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-slate-800/10 to-slate-900/20 pointer-events-none" />
+    <div className={`${getBackgroundClasses()} ${className}`}>
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className={`absolute top-0 left-0 w-full h-full ${getIntensityClasses()}`}>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
+        </div>
+      </div>
       
       {/* Content */}
-      <div className="relative z-20">
-        {children}
-      </div>
-    </div>
-  );
-};
-
-export default UltraFuturisticBackground;

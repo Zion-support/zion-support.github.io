@@ -1,0 +1,2 @@
+const FavoritesContext = createContext(null); export function FavoritesProvider({ children }) { const [favorites, setFavorites] = useState([]); useEffect(() => { const stored = localStorage.getItem("favorites"); if(stored) { try { setFavorites(JSON.parse(stored)); } catch {
+}}}})

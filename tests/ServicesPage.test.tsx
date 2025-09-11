@@ -1,32 +1,65 @@
-// SKIP: This test is skipped due to outdated imports from @/src/pages/ServicesPage'.'// import { render, screen, fireEvent } from @testing-library/react';// import { MemoryRouter } from react-router-dom';// import { rest } from msw';// import { setupServer } from msw/node';// import { SWRConfig } from swr';// import ServicesPage from @/src/pages/ServicesPage';// import * as sentry from @/utils/sentry';
-// jest.mock('@/utils/sentry');
-// const server = setupServer();
+import { render, screen, fireEvent } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
+import { SWRConfig } from 'swr';
+import ServicesPage from '@/pages/ServicesPage';
+import * as sentry from '@/utils/sentry';
 
-// beforeAll(() => server.listen());
-// afterEach(() => {
-//   server.resetHandlers();
-//   jest.resetAllMocks();
-// });
-// afterAll(() => server.close());
+jest.mock('@/utils/sentry');
 
-// function renderPage() {
-//   return render(
-//     <SWRConfig value={{ provider: () => new Map() }}>
-//       <MemoryRouter>
-//         <ServicesPage />
-//       </MemoryRouter>
-//     </SWRConfig>
-//   );
-// }
+const server = setupServer();
 
-// test('renders services from API', async () => {'//   server.use(
-//     rest.get('/api/services', (_req, res, ctx) => res(ctx.json(sampleData)))//   );
-//   renderPage();
-//   expect(screen.getByTestId('loading-state')).toBeInTheDocument();//   expect(await screen.findByText('Test Service')).toBeInTheDocument();// });
+beforeAll(() => server.listen());
+afterEach(() => {
+  server.resetHandlers();
+  jest.resetAllMocks();
+});
+afterAll(() => server.close());
 
-// test('shows error and allows retry', async () => {'//   server.use(rest.get('/api/services', (_req, res, ctx) => res(ctx.status(500))));//   renderPage();
-//   expect(await screen.findByTestId('error-state')).toBeInTheDocument();//   expect(sentry.captureException).toHaveBeenCalled();
+function renderPage() {
+  return render(
+    <SWRConfig value={{ provider: () => new Map() }}>
+      <MemoryRouter>
+        <ServicesPage />
+      </MemoryRouter>
+    </SWRConfig>
+  );
+}
 
-//   server.use(
-//     rest.get('/api/services', (_req, res, ctx) => res(ctx.json(sampleData)))//   );
-//   fireEvent.click(screen.getByTestId('retry-button'));//   expect(await screen.findByText('Test Service')).toBeInTheDocument();// });
+const sampleData = [
+  {
+    id: 's1',
+    title: 'Test Service',
+    description: 'desc',
+    category: 'dev',
+    price: 1000,
+    currency: '$',
+    tags: [],
+    author: { name: 'A', id: 'a' },
+    images: [],
+    createdAt: '2020-01-01',
+  },
+];
+
+test('renders services from API', async () => {
+  server.use(
+    rest.get('/api/services', (_req, res, ctx) => res(ctx.json(sampleData)))
+  );
+  renderPage();
+  expect(screen.getByTestId('loading-state')).toBeInTheDocument();
+  expect(await screen.findByText('Test Service')).toBeInTheDocument();
+});
+
+test('shows error and allows retry', async () => {
+  server.use(rest.get('/api/services', (_req, res, ctx) => res(ctx.status(500))));
+  renderPage();
+  expect(await screen.findByTestId('error-state')).toBeInTheDocument();
+  expect(sentry.captureException).toHaveBeenCalled();
+
+  server.use(
+    rest.get('/api/services', (_req, res, ctx) => res(ctx.json(sampleData)))
+  );
+  fireEvent.click(screen.getByTestId('retry-button'));
+  expect(await screen.findByText('Test Service')).toBeInTheDocument();
+});

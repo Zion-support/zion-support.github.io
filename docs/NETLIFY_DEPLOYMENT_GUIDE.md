@@ -26,10 +26,9 @@ This guide covers the complete setup for deploying the Zion Tech Marketplace to 
 
 ### 2. Configure Environment Variables
 
-⚠️ **CRITICAL**: Set these environment variables in Netlify UI **BEFORE** first deployment. The repository no longer defines them in `netlify.toml`, so the UI values will be used for all builds.
+⚠️ **CRITICAL**: Set these environment variables in Netlify UI **BEFORE** first deployment.
 
 #### Navigate to Environment Variables
-
 1. Go to **Site Settings** → **Environment Variables**
 2. Click "Add environment variable"
 
@@ -85,14 +84,12 @@ CLOUDINARY_API_SECRET = your-cloudinary-api-secret
 
 ### 🔐 Security Classifications
 
-#### Public Variables (NEXT*PUBLIC*\*)
-
+#### Public Variables (NEXT_PUBLIC_*)
 - **Safe to expose**: These are visible to end users in the browser
 - **Examples**: URLs, public API keys, project IDs
 - **Usage**: Client-side functionality
 
 #### Private Variables
-
 - **Keep secret**: Only available on the server during builds
 - **Examples**: Service role keys, auth tokens, API secrets
 - **Usage**: Server-side operations and builds
@@ -102,26 +99,22 @@ CLOUDINARY_API_SECRET = your-cloudinary-api-secret
 Use this checklist to ensure all required variables are configured:
 
 #### ✅ Authentication (Required)
-
 - [ ] `NEXT_PUBLIC_SUPABASE_URL`
 - [ ] `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - [ ] `SUPABASE_SERVICE_ROLE_KEY`
 - [ ] `INTERNAL_AUTH_SERVICE_URL`
 
 #### ✅ Error Monitoring (Recommended)
-
 - [ ] `NEXT_PUBLIC_SENTRY_DSN`
 - [ ] `SENTRY_ORG`
 - [ ] `SENTRY_PROJECT`
 - [ ] `SENTRY_AUTH_TOKEN`
 
 #### ✅ Payments (Optional)
-
 - [ ] `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
 - [ ] `STRIPE_SECRET_KEY`
 
 #### ✅ File Upload (Optional)
-
 - [ ] `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`
 - [ ] `CLOUDINARY_API_KEY`
 - [ ] `CLOUDINARY_API_SECRET`
@@ -131,26 +124,22 @@ Use this checklist to ensure all required variables are configured:
 ### 1. Build Failures
 
 #### Symptom
-
 ```
 Failed to compile.
 Type error: Cannot find name 'slugify'.
 ```
 
 #### Solution
-
 - Ensure all TypeScript compilation issues are resolved
 - Verify all dependencies are properly installed
 - Check that custom utility functions are properly imported
 
 #### Symptom
-
 ```
 Error: Supabase not configured
 ```
 
 #### Solution
-
 - Verify Supabase environment variables are set correctly
 - Ensure variables use actual values, not placeholders
 - Check variable names for typos
@@ -158,13 +147,10 @@ Error: Supabase not configured
 ### 2. Authentication Issues
 
 #### Symptom
-
 Users cannot register or login
 
 #### Solution
-
 1. Verify Supabase variables are set correctly:
-
    ```bash
    NEXT_PUBLIC_SUPABASE_URL=https://actual-project-id.supabase.co
    NEXT_PUBLIC_SUPABASE_ANON_KEY=actual_anon_key_value
@@ -176,11 +162,9 @@ Users cannot register or login
    - Database schema properly set up
 
 #### Symptom
-
 "Profile not found" after successful login
 
 #### Solution
-
 1. Verify database schema includes `profiles` table
 2. Check Row Level Security policies
 3. Ensure user profile creation triggers are set up
@@ -188,7 +172,6 @@ Users cannot register or login
 ### 3. Environment-Specific Issues
 
 #### Development vs Production Variables
-
 ```bash
 # Development (.env.local)
 NEXT_PUBLIC_SUPABASE_URL=http://localhost:54321  # Local Supabase
@@ -209,7 +192,6 @@ INTERNAL_AUTH_SERVICE_URL=https://auth-service.example.com
    - Configure DNS as instructed
 
 2. **Update Environment Variables**:
-
    ```bash
    NEXT_PUBLIC_APP_URL=https://yourdomain.com
    ```
@@ -287,7 +269,6 @@ curl -H "Authorization: Bearer $NETLIFY_TOKEN" \
 ## Troubleshooting Commands
 
 ### Verify Build Locally
-
 ```bash
 # Test production build locally
 npm run build
@@ -295,7 +276,6 @@ npm run start
 ```
 
 ### Check Environment Variable Loading
-
 ```javascript
 // Add to any page during debugging
 console.log('Environment variables:');
@@ -304,7 +284,6 @@ console.log('Supabase configured:', !!process.env.NEXT_PUBLIC_SUPABASE_URL);
 ```
 
 ### Test Supabase Connection
-
 ```javascript
 // Add to a page to test Supabase connectivity
 import { supabase } from '@/integrations/supabase/client';
@@ -324,4 +303,4 @@ const testConnection = async () => {
 
 ---
 
-**⚠️ Remember**: Always test your deployment thoroughly after any configuration changes. Keep your environment variables secure and regularly review access permissions.
+**⚠️ Remember**: Always test your deployment thoroughly after any configuration changes. Keep your environment variables secure and regularly review access permissions. 

@@ -1,92 +1,86 @@
-import crypto from 'crypto';
-import { readJsonFile, writeJsonFile, updateJsonFile } from './fileDb';
+import { supabase } from './supabase/client';
 
-export type TenantRole = 'owner' | 'admin' | 'recruiter' | 'viewer';
-
-export interface TenantMember {
-  userId: string;
-  email: string;
-  role: TenantRole;
-}
-
-export interface TenantBranding {
-  name: string;
-  logoUrl?: string;
-  primaryColor?: string;
-  secondaryColor?: string;
-  coBranding?: boolean;
-  tagline?: string;
-}
-
-export interface Tenant {
+export type Tenant = {
   id: string;
-  apiKey: string;
-  branding: TenantBranding;
-  members: TenantMember[];
-  createdAt: string;
-  updatedAt: string;
+  name: string; // e.g., Zion Health
+  subdomain: string; // e.g., health
+  fullDomain?: string; // e.g., health.ziontechgroup.com
+  logoUrl?: string;
+  accentColorHex?: string; // used as --accent
+  brandColorHex?: string; // used as --brand
+  whiteLabel?: boolean;
+  categories?: string[];
+  defaultAiTerms?: 'HIPAA' | 'GDPR' | 'NONE';
+  createdAt?: string;
+};
+
+export const defaultTenant: Tenant = {
+  id: "default",
+  brandName: "Zion Tech Group",
+  subdomain: null,
+  customDomain: null,
+  primaryColor: "#4f46e5",
+  logoUrl: null,
+  themePreset: "light",
+  navbarLinks: [
+    { label: "Services", href: "/services" },
+    { label: "Autonomy", href: "/autonomy" },
+    { label: "Products", href: "/products" },
+    { label: "Blog", href: "/blog" },
+    { label: "Talent", href: "/talent" },
+    { label: "Contact", href: "/contact" }
+  ],
+  footerText: "© " + new Date().getFullYear() + " Zion Tech Group",
+  heroTitle: "Intelligent AI Platforms for the Next Decade",
+  heroSubtitle: "Ship faster with our high‑performance, white‑label platform and expert services.",
+  suspended: false,
+};
+
+export function getSubdomainFromHost(host?: string): string | null {
+  if (!host) return null;
+  const parts = host.split(':')[0].split('.');
+  if (parts.length <= 2) return null; // example.com or localhost
+  return parts[0];
 }
 
-export interface TenantsFile {
-  tenants: Tenant[];
+export async function fetchTenantBySubdomain(subdomain: string): Promise<Tenant | null> {
+  if (isSupabaseConfigured()) {
+    const { data, error } = await supabase
+      .from('tenants')
+      .select('*')
+      .eq('subdomain', subdomain)
+      .maybeSingle();
+    if (error) {
+      console.error('Error fetching tenant:', error);
+      return null;
+    }
+    return data;
+  }
+  return null;
 }
 
-const FILE = 'tenants.json';
-const FALLBACK: TenantsFile = { tenants: [] };
-
-export function getTenants(): Tenant[] {
-  const data = readJsonFile<TenantsFile>(FILE, FALLBACK);
-  return data.tenants;
+export async function fetchTenantById(id: string): Promise<Tenant | null> {
+  if (isSupabaseConfigured()) {
+    const { data, error } = await supabase
+      .from('tenants')
+      .select('*')
+      .eq('id', id)
+      .maybeSingle();
+    if (error) {
+      console.error('Error fetching tenant:', error);
+      return null;
+    }
+    return data;
+  }
+  return null;
 }
 
-export function getTenantById(tenantId: string): Tenant | undefined {
-  return getTenants().find(t => t.id === tenantId);
-}
-
-export function getTenantByApiKey(apiKey: string): Tenant | undefined {
-  return getTenants().find(t => t.apiKey === apiKey);
-}
-
-export function createTenant(branding: TenantBranding): Tenant {
-  const now = new Date().toISOString();
-  const id = crypto.randomUUID();
-  const apiKey = crypto.randomBytes(24).toString('hex');
-  const tenant: Tenant = {
-    id,
-    apiKey,
-    branding,
-    members: [],
-    createdAt: now,
-    updatedAt: now,
-  };
-  updateJsonFile<TenantsFile>(FILE, (curr) => ({ tenants: [...(curr.tenants || []), tenant] }), FALLBACK);
-  return tenant;
-}
-
-export function updateTenant(tenantId: string, partial: Partial<Omit<Tenant, 'id' | 'apiKey'>>): Tenant | undefined {
-  let result: Tenant | undefined = undefined;
-  updateJsonFile<TenantsFile>(FILE, (curr) => {
-    const tenants = (curr.tenants || []).map(t => {
-      if (t.id !== tenantId) return t;
-      const updated: Tenant = { ...t, ...partial, branding: { ...t.branding, ...(partial as any).branding }, updatedAt: new Date().toISOString() };
-      result = updated;
-      return updated;
-    });
-    return { tenants };
-  }, FALLBACK);
-  return result;
-}
-
-export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
-  let result: Tenant | undefined = undefined;
-  updateJsonFile<TenantsFile>(FILE, (curr) => {
-    const tenants = (curr.tenants || []).map(t => {
-      if (t.id !== tenantId) return t;
-      const updated: Tenant = { ...t, apiKey: crypto.randomBytes(24).toString('hex'), updatedAt: new Date().toISOString() };
-      result = updated;
-      return updated;
-    });
-    return { tenants };
-  }, FALLBACK);
-  return result;
-}
+const isSupabaseConfigured = () => {
+  return (
+    typeof process !== 'undefined' &&
+    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co' &&
+    !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY &&
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY !== 'placeholder-key'
+  );
+};

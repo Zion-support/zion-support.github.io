@@ -14,7 +14,7 @@ async function checkSignupPage() {
   };
 
   try {
-    console.warn('Launching Puppeteer...');
+    console.log('Launching Puppeteer...');
     // Add --no-sandbox for typical CI environments
     // You might need to install additional dependencies for Chrome to run in some Linux environments
     // e.g., sudo apt-get install -yq gconf-service libasound2 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
@@ -24,27 +24,20 @@ async function checkSignupPage() {
     // ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
     browser = await puppeteer.launch({
       headless: true,
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-      ],
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
     });
     const page = await browser.newPage();
 
-    page.on('console', (msg) => {
+    page.on('console', msg => {
       if (msg.type() === 'error') {
         results.consoleErrors.push(msg.text());
       }
     });
 
-    console.warn('Navigating to http://localhost:5178/signup...');
-    await page.goto('http://localhost:5178/signup', {
-      waitUntil: 'networkidle2',
-      timeout: 30000,
-    });
+    console.log('Navigating to http://localhost:5178/signup...');
+    await page.goto('http://localhost:5178/signup', { waitUntil: 'networkidle2', timeout: 30000 });
 
-    console.warn('Page loaded. Checking for elements...');
+    console.log('Page loaded. Checking for elements...');
 
     // Check for display name input
     if (await page.$('[data-testid="display-name-input"]')) {
@@ -65,20 +58,21 @@ async function checkSignupPage() {
     if (await page.$('[data-testid="create-account-button"]')) {
       results.elements.createAccountButton = true;
     }
+
   } catch (error) {
     console.error('Error during Puppeteer script execution:', error);
     results.genericErrors.push(error.message);
   } finally {
     if (browser) {
-      console.warn('Closing Puppeteer...');
+      console.log('Closing Puppeteer...');
       await browser.close();
     }
   }
 
   // Output results as JSON for easier parsing
-  console.warn('---RESULTS_START---');
-  console.warn(JSON.stringify(results, null, 2));
-  console.warn('---RESULTS_END---');
+  console.log('---RESULTS_START---');
+  console.log(JSON.stringify(results, null, 2));
+  console.log('---RESULTS_END---');
 }
 
 checkSignupPage();

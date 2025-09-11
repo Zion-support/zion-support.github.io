@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 "use strict";
 
-const { spawnSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const { spawn, spawnSync } = require('child_process');
 
 class ComprehensiveAutomationLauncher {
   constructor() {
@@ -130,33 +130,7 @@ class ComprehensiveAutomationLauncher {
   async startAllSystems() {
     this.log("🚀 Starting all automation systems...");
     
-    // Seed known long-running or important jobs
-    const seedSystems = [
-      { name: 'intelligent-orchestrator', script: 'intelligent-orchestrator.cjs', args: ['continuous'] },
-      { name: 'automation-dashboard', script: 'automation-dashboard.cjs', args: ['start'] },
-      { name: 'lint-monitor', script: 'lint-monitor.cjs', args: ['start'] },
-      { name: 'self-healing', script: 'self-healing-orchestrator.cjs', args: [] },
-      { name: 'alignment-orchestrator', script: 'alignment-orchestrator.cjs', args: ['continuous'] },
-      { name: 'design-orchestrator', script: 'design-orchestrator.cjs', args: ['continuous'] },
-      { name: 'diversification-orchestrator', script: 'diversification-orchestrator.cjs', args: [] },
-      { name: 'responsive-content-orchestrator', script: 'responsive-content-orchestrator.cjs', args: ['continuous'] },
-      { name: 'variation-orchestrator', script: 'variation-orchestrator.cjs', args: ['continuous'] },
-      { name: 'frontend-sync-orchestrator', script: 'frontend-sync-orchestrator.cjs', args: ['continuous'] },
-      { name: 'saas-services-orchestrator', script: 'saas-services-orchestrator.cjs', args: ['continuous'] },
-      { name: 'homepage-promo-orchestrator', script: 'homepage-promo-orchestrator.cjs', args: ['continuous'] },
-      { name: 'linkedin-marketing-orchestrator', script: 'linkedin-marketing-orchestrator.cjs', args: ['continuous'] },
-      { name: 'cursor-chat-orchestrator', script: 'cursor-chat-orchestrator.cjs', args: ['continuous'] },
-      { name: 'site-link-orchestrator', script: 'site-link-orchestrator.cjs', args: ['continuous'] },
-      { name: 'site-promo-orchestrator', script: 'site-promo-orchestrator.cjs', args: ['continuous'] },
-      { name: 'spec-dev-orchestrator', script: 'spec-dev-orchestrator.cjs', args: ['continuous'] },
-      { name: 'linkedin-pro-orchestrator', script: 'linkedin-pro-orchestrator.cjs', args: ['continuous'] },
-      { name: 'code-quality', script: 'code-quality-monitor.cjs', args: [] },
-      { name: 'performance', script: 'performance-optimizer.cjs', args: [] },
-      { name: 'security-scanner', script: 'security-scanner.cjs', args: [] },
-      { name: 'seo-optimizer', script: 'seo-optimizer.cjs', args: [] },
-      { name: 'test-generator', script: 'test-generator.cjs', args: [] },
-      { name: 'app-intelligence', script: 'app-intelligence-enhancer.cjs', args: ['continuous'] }
-    ];
+    const results = [];
     
     for (const system of this.config.systems) {
       const success = await this.startSystem(system);
@@ -217,13 +191,39 @@ class ComprehensiveAutomationLauncher {
   async restartAllSystems() {
     this.log("🔄 Restarting all automation systems...");
     
-    await this.stopAllSystems();
-    
-    // Wait before restarting
-    this.log("⏳ Waiting 5 seconds before restarting...");
-    await new Promise(resolve => setTimeout(resolve, 5000));
-    
-    await this.startAllSystems();
+    this.log(`📊 Status: ${status.running} systems running`);
+    this.log(`📊 Systems: ${status.systems.join(', ')}`);
+
+    // If no processes are tracked in this instance (e.g., fresh CLI call),
+    // attempt a best-effort scan of OS processes to report running automation scripts
+    if (status.running === 0) {
+      try {
+        const ps = spawnSync('bash', ['-lc', "ps -eo pid,command | grep -E 'node .*automation/.*\\.(cjs|js)($| )' | grep -v grep"], { encoding: 'utf8' });
+        const lines = (ps.stdout || '').split('\n').map(s => s.trim()).filter(Boolean);
+        const detected = [];
+        for (const line of lines) {
+          const parts = line.split(/\s+/, 2);
+          const cmd = parts[1] || '';
+          const match = cmd.match(/node\s+([^\s]+automation\/([^\s]+))([^\n]*)/);
+          if (match) {
+            const fullPath = match[1];
+            const fileName = match[2];
+            const name = fileName.replace(/\.(cjs|js)$/,'');
+            detected.push(name);
+          }
+        }
+        if (detected.length > 0) {
+          status.running = detected.length;
+          status.systems = Array.from(new Set(detected));
+          status.totalSystems = detected.length;
+          this.log(`📊 Detected (OS): ${status.systems.join(', ')}`);
+        }
+      } catch (e) {
+        this.log(`⚠️ Status process scan failed: ${e.message}`);
+      }
+    }
+
+    return status;
   }
 
   async checkSystemHealth() {
