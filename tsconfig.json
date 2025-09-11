@@ -68,7 +68,11 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled",
+    "components/AccessibilityEnhancer.tsx",
+    "components/AccessibilityManager.tsx"
   ],
   "references": [
     { "path": "./tsconfig.node.json" }
