@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-08-29T15:49:21.069Z",
+  "timestamp": "2025-08-29T17:56:47.531Z",
   "summary": {
     "total": 6,
-    "passed": 5,
-    "failed": 1
+    "passed": 6,
+    "failed": 0
   },
   "results": {
     "unit": {
       "status": "success",
-      "results": "\n> bolt.new.zion.app@0.1.0 test\n> vitest\n\nNo unit tests found\n"
+      "results": "No unit tests found\n"
     },
     "integration": {
-      "status": "failure",
-      "results": "Command failed: npm run build"
+      "status": "success",
+      "results": "No integration tests found\n"
     },
     "e2e": {
       "status": "success",
@@ -28,8 +28,8 @@
     },
     "coverage": {
       "status": "success",
-      "results": "\n> bolt.new.zion.app@0.1.0 test\n> vitest --coverage\n\nCoverage generation failed\n"
+      "results": "Coverage generation failed\n"
     }
   },
-  "qualityGates": false
+  "qualityGates": true
 }

@@ -96,7 +96,6 @@ export default function Resources() {
     { name: 'Technical Papers', icon: <Database className="w-6 h-6" />, count: 1 }
   ] 
 
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
   return (
     <>
       <Head>
@@ -110,7 +109,6 @@ export default function Resources() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -121,11 +119,11 @@ export default function Resources() {
                 <Star className="w-4 h-4 mr-2" />
                 Educational Resources
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Resources & Insights
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Access exclusive whitepapers, guides, and educational content to deepen your understanding 
                 of AI, quantum computing, and technology innovation.
@@ -144,7 +142,7 @@ export default function Resources() {
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Resource Categories</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {resourceTypes.map((type, index) => (
                   <motion.div
@@ -159,7 +157,6 @@ export default function Resources() {
                     <p className="text-gray-400 text-sm">{type.count} resources</p>
                   </motion.div>
                 ))}
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
               </div>
             </motion.div>
           </div>
@@ -168,7 +165,6 @@ export default function Resources() {
         {/* Featured Resource */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -176,7 +172,7 @@ export default function Resources() {
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8">Featured Resource</h2>
-              
+
               {resources.filter(resource => resource.featured).map((resource, index) => (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-300">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -189,10 +185,10 @@ export default function Resources() {
                           Featured
                         </span>
                       </div>
-                      
+
                       <h3 className="text-3xl font-bold text-white mb-4">{resource.title}</h3>
                       <p className="text-gray-300 text-lg mb-6 leading-relaxed">{resource.description}</p>
-                      
+
                       <div className="flex items-center space-x-6 mb-6 text-gray-400">
                         <div className="flex items-center">
                           <Download className="w-4 h-4 mr-2" />
@@ -203,7 +199,7 @@ export default function Resources() {
                           {resource.fileSize}
                         </div>
                       </div>
-                      
+
                       <Link 
                         href={resource.downloadUrl}
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200"
@@ -212,7 +208,7 @@ export default function Resources() {
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </div>
-                    
+
                     <div className="flex justify-center">
                       <div className="w-32 h-32 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center">
                         {resource.icon}
@@ -240,7 +236,6 @@ export default function Resources() {
                 >
                   {category.name} ({category.count})
                 </button>
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
               ))}
             </div>
           </div>
@@ -256,7 +251,7 @@ export default function Resources() {
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8">All Resources</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {resources.filter(resource => !resource.featured).map((resource, index) => (
                   <motion.div
@@ -274,10 +269,10 @@ export default function Resources() {
                         </span>
                       </div>
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{resource.title}</h3>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">{resource.description}</p>
-                    
+
                     <div className="flex items-center justify-between text-gray-400 text-xs mb-4">
                       <div className="flex items-center">
                         <Download className="w-3 h-3 mr-1" />
@@ -288,7 +283,7 @@ export default function Resources() {
                         {resource.fileSize}
                       </div>
                     </div>
-                    
+
                     <Link 
                       href={resource.downloadUrl}
                       className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors duration-200"
@@ -306,7 +301,6 @@ export default function Resources() {
         {/* Newsletter Signup */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -319,7 +313,7 @@ export default function Resources() {
                 Subscribe to our newsletter for exclusive access to new resources, 
                 industry insights, and technology updates.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
@@ -329,7 +323,6 @@ export default function Resources() {
                 <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
                   Subscribe
                 </button>
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
               </div>
             </motion.div>
           </div>

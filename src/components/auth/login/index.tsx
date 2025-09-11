@@ -1,12 +1,27 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
-export default function index("props": "any) {return (;
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="index - Zion Tech Group" description="Professional index services by Zion Tech Group"   />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">index</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional index services to help your business grow.;
-        </p>;
-      </div>;
-  );""}";</div>
+import { LoginForm } from './LoginForm';
+
+export function LoginContent() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
+          <p className="text-zion-slate-light">Sign in to your account to continue</p>
+        </div>
+        
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-2xl">
+          <LoginForm />
+        </div>
+        
+        <div className="text-center mt-6">
+          <p className="text-zion-slate-light text-sm">
+            Don't have an account?{' '}
+            <a href="/register" className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
+              Sign up
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

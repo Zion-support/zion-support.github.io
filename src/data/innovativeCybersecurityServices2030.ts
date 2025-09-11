@@ -1,18 +1,20 @@
 // Innovative Cybersecurity Services 2030 - Zion Tech Group
 // Advanced security solutions for the digital age
+
 export interface CybersecurityService {
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-pricing: {
+  pricing: {
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string};
+    marketPrice: string;
+  };
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -45,7 +47,9 @@ pricing: {
   image: string;
   createdAt: string;
   featured: boolean;
-  trending: boolean}
+  trending: boolean;
+}
+
 // Zion Tech Group Contact Information
 const zionContact = {
   phone: "+1 302 464 0950",
@@ -53,6 +57,7 @@ const zionContact = {
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
+
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   {
     id: "quantum-resistant-encryption",
@@ -141,11 +146,12 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     availability: "Global",
     location: "Global",
     tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
   },
+
   {
     id: "ai-threat-hunting-platform",
     title: "Zion AI Threat Hunting Platform",
@@ -160,9 +166,9 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with endpoint-based pricing",
       marketPrice: "$699-1,399/month"
     },
-          features: [
-        "AI-powered threat detection",
-        "Behavioral analysis",
+    features: [
+      "AI-powered threat detection",
+      "Behavioral analysis",
       "Threat intelligence integration",
       "Automated response actions",
       "Real-time monitoring",
@@ -238,6 +244,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     featured: true,
     trending: true
   },
+
   {
     id: "zero-trust-network-access",
     title: "Zion Zero Trust Network Access Platform",
@@ -330,6 +337,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     featured: true,
     trending: true
   },
+
   {
     id: "ai-powered-vulnerability-management",
     title: "Zion AI-Powered Vulnerability Management",
@@ -416,12 +424,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-          tags: ["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],
+    tags: ["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
   },
+
   {
     id: "blockchain-security-audit",
     title: "Zion Blockchain Security Audit Platform",
@@ -515,4 +524,5 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     trending: true
   }
 ];
+
 export default innovativeCybersecurityServices2030;

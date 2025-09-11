@@ -118,15 +118,9 @@ export function AnalyticsManager("props": "any) {;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
 ;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-    // Page unload tracking';
-=======
-
     // Scroll tracking'
 =======
-    // Page unload tracking';    // Scroll tracking'
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
-    document.addEventListener('scroll', handleScroll, { passive: tru e }
+    // Page unload tracking';    // Scroll tracking'    document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
 
     // Page unload tracking'
@@ -176,88 +170,32 @@ export function AnalyticsManager("props": "any) {;
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-      // Largest Contentful Paint;
-=======
-      }
-    );
-      fcpObserver.observe({ entryTypes: ['paint'] }
-    );
->>>>>>> main
-
         if(lcp) {;
 
 =======
-      // Largest Contentful Paint;        if(lcp) {;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
-          trackPerformance('lcp', lcp.startTime)}
+      // Largest Contentful Paint;        if(lcp) {;          trackPerformance('lcp', lcp.startTime)}
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-      // First Input Delay;
-=======
-      }
-    );
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
-    );
->>>>>>> main
-
         if(fid) {;
 
 =======
-      // First Input Delay;        if(fid) {;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
-          trackPerformance('fid', fid.processingStart - fid.startTime)}
+      // First Input Delay;        if(fid) {;          trackPerformance('fid', fid.processingStart - fid.startTime)}
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Cumulative Layout Shift;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-      const clsObserver = new PerformanceObserver(list => {;
-=======
-      }
-    );
-      fidObserver.observe({ entryTypes: ['first-input'] }
-    );
->>>>>>> main
-
         let clsValue = 0;        for (const entry of list.getEntries()) {;
 
 =======
-      const clsObserver = new PerformanceObserver(list => {;        let clsValue = 0;        for (const entry of list.getEntries()) {;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
-          if(!entry.hadRecentInput) {;
+      const clsObserver = new PerformanceObserver(list => {;        let clsValue = 0;        for (const entry of list.getEntries()) {;          if(!entry.hadRecentInput) {;
 
             clsValue += (entry as any).value}
         }
         trackPerformance('cls', clsValue)});
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
-=======
-        trackPerformance('cls', clsValue)}
-    );
-      clsObserver.observe({ entryTypes: ['layout-shift'] })}
->>>>>>> main
-  }, []) }
-    }, 30000) ;
-;
-    return () => clearInterval(activityInterval) }, [currentSession]) ;
-<<<<<<< HEAD
-;
-        trackEvent('page_view', { path });
-;
-        // Send to analytics endpoint';
-        sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
-    },;
-    [currentSession];
-=======
-
         trackEvent('page_view', { path }
 =======
-      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}        trackEvent('page_view', { path }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
-    );
+      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}        trackEvent('page_view', { path }    );
 
         // Send to analytics endpoint'
         sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}

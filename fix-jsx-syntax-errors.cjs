@@ -2,7 +2,8 @@
 const fs = require('fs');
 
 // Function to fix JSX syntax errors;
-function fixJSXSyntaxErrors(filePath) {
+function fixJSXSyntaxErrors() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
@@ -32,39 +33,3 @@ function fixJSXSyntaxErrors(filePath) {
     ];
     fixes.forEach(fix => {;
   const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-  content = newContent;
-        modified = true;,
-}
-    });
-    if (modified) {
-  fs.writeFileSync(filePath, content, `utf8`);
-      console.log(`Fixed JSX syntax errors in: ${filePath}`);
-      return true;,
-}
-    return false;,
-} catch (error) {;
-  console.error(`Error fixing ${filePath }:`, error.message);
-    return false;,
-}
-}
-
-// Files that need JSX syntax fixes;
-const filesToFix = [;
-  `pages/NotFound.tsx`,
-  "pages/enhanced-home.tsx",
-  "pages/index.p.tsx",
-  "pages/pricing-guide.tsx",
-  "pages/sitemap.tsx",
-];
-console.log("🔧 Fixing JSX syntax errors...');
-let fixedCount = 0;
-filesToFix.forEach(file => {;
-  if (fs.existsSync(file)) {;
-  if (fixJSXSyntaxErrors(file)) {;
-  fixedCount++;,
-}
-  }
-});
-
-console.log(`✅ Fixed JSX syntax errors in ${fixedCount} files`);

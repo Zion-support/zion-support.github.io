@@ -1,8 +1,6 @@
 const fs = require('fs');
 <
 
-console.log('🔧 Fixing remaining problematic files...');
-
 const filesToFix = [
   {
     path: 'components/Header.tsx',
@@ -1054,6 +1052,5 @@ console.log('Fixed remaining files');
 console.log('Fixed remaining files');
 ;
 console.log('Fixed remaining files');
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
+;
+console.log('Fixed remaining files');

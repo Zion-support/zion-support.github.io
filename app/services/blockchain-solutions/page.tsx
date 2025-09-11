@@ -1,320 +1,262 @@
 export const metadata = { 
   title: 'Blockchain Solutions | Zion Tech Group',
-  description: 'Comprehensive blockchain development services including DeFi, NFTs, smart contracts, and Web3 applications.'
-}; 
+  description: 'Comprehensive blockchain development including DeFi, NFTs, smart contracts, and Web3 applications. Build the future of decentralized technology.'
+};
 
-export default function BlockchainSolutionsPage() { 
-  return ( 
+export default function BlockchainSolutionsPage() {
+  return (
     <div className="animate-fade-in">
-      <section className="py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Blockchain Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Cutting-edge blockchain development services including DeFi protocols, NFT platforms, 
-            smart contracts, and Web3 applications that drive innovation and growth.
-          </p>
-        </div>
-
-        {/* Core Blockchain Services */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core Blockchain Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BlockchainServiceCard 
-              title="Smart Contract Development" 
-              description="Secure, audited smart contracts for various blockchain platforms with comprehensive testing"
-              features={["Solidity development", "Security audits", "Gas optimization", "Multi-chain support", "Upgradeable contracts", "Testing suites"]}
-              price="Starting at $15k"
-              icon="📜"
-            />
-            <BlockchainServiceCard 
-              title="DeFi Protocols" 
-              description="Decentralized finance applications and yield farming platforms with advanced features"
-              features={["DEX development", "Lending protocols", "Yield farming", "Liquidity pools", "Flash loans", "Governance tokens"]}
-              price="Starting at $25k"
-              icon="💰"
-            />
-            <BlockchainServiceCard 
-              title="NFT Marketplaces" 
-              description="Complete NFT platforms with minting, trading, and auction features"
-              features={["NFT minting", "Marketplace UI", "Royalty system", "Metadata management", "Auction system", "Rarity tools"]}
-              price="Starting at $20k"
-              icon="🎨"
-            />
-            <BlockchainServiceCard 
-              title="Web3 Applications" 
-              description="Decentralized applications with wallet integration and blockchain connectivity"
-              features={["Wallet integration", "MetaMask support", "IPFS storage", "User authentication", "Multi-wallet support", "Mobile compatibility"]}
-              price="Starting at $18k"
-              icon="🌐"
-            />
-            <BlockchainServiceCard 
-              title="Token Development" 
-              description="Custom token creation and tokenomics design with advanced features"
-              features={["ERC-20/ERC-721", "Tokenomics design", "Vesting contracts", "Multi-signature wallets", "Token bridges", "Staking mechanisms"]}
-              price="Starting at $12k"
-              icon="🪙"
-            />
-            <BlockchainServiceCard 
-              title="Blockchain Integration" 
-              description="Integrate blockchain functionality into existing applications"
-              features={["API development", "Node management", "Transaction handling", "Event monitoring", "Webhook integration", "Real-time updates"]}
-              price="Starting at $10k"
-              icon="🔗"
-            />
-            <BlockchainServiceCard 
-              title="DAO Development" 
-              description="Decentralized Autonomous Organization platforms with governance and voting mechanisms"
-              features={["Governance tokens", "Voting systems", "Proposal management", "Treasury management", "Member management", "Transparency tools"]}
-              price="Starting at $30k"
-              icon="🏛️"
-            />
-            <BlockchainServiceCard 
-              title="Staking Platforms" 
-              description="Staking and yield farming platforms with automated rewards and compound interest"
-              features={["Staking contracts", "Yield farming", "Compound interest", "Reward distribution", "Slashing protection", "Validator management"]}
-              price="Starting at $22k"
-              icon="🌾"
-            />
-            <BlockchainServiceCard 
-              title="Cross-Chain Bridges" 
-              description="Interoperability solutions for seamless asset transfers between different blockchains"
-              features={["Asset bridging", "Cross-chain swaps", "Liquidity pools", "Security audits", "Multi-chain support", "Fast finality"]}
-              price="Starting at $40k"
-              icon="🌉"
-            />
-            <BlockchainServiceCard 
-              title="Oracle Integration" 
-              description="Decentralized oracle solutions for real-world data integration into smart contracts"
-              features={["Price feeds", "Random number generation", "External API integration", "Data verification", "Custom oracles", "Reliability guarantees"]}
-              price="Starting at $18k"
-              icon="🔮"
-            />
-            <BlockchainServiceCard 
-              title="Layer 2 Solutions" 
-              description="Scalability solutions including rollups, sidechains, and state channels"
-              features={["Optimistic rollups", "ZK rollups", "Sidechain development", "State channels", "Batch processing", "Cost optimization"]}
-              price="Starting at $35k"
-              icon="⚡"
-            />
-            <BlockchainServiceCard 
-              title="Blockchain Analytics" 
-              description="Advanced analytics and monitoring tools for blockchain applications and transactions"
-              features={["Transaction tracking", "Address monitoring", "Risk assessment", "Compliance reporting", "Real-time alerts", "Custom dashboards"]}
-              price="Starting at $15k"
-              icon="📊"
-            />
-          </div>
-        </div>
-
-        {/* Specialized Blockchain Solutions */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Specialized Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <SpecializedBlockchainCard 
-              title="Enterprise Blockchain" 
-              description="Private blockchain solutions for enterprise use cases and supply chain management"
-              features={["Hyperledger Fabric", "Consortium networks", "Supply chain tracking", "Data privacy"]}
-              price="$50k - $200k"
-              icon="🏢"
-            />
-            <SpecializedBlockchainCard 
-              title="Gaming & Metaverse" 
-              description="Blockchain gaming platforms and virtual world applications"
-              features={["Play-to-earn games", "Virtual assets", "Cross-game compatibility", "VR integration"]}
-              price="$40k - $150k"
-              icon="🎮"
-            />
-            <SpecializedBlockchainCard 
-              title="Identity & Authentication" 
-              description="Decentralized identity solutions and KYC/AML compliance"
-              features={["DID protocols", "Zero-knowledge proofs", "KYC integration", "Privacy preservation"]}
-              price="$35k - $120k"
-              icon="🆔"
-            />
-            <SpecializedBlockchainCard 
-              title="Cross-Chain Solutions" 
-              description="Interoperability solutions and cross-chain bridge development"
-              features={["Bridge protocols", "Cross-chain swaps", "Asset migration", "Multi-chain DApps"]}
-              price="$60k - $250k"
-              icon="🌉"
-            />
-          </div>
-        </div>
-
-        {/* Technical Stack */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Technical Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TechStackCard 
-              title="Blockchain Platforms" 
-              details={["Ethereum", "Polygon", "BSC", "Solana", "Avalanche", "Arbitrum"]} 
-            />
-            <TechStackCard 
-              title="Development Tools" 
-              details={["Solidity", "Web3.js", "Ethers.js", "Hardhat", "Truffle", "OpenZeppelin"]} 
-            />
-            <TechStackCard 
-              title="Infrastructure" 
-              details={["Node.js", "IPFS", "The Graph", "Alchemy", "Infura", "AWS/GCP"]} 
-            />
-          </div>
-        </div>
-
-        <Pricing />
-        <ContactSection />
+      <section className="text-center py-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Blockchain Solutions
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          Comprehensive blockchain development including DeFi, NFTs, smart contracts, and Web3 applications. 
+          Build the future of decentralized technology with our expert team.
+        </p>
       </section>
+
+      <section className="py-12">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Blockchain Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <BlockchainServiceCard
+            title="DeFi Protocol Development"
+            description="Decentralized finance protocols with yield farming, liquidity pools, and automated market makers"
+            features={["Smart contract development", "Yield farming mechanisms", "Liquidity pool management", "Governance tokens", "Security auditing"]}
+            price="$25k–$100k"
+            icon="🏦"
+          />
+          <BlockchainServiceCard
+            title="NFT Marketplace & Collections"
+            description="Complete NFT platforms with minting, trading, and marketplace functionality"
+            features={["NFT minting contracts", "Marketplace development", "Royalty management", "Metadata optimization", "IPFS integration"]}
+            price="$15k–$60k"
+            icon="🎨"
+          />
+          <BlockchainServiceCard
+            title="Web3 Applications"
+            description="Decentralized applications with wallet integration and blockchain connectivity"
+            features={["Wallet integration", "Smart contract interaction", "Token management", "User authentication", "Transaction handling"]}
+            price="$20k–$80k"
+            icon="🌐"
+          />
+          <BlockchainServiceCard
+            title="Smart Contract Auditing"
+            description="Comprehensive security auditing and optimization of smart contracts"
+            features={["Security vulnerability analysis", "Gas optimization", "Code review", "Test coverage", "Compliance checking"]}
+            price="$5k–$25k"
+            icon="🔍"
+          />
+          <BlockchainServiceCard
+            title="Token Development & ICO"
+            description="Custom token creation and initial coin offering management"
+            features={["ERC-20/ERC-721 tokens", "Tokenomics design", "ICO platform", "Vesting mechanisms", "Distribution management"]}
+            price="$10k–$40k"
+            icon="🪙"
+          />
+          <BlockchainServiceCard
+            title="Cross-Chain Solutions"
+            description="Interoperability solutions for multi-blockchain connectivity"
+            features={["Bridge development", "Cross-chain swaps", "Multi-chain wallets", "Interoperability protocols", "Asset migration"]}
+            price="$30k–$120k"
+            icon="🔗"
+          />
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Blockchain Technology Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Item 
+            title="Smart Contracts" 
+            details={[
+              "Solidity, Rust, and Vyper development",
+              "Ethereum, Polygon, and BSC deployment",
+              "Gas optimization and efficiency",
+              "Upgradeable contract patterns",
+              "Multi-signature wallet integration",
+              "Oracle integration and data feeds"
+            ]} 
+          />
+          <Item 
+            title="DeFi & DApps" 
+            details={[
+              "Decentralized exchange (DEX) development",
+              "Lending and borrowing protocols",
+              "Yield farming and staking mechanisms",
+              "Automated market makers (AMM)",
+              "Governance and voting systems",
+              "Liquidity mining programs"
+            ]} 
+          />
+          <Item 
+            title="Security & Compliance" 
+            details={[
+              "Smart contract security auditing",
+              "Penetration testing and vulnerability assessment",
+              "Regulatory compliance consulting",
+              "KYC/AML integration",
+              "Risk management frameworks",
+              "Insurance and coverage solutions"
+            ]} 
+          />
+        </div>
+      </section>
+
+      <Pricing />
+      <ContactSection />
     </div>
-  ); 
-} 
+  );
+}
 
 function BlockchainServiceCard({ title, description, features, price, icon }: { 
   title: string; 
   description: string; 
   features: string[]; 
-  price: string;
-  icon: string;
-}) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-200 bg-white">
+  price: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-4">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-orange-500 mr-2">•</span> {feature}
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-2">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="text-green-500 mr-2">✓</span>
+            {feature}
           </li>
         ))}
       </ul>
-      <div className="text-lg font-semibold text-orange-600">{price}</div>
     </div>
-  ); 
-} 
+  );
+}
 
-function SpecializedBlockchainCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string;
-  icon: string;
-}) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-8 hover:border-purple-300 hover:shadow-lg transition-all duration-200 bg-white">
-      <div className="text-5xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-6">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-purple-500 mr-2">•</span> {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="text-xl font-semibold text-purple-600">{price}</div>
-    </div>
-  ); 
-} 
-
-function TechStackCard({ title, details }: { title: string; details: string[] }) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-6 bg-gray-50">
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="text-gray-600 space-y-2">
-        {details.map((detail) => (
-          <li key={detail} className="flex items-center">
-            <span className="text-orange-500 mr-2">•</span> {detail}
+      <ul className="space-y-2">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start text-gray-600">
+            <span className="text-blue-500 mr-2 mt-1">•</span>
+            {detail}
           </li>
         ))}
       </ul>
     </div>
-  ); 
-} 
+  );
+}
 
-function Pricing() { 
-  return ( 
-    <div className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Blockchain Service Packages</h2>
+function Pricing() {
+  return (
+    <section className="py-12">
+      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Blockchain Development Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
-          name="Smart Contract Audit" 
-          price="$5k–$15k" 
-          duration="1–2 weeks"
-          features={["Code review", "Security analysis", "Gas optimization", "Vulnerability report"]} 
+          name="Smart Contract Development" 
+          price="$10k–$30k" 
+          duration="4–8 weeks"
+          features={[
+            "Custom smart contract development",
+            "Security testing and auditing",
+            "Gas optimization",
+            "Deployment and verification",
+            "Documentation and testing",
+            "Integration support"
+          ]} 
         />
         <Plan 
-          name="DApp Development" 
-          price="$20k–$60k" 
-          duration="6–12 weeks"
-          features={["Frontend + backend", "Smart contracts", "Testing", "Deployment"]} 
+          name="DeFi Protocol" 
+          price="$50k–$150k" 
+          duration="12–20 weeks"
+          features={[
+            "Complete DeFi protocol development",
+            "Frontend and backend integration",
+            "Security auditing and testing",
+            "Tokenomics design and implementation",
+            "Governance system development",
+            "Launch and marketing support"
+          ]} 
         />
         <Plan 
-          name="Enterprise Solution" 
+          name="Enterprise Blockchain" 
           price="$100k+" 
-          duration="Custom timeline"
-          features={["Custom blockchain", "Integration", "Compliance", "Ongoing support"]} 
+          duration="20+ weeks"
+          features={[
+            "Custom blockchain solutions",
+            "Enterprise integration",
+            "Compliance and regulatory support",
+            "Multi-chain interoperability",
+            "Dedicated development team",
+            "Ongoing maintenance and support"
+          ]} 
         />
       </div>
-    </div>
-  ); 
-} 
+    </section>
+  );
+}
 
 function Plan({ name, price, duration, features }: { 
   name: string; 
   price: string; 
   duration: string;
   features: string[]; 
-}) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-8 bg-white hover:border-orange-300 hover:shadow-lg transition-all duration-200">
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
       <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-orange-600 mb-2">{price}</div>
+      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
       <div className="text-gray-600 mb-6">{duration}</div>
-      <ul className="text-gray-600 space-y-3">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-orange-500 mr-2">✓</span> {feature}
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="text-green-500 mr-3">✓</span>
+            {feature}
           </li>
         ))}
       </ul>
       <a 
         href="tel:+13024640950" 
-        className="mt-6 block w-full bg-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
       >
         Get Started
       </a>
     </div>
-  ); 
-} 
+  );
+}
 
 function ContactSection() {
   return (
-    <div className="bg-gradient-to-r from-orange-50 to-purple-50 border border-orange-200 rounded-xl p-8 text-center">
-      <h3 className="text-3xl font-bold text-gray-900 mb-4">
-        Ready to Build on the Blockchain?
-      </h3>
-      <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-        Let's discuss your blockchain project and create innovative solutions that leverage 
-        the power of decentralized technology. Our team has built 30+ successful blockchain projects.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-lg"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors text-lg"
-        >
-          Email Us
-        </a>
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Build on the Blockchain?
+        </h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss your blockchain vision and create innovative decentralized solutions. 
+          Our blockchain experts have delivered 50+ successful Web3 projects.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
       </div>
-      <div className="mt-6 text-sm text-gray-500">
-        <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-      </div>
-    </div>
+    </section>
   );
 }

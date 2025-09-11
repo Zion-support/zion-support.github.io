@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import React,{ useEffect,useState } from \"react\" interface WebVitalsData { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb? number} export const \"WebVitalsMonitor\": React.FC = () => { const [vitals,setVitals] = useState<WebVitalsData>({}); const [isVisible,setIsVisible] = useState(false); useEffect(() => { const optimizer = PerformanceOptimizer.getInstance(); optimizer.init();\"}})
-const React,{ useEffect,useState } from "react" interface WebVitalsData { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb? number} export const WebVitalsMonitor: React.FC = () => { const [vitals,setVitals] = useState<WebVitalsData>({}); const [isVisible,setIsVisible] = useState(false); useEffect(() => { const optimizer = PerformanceOptimizer.getInstance(); optimizer.init();"}})""
-import _React,{ useEffect,useState } from "react" interface WebVitalsData { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb? number} export const "WebVitalsMonitor": _React.FC = () => { const [vitals,setVitals] = useState<WebVitalsData>({}); const [isVisible,setIsVisible] = useState(false); useEffect(() => { const optimizer = PerformanceOptimizer.getInstance(); optimizer.init();"}})
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

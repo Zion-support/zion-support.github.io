@@ -1,1 +1,0 @@
-import NotFound from '@/pages/NotFound export default function ErrorRoutes(_) { return (<Route path="*" element={<NotFound />}/>)} ;';';

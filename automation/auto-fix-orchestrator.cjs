@@ -1,10 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
 console.log('🎯 Starting Auto-Fix Orchestrator...');
 
 class AutoFixOrchestrator {
@@ -464,4 +458,3 @@ function main() {
 }
 
 if (require.main === module) main();
->>>>>>> origin/automation/changelog

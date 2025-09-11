@@ -1,11 +1,5 @@
 module.exports = {
   presets: [
-<<<<<<< HEAD
-    ['@babel/preset-env', { targets: { node: 'current' } }],
-    ['@babel/preset-react', { runtime: 'automatic' }]
-  ],
-  plugins: []
-=======
     ['@babel/preset-env', {
       modules: false, // Preserve ES modules
       targets: {
@@ -61,5 +55,4 @@ module.exports = {
       ]
     }
   ]
->>>>>>> origin/automation/changelog
 };

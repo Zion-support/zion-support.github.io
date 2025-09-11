@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
-
 interface AccessibilitySettings {
   highContrast: boolean;
   fontSize: "small" | "normal" | "large" | "xlarge";
   reducedMotion: boolean;
   focusVisible: boolean;
   screenReader: boolean;
-}
-
 const AccessibilityManager: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -16,114 +13,21 @@ const AccessibilityManager: React.FC = () => {
     focusVisible: false,
     screenReader: false,
   });
-
   useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibilitySettings');
+    // Load settings from localStorage
+    const savedSettings = localStorage.getItem("accessibilitySettings");
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        console.error('Error parsing accessibility settings:', error);
+        console.error("Error parsing accessibility settings:", error);
       }
     }
   }, []);
-
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {
-    const newSettings = { ...settings, [key]: value } as AccessibilitySettings;
+    const newSettings = { ...settings, [key]: value }
     setSettings(newSettings);
-    localStorage.setItem('accessibilitySettings', JSON.stringify(newSettings));
+    localStorage.setItem("accessibilitySettings", JSON.stringify(newSettings));
+    // Apply accessibility styles
     applyAccessibilityStyles(newSettings);
   };
-
-  const applyAccessibilityStyles = (settingsValue: AccessibilitySettings) => {
-    const root = document.documentElement;
-
-    if (settingsValue.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-xlarge');
-    root.classList.add(`font-${settingsValue.fontSize}`);
-
-    if (settingsValue.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    if (settingsValue.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-  };
-
-  return (
-    <div className="accessibility-manager">
-      <h2>Accessibility Settings</h2>
-
-      <div className="setting-group">
-        <label>
-          <input
-            type="checkbox"
-            checked={settings.highContrast}
-            onChange={(e) => updateSetting('highContrast', e.target.checked)}
-          />
-          High Contrast Mode
-        </label>
-      </div>
-
-      <div className="setting-group">
-        <label>
-          Font Size:
-          <select
-            value={settings.fontSize}
-            onChange={(e) => updateSetting('fontSize', e.target.value)}
-          >
-            <option value="small">Small</option>
-            <option value="normal">Normal</option>
-            <option value="large">Large</option>
-            <option value="xlarge">Extra Large</option>
-          </select>
-        </label>
-      </div>
-
-      <div className="setting-group">
-        <label>
-          <input
-            type="checkbox"
-            checked={settings.reducedMotion}
-            onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-          />
-          Reduce Motion
-        </label>
-      </div>
-
-      <div className="setting-group">
-        <label>
-          <input
-            type="checkbox"
-            checked={settings.focusVisible}
-            onChange={(e) => updateSetting('focusVisible', e.target.checked)}
-          />
-          Enhanced Focus Indicators
-        </label>
-      </div>
-
-      <div className="setting-group">
-        <label>
-          <input
-            type="checkbox"
-            checked={settings.screenReader}
-            onChange={(e) => updateSetting('screenReader', e.target.checked)}
-          />
-          Screen Reader Optimized
-        </label>
-      </div>
-    </div>
-  );
-};
-
-export default AccessibilityManager;

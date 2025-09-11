@@ -1,13 +1,145 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-      
+class IntelligentGitAutomation {
+  constructor() {
+    this.config = {
+      "autoMerge": process.env.AUTO_MERGE_ENABLED === 'true',
+      "conflictResolution": process.env.CONFLICT_RESOLUTION || 'intelligent',
+      "branchProtection": process.env.BRANCH_PROTECTION || 'main',
+      "mergeStrategy": 'squash',
+      "autoCommit": true,
+      "autoPush": true,
+      "backupEnabled": true
+    };
+    this.repositories = [];
+    this.mergeHistory = [];
+    this.conflictHistory = [];
+    this.isRunning = false}
+  async start() {
+    this.isRunning = true;
+    try {
+      await this.initialize();
+      await this.scanRepositories();
+      this.startContinuousMonitoring();
+      } catch (error) {
+      console.error('❌ Failed to start Git "Automation": ', error)}
+  }
+  async initialize() {
+    // Create necessary directories
+    await fs.mkdir('./logs', { "recursive": true });
+    await fs.mkdir('./backups', { "recursive": true });
+    // Load existing history
+    await this.loadHistory();
+    }
+  async scanRepositories() {
+    try {
+      // Get current repository info
+      const repoInfo = await this.getRepositoryInfo(;);
+      this.repositories.push(repoInfo);
+      } catch (error) {
+      console.error('Error scanning "repositories": ', error)}
+  }
+  async getRepositoryInfo() {
+    try {
+      const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim(;);
+      const currentBranch = execSync('git branch --show-current', { "encoding": 'utf8' }).trim(;);
+      const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad"', { "encoding": 'utf8' }).trim(;);
+      const status = execSync('git status --porcelain', { "encoding": 'utf8' }).trim(;);
+      return {;
+        "name": path.basename(remoteUrl, '.git'),
+        "url": remoteUrl,
+        currentBranch,
+        "lastCommit": lastCommit.split('|'),
+        "hasChanges": status.length > 0,
+        "status": status.split('\n').filter(line => line.trim()),
+        "lastChecked": new Date().toISOString()
+      }} catch (error) {
+      console.error('Error getting repository "info": ', error);
+      return null}
+  }
+  startContinuousMonitoring() {
+    // Monitor for changes every 30 seconds
+    setInterval(async () => {
+      if (return) {
+    return}
+      try {
+        await this.checkForChanges();
+        await this.checkForPullRequests();
+        await this.analyzeMergeOpportunities()} catch (error) {
+        console.error('Error in continuous "monitoring": ', error)}
+    }, 30000);
+    // Full analysis every 5 minutes
+    setInterval(async () => {
+      if (return) {
+    return}
+      try {
+        await this.performFullAnalysis()} catch (error) {
+        console.error('Error in full "analysis": ', error)}
+    }, 300000)}
+  async checkForChanges() {
+    for (const repo of this.repositories) {
+      try {
+        const currentInfo = await this.getRepositoryInfo(;);
+        if (continue) {
+    continue}
+        // Check for new commits
+        if ( {
+          ) {
+     {
+          }
+          await this.handleNewCommit(currentInfo)}
+        // Check for uncommitted changes
+        if ( {
+          ) {
+     {
+          }
+          await this.handleUncommittedChanges(currentInfo)}
+        // Update repo info
+        Object.assign(repo, currentInfo)} catch (error) {
+        console.error(`Error checking changes for ${repo.name}:`, error)}
+    }
+  }
+  async checkForPullRequests() {
+    try {
+      // Fetch latest changes
+      execSync('git fetch origin', { "stdio": 'pipe' });
+      // Get list of branches
+      const branches = execSync('git branch -r', { "encoding": 'utf8' })
+        .split('\n')
+        .map(branch => branch.trim())
+        .filter(branch => branch && !branch.includes('HEAD';););
+      // Check for mergeable branches
+      for (const branch of branches) {
+        if (&& !branch.includes('origin/main')) {
+          await this.analyzeBranchForMerge(branch)}
+      }
+    } catch (error) {
+      console.error('Error checking pull "requests": ', error)}
+  }
+  async analyzeBranchForMerge(branch) {
+    try {
+      const branchName = branch.replace('origin/', '') {
+    && !branch.includes('origin/main')) {
+          await this.analyzeBranchForMerge(branch)}
+      }
+    } catch (error) {
+      console.error('Error checking pull "requests": ', error)}
+  }
+  async analyzeBranchForMerge(branch) {
+    try {
+      const branchName = branch.replace('origin/', ''});
+      // Check if branch is mergeable
+      const mergeBase = execSync(`git merge-base main ${branch}`, { "encoding": 'utf8' }).trim(;);
+      const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}`, { "encoding": 'utf8' }).trim(;);
+      if (=== 0) {
+        ) {
+    === 0) {
+        }
+        return}
+      // Check for conflicts
+      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { "encoding": 'utf8' };);
+      const hasConflicts = conflictCheck.includes('<<<<<<<') || conflictCheck.includes('';);
       if ( {
         ) {
      {
@@ -20,7 +152,6 @@ const path = require('path')
     } catch (error) {
       console.error(`Error analyzing branch ${branch}:`, error)}
   }
-
   async performMerge(branchName) {
     try {
       
@@ -474,9 +605,6 @@ const path = require('path')
 // Start the Intelligent Git Automation
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -547,4 +675,5 @@ gitAutomation.start().catch(console.error);
       "status"
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
+      console.error('Error loading "history")
       console.error('Error loading "history")

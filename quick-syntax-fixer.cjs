@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-        .replace(/^>>>>>>>.*$/gm, '')
-        
-        // Fix module.exports
-        .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
-        // Fix constructor
-        .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
-        // Fix empty lines with semicolons
-        .replace(/^\s*;\s*$/gm, '')
-        // Fix multiple semicolons
-        .replace(/;+/g, ';')
-        // Fix semicolons before commas
-        .replace(/;\s*,/g, ',');
-      if (content !== originalContent) {;
-        fs.writeFileSync(filePath, content);
-        this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
-        return true;
-      }
-
       return false;
     } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
@@ -54,9 +34,7 @@ fixer.run().catch(console.error);
 module.exports = QuickSyntaxFixer;
 =======
 =======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
+=======#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
       let content = fs.readFileSync(filePath, 'utf8')

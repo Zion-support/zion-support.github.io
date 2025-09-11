@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -35,12 +34,7 @@
 }
 
 // Run the enhanced orchestrator
-main();
-=======
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
+main();#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')

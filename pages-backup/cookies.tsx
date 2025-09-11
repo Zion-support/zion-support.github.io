@@ -53,6 +53,3 @@ already on your computer and set most browsers to prevent them from being placed
                 </p>;
               </div>;
     </MainLayout>;
-  )}
-";
-export default CookiePolicy

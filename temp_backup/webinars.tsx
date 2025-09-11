@@ -13,7 +13,6 @@ export default function WebinarsPage() {
 						<h2 className="text-2xl font-semibold mb-2">No scheduled webinars</h2>
 						<p className="text-gray-400">New sessions will be announced soon. Follow us on LinkedIn for updates.</p>
 					</article>
-=======
 import SEO from '../components/SEO';
 import Link from 'next/link';
 

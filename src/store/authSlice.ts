@@ -1,21 +1,17 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export interface User {
+interface User {
   id: string;
   email: string;
-  name?: string;
-  role?: string;
+  name: string;
   avatar?: string;
-  createdAt?: string;
-  updatedAt?: string;
 }
 
-export interface AuthState {
+interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
   error: string | null;
-  token: string | null;
 }
 
 const initialState: AuthState = {
@@ -23,51 +19,7 @@ const initialState: AuthState = {
   isAuthenticated: false,
   isLoading: false,
   error: null,
-  token: null,
 };
-
-// Async thunk for user login
-export const loginUser = createAsyncThunk(
-  'auth/loginUser',
-  async (credentials: { email: string; password: string }, { rejectWithValue }) => {
-    try {
-      // Simulate API call
-      const response = await new Promise<User>((resolve) => {
-        setTimeout(() => {
-          resolve({
-            id: '1',
-            email: credentials.email,
-            name: 'User',
-            role: 'user',
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
-          });
-        }, 1000);
-      });
-      
-      return response;
-    } catch (error) {
-      return rejectWithValue('Login failed');
-    }
-  }
-);
-
-// Async thunk for user logout
-export const logoutUser = createAsyncThunk(
-  'auth/logoutUser',
-  async (_, { rejectWithValue }) => {
-    try {
-      // Simulate API call
-      await new Promise((resolve) => {
-        setTimeout(resolve, 500);
-      });
-      
-      return true;
-    } catch (error) {
-      return rejectWithValue('Logout failed');
-    }
-  }
-);
 
 const authSlice = createSlice({
   name: 'auth',
@@ -78,13 +30,9 @@ const authSlice = createSlice({
       state.isAuthenticated = true;
       state.error = null;
     },
-    setToken: (state, action: PayloadAction<string>) => {
-      state.token = action.payload;
-    },
     clearUser: (state) => {
       state.user = null;
       state.isAuthenticated = false;
-      state.token = null;
       state.error = null;
     },
     setLoading: (state, action: PayloadAction<boolean>) => {
@@ -97,48 +45,7 @@ const authSlice = createSlice({
       state.error = null;
     },
   },
-  extraReducers: (builder) => {
-    builder
-      // Login cases
-      .addCase(loginUser.pending, (state) => {
-        state.isLoading = true;
-        state.error = null;
-      })
-      .addCase(loginUser.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.user = action.payload;
-        state.isAuthenticated = true;
-        state.error = null;
-      })
-      .addCase(loginUser.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload as string;
-      })
-      // Logout cases
-      .addCase(logoutUser.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(logoutUser.fulfilled, (state) => {
-        state.isLoading = false;
-        state.user = null;
-        state.isAuthenticated = false;
-        state.token = null;
-        state.error = null;
-      })
-      .addCase(logoutUser.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload as string;
-      });
-  },
 });
 
-export const { 
-  setUser, 
-  setToken, 
-  clearUser, 
-  setLoading, 
-  setError, 
-  clearError 
-} = authSlice.actions;
-
+export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
 export default authSlice.reducer;

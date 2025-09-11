@@ -1,13 +1,27 @@
-import React, { Suspense, lazy } from 'react';
-export const LazyPricing = lazy(() => import('../pages / Pricing') ) ;
-import { LoadingSpinner } from './ui / LoadingSpinner';
-<<<<<<< HEAD:src_backup_temp/components/LazyLoader.tsx
-;
-export default function Page("props": "any) {;
-export;
-"
-=======
-export default function Page() {;
-export ;
+import React, { Suspense, lazy } from 'react'
+import { LoadingSpinner } from './ui/LoadingSpinner'
+
+interface LazyLoaderProps {
+  component: React.ComponentType<any>
+  fallback?: React.ReactNode
+  props?: any
 }
->>>>>>> origin/automation-fixes:src/components/LazyLoader.tsx
+
+export const LazyLoader: React.FC<LazyLoaderProps> = ({ 
+  component: Component, 
+  fallback = <LoadingSpinner />, 
+  props = {} 
+}) => {
+  return (
+    <Suspense fallback={fallback}>
+      <Component {...props} />
+    </Suspense>
+  )
+}
+
+// Lazy load commonly used components
+export const LazyHome = lazy(() => import('../pages/Home'))
+export const LazyServices = lazy(() => import('../pages/Services'))
+export const LazyAbout = lazy(() => import('../pages/About'))
+export const LazyContact = lazy(() => import('../pages/Contact'))
+export const LazyPricing = lazy(() => import('../pages/Pricing'))

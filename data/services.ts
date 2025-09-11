@@ -1,353 +1,424 @@
-<<<<<<< HEAD
-export type ServiceItem = { slug: string; title: string; category: 'Micro-SaaS' | 'IT Services' | 'AI Solutions'; description: string; startingPriceUSD: string; typicalTimeline: string; link: string; references?: { label: string; url: string }[]}; export const servicesCatalog: ServiceItem[] = [ { slug: 'ai-chatbot-for-support',title: 'AI Chatbot for Customer Support',category: 'Micro-SaaS',description: 'Deploy a branded AI assistant trained on your docs to deflect tickets,reduce response times,and boost CSAT across web and chat channels.',startingPriceUSD: '$1,500 setup + $99/mo',typicalTimeline: '1-2 weeks',link: '/services/ai-chatbot-for-support',references: [ { label: 'OpenAI API Pricing',url: 'https: { label: 'Vercel Pricing',url: 'https: ],},{ slug: 'lead-scraper-and-enrichment',title: 'Lead Scraper & Enrichment Engine',category: 'Micro-SaaS',description: 'Automated B2B lead discovery,enrichment,and scoring with workflow exports to your CRM.',startingPriceUSD: '$2,500 setup + $149/mo',typicalTimeline: '2-3 weeks',link: '/services/lead-scraper-and-enrichment',references: [ { label: 'Clearbit (reference)',url: 'https: { label: 'Apollo (reference)',url: 'https: ],},{ slug: 'document-processing-automation',title: 'Document Processing Automation',category: 'AI Solutions',description: 'Extract structured data from PDFs,invoices,forms and route it into ERPs/CRMs with human-in-the-loop review.',startingPriceUSD: '$3,000 setup + usage',typicalTimeline: '2-4 weeks',link: '/services/document-processing-automation',references: [ { label: 'Google Document AI',url: 'https: { label: 'AWS Textract',url: 'https: ],},{ slug: 'cloud-migration-and-cost-optimization',title: 'Cloud Migration & Cost Optimization',category: 'IT Services',description: 'Migrate workloads to AWS/GCP/Azure,implement IaC,and reduce spend via rightsizing and savings plans.',startingPriceUSD: 'From $8,000 project',typicalTimeline: '4-8 weeks',link: '/services/cloud-migration-and-cost-optimization',references: [ { label: 'AWS Pricing',url: 'https: { label: 'Terraform',url: 'https: ],},{ slug: 'security-hardening-and-audits',title: 'Security Hardening & Audits',category: 'IT Services',description: 'CIS/NIST aligned audits,SOC2 readiness,penetration testing coordination,and remediation roadmaps.',startingPriceUSD: 'From $5,000 audit',typicalTimeline: '2-6 weeks',link: '/services/security-hardening-and-audits',references: [ { label: 'CIS Benchmarks',url: 'https: { label: 'OWASP ASVS',url: 'https: ],},{ slug: 'mvp-web-app-development',title: 'MVP Web App Development',category: 'Micro-SaaS',description: 'Design and build a production-ready MVP with Next.js,Tailwind,Stripe,and modern auth.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '4-6 weeks',link: '/services/mvp-web-app-development',references: [ { label: 'Vercel Pricing',url: 'https: { label: 'Stripe Pricing',url: 'https: ],},{ slug: 'analytics-and-bi-dashboards',title: 'Analytics & BI Dashboards',category: 'AI Solutions',description: 'Data pipelines and BI with semantic layers and KPI dashboards for execs and ops teams.',startingPriceUSD: 'From $6,000 project',typicalTimeline: '3-5 weeks',link: '/services/analytics-and-bi-dashboards',references: [ { label: 'dbt',url: 'https: { label: 'BigQuery Pricing',url: 'https: ],},{ slug: 'ai-content-generator',title: 'AI Content Generator Platform',category: 'Micro-SaaS',description: 'AI-powered content creation tool that generates blog posts,social media content,marketing copy,and product descriptions with brand voice consistency.',startingPriceUSD: '$2,000 setup + $79/mo',typicalTimeline: '2-3 weeks',link: '/services/ai-content-generator',references: [ { label: 'OpenAI GPT-4 Pricing',url: 'https: { label: 'Content Marketing ROI',url: 'https: ],},{ slug: 'automated-email-followup',title: 'Automated Email Follow-up System',category: 'Micro-SaaS',description: 'Intelligent email automation platform that sends personalized follow-ups,nurtures leads,and maintains customer engagement with advanced segmentation.',startingPriceUSD: '$1,200 setup + $49/mo',typicalTimeline: '1-2 weeks',link: '/services/automated-email-followup',references: [ { label: 'Email Marketing ROI',url: 'https: { label: 'SendGrid Pricing',url: 'https: ],},{ slug: 'customer-support-platform',title: 'All-in-One Customer Support Platform',category: 'Micro-SaaS',description: 'Comprehensive helpdesk solution with ticket management,knowledge base,live chat,AI chatbots,and customer satisfaction tracking.',startingPriceUSD: '$3,500 setup + $99/mo',typicalTimeline: '3-4 weeks',link: '/services/customer-support-platform',references: [ { label: 'Zendesk Pricing',url: 'https: { label: 'Customer Support ROI',url: 'https: ],},{ slug: 'ai-email-responder',title: 'AI Email Responder & Manager',category: 'Micro-SaaS',description: 'AI-driven email management system that reads,categorizes,and responds to emails automatically while flagging important messages for human review.',startingPriceUSD: '$2,800 setup + $89/mo',typicalTimeline: '2-3 weeks',link: '/services/ai-email-responder',references: [ { label: 'Gmail API',url: 'https: { label: 'Email Productivity Stats',url: 'https: ],},{ slug: 'event-management-dashboard',title: 'Event Management & Analytics Dashboard',category: 'Micro-SaaS',description: 'Complete event management platform with ticket sales,attendee management,scheduling,feedback collection,and comprehensive analytics.',startingPriceUSD: '$4,000 setup + $129/mo',typicalTimeline: '4-5 weeks',link: '/services/event-management-dashboard',references: [ { label: 'Eventbrite Pricing',url: 'https: { label: 'Event Industry Growth',url: 'https: ],},{ slug: 'ecommerce-return-management',title: 'E-commerce Return Management SaaS',category: 'Micro-SaaS',description: 'Automated return processing system that handles return requests,generates labels,tracks status,and provides analytics for e-commerce businesses.',startingPriceUSD: '$2,200 setup + $69/mo',typicalTimeline: '2-3 weeks',link: '/services/ecommerce-return-management',references: [ { label: 'E-commerce Return Rates',url: 'https: { label: 'Shopify App Store',url: 'https: ],},{ slug: 'ai-talent-matching',title: 'AI-Powered Talent Matching Platform',category: 'Micro-SaaS',description: 'Advanced AI recruitment platform that matches businesses with perfect tech talent using machine learning algorithms and skills assessment.',startingPriceUSD: '$5,000 setup + $199/mo',typicalTimeline: '4-6 weeks',link: '/services/ai-talent-matching',references: [ { label: 'LinkedIn Talent Solutions',url: 'https: { label: 'Recruitment AI Market',url: 'https: ],},{ slug: 'inventory-optimization-ai',title: 'AI Inventory Optimization System',category: 'Micro-SaaS',description: 'Intelligent inventory management system that predicts demand,optimizes stock levels,prevents stockouts,and reduces carrying costs using AI.',startingPriceUSD: '$3,200 setup + $149/mo',typicalTimeline: '3-4 weeks',link: '/services/inventory-optimization-ai',references: [ { label: 'Inventory Management ROI',url: 'https: { label: 'AI in Supply Chain',url: 'https: ],},{ slug: 'zero-trust-security-implementation',title: 'Zero Trust Security Architecture',category: 'IT Services',description: 'Complete zero trust security implementation with identity verification,device trust,network segmentation,and continuous monitoring.',startingPriceUSD: 'From $15,000 project',typicalTimeline: '6-10 weeks',link: '/services/zero-trust-security-implementation',references: [ { label: 'NIST Zero Trust Framework',url: 'https: { label: 'CISA Zero Trust Maturity Model',url: 'https: ],},{ slug: 'disaster-recovery-planning',title: 'Disaster Recovery & Business Continuity',category: 'IT Services',description: 'Comprehensive disaster recovery planning,backup strategies,failover systems,and business continuity testing to ensure minimal downtime.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '4-8 weeks',link: '/services/disaster-recovery-planning',references: [ { label: 'AWS Disaster Recovery',url: 'https: { label: 'Business Continuity Planning',url: 'https: ],},{ slug: 'managed-it-support',title: '24/7 Managed IT Support Services',category: 'IT Services',description: 'Round-the-clock IT monitoring,maintenance,support,and proactive issue resolution with guaranteed response times and SLA compliance.',startingPriceUSD: 'From $2,500/mo',typicalTimeline: '1-2 weeks setup',link: '/services/managed-it-support',references: [ { label: 'Managed IT Services Market',url: 'https: { label: 'IT Support Best Practices',url: 'https: ],},{ slug: 'network-optimization',title: 'Network Performance Optimization',category: 'IT Services',description: 'Network infrastructure assessment,optimization,and modernization to improve performance,security,and reliability across all locations.',startingPriceUSD: 'From $8,500 project',typicalTimeline: '3-6 weeks',link: '/services/network-optimization',references: [ { label: 'Cisco Network Solutions',url: 'https: { label: 'Network Performance Monitoring',url: 'https: ],},{ slug: 'data-backup-solutions',title: 'Enterprise Data Backup & Recovery',category: 'IT Services',description: 'Comprehensive data backup strategies including cloud backup,on-premises solutions,and hybrid approaches with automated recovery testing.',startingPriceUSD: 'From $5,500 project',typicalTimeline: '2-4 weeks',link: '/services/data-backup-solutions',references: [ { label: 'Veeam Backup Solutions',url: 'https: { label: 'AWS Backup Services',url: 'https: ],},{ slug: 'predictive-analytics-platform',title: 'Predictive Analytics & Forecasting Platform',category: 'AI Solutions',description: 'Advanced predictive analytics platform that forecasts business trends,customer behavior,and market changes using machine learning models.',startingPriceUSD: 'From $8,500 project',typicalTimeline: '4-6 weeks',link: '/services/predictive-analytics-platform',references: [ { label: 'Predictive Analytics Market',url: 'https: { label: 'Machine Learning Models',url: 'https: ],},{ slug: 'computer-vision-solutions',title: 'Computer Vision & Image Recognition',category: 'AI Solutions',description: 'Custom computer vision solutions for object detection,facial recognition,quality control,and automated visual inspection systems.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '6-8 weeks',link: '/services/computer-vision-solutions',references: [ { label: 'OpenCV Documentation',url: 'https: { label: 'Computer Vision Applications',url: 'https: ],},{ slug: 'natural-language-processing',title: 'Natural Language Processing Solutions',category: 'AI Solutions',description: 'NLP solutions for sentiment analysis,text classification,language translation,and automated content processing and understanding.',startingPriceUSD: 'From $7,000 project',typicalTimeline: '3-5 weeks',link: '/services/natural-language-processing',references: [ { label: 'Hugging Face Models',url: 'https: { label: 'NLP Applications',url: 'https: ],},{ slug: 'ai-powered-crm',title: 'AI-Enhanced CRM System',category: 'AI Solutions',description: 'Intelligent CRM with AI-powered lead scoring,automated follow-ups,customer insights,and predictive sales analytics.',startingPriceUSD: 'From $10,000 project',typicalTimeline: '5-7 weeks',link: '/services/ai-powered-crm',references: [ { label: 'Salesforce AI Features',url: 'https: { label: 'CRM Market Growth',url: 'https: ],},{ slug: 'voice-assistant-development',title: 'Custom Voice Assistant Development',category: 'AI Solutions',description: 'Custom voice assistants and chatbots with natural language understanding,multi-language support,and integration with business systems.',startingPriceUSD: 'From $15,000 project',typicalTimeline: '6-10 weeks',link: '/services/voice-assistant-development',references: [ { label: 'Amazon Alexa Skills',url: 'https: { label: 'Google Assistant Actions',url: 'https: ],},{ slug: 'ai-fraud-detection',title: 'AI-Powered Fraud Detection System',category: 'AI Solutions',description: 'Advanced fraud detection system using machine learning to identify suspicious transactions,prevent fraud,and protect business assets.',startingPriceUSD: 'From $9,500 project',typicalTimeline: '4-6 weeks',link: '/services/ai-fraud-detection',references: [ { label: 'Fraud Detection Statistics',url: 'https: { label: 'Machine Learning for Fraud',url: 'https: ],},{ slug: 'ai-social-media-manager',title: 'AI Social Media Management Platform',category: 'Micro-SaaS',description: 'Intelligent social media automation that creates,schedules,and optimizes content across all platforms with AI-driven engagement strategies.',startingPriceUSD: '$1,800 setup + $89/mo',typicalTimeline: '2-3 weeks',link: '/services/ai-social-media-manager',references: [ { label: 'Social Media ROI',url: 'https: { label: 'AI Content Creation',url: 'https: ],},{ slug: 'blockchain-nft-marketplace',title: 'Blockchain NFT Marketplace Platform',category: 'Micro-SaaS',description: 'Complete NFT marketplace with smart contracts,wallet integration,auction system,and royalty management for digital asset trading.',startingPriceUSD: '$8,000 setup + $199/mo',typicalTimeline: '6-8 weeks',link: '/services/blockchain-nft-marketplace',references: [ { label: 'NFT Market Growth',url: 'https: { label: 'Ethereum Smart Contracts',url: 'https: ],},{ slug: 'ai-video-editing-platform',title: 'AI Video Editing & Production Platform',category: 'Micro-SaaS',description: 'Automated video editing platform that uses AI to create professional videos,add effects,optimize for different platforms,and generate thumbnails.',startingPriceUSD: '$3,500 setup + $149/mo',typicalTimeline: '4-5 weeks',link: '/services/ai-video-editing-platform',references: [ { label: 'Video Marketing Statistics',url: 'https: { label: 'AI Video Tools',url: 'https: ],},{ slug: 'affiliate-marketing-tracker',title: 'Affiliate Marketing Tracking & Analytics',category: 'Micro-SaaS',description: 'Comprehensive affiliate marketing platform with link tracking,commission management,performance analytics,and automated payouts.',startingPriceUSD: '$2,200 setup + $79/mo',typicalTimeline: '2-3 weeks',link: '/services/affiliate-marketing-tracker',references: [ { label: 'Affiliate Marketing Growth',url: 'https: { label: 'Commission Junction',url: 'https: ],},{ slug: 'ai-personalized-learning',title: 'AI-Powered Personalized Learning Platform',category: 'Micro-SaaS',description: 'Adaptive learning management system that personalizes educational content,tracks progress,and adjusts difficulty based on individual performance.',startingPriceUSD: '$4,500 setup + $129/mo',typicalTimeline: '5-6 weeks',link: '/services/ai-personalized-learning',references: [ { label: 'EdTech Market Growth',url: 'https: { label: 'Personalized Learning Benefits',url: 'https: ],},{ slug: 'smart-contract-auditor',title: 'Smart Contract Security Auditor',category: 'Micro-SaaS',description: 'Automated smart contract security analysis platform that identifies vulnerabilities,gas optimization opportunities,and compliance issues.',startingPriceUSD: '$5,500 setup + $199/mo',typicalTimeline: '4-6 weeks',link: '/services/smart-contract-auditor',references: [ { label: 'Smart Contract Security',url: 'https: { label: 'Blockchain Security',url: 'https: ],},{ slug: 'ai-weather-prediction',title: 'AI Weather Prediction & Analytics Platform',category: 'Micro-SaaS',description: 'Advanced weather forecasting platform using machine learning to provide hyperlocal weather predictions and climate analytics for businesses.',startingPriceUSD: '$3,800 setup + $99/mo',typicalTimeline: '3-4 weeks',link: '/services/ai-weather-prediction',references: [ { label: 'Weather API Services',url: 'https: { label: 'Climate Data',url: 'https: ],},{ slug: 'ai-code-reviewer',title: 'AI Code Review & Quality Assurance Platform',category: 'Micro-SaaS',description: 'Intelligent code review platform that automatically analyzes code quality,suggests improvements,detects bugs,and enforces coding standards.',startingPriceUSD: '$2,500 setup + $89/mo',typicalTimeline: '2-3 weeks',link: '/services/ai-code-reviewer',references: [ { label: 'Code Quality Metrics',url: 'https: { label: 'Static Code Analysis',url: 'https: ],},{ slug: 'iot-infrastructure-management',title: 'IoT Infrastructure & Device Management',category: 'IT Services',description: 'Complete IoT infrastructure setup with device monitoring,data collection,security protocols,and real-time analytics dashboard.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '6-10 weeks',link: '/services/iot-infrastructure-management',references: [ { label: 'IoT Security Framework',url: 'https: { label: 'AWS IoT Services',url: 'https: ],},{ slug: 'edge-computing-solutions',title: 'Edge Computing & Distributed Systems',category: 'IT Services',description: 'Edge computing infrastructure deployment with low-latency processing,distributed data management,and real-time decision making capabilities.',startingPriceUSD: 'From $18,000 project',typicalTimeline: '8-12 weeks',link: '/services/edge-computing-solutions',references: [ { label: 'Edge Computing Benefits',url: 'https: { label: 'Kubernetes Edge',url: 'https: ],},{ slug: 'quantum-computing-readiness',title: 'Quantum Computing Readiness Assessment',category: 'IT Services',description: 'Quantum computing readiness evaluation,algorithm optimization,and hybrid classical-quantum system integration for future-proofing.',startingPriceUSD: 'From $25,000 project',typicalTimeline: '10-16 weeks',link: '/services/quantum-computing-readiness',references: [ { label: 'IBM Quantum Network',url: 'https: { label: 'Quantum Computing Applications',url: 'https: ],},{ slug: '5g-network-implementation',title: '5G Network Implementation & Optimization',category: 'IT Services',description: '5G network deployment,optimization,and integration with existing infrastructure for enhanced connectivity and IoT capabilities.',startingPriceUSD: 'From $35,000 project',typicalTimeline: '12-20 weeks',link: '/services/5g-network-implementation',references: [ { label: '5G Technology Overview',url: 'https: { label: '5G Business Applications',url: 'https: ],},{ slug: 'cyber-threat-intelligence',title: 'Cyber Threat Intelligence & Monitoring',category: 'IT Services',description: 'Advanced threat intelligence platform with real-time monitoring,threat hunting,incident response,and security orchestration.',startingPriceUSD: 'From $15,000 project',typicalTimeline: '6-8 weeks',link: '/services/cyber-threat-intelligence',references: [ { label: 'MITRE ATT&CK Framework',url: 'https: { label: 'Threat Intelligence Platforms',url: 'https: ],},{ slug: 'ai-drug-discovery',title: 'AI-Powered Drug Discovery Platform',category: 'AI Solutions',description: 'Machine learning platform for pharmaceutical research,molecular design,drug interaction prediction,and clinical trial optimization.',startingPriceUSD: 'From $50,000 project',typicalTimeline: '12-20 weeks',link: '/services/ai-drug-discovery',references: [ { label: 'AI in Drug Discovery',url: 'https: { label: 'Pharmaceutical AI Market',url: 'https: ],},{ slug: 'ai-financial-modeling',title: 'AI Financial Modeling & Risk Assessment',category: 'AI Solutions',description: 'Advanced financial modeling platform with AI-driven risk assessment,portfolio optimization,and automated trading strategies.',startingPriceUSD: 'From $20,000 project',typicalTimeline: '8-12 weeks',link: '/services/ai-financial-modeling',references: [ { label: 'FinTech AI Applications',url: 'https: { label: 'Quantitative Finance',url: 'https: ],},{ slug: 'ai-supply-chain-optimization',title: 'AI Supply Chain Optimization Platform',category: 'AI Solutions',description: 'Intelligent supply chain management with demand forecasting,inventory optimization,route planning,and supplier risk assessment.',startingPriceUSD: 'From $25,000 project',typicalTimeline: '10-16 weeks',link: '/services/ai-supply-chain-optimization',references: [ { label: 'Supply Chain AI',url: 'https: { label: 'Supply Chain Optimization',url: 'https: ],},{ slug: 'ai-mental-health-platform',title: 'AI Mental Health & Wellness Platform',category: 'AI Solutions',description: 'AI-powered mental health platform with mood tracking,personalized therapy recommendations,crisis detection,and wellness coaching.',startingPriceUSD: 'From $30,000 project',typicalTimeline: '12-18 weeks',link: '/services/ai-mental-health-platform',references: [ { label: 'Digital Mental Health',url: 'https: { label: 'AI in Healthcare',url: 'https: ],},{ slug: 'ai-autonomous-vehicles',title: 'AI Autonomous Vehicle Systems',category: 'AI Solutions',description: 'Autonomous vehicle AI systems with computer vision,sensor fusion,path planning,and real-time decision making for self-driving applications.',startingPriceUSD: 'From $100,000 project',typicalTimeline: '20-30 weeks',link: '/services/ai-autonomous-vehicles',references: [ { label: 'Autonomous Vehicle Technology',url: 'https: { label: 'Self-Driving Car AI',url: 'https: ],},{ slug: 'ai-space-technology',title: 'AI Space Technology & Satellite Systems',category: 'AI Solutions',description: 'AI-powered space technology solutions including satellite data processing,orbital mechanics optimization,and space mission planning.',startingPriceUSD: 'From $75,000 project',typicalTimeline: '16-24 weeks',link: '/services/ai-space-technology',references: [ { label: 'Space AI Applications',url: 'https: { label: 'Satellite Technology',url: 'https: ],},];
-=======
 export interface Service {
   id: string;
   name: string;
-  category: "micro-saas" | "it-services" | "ai-services";
+  category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics';
   description: string;
   features: string[];
-  pricing: {;
+  benefits: string[];
+  pricing: {
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-};
-  benefits: string[];
-  useCases: string[];
-  technologies: string[];
+    period: string;
+  };
   link: string;
   icon: string;
+  isPopular?: boolean;
+  isNew?: boolean;
 }
 
-export const services: Service[] = [;
-  {;
-    id: "ai-content-generator",
-    name: "AI Content Generator Pro",
-    category: "micro-saas",
-    description: "Advanced AI-powered content generation platform for blogs, social media, and marketing materials with GPT-4 integration.",
-    features: [ "Multi-language content generation",
-      "SEO-optimized content",
-      "Brand voice customization",
-      "Content scheduling",
-      "Analytics dashboard",
-      "API integration",
-      "Plagiarism detection",
-      "Content templates library" ],
-    pricing: {;
+export const services: Service[] = [
+  // AI Services
+  {
+    id: 'ai-chatbot-platform',
+    name: 'AI Chatbot Platform',
+    category: 'AI',
+    description: 'Enterprise-grade AI chatbot platform with natural language processing, multi-language support, and seamless integration.',
+    features: [
+      'Advanced NLP with GPT-4 integration',
+      'Multi-language support (50+ languages)',
+      'Custom training on your data',
+      'Analytics and performance insights',
+      'API integration and webhooks',
+      '24/7 customer support'
+    ],
+    benefits: [
+      'Reduce customer service costs by 60%',
+      'Handle 1000+ conversations simultaneously',
+      'Improve customer satisfaction by 40%',
+      '24/7 availability without human intervention'
+    ],
+    pricing: {
+      starter: 99,
+      professional: 299,
+      enterprise: 999,
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/ai-chatbot-platform',
+    icon: '🤖',
+    isPopular: true
+  },
+  {
+    id: 'ai-content-generator',
+    name: 'AI Content Generator',
+    category: 'AI',
+    description: 'Generate high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.',
+    features: [
+      'SEO-optimized content generation',
+      'Multiple content types (blogs, social, ads)',
+      'Plagiarism-free content',
+      'Brand voice customization',
+      'Content calendar management',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Save 80% of content creation time',
+      'Improve SEO rankings by 45%',
+      'Generate 100+ articles per month',
+      'Maintain consistent brand voice'
+    ],
+    pricing: {
+      starter: 49,
+      professional: 149,
+      enterprise: 499,
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/ai-content-generator',
+    icon: '✍️'
+  },
+  {
+    id: 'ai-data-analytics',
+    name: 'AI-Powered Data Analytics',
+    category: 'AI',
+    description: 'Transform raw data into actionable insights with machine learning algorithms and predictive analytics.',
+    features: [
+      'Real-time data processing',
+      'Predictive analytics models',
+      'Custom dashboard creation',
+      'Automated reporting',
+      'Data visualization tools',
+      'API integration capabilities'
+    ],
+    benefits: [
+      'Increase data-driven decisions by 70%',
+      'Reduce analysis time by 85%',
+      'Predict trends with 90% accuracy',
+      'Automate routine reporting tasks'
+    ],
+    pricing: {
+      starter: 199,
+      professional: 499,
+      enterprise: 1499,
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/ai-data-analytics',
+    icon: '📊',
+    isNew: true
+  },
+
+  // IT Services
+  {
+    id: 'managed-it-services',
+    name: 'Managed IT Services',
+    category: 'IT',
+    description: 'Comprehensive IT management including network monitoring, security, and 24/7 technical support.',
+    features: [
+      '24/7 network monitoring',
+      'Proactive issue resolution',
+      'Security patch management',
+      'Backup and disaster recovery',
+      'Help desk support',
+      'Monthly reporting and analytics'
+    ],
+    benefits: [
+      'Reduce IT downtime by 95%',
+      'Lower IT costs by 30%',
+      'Improve system reliability',
+      'Focus on core business activities'
+    ],
+    pricing: {
+      starter: 299,
+      professional: 599,
+      enterprise: 1499,
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/managed-it-services',
+    icon: '🖥️'
+  },
+  {
+    id: 'cybersecurity-suite',
+    name: 'Cybersecurity Suite',
+    category: 'Security',
+    description: 'Advanced cybersecurity solutions including threat detection, vulnerability assessment, and incident response.',
+    features: [
+      'Real-time threat detection',
+      'Vulnerability scanning',
+      'Penetration testing',
+      'Security awareness training',
+      'Incident response planning',
+      'Compliance reporting'
+    ],
+    benefits: [
+      'Protect against 99.9% of cyber threats',
+      'Meet industry compliance standards',
+      'Reduce security breach risk by 80%',
+      '24/7 security monitoring'
+    ],
+    pricing: {
+      starter: 399,
+      professional: 799,
+      enterprise: 1999,
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/cybersecurity-suite',
+    icon: '🔒',
+    isPopular: true
+  },
+  {
+    id: 'cloud-migration',
+    name: 'Cloud Migration Services',
+    category: 'Cloud',
+    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
+    features: [
+      'Migration strategy planning',
+      'Data migration tools',
+      'Performance optimization',
+      'Security implementation',
+      'Training and documentation',
+      'Post-migration support'
+    ],
+    benefits: [
+      'Reduce infrastructure costs by 40%',
+      'Improve scalability and flexibility',
+      'Enhanced disaster recovery',
+      'Access to latest technologies'
+    ],
+    pricing: {
+      starter: 2999,
+      professional: 7999,
+      enterprise: 19999,
+      currency: 'USD',
+      period: 'one-time'
+    },
+    link: '/services/cloud-migration',
+    icon: '☁️'
+  },
+
+  // SAAS Services
+  {
+    id: 'project-management-platform',
+    name: 'Project Management Platform',
+    category: 'SAAS',
+    description: 'Collaborative project management tool with task tracking, team collaboration, and progress monitoring.',
+    features: [
+      'Task and project tracking',
+      'Team collaboration tools',
+      'Time tracking and reporting',
+      'File sharing and storage',
+      'Mobile app access',
+      'Integration with popular tools'
+    ],
+    benefits: [
+      'Increase team productivity by 35%',
+      'Reduce project delays by 50%',
+      'Improve communication efficiency',
+      'Centralized project information'
+    ],
+    pricing: {
       starter: 29,
       professional: 79,
       enterprise: 199,
-      currency: "USD";
-},
-    benefits: [ "10x faster content creation",
-      "Consistent brand messaging",
-      "SEO optimization built-in",
-      "Multi-platform publishing",
-      "Cost-effective content marketing" ],
-    useCases: [ "Blog content creation",
-      "Social media management",
-      "Email marketing campaigns",
-      "Product descriptions",
-      "Marketing copywriting" ],
-    technologies: ["OpenAI GPT-4", "React", "Node.js", "PostgreSQL", "Stripe"],
-    link: "https://ziontechgroup.com/services/ai-content-generator",
-    icon: "📝";
-},
-  {;
-    id: "ai-email-responder",
-    name: "AI Email Responder Pro",
-    category: "micro-saas",
-    description: "Intelligent email automation that reads, categorizes, and responds to emails using advanced AI, handling simple inquiries and flagging important messages.",
-    features: [ "AI-powered email analysis",
-      "Automatic response generation",
-      "Priority email flagging",
-      "Sentiment analysis",
-      "Multi-language support",
-      "Custom response templates",
-      "Integration with CRM systems",
-      "Analytics dashboard" ],
-    pricing: {;
-      starter: 35,
-      professional: 89,
-      enterprise: 249,
-      currency: "USD";
-},
-    benefits: [ "Reduce email response time by 80%",
-      "24/7 email handling",
-      "Improved customer satisfaction",
-      "Better email organization",
-      "Reduced manual workload" ],
-    useCases: [ "Customer support teams",
-      "Sales departments",
-      "Small businesses",
-      "Freelancers and consultants" ],
-    technologies: ["OpenAI GPT-4", "React", "Node.js", "PostgreSQL", "Email APIs"],
-    link: "https://ziontechgroup.com/services/ai-email-responder",
-    icon: "📧";
-},
-  {;
-    id: "social-media-scheduler",
-    name: "Social Media Scheduler Pro",
-    category: "micro-saas",
-    description: "Advanced social media management platform with AI-powered content optimization and cross-platform scheduling.",
-    features: [ "Multi-platform scheduling",
-      "AI content optimization",
-      "Hashtag research",
-      "Analytics & insights",
-      "Team collaboration",
-      "Content calendar",
-      "Auto-posting",
-      "Engagement tracking" ],
-    pricing: {;
-      starter: 19,
-      professional: 49,
-      enterprise: 129,
-      currency: "USD";
-},
-    benefits: [ "Save 10+ hours per week",
-      "Increase engagement by 40%",
-      "Consistent brand presence",
-      "Data-driven content strategy" ],
-    useCases: [ "Marketing agencies",
-      "Small businesses",
-      "Content creators",
-      "E-commerce brands" ],
-    technologies: ["React", "Node.js", "MongoDB", "Social APIs"],
-    link: "https://ziontechgroup.com/services/social-media-scheduler",
-    icon: "📱";
-},
-  {;
-    id: "ai-seo-optimizer",
-    name: "AI SEO Content Optimizer",
-    category: "micro-saas",
-    description: "AI-powered SEO optimization platform that analyzes web pages, provides keyword recommendations, and optimizes content for better search rankings.",
-    features: [ "Real-time SEO analysis",
-      "Keyword research and recommendations",
-      "Content optimization suggestions",
-      "Competitor analysis",
-      "Technical SEO audits",
-      "Performance tracking",
-      "Content scoring",
-      "Automated reports" ],
-    pricing: {;
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/project-management-platform',
+    icon: '📋'
+  },
+  {
+    id: 'crm-system',
+    name: 'Customer Relationship Management',
+    category: 'SAAS',
+    description: 'Comprehensive CRM solution for managing customer relationships, sales pipeline, and marketing campaigns.',
+    features: [
+      'Contact and lead management',
+      'Sales pipeline tracking',
+      'Email marketing automation',
+      'Customer support integration',
+      'Analytics and reporting',
+      'Mobile app access'
+    ],
+    benefits: [
+      'Increase sales by 30%',
+      'Improve customer retention by 25%',
+      'Streamline sales processes',
+      'Better customer insights'
+    ],
+    pricing: {
       starter: 39,
       professional: 99,
-      enterprise: 249,
-      currency: "USD";
-},
-    benefits: [ "Improve search rankings by 50%",
-      "Increase organic traffic",
-      "Better content performance",
-      "Automated optimization",
-      "Competitive advantage" ],
-    useCases: [ "Content creators",
-      "Digital marketing agencies",
-      "E-commerce businesses",
-      "Blog owners" ],
-    technologies: ["AI/ML", "React", "Node.js", "SEO APIs", "Analytics"],
-    link: "https://ziontechgroup.com/services/ai-seo-optimizer",
-    icon: "🔍";
-},
-  {;
-    id: "event-management-dashboard",
-    name: "Smart Event Management Dashboard",
-    category: "micro-saas",
-    description: "Comprehensive event management platform with ticket sales, guest management, scheduling, and real-time analytics for successful events.",
-    features: [ "Event planning tools",
-      "Ticket sales management",
-      "Guest registration",
-      "Schedule management",
-      "Real-time analytics",
-      "Payment processing",
-      "Mobile check-in",
-      "Post-event surveys" ],
-    pricing: {;
-      starter: 45,
-      professional: 119,
       enterprise: 299,
-      currency: "USD";
-},
-    benefits: [ "Streamline event planning",
-      "Increase ticket sales",
-      "Better guest experience",
-      "Real-time insights",
-      "Reduced manual work" ],
-    useCases: [ "Conference organizers",
-      "Wedding planners",
-      "Corporate events",
-      "Community organizations" ],
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Analytics"],
-    link: "https://ziontechgroup.com/services/event-management-dashboard",
-    icon: "🎪";
-},
-  {;
-    id: "ai-talent-matching",
-    name: "AI Talent Matching Platform",
-    category: "micro-saas",
-    description: "Advanced AI-powered talent matching system that connects businesses with the right tech professionals using machine learning algorithms.",
-    features: [ "AI-powered candidate matching",
-      "Skills assessment tools",
-      "Behavioral analysis",
-      "Cultural fit evaluation",
-      "Interview scheduling",
-      "Performance tracking",
-      "Integration with job boards",
-      "Analytics dashboard" ],
-    pricing: {;
-      starter: 199,
-      professional: 499,
-      enterprise: 1299,
-      currency: "USD";
-},
-    benefits: [ "Reduce hiring time by 70%",
-      "Better candidate matches",
-      "Improved retention rates",
-      "Cost-effective recruitment",
-      "Data-driven hiring decisions" ],
-    useCases: [ "Tech companies",
-      "Recruitment agencies",
-      "HR departments",
-      "Startups" ],
-    technologies: ["AI/ML", "React", "Node.js", "PostgreSQL", "Matching Algorithms"],
-    link: "https://ziontechgroup.com/services/ai-talent-matching",
-    icon: "👥";
-},
-  {;
-    id: "cloud-migration",
-    name: "Cloud Migration Expert",
-    category: "it-services",
-    description: "Comprehensive cloud migration services for seamless transition to AWS, Azure, or Google Cloud with zero downtime.",
-    features: [ "Infrastructure assessment",
-      "Migration planning",
-      "Data migration",
-      "Application modernization",
-      "Security implementation",
-      "Performance optimization",
-      "Cost optimization",
-      "24/7 monitoring" ],
-    pricing: {;
-      starter: 5000,
-      professional: 15000,
-      enterprise: 50000,
-      currency: "USD";
-},
-    benefits: [ "Reduced infrastructure costs by 40%",
-      "Improved scalability",
-      "Enhanced security",
-      "Better performance",
-      "Disaster recovery" ],
-    useCases: [ "Legacy system modernization",
-      "Data center consolidation",
-      "Disaster recovery setup",
-      "Application scaling" ],
-    technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"],
-    link: "https://ziontechgroup.com/services/cloud-migration",
-    icon: "☁️";
-},
-  {;
-    id: "zero-trust-security",
-    name: "Zero Trust Security Architecture",
-    category: "it-services",
-    description: "Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and advanced threat protection.",
-    features: [ "Identity verification systems",
-      "Micro-segmentation implementation",
-      "Continuous monitoring",
-      "Threat detection and response",
-      "Access control policies",
-      "Security analytics",
-      "Compliance automation",
-      "Incident response planning" ],
-    pricing: {;
-      starter: 20000,
-      professional: 60000,
-      enterprise: 150000,
-      currency: "USD";
-},
-    benefits: [ "Enhanced security posture",
-      "Reduced attack surface",
-      "Better compliance adherence",
-      "Improved visibility",
-      "Proactive threat protection" ],
-    useCases: [ "Enterprise organizations",
-      "Healthcare systems",
-      "Financial institutions",
-      "Government agencies" ],
-    technologies: ["Zero Trust", "SIEM", "SOAR", "Identity Management", "Network Security"],
-    link: "https://ziontechgroup.com/services/zero-trust-security",
-    icon: "🔒";
-},
-  {;
-    id: "custom-ai-models",
-    name: "Custom AI Model Development",
-    category: "ai-services",
-    description: "Custom AI model development tailored to your specific business needs and data with advanced machine learning techniques.",
-    features: [ "Custom model training",
-      "Data preprocessing",
-      "Model optimization",
-      "API development",
-      "Integration support",
-      "Ongoing maintenance",
-      "Model versioning",
-      "Performance monitoring" ],
-    pricing: {;
-      starter: 10000,
-      professional: 30000,
-      enterprise: 100000,
-      currency: "USD";
-},
-    benefits: [ "Tailored to your data",
-      "Better accuracy",
-      "Competitive advantage",
-      "Scalable solutions",
-      "ROI optimization" ],
-    useCases: [ "Predictive analytics",
-      "Image recognition",
-      "Natural language processing",
-      "Recommendation systems",
-      "Fraud detection" ],
-    technologies: ["TensorFlow", "PyTorch", "Scikit-learn", "Python", "Docker", "MLflow"],
-    link: "https://ziontechgroup.com/services/custom-ai-models",
-    icon: "🧠";
-},
-  {;
-    id: "computer-vision-solutions",
-    name: "Computer Vision & Image Recognition",
-    category: "ai-services",
-    description: "Advanced computer vision solutions for object detection, facial recognition, and image analysis applications.",
-    features: [ "Object detection & classification",
-      "Facial recognition systems",
-      "Image segmentation",
-      "OCR & text extraction",
-      "Quality inspection",
-      "Real-time processing",
-      "Custom model training",
-      "API integration" ],
-    pricing: {;
-      starter: 8000,
-      professional: 25000,
-      enterprise: 75000,
-      currency: "USD";
-},
-    benefits: [ "Automated visual inspection",
-      "Enhanced security",
-      "Improved accuracy",
-      "Cost reduction" ],
-    useCases: [ "Manufacturing quality control",
-      "Security & surveillance",
-      "Medical imaging",
-      "Retail analytics",
-      "Autonomous vehicles" ],
-    technologies: ["OpenCV", "TensorFlow", "PyTorch", "YOLO", "ResNet", "CUDA"],
-    link: "https://ziontechgroup.com/services/computer-vision-solutions",
-    icon: "👁️";
-}
-];
-export function getServicesByCategory(category: "micro-saas" | "it-services" | "ai-services"): Service[] {;
-  return services.filter(service => service.category === category);
-}
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/crm-system',
+    icon: '👥',
+    isPopular: true
+  },
+  {
+    id: 'hr-management-system',
+    name: 'HR Management System',
+    category: 'SAAS',
+    description: 'Complete HR solution for employee management, payroll, benefits, and performance tracking.',
+    features: [
+      'Employee database management',
+      'Payroll processing',
+      'Benefits administration',
+      'Performance reviews',
+      'Time and attendance',
+      'Compliance reporting'
+    ],
+    benefits: [
+      'Reduce HR administrative tasks by 60%',
+      'Improve employee satisfaction',
+      'Ensure compliance with regulations',
+      'Better workforce analytics'
+    ],
+    pricing: {
+      starter: 49,
+      professional: 129,
+      enterprise: 399,
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/hr-management-system',
+    icon: '👨‍💼'
+  },
 
-export function getServiceById(id: string): Service | undefined {;
-  return services.find(service => service.id === id);
-}
->>>>>>> origin/automation-fixes
+  // Development Services
+  {
+    id: 'web-development',
+    name: 'Custom Web Development',
+    category: 'Development',
+    description: 'Professional web development services including responsive design, e-commerce, and custom applications.',
+    features: [
+      'Responsive web design',
+      'E-commerce integration',
+      'Custom functionality',
+      'SEO optimization',
+      'Performance optimization',
+      'Ongoing maintenance'
+    ],
+    benefits: [
+      'Professional online presence',
+      'Improved user experience',
+      'Better search engine rankings',
+      'Scalable and maintainable code'
+    ],
+    pricing: {
+      starter: 2999,
+      professional: 7999,
+      enterprise: 19999,
+      currency: 'USD',
+      period: 'one-time'
+    },
+    link: '/services/web-development',
+    icon: '🌐'
+  },
+  {
+    id: 'mobile-app-development',
+    name: 'Mobile App Development',
+    category: 'Development',
+    description: 'Native and cross-platform mobile app development for iOS and Android platforms.',
+    features: [
+      'Native iOS and Android development',
+      'Cross-platform solutions',
+      'UI/UX design',
+      'App store optimization',
+      'Testing and quality assurance',
+      'Post-launch support'
+    ],
+    benefits: [
+      'Reach mobile users effectively',
+      'Improve customer engagement',
+      'Increase brand visibility',
+      'Generate additional revenue streams'
+    ],
+    pricing: {
+      starter: 4999,
+      professional: 14999,
+      enterprise: 49999,
+      currency: 'USD',
+      period: 'one-time'
+    },
+    link: '/services/mobile-app-development',
+    icon: '📱'
+  },
+  {
+    id: 'api-development',
+    name: 'API Development & Integration',
+    category: 'Development',
+    description: 'Custom API development and third-party service integration for seamless data exchange.',
+    features: [
+      'RESTful API development',
+      'GraphQL implementation',
+      'Third-party integrations',
+      'API documentation',
+      'Testing and monitoring',
+      'Performance optimization'
+    ],
+    benefits: [
+      'Enable system interoperability',
+      'Improve data flow efficiency',
+      'Reduce development time',
+      'Enhance user experience'
+    ],
+    pricing: {
+      starter: 1999,
+      professional: 5999,
+      enterprise: 14999,
+      currency: 'USD',
+      period: 'one-time'
+    },
+    link: '/services/api-development',
+    icon: '🔌'
+  },
+
+  // Analytics Services
+  {
+    id: 'business-intelligence',
+    name: 'Business Intelligence Solutions',
+    category: 'Analytics',
+    description: 'Transform business data into actionable insights with advanced analytics and reporting tools.',
+    features: [
+      'Data warehousing',
+      'Interactive dashboards',
+      'Custom reporting',
+      'Data visualization',
+      'Predictive analytics',
+      'Real-time monitoring'
+    ],
+    benefits: [
+      'Make data-driven decisions',
+      'Identify business opportunities',
+      'Improve operational efficiency',
+      'Gain competitive advantage'
+    ],
+    pricing: {
+      starter: 399,
+      professional: 899,
+      enterprise: 2499,
+      currency: 'USD',
+      period: 'month'
+    },
+    link: '/services/business-intelligence',
+    icon: '📈'
+  }
+];
+
+export const getServicesByCategory = (category: Service['category']) => {
+  return services.filter(service => service.category === category);
+};
+
+export const getPopularServices = () => {
+  return services.filter(service => service.isPopular);
+};
+
+export const getNewServices = () => {
+  return services.filter(service => service.isNew);
+};

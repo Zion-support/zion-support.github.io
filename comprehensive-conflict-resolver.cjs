@@ -19,15 +19,8 @@ function fixMergeConflicts() {
       let originalContent = content;
       
       // Remove merge conflict markers and keep the HEAD version
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
       
       // Clean up any remaining conflict markers
-      content = content.replace(/<<<<<<< HEAD/g, '');
-      content = content.replace(/=======/g, '');
-      content = content.replace(/>>>>>>> [^\n]+/g, '');
       
       // Fix common syntax issues
       content = content.replace(/import React from "react",/g, 'import React from "react";');

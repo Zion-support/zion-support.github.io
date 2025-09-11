@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-
+;
 // Security headers configuration
 export const securityHeaders = [
   {
@@ -36,6 +34,5 @@ export const securityHeaders = [
     value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'self';"
   }
 ];
-
 export const getSecurityHeaders = () => securityHeaders;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+;
