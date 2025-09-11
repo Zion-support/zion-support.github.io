@@ -1,8 +1,9 @@
-from app import app, db
-from models import Category, Course, Lesson, Quiz, Question, User
+from flask import current_app
+from models import db, Category, Course, Lesson, Quiz, Question, User
 
 def seed_data():
-    with app.app_context():
+    # Use the active Flask application context to avoid circular imports
+    with current_app.app_context():
         # Create Categories
         categories_data = [
             "AI Engineering", "Cloud & DevOps", "Marketplace Mastery", "Remote Work"
