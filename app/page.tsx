@@ -313,8 +313,3 @@ export default function HomePage() {
                 📋 Download Free Resources
               </Link>
             </div>
-            <div className='flex items-center justify-center gap-8 text-sm opacity-80'>
-              <div className='flex items-center gap-2'>
-                <span className='w-2 h-2 bg-green-400 rounded-full'></span>
-                <span>Updated Daily</span>
-              <p className='text-sm opacity-90'>Complete step-by-step guide for successful AI deployment</p>
