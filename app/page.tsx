@@ -113,10 +113,24 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <TestimonialCard
-              quote="Zion Tech Group transformed our entire data infrastructure. The AI platform they built reduced our analysis time by 85% and saved us over $2M annually."
+              quote="Zion Tech Group's AI transformation exceeded our expectations. The 85% efficiency gain and $2M in annual savings have transformed our operations completely."
               author="Sarah Chen"
               title="CTO"
-              company="Fortune 500 Fintech"
+              company="Fortune 500 Manufacturing"
+              rating={5}
+            />
+            <TestimonialCard
+              quote="Their quantum computing implementation helped us optimize our supply chain like never before. We reduced delivery times by 30% and fuel costs by 25%."
+              author="David Kim"
+              title="VP of Operations"
+              company="Global Logistics Company"
+              rating={5}
+            />
+            <TestimonialCard
+              quote="The AI automation they implemented handles 80% of our customer inquiries without human intervention. Our customer satisfaction is now at 95%."
+              author="Maria Garcia"
+              title="Customer Success Director"
+              company="International Bank"
               rating={5}
             />
             <TestimonialCard
@@ -131,6 +145,13 @@ export default function HomePage() {
               author="Jennifer Walsh"
               title="VP of Engineering"
               company="Healthcare Network"
+              rating={5}
+            />
+            <TestimonialCard
+              quote="Zion Tech Group's blockchain solution streamlined our supply chain operations. We now have complete transparency and reduced fraud by 90%."
+              author="Robert Johnson"
+              title="Supply Chain Director"
+              company="Retail Chain"
               rating={5}
             />
           </div>
@@ -150,19 +171,47 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <ContentPreviewCard
-              title='AI Transforming Business in 2025'
-              description='Discover how AI is reshaping enterprise operations and driving competitive advantage.'
-              href='/blog/ai-transforming-business-2025'
-              category='AI & Technology'
-              readTime='8 min read'
+              title='Quantum Computing Business Applications 2025'
+              description='Discover how quantum computing is revolutionizing business operations and creating new opportunities for competitive advantage.'
+              href='/blog/quantum-computing-business-applications-2025'
+              category='Quantum Computing'
+              readTime='12 min read'
+              icon='⚛️'
+            />
+            <ContentPreviewCard
+              title='AI Automation Enterprise Guide'
+              description='Complete implementation guide for AI automation in enterprise. Learn proven strategies and real-world success stories.'
+              href='/blog/ai-automation-enterprise'
+              category='AI Automation'
+              readTime='15 min read'
               icon='🤖'
             />
             <ContentPreviewCard
+              title='Fortune 500 AI Transformation'
+              description='Case study: How we helped a Fortune 500 company achieve 85% efficiency gains and $2M annual savings.'
+              href='/case-studies/fortune-500-ai-transformation'
+              category='Case Study'
+              readTime='8 min read'
+              icon='📈'
+            />
+          </div>
+          
+          {/* Additional Content Row */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-8'>
+            <ContentPreviewCard
+              title='AI Implementation Checklist'
+              description='Download our comprehensive 50-point checklist for successful AI implementation. Avoid common pitfalls and save time.'
+              href='/resources/ai-implementation-checklist'
+              category='Free Resource'
+              readTime='Download'
+              icon='✅'
+            />
+            <ContentPreviewCard
               title='Success Stories & Case Studies'
-              description='Real results from real clients. See how we\'ve helped businesses achieve remarkable outcomes.'
+              description='Real results from real clients. See how we\'ve helped businesses achieve remarkable outcomes across industries.'
               href='/case-studies'
               category='Case Studies'
-              readTime='15+ stories'
+              readTime='20+ stories'
               icon='📊'
             />
             <ContentPreviewCard
