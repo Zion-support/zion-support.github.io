@@ -1,100 +1,205 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Search, Bell, User, Settings, LogOut, Sun, Moon, Zap } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { useTheme } from '@/hooks/useTheme';
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
 import { MainNavigation } from '@/layout/MainNavigation';
-import { useAuth } from '@/hooks/useAuth';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { FuturisticBackground } from '@/components/ui/FuturisticBackground';
 
-export interface HeaderProps {
-  hideLogin?: boolean;
+interface HeaderProps {
   customLogo?: string;
-  customTheme?: {
-    primaryColor: string;
-    backgroundColor: string;
-    textColor: string;
-  };
+  hideLogin?: boolean;
 }
 
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
-  const { user } = useAuth();
-  const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();
-  const [query, setQuery] = useState("");
-  const searchSuggestions = generateSearchSuggestions();
-  
-  // If we have a white-label tenant and no specific customTheme is provided,
-  // use the tenant's primary color
-  const effectiveTheme = customTheme || (isWhitelabel ? {
-    primaryColor,
-    backgroundColor: '#000000', // Default dark background
-    textColor: '#ffffff', // Default light text
-  } : undefined);
-  
-  const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor,
-    color: effectiveTheme.textColor,
-    borderColor: `${effectiveTheme.primaryColor}20`
-  } : {};
+export function Header({ hideLogin = false, customLogo }: HeaderProps) {
+  const { user, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim()) {
-      navigate(`/search?q=${encodeURIComponent(query)}`);
-      setQuery("");
-    }
-  };
-  
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
+  const navigationItems = [
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
+    { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions') },
+    { name: 'About', href: '/about', current: location.pathname.startsWith('/about') },
+    { name: 'Contact', href: '/contact', current: location.pathname.startsWith('/contact') },
+  ];
+
   return (
-    <>
-      <FuturisticBackground variant="grid" intensity="low" className="opacity-30" />
-      <header 
-        className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl relative overflow-hidden"
-        style={headerStyle}
-      >
-        {/* Futuristic header accent */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-cyan/10 to-transparent opacity-50" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent" />
-        
-        <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
-          <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-white/10' 
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex-shrink-0"
+          >
+            <Link to="/" className="flex items-center space-x-2">
+              <Logo customLogo={customLogo} />
+            </Link>
+          </motion.div>
 
-          <div className="ml-6 flex-1">
-            <MainNavigation />
-          </div>
-          
-          <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-            <EnhancedSearchInput
-              value={query}
-              onChange={setQuery}
-              onSelectSuggestion={(text) => {
-                navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery("");
-              }}
-              searchSuggestions={searchSuggestions}
-            />
-          </form>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                  item.current
+                    ? 'text-zion-cyan'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                {item.name}
+                {item.current && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-zion-cyan/10 rounded-lg"
+                    initial={false}
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  />
+                )}
+              </Link>
+            ))}
+          </nav>
 
-          <div className="flex items-center gap-2">
-            <LanguageSelector />
-            {!hideLogin && <UserMenu />}
+          {/* Right side actions */}
+          <div className="flex items-center space-x-4">
+            {/* Search */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="p-2 text-gray-300 hover:text-zion-cyan transition-colors duration-300"
+            >
+              <Search className="h-5 w-5" />
+            </motion.button>
+
+            {/* Notifications */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="p-2 text-gray-300 hover:text-zion-cyan transition-colors duration-300 relative"
+            >
+              <Bell className="h-5 w-5" />
+              <span className="absolute -top-1 -right-1 h-3 w-3 bg-zion-cyan rounded-full animate-pulse" />
+            </motion.button>
+
+            {/* Theme Toggle */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={toggleTheme}
+              className="p-2 text-gray-300 hover:text-zion-cyan transition-colors duration-300"
+            >
+              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </motion.button>
+
+            {/* User Menu */}
+            {user ? (
+              <UserMenu user={user} />
+            ) : !hideLogin ? (
+              <div className="flex items-center space-x-2">
+                <Link
+                  to="/login"
+                  className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/register"
+                  className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                >
+                  Get Started
+                </Link>
+              </div>
+            ) : null}
+
+            {/* Mobile menu button */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-gray-300 hover:text-zion-cyan transition-colors duration-300"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </motion.button>
           </div>
         </div>
-        
-        {/* Floating navigation indicators */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-1">
-          <div className="w-2 h-1 bg-zion-cyan rounded-full animate-pulse" />
-          <div className="w-2 h-1 bg-zion-purple rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
-          <div className="w-2 h-1 bg-zion-cyan rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
-        </div>
-      </header>
-    </>
+      </div>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
+          >
+            <div className="px-4 py-4 space-y-4">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block px-3 py-2 text-base font-medium rounded-lg transition-colors duration-300 ${
+                    item.current
+                      ? 'text-zion-cyan bg-zion-cyan/10'
+                      : 'text-gray-300 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {!user && !hideLogin && (
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  <Link
+                    to="/login"
+                    className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    Sign In
+                  </Link>
+                  <Link
+                    to="/register"
+                    className="block px-3 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-base font-medium rounded-lg text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }

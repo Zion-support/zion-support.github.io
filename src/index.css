@@ -37,20 +37,34 @@
     --radius: 0.5rem;
 
     --sidebar-background: 228 12% 92%;
-
     --sidebar-foreground: 0 0% 7%;
-
     --sidebar-primary: 216 84% 53%;
-
     --sidebar-primary-foreground: 142 71% 45%;
-
     --sidebar-accent: 0 0% 68%;
-
     --sidebar-accent-foreground: 0 0% 7%;
 
-    --sidebar-border: 0 0% 68%;
+    /* Zion Tech Group Color Palette */
+    --zion-cyan: #00ffff;
+    --zion-purple: #8b5cf6;
+    --zion-pink: #ec4899;
+    --zion-blue: #3b82f6;
+    --zion-green: #10b981;
+    --zion-yellow: #f59e0b;
+    --zion-orange: #f97316;
+    --zion-red: #ef4444;
+    --zion-indigo: #6366f1;
+    --zion-teal: #14b8a6;
+    --zion-rose: #f43f5e;
 
-    --sidebar-ring: 216 84% 53%;
+    /* Zion Dark Theme */
+    --zion-bg-primary: #0a0a0a;
+    --zion-bg-secondary: #111111;
+    --zion-bg-tertiary: #1a1a1a;
+    --zion-text-primary: #ffffff;
+    --zion-text-secondary: #a1a1aa;
+    --zion-text-muted: #71717a;
+    --zion-border: #27272a;
+    --zion-border-light: #3f3f46;
   }
 
   .dark {
@@ -75,282 +89,243 @@
     --accent: 228 12% 92%;
     --accent-foreground: 0 0% 7%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 142 71% 45%;
 
     --border: 0 0% 68%;
     --input: 0 0% 68%;
     --ring: 216 84% 53%;
+
     --sidebar-background: 228 12% 92%;
     --sidebar-foreground: 0 0% 7%;
     --sidebar-primary: 216 84% 53%;
     --sidebar-primary-foreground: 142 71% 45%;
     --sidebar-accent: 0 0% 68%;
     --sidebar-accent-foreground: 0 0% 7%;
-    --sidebar-border: 0 0% 68%;
-    --sidebar-ring: 216 84% 53%;
   }
 
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 224 71% 4%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
-
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
-
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 210 40% 96%;
-    --accent-foreground: 224 71% 4%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 262 83% 58%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 210 40% 96%;
-    --sidebar-foreground: 224 71% 4%;
-    --sidebar-primary: 262 83% 58%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 224 71% 4%;
-    --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 262 83% 58%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Zion Tech Group Component Styles */
+  .zion-gradient {
+    @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink;
   }
 
-  /* Enhanced futuristic animations */
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
+  .zion-gradient-text {
+    @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent;
   }
 
-  @keyframes neon-pulse {
-    0%, 100% {
-      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-    }
-    50% {
-      text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
-    }
+  .zion-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
   }
 
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
+  .zion-button {
+    @apply px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300;
   }
 
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+  .zion-input {
+    @apply px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan;
   }
 
-  @keyframes glow {
-    0%, 100% {
-      box-shadow: 0 0 20px currentColor;
-    }
-    50% {
-      box-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
-    }
+  /* Futuristic Animations */
+  .futuristic-glow {
+    @apply relative;
   }
 
-  @keyframes matrix-rain {
-    0% {
-      transform: translateY(-100vh);
-    }
-    100% {
-      transform: translateY(100vh);
-    }
+  .futuristic-glow::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-pink/20 rounded-xl blur-xl opacity-0 transition-opacity duration-300;
   }
 
-  @keyframes cyber-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  .futuristic-glow:hover::before {
+    @apply opacity-100;
   }
 
-  @keyframes wave {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(-25%);
-    }
+  /* Holographic Effects */
+  .holographic {
+    background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff);
+    background-size: 400% 400%;
+    animation: holographic 3s ease-in-out infinite;
   }
 
-  .pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  @keyframes holographic {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 
-  .neon-pulse {
-    animation: neon-pulse 2s ease-in-out infinite alternate;
+  /* Quantum Field Animation */
+  .quantum-field {
+    position: relative;
+    overflow: hidden;
   }
 
-  .shimmer {
-    animation: shimmer 3s ease-in-out infinite;
+  .quantum-field::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    animation: quantum-sweep 2s linear infinite;
   }
 
-  .float {
-    animation: float 3s ease-in-out infinite;
+  @keyframes quantum-sweep {
+    0% { left: -100%; }
+    100% { left: 100%; }
   }
 
-  .glow {
-    animation: glow 2s ease-in-out infinite alternate;
+  /* Neural Network Connections */
+  .neural-connection {
+    position: relative;
   }
 
-  .matrix-rain {
-    animation: matrix-rain 10s linear infinite;
+  .neural-connection::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    background: #00ff80;
+    border-radius: 50%;
+    animation: neural-pulse 1.5s ease-in-out infinite;
   }
 
-  .cyber-spin {
-    animation: cyber-spin 20s linear infinite;
+  @keyframes neural-pulse {
+    0%, 100% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1); opacity: 1; }
   }
 
-  .wave {
-    animation: wave 6s ease-in-out infinite;
+  /* Cyberpunk Grid */
+  .cyberpunk-grid {
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
   }
 
-  /* Custom scrollbar for webkit browsers */
+  /* Space Nebula */
+  .space-nebula {
+    background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  }
+
+  /* Loading Spinner */
+  .zion-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 255, 255, 0.3);
+    border-top: 3px solid #00ffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Scrollbar Styling */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors["zion-blue"].DEFAULT');
+    @apply bg-slate-900;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors["zion-purple"].dark');
-    border-radius: 5px;
+    @apply bg-zion-cyan/50 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors["zion-purple"].DEFAULT');
+    @apply bg-zion-cyan/70;
   }
 
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
+  /* Selection Styling */
+  ::selection {
+    @apply bg-zion-cyan/30 text-white;
   }
 
-  /* LiveKit UI overrides */
-  [data-lk-theme='default'] {
-    --lk-color-accent: #06B6D4;
-    --lk-button-background: #06B6D4;
-    --lk-button-background-hover: #0891B2;
-    --lk-bg1: #0B1120;
-    --lk-bg2: #0F172A;
+  /* Focus Styling */
+  .focus-zion {
+    @apply focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+}
+
+@layer utilities {
+  /* Text Utilities */
+  .text-zion-cyan { color: var(--zion-cyan); }
+  .text-zion-purple { color: var(--zion-purple); }
+  .text-zion-pink { color: var(--zion-pink); }
+  .text-zion-blue { color: var(--zion-blue); }
+  .text-zion-green { color: var(--zion-green); }
+  .text-zion-yellow { color: var(--zion-yellow); }
+  .text-zion-orange { color: var(--zion-orange); }
+  .text-zion-red { color: var(--zion-red); }
+  .text-zion-indigo { color: var(--zion-indigo); }
+  .text-zion-teal { color: var(--zion-teal); }
+  .text-zion-rose { color: var(--zion-rose); }
+
+  /* Background Utilities */
+  .bg-zion-cyan { background-color: var(--zion-cyan); }
+  .bg-zion-purple { background-color: var(--zion-purple); }
+  .bg-zion-pink { background-color: var(--zion-pink); }
+  .bg-zion-blue { background-color: var(--zion-blue); }
+  .bg-zion-green { background-color: var(--zion-green); }
+  .bg-zion-yellow { background-color: var(--zion-yellow); }
+  .bg-zion-orange { background-color: var(--zion-orange); }
+  .bg-zion-red { background-color: var(--zion-red); }
+  .bg-zion-indigo { background-color: var(--zion-indigo); }
+  .bg-zion-teal { background-color: var(--zion-teal); }
+  .bg-zion-rose { background-color: var(--zion-rose); }
+
+  /* Border Utilities */
+  .border-zion-cyan { border-color: var(--zion-cyan); }
+  .border-zion-purple { border-color: var(--zion-purple); }
+  .border-zion-pink { border-color: var(--zion-pink); }
+  .border-zion-blue { border-color: var(--zion-blue); }
+  .border-zion-green { border-color: var(--zion-green); }
+  .border-zion-yellow { border-color: var(--zion-yellow); }
+  .border-zion-orange { border-color: var(--zion-orange); }
+  .border-zion-red { border-color: var(--zion-red); }
+  .border-zion-indigo { border-color: var(--zion-indigo); }
+  .border-zion-teal { border-color: var(--zion-teal); }
+  .border-zion-rose { border-color: var(--zion-rose); }
+
+  /* Animation Utilities */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 
-  /* Futuristic utility classes */
-  .cyber-border {
-    border: 1px solid;
-    border-image: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff) 1;
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
   }
 
-  .neon-text {
-    text-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor,
-      0 0 20px currentColor;
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
   }
 
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  @keyframes glow {
+    from { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+    to { box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
   }
 
-  .holographic {
-    background: linear-gradient(
-      45deg,
-      transparent 30%,
-      rgba(255, 255, 255, 0.1) 50%,
-      transparent 70%
-    );
-    background-size: 200% 200%;
-    animation: shimmer 3s ease-in-out infinite;
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
-  /* Responsive design improvements */
-  @media (max-width: 768px) {
-    .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .container {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
-    }
-  }
-
-  /* Accessibility improvements */
-  .focus-visible {
-    outline: 2px solid #00ffff;
-    outline-offset: 2px;
-  }
-
-  /* High contrast mode support */
-  @media (prefers-contrast: high) {
-    .neon-text {
-      text-shadow: 0 0 2px currentColor;
-    }
-    
-    .glass-effect {
-      background: rgba(0, 0, 0, 0.9);
-      border: 2px solid currentColor;
-    }
-  }
-
-  /* Reduced motion support */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
   }
 }
