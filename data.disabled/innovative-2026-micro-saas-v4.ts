@@ -1,3 +1,4 @@
+<<<<<<< HEAD:data.disabled/innovative-2026-micro-saas-v4.ts
 import { ServiceVariant } from '../types/service-variants';
 
 export interface Innovative2026MicroSaasServiceV4 {
@@ -370,3 +371,6 @@ export const innovative2026MicroSaasV4Services: Innovative2026MicroSaasV4Service
     reviews: 78
   }
 ];
+=======
+export const innovative2026MicroSaasV4Services: any[] = [];
+>>>>>>> origin/chore/standardize-pages-router:data/innovative-2026-micro-saas-v4.ts

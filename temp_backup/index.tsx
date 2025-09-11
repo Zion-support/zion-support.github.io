@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_backup/index.tsx
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -760,14 +761,28 @@ export default function Home() {
       <UltraFuturisticFooter2029 />
     </>  );
 export default function HomePage() {
+=======
+import Head from 'next/head'
+
+export default function Home() {
+>>>>>>> origin/chore/standardize-pages-router:pages/index.tsx
 	return (
-		<Layout>
+		<div className="min-h-screen bg-black text-white">
 			<Head>
-				<title>Zion Tech Group | Micro SaaS, AI, IT & Quantum Solutions</title>
-				<meta name="description" content="Real micro SaaS, AI, and IT services with transparent pricing and fast onboarding. Contact +1 302 464 0950 or kleber@ziontechgroup.com." />
-				<link rel="canonical" href="https://ziontechgroup.com/" />
+				<title>Zion Tech Group</title>
+				<meta name="description" content="Zion Tech Group website" />
 			</Head>
+<<<<<<< HEAD:temp_backup/index.tsx
 			<Homepage2025 />
 		</Layout>
 	);
 }
+=======
+			<main className="max-w-3xl mx-auto px-4 py-16">
+				<h1 className="text-3xl font-bold mb-4">Zion Tech Group</h1>
+				<p className="text-gray-300">Site setup successful. More pages re-enabling soon.</p>
+			</main>
+		</div>
+	)
+}
+>>>>>>> origin/chore/standardize-pages-router:pages/index.tsx

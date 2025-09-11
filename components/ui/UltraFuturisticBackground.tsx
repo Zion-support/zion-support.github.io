@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react'
+
+export default function UltraFuturisticBackground({ children }: { children: React.ReactNode }) {
+	return <div className="min-h-screen bg-gradient-to-br from-slate-950 via-black to-slate-900">{children}</div>
+}
+=======
 import React from 'react';
 
 interface UltraFuturisticBackgroundProps {
@@ -95,3 +102,4 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
 };
 
 export default UltraFuturisticBackground;
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

@@ -5,10 +5,7 @@ import Button from './Button';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-<<<<<<< HEAD
-=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -77,16 +74,16 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
               Home
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
               Services
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
               About
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
               Contact
             </Link>
             <Button variant="primary" size="small">
@@ -97,29 +94,26 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-<<<<<<< HEAD
-export default Header;
-=======
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-700">
+          <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Home
               </Link>
-              <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Services
               </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
                 About
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Contact
               </Link>
               <Button variant="primary" size="small" className="w-full">
@@ -128,10 +122,9 @@ export default Header;
             </nav>
           </div>
         )}
-      </nav>
+      </div>
     </header>
   );
 };
 
 export default Header;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

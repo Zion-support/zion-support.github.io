@@ -1,39 +1,9 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
-
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-=======
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
-import Button from './components/Button';
-import Card from './components/Card';
-import ServiceCard from './components/ServiceCard';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -52,53 +22,20 @@ const App = () => {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-          <Header />
-          <div className="flex">
-            <Sidebar />
-            <main className="flex-1">
-              <React.Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/services" element={<Services />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                  <Route path="/services/cloud-migration" element={<CloudMigration />} />
-                  <Route path="/services/devops" element={<DevOps />} />
-                  <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-                </Routes>
-              </React.Suspense>
-            </main>
-          </div>
-          <Footer />
-          <PerformanceMonitor />
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const App = () => {
-  return (
-    <ErrorBoundary>
-      <Router>
         <div className="min-h-screen bg-gray-50">
           <Header />
           <main>
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/cybersecurity" element={<Cybersecurity />} />
-                <Route path="/cloud-migration" element={<CloudMigration />} />
-                <Route path="/devops" element={<DevOps />} />
-                <Route path="/mobile-development" element={<MobileDevelopment />} />
+                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                <Route path="/services/cloud-migration" element={<CloudMigration />} />
+                <Route path="/services/devops" element={<DevOps />} />
+                <Route path="/services/mobile-development" element={<MobileDevelopment />} />
               </Routes>
             </Suspense>
           </main>
@@ -106,7 +43,6 @@ const App = () => {
         </div>
       </Router>
     </ErrorBoundary>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 };
 

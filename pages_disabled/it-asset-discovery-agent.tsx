@@ -1,411 +1,55 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-<<<<<<< HEAD
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-=======
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-<<<<<<< HEAD
-=======
-    
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  rel='noopener noreferrer'>;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-  return (
-    <UltraFuturisticBackground variant='space' intensity='high'>;
-      <Head>;
-        <title>IT Asset Discovery Agent | Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='Agentless discovery of cloud and on-prem assets with continuous inventory.'
-        />;
-        <link
-          rel='canonical'
-          href='https://ziontechgroup && ziontechgroup.com/it-asset-discovery-agent'
-        />;
-      </Head>;
-      <div className='container mx-auto px-4 py-16 text-white'>;
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>;
-          IT Asset Discovery Agent;
-        </h1>;
-        <p className='text-gray-300 max-w-3xl mb-8'>;
-          Agentless discovery across AWS, Azure, GCP, and on‑prem with CMDB;
-          export and drift alerts.;
-        </p>;
-        <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>;
-          <Card className='p-6 bg-black/40 border border-gray-800'>;
-            <h2 className='font-semibold mb-2'>Features</h2>;
-            <ul className='text-sm text-gray-300 space-y-2 list-disc list-inside'>;
-              <li>Agentless cloud inventory</li>;
-              <li>Network scan integrations</li>;
-              <li>Export to CMDB/ITSM</li>;
-              <li>Drift and anomaly alerts</li>;
-            </ul>;
-          </Card>;
-          <Card className='p-6 bg-black/40 border border-gray-800'>;
-            <h2 className='font-semibold mb-2'>References</h2>;
-            <ul className='text-sm text-gray-300 space-y-2 list-disc list-inside'>;
-              <li>;
-                <a
-                  className='text-cyan-300 underline'
-                  href='https://aws && aws.amazon.com/config/pricing/'
-                  target='_blank'
-                  rel='noopener noreferrer'>;
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import Head from 'next / head';
-import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
-import Card from '../components / ui / Card';
-;
-export default /**
- * ITAssetDiscoveryAgentPage - Function description
- */
-function ITAssetDiscoveryAgentPage() {
-  return (
-    <UltraFuturisticBackground variant='space' intensity='high'>;
-      <Head>;
-        <title > IT Asset Discovery Agent | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Agentless discovery of cloud and on - prem assets with continuous inventory.';
-        />;
-        <link;
-          rel='canonical';
-          href='https://ziontechgroup.com / it - asset - discovery - agent';
-        />;
-      </Head>;
-      <div className='container mx - auto px - 4 py - 16 text - white'>;
-        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6'>;
-          IT Asset Discovery Agent;
-        </h1>;
-        <p className='text - gray - 300 max - w-3xl mb - 8'>;
-          Agentless discovery across AWS, Azure, GCP, and on‑prem with CMDB;
-          export and drift alerts.;
-        </p>;
-        <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 6'>;
-          <Card className='p - 6 bg - black / 40 border border - gray - 800'>;
-            <h2 className='font - semibold mb - 2'>Features</h2>;
-            <ul className='text - sm text - gray - 300 space - y-2 list - disc list - inside'>;
-              <li > Agentless cloud inventory</li>;
-              <li > Network scan integrations</li>;
-              <li > Export to CMDB / ITSM</li>;
-              <li > Drift and anomaly alerts</li>;
-            </ul>;
-          </Card>;
-          <Card className='p - 6 bg - black / 40 border border - gray - 800'>;
-            <h2 className='font - semibold mb - 2'>References</h2>;
-            <ul className='text - sm text - gray - 300 space - y-2 list - disc list - inside'>;
-              <li>;
-                <a;
-                  className='text - cyan - 300 underline';
-                  href='https://aws.amazon.com / config / pricing/';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  AWS Config;
-                </a>;
-              </li>;
-              <li>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                <a;
-                  className='text - cyan - 300 underline';
-                  href='https://azure.microsoft.com / pricing / details / monitor/';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  Azure Monitor;
-                </a>;
-              </li>;
-              <li>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                <a;
-                  className='text - cyan - 300 underline';
-                  href='https://cloud.google.com / asset - inventory / pricing';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-                  GCP Asset Inventory;
-                </a>;
-              </li>;
-            </ul>;
-          </Card>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
-=======
-
-            className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-            className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        <div className='mt - 8'>;
-          <a;
-            href='/contact';
-            className='px - 6 py - 3 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
-          >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            Contact Sales;
-          </a>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
+import { Phone, Mail, MapPin, Check, ArrowRight, Search } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
+import { extraServices } from '../data/extra-services';
 
 export default function ITAssetDiscoveryAgentPage() {
+  const service = extraServices.find(s => s.id === 'it-asset-discovery-agent');
+  if (!service) return null;
+
   return (
-    <UltraFuturisticBackground variant='space' intensity='high'>
+    <Layout>
       <Head>
-        <title>IT Asset Discovery Agent | Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Agentless discovery of cloud and on-prem assets with continuous inventory.'
-        />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/it-asset-discovery-agent'
-        />
+        <title>{service.name} - Zion Tech Group</title>
+        <meta name="description" content={service.description} />
+        <link rel="canonical" href="https://ziontechgroup.com/it-asset-discovery-agent" />
       </Head>
-      <div className='container mx-auto px-4 py-16 text-white'>
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
-          IT Asset Discovery Agent
-        </h1>
-        <p className='text-gray-300 max-w-3xl mb-8'>
-          Agentless discovery across AWS, Azure, GCP, and on‑prem with CMDB
-          export and drift alerts.
-        </p>
-        <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>
-          <Card className='p-6 bg-black/40 border border-gray-800'>
-            <h2 className='font-semibold mb-2'>Features</h2>
-            <ul className='text-sm text-gray-300 space-y-2 list-disc list-inside'>
-              <li>Agentless cloud inventory</li>
-              <li>Network scan integrations</li>
-              <li>Export to CMDB/ITSM</li>
-              <li>Drift and anomaly alerts</li>
-            </ul>
-          </Card>
-          <Card className='p-6 bg-black/40 border border-gray-800'>
-            <h2 className='font-semibold mb-2'>References</h2>
-            <ul className='text-sm text-gray-300 space-y-2 list-disc list-inside'>
-              <li>
-                <a
-                  className='text-cyan-300 underline'
-                  href='https://aws.amazon.com/config/pricing/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  AWS Config
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-300 underline'
-                  href='https://azure.microsoft.com/pricing/details/monitor/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Azure Monitor
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-300 underline'
-                  href='https://cloud.google.com/asset-inventory/pricing'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  GCP Asset Inventory
-                </a>
-              </li>
-            </ul>
-          </Card>
-        </div>
-        <div className='mt-8'>
-          <a
-            href='/contact'
-            className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-          >
-            Contact Sales
-          </a>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10"><Search />{service.name}</h1>
+            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
+              <p className="text-slate-300 mb-6">{service.description}</p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {service.features.slice(0, 12).map((feat, i) => (
+                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-cyan-400 mt-0.5"><Check /><span>{feat}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
+              <div className="flex items-end justify-between mb-3">
+                <div>
+                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                </div>
+              </div>
+              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Start Discovery<ArrowRight /></a>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </UltraFuturisticBackground>;
+    </Layout>
   );
-=======
-
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-}
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Card from '../components/ui/Card',
-=======
-
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-export default function ITAssetDiscoveryAgentPage() {
-	return (
-		<UltraFuturisticBackground variant="space" intensity="high">
-			<Head>
-				<title>IT Asset Discovery Agent | Zion Tech Group</title>
-				<meta name="description" content="Agentless discovery of cloud and on-prem assets with continuous inventory." />
-				<link rel="canonical" href="https://ziontechgroup.com/it-asset-discovery-agent" />
-			</Head>
-			<div className="container mx-auto px-4 py-16 text-white">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">IT Asset Discovery Agent</h1>
-				<p className="text-gray-300 max-w-3xl mb-8">Agentless discovery across AWS, Azure, GCP, and on‑prem with CMDB export and drift alerts.</p>
-				<div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-					<Card className="p-6 bg-black/40 border border-gray-800">
-						<h2 className="font-semibold mb-2">Features</h2>
-						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
-							<li>Agentless cloud inventory</li>
-							<li>Network scan integrations</li>
-							<li>Export to CMDB/ITSM</li>
-							<li>Drift and anomaly alerts</li>
-						</ul>
-					</Card>
-<<<<<<< HEAD
-}
-</UltraFuturisticBackground>);
-;
-<<<<<<< HEAD
-
-
-
-					<Card className="p-6 bg-black/40 border border-gray-800">
-						<h2 className="font-semibold mb-2">References</h2>
-						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
-							<li><a className="text-cyan-300 underline" href="https://aws.amazon.com/config/pricing/" target="_blank" rel="noopener noreferrer">AWS Config</Link></li>
-							<li><a className="text-cyan-300 underline" href="https://azure.microsoft.com/pricing/details/monitor/" target="_blank" rel="noopener noreferrer">Azure Monitor</Link></li>
-							<li><a className="text-cyan-300 underline" href="https://cloud.google.com/asset-inventory/pricing" target="_blank" rel="noopener noreferrer">GCP Asset Inventory</Link></li>
-						</ul>
-					</Card>
-				</div>
-				<div className="mt-8"><a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link></div>
-			</div>
-		</UltraFuturisticBackground>
-	)
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-					<Card className="p-6 bg-black/40 border border-gray-800">
-						<h2 className="font-semibold mb-2">References</h2>
-						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
-							<li><a className="text-cyan-300 underline" href="https://aws.amazon.com/config/pricing/" target="_blank" rel="noopener noreferrer">AWS Config</a></li>
-							<li><a className="text-cyan-300 underline" href="https://azure.microsoft.com/pricing/details/monitor/" target="_blank" rel="noopener noreferrer">Azure Monitor</a></li>
-							<li><a className="text-cyan-300 underline" href="https://cloud.google.com/asset-inventory/pricing" target="_blank" rel="noopener noreferrer">GCP Asset Inventory</a></li>
-						</ul>
-					</Card>
-				</div>
-				<div className="mt-8"><a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a></div>
-			</div>
-		</UltraFuturisticBackground>
-	)
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </UltraFuturisticBackground>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

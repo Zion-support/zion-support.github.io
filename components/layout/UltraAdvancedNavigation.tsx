@@ -1,5 +1,29 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+import React from "react";
+export default function UltraAdvancedNavigation() {;
+  return null;,
+}';
+=======
+import React from 'react';
+
+export default function UltraAdvancedNavigation() {
+	return (
+		<header className="w-full border-b border-gray-800 bg-black/80 backdrop-blur px-4 py-3">
+			<div className="max-w-7xl mx-auto flex items-center justify-between">
+				<a href="/" className="text-white font-semibold">Zion Tech Group</a>
+				<nav className="hidden md:flex items-center gap-6 text-sm text-gray-300">
+					<a href="/services" className="hover:text-white">Services</a>
+					<a href="/about" className="hover:text-white">About</a>
+					<a href="/contact" className="hover:text-white">Contact</a>
+				</nav>
+			</div>
+		</header>
+	);
+}
+>>>>>>> origin/chore/standardize-pages-router
+=======
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -2141,3 +2165,4 @@ export default UltraAdvancedNavigation;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

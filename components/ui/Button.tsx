@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
+import { cn } from "../../src/lib/utils"
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
 
 
 import React from "react";
@@ -93,6 +100,40 @@ const Button: React.FC<ButtonProps> = ({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+export interface ButtonProps;
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? "span" : "button"
+    return (
+      <Comp className={cn(buttonVariants({ variant, size, className }))}
+=======
+import React from 'react'
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+	as?: 'button' | 'a'
+	href?: string
+	className?: string
+}
+
+export default function Button({ as = 'button', href, className = '', children, ...rest }: ButtonProps) {
+	if (as === 'a' && href) {
+		return (
+			<a href={href} className={`inline-flex items-center justify-center px-4 py-2 rounded ${className}`} {...(rest as any)}>
+				{children}
+			</a>
+		)
+	}
+	return (
+		<button className={`inline-flex items-center justify-center px-4 py-2 rounded ${className}`} {...rest}>
+			{children}
+		</button>
+	)
+}
+>>>>>>> origin/chore/standardize-pages-router
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
@@ -184,3 +225,4 @@ export { Button };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

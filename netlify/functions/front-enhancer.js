@@ -5,6 +5,25 @@ const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 function runNode(relPath, args = []) {
 
+<<<<<<< HEAD
+exports.config = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  schedule: '*/20 * * * *', // every 20 minutes
+=======
+  schedule: '*/45 * * * *', // every 45 minutes
+>>>>>>> origin/chore/front-automation
+=======
+  schedule: '*/15 * * * *', // every 15 minutes
+>>>>>>> origin/chore/futuristic-front-and-netlify-automations
+=======
+  schedule: '*/20 * * * *', // every 20 minutes
+>>>>>>> origin/chore/futuristic-front-automation
+};
+
+exports.handler = async () => {
+=======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -29,6 +48,7 @@ exports && exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 }
 exports && exports.handler = async () => {
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
   const logs = [];
   function logStep(name, fn) {
     logs.push(`\n=== ${name} ===`);
@@ -47,12 +67,27 @@ exports && exports.handler = async () => {
     return status;
   }
 
+<<<<<<< HEAD
   // Update the front page auto-generated section
   logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'));
 
   // Attempt to sync changes back to main (best-effort)
 <<<<<<< HEAD
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 =======
+  // Keep landing pages fresh
+  logStep('homepage-updater', () => runNode('automation/homepage-updater.cjs'));
+  logStep('homepage-advertiser', () => runNode('automation/homepage-auto-advertiser.cjs'));
+  logStep('front-page-updater', () => runNode('automation/front-page-updater.cjs'));
+
+  // Optionally touch search index/sitemap
+  logStep('search:index', () => runNode('scripts/generate-search-index.js'));
+  logStep('sitemap', () => runNode('scripts/generate-sitemap.js'));
+>>>>>>> origin/chore/futuristic-front-automation
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));

@@ -1,5 +1,41 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+import React from "react";
+import { cn } from "../../src/lib/utils";
+const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div ref={ref} className={cn("rounded-lg border bg-card text-card-foreground shadow-sm", className)} {...props}  />
+  )
+
+);
+Card.displayName = "Card";
+const CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div ref={ref} className={cn("flex flex-col space-y-1.5 p-6", className)} {...props}  />
+  )
+
+);
+CardHeader.displayName = "CardHeader";
+const CardTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(
+  ({ className, ...props }, ref) => (
+    <h3 ref={ref} className={cn("text-2xl font-semibold leading-none tracking-tight", className)} {...props}  />
+
+    {...props}>
+ />
+))
+
+
+CardHeader.displayName = "CardHeader"
+const CardTitle = React.forwardRef<
+  HTMLParagraphElement>
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => ("
+  <h3 ref="{ref}""
+    className="{cn(""
+      "text-2xl font-semibold leading-none tracking-tight"
+      className>
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '../../lib/utils';
 // Define HTML element types
@@ -47,6 +83,7 @@ const Card = React && React.forwardRef<;
     className={cn(
       "rounded-lg border bg-card text-card-foreground shadow-sm"
       className
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
     )}
     {...props}
   />;
@@ -227,6 +264,16 @@ import React from 'react',
   />;
 ));
 CardFooter.displayName = "CardFooter";
+<<<<<<< HEAD
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+=======
+import React from 'react'
+
+export default function Card({ className = '', children }: { className?: string; children: React.ReactNode }) {
+	return <div className={`rounded border border-gray-800 bg-black/40 ${className}`}>{children}</div>
+}
+>>>>>>> origin/chore/standardize-pages-router
+=======
 
 import React from 'react',;
 interface CardProps {
@@ -463,3 +510,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

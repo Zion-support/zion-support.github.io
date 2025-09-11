@@ -1,4 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import UltraFuturisticNavigation2040 from './UltraFuturisticNavigation2040';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
+import Analytics from '../Analytics';
 
+import TopContactBar from './TopContactBar';
+import PerformanceMonitor from '../PerformanceMonitor';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import CookieConsentBanner from '../CookieConsentBanner';
+=======
+import React from 'react';
+>>>>>>> origin/chore/standardize-pages-router
+=======
+
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +113,15 @@ import Footer from '../Footer';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LayoutProps {
+<<<<<<< HEAD
+	children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
+<<<<<<< HEAD
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+=======
   children: React.ReactNode;
 interface LayoutProps {;
   children: React && React.ReactNode;
@@ -128,6 +154,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 =======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
 
 =======
   ogTitle?: string;
@@ -216,6 +243,13 @@ function Layout() {
       <Footer />
     </div>;
   );
+=======
+	return (
+		<div className="min-h-screen bg-black text-white">
+			{children}
+		</div>
+	);
+>>>>>>> origin/chore/standardize-pages-router
 }
 ;
 =======
