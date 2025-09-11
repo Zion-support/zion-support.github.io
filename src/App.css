@@ -1,15 +1,24 @@
 /* App.css - Main application styles */
-
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.app-content {
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-main {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.app-footer {
+  margin-top: auto;
 }
 
 /* Loading states */
@@ -27,45 +36,28 @@
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  padding: 2rem;
   text-align: center;
-}
-
-.error-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #dc2626;
-  margin-bottom: 1rem;
-}
-
-.error-message {
-  color: #6b7280;
-  margin-bottom: 1rem;
+  padding: 2rem;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .app-content {
+  .app-main {
     padding: 0;
   }
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .app {
-    background-color: #0f172a;
-    color: #f8fafc;
-  }
+.dark .app {
+  background-color: #0a0a0a;
+  color: #ffffff;
 }
 
-/* Print styles */
-@media print {
-  .app {
-    background: white;
-    color: black;
-  }
-  
-  .no-print {
-    display: none !important;
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

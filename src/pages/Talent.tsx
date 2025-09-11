@@ -1,8 +1,6 @@
 import React from 'react';
-import { _Helmet } from 'react-helmet-async';
-
 import { Helmet } from 'react-helmet-async';
-const _Talent = () => {
+const Talent = () => {
     return (<>
       <Helmet>
         <title>Talent - Zion Tech Group</title>
@@ -25,6 +23,5 @@ const _Talent = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default Talent;

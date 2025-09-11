@@ -1,69 +1,22 @@
 import React, { useState, useMemo } from 'react';
-import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
-import { _Button } from '../components/ui/button';
-import { _Badge } from '../components/ui/badge';
-import { _Input } from '../components/ui/input';
-import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { _Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin } from 'lucide-react';
-import { _ENHANCED_INNOVATIVE_SERVICES } from '../data/enhancedInnovativeServices';
-import { _COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { _INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
-import { _motion } from 'framer-motion';
-
-import { Link } from 'react-router-dom';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin } from 'lucide-react';
+import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
 import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Heart } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BookOpen } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Icon } from 'lucide-react';
-const features = [];
-const services = [];
-const solutions = [];
 // Combine all services
 const ALL_SERVICES = [
     ...ENHANCED_INNOVATIVE_SERVICES,
     ...COMPREHENSIVE_SERVICES,
     ...INNOVATIVE_MICRO_SAAS_SERVICES
 ];
-const _categoryIcons = {
-    'AI & Legal Tech': FileText,
-    'AI & FinTech': DollarSign,
-    'AI & Healthcare': Heart,
-    'Cybersecurity & Quantum': Shield,
-    'AI & Supply Chain': Building,
-    'AI & Energy': Zap,
-    'AI & Customer Experience': Users,
-    'Quantum & AI': Cpu,
-    'AI & Data Governance': Database,
-    'AI & HR Tech': Users,
-    'AI & Machine Learning': Brain,
-    'AI & Business Intelligence': BarChart3,
-    'AI & Marketing Automation': Target,
-    'AI & CRM': Users,
-    'AI & ERP': Building,
-    'AI & Project Management': Code,
-    'AI & Autonomous Systems': Bot,
-    'AI & Research': Brain,
-    'AI & Content Generation': FileText,
-    'AI & Voice Technology': Smartphone,
-    'AI & Video Generation': Eye,
-    'AI & Threat Intelligence': Shield,
-    'AI & Cloud Management': Cloud,
-    'AI & DevOps': Code
-};
-const _categoryColors = {
-    'AI & Legal Tech': 'from-blue-500 to-indigo-500',
+const categoryColors = {
+  'AI & Legal Tech': 'from-blue-500 to-indigo-500',
     'AI & FinTech': 'from-green-500 to-emerald-500',
     'AI & Healthcare': 'from-red-500 to-pink-500',
     'Cybersecurity & Quantum': 'from-purple-500 to-violet-500',
@@ -86,59 +39,55 @@ const _categoryColors = {
     'AI & Video Generation': 'from-pink-500 to-rose-500',
     'AI & Threat Intelligence': 'from-red-500 to-pink-500',
     'AI & Cloud Management': 'from-blue-500 to-cyan-500',
-    'AI & DevOps': 'from-orange-500 to-red-500'
+  'AI & DevOps': 'from-orange-500 to-red-500'
+
+
 };
-const _supportLevelColors = {
-    'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
+const supportLevelColors = {
+  'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
     'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
-    'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+  'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+
+
 };
 export default function ComprehensiveServicesOverview() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const [selectedSupportLevel, setSelectedSupportLevel] = useState('all');
-    const _filteredServices = useMemo(() => {
-        const _filtered = ALL_SERVICES;
+    const filtered = ALL_SERVICES;
         // Search filter
         if (searchQuery) {
-            const _lowerQuery = searchQuery.toLowerCase();
+            const lowerQuery = searchQuery.toLowerCase();
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
-                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
-        }
+                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))))}
         // Category filter
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+            filtered = filtered.filter(service => service.category === selectedCategory)}
         // Price range filter
         if (priceRange !== 'all') {
             switch (priceRange) {
                 case 'low':
                     filtered = filtered.filter(service => {
-                        const _price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price <= 1000;
-                    });
+                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
+                        return price <= 1000});
                     break;
                 case 'medium':
                     filtered = filtered.filter(service => {
-                        const _price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 1000 && price <= 3000;
-                    });
+                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
+                        return price > 1000 && price <= 3000});
                     break;
                 case 'high':
                     filtered = filtered.filter(service => {
-                        const _price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 3000;
-                    });
-                    break;
-            }
+                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
+                        return price > 3000});
+                    break}
         }
     });
-    const _getServicePrice = (service) => {
+    const getServicePrice = (service) => {
         if (typeof service.price === 'number') {
-            return service.price;
-        }
+            return service.price}
     };
     return (<>
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
@@ -265,7 +214,15 @@ export default function ComprehensiveServicesOverview() {
                 <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
                 <p className="text-zion-slate-light">Try adjusting your search criteria or filters</p>
               </div>) : (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.05 }}>
+                {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  x: -20 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} transition={{ delay: index * 0.05 }}>
                     <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                       <CardHeader>
                         <div className="flex items-start justify-between mb-4">
@@ -401,5 +358,4 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </>)}
