@@ -305,21 +305,41 @@ export default function HomePage() {
             </div>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
-              <div className='text-3xl mb-2'>✅</div>
-              <h3 className='text-lg font-semibold mb-2'>AI Implementation Checklist</h3>
-              <p className='text-sm opacity-90'>Complete step-by-step guide for successful AI deployment</p>
-            </div>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
-              <div className='text-3xl mb-2'>🤖</div>
-              <h3 className='text-lg font-semibold mb-2'>Enterprise AI Automation</h3>
-              <p className='text-sm opacity-90'>Comprehensive 2025 implementation guide with real case studies</p>
-            </div>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
-              <div className='text-3xl mb-2'>💰</div>
-              <h3 className='text-lg font-semibold mb-2'>Startup Funding in AI Era</h3>
-              <p className='text-sm opacity-90'>Complete guide to securing funding for AI startups</p>
-            </div>
+            <Link href='/blog/ai-platform-engineering-2025' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>🧩</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>AI Platform Engineering in 2025</h3>
+                <p className='text-sm opacity-90'>Guardrails and reference patterns to ship AI safely at scale.</p>
+              </div>
+            </Link>
+            <Link href='/blog/customer-stories-automation-roi' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>🏆</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Customer Stories: Automation ROI</h3>
+                <p className='text-sm opacity-90'>3 case studies with clear, measurable business outcomes.</p>
+              </div>
+            </Link>
+            <Link href='/blog/enterprise-rag-2025-blueprint' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>📚</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Enterprise RAG in 2025: A Practical Blueprint</h3>
+                <p className='text-sm opacity-90'>Reliable architectures, guardrails, and cost controls for RAG at scale</p>
+              </div>
+            </Link>
+            <Link href='/blog/ai-cost-optimization-2025' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>💸</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>AI Cost Optimization in 2025</h3>
+                <p className='text-sm opacity-90'>Ship faster and spend less with practical cost governance</p>
+              </div>
+            </Link>
+            <Link href='/blog/startup-distribution-tactics-2025' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>📈</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Startup Distribution Tactics 2025</h3>
+                <p className='text-sm opacity-90'>Repeatable playbooks to reach your first 500 customers</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -336,32 +356,60 @@ export default function HomePage() {
           </div>
           {/* New Content Promo */}
           <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <Link href='/blog/ai-product-roadmap-2025' className='group'>
-              <div className='rounded-lg border border-blue-200 bg-blue-50 p-6 hover:bg-blue-100 transition-colors'>
-                <div className='text-sm font-medium text-blue-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>AI Product Roadmap 2025: From MVP to Scale</h3>
-                <p className='text-blue-800 mt-2'>Align outcomes, add guardrails, and scale AI features with confidence.</p>
+            <Link href='/blog/ai-platform-engineering-2025' className='group'>
+              <div className='rounded-lg border border-indigo-200 bg-indigo-50 p-6 hover:bg-indigo-100 transition-colors'>
+                <div className='text-sm font-medium text-indigo-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-indigo-900 group-hover:underline'>AI Platform Engineering in 2025</h3>
+                <p className='text-indigo-800 mt-2'>Governance, guardrails, and cost controls for production AI platforms.</p>
               </div>
             </Link>
-            <Link href='/blog/genai-evals-and-observability' className='group'>
+            <Link href='/blog/customer-stories-automation-roi' className='group'>
+              <div className='rounded-lg border border-amber-200 bg-amber-50 p-6 hover:bg-amber-100 transition-colors'>
+                <div className='text-sm font-medium text-amber-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-amber-900 group-hover:underline'>Customer Stories: Automation ROI</h3>
+                <p className='text-amber-800 mt-2'>Support, finance, and ops wins with time-to-value and payback.</p>
+              </div>
+            </Link>
+            <Link href='/blog/enterprise-rag-2025-blueprint' className='group'>
+              <div className='rounded-lg border border-blue-200 bg-blue-50 p-6 hover:bg-blue-100 transition-colors'>
+                <div className='text-sm font-medium text-blue-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>Enterprise RAG in 2025: Practical Blueprint</h3>
+                <p className='text-blue-800 mt-2'>Reference architecture and guardrails for reliable enterprise knowledge systems.</p>
+              </div>
+            </Link>
+            <Link href='/blog/startup-distribution-tactics-2025' className='group'>
               <div className='rounded-lg border border-green-200 bg-green-50 p-6 hover:bg-green-100 transition-colors'>
                 <div className='text-sm font-medium text-green-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>GenAI Evals & Observability: The Practical 2025 Guide</h3>
-                <p className='text-green-800 mt-2'>Measure quality, cost, and safety with evals and telemetry that matter.</p>
+                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>Startup Distribution Tactics 2025</h3>
+                <p className='text-green-800 mt-2'>Founder-led outbound, SEO content, and partners to 500 customers.</p>
+              </div>
+            </Link>
+            <Link href='/blog/ai-cost-optimization-2025' className='group'>
+              <div className='rounded-lg border border-purple-200 bg-purple-50 p-6 hover:bg-purple-100 transition-colors'>
+                <div className='text-sm font-medium text-purple-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>AI Cost Optimization in 2025</h3>
+                <p className='text-purple-800 mt-2'>Cut LLM and vector costs without hurting outcomes.</p>
+              </div>
+            </Link>
+            <Link href='/blog/enterprise-rag-architecture-2025' className='group'>
+              <div className='rounded-lg border border-purple-200 bg-purple-50 p-6 hover:bg-purple-100 transition-colors'>
+                <div className='text-sm font-medium text-purple-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>Enterprise RAG Architecture 2025</h3>
+                <p className='text-purple-800 mt-2'>Reliable, governed, and cost-aware Retrieval-Augmented Generation in production.</p>
               </div>
             </Link>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='Startup Go-To-Market in 2025: From 0 to 500 Customers'
-              href='/blog/startup-go-to-market-2025'
-              description='ICP focus, compelling offers, and three scalable channels to win early.'
-              icon='🧠'
-            />
-            <Card
               title='AI Agents in the Enterprise: Practical Playbooks for 2025'
               href='/blog/ai-agents-in-enterprise-2025'
               description='Architectures, guardrails, and KPIs to deploy reliable AI agents.'
+              icon='🧠'
+            />
+            <Card
+              title='Startup Distribution in 2025: A Practical Playbook'
+              href='/blog/startup-distribution-playbook-2025'
+              description='The highest-leverage channels to reach 0 → 500 customers.'
               icon='📈'
             />
             <Card
@@ -375,6 +423,18 @@ export default function HomePage() {
               href='/blog/genai-observability-checklist-2025'
               description='Telemetry that matters across prompts, tools, retrieval, and costs.'
               icon='🔍'
+            />
+            <Card
+              title='Zero-Trust AI Security: A Practical 2025 Guide'
+              href='/blog/zero-trust-ai-security-2025'
+              description='Layered defenses to keep AI systems safe in production.'
+              icon='🛡️'
+            />
+            <Card
+              title='Enterprise RAG Architecture 2025: Reliable and Governed'
+              href='/blog/enterprise-rag-architecture-2025'
+              description='Reference patterns for hybrid retrieval, evals, and governance.'
+              icon='📚'
             />
           </div>
         </div>
