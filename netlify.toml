@@ -1,73 +1,241 @@
-# Netlify build configuration (resolved)
+# This is a VITE project, NOT a Next.js project
+# The build process uses Vite to create a static site in the 'dist' folder
+# No Next.js plugins or configurations are needed
+
 [build]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
-  publish = ".next"
+  # Use npm for dependency management and Vite builds to dist/
+  command = "npm ci && npm run build"
+  publish = "dist"
+  # Force static site build (not Next.js)
   functions = "netlify/functions"
-  command_timeout = "30m"
+  edge_functions = "netlify/edge-functions"
+  # Explicitly specify this is a static site, not a framework
+  base = "."
 
 [build.environment]
-  NODE_VERSION = "22.12.0"
-  NODE_OPTIONS = "--max-old-space-size=6144"
-  SKIP_TYPE_CHECK = "true"
-  NPM_CONFIG_PRODUCTION = "false"
-  NPM_FLAGS = "--include=dev --include=optional"
-  NPM_CONFIG_OPTIONAL = "true"
-  NETLIFY_NEXT_PLUGIN_SKIP = "false"
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
-  # Skip Sharp postinstall to avoid NAPI issues
-  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
-  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
-  # Ensure proper build environment
-  NODE_ENV = "production"
-  CI = "true"
-  # Disable linting during build to prevent failures
-  ESLINT_NO_DEV_ERRORS = "true"
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max_old_space_size=6144"
+  # Use npm for dependency management
+  NPM_FLAGS = "--ignore-scripts"
+  # Skip Netlify's Next.js plugin since this is a Vite static site
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Force Vite/static site detection
+  NETLIFY_USE_YARN = "false"
+  NETLIFY_USE_NPM = "true"
+  # Disable framework detection
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
+  # Force static site build
+  NETLIFY_FORCE_STATIC_BUILD = "true"
+  # Skip all framework plugins
+  NETLIFY_SKIP_FRAMEWORK_PLUGINS = "true"
+  CANONICAL_URL = "https://ziontechgroup.com"
 
-<<<<<<< HEAD
-# Security headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' plausible.io; connect-src 'self' plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-=======
->>>>>>> origin/fix/netlify-skip-build
+# Explicitly disable Next.js plugin and configure only Vite-compatible plugins
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+  inputs = {}
 
-# Static assets caching
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+# No Next.js plugin needed for Vite project
 
-[[headers]]
-  for = "/_next/image/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+# Redirects for SEO/legacy URLs
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
+  status = 301
 
-[[headers]]
-  for = "/logos/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
 
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-materials-discovery"
+  to = "/quantum-materials-discovery-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator"
+  status = 301
+
+[[redirects]]
+  from = "/ai-customer-success-automation"
+  to = "/ai-customer-success-platform"
+  status = 301
+
+[[redirects]]
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
+  status = 301
+
+# Handle client-side routing for SPA (this is also in _redirects file)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[scheduled.functions]]
-  name = "health"
-  schedule = "*/5 * * * *"
+  name = "marketing-and-features-promo"
+  schedule = "0 */2 * * *" # every 2 hours
 
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
+[[scheduled.functions]]
+  name = "link-and-health-scheduler"
+  schedule = "0 */6 * * *" # every 6 hours
 
-[context.deploy-preview]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+[[scheduled.functions]]
+  name = "sitemap_runner"
+  schedule = "0 */12 * * *" # twice per day
 
-[context.branch-deploy]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+[[scheduled.functions]]
+  name = "fast-front-promoter"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "fast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "continuous-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "front-visionary-expander"
+  schedule = "*/3 * * * *" # fast refresh for front systems
+
+[[scheduled.functions]]
+  name = "home-visionary-expander"
+  schedule = "*/4 * * * *" # fast refresh for homepage
+
+[[scheduled.functions]]
+  name = "ultrafast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "trigger-all-and-commit"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "front-maximizer"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "continuous-front-runner"
+  schedule = "*/3 * * * *" # every 3 minutes
+
+[[scheduled.functions]]
+  name = "readme-advertiser"
+  schedule = "13 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "front-ads-promoter"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "ultrafast-front-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+# New ultra-fast tools
+[[scheduled.functions]]
+  name = "features-capabilities-benefits-advertiser"
+  schedule = "*/2 * * * *" # every 2 minutes
+
+[[scheduled.functions]]
+  name = "hyper-front-index-accelerator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "dead-code-report"
+  schedule = "7 */6 * * *"
+
+[[scheduled.functions]]
+  name = "security-audit-runner"
+  schedule = "19 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-index-runner"
+  schedule = "11 */4 * * *"
+
+[[scheduled.functions]]
+  name = "repo-knowledge-graph-runner"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "image-optimizer-runner"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "ai-changelog-runner"
+  schedule = "41 */6 * * *"
+
+[[scheduled.functions]]
+  name = "newsroom-runner"
+  schedule = "37 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-scanner-runner"
+  schedule = "13 */6 * * *"
+
+[[scheduled.functions]]
+  name = "broken-image-scanner-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "external-link-check-runner"
+  schedule = "31 */6 * * *"
+
+[[scheduled.functions]]
+  name = "repo-radar-runner"
+  schedule = "43 */6 * * *"
+
+[[scheduled.functions]]
+  name = "og-image-update-runner"
+  schedule = "47 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-search-index-runner"
+  schedule = "53 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-summary-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "netlify-auto-healer-runner"
+  schedule = "*/20 * * * *"
+
+# New intelligent cloud automations
+[[scheduled.functions]]
+  name = "innovation-lab"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "broken-image-scanner"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "auto-scheduler"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+# New autonomous cloud automations
+[[scheduled.functions]]
+  name = "edge-cache-warmer"
+  schedule = "*/3 * * * *" # every 3 minutes
+
+[[scheduled.functions]]
+  name = "og-meta-auditor"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "repo-fitness-score"
+  schedule = "*/5 * * * *" # every 5 minutes
+

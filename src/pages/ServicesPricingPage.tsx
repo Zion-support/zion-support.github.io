@@ -26,7 +26,6 @@ import {
   Clock
 } from "lucide-react";
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
-
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   if (!acc[service.category]) {
@@ -35,7 +34,6 @@ const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   acc[service.category].push(service);
   return acc;
 }, {} as { [key: string]: typeof EXPANDED_SERVICES });
-
 // Pricing comparison features
 const pricingFeatures = [
   "AI-Powered Solutions",
@@ -47,15 +45,12 @@ const pricingFeatures = [
   "Security Compliance",
   "Scalable Architecture"
 ];
-
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const categories = Object.keys(servicesByCategory);
   const filteredServices = selectedCategory === 'all' 
     ? EXPANDED_SERVICES 
     : servicesByCategory[selectedCategory] || [];
-
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
@@ -81,7 +76,6 @@ export default function ServicesPricingPage() {
     };
     return categoryIcons[category] || <Zap className="h-5 w-5" />;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
@@ -110,7 +104,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-zion-purple/20 border-b border-zion-purple/30">
         <div className="container mx-auto px-4 py-6">
@@ -128,7 +121,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         {/* Pricing Tiers Overview */}
@@ -162,7 +154,6 @@ export default function ServicesPricingPage() {
             ))}
           </div>
         </div>
-
         {/* Service Categories Tabs */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Services by Category</h2>
@@ -177,7 +168,6 @@ export default function ServicesPricingPage() {
                 </TabsTrigger>
               ))}
             </TabsList>
-            
             <TabsContent value={selectedCategory} className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (
@@ -200,7 +190,6 @@ export default function ServicesPricingPage() {
                         {service.description}
                       </CardDescription>
                     </CardHeader>
-                    
                     <CardContent>
                       <div className="space-y-4">
                         {/* Pricing and Details */}
@@ -226,7 +215,6 @@ export default function ServicesPricingPage() {
                             </span>
                           </div>
                         </div>
-
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2">
                           {service.tags.slice(0, 3).map((tag, index) => (
@@ -235,21 +223,19 @@ export default function ServicesPricingPage() {
                             </Badge>
                           ))}
                         </div>
-
                         {/* Rating and AI Score */}
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-1">
                             <Star className="h-4 w-4 text-yellow-400 fill-current" />
                             <span className="text-sm">{service.rating}</span>
-                            <span className="text-xs text-zion-cyan-light">({service.review_count} reviews)</span>
+                            <span className="text-xs text-zion-cyan-light">({service.reviewCount} reviews)</span>
                           </div>
-                                                      {service.ai_score && (
-                              <Badge className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                                AI Score: {service.ai_score}
-                              </Badge>
-                            )}
+                          {service.aiScore && (
+                            <Badge className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
+                              AI Score: {service.aiScore}
+                            </Badge>
+                          )}
                         </div>
-
                         {/* Action Buttons */}
                         <div className="flex gap-2">
                           <Button 
@@ -275,7 +261,6 @@ export default function ServicesPricingPage() {
             </TabsContent>
           </Tabs>
         </div>
-
         {/* Service Benefits Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose ZionTech Group?</h2>
@@ -292,7 +277,6 @@ export default function ServicesPricingPage() {
             ))}
           </div>
         </div>
-
         {/* Pricing FAQ Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
@@ -308,7 +292,6 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
-            
             <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
               <CardHeader>
                 <CardTitle className="text-zion-cyan">Do you offer custom pricing?</CardTitle>
@@ -320,7 +303,6 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
-            
             <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
               <CardHeader>
                 <CardTitle className="text-zion-cyan">What payment terms do you offer?</CardTitle>
@@ -332,7 +314,6 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
-            
             <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
               <CardHeader>
                 <CardTitle className="text-zion-cyan">Is there a money-back guarantee?</CardTitle>
@@ -346,7 +327,6 @@ export default function ServicesPricingPage() {
             </Card>
           </div>
         </div>
-
         {/* Contact CTA Section */}
         <div className="bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
