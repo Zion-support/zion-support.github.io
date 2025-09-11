@@ -1,6 +1,16 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import SEO from '../components/SEO';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import NewContentBanner from '../components/NewContentBanner';
+import EnhancedNewsletter from '../components/EnhancedNewsletter';
+import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -46,6 +56,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Banner - Top */}
+      <NewContentBanner variant="default" maxItems={4} />
+
       {/* New Content Showcase Banner */}
       <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
@@ -58,8 +71,8 @@ export default function HomePage() {
               🚀 Fresh AI & Tech Insights
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: AI Manufacturing Success Story, Cloud-Native Architecture Blueprint, 
-              and AI Implementation Playbook. Expert insights to accelerate your digital transformation.
+              Fresh content just published: AI Productivity Automation, Startup Funding in AI Era, 
+              Edge AI Privacy by Design, and GenAI Evaluation Playbook. Expert insights to accelerate your digital transformation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -79,11 +92,11 @@ export default function HomePage() {
 
           {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-2025-year-in-review' className='group'>
+            <Link href='/blog/ai-productivity-automation-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
-                <h3 className='text-lg font-semibold mb-2'>AI 2025: Year in Review</h3>
-                <p className='text-sm opacity-90 mb-3'>Major breakthroughs and industry impact</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Productivity Automation</h3>
+                <p className='text-sm opacity-90 mb-3'>300% productivity boost with AI automation</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>18 min read</span>
                   <span className='mx-2'>•</span>
@@ -92,11 +105,11 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/blog/ai-2026-predictions' className='group'>
+            <Link href='/blog/startup-funding-ai-era-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
-                <h3 className='text-lg font-semibold mb-2'>AI 2026 Predictions</h3>
-                <p className='text-sm opacity-90 mb-3'>The next frontier of AI technology</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
+                <h3 className='text-lg font-semibold mb-2'>Startup Funding in AI Era</h3>
+                <p className='text-sm opacity-90 mb-3'>Navigate $50B+ AI funding landscape</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>22 min read</span>
                   <span className='mx-2'>•</span>
@@ -105,28 +118,28 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/case-studies/ai-transformation-retail-giant-2025' className='group'>
+            <Link href='/blog/edge-ai-privacy-by-design-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏪</div>
-                <h3 className='text-lg font-semibold mb-2'>Retail AI Transformation</h3>
-                <p className='text-sm opacity-90 mb-3'>300% revenue growth case study</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔐</div>
+                <h3 className='text-lg font-semibold mb-2'>Edge AI: Privacy by Design</h3>
+                <p className='text-sm opacity-90 mb-3'>On-device intelligence with complete privacy</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>Case Study</span>
+                  <span>8 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/resources/ai-transformation-playbook-2026' className='group'>
+            <Link href='/blog/genai-evaluation-playbook-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Transformation Playbook</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete 2026 implementation guide</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧪</div>
+                <h3 className='text-lg font-semibold mb-2'>GenAI Evaluation Playbook</h3>
+                <p className='text-sm opacity-90 mb-3'>Ship quality GenAI with confidence</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
+                  <span>9 min read</span>
                   <span className='mx-2'>•</span>
-                  <span>45 min read</span>
+                  <span>New</span>
                 </div>
               </div>
             </Link>
@@ -406,7 +419,7 @@ export default function HomePage() {
 
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-2025-year-in-review' className='group'>
+            <Link href='/blog/ai-enterprise-integration-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
                 <h3 className='text-lg font-semibold mb-2'>AI 2025: Year in Review</h3>
@@ -976,6 +989,30 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase variant="featured" maxItems={4} />
+      
+      {/* New Content Banner */}
+      <NewContentBanner variant="gradient" maxItems={4} />
+
+      {/* Trending Content Section */}
+      <EnhancedContentShowcase variant="trending" maxItems={4} />
+      
+      {/* Latest Content Section */}
+      <EnhancedContentShowcase variant="latest" maxItems={4} />
+
+
+      {/* Performance Metrics Section */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
+        <PerformanceMetrics />
+      </Suspense>
+
+      {/* Technology Stack Section */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading tech stack..." />}>
+        <TechnologyStack />
+      </Suspense>
+>>>>>>> cursor/create-and-deploy-new-content-50f9
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
