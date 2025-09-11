@@ -3,160 +3,228 @@ import Link from 'next/link';
 
 export default function BlogPage() {
 	const blogPosts = [
-		{
-			id: 'ai-transforming-business-2025',
-			title: 'How AI is Transforming Business Operations in 2025',
-			excerpt:
-				'Discover the latest AI trends reshaping enterprise operations and how companies are leveraging artificial intelligence for competitive advantage.',
-			date: '2025-01-15',
-			readTime: '8 min read',
-			category: 'AI & Technology',
-			featured: true,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'quantum-computing-business-applications',
-			title: 'Quantum Computing: The Next Frontier in Business Innovation',
-			excerpt:
-				'Explore how quantum computing is revolutionizing industries from finance to healthcare, and discover practical applications that are already delivering real business value.',
-			date: '2025-01-20',
-			readTime: '12 min read',
-			category: 'Quantum Computing',
-			featured: true,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'edge-computing-iot-revolution',
-			title: 'Edge Computing and IoT: Revolutionizing Real-Time Business Operations',
-			excerpt:
-				'Discover how edge computing and IoT are transforming industries by enabling real-time data processing, reducing latency, and creating new business opportunities.',
-			date: '2025-01-18',
-			readTime: '10 min read',
-			category: 'Edge Computing & IoT',
-			featured: true,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'sustainable-tech-green-it',
-			title: 'Sustainable Technology: Building a Greener Future Through Green IT',
-			excerpt:
-				'Explore how businesses are leveraging sustainable technology practices to reduce environmental impact while improving operational efficiency and creating long-term value.',
-			date: '2025-01-22',
-			readTime: '9 min read',
-			category: 'Green IT & Sustainability',
-			featured: true,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'ai-ethics-responsible-innovation',
-			title: 'AI Ethics and Responsible Innovation: Building Trust in Artificial Intelligence',
-			excerpt:
-				'Explore the critical importance of ethical AI development and how businesses can implement responsible innovation practices to build trustworthy AI systems.',
-			date: '2025-01-25',
-			readTime: '11 min read',
-			category: 'AI Ethics & Responsible Innovation',
-			featured: true,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'micro-saas-success-stories',
-			title: 'Micro SaaS Success Stories: From Idea to $1M ARR',
-			excerpt:
-				'Real case studies of successful micro SaaS businesses and the strategies that helped them scale from zero to seven-figure revenue.',
-			date: '2025-01-12',
-			readTime: '12 min read',
-			category: 'Business Strategy',
-			featured: false,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'cloud-migration-best-practices',
-			title: 'Cloud Migration Best Practices: A Complete Guide',
-			excerpt:
-				'Everything you need to know about migrating to the cloud successfully, including common pitfalls and proven strategies.',
-			date: '2025-01-10',
-			readTime: '15 min read',
-			category: 'Cloud & DevOps',
-			featured: false,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'blockchain-business-applications',
-			title: 'Blockchain Beyond Crypto: Real Business Applications',
-			excerpt:
-				'Exploring practical blockchain applications in supply chain, healthcare, and finance that are driving real business value.',
-			date: '2025-01-08',
-			readTime: '10 min read',
-			category: 'Blockchain',
-			featured: false,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'cybersecurity-2025-trends',
-			title: 'Cybersecurity Trends Every Business Should Know in 2025',
-			excerpt:
-				'The evolving threat landscape and essential security measures every organization needs to implement this year.',
-			date: '2025-01-05',
-			readTime: '7 min read',
-			category: 'Security',
-			featured: false,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'data-analytics-roi',
-			title: 'Maximizing ROI with Advanced Data Analytics',
-			excerpt:
-				'How to build a data-driven culture and implement analytics solutions that deliver measurable business impact.',
-			date: '2025-01-03',
-			readTime: '9 min read',
-			category: 'Data & Analytics',
-			featured: false,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'agentic-workflows-2025',
-			title: 'Agentic Workflows in 2025: Practical Patterns for Production',
-			excerpt:
-				'Guardrails, budgets, approvals, and observability to safely ship agentic systems.',
-			date: '2025-09-11',
-			readTime: '10 min read',
-			category: 'AI Engineering',
-			featured: true,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'data-engineering-modern-stack',
-			title: 'Modern Data Engineering Stack: 2025 Reference',
-			excerpt:
-				'An opinionated blueprint for reliable, affordable pipelines: ingestion to governance.',
-			date: '2025-09-11',
-			readTime: '8 min read',
-			category: 'Data Engineering',
-			featured: false,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'ai-automation-enterprise-2025',
-			title: 'AI Automation in Enterprise: The Complete 2025 Implementation Guide',
-			excerpt:
-				'Everything you need to know about implementing AI automation in your enterprise, from planning to optimization.',
-			date: '2025-01-27',
-			readTime: '15 min read',
-			category: 'AI & Technology',
-			featured: true,
-			image: '/api/placeholder/600/400',
-		},
-		{
-			id: 'startup-funding-ai-era',
-			title: 'Startup Funding in the AI Era: A Complete Guide for 2025',
-			excerpt:
-				'Navigate the new funding landscape and position your AI startup for success with this comprehensive guide.',
-			date: '2025-01-27',
-			readTime: '12 min read',
-			category: 'Startup Strategy',
-			featured: true,
-			image: '/api/placeholder/600/400',
-		}
+	  {
+	    id: 'ai-transforming-business-2025',
+	    title: 'How AI is Transforming Business Operations in 2025',
+	    excerpt:
+	      'Discover the latest AI trends reshaping enterprise operations and how companies are leveraging artificial intelligence for competitive advantage.',
+	    date: '2025-01-15',
+	    readTime: '8 min read',
+	    category: 'AI & Technology',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'quantum-computing-business-applications',
+	    title: 'Quantum Computing: The Next Frontier in Business Innovation',
+	    excerpt:
+	      'Explore how quantum computing is revolutionizing industries from finance to healthcare, and discover practical applications that are already delivering real business value.',
+	    date: '2025-01-20',
+	    readTime: '12 min read',
+	    category: 'Quantum Computing',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'edge-computing-iot-revolution',
+	    title: 'Edge Computing and IoT: Revolutionizing Real-Time Business Operations',
+	    excerpt:
+	      'Discover how edge computing and IoT are transforming industries by enabling real-time data processing, reducing latency, and creating new business opportunities.',
+	    date: '2025-01-18',
+	    readTime: '10 min read',
+	    category: 'Edge Computing & IoT',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'sustainable-tech-green-it',
+	    title: 'Sustainable Technology: Building a Greener Future Through Green IT',
+	    excerpt:
+	      'Explore how businesses are leveraging sustainable technology practices to reduce environmental impact while improving operational efficiency and creating long-term value.',
+	    date: '2025-01-22',
+	    readTime: '9 min read',
+	    category: 'Green IT & Sustainability',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-ethics-responsible-innovation',
+	    title: 'AI Ethics and Responsible Innovation: Building Trust in Artificial Intelligence',
+	    excerpt:
+	      'Explore the critical importance of ethical AI development and how businesses can implement responsible innovation practices to build trustworthy AI systems.',
+	    date: '2025-01-25',
+	    readTime: '11 min read',
+	    category: 'AI Ethics & Responsible Innovation',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'micro-saas-success-stories',
+	    title: 'Micro SaaS Success Stories: From Idea to $1M ARR',
+	    excerpt:
+	      'Real case studies of successful micro SaaS businesses and the strategies that helped them scale from zero to seven-figure revenue.',
+	    date: '2025-01-12',
+	    readTime: '12 min read',
+	    category: 'Business Strategy',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'cloud-migration-best-practices',
+	    title: 'Cloud Migration Best Practices: A Complete Guide',
+	    excerpt:
+	      'Everything you need to know about migrating to the cloud successfully, including common pitfalls and proven strategies.',
+	    date: '2025-01-10',
+	    readTime: '15 min read',
+	    category: 'Cloud & DevOps',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'blockchain-business-applications',
+	    title: 'Blockchain Beyond Crypto: Real Business Applications',
+	    excerpt:
+	      'Exploring practical blockchain applications in supply chain, healthcare, and finance that are driving real business value.',
+	    date: '2025-01-08',
+	    readTime: '10 min read',
+	    category: 'Blockchain',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'cybersecurity-2025-trends',
+	    title: 'Cybersecurity Trends Every Business Should Know in 2025',
+	    excerpt:
+	      'The evolving threat landscape and essential security measures every organization needs to implement this year.',
+	    date: '2025-01-05',
+	    readTime: '7 min read',
+	    category: 'Security',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'data-analytics-roi',
+	    title: 'Maximizing ROI with Advanced Data Analytics',
+	    excerpt:
+	      'How to build a data-driven culture and implement analytics solutions that deliver measurable business impact.',
+	    date: '2025-01-03',
+	    readTime: '9 min read',
+	    category: 'Data & Analytics',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  // New posts (2025-09)
+	  {
+	    id: 'ai-cost-optimization-2025',
+	    title: 'AI Cost Optimization in 2025: Ship Faster, Spend Less',
+	    excerpt:
+	      'Practical techniques to reduce LLM and vector costs without hurting outcomes.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-sales-playbook-2025',
+	    title: 'Startup Sales Playbook 2025: From First Meetings to Revenue',
+	    excerpt:
+	      'Cadences, scripts, and minimal tooling to land your first 100 customers.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'Growth',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-agents-in-enterprise-2025',
+	    title: 'AI Agents in the Enterprise: Practical Playbooks for 2025',
+	    excerpt:
+	      'Architectures, guardrails, and KPIs to deploy reliable AI agents that move business metrics.',
+	    date: '2025-09-11',
+	    readTime: '11 min read',
+	    category: 'AI & Automation',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-distribution-playbook-2025',
+	    title: 'Startup Distribution in 2025: A Practical Playbook',
+	    excerpt:
+	      'The highest-leverage channels and measurement to get from 0 → 500 customers.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'Growth',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-governance-blueprint-2025',
+	    title: 'AI Governance Blueprint 2025: Controls that Actually Work',
+	    excerpt:
+	      'Policy, process, and technical controls that reduce risk without blocking the business.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'Governance',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'genai-observability-checklist-2025',
+	    title: 'GenAI Observability: The 2025 Checklist',
+	    excerpt:
+	      'Telemetry that matters across prompts, tools, retrieval, costs, and outcomes.',
+	    date: '2025-09-11',
+	    readTime: '7 min read',
+	    category: 'MLOps',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'agentic-workflows-2025',
+	    title: 'Agentic Workflows in 2025: Practical Patterns for Production',
+	    excerpt:
+	      'Guardrails, budgets, approvals, and observability to safely ship agentic systems.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'data-engineering-modern-stack',
+	    title: 'Modern Data Engineering Stack: 2025 Reference',
+	    excerpt:
+	      'An opinionated blueprint for reliable, affordable pipelines: ingestion to governance.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'Data Engineering',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  // Additional existing featured content preserved from main
+	  {
+	    id: 'ai-automation-enterprise-2025',
+	    title: 'AI Automation in Enterprise: The Complete 2025 Implementation Guide',
+	    excerpt:
+	      'Everything you need to know about implementing AI automation in your enterprise, from planning to optimization.',
+	    date: '2025-01-27',
+	    readTime: '15 min read',
+	    category: 'AI & Technology',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-funding-ai-era',
+	    title: 'Startup Funding in the AI Era: A Complete Guide for 2025',
+	    excerpt:
+	      'Navigate the new funding landscape and position your AI startup for success with this comprehensive guide.',
+	    date: '2025-01-27',
+	    readTime: '12 min read',
+	    category: 'Startup Strategy',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  }
 	];
 
 	const featuredPosts = blogPosts.filter(post => post.featured);
