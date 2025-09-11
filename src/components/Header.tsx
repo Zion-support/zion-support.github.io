@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 import Button from './Button';
 
 const Header: React.FC = () => {
@@ -61,7 +62,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
