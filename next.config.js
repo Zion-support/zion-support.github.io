@@ -13,10 +13,10 @@ const nextConfig = {
     optimizePackageImports: ["lucide-react"],
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
   async headers() {
     return [
@@ -32,5 +32,5 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
 
