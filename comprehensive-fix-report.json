@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-09-06T01:31:58.752Z",
+  "duration": 31336,
+  "fixedFiles": [
+    "components/reports.tsx",
+    "components/request-to-hire.tsx",
+    "components/resources.tsx",
+    "components/solutions.tsx",
+    "components/startup-tools.tsx",
+    "components/technology-insights.tsx",
+    "components/website-performance-monitor.tsx",
+    "lib/utils.ts",
+    "src/App.tsx"
+  ],
+  "errors": [
+    "Build failed"
+  ],
+  "success": false
+}

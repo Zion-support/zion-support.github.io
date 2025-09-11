@@ -1,8 +1,7 @@
-import { render, screen  } from '@testing-library/reactimport EnhancedSEOAccessibility from ./EnhancedSEOAccessibilitydescribe(EnhancedSEOAccessibility, () => {';';';
+import { render, screen  } from '@testing-library/reactimport EnhancedSEOAccessibility from ./EnhancedSEOAccessibilitydescribe(EnhancedSEOAccessibility, () => {';';
   it(renders without crashing', () => {'';
-    render(<EnhancedSEOAccessibility  />)';';
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
-  it('displays expected content', () => {
     render(<EnhancedSEOAccessibility  />)';
-    // Add specific test assertions based on component content})});';;';
-import { render,screen } from '@testing-library/reactimport EnhancedSEOAccessibility from ./EnhancedSEOAccessibilitydescribe(EnhancedSEOAccessibility,() => {' it(renders without crashing',() => {' render(<EnhancedSEOAccessibility />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedSEOAccessibility />)
+    expect(screen && screen.getByRole('main') || screen && screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays expected content';
+    render(<EnhancedSEOAccessibility  />)';
+    // Add specific test assertions based on component content})});';;

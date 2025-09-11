@@ -43,9 +43,6 @@ const servicePricing: ServicePricing[] = [
         name: "Professional",
         price: "$299",
         period: "/month",
-<<<<<<< HEAD
-const categories = ["All", "Core Platform", "AI Services", "IT Services", "Business Automation", "Blockchain & Web3", "Industry Solutions"];
-=======
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -74,7 +71,6 @@ export default function PricingPage() {
             <option key={category} value={category}>{category}</option>
           ))}
         </select>
-=======
       {/* Category Filter */}
       <div className="flex justify-center">
         <div className="flex flex-wrap gap-2 bg-zinc-800 rounded-lg p-1">
@@ -102,7 +98,6 @@ export default function PricingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-xl font-semibold mb-3">Key Features</h3>
-=======
               <h2 className="text-2xl font-bold">{service.serviceName}</h2>
               <p className="text-lg opacity-80">{service.description}</p>
             </div>
@@ -123,13 +118,6 @@ export default function PricingPage() {
             {/* Pricing Tiers */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {service.tiers.map((tier, tierIndex) => (
-<<<<<<< HEAD
-                <div 
-                  key={tierIndex} 
-                  className={`border rounded-lg p-6 relative ${
-                    tier.popular 
-                      ? 'border-blue-500 bg-blue-500/10' 
-=======
                 <div
                   key={tierIndex}
                   className={`relative border rounded-lg p-6 ${
@@ -150,9 +138,6 @@ export default function PricingPage() {
                   <div className="mt-6">
                     <a
                       href={tier.ctaLink}
-<<<<<<< HEAD
-                      className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
-=======
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${                        tier.popular
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'
                           : 'bg-zinc-700 hover:bg-zinc-600 text-white'
@@ -187,7 +172,6 @@ export default function PricingPage() {
           <div className="border border-white/10 rounded-lg p-4">
             <h3 className="font-semibold mb-2">Is there a setup fee?</h3>
             <p className="text-sm opacity-80">No setup fees for our monthly plans. One-time services may have project-based pricing.</p>
-=======
       {/* Additional Services */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-white">
         <div className="text-center space-y-4">

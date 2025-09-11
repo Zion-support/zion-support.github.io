@@ -107,7 +107,6 @@ import {
       link: "/services/multi-cloud-management",
       badge: "Cloud",
       details: "Cost optimization, security compliance, and unified monitoring across all cloud platforms. Starting at $79/month."
-=======
     // New Micro SAAS Services
     {
       title: "AI Content Generator",
@@ -226,7 +225,6 @@ import {
       icon: <Heart className="h-10 w-10 p-2 rounded-md bg-gradient-to-br from-red-100 to-pink-100 text-red-700" />,
       link: "/services/ai-healthcare",
       badge: "Healthcare",
-      details: "Health tracking, symptom analysis, and wellness coaching. HIPAA compliant. Starting at $29/month for individuals."=======
       icon: <Server className="h-10 w-10 p-2 rounded-md bg-gradient-to-br from-orange-100 to-red-100 text-orange-700" />,
       link: "/devops-platform",
       badge: "DevOps",
@@ -350,7 +348,6 @@ import {
       icon: <Brain className="h-10 w-10 p-2 rounded-md bg-gradient-to-br from-violet-100 to-purple-100 text-violet-700" />,
       link: "/design-ai",
       badge: "Creative",
-      details: "Create professional designs with AI-powered tools and templates. Plans from $19/month."=======
     {
       title: "AI Analytics Dashboard",
       description: "Transform your business data into actionable intelligence with AI-powered analytics and insights.",
@@ -382,8 +379,6 @@ import {
       link: "/cloud-migration-services",
       badge: "Cloud",
       details: "Seamless migration to the cloud with cost optimization, security, and performance improvements."
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
-=======
     {
       title: "Comprehensive Services",
       description: "Access our complete range of micro SAAS, IT services, and AI solutions in one platform.",
@@ -391,7 +386,6 @@ import {
       link: "/comprehensive-services",
       badge: "New",
       details: "Discover 30+ professional services including AI development, cloud migration, cybersecurity, and more."
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
     }
   };
 
@@ -552,10 +546,8 @@ import {
             </div>
           </div>
         </motion.div>
-=======
     <section className="py-16 bg-gradient-to-b from-background to-background/90">
       <div className="container mx-auto px-4">
-=======
     <section className="relative py-16 bg-gradient-to-b from-background to-background/90">
       <AnimatedBackground variant="section" />
       <div className="container mx-auto px-4 relative z-10">        <div className="mb-12 text-center">
@@ -650,8 +642,3 @@ export const FeatureCTAs: React.FC = () => {
     </section>
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

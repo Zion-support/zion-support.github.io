@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';'''
 import {motion} from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = ("props": "any) => {"}
@@ -10,6 +11,56 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
     // Sample data based on the analysis report;
     const sampleIssues = []
         {}
+';
+'';
+''';
+            "id": '1',''';
+            "pageUrl": '"https": "//ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js'",''';
+            "pageTitle": 'Missing',''';
+            "issueType": 'missing_title',''';
+            "severity": 'high',''';
+            "description": 'Short or missing title, No headings found, Missing meta description, Meta description too short',''';
+            "recommendation": 'Add proper page title, headings, and meta description for better SEO',''';
+            "status": 'open';
+        },;
+        {}
+';
+'';
+''';
+            "id": '2',''';
+            "pageUrl": '"https": "//ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js'",''';
+            "pageTitle": 'Missing',''';
+            "issueType": 'missing_meta',''';
+            "severity": 'high',''';
+            "description": 'Short or missing title, No headings found, Missing meta description, Meta description too short',''';
+            "recommendation": 'Add proper page title, headings, and meta description for better SEO',''';
+            "status": 'open';
+        },;
+        {}
+';
+'';
+''';
+            "id": '3',''';
+            "pageUrl": '"https": "//ziontechgroup.com/about/'",''';
+            "pageTitle": 'About',''';
+            "issueType": 'minimal_content',''';
+            "severity": 'medium',''';
+            "description": 'Suspiciously small HTML content',''';
+            "recommendation": 'Add more meaningful content, headings, and images to improve user experience',''';
+            "status": 'open';
+        },;
+        {}
+';
+'';
+''';
+            "id": '4',''';
+            "pageUrl": '"https": "//ziontechgroup.com/services/'",''';
+            "pageTitle": 'Services',''';
+            "issueType": 'no_headings',''';
+            "severity": 'medium',''';
+            "description": 'No headings found',''';
+            "recommendation": 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',''';
+            "status": 'open';
 '
 ''
 '''
@@ -60,7 +111,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             description: 'No headings found','''
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO','''
             status: 'open'
-
 import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = (props: any) => {}
@@ -127,6 +177,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
     useEffect ( () => {}
         setContentIssues (sampleIssues) ;
         generateReport (sampleIssues) }, []) ;
+    const generateReport = (props: any) => {}';
+        const totalPages = 79; // From analysis report;';';
+        const pagesWithIssues = issues.length;'';';
+        const criticalIssues = issues.filter(i => i.severity === 'high').length;'';';
+        const mediumIssues = issues.filter(i => i.severity === 'medium').length;'';';
     const generateReport = (props: any) => {}
         const totalPages = 79; // From analysis report;
         const pagesWithIssues = issues.length;';
@@ -139,6 +194,15 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         const mediumIssues = issues.filter(i => i.severity === 'medium').length;'
         const lowIssues = issues.filter(i => i.severity === 'low').length;
         setReport({}
+            totalPages,;
+            pagesWithIssues,;
+            criticalIssues,;
+            mediumIssues,;
+            lowIssues,;
+            "averageContentLength": "5000", // Sample data;
+            "pagesWithImages": "45", // Sample data;
+            "pagesWithMetaDescriptions": "32", // Sample data;
+            "lastUpdated": "new Date () "}) };
             totalPages,
             pagesWithIssues,
             criticalIssues,
@@ -153,9 +217,56 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         // Simulate content analysis;
         await new Promise(resolve => setTimeout (resolve, 3000) ) ;
         setIsAnalyzing(false) };
+    const getSeverityIcon = (props: any) => {}';
+        switch (severity) {}';';
+'';';
+            case 'high': any;';';
+                return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""';';
+            case 'medium':""""';';
+                return <AlertTriangle className="w-4 h-4 text-yellow-400" />;'"""';';
+            case 'low':""""
+                return <Info className="w-4 h-4 text-blue-400" />;"""
+            default:""""
+                return <Info className="w-4 h-4 text-gray-400" />}
+    };
+    const getSeverityColor = (props: any) => {}';
+        switch (severity) {}';';
+'';';
+''';';
+'''';';
+            case 'high':''''';';
+                return 'text-red-400';'''';';
+            case 'medium':''''';';
+                return 'text-yellow-400';'''';';
+            case 'low':''''';';
+                return 'text-blue-400';'''';';
+            default:''''';';
+                return 'text-gray-400'}
+    };
+    const getStatusColor = (props: any) => {}';
+        switch (status) {}';';
+'';';
+''';';
+'''';';
+            case 'resolved':''''';';
+                return 'text-green-400';'''';';
+            case 'in_progress':''''';';
+                return 'text-yellow-400';'''';';
+            case 'open':''''';';
+                return 'text-red-400';'''';';
+            default:''''';';
     const getSeverityIcon = (props: any) => {}
     const getSeverityIcon = ("props": "any) => {"}
         switch (severity) {}
+';
+            case 'high': "any;
+                return <AlertTriangle className="w-4 h-4 text-red-400" />;'""";
+            case 'medium':"""";
+                return <AlertTriangle className="w-4 h-4 text-yellow-400" />;'""";
+            case 'low':"""";
+                return <Info className="w-4 h-4 text-blue-400" />;""";
+            "default":"""";
+                return <Info className="w-4 h-4 text-gray-400" />"}
 '
             case 'high': any;
                 return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""
@@ -168,6 +279,16 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
     };
     const getSeverityColor = ("props": "any) => {"}
         switch (severity) {}
+';
+'';
+''';
+            case 'high':'''';
+                return 'text-red-400';''';
+            case 'medium':'''';
+                return 'text-yellow-400';''';
+            case 'low':'''';
+                return 'text-blue-400';''';
+            "default":'''';
 '
 ''
 '''
@@ -182,6 +303,16 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
     };
     const getStatusColor = ("props": "any) => {"}
         switch (status) {}
+';
+'';
+''';
+            case 'resolved':'''';
+                return 'text-green-400';''';
+            case 'in_progress':'''';
+                return 'text-yellow-400';''';
+            case 'open':'''';
+                return 'text-red-400';''';
+            default:'''';
             "default":'''';
 '
 ''
@@ -198,11 +329,38 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
     const filteredIssues = contentIssues.filter(issue => {}
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesFilter && matchesSearch});
+    const getIssueTypeLabel = (props: any) => {}';
+        switch (type) {}';';
+'';';
+''';';
+'''';';
+            case 'missing_title':''''';';
+                return 'Missing Title';'''';';
+            case 'missing_meta':''''';';
+                return 'Missing Meta Description';'''';';
+            case 'no_headings':''''';';
+                return 'No Headings';'''';';
+            case 'minimal_content':''''';';
+                return 'Minimal Content';'''';';
+            case 'no_images':''''';';
     const getIssueTypeLabel = ("props": "any) => {"}
         return matchesFilter && matchesSearch}
     );
     const getIssueTypeLabel = (props: any) => {}
         switch (type) {}
+';
+'';
+''';
+            case 'missing_title':'''';
+                return 'Missing Title';''';
+            case 'missing_meta':'''';
+                return 'Missing Meta Description';''';
+            case 'no_headings':'''';
+                return 'No Headings';''';
+            case 'minimal_content':'''';
+                return 'Minimal Content';''';
+            case 'no_images':'''';
 '
 ''
 '''
@@ -219,6 +377,36 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             "default": "any;
                 return type"}
     };
+    return (<>""";
+      {/* Floating Action Button */}"""";
+      <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg "hover": "shadow-xl transition-all duration-300 transform "hover":scale-110" whileHover={{ "scale": 1.1 "}} whileTap={{ "scale": "0.9 "}}>"""";
+        <FileText className="w-6 h-6" />;
+      </motion.button>;
+""";
+      {/* Modal */}"""";
+      {isOpen && (<motion.div initial={{ "opacity": "0 "}} animate={{ "opacity": "1 "}} exit={{ "opacity": "0 "}} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;
+          <motion.div initial = {}
+  {"scale": "0.9",;
+  "opacity": "0;"}} animate = {}
+  {"scale": "1",;
+  "opacity": "1;"}} exit = {}
+  {"scale": "0.9",;
+  "opacity": "0;
+""";
+"""""}} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>""";
+            {/* Header */}"""";
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">"""";
+              <div className="flex items-center justify-between">"""";
+                <div className="flex items-center space-x-3">"""";
+                  <FileText className="w-8 h-8" />"""";
+                  <h2 className="text-2xl font-bold">Content Quality Analyzer</h2>""";
+                </div>"""";
+                <button onClick={() => setIsOpen(false)} className="text-white/80 "hover": "text-white transition-colors">;
+                  ✕;
+                </button>""";
+              </div>"""";
+              <p className="text-purple-100 mt-2">;
+                Analyze and improve content quality across all website pages;
               </p>;
             </div>;
 """;
@@ -650,6 +838,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                               </div>""""
                               <div className="text-xs text-purple-400">
                                 <strong>Recommendation:</strong> {issue.recommendation}
+                              </div>
+                            </div>"""
+                          </td>""`';
+                          <td className="px-6 py-4 whitespace-nowrap">``';';
+                            <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>'';';
                               </div>;
                             </div>""";
                           </td>""`;
@@ -727,20 +920,26 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 export default ContentQualityAnalyzer;
 }}}}}}
 ;
+export {ContentQualityAnalyzer};
+;
+export {ContentQualityAnalyzer};
+;
+export {ContentQualityAnalyzer};
+;
+export {ContentQualityAnalyzer};
+;
+export {ContentQualityAnalyzer};
+</motion>';
+</motion>;';;';
+;
 </motion>;
 </motion>;
 </motion>;
-
 export {ContentQualityAnalyzer};
-
 export {ContentQualityAnalyzer};
-
 export {ContentQualityAnalyzer};
-
 export {ContentQualityAnalyzer};
-
 export {ContentQualityAnalyzer};
-
 </motion>
 </motion>
 </motion>

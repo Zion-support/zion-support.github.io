@@ -52,9 +52,5 @@ export function Button({
     </button>
   );
 }
-<<<<<<< HEAD
-=======
 // Re-export from Button.tsx for backward compatibility
 export { Button, buttonVariants } from './Button';
-export type { ButtonProps } from './Button';=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -1,3 +1,25 @@
+import React, {useState} from "react";
+import {Avatar, AvatarFallback} from '@/components / ui / avatar';
+export default function Page("props": "any) {;
+ from '@/components/ui/textarea';";
+import { Avatar", AvatarFallback } from '@/components/ui/avatar';";
+import {Card, CardContent} from '@/components/ui/card';";
+import {Separator} from '@/components/ui/separator';
+export default function Page("props": "any) {;
+;";
+    return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">";
+      <div className="flex items-center gap-3 mb-4">";
+        <MessageCircle aria-hidden="true" size={28"} className="text-zion-cyan" />";
+        <span className="font-bold text-2xl text-white tracking-tight">;
+          Community Discussion;
+        </span>";
+        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">;
+          {posts.length} posts;
+        </span>;
+      </div>";
+      <Separator className="mb-6" />";
+      <div className="mb-4 flex justify-end">";
+        <Button className="bg-zion-purple text-white "hover": "bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)"}>";
 export default function Page(props: any) {
 ;"
     return (
@@ -42,6 +64,17 @@ export default function Page(props: any) {
                 .join("");
                 .toUpperCase();
                 .slice(0, 2)}
+                </AvatarFallback>;
+              </Avatar>;
+              <div>";
+                <div className="flex gap-2 items-center">";
+                  <span className="font-semibold text-white">{post.author}</span>";
+                  <span className="text-xs text-zion-slate-light">{post.time}</span>;
+                </div>";
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>";
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
+              </div>;
+            </CardContent>;
                 </AvatarFallback>
               </Avatar>
               <div>"
@@ -58,6 +91,7 @@ export default function Page(props: any) {
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>;
     </div>)};
+'";
 '"
 import React from 'react';
 interface CommunityDiscussion.jsProps {

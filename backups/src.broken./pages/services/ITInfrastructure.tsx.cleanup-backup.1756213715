@@ -24,7 +24,6 @@ const ITInfrastructure: React.FC = () => {
       description: "Multi-layered security solutions to protect your IT assets",
       icon: "🔒",
       features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"]
-=======
 const ITInfrastructure: React.FC = () => {
   const features = [
     {
@@ -34,8 +33,6 @@ const ITInfrastructure: React.FC = () => {
     "Reduced operational costs",
     "Enhanced performance and reliability",
     "Expert support and maintenance"
-=======
-=======      title: "Network Management",
       description: "Comprehensive network infrastructure design, implementation, and maintenance",
       features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
       icon: "🌐"
@@ -77,16 +74,6 @@ const ITInfrastructure: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 };
 

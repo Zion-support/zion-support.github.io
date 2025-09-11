@@ -1,7 +1,6 @@
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of innovators at Zion Tech Group. Explore exciting career opportunities in AI, quantum computing, and technology solutions.',
-=======
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
@@ -47,7 +46,6 @@ export default function CareersPage() {
       positions: 7,
       icon: '🚀'
     }
-=======
       title: 'Senior AI Research Engineer',
       department: 'Research & Development',
       location: 'Remote / Global',
@@ -213,7 +211,6 @@ export default function CareersPage() {
               </div>
             ))}
           </div>
-=======
       title: 'Remote First',
       description: 'Work from anywhere in the world with our distributed team.',
       icon: '🌍',
@@ -411,7 +408,6 @@ export default function CareersPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Offer</h3>
               <p className="text-gray-600">Welcome to the Zion Tech Group team!</p>
             </div>
-=======
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -454,29 +450,6 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Join Our Team?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Don't see the perfect role? We're always looking for talented individuals 
-            to join our team. Send us your resume and let's explore opportunities together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              Contact Us
-            </Link>
-            <a
-              href="mailto:careers@ziontechgroup.com"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              Send Resume
-            </a>
-          </div>
-=======
       <section className="text-center py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
         <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
@@ -495,7 +468,6 @@ export default function CareersPage() {
           >
             Send Resume
           </a>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
         </div>
       </section>
     </div>

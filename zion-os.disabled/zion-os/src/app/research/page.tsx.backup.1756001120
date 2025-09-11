@@ -6,54 +6,6 @@ export default function ResearchPage() {
       title: "AI Consciousness Evolution",
   const publications = [
     {
-<<<<<<< HEAD
-      title: "Towards Conscious AI: A Framework for Machine Consciousness",
-      authors: "Dr. Kleber & Zion Research Team",
-      journal: "Nature AI",
-      year: "2024",
-      abstract: "This paper presents a novel framework for developing conscious AI systems, exploring the fundamental principles of machine consciousness and self-awareness.",
-      doi: "10.1038/ai.2024.001"
-    },
-    {
-      title: "Quantum Neural Networks: Breaking the Classical Barrier",
-      authors: "Zion Quantum Research Division",
-      journal: "Science Advances",
-      year: "2024",
-      abstract: "We demonstrate quantum advantage in neural network training and inference, opening new possibilities for AI applications.",
-      doi: "10.1126/sciadv.2024.002"
-    },
-    {
-      title: "Autonomous AI Systems: Principles and Implementation",
-      authors: "Zion Autonomous Systems Lab",
-      journal: "AI Research",
-      year: "2024",
-      abstract: "A comprehensive study of autonomous AI systems, their architecture, decision-making processes, and real-world applications.",
-      doi: "10.1000/ai.2024.003"
-    }
-  ];
-
-  const ongoingProjects = [
-    {
-      title: "Project Phoenix",
-      description: "Developing the next generation of autonomous AI systems with advanced reasoning capabilities.",
-      status: "In Progress",
-      timeline: "2024-2026",
-      team: "15 researchers"
-    },
-    {
-      title: "Quantum Consciousness Initiative",
-      description: "Exploring quantum effects in neural networks and their relationship to consciousness.",
-      status: "Planning Phase",
-      timeline: "2025-2027",
-      team: "8 researchers"
-    },
-    {
-      title: "AI Safety Protocol Development",
-      description: "Creating comprehensive safety protocols for autonomous AI systems.",
-      status: "Active",
-      timeline: "2024-2025",
-      team: "12 researchers"
-=======
       title: "Evolutionary Neural Architectures for Autonomous AI Systems",
       authors: "Dr. Kleber, AI Research Team",
       journal: "Nature AI",
@@ -301,7 +253,6 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
-=======
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">

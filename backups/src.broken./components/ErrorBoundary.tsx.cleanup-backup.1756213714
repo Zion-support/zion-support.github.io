@@ -5,7 +5,6 @@ interface ErrorBoundaryProps {
 interface ErrorFallbackProps {
   error?: Error;
   resetError: () => void;
-=======
     );
   }
 
@@ -35,9 +34,4 @@ export function withErrorBoundary<P extends object>(
       </ErrorBoundary>
     );
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

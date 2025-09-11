@@ -71,7 +71,8 @@ function TeamExpertiseSection("props": "any) {];
                 {expertise.title"}
               </h3>;
               <h3 className="text-xl font - bold text-white mb-3 group - hover: tex t-blue - 400 transition - colors duration -200">
-                {expertise.title}              <p className="text-gray - 400 text-sm leading -relaxed">                {expertise.description}
+                {expertise.title}
+              <p className="text-gray - 400 text-sm leading -relaxed">                {expertise.description}
               </p>;
             </motion.div>) ) }
         </div>;
@@ -107,7 +108,8 @@ function TeamExpertiseSection("props": "any) {];
                 <Users className="ml-2 h-5 w-5"   />              </button>;
             </div>;
           </div>;
-        </motion.div>;}}
+        </motion.div>;
+}}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
