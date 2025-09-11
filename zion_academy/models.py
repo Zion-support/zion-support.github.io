@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from werkzeug.security import check_password_hash
 
 db = SQLAlchemy()
 
@@ -16,7 +17,6 @@ class User(db.Model):
     certificates = db.relationship('Certificate', backref='user', lazy=True, cascade="all, delete-orphan")
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
-=======
     update_reactions = db.relationship('UpdateReaction', backref='user', lazy=True, cascade="all, delete-orphan")
     update_comments = db.relationship('UpdateComment', backref='user', lazy=True, cascade="all, delete-orphan")
     def __repr__(self):
