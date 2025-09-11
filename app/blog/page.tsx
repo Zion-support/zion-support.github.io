@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 const posts = [
@@ -10,12 +11,28 @@ const posts = [
     tags: ['AI', 'Automation', 'Agents'],
   },
   {
+    title: 'Production-Grade AI Agents: Observability and Safety',
+    description:
+      'How to harden agents for production with logging, evals, safety and cost controls.',
+    href: '/blog/production-grade-ai-agents',
+    date: '2025-09-11',
+    tags: ['AI', 'Agents', 'MLOps'],
+  },
+  {
     title: 'Cloud Cost Optimization in 2025: Proven Playbook',
     description:
       'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
     href: '/blog/cloud-cost-optimization-2025',
     date: '2025-09-11',
     tags: ['Cloud', 'FinOps', 'DevOps'],
+  },
+  {
+    title: 'Cloud FinOps Automation: 30% Savings With Guardrails',
+    description:
+      'Automation-first FinOps: waste sweeps, rightsizing approvals, commitments, and guardrails.',
+    href: '/blog/cloud-finops-automation',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'Automation'],
   },
   {
     title: 'AI-Powered Customer Support Playbooks',
@@ -40,6 +57,14 @@ const posts = [
     href: '/blog/enterprise-rag-blueprint',
     date: '2025-09-11',
     tags: ['RAG', 'LLM', 'Architecture'],
+  },
+  {
+    title: 'The Modern Data Stack in 2025: Pragmatic Guide',
+    description:
+      'Ingestion, lakehouse, transformations, metrics and activation that actually work at scale.',
+    href: '/blog/modern-data-stack-2025',
+    date: '2025-09-11',
+    tags: ['Data', 'Analytics', 'Engineering'],
   },
 ];
 
