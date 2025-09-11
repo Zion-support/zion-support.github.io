@@ -295,6 +295,178 @@ export default function MarketPricingPage() {
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* New categories with verified links */}
+          <div className="space-y-6">
+            <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Affiliate & Partnerships</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Refersion pricing: <a className="text-cyan-400 underline" href={`https://www.refersion.com/pricing`} target="_blank" rel="noopener noreferrer">refersion.com/pricing</a></li>
+                <li>LeadDyno pricing: <a className="text-cyan-400 underline" href={`https://www.leaddyno.com/pricing`} target="_blank" rel="noopener noreferrer">leaddyno.com/pricing</a></li>
+                <li>PartnerStack pricing: <a className="text-cyan-400 underline" href={`https://partnerstack.com/pricing`} target="_blank" rel="noopener noreferrer">partnerstack.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $49–$500/month by affiliates and orders.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Returns & Post‑Purchase</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Loop Returns: <a className="text-cyan-400 underline" href={`https://www.loopreturns.com/pricing`} target="_blank" rel="noopener noreferrer">loopreturns.com/pricing</a></li>
+                <li>Returnly: <a className="text-cyan-400 underline" href={`https://returnly.com/`} target="_blank" rel="noopener noreferrer">returnly.com</a></li>
+                <li>AfterShip Returns: <a className="text-cyan-400 underline" href={`https://www.aftership.com/returns-center/pricing`} target="_blank" rel="noopener noreferrer">aftership.com/returns-center/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $29–$299/month by orders and features.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Helpdesk & ITSM</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Freshdesk pricing: <a className="text-cyan-400 underline" href={`https://freshdesk.com/pricing`} target="_blank" rel="noopener noreferrer">freshdesk.com/pricing</a></li>
+                <li>Zendesk pricing: <a className="text-cyan-400 underline" href={`https://www.zendesk.com/pricing/`} target="_blank" rel="noopener noreferrer">zendesk.com/pricing</a></li>
+                <li>Jira Service Management: <a className="text-cyan-400 underline" href={`https://www.atlassian.com/software/jira/service-management/pricing`} target="_blank" rel="noopener noreferrer">atlassian.com/.../pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $19–$1,000/month based on agents and SLAs.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-red-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">SBOM & Supply Chain Security</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Anchore: <a className="text-cyan-400 underline" href={`https://anchore.com/pricing/`} target="_blank" rel="noopener noreferrer">anchore.com/pricing</a></li>
+                <li>Snyk pricing: <a className="text-cyan-400 underline" href={`https://snyk.io/plans/`} target="_blank" rel="noopener noreferrer">snyk.io/plans</a></li>
+                <li>OWASP Dependency-Track: <a className="text-cyan-400 underline" href={`https://dependencytrack.org/`} target="_blank" rel="noopener noreferrer">dependencytrack.org</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$500/month depending on repos and images.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Meeting Notes & Transcription</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Otter.ai pricing: <a className="text-cyan-400 underline" href={`https://otter.ai/pricing`} target="_blank" rel="noopener noreferrer">otter.ai/pricing</a></li>
+                <li>Descript pricing: <a className="text-cyan-400 underline" href={`https://www.descript.com/pricing`} target="_blank" rel="noopener noreferrer">descript.com/pricing</a></li>
+                <li>Fireflies.ai pricing: <a className="text-cyan-400 underline" href={`https://fireflies.ai/pricing`} target="_blank" rel="noopener noreferrer">fireflies.ai/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $10–$60/user/month depending on minutes and seats.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-teal-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Cookie Consent & CMP</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Cookiebot pricing: <a className="text-cyan-400 underline" href={`https://www.cookiebot.com/en/pricing/`} target="_blank" rel="noopener noreferrer">cookiebot.com/en/pricing</a></li>
+                <li>OneTrust CMP: <a className="text-cyan-400 underline" href={`https://www.onetrust.com/products/cookie-consent/`} target="_blank" rel="noopener noreferrer">onetrust.com/products/cookie-consent</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $10–$100/month based on traffic and regions.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Invoice OCR & AP Automation</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Veryfi pricing: <a className="text-cyan-400 underline" href={`https://www.veryfi.com/pricing/`} target="_blank" rel="noopener noreferrer">veryfi.com/pricing</a></li>
+                <li>Docparser pricing: <a className="text-cyan-400 underline" href={`https://docparser.com/pricing`} target="_blank" rel="noopener noreferrer">docparser.com/pricing</a></li>
+                <li>UiPath: <a className="text-cyan-400 underline" href={`https://www.uipath.com/solutions/automated-invoice-processing`} target="_blank" rel="noopener noreferrer">uipath.com/.../invoice-processing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $30–$300/month depending on documents/month.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Access Reviews & IGA</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>SailPoint: <a className="text-cyan-400 underline" href={`https://www.sailpoint.com`} target="_blank" rel="noopener noreferrer">sailpoint.com</a></li>
+                <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,000/month depending on identities and systems.</div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">CDP & Reverse ETL</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Segment: <a className="text-cyan-400 underline" href={`https://segment.com/pricing/`} target="_blank" rel="noopener noreferrer">segment.com/pricing</a></li>
+                <li>RudderStack: <a className="text-cyan-400 underline" href={`https://www.rudderstack.com/pricing/`} target="_blank" rel="noopener noreferrer">rudderstack.com/pricing</a></li>
+                <li>Hightouch (Reverse ETL): <a className="text-cyan-400 underline" href={`https://hightouch.com/pricing`} target="_blank" rel="noopener noreferrer">hightouch.com/pricing</a></li>
+                <li>Census (Reverse ETL): <a className="text-cyan-400 underline" href={`https://www.getcensus.com/pricing`} target="_blank" rel="noopener noreferrer">getcensus.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on sources, destinations, and MAUs.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Returns & Logistics</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Loop Returns: <a className="text-cyan-400 underline" href={`https://www.loopreturns.com/pricing/`} target="_blank" rel="noopener noreferrer">loopreturns.com/pricing</a></li>
+                <li>Happy Returns: <a className="text-cyan-400 underline" href={`https://www.happyreturns.com/`} target="_blank" rel="noopener noreferrer">happyreturns.com</a></li>
+                <li>Shippo: <a className="text-cyan-400 underline" href={`https://goshippo.com/pricing/`} target="_blank" rel="noopener noreferrer">goshippo.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$400/month plus label costs.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Feature Flags & Experiments</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>LaunchDarkly: <a className="text-cyan-400 underline" href={`https://launchdarkly.com/pricing/`} target="_blank" rel="noopener noreferrer">launchdarkly.com/pricing</a></li>
+                <li>Flagsmith: <a className="text-cyan-400 underline" href={`https://www.flagsmith.com/pricing`} target="_blank" rel="noopener noreferrer">flagsmith.com/pricing</a></li>
+                <li>Split.io: <a className="text-cyan-400 underline" href={`https://www.split.io/pricing/`} target="_blank" rel="noopener noreferrer">split.io/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$800/month depending on flags and MAUs.</div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Headless CMS</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Contentful pricing: <a className="text-cyan-400 underline" href={`https://www.contentful.com/pricing/`} target="_blank" rel="noopener noreferrer">contentful.com/pricing</a></li>
+                <li>Sanity pricing: <a className="text-cyan-400 underline" href={`https://www.sanity.io/pricing`} target="_blank" rel="noopener noreferrer">sanity.io/pricing</a></li>
+                <li>Strapi pricing: <a className="text-cyan-400 underline" href={`https://strapi.io/pricing`} target="_blank" rel="noopener noreferrer">strapi.io/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$1,500/month depending on seats, locales, and environments.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Payments & Subscriptions</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Stripe pricing: <a className="text-cyan-400 underline" href={`https://stripe.com/pricing`} target="_blank" rel="noopener noreferrer">stripe.com/pricing</a></li>
+                <li>Braintree pricing: <a className="text-cyan-400 underline" href={`https://www.braintreepayments.com/braintree-pricing`} target="_blank" rel="noopener noreferrer">braintreepayments.com/braintree-pricing</a></li>
+                <li>Adyen pricing: <a className="text-cyan-400 underline" href={`https://www.adyen.com/pricing`} target="_blank" rel="noopener noreferrer">adyen.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: processing fees + $0–$300/month for billing features.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Passkeys & Passwordless</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Auth0 Passkeys: <a className="text-cyan-400 underline" href={`https://auth0.com/docs/authenticate/passwordless/passkeys`} target="_blank" rel="noopener noreferrer">auth0.com/.../passkeys</a></li>
+                <li>Okta Passkeys: <a className="text-cyan-400 underline" href={`https://help.okta.com/oag/en-us/Content/Topics/identity-engine/devices/about-passkeys.htm`} target="_blank" rel="noopener noreferrer">help.okta.com/.../about-passkeys</a></li>
+                <li>WebAuthn guide: <a className="text-cyan-400 underline" href={`https://webauthn.guide/`} target="_blank" rel="noopener noreferrer">webauthn.guide</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$200/month depending on MAUs and auth provider.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Headless Commerce</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Shopify Plus: <a className="text-cyan-400 underline" href={`https://www.shopify.com/plus/pricing`} target="_blank" rel="noopener noreferrer">shopify.com/plus/pricing</a></li>
+                <li>commercetools: <a className="text-cyan-400 underline" href={`https://www.commercetools.com/pricing`} target="_blank" rel="noopener noreferrer">commercetools.com/pricing</a></li>
+                <li>BigCommerce Enterprise: <a className="text-cyan-400 underline" href={`https://www.bigcommerce.com/enterprise/pricing/`} target="_blank" rel="noopener noreferrer">bigcommerce.com/enterprise/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: vendor subscriptions + implementation costs; $1k–$10k setup.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Audit, Compliance & Trust</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Vanta pricing: <a className="text-cyan-400 underline" href={`https://www.vanta.com/pricing`} target="_blank" rel="noopener noreferrer">vanta.com/pricing</a></li>
+                <li>Drata pricing: <a className="text-cyan-400 underline" href={`https://drata.com`} target="_blank" rel="noopener noreferrer">drata.com</a></li>
+                <li>Secureframe pricing: <a className="text-cyan-400 underline" href={`https://secureframe.com/pricing`} target="_blank" rel="noopener noreferrer">secureframe.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$2,000/month depending on frameworks and integrations.</div>
+            </div>
+          </div>
+
+          <div className="text-center text-slate-400 mt-10">
+            Need help benchmarking? <a href="/contact" className="text-cyan-400 underline">Contact us</a> — we align to transparent, vendor-verifiable pricing.
+          </div>
+>>>>>>> origin/feat/service-expansion-ads-pricing
         </div>
         <p className="text-sm text-gray-400 mt-6">Note: Pricing varies by usage, team size, and compliance needs. We provide transparent quotes and competitive match.</p>
       </div>

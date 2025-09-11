@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import AnimatedSection from '../components/AnimatedSection';
 import './HomePage.css';
-import { BLOG_POSTS } from '../data/blog-posts';
 
 const HomePage: React.FC = () => {
   return (
@@ -108,50 +107,6 @@ const HomePage: React.FC = () => {
                     <a href="/services#security" className="service-link">Learn More →</a>
                   </div>
                 </AnimatedSection>
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection animation="slideUp" delay={200}>
-          <section className="promo-section">
-            <div className="container">
-              <div className="promo-card">
-                <div className="promo-content">
-                  <h2 className="section-title">What’s New</h2>
-                  <p className="promo-text">New on the blog: GenAI in production, privacy-first Edge AI personalization, and incident-ready CI/CD playbooks.</p>
-                </div>
-                <a href="/blog" className="btn btn-primary">Explore the latest posts →</a>
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection animation="slideUp" delay={200}>
-          <section className="blog-preview">
-            <div className="container">
-              <h2 className="section-title">From the Blog</h2>
-              <div className="blog-grid">
-                {[...BLOG_POSTS]
-                  .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
-                  .slice(0, 4)
-                  .map(post => (
-                  <article key={post.id} className="blog-card">
-                    <div className="blog-card-image" style={{ backgroundImage: `url(${post.featuredImage})` }} />
-                    <div className="blog-card-content">
-                      <div className="blog-meta">
-                        <span className="blog-category">{post.category}</span>
-                        <span className="blog-dot">•</span>
-                        <span className="blog-date">{new Date(post.publishedAt).toLocaleDateString()}</span>
-                        <span className="blog-dot">•</span>
-                        <span className="blog-readtime">{post.readTime} min read</span>
-                      </div>
-                      <h3 className="blog-title">{post.title}</h3>
-                      <p className="blog-excerpt">{post.excerpt}</p>
-                      <a href="/blog" className="service-link">Read on the blog →</a>
-                    </div>
-                  </article>
-                ))}
               </div>
             </div>
           </section>

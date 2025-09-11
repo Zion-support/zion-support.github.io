@@ -46,7 +46,6 @@ import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
 import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
 import { realAdditions2025Q3 } from '../data/real-additions-2025-q3';
-import { newServiceAdditions2025 } from '../data/2025-new-service-additions';
 
   const allServices = [
     ...innovativeAIServices,
@@ -636,8 +635,7 @@ const allServices = [
   ...real2029Q3Additions,
   ...validatedServices2025Q4,
   ...real2035Q2Additions,
-  ...real2035Q3Additions,
-  ...newServiceAdditions2025
+  ...real2035Q3Additions
 ];
 
 const aiServices: Service[] = [;

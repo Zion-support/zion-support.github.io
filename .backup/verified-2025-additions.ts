@@ -352,7 +352,7 @@ export const verified2025Additions: VerifiedService2025[] = [
       'Alert rules and on-call rotation export',
       'Weekly reports and summaries',
       'CSV/JSON exports'
-    ],;
+    ],
     popular: false,;
     icon: '⏱️',;
     color: 'from-slate-600 to-gray-700',;

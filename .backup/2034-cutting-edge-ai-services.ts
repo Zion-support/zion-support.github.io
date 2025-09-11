@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:data-disabled/2034-cutting-edge-ai-services.ts
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
   id: string;

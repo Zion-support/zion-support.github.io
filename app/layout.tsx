@@ -55,22 +55,10 @@ function Header() {
             About
           </Link>
           <Link
-            href='/blog'
-            className='text-gray-700 hover:text-blue-600 transition-colors'
-          >
-            Blog
-          </Link>
-          <Link
             href='/services'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Services
-          </Link>
-          <Link
-            href='/case-studies'
-            className='text-gray-700 hover:text-blue-600 transition-colors'
-          >
-            Case Studies
           </Link>
           <Link
             href='/contact'
@@ -147,12 +135,6 @@ function Footer() {
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 About
-              </Link>
-              <Link
-                href='/case-studies'
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                Case Studies
               </Link>
               <Link
                 href='/contact'

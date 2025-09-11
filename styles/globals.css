@@ -7,38 +7,6 @@
   --zion-blue: #3b82f6;
   --zion-purple: #8b5cf6;
   --zion-indigo: #6366f1;
-  --primary-cyan: #00d4ff;
-  --primary-purple: #8b5cf6;
-  --primary-pink: #ec4899;
-  --primary-blue: #3b82f6;
-  --primary-green: #10b981;
-  --primary-orange: #f97316;
-  --primary-red: #ef4444;
-  --primary-yellow: #eab308;
-  
-  --gradient-cyan-purple: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
-  --gradient-purple-pink: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
-  --gradient-cyan-pink: linear-gradient(135deg, #00d4ff 0%, #ec4899 100%);
-  --gradient-multi: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 50%, #ec4899 100%);
-  
-  --shadow-cyan: 0 0 20px rgba(0, 212, 255, 0.3);
-  --shadow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
-  --shadow-pink: 0 0 20px rgba(236, 72, 153, 0.3);
-  --shadow-multi: 0 0 30px rgba(0, 212, 255, 0.2), 0 0 30px rgba(139, 92, 246, 0.2), 0 0 30px rgba(236, 72, 153, 0.2);
-  --focus-outline: rgba(0, 212, 255, 0.5);
-  --card-bg: rgba(0, 0, 0, 0.55);
-  --card-border: rgba(148, 163, 184, 0.25);
-}
-
-/* Base Styles */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
->>>>>>> origin/feature/services-ui-updates
 }
 
 /* Base styles */
@@ -418,7 +386,6 @@ body::before {
   }
 }
 
-<<<<<<< HEAD
 /* Enhanced Accessibility */
 .sr-only {
   position: absolute;
@@ -475,34 +442,3 @@ body::before {
     transition-duration: 0.01ms !important;
   }
 } 
-=======
-/* Improve link contrast on dark bg */
-.prose a { color: #67e8f9; }
-.prose a:hover { color: #a5f3fc; }
-
-/* Improve base link contrast and focus */
-a { color: #a5f3fc; }
-a:hover { color: #67e8f9; }
-a:focus-visible { outline: 2px solid var(--focus-outline); outline-offset: 2px; border-radius: 6px; }
-
-/* Improve card legibility */
-.card-dark {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-}
-
-/* Adjust neon text visibility on dark backgrounds */
-.neon-cyan, .neon-purple, .neon-pink {
-  filter: drop-shadow(0 0 6px rgba(0,0,0,0.45));
-}
-
-/* Better responsive spacing */
-.container { padding-left: 1rem; padding-right: 1rem; }
-@media (min-width: 1024px) { .container { padding-left: 1.25rem; padding-right: 1.25rem; } }
-
-/* Improve pagination buttons */
-.pagination button:focus-visible {
-  outline: 2px solid var(--focus-outline);
-  outline-offset: 2px;
-}
->>>>>>> origin/feature/services-ui-updates

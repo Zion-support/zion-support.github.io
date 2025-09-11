@@ -207,7 +207,6 @@ export default function ServicesIndex() {
               { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
               { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
               { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
-              { href: '/services/ai-contract-risk-analyzer', title: 'AI Contract Risk Analyzer', desc: 'Flag risky clauses and missing terms in seconds.' },
             ].map((s) => (
               <Link key={s.href} href={s.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">

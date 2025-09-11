@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -104,111 +103,29 @@ export default function HomePage() {
       {/* Latest Articles */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Latest Articles</h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Fresh insights from our team on AI, cloud, and automation.
-            </p>
+          <div className='flex items-center justify-between mb-8'>
+            <div>
+              <h2 className='text-3xl font-bold text-gray-900 mb-2'>Latest Articles</h2>
+              <p className='text-gray-600'>Fresh insights on AI, micro SaaS, and cloud.</p>
+            </div>
+            <Link href='/blog' className='text-blue-600 font-semibold hover:underline'>View all</Link>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <Card
-              title='LLM Cost Optimization Playbook: Cut Spend Without Losing Quality'
-              href='/blog/llm-cost-optimization-playbook'
-              description='Reduce inference spend 20–50% with routing, retrieval, batching, and tight observability.'
-              icon='💰'
+            <ArticleCard
+              title='AI-Powered Customer Support: From FAQ Bots to Full Resolution'
+              href='/blog/ai-powered-customer-support'
+              description='Evolve from deflection to autonomous resolution with guardrails and KPIs.'
             />
-            <Card
-              title='Agentic Workflows in the Enterprise: Reliable, Observable, Governed'
-              href='/blog/agentic-workflows-enterprise'
-              description='Blueprint for agentic systems with reliability, observability, and governance.'
-              icon='🧭'
+            <ArticleCard
+              title='Micro SaaS in 60 Days: A Lean Delivery Blueprint'
+              href='/blog/micro-saas-in-60-days'
+              description='Scope, build, launch and monetize a niche product quickly and safely.'
             />
-            <Card
-              title='Zero-Trust AI Integrations: Safely Connecting to Your Systems'
-              href='/blog/zero-trust-ai-integrations'
-              description='Least privilege, short-lived creds, and policy approvals for safe integrations.'
-              icon='🔐'
+            <ArticleCard
+              title='Cloud Cost Optimization That Doesn’t Hurt Velocity'
+              href='/blog/cloud-cost-optimization-without-slowdowns'
+              description='Cut 25–45% of cloud spend while keeping teams shipping fast.'
             />
-            <Card
-              title='AI Automation for Businesses: Complete Guide'
-              href='/blog/ai-automation-for-businesses'
-              description='Transform your business operations with AI automation. Learn strategies that achieve 40% efficiency gains.'
-              icon='🤖'
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Success Stories</h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              See how we've helped companies achieve remarkable results with our technology solutions.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>
-            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
-              <div className='text-3xl font-bold text-green-600 mb-2'>60%</div>
-              <div className='text-sm text-gray-600 mb-2'>Cost Reduction</div>
-              <div className='text-sm text-gray-800 font-semibold'>E-commerce Platform</div>
-              <div className='text-xs text-gray-500 mt-1'>AI automation & cloud migration</div>
-            </div>
-            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
-              <div className='text-3xl font-bold text-blue-600 mb-2'>50%</div>
-              <div className='text-sm text-gray-600 mb-2'>Supply Chain Savings</div>
-              <div className='text-sm text-gray-800 font-semibold'>Manufacturing Company</div>
-              <div className='text-xs text-gray-500 mt-1'>Blockchain implementation</div>
-            </div>
-            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
-              <div className='text-3xl font-bold text-purple-600 mb-2'>70%</div>
-              <div className='text-sm text-gray-600 mb-2'>Faster Processing</div>
-              <div className='text-sm text-gray-800 font-semibold'>Financial Services</div>
-              <div className='text-xs text-gray-500 mt-1'>AI-powered automation</div>
-            </div>
-          </div>
-          <div className='text-center'>
-            <Link
-              href='/case-studies'
-              className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
-            >
-              View All Case Studies
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Stack */}
-      <section className='py-16'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Cutting-Edge Technology Stack</h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              We leverage the latest technologies to deliver innovative solutions that drive real business value.
-            </p>
-          </div>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-            <div className='text-center'>
-              <div className='text-4xl mb-4'>🤖</div>
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>AI & Machine Learning</h3>
-              <p className='text-sm text-gray-600'>GPT-4, Claude, custom models, RAG systems</p>
-            </div>
-            <div className='text-center'>
-              <div className='text-4xl mb-4'>☁️</div>
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Cloud Platforms</h3>
-              <p className='text-sm text-gray-600'>AWS, Azure, GCP, hybrid solutions</p>
-            </div>
-            <div className='text-center'>
-              <div className='text-4xl mb-4'>⛓️</div>
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Blockchain</h3>
-              <p className='text-sm text-gray-600'>Ethereum, smart contracts, DeFi protocols</p>
-            </div>
-            <div className='text-center'>
-              <div className='text-4xl mb-4'>⚡</div>
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Automation</h3>
-              <p className='text-sm text-gray-600'>RPA, workflow automation, AI agents</p>
-            </div>
           </div>
         </div>
       </section>
@@ -285,5 +202,27 @@ function FeatureCard({
       <h3 className='text-lg font-semibold text-gray-900 mb-2'>{title}</h3>
       <p className='text-gray-600'>{description}</p>
     </div>
+  );
+}
+
+function ArticleCard({
+  title,
+  href,
+  description,
+}: {
+  title: string;
+  href: string;
+  description: string;
+}) {
+  return (
+    <Link href={href} className='group'>
+      <article className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 h-full'>
+        <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+          {title}
+        </h3>
+        <p className='text-gray-600'>{description}</p>
+        <span className='inline-block mt-4 text-blue-600 font-medium'>Read more →</span>
+      </article>
+    </Link>
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 >>>>>>> origin/automation-improvements-final
@@ -32,9 +33,15 @@ export function Logo({ customLogo, customColor }) {}
         </span>;
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
+<<<<<<< HEAD
 
     </Link>;
 
+=======
+
+    </Link>;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -57,6 +64,7 @@ import { Link } from 'react-router-dom';
 
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE';
+<<<<<<< HEAD
 
       <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react'
 import { Link } from 'react-router-dom'
@@ -65,6 +73,10 @@ export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE'
 
   
+=======
+
+
+>>>>>>> origin/automation-improvements-final
 =======
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -85,8 +97,13 @@ export function Logo({ customLogo, customColor }) {
     <Link to="/" className="flex items-center space-x-3 group">
       <div
         className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> origin/automation-improvements-final
@@ -141,6 +158,7 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
     </Link>
   );
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
