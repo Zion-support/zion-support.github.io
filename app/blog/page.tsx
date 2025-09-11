@@ -3,7 +3,40 @@ import Link from 'next/link';
 
 export default function BlogPage() {
 	const blogPosts = [
- 	  // New posts (2025-09)
+	  {
+	    id: 'product-analytics-2025',
+	    title: 'Product Analytics 2025: From Dashboards to Decisions',
+	    excerpt:
+	      'A concise framework to turn product data into action and roadmap changes.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'Analytics',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'finops-ai-2025',
+	    title: 'FinOps for AI 2025: Cut LLM Spend Without Slowing Teams',
+	    excerpt:
+	      'Caching, quantization, retrieval tuning, and eval-driven budgets that work.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'FinOps',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-roadmap-2026',
+	    title: 'AI Product Roadmap 2026: Ship Impactful Features with Guardrails',
+	    excerpt:
+	      'Outcome-first planning, technical guardrails, and an operating model that scales.',
+	    date: '2026-02-01',
+	    readTime: '12 min read',
+	    category: 'Strategy',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  // New posts (2025-09)
  	  {
  	    id: 'ai-productivity-playbook-2025',
  	    title: 'AI Productivity Playbook 2025: Ship Faster Without Breaking Things',
