@@ -1,9 +1,15 @@
 [build]
+<<<<<<< HEAD
   command = "npm ci --no-audit --no-fund --omit=optional && npm run build"
+=======
+  # Use Yarn with frozen lockfile to ensure reproducible installs, then build
+  command = "corepack enable && yarn install --frozen-lockfile && yarn build"
+>>>>>>> origin/chore/netlify-build-yarn
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
+<<<<<<< HEAD
 NODE_VERSION = "22.12.0"
 NODE_OPTIONS = "--max-old-space-size=6144"
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
@@ -20,6 +26,11 @@ CI = "true"
 ESLINT_NO_DEV_ERRORS = "true"
 # Optimize build performance
 VITE_LEGACY_BUILD = "false"
+=======
+  NODE_VERSION = "20"
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
+  NETLIFY_SKIP_INSTALL = "true"
+>>>>>>> origin/chore/netlify-build-yarn
 
 # API functions (disabled for Vite SPA)
 # [functions]
