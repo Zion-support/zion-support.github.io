@@ -1,14 +1,14 @@
-declare module "cmdk";
-declare module "@radix-ui/react-context-menu";
-declare module "vaul";
-declare module "@radix-ui/react-hover-card";
-declare module "input-otp";
-declare module "react-markdown";
-declare module "@radix-ui/react-menubar";
-declare module "@radix-ui/react-navigation-menu";
-declare module "react-resizable-panels";
-declare module "@radix-ui/react-toggle-group";
-declare module "@radix-ui/react-toggle";
+declare module 'cmdk';
+declare module '@radix-ui/react-context-menu';
+declare module 'vaul';
+declare module '@radix-ui/react-hover-card';
+declare module 'input-otp';
+declare module 'react-markdown';
+declare module '@radix-ui/react-menubar';
+declare module '@radix-ui/react-navigation-menu';
+declare module 'react-resizable-panels';
+declare module '@radix-ui/react-toggle-group';
+declare module '@radix-ui/react-toggle';
 declare module '*.module.css' {
   const classes: { [key: string]: string };
   export default classes;
@@ -262,8 +262,8 @@ declare module '@radix-ui/react-toast';
 declare module '@radix-ui/react-tooltip';
 declare module '@supabase/supabase-js';
 declare module 'class-variance-authority' {
-  export function cva(...inputs: any[]): any
-  export type VariantProps<T extends (...args: any) => any> = any
+  export function cva(...inputs: any[]): any;
+  export type VariantProps<T extends (...args: any) => any> = any;
 }
 declare module 'clsx' {
   export type ClassValue = any;
@@ -275,57 +275,57 @@ declare module 'i18next';
 declare module 'i18next-browser-languagedetector';
 declare module 'react-helmet-async';
 declare module 'react-hook-form' {
-  import type { ComponentType, ReactElement, ReactNode } from 'react'
+  import type { ComponentType, ReactElement, ReactNode } from 'react';
 
   // Minimal generic typings to satisfy local usage without full type defs
-  export type FieldValues = Record<string, any>
-  export type FieldPath<TFieldValues extends FieldValues> =
-    keyof TFieldValues & string
+  export type FieldValues = Record<string, any>;
+  export type FieldPath<TFieldValues extends FieldValues> = keyof TFieldValues &
+    string;
 
-  export type Control<TFieldValues extends FieldValues = FieldValues> = any
+  export type Control<TFieldValues extends FieldValues = FieldValues> = any;
 
   export interface UseFormReturn<
     TFieldValues extends FieldValues = FieldValues,
   > {
-    control: Control<TFieldValues>
-    handleSubmit: any
-    register: any
-    formState: any
-    [key: string]: any
+    control: Control<TFieldValues>;
+    handleSubmit: any;
+    register: any;
+    formState: any;
+    [key: string]: any;
   }
 
-  export function useForm<
-    TFieldValues extends FieldValues = FieldValues,
-  >(options?: any): UseFormReturn<TFieldValues>
+  export function useForm<TFieldValues extends FieldValues = FieldValues>(
+    options?: any
+  ): UseFormReturn<TFieldValues>;
 
-  export function useFieldArray<
-    TFieldValues extends FieldValues = FieldValues,
-  >(options: any): any
+  export function useFieldArray<TFieldValues extends FieldValues = FieldValues>(
+    options: any
+  ): any;
 
   export interface ControllerProps<
     TFieldValues extends FieldValues = FieldValues,
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
   > {
-    name: TName
-    control?: Control<TFieldValues>
-    rules?: any
-    defaultValue?: any
-    render: (props: any) => ReactElement
+    name: TName;
+    control?: Control<TFieldValues>;
+    rules?: any;
+    defaultValue?: any;
+    render: (props: any) => ReactElement;
   }
 
-  export const Controller: ComponentType<ControllerProps<any, any>>
+  export const Controller: ComponentType<ControllerProps<any, any>>;
 
   export interface FormProviderProps<
     TFieldValues extends FieldValues = FieldValues,
   > {
-    children?: ReactNode
-    [key: string]: any
+    children?: ReactNode;
+    [key: string]: any;
   }
 
-  export const FormProvider: ComponentType<FormProviderProps<any>>
+  export const FormProvider: ComponentType<FormProviderProps<any>>;
   export function useFormContext<
     TFieldValues extends FieldValues = FieldValues,
-  >(): UseFormReturn<TFieldValues>
+  >(): UseFormReturn<TFieldValues>;
 }
 declare module 'react-i18next';
 declare module 'react-dom/client';

@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Connectors and KYC Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Connectors and KYC Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix connectors file - add missing function declaration
@@ -72,7 +74,9 @@ export const email = {
 };
 `;
 fs.writeFileSync(connectorsPath, connectorsContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed lib/integrations/connectors.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed lib/integrations/connectors.ts'
+);
 // Fix KYC start file
 const kycStartPath = '/workspace/pages/api/kyc/start.ts';
 const kycStartContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -239,8 +243,11 @@ const report = {
     'pages/api/kyc/start.ts',
     'pages/api/kyc/status.ts',
     'pages/api/kyc/submit.ts',
-    'pages/api/kyc/upload.ts'
-  ]
+    'pages/api/kyc/upload.ts',
+  ],
 };
-fs.writeFileSync('/workspace/connectors-and-kyc-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/connectors-and-kyc-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to connectors-and-kyc-fix-report.json');

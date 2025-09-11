@@ -15,13 +15,16 @@ export class PerformanceMonitor {
   }
 
   private initializeObservers() {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window))
+      return;
 
     // First Contentful Paint
     try {
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        const fcpEntry = entries.find(
+          entry => entry.name === 'first-contentful-paint'
+        );
         if (fcpEntry) {
           this.metrics.fcp = fcpEntry.startTime;
         }
@@ -34,7 +37,7 @@ export class PerformanceMonitor {
 
     // Largest Contentful Paint
     try {
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
@@ -49,7 +52,7 @@ export class PerformanceMonitor {
 
     // First Input Delay
     try {
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (entry.processingStart && entry.startTime) {
@@ -65,7 +68,7 @@ export class PerformanceMonitor {
 
     // Cumulative Layout Shift
     try {
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list => {
         let clsValue = 0;
         const entries = list.getEntries();
         entries.forEach((entry: any) => {

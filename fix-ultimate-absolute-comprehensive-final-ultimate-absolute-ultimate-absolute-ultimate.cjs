@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Absolute Comprehensive Final Ultimate Absolute Ultimate Absolute Ultimate Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Absolute Comprehensive Final Ultimate Absolute Ultimate Absolute Ultimate Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix sync metrics file - rewrite completely
@@ -48,19 +50,20 @@ if (fs.existsSync(syncTalentMobilityPath)) {
     '  const body = { ...event, propagate: false };'
   );
   fs.writeFileSync(syncTalentMobilityPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/sync/talent-mobility.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/sync/talent-mobility.ts'
+  );
 }
 // Fix sync token-transfer file
 const syncTokenTransferPath = '/workspace/pages/api/sync/token-transfer.ts';
 if (fs.existsSync(syncTokenTransferPath)) {
   let content = fs.readFileSync(syncTokenTransferPath, 'utf8');
   // Fix the syntax error
-  content = content.replace(
-    '  upsertEvent,;',
-    '  upsertEvent,'
-  );
+  content = content.replace('  upsertEvent,;', '  upsertEvent,');
   fs.writeFileSync(syncTokenTransferPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/sync/token-transfer.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/sync/token-transfer.ts'
+  );
 }
 // Fix talent-response-log file
 const talentResponseLogPath = '/workspace/pages/api/talent-response-log.ts';
@@ -71,7 +74,9 @@ if (fs.existsSync(talentResponseLogPath)) {
     content += '\n}';
   }
   fs.writeFileSync(talentResponseLogPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/talent-response-log.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/talent-response-log.ts'
+  );
 }
 // Fix telemetry search file - rewrite completely
 const telemetrySearchPath = '/workspace/pages/api/telemetry/search.ts';
@@ -96,9 +101,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).end('Method Not Allowed');
 }`;
 fs.writeFileSync(telemetrySearchPath, telemetrySearchContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/telemetry/search.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/telemetry/search.ts'
+);
 console.log('');
-console.log('📊 ULTIMATE ABSOLUTE COMPREHENSIVE FINAL ULTIMATE ABSOLUTE ULTIMATE ABSOLUTE ULTIMATE FIX REPORT');
+console.log(
+  '📊 ULTIMATE ABSOLUTE COMPREHENSIVE FINAL ULTIMATE ABSOLUTE ULTIMATE ABSOLUTE ULTIMATE FIX REPORT'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] =');
 console.log('');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
@@ -106,9 +115,15 @@ console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
 console.log('');
 console.log('✅ Successfully fixed files:');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/sync/metrics.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/sync/talent-mobility.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/sync/token-transfer.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/talent-response-log.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/sync/talent-mobility.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/sync/token-transfer.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/talent-response-log.ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/telemetry/search.ts');
 console.log('');
 // Save report
@@ -121,8 +136,13 @@ const report = {
     'pages/api/sync/talent-mobility.ts',
     'pages/api/sync/token-transfer.ts',
     'pages/api/talent-response-log.ts',
-    'pages/api/telemetry/search.ts'
-  ]
+    'pages/api/telemetry/search.ts',
+  ],
 };
-fs.writeFileSync('/workspace/ultimate-absolute-comprehensive-final-ultimate-absolute-ultimate-absolute-ultimate-fix-report.json', JSON.stringify(report, null, 2));
-console.log('📄 Report saved to ultimate-absolute-comprehensive-final-ultimate-absolute-ultimate-absolute-ultimate-fix-report.json');
+fs.writeFileSync(
+  '/workspace/ultimate-absolute-comprehensive-final-ultimate-absolute-ultimate-absolute-ultimate-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
+console.log(
+  '📄 Report saved to ultimate-absolute-comprehensive-final-ultimate-absolute-ultimate-absolute-ultimate-fix-report.json'
+);

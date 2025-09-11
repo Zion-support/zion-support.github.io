@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
@@ -55,7 +55,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Revolutionary satellite communication with quantum encryption',
     price: '$5,999',
     period: '/month',
-    description: 'Advanced satellite communication platform that uses quantum encryption to provide ultra-secure, high-speed communication for government, military, and enterprise applications.',
+    description:
+      'Advanced satellite communication platform that uses quantum encryption to provide ultra-secure, high-speed communication for government, military, and enterprise applications.',
     features: [
       'Quantum key distribution via satellite',
       'Ultra-secure communication channels',
@@ -65,7 +66,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Quantum-resistant protocols',
       'Multi-satellite coordination',
       'Ground station integration',
-      'Compliance with space regulations'
+      'Compliance with space regulations',
     ],
     popular: true,
     icon: '🛰️⚛️',
@@ -73,14 +74,21 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-enhanced-satellite-communication',
     marketPosition: 'First quantum-secure satellite communication network',
-    targetAudience: 'Government agencies, military, telecommunications, aerospace',
+    targetAudience:
+      'Government agencies, military, telecommunications, aerospace',
     trialDays: 90,
     setupTime: '6 weeks',
     category: 'Space Technology & Quantum',
     realService: true,
     technology: ['Quantum hardware, Satellite systems, QKD protocols'],
-    integrations: ['Ground stations, existing satellite networks, communication systems'],
-    useCases: ['Secure communications', 'military operations', 'government communications'],
+    integrations: [
+      'Ground stations, existing satellite networks, communication systems',
+    ],
+    useCases: [
+      'Secure communications',
+      'military operations',
+      'government communications',
+    ],
     roi: 'Provide unbreakable security and reduce communication costs by 30%',
     competitors: ['Iridium, Globalstar, Inmarsat'],
     marketSize: '$25B+ satellite communication market by 2030',
@@ -88,11 +96,12 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     variant: 'space-quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum satellite network with ground station infrastructure',
+    implementationDetails:
+      'Quantum satellite network with ground station infrastructure',
     launchDate: '2026-12-15',
     customers: 8,
     rating: 4.9,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'ai-powered-space-debris-tracking',
@@ -100,7 +109,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Track and manage space debris with AI precision',
     price: '$1,299',
     period: '/month',
-    description: 'Comprehensive space debris tracking platform that uses AI and advanced sensors to monitor, predict, and manage space debris to ensure satellite safety and orbital sustainability.',
+    description:
+      'Comprehensive space debris tracking platform that uses AI and advanced sensors to monitor, predict, and manage space debris to ensure satellite safety and orbital sustainability.',
     features: [
       'AI-powered debris detection',
       'Real-time tracking and monitoring',
@@ -110,7 +120,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Debris removal planning',
       'Regulatory compliance reporting',
       'Multi-sensor integration',
-      'Global monitoring network'
+      'Global monitoring network',
     ],
     popular: true,
     icon: '🛸🤖',
@@ -124,8 +134,14 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     category: 'Space Safety & AI',
     realService: true,
     technology: ['AI/ML, Computer Vision, Sensor networks, Orbital mechanics'],
-    integrations: ['Satellite tracking systems, ground stations, space agency databases'],
-    useCases: ['Space debris monitoring', 'collision avoidance', 'orbital safety'],
+    integrations: [
+      'Satellite tracking systems, ground stations, space agency databases',
+    ],
+    useCases: [
+      'Space debris monitoring',
+      'collision avoidance',
+      'orbital safety',
+    ],
     roi: 'Prevent satellite collisions and reduce insurance costs by 40%',
     competitors: ['LeoLabs, Space-Track, ESA DISCOS'],
     marketSize: '$8B+ space situational awareness market by 2030',
@@ -137,7 +153,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     launchDate: '2026-05-20',
     customers: 45,
     rating: 4.7,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'quantum-enhanced-space-weather-forecasting',
@@ -145,7 +161,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Predict space weather with quantum computing precision',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced space weather forecasting platform that uses quantum computing to model solar storms, geomagnetic events, and space weather phenomena to protect satellites and infrastructure.',
+    description:
+      'Advanced space weather forecasting platform that uses quantum computing to model solar storms, geomagnetic events, and space weather phenomena to protect satellites and infrastructure.',
     features: [
       'Quantum-enhanced solar storm modeling',
       'Real-time space weather monitoring',
@@ -155,7 +172,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Historical data analysis',
       'Multi-model ensemble forecasting',
       'API for integration',
-      'Custom alert systems'
+      'Custom alert systems',
     ],
     popular: true,
     icon: '☀️⚛️',
@@ -170,7 +187,11 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     realService: true,
     technology: ['Quantum algorithms, Solar physics models, Machine Learning'],
     integrations: ['Solar observatories, satellite data, ground-based sensors'],
-    useCases: ['Space weather prediction', 'satellite protection', 'infrastructure safety'],
+    useCases: [
+      'Space weather prediction',
+      'satellite protection',
+      'infrastructure safety',
+    ],
     roi: 'Improve space weather prediction accuracy by 35% and prevent satellite damage',
     competitors: ['NOAA Space Weather, ESA Space Weather, NASA'],
     marketSize: '$12B+ space weather market by 2030',
@@ -182,7 +203,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     launchDate: '2026-08-10',
     customers: 23,
     rating: 4.8,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'ai-powered-satellite-constellation-management',
@@ -190,7 +211,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Manage satellite constellations with AI intelligence',
     price: '$3,499',
     period: '/month',
-    description: 'Comprehensive satellite constellation management platform that uses AI to optimize orbital positions, coordinate communications, and manage large fleets of satellites efficiently.',
+    description:
+      'Comprehensive satellite constellation management platform that uses AI to optimize orbital positions, coordinate communications, and manage large fleets of satellites efficiently.',
     features: [
       'AI-powered orbital optimization',
       'Constellation coordination algorithms',
@@ -200,7 +222,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Performance analytics dashboard',
       'Multi-constellation support',
       'Regulatory compliance tools',
-      'API for ground control integration'
+      'API for ground control integration',
     ],
     popular: true,
     icon: '🛰️🤖',
@@ -213,9 +235,17 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     setupTime: '4 weeks',
     category: 'Satellite Management & AI',
     realService: true,
-    technology: ['AI/ML, Orbital mechanics, Distributed systems, Cloud computing'],
-    integrations: ['Ground control systems, satellite networks, communication platforms'],
-    useCases: ['Constellation management', 'orbital optimization', 'communication coordination'],
+    technology: [
+      'AI/ML, Orbital mechanics, Distributed systems, Cloud computing',
+    ],
+    integrations: [
+      'Ground control systems, satellite networks, communication platforms',
+    ],
+    useCases: [
+      'Constellation management',
+      'orbital optimization',
+      'communication coordination',
+    ],
     roi: 'Improve constellation efficiency by 25% and reduce operational costs by 30%',
     competitors: ['Lockheed Martin, Boeing, Airbus Defence and Space'],
     marketSize: '$18B+ satellite management market by 2030',
@@ -227,7 +257,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     launchDate: '2026-06-15',
     customers: 31,
     rating: 4.6,
-    reviews: 26
+    reviews: 26,
   },
   {
     id: 'quantum-enhanced-space-mining-operations',
@@ -235,7 +265,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Optimize space mining with quantum computing power',
     price: '$4,999',
     period: '/month',
-    description: 'Advanced space mining operations platform that uses quantum computing to analyze asteroid composition, optimize mining strategies, and manage resource extraction in space.',
+    description:
+      'Advanced space mining operations platform that uses quantum computing to analyze asteroid composition, optimize mining strategies, and manage resource extraction in space.',
     features: [
       'Quantum-enhanced asteroid analysis',
       'Mining strategy optimization',
@@ -245,7 +276,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Safety and risk assessment',
       'Regulatory compliance tracking',
       'Economic feasibility analysis',
-      'Multi-asteroid mission planning'
+      'Multi-asteroid mission planning',
     ],
     popular: true,
     icon: '⚛️⛏️',
@@ -253,13 +284,16 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/quantum-enhanced-space-mining-operations',
     marketPosition: 'First quantum-powered space mining operations platform',
-    targetAudience: 'Space mining companies, asteroid mining startups, space agencies',
+    targetAudience:
+      'Space mining companies, asteroid mining startups, space agencies',
     trialDays: 90,
     setupTime: '6 weeks',
     category: 'Space Mining & Quantum',
     realService: true,
     technology: ['Quantum algorithms, Mining engineering, Robotics, AI/ML'],
-    integrations: ['Spacecraft systems, mining equipment, ground control stations'],
+    integrations: [
+      'Spacecraft systems, mining equipment, ground control stations',
+    ],
     useCases: ['Asteroid mining', 'resource extraction', 'mission planning'],
     roi: 'Optimize mining operations and increase resource recovery by 40%',
     competitors: ['Planetary Resources, Deep Space Industries, AstroForge'],
@@ -268,11 +302,12 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     variant: 'space-quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-enhanced space mining optimization platform',
+    implementationDetails:
+      'Quantum-enhanced space mining optimization platform',
     launchDate: '2026-11-20',
     customers: 12,
     rating: 4.9,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'ai-powered-space-tourism-platform',
@@ -280,7 +315,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Revolutionize space tourism with AI-powered experiences',
     price: '$1,999',
     period: '/month',
-    description: 'Comprehensive space tourism platform that uses AI to personalize space travel experiences, manage bookings, and provide immersive virtual reality previews of space destinations.',
+    description:
+      'Comprehensive space tourism platform that uses AI to personalize space travel experiences, manage bookings, and provide immersive virtual reality previews of space destinations.',
     features: [
       'AI-powered travel personalization',
       'Virtual reality space previews',
@@ -290,7 +326,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Multi-destination planning',
       'Integration with space companies',
       'Customer support automation',
-      'Marketing and sales tools'
+      'Marketing and sales tools',
     ],
     popular: true,
     icon: '🚀🤖',
@@ -298,14 +334,19 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-powered-space-tourism-platform',
     marketPosition: 'Leading AI-powered space tourism platform',
-    targetAudience: 'Space tourism companies, travel agencies, adventure seekers',
+    targetAudience:
+      'Space tourism companies, travel agencies, adventure seekers',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Space Tourism & AI',
     realService: true,
     technology: ['AI/ML, Virtual Reality, Booking systems, Customer analytics'],
     integrations: ['Space companies, travel platforms, payment systems'],
-    useCases: ['Space tourism booking', 'experience personalization', 'customer management'],
+    useCases: [
+      'Space tourism booking',
+      'experience personalization',
+      'customer management',
+    ],
     roi: 'Increase booking conversion by 35% and improve customer satisfaction by 40%',
     competitors: ['Virgin Galactic, Blue Origin, Space Adventures'],
     marketSize: '$20B+ space tourism market by 2030',
@@ -317,7 +358,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     launchDate: '2026-07-25',
     customers: 89,
     rating: 4.7,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'quantum-enhanced-space-navigation-system',
@@ -325,7 +366,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Navigate space with quantum precision',
     price: '$3,999',
     period: '/month',
-    description: 'Advanced space navigation system that uses quantum sensors and algorithms to provide ultra-precise positioning, navigation, and timing for spacecraft and satellites.',
+    description:
+      'Advanced space navigation system that uses quantum sensors and algorithms to provide ultra-precise positioning, navigation, and timing for spacecraft and satellites.',
     features: [
       'Quantum-enhanced positioning',
       'Ultra-precise navigation algorithms',
@@ -335,7 +377,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Quantum sensor integration',
       'Performance analytics',
       'API for spacecraft integration',
-      'Ground station coordination'
+      'Ground station coordination',
     ],
     popular: true,
     icon: '🧭⚛️',
@@ -343,14 +385,19 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-enhanced-space-navigation-system',
     marketPosition: 'First quantum-powered space navigation system',
-    targetAudience: 'Space agencies, satellite operators, spacecraft manufacturers',
+    targetAudience:
+      'Space agencies, satellite operators, spacecraft manufacturers',
     trialDays: 60,
     setupTime: '5 weeks',
     category: 'Space Navigation & Quantum',
     realService: true,
     technology: ['Quantum sensors, Navigation algorithms, Orbital mechanics'],
     integrations: ['Spacecraft systems, ground stations, satellite networks'],
-    useCases: ['Spacecraft navigation', 'satellite positioning', 'mission planning'],
+    useCases: [
+      'Spacecraft navigation',
+      'satellite positioning',
+      'mission planning',
+    ],
     roi: 'Improve navigation accuracy by 50% and reduce fuel consumption by 25%',
     competitors: ['NASA Deep Space Network, ESA Navigation, GPS'],
     marketSize: '$10B+ space navigation market by 2030',
@@ -362,7 +409,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     launchDate: '2026-09-30',
     customers: 18,
     rating: 4.8,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'ai-powered-space-research-collaboration',
@@ -370,7 +417,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Collaborate on space research with AI-powered tools',
     price: '$899',
     period: '/month',
-    description: 'Comprehensive space research collaboration platform that uses AI to connect researchers, share data, and coordinate international space research projects.',
+    description:
+      'Comprehensive space research collaboration platform that uses AI to connect researchers, share data, and coordinate international space research projects.',
     features: [
       'AI-powered researcher matching',
       'Collaborative project management',
@@ -380,7 +428,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Publication and citation tracking',
       'Multi-language support',
       'Regulatory compliance tools',
-      'Integration with research databases'
+      'Integration with research databases',
     ],
     popular: true,
     icon: '🔬🤖',
@@ -394,8 +442,14 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     category: 'Space Research & AI',
     realService: true,
     technology: ['AI/ML, Collaboration tools, Data analytics, Cloud computing'],
-    integrations: ['Research databases, publication platforms, funding systems'],
-    useCases: ['Research collaboration', 'data sharing', 'project coordination'],
+    integrations: [
+      'Research databases, publication platforms, funding systems',
+    ],
+    useCases: [
+      'Research collaboration',
+      'data sharing',
+      'project coordination',
+    ],
     roi: 'Increase research collaboration by 40% and accelerate discoveries by 30%',
     competitors: ['ResearchGate, Academia.edu, Mendeley'],
     marketSize: '$8B+ research collaboration market by 2030',
@@ -407,7 +461,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     launchDate: '2026-04-15',
     customers: 156,
     rating: 4.6,
-    reviews: 134
+    reviews: 134,
   },
   {
     id: 'quantum-enhanced-space-robotics-platform',
@@ -415,7 +469,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Control space robots with quantum computing precision',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced space robotics platform that uses quantum computing to control autonomous robots, optimize robotic operations, and coordinate complex space missions.',
+    description:
+      'Advanced space robotics platform that uses quantum computing to control autonomous robots, optimize robotic operations, and coordinate complex space missions.',
     features: [
       'Quantum-enhanced robot control',
       'Autonomous mission planning',
@@ -425,7 +480,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Performance optimization',
       'Safety and risk management',
       'Mission simulation tools',
-      'API for robot integration'
+      'API for robot integration',
     ],
     popular: true,
     icon: '🤖⚛️',
@@ -433,14 +488,19 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-enhanced-space-robotics-platform',
     marketPosition: 'First quantum-powered space robotics platform',
-    targetAudience: 'Space agencies, robotics companies, space exploration companies',
+    targetAudience:
+      'Space agencies, robotics companies, space exploration companies',
     trialDays: 60,
     setupTime: '4 weeks',
     category: 'Space Robotics & Quantum',
     realService: true,
     technology: ['Quantum algorithms, Robotics, AI/ML, Control systems'],
     integrations: ['Robot hardware, ground control stations, mission systems'],
-    useCases: ['Space robotics control', 'autonomous missions', 'robotic coordination'],
+    useCases: [
+      'Space robotics control',
+      'autonomous missions',
+      'robotic coordination',
+    ],
     roi: 'Improve robotic performance by 35% and reduce mission failures by 40%',
     competitors: ['NASA Robotics, ESA Robotics, JAXA Robotics'],
     marketSize: '$12B+ space robotics market by 2030',
@@ -452,7 +512,7 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     launchDate: '2026-10-20',
     customers: 25,
     rating: 4.7,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'ai-powered-space-infrastructure-monitoring',
@@ -460,7 +520,8 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     tagline: 'Monitor space infrastructure with AI intelligence',
     price: '$1,799',
     period: '/month',
-    description: 'Comprehensive space infrastructure monitoring platform that uses AI to monitor satellites, space stations, and other space assets for maintenance, safety, and performance optimization.',
+    description:
+      'Comprehensive space infrastructure monitoring platform that uses AI to monitor satellites, space stations, and other space assets for maintenance, safety, and performance optimization.',
     features: [
       'AI-powered infrastructure monitoring',
       'Predictive maintenance alerts',
@@ -470,14 +531,15 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
       'Maintenance scheduling',
       'Resource optimization',
       'Compliance reporting',
-      'Integration with existing systems'
+      'Integration with existing systems',
     ],
     popular: true,
     icon: '🏗️🤖',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-400',
     link: 'https://ziontechgroup.com/ai-powered-space-infrastructure-monitoring',
-    marketPosition: 'Leading AI-powered space infrastructure monitoring platform',
+    marketPosition:
+      'Leading AI-powered space infrastructure monitoring platform',
     targetAudience: 'Space agencies, satellite operators, space companies',
     trialDays: 45,
     setupTime: '3 weeks',
@@ -485,7 +547,11 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     realService: true,
     technology: ['AI/ML, IoT sensors, Predictive analytics, Cloud computing'],
     integrations: ['Satellite systems, space stations, ground infrastructure'],
-    useCases: ['Infrastructure monitoring', 'predictive maintenance', 'performance optimization'],
+    useCases: [
+      'Infrastructure monitoring',
+      'predictive maintenance',
+      'performance optimization',
+    ],
     roi: 'Reduce maintenance costs by 30% and improve infrastructure reliability by 25%',
     competitors: ['Lockheed Martin, Boeing, Northrop Grumman'],
     marketSize: '$15B+ space infrastructure market by 2030',
@@ -497,6 +563,6 @@ export const real2036SpaceTechAdditions: Real2036SpaceTechService[] = [
     launchDate: '2026-06-30',
     customers: 42,
     rating: 4.5,
-    reviews: 35
-  }
+    reviews: 35,
+  },
 ];

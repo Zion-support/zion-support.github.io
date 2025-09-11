@@ -12,7 +12,8 @@ export interface ComprehensiveService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string};
+    address: string;
+  };
   link: string;
   icon: string;
   color: string;
@@ -32,12 +33,13 @@ export interface ComprehensiveService {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number;
+}
 
 const contact = {
-  mobile: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
 };
 
 export const comprehensiveExpandedServices: ComprehensiveService[] = [
@@ -48,13 +50,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: 'Predictive customer health scoring with automated interventions',
     price: '$299',
     period: '/month',
-    description: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.',
+    description:
+      'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.',
     features: [
       'Predictive churn scoring',
       'Automated intervention workflows',
       'Customer health dashboards',
       'Integration with CRM systems',
-      'ROI tracking and analytics'
+      'ROI tracking and analytics',
     ],
     category: 'AI & Machine Learning',
     subcategory: 'Customer Success',
@@ -69,9 +72,17 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     targetAudience: 'Customer success teams, SaaS companies',
     trialDays: 21,
     setupTime: '2-3 days',
-    technology: ['Machine Learning', 'Predictive Analytics', 'Workflow Automation'],
+    technology: [
+      'Machine Learning',
+      'Predictive Analytics',
+      'Workflow Automation',
+    ],
     integrations: ['Salesforce', 'HubSpot', 'Intercom', 'Zendesk'],
-    useCases: ['Churn prevention', 'Customer health monitoring', 'Automated retention'],
+    useCases: [
+      'Churn prevention',
+      'Customer health monitoring',
+      'Automated retention',
+    ],
     roi: 'Reduces churn by 25-40%',
     competitors: ['Gainsight', 'Totango', 'ChurnZero'],
     marketSize: '$2.8B customer success platform market',
@@ -79,20 +90,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 85,
     rating: 4.8,
-    reviews: 47
-  }, {
+    reviews: 47,
+  },
+  {
     id: 'ai-powered-sales-intelligence',
     name: 'AI Sales Intelligence Platform',
     tagline: 'Real-time sales coaching and opportunity scoring',
     price: '$199',
     period: '/month',
-    description: 'Intelligent sales platform that analyzes calls, emails, and meetings to provide real-time coaching and opportunity insights.',
+    description:
+      'Intelligent sales platform that analyzes calls, emails, and meetings to provide real-time coaching and opportunity insights.',
     features: [
       'Call transcription and analysis',
       'Real-time sales coaching',
       'Opportunity scoring',
       'Competitor tracking',
-      'Sales performance analytics'
+      'Sales performance analytics',
     ],
     category: 'AI & Machine Learning',
     subcategory: 'Sales Intelligence',
@@ -107,7 +120,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     targetAudience: 'Sales teams, B2B companies',
     trialDays: 14,
     setupTime: '1 week',
-    technology: ['Natural Language Processing', 'Speech Recognition', 'Machine Learning'],
+    technology: [
+      'Natural Language Processing',
+      'Speech Recognition',
+      'Machine Learning',
+    ],
     integrations: ['Salesforce', 'HubSpot', 'Zoom', 'Teams'],
     useCases: ['Sales coaching', 'Call analysis', 'Opportunity management'],
     roi: 'Increases win rates by 30%',
@@ -117,20 +134,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 62,
     rating: 4.6,
-    reviews: 38
-  }, {
+    reviews: 38,
+  },
+  {
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
     tagline: 'Dynamic content adaptation based on user behavior',
     price: '$149',
     period: '/month',
-    description: 'AI engine that automatically personalizes website content, emails, and marketing materials based on user behavior and preferences.',
+    description:
+      'AI engine that automatically personalizes website content, emails, and marketing materials based on user behavior and preferences.',
     features: [
       'Real-time content adaptation',
       'Behavioral analysis',
       'A/B testing automation',
       'Personalization rules engine',
-      'Performance analytics'
+      'Performance analytics',
     ],
     category: 'AI & Machine Learning',
     subcategory: 'Content Marketing',
@@ -145,9 +164,17 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     targetAudience: 'Marketing teams, E-commerce companies',
     trialDays: 30,
     setupTime: '1-2 weeks',
-    technology: ['Machine Learning', 'Behavioral Analytics', 'Content Optimization'],
+    technology: [
+      'Machine Learning',
+      'Behavioral Analytics',
+      'Content Optimization',
+    ],
     integrations: ['Shopify', 'WordPress', 'Mailchimp', 'HubSpot'],
-    useCases: ['Website personalization', 'Email marketing', 'Product recommendations'],
+    useCases: [
+      'Website personalization',
+      'Email marketing',
+      'Product recommendations',
+    ],
     roi: 'Increases conversion rates by 35%',
     competitors: ['Optimizely', 'Dynamic Yield', 'Evergage'],
     marketSize: '$1.2B personalization market',
@@ -155,7 +182,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-20',
     customers: 73,
     rating: 4.7,
-    reviews: 41
+    reviews: 41,
   },
 
   // Cloud & Infrastructure Services
@@ -165,13 +192,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: 'AI-driven cloud spending optimization and FinOps automation',
     price: '$399',
     period: '/month',
-    description: 'Intelligent platform that automatically optimizes cloud costs across AWS, Azure, and GCP using machine learning and predictive analytics.',
+    description:
+      'Intelligent platform that automatically optimizes cloud costs across AWS, Azure, and GCP using machine learning and predictive analytics.',
     features: [
       'Multi-cloud cost optimization',
       'Predictive cost forecasting',
       'Automated resource scaling',
       'Waste detection and elimination',
-      'FinOps reporting and analytics'
+      'FinOps reporting and analytics',
     ],
     category: 'Cloud & Infrastructure',
     subcategory: 'Cost Optimization',
@@ -188,7 +216,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     setupTime: '2-3 weeks',
     technology: ['Machine Learning', 'Cloud APIs', 'Predictive Analytics'],
     integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform'],
-    useCases: ['Cloud cost optimization', 'FinOps automation', 'Resource management'],
+    useCases: [
+      'Cloud cost optimization',
+      'FinOps automation',
+      'Resource management',
+    ],
     roi: 'Reduces cloud costs by 25-40%',
     competitors: ['CloudHealth', 'CloudCheckr', 'Apptio'],
     marketSize: '$3.2B cloud management market',
@@ -196,20 +228,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-10',
     customers: 128,
     rating: 4.9,
-    reviews: 89
-  }, {
+    reviews: 89,
+  },
+  {
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero-trust architecture implementation',
     price: '$599',
     period: '/month',
-    description: 'Enterprise-grade zero-trust security platform that implements continuous verification and least-privilege access across all systems.',
+    description:
+      'Enterprise-grade zero-trust security platform that implements continuous verification and least-privilege access across all systems.',
     features: [
       'Identity verification and management',
       'Continuous monitoring and analytics',
       'Micro-segmentation',
       'Threat detection and response',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     category: 'Cloud & Infrastructure',
     subcategory: 'Security',
@@ -224,7 +258,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     targetAudience: 'Security teams, Enterprise companies',
     trialDays: 21,
     setupTime: '3-4 weeks',
-    technology: ['Zero Trust Architecture', 'Identity Management', 'Threat Detection'],
+    technology: [
+      'Zero Trust Architecture',
+      'Identity Management',
+      'Threat Detection',
+    ],
     integrations: ['Active Directory', 'Okta', 'CrowdStrike', 'Splunk'],
     useCases: ['Enterprise security', 'Compliance', 'Threat prevention'],
     roi: 'Reduces security incidents by 60%',
@@ -234,20 +272,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-05',
     customers: 156,
     rating: 4.8,
-    reviews: 112
-  }, {
+    reviews: 112,
+  },
+  {
     id: 'kubernetes-autonomous-operations',
     name: 'Kubernetes Autonomous Operations',
     tagline: 'Self-healing Kubernetes clusters with AI-driven optimization',
     price: '$299',
     period: '/month',
-    description: 'AI-powered Kubernetes management platform that automatically optimizes, scales, and heals clusters while providing comprehensive monitoring.',
+    description:
+      'AI-powered Kubernetes management platform that automatically optimizes, scales, and heals clusters while providing comprehensive monitoring.',
     features: [
       'Autonomous cluster optimization',
       'Self-healing capabilities',
       'Intelligent scaling',
       'Performance monitoring',
-      'Cost optimization'
+      'Cost optimization',
     ],
     category: 'Cloud & Infrastructure',
     subcategory: 'Container Management',
@@ -264,7 +304,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     setupTime: '2-3 weeks',
     technology: ['Kubernetes', 'Machine Learning', 'Automation'],
     integrations: ['AWS EKS', 'Azure AKS', 'GCP GKE', 'Rancher'],
-    useCases: ['Kubernetes management', 'DevOps automation', 'Platform operations'],
+    useCases: [
+      'Kubernetes management',
+      'DevOps automation',
+      'Platform operations',
+    ],
     roi: 'Reduces operational overhead by 40%',
     competitors: ['Rancher', 'Platform9', 'D2iQ'],
     marketSize: '$2.1B Kubernetes management market',
@@ -272,7 +316,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-15',
     customers: 94,
     rating: 4.7,
-    reviews: 67
+    reviews: 67,
   },
 
   // Data & Analytics Services
@@ -282,13 +326,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: 'Streaming data processing with real-time analytics',
     price: '$449',
     period: '/month',
-    description: 'High-performance streaming data platform that processes millions of events per second with real-time analytics and machine learning capabilities.',
+    description:
+      'High-performance streaming data platform that processes millions of events per second with real-time analytics and machine learning capabilities.',
     features: [
       'Real-time stream processing',
       'ML model serving',
       'Data quality monitoring',
       'Scalable architecture',
-      'Real-time dashboards'
+      'Real-time dashboards',
     ],
     category: 'Data & Analytics',
     subcategory: 'Streaming Analytics',
@@ -313,20 +358,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-25',
     customers: 78,
     rating: 4.8,
-    reviews: 56
-  }, {
+    reviews: 56,
+  },
+  {
     id: 'ai-powered-business-intelligence',
     name: 'AI-Powered Business Intelligence',
     tagline: 'Intelligent insights and automated reporting',
     price: '$199',
     period: '/month',
-    description: 'AI-driven BI platform that automatically generates insights, creates reports, and provides predictive analytics without manual intervention.',
+    description:
+      'AI-driven BI platform that automatically generates insights, creates reports, and provides predictive analytics without manual intervention.',
     features: [
       'Automated insight generation',
       'Natural language queries',
       'Predictive analytics',
       'Automated reporting',
-      'Data storytelling'
+      'Data storytelling',
     ],
     category: 'Data & Analytics',
     subcategory: 'Business Intelligence',
@@ -341,7 +388,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     targetAudience: 'Business analysts, Data teams',
     trialDays: 21,
     setupTime: '1-2 weeks',
-    technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics'],
+    technology: [
+      'Machine Learning',
+      'Natural Language Processing',
+      'Predictive Analytics',
+    ],
     integrations: ['Snowflake', 'BigQuery', 'Redshift', 'Tableau'],
     useCases: ['Business reporting', 'Data analysis', 'Performance monitoring'],
     roi: 'Reduces analysis time by 70%',
@@ -351,7 +402,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-10',
     customers: 112,
     rating: 4.6,
-    reviews: 78
+    reviews: 78,
   },
 
   // Developer Tools & DevOps
@@ -361,13 +412,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: 'Automated code quality analysis and improvement suggestions',
     price: '$99',
     period: '/month',
-    description: 'Intelligent code review platform that automatically analyzes code quality, suggests improvements, and identifies potential security vulnerabilities.',
+    description:
+      'Intelligent code review platform that automatically analyzes code quality, suggests improvements, and identifies potential security vulnerabilities.',
     features: [
       'Automated code analysis',
       'Security vulnerability detection',
       'Code quality scoring',
       'Improvement suggestions',
-      'Team collaboration tools'
+      'Team collaboration tools',
     ],
     category: 'Developer Tools & DevOps',
     subcategory: 'Code Quality',
@@ -392,20 +444,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-20',
     customers: 156,
     rating: 4.7,
-    reviews: 98
-  }, {
+    reviews: 98,
+  },
+  {
     id: 'autonomous-deployment-platform',
     name: 'Autonomous Deployment Platform',
     tagline: 'Self-managing CI/CD with intelligent rollback and monitoring',
     price: '$349',
     period: '/month',
-    description: 'AI-powered deployment platform that automatically manages CI/CD pipelines, monitors deployments, and intelligently rolls back when issues are detected.',
+    description:
+      'AI-powered deployment platform that automatically manages CI/CD pipelines, monitors deployments, and intelligently rolls back when issues are detected.',
     features: [
       'Automated CI/CD management',
       'Intelligent rollback',
       'Performance monitoring',
       'Deployment analytics',
-      'Team collaboration'
+      'Team collaboration',
     ],
     category: 'Developer Tools & DevOps',
     subcategory: 'Deployment',
@@ -422,7 +476,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     setupTime: '2-3 weeks',
     technology: ['Machine Learning', 'CI/CD Automation', 'Monitoring'],
     integrations: ['Jenkins', 'GitHub Actions', 'GitLab CI', 'ArgoCD'],
-    useCases: ['CI/CD automation', 'Deployment management', 'Release automation'],
+    useCases: [
+      'CI/CD automation',
+      'Deployment management',
+      'Release automation',
+    ],
     roi: 'Reduces deployment failures by 60%',
     competitors: ['Spinnaker', 'ArgoCD', 'Tekton'],
     marketSize: '$1.2B CI/CD market',
@@ -430,7 +488,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-30',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
 
   // Industry-Specific Solutions
@@ -440,13 +498,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: 'Automated HIPAA compliance and medical data security',
     price: '$799',
     period: '/month',
-    description: 'AI-powered platform that automatically ensures HIPAA compliance, monitors data access, and provides audit trails for healthcare organizations.',
+    description:
+      'AI-powered platform that automatically ensures HIPAA compliance, monitors data access, and provides audit trails for healthcare organizations.',
     features: [
       'HIPAA compliance automation',
       'Data access monitoring',
       'Audit trail generation',
       'Security incident detection',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     category: 'Industry Solutions',
     subcategory: 'Healthcare',
@@ -471,20 +530,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 45,
     rating: 4.9,
-    reviews: 34
-  }, {
+    reviews: 34,
+  },
+  {
     id: 'fintech-fraud-detection-ai',
     name: 'FinTech Fraud Detection AI',
     tagline: 'Real-time fraud detection for financial transactions',
     price: '$599',
     period: '/month',
-    description: 'Advanced AI platform that detects fraudulent transactions in real-time using machine learning and behavioral analysis for financial institutions.',
+    description:
+      'Advanced AI platform that detects fraudulent transactions in real-time using machine learning and behavioral analysis for financial institutions.',
     features: [
       'Real-time fraud detection',
       'Behavioral analysis',
       'Risk scoring',
       'Transaction monitoring',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     category: 'Industry Solutions',
     subcategory: 'FinTech',
@@ -499,7 +560,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     targetAudience: 'Banks, Payment processors, FinTech companies',
     trialDays: 30,
     setupTime: '3-4 weeks',
-    technology: ['Machine Learning', 'Real-time Processing', 'Behavioral Analytics'],
+    technology: [
+      'Machine Learning',
+      'Real-time Processing',
+      'Behavioral Analytics',
+    ],
     integrations: ['Stripe', 'Square', 'PayPal', 'Bank APIs'],
     useCases: ['Fraud detection', 'Risk management', 'Compliance'],
     roi: 'Reduces fraud losses by 80%',
@@ -509,7 +574,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 67,
     rating: 4.8,
-    reviews: 52
+    reviews: 52,
   },
 
   // Micro SaaS Services
@@ -519,13 +584,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: 'Intelligent email marketing with AI-powered personalization',
     price: '$79',
     period: '/month',
-    description: 'Complete email marketing automation platform with AI-driven content generation, send time optimization, and behavioral targeting.',
+    description:
+      'Complete email marketing automation platform with AI-driven content generation, send time optimization, and behavioral targeting.',
     features: [
       'AI content generation',
       'Send time optimization',
       'Behavioral targeting',
       'A/B testing automation',
-      'Advanced analytics'
+      'Advanced analytics',
     ],
     category: 'Micro SaaS',
     subcategory: 'Email Marketing',
@@ -550,20 +616,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-20',
     customers: 234,
     rating: 4.8,
-    reviews: 156
-  }, {
+    reviews: 156,
+  },
+  {
     id: 'smart-inventory-management',
     name: 'Smart Inventory Management',
     tagline: 'AI-powered inventory optimization and demand forecasting',
     price: '$149',
     period: '/month',
-    description: 'Intelligent inventory management system that predicts demand, optimizes stock levels, and prevents stockouts using machine learning.',
+    description:
+      'Intelligent inventory management system that predicts demand, optimizes stock levels, and prevents stockouts using machine learning.',
     features: [
       'Demand forecasting',
       'Stock optimization',
       'Reorder automation',
       'Multi-location support',
-      'Real-time analytics'
+      'Real-time analytics',
     ],
     category: 'Micro SaaS',
     subcategory: 'Inventory Management',
@@ -588,20 +656,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 189,
     rating: 4.7,
-    reviews: 134
-  }, {
+    reviews: 134,
+  },
+  {
     id: 'ai-customer-support-chatbot',
     name: 'AI Customer Support Chatbot',
     tagline: 'Intelligent chatbot with natural language understanding',
     price: '$99',
     period: '/month',
-    description: 'Advanced AI chatbot that handles customer inquiries, provides instant support, and escalates complex issues to human agents.',
+    description:
+      'Advanced AI chatbot that handles customer inquiries, provides instant support, and escalates complex issues to human agents.',
     features: [
       'Natural language processing',
       'Multi-language support',
       'Integration with CRM',
       'Analytics dashboard',
-      'Custom training'
+      'Custom training',
     ],
     category: 'Micro SaaS',
     subcategory: 'Customer Support',
@@ -626,20 +696,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-10',
     customers: 312,
     rating: 4.6,
-    reviews: 198
-  }, {
+    reviews: 198,
+  },
+  {
     id: 'automated-social-media-manager',
     name: 'Automated Social Media Manager',
     tagline: 'AI-powered social media scheduling and content optimization',
     price: '$69',
     period: '/month',
-    description: 'Intelligent social media management platform that schedules posts, optimizes content, and analyzes performance across all platforms.',
+    description:
+      'Intelligent social media management platform that schedules posts, optimizes content, and analyzes performance across all platforms.',
     features: [
       'AI content optimization',
       'Multi-platform scheduling',
       'Hashtag research',
       'Performance analytics',
-      'Competitor analysis'
+      'Competitor analysis',
     ],
     category: 'Micro SaaS',
     subcategory: 'Social Media',
@@ -656,7 +728,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     setupTime: '1-2 days',
     technology: ['AI/ML', 'Social Media APIs', 'Content Analysis'],
     integrations: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn'],
-    useCases: ['Social media management', 'Content optimization', 'Engagement tracking'],
+    useCases: [
+      'Social media management',
+      'Content optimization',
+      'Engagement tracking',
+    ],
     roi: 'Increases engagement by 40%',
     competitors: ['Hootsuite', 'Buffer', 'Sprout Social'],
     marketSize: '$900M social media management market',
@@ -664,7 +740,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 167,
     rating: 4.5,
-    reviews: 112
+    reviews: 112,
   },
 
   // IT Services
@@ -674,13 +750,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: '24/7 IT support and infrastructure management',
     price: '$299',
     period: '/month',
-    description: 'Comprehensive managed IT services including helpdesk support, network monitoring, security management, and cloud migration.',
+    description:
+      'Comprehensive managed IT services including helpdesk support, network monitoring, security management, and cloud migration.',
     features: [
       '24/7 helpdesk support',
       'Network monitoring',
       'Security management',
       'Cloud migration',
-      'Backup and recovery'
+      'Backup and recovery',
     ],
     category: 'IT Services',
     subcategory: 'Managed Services',
@@ -697,7 +774,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     setupTime: '1-2 weeks',
     technology: ['IT Infrastructure', 'Cloud Computing', 'Cybersecurity'],
     integrations: ['Microsoft 365', 'Google Workspace', 'AWS', 'Azure'],
-    useCases: ['IT support', 'Infrastructure management', 'Digital transformation'],
+    useCases: [
+      'IT support',
+      'Infrastructure management',
+      'Digital transformation',
+    ],
     roi: 'Reduces IT costs by 35%',
     competitors: ['ConnectWise', 'Kaseya', 'SolarWinds'],
     marketSize: '$2.8B managed IT services market',
@@ -705,20 +786,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-05',
     customers: 145,
     rating: 4.8,
-    reviews: 98
-  }, {
+    reviews: 98,
+  },
+  {
     id: 'cybersecurity-assessment-platform',
     name: 'Cybersecurity Assessment Platform',
     tagline: 'Comprehensive security audits and compliance monitoring',
     price: '$199',
     period: '/month',
-    description: 'Automated cybersecurity assessment platform that scans for vulnerabilities, monitors compliance, and provides remediation guidance.',
+    description:
+      'Automated cybersecurity assessment platform that scans for vulnerabilities, monitors compliance, and provides remediation guidance.',
     features: [
       'Vulnerability scanning',
       'Compliance monitoring',
       'Security reporting',
       'Remediation guidance',
-      'Risk assessment'
+      'Risk assessment',
     ],
     category: 'IT Services',
     subcategory: 'Cybersecurity',
@@ -743,20 +826,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-12',
     customers: 98,
     rating: 4.7,
-    reviews: 67
-  }, {
+    reviews: 67,
+  },
+  {
     id: 'cloud-migration-consulting',
     name: 'Cloud Migration Consulting',
     tagline: 'Expert cloud migration and optimization services',
     price: '$499',
     period: '/month',
-    description: 'Professional cloud migration services including assessment, planning, execution, and optimization for AWS, Azure, and GCP.',
+    description:
+      'Professional cloud migration services including assessment, planning, execution, and optimization for AWS, Azure, and GCP.',
     features: [
       'Migration assessment',
       'Architecture planning',
       'Data migration',
       'Application modernization',
-      'Cost optimization'
+      'Cost optimization',
     ],
     category: 'IT Services',
     subcategory: 'Cloud Consulting',
@@ -773,7 +858,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     setupTime: '2-4 weeks',
     technology: ['Cloud Computing', 'DevOps', 'Infrastructure as Code'],
     integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes'],
-    useCases: ['Cloud migration', 'Digital transformation', 'Cost optimization'],
+    useCases: [
+      'Cloud migration',
+      'Digital transformation',
+      'Cost optimization',
+    ],
     roi: 'Reduces infrastructure costs by 40%',
     competitors: ['Accenture', 'Deloitte', 'IBM'],
     marketSize: '$3.2B cloud consulting market',
@@ -781,7 +870,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-25',
     customers: 67,
     rating: 4.9,
-    reviews: 45
+    reviews: 45,
   },
 
   // Advanced AI Services
@@ -791,13 +880,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: 'Intelligent document extraction and data processing',
     price: '$179',
     period: '/month',
-    description: 'Advanced AI platform that extracts data from documents, processes forms, and automates document workflows using OCR and NLP.',
+    description:
+      'Advanced AI platform that extracts data from documents, processes forms, and automates document workflows using OCR and NLP.',
     features: [
       'OCR and text extraction',
       'Form processing',
       'Data validation',
       'Workflow automation',
-      'API integration'
+      'API integration',
     ],
     category: 'AI & Machine Learning',
     subcategory: 'Document Processing',
@@ -822,20 +912,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-18',
     customers: 156,
     rating: 4.8,
-    reviews: 89
-  }, {
+    reviews: 89,
+  },
+  {
     id: 'ai-predictive-maintenance',
     name: 'AI Predictive Maintenance',
     tagline: 'Machine learning-powered equipment maintenance prediction',
     price: '$399',
     period: '/month',
-    description: 'AI platform that predicts equipment failures, optimizes maintenance schedules, and reduces downtime using IoT sensors and machine learning.',
+    description:
+      'AI platform that predicts equipment failures, optimizes maintenance schedules, and reduces downtime using IoT sensors and machine learning.',
     features: [
       'Failure prediction',
       'Maintenance scheduling',
       'IoT integration',
       'Cost optimization',
-      'Performance analytics'
+      'Performance analytics',
     ],
     category: 'AI & Machine Learning',
     subcategory: 'Predictive Analytics',
@@ -852,7 +944,11 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     setupTime: '3-4 weeks',
     technology: ['Machine Learning', 'IoT', 'Time Series Analysis'],
     integrations: ['Siemens', 'GE Predix', 'PTC ThingWorx', 'AWS IoT'],
-    useCases: ['Equipment maintenance', 'Downtime reduction', 'Cost optimization'],
+    useCases: [
+      'Equipment maintenance',
+      'Downtime reduction',
+      'Cost optimization',
+    ],
     roi: 'Reduces maintenance costs by 25%',
     competitors: ['GE Digital', 'Siemens', 'PTC'],
     marketSize: '$1.8B predictive maintenance market',
@@ -860,7 +956,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-05',
     customers: 78,
     rating: 4.7,
-    reviews: 56
+    reviews: 56,
   },
 
   // Emerging Technology Services
@@ -870,13 +966,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     tagline: 'Quantum algorithm testing and optimization platform',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced platform for simulating quantum algorithms, optimizing quantum circuits, and preparing for quantum computing adoption.',
+    description:
+      'Advanced platform for simulating quantum algorithms, optimizing quantum circuits, and preparing for quantum computing adoption.',
     features: [
       'Quantum algorithm simulation',
       'Circuit optimization',
       'Performance benchmarking',
       'Quantum education tools',
-      'Research collaboration'
+      'Research collaboration',
     ],
     category: 'Emerging Technology',
     subcategory: 'Quantum Computing',
@@ -891,8 +988,17 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     targetAudience: 'Research institutions, Tech companies, Universities',
     trialDays: 60,
     setupTime: '4-6 weeks',
-    technology: ['Quantum Simulation', 'Algorithm Optimization', 'High Performance Computing'],
-    integrations: ['IBM Qiskit', 'Google Cirq', 'Microsoft Q#', 'Amazon Braket'],
+    technology: [
+      'Quantum Simulation',
+      'Algorithm Optimization',
+      'High Performance Computing',
+    ],
+    integrations: [
+      'IBM Qiskit',
+      'Google Cirq',
+      'Microsoft Q#',
+      'Amazon Braket',
+    ],
     useCases: ['Quantum research', 'Algorithm development', 'Education'],
     roi: 'Accelerates quantum research and development',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum'],
@@ -901,20 +1007,22 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-03-01',
     customers: 23,
     rating: 4.9,
-    reviews: 18
-  }, {
+    reviews: 18,
+  },
+  {
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise-grade blockchain infrastructure and smart contracts',
     price: '$899',
     period: '/month',
-    description: 'Scalable blockchain platform for enterprises with smart contract development, tokenization, and decentralized application support.',
+    description:
+      'Scalable blockchain platform for enterprises with smart contract development, tokenization, and decentralized application support.',
     features: [
       'Enterprise blockchain infrastructure',
       'Smart contract development',
       'Tokenization platform',
       'DApp deployment',
-      'Governance tools'
+      'Governance tools',
     ],
     category: 'Emerging Technology',
     subcategory: 'Blockchain',
@@ -926,7 +1034,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     textColor: 'text-orange-300',
     popular: false,
     marketPosition: 'Enterprise blockchain with comprehensive tooling',
-    targetAudience: 'Enterprises, Financial institutions, Supply chain companies',
+    targetAudience:
+      'Enterprises, Financial institutions, Supply chain companies',
     trialDays: 45,
     setupTime: '6-8 weeks',
     technology: ['Blockchain', 'Smart Contracts', 'Web3', 'DeFi'],
@@ -939,58 +1048,82 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-15',
     customers: 34,
     rating: 4.7,
-    reviews: 28
-  }
+    reviews: 28,
+  },
 ];
 
 export const serviceCategories = [
   {
     name: 'Micro SaaS',
-    description: 'Affordable, specialized software solutions for small businesses',
-    services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
+    description:
+      'Affordable, specialized software solutions for small businesses',
+    services: comprehensiveExpandedServices.filter(
+      s => s.category === 'Micro SaaS'
+    ),
     icon: '💼',
-    color: 'from-blue-600 to-cyan-700'
-  }, {
+    color: 'from-blue-600 to-cyan-700',
+  },
+  {
     name: 'AI & Machine Learning',
     description: 'Intelligent automation and decision-making systems',
-    services: comprehensiveExpandedServices.filter(s => s.category === 'AI & Machine Learning'),
+    services: comprehensiveExpandedServices.filter(
+      s => s.category === 'AI & Machine Learning'
+    ),
     icon: '🤖',
-    color: 'from-purple-600 to-pink-700'
-  }, {
+    color: 'from-purple-600 to-pink-700',
+  },
+  {
     name: 'IT Services',
     description: 'Comprehensive IT support and infrastructure management',
-    services: comprehensiveExpandedServices.filter(s => s.category === 'IT Services'),
+    services: comprehensiveExpandedServices.filter(
+      s => s.category === 'IT Services'
+    ),
     icon: '🛠️',
-    color: 'from-indigo-600 to-blue-700'
-  }, {
+    color: 'from-indigo-600 to-blue-700',
+  },
+  {
     name: 'Cloud & Infrastructure',
     description: 'Scalable cloud solutions and infrastructure management',
-    services: comprehensiveExpandedServices.filter(s => s.category === 'Cloud & Infrastructure'),
+    services: comprehensiveExpandedServices.filter(
+      s => s.category === 'Cloud & Infrastructure'
+    ),
     icon: '☁️',
-    color: 'from-green-600 to-emerald-700'
-  }, {
+    color: 'from-green-600 to-emerald-700',
+  },
+  {
     name: 'Data & Analytics',
     description: 'Real-time data processing and business intelligence',
-    services: comprehensiveExpandedServices.filter(s => s.category === 'Data & Analytics'),
+    services: comprehensiveExpandedServices.filter(
+      s => s.category === 'Data & Analytics'
+    ),
     icon: '📊',
-    color: 'from-teal-600 to-green-700'
-  }, {
+    color: 'from-teal-600 to-green-700',
+  },
+  {
     name: 'Developer Tools & DevOps',
     description: 'Development automation and operational excellence',
-    services: comprehensiveExpandedServices.filter(s => s.category === 'Developer Tools & DevOps'),
+    services: comprehensiveExpandedServices.filter(
+      s => s.category === 'Developer Tools & DevOps'
+    ),
     icon: '⚙️',
-    color: 'from-cyan-600 to-blue-700'
-  }, {
+    color: 'from-cyan-600 to-blue-700',
+  },
+  {
     name: 'Industry Solutions',
     description: 'Specialized solutions for specific industries',
-    services: comprehensiveExpandedServices.filter(s => s.category === 'Industry Solutions'),
+    services: comprehensiveExpandedServices.filter(
+      s => s.category === 'Industry Solutions'
+    ),
     icon: '🏢',
-    color: 'from-orange-600 to-red-700'
-  }, {
+    color: 'from-orange-600 to-red-700',
+  },
+  {
     name: 'Emerging Technology',
     description: 'Cutting-edge technology solutions and platforms',
-    services: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),
+    services: comprehensiveExpandedServices.filter(
+      s => s.category === 'Emerging Technology'
+    ),
     icon: '🚀',
-    color: 'from-violet-600 to-purple-700'
-  }
+    color: 'from-violet-600 to-purple-700',
+  },
 ];

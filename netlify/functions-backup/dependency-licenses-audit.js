@@ -5,7 +5,11 @@ const { spawnSync } = require('child_process');
 
 function run(cmd, args = []) {
   const res = spawnSync(cmd, args, { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
+  };
 }
 
 async function ensureDir(dirPath) {
@@ -14,7 +18,9 @@ async function ensureDir(dirPath) {
 
 async function fetchPackageInfo(name, versionRange) {
   const cleaned = String(versionRange || '').replace(/^\^|~|>=?|<=?|=|\s/g, '');
-  const byRangeUrl = cleaned ? `https://registry.npmjs.org/${encodeURIComponent(name)}/${encodeURIComponent(cleaned)}` : '';
+  const byRangeUrl = cleaned
+    ? `https://registry.npmjs.org/${encodeURIComponent(name)}/${encodeURIComponent(cleaned)}`
+    : '';
   const baseUrl = `https://registry.npmjs.org/${encodeURIComponent(name)}`;
   try {
     if (byRangeUrl) {
@@ -27,17 +33,31 @@ async function fetchPackageInfo(name, versionRange) {
     if (!res.ok) throw new Error(`registry fetch failed: ${res.status}`);
     const data = await res.json();
     const latest = data && data['dist-tags'] && data['dist-tags'].latest;
-    if (latest && data.versions && data.versions[latest]) return data.versions[latest];
+    if (latest && data.versions && data.versions[latest])
+      return data.versions[latest];
     return data;
   } catch (e) {
-    return { name, version: versionRange || 'unknown', license: 'unknown', error: String(e) };
+    return {
+      name,
+      version: versionRange || 'unknown',
+      license: 'unknown',
+      error: String(e),
+    };
   }
 }
 
 function classifyLicense(license) {
   const val = (license && (license.type || license)) || '';
   const s = String(val).toUpperCase();
-  const permissive = ['MIT','BSD','BSD-2-CLAUSE','BSD-3-CLAUSE','ISC','APACHE-2.0','CC0-1.0'];
+  const permissive = [
+    'MIT',
+    'BSD',
+    'BSD-2-CLAUSE',
+    'BSD-3-CLAUSE',
+    'ISC',
+    'APACHE-2.0',
+    'CC0-1.0',
+  ];
   if (permissive.includes(s)) return { level: 'ok', label: val };
   if (/APACHE/.test(s)) return { level: 'ok', label: val };
   if (/GPL|AGPL|LGPL/.test(s)) return { level: 'warn', label: val };
@@ -46,15 +66,22 @@ function classifyLicense(license) {
 }
 
 function renderHtml(results) {
-  const rows = results.map(r => {
-    const cls = r.classification.level === 'ok' ? 'text-emerald-400' : (r.classification.level === 'warn' ? 'text-amber-400' : 'text-rose-400');
-    return `<tr>
+  const rows = results
+    .map(r => {
+      const cls =
+        r.classification.level === 'ok'
+          ? 'text-emerald-400'
+          : r.classification.level === 'warn'
+            ? 'text-amber-400'
+            : 'text-rose-400';
+      return `<tr>
       <td style="padding:8px;border-bottom:1px solid #223;">${r.name}</td>
       <td style="padding:8px;border-bottom:1px solid #223;">${r.versionWanted || ''}</td>
       <td style="padding:8px;border-bottom:1px solid #223;">${r.version || ''}</td>
       <td style="padding:8px;border-bottom:1px solid #223;" class="${cls}">${r.classification.label}</td>
     </tr>`;
-  }).join('\n');
+    })
+    .join('\n');
   return `<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8" />
@@ -97,7 +124,10 @@ exports.handler = async () => {
   for (const name of names) {
     try {
       const info = await fetchPackageInfo(name, deps[name]);
-      const license = info.license || (info.licenses && info.licenses[0] && info.licenses[0].type) || 'unknown';
+      const license =
+        info.license ||
+        (info.licenses && info.licenses[0] && info.licenses[0].type) ||
+        'unknown';
       const entry = {
         name,
         versionWanted: deps[name],
@@ -107,12 +137,30 @@ exports.handler = async () => {
       entry.classification = classifyLicense(entry.license);
       results.push(entry);
     } catch (e) {
-      results.push({ name, versionWanted: deps[name], version: 'unknown', license: 'unknown', classification: { level: 'warn', label: 'unknown' }, error: String(e) });
+      results.push({
+        name,
+        versionWanted: deps[name],
+        version: 'unknown',
+        license: 'unknown',
+        classification: { level: 'warn', label: 'unknown' },
+        error: String(e),
+      });
     }
   }
 
   await ensureDir(outDir);
-  await fsp.writeFile(jsonPath, JSON.stringify({ generatedAt: new Date().toISOString(), total: results.length, packages: results }, null, 2));
+  await fsp.writeFile(
+    jsonPath,
+    JSON.stringify(
+      {
+        generatedAt: new Date().toISOString(),
+        total: results.length,
+        packages: results,
+      },
+      null,
+      2
+    )
+  );
   await fsp.writeFile(htmlPath, renderHtml(results), 'utf8');
 
   // Sync changes to repo

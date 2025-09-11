@@ -42,10 +42,12 @@ describe('signup to checkout flow', () => {
     cy.get('input[name="city"]').type('Testville');
     cy.get('input[name="country"]').type('Testland');
 
-    cy.window().then((win) => {
+    cy.window().then(win => {
       win.Stripe = () => ({
         confirmCardPayment: () =>
-          Promise.resolve({ paymentIntent: { id: 'pi_test123', status: 'succeeded' } }),
+          Promise.resolve({
+            paymentIntent: { id: 'pi_test123', status: 'succeeded' },
+          }),
         elements: () => ({ getElement: () => ({}) }),
       });
     });

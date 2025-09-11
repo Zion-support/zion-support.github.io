@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
@@ -55,7 +55,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'AI-powered cloud cost management and optimization automation',
     price: '$199',
     period: '/month',
-    description: 'Intelligent platform that automatically optimizes cloud costs across AWS, Azure, and GCP using machine learning and predictive analytics.',
+    description:
+      'Intelligent platform that automatically optimizes cloud costs across AWS, Azure, and GCP using machine learning and predictive analytics.',
     features: [
       'Automated cost optimization',
       'Multi-cloud cost management',
@@ -64,34 +65,41 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Reserved instance optimization',
       'Spot instance management',
       'Cost anomaly detection',
-      'Automated cost reporting'
+      'Automated cost reporting',
     ],
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-cloud-cost-optimization',
-    marketPosition: 'Advanced AI-powered cost optimization; differentiates from basic cost monitoring tools.',
-    targetAudience: 'DevOps teams, Cloud architects, FinOps professionals, Enterprise IT teams',
+    marketPosition:
+      'Advanced AI-powered cost optimization; differentiates from basic cost monitoring tools.',
+    targetAudience:
+      'DevOps teams, Cloud architects, FinOps professionals, Enterprise IT teams',
     trialDays: 14,
     setupTime: '1 day',
     category: 'Cloud Computing & FinOps',
     realService: true,
     technology: ['Machine Learning, Cloud APIs, Cost Analytics, Automation'],
     integrations: ['AWS, Azure, GCP, Kubernetes, Terraform'],
-    useCases: ['Cost optimization, Resource management, Budget planning, FinOps implementation'],
+    useCases: [
+      'Cost optimization, Resource management, Budget planning, FinOps implementation',
+    ],
     roi: 'Reduce cloud costs by 25-40% and improve resource utilization by 30%.',
-    competitors: ['CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management'],
+    competitors: [
+      'CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management',
+    ],
     marketSize: '$2.8B cloud cost management market',
     growthRate: '35% YoY',
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML cost models, automated optimization workflows, multi-cloud integration.',
+    implementationDetails:
+      'ML cost models, automated optimization workflows, multi-cloud integration.',
     launchDate: '2025-01-20',
     customers: 178,
     rating: 4.8,
-    reviews: 112
+    reviews: 112,
   },
   {
     id: 'zero-trust-network-access-platform',
@@ -99,7 +107,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'Modern secure access solution with continuous verification',
     price: '$159',
     period: '/month',
-    description: 'Comprehensive zero trust network access platform that provides secure, identity-based access to applications and resources without traditional VPN.',
+    description:
+      'Comprehensive zero trust network access platform that provides secure, identity-based access to applications and resources without traditional VPN.',
     features: [
       'Identity-based access control',
       'Continuous verification',
@@ -108,34 +117,43 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Micro-segmentation',
       'Real-time threat detection',
       'Compliance reporting',
-      'Integration with identity providers'
+      'Integration with identity providers',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/zero-trust-network-access-platform',
-    marketPosition: 'Modern zero trust solution; competes with traditional VPN and access solutions.',
-    targetAudience: 'Security teams, Network administrators, DevOps teams, Enterprise IT',
+    marketPosition:
+      'Modern zero trust solution; competes with traditional VPN and access solutions.',
+    targetAudience:
+      'Security teams, Network administrators, DevOps teams, Enterprise IT',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Network Security & Zero Trust',
     realService: true,
-    technology: ['Zero Trust Architecture, Identity Management, Network Security, AI/ML'],
+    technology: [
+      'Zero Trust Architecture, Identity Management, Network Security, AI/ML',
+    ],
     integrations: ['Active Directory, Okta, Azure AD, SAML, OAuth'],
-    useCases: ['Secure remote access, Application security, Network segmentation, Compliance'],
+    useCases: [
+      'Secure remote access, Application security, Network segmentation, Compliance',
+    ],
     roi: 'Improve security posture and reduce attack surface while maintaining user experience.',
-    competitors: ['Zscaler, Palo Alto Networks, Cloudflare Access, Okta Access Gateway'],
+    competitors: [
+      'Zscaler, Palo Alto Networks, Cloudflare Access, Okta Access Gateway',
+    ],
     marketSize: '$3.2B zero trust network access market',
     growthRate: '42% YoY',
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Zero trust architecture, identity verification, continuous monitoring.',
+    implementationDetails:
+      'Zero trust architecture, identity verification, continuous monitoring.',
     launchDate: '2025-02-01',
     customers: 145,
     rating: 4.9,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'autonomous-devops-orchestration',
@@ -143,7 +161,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'AI-powered DevOps automation and intelligent workflow management',
     price: '$229',
     period: '/month',
-    description: 'Intelligent DevOps platform that automates CI/CD pipelines, infrastructure management, and deployment processes using AI and machine learning.',
+    description:
+      'Intelligent DevOps platform that automates CI/CD pipelines, infrastructure management, and deployment processes using AI and machine learning.',
     features: [
       'Intelligent CI/CD automation',
       'Infrastructure as code management',
@@ -152,14 +171,15 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Incident response automation',
       'Resource optimization',
       'Compliance automation',
-      'Team collaboration tools'
+      'Team collaboration tools',
     ],
     popular: false,
     icon: '⚙️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/autonomous-devops-orchestration',
-    marketPosition: 'Advanced AI-powered DevOps; differentiates from traditional CI/CD tools.',
+    marketPosition:
+      'Advanced AI-powered DevOps; differentiates from traditional CI/CD tools.',
     targetAudience: 'DevOps engineers, Platform teams, SREs, Development teams',
     trialDays: 14,
     setupTime: '1 week',
@@ -167,7 +187,9 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     realService: true,
     technology: ['AI/ML, CI/CD, Infrastructure as Code, Automation'],
     integrations: ['GitHub Actions, GitLab CI, Jenkins, Terraform, Kubernetes'],
-    useCases: ['CI/CD automation, Infrastructure management, Deployment automation, Performance optimization'],
+    useCases: [
+      'CI/CD automation, Infrastructure management, Deployment automation, Performance optimization',
+    ],
     roi: 'Reduce deployment time by 60-80% and improve system reliability by 40%.',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
     marketSize: '$4.2B DevOps tools market',
@@ -175,11 +197,12 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'devops-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered automation, intelligent workflows, performance optimization.',
+    implementationDetails:
+      'AI-powered automation, intelligent workflows, performance optimization.',
     launchDate: '2025-02-10',
     customers: 98,
     rating: 4.7,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'edge-computing-orchestration-platform',
@@ -187,7 +210,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'Intelligent edge infrastructure management and optimization',
     price: '$279',
     period: '/month',
-    description: 'Comprehensive platform for managing and optimizing edge computing infrastructure, including edge nodes, applications, and data processing.',
+    description:
+      'Comprehensive platform for managing and optimizing edge computing infrastructure, including edge nodes, applications, and data processing.',
     features: [
       'Edge node management',
       'Application deployment',
@@ -196,34 +220,41 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Security management',
       'Performance monitoring',
       'Automated scaling',
-      'Edge analytics'
+      'Edge analytics',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
-    marketPosition: 'Specialized edge computing management; addresses distributed infrastructure challenges.',
-    targetAudience: 'Edge computing providers, IoT companies, CDN providers, Telecommunications',
+    marketPosition:
+      'Specialized edge computing management; addresses distributed infrastructure challenges.',
+    targetAudience:
+      'Edge computing providers, IoT companies, CDN providers, Telecommunications',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Edge Computing & IoT',
     realService: true,
     technology: ['Edge Computing, Kubernetes, IoT, 5G, AI/ML'],
     integrations: ['Kubernetes, Docker, IoT platforms, 5G networks'],
-    useCases: ['Edge infrastructure management, IoT applications, Content delivery, Real-time processing'],
+    useCases: [
+      'Edge infrastructure management, IoT applications, Content delivery, Real-time processing',
+    ],
     roi: 'Improve edge performance by 30-50% and reduce latency by 40-60%.',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'],
+    competitors: [
+      'AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry',
+    ],
     marketSize: '$1.8B edge computing orchestration market',
     growthRate: '38% YoY',
     variant: 'edge-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Edge orchestration, intelligent routing, performance optimization.',
+    implementationDetails:
+      'Edge orchestration, intelligent routing, performance optimization.',
     launchDate: '2025-01-25',
     customers: 67,
     rating: 4.6,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'ai-powered-it-service-management',
@@ -231,7 +262,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'Intelligent IT service desk with predictive incident management',
     price: '$149',
     period: '/month',
-    description: 'Advanced ITSM platform that uses AI to automate ticket routing, predict incidents, and optimize service delivery processes.',
+    description:
+      'Advanced ITSM platform that uses AI to automate ticket routing, predict incidents, and optimize service delivery processes.',
     features: [
       'AI-powered ticket routing',
       'Predictive incident management',
@@ -240,22 +272,28 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Service catalog automation',
       'Performance analytics',
       'Integration with monitoring tools',
-      'Mobile app support'
+      'Mobile app support',
     ],
     popular: true,
     icon: '🛠️',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-powered-itsm',
-    marketPosition: 'Modern AI-powered ITSM; differentiates from traditional service desk tools.',
-    targetAudience: 'IT service desk teams, IT managers, Support teams, Enterprise IT',
+    marketPosition:
+      'Modern AI-powered ITSM; differentiates from traditional service desk tools.',
+    targetAudience:
+      'IT service desk teams, IT managers, Support teams, Enterprise IT',
     trialDays: 21,
     setupTime: '1 week',
     category: 'ITSM & Service Management',
     realService: true,
     technology: ['AI/ML, NLP, Workflow Automation, Service Management'],
-    integrations: ['ServiceNow, Jira, Slack, Microsoft Teams, Monitoring tools'],
-    useCases: ['Service desk automation, Incident management, Knowledge management, Service optimization'],
+    integrations: [
+      'ServiceNow, Jira, Slack, Microsoft Teams, Monitoring tools',
+    ],
+    useCases: [
+      'Service desk automation, Incident management, Knowledge management, Service optimization',
+    ],
     roi: 'Reduce ticket resolution time by 40-60% and improve user satisfaction by 30%.',
     competitors: ['ServiceNow, Jira Service Management, BMC Helix, Ivanti'],
     marketSize: '$5.2B ITSM market',
@@ -263,19 +301,22 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'itsm-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI ticket routing, predictive analytics, automated workflows.',
+    implementationDetails:
+      'AI ticket routing, predictive analytics, automated workflows.',
     launchDate: '2025-02-15',
     customers: 234,
     rating: 4.8,
-    reviews: 156
+    reviews: 156,
   },
   {
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure Platform',
-    tagline: 'Quantum computing resources in the cloud for enterprise applications',
+    tagline:
+      'Quantum computing resources in the cloud for enterprise applications',
     price: '$499',
     period: '/month',
-    description: 'Cloud platform that provides access to quantum computing resources, quantum algorithms, and hybrid quantum-classical computing capabilities.',
+    description:
+      'Cloud platform that provides access to quantum computing resources, quantum algorithms, and hybrid quantum-classical computing capabilities.',
     features: [
       'Quantum computing access',
       'Quantum algorithm libraries',
@@ -284,22 +325,28 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Quantum error correction',
       'Developer tools and SDKs',
       'Expert consultation',
-      'Training and documentation'
+      'Training and documentation',
     ],
     popular: false,
     icon: '⚛️',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
-    marketPosition: 'Cutting-edge quantum cloud platform; addresses emerging quantum computing needs.',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, Technology companies',
+    marketPosition:
+      'Cutting-edge quantum cloud platform; addresses emerging quantum computing needs.',
+    targetAudience:
+      'Research institutions, Pharmaceutical companies, Financial institutions, Technology companies',
     trialDays: 45,
     setupTime: '1 month',
     category: 'Quantum Computing & Cloud',
     realService: true,
-    technology: ['Quantum Computing, Cloud Infrastructure, Quantum Algorithms, Hybrid Computing'],
+    technology: [
+      'Quantum Computing, Cloud Infrastructure, Quantum Algorithms, Hybrid Computing',
+    ],
     integrations: ['AWS Braket, Azure Quantum, Google Quantum, IBM Quantum'],
-    useCases: ['Quantum research, Drug discovery, Financial modeling, Optimization problems'],
+    useCases: [
+      'Quantum research, Drug discovery, Financial modeling, Optimization problems',
+    ],
     roi: 'Access quantum computing capabilities and gain competitive advantage in research.',
     competitors: ['IBM Quantum, AWS Braket, Azure Quantum, Google Quantum'],
     marketSize: '$600M quantum cloud market',
@@ -307,11 +354,12 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum infrastructure, algorithm optimization, hybrid computing workflows.',
+    implementationDetails:
+      'Quantum infrastructure, algorithm optimization, hybrid computing workflows.',
     launchDate: '2025-01-10',
     customers: 23,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'autonomous-data-center-management',
@@ -319,7 +367,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'AI-powered data center optimization and automation',
     price: '$349',
     period: '/month',
-    description: 'Intelligent platform that automates data center operations including power management, cooling optimization, and resource allocation.',
+    description:
+      'Intelligent platform that automates data center operations including power management, cooling optimization, and resource allocation.',
     features: [
       'Power consumption optimization',
       'Cooling system management',
@@ -328,22 +377,28 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Energy efficiency monitoring',
       'Capacity planning',
       'Real-time analytics',
-      'Automated reporting'
+      'Automated reporting',
     ],
     popular: true,
     icon: '🏢',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/autonomous-data-center-management',
-    marketPosition: 'Advanced data center automation; differentiates from basic monitoring tools.',
-    targetAudience: 'Data center operators, Infrastructure teams, Facilities managers, Enterprise IT',
+    marketPosition:
+      'Advanced data center automation; differentiates from basic monitoring tools.',
+    targetAudience:
+      'Data center operators, Infrastructure teams, Facilities managers, Enterprise IT',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Data Center & Infrastructure',
     realService: true,
     technology: ['AI/ML, IoT, Building Management Systems, Energy Management'],
-    integrations: ['Building management systems, Power monitoring, Cooling systems, IoT sensors'],
-    useCases: ['Energy optimization, Predictive maintenance, Capacity planning, Cost reduction'],
+    integrations: [
+      'Building management systems, Power monitoring, Cooling systems, IoT sensors',
+    ],
+    useCases: [
+      'Energy optimization, Predictive maintenance, Capacity planning, Cost reduction',
+    ],
     roi: 'Reduce energy costs by 20-35% and improve operational efficiency by 40%.',
     competitors: ['Schneider Electric, Siemens, Honeywell, Johnson Controls'],
     marketSize: '$2.4B data center management market',
@@ -351,11 +406,12 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'enterprise-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI optimization models, IoT integration, automated workflows.',
+    implementationDetails:
+      'AI optimization models, IoT integration, automated workflows.',
     launchDate: '2025-02-20',
     customers: 89,
     rating: 4.7,
-    reviews: 56
+    reviews: 56,
   },
   {
     id: 'ai-powered-network-security-monitoring',
@@ -363,7 +419,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'Intelligent network threat detection and response automation',
     price: '$189',
     period: '/month',
-    description: 'Advanced network security platform that uses AI to detect threats, analyze network traffic, and automate security responses.',
+    description:
+      'Advanced network security platform that uses AI to detect threats, analyze network traffic, and automate security responses.',
     features: [
       'AI-powered threat detection',
       'Network traffic analysis',
@@ -372,34 +429,45 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Threat intelligence',
       'Compliance monitoring',
       'Real-time alerts',
-      'Performance analytics'
+      'Performance analytics',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-network-security-monitoring',
-    marketPosition: 'Advanced AI-powered network security; differentiates from traditional NIDS/NIPS.',
-    targetAudience: 'Security teams, Network administrators, SOC analysts, Enterprise IT',
+    marketPosition:
+      'Advanced AI-powered network security; differentiates from traditional NIDS/NIPS.',
+    targetAudience:
+      'Security teams, Network administrators, SOC analysts, Enterprise IT',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Network Security & AI',
     realService: true,
-    technology: ['AI/ML, Network Security, Threat Intelligence, Behavioral Analytics'],
-    integrations: ['Firewalls, IDS/IPS, SIEM platforms, Network monitoring tools'],
-    useCases: ['Threat detection, Network monitoring, Incident response, Compliance'],
+    technology: [
+      'AI/ML, Network Security, Threat Intelligence, Behavioral Analytics',
+    ],
+    integrations: [
+      'Firewalls, IDS/IPS, SIEM platforms, Network monitoring tools',
+    ],
+    useCases: [
+      'Threat detection, Network monitoring, Incident response, Compliance',
+    ],
     roi: 'Improve threat detection accuracy by 40-60% and reduce false positives.',
-    competitors: ['Darktrace, Cisco Stealthwatch, Palo Alto Networks, Fortinet'],
+    competitors: [
+      'Darktrace, Cisco Stealthwatch, Palo Alto Networks, Fortinet',
+    ],
     marketSize: '$3.8B network security market',
     growthRate: '38% YoY',
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI threat models, behavioral analysis, automated response workflows.',
+    implementationDetails:
+      'AI threat models, behavioral analysis, automated response workflows.',
     launchDate: '2025-02-25',
     customers: 167,
     rating: 4.8,
-    reviews: 98
+    reviews: 98,
   },
   {
     id: 'quantum-secure-communications-network',
@@ -407,7 +475,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'Unbreakable communications using quantum cryptography',
     price: '$599',
     period: '/month',
-    description: 'Advanced communications network that uses quantum cryptography to provide unbreakable encryption for sensitive communications.',
+    description:
+      'Advanced communications network that uses quantum cryptography to provide unbreakable encryption for sensitive communications.',
     features: [
       'Quantum key distribution',
       'Quantum encryption',
@@ -416,22 +485,30 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Performance monitoring',
       'Compliance certification',
       'Integration APIs',
-      'Expert support'
+      'Expert support',
     ],
     popular: false,
     icon: '🔒',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-secure-communications',
-    marketPosition: 'Cutting-edge quantum security; provides future-proof communications security.',
-    targetAudience: 'Government agencies, Financial institutions, Defense contractors, High-security organizations',
+    marketPosition:
+      'Cutting-edge quantum security; provides future-proof communications security.',
+    targetAudience:
+      'Government agencies, Financial institutions, Defense contractors, High-security organizations',
     trialDays: 60,
     setupTime: '1 month',
     category: 'Quantum Security & Communications',
     realService: true,
-    technology: ['Quantum Cryptography, Quantum Key Distribution, Fiber Optics, Photonics'],
-    integrations: ['VPN systems, Secure communications, Data centers, Government networks'],
-    useCases: ['Secure communications, Government applications, Financial security, Defense communications'],
+    technology: [
+      'Quantum Cryptography, Quantum Key Distribution, Fiber Optics, Photonics',
+    ],
+    integrations: [
+      'VPN systems, Secure communications, Data centers, Government networks',
+    ],
+    useCases: [
+      'Secure communications, Government applications, Financial security, Defense communications',
+    ],
     roi: 'Provide unbreakable communications and maintain competitive security advantage.',
     competitors: ['ID Quantique, Toshiba, QNu Labs, Quantum Xchange'],
     marketSize: '$400M quantum communications market',
@@ -439,11 +516,12 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum network infrastructure, key management, security protocols.',
+    implementationDetails:
+      'Quantum network infrastructure, key management, security protocols.',
     launchDate: '2025-01-05',
     customers: 15,
     rating: 4.9,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'autonomous-backup-and-disaster-recovery',
@@ -451,7 +529,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'AI-powered backup automation and intelligent disaster recovery',
     price: '$129',
     period: '/month',
-    description: 'Intelligent platform that automates backup processes, optimizes storage, and provides intelligent disaster recovery planning.',
+    description:
+      'Intelligent platform that automates backup processes, optimizes storage, and provides intelligent disaster recovery planning.',
     features: [
       'Automated backup scheduling',
       'Intelligent storage optimization',
@@ -460,22 +539,30 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Performance monitoring',
       'Compliance automation',
       'Real-time analytics',
-      'Automated testing'
+      'Automated testing',
     ],
     popular: false,
     icon: '💾',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/autonomous-backup-disaster-recovery',
-    marketPosition: 'Advanced AI-powered backup solution; differentiates from traditional backup tools.',
-    targetAudience: 'IT administrators, Backup teams, Disaster recovery planners, Enterprise IT',
+    marketPosition:
+      'Advanced AI-powered backup solution; differentiates from traditional backup tools.',
+    targetAudience:
+      'IT administrators, Backup teams, Disaster recovery planners, Enterprise IT',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Backup & Disaster Recovery',
     realService: true,
-    technology: ['AI/ML, Backup Automation, Storage Optimization, Disaster Recovery'],
-    integrations: ['Storage systems, Cloud storage, Virtualization platforms, Database systems'],
-    useCases: ['Backup automation, Storage optimization, Disaster recovery, Compliance'],
+    technology: [
+      'AI/ML, Backup Automation, Storage Optimization, Disaster Recovery',
+    ],
+    integrations: [
+      'Storage systems, Cloud storage, Virtualization platforms, Database systems',
+    ],
+    useCases: [
+      'Backup automation, Storage optimization, Disaster recovery, Compliance',
+    ],
     roi: 'Reduce backup time by 50-70% and improve recovery time by 40-60%.',
     competitors: ['Veeam, Commvault, Rubrik, Cohesity'],
     marketSize: '$2.1B backup and recovery market',
@@ -483,11 +570,12 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'backup-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI backup optimization, intelligent scheduling, automated testing.',
+    implementationDetails:
+      'AI backup optimization, intelligent scheduling, automated testing.',
     launchDate: '2025-03-01',
     customers: 78,
     rating: 4.7,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-enterprise-architecture-platform',
@@ -495,7 +583,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'Intelligent enterprise architecture planning and optimization',
     price: '$249',
     period: '/month',
-    description: 'Advanced platform that uses AI to analyze enterprise architecture, identify optimization opportunities, and plan digital transformations.',
+    description:
+      'Advanced platform that uses AI to analyze enterprise architecture, identify optimization opportunities, and plan digital transformations.',
     features: [
       'Architecture analysis',
       'Optimization recommendations',
@@ -504,22 +593,30 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Compliance assessment',
       'Performance analytics',
       'Collaboration tools',
-      'Integration mapping'
+      'Integration mapping',
     ],
     popular: false,
     icon: '🏗️',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/ai-enterprise-architecture-platform',
-    marketPosition: 'Advanced AI-powered EA platform; differentiates from traditional architecture tools.',
-    targetAudience: 'Enterprise architects, IT strategists, Digital transformation teams, CIOs',
+    marketPosition:
+      'Advanced AI-powered EA platform; differentiates from traditional architecture tools.',
+    targetAudience:
+      'Enterprise architects, IT strategists, Digital transformation teams, CIOs',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Enterprise Architecture & Strategy',
     realService: true,
-    technology: ['AI/ML, Enterprise Architecture, Digital Transformation, Analytics'],
-    integrations: ['EA tools, Business process tools, IT management platforms, Analytics tools'],
-    useCases: ['Architecture planning, Digital transformation, Technology optimization, Compliance'],
+    technology: [
+      'AI/ML, Enterprise Architecture, Digital Transformation, Analytics',
+    ],
+    integrations: [
+      'EA tools, Business process tools, IT management platforms, Analytics tools',
+    ],
+    useCases: [
+      'Architecture planning, Digital transformation, Technology optimization, Compliance',
+    ],
     roi: 'Improve architecture efficiency by 30-50% and accelerate digital transformation.',
     competitors: ['Sparx Systems, BiZZdesign, Orbus Software, Planview'],
     marketSize: '$1.8B enterprise architecture market',
@@ -527,11 +624,12 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'enterprise-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI architecture analysis, optimization algorithms, transformation planning.',
+    implementationDetails:
+      'AI architecture analysis, optimization algorithms, transformation planning.',
     launchDate: '2025-02-28',
     customers: 56,
     rating: 4.6,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'quantum-enhanced-storage-platform',
@@ -539,7 +637,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'Quantum computing optimized storage and data management',
     price: '$399',
     period: '/month',
-    description: 'Advanced storage platform that uses quantum computing principles to optimize data storage, retrieval, and management.',
+    description:
+      'Advanced storage platform that uses quantum computing principles to optimize data storage, retrieval, and management.',
     features: [
       'Quantum-optimized storage',
       'Data compression algorithms',
@@ -548,34 +647,45 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Security enhancement',
       'Scalability management',
       'Real-time analytics',
-      'Expert consultation'
+      'Expert consultation',
     ],
     popular: false,
     icon: '💿',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-enhanced-storage-platform',
-    marketPosition: 'Cutting-edge quantum storage; addresses future storage optimization needs.',
-    targetAudience: 'Storage administrators, Data scientists, Research institutions, Technology companies',
+    marketPosition:
+      'Cutting-edge quantum storage; addresses future storage optimization needs.',
+    targetAudience:
+      'Storage administrators, Data scientists, Research institutions, Technology companies',
     trialDays: 45,
     setupTime: '2 weeks',
     category: 'Quantum Computing & Storage',
     realService: true,
-    technology: ['Quantum Computing, Storage Optimization, Data Management, AI/ML'],
-    integrations: ['Storage systems, Cloud storage, Database systems, Analytics platforms'],
-    useCases: ['Storage optimization, Data management, Performance improvement, Research applications'],
+    technology: [
+      'Quantum Computing, Storage Optimization, Data Management, AI/ML',
+    ],
+    integrations: [
+      'Storage systems, Cloud storage, Database systems, Analytics platforms',
+    ],
+    useCases: [
+      'Storage optimization, Data management, Performance improvement, Research applications',
+    ],
     roi: 'Improve storage efficiency by 40-60% and reduce storage costs by 30%.',
-    competitors: ['Traditional storage vendors, Cloud storage providers, Storage optimization tools'],
+    competitors: [
+      'Traditional storage vendors, Cloud storage providers, Storage optimization tools',
+    ],
     marketSize: '$500M quantum storage market',
     growthRate: '55% YoY',
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum algorithms, storage optimization, performance tuning.',
+    implementationDetails:
+      'Quantum algorithms, storage optimization, performance tuning.',
     launchDate: '2025-01-15',
     customers: 28,
     rating: 4.8,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'autonomous-api-management-platform',
@@ -583,7 +693,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'AI-powered API lifecycle management and optimization',
     price: '$179',
     period: '/month',
-    description: 'Intelligent platform that automates API design, testing, deployment, and monitoring using AI and machine learning.',
+    description:
+      'Intelligent platform that automates API design, testing, deployment, and monitoring using AI and machine learning.',
     features: [
       'AI-powered API design',
       'Automated testing',
@@ -592,22 +703,28 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Traffic management',
       'Developer portal',
       'Analytics and insights',
-      'Integration tools'
+      'Integration tools',
     ],
     popular: true,
     icon: '🔌',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-api-management-platform',
-    marketPosition: 'Advanced AI-powered API management; differentiates from traditional API gateways.',
-    targetAudience: 'API developers, DevOps teams, Platform engineers, Enterprise IT',
+    marketPosition:
+      'Advanced AI-powered API management; differentiates from traditional API gateways.',
+    targetAudience:
+      'API developers, DevOps teams, Platform engineers, Enterprise IT',
     trialDays: 14,
     setupTime: '1 week',
     category: 'API Management & Development',
     realService: true,
     technology: ['AI/ML, API Management, Automation, Performance Optimization'],
-    integrations: ['API gateways, CI/CD tools, Monitoring platforms, Developer tools'],
-    useCases: ['API lifecycle management, Performance optimization, Security monitoring, Developer experience'],
+    integrations: [
+      'API gateways, CI/CD tools, Monitoring platforms, Developer tools',
+    ],
+    useCases: [
+      'API lifecycle management, Performance optimization, Security monitoring, Developer experience',
+    ],
     roi: 'Reduce API development time by 40-60% and improve performance by 30%.',
     competitors: ['Kong, Apigee, AWS API Gateway, Azure API Management'],
     marketSize: '$2.6B API management market',
@@ -615,11 +732,12 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'api-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI API optimization, automated testing, performance monitoring.',
+    implementationDetails:
+      'AI API optimization, automated testing, performance monitoring.',
     launchDate: '2025-03-05',
     customers: 134,
     rating: 4.8,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'ai-powered-integration-platform',
@@ -627,7 +745,8 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     tagline: 'Intelligent data and application integration with AI automation',
     price: '$219',
     period: '/month',
-    description: 'Advanced integration platform that uses AI to automate data mapping, transform data, and optimize integration workflows.',
+    description:
+      'Advanced integration platform that uses AI to automate data mapping, transform data, and optimize integration workflows.',
     features: [
       'AI-powered data mapping',
       'Intelligent transformation',
@@ -636,22 +755,26 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
       'Error handling',
       'Performance monitoring',
       'Compliance management',
-      'Developer tools'
+      'Developer tools',
     ],
     popular: false,
     icon: '🔗',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-integration-platform',
-    marketPosition: 'Advanced AI-powered integration; differentiates from traditional ETL tools.',
-    targetAudience: 'Data engineers, Integration specialists, IT architects, Enterprise IT',
+    marketPosition:
+      'Advanced AI-powered integration; differentiates from traditional ETL tools.',
+    targetAudience:
+      'Data engineers, Integration specialists, IT architects, Enterprise IT',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Integration & Data Management',
     realService: true,
     technology: ['AI/ML, Data Integration, ETL, Workflow Automation'],
     integrations: ['Databases, Cloud services, APIs, Business applications'],
-    useCases: ['Data integration, Application integration, Workflow automation, Data transformation'],
+    useCases: [
+      'Data integration, Application integration, Workflow automation, Data transformation',
+    ],
     roi: 'Reduce integration time by 50-70% and improve data quality by 40%.',
     competitors: ['Informatica, Talend, MuleSoft, Boomi'],
     marketSize: '$3.2B integration platform market',
@@ -659,10 +782,11 @@ export const advanced2025ITSolutionsExpansionV2: AdvancedITSolution[] = [
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI data mapping, intelligent transformation, automated workflows.',
+    implementationDetails:
+      'AI data mapping, intelligent transformation, automated workflows.',
     launchDate: '2025-03-10',
     customers: 89,
     rating: 4.7,
-    reviews: 56
-  }
+    reviews: 56,
+  },
 ];

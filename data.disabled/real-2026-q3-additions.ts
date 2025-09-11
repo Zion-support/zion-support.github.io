@@ -10,7 +10,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2026Q3Additions: EnhancedRealMicroSaasService[] = [
@@ -19,6 +19,10 @@ export const real2026Q3Additions: EnhancedRealMicroSaasService[] = [
     name: 'Q3 2026 Service 1',
     tagline: 'Q3 2026 service solutions',
     price: '$399',
-    features: ['Q3 2026 features', 'Advanced capabilities', 'Enhanced performance']
-  }
+    features: [
+      'Q3 2026 features',
+      'Advanced capabilities',
+      'Enhanced performance',
+    ],
+  },
 ];

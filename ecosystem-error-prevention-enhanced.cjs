@@ -13,7 +13,7 @@ module.exports = {
         SCAN_INTERVAL: 300000, // 5 minutes
         LOG_LEVEL: 'info',
         MAX_RETRIES: 3,
-        AUTO_RESTART_ON_ERROR: true
+        AUTO_RESTART_ON_ERROR: true,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -32,7 +32,7 @@ module.exports = {
       wait_ready: true,
       listen_timeout: 20000,
       cron_restart: '0 */6 * * *', // Restart every 6 hours
-      max_unstable_restarts: 5
+      max_unstable_restarts: 5,
     },
 
     // Real-time Error Monitor
@@ -43,8 +43,15 @@ module.exports = {
       cwd: './',
       watch: ['src/**/*', 'components/**/*', 'pages/**/*', 'utils/**/*'],
       ignore_watch: [
-        'node_modules', 'dist', '.git', '*.log', 'logs/*', 
-        '*.backup', '*.tsbackup', '*.lintbackup', 'reports/*'
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+        '*.tsbackup',
+        '*.lintbackup',
+        'reports/*',
       ],
       env: {
         NODE_ENV: 'production',
@@ -52,7 +59,7 @@ module.exports = {
         SCAN_INTERVAL: 30000, // 30 seconds
         LOG_LEVEL: 'info',
         AUTO_FIX_ENABLED: true,
-        NOTIFICATION_ENABLED: true
+        NOTIFICATION_ENABLED: true,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -69,7 +76,7 @@ module.exports = {
       restart_delay: 10000,
       kill_timeout: 10000,
       wait_ready: true,
-      listen_timeout: 12000
+      listen_timeout: 12000,
     },
 
     // Intelligent Code Quality Fixer
@@ -78,10 +85,21 @@ module.exports = {
       script: './scripts/automation/intelligent-code-quality-fixer.cjs',
       args: 'fix',
       cwd: './',
-      watch: ['src/**/*.{ts,tsx,js,jsx}', 'components/**/*.{ts,tsx,js,jsx}', 'pages/**/*.{ts,tsx,js,jsx}'],
+      watch: [
+        'src/**/*.{ts,tsx,js,jsx}',
+        'components/**/*.{ts,tsx,js,jsx}',
+        'pages/**/*.{ts,tsx,js,jsx}',
+      ],
       ignore_watch: [
-        'node_modules', 'dist', '.git', '*.log', 'logs/*', 
-        '*.backup', '*.tsbackup', '*.lintbackup', 'reports/*'
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+        '*.tsbackup',
+        '*.lintbackup',
+        'reports/*',
       ],
       env: {
         NODE_ENV: 'production',
@@ -90,7 +108,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         AI_ASSISTED_FIXES: true,
         LEARNING_MODE: true,
-        PATTERN_RECOGNITION: true
+        PATTERN_RECOGNITION: true,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -107,7 +125,7 @@ module.exports = {
       restart_delay: 8000,
       kill_timeout: 8000,
       wait_ready: true,
-      listen_timeout: 10000
+      listen_timeout: 10000,
     },
 
     // Automated Testing and Validation
@@ -124,7 +142,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         AUTO_FIX_ON_FAILURE: true,
         GENERATE_REPORTS: true,
-        NOTIFY_ON_FAILURE: true
+        NOTIFY_ON_FAILURE: true,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -141,7 +159,7 @@ module.exports = {
       restart_delay: 12000,
       kill_timeout: 12000,
       wait_ready: true,
-      listen_timeout: 15000
+      listen_timeout: 15000,
     },
 
     // Performance and Security Scanner
@@ -159,7 +177,7 @@ module.exports = {
         SECURITY_CHECKS: true,
         PERFORMANCE_ANALYSIS: true,
         VULNERABILITY_SCANNING: true,
-        AUTO_REMEDIATION: true
+        AUTO_REMEDIATION: true,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -176,7 +194,7 @@ module.exports = {
       restart_delay: 15000,
       kill_timeout: 15000,
       wait_ready: true,
-      listen_timeout: 20000
+      listen_timeout: 20000,
     },
 
     // Code Style and Formatting Enforcer
@@ -185,10 +203,21 @@ module.exports = {
       script: './scripts/automation/code-style-formatting-enforcer.cjs',
       args: 'enforce',
       cwd: './',
-      watch: ['src/**/*.{ts,tsx,js,jsx}', 'components/**/*.{ts,tsx,js,jsx}', 'pages/**/*.{ts,tsx,js,jsx}'],
+      watch: [
+        'src/**/*.{ts,tsx,js,jsx}',
+        'components/**/*.{ts,tsx,js,jsx}',
+        'pages/**/*.{ts,tsx,js,jsx}',
+      ],
       ignore_watch: [
-        'node_modules', 'dist', '.git', '*.log', 'logs/*', 
-        '*.backup', '*.tsbackup', '*.lintbackup', 'reports/*'
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+        '*.tsbackup',
+        '*.lintbackup',
+        'reports/*',
       ],
       env: {
         NODE_ENV: 'production',
@@ -197,7 +226,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         AUTO_FORMAT: true,
         STYLE_GUIDE: 'strict',
-        CONSISTENCY_CHECK: true
+        CONSISTENCY_CHECK: true,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -214,7 +243,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Dependency and Security Manager
@@ -233,7 +262,7 @@ module.exports = {
         AUTO_UPDATE: true,
         SECURITY_AUDIT: true,
         VULNERABILITY_FIXES: true,
-        DEPENDENCY_ANALYSIS: true
+        DEPENDENCY_ANALYSIS: true,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -250,7 +279,7 @@ module.exports = {
       restart_delay: 15000,
       kill_timeout: 15000,
       wait_ready: true,
-      listen_timeout: 20000
+      listen_timeout: 20000,
     },
 
     // Health Check and Monitoring Dashboard
@@ -268,7 +297,7 @@ module.exports = {
         METRICS_COLLECTION: true,
         ALERTING: true,
         PERFORMANCE_MONITORING: true,
-        RESOURCE_USAGE_TRACKING: true
+        RESOURCE_USAGE_TRACKING: true,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -285,8 +314,8 @@ module.exports = {
       restart_delay: 8000,
       kill_timeout: 8000,
       wait_ready: true,
-      listen_timeout: 10000
-    }
+      listen_timeout: 10000,
+    },
   ],
 
   deploy: {
@@ -296,10 +325,14 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:your-username/zion-app.git',
       path: '/var/www/zion-app',
-      'pre-deploy-local': 'echo "Starting enhanced error prevention automation deployment"',
-      'post-deploy': 'npm install && pm2 reload ecosystem-error-prevention-enhanced.cjs --env production',
-      'pre-setup': 'echo "Setting up enhanced error prevention automation environment"',
-      'post-setup': 'pm2 start ecosystem-error-prevention-enhanced.cjs --env production'
+      'pre-deploy-local':
+        'echo "Starting enhanced error prevention automation deployment"',
+      'post-deploy':
+        'npm install && pm2 reload ecosystem-error-prevention-enhanced.cjs --env production',
+      'pre-setup':
+        'echo "Setting up enhanced error prevention automation environment"',
+      'post-setup':
+        'pm2 start ecosystem-error-prevention-enhanced.cjs --env production',
     },
     staging: {
       user: 'ubuntu',
@@ -307,11 +340,15 @@ module.exports = {
       ref: 'origin/develop',
       repo: 'git@github.com:your-username/zion-app.git',
       path: '/var/www/zion-app-staging',
-      'pre-deploy-local': 'echo "Starting enhanced error prevention automation deployment"',
-      'post-deploy': 'npm install && pm2 reload ecosystem-error-prevention-enhanced.cjs --env production',
-      'pre-setup': 'echo "Setting up enhanced error prevention automation environment"',
-      'post-setup': 'pm2 start ecosystem-error-prevention-enhanced.cjs --env production'
-    }
+      'pre-deploy-local':
+        'echo "Starting enhanced error prevention automation deployment"',
+      'post-deploy':
+        'npm install && pm2 reload ecosystem-error-prevention-enhanced.cjs --env production',
+      'pre-setup':
+        'echo "Setting up enhanced error prevention automation environment"',
+      'post-setup':
+        'pm2 start ecosystem-error-prevention-enhanced.cjs --env production',
+    },
   },
 
   // PM2 Configuration
@@ -334,6 +371,6 @@ module.exports = {
     restart_delay: 10000,
     kill_timeout: 10000,
     wait_ready: true,
-    listen_timeout: 15000
-  }
+    listen_timeout: 15000,
+  },
 };

@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const baseUrl = 'https://ziontechgroup.com';
-  
+
   const staticPages = [
     '/',
     '/about',
@@ -18,7 +18,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/auth/callback',
     '/auth/forgot-password',
     '/auth/reset-password',
-    '/auth/verify' ];
+    '/auth/verify',
+  ];
 
   const blogPages = [
     '/blog/5g-technology-and-its-impact-on-iot-chat',
@@ -35,7 +36,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/blog/microservices-architecture-benefits-and-challenges-chat',
     '/blog/quantum-computing-implications-for-business-chat',
     '/blog/sustainable-technology-green-computing-solutions-chat',
-    '/blog/the-rise-of-edge-computing-in-iot-applications-chat' ];
+    '/blog/the-rise-of-edge-computing-in-iot-applications-chat',
+  ];
 
   const servicePages = [
     '/services/ai-model-development-chat',
@@ -52,7 +54,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/services/system-administration-chat',
     '/services/technical-documentation-chat',
     '/services/ui-ux-design-chat',
-    '/services/web-application-development-chat' ];
+    '/services/web-application-development-chat',
+  ];
 
   const categoryPages = [
     '/category/ai-consulting-chat',
@@ -69,7 +72,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/category/system-administration-chat',
     '/category/technical-writing-chat',
     '/category/ui-ux-design-chat',
-    '/category/web-development-chat' ];
+    '/category/web-development-chat',
+  ];
 
   const chatContentPages = [
     '/chat-content/ai-powered-business-solutions-discussion',
@@ -81,32 +85,38 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/chat-content/future-of-work-and-automation',
     '/chat-content/innovation-in-enterprise-technology',
     '/chat-content/sustainable-technology-practices',
-    '/chat-content/technology-implementation-strategies' ];
+    '/chat-content/technology-implementation-strategies',
+  ];
 
   const allPages = [
     ...staticPages,
     ...blogPages,
     ...servicePages,
     ...categoryPages,
-    ...chatContentPages ];
+    ...chatContentPages,
+  ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${allPages
-    .map((page) => {
-      const priority = page === '/' ? '1.0' : page.includes('/blog/') ? '0.8' : '0.9';
-      const changefreq = page === '/' ? 'daily' : page.includes('/blog/') ? 'weekly' : 'monthly';
-      
+    .map(page => {
+      const priority =
+        page === '/' ? '1.0' : page.includes('/blog/') ? '0.8' : '0.9';
+      const changefreq =
+        page === '/' ? 'daily' : page.includes('/blog/') ? 'weekly' : 'monthly';
+
       return `
     <url>
       <loc>${baseUrl}${page}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>${changefreq}</changefreq>
       <priority>${priority}</priority>
-    </url>`})
+    </url>`;
+    })
     .join('')}
 </urlset>`;
 
   res.setHeader('Content-Type', 'text/xml');
   res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400');
-  res.status(200).send(sitemap)}
+  res.status(200).send(sitemap);
+}

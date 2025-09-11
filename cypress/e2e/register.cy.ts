@@ -1,9 +1,18 @@
 describe('register flow', () => {
   beforeEach(() => {
     // Ensure environment variables are set
-    expect(Cypress.env('TEST_USER_DISPLAY_NAME'), 'TEST_USER_DISPLAY_NAME was not set').to.be.a('string');
-    expect(Cypress.env('TEST_USER_EMAIL'), 'TEST_USER_EMAIL was not set').to.be.a('string');
-    expect(Cypress.env('TEST_USER_PASSWORD'), 'TEST_USER_PASSWORD was not set').to.be.a('string');
+    expect(
+      Cypress.env('TEST_USER_DISPLAY_NAME'),
+      'TEST_USER_DISPLAY_NAME was not set'
+    ).to.be.a('string');
+    expect(
+      Cypress.env('TEST_USER_EMAIL'),
+      'TEST_USER_EMAIL was not set'
+    ).to.be.a('string');
+    expect(
+      Cypress.env('TEST_USER_PASSWORD'),
+      'TEST_USER_PASSWORD was not set'
+    ).to.be.a('string');
   });
 
   it('can register a new user', () => {
@@ -18,10 +27,14 @@ describe('register flow', () => {
     cy.visit('/signup');
     cy.url().should('include', '/signup');
     cy.get('h2').should('contain.text', 'Create your account');
-    cy.get('input[name="displayName"]').type(Cypress.env('TEST_USER_DISPLAY_NAME'));
+    cy.get('input[name="displayName"]').type(
+      Cypress.env('TEST_USER_DISPLAY_NAME')
+    );
     cy.get('input[name="email"]').type(uniqueEmail);
     cy.get('input[name="password"]').type(Cypress.env('TEST_USER_PASSWORD'));
-    cy.get('input[name="confirmPassword"]').type(Cypress.env('TEST_USER_PASSWORD'));
+    cy.get('input[name="confirmPassword"]').type(
+      Cypress.env('TEST_USER_PASSWORD')
+    );
     cy.get('input[type="checkbox"]').check();
     cy.contains('Create Account').click();
     cy.wait('@registerUser');
@@ -37,14 +50,20 @@ describe('register flow', () => {
     }).as('registerDuplicateEmail');
 
     cy.visit('/signup');
-    cy.get('input[name="displayName"]').type(Cypress.env('TEST_USER_DISPLAY_NAME'));
+    cy.get('input[name="displayName"]').type(
+      Cypress.env('TEST_USER_DISPLAY_NAME')
+    );
     cy.get('input[name="email"]').type(Cypress.env('TEST_USER_EMAIL')); // Use the pre-defined email that would be a duplicate
     cy.get('input[name="password"]').type(Cypress.env('TEST_USER_PASSWORD'));
-    cy.get('input[name="confirmPassword"]').type(Cypress.env('TEST_USER_PASSWORD'));
+    cy.get('input[name="confirmPassword"]').type(
+      Cypress.env('TEST_USER_PASSWORD')
+    );
     cy.get('input[type="checkbox"]').check();
     cy.contains('Create Account').click();
     cy.wait('@registerDuplicateEmail');
-    cy.get('[data-testid="error-message"]').should('be.visible').and('contain', 'Email already exists');
+    cy.get('[data-testid="error-message"]')
+      .should('be.visible')
+      .and('contain', 'Email already exists');
   });
 
   it('visiting /register shows register form and sign-in link works', () => {

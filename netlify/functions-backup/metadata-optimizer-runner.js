@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('metadata-optimizer-runner function triggered');
-    
+
     // Metadata optimization simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Metadata optimizer runner executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         optimization: {
           status: 'active',
           metadataOptimized: 0,
-          lastOptimization: new Date().toISOString()
-        }
-      })
+          lastOptimization: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in metadata-optimizer-runner:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'metadata-optimizer-runner'
-      })
+        function: 'metadata-optimizer-runner',
+      }),
     };
   }
 };

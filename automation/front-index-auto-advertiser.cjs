@@ -16,27 +16,62 @@ function log(msg) {
 
 function buildTiles() {
   const items = [
-    { href: '/automation', label: 'Automation Hub', tagline: 'Factories, agents, and live workflows' },
-    { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, and link integrity' },
-    { href: '/reports/seo', label: 'AI SEO Auditor', tagline: 'Continuous on‑site improvements' },
-    { href: '/reports/ai-trends', label: 'AI Trends', tagline: 'Signals for new automations' },
-    { href: '/newsroom', label: 'Newsroom', tagline: 'Autonomous updates & highlights' },
-    { href: '/main/front', label: 'Front Systems Hub', tagline: 'Curated, futuristic front experience' },
-    { href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', label: 'Docs', tagline: 'Technical notes & guides', external: true },
-    { href: 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md', label: 'AI Changelog', tagline: 'Summarized autonomous changes', external: true },
+    {
+      href: '/automation',
+      label: 'Automation Hub',
+      tagline: 'Factories, agents, and live workflows',
+    },
+    {
+      href: '/site-health',
+      label: 'Site Health',
+      tagline: 'A11y, performance, and link integrity',
+    },
+    {
+      href: '/reports/seo',
+      label: 'AI SEO Auditor',
+      tagline: 'Continuous on‑site improvements',
+    },
+    {
+      href: '/reports/ai-trends',
+      label: 'AI Trends',
+      tagline: 'Signals for new automations',
+    },
+    {
+      href: '/newsroom',
+      label: 'Newsroom',
+      tagline: 'Autonomous updates & highlights',
+    },
+    {
+      href: '/main/front',
+      label: 'Front Systems Hub',
+      tagline: 'Curated, futuristic front experience',
+    },
+    {
+      href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs',
+      label: 'Docs',
+      tagline: 'Technical notes & guides',
+      external: true,
+    },
+    {
+      href: 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md',
+      label: 'AI Changelog',
+      tagline: 'Summarized autonomous changes',
+      external: true,
+    },
   ];
 
-  return items.map((it) => {
-    if (it.external) {
-      return `
+  return items
+    .map(it => {
+      if (it.external) {
+        return `
             <a href="${it.href}" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left text-white/80 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
               <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\" />
               <div className=\"text-base font-semibold text-white/90\">${it.label}</div>
               <div className=\"mt-0.5 text-xs text-white/70\">${it.tagline}</div>
               <div className=\"mt-3 inline-flex items-center gap-1 text-[11px] text-cyan-300/90\">Open <span aria-hidden>↗</span></div>
             </a>`;
-    }
-    return `
+      }
+      return `
             <Link href=\"${it.href}\">
               <a className=\"group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left text-white/80 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo\">
                 <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\" />
@@ -45,12 +80,16 @@ function buildTiles() {
                 <div className=\"mt-3 inline-flex items-center gap-1 text-[11px] text-cyan-300/90\">Open <span aria-hidden>→</span></div>
               </a>
             </Link>`;
-  }).join('\n');
+    })
+    .join('\n');
 }
 
 function ensureImports(tsx) {
   if (!tsx.includes("from 'next/link'")) {
-    tsx = tsx.replace(/(import\s+Head\s+from\s+'next\/head';?)/, `$1\nimport Link from 'next/link';`);
+    tsx = tsx.replace(
+      /(import\s+Head\s+from\s+'next\/head';?)/,
+      `$1\nimport Link from 'next/link';`
+    );
   }
   return tsx;
 }

@@ -2,11 +2,14 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting All Remaining Build Issues Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting All Remaining Build Issues Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix enterprise members file - change import path
-const membersPath = '/workspace/pages/api/enterprise/companies/[companyId]/members.ts';
+const membersPath =
+  '/workspace/pages/api/enterprise/companies/[companyId]/members.ts';
 if (fs.existsSync(membersPath)) {
   let content = fs.readFileSync(membersPath, 'utf8');
   // Fix the import path
@@ -17,10 +20,13 @@ if (fs.existsSync(membersPath)) {
   // Fix all references to store
   content = content.replace(/store\./g, 'enterpriseStore.');
   fs.writeFileSync(membersPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/enterprise/companies/[companyId]/members.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/enterprise/companies/[companyId]/members.ts'
+  );
 }
 // Fix enterprise usage file - change import path
-const usagePath = '/workspace/pages/api/enterprise/companies/[companyId]/usage.ts';
+const usagePath =
+  '/workspace/pages/api/enterprise/companies/[companyId]/usage.ts';
 if (fs.existsSync(usagePath)) {
   let content = fs.readFileSync(usagePath, 'utf8');
   // Fix the import path
@@ -31,10 +37,13 @@ if (fs.existsSync(usagePath)) {
   // Fix all references to store
   content = content.replace(/store\./g, 'enterpriseStore.');
   fs.writeFileSync(usagePath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/enterprise/companies/[companyId]/usage.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/enterprise/companies/[companyId]/usage.ts'
+  );
 }
 // Fix generate service description file
-const generateServicePath = '/workspace/pages/api/generate-service-description.ts';
+const generateServicePath =
+  '/workspace/pages/api/generate-service-description.ts';
 if (fs.existsSync(generateServicePath)) {
   let content = fs.readFileSync(generateServicePath, 'utf8');
   // Add missing closing brace
@@ -42,7 +51,9 @@ if (fs.existsSync(generateServicePath)) {
     content += '\n}';
   }
   fs.writeFileSync(generateServicePath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts'
+  );
 }
 // Fix homepage content file - completely rewrite it
 const homepageContentPath = '/workspace/pages/api/homepage/content.ts';
@@ -78,7 +89,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json(null);
 }`;
 fs.writeFileSync(homepageContentPath, homepageContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/homepage/content.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/homepage/content.ts'
+);
 // Fix integrations connect file
 const integrationsConnectPath = '/workspace/pages/api/integrations/connect.ts';
 if (fs.existsSync(integrationsConnectPath)) {
@@ -88,7 +101,9 @@ if (fs.existsSync(integrationsConnectPath)) {
     content += '\n}';
   }
   fs.writeFileSync(integrationsConnectPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/connect.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/connect.ts'
+  );
 }
 console.log('');
 console.log('📊 ALL REMAINING BUILD ISSUES FIX REPORT');
@@ -98,11 +113,19 @@ console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
 console.log('');
 console.log('✅ Successfully fixed files:');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/enterprise/companies/[companyId]/members.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/enterprise/companies/[companyId]/usage.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/generate-service-description.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/enterprise/companies/[companyId]/members.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/enterprise/companies/[companyId]/usage.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/generate-service-description.ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/homepage/content.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/connect.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/connect.ts'
+);
 console.log('');
 // Save report
 const report = {
@@ -114,8 +137,11 @@ const report = {
     'pages/api/enterprise/companies/[companyId]/usage.ts',
     'pages/api/generate-service-description.ts',
     'pages/api/homepage/content.ts',
-    'pages/api/integrations/connect.ts'
-  ]
+    'pages/api/integrations/connect.ts',
+  ],
 };
-fs.writeFileSync('/workspace/all-remaining-build-issues-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/all-remaining-build-issues-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to all-remaining-build-issues-fix-report.json');

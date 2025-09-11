@@ -14,7 +14,7 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       'Entity extraction and content gap suggestions',
       'Readability, structure, and internal linking checks',
       'Schema.org hints and JSON-LD validation',
-      'CMS plugins and CI quality gates'
+      'CMS plugins and CI quality gates',
     ],
     popular: true,
     icon: '🔎',
@@ -23,7 +23,8 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/services/ai-seo-content-optimizer',
     marketPosition:
       'Comparable to Clearscope and SurferSEO; focuses on developer workflow and CI integration.',
-    targetAudience: 'Marketing teams and content ops at SaaS and eCommerce companies',
+    targetAudience:
+      'Marketing teams and content ops at SaaS and eCommerce companies',
     trialDays: 14,
     setupTime: '30 minutes',
     category: 'AI & Machine Learning',
@@ -40,14 +41,14 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Runs as an API with CMS apps and a dashboard.',
     launchDate: '2025-01-10',
     customers: 120,
     rating: 4.6,
-    reviews: 78
+    reviews: 78,
   },
   {
     id: 'automated-email-follow-up',
@@ -62,14 +63,15 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       'Smart send windows and deliverability guardrails',
       'Reply detection and CRM syncing',
       'Inbox rotation and warm-up',
-      'Unsubscribe and compliance automation'
+      'Unsubscribe and compliance automation',
     ],
     popular: true,
     icon: '✉️',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/services/automated-email-follow-up',
-    marketPosition: 'Alternative to Lemlist and Mailshake with safer defaults and AI assist.',
+    marketPosition:
+      'Alternative to Lemlist and Mailshake with safer defaults and AI assist.',
     targetAudience: 'SDRs, founders, and customer success teams',
     trialDays: 14,
     setupTime: '20 minutes',
@@ -87,19 +89,21 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Hosted multi-tenant app with deliverability safeguards.',
+    implementationDetails:
+      'Hosted multi-tenant app with deliverability safeguards.',
     launchDate: '2025-01-10',
     customers: 220,
     rating: 4.5,
-    reviews: 91
+    reviews: 91,
   },
   {
     id: 'ecommerce-returns-manager',
     name: 'E‑Commerce Returns Manager',
-    tagline: 'Self-serve portal, RMA labels, and analytics for Shopify/WooCommerce',
+    tagline:
+      'Self-serve portal, RMA labels, and analytics for Shopify/WooCommerce',
     price: '$149',
     period: '/month',
     description:
@@ -109,14 +113,15 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       'Carrier label generation and tracking',
       'Policy rules (windows, conditions, fees)',
       'Return reason analytics',
-      'Fraud checks and RMA approvals'
+      'Fraud checks and RMA approvals',
     ],
     popular: false,
     icon: '🛍️',
     color: 'from-emerald-500 to-green-600',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/ecommerce-returns-manager',
-    marketPosition: 'Comparable to Loop Returns and Happy Returns with simpler pricing.',
+    marketPosition:
+      'Comparable to Loop Returns and Happy Returns with simpler pricing.',
     targetAudience: 'DTC brands on Shopify and WooCommerce',
     trialDays: 14,
     setupTime: '1 hour',
@@ -134,14 +139,14 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Shopify app + backend with webhook processors.',
     launchDate: '2025-01-10',
     customers: 85,
     rating: 4.4,
-    reviews: 42
+    reviews: 42,
   },
   {
     id: 'ai-it-helpdesk',
@@ -156,14 +161,15 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       'Generative runbooks and KB',
       'SLA tracking and alerts',
       'Chat and email channels',
-      'RPA integration for fixes'
+      'RPA integration for fixes',
     ],
     popular: true,
     icon: '🛠️',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/ai-it-helpdesk',
-    marketPosition: 'Alternative to Freshservice and Zendesk with native AI automations.',
+    marketPosition:
+      'Alternative to Freshservice and Zendesk with native AI automations.',
     targetAudience: 'MSPs and internal IT teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -181,14 +187,14 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Agent assist and workflow engine with connectors.',
     launchDate: '2025-01-10',
     customers: 64,
     rating: 4.6,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'lightweight-privacy-analytics',
@@ -203,14 +209,15 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       'Event tracking API',
       'Realtime dashboard',
       'No cookies, no PII',
-      'Export to CSV and webhook'
+      'Export to CSV and webhook',
     ],
     popular: false,
     icon: '📈',
     color: 'from-sky-500 to-cyan-600',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/services/lightweight-privacy-analytics',
-    marketPosition: 'Comparable to Plausible and Fathom, with simpler events API.',
+    marketPosition:
+      'Comparable to Plausible and Fathom, with simpler events API.',
     targetAudience: 'Startups and SMB websites',
     trialDays: 14,
     setupTime: '10 minutes',
@@ -228,14 +235,15 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Edge collector with columnar storage and static UI.',
+    implementationDetails:
+      'Edge collector with columnar storage and static UI.',
     launchDate: '2025-01-10',
     customers: 340,
     rating: 4.7,
-    reviews: 112
+    reviews: 112,
   },
   {
     id: 'affiliate-tracking-ai',
@@ -250,14 +258,15 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       'Fraud scoring with anomaly detection',
       'Automated payouts and invoicing',
       'White-label partner portal',
-      'Webhook and REST APIs'
+      'Webhook and REST APIs',
     ],
     popular: false,
     icon: '🤝',
     color: 'from-orange-500 to-red-600',
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/affiliate-tracking-ai',
-    marketPosition: 'Alternative to Tapfiliate and Impact with AI-based fraud scoring.',
+    marketPosition:
+      'Alternative to Tapfiliate and Impact with AI-based fraud scoring.',
     targetAudience: 'SaaS and commerce businesses with partner programs',
     trialDays: 14,
     setupTime: '3 hours',
@@ -275,14 +284,15 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Tracking pixels, server-side attribution, and payouts engine.',
+    implementationDetails:
+      'Tracking pixels, server-side attribution, and payouts engine.',
     launchDate: '2025-01-10',
     customers: 56,
     rating: 4.3,
-    reviews: 27
+    reviews: 27,
   },
   {
     id: 'smb-lms',
@@ -297,14 +307,15 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       'Team and cohort tracking',
       'SCORM and video hosting support',
       'SSO (SAML/OIDC)',
-      'API and webhooks'
+      'API and webhooks',
     ],
     popular: false,
     icon: '🎓',
     color: 'from-indigo-500 to-violet-600',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/smb-lms',
-    marketPosition: 'Comparable to TalentLMS and LearnDash with simpler admin UX.',
+    marketPosition:
+      'Comparable to TalentLMS and LearnDash with simpler admin UX.',
     targetAudience: 'SMBs and agencies with training needs',
     trialDays: 21,
     setupTime: '1 day',
@@ -322,14 +333,13 @@ export const newMarketOfferings: EnhancedRealMicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Multi-tenant LMS with SCORM import and SSO.',
     launchDate: '2025-01-10',
     customers: 48,
     rating: 4.4,
-    reviews: 19
-  }
+    reviews: 19,
+  },
 ];
-

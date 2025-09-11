@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const cuttingEdgeServices: CuttingEdgeService[] = [
@@ -55,7 +55,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Accelerate pharmaceutical R&D with quantum computing and AI',
     price: '$2,499',
     period: '/month',
-    description: 'Revolutionary platform combining quantum algorithms with AI to predict molecular interactions, optimize drug candidates, and reduce drug discovery timelines from years to months.',
+    description:
+      'Revolutionary platform combining quantum algorithms with AI to predict molecular interactions, optimize drug candidates, and reduce drug discovery timelines from years to months.',
     features: [
       'Quantum molecular dynamics simulation',
       'AI-powered binding affinity prediction',
@@ -64,22 +65,26 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Patent landscape analysis',
       'Clinical trial success probability',
       'Real-time collaboration tools',
-      'Regulatory compliance tracking'
+      'Regulatory compliance tracking',
     ],
     popular: true,
     icon: '🧬',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-drug-discovery',
-    marketPosition: 'First-mover in quantum-AI drug discovery; complements existing pharma tools like Schrödinger and OpenEye.',
-    targetAudience: 'Pharmaceutical companies, biotech startups, research institutions',
+    marketPosition:
+      'First-mover in quantum-AI drug discovery; complements existing pharma tools like Schrödinger and OpenEye.',
+    targetAudience:
+      'Pharmaceutical companies, biotech startups, research institutions',
     trialDays: 30,
     setupTime: '1 week',
     category: 'AI & Healthcare',
     realService: true,
     technology: ['Quantum computing, TensorFlow, PyTorch, Molecular dynamics'],
     integrations: ['Schrödinger, OpenEye, PubChem, ChEMBL'],
-    useCases: ['Drug discovery acceleration, Molecular optimization, Clinical trial design'],
+    useCases: [
+      'Drug discovery acceleration, Molecular optimization, Clinical trial design',
+    ],
     roi: 'Reduce drug discovery costs by 40-60% and timeline by 50-70%.',
     competitors: ['Schrödinger, OpenEye, Atomwise, Insilico Medicine'],
     marketSize: '$45B+ drug discovery market',
@@ -87,11 +92,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'quantum-ai-revolutionary',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, AI model training, molecular database connectivity.',
+    implementationDetails:
+      'Quantum cloud integration, AI model training, molecular database connectivity.',
     launchDate: '2037-10-01',
     customers: 12,
     rating: 4.9,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'autonomous-supply-chain-orchestrator',
@@ -99,7 +105,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Self-optimizing supply chains with AI and IoT integration',
     price: '$899',
     period: '/month',
-    description: 'End-to-end supply chain automation platform that predicts disruptions, optimizes inventory, and autonomously adjusts logistics in real-time using AI and IoT sensors.',
+    description:
+      'End-to-end supply chain automation platform that predicts disruptions, optimizes inventory, and autonomously adjusts logistics in real-time using AI and IoT sensors.',
     features: [
       'Predictive disruption forecasting',
       'Autonomous inventory optimization',
@@ -108,15 +115,17 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Blockchain traceability',
       'Sustainability scoring',
       'Multi-warehouse coordination',
-      'Dynamic pricing optimization'
+      'Dynamic pricing optimization',
     ],
     popular: true,
     icon: '🚚',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-supply-chain',
-    marketPosition: 'Next-generation supply chain platform; integrates with existing ERP systems like SAP and Oracle.',
-    targetAudience: 'Manufacturing companies, logistics providers, retail chains',
+    marketPosition:
+      'Next-generation supply chain platform; integrates with existing ERP systems like SAP and Oracle.',
+    targetAudience:
+      'Manufacturing companies, logistics providers, retail chains',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Supply Chain & Logistics',
@@ -131,11 +140,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'ai-autonomous',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'IoT sensor deployment, AI model training, ERP system integration.',
+    implementationDetails:
+      'IoT sensor deployment, AI model training, ERP system integration.',
     launchDate: '2037-09-15',
     customers: 28,
     rating: 4.8,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'quantum-financial-risk-analyzer',
@@ -143,7 +153,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Quantum-powered risk assessment for institutional trading',
     price: '$1,799',
     period: '/month',
-    description: 'Advanced financial risk management platform leveraging quantum computing to analyze market volatility, portfolio optimization, and real-time risk assessment for institutional investors.',
+    description:
+      'Advanced financial risk management platform leveraging quantum computing to analyze market volatility, portfolio optimization, and real-time risk assessment for institutional investors.',
     features: [
       'Quantum Monte Carlo simulations',
       'Real-time portfolio risk monitoring',
@@ -152,22 +163,26 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Regulatory compliance reporting',
       'Multi-asset correlation analysis',
       'AI-driven trading signals',
-      'Risk-adjusted return optimization'
+      'Risk-adjusted return optimization',
     ],
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-financial-risk',
-    marketPosition: 'Cutting-edge risk management for institutional investors; complements Bloomberg and Refinitiv platforms.',
-    targetAudience: 'Investment banks, hedge funds, asset managers, insurance companies',
+    marketPosition:
+      'Cutting-edge risk management for institutional investors; complements Bloomberg and Refinitiv platforms.',
+    targetAudience:
+      'Investment banks, hedge funds, asset managers, insurance companies',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Financial Technology',
     realService: true,
     technology: ['Quantum computing, Python, R, Financial modeling'],
     integrations: ['Bloomberg Terminal, Refinitiv, FactSet, Bloomberg'],
-    useCases: ['Portfolio risk management, Trading optimization, Regulatory compliance'],
+    useCases: [
+      'Portfolio risk management, Trading optimization, Regulatory compliance',
+    ],
     roi: 'Improve risk-adjusted returns by 15-25% and reduce VaR by 20-30%.',
     competitors: ['Bloomberg Risk, MSCI RiskMetrics, FactSet'],
     marketSize: '$15B+ risk management market',
@@ -175,11 +190,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'quantum-financial',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, financial data feeds, risk model deployment.',
+    implementationDetails:
+      'Quantum cloud integration, financial data feeds, risk model deployment.',
     launchDate: '2037-08-20',
     customers: 18,
     rating: 4.9,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'ai-powered-legal-contract-analyzer',
@@ -187,7 +203,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Intelligent contract review and risk assessment',
     price: '$399',
     period: '/month',
-    description: 'Advanced legal AI platform that analyzes contracts, identifies risks, suggests improvements, and automates legal document review with 99.5% accuracy.',
+    description:
+      'Advanced legal AI platform that analyzes contracts, identifies risks, suggests improvements, and automates legal document review with 99.5% accuracy.',
     features: [
       'Contract risk assessment',
       'Legal clause analysis',
@@ -196,14 +213,15 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Negotiation suggestions',
       'Document version control',
       'Legal research integration',
-      'Multi-jurisdiction support'
+      'Multi-jurisdiction support',
     ],
     popular: false,
     icon: '⚖️',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-400',
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
-    marketPosition: 'Enterprise-grade legal AI platform; integrates with existing legal management systems.',
+    marketPosition:
+      'Enterprise-grade legal AI platform; integrates with existing legal management systems.',
     targetAudience: 'Law firms, corporate legal departments, compliance teams',
     trialDays: 14,
     setupTime: '3 days',
@@ -211,7 +229,9 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     realService: true,
     technology: ['NLP, Machine Learning, Legal databases, Cloud computing'],
     integrations: ['DocuSign, Adobe Sign, LegalZoom, Clio'],
-    useCases: ['Contract review automation, Risk assessment, Compliance management'],
+    useCases: [
+      'Contract review automation, Risk assessment, Compliance management',
+    ],
     roi: 'Reduce contract review time by 80-90% and legal costs by 30-40%.',
     competitors: ['Kira Systems, eBrevia, LawGeex'],
     marketSize: '$8B legal tech market',
@@ -219,11 +239,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, legal database integration, workflow automation.',
+    implementationDetails:
+      'AI model training, legal database integration, workflow automation.',
     launchDate: '2037-07-10',
     customers: 45,
     rating: 4.7,
-    reviews: 23
+    reviews: 23,
   },
   {
     id: 'quantum-cybersecurity-threat-hunter',
@@ -231,7 +252,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Quantum-powered threat detection and response',
     price: '$1,299',
     period: '/month',
-    description: 'Next-generation cybersecurity platform using quantum algorithms to detect zero-day threats, analyze attack patterns, and provide real-time threat intelligence.',
+    description:
+      'Next-generation cybersecurity platform using quantum algorithms to detect zero-day threats, analyze attack patterns, and provide real-time threat intelligence.',
     features: [
       'Quantum threat detection',
       'Zero-day vulnerability scanning',
@@ -240,14 +262,15 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Incident response automation',
       'Compliance reporting',
       'Multi-cloud security',
-      'AI-powered threat hunting'
+      'AI-powered threat hunting',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity',
-    marketPosition: 'Advanced threat detection platform; complements existing security tools like CrowdStrike and SentinelOne.',
+    marketPosition:
+      'Advanced threat detection platform; complements existing security tools like CrowdStrike and SentinelOne.',
     targetAudience: 'Enterprise security teams, MSSPs, government agencies',
     trialDays: 21,
     setupTime: '1 week',
@@ -263,11 +286,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, security tool integration, threat intelligence setup.',
+    implementationDetails:
+      'Quantum cloud integration, security tool integration, threat intelligence setup.',
     launchDate: '2037-06-15',
     customers: 32,
     rating: 4.8,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'ai-powered-hr-talent-predictor',
@@ -275,7 +299,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Predict employee success and retention with AI',
     price: '$299',
     period: '/month',
-    description: 'Intelligent HR platform that predicts employee performance, identifies flight risks, and optimizes hiring decisions using advanced AI and people analytics.',
+    description:
+      'Intelligent HR platform that predicts employee performance, identifies flight risks, and optimizes hiring decisions using advanced AI and people analytics.',
     features: [
       'Employee performance prediction',
       'Flight risk identification',
@@ -284,15 +309,17 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Career path planning',
       'Employee engagement monitoring',
       'Diversity and inclusion metrics',
-      'Predictive analytics dashboard'
+      'Predictive analytics dashboard',
     ],
     popular: false,
     icon: '👥',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-hr-talent-predictor',
-    marketPosition: 'Predictive HR analytics platform; integrates with existing HRIS systems.',
-    targetAudience: 'HR departments, recruitment agencies, talent management teams',
+    marketPosition:
+      'Predictive HR analytics platform; integrates with existing HRIS systems.',
+    targetAudience:
+      'HR departments, recruitment agencies, talent management teams',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Human Resources',
@@ -307,11 +334,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, HRIS integration, analytics dashboard setup.',
+    implementationDetails:
+      'AI model training, HRIS integration, analytics dashboard setup.',
     launchDate: '2037-05-20',
     customers: 67,
     rating: 4.6,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'quantum-logistics-optimizer',
@@ -319,7 +347,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Quantum-powered route optimization and fleet management',
     price: '$799',
     period: '/month',
-    description: 'Advanced logistics platform using quantum computing to solve complex routing problems, optimize fleet operations, and reduce transportation costs.',
+    description:
+      'Advanced logistics platform using quantum computing to solve complex routing problems, optimize fleet operations, and reduce transportation costs.',
     features: [
       'Quantum route optimization',
       'Fleet management',
@@ -328,15 +357,17 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Carbon footprint reduction',
       'Multi-modal transportation',
       'Dynamic pricing',
-      'Predictive maintenance'
+      'Predictive maintenance',
     ],
     popular: true,
     icon: '🚛',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-logistics-optimizer',
-    marketPosition: 'Next-generation logistics optimization; integrates with existing TMS and WMS systems.',
-    targetAudience: 'Logistics companies, e-commerce businesses, manufacturing companies',
+    marketPosition:
+      'Next-generation logistics optimization; integrates with existing TMS and WMS systems.',
+    targetAudience:
+      'Logistics companies, e-commerce businesses, manufacturing companies',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Logistics & Transportation',
@@ -351,11 +382,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'quantum-logistics',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, TMS integration, IoT device deployment.',
+    implementationDetails:
+      'Quantum cloud integration, TMS integration, IoT device deployment.',
     launchDate: '2037-04-10',
     customers: 41,
     rating: 4.7,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'ai-powered-marketing-attribution-suite',
@@ -363,7 +395,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Multi-touch attribution with AI-driven insights',
     price: '$499',
     period: '/month',
-    description: 'Advanced marketing attribution platform that uses AI to track customer journeys, measure campaign effectiveness, and optimize marketing spend across all channels.',
+    description:
+      'Advanced marketing attribution platform that uses AI to track customer journeys, measure campaign effectiveness, and optimize marketing spend across all channels.',
     features: [
       'Multi-touch attribution',
       'Customer journey mapping',
@@ -372,22 +405,27 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Cross-channel tracking',
       'Predictive analytics',
       'A/B testing automation',
-      'Real-time dashboards'
+      'Real-time dashboards',
     ],
     popular: true,
     icon: '📊',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-marketing-attribution',
-    marketPosition: 'Advanced marketing attribution platform; integrates with major marketing tools and platforms.',
+    marketPosition:
+      'Advanced marketing attribution platform; integrates with major marketing tools and platforms.',
     targetAudience: 'Marketing teams, agencies, e-commerce businesses',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Marketing & Analytics',
     realService: true,
-    technology: ['AI/ML, Data analytics, Marketing automation, Cloud computing'],
+    technology: [
+      'AI/ML, Data analytics, Marketing automation, Cloud computing',
+    ],
     integrations: ['Google Analytics, Facebook Ads, HubSpot, Marketo'],
-    useCases: ['Campaign optimization, ROI measurement, Customer journey analysis'],
+    useCases: [
+      'Campaign optimization, ROI measurement, Customer journey analysis',
+    ],
     roi: 'Improve marketing ROI by 30-50% and reduce customer acquisition costs by 25-35%.',
     competitors: ['AppsFlyer, Branch, Adjust'],
     marketSize: '$15B marketing attribution market',
@@ -395,11 +433,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, marketing tool integration, analytics dashboard setup.',
+    implementationDetails:
+      'AI model training, marketing tool integration, analytics dashboard setup.',
     launchDate: '2037-03-15',
     customers: 89,
     rating: 4.8,
-    reviews: 56
+    reviews: 56,
   },
   {
     id: 'quantum-energy-grid-optimizer',
@@ -407,7 +446,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Quantum-powered energy distribution optimization',
     price: '$1,999',
     period: '/month',
-    description: 'Advanced energy management platform using quantum computing to optimize power distribution, predict demand, and integrate renewable energy sources.',
+    description:
+      'Advanced energy management platform using quantum computing to optimize power distribution, predict demand, and integrate renewable energy sources.',
     features: [
       'Quantum grid optimization',
       'Demand prediction',
@@ -416,14 +456,15 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Energy storage optimization',
       'Carbon reduction tracking',
       'Real-time monitoring',
-      'Predictive maintenance'
+      'Predictive maintenance',
     ],
     popular: false,
     icon: '⚡',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-energy-grid',
-    marketPosition: 'Next-generation energy management; integrates with existing SCADA and energy management systems.',
+    marketPosition:
+      'Next-generation energy management; integrates with existing SCADA and energy management systems.',
     targetAudience: 'Utility companies, energy providers, smart city projects',
     trialDays: 30,
     setupTime: '3 weeks',
@@ -439,11 +480,12 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'quantum-energy',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, SCADA integration, IoT sensor deployment.',
+    implementationDetails:
+      'Quantum cloud integration, SCADA integration, IoT sensor deployment.',
     launchDate: '2037-02-20',
     customers: 15,
     rating: 4.9,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'ai-powered-customer-churn-predictor',
@@ -451,7 +493,8 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     tagline: 'Predict and prevent customer churn with AI',
     price: '$199',
     period: '/month',
-    description: 'Intelligent customer retention platform that predicts churn risk, identifies at-risk customers, and provides actionable insights to improve retention.',
+    description:
+      'Intelligent customer retention platform that predicts churn risk, identifies at-risk customers, and provides actionable insights to improve retention.',
     features: [
       'Churn risk prediction',
       'Customer segmentation',
@@ -460,15 +503,17 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
       'Lifetime value prediction',
       'Engagement scoring',
       'Automated alerts',
-      'ROI measurement'
+      'ROI measurement',
     ],
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-customer-churn-predictor',
-    marketPosition: 'Customer retention analytics platform; integrates with CRM and customer support tools.',
-    targetAudience: 'SaaS companies, e-commerce businesses, subscription services',
+    marketPosition:
+      'Customer retention analytics platform; integrates with CRM and customer support tools.',
+    targetAudience:
+      'SaaS companies, e-commerce businesses, subscription services',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Customer Success',
@@ -483,10 +528,11 @@ export const cuttingEdgeServices: CuttingEdgeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, CRM integration, analytics dashboard setup.',
+    implementationDetails:
+      'AI model training, CRM integration, analytics dashboard setup.',
     launchDate: '2037-01-10',
     customers: 156,
     rating: 4.7,
-    reviews: 89
-  }
+    reviews: 89,
+  },
 ];

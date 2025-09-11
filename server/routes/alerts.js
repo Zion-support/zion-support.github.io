@@ -6,7 +6,9 @@ router.post('/notify-slack', async (req, res) => {
   const { ip_address, route, reason, timestamp } = req.body;
 
   if (!ip_address || !route || !reason) {
-    return res.status(400).json({ error: 'Missing required fields: ip_address, route, reason' });
+    return res
+      .status(400)
+      .json({ error: 'Missing required fields: ip_address, route, reason' });
   }
 
   const message = `🚨 IP Blocked Alert 🚨

@@ -1,11 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   try {
     // Get the automation script path
-    const automationPath = path.join(process.cwd(), 'automation', 'ultra-fast-automation-orchestrator.cjs');
-    
+    const automationPath = path.join(
+      process.cwd(),
+      'automation',
+      'ultra-fast-automation-orchestrator.cjs'
+    );
+
     // Check if the automation script exists
     if (!fs.existsSync(automationPath)) {
       return {
@@ -14,14 +18,14 @@ exports.handler = async function(event, context) {
         body: JSON.stringify({
           error: 'Ultra-fast automation orchestrator script not found',
           path: automationPath,
-          timestamp: new Date().toISOString()
-        })
+          timestamp: new Date().toISOString(),
+        }),
       };
     }
 
     // Import and run the automation
     const automation = require(automationPath);
-    
+
     let result;
     if (typeof automation === 'function') {
       result = await automation();
@@ -39,17 +43,17 @@ exports.handler = async function(event, context) {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        message: 'Ultra-fast automation orchestrator function executed successfully',
+        message:
+          'Ultra-fast automation orchestrator function executed successfully',
         result: result,
         timestamp: new Date().toISOString(),
         functionName: 'ultra-fast-automation-orchestrator',
-        schedule: 'every 5 minutes'
-      })
+        schedule: 'every 5 minutes',
+      }),
     };
-
   } catch (error) {
     console.error('Ultra-fast automation orchestrator function error:', error);
-    
+
     return {
       statusCode: 500,
       headers: { 'Content-Type': 'application/json' },
@@ -58,8 +62,8 @@ exports.handler = async function(event, context) {
         message: error.message,
         stack: error.stack,
         timestamp: new Date().toISOString(),
-        functionName: 'ultra-fast-automation-orchestrator'
-      })
+        functionName: 'ultra-fast-automation-orchestrator',
+      }),
     };
   }
 };

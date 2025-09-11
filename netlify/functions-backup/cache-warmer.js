@@ -1,33 +1,55 @@
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   const path = require('path');
   const fs = require('fs');
-  const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
+  const baseUrl = (
+    process.env.SITE_URL ||
+    process.env.URL ||
+    process.env.DEPLOY_PRIME_URL ||
+    ''
+  ).replace(/\/$/, '');
   const githubToken = process.env.GITHUB_TOKEN || '';
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
   const githubBranch = process.env.GIT_BRANCH || 'main';
   const timeoutMs = 15000;
   const concurrency = 12;
 
-  function log(msg) { console.log(`[cache-warmer] ${msg}`); }
+  function log(msg) {
+    console.log(`[cache-warmer] ${msg}`);
+  }
 
   const ROOT = path.join(__dirname, '..', '..');
 
   function readContentRegistry() {
     try {
-      const regPath = path.join(ROOT, 'public', 'automation', 'content-registry.json');
+      const regPath = path.join(
+        ROOT,
+        'public',
+        'automation',
+        'content-registry.json'
+      );
       const json = JSON.parse(fs.readFileSync(regPath, 'utf8'));
-      const routes = Array.isArray(json.pages) ? json.pages.map(p => p.route).filter(Boolean) : [];
+      const routes = Array.isArray(json.pages)
+        ? json.pages.map(p => p.route).filter(Boolean)
+        : [];
       return routes;
     } catch (e) {
       log(`No content registry or failed to read: ${e.message}`);
-      return ['/','/automation','/main/front','/reports/seo','/reports/ai-trends','/newsroom'];
+      return [
+        '/',
+        '/automation',
+        '/main/front',
+        '/reports/seo',
+        '/reports/ai-trends',
+        '/newsroom',
+      ];
     }
   }
 
   function getFunctionNames() {
     try {
       const manifest = require('./functions-manifest.json');
-      if (Array.isArray(manifest.functions)) return manifest.functions.filter(n => n !== 'cache-warmer');
+      if (Array.isArray(manifest.functions))
+        return manifest.functions.filter(n => n !== 'cache-warmer');
     } catch (e) {}
     // Fallback to a small curated list
     return [
@@ -36,7 +58,7 @@ exports.handler = async function(event, context) {
       'homepage_advertiser',
       'cloud_orchestrator',
       'readme-advertiser',
-      'features-capabilities-benefits-advertiser'
+      'features-capabilities-benefits-advertiser',
     ];
   }
 
@@ -65,23 +87,32 @@ exports.handler = async function(event, context) {
         results.push(await fetchWithTimeout(u));
       }
     }
-    const workers = Array.from({ length: Math.min(concurrency, urls.length) }, () => worker());
+    const workers = Array.from(
+      { length: Math.min(concurrency, urls.length) },
+      () => worker()
+    );
     await Promise.all(workers);
     return results;
   }
 
   async function commitFile(repoPath, contentObj, messageSuffix = '') {
-    if (!githubToken) return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
-    const content = Buffer.from(JSON.stringify(contentObj, null, 2) + '\n').toString('base64');
+    if (!githubToken)
+      return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
+    const content = Buffer.from(
+      JSON.stringify(contentObj, null, 2) + '\n'
+    ).toString('base64');
     const headers = {
       Authorization: `token ${githubToken}`,
       'Content-Type': 'application/json',
-      'User-Agent': 'netlify-cache-warmer'
+      'User-Agent': 'netlify-cache-warmer',
     };
     // get sha if exists
     let sha;
     try {
-      const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath)}?ref=${encodeURIComponent(githubBranch)}`, { headers });
+      const getRes = await fetch(
+        `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath)}?ref=${encodeURIComponent(githubBranch)}`,
+        { headers }
+      );
       if (getRes.ok) {
         const json = await getRes.json();
         sha = json.sha;
@@ -91,18 +122,25 @@ exports.handler = async function(event, context) {
       message: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`,
       content,
       branch: githubBranch,
-      sha
+      sha,
     };
-    const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath)}`, {
-      method: 'PUT',
-      headers,
-      body: JSON.stringify(body)
-    });
+    const putRes = await fetch(
+      `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath)}`,
+      {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify(body),
+      }
+    );
     const ok = putRes.ok;
     const status = putRes.status;
     let error;
     if (!ok) {
-      try { error = await putRes.text(); } catch (e) { error = String(e); }
+      try {
+        error = await putRes.text();
+      } catch (e) {
+        error = String(e);
+      }
     }
     return { ok, status, error };
   }
@@ -113,7 +151,9 @@ exports.handler = async function(event, context) {
 
     const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : [];
     const functionNames = getFunctionNames();
-    const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : [];
+    const functionUrls = baseUrl
+      ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`)
+      : [];
 
     const warmedPages = baseUrl ? await warmUrls(pageUrls) : [];
     const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : [];
@@ -123,18 +163,23 @@ exports.handler = async function(event, context) {
       baseUrl,
       counts: {
         pages: warmedPages.length,
-        functions: warmedFunctions.length
+        functions: warmedFunctions.length,
       },
-      ok: warmedPages.filter(x => x.ok).length + warmedFunctions.filter(x => x.ok).length,
-      failed: warmedPages.filter(x => !x.ok).length + warmedFunctions.filter(x => !x.ok).length,
+      ok:
+        warmedPages.filter(x => x.ok).length +
+        warmedFunctions.filter(x => x.ok).length,
+      failed:
+        warmedPages.filter(x => !x.ok).length +
+        warmedFunctions.filter(x => !x.ok).length,
       pages: warmedPages,
-      functions: warmedFunctions
+      functions: warmedFunctions,
     };
 
     // Commit reports if possible
     const dirLatest = 'data/reports/cache-warm/latest.json';
     const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`;
-    let commitLatest = { ok: false }, commitHistory = { ok: false };
+    let commitLatest = { ok: false },
+      commitHistory = { ok: false };
     if (githubToken) {
       commitHistory = await commitFile(dirHistory, summary, '[history]');
       commitLatest = await commitFile(dirLatest, summary, '[latest]');
@@ -143,10 +188,13 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ok: true, summary, commitLatest, commitHistory })
+      body: JSON.stringify({ ok: true, summary, commitLatest, commitHistory }),
     };
   } catch (err) {
     log(String(err));
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(err) }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: false, error: String(err) }),
+    };
   }
 };

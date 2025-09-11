@@ -3,7 +3,8 @@ import path from 'path';
 
 // Allow overriding the log directory via WATCHDOG_LOG_PATH so logging works
 // in read-only environments.
-const baseLogDir = process.env.WATCHDOG_LOG_PATH || path.join(__dirname, '..', '..', 'logs');
+const baseLogDir =
+  process.env.WATCHDOG_LOG_PATH || path.join(__dirname, '..', '..', 'logs');
 const logsDir = path.join(baseLogDir, 'perf');
 
 // Determine log level from environment variable or default to 'info'

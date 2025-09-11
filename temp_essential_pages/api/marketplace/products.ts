@@ -1,4 +1,8 @@
-import { PrismaClient, type Product as ProductModel, type Prisma } from '@prisma/client';
+import {
+  PrismaClient,
+  type Product as ProductModel,
+  type Prisma,
+} from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { withErrorLogging } from '@/utils/withErrorLogging';
 import * as Sentry from '@sentry/nextjs';
@@ -44,8 +48,12 @@ async function handler(
   // DATABASE_URL is essential for Prisma Client to connect to the database.
   // This check ensures the service is not attempting to run without proper configuration.
   if (!process.env.DATABASE_URL) {
-    console.error("DATABASE_URL is not set or empty.");
-    return res.status(503).json({ error: 'Service Unavailable: Database configuration is missing.' });
+    console.error('DATABASE_URL is not set or empty.');
+    return res
+      .status(503)
+      .json({
+        error: 'Service Unavailable: Database configuration is missing.',
+      });
   }
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
@@ -60,20 +68,32 @@ async function handler(
     const skip = (page - 1) * limit;
 
     const filters: ProductFilters = {
-      category: typeof req.query.category === 'string' ? req.query.category.toLowerCase().trim() : undefined,
-      minPrice: typeof req.query.minPrice === 'string' ? parseFloat(req.query.minPrice) : undefined,
-      maxPrice: typeof req.query.maxPrice === 'string' ? parseFloat(req.query.maxPrice) : undefined,
-      search: typeof req.query.search === 'string' ? req.query.search.toLowerCase().trim() : undefined,
+      category:
+        typeof req.query.category === 'string'
+          ? req.query.category.toLowerCase().trim()
+          : undefined,
+      minPrice:
+        typeof req.query.minPrice === 'string'
+          ? parseFloat(req.query.minPrice)
+          : undefined,
+      maxPrice:
+        typeof req.query.maxPrice === 'string'
+          ? parseFloat(req.query.maxPrice)
+          : undefined,
+      search:
+        typeof req.query.search === 'string'
+          ? req.query.search.toLowerCase().trim()
+          : undefined,
     };
 
     // Build where clause
     const where: Prisma.ProductWhereInput = {};
-    
+
     if (filters.category) {
       // Assuming category is a string. If it's a relation, adjust accordingly.
       where.category = { equals: filters.category, mode: 'insensitive' };
     }
-    
+
     if (filters.minPrice !== undefined || filters.maxPrice !== undefined) {
       where.price = {};
       if (filters.minPrice !== undefined) {
@@ -83,7 +103,7 @@ async function handler(
         where.price.lte = filters.maxPrice;
       }
     }
-    
+
     if (filters.search) {
       where.OR = [
         { name: { contains: filters.search, mode: 'insensitive' } },
@@ -114,7 +134,7 @@ async function handler(
       prisma.product.count({ where }),
     ]);
 
-    const ids = products.map((p) => p.id);
+    const ids = products.map(p => p.id);
 
     let stats;
     try {
@@ -145,10 +165,10 @@ async function handler(
     }
 
     const statsMap = new Map<string, ProductStats>(
-      stats.map((s) => [s.productId, { avg: s._avg.rating, count: s._count.id }])
+      stats.map(s => [s.productId, { avg: s._avg.rating, count: s._count.id }])
     );
 
-    const result: ProductWithStats[] = products.map((p) => {
+    const result: ProductWithStats[] = products.map(p => {
       const productStats = statsMap.get(p.id);
       return {
         ...p,
@@ -166,24 +186,26 @@ async function handler(
       hasMore: skip + limit < totalCount,
     };
     return res.status(200).json(successResponse);
-  } catch (e: unknown) { // Changed from any to unknown
+  } catch (e: unknown) {
+    // Changed from any to unknown
     // Inner try-catch blocks are responsible for logging specific Prisma errors with detailed context.
     // This outer catch block handles any other generic errors that might occur,
     // or errors re-thrown from the inner blocks.
-    console.error(
-      'Generic error in products API handler (fallback catch):',
-      {
-        message: e.message, // General error message
-        code: e.code,       // Error code, if present (e.g., from a non-Prisma error)
-        stack: e.stack,     // Call stack for debugging
-        fullError: e,       // The complete error object for comprehensive analysis
-      }
-    );
+    console.error('Generic error in products API handler (fallback catch):', {
+      message: e.message, // General error message
+      code: e.code, // Error code, if present (e.g., from a non-Prisma error)
+      stack: e.stack, // Call stack for debugging
+      fullError: e, // The complete error object for comprehensive analysis
+    });
     Sentry.captureException(e);
-    const errorMessage = e instanceof Error ? e.message : 'An unexpected error occurred.';
+    const errorMessage =
+      e instanceof Error ? e.message : 'An unexpected error occurred.';
     return res
       .status(500)
-      .json({ error: 'Internal server error while fetching products.', details: errorMessage });
+      .json({
+        error: 'Internal server error while fetching products.',
+        details: errorMessage,
+      });
   } finally {
     // Ensures Prisma client is disconnected after the request is handled,
     // whether it succeeded or failed, to prevent resource leaks.

@@ -12,6 +12,10 @@ export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [
     name: 'Batch 3 Service 1',
     tagline: 'Third batch of enhanced services',
     price: '$499',
-    features: ['Enhanced capabilities', 'Better performance', 'Advanced features']
-  }
+    features: [
+      'Enhanced capabilities',
+      'Better performance',
+      'Advanced features',
+    ],
+  },
 ];

@@ -16,14 +16,15 @@ export const newOperationalServices2025: MicroSaasService[] = [
       'Policy-as-code checks for SOC 2/ISO',
       'Branch protection & CODEOWNERS enforcement',
       'Secret scanning & dependency audit alerts',
-      'Weekly compliance report and scorecard'
+      'Weekly compliance report and scorecard',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: '/github-compliance-bot',
-    marketPosition: 'Lightweight alternative to heavy GRC suites for engineering orgs.',
+    marketPosition:
+      'Lightweight alternative to heavy GRC suites for engineering orgs.',
     targetAudience: 'Engineering leaders, security teams',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -41,14 +42,15 @@ export const newOperationalServices2025: MicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Org install with least-privilege app; scheduled policy runs.',
+    implementationDetails:
+      'Org install with least-privilege app; scheduled policy runs.',
     launchDate: '2025-01-20',
     customers: 16,
     rating: 4.7,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'aws-cost-anomaly-monitor',
@@ -62,14 +64,15 @@ export const newOperationalServices2025: MicroSaasService[] = [
       'Anomaly detection and budget guardrails',
       'Slack notifications and triage workflows',
       'Service- and tag-level breakdowns',
-      'Monthly savings recommendations'
+      'Monthly savings recommendations',
     ],
     popular: true,
     icon: '💸',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: '/aws-cost-anomaly-monitor',
-    marketPosition: 'Simple setup, actionable alerts, no heavy FinOps overhead.',
+    marketPosition:
+      'Simple setup, actionable alerts, no heavy FinOps overhead.',
     targetAudience: 'FinOps, platform, founders',
     trialDays: 14,
     setupTime: '45 minutes',
@@ -87,14 +90,14 @@ export const newOperationalServices2025: MicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Read-only CUR + anomaly rules + Slack app.',
     launchDate: '2025-01-20',
     customers: 21,
     rating: 4.6,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'cloudflare-workers-edge-config',
@@ -108,7 +111,7 @@ export const newOperationalServices2025: MicroSaasService[] = [
       'Versioned config with approvals',
       'Preview links and automatic rollbacks',
       'Audit logs and drift detection',
-      'Multi-env and secret management'
+      'Multi-env and secret management',
     ],
     popular: false,
     icon: '⚙️',
@@ -133,14 +136,14 @@ export const newOperationalServices2025: MicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'GitOps pipeline with previews and approvals.',
     launchDate: '2025-01-20',
     customers: 9,
     rating: 4.5,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'api-latency-slo-tracker',
@@ -154,7 +157,7 @@ export const newOperationalServices2025: MicroSaasService[] = [
       'SLO budgets with alerts',
       'Synthetic + RUM coverage',
       'Per-endpoint latency dashboards',
-      'Public status page (optional)'
+      'Public status page (optional)',
     ],
     popular: false,
     icon: '⏱️',
@@ -179,14 +182,14 @@ export const newOperationalServices2025: MicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Agentless synthetic checks + JS snippet for RUM.',
     launchDate: '2025-01-20',
     customers: 14,
     rating: 4.6,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'kubernetes-rbac-auditor',
@@ -200,7 +203,7 @@ export const newOperationalServices2025: MicroSaasService[] = [
       'Cluster-wide RBAC inventory',
       'Over-permission and wildcard detection',
       'Unused binding analysis',
-      'Least-privilege recommendations'
+      'Least-privilege recommendations',
     ],
     popular: false,
     icon: '🧩',
@@ -225,14 +228,14 @@ export const newOperationalServices2025: MicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Read-only service account, periodic scans.',
     launchDate: '2025-01-20',
     customers: 7,
     rating: 4.5,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'sso-user-lifecycle-automation',
@@ -246,7 +249,7 @@ export const newOperationalServices2025: MicroSaasService[] = [
       'SCIM connectors with approvals',
       'Role change workflows',
       'Deprovisioning with evidence',
-      'Audit trails and reports'
+      'Audit trails and reports',
     ],
     popular: true,
     icon: '🔐',
@@ -271,14 +274,14 @@ export const newOperationalServices2025: MicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'SCIM app integrations + approval flows.',
     launchDate: '2025-01-20',
     customers: 10,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'email-dmarc-analyzer',
@@ -292,7 +295,7 @@ export const newOperationalServices2025: MicroSaasService[] = [
       'DMARC aggregate and forensic reports',
       'SPF/DKIM audits and DNS change history',
       'Mailbox provider insights and tips',
-      'Weekly deliverability scorecard'
+      'Weekly deliverability scorecard',
     ],
     popular: true,
     icon: '✉️',
@@ -317,14 +320,14 @@ export const newOperationalServices2025: MicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'DMARC inbox + parser + dashboards.',
     launchDate: '2025-01-20',
     customers: 25,
     rating: 4.6,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'incident-postmortem-generator',
@@ -338,14 +341,15 @@ export const newOperationalServices2025: MicroSaasService[] = [
       'RCA timeline assembly',
       'Impact summary and customer comms',
       'Template library and reviewer flow',
-      'Action items with owners and due dates'
+      'Action items with owners and due dates',
     ],
     popular: false,
     icon: '📈',
     color: 'from-purple-600 to-fuchsia-700',
     textColor: 'text-purple-300',
     link: '/incident-postmortem-generator',
-    marketPosition: 'Faster, more consistent incident reports for on-call teams.',
+    marketPosition:
+      'Faster, more consistent incident reports for on-call teams.',
     targetAudience: 'SRE, platform, support',
     trialDays: 7,
     setupTime: '20 minutes',
@@ -363,14 +367,14 @@ export const newOperationalServices2025: MicroSaasService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'API integrations + prompt templates + reviewer loop.',
+    implementationDetails:
+      'API integrations + prompt templates + reviewer loop.',
     launchDate: '2025-01-20',
     customers: 11,
     rating: 4.5,
-    reviews: 7
-  }
+    reviews: 7,
+  },
 ];
-

@@ -1,8 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "src/AppMinimal.tsx"
-  ],
+  "include": ["src/AppMinimal.tsx"],
   "exclude": [
     "node_modules",
     ".next",
@@ -33,4 +31,3 @@
     "utils/**"
   ]
 }
-

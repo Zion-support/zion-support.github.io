@@ -10,7 +10,10 @@ function ensureDir(dirPath) {
 }
 
 function toSlug(name) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 }
 
 function writeFileSafe(filePath, content) {
@@ -88,7 +91,9 @@ function main() {
   // Usage: node automation/content-generator.cjs <type> <name> [--title Title] [--description Desc] [--dir pages/auto]
   const args = process.argv.slice(2);
   if (args.length < 2) {
-    console.log('Usage: node automation/content-generator.cjs <blog|page|component> <name> [--title Title] [--description Desc] [--dir pages/auto]');
+    console.log(
+      'Usage: node automation/content-generator.cjs <blog|page|component> <name> [--title Title] [--description Desc] [--dir pages/auto]'
+    );
     process.exit(1);
   }
 
@@ -99,7 +104,10 @@ function main() {
   const dirArgIndex = args.indexOf('--dir');
 
   const title = titleArgIndex !== -1 ? args[titleArgIndex + 1] : rawName;
-  const description = descArgIndex !== -1 ? args[descArgIndex + 1] : `Generated ${type} for ${rawName}`;
+  const description =
+    descArgIndex !== -1
+      ? args[descArgIndex + 1]
+      : `Generated ${type} for ${rawName}`;
   const outDir = dirArgIndex !== -1 ? args[dirArgIndex + 1] : 'pages/auto';
 
   const nameSlug = toSlug(rawName);

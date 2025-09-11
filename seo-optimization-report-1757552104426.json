@@ -42,8 +42,6 @@
       "message": "robots.txt found"
     }
   ],
-  "recommendations": [
-    "Consider implementing missing SEO elements"
-  ],
+  "recommendations": ["Consider implementing missing SEO elements"],
   "status": "completed"
 }

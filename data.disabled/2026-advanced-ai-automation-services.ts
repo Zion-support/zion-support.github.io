@@ -6,4 +6,5 @@ export interface AdvancedAIAutomationService2026 {
   features: string[];
 }
 
-export const advancedAIAutomationServices2026: AdvancedAIAutomationService2026[] = [];
+export const advancedAIAutomationServices2026: AdvancedAIAutomationService2026[] =
+  [];

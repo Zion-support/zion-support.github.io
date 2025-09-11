@@ -4,7 +4,9 @@ interface FuturisticAnimatedBackground2029Props {
   className?: string;
 }
 
-export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {
+export default function FuturisticAnimatedBackground2029({
+  className = '',
+}: FuturisticAnimatedBackground2029Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -69,7 +71,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
           ctx.fill();
-          
+
           // Add glow effect
           ctx.shadowColor = this.color;
           ctx.shadowBlur = 10;
@@ -103,7 +105,11 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           ctx.lineWidth = 1;
 
           // Vertical lines
-          for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {
+          for (
+            let x = this.offset % this.spacing;
+            x < canvas.width;
+            x += this.spacing
+          ) {
             ctx.beginPath();
             ctx.moveTo(x, 0);
             ctx.lineTo(x, canvas.height);
@@ -111,7 +117,11 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           }
 
           // Horizontal lines
-          for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {
+          for (
+            let y = this.offset % this.spacing;
+            y < canvas.height;
+            y += this.spacing
+          ) {
             ctx.beginPath();
             ctx.moveTo(0, y);
             ctx.lineTo(canvas.width, y);
@@ -146,7 +156,9 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           ctx.beginPath();
 
           for (let x = 0; x < canvas.width; x++) {
-            const y = Math.sin(x * this.frequency + this.offset) * this.amplitude + canvas.height / 2;
+            const y =
+              Math.sin(x * this.frequency + this.offset) * this.amplitude +
+              canvas.height / 2;
             if (x === 0) {
               ctx.moveTo(x, y);
             } else {
@@ -286,20 +298,27 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
     <div className={`fixed inset-0 pointer-events-none ${className}`}>
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
+        className='w-full h-full'
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)'
+          background:
+            'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)',
         }}
       />
-      
+
       {/* Overlay gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
-      
+      <div className='absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent' />
+      <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent' />
+
       {/* Animated orbs */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className='absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse' />
+      <div
+        className='absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse'
+        style={{ animationDelay: '1s' }}
+      />
+      <div
+        className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'
+        style={{ animationDelay: '2s' }}
+      />
     </div>
   );
 }

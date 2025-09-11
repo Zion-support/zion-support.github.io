@@ -8,11 +8,7 @@
         "label": "See the workflows",
         "href": "https://github.com/Zion-Holdings/zion.app/tree/main/.github/workflows"
       },
-      "tags": [
-        "Autonomous",
-        "CI",
-        "Cloud"
-      ]
+      "tags": ["Autonomous", "CI", "Cloud"]
     },
     {
       "title": "Evolving Frontend",
@@ -21,11 +17,7 @@
         "label": "View UI evolution",
         "href": "https://github.com/Zion-Holdings/zion.app/tree/main/automation/ui-evolution-agents"
       },
-      "tags": [
-        "Design",
-        "Performance",
-        "A11y"
-      ]
+      "tags": ["Design", "Performance", "A11y"]
     }
   ]
 }

@@ -1,7 +1,5 @@
 {
-  "successful": [
-    "0smfo8-codex/fix-404-error-for-non-existent-route"
-  ],
+  "successful": ["0smfo8-codex/fix-404-error-for-non-existent-route"],
   "failed": [
     {
       "branch": "0nylrk-codex/fix-footer-contact-link",

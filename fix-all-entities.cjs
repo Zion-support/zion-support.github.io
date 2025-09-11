@@ -8,15 +8,15 @@ function fixAllEntities(content) {
   content = content.replace(/&lt;/g, '<');
   content = content.replace(/&gt;/g, '>');
   content = content.replace(/&amp;/g, '&');
-  
+
   return content;
 }
 
 // Get all TypeScript/JavaScript files
 const glob = require('glob');
-const files = glob.sync('**/*.{ts,tsx,js,jsx}', { 
+const files = glob.sync('**/*.{ts,tsx,js,jsx}', {
   cwd: '/workspace',
-  ignore: ['node_modules/**', 'dist/**', '.git/**', 'src.disabled/**']
+  ignore: ['node_modules/**', 'dist/**', '.git/**', 'src.disabled/**'],
 });
 
 files.forEach(file => {

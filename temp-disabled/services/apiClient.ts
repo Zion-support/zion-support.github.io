@@ -25,7 +25,10 @@ apiClient.interceptors.response.use(
         window.location.assign('/login');
       }
     } else {
-      const message = error.response?.data?.message || error.response?.data?.error || 'Something went wrong';
+      const message =
+        error.response?.data?.message ||
+        error.response?.data?.error ||
+        'Something went wrong';
       toast.error(message);
     }
     return Promise.reject(new Error(error.message || 'API request failed'));

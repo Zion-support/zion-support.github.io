@@ -5,11 +5,15 @@ interface ViewModeContextType {
   setViewMode: (mode: 'grid' | 'list') => void;
 }
 
-const ViewModeContext = createContext<ViewModeContextType | undefined>(undefined);
+const ViewModeContext = createContext<ViewModeContextType | undefined>(
+  undefined
+);
 
-export const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  
+
   return (
     <ViewModeContext.Provider value={{ viewMode, setViewMode }}>
       {children}

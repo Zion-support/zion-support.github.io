@@ -6,4 +6,5 @@ export interface InnovativeMicroSaasService2026 {
   features: string[];
 }
 
-export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [];
+export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
+  [];

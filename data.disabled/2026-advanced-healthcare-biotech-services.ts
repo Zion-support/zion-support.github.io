@@ -6,4 +6,5 @@ export interface AdvancedHealthcareBiotechService2026 {
   features: string[];
 }
 
-export const advancedHealthcareBiotechServices2026: AdvancedHealthcareBiotechService2026[] = [];
+export const advancedHealthcareBiotechServices2026: AdvancedHealthcareBiotechService2026[] =
+  [];

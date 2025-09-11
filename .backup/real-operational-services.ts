@@ -4,24 +4,27 @@ export const realOperationalServices: RealMarketService[] = [
   {
     id: 'k8s-cost-optimizer-accelerator',
     name: 'Kubernetes Cost Optimization Accelerator',
-    tagline: 'Actionable savings in days with rightsizing, autoscaling and FinOps guardrails',
+    tagline:
+      'Actionable savings in days with rightsizing, autoscaling and FinOps guardrails',
     price: '$399',
     period: '/month',
-    description: 'Deploy cluster-wide cost policies, identify idle/over-provisioned resources, rightsize requests/limits and set budgets/alerts integrated with Slack.',
+    description:
+      'Deploy cluster-wide cost policies, identify idle/over-provisioned resources, rightsize requests/limits and set budgets/alerts integrated with Slack.',
     features: [
       'Rightsizing recommendations (CPU/memory)',
       'Idle/oversized workload detection',
       'Cluster and namespace budgets/alerts',
       'Scheduled scale-to-zero for non-prod',
       'Spot/preemptible workload policies',
-      'Kubecost/CloudZero export integration'
+      'Kubecost/CloudZero export integration',
     ],
     popular: true,
     icon: '💸',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-    marketPosition: 'Complements Kubecost and CloudZero with hands-on automation and SRE policies.',
+    marketPosition:
+      'Complements Kubecost and CloudZero with hands-on automation and SRE policies.',
     targetAudience: 'Platform engineering, SRE, FinOps teams',
     trialDays: 14,
     setupTime: '3-5 days',
@@ -39,14 +42,15 @@ export const realOperationalServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Helm chart + policy controller with scheduled jobs and budgets.',
+    implementationDetails:
+      'Helm chart + policy controller with scheduled jobs and budgets.',
     launchDate: '2024-11-01',
     customers: 140,
     rating: 4.7,
-    reviews: 88
+    reviews: 88,
   },
   {
     id: 'browser-performance-monitor',
@@ -54,20 +58,22 @@ export const realOperationalServices: RealMarketService[] = [
     tagline: 'Field data for Core Web Vitals with alerting and diagnostics',
     price: '$149',
     period: '/month',
-    description: 'Lightweight RUM script captures LCP/INP/CLS with attribution, segments by route/device, and pushes to dashboards with alerts.',
+    description:
+      'Lightweight RUM script captures LCP/INP/CLS with attribution, segments by route/device, and pushes to dashboards with alerts.',
     features: [
       'Real user monitoring (RUM) script',
       'LCP/INP/CLS with attribution',
       'Route/device segmentation',
       'Threshold-based alerting',
-      'Dashboards and weekly reports'
+      'Dashboards and weekly reports',
     ],
     popular: true,
     icon: '⚡',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/browser-performance-monitor',
-    marketPosition: 'Alternative to rolling your own; complements SpeedCurve and Calibre.',
+    marketPosition:
+      'Alternative to rolling your own; complements SpeedCurve and Calibre.',
     targetAudience: 'Frontend/platform teams',
     trialDays: 7,
     setupTime: '1-2 days',
@@ -85,14 +91,14 @@ export const realOperationalServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Drop-in script + collector + dashboard templates.',
     launchDate: '2024-10-15',
     customers: 95,
     rating: 4.6,
-    reviews: 54
+    reviews: 54,
   },
   {
     id: 'tls-certificate-monitor',
@@ -100,12 +106,13 @@ export const realOperationalServices: RealMarketService[] = [
     tagline: 'Never let a certificate expire unnoticed again',
     price: '$49',
     period: '/month',
-    description: 'Scans domains and endpoints for TLS expiry, misconfigurations and weak ciphers. Notifies via email/Slack and opens tickets automatically.',
+    description:
+      'Scans domains and endpoints for TLS expiry, misconfigurations and weak ciphers. Notifies via email/Slack and opens tickets automatically.',
     features: [
       'Automated expiry scanning',
       'Weak cipher detection',
       'Email/Slack notifications',
-      'Ticket auto-creation'
+      'Ticket auto-creation',
     ],
     popular: false,
     icon: '🔒',
@@ -130,14 +137,14 @@ export const realOperationalServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Scheduled scanners + notifier + integration hooks.',
     launchDate: '2024-09-01',
     customers: 210,
     rating: 4.5,
-    reviews: 102
+    reviews: 102,
   },
   {
     id: 'uptime-slo-monitor',
@@ -145,12 +152,13 @@ export const realOperationalServices: RealMarketService[] = [
     tagline: 'Synthetics, SLOs, and error budgets in one simple package',
     price: '$99',
     period: '/month',
-    description: 'HTTP/DNS pings, transaction monitors, SLO calculator and error budget alerts shipped with dashboards and reports.',
+    description:
+      'HTTP/DNS pings, transaction monitors, SLO calculator and error budget alerts shipped with dashboards and reports.',
     features: [
       'HTTP/DNS/ICMP checks',
       'Multi-region synthetics',
       'SLO & error budgets',
-      'PagerDuty/Slack alerts'
+      'PagerDuty/Slack alerts',
     ],
     popular: true,
     icon: '📊',
@@ -175,34 +183,37 @@ export const realOperationalServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Probes + dashboards + SLO calculator.',
     launchDate: '2024-08-10',
     customers: 300,
     rating: 4.6,
-    reviews: 150
+    reviews: 150,
   },
   {
     id: 'serverless-cron-manager',
     name: 'Serverless Cron Manager',
-    tagline: 'Reliable scheduled jobs with retries, dead-lettering and insights',
+    tagline:
+      'Reliable scheduled jobs with retries, dead-lettering and insights',
     price: '$79',
     period: '/month',
-    description: 'Define, audit, and observe scheduled jobs across clouds with retries, DLQs and notification hooks.',
+    description:
+      'Define, audit, and observe scheduled jobs across clouds with retries, DLQs and notification hooks.',
     features: [
       'Visual cron definitions',
       'Retries and DLQ',
       'Execution logs and metrics',
-      'Slack/Email notifications'
+      'Slack/Email notifications',
     ],
     popular: false,
     icon: '⏱️',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/serverless-cron-manager',
-    marketPosition: 'Complements cloud-native schedulers with cross-cloud visibility.',
+    marketPosition:
+      'Complements cloud-native schedulers with cross-cloud visibility.',
     targetAudience: 'Developers, platform teams',
     trialDays: 7,
     setupTime: '1 day',
@@ -220,14 +231,14 @@ export const realOperationalServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Queue-backed scheduler with observability hooks.',
     launchDate: '2024-07-01',
     customers: 120,
     rating: 4.4,
-    reviews: 47
+    reviews: 47,
   },
   {
     id: 'pdf-render-api',
@@ -235,12 +246,13 @@ export const realOperationalServices: RealMarketService[] = [
     tagline: 'High-fidelity HTML-to-PDF with templating and webhooks',
     price: '$49',
     period: '/month',
-    description: 'Render PDFs from HTML/Markdown with assets, templates, and callback webhooks. Great for invoices, reports, and statements.',
+    description:
+      'Render PDFs from HTML/Markdown with assets, templates, and callback webhooks. Great for invoices, reports, and statements.',
     features: [
       'HTML/Markdown to PDF',
       'Template library',
       'Webhook callbacks',
-      'Usage metrics and logs'
+      'Usage metrics and logs',
     ],
     popular: true,
     icon: '🧾',
@@ -265,14 +277,14 @@ export const realOperationalServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Headless browser renderer with queueing and callbacks.',
+    implementationDetails:
+      'Headless browser renderer with queueing and callbacks.',
     launchDate: '2024-06-01',
     customers: 260,
     rating: 4.5,
-    reviews: 130
-  }
+    reviews: 130,
+  },
 ];
-

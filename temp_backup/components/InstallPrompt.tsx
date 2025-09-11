@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 
 export const InstallPrompt: React.FC = () => {
-  const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
+  const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(
+    null
+  );
 
   useEffect(() => {
     const handler = (e: BeforeInstallPromptEvent) => {
@@ -27,7 +29,7 @@ export const InstallPrompt: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className='fixed bottom-4 right-4 z-50'>
       <Button onClick={onClick}>Install App</Button>
     </div>
   );

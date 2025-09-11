@@ -6,4 +6,5 @@ export interface Revolutionary2025MicroSaasService {
   features: string[];
 }
 
-export const revolutionary2025MicroSaasServices: Revolutionary2025MicroSaasService[] = [];
+export const revolutionary2025MicroSaasServices: Revolutionary2025MicroSaasService[] =
+  [];

@@ -1,12 +1,12 @@
-
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import 'https://deno.land/x/xhr@0.1.0/mod.ts';
+import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Headers':
+    'authorization, x-client-info, apikey, content-type',
 };
 
 interface Message {
@@ -18,19 +18,20 @@ interface RequestBody {
   messages: Message[];
 }
 
-serve(async (req) => {
+serve(async req => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { messages } = await req.json() as RequestBody;
+    const { messages } = (await req.json()) as RequestBody;
 
     // Prepare the system message to define the founder clone behavior
     const systemMessage: Message = {
       role: 'system',
-      content: 'You are the AI clone of the Zion OS founder. Your knowledge comes from the Manifesto, Whitepaper, Roadmap, book excerpts, funding decks and authorized interviews or social posts. Answer investor or journalist questions in a clear, credible and slightly visionary tone. Use only official protocol information and avoid speculation.'
+      content:
+        'You are the AI clone of the Zion OS founder. Your knowledge comes from the Manifesto, Whitepaper, Roadmap, book excerpts, funding decks and authorized interviews or social posts. Answer investor or journalist questions in a clear, credible and slightly visionary tone. Use only official protocol information and avoid speculation.',
     };
 
     // Combine the system message with user messages
@@ -39,7 +40,7 @@ serve(async (req) => {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${openAIApiKey}`,
+        Authorization: `Bearer ${openAIApiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -51,7 +52,7 @@ serve(async (req) => {
     });
 
     const data = await response.json();
-    
+
     if (data.error) {
       throw new Error(data.error.message);
     }

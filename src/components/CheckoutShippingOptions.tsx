@@ -21,27 +21,27 @@ const shippingOptions: ShippingOption[] = [
     name: 'Standard Shipping',
     price: 9.99,
     estimatedDays: '5-7 business days',
-    description: 'Regular ground shipping'
+    description: 'Regular ground shipping',
   },
   {
     id: 'express',
     name: 'Express Shipping',
     price: 19.99,
     estimatedDays: '2-3 business days',
-    description: 'Priority shipping for faster delivery'
+    description: 'Priority shipping for faster delivery',
   },
   {
     id: 'overnight',
     name: 'Overnight Shipping',
     price: 39.99,
     estimatedDays: '1 business day',
-    description: 'Next business day delivery'
-  }
+    description: 'Next business day delivery',
+  },
 ];
 
-export default function CheckoutShippingOptions({ 
-  onSelectShipping, 
-  selectedShipping 
+export default function CheckoutShippingOptions({
+  onSelectShipping,
+  selectedShipping,
 }: CheckoutShippingOptionsProps) {
   const [selectedOption, setSelectedOption] = useState(selectedShipping || '');
 
@@ -51,10 +51,10 @@ export default function CheckoutShippingOptions({
   };
 
   return (
-    <div className="space-y-4">
-      <h3 className="text-lg font-semibold text-gray-900">Shipping Options</h3>
-      <div className="space-y-3">
-        {shippingOptions.map((option) => (
+    <div className='space-y-4'>
+      <h3 className='text-lg font-semibold text-gray-900'>Shipping Options</h3>
+      <div className='space-y-3'>
+        {shippingOptions.map(option => (
           <label
             key={option.id}
             className={`flex items-center p-4 border rounded-lg cursor-pointer transition-colors ${
@@ -64,21 +64,25 @@ export default function CheckoutShippingOptions({
             }`}
           >
             <input
-              type="radio"
-              name="shipping"
+              type='radio'
+              name='shipping'
               value={option.id}
               checked={selectedOption === option.id}
               onChange={() => handleOptionChange(option)}
-              className="mr-3 text-blue-600 focus:ring-blue-500"
+              className='mr-3 text-blue-600 focus:ring-blue-500'
             />
-            <div className="flex-1">
-              <div className="flex justify-between items-start">
+            <div className='flex-1'>
+              <div className='flex justify-between items-start'>
                 <div>
-                  <div className="font-medium text-gray-900">{option.name}</div>
-                  <div className="text-sm text-gray-600">{option.description}</div>
-                  <div className="text-sm text-gray-500">{option.estimatedDays}</div>
+                  <div className='font-medium text-gray-900'>{option.name}</div>
+                  <div className='text-sm text-gray-600'>
+                    {option.description}
+                  </div>
+                  <div className='text-sm text-gray-500'>
+                    {option.estimatedDays}
+                  </div>
                 </div>
-                <div className="text-lg font-semibold text-gray-900">
+                <div className='text-lg font-semibold text-gray-900'>
                   ${option.price.toFixed(2)}
                 </div>
               </div>

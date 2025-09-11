@@ -56,7 +56,6 @@ export async function runMonitoring() {
   // const results = await measureLatency(endpoints); // Original line
   const results: EndpointTestResult[] = await measureLatency(resolvedEndpoints); // Use resolved endpoints
 
-
   // Process alerts
   for (const result of results) {
     // No 'await' here if we want alerts to be non-blocking for the overall monitoring cycle.
@@ -65,13 +64,17 @@ export async function runMonitoring() {
     await triggerAlerts(result); // Simplified call to triggerAlerts
   }
 
-  const sortedResults = results.sort((a, b) => (b.latencyMs || 0) - (a.latencyMs || 0));
+  const sortedResults = results.sort(
+    (a, b) => (b.latencyMs || 0) - (a.latencyMs || 0)
+  );
   const slowestResponses = sortedResults.slice(0, 5);
 
   if (slowestResponses.length > 0) {
     logger.info('Top 5 slowest responses:', { slowestResponses });
   } else {
-    logger.info('No responses measured or all responses were errors before latency could be determined.');
+    logger.info(
+      'No responses measured or all responses were errors before latency could be determined.'
+    );
   }
 
   results.forEach(result => {

@@ -3,8 +3,15 @@ const { spawnSync } = require('child_process');
 
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe',
+    encoding: 'utf8',
+  });
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
+  };
 }
 
 exports.config = {
@@ -22,7 +29,10 @@ exports.handler = async () => {
     return status;
   }
 
-  step('front:directory-builder', 'automation/front-index-directory-builder.cjs');
+  step(
+    'front:directory-builder',
+    'automation/front-index-directory-builder.cjs'
+  );
   step('front:ads', 'automation/front-index-ads.cjs');
   step('og-image:generator', 'automation/og-image-generator.cjs');
   step('homepage:updater', 'automation/homepage-updater.cjs');

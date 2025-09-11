@@ -7,22 +7,25 @@ Autonomous, cloud‑native app with self‑running automations.
 Home: https://github.com/Zion-Holdings/zion.app#readme
 
 ### Highlights
+
 - **Autonomous cloud automations**: GitHub Actions run on schedules to maintain, audit, and improve the repo without human intervention.
 - **Rapid sync**: A 1-minute cadence keeps branches synchronized.
 - **Self-healing CI**: Automatic detection and PRs for fixes after failures.
 
 ### Key Directories
+
 - `automation/`: Cloud automation scripts (content, SEO, security, sync).
 - `scripts/`: Utility scripts (sitemap, SEO, radar, README generator).
 - `pages/`: Next.js pages.
 - `components/`: Reusable UI components.
 
 ### Routes
+
 - /
 - /404
 - /500
-- /_app
-- /_document
+- /\_app
+- /\_document
 - /about
 - /api-documentation
 - /automation
@@ -2980,6 +2983,7 @@ Home: https://github.com/Zion-Holdings/zion.app#readme
 - /user-management
 
 ### Automations
+
 - [Accessibility Audit](https://github.com/Zion-Holdings/zion/actions/workflows/accessibility-audit.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/accessibility-audit.yml/badge.svg)
 - [Actionlint](https://github.com/Zion-Holdings/zion/actions/workflows/actionlint.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/actionlint.yml/badge.svg)
 - [Actions Keepalive](https://github.com/Zion-Holdings/zion/actions/workflows/actions-keepalive.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/actions-keepalive.yml/badge.svg)
@@ -3209,15 +3213,18 @@ Home: https://github.com/Zion-Holdings/zion.app#readme
 - [Yaml Validator](https://github.com/Zion-Holdings/zion/actions/workflows/yaml-validator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/yaml-validator.yml/badge.svg)
 
 ### Local Development
+
 1. Install Node 20+ and npm 10+.
 2. Install deps: `npm ci`.
 3. Run dev: `npm run dev`.
 
 ### Maintenance Commands
+
 - `npm run git:sync` – Advanced git sync
 - `npm run automation:cloud` – Run cloud orchestrator locally
 - `npm run sitemap` – Regenerate sitemap
 - `npm run readme:generate` – Refresh this README
 
 ---
+
 This README is auto-generated. Do not edit manually.# Triggering GitHub Actions workflows for testing

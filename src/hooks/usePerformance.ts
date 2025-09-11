@@ -6,8 +6,15 @@ interface PerformanceOptions {
   logMetrics?: boolean;
 }
 
-export const usePerformance = (componentName: string, options: PerformanceOptions = {}) => {
-  const { measureRender = true, measureInteraction = true, logMetrics = false } = options;
+export const usePerformance = (
+  componentName: string,
+  options: PerformanceOptions = {}
+) => {
+  const {
+    measureRender = true,
+    measureInteraction = true,
+    logMetrics = false,
+  } = options;
   const renderStartTime = useRef<number>(0);
   const [metrics, setMetrics] = useState<{
     renderTime: number;
@@ -23,13 +30,15 @@ export const usePerformance = (componentName: string, options: PerformanceOption
   useEffect(() => {
     if (measureRender) {
       renderStartTime.current = performance.now();
-      
+
       const measureRenderTime = () => {
         const renderTime = performance.now() - renderStartTime.current;
         setMetrics(prev => ({ ...prev, renderTime }));
-        
+
         if (logMetrics) {
-          console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`);
+          console.log(
+            `${componentName} render time: ${renderTime.toFixed(2)}ms`
+          );
         }
       };
 
@@ -39,62 +48,71 @@ export const usePerformance = (componentName: string, options: PerformanceOption
   }, [componentName, measureRender, logMetrics]);
 
   // Track interactions
-  const trackInteraction = useCallback((interactionType: string) => {
-    if (measureInteraction) {
-      setMetrics(prev => ({
-        ...prev,
-        interactionCount: prev.interactionCount + 1,
-        lastInteractionTime: performance.now(),
-      }));
+  const trackInteraction = useCallback(
+    (interactionType: string) => {
+      if (measureInteraction) {
+        setMetrics(prev => ({
+          ...prev,
+          interactionCount: prev.interactionCount + 1,
+          lastInteractionTime: performance.now(),
+        }));
 
-      if (logMetrics) {
-        console.log(`${componentName} interaction: ${interactionType}`);
+        if (logMetrics) {
+          console.log(`${componentName} interaction: ${interactionType}`);
+        }
       }
-    }
-  }, [componentName, measureInteraction, logMetrics]);
+    },
+    [componentName, measureInteraction, logMetrics]
+  );
 
   // Debounce function for performance
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
-    delay: number
-  ): ((...args: Parameters<T>) => void) => {
-    const timeoutRef = useRef<NodeJS.Timeout>();
-    
-    return (...args: Parameters<T>) => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      
-      timeoutRef.current = setTimeout(() => {
-        func(...args);
-      }, delay);
-    };
-  }, []);
+  const debounce = useCallback(
+    <T extends (...args: any[]) => any>(
+      func: T,
+      delay: number
+    ): ((...args: Parameters<T>) => void) => {
+      const timeoutRef = useRef<NodeJS.Timeout>();
+
+      return (...args: Parameters<T>) => {
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+
+        timeoutRef.current = setTimeout(() => {
+          func(...args);
+        }, delay);
+      };
+    },
+    []
+  );
 
   // Throttle function for performance
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
-    delay: number
-  ): ((...args: Parameters<T>) => void) => {
-    const lastCallRef = useRef<number>(0);
-    
-    return (...args: Parameters<T>) => {
-      const now = performance.now();
-      
-      if (now - lastCallRef.current >= delay) {
-        lastCallRef.current = now;
-        func(...args);
-      }
-    };
-  }, []);
+  const throttle = useCallback(
+    <T extends (...args: any[]) => any>(
+      func: T,
+      delay: number
+    ): ((...args: Parameters<T>) => void) => {
+      const lastCallRef = useRef<number>(0);
+
+      return (...args: Parameters<T>) => {
+        const now = performance.now();
+
+        if (now - lastCallRef.current >= delay) {
+          lastCallRef.current = now;
+          func(...args);
+        }
+      };
+    },
+    []
+  );
 
   // Memoize expensive calculations
-  const useMemoizedValue = useCallback(<T>(
-    factory: () => T,
-    deps: React.DependencyList
-  ): T => {
-    return useMemo(factory, deps);
-  }, []);
+  const useMemoizedValue = useCallback(
+    <T>(factory: () => T, deps: React.DependencyList): T => {
+      return useMemo(factory, deps);
+    },
+    []
+  );
 
   return {
     metrics,

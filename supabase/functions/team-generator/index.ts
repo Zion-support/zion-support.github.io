@@ -1,5 +1,8 @@
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
-import { createClient, SupabaseClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import {
+  createClient,
+  SupabaseClient,
+} from 'https://esm.sh/@supabase/supabase-js@2';
 import { corsHeaders } from '../_shared/cors.ts';
 
 // Initialize Supabase client (admin role for querying talent_profiles)
@@ -31,14 +34,24 @@ interface TeamRecommendation {
   roles: RecommendedRole[];
 }
 
-async function getTeamRecommendationFromGPT(projectBrief: ProjectBrief, openAIApiKey: string): Promise<Omit<TeamRecommendation, 'roles'> & { roles: Omit<RecommendedRole, 'matchedTalent'>[] }> {
-  let optimizationInstructions = "";
+async function getTeamRecommendationFromGPT(
+  projectBrief: ProjectBrief,
+  openAIApiKey: string
+): Promise<
+  Omit<TeamRecommendation, 'roles'> & {
+    roles: Omit<RecommendedRole, 'matchedTalent'>[];
+  }
+> {
+  let optimizationInstructions = '';
   if (projectBrief.lockTimeline && projectBrief.lockBudget) {
-    optimizationInstructions = "The project timeline and budget are strictly fixed. Please propose a team structure that adheres to both constraints, potentially by adjusting role seniority, scope, or weekly hours. Clearly state if trade-offs are necessary.";
+    optimizationInstructions =
+      'The project timeline and budget are strictly fixed. Please propose a team structure that adheres to both constraints, potentially by adjusting role seniority, scope, or weekly hours. Clearly state if trade-offs are necessary.';
   } else if (projectBrief.lockTimeline) {
-    optimizationInstructions = "The project timeline is strictly fixed. Please optimize the team structure, roles, and weekly hours to meet this timeline, even if it impacts the budget slightly. Highlight potential budget impacts.";
+    optimizationInstructions =
+      'The project timeline is strictly fixed. Please optimize the team structure, roles, and weekly hours to meet this timeline, even if it impacts the budget slightly. Highlight potential budget impacts.';
   } else if (projectBrief.lockBudget) {
-    optimizationInstructions = "The project budget is strictly fixed. Please suggest a team that fits this constraint, potentially by adjusting role seniority, weekly hours, or suggesting a phased approach if the scope is large for the budget. Highlight potential timeline impacts.";
+    optimizationInstructions =
+      'The project budget is strictly fixed. Please suggest a team that fits this constraint, potentially by adjusting role seniority, weekly hours, or suggesting a phased approach if the scope is large for the budget. Highlight potential timeline impacts.';
   }
 
   const prompt = `
@@ -48,9 +61,13 @@ async function getTeamRecommendationFromGPT(projectBrief: ProjectBrief, openAIAp
     Timeline: ${projectBrief.timeline}
     Budget: ${projectBrief.budget}
     Tech Stack/Areas: ${projectBrief.techStack?.join(', ') || 'Not specified'}
-    ${optimizationInstructions ? `
+    ${
+      optimizationInstructions
+        ? `
 Important Constraints: ${optimizationInstructions}
-` : ''}
+`
+        : ''
+    }
     Return the team structure in a structured JSON format.
     The JSON should have a top-level object with two keys: "recommendationSummary" (a string summarizing the team, e.g., "1 Product Manager, 2 Fullstack Engineers") and "roles".
     The "roles" key should be an array of objects, where each object represents a role and includes:
@@ -74,7 +91,7 @@ Important Constraints: ${optimizationInstructions}
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${openAIApiKey}`,
+      Authorization: `Bearer ${openAIApiKey}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -82,16 +99,17 @@ Important Constraints: ${optimizationInstructions}
       messages: [
         {
           role: 'system',
-          content: 'You are an expert tech team architect. Generate team recommendations based on project briefs. Always respond with valid JSON only.'
+          content:
+            'You are an expert tech team architect. Generate team recommendations based on project briefs. Always respond with valid JSON only.',
         },
         {
           role: 'user',
-          content: prompt
-        }
+          content: prompt,
+        },
       ],
       temperature: 0.7,
-      max_tokens: 2000
-    })
+      max_tokens: 2000,
+    }),
   });
 
   if (!response.ok) {
@@ -113,13 +131,18 @@ Important Constraints: ${optimizationInstructions}
   }
 }
 
-async function findMatchingTalent(roles: Omit<RecommendedRole, 'matchedTalent'>[]): Promise<RecommendedRole[]> {
+async function findMatchingTalent(
+  roles: Omit<RecommendedRole, 'matchedTalent'>[]
+): Promise<RecommendedRole[]> {
   const rolesWithTalent: RecommendedRole[] = [];
 
   for (const role of roles) {
     // Simple keyword matching for now - in production, this would be more sophisticated
-    const keywords = role.role.toLowerCase().split(' ').concat(role.description.toLowerCase().split(' '));
-    
+    const keywords = role.role
+      .toLowerCase()
+      .split(' ')
+      .concat(role.description.toLowerCase().split(' '));
+
     const { data: talentProfiles, error } = await supabaseAdmin
       .from('talent_profiles')
       .select('*')
@@ -132,10 +155,12 @@ async function findMatchingTalent(roles: Omit<RecommendedRole, 'matchedTalent'>[
     }
 
     // Simple matching logic - in production, this would use more sophisticated matching
-    const matchedTalent = talentProfiles?.filter(profile => {
-      const profileText = `${profile.title} ${profile.skills} ${profile.experience}`.toLowerCase();
-      return keywords.some(keyword => profileText.includes(keyword));
-    }) || [];
+    const matchedTalent =
+      talentProfiles?.filter(profile => {
+        const profileText =
+          `${profile.title} ${profile.skills} ${profile.experience}`.toLowerCase();
+        return keywords.some(keyword => profileText.includes(keyword));
+      }) || [];
 
     rolesWithTalent.push({ ...role, matchedTalent });
   }
@@ -143,7 +168,7 @@ async function findMatchingTalent(roles: Omit<RecommendedRole, 'matchedTalent'>[
   return rolesWithTalent;
 }
 
-serve(async (req) => {
+serve(async req => {
   // Handle CORS
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
@@ -154,35 +179,39 @@ serve(async (req) => {
 
     if (!projectBrief || !openAIApiKey) {
       return new Response(
-        JSON.stringify({ error: 'Missing required fields: projectBrief and openAIApiKey' }),
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({
+          error: 'Missing required fields: projectBrief and openAIApiKey',
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
       );
     }
 
     // Get team recommendation from GPT
-    const teamRecommendation = await getTeamRecommendationFromGPT(projectBrief, openAIApiKey);
+    const teamRecommendation = await getTeamRecommendationFromGPT(
+      projectBrief,
+      openAIApiKey
+    );
 
     // Find matching talent for each role
     const rolesWithTalent = await findMatchingTalent(teamRecommendation.roles);
 
     const finalRecommendation: TeamRecommendation = {
       recommendationSummary: teamRecommendation.recommendationSummary,
-      roles: rolesWithTalent
+      roles: rolesWithTalent,
     };
 
-    return new Response(
-      JSON.stringify(finalRecommendation),
-      { 
-        status: 200, 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
-      }
-    );
-
+    return new Response(JSON.stringify(finalRecommendation), {
+      status: 200,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   } catch (error) {
     // console.error('Error in team-generator function:', error);
-    return new Response(
-      JSON.stringify({ error: 'Internal server error' }),
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    );
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   }
 });

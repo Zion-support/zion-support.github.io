@@ -8,8 +8,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Vehicle control systems',
       'Safety monitoring',
       'Route optimization',
-      'Performance analytics'
-    ]
+      'Performance analytics',
+    ],
   },
   {
     name: 'AI Consciousness Evolution',
@@ -20,8 +20,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Consciousness mapping',
       'Evolution tracking',
       'Ethical development',
-      'Performance monitoring'
-    ]
+      'Performance monitoring',
+    ],
   },
   {
     name: 'AI Content Factory Pro',
@@ -32,8 +32,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Multi-format generation',
       'Brand customization',
       'Content management',
-      'Performance analytics'
-    ]
+      'Performance analytics',
+    ],
   },
   {
     name: 'AI Content Marketing Automation',
@@ -44,8 +44,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Automated scheduling',
       'Social integration',
       'Workflow automation',
-      'ROI tracking'
-    ]
+      'ROI tracking',
+    ],
   },
   {
     name: 'AI Content Personalization',
@@ -56,8 +56,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Behavior analysis',
       'Dynamic rendering',
       'A/B testing',
-      'Personalization insights'
-    ]
+      'Personalization insights',
+    ],
   },
   {
     name: 'AI Creativity Orchestrator',
@@ -68,8 +68,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Creative briefs',
       'Asset management',
       'Collaboration tools',
-      'Creative analytics'
-    ]
+      'Creative analytics',
+    ],
   },
   {
     name: 'AI Customer Intelligence Platform',
@@ -80,8 +80,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Customer analytics',
       'Behavior tracking',
       'Segmentation tools',
-      'Insight generation'
-    ]
+      'Insight generation',
+    ],
   },
   {
     name: 'AI Customer Success',
@@ -92,8 +92,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Milestone tracking',
       'Automated check-ins',
       'Churn prediction',
-      'Success metrics'
-    ]
+      'Success metrics',
+    ],
   },
   {
     name: 'AI Customer Success Automation',
@@ -104,8 +104,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Workflow automation',
       'Task prioritization',
       'Performance monitoring',
-      'Success optimization'
-    ]
+      'Success optimization',
+    ],
   },
   {
     name: 'AI Dream Interpreter Platform',
@@ -116,8 +116,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Pattern analysis',
       'Psychological insights',
       'Dream journaling',
-      'Interpretation tools'
-    ]
+      'Interpretation tools',
+    ],
   },
   {
     name: 'AI Education Platform Pro',
@@ -128,8 +128,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Adaptive learning',
       'Content personalization',
       'Progress tracking',
-      'Assessment tools'
-    ]
+      'Assessment tools',
+    ],
   },
   {
     name: 'AI Emotional Intelligence',
@@ -140,8 +140,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Emotion recognition',
       'EQ assessment',
       'Training modules',
-      'Progress tracking'
-    ]
+      'Progress tracking',
+    ],
   },
   {
     name: 'AI Ethics & Governance',
@@ -152,8 +152,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Ethics guidelines',
       'Bias detection',
       'Compliance monitoring',
-      'Governance tools'
-    ]
+      'Governance tools',
+    ],
   },
   {
     name: 'AI Financial Fraud Detection',
@@ -164,8 +164,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Real-time monitoring',
       'Pattern recognition',
       'Risk scoring',
-      'Alert management'
-    ]
+      'Alert management',
+    ],
   },
   {
     name: 'AI Financial Intelligence Suite',
@@ -176,8 +176,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Market analysis',
       'Portfolio optimization',
       'Risk assessment',
-      'Financial planning'
-    ]
+      'Financial planning',
+    ],
   },
   {
     name: 'AI Healthcare Diagnostics Pro',
@@ -188,8 +188,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Diagnostic algorithms',
       'Medical imaging analysis',
       'Patient data integration',
-      'Clinical decision support'
-    ]
+      'Clinical decision support',
+    ],
   },
   {
     name: 'AI Logistics Platform',
@@ -200,8 +200,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Route optimization',
       'Inventory management',
       'Demand forecasting',
-      'Performance analytics'
-    ]
+      'Performance analytics',
+    ],
   },
   {
     name: 'AI-Powered Enterprise Security',
@@ -212,8 +212,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Threat detection',
       'Behavioral analysis',
       'Incident response',
-      'Security analytics'
-    ]
+      'Security analytics',
+    ],
   },
   {
     name: 'AI Predictive Maintenance',
@@ -224,8 +224,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Equipment monitoring',
       'Failure prediction',
       'Maintenance scheduling',
-      'Cost optimization'
-    ]
+      'Cost optimization',
+    ],
   },
   {
     name: 'AI Sales Intelligence',
@@ -236,8 +236,8 @@ export const advancedAIServicesExpansion2025V2 = [
       'Lead scoring',
       'Opportunity identification',
       'Sales forecasting',
-      'Performance analytics'
-    ]
+      'Performance analytics',
+    ],
   },
   {
     name: 'AI Threat Detection',
@@ -248,7 +248,7 @@ export const advancedAIServicesExpansion2025V2 = [
       'Real-time monitoring',
       'Threat intelligence',
       'Automated response',
-      'Incident management'
-    ]
-  }
+      'Incident management',
+    ],
+  },
 ];

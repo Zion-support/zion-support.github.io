@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
@@ -55,7 +55,8 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     tagline: 'Intelligent inventory management with predictive analytics',
     price: '$899',
     period: '/month',
-    description: 'Smart inventory management platform that uses AI and machine learning to predict demand, optimize stock levels, and reduce waste across multiple locations.',
+    description:
+      'Smart inventory management platform that uses AI and machine learning to predict demand, optimize stock levels, and reduce waste across multiple locations.',
     features: [
       'AI-powered demand forecasting',
       'Multi-location inventory tracking',
@@ -65,7 +66,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
       'Real-time inventory alerts',
       'Mobile app for warehouse staff',
       'Integration with accounting systems',
-      'Advanced reporting and analytics'
+      'Advanced reporting and analytics',
     ],
     popular: true,
     icon: '📦🤖',
@@ -73,7 +74,8 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-inventory-optimizer',
     marketPosition: 'Leading AI-powered inventory optimization platform',
-    targetAudience: 'Retailers, manufacturers, distributors, e-commerce businesses',
+    targetAudience:
+      'Retailers, manufacturers, distributors, e-commerce businesses',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Inventory Management',
@@ -92,7 +94,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     launchDate: '2027-01-10',
     customers: 234,
     rating: 4.6,
-    reviews: 156
+    reviews: 156,
   },
   {
     id: 'smart-contract-automation-platform',
@@ -100,7 +102,8 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     tagline: 'Automate business processes with intelligent contracts',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced platform for creating, deploying, and managing smart contracts that automate business processes, payments, and compliance across various industries.',
+    description:
+      'Advanced platform for creating, deploying, and managing smart contracts that automate business processes, payments, and compliance across various industries.',
     features: [
       'Visual smart contract builder',
       'Multi-blockchain support',
@@ -110,7 +113,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
       'Contract template library',
       'Real-time contract monitoring',
       'Integration with legal systems',
-      'Advanced analytics and insights'
+      'Advanced analytics and insights',
     ],
     popular: false,
     icon: '📋⚡',
@@ -118,7 +121,8 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/smart-contract-automation',
     marketPosition: 'Leading smart contract automation platform',
-    targetAudience: 'Legal firms, real estate companies, financial services, startups',
+    targetAudience:
+      'Legal firms, real estate companies, financial services, startups',
     trialDays: 21,
     setupTime: '3 weeks',
     category: 'Smart Contracts',
@@ -137,7 +141,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     launchDate: '2027-02-05',
     customers: 89,
     rating: 4.7,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'ai-powered-customer-feedback-analyzer',
@@ -145,7 +149,8 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     tagline: 'Transform customer feedback into actionable insights',
     price: '$699',
     period: '/month',
-    description: 'Intelligent platform that analyzes customer feedback from multiple sources using AI to extract insights, identify trends, and provide actionable recommendations.',
+    description:
+      'Intelligent platform that analyzes customer feedback from multiple sources using AI to extract insights, identify trends, and provide actionable recommendations.',
     features: [
       'Multi-source feedback collection',
       'AI-powered sentiment analysis',
@@ -155,7 +160,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
       'Competitive analysis tools',
       'Real-time feedback monitoring',
       'Integration with CRM systems',
-      'Custom dashboard and reporting'
+      'Custom dashboard and reporting',
     ],
     popular: true,
     icon: '💬🧠',
@@ -170,7 +175,9 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     realService: true,
     technology: ['Python, NLP, TensorFlow, React, Node.js, MongoDB'],
     integrations: ['Salesforce, HubSpot, Zendesk, Intercom, SurveyMonkey'],
-    useCases: ['Customer feedback analysis, product improvement, customer satisfaction'],
+    useCases: [
+      'Customer feedback analysis, product improvement, customer satisfaction',
+    ],
     roi: 'Improve customer satisfaction by 30% and reduce churn by 20%',
     competitors: ['Qualtrics, SurveyMonkey, Typeform'],
     marketSize: '$20B+ customer feedback market by 2035',
@@ -182,7 +189,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     launchDate: '2027-01-25',
     customers: 187,
     rating: 4.8,
-    reviews: 134
+    reviews: 134,
   },
   {
     id: 'quantum-secure-file-sharing',
@@ -190,7 +197,8 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     tagline: 'Future-proof file sharing with quantum-resistant security',
     price: '$1,199',
     period: '/month',
-    description: 'Advanced file sharing and collaboration platform that implements quantum-resistant encryption to ensure data security against future quantum computing threats.',
+    description:
+      'Advanced file sharing and collaboration platform that implements quantum-resistant encryption to ensure data security against future quantum computing threats.',
     features: [
       'Quantum-resistant encryption',
       'Secure file sharing and collaboration',
@@ -200,7 +208,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
       'Mobile and desktop apps',
       'Integration with cloud storage',
       'Advanced security analytics',
-      'Custom branding options'
+      'Custom branding options',
     ],
     popular: false,
     icon: '📁🔒',
@@ -227,7 +235,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     launchDate: '2027-03-01',
     customers: 67,
     rating: 4.9,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-hr-analytics-suite',
@@ -235,7 +243,8 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     tagline: 'Data-driven HR decisions with AI insights',
     price: '$1,499',
     period: '/month',
-    description: 'Comprehensive HR analytics platform that uses artificial intelligence to analyze employee data, predict turnover, and optimize workforce planning and performance.',
+    description:
+      'Comprehensive HR analytics platform that uses artificial intelligence to analyze employee data, predict turnover, and optimize workforce planning and performance.',
     features: [
       'AI-powered employee analytics',
       'Turnover prediction and prevention',
@@ -245,7 +254,7 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
       'Workforce planning tools',
       'Compliance and reporting',
       'Integration with HRIS systems',
-      'Custom dashboard and alerts'
+      'Custom dashboard and alerts',
     ],
     popular: true,
     icon: '👥📊',
@@ -253,14 +262,17 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-hr-analytics',
     marketPosition: 'Leading AI-powered HR analytics platform',
-    targetAudience: 'HR professionals, people operations, talent acquisition teams',
+    targetAudience:
+      'HR professionals, people operations, talent acquisition teams',
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'HR Analytics',
     realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL'],
     integrations: ['Workday, BambooHR, Greenhouse, Lever, Slack'],
-    useCases: ['Employee analytics, turnover prevention, performance optimization'],
+    useCases: [
+      'Employee analytics, turnover prevention, performance optimization',
+    ],
     roi: 'Reduce turnover by 25% and improve hiring efficiency by 40%',
     competitors: ['Visier, Tableau, Power BI, Workday Analytics'],
     marketSize: '$35B+ HR analytics market by 2035',
@@ -272,6 +284,6 @@ export const real2037MicroSaasAdditions: Real2037MicroSaasService[] = [
     launchDate: '2027-02-15',
     customers: 145,
     rating: 4.7,
-    reviews: 98
-  }
+    reviews: 98,
+  },
 ];

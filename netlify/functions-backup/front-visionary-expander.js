@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('front-visionary-expander function triggered');
-    
+
     // Front visionary expansion simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Front visionary expander executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         expansion: {
           status: 'visionary',
           expansions: 0,
-          lastExpansion: new Date().toISOString()
-        }
-      })
+          lastExpansion: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in front-visionary-expander:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'front-visionary-expander'
-      })
+        function: 'front-visionary-expander',
+      }),
     };
   }
 };

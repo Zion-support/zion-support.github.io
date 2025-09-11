@@ -206,7 +206,8 @@ This project is licensed under the MIT License.
   }
   extractHttpMethods(content) {
     const methods = [];
-    const methodRegex = /export\s+(?:default\s+)?(?:async\s+)?function\s+(get|post|put|delete|patch|head|options)/gi;
+    const methodRegex =
+      /export\s+(?:default\s+)?(?:async\s+)?function\s+(get|post|put|delete|patch|head|options)/gi;
     let match;
     while ((match = methodRegex.exec(content)) !== null) {
       if (!methods.includes(match[1].toUpperCase())) {
@@ -243,7 +244,8 @@ This project is licensed under the MIT License.
       if (fs.existsSync(componentsDir)) {
         const componentFiles = this.findComponentFiles(componentsDir);
         if (componentFiles.length > 0) {
-          const componentDocs = this.generateComponentDocumentation(componentFiles);
+          const componentDocs =
+            this.generateComponentDocumentation(componentFiles);
           const docsPath = path.join(process.cwd(), 'docs/components.md');
           // Ensure docs directory exists
           const docsDir = path.dirname(docsPath);
@@ -322,9 +324,12 @@ This project is licensed under the MIT License.
     // Generate documentation immediately
     await this.generateDocumentation();
     // Set up interval for periodic documentation updates
-    setInterval(async () => {
-      await this.generateDocumentation();
-    }, 2 * 60 * 60 * 1000); // Every 2 hours
+    setInterval(
+      async () => {
+        await this.generateDocumentation();
+      },
+      2 * 60 * 60 * 1000
+    ); // Every 2 hours
   }
 }
 // Start the service

@@ -11,9 +11,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     const response = await fetch('/functions/v1/track-referral', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(req.body || {})
+      body: JSON.stringify(req.body || {}),
     });
 
     const data = await response.json().catch(() => ({}));

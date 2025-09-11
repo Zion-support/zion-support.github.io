@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('front-maximizer function triggered');
-    
+
     // Front maximization simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Front maximizer executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         maximization: {
           status: 'active',
           optimizations: 0,
-          lastOptimization: new Date().toISOString()
-        }
-      })
+          lastOptimization: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in front-maximizer:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'front-maximizer'
-      })
+        function: 'front-maximizer',
+      }),
     };
   }
 };

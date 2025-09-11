@@ -27,7 +27,11 @@ class FinalComprehensiveImprovements {
   async runCommand(command, description) {
     this.log(`🚀 ${description}: ${command}`);
     try {
-      const output = execSync(command, { cwd: this.rootPath, encoding: 'utf8', stdio: 'pipe' });
+      const output = execSync(command, {
+        cwd: this.rootPath,
+        encoding: 'utf8',
+        stdio: 'pipe',
+      });
       this.log(`✅ ${description} successful.`);
       return output;
     } catch (error) {
@@ -42,9 +46,9 @@ class FinalComprehensiveImprovements {
       // Find files with syntax errors that ESLint can't parse
       const command = `find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | grep -v node_modules | grep -v .next | grep -v dist | head -20`;
       const files = await this.runCommand(command, 'Find JS/TS files');
-      
+
       const fileList = files.split('\n').filter(f => f.trim());
-      
+
       for (const file of fileList) {
         try {
           if (fs.existsSync(file)) {
@@ -52,11 +56,21 @@ class FinalComprehensiveImprovements {
             let modified = false;
 
             // Fix common syntax errors
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (
+              content.includes('<<<<<<<') ||
+              content.includes('=======') ||
+              content.includes('>>>>>>>')
+            ) {
               // Remove merge conflict markers
               content = content
-                .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-                .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+                .replace(
+                  /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
+                  ''
+                )
+                .replace(
+                  /<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
+                  ''
+                );
               modified = true;
             }
 
@@ -148,11 +162,16 @@ fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 console.log('Performance report generated');
 `;
 
-      fs.writeFileSync(path.join(this.rootPath, 'scripts', 'performance-monitor.cjs'), perfScript);
+      fs.writeFileSync(
+        path.join(this.rootPath, 'scripts', 'performance-monitor.cjs'),
+        perfScript
+      );
       this.log('✅ Created performance monitoring script');
       this.improvements.push('Created performance monitoring script');
     } catch (error) {
-      this.log(`❌ Failed to create performance optimizations: ${error.message}`);
+      this.log(
+        `❌ Failed to create performance optimizations: ${error.message}`
+      );
     }
   }
 
@@ -221,7 +240,10 @@ fs.writeFileSync('security-audit-report.json', JSON.stringify(report, null, 2));
 console.log('Security audit completed');
 `;
 
-      fs.writeFileSync(path.join(this.rootPath, 'scripts', 'security-audit.cjs'), securityScript);
+      fs.writeFileSync(
+        path.join(this.rootPath, 'scripts', 'security-audit.cjs'),
+        securityScript
+      );
       this.log('✅ Created security audit script');
       this.improvements.push('Created security audit script');
     } catch (error) {
@@ -307,11 +329,16 @@ fs.writeFileSync('accessibility-report.json', JSON.stringify(report, null, 2));
 console.log('Accessibility check completed');
 `;
 
-      fs.writeFileSync(path.join(this.rootPath, 'scripts', 'accessibility-checker.cjs'), a11yScript);
+      fs.writeFileSync(
+        path.join(this.rootPath, 'scripts', 'accessibility-checker.cjs'),
+        a11yScript
+      );
       this.log('✅ Created accessibility checker script');
       this.improvements.push('Created accessibility checker script');
     } catch (error) {
-      this.log(`❌ Failed to create accessibility improvements: ${error.message}`);
+      this.log(
+        `❌ Failed to create accessibility improvements: ${error.message}`
+      );
     }
   }
 
@@ -319,14 +346,23 @@ console.log('Accessibility check completed');
     this.log('🚀 Running all improvement scripts...');
     try {
       // Run performance monitoring
-      await this.runCommand('node scripts/performance-monitor.cjs', 'Performance Monitoring');
-      
+      await this.runCommand(
+        'node scripts/performance-monitor.cjs',
+        'Performance Monitoring'
+      );
+
       // Run security audit
-      await this.runCommand('node scripts/security-audit.cjs', 'Security Audit');
-      
+      await this.runCommand(
+        'node scripts/security-audit.cjs',
+        'Security Audit'
+      );
+
       // Run accessibility check
-      await this.runCommand('node scripts/accessibility-checker.cjs', 'Accessibility Check');
-      
+      await this.runCommand(
+        'node scripts/accessibility-checker.cjs',
+        'Accessibility Check'
+      );
+
       this.log('✅ All improvement scripts completed successfully');
     } catch (error) {
       this.log(`❌ Some scripts failed: ${error.message}`);
@@ -354,7 +390,6 @@ console.log('Accessibility check completed');
       this.log('  - Security auditing');
       this.log('  - Accessibility checking');
       this.log('  - Build optimization');
-
     } catch (error) {
       this.log(`🚨 An error occurred during improvements: ${error.message}`);
     }

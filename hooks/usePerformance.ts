@@ -11,7 +11,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
   const {
     enableMonitoring = true,
     reportInterval = 5000,
-    onMetricUpdate
+    onMetricUpdate,
   } = options;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -19,7 +19,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null
+    ttfb: null,
   });
 
   const [isSupported, setIsSupported] = useState(false);
@@ -32,9 +32,11 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     if (!('PerformanceObserver' in window)) return;
 
     // First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
+    const fcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      const fcpEntry = entries.find(
+        entry => entry.name === 'first-contentful-paint'
+      );
       if (fcpEntry) {
         setMetrics(prev => {
           const newMetrics = { ...prev, fcp: fcpEntry.startTime };
@@ -46,7 +48,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {
+    const lcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       setMetrics(prev => {
@@ -58,13 +60,13 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {
+    const fidObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach((entry: any) => {
         setMetrics(prev => {
-          const newMetrics = { 
-            ...prev, 
-            fid: entry.processingStart - entry.startTime 
+          const newMetrics = {
+            ...prev,
+            fid: entry.processingStart - entry.startTime,
           };
           onMetricUpdate?.(newMetrics);
           return newMetrics;
@@ -75,7 +77,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
 
     // Cumulative Layout Shift
     let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
+    const clsObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach((entry: any) => {
         if (!entry.hadRecentInput) {
@@ -91,12 +93,14 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Time to First Byte
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigationEntry = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       setMetrics(prev => {
-        const newMetrics = { 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        const newMetrics = {
+          ...prev,
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
         };
         onMetricUpdate?.(newMetrics);
         return newMetrics;
@@ -116,12 +120,12 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     if (typeof window === 'undefined' || !('memory' in performance)) {
       return null;
     }
-    
+
     const memory = (performance as any).memory;
     return {
       used: Math.round(memory.usedJSHeapSize / 1048576), // MB
       total: Math.round(memory.totalJSHeapSize / 1048576), // MB
-      limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
+      limit: Math.round(memory.jsHeapSizeLimit / 1048576), // MB
     };
   }, []);
 
@@ -133,25 +137,29 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
       name: resource.name,
       duration: resource.duration,
       size: (resource as any).transferSize || 0,
-      type: resource.initiatorType
+      type: resource.initiatorType,
     }));
   }, []);
 
   const getNavigationTiming = useCallback(() => {
     if (typeof window === 'undefined') return null;
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
     if (!navigation) return null;
 
     return {
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      domContentLoaded:
+        navigation.domContentLoadedEventEnd -
+        navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
       totalTime: navigation.loadEventEnd - navigation.fetchStart,
       dns: navigation.domainLookupEnd - navigation.domainLookupStart,
       tcp: navigation.connectEnd - navigation.connectStart,
       request: navigation.responseStart - navigation.requestStart,
       response: navigation.responseEnd - navigation.responseStart,
-      domProcessing: navigation.domComplete - navigation.domLoading
+      domProcessing: navigation.domComplete - navigation.domLoading,
     };
   }, []);
 
@@ -161,18 +169,18 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
       lcp: null,
       fid: null,
       cls: null,
-      ttfb: null
+      ttfb: null,
     });
   }, []);
 
   const isGoodPerformance = useCallback(() => {
     const { fcp, lcp, fid, cls } = metrics;
-    
+
     return {
       fcp: fcp !== null && fcp < 1800, // Good FCP is under 1.8s
       lcp: lcp !== null && lcp < 2500, // Good LCP is under 2.5s
-      fid: fid !== null && fid < 100,  // Good FID is under 100ms
-      cls: cls !== null && cls < 0.1   // Good CLS is under 0.1
+      fid: fid !== null && fid < 100, // Good FID is under 100ms
+      cls: cls !== null && cls < 0.1, // Good CLS is under 0.1
     };
   }, [metrics]);
 
@@ -201,7 +209,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     getResourceTiming,
     getNavigationTiming,
     clearMetrics,
-    isGoodPerformance: isGoodPerformance()
+    isGoodPerformance: isGoodPerformance(),
   };
 };
 

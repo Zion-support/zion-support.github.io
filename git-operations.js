@@ -11,10 +11,10 @@ try {
   function execGit(command, description) {
     try {
       console.log(`📋 ${description}...`);
-      const result = execSync(command, { 
-        cwd: '/workspace', 
+      const result = execSync(command, {
+        cwd: '/workspace',
         encoding: 'utf8',
-        timeout: 30000 
+        timeout: 30000,
       });
       console.log(`✅ ${description} completed`);
       return result;
@@ -47,13 +47,19 @@ try {
 
   // Step 4: Push to current branch
   console.log('\n=== STEP 4: Pushing to current branch ===');
-  execGit('git push origin cursor/fix-syntax-push-and-merge-to-main-c855', 'Pushing to feature branch');
+  execGit(
+    'git push origin cursor/fix-syntax-push-and-merge-to-main-c855',
+    'Pushing to feature branch'
+  );
 
   // Step 5: Switch to main and merge
   console.log('\n=== STEP 5: Switching to main and merging ===');
   execGit('git checkout main', 'Switching to main branch');
   execGit('git pull origin main', 'Pulling latest main');
-  execGit('git merge cursor/fix-syntax-push-and-merge-to-main-c855', 'Merging feature branch');
+  execGit(
+    'git merge cursor/fix-syntax-push-and-merge-to-main-c855',
+    'Merging feature branch'
+  );
   execGit('git push origin main', 'Pushing merged changes to main');
 
   // Step 6: Check final status
@@ -62,7 +68,6 @@ try {
   execGit('git log --oneline -5', 'Recent commits');
 
   console.log('\n✅ All git operations completed successfully!');
-
 } catch (error) {
   console.error('❌ Error during git operations:', error.message);
   process.exit(1);

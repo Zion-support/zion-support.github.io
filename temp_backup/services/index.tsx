@@ -7,13 +7,13 @@ const Index: NextPage = () => {
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index service" />
+        <meta name='description' content='Index service' />
       </Head>
-      
+
       <main>
         <h1>Index</h1>
         <p>Service details coming soon...</p>
-        <Link href="/services">Back to Services</Link>
+        <Link href='/services'>Back to Services</Link>
       </main>
     </div>
   );

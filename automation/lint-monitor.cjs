@@ -8,7 +8,9 @@ const chokidar = require('chokidar');
 const logsDir = path.join(__dirname, 'logs');
 const logFile = path.join(logsDir, 'lint-monitor.log');
 
-function ensureDir(d) { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); }
+function ensureDir(d) {
+  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
+}
 function log(msg) {
   const line = `[${new Date().toISOString()}] ${msg}\n`;
   console.log(msg);
@@ -33,10 +35,16 @@ function runLint(files = []) {
   if (files.length > 0) args.push(...files);
 
   if (lintProc && !lintProc.killed) {
-    try { lintProc.kill('SIGTERM'); } catch (_) {}
+    try {
+      lintProc.kill('SIGTERM');
+    } catch (_) {}
   }
-  log(`Running ESLint ${files.length ? `on ${files.length} file(s)` : 'on repository'}...`);
-  lintProc = spawn('npx', ['eslint', '.', ...args], { cwd: path.join(__dirname, '..') });
+  log(
+    `Running ESLint ${files.length ? `on ${files.length} file(s)` : 'on repository'}...`
+  );
+  lintProc = spawn('npx', ['eslint', '.', ...args], {
+    cwd: path.join(__dirname, '..'),
+  });
   lintProc.stdout.on('data', d => log(d.toString().trim()));
   lintProc.stderr.on('data', d => log(`[err] ${d.toString().trim()}`));
   lintProc.on('close', code => {
@@ -48,9 +56,17 @@ function runLint(files = []) {
 function startWatcher() {
   ensureDir(logsDir);
   log('Starting lint monitor...');
-  const watchPaths = [path.join(__dirname, '..', 'pages'), path.join(__dirname, '..', 'components'), path.join(__dirname, '..', 'app'), path.join(__dirname, '..', 'src')];
+  const watchPaths = [
+    path.join(__dirname, '..', 'pages'),
+    path.join(__dirname, '..', 'components'),
+    path.join(__dirname, '..', 'app'),
+    path.join(__dirname, '..', 'src'),
+  ];
   const existing = watchPaths.filter(p => fs.existsSync(p));
-  const watcher = chokidar.watch(existing, { ignoreInitial: true, ignored: /node_modules|\.next|dist/ });
+  const watcher = chokidar.watch(existing, {
+    ignoreInitial: true,
+    ignored: /node_modules|\.next|dist/,
+  });
 
   watcher.on('all', (event, filePath) => {
     if (!filePath.match(/\.(js|jsx|ts|tsx)$/)) return;

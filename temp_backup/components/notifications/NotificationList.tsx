@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
@@ -21,34 +20,34 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   notifications,
   onMarkAsRead,
   onDismiss,
-  onRetry
+  onRetry,
 }) => {
   return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
+    <ScrollArea className='flex-1 overflow-y-auto max-h-[350px]'>
       {error ? (
-        <div className="p-8 text-center text-amber-500">
+        <div className='p-8 text-center text-amber-500'>
           <p>{error}</p>
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="mt-2"
+          <Button
+            variant='outline'
+            size='sm'
+            className='mt-2'
             onClick={onRetry}
           >
             Try Again
           </Button>
         </div>
       ) : loading ? (
-        <div className="p-4 space-y-4">
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+        <div className='p-4 space-y-4'>
+          <Skeleton className='h-12 w-full bg-zion-blue-dark/50' />
+          <Skeleton className='h-12 w-full bg-zion-blue-dark/50' />
+          <Skeleton className='h-12 w-full bg-zion-blue-dark/50' />
         </div>
       ) : notifications.length === 0 ? (
-        <div className="p-8 text-center text-zion-slate-light">
+        <div className='p-8 text-center text-zion-slate-light'>
           <p>No notifications yet</p>
         </div>
       ) : (
-        notifications.map((notification) => (
+        notifications.map(notification => (
           <NotificationItem
             key={notification.id}
             notification={notification}

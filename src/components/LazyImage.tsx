@@ -65,7 +65,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {!isInView ? (
         <img
           src={placeholder}
-          alt=""
+          alt=''
           style={{
             width: '100%',
             height: '100%',
@@ -78,7 +78,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           {!isLoaded && !hasError && (
             <img
               src={placeholder}
-              alt=""
+              alt=''
               style={{
                 position: 'absolute',
                 top: 0,

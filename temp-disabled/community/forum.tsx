@@ -4,10 +4,10 @@ import CommunityPage from '@/pages/CommunityPage';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
-    props: {}
+    props: {},
   };
 };
 
 export default function CommunityForumPage() {
   return <CommunityPage />;
-} 
+}

@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const moreRealServices2025: MicroSaasService[] = [
@@ -14,20 +14,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Daily K8s spend diffs, alerts, and savings recommendations',
     price: '$179',
     period: '/month',
-    description: 'Continuously analyze Kubernetes cluster costs by namespace, workload, and label. Detect anomalies, right-size workloads, and generate actionable savings pull requests.',
+    description:
+      'Continuously analyze Kubernetes cluster costs by namespace, workload, and label. Detect anomalies, right-size workloads, and generate actionable savings pull requests.',
     features: [
       'Daily and hourly anomaly detection',
       'Namespace/workload/label cost breakdown',
       'Right-sizing and bin-packing suggestions',
       'Reserved/spot instance recommendations',
-      'Slack/Email alerts with context and graphs'
+      'Slack/Email alerts with context and graphs',
     ],
     popular: true,
     icon: '📉',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/kubernetes-cost-anomaly-detector',
-    marketPosition: 'Focused cost guardrail without heavy APM footprint. Complements native provider cost tools.',
+    marketPosition:
+      'Focused cost guardrail without heavy APM footprint. Complements native provider cost tools.',
     targetAudience: 'Platform engineering, FinOps, SRE',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -35,7 +37,9 @@ export const moreRealServices2025: MicroSaasService[] = [
     realService: true,
     technology: ['Node.js, Prometheus, Kubecost API, Helm'],
     integrations: ['Slack, GitHub, PagerDuty'],
-    useCases: ['Detect runaway deployments, Control cost regressions, Budget guardrails'],
+    useCases: [
+      'Detect runaway deployments, Control cost regressions, Budget guardrails',
+    ],
     roi: 'Cut K8s costs by 15–35% on average',
     competitors: ['Kubecost (enterprise), Cloud provider native tools'],
     marketSize: '$6B+ FinOps & cloud cost',
@@ -43,11 +47,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Agentless metrics pull + cost model; GitHub PRs for manifest right-sizing.',
+    implementationDetails:
+      'Agentless metrics pull + cost model; GitHub PRs for manifest right-sizing.',
     launchDate: '2025-08-01',
     customers: 12,
     rating: 4.7,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'okta-to-auth0-migration-kit',
@@ -55,20 +60,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Zero-downtime identity migration playbooks and tooling',
     price: '$2,500',
     period: '/one-time',
-    description: 'Blueprints, scripts, and runbooks to safely migrate tenants, apps, and users from Okta to Auth0 with staged cutovers and rollbacks.',
+    description:
+      'Blueprints, scripts, and runbooks to safely migrate tenants, apps, and users from Okta to Auth0 with staged cutovers and rollbacks.',
     features: [
       'User/profile export with hashing and PII handling',
       'App/client recreation scripts and secrets rotation',
       'Progressive traffic shifting with feature flags',
       'Roll-back plans and smoke tests',
-      'Compliance evidence package'
+      'Compliance evidence package',
     ],
     popular: false,
     icon: '🔐',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/okta-to-auth0-migration-kit',
-    marketPosition: 'Faster and safer than ad-hoc migrations; saves weeks of trial-and-error.',
+    marketPosition:
+      'Faster and safer than ad-hoc migrations; saves weeks of trial-and-error.',
     targetAudience: 'IT, security, platform teams',
     trialDays: 0,
     setupTime: '3–5 days',
@@ -84,11 +91,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Repeatable scripts, templates, and validation checklists.',
+    implementationDetails:
+      'Repeatable scripts, templates, and validation checklists.',
     launchDate: '2025-07-15',
     customers: 5,
     rating: 4.8,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'postgres-ha-blueprint',
@@ -96,13 +104,14 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Opinionated HA/backup/restore with chaos drills',
     price: '$399',
     period: '/month',
-    description: 'Productized Postgres HA with PITR, automated failover simulations, and restore runbooks. Includes metrics and alerting defaults.',
+    description:
+      'Productized Postgres HA with PITR, automated failover simulations, and restore runbooks. Includes metrics and alerting defaults.',
     features: [
       'PITR and encrypted backups',
       'Automated failover simulations',
       'Restore drills with RTO tracking',
       'Dashboards and SLOs',
-      'Runbooks and incident templates'
+      'Runbooks and incident templates',
     ],
     popular: true,
     icon: '🗄️',
@@ -129,7 +138,7 @@ export const moreRealServices2025: MicroSaasService[] = [
     launchDate: '2025-08-10',
     customers: 9,
     rating: 4.6,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'rag-evaluator-suite',
@@ -137,20 +146,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Automated evals for retrieval, grounding, and safety',
     price: '$249',
     period: '/month',
-    description: 'Turn-key evaluation harness for RAG systems: retrieval quality, hallucination rates, guardrails, and cost-latency tradeoffs with dashboards.',
+    description:
+      'Turn-key evaluation harness for RAG systems: retrieval quality, hallucination rates, guardrails, and cost-latency tradeoffs with dashboards.',
     features: [
       'Groundedness and hallucination metrics',
       'Retrieval precision/recall and MRR@K',
       'Adversarial prompt batteries',
       'Latency/cost Pareto charts',
-      'CI gate with regression thresholds'
+      'CI gate with regression thresholds',
     ],
     popular: false,
     icon: '🧪',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/services/rag-evaluator-suite',
-    marketPosition: 'Purpose-built for RAG teams; simpler than repurposed MLOps suites.',
+    marketPosition:
+      'Purpose-built for RAG teams; simpler than repurposed MLOps suites.',
     targetAudience: 'AI platform, search, product engineering',
     trialDays: 14,
     setupTime: '1 day',
@@ -166,11 +177,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Dataset loaders, judges, scoring, dashboards, CI template.',
+    implementationDetails:
+      'Dataset loaders, judges, scoring, dashboards, CI template.',
     launchDate: '2025-07-28',
     customers: 11,
     rating: 4.7,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 's3-backup-compliance-lifecycle',
@@ -178,20 +190,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Retention, immutability, and audit-ready evidence',
     price: '$129',
     period: '/month',
-    description: 'Automate S3 backup lifecycle policies with retention, object lock for immutability, and exportable compliance evidence packs.',
+    description:
+      'Automate S3 backup lifecycle policies with retention, object lock for immutability, and exportable compliance evidence packs.',
     features: [
       'Lifecycle and retention policies as code',
       'Object Lock governance mode',
       'Automated evidence bundles (CSV/PDF)',
       'Drift detection and remediation',
-      'Cost-aware storage tiers'
+      'Cost-aware storage tiers',
     ],
     popular: false,
     icon: '🛡️',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/s3-backup-compliance-lifecycle',
-    marketPosition: 'A lightweight alternative to heavy GRC suites for backups.',
+    marketPosition:
+      'A lightweight alternative to heavy GRC suites for backups.',
     targetAudience: 'IT ops, security, compliance',
     trialDays: 14,
     setupTime: '1 day',
@@ -207,11 +221,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Terraform modules, scanners, and evidence generators.',
+    implementationDetails:
+      'Terraform modules, scanners, and evidence generators.',
     launchDate: '2025-08-05',
     customers: 6,
     rating: 4.5,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'edge-feature-flags-workers',
@@ -219,20 +234,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Ultra-low latency flags at the CDN edge',
     price: '$99',
     period: '/month',
-    description: 'Roll out features with sub-10ms decision latency globally using Cloudflare Workers with staging, audits, and kill switches.',
+    description:
+      'Roll out features with sub-10ms decision latency globally using Cloudflare Workers with staging, audits, and kill switches.',
     features: [
       'Geo and segment targeting',
       'Audit logs and approvals',
       'Experiment cohorts and holdouts',
       'SDKs for Node/Browser',
-      'Fallbacks on edge cache misses'
+      'Fallbacks on edge cache misses',
     ],
     popular: true,
     icon: '🚦',
     color: 'from-sky-600 to-cyan-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/services/edge-feature-flags-workers',
-    marketPosition: 'Edge-native and lean versus heavy centralized flag platforms.',
+    marketPosition:
+      'Edge-native and lean versus heavy centralized flag platforms.',
     targetAudience: 'Product, platform, edge teams',
     trialDays: 14,
     setupTime: '2 hours',
@@ -248,11 +265,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Workers scripts, SDKs, audit service, and dashboards.',
+    implementationDetails:
+      'Workers scripts, SDKs, audit service, and dashboards.',
     launchDate: '2025-07-30',
     customers: 14,
     rating: 4.8,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'stripe-churn-predictor',
@@ -260,26 +278,30 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Early risk scoring and retention playbooks for subscriptions',
     price: '$149',
     period: '/month',
-    description: 'Predict churn risk for Stripe subscribers using payment behavior, product usage, and support signals. Trigger targeted win-back offers and outreach automations.',
+    description:
+      'Predict churn risk for Stripe subscribers using payment behavior, product usage, and support signals. Trigger targeted win-back offers and outreach automations.',
     features: [
       'ML-based churn risk scoring',
       'Dunning and smart retry workflows',
       'Win-back offer experiments',
       'Customer health dashboards',
-      'Slack/Email/CRM automations'
+      'Slack/Email/CRM automations',
     ],
     popular: true,
     icon: '🔮',
     color: 'from-rose-600 to-fuchsia-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/stripe-churn-predictor',
-    marketPosition: 'Comparable to ProfitWell Retain and Churn Buster; lightweight setup and integrated ML scoring. Typical tools range $99–$399/mo.',
+    marketPosition:
+      'Comparable to ProfitWell Retain and Churn Buster; lightweight setup and integrated ML scoring. Typical tools range $99–$399/mo.',
     targetAudience: 'SaaS founders, RevOps, growth teams',
     trialDays: 14,
     setupTime: '2 hours',
     category: 'AI & Data',
     realService: true,
-    technology: ['TypeScript, Node.js, Stripe API, Postgres, Python scikit-learn'],
+    technology: [
+      'TypeScript, Node.js, Stripe API, Postgres, Python scikit-learn',
+    ],
     integrations: ['Stripe, HubSpot, Salesforce, Slack, Customer.io'],
     useCases: ['Reduce voluntary churn, Improve recovery, Target offers'],
     roi: 'Recover 10–25% more failed payments; reduce churn 15–30%.',
@@ -289,32 +311,36 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Direct Stripe webhooks + health scoring jobs + templated outreach playbooks.',
+    implementationDetails:
+      'Direct Stripe webhooks + health scoring jobs + templated outreach playbooks.',
     launchDate: '2025-08-22',
     customers: 21,
     rating: 4.7,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'incident-postmortem-copilot',
     name: 'Incident Postmortem Copilot',
-    tagline: 'Generate blameless postmortems with timelines, impact, and actions',
+    tagline:
+      'Generate blameless postmortems with timelines, impact, and actions',
     price: '$129',
     period: '/month',
-    description: 'Automate incident timelines from alerts, commits, and chat. Draft blameless write-ups, RCA trees, and action items with owners and due dates.',
+    description:
+      'Automate incident timelines from alerts, commits, and chat. Draft blameless write-ups, RCA trees, and action items with owners and due dates.',
     features: [
       'Automated timeline synthesis',
       'RCA fishbone and 5 Whys',
       'Impact and customer cohort mapping',
       'Action item deduplication',
-      'SLO/SLA evidence attachments'
+      'SLO/SLA evidence attachments',
     ],
     popular: true,
     icon: '🧩',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/incident-postmortem-copilot',
-    marketPosition: 'Alternative to manual docs or heavy IRM suites; similar outcomes to Jeli/FireHydrant at lower cost. Market prices $99–$499/mo.',
+    marketPosition:
+      'Alternative to manual docs or heavy IRM suites; similar outcomes to Jeli/FireHydrant at lower cost. Market prices $99–$499/mo.',
     targetAudience: 'SRE, platform, support leadership',
     trialDays: 14,
     setupTime: '1 day',
@@ -330,11 +356,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Parsers for alerts/commits/chat + summarization + Jira sync workflows.',
+    implementationDetails:
+      'Parsers for alerts/commits/chat + summarization + Jira sync workflows.',
     launchDate: '2025-08-22',
     customers: 17,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'terraform-drift-guard',
@@ -342,20 +369,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Detect and auto-heal IaC drift with approvals and evidence',
     price: '$199',
     period: '/month',
-    description: 'Continuously detect cloud resource drift from Terraform state, propose safe remediations, and capture audit evidence for compliance.',
+    description:
+      'Continuously detect cloud resource drift from Terraform state, propose safe remediations, and capture audit evidence for compliance.',
     features: [
       'Drift detection and diff views',
       'Approval workflows with change sets',
       'Auto-remediation with guardrails',
       'Evidence bundles for audits',
-      'Policy as code (OPA) checks'
+      'Policy as code (OPA) checks',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-sky-600 to-cyan-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/services/terraform-drift-guard',
-    marketPosition: 'Competes with Spacelift/Env0 drift modules; focused on compliance-grade evidence. Typical pricing $149–$399/mo.',
+    marketPosition:
+      'Competes with Spacelift/Env0 drift modules; focused on compliance-grade evidence. Typical pricing $149–$399/mo.',
     targetAudience: 'Platform engineering, DevOps, compliance',
     trialDays: 14,
     setupTime: '1 day',
@@ -371,11 +400,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'State polling + cloud inventory + remediation plans with approvals.',
+    implementationDetails:
+      'State polling + cloud inventory + remediation plans with approvals.',
     launchDate: '2025-08-22',
     customers: 10,
     rating: 4.5,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'saml-to-oidc-broker',
@@ -383,20 +413,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Bridge legacy SAML to modern OIDC without rewriting apps',
     price: '$299',
     period: '/month',
-    description: 'A secure identity broker that translates between SAML and OIDC/OAuth2, simplifying migrations and consolidations while preserving SSO and user claims.',
+    description:
+      'A secure identity broker that translates between SAML and OIDC/OAuth2, simplifying migrations and consolidations while preserving SSO and user claims.',
     features: [
       'Protocol translation SAML↔OIDC',
       'Claims mapping and transformations',
       'MFA and risk-based policies',
       'Token introspection and revocation',
-      'High-availability deployment templates'
+      'High-availability deployment templates',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/saml-to-oidc-broker',
-    marketPosition: 'Alternative to custom gateways and niche tools; faster time-to-value. Market prices $199–$999/mo.',
+    marketPosition:
+      'Alternative to custom gateways and niche tools; faster time-to-value. Market prices $199–$999/mo.',
     targetAudience: 'IT and security, platform teams, B2B SaaS',
     trialDays: 14,
     setupTime: '2–3 days',
@@ -406,17 +438,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     integrations: ['Okta, Auth0, Azure AD, Keycloak'],
     useCases: ['Identity modernization, M&A integration, Vendor consolidation'],
     roi: 'Cut migration effort 50–70%; reduce auth incidents.',
-    competitors: ['Auth0 extensibility', 'Keycloak adapters', 'Commercial gateways'],
+    competitors: [
+      'Auth0 extensibility',
+      'Keycloak adapters',
+      'Commercial gateways',
+    ],
     marketSize: '$2B identity modernization',
     growthRate: '12% CAGR',
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Pluggable mappers + hardened proxy + IdP/SP compatibility suites.',
+    implementationDetails:
+      'Pluggable mappers + hardened proxy + IdP/SP compatibility suites.',
     launchDate: '2025-08-22',
     customers: 8,
     rating: 4.6,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'meeting-notes-multimodal-ai',
@@ -424,20 +461,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Summaries, decisions, and next steps from calls and screens',
     price: '$99',
     period: '/month',
-    description: 'Capture audio and shared screens to generate accurate summaries, decisions, and action items routed to the right tools with owner notifications.',
+    description:
+      'Capture audio and shared screens to generate accurate summaries, decisions, and action items routed to the right tools with owner notifications.',
     features: [
       'Speaker diarization and topic clustering',
       'Slide and screen understanding',
       'Decision and risk extraction',
       'Action routing to PM/CRM',
-      'Knowledge base linking'
+      'Knowledge base linking',
     ],
     popular: false,
     icon: '🎙️',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/meeting-notes-multimodal-ai',
-    marketPosition: 'Competes with Fathom/Avoma; stronger action routing and privacy controls. Typical $30–$150/user/mo.',
+    marketPosition:
+      'Competes with Fathom/Avoma; stronger action routing and privacy controls. Typical $30–$150/user/mo.',
     targetAudience: 'Sales, customer success, product teams',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -453,11 +492,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Real-time capture + summary + action routers with templates.',
+    implementationDetails:
+      'Real-time capture + summary + action routers with templates.',
     launchDate: '2025-08-22',
     customers: 34,
     rating: 4.7,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'data-quality-sla-monitor',
@@ -465,20 +505,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Contracts, checks, and SLOs for reliable data products',
     price: '$179',
     period: '/month',
-    description: 'Define and enforce data contracts and SLAs with freshness, completeness, and accuracy checks. Alert on regressions and provide lineage-aware root cause hints.',
+    description:
+      'Define and enforce data contracts and SLAs with freshness, completeness, and accuracy checks. Alert on regressions and provide lineage-aware root cause hints.',
     features: [
       'Data contracts and policies',
       'Freshness/completeness/accuracy checks',
       'Lineage and impact analysis',
       'On-call routing and runbooks',
-      'Evidence for compliance reviews'
+      'Evidence for compliance reviews',
     ],
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/data-quality-sla-monitor',
-    marketPosition: 'Alternative to full MLOps suites; focused on core reliability. Comparable market $99–$499/mo.',
+    marketPosition:
+      'Alternative to full MLOps suites; focused on core reliability. Comparable market $99–$499/mo.',
     targetAudience: 'Data platform, analytics, ML teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -494,11 +536,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Declarative checks + lineage graph + SLOs + alert routing.',
+    implementationDetails:
+      'Declarative checks + lineage graph + SLOs + alert routing.',
     launchDate: '2025-08-22',
     customers: 13,
     rating: 4.6,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'container-sbom-vulnerability-monitor',
@@ -506,20 +549,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Continuously watch images for CVEs and license risks',
     price: '$129',
     period: '/month',
-    description: 'Generate and monitor SBOMs for container images. Track new CVEs, policy violations, and license risks with pull-request remediation suggestions.',
+    description:
+      'Generate and monitor SBOMs for container images. Track new CVEs, policy violations, and license risks with pull-request remediation suggestions.',
     features: [
       'SBOM generation (CycloneDX/SPDX)',
       'CVE watch and severity prioritization',
       'License and policy checks',
       'PR suggestions for fixes',
-      'Dashboards and alerts'
+      'Dashboards and alerts',
     ],
     popular: false,
     icon: '🧬',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/container-sbom-vulnerability-monitor',
-    marketPosition: 'Competes with Snyk/Anchore for container focus with simpler flows. Market $99–$599/mo.',
+    marketPosition:
+      'Competes with Snyk/Anchore for container focus with simpler flows. Market $99–$599/mo.',
     targetAudience: 'Platform, security, DevSecOps teams',
     trialDays: 14,
     setupTime: '4 hours',
@@ -535,11 +580,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'CI hooks + registry scanners + policy engine + alerting.',
+    implementationDetails:
+      'CI hooks + registry scanners + policy engine + alerting.',
     launchDate: '2025-08-22',
     customers: 19,
     rating: 4.5,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'ai-security-risk-triage',
@@ -547,20 +593,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Prioritize and summarize risks from findings into action plans',
     price: '$199',
     period: '/month',
-    description: 'Aggregate findings from scanners and cloud logs. Use AI to deduplicate, prioritize, and produce actionable remediation plans and owner assignments.',
+    description:
+      'Aggregate findings from scanners and cloud logs. Use AI to deduplicate, prioritize, and produce actionable remediation plans and owner assignments.',
     features: [
       'Deduplication and risk scoring',
       'Owner routing with SLAs',
       'Executive and engineer summaries',
       'Compliance mapping and evidence',
-      'Weekly remediation digests'
+      'Weekly remediation digests',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-security-risk-triage',
-    marketPosition: 'Sits above scanners (Snyk/Tenable) to drive outcomes; $149–$499/mo typical.',
+    marketPosition:
+      'Sits above scanners (Snyk/Tenable) to drive outcomes; $149–$499/mo typical.',
     targetAudience: 'Security engineering, platform, compliance',
     trialDays: 14,
     setupTime: '1 day',
@@ -568,7 +616,9 @@ export const moreRealServices2025: MicroSaasService[] = [
     realService: true,
     technology: ['OpenAI, vector DB, Node.js, Postgres'],
     integrations: ['Tenable, Snyk, Wiz, Jira, Slack'],
-    useCases: ['Reduce alert fatigue, Faster remediation, Compliance readiness'],
+    useCases: [
+      'Reduce alert fatigue, Faster remediation, Compliance readiness',
+    ],
     roi: 'Cut backlog 30–50%; improve SLA compliance to 95%+',
     competitors: ['JupiterOne', 'Jira automations', 'Custom SIEM dashboards'],
     marketSize: '$8B security ops',
@@ -576,11 +626,12 @@ export const moreRealServices2025: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Connectors + rule-based + AI summaries + ticketing sync.',
+    implementationDetails:
+      'Connectors + rule-based + AI summaries + ticketing sync.',
     launchDate: '2025-08-22',
     customers: 15,
     rating: 4.7,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'smart-dunning-retries',
@@ -588,20 +639,22 @@ export const moreRealServices2025: MicroSaasService[] = [
     tagline: 'Optimize payment recovery with adaptive retry schedules',
     price: '$99',
     period: '/month',
-    description: 'Adaptive dunning sequences and retry timing models increase payment recovery without customer frustration. Includes localized templates.',
+    description:
+      'Adaptive dunning sequences and retry timing models increase payment recovery without customer frustration. Includes localized templates.',
     features: [
       'Adaptive retry timing models',
       'Localized email/SMS templates',
       'A/B tests for recovery rate',
       'Provider failover strategies',
-      'Analytics and cohort reports'
+      'Analytics and cohort reports',
     ],
     popular: false,
     icon: '💳',
     color: 'from-teal-600 to-emerald-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/smart-dunning-retries',
-    marketPosition: 'Comparable to Recover tools; simpler integration and pricing $49–$199/mo.',
+    marketPosition:
+      'Comparable to Recover tools; simpler integration and pricing $49–$199/mo.',
     targetAudience: 'SaaS finance, RevOps',
     trialDays: 14,
     setupTime: '2 hours',
@@ -621,7 +674,6 @@ export const moreRealServices2025: MicroSaasService[] = [
     launchDate: '2025-08-22',
     customers: 22,
     rating: 4.6,
-    reviews: 14
-  }
+    reviews: 14,
+  },
 ];
-

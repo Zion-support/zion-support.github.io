@@ -9,7 +9,7 @@ function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
-    
+
     // Fix common syntax errors
     content = content.replace(/ {;/g, ' {');
     content = content.replace(/;,$/gm, ',');
@@ -21,20 +21,23 @@ function fixFile(filePath) {
     content = content.replace(/,\s*}/g, '}');
     content = content.replace(/,\s*]/g, ']');
     content = content.replace(/,\s*\)/g, ')');
-    
+
     // Fix specific patterns
     content = content.replace(/}\s*else\s*{/g, '} else {');
     content = content.replace(/}\s*;\s*$/gm, '}');
     content = content.replace(/^\s*;\s*$/gm, '');
     content = content.replace(/require\("\$1"\)/g, 'require("fs")');
     content = content.replace(/require\("\$1"\)/g, 'require("path")');
-    
+
     // Fix comment syntax
-    content = content.replace(/^#!\/usr\/bin\/env node;$/gm, '#!/usr/bin/env node');
+    content = content.replace(
+      /^#!\/usr\/bin\/env node;$/gm,
+      '#!/usr/bin/env node'
+    );
     content = content.replace(/\/\*\*;/g, '/**');
     content = content.replace(/\*\/;/g, '*/');
     content = content.replace(/^\s*\*;/gm, ' *');
-    
+
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed: ${filePath}`);

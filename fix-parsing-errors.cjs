@@ -10,7 +10,10 @@ function fixParsingErrors(filePath) {
     let modified = false;
 
     // Fix missing commas in object literals and arrays
-    content = content.replace(/(\w+):\s*([^,\n}]+)\s*\n\s*(\w+):/g, '$1: $2,\n$3:');
+    content = content.replace(
+      /(\w+):\s*([^,\n}]+)\s*\n\s*(\w+):/g,
+      '$1: $2,\n$3:'
+    );
     content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n$2:');
     content = content.replace(/(\w+)\s*\n\s*(\w+)\]/g, '$1,\n$2]');
     content = content.replace(/(\w+)\s*\n\s*(\w+)\}/g, '$1,\n$2}');
@@ -29,17 +32,38 @@ function fixParsingErrors(filePath) {
     content = content.replace(/<\s*(\w+)\s*>\s*</g, '<$1><');
 
     // Fix import statements
-    content = content.replace(/import\s+([^;]+)\s*\n\s*import/g, 'import $1;\nimport');
-    content = content.replace(/import\s+([^;]+)\s*\n\s*const/g, 'import $1;\nconst');
+    content = content.replace(
+      /import\s+([^;]+)\s*\n\s*import/g,
+      'import $1;\nimport'
+    );
+    content = content.replace(
+      /import\s+([^;]+)\s*\n\s*const/g,
+      'import $1;\nconst'
+    );
 
     // Fix variable declarations
-    content = content.replace(/const\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g, 'const $1 = {\n$2:');
-    content = content.replace(/let\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g, 'let $1 = {\n$2:');
-    content = content.replace(/var\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g, 'var $1 = {\n$2:');
+    content = content.replace(
+      /const\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g,
+      'const $1 = {\n$2:'
+    );
+    content = content.replace(
+      /let\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g,
+      'let $1 = {\n$2:'
+    );
+    content = content.replace(
+      /var\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g,
+      'var $1 = {\n$2:'
+    );
 
     // Fix React component syntax
-    content = content.replace(/React\.FC<(\w+)>\s*=\s*\(\s*{\s*(\w+)\s*}\s*\)\s*=>/g, 'React.FC<$1> = ({ $2 }) =>');
-    content = content.replace(/React\.FC<(\w+)>\s*=\s*\(\s*{\s*(\w+)\s*,\s*(\w+)\s*}\s*\)\s*=>/g, 'React.FC<$1> = ({ $2, $3 }) =>');
+    content = content.replace(
+      /React\.FC<(\w+)>\s*=\s*\(\s*{\s*(\w+)\s*}\s*\)\s*=>/g,
+      'React.FC<$1> = ({ $2 }) =>'
+    );
+    content = content.replace(
+      /React\.FC<(\w+)>\s*=\s*\(\s*{\s*(\w+)\s*,\s*(\w+)\s*}\s*\)\s*=>/g,
+      'React.FC<$1> = ({ $2, $3 }) =>'
+    );
 
     // Fix missing semicolons
     content = content.replace(/(\w+)\s*\n\s*export/g, '$1;\nexport');
@@ -49,7 +73,7 @@ function fixParsingErrors(filePath) {
 
     // Clean up multiple empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
+
     // Remove trailing whitespace
     content = content.replace(/\s+$/gm, '');
 
@@ -60,7 +84,7 @@ function fixParsingErrors(filePath) {
       console.log(`Fixed parsing errors in: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -99,7 +123,7 @@ const filesToFix = [
   'pages/ai-services.tsx',
   'pages/blockchain.tsx',
   'pages/contact.tsx',
-  'pages/index.tsx'
+  'pages/index.tsx',
 ];
 
 console.log('Fixing parsing errors...');

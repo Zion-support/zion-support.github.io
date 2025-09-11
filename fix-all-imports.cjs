@@ -5,7 +5,9 @@ const glob = require('glob');
 console.log('Fixing all broken import statements...');
 
 // Find all .tsx files in pages directory
-const pages = glob.sync('pages/**/*.tsx', { ignore: ['node_modules/**', 'dist/**', 'out/**', '.next/**'] });
+const pages = glob.sync('pages/**/*.tsx', {
+  ignore: ['node_modules/**', 'dist/**', 'out/**', '.next/**'],
+});
 
 let fixedCount = 0;
 
@@ -13,38 +15,68 @@ pages.forEach(file => {
   try {
     let content = fs.readFileSync(file, 'utf8');
     let originalContent = content;
-    
+
     // Fix various broken import patterns
     // Pattern 1: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 2: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 3: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 4: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 5: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 6: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 7: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 8: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 9: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     // Pattern 10: import { \nimport { motion } from 'framer-motion';
-    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
-    
+    content = content.replace(
+      /import { \nimport { motion } from 'framer-motion';\n/g,
+      "import { motion } from 'framer-motion';\nimport { "
+    );
+
     if (content !== originalContent) {
       console.log(`Fixed broken imports in: ${file}`);
       fs.writeFileSync(file, content, 'utf8');

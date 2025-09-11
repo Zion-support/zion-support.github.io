@@ -2,7 +2,7 @@ name: Metrics gate
 
 on:
   schedule:
-    - cron: "15 */6 * * *"
+    - cron: '15 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -14,9 +14,9 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  MIN_PASS_RATE: "0.6"
-  MAX_COST_PER_AGENT_USD: "5"
-  EXPLORATION_FRACTION: "0.3"
+  MIN_PASS_RATE: '0.6'
+  MAX_COST_PER_AGENT_USD: '5'
+  EXPLORATION_FRACTION: '0.3'
 
 jobs:
   gate:
@@ -61,8 +61,8 @@ jobs:
       - name: Update factory policy
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "factory(policy): update after gate"
-          title: "Factory policy refresh"
-          body: "Automated gate applied. Allowed: ${{ steps.aggregate.outputs.allowed }}"
-          branch: "factory/policy-${{ github.run_id }}"
+          commit-message: 'factory(policy): update after gate'
+          title: 'Factory policy refresh'
+          body: 'Automated gate applied. Allowed: ${{ steps.aggregate.outputs.allowed }}'
+          branch: 'factory/policy-${{ github.run_id }}'
           labels: factory,policy

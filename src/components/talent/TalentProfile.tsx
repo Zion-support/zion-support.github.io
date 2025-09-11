@@ -4,17 +4,17 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
-import { 
-  MessageSquare, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Calendar, 
+import {
+  MessageSquare,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Calendar,
   Award,
   Star,
   ExternalLink,
-  Download
+  Download,
 } from '@/components/icons';
 
 interface TalentProfileProps {
@@ -79,8 +79,8 @@ export function TalentProfile({ talent }: TalentProfileProps) {
           i < Math.floor(rating)
             ? 'text-yellow-400 fill-current'
             : i < rating
-            ? 'text-yellow-400 fill-current opacity-50'
-            : 'text-zion-slate-300'
+              ? 'text-yellow-400 fill-current opacity-50'
+              : 'text-zion-slate-300'
         }`}
       />
     ));
@@ -100,57 +100,68 @@ export function TalentProfile({ talent }: TalentProfileProps) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       {/* Header Section */}
       <Card>
-        <CardHeader className="text-center">
-          <div className="flex flex-col items-center space-y-4">
-            <Avatar className="w-32 h-32">
+        <CardHeader className='text-center'>
+          <div className='flex flex-col items-center space-y-4'>
+            <Avatar className='w-32 h-32'>
               <AvatarImage src={talent.avatar} alt={talent.name} />
-              <AvatarFallback className="text-2xl font-bold bg-gradient-to-br from-zion-blue to-zion-purple text-white">
-                {talent.name.split(' ').map(n => n[0]).join('')}
+              <AvatarFallback className='text-2xl font-bold bg-gradient-to-br from-zion-blue to-zion-purple text-white'>
+                {talent.name
+                  .split(' ')
+                  .map(n => n[0])
+                  .join('')}
               </AvatarFallback>
             </Avatar>
-            
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold text-zion-slate-900 dark:text-zion-slate-100">
+
+            <div className='space-y-2'>
+              <h1 className='text-3xl font-bold text-zion-slate-900 dark:text-zion-slate-100'>
                 {talent.name}
               </h1>
-              <p className="text-xl text-zion-slate-600 dark:text-zion-slate-400">
+              <p className='text-xl text-zion-slate-600 dark:text-zion-slate-400'>
                 {talent.title}
               </p>
             </div>
 
             {/* Rating and Reviews */}
-            <div className="flex items-center space-x-2">
-              <div className="flex items-center space-x-1">
+            <div className='flex items-center space-x-2'>
+              <div className='flex items-center space-x-1'>
                 {renderStars(talent.rating)}
               </div>
-              <span className="text-zion-slate-600 dark:text-zion-slate-400">
+              <span className='text-zion-slate-600 dark:text-zion-slate-400'>
                 {talent.rating.toFixed(1)} ({talent.reviewCount} reviews)
               </span>
             </div>
 
             {/* Availability Badge */}
-            <Badge className={`px-4 py-2 text-sm font-medium ${getAvailabilityColor(talent.availability)}`}>
+            <Badge
+              className={`px-4 py-2 text-sm font-medium ${getAvailabilityColor(talent.availability)}`}
+            >
               {talent.availability}
             </Badge>
           </div>
         </CardHeader>
-        
+
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
             <div>
-              <p className="text-2xl font-bold text-zion-blue">${talent.hourlyRate}</p>
-              <p className="text-sm text-zion-slate-500">per hour</p>
+              <p className='text-2xl font-bold text-zion-blue'>
+                ${talent.hourlyRate}
+              </p>
+              <p className='text-sm text-zion-slate-500'>per hour</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-zion-purple">{talent.experience.length}</p>
-              <p className="text-sm text-zion-slate-500">years experience</p>
+              <p className='text-2xl font-bold text-zion-purple'>
+                {talent.experience.length}
+              </p>
+              <p className='text-sm text-zion-slate-500'>years experience</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-zion-cyan">{talent.skills.length}</p>
-              <p className="text-sm text-zion-slate-500">skills</p>
+              <p className='text-2xl font-bold text-zion-cyan'>
+                {talent.skills.length}
+              </p>
+              <p className='text-sm text-zion-slate-500'>skills</p>
             </div>
           </div>
         </CardContent>
@@ -159,10 +170,10 @@ export function TalentProfile({ talent }: TalentProfileProps) {
       {/* About Section */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-semibold">About</CardTitle>
+          <CardTitle className='text-xl font-semibold'>About</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-zion-slate-700 dark:text-zion-slate-300 leading-relaxed">
+          <p className='text-zion-slate-700 dark:text-zion-slate-300 leading-relaxed'>
             {talent.bio}
           </p>
         </CardContent>
@@ -171,12 +182,14 @@ export function TalentProfile({ talent }: TalentProfileProps) {
       {/* Skills Section */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-semibold">Skills & Technologies</CardTitle>
+          <CardTitle className='text-xl font-semibold'>
+            Skills & Technologies
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-wrap gap-2">
-            {talent.skills.map((skill) => (
-              <Badge key={skill} variant="secondary" className="px-3 py-1">
+          <div className='flex flex-wrap gap-2'>
+            {talent.skills.map(skill => (
+              <Badge key={skill} variant='secondary' className='px-3 py-1'>
                 {skill}
               </Badge>
             ))}
@@ -187,27 +200,30 @@ export function TalentProfile({ talent }: TalentProfileProps) {
       {/* Experience Section */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-semibold">Work Experience</CardTitle>
+          <CardTitle className='text-xl font-semibold'>
+            Work Experience
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          {talent.experience.map((exp) => (
-            <div key={exp.id} className="space-y-2">
-              <div className="flex justify-between items-start">
+        <CardContent className='space-y-6'>
+          {talent.experience.map(exp => (
+            <div key={exp.id} className='space-y-2'>
+              <div className='flex justify-between items-start'>
                 <div>
-                  <h4 className="font-semibold text-zion-slate-900 dark:text-zion-slate-100">
+                  <h4 className='font-semibold text-zion-slate-900 dark:text-zion-slate-100'>
                     {exp.position}
                   </h4>
-                  <p className="text-zion-blue font-medium">{exp.company}</p>
+                  <p className='text-zion-blue font-medium'>{exp.company}</p>
                 </div>
-                <Badge variant="outline" className="text-sm">
+                <Badge variant='outline' className='text-sm'>
                   {exp.duration}
                 </Badge>
               </div>
-              <p className="text-zion-slate-600 dark:text-zion-slate-400 text-sm">
+              <p className='text-zion-slate-600 dark:text-zion-slate-400 text-sm'>
                 {exp.description}
               </p>
-              {exp.id !== talent.experience[talent.experience.length - 1].id && (
-                <Separator className="my-4" />
+              {exp.id !==
+                talent.experience[talent.experience.length - 1].id && (
+                <Separator className='my-4' />
               )}
             </div>
           ))}
@@ -217,19 +233,21 @@ export function TalentProfile({ talent }: TalentProfileProps) {
       {/* Education Section */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-semibold">Education</CardTitle>
+          <CardTitle className='text-xl font-semibold'>Education</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          {talent.education.map((edu) => (
-            <div key={edu.id} className="space-y-2">
-              <div className="flex justify-between items-start">
+        <CardContent className='space-y-4'>
+          {talent.education.map(edu => (
+            <div key={edu.id} className='space-y-2'>
+              <div className='flex justify-between items-start'>
                 <div>
-                  <h4 className="font-semibold text-zion-slate-900 dark:text-zion-slate-100">
+                  <h4 className='font-semibold text-zion-slate-900 dark:text-zion-slate-100'>
                     {edu.degree} in {edu.field}
                   </h4>
-                  <p className="text-zion-blue font-medium">{edu.institution}</p>
+                  <p className='text-zion-blue font-medium'>
+                    {edu.institution}
+                  </p>
                 </div>
-                <Badge variant="outline" className="text-sm">
+                <Badge variant='outline' className='text-sm'>
                   {edu.year}
                 </Badge>
               </div>
@@ -241,23 +259,27 @@ export function TalentProfile({ talent }: TalentProfileProps) {
       {/* Portfolio Section */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-semibold">Portfolio</CardTitle>
+          <CardTitle className='text-xl font-semibold'>Portfolio</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {talent.portfolio.map((project) => (
-              <div key={project.id} className="space-y-3">
-                <div className="relative group">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {talent.portfolio.map(project => (
+              <div key={project.id} className='space-y-3'>
+                <div className='relative group'>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-32 object-cover rounded-lg"
+                    className='w-full h-32 object-cover rounded-lg'
                   />
                   {project.link && (
-                    <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg flex items-center justify-center">
-                      <Button size="sm" variant="secondary" asChild>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
+                    <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg flex items-center justify-center'>
+                      <Button size='sm' variant='secondary' asChild>
+                        <a
+                          href={project.link}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        >
+                          <ExternalLink className='w-4 h-4 mr-2' />
                           View Project
                         </a>
                       </Button>
@@ -265,15 +287,15 @@ export function TalentProfile({ talent }: TalentProfileProps) {
                   )}
                 </div>
                 <div>
-                  <h4 className="font-semibold text-zion-slate-900 dark:text-zion-slate-100">
+                  <h4 className='font-semibold text-zion-slate-900 dark:text-zion-slate-100'>
                     {project.title}
                   </h4>
-                  <p className="text-sm text-zion-slate-600 dark:text-zion-slate-400 mb-2">
+                  <p className='text-sm text-zion-slate-600 dark:text-zion-slate-400 mb-2'>
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-1">
-                    {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-xs">
+                  <div className='flex flex-wrap gap-1'>
+                    {project.technologies.map(tech => (
+                      <Badge key={tech} variant='outline' className='text-xs'>
                         {tech}
                       </Badge>
                     ))}
@@ -288,53 +310,55 @@ export function TalentProfile({ talent }: TalentProfileProps) {
       {/* Contact & Additional Info */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-semibold">Contact & Additional Information</CardTitle>
+          <CardTitle className='text-xl font-semibold'>
+            Contact & Additional Information
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-zion-blue" />
-                <span className="text-zion-slate-700 dark:text-zion-slate-300">
+        <CardContent className='space-y-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div className='space-y-3'>
+              <div className='flex items-center space-x-3'>
+                <Mail className='w-5 h-5 text-zion-blue' />
+                <span className='text-zion-slate-700 dark:text-zion-slate-300'>
                   {talent.email}
                 </span>
               </div>
-              
+
               {talent.phone && (
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-zion-blue" />
-                  <span className="text-zion-slate-700 dark:text-zion-slate-300">
+                <div className='flex items-center space-x-3'>
+                  <Phone className='w-5 h-5 text-zion-blue' />
+                  <span className='text-zion-slate-700 dark:text-zion-slate-300'>
                     {talent.phone}
                   </span>
                 </div>
               )}
-              
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-zion-blue" />
-                <span className="text-zion-slate-700 dark:text-zion-slate-300">
+
+              <div className='flex items-center space-x-3'>
+                <MapPin className='w-5 h-5 text-zion-blue' />
+                <span className='text-zion-slate-700 dark:text-zion-slate-300'>
                   {talent.location}
                 </span>
               </div>
             </div>
-            
-            <div className="space-y-3">
+
+            <div className='space-y-3'>
               {talent.website && (
-                <div className="flex items-center space-x-3">
-                  <Globe className="w-5 h-5 text-zion-blue" />
+                <div className='flex items-center space-x-3'>
+                  <Globe className='w-5 h-5 text-zion-blue' />
                   <a
                     href={talent.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zion-blue hover:underline"
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-zion-blue hover:underline'
                   >
                     {talent.website}
                   </a>
                 </div>
               )}
-              
-              <div className="flex items-center space-x-3">
-                <Calendar className="w-5 h-5 text-zion-blue" />
-                <span className="text-zion-slate-700 dark:text-zion-slate-300">
+
+              <div className='flex items-center space-x-3'>
+                <Calendar className='w-5 h-5 text-zion-blue' />
+                <span className='text-zion-slate-700 dark:text-zion-slate-300'>
                   Timezone: {talent.timezone}
                 </span>
               </div>
@@ -344,14 +368,17 @@ export function TalentProfile({ talent }: TalentProfileProps) {
       </Card>
 
       {/* Action Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Button size="lg" className="flex-1 bg-gradient-to-r from-zion-blue to-zion-purple hover:from-zion-blue/90 hover:to-zion-purple/90">
-          <MessageSquare className="w-5 h-5 mr-2" />
+      <div className='flex flex-col sm:flex-row gap-4'>
+        <Button
+          size='lg'
+          className='flex-1 bg-gradient-to-r from-zion-blue to-zion-purple hover:from-zion-blue/90 hover:to-zion-purple/90'
+        >
+          <MessageSquare className='w-5 h-5 mr-2' />
           Contact {talent.name}
         </Button>
-        
-        <Button size="lg" variant="outline" className="flex-1">
-          <Download className="w-5 h-5 mr-2" />
+
+        <Button size='lg' variant='outline' className='flex-1'>
+          <Download className='w-5 h-5 mr-2' />
           Download Resume
         </Button>
       </div>

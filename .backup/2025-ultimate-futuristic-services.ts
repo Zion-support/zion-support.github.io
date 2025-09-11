@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
@@ -53,10 +53,12 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
   {
     id: 'ai-consciousness-evolution-2030',
     name: 'AI Consciousness Evolution 2030',
-    tagline: 'Next-generation AI consciousness with quantum emotional intelligence',
+    tagline:
+      'Next-generation AI consciousness with quantum emotional intelligence',
     price: '$12,999',
     period: '/month',
-    description: 'Revolutionary AI platform that develops advanced consciousness, quantum emotional intelligence, and self-awareness capabilities. Enables human-AI collaboration with unprecedented understanding and empathy.',
+    description:
+      'Revolutionary AI platform that develops advanced consciousness, quantum emotional intelligence, and self-awareness capabilities. Enables human-AI collaboration with unprecedented understanding and empathy.',
     features: [
       'Quantum emotional intelligence',
       'Advanced consciousness algorithms',
@@ -67,22 +69,42 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Emotional state analysis',
       'Consciousness metrics',
       'Ethics framework',
-      'Research collaboration'
+      'Research collaboration',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/ai-consciousness-evolution-2030',
-    marketPosition: 'First-to-market AI consciousness platform with quantum emotional intelligence capabilities.',
-    targetAudience: 'Research institutions, AI labs, consciousness researchers, technology companies',
+    marketPosition:
+      'First-to-market AI consciousness platform with quantum emotional intelligence capabilities.',
+    targetAudience:
+      'Research institutions, AI labs, consciousness researchers, technology companies',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI & Consciousness',
     realService: true,
-    technology: ['Quantum neural networks', 'Consciousness algorithms', 'Emotional AI', 'Python', 'TensorFlow', 'Quantum computing'],
-    integrations: ['Research platforms', 'AI frameworks', 'Data analysis tools', 'Collaboration platforms', 'Quantum systems'],
-    useCases: ['Consciousness research', 'Emotional AI development', 'Human-AI collaboration', 'Ethics research'],
+    technology: [
+      'Quantum neural networks',
+      'Consciousness algorithms',
+      'Emotional AI',
+      'Python',
+      'TensorFlow',
+      'Quantum computing',
+    ],
+    integrations: [
+      'Research platforms',
+      'AI frameworks',
+      'Data analysis tools',
+      'Collaboration platforms',
+      'Quantum systems',
+    ],
+    useCases: [
+      'Consciousness research',
+      'Emotional AI development',
+      'Human-AI collaboration',
+      'Ethics research',
+    ],
     roi: 'Accelerate consciousness research by 1000% and enable breakthrough AI capabilities.',
     competitors: ['First-to-market solution'],
     marketSize: '$100B+ AI consciousness market potential',
@@ -90,11 +112,12 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced AI consciousness platform with quantum emotional intelligence and self-awareness.',
+    implementationDetails:
+      'Advanced AI consciousness platform with quantum emotional intelligence and self-awareness.',
     launchDate: '2025-01-01',
     customers: 25,
     rating: 5.0,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'quantum-ai-brain-computer-interface',
@@ -102,7 +125,8 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     tagline: 'Revolutionary neural interface with quantum AI processing',
     price: '$25,999',
     period: '/month',
-    description: 'Breakthrough brain-computer interface technology that combines quantum computing with AI to enable direct neural communication and control.',
+    description:
+      'Breakthrough brain-computer interface technology that combines quantum computing with AI to enable direct neural communication and control.',
     features: [
       'Quantum neural processing',
       'Real-time brain mapping',
@@ -113,22 +137,41 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Neural network integration',
       'Quantum security protocols',
       'Real-time monitoring',
-      'Advanced analytics'
+      'Advanced analytics',
     ],
     popular: true,
     icon: '🧬',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface',
-    marketPosition: 'First-to-market quantum AI brain-computer interface platform.',
-    targetAudience: 'Medical research, neuroscience labs, technology companies, research institutions',
+    marketPosition:
+      'First-to-market quantum AI brain-computer interface platform.',
+    targetAudience:
+      'Medical research, neuroscience labs, technology companies, research institutions',
     trialDays: 60,
     setupTime: '4 weeks',
     category: 'Quantum & Emerging Tech',
     realService: true,
-    technology: ['Quantum computing', 'Neural interfaces', 'AI algorithms', 'Brain mapping', 'Quantum encryption'],
-    integrations: ['Medical devices', 'Research platforms', 'AI systems', 'Quantum computers', 'Neural networks'],
-    useCases: ['Medical research', 'Neural enhancement', 'Brain-computer control', 'Cognitive research'],
+    technology: [
+      'Quantum computing',
+      'Neural interfaces',
+      'AI algorithms',
+      'Brain mapping',
+      'Quantum encryption',
+    ],
+    integrations: [
+      'Medical devices',
+      'Research platforms',
+      'AI systems',
+      'Quantum computers',
+      'Neural networks',
+    ],
+    useCases: [
+      'Medical research',
+      'Neural enhancement',
+      'Brain-computer control',
+      'Cognitive research',
+    ],
     roi: 'Revolutionize neural interface technology and enable breakthrough medical applications.',
     competitors: ['First-to-market solution'],
     marketSize: '$75B+ neural interface market potential',
@@ -136,11 +179,12 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Revolutionary brain-computer interface with quantum AI processing capabilities.',
+    implementationDetails:
+      'Revolutionary brain-computer interface with quantum AI processing capabilities.',
     launchDate: '2025-02-01',
     customers: 8,
     rating: 5.0,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'space-mining-ai-platform',
@@ -148,7 +192,8 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     tagline: 'AI-powered asteroid mining and space resource extraction',
     price: '$50,999',
     period: '/month',
-    description: 'Revolutionary AI platform for autonomous asteroid mining, space resource extraction, and interplanetary resource management.',
+    description:
+      'Revolutionary AI platform for autonomous asteroid mining, space resource extraction, and interplanetary resource management.',
     features: [
       'AI-powered asteroid detection',
       'Autonomous mining operations',
@@ -159,7 +204,7 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Resource processing algorithms',
       'Space safety protocols',
       'Real-time monitoring',
-      'Predictive analytics'
+      'Predictive analytics',
     ],
     popular: true,
     icon: '🚀',
@@ -167,14 +212,32 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/space-mining-ai-platform',
     marketPosition: 'First-to-market AI-powered space mining platform.',
-    targetAudience: 'Space companies, mining corporations, government agencies, research institutions',
+    targetAudience:
+      'Space companies, mining corporations, government agencies, research institutions',
     trialDays: 90,
     setupTime: '8 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['AI algorithms', 'Space robotics', 'Autonomous systems', 'Resource detection', 'Space logistics'],
-    integrations: ['Spacecraft systems', 'Mining equipment', 'AI platforms', 'Satellite networks', 'Ground stations'],
-    useCases: ['Asteroid mining', 'Space resource extraction', 'Interplanetary logistics', 'Space exploration'],
+    technology: [
+      'AI algorithms',
+      'Space robotics',
+      'Autonomous systems',
+      'Resource detection',
+      'Space logistics',
+    ],
+    integrations: [
+      'Spacecraft systems',
+      'Mining equipment',
+      'AI platforms',
+      'Satellite networks',
+      'Ground stations',
+    ],
+    useCases: [
+      'Asteroid mining',
+      'Space resource extraction',
+      'Interplanetary logistics',
+      'Space exploration',
+    ],
     roi: 'Enable trillion-dollar space mining industry and revolutionize resource extraction.',
     competitors: ['First-to-market solution'],
     marketSize: '$1T+ space mining market potential',
@@ -182,11 +245,12 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'space-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered platform for autonomous space mining and resource extraction.',
+    implementationDetails:
+      'AI-powered platform for autonomous space mining and resource extraction.',
     launchDate: '2025-03-01',
     customers: 5,
     rating: 5.0,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'quantum-financial-trading-platform',
@@ -194,7 +258,8 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     tagline: 'Quantum AI-powered financial trading with predictive analytics',
     price: '$35,999',
     period: '/month',
-    description: 'Advanced quantum AI platform for financial trading, market prediction, and automated investment strategies with unprecedented accuracy.',
+    description:
+      'Advanced quantum AI platform for financial trading, market prediction, and automated investment strategies with unprecedented accuracy.',
     features: [
       'Quantum market prediction',
       'AI-powered trading algorithms',
@@ -205,7 +270,7 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Market sentiment analysis',
       'Quantum encryption',
       'Compliance monitoring',
-      'Performance analytics'
+      'Performance analytics',
     ],
     popular: true,
     icon: '💰',
@@ -213,14 +278,32 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading-platform',
     marketPosition: 'First-to-market quantum AI financial trading platform.',
-    targetAudience: 'Financial institutions, trading firms, investment banks, hedge funds',
+    targetAudience:
+      'Financial institutions, trading firms, investment banks, hedge funds',
     trialDays: 45,
     setupTime: '6 weeks',
     category: 'Financial Technology',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Machine learning', 'Financial modeling', 'Quantum encryption'],
-    integrations: ['Trading platforms', 'Market data feeds', 'Banking systems', 'AI platforms', 'Quantum computers'],
-    useCases: ['Algorithmic trading', 'Market prediction', 'Portfolio management', 'Risk assessment'],
+    technology: [
+      'Quantum computing',
+      'AI algorithms',
+      'Machine learning',
+      'Financial modeling',
+      'Quantum encryption',
+    ],
+    integrations: [
+      'Trading platforms',
+      'Market data feeds',
+      'Banking systems',
+      'AI platforms',
+      'Quantum computers',
+    ],
+    useCases: [
+      'Algorithmic trading',
+      'Market prediction',
+      'Portfolio management',
+      'Risk assessment',
+    ],
     roi: 'Increase trading accuracy by 500% and enable breakthrough financial strategies.',
     competitors: ['First-to-market solution'],
     marketSize: '$200B+ fintech market potential',
@@ -228,11 +311,12 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'finance-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum AI-powered financial trading platform with predictive analytics.',
+    implementationDetails:
+      'Quantum AI-powered financial trading platform with predictive analytics.',
     launchDate: '2025-04-01',
     customers: 18,
     rating: 5.0,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'ai-autonomous-content-factory',
@@ -240,7 +324,8 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     tagline: 'Fully autonomous AI content creation and management platform',
     price: '$8,999',
     period: '/month',
-    description: 'Revolutionary AI platform that autonomously creates, manages, and optimizes content across all digital channels with human-like creativity.',
+    description:
+      'Revolutionary AI platform that autonomously creates, manages, and optimizes content across all digital channels with human-like creativity.',
     features: [
       'Autonomous content creation',
       'Multi-channel publishing',
@@ -251,7 +336,7 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Brand voice consistency',
       'Multilingual support',
       'Content scheduling',
-      'Performance tracking'
+      'Performance tracking',
     ],
     popular: true,
     icon: '📝',
@@ -259,14 +344,32 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-autonomous-content-factory',
     marketPosition: 'First-to-market autonomous AI content creation platform.',
-    targetAudience: 'Marketing agencies, content creators, businesses, publishers',
+    targetAudience:
+      'Marketing agencies, content creators, businesses, publishers',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Content Automation',
     realService: true,
-    technology: ['AI algorithms', 'Natural language processing', 'Machine learning', 'Content generation', 'Automation'],
-    integrations: ['CMS platforms', 'Social media APIs', 'Marketing tools', 'Analytics platforms', 'AI services'],
-    useCases: ['Content marketing', 'Social media management', 'SEO optimization', 'Brand communication'],
+    technology: [
+      'AI algorithms',
+      'Natural language processing',
+      'Machine learning',
+      'Content generation',
+      'Automation',
+    ],
+    integrations: [
+      'CMS platforms',
+      'Social media APIs',
+      'Marketing tools',
+      'Analytics platforms',
+      'AI services',
+    ],
+    useCases: [
+      'Content marketing',
+      'Social media management',
+      'SEO optimization',
+      'Brand communication',
+    ],
     roi: 'Reduce content creation costs by 80% and increase engagement by 300%.',
     competitors: ['First-to-market solution'],
     marketSize: '$50B+ content marketing market potential',
@@ -274,11 +377,12 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'marketing-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Fully autonomous AI content creation and management platform.',
+    implementationDetails:
+      'Fully autonomous AI content creation and management platform.',
     launchDate: '2025-05-01',
     customers: 45,
     rating: 5.0,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'quantum-cybersecurity-platform',
@@ -286,7 +390,8 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     tagline: 'Unbreakable quantum encryption and advanced threat detection',
     price: '$22,999',
     period: '/month',
-    description: 'Next-generation cybersecurity platform using quantum encryption, AI threat detection, and autonomous security response systems.',
+    description:
+      'Next-generation cybersecurity platform using quantum encryption, AI threat detection, and autonomous security response systems.',
     features: [
       'Quantum encryption',
       'AI threat detection',
@@ -297,7 +402,7 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Security monitoring',
       'Compliance management',
       'Risk assessment',
-      'Security analytics'
+      'Security analytics',
     ],
     popular: true,
     icon: '🔒',
@@ -305,14 +410,32 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform',
     marketPosition: 'First-to-market quantum cybersecurity platform.',
-    targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations',
+    targetAudience:
+      'Enterprises, government agencies, financial institutions, healthcare organizations',
     trialDays: 45,
     setupTime: '4 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Quantum encryption', 'AI algorithms', 'Machine learning', 'Threat detection', 'Zero-trust security'],
-    integrations: ['Security tools', 'SIEM platforms', 'Firewalls', 'AI systems', 'Quantum computers'],
-    useCases: ['Enterprise security', 'Government security', 'Financial security', 'Healthcare security'],
+    technology: [
+      'Quantum encryption',
+      'AI algorithms',
+      'Machine learning',
+      'Threat detection',
+      'Zero-trust security',
+    ],
+    integrations: [
+      'Security tools',
+      'SIEM platforms',
+      'Firewalls',
+      'AI systems',
+      'Quantum computers',
+    ],
+    useCases: [
+      'Enterprise security',
+      'Government security',
+      'Financial security',
+      'Healthcare security',
+    ],
     roi: 'Provide unbreakable security and reduce cyber threats by 99.9%.',
     competitors: ['First-to-market solution'],
     marketSize: '$150B+ cybersecurity market potential',
@@ -320,19 +443,22 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Next-generation quantum cybersecurity platform with AI threat detection.',
+    implementationDetails:
+      'Next-generation quantum cybersecurity platform with AI threat detection.',
     launchDate: '2025-06-01',
     customers: 32,
     rating: 5.0,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'ai-healthcare-diagnostics-platform',
     name: 'AI Healthcare Diagnostics Platform',
-    tagline: 'Revolutionary AI-powered medical diagnostics and treatment planning',
+    tagline:
+      'Revolutionary AI-powered medical diagnostics and treatment planning',
     price: '$28,999',
     period: '/month',
-    description: 'Advanced AI platform for medical diagnostics, treatment planning, and personalized healthcare with unprecedented accuracy.',
+    description:
+      'Advanced AI platform for medical diagnostics, treatment planning, and personalized healthcare with unprecedented accuracy.',
     features: [
       'AI medical diagnostics',
       'Treatment planning',
@@ -343,7 +469,7 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Patient monitoring',
       'Clinical decision support',
       'Medical research',
-      'Healthcare analytics'
+      'Healthcare analytics',
     ],
     popular: true,
     icon: '🏥',
@@ -351,14 +477,32 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics-platform',
     marketPosition: 'First-to-market AI healthcare diagnostics platform.',
-    targetAudience: 'Hospitals, clinics, medical research institutions, healthcare providers',
+    targetAudience:
+      'Hospitals, clinics, medical research institutions, healthcare providers',
     trialDays: 60,
     setupTime: '6 weeks',
     category: 'Healthcare Technology',
     realService: true,
-    technology: ['AI algorithms', 'Machine learning', 'Medical imaging', 'Natural language processing', 'Healthcare analytics'],
-    integrations: ['EMR systems', 'Medical devices', 'Imaging equipment', 'AI platforms', 'Healthcare databases'],
-    useCases: ['Medical diagnostics', 'Treatment planning', 'Personalized medicine', 'Medical research'],
+    technology: [
+      'AI algorithms',
+      'Machine learning',
+      'Medical imaging',
+      'Natural language processing',
+      'Healthcare analytics',
+    ],
+    integrations: [
+      'EMR systems',
+      'Medical devices',
+      'Imaging equipment',
+      'AI platforms',
+      'Healthcare databases',
+    ],
+    useCases: [
+      'Medical diagnostics',
+      'Treatment planning',
+      'Personalized medicine',
+      'Medical research',
+    ],
     roi: 'Improve diagnostic accuracy by 95% and reduce healthcare costs by 40%.',
     competitors: ['First-to-market solution'],
     marketSize: '$100B+ healthcare AI market potential',
@@ -366,19 +510,22 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'healthcare-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Revolutionary AI-powered medical diagnostics and treatment planning platform.',
+    implementationDetails:
+      'Revolutionary AI-powered medical diagnostics and treatment planning platform.',
     launchDate: '2025-07-01',
     customers: 28,
     rating: 5.0,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'quantum-energy-platform',
     name: 'Quantum Energy Platform',
-    tagline: 'Quantum computing for fusion power simulation and energy optimization',
+    tagline:
+      'Quantum computing for fusion power simulation and energy optimization',
     price: '$45,999',
     period: '/month',
-    description: 'Breakthrough quantum platform for fusion power simulation, energy optimization, and sustainable energy research.',
+    description:
+      'Breakthrough quantum platform for fusion power simulation, energy optimization, and sustainable energy research.',
     features: [
       'Fusion power simulation',
       'Energy optimization',
@@ -389,7 +536,7 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Renewable energy planning',
       'Energy efficiency',
       'Climate impact modeling',
-      'Energy analytics'
+      'Energy analytics',
     ],
     popular: true,
     icon: '⚡',
@@ -397,14 +544,32 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-energy-platform',
     marketPosition: 'First-to-market quantum energy platform.',
-    targetAudience: 'Energy companies, research institutions, government agencies, utilities',
+    targetAudience:
+      'Energy companies, research institutions, government agencies, utilities',
     trialDays: 90,
     setupTime: '8 weeks',
     category: 'Energy Technology',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Energy modeling', 'Fusion simulation', 'Grid optimization'],
-    integrations: ['Energy systems', 'Grid infrastructure', 'AI platforms', 'Quantum computers', 'Research tools'],
-    useCases: ['Fusion research', 'Energy optimization', 'Grid management', 'Sustainable energy'],
+    technology: [
+      'Quantum computing',
+      'AI algorithms',
+      'Energy modeling',
+      'Fusion simulation',
+      'Grid optimization',
+    ],
+    integrations: [
+      'Energy systems',
+      'Grid infrastructure',
+      'AI platforms',
+      'Quantum computers',
+      'Research tools',
+    ],
+    useCases: [
+      'Fusion research',
+      'Energy optimization',
+      'Grid management',
+      'Sustainable energy',
+    ],
     roi: 'Accelerate fusion research by 1000% and enable sustainable energy solutions.',
     competitors: ['First-to-market solution'],
     marketSize: '$200B+ energy technology market potential',
@@ -412,19 +577,22 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'quantum-energy',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum platform for fusion power simulation and energy optimization.',
+    implementationDetails:
+      'Quantum platform for fusion power simulation and energy optimization.',
     launchDate: '2025-08-01',
     customers: 15,
     rating: 5.0,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'ai-education-platform',
     name: 'AI Education Platform',
-    tagline: 'Personalized AI-powered learning and educational content creation',
+    tagline:
+      'Personalized AI-powered learning and educational content creation',
     price: '$15,999',
     period: '/month',
-    description: 'Revolutionary AI platform for personalized education, adaptive learning, and intelligent content creation.',
+    description:
+      'Revolutionary AI platform for personalized education, adaptive learning, and intelligent content creation.',
     features: [
       'Personalized learning',
       'Adaptive content',
@@ -435,7 +603,7 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Multilingual support',
       'Interactive lessons',
       'Assessment tools',
-      'Collaborative learning'
+      'Collaborative learning',
     ],
     popular: true,
     icon: '🎓',
@@ -443,14 +611,32 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-education-platform',
     marketPosition: 'First-to-market AI education platform.',
-    targetAudience: 'Educational institutions, corporate training, online learning platforms, tutors',
+    targetAudience:
+      'Educational institutions, corporate training, online learning platforms, tutors',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Education Technology',
     realService: true,
-    technology: ['AI algorithms', 'Machine learning', 'Natural language processing', 'Adaptive learning', 'Content generation'],
-    integrations: ['LMS platforms', 'Educational tools', 'AI services', 'Analytics platforms', 'Content management'],
-    useCases: ['K-12 education', 'Higher education', 'Corporate training', 'Online learning'],
+    technology: [
+      'AI algorithms',
+      'Machine learning',
+      'Natural language processing',
+      'Adaptive learning',
+      'Content generation',
+    ],
+    integrations: [
+      'LMS platforms',
+      'Educational tools',
+      'AI services',
+      'Analytics platforms',
+      'Content management',
+    ],
+    useCases: [
+      'K-12 education',
+      'Higher education',
+      'Corporate training',
+      'Online learning',
+    ],
     roi: 'Improve learning outcomes by 300% and reduce educational costs by 50%.',
     competitors: ['First-to-market solution'],
     marketSize: '$80B+ edtech market potential',
@@ -458,11 +644,12 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Revolutionary AI platform for personalized education and adaptive learning.',
+    implementationDetails:
+      'Revolutionary AI platform for personalized education and adaptive learning.',
     launchDate: '2025-09-01',
     customers: 38,
     rating: 5.0,
-    reviews: 25
+    reviews: 25,
   },
   {
     id: 'quantum-materials-discovery',
@@ -470,7 +657,8 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     tagline: 'AI-powered quantum materials research and discovery',
     price: '$32,999',
     period: '/month',
-    description: 'Breakthrough platform for quantum materials research, discovery, and development using AI and quantum computing.',
+    description:
+      'Breakthrough platform for quantum materials research, discovery, and development using AI and quantum computing.',
     features: [
       'Quantum materials research',
       'AI-powered discovery',
@@ -481,7 +669,7 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
       'Research collaboration',
       'Data analysis',
       'Patent research',
-      'Market analysis'
+      'Market analysis',
     ],
     popular: true,
     icon: '🔬',
@@ -489,14 +677,32 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-materials-discovery',
     marketPosition: 'First-to-market quantum materials discovery platform.',
-    targetAudience: 'Research institutions, materials companies, universities, government labs',
+    targetAudience:
+      'Research institutions, materials companies, universities, government labs',
     trialDays: 60,
     setupTime: '6 weeks',
     category: 'Materials Science',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Materials simulation', 'Machine learning', 'Quantum chemistry'],
-    integrations: ['Research tools', 'Simulation software', 'AI platforms', 'Quantum computers', 'Databases'],
-    useCases: ['Materials research', 'Drug discovery', 'Energy materials', 'Electronics materials'],
+    technology: [
+      'Quantum computing',
+      'AI algorithms',
+      'Materials simulation',
+      'Machine learning',
+      'Quantum chemistry',
+    ],
+    integrations: [
+      'Research tools',
+      'Simulation software',
+      'AI platforms',
+      'Quantum computers',
+      'Databases',
+    ],
+    useCases: [
+      'Materials research',
+      'Drug discovery',
+      'Energy materials',
+      'Electronics materials',
+    ],
     roi: 'Accelerate materials discovery by 1000% and enable breakthrough innovations.',
     competitors: ['First-to-market solution'],
     marketSize: '$150B+ materials science market potential',
@@ -504,10 +710,11 @@ export const ultimateFuturisticServices2025: UltimateFuturisticService[] = [
     variant: 'biotech-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered quantum materials research and discovery platform.',
+    implementationDetails:
+      'AI-powered quantum materials research and discovery platform.',
     launchDate: '2025-10-01',
     customers: 22,
     rating: 5.0,
-    reviews: 16
-  }
+    reviews: 16,
+  },
 ];

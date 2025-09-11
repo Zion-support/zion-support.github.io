@@ -7,7 +7,7 @@ const servicePages = [
   'app/services/blockchain-solutions/page.tsx',
   'app/services/cybersecurity/page.tsx',
   'app/services/data-analytics/page.tsx',
-  'app/services/devops-automation/page.tsx'
+  'app/services/devops-automation/page.tsx',
 ];
 
 // Template for a clean service page
@@ -80,10 +80,11 @@ export default function ServicePage() {
 servicePages.forEach(filePath => {
   try {
     const serviceName = path.basename(path.dirname(filePath));
-    const title = serviceName.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
-    
+    const title = serviceName
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+
     const content = servicePageTemplate(serviceName, title);
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);

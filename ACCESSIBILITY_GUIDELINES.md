@@ -1,6 +1,7 @@
 # Accessibility Guidelines
 
 ## Key Principles
+
 1. **Semantic HTML**: Use proper HTML elements (header, nav, main, section, article, footer)
 2. **Alt Text**: All images must have descriptive alt text
 3. **Color Contrast**: Ensure sufficient contrast ratios (4.5:1 for normal text)
@@ -9,6 +10,7 @@
 6. **Focus Management**: Clear focus indicators and logical tab order
 
 ## Implementation Checklist
+
 - [ ] Add alt text to all images
 - [ ] Use semantic HTML elements
 - [ ] Ensure keyboard navigation works
@@ -18,6 +20,7 @@
 - [ ] Test with keyboard-only navigation
 
 ## Tools for Testing
+
 - axe-core browser extension
 - WAVE Web Accessibility Evaluator
 - Lighthouse accessibility audit

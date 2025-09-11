@@ -3,8 +3,15 @@ const { spawnSync } = require('child_process');
 
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe',
+    encoding: 'utf8',
+  });
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
+  };
 }
 
 exports.config = { schedule: '*/2 * * * *' };
@@ -36,5 +43,9 @@ exports.handler = async () => {
   // Sync
   step('git:sync', 'automation/advanced-git-sync.cjs');
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+  return {
+    statusCode: 200,
+    headers: { 'content-type': 'text/plain' },
+    body: logs.join('\n'),
+  };
 };

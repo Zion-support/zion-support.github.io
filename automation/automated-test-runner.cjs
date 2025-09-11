@@ -15,8 +15,8 @@ class AutomatedTestRunner {
         total: 0,
         passed: 0,
         failed: 0,
-        skipped: 0
-      }
+        skipped: 0,
+      },
     };
     this.logFile = path.join(__dirname, 'logs', 'test-runner.log');
     this.ensureLogDirectory();
@@ -42,19 +42,19 @@ class AutomatedTestRunner {
     try {
       // Run smoke tests
       await this.runSmokeTests();
-      
+
       // Run unit tests
       await this.runUnitTests();
-      
+
       // Run integration tests
       await this.runIntegrationTests();
-      
+
       // Generate coverage report
       await this.generateCoverageReport();
-      
+
       // Save results
       await this.saveResults();
-      
+
       this.log('Automated test runner completed successfully');
       return this.testResults;
     } catch (error) {
@@ -65,34 +65,33 @@ class AutomatedTestRunner {
 
   async runSmokeTests() {
     this.log('Running smoke tests...');
-    
+
     try {
       const startTime = Date.now();
-      const result = execSync('npm run test:smoke', { 
+      const result = execSync('npm run test:smoke', {
         encoding: 'utf8',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
       const duration = Date.now() - startTime;
-      
+
       this.testResults.testSuites.push({
         name: 'smoke',
         status: 'passed',
         duration: duration,
-        output: result
+        output: result,
       });
-      
+
       this.testResults.summary.total++;
       this.testResults.summary.passed++;
-      
     } catch (error) {
       this.log(`Smoke tests failed: ${error.message}`, 'ERROR');
       this.testResults.testSuites.push({
         name: 'smoke',
         status: 'failed',
         duration: 0,
-        error: error.message
+        error: error.message,
       });
-      
+
       this.testResults.summary.total++;
       this.testResults.summary.failed++;
     }
@@ -100,34 +99,33 @@ class AutomatedTestRunner {
 
   async runUnitTests() {
     this.log('Running unit tests...');
-    
+
     try {
       const startTime = Date.now();
-      const result = execSync('npm test', { 
+      const result = execSync('npm test', {
         encoding: 'utf8',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
       const duration = Date.now() - startTime;
-      
+
       this.testResults.testSuites.push({
         name: 'unit',
         status: 'passed',
         duration: duration,
-        output: result
+        output: result,
       });
-      
+
       this.testResults.summary.total++;
       this.testResults.summary.passed++;
-      
     } catch (error) {
       this.log(`Unit tests failed: ${error.message}`, 'ERROR');
       this.testResults.testSuites.push({
         name: 'unit',
         status: 'failed',
         duration: 0,
-        error: error.message
+        error: error.message,
       });
-      
+
       this.testResults.summary.total++;
       this.testResults.summary.failed++;
     }
@@ -135,34 +133,33 @@ class AutomatedTestRunner {
 
   async runIntegrationTests() {
     this.log('Running integration tests...');
-    
+
     try {
       const startTime = Date.now();
-      const result = execSync('npm run test:integration', { 
+      const result = execSync('npm run test:integration', {
         encoding: 'utf8',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
       const duration = Date.now() - startTime;
-      
+
       this.testResults.testSuites.push({
         name: 'integration',
         status: 'passed',
         duration: duration,
-        output: result
+        output: result,
       });
-      
+
       this.testResults.summary.total++;
       this.testResults.summary.passed++;
-      
     } catch (error) {
       this.log(`Integration tests failed: ${error.message}`, 'WARNING');
       this.testResults.testSuites.push({
         name: 'integration',
         status: 'skipped',
         duration: 0,
-        error: error.message
+        error: error.message,
       });
-      
+
       this.testResults.summary.total++;
       this.testResults.summary.skipped++;
     }
@@ -170,24 +167,26 @@ class AutomatedTestRunner {
 
   async generateCoverageReport() {
     this.log('Generating coverage report...');
-    
+
     try {
-      const result = execSync('npm run test:coverage', { 
+      const result = execSync('npm run test:coverage', {
         encoding: 'utf8',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
-      
+
       this.testResults.coverage = {
         report: result,
-        generated: true
+        generated: true,
       };
-      
     } catch (error) {
-      this.log(`Coverage report generation failed: ${error.message}`, 'WARNING');
+      this.log(
+        `Coverage report generation failed: ${error.message}`,
+        'WARNING'
+      );
       this.testResults.coverage = {
         report: null,
         generated: false,
-        error: error.message
+        error: error.message,
       };
     }
   }

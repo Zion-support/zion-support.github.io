@@ -64,16 +64,45 @@ function generateId(prefix: string = 'id'): string {
 
 function seedTalent(): TalentProfile[] {
   return [
-    { id: generateId('talent'), name: 'Ari Innovator', skills: ['AI', 'Product'], bio: 'Builder of intelligent systems.' },
-    { id: generateId('talent'), name: 'Sol Dev', skills: ['Solidity', 'Governance'], bio: 'Smart contracts and DAOs.' },
-    { id: generateId('talent'), name: 'Fulla Stack', skills: ['Next.js', 'Node'], bio: 'End-to-end app developer.' },
+    {
+      id: generateId('talent'),
+      name: 'Ari Innovator',
+      skills: ['AI', 'Product'],
+      bio: 'Builder of intelligent systems.',
+    },
+    {
+      id: generateId('talent'),
+      name: 'Sol Dev',
+      skills: ['Solidity', 'Governance'],
+      bio: 'Smart contracts and DAOs.',
+    },
+    {
+      id: generateId('talent'),
+      name: 'Fulla Stack',
+      skills: ['Next.js', 'Node'],
+      bio: 'End-to-end app developer.',
+    },
   ];
 }
 
 function seedJobs(): Job[] {
   return [
-    { id: generateId('job'), title: 'Design Zion OS Landing', description: 'Create modern landing page designs.', reward: 250, createdByAddress: 'zion:system', createdAt: Date.now() },
-    { id: generateId('job'), title: 'Implement DAO Voting', description: 'Simulate governance voting logic.', reward: 400, createdByAddress: 'zion:system', createdAt: Date.now() },
+    {
+      id: generateId('job'),
+      title: 'Design Zion OS Landing',
+      description: 'Create modern landing page designs.',
+      reward: 250,
+      createdByAddress: 'zion:system',
+      createdAt: Date.now(),
+    },
+    {
+      id: generateId('job'),
+      title: 'Implement DAO Voting',
+      description: 'Simulate governance voting logic.',
+      reward: 400,
+      createdByAddress: 'zion:system',
+      createdAt: Date.now(),
+    },
   ];
 }
 
@@ -89,7 +118,9 @@ function createInitialState(): DevNetState {
 
 // Ensure a single shared instance across hot-reloads in dev
 // @ts-ignore
-const globalForDevNet: { [key: symbol]: DevNetState } = (global as any) as { [key: symbol]: DevNetState };
+const globalForDevNet: { [key: symbol]: DevNetState } = global as any as {
+  [key: symbol]: DevNetState;
+};
 
 if (!globalForDevNet[globalStateKey]) {
   globalForDevNet[globalStateKey] = createInitialState();

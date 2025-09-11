@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovative2036AIServicesExpanded: MicroSaasService[] = [
@@ -14,7 +14,8 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     tagline: 'Advanced AI emotional intelligence and empathy development',
     price: '$899',
     period: '/month',
-    description: 'Revolutionary platform for training AI systems in emotional intelligence, empathy, and human-like understanding. Includes emotion recognition, sentiment analysis, and ethical decision-making frameworks.',
+    description:
+      'Revolutionary platform for training AI systems in emotional intelligence, empathy, and human-like understanding. Includes emotion recognition, sentiment analysis, and ethical decision-making frameworks.',
     features: [
       'Emotion recognition and classification',
       'Sentiment analysis and understanding',
@@ -23,7 +24,7 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
       'Human-AI interaction optimization',
       'Emotional context awareness',
       'Multi-cultural emotional intelligence',
-      'Real-time emotional response generation'
+      'Real-time emotional response generation',
     ],
     popular: true,
     icon: '❤️',
@@ -38,7 +39,9 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     realService: true,
     technology: ['Deep Learning, NLP, Computer Vision, Sentiment Analysis'],
     integrations: ['OpenAI, Anthropic, Google AI, Microsoft Azure'],
-    useCases: ['Customer service AI, Healthcare AI, Educational AI, Social robots'],
+    useCases: [
+      'Customer service AI, Healthcare AI, Educational AI, Social robots',
+    ],
     roi: 'Improve AI customer satisfaction by 250%',
     competitors: ['IBM Watson, Microsoft Cognitive Services'],
     marketSize: '$75B AI emotional intelligence market',
@@ -46,11 +49,12 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     variant: 'ai-emotional',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete emotional intelligence training suite with real-time feedback and analytics',
+    implementationDetails:
+      'Complete emotional intelligence training suite with real-time feedback and analytics',
     launchDate: '2026-03-01',
     customers: 18,
     rating: 4.8,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'ai-autonomous-research-assistant',
@@ -58,7 +62,8 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     tagline: 'Fully autonomous research and analysis platform',
     price: '$1,199',
     period: '/month',
-    description: 'Cutting-edge autonomous research platform that independently conducts research, analyzes data, and generates comprehensive reports. Includes multi-source data integration, hypothesis generation, and automated insights.',
+    description:
+      'Cutting-edge autonomous research platform that independently conducts research, analyzes data, and generates comprehensive reports. Includes multi-source data integration, hypothesis generation, and automated insights.',
     features: [
       'Autonomous research execution',
       'Multi-source data integration',
@@ -67,7 +72,7 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
       'Real-time data analysis',
       'Predictive modeling',
       'Research methodology optimization',
-      'Collaborative research coordination'
+      'Collaborative research coordination',
     ],
     popular: true,
     icon: '🔬',
@@ -75,14 +80,17 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/ai-autonomous-research-assistant',
     marketPosition: 'First autonomous research platform',
-    targetAudience: 'Research institutions, Universities, Corporations, Government',
+    targetAudience:
+      'Research institutions, Universities, Corporations, Government',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI & Research',
     realService: true,
     technology: ['Machine Learning, NLP, Data Mining, Predictive Analytics'],
     integrations: ['PubMed, arXiv, Google Scholar, ResearchGate'],
-    useCases: ['Academic research, Market research, Scientific discovery, Policy analysis'],
+    useCases: [
+      'Academic research, Market research, Scientific discovery, Policy analysis',
+    ],
     roi: 'Accelerate research by 400%',
     competitors: ['None - First to market'],
     marketSize: '$120B research automation market',
@@ -90,11 +98,12 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Full autonomous research platform with custom research domains',
+    implementationDetails:
+      'Full autonomous research platform with custom research domains',
     launchDate: '2026-02-15',
     customers: 25,
     rating: 4.9,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'ai-predictive-maintenance-platform',
@@ -102,7 +111,8 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     tagline: 'Intelligent predictive maintenance and asset optimization',
     price: '$799',
     period: '/month',
-    description: 'Advanced AI-powered predictive maintenance platform that monitors equipment health, predicts failures, and optimizes maintenance schedules. Reduces downtime and maintenance costs significantly.',
+    description:
+      'Advanced AI-powered predictive maintenance platform that monitors equipment health, predicts failures, and optimizes maintenance schedules. Reduces downtime and maintenance costs significantly.',
     features: [
       'Real-time equipment monitoring',
       'Failure prediction algorithms',
@@ -111,7 +121,7 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
       'Predictive analytics dashboard',
       'IoT sensor integration',
       'Cost optimization analysis',
-      'Maintenance history tracking'
+      'Maintenance history tracking',
     ],
     popular: true,
     icon: '⚙️',
@@ -126,7 +136,9 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     realService: true,
     technology: ['Machine Learning, IoT, Time Series Analysis, Sensor Fusion'],
     integrations: ['Siemens, GE, ABB, Schneider Electric'],
-    useCases: ['Manufacturing equipment, Power plants, Fleet management, Medical devices'],
+    useCases: [
+      'Manufacturing equipment, Power plants, Fleet management, Medical devices',
+    ],
     roi: 'Reduce maintenance costs by 35%',
     competitors: ['IBM Maximo, SAP Predictive Maintenance'],
     marketSize: '$90B predictive maintenance market',
@@ -134,11 +146,12 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     variant: 'iot-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete predictive maintenance suite with IoT integration',
+    implementationDetails:
+      'Complete predictive maintenance suite with IoT integration',
     launchDate: '2026-01-20',
     customers: 42,
     rating: 4.7,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'ai-content-personalization-engine',
@@ -146,7 +159,8 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     tagline: 'Hyper-personalized content delivery and optimization',
     price: '$649',
     period: '/month',
-    description: 'Revolutionary AI content personalization engine that delivers hyper-personalized content experiences. Uses advanced machine learning to understand user preferences and optimize content delivery in real-time.',
+    description:
+      'Revolutionary AI content personalization engine that delivers hyper-personalized content experiences. Uses advanced machine learning to understand user preferences and optimize content delivery in real-time.',
     features: [
       'Real-time content personalization',
       'User behavior analysis',
@@ -155,7 +169,7 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
       'Multi-channel delivery',
       'Performance analytics',
       'Content recommendation engine',
-      'Personalization rules engine'
+      'Personalization rules engine',
     ],
     popular: true,
     icon: '🎯',
@@ -168,9 +182,13 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     setupTime: '1-2 weeks',
     category: 'AI & Content',
     realService: true,
-    technology: ['Machine Learning, NLP, Recommendation Systems, Real-time Analytics'],
+    technology: [
+      'Machine Learning, NLP, Recommendation Systems, Real-time Analytics',
+    ],
     integrations: ['Shopify, WordPress, HubSpot, Salesforce'],
-    useCases: ['E-commerce personalization, Content marketing, Educational content, Media streaming'],
+    useCases: [
+      'E-commerce personalization, Content marketing, Educational content, Media streaming',
+    ],
     roi: 'Increase engagement by 180%',
     competitors: ['Optimizely, Adobe Target, Dynamic Yield'],
     marketSize: '$85B content personalization market',
@@ -178,11 +196,12 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Full content personalization platform with multi-channel support',
+    implementationDetails:
+      'Full content personalization platform with multi-channel support',
     launchDate: '2026-02-01',
     customers: 35,
     rating: 4.6,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'ai-autonomous-ecosystem-manager',
@@ -190,7 +209,8 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     tagline: 'Intelligent ecosystem management and optimization',
     price: '$1,499',
     period: '/month',
-    description: 'Breakthrough AI platform that autonomously manages complex business ecosystems, optimizing interactions between partners, suppliers, and customers. Creates self-optimizing business networks.',
+    description:
+      'Breakthrough AI platform that autonomously manages complex business ecosystems, optimizing interactions between partners, suppliers, and customers. Creates self-optimizing business networks.',
     features: [
       'Autonomous ecosystem optimization',
       'Partner relationship management',
@@ -199,7 +219,7 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
       'Predictive ecosystem modeling',
       'Automated partnership matching',
       'Performance analytics dashboard',
-      'Ecosystem health monitoring'
+      'Ecosystem health monitoring',
     ],
     popular: true,
     icon: '🌐',
@@ -207,14 +227,19 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ai-autonomous-ecosystem-manager',
     marketPosition: 'First autonomous ecosystem management platform',
-    targetAudience: 'Large enterprises, Platform companies, Ecosystems, Alliances',
+    targetAudience:
+      'Large enterprises, Platform companies, Ecosystems, Alliances',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI & Ecosystem Management',
     realService: true,
-    technology: ['AI, Network Theory, Optimization Algorithms, Predictive Modeling'],
+    technology: [
+      'AI, Network Theory, Optimization Algorithms, Predictive Modeling',
+    ],
     integrations: ['Salesforce, SAP, Oracle, Microsoft Dynamics'],
-    useCases: ['Partner ecosystems, Supply chain networks, Platform businesses, Strategic alliances'],
+    useCases: [
+      'Partner ecosystems, Supply chain networks, Platform businesses, Strategic alliances',
+    ],
     roi: 'Optimize ecosystem value by 300%',
     competitors: ['None - First to market'],
     marketSize: '$150B ecosystem management market',
@@ -222,11 +247,12 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete ecosystem management platform with autonomous optimization',
+    implementationDetails:
+      'Complete ecosystem management platform with autonomous optimization',
     launchDate: '2026-03-15',
     customers: 12,
     rating: 4.9,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-ethics-governance-framework',
@@ -234,7 +260,8 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     tagline: 'Comprehensive AI ethics and governance platform',
     price: '$1,099',
     period: '/month',
-    description: 'Comprehensive AI ethics and governance platform that ensures responsible AI development and deployment. Includes bias detection, fairness testing, transparency tools, and compliance monitoring.',
+    description:
+      'Comprehensive AI ethics and governance platform that ensures responsible AI development and deployment. Includes bias detection, fairness testing, transparency tools, and compliance monitoring.',
     features: [
       'Bias detection and mitigation',
       'Fairness testing algorithms',
@@ -243,7 +270,7 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
       'Ethical AI guidelines',
       'Risk assessment tools',
       'Audit trail management',
-      'Stakeholder communication'
+      'Stakeholder communication',
     ],
     popular: true,
     icon: '⚖️',
@@ -256,9 +283,13 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     setupTime: '2-3 weeks',
     category: 'AI & Ethics',
     realService: true,
-    technology: ['AI Ethics, Bias Detection, Explainable AI, Compliance Monitoring'],
+    technology: [
+      'AI Ethics, Bias Detection, Explainable AI, Compliance Monitoring',
+    ],
     integrations: ['OpenAI, Anthropic, Google AI, Microsoft Azure'],
-    useCases: ['AI development, Regulatory compliance, Risk management, Ethical AI deployment'],
+    useCases: [
+      'AI development, Regulatory compliance, Risk management, Ethical AI deployment',
+    ],
     roi: 'Ensure regulatory compliance and reduce risk',
     competitors: ['IBM AI Fairness 360, Microsoft Responsible AI'],
     marketSize: '$60B AI governance market',
@@ -266,11 +297,12 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI ethics and governance platform with compliance tools',
+    implementationDetails:
+      'Complete AI ethics and governance platform with compliance tools',
     launchDate: '2026-02-01',
     customers: 28,
     rating: 4.8,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'ai-customer-success-platform',
@@ -278,7 +310,8 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     tagline: 'Intelligent customer success and retention optimization',
     price: '$749',
     period: '/month',
-    description: 'Advanced AI-powered customer success platform that predicts customer churn, identifies upsell opportunities, and automates customer success workflows. Maximizes customer lifetime value.',
+    description:
+      'Advanced AI-powered customer success platform that predicts customer churn, identifies upsell opportunities, and automates customer success workflows. Maximizes customer lifetime value.',
     features: [
       'Churn prediction algorithms',
       'Upsell opportunity identification',
@@ -287,7 +320,7 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
       'Success metric tracking',
       'Personalized success plans',
       'Proactive intervention alerts',
-      'Performance analytics dashboard'
+      'Performance analytics dashboard',
     ],
     popular: true,
     icon: '🎉',
@@ -300,9 +333,13 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     setupTime: '1-2 weeks',
     category: 'AI & Customer Success',
     realService: true,
-    technology: ['Machine Learning, Predictive Analytics, Workflow Automation, CRM Integration'],
+    technology: [
+      'Machine Learning, Predictive Analytics, Workflow Automation, CRM Integration',
+    ],
     integrations: ['Salesforce, HubSpot, Pipedrive, Zendesk'],
-    useCases: ['Customer retention, Upsell optimization, Success automation, Churn prevention'],
+    useCases: [
+      'Customer retention, Upsell optimization, Success automation, Churn prevention',
+    ],
     roi: 'Increase customer lifetime value by 200%',
     competitors: ['Gainsight, Totango, ChurnZero'],
     marketSize: '$70B customer success market',
@@ -310,11 +347,12 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete customer success platform with AI automation',
+    implementationDetails:
+      'Complete customer success platform with AI automation',
     launchDate: '2026-01-15',
     customers: 38,
     rating: 4.7,
-    reviews: 25
+    reviews: 25,
   },
   {
     id: 'ai-sales-intelligence-platform',
@@ -322,7 +360,8 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     tagline: 'Intelligent sales optimization and lead generation',
     price: '$899',
     period: '/month',
-    description: 'Revolutionary AI sales intelligence platform that optimizes sales processes, identifies high-value leads, and automates sales workflows. Increases conversion rates and sales efficiency.',
+    description:
+      'Revolutionary AI sales intelligence platform that optimizes sales processes, identifies high-value leads, and automates sales workflows. Increases conversion rates and sales efficiency.',
     features: [
       'Lead scoring and prioritization',
       'Sales process optimization',
@@ -331,7 +370,7 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
       'Sales automation workflows',
       'Performance analytics',
       'Competitive intelligence',
-      'Sales coaching insights'
+      'Sales coaching insights',
     ],
     popular: true,
     icon: '💰',
@@ -344,9 +383,13 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     setupTime: '1-2 weeks',
     category: 'AI & Sales',
     realService: true,
-    technology: ['Machine Learning, Predictive Analytics, Sales Automation, CRM Integration'],
+    technology: [
+      'Machine Learning, Predictive Analytics, Sales Automation, CRM Integration',
+    ],
     integrations: ['Salesforce, HubSpot, Pipedrive, Microsoft Dynamics'],
-    useCases: ['Lead generation, Sales optimization, Pipeline management, Performance improvement'],
+    useCases: [
+      'Lead generation, Sales optimization, Pipeline management, Performance improvement',
+    ],
     roi: 'Increase sales conversion by 150%',
     competitors: ['Gong, Chorus, SalesLoft'],
     marketSize: '$80B sales intelligence market',
@@ -354,10 +397,11 @@ export const innovative2036AIServicesExpanded: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete sales intelligence platform with AI optimization',
+    implementationDetails:
+      'Complete sales intelligence platform with AI optimization',
     launchDate: '2026-02-01',
     customers: 45,
     rating: 4.8,
-    reviews: 32
-  }
+    reviews: 32,
+  },
 ];

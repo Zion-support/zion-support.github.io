@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
@@ -56,7 +56,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Revolutionary medical diagnostics with AI precision',
     price: '$5,999',
     period: '/month',
-    description: 'Advanced medical diagnostic platform that combines AI, machine learning, and medical imaging to provide accurate diagnoses, treatment recommendations, and patient outcome predictions.',
+    description:
+      'Advanced medical diagnostic platform that combines AI, machine learning, and medical imaging to provide accurate diagnoses, treatment recommendations, and patient outcome predictions.',
     features: [
       'AI-powered medical image analysis',
       'Diagnostic accuracy validation',
@@ -66,14 +67,15 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'HIPAA-compliant data handling',
       'Integration with EMR systems',
       'Real-time diagnostic alerts',
-      'Continual learning algorithms'
+      'Continual learning algorithms',
     ],
     popular: true,
     icon: '🏥',
     color: 'from-red-600 to-pink-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-powered-diagnostic-assistant',
-    marketPosition: 'Leading AI diagnostic platform; competes with IBM Watson Health and Google Health AI.',
+    marketPosition:
+      'Leading AI diagnostic platform; competes with IBM Watson Health and Google Health AI.',
     targetAudience: 'Hospitals, clinics, radiologists, healthcare providers',
     trialDays: 60,
     setupTime: '2-4 weeks',
@@ -89,11 +91,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native healthcare platform with AI diagnostics, EMR integration, and compliance features.',
+    implementationDetails:
+      'Cloud-native healthcare platform with AI diagnostics, EMR integration, and compliance features.',
     launchDate: '2024-09-15',
     customers: 78,
     rating: 4.9,
-    reviews: 234
+    reviews: 234,
   },
   {
     id: 'quantum-pharmaceutical-research',
@@ -101,7 +104,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Accelerate drug discovery with quantum computing',
     price: '$18,000',
     period: '/month',
-    description: 'Cutting-edge pharmaceutical research platform leveraging quantum computing to simulate molecular interactions, predict drug efficacy, and optimize clinical trial designs.',
+    description:
+      'Cutting-edge pharmaceutical research platform leveraging quantum computing to simulate molecular interactions, predict drug efficacy, and optimize clinical trial designs.',
     features: [
       'Quantum molecular dynamics simulation',
       'Drug-target interaction modeling',
@@ -111,21 +115,25 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Market opportunity assessment',
       'Collaborative research tools',
       'Real-time data visualization',
-      'Expert consultation services'
+      'Expert consultation services',
     ],
     popular: false,
     icon: '💊',
     color: 'from-blue-600 to-indigo-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-pharmaceutical-research',
-    marketPosition: 'Leading quantum pharmaceutical platform; competes with Schrödinger and Dassault Systèmes.',
-    targetAudience: 'Pharmaceutical companies, biotech startups, research institutions',
+    marketPosition:
+      'Leading quantum pharmaceutical platform; competes with Schrödinger and Dassault Systèmes.',
+    targetAudience:
+      'Pharmaceutical companies, biotech startups, research institutions',
     trialDays: 90,
     setupTime: '1-2 months',
     category: 'Healthcare & Life Sciences',
     realService: true,
     technology: ['Qiskit, Cirq, Python, CUDA, AWS Braket, Azure Quantum'],
-    integrations: ['Lab management systems, Clinical trial platforms, Regulatory databases'],
+    integrations: [
+      'Lab management systems, Clinical trial platforms, Regulatory databases',
+    ],
     useCases: ['Drug discovery, Clinical trials, Research collaboration'],
     roi: 'Reduce drug discovery time by 80% and costs by 70%.',
     competitors: ['Schrödinger, Dassault Systèmes, BIOVIA'],
@@ -134,11 +142,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise quantum computing platform with pharmaceutical research workflows and collaboration tools.',
+    implementationDetails:
+      'Enterprise quantum computing platform with pharmaceutical research workflows and collaboration tools.',
     launchDate: '2024-08-01',
     customers: 23,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
 
   // MANUFACTURING & INDUSTRIAL
@@ -148,7 +157,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Self-optimizing factories of the future',
     price: '$12,000',
     period: '/month',
-    description: 'Revolutionary manufacturing platform that autonomously optimizes production processes, predicts equipment failures, and maximizes efficiency through AI-powered automation.',
+    description:
+      'Revolutionary manufacturing platform that autonomously optimizes production processes, predicts equipment failures, and maximizes efficiency through AI-powered automation.',
     features: [
       'Predictive maintenance automation',
       'Production line optimization',
@@ -158,22 +168,26 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Real-time performance monitoring',
       'Automated quality assurance',
       'Inventory management',
-      'Compliance monitoring'
+      'Compliance monitoring',
     ],
     popular: true,
     icon: '🏭',
     color: 'from-gray-600 to-slate-600',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/autonomous-manufacturing-ai',
-    marketPosition: 'Leading autonomous manufacturing platform; competes with Siemens Mindsphere and GE Digital.',
-    targetAudience: 'Manufacturing companies, industrial facilities, factory operators',
+    marketPosition:
+      'Leading autonomous manufacturing platform; competes with Siemens Mindsphere and GE Digital.',
+    targetAudience:
+      'Manufacturing companies, industrial facilities, factory operators',
     trialDays: 45,
     setupTime: '1-3 months',
     category: 'Manufacturing & Industrial',
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, React, Node.js, IoT platforms'],
     integrations: ['Siemens, GE, Rockwell, Schneider Electric, SAP'],
-    useCases: ['Production optimization, Predictive maintenance, Quality control'],
+    useCases: [
+      'Production optimization, Predictive maintenance, Quality control',
+    ],
     roi: 'Increase production efficiency by 35% and reduce downtime by 60%.',
     competitors: ['Siemens Mindsphere, GE Digital, PTC ThingWorx'],
     marketSize: '$35B+ industrial IoT market',
@@ -181,11 +195,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Industrial IoT platform with AI automation, predictive analytics, and real-time monitoring.',
+    implementationDetails:
+      'Industrial IoT platform with AI automation, predictive analytics, and real-time monitoring.',
     launchDate: '2024-10-01',
     customers: 45,
     rating: 4.7,
-    reviews: 123
+    reviews: 123,
   },
   {
     id: 'quantum-supply-chain-optimization',
@@ -193,7 +208,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Solve complex logistics with quantum computing',
     price: '$8,500',
     period: '/month',
-    description: 'Advanced supply chain optimization platform using quantum computing to solve complex logistics problems, optimize routes, and minimize costs across global operations.',
+    description:
+      'Advanced supply chain optimization platform using quantum computing to solve complex logistics problems, optimize routes, and minimize costs across global operations.',
     features: [
       'Quantum route optimization',
       'Multi-modal transportation planning',
@@ -203,14 +219,15 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Sustainability impact analysis',
       'Real-time tracking and monitoring',
       'Cost optimization algorithms',
-      'Scenario planning and simulation'
+      'Scenario planning and simulation',
     ],
     popular: false,
     icon: '🚚',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-supply-chain-optimization',
-    marketPosition: 'Leading quantum supply chain platform; competes with SAP and Oracle with quantum capabilities.',
+    marketPosition:
+      'Leading quantum supply chain platform; competes with SAP and Oracle with quantum capabilities.',
     targetAudience: 'Logistics companies, manufacturers, retailers, e-commerce',
     trialDays: 60,
     setupTime: '2-4 weeks',
@@ -226,11 +243,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum computing platform with supply chain optimization algorithms and real-time analytics.',
+    implementationDetails:
+      'Quantum computing platform with supply chain optimization algorithms and real-time analytics.',
     launchDate: '2024-11-01',
     customers: 67,
     rating: 4.6,
-    reviews: 89
+    reviews: 89,
   },
 
   // RETAIL & E-COMMERCE
@@ -240,7 +258,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Transform retail with intelligent automation',
     price: '$3,999',
     period: '/month',
-    description: 'Comprehensive retail optimization platform that uses AI to optimize pricing, inventory, customer experience, and marketing campaigns for maximum profitability.',
+    description:
+      'Comprehensive retail optimization platform that uses AI to optimize pricing, inventory, customer experience, and marketing campaigns for maximum profitability.',
     features: [
       'Dynamic pricing optimization',
       'Inventory demand forecasting',
@@ -250,22 +269,27 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Real-time analytics dashboard',
       'Omnichannel integration',
       'Customer segmentation',
-      'ROI tracking and attribution'
+      'ROI tracking and attribution',
     ],
     popular: true,
     icon: '🛍️',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-retail-optimization',
-    marketPosition: 'Leading AI retail platform; competes with Salesforce Commerce Cloud and Shopify Plus.',
+    marketPosition:
+      'Leading AI retail platform; competes with Salesforce Commerce Cloud and Shopify Plus.',
     targetAudience: 'Retail chains, e-commerce businesses, department stores',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Retail & E-commerce',
     realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['Shopify, WooCommerce, Salesforce, HubSpot, Google Analytics'],
-    useCases: ['Pricing optimization, Inventory management, Customer analytics'],
+    integrations: [
+      'Shopify, WooCommerce, Salesforce, HubSpot, Google Analytics',
+    ],
+    useCases: [
+      'Pricing optimization, Inventory management, Customer analytics',
+    ],
     roi: 'Increase profit margins by 25% and customer lifetime value by 3x.',
     competitors: ['Salesforce Commerce Cloud, Shopify Plus, Adobe Commerce'],
     marketSize: '$30B+ retail technology market',
@@ -273,11 +297,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native retail platform with AI optimization, analytics, and omnichannel integration.',
+    implementationDetails:
+      'Cloud-native retail platform with AI optimization, analytics, and omnichannel integration.',
     launchDate: '2024-12-01',
     customers: 234,
     rating: 4.8,
-    reviews: 456
+    reviews: 456,
   },
   {
     id: 'metaverse-retail-experience',
@@ -285,7 +310,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Create immersive shopping experiences',
     price: '$4,500',
     period: '/month',
-    description: 'Next-generation retail platform enabling businesses to create immersive 3D shopping experiences, virtual stores, and interactive product demonstrations in the metaverse.',
+    description:
+      'Next-generation retail platform enabling businesses to create immersive 3D shopping experiences, virtual stores, and interactive product demonstrations in the metaverse.',
     features: [
       '3D virtual store builder',
       'VR/AR shopping experiences',
@@ -295,21 +321,24 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Cryptocurrency payments',
       'NFT marketplace integration',
       'Real-time analytics',
-      'Multi-platform compatibility'
+      'Multi-platform compatibility',
     ],
     popular: false,
     icon: '🕶️',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/metaverse-retail-experience',
-    marketPosition: 'Leading metaverse retail platform; competes with Decentraland and The Sandbox.',
+    marketPosition:
+      'Leading metaverse retail platform; competes with Decentraland and The Sandbox.',
     targetAudience: 'Fashion brands, luxury retailers, e-commerce businesses',
     trialDays: 45,
     setupTime: '3-6 weeks',
     category: 'Retail & E-commerce',
     realService: true,
     technology: ['Unity, Unreal Engine, WebGL, Three.js, Solana, Ethereum'],
-    integrations: ['Shopify, WooCommerce, Meta, VR platforms, Payment gateways'],
+    integrations: [
+      'Shopify, WooCommerce, Meta, VR platforms, Payment gateways',
+    ],
     useCases: ['Virtual retail, Product demonstrations, Brand experiences'],
     roi: 'Create new revenue streams and increase customer engagement by 4x.',
     competitors: ['Decentraland, The Sandbox, Roblox'],
@@ -318,11 +347,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'metaverse-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: '3D metaverse platform with retail tools, VR support, and blockchain integration.',
+    implementationDetails:
+      '3D metaverse platform with retail tools, VR support, and blockchain integration.',
     launchDate: '2024-09-01',
     customers: 56,
     rating: 4.5,
-    reviews: 78
+    reviews: 78,
   },
 
   // GOVERNMENT & PUBLIC SECTOR
@@ -332,7 +362,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Transform public services with intelligent automation',
     price: '$15,000',
     period: '/month',
-    description: 'Comprehensive government automation platform that streamlines public services, improves citizen experience, and optimizes government operations through AI-powered automation.',
+    description:
+      'Comprehensive government automation platform that streamlines public services, improves citizen experience, and optimizes government operations through AI-powered automation.',
     features: [
       'Citizen service automation',
       'Document processing and analysis',
@@ -342,21 +373,26 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Workflow automation',
       'Data security and privacy',
       'Performance reporting',
-      'Integration with government systems'
+      'Integration with government systems',
     ],
     popular: false,
     icon: '🏛️',
     color: 'from-blue-600 to-indigo-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-government-automation',
-    marketPosition: 'Leading government AI platform; competes with Accenture and Deloitte with AI capabilities.',
+    marketPosition:
+      'Leading government AI platform; competes with Accenture and Deloitte with AI capabilities.',
     targetAudience: 'Federal agencies, state governments, local municipalities',
     trialDays: 90,
     setupTime: '2-6 months',
     category: 'Government & Public Sector',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, AWS GovCloud'],
-    integrations: ['Government ERP systems, Citizen portals, Security platforms'],
+    technology: [
+      'Python, TensorFlow, React, Node.js, PostgreSQL, AWS GovCloud',
+    ],
+    integrations: [
+      'Government ERP systems, Citizen portals, Security platforms',
+    ],
     useCases: ['Service automation, Compliance monitoring, Fraud detection'],
     roi: 'Reduce processing time by 70% and improve citizen satisfaction by 50%.',
     competitors: ['Accenture, Deloitte, IBM Government'],
@@ -365,11 +401,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Government-grade AI platform with security compliance, automation, and analytics.',
+    implementationDetails:
+      'Government-grade AI platform with security compliance, automation, and analytics.',
     launchDate: '2024-07-01',
     customers: 12,
     rating: 4.9,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'quantum-secure-government-communications',
@@ -377,7 +414,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Future-proof secure communications for government',
     price: '$25,000',
     period: '/month',
-    description: 'Advanced government communications platform featuring quantum-resistant encryption, AI-powered security, and autonomous threat detection for classified and sensitive communications.',
+    description:
+      'Advanced government communications platform featuring quantum-resistant encryption, AI-powered security, and autonomous threat detection for classified and sensitive communications.',
     features: [
       'Quantum-resistant encryption',
       'AI-powered threat detection',
@@ -387,21 +425,27 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Audit logging and compliance',
       'Real-time security monitoring',
       'Incident response automation',
-      '24/7 security operations'
+      '24/7 security operations',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-red-600 to-orange-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-secure-government-communications',
-    marketPosition: 'Leading quantum-secure government platform; competes with Palantir and Raytheon.',
-    targetAudience: 'Federal agencies, defense contractors, intelligence community',
+    marketPosition:
+      'Leading quantum-secure government platform; competes with Palantir and Raytheon.',
+    targetAudience:
+      'Federal agencies, defense contractors, intelligence community',
     trialDays: 120,
     setupTime: '3-6 months',
     category: 'Government & Public Sector',
     realService: true,
-    technology: ['Quantum algorithms, AI/ML, Rust, Go, Kubernetes, AWS GovCloud'],
-    integrations: ['Government systems, Security platforms, Identity providers'],
+    technology: [
+      'Quantum algorithms, AI/ML, Rust, Go, Kubernetes, AWS GovCloud',
+    ],
+    integrations: [
+      'Government systems, Security platforms, Identity providers',
+    ],
     useCases: ['Secure communications, Document protection, Threat prevention'],
     roi: 'Ensure 100% security compliance and prevent all cyber threats.',
     competitors: ['Palantir, Raytheon, Lockheed Martin'],
@@ -410,11 +454,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Government-grade security platform with quantum-resistant encryption and AI threat intelligence.',
+    implementationDetails:
+      'Government-grade security platform with quantum-resistant encryption and AI threat intelligence.',
     launchDate: '2024-06-01',
     customers: 8,
     rating: 4.9,
-    reviews: 23
+    reviews: 23,
   },
 
   // FINANCIAL SERVICES
@@ -424,7 +469,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Intelligent risk assessment and mitigation',
     price: '$7,500',
     period: '/month',
-    description: 'Advanced risk management platform that uses AI to identify, assess, and mitigate financial, operational, and compliance risks in real-time.',
+    description:
+      'Advanced risk management platform that uses AI to identify, assess, and mitigate financial, operational, and compliance risks in real-time.',
     features: [
       'Real-time risk monitoring',
       'AI-powered risk assessment',
@@ -434,21 +480,24 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Stress testing and scenario analysis',
       'Risk reporting and analytics',
       'Automated risk mitigation',
-      'Regulatory compliance automation'
+      'Regulatory compliance automation',
     ],
     popular: false,
     icon: '📊',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-powered-risk-management',
-    marketPosition: 'Leading AI risk management platform; competes with SAS and IBM with AI capabilities.',
+    marketPosition:
+      'Leading AI risk management platform; competes with SAS and IBM with AI capabilities.',
     targetAudience: 'Banks, insurance companies, investment firms, fintech',
     trialDays: 45,
     setupTime: '2-4 weeks',
     category: 'Financial Services',
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL'],
-    integrations: ['Core banking systems, Trading platforms, Regulatory databases'],
+    integrations: [
+      'Core banking systems, Trading platforms, Regulatory databases',
+    ],
     useCases: ['Risk assessment, Compliance monitoring, Fraud detection'],
     roi: 'Reduce risk exposure by 40% and compliance costs by 60%.',
     competitors: ['SAS, IBM, Oracle Financial Services'],
@@ -457,11 +506,12 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native risk management platform with AI analytics, real-time monitoring, and compliance automation.',
+    implementationDetails:
+      'Cloud-native risk management platform with AI analytics, real-time monitoring, and compliance automation.',
     launchDate: '2024-10-15',
     customers: 89,
     rating: 4.7,
-    reviews: 156
+    reviews: 156,
   },
   {
     id: 'quantum-financial-modeling',
@@ -469,7 +519,8 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     tagline: 'Revolutionary financial modeling with quantum computing',
     price: '$12,000',
     period: '/month',
-    description: 'Cutting-edge financial modeling platform that leverages quantum computing to solve complex financial problems, optimize portfolios, and provide superior investment insights.',
+    description:
+      'Cutting-edge financial modeling platform that leverages quantum computing to solve complex financial problems, optimize portfolios, and provide superior investment insights.',
     features: [
       'Quantum portfolio optimization',
       'Risk modeling and simulation',
@@ -479,21 +530,24 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
       'Predictive modeling',
       'Scenario analysis',
       'Performance benchmarking',
-      'Expert consultation services'
+      'Expert consultation services',
     ],
     popular: true,
     icon: '💹',
     color: 'from-yellow-600 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-modeling',
-    marketPosition: 'Leading quantum financial platform; competes with Bloomberg and Thomson Reuters.',
+    marketPosition:
+      'Leading quantum financial platform; competes with Bloomberg and Thomson Reuters.',
     targetAudience: 'Investment banks, hedge funds, asset managers, fintech',
     trialDays: 60,
     setupTime: '3-4 weeks',
     category: 'Financial Services',
     realService: true,
     technology: ['Quantum algorithms, Python, React, Node.js, PostgreSQL'],
-    integrations: ['Bloomberg, Thomson Reuters, Trading platforms, Market data'],
+    integrations: [
+      'Bloomberg, Thomson Reuters, Trading platforms, Market data',
+    ],
     useCases: ['Portfolio optimization, Risk modeling, Investment analysis'],
     roi: 'Outperform market benchmarks by 20% and reduce risk by 30%.',
     competitors: ['Bloomberg, Thomson Reuters, FactSet'],
@@ -502,10 +556,11 @@ export const specializedIndustrySolutions: SpecializedIndustrySolution[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum computing platform with financial modeling algorithms and real-time market data.',
+    implementationDetails:
+      'Quantum computing platform with financial modeling algorithms and real-time market data.',
     launchDate: '2024-08-15',
     customers: 45,
     rating: 4.8,
-    reviews: 89
-  }
+    reviews: 89,
+  },
 ];

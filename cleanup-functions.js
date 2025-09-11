@@ -23,7 +23,7 @@ function getFileHash(filePath) {
 // Function to check if file is a duplicate
 function isDuplicate(fileName) {
   const patterns = [
-    /^.*_runner\.js$/,  // Files ending with _runner.js
+    /^.*_runner\.js$/, // Files ending with _runner.js
     /^.*-auditor\.js$/, // Files ending with -auditor.js
     /^.*-scanner\.js$/, // Files ending with -scanner.js
     /^.*-scheduler\.js$/, // Files ending with -scheduler.js
@@ -61,7 +61,7 @@ function isDuplicate(fileName) {
     /^.*-committer\.js$/, // Files ending with -committer.js
     /^.*-nudges\.ts$/, // Files ending with -nudges.ts
   ];
-  
+
   return patterns.some(pattern => pattern.test(fileName));
 }
 
@@ -72,32 +72,34 @@ function isEssential(fileName) {
     /^functions-manifest\.json$/, // Manifest file
     /^.*-report\.md$/, // Report files
   ];
-  
+
   return essentialPatterns.some(pattern => pattern.test(fileName));
 }
 
 // Main cleanup function
 function cleanupFunctions() {
   console.log('🧹 Starting function cleanup...');
-  
+
   const files = fs.readdirSync(functionsDir);
-  const jsFiles = files.filter(file => file.endsWith('.js') || file.endsWith('.ts'));
-  
+  const jsFiles = files.filter(
+    file => file.endsWith('.js') || file.endsWith('.ts')
+  );
+
   console.log(`📊 Found ${jsFiles.length} function files`);
-  
+
   let removedCount = 0;
   let keptCount = 0;
-  
+
   for (const file of jsFiles) {
     const filePath = path.join(functionsDir, file);
-    
+
     // Skip if essential
     if (isEssential(file)) {
       console.log(`✅ Keeping essential: ${file}`);
       keptCount++;
       continue;
     }
-    
+
     // Remove if duplicate/automation function
     if (isDuplicate(file)) {
       console.log(`🗑️  Removing duplicate/automation: ${file}`);
@@ -108,16 +110,16 @@ function cleanupFunctions() {
       keptCount++;
     }
   }
-  
+
   console.log(`\n📈 Cleanup Summary:`);
   console.log(`   Removed: ${removedCount} files`);
   console.log(`   Kept: ${keptCount} files`);
   console.log(`   Total: ${jsFiles.length} files`);
-  
+
   // Count remaining files
-  const remainingFiles = fs.readdirSync(functionsDir).filter(file => 
-    file.endsWith('.js') || file.endsWith('.ts')
-  );
+  const remainingFiles = fs
+    .readdirSync(functionsDir)
+    .filter(file => file.endsWith('.js') || file.endsWith('.ts'));
   console.log(`   Remaining: ${remainingFiles.length} files`);
 }
 

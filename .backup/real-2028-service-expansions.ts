@@ -5,7 +5,8 @@ export const real2028ServiceExpansions = [
     tagline: 'Prevent breaking changes with automated OpenAPI contract tests',
     price: '$79',
     period: '/month',
-    description: 'Automate contract tests for REST and GraphQL using OpenAPI/JSON Schema with CI gates, diff reports, and rollback guidance. Integrates with GitHub, Postman, and popular CI systems.',
+    description:
+      'Automate contract tests for REST and GraphQL using OpenAPI/JSON Schema with CI gates, diff reports, and rollback guidance. Integrates with GitHub, Postman, and popular CI systems.',
     features: [
       'OpenAPI/JSON Schema validation',
       'Schema diff and changelog reports',
@@ -14,14 +15,15 @@ export const real2028ServiceExpansions = [
       'CI/CD gates and GitHub status checks',
       'Postman and Insomnia sync',
       'Alerts to Slack/Teams',
-      'Audit logs and approvals'
+      'Audit logs and approvals',
     ],
     popular: false,
     icon: '🧪',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/api-contract-testing-suite',
-    marketPosition: 'Competitive with Postman (free–$79), Stoplight (custom), and Optic (team tiers). Advantage: CI-first guardrails and auto-diff reports.',
+    marketPosition:
+      'Competitive with Postman (free–$79), Stoplight (custom), and Optic (team tiers). Advantage: CI-first guardrails and auto-diff reports.',
     targetAudience: 'Platform teams, API teams, fintech, marketplaces',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -29,7 +31,11 @@ export const real2028ServiceExpansions = [
     realService: true,
     technology: ['OpenAPI', 'TypeScript', 'Next.js', 'PostgreSQL'],
     integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Postman', 'Slack'],
-    useCases: ['Prevent breaking changes', 'Govern schema evolution', 'Automate release checks'],
+    useCases: [
+      'Prevent breaking changes',
+      'Govern schema evolution',
+      'Automate release checks',
+    ],
     roi: 'Reduce API outages by 60%+; faster releases.',
     competitors: ['Postman', 'Stoplight', 'Optic'],
     marketSize: '$2B+ API tooling',
@@ -39,14 +45,15 @@ export const real2028ServiceExpansions = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'OpenAPI parser, diff engine, CI adapters, and status checks.',
+    implementationDetails:
+      'OpenAPI parser, diff engine, CI adapters, and status checks.',
     launchDate: '2028-01-15',
     customers: 42,
     rating: 4.8,
-    reviews: 128
+    reviews: 128,
   },
   {
     id: 'data-quality-etl-monitor',
@@ -54,7 +61,8 @@ export const real2028ServiceExpansions = [
     tagline: 'Detect schema drift, null spikes, and pipeline regressions',
     price: '$149',
     period: '/month',
-    description: 'End-to-end data quality monitoring for warehouses and lakes. Detects anomalies, schema drift, and freshness issues with auto-created incidents and owner routing.',
+    description:
+      'End-to-end data quality monitoring for warehouses and lakes. Detects anomalies, schema drift, and freshness issues with auto-created incidents and owner routing.',
     features: [
       'Freshness and volume SLAs',
       'Schema drift detection',
@@ -63,14 +71,15 @@ export const real2028ServiceExpansions = [
       'dbt/SQL test ingestion',
       'Incident routing and runbooks',
       'Slack/Email alerts',
-      'Grafana dashboards'
+      'Grafana dashboards',
     ],
     popular: true,
     icon: '📊',
     color: 'from-emerald-500 to-teal-600',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/data-quality-etl-monitor',
-    marketPosition: 'Comparable to Monte Carlo (custom) and Bigeye ($349+). Advantage: simpler setup and dbt-native tests.',
+    marketPosition:
+      'Comparable to Monte Carlo (custom) and Bigeye ($349+). Advantage: simpler setup and dbt-native tests.',
     targetAudience: 'Analytics teams, data engineering, ecommerce, SaaS',
     trialDays: 14,
     setupTime: '1 hour',
@@ -88,14 +97,15 @@ export const real2028ServiceExpansions = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Warehouse connectors, metrics store, anomaly detection.',
+    implementationDetails:
+      'Warehouse connectors, metrics store, anomaly detection.',
     launchDate: '2028-02-10',
     customers: 33,
     rating: 4.7,
-    reviews: 97
+    reviews: 97,
   },
   {
     id: 'cloud-cost-optimization-accelerator',
@@ -103,21 +113,23 @@ export const real2028ServiceExpansions = [
     tagline: 'Immediate AWS/Azure/GCP savings with guardrails',
     price: '$299',
     period: '/month',
-    description: 'Rightsize compute/storage, apply SP/RI automations, and set budgets/alerts with dashboards and weekly saving plans. Integrates with AWS, Azure, GCP, and Kubernetes.',
+    description:
+      'Rightsize compute/storage, apply SP/RI automations, and set budgets/alerts with dashboards and weekly saving plans. Integrates with AWS, Azure, GCP, and Kubernetes.',
     features: [
       'Rightsizing and idle cleanup',
       'Savings Plans/Reserved Instances planner',
       'Budgets and anomaly alerts',
       'Kubernetes cost allocation',
       'IAM/security guardrails',
-      'Weekly optimization plans'
+      'Weekly optimization plans',
     ],
     popular: true,
     icon: '💸',
     color: 'from-amber-500 to-orange-600',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/cloud-cost-optimization-accelerator',
-    marketPosition: 'Aligned with Kubecost (free–$499), CloudZero (custom), Finout (custom). Advantage: hands-on remediation recipes.',
+    marketPosition:
+      'Aligned with Kubecost (free–$499), CloudZero (custom), Finout (custom). Advantage: hands-on remediation recipes.',
     targetAudience: 'FinOps, platform teams, startups and SMBs',
     trialDays: 14,
     setupTime: '1 day',
@@ -135,14 +147,15 @@ export const real2028ServiceExpansions = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Cloud billing collectors and remediation playbooks.',
+    implementationDetails:
+      'Cloud billing collectors and remediation playbooks.',
     launchDate: '2028-03-01',
     customers: 58,
     rating: 4.8,
-    reviews: 141
+    reviews: 141,
   },
   {
     id: 'incident-automation-copilot',
@@ -150,21 +163,23 @@ export const real2028ServiceExpansions = [
     tagline: 'Reduce MTTR with AI-guided runbooks and auto-remediation',
     price: '$129',
     period: '/month',
-    description: 'Generate incidents from alerts, correlate signals, and run safe automation with justifications. Ships with templates for common stacks and cloud services.',
+    description:
+      'Generate incidents from alerts, correlate signals, and run safe automation with justifications. Ships with templates for common stacks and cloud services.',
     features: [
       'Signal correlation and deduplication',
       'AI-suggested remediation steps',
       'Runbook execution with approvals',
       'Postmortem drafts with timelines',
       'PagerDuty/Slack integration',
-      'Compliance-grade audit logs'
+      'Compliance-grade audit logs',
     ],
     popular: false,
     icon: '🚑',
     color: 'from-rose-500 to-pink-600',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/incident-automation-copilot',
-    marketPosition: 'Complements Datadog/NR. Advantage: opinionated remediation and postmortems.',
+    marketPosition:
+      'Complements Datadog/NR. Advantage: opinionated remediation and postmortems.',
     targetAudience: 'SRE, DevOps, platform teams',
     trialDays: 14,
     setupTime: '2 hours',
@@ -182,14 +197,15 @@ export const real2028ServiceExpansions = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Alert webhooks, correlation rules, automation actions.',
+    implementationDetails:
+      'Alert webhooks, correlation rules, automation actions.',
     launchDate: '2028-03-20',
     customers: 21,
     rating: 4.6,
-    reviews: 64
+    reviews: 64,
   },
   {
     id: 'backup-dr-runbook-hub',
@@ -197,21 +213,23 @@ export const real2028ServiceExpansions = [
     tagline: 'Tested backups and disaster recovery workflows you can trust',
     price: '$99',
     period: '/month',
-    description: 'Opinionated backup policies, automated restore tests, and DR runbooks with evidence. Supports databases, object storage, and Kubernetes clusters.',
+    description:
+      'Opinionated backup policies, automated restore tests, and DR runbooks with evidence. Supports databases, object storage, and Kubernetes clusters.',
     features: [
       'Scheduled backup policies',
       'Automated restore tests',
       'RTO/RPO dashboards',
       'Evidence exports for audits',
       'Kubernetes PV snapshots',
-      'S3/GCS immutability support'
+      'S3/GCS immutability support',
     ],
     popular: false,
     icon: '🛡️',
     color: 'from-indigo-500 to-blue-600',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/backup-dr-runbook-hub',
-    marketPosition: 'Alternative to DIY scripts; complements Veeam/Velero. Advantage: continuous restore tests and evidence.',
+    marketPosition:
+      'Alternative to DIY scripts; complements Veeam/Velero. Advantage: continuous restore tests and evidence.',
     targetAudience: 'SaaS, ecommerce, regulated industries',
     trialDays: 14,
     setupTime: '1 day',
@@ -229,14 +247,15 @@ export const real2028ServiceExpansions = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Scheduled jobs, restore rehearsals, evidence storage.',
+    implementationDetails:
+      'Scheduled jobs, restore rehearsals, evidence storage.',
     launchDate: '2028-04-05',
     customers: 18,
     rating: 4.7,
-    reviews: 39
+    reviews: 39,
   },
   {
     id: 'pii-data-vault-tokenization',
@@ -244,21 +263,23 @@ export const real2028ServiceExpansions = [
     tagline: 'Vault PII and tokenize sensitive fields with audit trails',
     price: '$399',
     period: '/month',
-    description: 'Protect PII with vaulted storage and reversible tokens. SDKs for app integration, field policies, and redaction for analytics and exports.',
+    description:
+      'Protect PII with vaulted storage and reversible tokens. SDKs for app integration, field policies, and redaction for analytics and exports.',
     features: [
       'Tokenization and detokenization APIs',
       'Field-level policies and masking',
       'HSM/KMS-backed encryption',
       'Access controls and audit logs',
       'Batch migration tooling',
-      'SDKs for popular stacks'
+      'SDKs for popular stacks',
     ],
     popular: true,
     icon: '🔒',
     color: 'from-purple-500 to-violet-600',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/pii-data-vault-tokenization',
-    marketPosition: 'Benchmarks: Skyflow, VGS. Advantage: developer-first SDKs and hosted+on-prem options.',
+    marketPosition:
+      'Benchmarks: Skyflow, VGS. Advantage: developer-first SDKs and hosted+on-prem options.',
     targetAudience: 'Fintech, healthcare, SaaS',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -266,7 +287,11 @@ export const real2028ServiceExpansions = [
     realService: true,
     technology: ['KMS/HSM', 'PostgreSQL', 'Node.js'],
     integrations: ['AWS KMS', 'GCP KMS', 'HashiCorp Vault'],
-    useCases: ['Compliance (PCI/PII/PHI)', 'Data minimization', 'Secure analytics'],
+    useCases: [
+      'Compliance (PCI/PII/PHI)',
+      'Data minimization',
+      'Secure analytics',
+    ],
     roi: 'Accelerate go-live for compliance-heavy apps.',
     competitors: ['Skyflow', 'Very Good Security'],
     marketSize: '$2B+ privacy infra',
@@ -276,14 +301,14 @@ export const real2028ServiceExpansions = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Vaulted storage, token service, policy engine.',
     launchDate: '2028-04-20',
     customers: 12,
     rating: 4.6,
-    reviews: 27
+    reviews: 27,
   },
   {
     id: 'edge-feature-flag-proxy',
@@ -291,20 +316,22 @@ export const real2028ServiceExpansions = [
     tagline: 'Ultra-low-latency flags at the edge with geo targeting',
     price: '$59',
     period: '/month',
-    description: 'Serve experiment and kill-switch flags from the edge with geo/rule targeting, kill switches, and SDKs. Compatible with major flag providers.',
+    description:
+      'Serve experiment and kill-switch flags from the edge with geo/rule targeting, kill switches, and SDKs. Compatible with major flag providers.',
     features: [
       'Edge caching and geo targeting',
       'SDKs for web and mobile',
       'Kill switches and rollbacks',
       'Rule editor and audit logs',
-      'Provider compatibility mode'
+      'Provider compatibility mode',
     ],
     popular: false,
     icon: '🚩',
     color: 'from-teal-500 to-cyan-600',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/edge-feature-flag-proxy',
-    marketPosition: 'Comparable to LaunchDarkly/Flagsmith when paired. Advantage: edge latency and provider-agnostic mode.',
+    marketPosition:
+      'Comparable to LaunchDarkly/Flagsmith when paired. Advantage: edge latency and provider-agnostic mode.',
     targetAudience: 'Growth, platform, web teams',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -322,14 +349,14 @@ export const real2028ServiceExpansions = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Edge worker, provider adapters, rule engine.',
     launchDate: '2028-05-01',
     customers: 25,
     rating: 4.7,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'etl-change-guard',
@@ -337,20 +364,22 @@ export const real2028ServiceExpansions = [
     tagline: 'Block risky schema and pipeline changes in CI',
     price: '$69',
     period: '/month',
-    description: 'Policy-driven guardrails for ETL and dbt changes. Enforces approvals for breaking changes, with impact analysis and roll-forward plans.',
+    description:
+      'Policy-driven guardrails for ETL and dbt changes. Enforces approvals for breaking changes, with impact analysis and roll-forward plans.',
     features: [
       'Change impact analysis',
       'Breaking change detection',
       'Approval workflows',
       'dbt test integration',
-      'Rollback/roll-forward plans'
+      'Rollback/roll-forward plans',
     ],
     popular: false,
     icon: '🛑',
     color: 'from-red-500 to-rose-600',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/etl-change-guard',
-    marketPosition: 'Lightweight alternative to bespoke checks. Advantage: dbt-native policies.',
+    marketPosition:
+      'Lightweight alternative to bespoke checks. Advantage: dbt-native policies.',
     targetAudience: 'Data engineering and analytics teams',
     trialDays: 14,
     setupTime: '45 minutes',
@@ -368,13 +397,13 @@ export const real2028ServiceExpansions = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'PR checks, policy engine, metadata adapters.',
     launchDate: '2028-05-12',
     customers: 14,
     rating: 4.5,
-    reviews: 22
-  }
+    reviews: 22,
+  },
 ];

@@ -70,5 +70,5 @@ export const safeStorage: SafeStorage = {
     } catch {
       return 0;
     }
-  }
+  },
 };

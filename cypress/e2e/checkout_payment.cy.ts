@@ -17,8 +17,10 @@ describe('test checkout purchase', () => {
       statusCode: 200,
       body: { sessionId },
     }).as('createSession');
-    cy.intercept('POST', '/api/points/increment', { statusCode: 200 }).as('addPoints');
-    cy.intercept('GET', /\/api\/orders\/.*/, (req) => {
+    cy.intercept('POST', '/api/points/increment', { statusCode: 200 }).as(
+      'addPoints'
+    );
+    cy.intercept('GET', /\/api\/orders\/.*/, req => {
       const id = req.url.split('/').pop();
       req.reply({
         statusCode: 200,
@@ -29,7 +31,13 @@ describe('test checkout purchase', () => {
           status: 'paid',
           invoiceUrl: '/inv.pdf',
           items: [{ name: 'Test', price: 0.5, quantity: 1 }],
-          shippingAddress: { name: 'QA Tester', street: '123', city: 'Test', state: 'TS', zip: '12345' },
+          shippingAddress: {
+            name: 'QA Tester',
+            street: '123',
+            city: 'Test',
+            state: 'TS',
+            zip: '12345',
+          },
           trackingEvents: [],
         },
       });
@@ -42,7 +50,7 @@ describe('test checkout purchase', () => {
     cy.get('input[name="city"]').type('Testville');
     cy.get('input[name="country"]').type('Testland');
 
-    cy.window().then((win) => {
+    cy.window().then(win => {
       win.Stripe = () => ({
         redirectToCheckout: ({ sessionId: id }) => {
           win.location.href = `/success?session_id=${id}`;
@@ -58,7 +66,5 @@ describe('test checkout purchase', () => {
     cy.wait('@getOrder');
 
     cy.url().should('include', '/success');
-
   });
 });
-

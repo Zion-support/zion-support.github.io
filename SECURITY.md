@@ -5,7 +5,9 @@
 ## Reporting a Vulnerability
 
 We take the security of Zion Tech Group seriously. If you believe you have found a security vulnerability, please report it to us as described below.
+
 ## Table of Contents
+
 - [Overview](#overview)
 - [Security Model](#security-model)
 - [Authentication](#authentication)
@@ -32,39 +34,47 @@ You should receive a response within 48 hours. If for some reason you do not, pl
 This information will help us triage your report more quickly.
 
 ## Preferred Languages
+
 ## Prerequisites
+
 - Node.js 18+ installed
 - npm or yarn package manager
 - Git for version control
 - Basic knowledge of React and TypeScript
-We prefer to receive vulnerability reports in English, but we can also handle reports in Portuguese.
+  We prefer to receive vulnerability reports in English, but we can also handle reports in Portuguese.
 
 Zion Tech Group follows the principle of [Responsible Disclosure](https://en.wikipedia.org/wiki/Responsible_disclosure).
 
 ## Disclosure Policy
 
 When we receive a security bug report, we will:
+
 1. Clone the repository:
- ```bash
- git clone https://github.com/your-org/zion-app.git
- cd zion-app
- ```
+
+```bash
+git clone https://github.com/your-org/zion-app.git
+cd zion-app
+```
 
 2. Install dependencies:
- ```bash
- npm install
- ```
+
+```bash
+npm install
+```
 
 3. Set up environment variables:
- ```bash
- cp .env.example .env.local
- # Edit .env.local with your configuration
- ```
+
+```bash
+cp .env.example .env.local
+# Edit .env.local with your configuration
+```
 
 4. Start the development server:
- ```bash
- npm run dev
- ```
+
+```bash
+npm run dev
+```
+
 1. **Confirm the problem** and determine affected versions
 2. **Audit code** to find any similar problems
 3. **Prepare fixes** for all supported versions
@@ -76,7 +86,9 @@ Security updates are released as patch versions (e.g., 1.0.1, 1.0.2) and are ava
 ## Security Best Practices
 
 ### For Developers
+
 ## Basic Example
+
 - Always validate and sanitize user input
 - Use parameterized queries to prevent SQL injection
 - Implement proper authentication and authorization
@@ -104,6 +116,7 @@ We use the following security tools and practices:
 - **Email**: kleber@ziontechgroup.com
 - **Phone**: +1 302 464 0950
 - **Response Time**: 48 hours
+
 ```typescript
 // Real-world usage example
 const app = new Application();
@@ -114,7 +127,9 @@ app.start();
 ### Security Team
 
 ## Bug Bounty Program
+
 ## Methods
+
 We currently do not have a formal bug bounty program, but we do appreciate security researchers who responsibly disclose vulnerabilities. We may offer recognition or other forms of appreciation for significant security findings.
 
 ## Responsible Disclosure Timeline
@@ -145,12 +160,16 @@ This security policy may be updated from time to time. We will notify users of a
 - Website updates
 
 ## Contact
+
 ## How to Contribute
+
 If you have any questions about this security policy, please contact us at kleber@ziontechgroup.com.
 
 **Last Updated**: August 26, 2025  
 **Version**: 1.0.0
+
 ## Code Standards
+
 - Follow the existing code style and conventions
 - Write clear, readable code with meaningful variable names
 - Add comments for complex logic
@@ -160,6 +179,7 @@ If you have any questions about this security policy, please contact us at klebe
 ## Getting Help
 
 If you need help or have questions:
+
 - Check existing documentation
 - Search through existing issues
 - Create a new issue with a clear description

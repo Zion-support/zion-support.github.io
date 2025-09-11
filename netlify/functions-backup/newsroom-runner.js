@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('newsroom-runner function triggered');
-    
+
     // Newsroom simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Newsroom runner executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         newsroom: {
           status: 'active',
           articles: 0,
-          lastUpdate: new Date().toISOString()
-        }
-      })
+          lastUpdate: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in newsroom-runner:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'newsroom-runner'
-      })
+        function: 'newsroom-runner',
+      }),
     };
   }
 };

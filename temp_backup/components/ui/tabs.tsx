@@ -26,7 +26,9 @@ export const Tabs: React.FC<TabsProps> = ({
   const handleValueChange = onValueChange || setInternalValue;
 
   return (
-    <TabsContext.Provider value={{ value: currentValue, onValueChange: handleValueChange }}>
+    <TabsContext.Provider
+      value={{ value: currentValue, onValueChange: handleValueChange }}
+    >
       {children}
     </TabsContext.Provider>
   );
@@ -46,7 +48,8 @@ export const TabsList: React.FC<TabsListProps> = ({ className, ...props }) => {
   );
 };
 
-interface TabsTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface TabsTriggerProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   value: string;
 }
 

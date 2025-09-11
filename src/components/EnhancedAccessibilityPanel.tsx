@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  Contrast, 
+import {
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Type,
+  Contrast,
   MousePointer,
   Keyboard,
   Monitor,
   Settings,
   X,
   Check,
-  AlertTriangle
+  AlertTriangle,
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -37,7 +37,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     keyboardNavigation: false,
     focusIndicator: true,
     colorBlindness: 'none',
-    fontSize: 'medium'
+    fontSize: 'medium',
   });
 
   const [announcements, setAnnouncements] = useState<string[]>([]);
@@ -60,7 +60,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   // Apply accessibility settings to the document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
@@ -95,7 +95,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       const filters = {
         protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',
-        tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)'
+        tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)',
       };
       root.style.filter = filters[newSettings.colorBlindness];
     } else {
@@ -107,7 +107,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       small: '0.875rem',
       medium: '1rem',
       large: '1.125rem',
-      'extra-large': '1.25rem'
+      'extra-large': '1.25rem',
     };
     root.style.setProperty('--base-font-size', fontSizes[newSettings.fontSize]);
 
@@ -134,9 +134,11 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     const focusableElements = document.querySelectorAll(
       'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
     );
-    
-    const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
-    
+
+    const currentIndex = Array.from(focusableElements).findIndex(
+      el => el === document.activeElement
+    );
+
     switch (event.key) {
       case 'Tab':
         // Let default tab behavior work
@@ -146,14 +148,19 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         event.preventDefault();
         const nextIndex = (currentIndex + 1) % focusableElements.length;
         (focusableElements[nextIndex] as HTMLElement).focus();
-        announceToScreenReader(`Focused on ${(focusableElements[nextIndex] as HTMLElement).textContent || 'element'}`);
+        announceToScreenReader(
+          `Focused on ${(focusableElements[nextIndex] as HTMLElement).textContent || 'element'}`
+        );
         break;
       case 'ArrowLeft':
       case 'ArrowUp':
         event.preventDefault();
-        const prevIndex = currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;
+        const prevIndex =
+          currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;
         (focusableElements[prevIndex] as HTMLElement).focus();
-        announceToScreenReader(`Focused on ${(focusableElements[prevIndex] as HTMLElement).textContent || 'element'}`);
+        announceToScreenReader(
+          `Focused on ${(focusableElements[prevIndex] as HTMLElement).textContent || 'element'}`
+        );
         break;
       case 'Enter':
       case ' ':
@@ -165,49 +172,57 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, []);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
-    if (!settings.screenReader) return;
+  const announceToScreenReader = useCallback(
+    (message: string) => {
+      if (!settings.screenReader) return;
 
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    // Remove after announcement
-    setTimeout(() => {
-      if (announcement.parentNode) {
-        announcement.parentNode.removeChild(announcement);
-      }
-    }, 1000);
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
 
-    setAnnouncements(prev => [...prev, message]);
-    setIsAnnouncing(true);
-    setTimeout(() => setIsAnnouncing(false), 1000);
-  }, [settings.screenReader]);
+      document.body.appendChild(announcement);
+
+      // Remove after announcement
+      setTimeout(() => {
+        if (announcement.parentNode) {
+          announcement.parentNode.removeChild(announcement);
+        }
+      }, 1000);
+
+      setAnnouncements(prev => [...prev, message]);
+      setIsAnnouncing(true);
+      setTimeout(() => setIsAnnouncing(false), 1000);
+    },
+    [settings.screenReader]
+  );
 
   // Update settings
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applySettings(newSettings);
-    
-    // Announce changes to screen reader
-    const settingNames = {
-      highContrast: 'high contrast mode',
-      largeText: 'large text',
-      reducedMotion: 'reduced motion',
-      screenReader: 'screen reader support',
-      keyboardNavigation: 'keyboard navigation',
-      focusIndicator: 'focus indicator',
-      colorBlindness: 'color blindness simulation',
-      fontSize: 'font size'
-    };
-    
-    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`);
-  }, [settings, applySettings, announceToScreenReader]);
+  const updateSetting = useCallback(
+    (key: keyof AccessibilitySettings, value: any) => {
+      const newSettings = { ...settings, [key]: value };
+      setSettings(newSettings);
+      applySettings(newSettings);
+
+      // Announce changes to screen reader
+      const settingNames = {
+        highContrast: 'high contrast mode',
+        largeText: 'large text',
+        reducedMotion: 'reduced motion',
+        screenReader: 'screen reader support',
+        keyboardNavigation: 'keyboard navigation',
+        focusIndicator: 'focus indicator',
+        colorBlindness: 'color blindness simulation',
+        fontSize: 'font size',
+      };
+
+      announceToScreenReader(
+        `${settingNames[key]} ${value ? 'enabled' : 'disabled'}`
+      );
+    },
+    [settings, applySettings, announceToScreenReader]
+  );
 
   // Reset to defaults
   const resetToDefaults = useCallback(() => {
@@ -219,9 +234,9 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       keyboardNavigation: false,
       focusIndicator: true,
       colorBlindness: 'none',
-      fontSize: 'medium'
+      fontSize: 'medium',
     };
-    
+
     setSettings(defaultSettings);
     applySettings(defaultSettings);
     announceToScreenReader('Accessibility settings reset to defaults');
@@ -230,7 +245,9 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   // Toggle panel
   const togglePanel = useCallback(() => {
     setIsOpen(!isOpen);
-    announceToScreenReader(isOpen ? 'Accessibility panel closed' : 'Accessibility panel opened');
+    announceToScreenReader(
+      isOpen ? 'Accessibility panel closed' : 'Accessibility panel opened'
+    );
   }, [isOpen, announceToScreenReader]);
 
   // Handle escape key
@@ -253,13 +270,13 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         onClick={togglePanel}
-        className="fixed top-4 right-4 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg z-40 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
-        title="Accessibility Settings"
-        aria-label="Open accessibility settings panel"
+        className='fixed top-4 right-4 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg z-40 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2'
+        title='Accessibility Settings'
+        aria-label='Open accessibility settings panel'
         aria-expanded={isOpen}
-        aria-controls="accessibility-panel"
+        aria-controls='accessibility-panel'
       >
-        <Settings className="w-5 h-5" />
+        <Settings className='w-5 h-5' />
       </motion.button>
 
       {/* Accessibility Panel */}
@@ -269,64 +286,78 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
-            className="fixed top-0 right-0 h-full w-80 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-700 shadow-2xl z-50 overflow-y-auto"
-            id="accessibility-panel"
-            role="dialog"
-            aria-label="Accessibility Settings"
-            aria-modal="true"
+            className='fixed top-0 right-0 h-full w-80 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-700 shadow-2xl z-50 overflow-y-auto'
+            id='accessibility-panel'
+            role='dialog'
+            aria-label='Accessibility Settings'
+            aria-modal='true'
           >
             {/* Header */}
-            <div className="sticky top-0 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 p-4">
-              <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            <div className='sticky top-0 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 p-4'>
+              <div className='flex items-center justify-between'>
+                <h2 className='text-lg font-semibold text-slate-900 dark:text-white'>
                   Accessibility Settings
                 </h2>
                 <button
                   onClick={togglePanel}
-                  className="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
-                  aria-label="Close accessibility panel"
+                  className='text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors'
+                  aria-label='Close accessibility panel'
                 >
-                  <X className="w-5 h-5" />
+                  <X className='w-5 h-5' />
                 </button>
               </div>
             </div>
 
             {/* Content */}
-            <div className="p-4 space-y-6">
+            <div className='p-4 space-y-6'>
               {/* Visual Settings */}
               <div>
-                <h3 className="text-sm font-medium text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                  <Monitor className="w-4 h-4" />
+                <h3 className='text-sm font-medium text-slate-900 dark:text-white mb-3 flex items-center gap-2'>
+                  <Monitor className='w-4 h-4' />
                   Visual Settings
                 </h3>
-                
-                <div className="space-y-3">
-                  <label className="flex items-center justify-between cursor-pointer">
-                    <span className="text-sm text-slate-700 dark:text-slate-300">High Contrast</span>
+
+                <div className='space-y-3'>
+                  <label className='flex items-center justify-between cursor-pointer'>
+                    <span className='text-sm text-slate-700 dark:text-slate-300'>
+                      High Contrast
+                    </span>
                     <button
-                      onClick={() => updateSetting('highContrast', !settings.highContrast)}
+                      onClick={() =>
+                        updateSetting('highContrast', !settings.highContrast)
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.highContrast ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
+                        settings.highContrast
+                          ? 'bg-cyan-600'
+                          : 'bg-slate-300 dark:bg-slate-600'
                       }`}
-                      role="switch"
+                      role='switch'
                       aria-checked={settings.highContrast}
                     >
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                          settings.highContrast
+                            ? 'translate-x-6'
+                            : 'translate-x-1'
                         }`}
                       />
                     </button>
                   </label>
 
-                  <label className="flex items-center justify-between cursor-pointer">
-                    <span className="text-sm text-slate-700 dark:text-slate-300">Large Text</span>
+                  <label className='flex items-center justify-between cursor-pointer'>
+                    <span className='text-sm text-slate-700 dark:text-slate-300'>
+                      Large Text
+                    </span>
                     <button
-                      onClick={() => updateSetting('largeText', !settings.largeText)}
+                      onClick={() =>
+                        updateSetting('largeText', !settings.largeText)
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.largeText ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
+                        settings.largeText
+                          ? 'bg-cyan-600'
+                          : 'bg-slate-300 dark:bg-slate-600'
                       }`}
-                      role="switch"
+                      role='switch'
                       aria-checked={settings.largeText}
                     >
                       <span
@@ -337,53 +368,67 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                     </button>
                   </label>
 
-                  <label className="flex items-center justify-between cursor-pointer">
-                    <span className="text-sm text-slate-700 dark:text-slate-300">Reduced Motion</span>
+                  <label className='flex items-center justify-between cursor-pointer'>
+                    <span className='text-sm text-slate-700 dark:text-slate-300'>
+                      Reduced Motion
+                    </span>
                     <button
-                      onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
+                      onClick={() =>
+                        updateSetting('reducedMotion', !settings.reducedMotion)
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.reducedMotion ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
+                        settings.reducedMotion
+                          ? 'bg-cyan-600'
+                          : 'bg-slate-300 dark:bg-slate-600'
                       }`}
-                      role="switch"
+                      role='switch'
                       aria-checked={settings.reducedMotion}
                     >
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                          settings.reducedMotion
+                            ? 'translate-x-6'
+                            : 'translate-x-1'
                         }`}
                       />
                     </button>
                   </label>
 
                   <div>
-                    <label className="block text-sm text-slate-700 dark:text-slate-300 mb-2">
+                    <label className='block text-sm text-slate-700 dark:text-slate-300 mb-2'>
                       Font Size
                     </label>
                     <select
                       value={settings.fontSize}
-                      onChange={(e) => updateSetting('fontSize', e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      onChange={e => updateSetting('fontSize', e.target.value)}
+                      className='w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500'
                     >
-                      <option value="small">Small</option>
-                      <option value="medium">Medium</option>
-                      <option value="large">Large</option>
-                      <option value="extra-large">Extra Large</option>
+                      <option value='small'>Small</option>
+                      <option value='medium'>Medium</option>
+                      <option value='large'>Large</option>
+                      <option value='extra-large'>Extra Large</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-sm text-slate-700 dark:text-slate-300 mb-2">
+                    <label className='block text-sm text-slate-700 dark:text-slate-300 mb-2'>
                       Color Blindness Simulation
                     </label>
                     <select
                       value={settings.colorBlindness}
-                      onChange={(e) => updateSetting('colorBlindness', e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      onChange={e =>
+                        updateSetting('colorBlindness', e.target.value)
+                      }
+                      className='w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500'
                     >
-                      <option value="none">None</option>
-                      <option value="protanopia">Protanopia (Red-Blind)</option>
-                      <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
-                      <option value="tritanopia">Tritanopia (Blue-Blind)</option>
+                      <option value='none'>None</option>
+                      <option value='protanopia'>Protanopia (Red-Blind)</option>
+                      <option value='deuteranopia'>
+                        Deuteranopia (Green-Blind)
+                      </option>
+                      <option value='tritanopia'>
+                        Tritanopia (Blue-Blind)
+                      </option>
                     </select>
                   </div>
                 </div>
@@ -391,43 +436,65 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
 
               {/* Navigation Settings */}
               <div>
-                <h3 className="text-sm font-medium text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                  <Keyboard className="w-4 h-4" />
+                <h3 className='text-sm font-medium text-slate-900 dark:text-white mb-3 flex items-center gap-2'>
+                  <Keyboard className='w-4 h-4' />
                   Navigation Settings
                 </h3>
-                
-                <div className="space-y-3">
-                  <label className="flex items-center justify-between cursor-pointer">
-                    <span className="text-sm text-slate-700 dark:text-slate-300">Keyboard Navigation</span>
+
+                <div className='space-y-3'>
+                  <label className='flex items-center justify-between cursor-pointer'>
+                    <span className='text-sm text-slate-700 dark:text-slate-300'>
+                      Keyboard Navigation
+                    </span>
                     <button
-                      onClick={() => updateSetting('keyboardNavigation', !settings.keyboardNavigation)}
+                      onClick={() =>
+                        updateSetting(
+                          'keyboardNavigation',
+                          !settings.keyboardNavigation
+                        )
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.keyboardNavigation ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
+                        settings.keyboardNavigation
+                          ? 'bg-cyan-600'
+                          : 'bg-slate-300 dark:bg-slate-600'
                       }`}
-                      role="switch"
+                      role='switch'
                       aria-checked={settings.keyboardNavigation}
                     >
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
+                          settings.keyboardNavigation
+                            ? 'translate-x-6'
+                            : 'translate-x-1'
                         }`}
                       />
                     </button>
                   </label>
 
-                  <label className="flex items-center justify-between cursor-pointer">
-                    <span className="text-sm text-slate-700 dark:text-slate-300">Focus Indicator</span>
+                  <label className='flex items-center justify-between cursor-pointer'>
+                    <span className='text-sm text-slate-700 dark:text-slate-300'>
+                      Focus Indicator
+                    </span>
                     <button
-                      onClick={() => updateSetting('focusIndicator', !settings.focusIndicator)}
+                      onClick={() =>
+                        updateSetting(
+                          'focusIndicator',
+                          !settings.focusIndicator
+                        )
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.focusIndicator ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
+                        settings.focusIndicator
+                          ? 'bg-cyan-600'
+                          : 'bg-slate-300 dark:bg-slate-600'
                       }`}
-                      role="switch"
+                      role='switch'
                       aria-checked={settings.focusIndicator}
                     >
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
+                          settings.focusIndicator
+                            ? 'translate-x-6'
+                            : 'translate-x-1'
                         }`}
                       />
                     </button>
@@ -437,25 +504,33 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
 
               {/* Screen Reader Settings */}
               <div>
-                <h3 className="text-sm font-medium text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                  <Volume2 className="w-4 h-4" />
+                <h3 className='text-sm font-medium text-slate-900 dark:text-white mb-3 flex items-center gap-2'>
+                  <Volume2 className='w-4 h-4' />
                   Screen Reader Support
                 </h3>
-                
-                <div className="space-y-3">
-                  <label className="flex items-center justify-between cursor-pointer">
-                    <span className="text-sm text-slate-700 dark:text-slate-300">Screen Reader Mode</span>
+
+                <div className='space-y-3'>
+                  <label className='flex items-center justify-between cursor-pointer'>
+                    <span className='text-sm text-slate-700 dark:text-slate-300'>
+                      Screen Reader Mode
+                    </span>
                     <button
-                      onClick={() => updateSetting('screenReader', !settings.screenReader)}
+                      onClick={() =>
+                        updateSetting('screenReader', !settings.screenReader)
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.screenReader ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
+                        settings.screenReader
+                          ? 'bg-cyan-600'
+                          : 'bg-slate-300 dark:bg-slate-600'
                       }`}
-                      role="switch"
+                      role='switch'
                       aria-checked={settings.screenReader}
                     >
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.screenReader ? 'translate-x-6' : 'translate-x-1'
+                          settings.screenReader
+                            ? 'translate-x-6'
+                            : 'translate-x-1'
                         }`}
                       />
                     </button>
@@ -464,23 +539,53 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
               </div>
 
               {/* Reset Button */}
-              <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
+              <div className='pt-4 border-t border-slate-200 dark:border-slate-700'>
                 <button
                   onClick={resetToDefaults}
-                  className="w-full px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className='w-full px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500'
                 >
                   Reset to Defaults
                 </button>
               </div>
 
               {/* Keyboard Shortcuts Help */}
-              <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
-                <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2">Keyboard Shortcuts</h4>
-                <div className="text-xs text-slate-600 dark:text-slate-400 space-y-1">
-                  <div>• <kbd className="px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded">Tab</kbd> Navigate between elements</div>
-                  <div>• <kbd className="px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded">Arrow Keys</kbd> Navigate when enabled</div>
-                  <div>• <kbd className="px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded">Enter</kbd> or <kbd className="px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded">Space</kbd> Activate elements</div>
-                  <div>• <kbd className="px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded">Escape</kbd> Close panels</div>
+              <div className='pt-4 border-t border-slate-200 dark:border-slate-700'>
+                <h4 className='text-sm font-medium text-slate-900 dark:text-white mb-2'>
+                  Keyboard Shortcuts
+                </h4>
+                <div className='text-xs text-slate-600 dark:text-slate-400 space-y-1'>
+                  <div>
+                    •{' '}
+                    <kbd className='px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded'>
+                      Tab
+                    </kbd>{' '}
+                    Navigate between elements
+                  </div>
+                  <div>
+                    •{' '}
+                    <kbd className='px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded'>
+                      Arrow Keys
+                    </kbd>{' '}
+                    Navigate when enabled
+                  </div>
+                  <div>
+                    •{' '}
+                    <kbd className='px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded'>
+                      Enter
+                    </kbd>{' '}
+                    or{' '}
+                    <kbd className='px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded'>
+                      Space
+                    </kbd>{' '}
+                    Activate elements
+                  </div>
+                  <div>
+                    •{' '}
+                    <kbd className='px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded'>
+                      Escape
+                    </kbd>{' '}
+                    Close panels
+                  </div>
                 </div>
               </div>
             </div>
@@ -489,11 +594,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       </AnimatePresence>
 
       {/* Screen Reader Announcements */}
-      <div
-        aria-live="polite"
-        aria-atomic="true"
-        className="sr-only"
-      >
+      <div aria-live='polite' aria-atomic='true' className='sr-only'>
         {announcements[announcements.length - 1]}
       </div>
 
@@ -504,10 +605,10 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed bottom-20 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center gap-2"
+            className='fixed bottom-20 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center gap-2'
           >
-            <Check className="w-4 h-4" />
-            <span className="text-sm">Setting updated</span>
+            <Check className='w-4 h-4' />
+            <span className='text-sm'>Setting updated</span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -518,7 +619,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className='fixed inset-0 bg-black bg-opacity-50 z-40'
           onClick={togglePanel}
         />
       )}

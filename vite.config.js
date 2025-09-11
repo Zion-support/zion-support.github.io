@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -18,12 +18,12 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           ui: ['framer-motion', 'lucide-react'],
-          router: ['react-router-dom']
-        }
-      }
+          router: ['react-router-dom'],
+        },
+      },
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-  }
-})
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
+  },
+});

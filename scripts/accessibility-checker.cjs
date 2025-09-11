@@ -16,7 +16,8 @@ class AccessibilityChecker {
   }
 
   async findReactFiles() {
-    const command = 'find . -name "*.tsx" -o -name "*.jsx" | grep -v node_modules | head -10';
+    const command =
+      'find . -name "*.tsx" -o -name "*.jsx" | grep -v node_modules | head -10';
     const { execSync } = require('child_process');
     try {
       const output = execSync(command, { encoding: 'utf8' });
@@ -29,17 +30,21 @@ class AccessibilityChecker {
   checkFile(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-      
+
       // Check for missing alt attributes
       if (content.includes('<img') && !content.includes('alt=')) {
         this.issues.push(`Missing alt attribute in ${filePath}`);
       }
-      
+
       // Check for missing aria labels
-      if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {
+      if (
+        content.includes('<button') &&
+        !content.includes('aria-label') &&
+        !content.includes('aria-labelledby')
+      ) {
         this.issues.push(`Button missing aria-label in ${filePath}`);
       }
-      
+
       // Check for proper heading structure
       if (content.includes('<h2') && !content.includes('<h1')) {
         this.issues.push(`Missing h1 before h2 in ${filePath}`);
@@ -57,9 +62,9 @@ class AccessibilityChecker {
         'Use semantic HTML elements',
         'Ensure proper heading hierarchy',
         'Add ARIA labels where needed',
-        'Test with screen readers'
+        'Test with screen readers',
       ],
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     };
   }
 }

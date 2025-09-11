@@ -20,4 +20,6 @@ export interface AuthContextType {
   setOnboardingStep: (step: number) => void;
 }
 
-export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+export const AuthContext = createContext<AuthContextType | undefined>(
+  undefined
+);

@@ -18,23 +18,52 @@ function buildItems(repoUrl, workspaceRoot) {
 
   // Internal pages detection
   const internalCandidates = [
-    { href: '/automation', label: 'Automation Hub — live agents & reports', check: path.join(pagesDir, 'automation', 'index.tsx') },
-    { href: '/newsroom', label: 'Newsroom — latest autonomous updates', check: path.join(pagesDir, 'newsroom.tsx') },
-    { href: '/site-health', label: 'Site Health — audits & insights', check: path.join(pagesDir, 'site-health.tsx') },
+    {
+      href: '/automation',
+      label: 'Automation Hub — live agents & reports',
+      check: path.join(pagesDir, 'automation', 'index.tsx'),
+    },
+    {
+      href: '/newsroom',
+      label: 'Newsroom — latest autonomous updates',
+      check: path.join(pagesDir, 'newsroom.tsx'),
+    },
+    {
+      href: '/site-health',
+      label: 'Site Health — audits & insights',
+      check: path.join(pagesDir, 'site-health.tsx'),
+    },
   ];
 
-  internalCandidates.forEach((c) => {
-    if (fileExists(c.check)) items.push({ type: 'internal', href: c.href, label: c.label });
+  internalCandidates.forEach(c => {
+    if (fileExists(c.check))
+      items.push({ type: 'internal', href: c.href, label: c.label });
   });
 
-  items.push({ type: 'external', href: '/.netlify/functions/homepage-automation', label: 'Netlify Functions — homepage automation' });
-  items.push({ type: 'external', href: '/.netlify/functions/maintenance-scheduler', label: 'Netlify Functions — maintenance scheduler' });
+  items.push({
+    type: 'external',
+    href: '/.netlify/functions/homepage-automation',
+    label: 'Netlify Functions — homepage automation',
+  });
+  items.push({
+    type: 'external',
+    href: '/.netlify/functions/maintenance-scheduler',
+    label: 'Netlify Functions — maintenance scheduler',
+  });
   if (fileExists(path.join(workspaceRoot, 'docs'))) {
-    items.push({ type: 'internal', href: '/docs', label: 'Docs — technical notes & guides' });
+    items.push({
+      type: 'internal',
+      href: '/docs',
+      label: 'Docs — technical notes & guides',
+    });
   }
   // Prefer internal site-health and reports hubs
   if (fileExists(path.join(workspaceRoot, 'pages', 'site-health.tsx'))) {
-    items.push({ type: 'internal', href: '/site-health', label: 'Site Health — audits & insights' });
+    items.push({
+      type: 'internal',
+      href: '/site-health',
+      label: 'Site Health — audits & insights',
+    });
   }
 
   return items;
@@ -42,7 +71,7 @@ function buildItems(repoUrl, workspaceRoot) {
 
 function renderItems(items) {
   const lines = [];
-  items.forEach((item) => {
+  items.forEach(item => {
     if (item.type === 'internal') {
       lines.push(
         `            <Link href="${item.href}"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">${item.label}</span></a></Link>`
@@ -103,7 +132,7 @@ function main() {
     itemsMarkup,
     '   </div>',
     ' </section>',
-    ' '
+    ' ',
   ].join('\n');
 
   const updated = before + section + after;

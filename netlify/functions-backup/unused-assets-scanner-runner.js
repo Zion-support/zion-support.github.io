@@ -12,10 +12,18 @@ exports.handler = async () => {
     run('git config user.name "zion-bot"');
     run('git config user.email "bot@zion.app"');
     run('git add data/reports/unused_assets.json || true');
-    run('git commit -m "chore(report): update unused assets report [skip ci]" || true');
+    run(
+      'git commit -m "chore(report): update unused assets report [skip ci]" || true'
+    );
     run('git push origin main || true');
-    return { statusCode: 200, body: JSON.stringify({ ok: true, tool: 'unused-assets-scanner-runner' }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, tool: 'unused-assets-scanner-runner' }),
+    };
   } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: false, error: String(e) }),
+    };
   }
 };

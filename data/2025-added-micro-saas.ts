@@ -1,18 +1,20 @@
-import type { InnovativeMicroSaasService } from './2025-innovative-real-micro-saas-services'
+import type { InnovativeMicroSaasService } from './2025-innovative-real-micro-saas-services';
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
   {
     id: 'ai-sales-sequence-orchestrator',
     name: 'AI Sales Sequence Orchestrator',
-    tagline: 'Autonomously plans, writes, and schedules multichannel outbound sequences',
+    tagline:
+      'Autonomously plans, writes, and schedules multichannel outbound sequences',
     price: '$399',
     period: '/month',
-    description: 'An autonomous outbound engine that researches prospects, drafts tailored emails/LI messages, and schedules multichannel steps with smart throttling and reply intent detection.',
+    description:
+      'An autonomous outbound engine that researches prospects, drafts tailored emails/LI messages, and schedules multichannel steps with smart throttling and reply intent detection.',
     features: [
       'Prospect research enrichment',
       'Channel mix optimization (Email/LinkedIn/X)',
@@ -20,14 +22,15 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Auto A/B test with guardrails',
       'Compliance-aware sending windows',
       'Native CRM sync',
-      'Sequence ROI analytics'
+      'Sequence ROI analytics',
     ],
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-cyan-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/ai-sales-sequence-orchestrator',
-    marketPosition: 'More autonomous than Outreach/Salesloft add-ons with built-in research and copy generation',
+    marketPosition:
+      'More autonomous than Outreach/Salesloft add-ons with built-in research and copy generation',
     targetAudience: 'B2B startups, agencies, enterprise SDR teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -35,40 +38,48 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     realService: true,
     technology: ['Next.js', 'PostgreSQL', 'OpenAI/Anthropic'],
     integrations: ['HubSpot', 'Salesforce', 'Apollo', 'LinkedIn'],
-    useCases: ['Outbound sequences', 'Reactivation campaigns', 'Event follow-ups'],
+    useCases: [
+      'Outbound sequences',
+      'Reactivation campaigns',
+      'Event follow-ups',
+    ],
     roi: '2–5x meetings booked within 60 days',
     competitors: ['Outreach', 'Salesloft', 'Reply.io'],
     marketSize: '$8B sales engagement market',
     growthRate: '20% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with deliverability warmup, smart throttle, and CRM webhooks',
+    implementationDetails:
+      'Multi-tenant SaaS with deliverability warmup, smart throttle, and CRM webhooks',
     launchDate: '2025-04-10',
     customers: 86,
     rating: 4.8,
-    reviews: 55
+    reviews: 55,
   },
   {
     id: 'ai-rfp-response-copilot',
     name: 'AI RFP Response Copilot',
-    tagline: 'Turn RFPs into tailored, compliant proposals in hours instead of weeks',
+    tagline:
+      'Turn RFPs into tailored, compliant proposals in hours instead of weeks',
     price: '$649',
     period: '/month',
-    description: 'Uploads RFPs, extracts requirements, maps to your knowledge base, drafts compliant answers, and compiles polished proposals with evidence and references.',
+    description:
+      'Uploads RFPs, extracts requirements, maps to your knowledge base, drafts compliant answers, and compiles polished proposals with evidence and references.',
     features: [
       'RFP requirement extraction',
       'Policy/Compliance mapping',
       'Answer library with citations',
       'Reviewer workflows and redlining',
       'Auto formatting to client template',
-      'Win-loss analytics'
+      'Win-loss analytics',
     ],
     popular: false,
     icon: '📄',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/services/ai-rfp-response-copilot',
-    marketPosition: 'Faster than traditional proposal software with on-device privacy options',
+    marketPosition:
+      'Faster than traditional proposal software with on-device privacy options',
     targetAudience: 'Gov contractors, enterprise vendors, MSPs',
     trialDays: 7,
     setupTime: '3 days',
@@ -83,32 +94,36 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     growthRate: '18% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Doc parser, RAG knowledge base, reviewer workflows, export to Word/PDF',
+    implementationDetails:
+      'Doc parser, RAG knowledge base, reviewer workflows, export to Word/PDF',
     launchDate: '2025-02-20',
     customers: 41,
     rating: 4.7,
-    reviews: 29
+    reviews: 29,
   },
   {
     id: 'local-seo-insights-engine',
     name: 'Local SEO Insights Engine',
-    tagline: 'Automated audits, content briefs, and citation fixes for local businesses',
+    tagline:
+      'Automated audits, content briefs, and citation fixes for local businesses',
     price: '$129',
     period: '/month',
-    description: 'Continuously audits GMB, citations, and competitors; generates content briefs and tasks; tracks rankings and call leads.',
+    description:
+      'Continuously audits GMB, citations, and competitors; generates content briefs and tasks; tracks rankings and call leads.',
     features: [
       'GMB health scoring',
       'Citation discovery/fix',
       'Competitor gap analysis',
       'Content brief generation',
-      'Lead tracking and call attribution'
+      'Lead tracking and call attribution',
     ],
     popular: true,
     icon: '📍',
     color: 'from-rose-600 to-orange-700',
     textColor: 'text-rose-400',
     link: 'https://ziontechgroup.com/services/local-seo-insights-engine',
-    marketPosition: 'Combines audit + content + attribution in one low-cost tool',
+    marketPosition:
+      'Combines audit + content + attribution in one low-cost tool',
     targetAudience: 'Local SMBs, agencies',
     trialDays: 14,
     setupTime: '2 hours',
@@ -123,11 +138,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     growthRate: '12% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Scheduled audits, insights feed, tasking, and white-label reports',
+    implementationDetails:
+      'Scheduled audits, insights feed, tasking, and white-label reports',
     launchDate: '2025-05-12',
     customers: 211,
     rating: 4.8,
-    reviews: 77
+    reviews: 77,
   },
   {
     id: 'gdpr-cookie-consent-manager',
@@ -135,20 +151,22 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Automated consent banners, policy updates, and evidence logs',
     price: '$79',
     period: '/month',
-    description: 'Deploy region-aware consent banners, auto-scan trackers, generate policy updates, and maintain verifiable consent logs.',
+    description:
+      'Deploy region-aware consent banners, auto-scan trackers, generate policy updates, and maintain verifiable consent logs.',
     features: [
       'Auto region detection and languages',
       'Scanner for cookies/trackers',
       'Consent evidence logs',
       'IAB TCF support',
-      'WCAG-compliant UI'
+      'WCAG-compliant UI',
     ],
     popular: true,
     icon: '🍪',
     color: 'from-blue-600 to-sky-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/gdpr-cookie-consent-manager',
-    marketPosition: 'Simpler and faster to deploy than heavy CMP suites; great for SMBs',
+    marketPosition:
+      'Simpler and faster to deploy than heavy CMP suites; great for SMBs',
     targetAudience: 'SaaS, eCommerce, publishers',
     trialDays: 14,
     setupTime: '1 hour',
@@ -163,11 +181,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     growthRate: '14% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Script tag + dashboard with regional policies and audit exports',
+    implementationDetails:
+      'Script tag + dashboard with regional policies and audit exports',
     launchDate: '2025-06-01',
     customers: 318,
     rating: 4.7,
-    reviews: 96
+    reviews: 96,
   },
   {
     id: 'churn-prediction-insights',
@@ -175,13 +194,14 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Detect at-risk accounts and trigger playbooks automatically',
     price: '$249',
     period: '/month',
-    description: 'Ingests product events and billing signals to surface churn risk and automate retention playbooks.',
+    description:
+      'Ingests product events and billing signals to surface churn risk and automate retention playbooks.',
     features: [
       'Risk scoring and cohorts',
       'Health dashboards',
       'Playbook automation',
       'Revenue impact tracking',
-      'Alerting to Slack/Email'
+      'Alerting to Slack/Email',
     ],
     popular: false,
     icon: '📉',
@@ -207,28 +227,31 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-05-28',
     customers: 122,
     rating: 4.6,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'docs-to-knowledge-bot',
     name: 'Docs-to-Knowledge Bot',
-    tagline: 'Generate a robust help center and an embedded AI bot from your docs',
+    tagline:
+      'Generate a robust help center and an embedded AI bot from your docs',
     price: '$159',
     period: '/month',
-    description: 'Crawl docs, changelogs, and tickets to build a searchable help center with an embedded, safe AI bot.',
+    description:
+      'Crawl docs, changelogs, and tickets to build a searchable help center with an embedded, safe AI bot.',
     features: [
       'Doc crawler and canonicalization',
       'Version-aware indexing',
       'Hallucination guardrails',
       'Feedback and content gaps',
-      'Embeddable widget'
+      'Embeddable widget',
     ],
     popular: true,
     icon: '📚',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/docs-to-knowledge-bot',
-    marketPosition: 'Lower cost and faster to deploy than complex enterprise KMS',
+    marketPosition:
+      'Lower cost and faster to deploy than complex enterprise KMS',
     targetAudience: 'Developer tools, SaaS, platforms',
     trialDays: 14,
     setupTime: '1 day',
@@ -243,11 +266,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     growthRate: '16% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Site crawler + chunking + evals + embeddable web component',
+    implementationDetails:
+      'Site crawler + chunking + evals + embeddable web component',
     launchDate: '2025-05-15',
     customers: 187,
     rating: 4.8,
-    reviews: 68
+    reviews: 68,
   },
   {
     id: 'soc2-evidence-collector',
@@ -255,20 +279,22 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Continuously gathers audit evidence from your stack with alerts',
     price: '$199',
     period: '/month',
-    description: 'Automates SOC 2 audit readiness by collecting controls evidence across cloud, code, and processes with exportable reports.',
+    description:
+      'Automates SOC 2 audit readiness by collecting controls evidence across cloud, code, and processes with exportable reports.',
     features: [
       'Automated control checks',
       'Cloud/config drift detection',
       'Access review workflows',
       'Evidence vault and exports',
-      ' auditor-friendly reports'
+      ' auditor-friendly reports',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-teal-600 to-emerald-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/soc2-evidence-collector',
-    marketPosition: 'Lighter and faster than heavy GRC tools; focused on automation',
+    marketPosition:
+      'Lighter and faster than heavy GRC tools; focused on automation',
     targetAudience: 'Startups, fintech, healthcare, SaaS',
     trialDays: 14,
     setupTime: '1 day',
@@ -276,18 +302,23 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     realService: true,
     technology: ['Next.js', 'Cloud APIs', 'Webhook listeners'],
     integrations: ['AWS', 'GCP', 'Azure', 'GitHub', 'Okta'],
-    useCases: ['SOC 2 readiness', 'ISO 27001 evidence', 'Vendor security reviews'],
+    useCases: [
+      'SOC 2 readiness',
+      'ISO 27001 evidence',
+      'Vendor security reviews',
+    ],
     roi: 'Cut audit prep time by 60–80%',
     competitors: ['Vanta (elements)', 'Drata (lite)'],
     marketSize: '$3B compliance automation',
     growthRate: '20% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Agentless connectors, scheduled checks, exportable reports',
+    implementationDetails:
+      'Agentless connectors, scheduled checks, exportable reports',
     launchDate: '2025-06-14',
     customers: 57,
     rating: 4.7,
-    reviews: 24
+    reviews: 24,
   },
   {
     id: 'smart-invoice-extractor',
@@ -295,13 +326,14 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Parse invoices and receipts with high accuracy and GL mapping',
     price: '$129',
     period: '/month',
-    description: 'Uploads or emails invoices to auto-extract line items, taxes, vendors, and map to your chart of accounts.',
+    description:
+      'Uploads or emails invoices to auto-extract line items, taxes, vendors, and map to your chart of accounts.',
     features: [
       'Table and line-item capture',
       'Vendor normalization',
       'Tax and currency handling',
       'GL account mapping',
-      'Review and approval queue'
+      'Review and approval queue',
     ],
     popular: false,
     icon: '🧾',
@@ -327,7 +359,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-10',
     customers: 133,
     rating: 4.6,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'partner-portal-builder',
@@ -335,13 +367,14 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Spin up a secure, branded partner portal with AI assist',
     price: '$179',
     period: '/month',
-    description: 'Quickly launch a partner portal with deal reg, training, assets, and an AI assistant to answer product questions.',
+    description:
+      'Quickly launch a partner portal with deal reg, training, assets, and an AI assistant to answer product questions.',
     features: [
       'Deal registration and approvals',
       'Co-marketing asset hub',
       'Training and certifications',
       'AI Q&A with citations',
-      'Role-based access and analytics'
+      'Role-based access and analytics',
     ],
     popular: true,
     icon: '🤝',
@@ -367,7 +400,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-12',
     customers: 48,
     rating: 4.7,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'ai-procurement-bid-analyzer',
@@ -375,13 +408,14 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Parse RFPs, flag risks, and generate responsive bid outlines',
     price: '$219',
     period: '/month',
-    description: 'Uploads RFP packages to extract key clauses, deadlines, and compliance matrices. Produces a win-plan outline and task board with responsible owners.',
+    description:
+      'Uploads RFP packages to extract key clauses, deadlines, and compliance matrices. Produces a win-plan outline and task board with responsible owners.',
     features: [
       'Clause/Risk extraction with citations',
       'Compliance matrix generator',
       'Win themes and differentiators',
       'Timeline and task board sync',
-      'Auto Q&A tracker'
+      'Auto Q&A tracker',
     ],
     popular: false,
     icon: '📦',
@@ -407,7 +441,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-20',
     customers: 33,
     rating: 4.6,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'smart-terms-policy-generator',
@@ -415,13 +449,14 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Generate region-aware Terms, Privacy, DPA, and ToS updates',
     price: '$89',
     period: '/month',
-    description: 'Keeps legal pages current using jurisdiction templates and change tracking. Produces diff PRs and stores signed acceptance records.',
+    description:
+      'Keeps legal pages current using jurisdiction templates and change tracking. Produces diff PRs and stores signed acceptance records.',
     features: [
       'Jurisdiction-aware templates',
       'Change-log and redlines',
       'DPA/ToS variants per product',
       'Cookie/Consent policy sync',
-      'Signed acceptance ledger'
+      'Signed acceptance ledger',
     ],
     popular: true,
     icon: '📜',
@@ -447,7 +482,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-18',
     customers: 122,
     rating: 4.7,
-    reviews: 39
+    reviews: 39,
   },
   {
     id: 'vendor-security-review-assistant',
@@ -455,20 +490,22 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Speed up vendor security questionnaires with reusable answers',
     price: '$139',
     period: '/month',
-    description: 'Centralizes past answers, maps to new questionnaires, drafts responses with citations, and tracks approvals.',
+    description:
+      'Centralizes past answers, maps to new questionnaires, drafts responses with citations, and tracks approvals.',
     features: [
       'Answer library with tags',
       'Auto-mapping to new forms',
       'Evidence links and approvals',
       'Export to XLSX/portal formats',
-      'Renewal reminders'
+      'Renewal reminders',
     ],
     popular: true,
     icon: '🧰',
     color: 'from-indigo-600 to-blue-800',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/vendor-security-review-assistant',
-    marketPosition: 'Faster than starting from scratch; integrates evidence vaults',
+    marketPosition:
+      'Faster than starting from scratch; integrates evidence vaults',
     targetAudience: 'Security and sales engineering teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -487,21 +524,23 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-22',
     customers: 58,
     rating: 4.6,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'smart-release-notes-broadcaster',
     name: 'Smart Release Notes Broadcaster',
-    tagline: 'Turn changelogs into tailored announcements and help center updates',
+    tagline:
+      'Turn changelogs into tailored announcements and help center updates',
     price: '$109',
     period: '/month',
-    description: 'Parses release PRs and commits, drafts customer-facing notes, segments messages by audience, and updates docs/search.',
+    description:
+      'Parses release PRs and commits, drafts customer-facing notes, segments messages by audience, and updates docs/search.',
     features: [
       'Repo/PR parser and summarizer',
       'Audience segmentation',
       'Multi-channel publishing',
       'Help center sync',
-      'Impact analytics'
+      'Impact analytics',
     ],
     popular: false,
     icon: '📣',
@@ -527,28 +566,31 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-21',
     customers: 74,
     rating: 4.7,
-    reviews: 26
+    reviews: 26,
   },
   {
     id: 'contract-redline-copilot',
     name: 'Contract Redline Copilot',
-    tagline: 'Detect risky clauses and suggest edits with fallback to playbooks',
+    tagline:
+      'Detect risky clauses and suggest edits with fallback to playbooks',
     price: '$199',
     period: '/month',
-    description: 'Uploads MSAs/DPAs to find risky terms, compare to playbooks, and propose redlines with rationale and negotiation notes.',
+    description:
+      'Uploads MSAs/DPAs to find risky terms, compare to playbooks, and propose redlines with rationale and negotiation notes.',
     features: [
       'Clause detection and scoring',
       'Playbook comparison',
       'Track-changes export',
       'Negotiation notes',
-      'Approval workflows'
+      'Approval workflows',
     ],
     popular: true,
     icon: '✍️',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-200',
     link: 'https://ziontechgroup.com/services/contract-redline-copilot',
-    marketPosition: 'Faster for SMB legal ops with explainability and approvals',
+    marketPosition:
+      'Faster for SMB legal ops with explainability and approvals',
     targetAudience: 'SaaS vendors, procurement, legal ops',
     trialDays: 7,
     setupTime: '1 day',
@@ -567,28 +609,31 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-19',
     customers: 61,
     rating: 4.7,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'vendor-security-questionnaire-automation',
     name: 'Vendor Security Questionnaire Automation',
-    tagline: 'Auto-complete SIG/CAIQ questionnaires with citations and policy links',
+    tagline:
+      'Auto-complete SIG/CAIQ questionnaires with citations and policy links',
     price: '$299',
     period: '/month',
-    description: 'Parses vendor questionnaires, maps questions to your approved security statements, and generates responses with evidence links for fast reviews.',
+    description:
+      'Parses vendor questionnaires, maps questions to your approved security statements, and generates responses with evidence links for fast reviews.',
     features: [
       'SIG/CAIQ template support',
       'Policy answer library with versioning',
       'Evidence links and doc redaction',
       'Reviewer workflows and exports',
-      'Audit-ready change history'
+      'Audit-ready change history',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-blue-600 to-emerald-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/vendor-security-questionnaire-automation',
-    marketPosition: 'Faster and cheaper than manual reviews; integrates with policy wikis',
+    marketPosition:
+      'Faster and cheaper than manual reviews; integrates with policy wikis',
     targetAudience: 'B2B SaaS, healthcare, fintech',
     trialDays: 14,
     setupTime: '1 day',
@@ -596,39 +641,47 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     realService: true,
     technology: ['Next.js', 'LLM function calling', 'Embeddings'],
     integrations: ['Confluence', 'Google Drive', 'Notion'],
-    useCases: ['SIG Lite responses', 'Customer security forms', 'DDQ automation'],
+    useCases: [
+      'SIG Lite responses',
+      'Customer security forms',
+      'DDQ automation',
+    ],
     roi: 'Cuts questionnaire time by 70–90%',
     competitors: ['Whistic', 'Vanta Q&A templates'],
     marketSize: '$2B vendor security market',
     growthRate: '20% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Question classifier, answer retrieval with citations, export to Excel/PDF',
+    implementationDetails:
+      'Question classifier, answer retrieval with citations, export to Excel/PDF',
     launchDate: '2025-05-12',
     customers: 57,
     rating: 4.7,
-    reviews: 33
+    reviews: 33,
   },
   {
     id: 'contract-clause-analyzer',
     name: 'Contract Clause Analyzer',
-    tagline: 'Detect risky clauses and propose redlines aligned to your playbook',
+    tagline:
+      'Detect risky clauses and propose redlines aligned to your playbook',
     price: '$199',
     period: '/month',
-    description: 'Ingests MSAs and SOWs, highlights risky terms, and drafts friendly redlines using your negotiation playbook and fallback positions.',
+    description:
+      'Ingests MSAs and SOWs, highlights risky terms, and drafts friendly redlines using your negotiation playbook and fallback positions.',
     features: [
       'Clause classification and risk scoring',
       'Playbook-driven suggestions',
       'Track changes exports',
       'Counterparty-friendly language',
-      'Approval workflows'
+      'Approval workflows',
     ],
     popular: false,
     icon: '📜',
     color: 'from-amber-600 to-rose-700',
     textColor: 'text-amber-200',
     link: 'https://ziontechgroup.com/services/contract-clause-analyzer',
-    marketPosition: 'Practical redlines vs. generic summaries; integrates with CLMs',
+    marketPosition:
+      'Practical redlines vs. generic summaries; integrates with CLMs',
     targetAudience: 'Legal, sales ops, founders',
     trialDays: 7,
     setupTime: '4 hours',
@@ -643,11 +696,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     growthRate: '24% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Clause extraction, risk heuristics, playbook prompts, doc export',
+    implementationDetails:
+      'Clause extraction, risk heuristics, playbook prompts, doc export',
     launchDate: '2025-06-01',
     customers: 39,
     rating: 4.6,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'marketing-attribution-insights',
@@ -655,13 +709,14 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Unify UTMs, CRM, and ad spend to reveal true ROI',
     price: '$149',
     period: '/month',
-    description: 'Collects multi-touch data across ads, web, and CRM to produce actionable attribution dashboards and cohort analyses.',
+    description:
+      'Collects multi-touch data across ads, web, and CRM to produce actionable attribution dashboards and cohort analyses.',
     features: [
       'UTM normalization and deduplication',
       'First/last/multi-touch models',
       'Cohort and LTV reports',
       'Spend ingestion and pacing alerts',
-      'Attribution API for BI tools'
+      'Attribution API for BI tools',
     ],
     popular: true,
     icon: '📊',
@@ -683,11 +738,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     growthRate: '21% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Event collection, identity resolution, attribution models, dashboards',
+    implementationDetails:
+      'Event collection, identity resolution, attribution models, dashboards',
     launchDate: '2025-05-25',
     customers: 102,
     rating: 4.8,
-    reviews: 61
+    reviews: 61,
   },
   {
     id: 'ai-compliance-policy-watcher',
@@ -695,20 +751,22 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Monitors regulatory sites and updates policies automatically',
     price: '$99',
     period: '/month',
-    description: 'Continuously monitors regulators and vendors for policy changes, drafts tailored updates to your policies with diffs and approvals.',
+    description:
+      'Continuously monitors regulators and vendors for policy changes, drafts tailored updates to your policies with diffs and approvals.',
     features: [
       'Regulatory site monitoring',
       'Change detection and diffs',
       'Jurisdiction-aware updates',
       'Approval workflow',
-      'Export to PDF/HTML'
+      'Export to PDF/HTML',
     ],
     popular: false,
     icon: '🕵️',
     color: 'from-slate-600 to-blue-700',
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/services/ai-compliance-policy-watcher',
-    marketPosition: 'Affordable automation vs. manual tracking and large GRC suites',
+    marketPosition:
+      'Affordable automation vs. manual tracking and large GRC suites',
     targetAudience: 'SMBs, SaaS, fintech, healthcare',
     trialDays: 14,
     setupTime: '2 hours',
@@ -727,7 +785,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-24',
     customers: 27,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'smart-churn-winback-campaigns',
@@ -735,13 +793,14 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Auto-generates tailored winback sequences based on churn reasons',
     price: '$119',
     period: '/month',
-    description: 'Analyzes churn survey responses and usage data to trigger personalized winback offers and messages across channels.',
+    description:
+      'Analyzes churn survey responses and usage data to trigger personalized winback offers and messages across channels.',
     features: [
       'Churn reason classifier',
       'Offer library and testing',
       'Multi-channel outreach',
       'Attribution to reactivations',
-      'ROI reporting'
+      'ROI reporting',
     ],
     popular: true,
     icon: '🔁',
@@ -767,7 +826,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-23',
     customers: 44,
     rating: 4.7,
-    reviews: 20
+    reviews: 20,
   },
   {
     id: 'ai-sla-uptime-reporter',
@@ -775,20 +834,22 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     tagline: 'Generates customer-ready SLA reports from monitoring data',
     price: '$89',
     period: '/month',
-    description: 'Pulls metrics from your observability stack to compile accurate, branded uptime and SLA credits reports with anomaly explanations.',
+    description:
+      'Pulls metrics from your observability stack to compile accurate, branded uptime and SLA credits reports with anomaly explanations.',
     features: [
       'SLA calculation engine',
       'Incident and anomaly narratives',
       'Branded PDF exports',
       'Customer portal access',
-      'Audit trail and sign-off'
+      'Audit trail and sign-off',
     ],
     popular: false,
     icon: '📈',
     color: 'from-indigo-600 to-violet-700',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/ai-sla-uptime-reporter',
-    marketPosition: 'Turns raw metrics into actionable, customer-facing reports',
+    marketPosition:
+      'Turns raw metrics into actionable, customer-facing reports',
     targetAudience: 'SaaS, platforms with SLAs',
     trialDays: 7,
     setupTime: '2 hours',
@@ -807,6 +868,6 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     launchDate: '2025-06-22',
     customers: 31,
     rating: 4.6,
-    reviews: 14
-  }
-]
+    reviews: 14,
+  },
+];

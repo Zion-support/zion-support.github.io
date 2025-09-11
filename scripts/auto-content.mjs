@@ -10,21 +10,36 @@ const root = path.resolve(__dirname, '..');
 const pagesDir = path.join(root, '..', 'pages', 'blog');
 
 function slugify(s) {
-  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 }
 
 async function generateTitleAndIntro() {
-  const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.GEMINI_API_KEY || '';
+  const OPENAI_API_KEY =
+    process.env.OPENAI_API_KEY || process.env.GEMINI_API_KEY || '';
   const fallback = {
     title: 'AI Engineering Trends ' + new Date().toISOString().slice(0, 10),
-    intro: 'A brief exploration of emerging AI engineering practices and platform capabilities.'
+    intro:
+      'A brief exploration of emerging AI engineering practices and platform capabilities.',
   };
   if (!OPENAI_API_KEY) return fallback;
   try {
-    const prompt = 'Give a concise blog title and a 2-sentence intro about a practical AI engineering topic. Return JSON with keys title and intro.';
+    const prompt =
+      'Give a concise blog title and a 2-sentence intro about a practical AI engineering topic. Return JSON with keys title and intro.';
     const resp = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${OPENAI_API_KEY}` },
-      body: JSON.stringify({ model: 'gpt-4o-mini', messages: [{ role: 'user', content: prompt }], temperature: 0.5, response_format: { type: 'json_object' } })
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.5,
+        response_format: { type: 'json_object' },
+      }),
     });
     const data = await resp.json();
     const content = data.choices?.[0]?.message?.content || '{}';

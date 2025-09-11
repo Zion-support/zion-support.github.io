@@ -5,7 +5,7 @@ export const logErrorToProduction = (message, error) => {
   if (process.env.NODE_ENV === 'development') {
     console.error(message, error);
   }
-  
+
   // You can add production logging here:
   // - Sentry
   // - LogRocket

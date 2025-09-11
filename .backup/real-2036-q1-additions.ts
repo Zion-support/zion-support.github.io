@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2036Q1Additions: RealMarketService[] = [
@@ -55,7 +55,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Orchestrate quantum and classical AI workflows seamlessly',
     price: '$2,499',
     period: '/month',
-    description: 'Advanced orchestration platform that seamlessly integrates quantum computing resources with classical AI workflows, enabling hybrid quantum-classical machine learning pipelines.',
+    description:
+      'Advanced orchestration platform that seamlessly integrates quantum computing resources with classical AI workflows, enabling hybrid quantum-classical machine learning pipelines.',
     features: [
       'Quantum-classical workflow orchestration',
       'Real-time quantum resource allocation',
@@ -65,22 +66,30 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Advanced scheduling algorithms',
       'Performance analytics dashboard',
       'API-first architecture',
-      'Enterprise security compliance'
+      'Enterprise security compliance',
     ],
     popular: true,
     icon: '⚛️🧠',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-orchestrator',
-    marketPosition: 'First-to-market quantum-classical orchestration platform with enterprise-grade features.',
-    targetAudience: 'Quantum computing labs, AI research institutions, enterprise R&D teams',
+    marketPosition:
+      'First-to-market quantum-classical orchestration platform with enterprise-grade features.',
+    targetAudience:
+      'Quantum computing labs, AI research institutions, enterprise R&D teams',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Quantum AI',
     realService: true,
-    technology: ['Python, Qiskit, TensorFlow, Kubernetes, AWS Braket, Azure Quantum'],
-    integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, D-Wave'],
-    useCases: ['Drug discovery, Financial modeling, Climate simulation, AI research'],
+    technology: [
+      'Python, Qiskit, TensorFlow, Kubernetes, AWS Braket, Azure Quantum',
+    ],
+    integrations: [
+      'IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, D-Wave',
+    ],
+    useCases: [
+      'Drug discovery, Financial modeling, Climate simulation, AI research',
+    ],
     roi: 'Accelerate quantum research by 10x with automated orchestration.',
     competitors: ['IBM Quantum Composer, Google Quantum AI, D-Wave Leap'],
     marketSize: '$1.2B quantum computing market',
@@ -88,11 +97,12 @@ export const real2036Q1Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with quantum backend integration and classical ML pipeline orchestration.',
+    implementationDetails:
+      'Multi-tenant SaaS platform with quantum backend integration and classical ML pipeline orchestration.',
     launchDate: '2026-01-15',
     customers: 12,
     rating: 4.9,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-ethics-compliance-engine',
@@ -100,7 +110,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Automated AI governance and ethical compliance monitoring',
     price: '$899',
     period: '/month',
-    description: 'Comprehensive AI ethics and compliance platform that automatically monitors, audits, and ensures AI systems adhere to ethical guidelines and regulatory requirements.',
+    description:
+      'Comprehensive AI ethics and compliance platform that automatically monitors, audits, and ensures AI systems adhere to ethical guidelines and regulatory requirements.',
     features: [
       'Automated bias detection and mitigation',
       'Real-time compliance monitoring',
@@ -110,22 +121,28 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Stakeholder impact assessment',
       'Audit trail generation',
       'Multi-jurisdiction support',
-      'Integration with existing AI systems'
+      'Integration with existing AI systems',
     ],
     popular: true,
     icon: '⚖️🤖',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-ethics-compliance',
-    marketPosition: 'Leading AI ethics platform with automated compliance and bias detection.',
-    targetAudience: 'Financial services, healthcare, government, enterprise AI teams',
+    marketPosition:
+      'Leading AI ethics platform with automated compliance and bias detection.',
+    targetAudience:
+      'Financial services, healthcare, government, enterprise AI teams',
     trialDays: 21,
     setupTime: '3 days',
     category: 'AI Governance',
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, FastAPI, PostgreSQL, Redis'],
-    integrations: ['AWS SageMaker, Azure ML, Google AI Platform, OpenAI, Anthropic'],
-    useCases: ['Financial AI compliance, Healthcare AI governance, Government AI oversight'],
+    integrations: [
+      'AWS SageMaker, Azure ML, Google AI Platform, OpenAI, Anthropic',
+    ],
+    useCases: [
+      'Financial AI compliance, Healthcare AI governance, Government AI oversight',
+    ],
     roi: 'Reduce compliance risks by 80% and accelerate AI deployment by 3x.',
     competitors: ['Fiddler AI, TruEra, Weights & Biases, DataRobot'],
     marketSize: '$2.8B AI governance market',
@@ -133,11 +150,12 @@ export const real2036Q1Additions: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native SaaS platform with real-time monitoring, automated compliance checks, and comprehensive reporting.',
+    implementationDetails:
+      'Cloud-native SaaS platform with real-time monitoring, automated compliance checks, and comprehensive reporting.',
     launchDate: '2026-01-20',
     customers: 45,
     rating: 4.8,
-    reviews: 23
+    reviews: 23,
   },
   {
     id: 'quantum-cybersecurity-suite',
@@ -145,7 +163,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Post-quantum cryptography and quantum-resistant security',
     price: '$1,799',
     period: '/month',
-    description: 'Advanced cybersecurity suite that implements post-quantum cryptography algorithms and quantum-resistant security protocols to protect against future quantum attacks.',
+    description:
+      'Advanced cybersecurity suite that implements post-quantum cryptography algorithms and quantum-resistant security protocols to protect against future quantum attacks.',
     features: [
       'Post-quantum cryptography algorithms',
       'Quantum-resistant key management',
@@ -155,22 +174,26 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Encrypted communication channels',
       'Compliance with NIST standards',
       'Multi-platform support',
-      '24/7 security monitoring'
+      '24/7 security monitoring',
     ],
     popular: false,
     icon: '🔐⚛️',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity',
-    marketPosition: 'Future-proof cybersecurity solution with quantum-resistant encryption.',
-    targetAudience: 'Government agencies, financial institutions, healthcare organizations, defense contractors',
+    marketPosition:
+      'Future-proof cybersecurity solution with quantum-resistant encryption.',
+    targetAudience:
+      'Government agencies, financial institutions, healthcare organizations, defense contractors',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Quantum Security',
     realService: true,
     technology: ['Rust, Go, C++, OpenSSL, NIST PQC algorithms, Kubernetes'],
     integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems'],
-    useCases: ['Government security, Financial data protection, Healthcare privacy, Defense systems'],
+    useCases: [
+      'Government security, Financial data protection, Healthcare privacy, Defense systems',
+    ],
     roi: 'Future-proof security investment with 99.99% attack prevention.',
     competitors: ['Quantum Xchange, ID Quantique, QuintessenceLabs'],
     marketSize: '$3.5B quantum cybersecurity market',
@@ -178,11 +201,12 @@ export const real2036Q1Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade security suite with quantum-resistant algorithms and comprehensive threat protection.',
+    implementationDetails:
+      'Enterprise-grade security suite with quantum-resistant algorithms and comprehensive threat protection.',
     launchDate: '2026-01-25',
     customers: 8,
     rating: 4.7,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'autonomous-devops-platform',
@@ -190,7 +214,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Self-healing infrastructure with AI-powered automation',
     price: '$1,299',
     period: '/month',
-    description: 'Intelligent DevOps platform that uses AI to automatically detect, diagnose, and resolve infrastructure issues, optimize performance, and maintain system health.',
+    description:
+      'Intelligent DevOps platform that uses AI to automatically detect, diagnose, and resolve infrastructure issues, optimize performance, and maintain system health.',
     features: [
       'AI-powered incident detection',
       'Automated problem resolution',
@@ -200,34 +225,39 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Intelligent deployment strategies',
       'Real-time monitoring and alerting',
       'Cost optimization recommendations',
-      'Multi-cloud management'
+      'Multi-cloud management',
     ],
     popular: true,
     icon: '🤖⚙️',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-devops',
-    marketPosition: 'Next-generation DevOps with autonomous operations and AI-driven optimization.',
-    targetAudience: 'DevOps teams, SRE engineers, cloud architects, platform teams',
+    marketPosition:
+      'Next-generation DevOps with autonomous operations and AI-driven optimization.',
+    targetAudience:
+      'DevOps teams, SRE engineers, cloud architects, platform teams',
     trialDays: 30,
     setupTime: '1 week',
     category: 'DevOps Automation',
     realService: true,
     technology: ['Python, Kubernetes, Docker, Terraform, Prometheus, Grafana'],
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jenkins, CircleCI'],
-    useCases: ['Continuous deployment, Infrastructure automation, Performance optimization, Cost management'],
+    useCases: [
+      'Continuous deployment, Infrastructure automation, Performance optimization, Cost management',
+    ],
     roi: 'Reduce DevOps overhead by 60% and improve system reliability by 99.9%.',
     competitors: ['HashiCorp, PagerDuty, DataDog, New Relic'],
     marketSize: '$8.2B DevOps market',
     growthRate: '90% YoY',
-          variant: 'autonomous-futuristic',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails: 'Cloud-native platform with AI-powered automation, self-healing capabilities, and comprehensive monitoring.',
-      launchDate: '2026-01-30',
-      customers: 67,
-      rating: 4.6,
-      reviews: 34
+    variant: 'autonomous-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Cloud-native platform with AI-powered automation, self-healing capabilities, and comprehensive monitoring.',
+    launchDate: '2026-01-30',
+    customers: 67,
+    rating: 4.6,
+    reviews: 34,
   },
   {
     id: 'quantum-machine-learning-studio',
@@ -235,7 +265,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Visual quantum ML development and training platform',
     price: '$1,599',
     period: '/month',
-    description: 'Integrated development environment for quantum machine learning, featuring visual circuit design, hybrid quantum-classical training, and real-time quantum simulation.',
+    description:
+      'Integrated development environment for quantum machine learning, featuring visual circuit design, hybrid quantum-classical training, and real-time quantum simulation.',
     features: [
       'Visual quantum circuit designer',
       'Hybrid quantum-classical training',
@@ -245,22 +276,26 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Collaborative development workspace',
       'Version control integration',
       'Deployment to quantum hardware',
-      'Comprehensive documentation'
+      'Comprehensive documentation',
     ],
     popular: false,
     icon: '🎨⚛️',
     color: 'from-pink-600 to-purple-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/quantum-ml-studio',
-    marketPosition: 'First visual quantum ML development platform with enterprise features.',
-    targetAudience: 'Quantum researchers, ML engineers, data scientists, academic institutions',
+    marketPosition:
+      'First visual quantum ML development platform with enterprise features.',
+    targetAudience:
+      'Quantum researchers, ML engineers, data scientists, academic institutions',
     trialDays: 21,
     setupTime: '3 days',
     category: 'Quantum ML',
     realService: true,
     technology: ['TypeScript, React, Python, Qiskit, Cirq, PennyLane'],
     integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum'],
-    useCases: ['Quantum algorithm research, ML model development, Educational purposes, Research collaboration'],
+    useCases: [
+      'Quantum algorithm research, ML model development, Educational purposes, Research collaboration',
+    ],
     roi: 'Accelerate quantum ML development by 5x with visual tools and automation.',
     competitors: ['IBM Quantum Experience, Google Quantum AI, Amazon Braket'],
     marketSize: '$850M quantum ML market',
@@ -268,11 +303,12 @@ export const real2036Q1Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Web-based IDE with visual quantum circuit design, real-time simulation, and seamless quantum hardware integration.',
+    implementationDetails:
+      'Web-based IDE with visual quantum circuit design, real-time simulation, and seamless quantum hardware integration.',
     launchDate: '2026-02-05',
     customers: 23,
     rating: 4.8,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'ai-powered-data-governance',
@@ -280,7 +316,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Intelligent data management and compliance automation',
     price: '$799',
     period: '/month',
-    description: 'Comprehensive data governance platform that uses AI to automatically classify, catalog, and manage data while ensuring compliance with privacy regulations and business policies.',
+    description:
+      'Comprehensive data governance platform that uses AI to automatically classify, catalog, and manage data while ensuring compliance with privacy regulations and business policies.',
     features: [
       'AI-powered data classification',
       'Automated data cataloging',
@@ -290,22 +327,30 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Data quality assessment',
       'Regulatory compliance reporting',
       'Multi-cloud data governance',
-      'Real-time policy enforcement'
+      'Real-time policy enforcement',
     ],
     popular: true,
     icon: '📊🤖',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-data-governance',
-    marketPosition: 'Leading AI-driven data governance with comprehensive compliance and automation.',
-    targetAudience: 'Data teams, compliance officers, IT administrators, business analysts',
+    marketPosition:
+      'Leading AI-driven data governance with comprehensive compliance and automation.',
+    targetAudience:
+      'Data teams, compliance officers, IT administrators, business analysts',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Data Management',
     realService: true,
-    technology: ['Python, Apache Spark, Elasticsearch, PostgreSQL, Redis, Kubernetes'],
-    integrations: ['Snowflake, Databricks, AWS S3, Azure Blob, Google Cloud Storage'],
-    useCases: ['Data compliance, Privacy management, Data quality, Regulatory reporting'],
+    technology: [
+      'Python, Apache Spark, Elasticsearch, PostgreSQL, Redis, Kubernetes',
+    ],
+    integrations: [
+      'Snowflake, Databricks, AWS S3, Azure Blob, Google Cloud Storage',
+    ],
+    useCases: [
+      'Data compliance, Privacy management, Data quality, Regulatory reporting',
+    ],
     roi: 'Reduce data governance overhead by 70% and improve compliance by 95%.',
     competitors: ['Collibra, Alation, Informatica, Talend'],
     marketSize: '$4.1B data governance market',
@@ -313,11 +358,12 @@ export const real2036Q1Additions: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade platform with AI-powered automation, comprehensive compliance, and multi-cloud support.',
+    implementationDetails:
+      'Enterprise-grade platform with AI-powered automation, comprehensive compliance, and multi-cloud support.',
     launchDate: '2026-02-10',
     customers: 89,
     rating: 4.7,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'quantum-financial-modeling',
@@ -325,7 +371,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Quantum-powered financial analysis and risk assessment',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced financial modeling platform that leverages quantum computing to solve complex financial problems, optimize portfolios, and assess risk with unprecedented accuracy.',
+    description:
+      'Advanced financial modeling platform that leverages quantum computing to solve complex financial problems, optimize portfolios, and assess risk with unprecedented accuracy.',
     features: [
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
@@ -335,22 +382,28 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Market volatility prediction',
       'Real-time market data integration',
       'Regulatory compliance reporting',
-      'Multi-asset class support'
+      'Multi-asset class support',
     ],
     popular: true,
     icon: '💰⚛️',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-modeling',
-    marketPosition: 'First quantum-powered financial modeling platform for enterprise use.',
-    targetAudience: 'Investment banks, hedge funds, asset managers, financial institutions',
+    marketPosition:
+      'First quantum-powered financial modeling platform for enterprise use.',
+    targetAudience:
+      'Investment banks, hedge funds, asset managers, financial institutions',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum Finance',
     realService: true,
     technology: ['Python, Qiskit, NumPy, Pandas, Financial modeling libraries'],
-    integrations: ['Bloomberg, Reuters, FactSet, Bloomberg Terminal, Trading platforms'],
-    useCases: ['Portfolio optimization, Risk management, Option pricing, Credit analysis'],
+    integrations: [
+      'Bloomberg, Reuters, FactSet, Bloomberg Terminal, Trading platforms',
+    ],
+    useCases: [
+      'Portfolio optimization, Risk management, Option pricing, Credit analysis',
+    ],
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%.',
     competitors: ['Bloomberg Terminal, FactSet, Refinitiv, MSCI'],
     marketSize: '$12.5B financial modeling market',
@@ -358,11 +411,12 @@ export const real2036Q1Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise financial platform with quantum algorithms, real-time data integration, and comprehensive risk analytics.',
+    implementationDetails:
+      'Enterprise financial platform with quantum algorithms, real-time data integration, and comprehensive risk analytics.',
     launchDate: '2026-02-15',
     customers: 15,
     rating: 4.9,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'autonomous-cloud-cost-optimizer',
@@ -370,7 +424,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'AI-driven cloud cost reduction and resource optimization',
     price: '$599',
     period: '/month',
-    description: 'Intelligent cloud cost optimization platform that automatically analyzes usage patterns, identifies cost-saving opportunities, and implements optimization strategies across multiple cloud providers.',
+    description:
+      'Intelligent cloud cost optimization platform that automatically analyzes usage patterns, identifies cost-saving opportunities, and implements optimization strategies across multiple cloud providers.',
     features: [
       'Multi-cloud cost analysis',
       'Automated resource optimization',
@@ -380,34 +435,41 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Storage lifecycle management',
       'Real-time cost monitoring',
       'Automated scaling policies',
-      'ROI tracking and reporting'
+      'ROI tracking and reporting',
     ],
     popular: true,
     icon: '☁️💰',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-    marketPosition: 'Leading autonomous cloud cost optimization with multi-cloud support.',
-    targetAudience: 'Cloud architects, DevOps teams, IT managers, finance teams',
+    marketPosition:
+      'Leading autonomous cloud cost optimization with multi-cloud support.',
+    targetAudience:
+      'Cloud architects, DevOps teams, IT managers, finance teams',
     trialDays: 21,
     setupTime: '3 days',
     category: 'Cloud Optimization',
     realService: true,
     technology: ['Python, AWS SDK, Azure SDK, GCP SDK, Kubernetes, Terraform'],
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
-    useCases: ['Cost reduction, Resource optimization, Budget management, Performance optimization'],
+    useCases: [
+      'Cost reduction, Resource optimization, Budget management, Performance optimization',
+    ],
     roi: 'Reduce cloud costs by 25-40% with automated optimization and monitoring.',
-    competitors: ['CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management'],
+    competitors: [
+      'CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management',
+    ],
     marketSize: '$6.8B cloud cost management market',
     growthRate: '130% YoY',
-          variant: 'autonomous-futuristic',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails: 'Multi-cloud optimization platform with AI-powered analysis, automated cost reduction, and comprehensive reporting.',
-      launchDate: '2026-02-20',
-      customers: 156,
-      rating: 4.6,
-      reviews: 78
+    variant: 'autonomous-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Multi-cloud optimization platform with AI-powered analysis, automated cost reduction, and comprehensive reporting.',
+    launchDate: '2026-02-20',
+    customers: 156,
+    rating: 4.6,
+    reviews: 78,
   },
   {
     id: 'quantum-drug-discovery-platform',
@@ -415,7 +477,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Accelerate pharmaceutical research with quantum computing',
     price: '$3,999',
     period: '/month',
-    description: 'Revolutionary drug discovery platform that uses quantum computing to simulate molecular interactions, predict drug efficacy, and accelerate the development of new pharmaceutical compounds.',
+    description:
+      'Revolutionary drug discovery platform that uses quantum computing to simulate molecular interactions, predict drug efficacy, and accelerate the development of new pharmaceutical compounds.',
     features: [
       'Quantum molecular simulation',
       'Drug-target interaction modeling',
@@ -425,22 +488,28 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Structure-activity relationship analysis',
       'Clinical trial optimization',
       'Regulatory compliance support',
-      'Collaborative research tools'
+      'Collaborative research tools',
     ],
     popular: false,
     icon: '💊⚛️',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-drug-discovery',
-    marketPosition: 'First quantum-powered drug discovery platform for pharmaceutical research.',
-    targetAudience: 'Pharmaceutical companies, biotech firms, research institutions, CROs',
+    marketPosition:
+      'First quantum-powered drug discovery platform for pharmaceutical research.',
+    targetAudience:
+      'Pharmaceutical companies, biotech firms, research institutions, CROs',
     trialDays: 60,
     setupTime: '1 month',
     category: 'Quantum Healthcare',
     realService: true,
     technology: ['Python, Qiskit, OpenMM, RDKit, Molecular modeling libraries'],
-    integrations: ['Lab management systems, Clinical trial platforms, Regulatory databases'],
-    useCases: ['Drug discovery, Molecular modeling, Clinical trial optimization, Regulatory compliance'],
+    integrations: [
+      'Lab management systems, Clinical trial platforms, Regulatory databases',
+    ],
+    useCases: [
+      'Drug discovery, Molecular modeling, Clinical trial optimization, Regulatory compliance',
+    ],
     roi: 'Accelerate drug discovery by 10x and reduce development costs by 60%.',
     competitors: ['Schrödinger, OpenEye, BIOVIA, Chemical Computing Group'],
     marketSize: '$18.2B drug discovery market',
@@ -448,11 +517,12 @@ export const real2036Q1Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise quantum platform with molecular simulation, drug discovery tools, and comprehensive research support.',
+    implementationDetails:
+      'Enterprise quantum platform with molecular simulation, drug discovery tools, and comprehensive research support.',
     launchDate: '2026-02-25',
     customers: 7,
     rating: 4.8,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'ai-powered-supply-chain-optimizer',
@@ -460,7 +530,8 @@ export const real2036Q1Additions: RealMarketService[] = [
     tagline: 'Intelligent supply chain optimization and risk management',
     price: '$1,199',
     period: '/month',
-    description: 'Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, manage logistics, and mitigate supply chain risks in real-time.',
+    description:
+      'Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, manage logistics, and mitigate supply chain risks in real-time.',
     features: [
       'Demand forecasting with AI',
       'Inventory optimization',
@@ -470,22 +541,28 @@ export const real2036Q1Additions: RealMarketService[] = [
       'Real-time tracking and visibility',
       'Cost optimization algorithms',
       'Sustainability impact analysis',
-      'Multi-tier supply chain mapping'
+      'Multi-tier supply chain mapping',
     ],
     popular: true,
     icon: '🚚🤖',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/supply-chain-optimizer',
-    marketPosition: 'Leading AI-powered supply chain optimization with comprehensive risk management.',
-    targetAudience: 'Manufacturing companies, retailers, logistics providers, supply chain managers',
+    marketPosition:
+      'Leading AI-powered supply chain optimization with comprehensive risk management.',
+    targetAudience:
+      'Manufacturing companies, retailers, logistics providers, supply chain managers',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Supply Chain',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Apache Spark, PostgreSQL, Redis'],
+    technology: [
+      'Python, TensorFlow, PyTorch, Apache Spark, PostgreSQL, Redis',
+    ],
     integrations: ['ERP systems, WMS, TMS, IoT devices, Blockchain networks'],
-    useCases: ['Demand planning, Inventory management, Logistics optimization, Risk management'],
+    useCases: [
+      'Demand planning, Inventory management, Logistics optimization, Risk management',
+    ],
     roi: 'Reduce supply chain costs by 20-30% and improve efficiency by 40%.',
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder'],
     marketSize: '$9.4B supply chain optimization market',
@@ -493,10 +570,11 @@ export const real2036Q1Additions: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with AI-powered optimization, real-time monitoring, and comprehensive supply chain management.',
+    implementationDetails:
+      'Enterprise platform with AI-powered optimization, real-time monitoring, and comprehensive supply chain management.',
     launchDate: '2026-03-01',
     customers: 78,
     rating: 4.7,
-    reviews: 41
-  }
+    reviews: 41,
+  },
 ];

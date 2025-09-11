@@ -3,14 +3,19 @@ import { SuggestedMatch } from '../types/job';
 
 function getAdminClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL as string;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const serviceKey =
+    process.env.SUPABASE_SERVICE_ROLE_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !serviceKey) {
     throw new Error('Supabase env not configured');
   }
   return createClient(url, serviceKey);
 }
 
-export async function storeSuggestedMatches(jobId: string, matches: { slug: string; score: number }[]) {
+export async function storeSuggestedMatches(
+  jobId: string,
+  matches: { slug: string; score: number }[]
+) {
   const supabase = getAdminClient();
   const rows: SuggestedMatch[] = matches.map(m => ({
     jobId,

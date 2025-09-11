@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('stale-content-auditor-runner function triggered');
-    
+
     // Stale content auditing simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Stale content auditor runner executed successfully',
@@ -18,11 +18,11 @@ exports.handler = async function(event, context, callback) {
           status: 'active',
           contentAudited: 0,
           staleFound: 0,
-          lastAudit: new Date().toISOString()
-        }
-      })
+          lastAudit: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in stale-content-auditor-runner:', error);
@@ -30,13 +30,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'stale-content-auditor-runner'
-      })
+        function: 'stale-content-auditor-runner',
+      }),
     };
   }
 };

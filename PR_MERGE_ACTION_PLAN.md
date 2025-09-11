@@ -1,6 +1,7 @@
 # PR Merge Action Plan
 
 ## Current Status
+
 - **Repository**: Zion-Holdings/zion.app
 - **Open PRs Found**: 2 PRs need to be merged
 - **Scripts Created**: Multiple merge resolution scripts ready for execution
@@ -8,12 +9,14 @@
 ## Open PRs to Merge
 
 ### PR #12994: "Fix netlify build and merge to main"
+
 - **Branch**: `cursor/fix-netlify-build-and-merge-to-main-c1d9`
 - **SHA**: `ba3d687f50ded102d1ac32fad5b0b4e0ec5a8376`
 - **Status**: Draft PR
 - **Base**: main
 
 ### PR #12993: "Check, fix, push, and merge to main"
+
 - **Branch**: `cursor/check-fix-push-and-merge-to-main-dad6`
 - **SHA**: `ba3d687f50ded102d1ac32fad5b0b4e0ec5a8376`
 - **Status**: Draft PR
@@ -22,7 +25,9 @@
 ## Merge Resolution Strategy
 
 ### Option 1: GitHub API Direct Merge (Automated)
+
 Execute the prepared scripts:
+
 ```bash
 # Run the comprehensive merger
 node /workspace/comprehensive_pr_merger.js
@@ -35,6 +40,7 @@ bash /workspace/merge_batch.sh
 ```
 
 ### Option 2: Manual GitHub Web Interface
+
 1. Navigate to https://github.com/Zion-Holdings/zion.app/pulls
 2. For each PR:
    - Click on the PR
@@ -44,6 +50,7 @@ bash /workspace/merge_batch.sh
    - Confirm the merge
 
 ### Option 3: Command Line Resolution
+
 ```bash
 # Ensure we're on main and up to date
 git checkout main
@@ -78,11 +85,13 @@ git push origin main
 ## Conflict Resolution Strategy
 
 ### Auto-Resolution Approach
+
 - For simple conflicts: Accept incoming changes (theirs)
 - For complex conflicts: Manual review required
 - Priority: Maintain functionality while integrating new features
 
 ### Files Likely to Have Conflicts
+
 - Package.json (dependencies)
 - Configuration files
 - Build scripts
@@ -115,6 +124,7 @@ git push origin main
 ## Expected Outcomes
 
 After successful merge:
+
 - Both PRs will be closed and merged
 - Main branch will contain all changes
 - Build issues should be resolved
@@ -123,6 +133,7 @@ After successful merge:
 ## Rollback Plan
 
 If issues arise after merge:
+
 ```bash
 # Create rollback branch
 git checkout main
