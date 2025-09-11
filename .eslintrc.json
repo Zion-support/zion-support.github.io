@@ -10,11 +10,7 @@
     "react",
     "react-hooks"
   ],
-origin/automation-improvements-final
-
-
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
@@ -27,8 +23,6 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
@@ -37,8 +31,6 @@ origin/automation-improvements-final
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
   },
   "ignorePatterns": [
     "node_modules/",
