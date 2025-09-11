@@ -9,6 +9,8 @@ import LoadingSpinner from './components/LoadingSpinner';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { ErrorBoundary as CustomErrorBoundary } from './components/ErrorMonitor';
+import usePerformance from './hooks/usePerformance';
+import performanceMonitor from './utils/performanceMonitor';
 
 // Loading component
 const LoadingSpinnerComponent = () => (
@@ -98,7 +100,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-const App = memo(() => {
+function AppComponent() {
   const { metrics, trackInteraction } = usePerformance('App', {
     measureRender: true,
     measureInteraction: true,
@@ -114,11 +116,9 @@ const App = memo(() => {
     return cleanup;
   }, []);
 
-export default function App() {
   return (
     <HelmetProvider>
-      <ErrorMonitorProvider>
-        <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
+      <CustomErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
           <AccessibilityEnhancer>
             <Router>
               <div 
@@ -181,12 +181,11 @@ export default function App() {
               </div>
             </Router>
           </AccessibilityEnhancer>
-        </ErrorBoundary>
-      </ErrorMonitorProvider>
+        </CustomErrorBoundary>
     </HelmetProvider>
   );
-});
+}
 
+const App = memo(AppComponent);
 App.displayName = 'App';
-
 export default App;
