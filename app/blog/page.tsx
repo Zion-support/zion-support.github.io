@@ -425,6 +425,28 @@ export default function BlogPage() {
 	    category: 'Startup Strategy',
 	    featured: true,
 	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-governance-in-practice-2025',
+	    title: 'AI Governance in Practice 2025: Controls That Actually Work',
+	    excerpt:
+	      'Pragmatic policies, processes, and technical controls that reduce risk without blocking delivery.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'Governance',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'edge-ai-privacy-by-design-2025',
+	    title: 'Edge AI 2025: Privacy by Design, Real-Time Customer Experiences',
+	    excerpt:
+	      'On-device intelligence to reduce latency, cut cloud costs, and protect PII by default.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'Edge & IoT',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
 	  }
 	];
 
