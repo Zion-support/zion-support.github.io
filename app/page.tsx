@@ -305,21 +305,27 @@ export default function HomePage() {
             </div>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
-              <div className='text-3xl mb-2'>✅</div>
-              <h3 className='text-lg font-semibold mb-2'>AI Implementation Checklist</h3>
-              <p className='text-sm opacity-90'>Complete step-by-step guide for successful AI deployment</p>
-            </div>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
-              <div className='text-3xl mb-2'>🤖</div>
-              <h3 className='text-lg font-semibold mb-2'>Enterprise AI Automation</h3>
-              <p className='text-sm opacity-90'>Comprehensive 2025 implementation guide with real case studies</p>
-            </div>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
-              <div className='text-3xl mb-2'>💰</div>
-              <h3 className='text-lg font-semibold mb-2'>Startup Funding in AI Era</h3>
-              <p className='text-sm opacity-90'>Complete guide to securing funding for AI startups</p>
-            </div>
+            <Link href='/blog/enterprise-rag-2025-blueprint' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>📚</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Enterprise RAG in 2025: A Practical Blueprint</h3>
+                <p className='text-sm opacity-90'>Reliable architectures, guardrails, and cost controls for RAG at scale</p>
+              </div>
+            </Link>
+            <Link href='/blog/ai-cost-optimization-2025' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>💸</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>AI Cost Optimization in 2025</h3>
+                <p className='text-sm opacity-90'>Ship faster and spend less with practical cost governance</p>
+              </div>
+            </Link>
+            <Link href='/blog/startup-distribution-tactics-2025' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>📈</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Startup Distribution Tactics 2025</h3>
+                <p className='text-sm opacity-90'>Repeatable playbooks to reach your first 500 customers</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -336,25 +342,25 @@ export default function HomePage() {
           </div>
           {/* New Content Promo */}
           <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <Link href='/blog/ai-automation-enterprise-2025' className='group'>
+            <Link href='/blog/enterprise-rag-2025-blueprint' className='group'>
               <div className='rounded-lg border border-blue-200 bg-blue-50 p-6 hover:bg-blue-100 transition-colors'>
                 <div className='text-sm font-medium text-blue-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>AI Automation in Enterprise: Complete 2025 Guide</h3>
-                <p className='text-blue-800 mt-2'>Everything you need to know about implementing AI automation in your enterprise.</p>
+                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>Enterprise RAG in 2025: Practical Blueprint</h3>
+                <p className='text-blue-800 mt-2'>Reference architecture and guardrails for reliable enterprise knowledge systems.</p>
               </div>
             </Link>
-            <Link href='/blog/startup-funding-ai-era' className='group'>
+            <Link href='/blog/startup-distribution-tactics-2025' className='group'>
               <div className='rounded-lg border border-green-200 bg-green-50 p-6 hover:bg-green-100 transition-colors'>
                 <div className='text-sm font-medium text-green-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>Startup Funding in the AI Era: Complete Guide</h3>
-                <p className='text-green-800 mt-2'>Navigate the new funding landscape and position your AI startup for success.</p>
+                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>Startup Distribution Tactics 2025</h3>
+                <p className='text-green-800 mt-2'>Founder-led outbound, SEO content, and partners to 500 customers.</p>
               </div>
             </Link>
-            <Link href='/blog/zero-trust-ai-security-2025' className='group'>
+            <Link href='/blog/ai-cost-optimization-2025' className='group'>
               <div className='rounded-lg border border-purple-200 bg-purple-50 p-6 hover:bg-purple-100 transition-colors'>
                 <div className='text-sm font-medium text-purple-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>Zero-Trust for AI Systems: Security Guide 2025</h3>
-                <p className='text-purple-800 mt-2'>Practical controls for prompts, tools, retrieval, and outputs in production.</p>
+                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>AI Cost Optimization in 2025</h3>
+                <p className='text-purple-800 mt-2'>Cut LLM and vector costs without hurting outcomes.</p>
               </div>
             </Link>
           </div>

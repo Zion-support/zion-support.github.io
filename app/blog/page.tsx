@@ -126,6 +126,17 @@ export default function BlogPage() {
 	    image: '/api/placeholder/600/400',
 	  },
 	  {
+	    id: 'enterprise-rag-2025-blueprint',
+	    title: 'Enterprise RAG in 2025: A Practical Blueprint',
+	    excerpt:
+	      'Reference architecture, guardrails, and ops to deploy reliable enterprise RAG at scale.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
 	    id: 'startup-sales-playbook-2025',
 	    title: 'Startup Sales Playbook 2025: From First Meetings to Revenue',
 	    excerpt:
@@ -156,6 +167,17 @@ export default function BlogPage() {
 	    readTime: '9 min read',
 	    category: 'Growth',
 	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-distribution-tactics-2025',
+	    title: 'Startup Distribution Tactics 2025: Get to 500 Customers',
+	    excerpt:
+	      'Founder-led outbound, SEO content, partners, and measurement to scale revenue.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'Growth',
+	    featured: false,
 	    image: '/api/placeholder/600/400',
 	  },
 	  {
