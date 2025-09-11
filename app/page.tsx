@@ -10,6 +10,7 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
+const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
 
 export default function HomePage() {
   return (
@@ -73,6 +74,100 @@ export default function HomePage() {
                 className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
               >
                 Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Content Spotlight */}
+      <section className='py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🔥 JUST RELEASED</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh Content & Expert Insights
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              New this week: AI Automation Trends 2025, Micro SaaS Success Guide, and Fortune 500 Manufacturing Case Study. 
+              Get ahead with cutting-edge strategies and proven frameworks.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest Articles
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg' 
+              >
+                📋 Download Resources
+              </Link>
+            </div>
+          </div>
+          
+          {/* Featured Content Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+            <Link href='/blog/ai-automation-2025-trends' className='group'>
+              <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                <div className='text-3xl mb-3'>🤖</div>
+                <h3 className='text-xl font-semibold text-white group-hover:underline mb-2'>AI Automation Trends 2025</h3>
+                <p className='text-white/80 text-sm mb-3'>Discover the top AI automation trends shaping business intelligence and operational excellence.</p>
+                <div className='flex items-center text-white/60 text-xs'>
+                  <span>12 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Jan 15, 2025</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/micro-saas-trends-2025' className='group'>
+              <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                <div className='text-3xl mb-3'>💼</div>
+                <h3 className='text-xl font-semibold text-white group-hover:underline mb-2'>Micro SaaS Trends 2025</h3>
+                <p className='text-white/80 text-sm mb-3'>The future of niche software solutions and how entrepreneurs are building profitable businesses.</p>
+                <div className='flex items-center text-white/60 text-xs'>
+                  <span>15 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Jan 14, 2025</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/case-studies/ai-automation-manufacturing-success-2025' className='group'>
+              <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                <div className='text-3xl mb-3'>🏭</div>
+                <h3 className='text-xl font-semibold text-white group-hover:underline mb-2'>Manufacturing AI Success</h3>
+                <p className='text-white/80 text-sm mb-3'>Fortune 500 manufacturer achieves 40% cost reduction through AI automation implementation.</p>
+                <div className='flex items-center text-white/60 text-xs'>
+                  <span>8 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Jan 13, 2025</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          
+          {/* Additional Resources */}
+          <div className='mt-12 text-center'>
+            <p className='text-white/80 mb-6'>Plus new resources and tools:</p>
+            <div className='flex flex-wrap justify-center gap-4'>
+              <Link href='/resources/ai-implementation-playbook-2025' className='bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm transition-colors'>
+                📖 AI Implementation Playbook
+              </Link>
+              <Link href='/resources/ai-automation-roi-calculator' className='bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm transition-colors'>
+                🧮 ROI Calculator
+              </Link>
+              <Link href='/resources/ai-security-hardening-checklist' className='bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm transition-colors'>
+                🔒 Security Checklist
+              </Link>
+              <Link href='/case-studies' className='bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm transition-colors'>
+                📊 All Case Studies
               </Link>
             </div>
           </div>
@@ -453,17 +548,17 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[{
-              id: 'ai-automation-roi-calculator-2025',
-              title: 'AI Automation ROI Calculator 2025',
-              excerpt: 'Measure the true business impact of AI automation with our comprehensive ROI framework.'
+              id: 'ai-automation-2025-trends',
+              title: 'AI Automation Trends 2025',
+              excerpt: 'Discover the top AI automation trends shaping business intelligence and operational excellence.'
             }, {
-              id: 'enterprise-ai-security-best-practices-2025',
-              title: 'Enterprise AI Security Best Practices 2025',
-              excerpt: 'Protect your AI systems with enterprise-grade security and compliance framework.'
+              id: 'micro-saas-trends-2025',
+              title: 'Micro SaaS Trends 2025',
+              excerpt: 'The future of niche software solutions and how entrepreneurs are building profitable businesses.'
             }, {
-              id: 'fortune-500-ai-transformation-success',
-              title: 'Fortune 500 AI Transformation Success',
-              excerpt: 'How a leading manufacturer achieved 40% cost reduction through AI automation.'
+              id: 'ai-automation-manufacturing-success-2025',
+              title: 'Manufacturing AI Success Story',
+              excerpt: 'Fortune 500 manufacturer achieves 40% cost reduction through AI automation implementation.'
             }].map((post) => (
               <Link key={post.id} href={`/blog/${post.id}`} className='group'>
                 <article className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow'>
@@ -476,6 +571,15 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className='py-16 bg-gradient-to-r from-gray-50 to-blue-50'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading newsletter signup..." />}>
+            <NewsletterSignup />
+          </Suspense>
         </div>
       </section>
 
