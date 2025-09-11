@@ -1,49 +1,37 @@
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-export default function Privacy() {
-    return (<>
-      <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://ziontechgroup.com/privacy"/>
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Privacy Policy</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Your privacy is important to us. This page explains how we collect,
-              use, and safeguard your information.
-            </p>
-          </div>
-          <div className="space-y-6 text-zion-slate-light text-lg">
-            <p>
-              We collect personal information you provide when creating an
-              account or using our services. This may include your name, email,
-              and  other details required to deliver our marketplace
-              features.
-            </p>
-            <p>
-              Zion Tech Group uses this data solely to operate and improve our
-              platform. We do not sell your personal information to third
-              parties.
-            </p>
-            <p>
-              If you have questions about our privacy practices, please contact
-              us at
-              {" "}
-              <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
-                support@ziontechgroup.com
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>)}
-=======
 import React from 'react';
-import SEO from '../components/SEO';
 
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac
+const Privacy: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">Privacy Policy</h1>
+        <div className="prose prose-lg max-w-none">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information.
+          </p>
+          
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Information We Collect</h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            We collect information you provide directly to us, such as when you create an account, 
+            contact us, or use our services. This may include your name, email address, phone number, 
+            and other information you choose to provide.
+          </p>
+          
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How We Use Your Information</h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            We use the information we collect to provide, maintain, and improve our services, 
+            communicate with you, and ensure the security of our platform.
+          </p>
+          
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Contact Us</h2>
+          <p className="text-gray-600 dark:text-gray-300">
+            If you have any questions about this Privacy Policy, please contact us at 
+            kleber@ziontechgroup.com or call us at +1 302 464 0950.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Privacy;
