@@ -13,7 +13,7 @@ const "InteractiveSearch": React.FC<InteractiveSearchProps> = ({ ;
 "}) => {;
   const [query, setQuery] = useState<any>('');
 ;
-  const handleSubmit = ("props": "any) => {;  };
+  const _handleSubmit = ("props": "any) => {;  };
   return (
     <form onSubmit={handleSubmit} className={`w-full ${className}`}>
       <div className="relative">

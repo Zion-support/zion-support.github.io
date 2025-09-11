@@ -1,0 +1,76 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+const _AccessibilityContext = createContext(undefined);
+export const _useAccessibility = () => {
+    const _context = useContext(AccessibilityContext);
+    if (!context) {
+        throw new Error('useAccessibility must be used within an AccessibilityProvider');
+    }
+    return context;
+};
+// Accessibility Provider Component
+export const _AccessibilityProvider = ({ children }) => {
+import React, { useState, useEffect, createContext, useContext } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
+import { Button } from "../ui/button";
+const AccessibilityContext = createContext(null);
+export const useAccessibility = () => {
+    const context = useContext(AccessibilityContext);
+    if (!context) {
+        throw new Error('useAccessibility must be used within an AccessibilityProvider')}
+    return context};
+// Accessibility Provider Component
+export const AccessibilityProvider = ({ children }) => {    const [highContrast, setHighContrast] = useState(false);
+    const [reducedMotion, setReducedMotion] = useState(false);
+    const [fontSize, setFontSize] = useState('medium');
+    const [colorBlindMode, setColorBlindMode] = useState('none');
+    // Load settings from localStorage
+    useEffect(() => {
+};
+        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+    // Apply accessibility settings to document
+    useEffect(() => {
+        const root = document.documentElement;
+        // High contrast mode
+        if (highContrast) {
+            root.classList.add('high-contrast')}
+        else {
+            root.classList.remove('high-contrast')}
+        // Reduced motion
+        if (reducedMotion) {
+            root.classList.add('reduced-motion')}
+        else {
+            root.classList.remove('reduced-motion')}
+        // Font size
+        root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
+        // Color blind mode
+        root.style.filter = colorBlindMode === 'none' ? 'none' :
+            colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
+                colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
+                    'url(#tritanopia)'}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+    const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+    const value = {
+  highContrast,
+        reducedMotion,
+        fontSize,
+        colorBlindMode,
+        toggleHighContrast,
+        toggleReducedMotion,
+        setFontSize,
+  setColorBlindMode
+    
+
+};
+    return (<AccessibilityContext.Provider value={value}>
+      {children}
+    </AccessibilityContext.Provider>)};
+// Accessibility Panel Component
+export const AccessibilityPanel = () => {    const [isOpen, setIsOpen] = useState(false);
+    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
+    // Keyboard shortcuts
+    useEffect(() => {
+      {/* Accessibility Panel */}
+      <AnimatePresence>
+        {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>

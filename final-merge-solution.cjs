@@ -14,27 +14,8 @@ function cleanMergeConflicts(filePath) {
     
     let content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('<<<<<<< HEAD')) {
-      return false;
-    }
-    
-    console.log(`🧹 Cleaning: ${filePath}`);
-    
-    // Remove all merge conflict markers and keep the incoming changes
-    const lines = content.split('\n');
-    const cleaned = [];
-    let inConflict = false;
-    let keepIncoming = false;
-    
-    for (const line of lines) {
-      if (line.includes('<<<<<<< HEAD')) {
-        inConflict = true;
-        keepIncoming = false;
-        continue;
-      } else if (line.includes('=======')) {
         keepIncoming = true;
         continue;
-      } else if (line.includes('>>>>>>>')) {
         inConflict = false;
         keepIncoming = false;
         continue;
@@ -76,57 +57,3 @@ function cleanAllConflicts() {
           // Check if file has conflicts
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD')) {
-              if (cleanMergeConflicts(fullPath)) {
-                cleanedFiles.push(fullPath);
-              }
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
-  }
-  
-  scanDirectory('/workspace');
-  return cleanedFiles;
-}
-
-// Main execution
-async function main() {
-  try {
-    console.log('📋 Step 1: Cleaning all merge conflicts...\n');
-    const cleanedFiles = cleanAllConflicts();
-    console.log(`\n✅ Cleaned ${cleanedFiles.length} files\n`);
-    
-    console.log('📋 Step 2: Creating a comprehensive merge commit...\n');
-    
-    // Create a summary of what was cleaned
-    const summary = {
-      timestamp: new Date().toISOString(),
-      cleanedFiles: cleanedFiles.length,
-      files: cleanedFiles.slice(0, 10) // Show first 10 files
-    };
-    
-    fs.writeFileSync('/workspace/merge-cleanup-summary.json', JSON.stringify(summary, null, 2));
-    console.log('✅ Created merge cleanup summary\n');
-    
-    console.log('📋 Step 3: Final status...\n');
-    console.log(`Cleaned ${cleanedFiles.length} files with merge conflicts`);
-    console.log('All conflicts have been resolved by keeping incoming changes');
-    
-    console.log('\n🎉 Merge conflict cleanup completed!\n');
-    console.log('Next steps:');
-    console.log('1. Run: git add .');
-    console.log('2. Run: git commit -m "Resolve all merge conflicts"');
-    console.log('3. Run: git push origin main');
-    
-  } catch (error) {
-    console.log(`\n❌ Error during execution: ${error.message}`);
-  }
-}
-
-main();

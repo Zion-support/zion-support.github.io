@@ -19,7 +19,8 @@ export function Button(props: any) {';';
     default: 'bg-primary text-primary-foreground hover: b g-primary/90',';';
     outline: 'border border-input bg-background hover: b g-accent hover: tex t-accent-foreground',';';
     ghost: 'hover: b g-accent hover: tex t-accent-foreground',';';
-    link: 'text-primary underline-offset-4 hover: underlin e'export function Button({ 
+    link: 'text-primary underline-offset-4 hover: underlin e'
+export function Button({ 
   variant = 'default', 
   size = 'md', 
   asChild = false, 
@@ -75,7 +76,8 @@ export function Button("props": "any) {;
   );
 }';
 </HTMLButtonElement>;';;';
-}}
+}
+}
 }
   &quot;children&quot;: React.ReactNode;
   variant?: &apos;default&apos; | &apos;outline&apos; | &apos;ghost&apos; | &apos;link

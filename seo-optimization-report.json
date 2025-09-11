@@ -1,231 +1,81 @@
 {
-  "timestamp": "2025-09-10T16:04:43.106Z",
-  "optimizations": [
+  "timestamp": "2025-09-06T04:26:54.075Z",
+  "issues": [
     {
-      "type": "sitemap",
-      "message": "Sitemap.xml is present"
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "issue": "Missing Head component for meta tags",
+      "severity": "high"
     },
     {
-      "type": "robots",
-      "message": "robots.txt is present"
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "issue": "Missing page title",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "issue": "Missing meta description",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages_minimal/about.tsx",
+      "issue": "Missing Head component for meta tags",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/about.tsx",
+      "issue": "Missing page title",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/about.tsx",
+      "issue": "Missing meta description",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages_minimal/contact.tsx",
+      "issue": "Missing Head component for meta tags",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/contact.tsx",
+      "issue": "Missing page title",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/contact.tsx",
+      "issue": "Missing meta description",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages_minimal/index.tsx",
+      "issue": "Missing Head component for meta tags",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/index.tsx",
+      "issue": "Missing page title",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/index.tsx",
+      "issue": "Missing meta description",
+      "severity": "medium"
     }
+  ],
+  "optimizations": [
+    "Add Head component to all pages",
+    "Include unique titles for each page",
+    "Add meta descriptions",
+    "Implement structured data",
+    "Optimize images with alt tags",
+    "Create XML sitemap",
+    "Add robots.txt"
   ],
   "recommendations": [
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/debug-logs.html",
-      "priority": "high"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing viewport meta tag in dist/debug-logs.html",
-      "priority": "medium"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/log-viewer.html",
-      "priority": "high"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing viewport meta tag in dist/log-viewer.html",
-      "priority": "medium"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/offline.html",
-      "priority": "high"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/reports/page-validation/index.html",
-      "priority": "high"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing viewport meta tag in dist/reports/page-validation/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/reports/pre-build-health/index.html",
-      "priority": "high"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing viewport meta tag in dist/reports/pre-build-health/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/reports/routes/index.html",
-      "priority": "high"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/reports.backup/ai-trends/index.html",
-      "priority": "high"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/reports.backup/metadata/index.html",
-      "priority": "high"
-    },
-    {
-      "type": "meta_tags",
-      "message": "Missing meta description in dist/reports.backup/seo/index.html",
-      "priority": "high"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/about/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/contact/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
-      "message": "Missing h1 tag in dist/enterprise/index.html",
-      "priority": "high"
-    },
-    {
-      "type": "headings",
-      "message": "Missing h1 tag in dist/index.html",
-      "priority": "high"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/privacy/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/reports/page-validation/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/solutions/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/terms/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/about/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/contact/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/contact/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/privacy/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/request-quote/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/solutions/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/terms/index.html",
-      "priority": "medium"
-    }
-  ],
-  "metrics": {}
+    "Use Next.js Head component for meta tags",
+    "Implement dynamic titles based on page content",
+    "Add Open Graph tags for social sharing",
+    "Create canonical URLs",
+    "Implement breadcrumb navigation"
+  ]
 }

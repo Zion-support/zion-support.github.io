@@ -67,7 +67,6 @@ export default function CybersecurityPage() {
               <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
                 <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -319,7 +318,6 @@ export default function CybersecurityPage() {
                 Get Security Assessment
               </Link>
               <Link href="/case-studies" className="btn-secondary">
-=======
                 Advanced threat detection using AI and machine learning with 
                 rapid incident response capabilities.
               </p>
@@ -684,10 +682,6 @@ export default function CybersecurityPage() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-      </div>
-=======
         </div>
       </section>    </div>
   );

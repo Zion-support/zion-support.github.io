@@ -72,9 +72,6 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
-<<<<<<< HEAD
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
       modified = true;

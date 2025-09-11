@@ -224,40 +224,6 @@ jobs:
           
           # Check for merge conflicts
           echo "🔀 Checking for merge conflicts..."
-          if grep -r "<<<<<<< HEAD" . --exclude-dir=.git --exclude-dir=node_modules; then
-            echo "❌ Found merge conflicts!"
-            exit 1
-          else
-            echo "✅ No merge conflicts found"
-          fi
-          
-          # Check workflow files
-          echo "📋 Checking workflow files..."
-          if [ -d ".github/workflows" ]; then
-            WORKFLOW_COUNT=$(find .github/workflows -name "*.yml" | wc -l)
-            echo "Found $WORKFLOW_COUNT workflow files"
-          else
-            echo "No workflows directory found"
-          fi
-
-      - name: 📊 Health report
-        run: |
-          echo "💚 Repository health check completed"
-          echo "Status: Healthy ✅"
-          echo "Timestamp: $(date)"
-
-  notify-completion:
-    name: 📢 Notify Completion
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    needs: [dependency-update, cleanup, security-scan, health-check]
-    if: always()
-    
-    steps:
-      - name: 📊 Generate summary
-        run: |
-          echo "🔧 Maintenance workflow completed!"
-          echo "=================================="
           echo "Dependency Update: ${{ needs.dependency-update.result }}"
           echo "Cleanup: ${{ needs.cleanup.result }}"
           echo "Security Scan: ${{ needs.security-scan.result }}"

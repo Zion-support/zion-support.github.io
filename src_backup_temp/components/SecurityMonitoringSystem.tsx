@@ -327,7 +327,8 @@ interface SecurityMonitoringSystemProps {;
                           </div>;
                         </div>;
                       </div>;
-                    </div>;              {/* Content */}"
+                    </div>;
+              {/* Content */}"
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
                 {isScanning ? ("
                   <div className="text-center py-12">"
@@ -389,7 +390,6 @@ interface SecurityMonitoringSystemProps {;
                         </div>
                       </div>
                     </div>
-
                     {/* Navigation Tabs */}";
                     <div className="flex space-x-1 bg-gray-100 "dark": "b g-gray-800 rounded-lg p-1">;
                       {[{;
@@ -450,7 +450,113 @@ interface SecurityMonitoringSystemProps {;
                               <div className="flex items-start justify-between">";
                                 <div className="flex-1">";
                                   <div className="flex items-center space-x-3 mb-2">;
-                                    <div`;                    {selectedView === 'vulnerabilities' && ("
+                                    <div`;
+                    {selectedView === 'threats' && ("
+                      <div className="space-y-4">"
+                        <div className="flex items-center justify-between">"
+                          <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
+                            Active Security Threats
+                          <button
+                            onClick={() => setShowAdvanced(!showAdvanced)}"
+                            className="px-3 py-1 text-sm bg-red-600 text-white rounded-md hover: b g-red-700 transition-colors"
+                          >
+                            {showAdvanced ? 'Hide' : 'Show'} Advanced
+                          </button>
+                        </div>
+"
+                        <div className="grid gap-4">
+                          {threats.map((threat, index) => (
+                            <motion.div
+                              key={threat.id}"
+                              className="bg-white dark: b g-gray-800 p-4 rounded-xl border border-gray-200 dark: borde r-gray-700 hover: shado w-lg transition-all duration-300"
+                              whileHover={{ y: -2 }}
+                              initial={{ opacity: 0, y: 2 0 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ delay: inde x * 0.1 }}
+                            >"
+                              <div className="flex items-start justify-between">"
+                                <div className="flex-1">"
+                                  <div className="flex items-center space-x-3 mb-2">
+                                    <div`
+                                      className={`px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(threat.type)}`}
+                                    >;
+                                      {threat.type.toUpperCase()}
+                                    </div>";
+                                    <div className="flex items-center space-x-2">;
+                                      {getStatusIcon(threat.status)}";
+                                      <span className="text-sm text-gray-500 "dark": "tex t-gray-400">;
+                                        {threat.status"}
+                                      </span>;
+                                    </div>;
+                                  </div>;
+";
+                                  <h4 className="font-medium text-gray-900 "dark": "tex t-white mb-2">;
+                                    {threat.description"}
+                                  </h4>;
+";
+                                  <div className="flex items-center space-x-4 text-sm text-gray-500 "dark": "tex t-gray-400 mb-3">;
+                                    <span>"Source": {threat.source"}</span>;
+                                    <span>"Severity": "{threat.severity"}/100</span>;
+                                    <span>;
+                                      "Affected": "{threat.affectedSystems.length"}{' '}
+                                      systems;
+                                    </span>;
+                                  </div>;
+                                  {showAdvanced && (";
+                                    <div className="bg-gray-50 "dark": "b g-gray-700 rounded-lg p-3">";
+                                      <h5 className="font-medium text-gray-900 "dark": tex t-white mb-2">;
+                                        "Recommendations":;
+                                      </h5>";
+                                      <ul className="space-y-1">;
+                                        {threat.recommendations.map();
+                                          (rec", idx) => (;
+                                            <li;
+                                              key={idx}";
+                                              className="text-sm text-gray-600 "dark": "tex t-gray-400 flex items-center space-x-2";
+                                            >";
+                                              <CheckCircle className="w-3 h-3 text-green-500"   />;
+                                              <span>{rec"}</span>;
+                                            </li>;
+                                          );
+                                        )}                                      </ul>;
+                                    </div>) }
+                                </div>;
+";
+                                <div className="text-right text-sm text-gray-500 "dark": "tex t-gray-400">;
+                                  <div>;
+                                    {threat.timestamp.toLocaleTimeString()"}
+                                  </div>;
+                                  <div>;
+                                    {threat.timestamp.toLocaleDateString()}
+                                  </div>;
+                                </div>;
+                              </div>;
+                            </motion.div>) ) }
+                        </div>;
+                      </div>) }
+;
+                    {/* Vulnerabilities View */}
+                    {selectedView === 'vulnerabilities' && (";
+                      <div className="space-y-4">";
+                        <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
+                          Vulnerability Assessment;
+                        </h3>;
+";
+                        <div className="grid gap-4">;
+                          {vulnerabilities.map((vuln", index) => (;
+                            <motion.div;
+                              key={vuln.id}";
+                              className="bg-white "dark": "b g-gray-800 p-4 rounded-xl border border-gray-200 "dark": borde r-gray-700 "hover": shado w-lg transition-all duration-300";
+                              whileHover={{ "y": -2 "}}
+                              initial={{ "opacity": "0", "y": "2 0 "}}
+                              animate={{ "opacity": "1", "y": "0 "}}
+                              transition={{ "delay": "inde x * 0.1 "}}
+                            >";
+                              <div className="flex items-start justify-between">";
+                                <div className="flex-1">";
+                                  <div className="flex items-center space-x-3 mb-2">;
+                                    <div`;
+                    {selectedView === 'vulnerabilities' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Vulnerability Assessment
@@ -525,7 +631,111 @@ interface SecurityMonitoringSystemProps {;
                                 <h4 className="text-lg font-medium text-gray-900 "dark": "tex t-white">;
                                   {compliance.framework"}
                                 </h4>;
-                                <div`;                    {/* Action Buttons */}"
+                                <div`;
+                    {selectedView === 'compliance' && ("
+                      <div className="space-y-4">"
+                        <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
+                          Compliance Status
+"
+                        <div className="grid gap-4">
+                          {complianceStatus.map((compliance, index) => (
+                            <motion.div
+                              key={compliance.framework}"
+                              className="bg-white dark: b g-gray-800 p-4 rounded-xl border border-gray-200 dark: borde r-gray-700 hover: shado w-lg transition-all duration-300"
+                              whileHover={{ y: -2 }}
+                              initial={{ opacity: 0, y: 2 0 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ delay: inde x * 0.1 }}
+                            >"
+                              <div className="flex items-center justify-between mb-4">"
+                                <h4 className="text-lg font-medium text-gray-900 dark: tex t-white">
+                                  {compliance.framework}
+                                </h4>
+                                <div`
+                                  className={`px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}`}
+                                >;
+                                  {compliance.status.replace('-',)}
+                                </div>;
+                              </div>;
+";
+                              <div className="grid grid-cols-2 gap-4 mb-4">";
+                                <div className="text-center">";
+                                  <div className="text-2xl font-bold text-gray-900 "dark": "tex t-white">;
+                                    {compliance.score"}%;
+                                  </div>";
+                                  <div className="text-sm text-gray-500 "dark": "tex t-gray-400">;
+                                    Compliance Score;
+                                  </div>;
+                                </div>;
+";
+                                <div className="text-center">";
+                                  <div className="text-2xl font-bold text-gray-900 "dark": tex t-white">;
+                                    {compliance.requirements.compliant"}/;
+                                    {compliance.requirements.total}
+                                  </div>";
+                                  <div className="text-sm text-gray-500 "dark": "tex t-gray-400">;
+                                    Requirements Met;
+                                  </div>;
+                                </div>;
+                              </div>;
+";
+                              <div className="space-y-2">";
+                                <div className="flex items-center justify-between text-sm">";
+                                  <span className="text-gray-600 "dark": tex t-gray-400">;
+                                    Last "Audit":;
+                                  </span>";
+                                  <span className="text-gray-900 "dark": tex t-white">;
+                                    {compliance.lastAudit.toLocaleDateString()"}
+                                  </span>;
+                                </div>";
+                                <div className="flex items-center justify-between text-sm">";
+                                  <span className="text-gray-600 "dark": "tex t-gray-400">;
+                                    Next "Audit":;
+                                  </span>";
+                                  <span className="text-gray-900 "dark": tex t-white">;
+                                    {compliance.nextAudit.toLocaleDateString()"}
+                                  </span>;
+                                </div>;
+                              </div>;
+                            </motion.div>) ) }
+                        </div>;
+                      </div>) }
+;
+                    {/* Action Buttons */}";
+                    <div className="flex items-center justify-center space-x-4 pt-6">";
+                      <button className="flex items-center space-x-2 px-6 py-3 bg-red-600 text-white rounded-lg "hover": "b g-red-700 transition-colors">";
+                        <Download className="w-4 h-4"   />;
+                        <span>Export Report</span>;
+                      </button>;
+";
+                      <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg "hover": b g-green-700 transition-colors">";
+                        <Shield className="w-4 h-4"   />                        <span>Run Full Scan</span>;
+                      </button>;
+";
+                      <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 transition-colors">";
+                        <Share2 className="w-4 h-4"  />;
+                        <span>Share Report</span>;
+                      </button>;
+                    </div>;
+                  </div>;
+                ) : (";
+                  <div className="text-center py-12">";
+                    <Shield className="w-16 h-16 text-red-600 mx-auto mb-4"   />"                    <h3 className="text-xl font-semibold text-gray-900 "dark": tex t-white mb-2">;
+                      Ready to monitor security?;
+                    </h3>";
+                    <p className="text-gray-600 "dark": tex t-gray-400 mb-6">;
+                      Click the scan button to start security monitoring;
+                    </p>;
+                    <button;
+                      onClick={startSecurityScan"}";
+                      className="px-6 py-3 bg-red-600 text-white rounded-lg "hover": "b g-red-700 transition-colors";
+                    >;
+                      Start Security Scan;
+                    </button>;
+                  </div>) "}
+              </div>;
+            </motion.div>;
+                    {/* Action Buttons */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-red-600 text-white rounded-lg hover: b g-red-700 transition-colors">"
                         <Download className="w-4 h-4"   />

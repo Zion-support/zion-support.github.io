@@ -1,2160 +1,368 @@
-import React from 'react';
-import {  import { innovativeServices2025 } from '../data/innovativeServices2025';
-import { motion, AnimatePresence  } from 'framer-motion';
- params - Function parameters
- * @returns {*} Function return value
- */
-function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) {';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);';';;
- params - Function parameters;
- * @returns {*} Function return value;
- */;
-function EnhancedHeader("props": "any) {export function EnhancedHeader("props": any) {;
-  const [mobileMenuOpen", setMobileMenuOpen] = useState<any>(false);
- params - Function parameters
- * @returns {*} Function return value
- */
-function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
-  const [searchQuery, setSearchQuery] = useState<any>('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState<any>(false);
-  const [scrolled, setScrolled] = useState<any>(false);
-  const [isSearching, setIsSearching] = useState<any>(false);
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};  useEffect(() => {
-  // TODO: Add dependencies if needed
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    };';
-';';
-    window.addEventListener('scroll', handleScroll);';';
-;    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-;
-  const handleSearch = async("e": "React.FormEvent) => {;
-    e.preventDefault();    if(searchQuery.trim()) {;
-      setIsSearching(true);
-      try {;
-        await new Promise(resolve => setTimeout (resolve", 1000) ) ;
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {;  const handleSearch = async(e: React.FormEvent) => {
-    e.preventDefault();    if(searchQuery.trim()) {
-      setIsSearching(true);
-      try {
-        await new Promise(resolve => setTimeout (resolve, 1000) ) ;
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {
+import React, { useState, memo, useCallback, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Search, 
+  Phone, 
+  Mail,
+  MapPin,
+  Brain,
+  Shield,
+  Cloud,
+  Code,
+  Smartphone,
+  Zap,
+  Rocket
+} from 'lucide-react';
+import { OptimizedButton } from './PerformanceOptimizer';
 
-        setIsSearching(false)}    }
-  };
-  // Enhanced navigation with better organization
-  // Enhanced services by category with better organization
-  // Service categories for mega menu
-  return ()    <>
-      {/* Matrix Rain Background */}
-      <div  className="matrix -rain"></div>
-      {/* Enhanced Header */}';
-      <motion.header`';';
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'';';
-            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl''';';
-            : 'bg-transparent'`      <div  className="matrix -rain"></div>
-      {/* Enhanced Header */}
-      <motion.header`
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'
-            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl''
-            : 'bg-transparent'`
-        }`}
-        initial={{ "y": "-100 "}}
-        animate={{ "y": "0 "}}
-        transition={{ "duration": "0.8", "ease": 'easeOut' }}
-      >";
-        <div className="container mx-auto px-4">";
-          <div className="flex items-center justify-between h-20">;
-            {/* Enhanced Logo */}";
-            <Link to="/" className="flex items-center space-x-3 group">;
-              <motion.div";
-                className="relative";
-                whileHover={{ "scale": "1.05", "rotate": "5 "}}
-                whileTap={{ "scale": "0.95 "}}
-              >";
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">";
-                  <Zap className="w-7 h-7 text-white"   />;
-                </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-"hover": "opacit y-100 transition-opacity duration-500 blur-lg"  />;
-              </motion.div>";
-              <div className="flex flex-col">";
-                <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                  Zion Tech;
-                </span>";
-                <span className="text-xs text-cyan-400 font-medium font-rajdhani tracking-wider">;
-                  Innovation Group;
-                </span>;
-              </div>;
-            </Link>;
-            {/* Desktop Navigation */"}";
-            <nav className="hidden "xl": "flex items-center space-x-8">;
-              {navigation.slice(0", 6).map(item => (;
-                <Link;
-                  key={item.name}
-                  to={item.href}`;
-                  className={`nav-link font-medium transition-all duration-300 ${item.current';
-                      ? 'text-cyan-400 border-b-2 border-cyan-400'';
-                      : 'text-gray-300 "hover": "tex t-cyan-400'`;
-                  "}`}
-                >;
-                  {item.name}
-                </Link>) ) }
-;
-              {/* Enhanced Services Mega Menu */}";
-              <div className="relative group">;
-                <button";
-                  className="nav-link flex items-center space-x-2 font-medium text-gray-300 "hover": "tex t-cyan-400 transition-all duration-300";
-                  onMouseEnter={() => setServicesDropdownOpen(true)"}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}
-                >;
-                  <span>Services</span>";
-                  <ChevronDown className="w-4 h-4 transition-transform group-"hover": "rotat e-180 duration-300"   />                </button>;
-                <AnimatePresence>;
-                  {servicesDropdownOpen && (;
-                    <motion.div";
-                      className="absolute top-full left-0 mt-4 w-[1200px] bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20";
-                      initial={{ "opacity": 0", "y": "-20", "scale": "0.95 "}}
-                      animate={{ "opacity": "1", "y": "0", "scale": "1 "}}
-                      exit={{ "opacity": "0", "y": "-20", "scale": "0.95 "}}
-                      transition={{ "duration": "0.3 "}}              >";
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">";
-                  <Zap className="w-7 h-7 text-white"   />;
-                </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover: opacit y-100 transition-opacity duration-500 blur-lg"  />;
-              </motion.div>";
-              <div className="flex flex-col">";
-                <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                  Zion Tech;
-                </span>";
-                <span className="text-xs text-cyan-400 font-medium font-rajdhani tracking-wider">;
-                  Innovation Group;
-                </span>;
-              </div>;
-            </Link>;
-            {/* Desktop Navigation */}";
-            <nav className="hidden xl: flex items-center space-x-8">;
-              {navigation.slice(0, 6).map(item => (;
-                <Link;
-                  key={item.name}
-                  to={item.href}`;
-                  className={`nav-link font-medium transition-all duration-300 ${item.current';
-                      ? 'text-cyan-400 border-b-2 border-cyan-400'';
-                      : 'text-gray-300 hover: tex t-cyan-400'`;
-                                <p className="text-sm text-gray-400 group-"hover": "tex t-gray-300 transition-colors mb-3">;
-                                  {service.description"}
-                                </p>;
-                                {service.badge && (;
-                                  <span`;
-                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New'';
-                                        ? 'bg-green-500/20 text-green-400'';
-                                        : "service.badge === 'Popular'';
-                                          ? 'bg-blue-500/20 text-blue-400'';
-                                          : service.badge === 'Featured'';
-                                            ? 'bg-purple-500/20 text-purple-400'';
-                                            : 'bg-cyan-500/20 text-cyan-400'`;
-                                    }`}                                    }`}
-                                  >
-                                    {service.badge}
-                                  </span>
-                                )}
-                              </Link>
-                            ))}
-                        </div>
-                      </div>
-                      {/* Service Categories Grid */}"
-                      <div className="grid grid-cols-2 gap-8">
-                        {serviceCategories.map(category => (
-                          <div key={category.name}>"
-                            <div className="flex items-center space-x-3 mb-4">
-                              <div`
-                                className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}
-                              >"
-                                <category.icon className="w-5 h-5 text-white" />
-                              </div>"
-                              <h4 className="text-lg font-semibold text-gray-300 font-rajdhani">
-                                {category.name}
-                              </h4>
-                            </div>"
-                            <div className="space-y-2">
-                              {category.services.slice(0, 3).map(service => (
-                                <Link
-                                  key={service.name}
-                                  to={service.href}";
-                                  className="flex items-center space-x-3 p-3 rounded-lg "hover": "b g-gray-800/50 transition-colors group";
-                                >";
-                                  <service.icon className="w-4 h-4 text-cyan-400 group-"hover": tex t-cyan-300 transition-colors" />";
-                                  <span className="text-sm text-gray-300 group-"hover": tex t-white transition-colors">;
-                                    {service.name"}
-                                  </span>;
-                                  {service.badge && (;
-                                    <span`;
-                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New'';
-                                          ? 'bg-green-500/20 text-green-400'';
-                                          : "service.badge === 'Popular'';
-                                            ? 'bg-blue-500/20 text-blue-400'';
-                                            : 'bg-cyan-500/20 text-cyan-400'`;
-                                      }`}                              {category.services.length > 3 && (
-                                <Link
-                                  to={category.href}"
-                                  className="flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors text-sm font-medium group"
-                                >
-                                  View All {category.name}"
-                                  <ArrowRight className="ml-2 w-4 h-4 group-hover: translat e-x-1 transition-transform"   />                                </Link>
-                              )}
-                            </div>
-                          </div>) ) }
-                      </div>
-                      {/* View All Services Link */}"
-                      <div className="mt-8 pt-6 border-t border-gray-700">"
-                        <div className="flex items-center justify-between">
-                          <Link"
-                            to="/innovative-services-showcase-2025"
-                            className="inline-flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors font-medium group text-lg"
-                          >
-                            View All Innovative Services 2025"
-                            <ArrowRight className="ml-2 w-5 h-5 group-hover: translat e-x-1 transition-transform"   />
-                          </Link>"                          <div className="flex items-center space-x-4 text-sm text-gray-400">
-                            <span>50+ Services Available</span>
-                            <span>•</span>
-                            <span > Proven ROI</span>
-                            <span>•</span>
-                            <span > 24 / 7 Support</span>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>) }
-                </AnimatePresence>
-              </div>
-              {/* Additional Navigation Items */}
-              {navigation.slice(6, 10).map(item => (
-                <Link
-                  key={item.name}';
-                  to={item.href}`';';
-                  className={`nav-link font-medium transition-all duration-300 ${item.current'';';
-                      ? 'text-cyan-400 border-b-2 border-cyan-400''';';
-                      : 'text-gray-300 hover: tex t-cyan-400'`              {navigation.slice(6, 10).map(item => (;
-                <Link;
-              {navigation.slice(6, 10).map(item => (
-                <Link
-                  key={item.name}
-                  to={item.href}`;
-                  className={`nav-link font-medium transition-all duration-300 ${item.current';
-                      ? 'text-cyan-400 border-b-2 border-cyan-400'';
-                      : 'text-gray-300 hover: tex t-cyan-400'`;
-                  }`}                        className="block px-4 py-2 text-sm text-gray-700 hover: b g-blue-50 hover: tex t-blue-600 transition-colors"
-                      >
-                        {subLink.label}
-                      </a>
-                    ))}
-                      </div>
-  );
-}
-              </div>
-                  </div>;
-                )}
-              </div>;                  </div>
-                )}
-              </div>
-            ))}
-            <a href="/contact" className="hidden "lg": "inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md "hover": b g-blue-700 transition-colors">Get Started</a>;
-return (<header className="bg-white shadow-lg">;
-";
-  return (<header className="bg-white shadow-lg">";
-      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">";
-        <div className="flex justify-between items-center py-6">";
-          <div className="flex items-center">";
-            <a href="/" className="text-2xl font-bold text-blue-900">;
-              Zion Tech Group",;
-            </a>;
-          </div>";
-          <nav className="hidden "md": "flex space-x-8">";
-          <nav className="hidden "md": flex space-x-6">";
-            <a href="/" className="text-gray-700 "hover": tex t-blue-600">Home</a>";
-            <a href="/about" className="text-gray-700 "hover": tex t-blue-600">About</a>";
-            <a href="/services" className="text-gray-700 "hover": tex t-blue-600">Services</a>";
-            <a href="/solutions" className="text-gray-700 "hover": tex t-blue-600">Solutions</a>";
-            <a href="/contact" className="text-gray-700 "hover": tex t-blue-600">Contact</a>;
-</nav>;
-    </header>";
-            <a href="/micro-saas" className="text-gray-700 "hover": tex t-blue-600">Micro SAAS</a>";
-            <a href="/it-services" className="text-gray-700 "hover": tex t-blue-600">IT Services</a>";
-            <a href="/marketplace" className="text-gray-700 "hover": tex t-blue-600">Marketplace</a>";
-            <a href="/news" className="text-gray-700 "hover": tex t-blue-600">News</a>";
-            <a href="/blog" className="text-gray-700 "hover": tex t-blue-600">Blog</a>";
-            <a href="/careers" className="text-gray-700 "hover": tex t-blue-600">Careers</a>",,;
-  ),";
-,"});,"})";
-;,"});,"})";
-export const "EnhancedHeader": "React.FC = () => {","});,"})";
-  return (<header className="bg-white shadow-lg">;,"});,"})";
-      <div className="max-w-7xl mx-auto px-4 "sm": "p x-6 "lg": p x-8">","});,"})";
-        <div className="flex justify-between items-center py-4 "md": "p y-6">","});,"})";
-          <div className="flex items-center">;,"});,"})";
-            <a href="/" className="text-xl "md": "tex t-2xl font-bold text-blue-900">","});,"})";
-              Zion Tech Group,"});,"})";
-            </a>;,"});,"})";
-          </div>;,"});,"})";
-          <nav className="hidden "md": "flex gap-6">","});,"})";
-            <a href="/" className="text-gray-700 "hover": "tex t-blue-600">Home</a>","});,"})";
-            <a href="/services" className="text-gray-700 "hover": "tex t-blue-600">Services</a>","});,"})";
-            <a href="/solutions" className="text-gray-700 "hover": "tex t-blue-600">Solutions</a>","});,"})";
-            <a href="/pricing-guide" className="text-gray-700 "hover": "tex t-blue-600">Pricing</a>","});,"})";
-            <a href="/contact" className="text-gray-700 "hover": "tex t-blue-600">Contact</a>","});,"})";
-          </nav>;,"});,"})";
-    </header>;,"});,"})";
-  );,"});,"});";
-};,"});,"})"";
-  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,;
-  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,;
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,;
-  Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,";
-  Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react;
-export function EnhancedHeader("props": "any) {;
-  const [mobileMenuOpen", setMobileMenuOpen] = useState()";
-  const [searchQuery, setSearchQuery] = useState<any>(");  useEffect(() => {
-    const handleScroll = (props: any) => {
-      setScrolled(window.scrollY > 50)}
-    window.addEventListener()
-}
-    return () => window.removeEventListener("scroll", handleScroll)}, []);react"react - router-dom",framer-motion
-  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
-  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
-  Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,
-  Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react"
-export: function EnhancedHeader(props: any) {",
-  const [searchQuery, setSearchQuery] = useState<any>("")
-}
-      setScrolled(window.scrollY: > 50)},
-    window.addEventListener()
-}
-    return: () => window.removeEventListener("scroll", handleScroll)}, [])
-}
-    // comment
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from &apos;lucide-react";&apos;&apos
-export function EnhancedHeader(props: any) {}"""""""
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"""
-""
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
-  const router = useRouter()
-}
-  const [searchQuery, setSearchQuery] = useState<any>(&apos;&apos);&apos;&apos
-  const [activeDropdown, setActiveDropdown] = useState<;<;<string | null>(null)
-}
-  useEffect(() => {}
-    window.addEventListener(&apos;scroll&apos, handleScroll)
-}
-    return () => window.removeEventListener(&apos;scroll&apos, handleScroll)}, [])
-}
-    // comment
-    setIsMenuOpen(false)
-}
-    setActiveDropdown(null)}, [location.pathname])
-}
-  const handleSearch = async ("e": "React.FormEvent) =>  {",;
-    e.preventDefault(),;
-    "if": "(searchQuery.trim()) {"",,;
-      window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}"";
-  const navigation = [];
-  // comment;
-  const servicesCategories = []},", {";
-      "title": ""Quantum": "Computin g",",";
-      "icon": "At o",m,";
-      "color": "from - indigo-"500": "t o-purple-500",",",;
-      "services": ",[ { "name": ""Quantum": AI Hybrid Platform",", "href": "/services/quantum - ai-hybrid-platform,", "description": ""Revolutionary": "quantu m-AI computing""},", { "name": ""Quantum": "Computing Solutions",", "href": "/services/quantum - computing,", "description": "Next-"generation": "computing power""},", { "name": ""Quantum": "Financial Trading",", "href": "/services/ai - quantum-financial-trading-platform,", "description": ""Advanced": "quantum trading""},", { "name": ""Quantum": "Machine Learning",", "href": "/services/quantum - machine-learning,", "description": "Quantum-"enhanced": "ML algorithms""},", { "name": ""AI": "Quantum Financial Analytics",", "href": "/services/ai - quantum-financial-analytics-platform,", "description": ""Revolutionary": "quantum AI financial platform""}]},", {";
-      "title": ""Cloud": "& Infrastructure",",";
-      "icon": "Clo u",d,";
-      "color": "from - cyan-"500": "t o-blue-500",",",;
-      "services": ",[ { "name": ""Cloud": DevOp s",", "href": "/services/cloud - devops,", "description": ""Infrastructure": "automatio n & scaling""},", { "name": ""IT": "Infrastructur e",", "href": "/services/it - infrastructure,", "description": ""Enterprise": "infrastructure solutions""},", { "name": ""FinOps": "Adviso r",", "href": "/services/finops - advisor,", "description": ""Cloud": "cost optimization""},", { "name": ""Cloud": "FinOps Optimizer",", "href": "/services/cloud - finops-optimizer,", "description": ""Financial": "operations automation""}]},", {";
-      "title": "Cybersecurity,",";
-      "icon": "Shie l",d,";
-      "color": "from - red-"500": "t o-orange-500",",",;
-      "services": ",[ { "name": ""AI": Cybersecurity Platform",", "href": "/services/ai - cybersecurity-platform,", "description": ""Advanced": "A I-powered security""},", { "name": ""AI": "Cybersecurity Operations",", "href": "/services/ai - cybersecurity-operations-center,", "description": ""Autonomous": "security operations center""},", { "name": ""Security": "Header s & CSP",", "href": "/services/security - headers-csp,", "description": ""Web": "security hardening""},", { "name": ""DSR": "Privacy Portal",", "href": "/services/dsr - portal,", "description": "GDPR/"CCPA": "complianc e""},", { "name": ""Zero": "Trust Network Access",", "href": "/services/zero - trust-network-access,", "description": ""Modern": "security architecture""}]},", {";
-      "title": ""Supply": "Chai n & Logistics",",";
-      "icon": "Tru c",k,";
-      "color": "from - green-"500": "t o-blue-600",",",;
-      "services": ",[ { "name": ""AI": Autonomous Supply Chain",", "href": "/services/ai - autonomous-supply-chain-management-platform,", "description": "Self-"learning": "supply chain management""},", { "name": ""Autonomous": "Logistic s",", "href": "/services/autonomous - logistics,", "description": ""Smart": "supply chain automation""}]},", {";
-      "title": ""Emerging": "Technologie s",",";
-      "icon": "Rock e",t,";
-      "color": "from - purple-"500": "t o-pink-500",",",;
-      "services": ",[ { "name": ""AI": Smart City Infrastructure",", "href": "/services/ai - smart-city-infrastructure-management,", "description": ""Intelligent": "urban management""},", { "name": ""AI": "Autonomous Vehicles",", "href": "/services/ai - autonomous-vehicle-management-platform,", "description": ""Autonomous": "fleet management""},", { "name": ""IoT": "Edge Computing",", "href": "/services/iot - edge-computing,", "description": ""Connected": "device intelligence""},", { "name": ""Digital": "Twin Platform",", "href": "/services/digital - twin,", "description": ""Virtual": "replica technology""},", { "name": ""Space": "Technolog y",", "href": "/space - tech,", "description": ""Innovative": "space solutions""}]},", {";
-      "title": ""Smart": "Cit y & Infrastructure",",";
-      "icon": "Buildin g",2,";
-      "color": "from - green-"500": "t o-emerald-500",",",;
-      "services": ",[ { "name": ""AI": Smart City Management",", "href": "/services/ai - smart-city-infrastructure-management,", "description": ""Intelligent": "urban infrastructure""},", { "name": ""Traffic": "Managemen t",", "href": "/services/traffic - management,", "description": "AI-"powered": "traffic optimization""},", { "name": ""Energy": "Grid Management",", "href": "/services/energy - grid,", "description": ""Smart": "energy distribution""},", { "name": ""Environmental": "Monitorin g",", "href": "/services/environmental - monitoring,", "description": "Real-"time": "environmental tracking""}]},", {";
-      "title": ""Autonomous": "System s",",";
-      "icon": "C a",r,";
-      "color": "from - blue-"500": "t o-cyan-500",",",;
-      "services": ",[ { "name": ""AI": Autonomous Vehicle Platform",", "href": "/services/ai - autonomous-vehicle-management-platform,", "description": ""Fleet": "managemen t & safety""},", { "name": ""Drone": "Managemen t",", "href": "/services/drone - management,", "description": ""Autonomous": "drone operations""},", { "name": ""Robotics": "Automatio n",", "href": "/services/robotics - automation,", "description": ""Industrial": "robotics solutions""}]},", {";
-      "title": ""Micro": "SaaS Solutions",",";
-      "icon": "Co d",e,";
-      "services": ",[ { "name": ""AI": Email Automation Suite",", "href": "/services/ai - email-automation-suite,", "description": ""Intelligent": "email management & automation""},", { "name": ""AI": "Social Media Scheduler",", "href": "/services/ai - social-media-scheduler,", "description": "AI-"powered": "social media automation""},", { "name": ""AI": "Customer Insights Platform",", "href": "/services/ai - customer-insights-platform,", "description": ""Advanced": "customer analytics & insights""},", { "name": ""Micro": "CR M",", "href": "/services/micro - crm,", "description": ""Lightweight": "customer management""},", { "name": ""Helpdesk": "Platfor m",", "href": "/services/helpdesk - platform,", "description": ""Efficient": "support system""},", { "name": ""AI": "Content Marketing",", "href": "/services/ai - content-marketing-suite,", "description": "AI-"powered": "content creation""},", { "name": ""Customer": "Support Automation",", "href": "/services/ai - customer-support-automation,", "description": ""Intelligent": "support automation""},", { "name": ""Website": "Analytic s",", "href": "/services/website - analytics,", "description": ""Performance": "insight s""}]},", {";
-      "title": ""DevOps": "& Automation",",";
-      "icon": "Workfl o",w,";
-      "services": ",[ { "name": "AI - "Powered": DevOps Automation",", "href": "/services/ai-powered-devops-automation,", "description": ""Intelligent": "C I/CD & infrastructure automation""},", { "name": ""Cloud": "DevOp s",", "href": "/services/cloud - devops,", "description": ""Infrastructure": "automatio n & scaling""},", { "name": ""IT": "Infrastructur e",", "href": "/services/it - infrastructure,", "description": ""Enterprise": "infrastructure solutions""},", { "name": ""FinOps": "Adviso r",", "href": "/services/finops-advisor,", "description": ""Cloud": "cost optimization""}]}";
+const Header = memo(() => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
+
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  }, []);
+
+  const handleDropdownToggle = useCallback((dropdown: string) => {
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
+  }, []);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close menu on route change
+  useEffect(() => {
+    closeMenu();
+  }, [location.pathname, closeMenu]);
+
+  const navigation = [
+    { 
+      name: 'Home', 
+      href: '/',
+      icon: null
+    },
+    { 
+      name: 'Services', 
+      href: '/services',
+      icon: ChevronDown,
+      dropdown: [
+        { 
+          name: 'AI Services', 
+          href: '/services/ai-services',
+          icon: Brain,
+          description: 'AI-powered solutions for business transformation'
+        },
+        { 
+          name: 'Micro SaaS', 
+          href: '/services/micro-saas',
+          icon: Rocket,
+          description: 'Complete micro-SaaS development platform'
+        },
+        { 
+          name: 'Cloud Solutions', 
+          href: '/services/cloud-solutions',
+          icon: Cloud,
+          description: 'Scalable cloud infrastructure and migration'
+        },
+        { 
+          name: 'Cybersecurity', 
+          href: '/services/cybersecurity',
+          icon: Shield,
+          description: 'Advanced security and compliance solutions'
+        },
+        { 
+          name: 'Mobile Development', 
+          href: '/services/mobile-development',
+          icon: Smartphone,
+          description: 'Native and cross-platform mobile apps'
+        },
+        { 
+          name: 'DevOps & Automation', 
+          href: '/services/devops',
+          icon: Code,
+          description: 'CI/CD pipelines and infrastructure automation'
+        }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      icon: ChevronDown,
+      dropdown: [
+        { 
+          name: 'Enterprise', 
+          href: '/solutions/enterprise',
+          description: 'Large-scale enterprise solutions'
+        },
+        { 
+          name: 'Startup', 
+          href: '/solutions/startup',
+          description: 'Rapid development for startups'
+        },
+        { 
+          name: 'SMB', 
+          href: '/solutions/smb',
+          description: 'Cost-effective solutions for small businesses'
+        }
+      ]
+    },
+    { 
+      name: 'Pricing', 
+      href: '/pricing',
+      icon: null
+    },
+    { 
+      name: 'About', 
+      href: '/about',
+      icon: null
+    },
+    { 
+      name: 'Contact', 
+      href: '/contact',
+      icon: null
+    }
   ];
-  // comment;
-  const services = []},", {";
-      "title": ""Technology": "Solution s",",";
-      "icon": "C p",u,";
-      "solutions": ",[ { "name": ""AI": Solution s",", "href": "/ai - solutions,", "description": ""Artificial": "intelligence integration""},", { "name": ""Digital": "Transformatio n",", "href": "/services / digital - transformation,", "description": ""Business": "modernizatio n""},", { "name": ""Research": "& Development",", "href": "/research - development,", "description": ""Innovation": "and discovery""},", { "name": ""Green": "IT Solutions",", "href": "/green - it,", "description": ""Sustainable": "technolog y""}]}",,;
-  const companyLinks = [],,;
-  const resourceLinks = [],;
-  const supportLinks = [];
-  const toggleDropdown = ("props": "any) => {",,;
-    setActiveDropdown("activeDropdown": "=== dropdown ? "null": dropdow n)"}
-;
-"export": "const "EnhancedHeader": React."FC": = () => {",;
-  const [mobileOpen, setMobileOpen] = useState();
-}
-  const navLinks = [];
-  // comment;
-      "title": "AI & Machine Learning",;
-"icon": "Brai n",";
-"color": "from-blue-500 to-indigo-500",";
-"services": "[{ "name": "AI Autonomous Business Manager"", "href": "/services/ai-autonomous-business-manager", "description": "Fully autonomous business operations" }, { "name": "AI Business Intelligence", "href": "/services/ai-business-intelligence", "description": "Advanced analytics & ML insights" }, { "name": "AI Compliance Assistant", "href": "/services/ai-compliance-assistant", "description": "Automated regulatory compliance" }, { "name": "AI Sales Copilot", "href": "/services/ai-sales-copilot", "description": "Intelligent sales optimization" }, { "name": "AI-Powered SEO", "href": "/services/ai-powered-seo", "description": "Machine learning SEO optimization" }, { "name": "AI Content Marketing Suite", "href": "/services/ai-content-marketing-suite", "description": "AI-powered content creation & optimization" }, { "name": "AI Customer Support", "href": "/services/ai-customer-support-automation", "description": "Intelligent support automation" }, { "name": "AI Project Management", "href": "/services/ai-project-management", "description": "AI-driven project optimization" }, { "name": "AI Financial Analytics", "href": "/services/ai-financial-analytics", "description": "Intelligent financial insights" }]}, {";
-      "title": "Quantum Computing",;
-"icon": "Ato m",";
-"color": "from-indigo-500 to-purple-500",";
-"services": "[ { "name": "Quantum AI Hybrid Platform"", "href": "/services/quantum-ai-hybrid-platform", "description": "Revolutionary quantum-AI computing" }, { "name": "Quantum Computing Solutions", "href": "/services/quantum-computing", "description": "Next-generation computing power" }, { "name": "Quantum Financial Trading", "href": "/services/ai-quantum-financial-trading-platform", "description": "Advanced quantum trading" }, { "name": "Quantum Machine Learning", "href": "/services/quantum-machine-learning", "description": "Quantum-enhanced ML algorithms" }, { "name": "AI Quantum Financial Analytics", "href": "/services/ai-quantum-financial-analytics-platform", "description": "Revolutionary quantum AI financial platform" }]}, {";
-      "title": "Cloud & Infrastructure",;
-"icon": "Clou d",";
-"color": "from-cyan-500 to-blue-500",";
-"services": "[ { "name": "Cloud DevOps"", "href": "/services/cloud-devops", "description": "Infrastructure automation & scaling" }, { "name": "IT Infrastructure", "href": "/services/it-infrastructure", "description": "Enterprise infrastructure solutions" }, { "name": "FinOps Advisor", "href": "/services/finops-advisor", "description": "Cloud cost optimization" }, { "name": "Cloud FinOps Optimizer", "href": "/services/cloud-finops-optimizer", "description": "Financial operations automation" }]}, {";
-      "title": "Cybersecurity",;
-"icon": "Shiel d",";
-"color": "from-red-500 to-orange-500",";
-"services": "[ { "name": "AI Cybersecurity Platform"", "href": "/services/ai-cybersecurity-platform", "description": "Advanced AI-powered security" }, { "name": "AI Cybersecurity Operations", "href": "/services/ai-cybersecurity-operations-center", "description": "Autonomous security operations center" }, { "name": "Security Headers & CSP", "href": "/services/security-headers-csp", "description": "Web security hardening" }, { "name": "DSR Privacy Portal", "href": "/services/dsr-portal", "description": "GDPR/CCPA compliance" }, { "name": "Zero Trust Network Access", "href": "/services/zero-trust-network-access", "description": "Modern security architecture" }]}, {";
-      "title": "Supply Chain & Logistics",;
-"icon": "Truc k",";
-"color": "from-green-500 to-blue-600",";
-"services": "[ { "name": "AI Autonomous Supply Chain"", "href": "/services/ai-autonomous-supply-chain-management-platform", "description": "Self-learning supply chain management" }, { "name": "Autonomous Logistics", "href": "/services/autonomous-logistics", "description": "Smart supply chain automation" }]}, {";
-      "title": "Emerging Technologies",;
-"icon": "Rocke t",";
-"color": "from-purple-500 to-pink-500",";
-"services": "[ { "name": "AI Smart City Infrastructure"", "href": "/services/ai-smart-city-infrastructure-management", "description": "Intelligent urban management" }, { "name": "AI Autonomous Vehicles", "href": "/services/ai-autonomous-vehicle-management-platform", "description": "Autonomous fleet management" }, { "name": "IoT Edge Computing", "href": "/services/iot-edge-computing", "description": "Connected device intelligence" }, { "name": "Digital Twin Platform", "href": "/services/digital-twin", "description": "Virtual replica technology" }, { "name": "Space Technology", "href": "/space-tech", "description": "Innovative space solutions" }]}, {";
-      "title": "Smart City & Infrastructure",;
-"icon": "Building 2",";
-"color": "from-green-500 to-emerald-500",";
-"services": "[ { "name": "AI Smart City Management"", "href": "/services/ai-smart-city-infrastructure-management", "description": "Intelligent urban infrastructure" }, { "name": "Traffic Management", "href": "/services/traffic-management", "description": "AI-powered traffic optimization" }, { "name": "Energy Grid Management", "href": "/services/energy-grid", "description": "Smart energy distribution" }, { "name": "Environmental Monitoring", "href": "/services/environmental-monitoring", "description": "Real-time environmental tracking" }]}, {";
-      "title": "Autonomous Systems",;
-"icon": "Ca r",";
-"color": "from-blue-500 to-cyan-500",";
-"services": "[ { "name": "AI Autonomous Vehicle Platform"", "href": "/services/ai-autonomous-vehicle-management-platform", "description": "Fleet management & safety" }, { "name": "Drone Management", "href": "/services/drone-management", "description": "Autonomous drone operations" }, { "name": "Robotics Automation", "href": "/services/robotics-automation", "description": "Industrial robotics solutions" }]}, {";
-      "title": "Micro SaaS Solutions",;
-"icon": "Cod e",";
-"services": "[ { "name": "AI Email Automation Suite"", "href": "/services/ai-email-automation-suite", "description": "Intelligent email management & automation" }, { "name": "AI Social Media Scheduler", "href": "/services/ai-social-media-scheduler", "description": "AI-powered social media automation" }, { "name": "AI Customer Insights Platform", "href": "/services/ai-customer-insights-platform", "description": "Advanced customer analytics & insights" }, { "name": "Micro CRM", "href": "/services/micro-crm", "description": "Lightweight customer management" }, { "name": "Helpdesk Platform", "href": "/services/helpdesk-platform", "description": "Efficient support system" }, { "name": "AI Content Marketing", "href": "/services/ai-content-marketing-suite", "description": "AI-powered content creation" }, { "name": "Customer Support Automation", "href": "/services/ai-customer-support-automation", "description": "Intelligent support automation" }, { "name": "Website Analytics", "href": "/services/website-analytics", "description": "Performance insights" }]}, {";
-      "title": "DevOps & Automation",;
-"icon": "Workflo w",";
-"services": "[ { "name": "AI-Powered DevOps Automation"", "href": "/services/ai-powered-devops-automation", "description": "Intelligent CI/CD & infrastructure automation" }, { "name": "Cloud DevOps", "href": "/services/cloud-devops", "description": "Infrastructure automation & scaling" }, { "name": "IT Infrastructure", "href": "/services/it-infrastructure", "description": "Enterprise infrastructure solutions" }, { "name": "FinOps Advisor", "href": "/services/finops-advisor", "description": "Cloud cost optimization" }]}
-;
-  // comment;
-      "name": "AI Email Automation Suite"";
-      "description": "Intelligent email management & automation"",;
-      "href": "/services/ai-email-automation-suite",;
-"icon": "Mai l",;
-"featured": "tru e"}, {";
-      "name": "AI Social Media Scheduler"";
-      "description": "AI-powered social media automation"",;
-      "href": "/services/ai-social-media-scheduler",;
-"icon": "Share 2",";
-"name": "AI Customer Insights Platform"";
-      "description": "Advanced customer analytics & insights"",;
-      "href": "/services/ai-customer-insights-platform",;
-"icon": "User s",";
-"name": "AI-Powered DevOps Automation"";
-      "description": "Intelligent CI/CD & infrastructure automation"";
-      "href": "/services/ai-powered-devops-automation"";
-      "name": "AI Content Creation Studio Pro"";
-      "description": "Advanced AI-powered content creation platform"",;
-      "href": "/services/AI-Content-Creation-Studio-Pro",;
-"icon": "PenToo l",";
-"name": "Quantum AI Trading Platform"";
-      "description": "Revolutionary quantum-enhanced trading system"",;
-      "href": "/services/Quantum-AI-Trading-Platform",;
-"icon": "BarChart 3",";
-"color": "from-orange-500 to-red-500"";
-      "name": "AI Quantum Financial Analytics"";
-      "description": "Revolutionary quantum AI financial platform"";
-      "href": "/services/ai-quantum-financial-analytics-platform"";
-      "color": "from-blue-500 to-purple-600"";
-      "name": "AI Autonomous Supply Chain"";
-      "description": "Self-learning supply chain management"";
-      "href": "/services/ai-autonomous-supply-chain-management-platform"";
-      "name": "AI Cybersecurity Operations"";
-      "description": "Autonomous security operations center"";
-      "href": "/services/ai-cybersecurity-operations-center"";
-      "color": "from-red-500 to-orange-600"";
-      "name": "2026 Services Showcase"";
-      "description": "Latest innovative services showcase"",;
-      "href": "/innovative-services-showcase-2026",;
-"icon": "Sparkle s",";
-"color": "from-yellow-500 to-orange-500",;
-    setActiveDropdown(null)}, [location.pathname]);&apos;
-    setMobileMenuOpen(false);
-}
-    setActiveDropdown(null)}, []);";
-      router.push("/search?q = "${encodeURIComponent(searchQuery.trim())}")}";
-  const navigation = [];
-  // comment;
-  const servicesCategories = []} {;
-      "title": "&apos",Quantum Computing&apos,;
-      "icon": "Ato m",;
-      "color": "&apos",from-indigo-500 to-purple-500&apos,;
-      "services": "[",;
-        { nam,"e": "&apos",Quantum AI Hybrid Platform&apos, "href": "&apos",/services/quantum-ai-hybrid-platform&apos, "description": "&apos",Revolutionary quantum-AI computing&apos} { "name": "&apos",Quantum Computing Solutions&apos, "href": "&apos",/services/quantum-computing&apos, "description": "&apos",Next-generation computing power&apos} { "name": "&apos",Quantum Financial Trading&apos, "href": "&apos",/services/ai-quantum-financial-trading-platform&apos, "description": "&apos",Advanced quantum trading&apos} { "name": "&apos",Quantum Machine Learning&apos, "href": "&apos",/services/quantum-machine-learning&apos, "description": "&apos",Quantum-enhanced ML algorithms&apos} { "name": "&apos",AI Quantum Financial Analytics&apos, "href": "&apos",/services/ai-quantum-financial-analytics-platform&apos, "description": "&apos",Revolutionary quantum AI financial platform&apos}]} {;
-      "title": "&apos",Cloud & Infrastructure&apos,;
-      "icon": "Clou d",;
-      "color": "&apos",from-cyan-500 to-blue-500&apos,;
-        { nam,"e": "&apos",Cloud DevOps&apos, "href": "&apos",/services/cloud-devops&apos, "description": "&apos",Infrastructure automation & scaling&apos} { "name": "&apos",IT Infrastructure&apos, "href": "&apos",/services/it-infrastructure&apos, "description": "&apos",Enterprise infrastructure solutions&apos} { "name": "&apos",FinOps Advisor&apos, "href": "&apos",/services/finops-advisor&apos, "description": "&apos",Cloud cost optimization&apos} { "name": "&apos",Cloud FinOps Optimizer&apos, "href": "&apos",/services/cloud-finops-optimizer&apos, "description": "&apos",Financial operations automation&apos}]} {;
-      "title": "&apos",Cybersecurity&apos,;
-      "icon": "Shiel d",;
-      "color": "&apos",from-red-500 to-orange-500&apos,;
-        { nam,"e": "&apos",AI Cybersecurity Platform&apos, "href": "&apos",/services/ai-cybersecurity-platform&apos, "description": "&apos",Advanced AI-powered security&apos} { "name": "&apos",AI Cybersecurity Operations&apos, "href": "&apos",/services/ai-cybersecurity-operations-center&apos, "description": "&apos",Autonomous security operations center&apos} { "name": "&apos",Security Headers & CSP&apos, "href": "&apos",/services/security-headers-csp&apos, "description": "&apos",Web security hardening&apos} { "name": "&apos",DSR Privacy Portal&apos, "href": "&apos",/services/dsr-portal&apos, "description": "&apos",GDPR/CCPA compliance&apos} { "name": "&apos",Zero Trust Network Access&apos, "href": "&apos",/services/zero-trust-network-access&apos, "description": "&apos",Modern security architecture&apos}]} {;
-      "title": "&apos",Supply Chain & Logistics&apos,;
-      "icon": "Truc k",;
-      "color": "&apos",from-green-500 to-blue-600&apos,;
-        { nam,"e": "&apos",AI Autonomous Supply Chain&apos, "href": "&apos",/services/ai-autonomous-supply-chain-management-platform&apos, "description": "&apos",Self-learning supply chain management&apos} { "name": "&apos",Autonomous Logistics&apos, "href": "&apos",/services/autonomous-logistics&apos, "description": "&apos",Smart supply chain automation&apos}]} {;
-      "title": "&apos",Emerging Technologies&apos,;
-      "icon": "Rocke t",;
-      "color": "&apos",from-purple-500 to-pink-500&apos,;
-        { nam,"e": "&apos",AI Smart City Infrastructure&apos, "href": "&apos",/services/ai-smart-city-infrastructure-management&apos, "description": "&apos",Intelligent urban management&apos} { "name": "&apos",AI Autonomous Vehicles&apos, "href": "&apos",/services/ai-autonomous-vehicle-management-platform&apos, "description": "&apos",Autonomous fleet management&apos} { "name": "&apos",IoT Edge Computing&apos, "href": "&apos",/services/iot-edge-computing&apos, "description": "&apos",Connected device intelligence&apos} { "name": "&apos",Digital Twin Platform&apos, "href": "&apos",/services/digital-twin&apos, "description": "&apos",Virtual replica technology&apos} { "name": "&apos",Space Technology&apos, "href": "&apos",/space-tech&apos, "description": "&apos",Innovative space solutions&apos}]} {;
-      "title": "&apos",Smart City & Infrastructure&apos,;
-      "icon": "Building 2",;
-      "color": "&apos",from-green-500 to-emerald-500&apos,;
-        { nam,"e": "&apos",AI Smart City Management&apos, "href": "&apos",/services/ai-smart-city-infrastructure-management&apos, "description": "&apos",Intelligent urban infrastructure&apos} { "name": "&apos",Traffic Management&apos, "href": "&apos",/services/traffic-management&apos, "description": "&apos",AI-powered traffic optimization&apos} { "name": "&apos",Energy Grid Management&apos, "href": "&apos",/services/energy-grid&apos, "description": "&apos",Smart energy distribution&apos} { "name": "&apos",Environmental Monitoring&apos, "href": "&apos",/services/environmental-monitoring&apos, "description": "&apos",Real-time environmental tracking&apos}]} {;
-      "title": "&apos",Autonomous Systems&apos,;
-      "icon": "Ca r",;
-      "color": "&apos",from-blue-500 to-cyan-500&apos,;
-        { nam,"e": "&apos",AI Autonomous Vehicle Platform&apos, "href": "&apos",/services/ai-autonomous-vehicle-management-platform&apos, "description": "&apos",Fleet management & safety&apos} { "name": "&apos",Drone Management&apos, "href": "&apos",/services/drone-management&apos, "description": "&apos",Autonomous drone operations&apos} { "name": "&apos",Robotics Automation&apos, "href": "&apos",/services/robotics-automation&apos, "description": "&apos",Industrial robotics solutions&apos}]} {;
-      "title": "&apos",Micro SaaS Solutions&apos,;
-      "icon": "Cod e",;
-        { nam,"e": "&apos",AI Email Automation Suite&apos, "href": "&apos",/services/ai-email-automation-suite&apos, "description": "&apos",Intelligent email management & automation&apos} { "name": "&apos",AI Social Media Scheduler&apos, "href": "&apos",/services/ai-social-media-scheduler&apos, "description": "&apos",AI-powered social media automation&apos} { "name": "&apos",AI Customer Insights Platform&apos, "href": "&apos",/services/ai-customer-insights-platform&apos, "description": "&apos",Advanced customer analytics & insights&apos} { "name": "&apos",Micro CRM&apos, "href": "&apos",/services/micro-crm&apos, "description": "&apos",Lightweight customer management&apos} { "name": "&apos",Helpdesk Platform&apos, "href": "&apos",/services/helpdesk-platform&apos, "description": "&apos",Efficient support system&apos} { "name": "&apos",AI Content Marketing&apos, "href": "&apos",/services/ai-content-marketing-suite&apos, "description": "&apos",AI-powered content creation&apos} { "name": "&apos",Customer Support Automation&apos, "href": "&apos",/services/ai-customer-support-automation&apos, "description": "&apos",Intelligent support automation&apos} { "name": "&apos",Website Analytics&apos, "href": "&apos",/services/website-analytics&apos, "description": "&apos",Performance insights&apos}]} {;
-      "title": "&apos",DevOps & Automation&apos,;
-      "icon": "Workflo w",;
-        { nam,"e": "&apos",AI-Powered DevOps Automation&apos, "href": "&apos",/services/ai-powered-devops-automation&apos, "description": "&apos",Intelligent CI/CD & infrastructure automation&apos} { "name": "&apos",Cloud DevOps&apos, "href": "&apos",/services/cloud-devops&apos, "description": "&apos",Infrastructure automation & scaling&apos} { "name": "&apos",IT Infrastructure&apos, "href": "&apos",/services/it-infrastructure&apos, "description": "&apos",Enterprise infrastructure solutions&apos} { "name": "&apos",FinOps Advisor&apos, "href": "&apos",/services/finops-advisor&apos, "description": "&apos",Cloud cost optimization&apos}]}
-;
-    { "name": "Home", "href": "/", "current": "tru e "} { "name": "About", "href": "/about", "current": "fals e "} { "name": "Services", "href": "/services", "current": "fals e "} { "name": "Innovative Services 2028", "href": "/innovative-services-showcase-2028", "current": "fals e "} { "name": "Pricing Guide", "href": "/comprehensive-pricing-guide-2028", "current": "fals e "} { "name": "Solutions", "href": "/solutions", "current": "fals e "} { "name": "Contact", "href": "/contact", "current": "fals e "}];
-  // comment;
-    { "title": "AI & Machine Learning", "icon": "Brai n",";
-      "color": "from-blue-500 to-indigo-500", "services": "[{ "name": "AI Autonomous Business Manager"", "href": "/services/ai-autonomous-business-manager", "description": "Fully autonomous business operations" } { "name": "AI Business Intelligence", "href": "/services/ai-business-intelligence", "description": "Advanced analytics & ML insights" } { "name": "AI Compliance Assistant", "href": "/services/ai-compliance-assistant", "description": "Automated regulatory compliance" } { "name": "AI Sales Copilot", "href": "/services/ai-sales-copilot", "description": "Intelligent sales optimization" } { "name": "AI-Powered SEO", "href": "/services/ai-powered-seo", "description": "Machine learning SEO optimization" } { "name": "AI Content Marketing Suite", "href": "/services/ai-content-marketing-suite", "description": "AI-powered content creation & optimization" } { "name": "AI Customer Support", "href": "/services/ai-customer-support-automation", "description": "Intelligent support automation" } { "name": "AI Project Management", "href": "/services/ai-project-management", "description": "AI-driven project optimization" } { "name": "AI Financial Analytics", "href": "/services/ai-financial-analytics", "description": "Intelligent financial insights" }]} { "title": "Quantum Computing",";
-      "icon": "Ato m", "color": "from-indigo-500 to-purple-500",";
-        { "name": "Quantum AI Hybrid Platform", "href": "/services/quantum-ai-hybrid-platform", "description": "Revolutionary quantum-AI computing" } { "name": "Quantum Computing Solutions", "href": "/services/quantum-computing", "description": "Next-generation computing power" } { "name": "Quantum Financial Trading", "href": "/services/ai-quantum-financial-trading-platform", "description": "Advanced quantum trading" } { "name": "Quantum Machine Learning", "href": "/services/quantum-machine-learning", "description": "Quantum-enhanced ML algorithms" } { "name": "AI Quantum Financial Analytics", "href": "/services/ai-quantum-financial-analytics-platform", "description": "Revolutionary quantum AI financial platform" }]} { "title": "Cloud & Infrastructure",";
-      "icon": "Clou d", "color": "from-cyan-500 to-blue-500",";
-        { "name": "Cloud DevOps", "href": "/services/cloud-devops", "description": "Infrastructure automation & scaling" } { "name": "IT Infrastructure", "href": "/services/it-infrastructure", "description": "Enterprise infrastructure solutions" } { "name": "FinOps Advisor", "href": "/services/finops-advisor", "description": "Cloud cost optimization" } { "name": "Cloud FinOps Optimizer", "href": "/services/cloud-finops-optimizer", "description": "Financial operations automation" }]} { "title": "Cybersecurity",";
-      "icon": "Shiel d", "color": "from-red-500 to-orange-500",";
-        { "name": "AI Cybersecurity Platform", "href": "/services/ai-cybersecurity-platform", "description": "Advanced AI-powered security" } { "name": "AI Cybersecurity Operations", "href": "/services/ai-cybersecurity-operations-center", "description": "Autonomous security operations center" } { "name": "Security Headers & CSP", "href": "/services/security-headers-csp", "description": "Web security hardening" } { "name": "DSR Privacy Portal", "href": "/services/dsr-portal", "description": "GDPR/CCPA compliance" } { "name": "Zero Trust Network Access", "href": "/services/zero-trust-network-access", "description": "Modern security architecture" }]} { "title": "Supply Chain & Logistics",";
-      "icon": "Truc k", "color": "from-green-500 to-blue-600",";
-        { "name": "AI Autonomous Supply Chain", "href": "/services/ai-autonomous-supply-chain-management-platform", "description": "Self-learning supply chain management" } { "name": "Autonomous Logistics", "href": "/services/autonomous-logistics", "description": "Smart supply chain automation" }]} { "title": "Emerging Technologies",";
-      "icon": "Rocke t", "color": "from-purple-500 to-pink-500",";
-        { "name": "AI Smart City Infrastructure", "href": "/services/ai-smart-city-infrastructure-management", "description": "Intelligent urban management" } { "name": "AI Autonomous Vehicles", "href": "/services/ai-autonomous-vehicle-management-platform", "description": "Autonomous fleet management" } { "name": "IoT Edge Computing", "href": "/services/iot-edge-computing", "description": "Connected device intelligence" } { "name": "Digital Twin Platform", "href": "/services/digital-twin", "description": "Virtual replica technology" } { "name": "Space Technology", "href": "/space-tech", "description": "Innovative space solutions" }]} { "title": "Smart City & Infrastructure",";
-      "icon": "Building 2", "color": "from-green-500 to-emerald-500",";
-        { "name": "AI Smart City Management", "href": "/services/ai-smart-city-infrastructure-management", "description": "Intelligent urban infrastructure" } { "name": "Traffic Management", "href": "/services/traffic-management", "description": "AI-powered traffic optimization" } { "name": "Energy Grid Management", "href": "/services/energy-grid", "description": "Smart energy distribution" } { "name": "Environmental Monitoring", "href": "/services/environmental-monitoring", "description": "Real-time environmental tracking" }]} { "title": "Autonomous Systems",";
-      "icon": "Ca r", "color": "from-blue-500 to-cyan-500",";
-        { "name": "AI Autonomous Vehicle Platform", "href": "/services/ai-autonomous-vehicle-management-platform", "description": "Fleet management & safety" } { "name": "Drone Management", "href": "/services/drone-management", "description": "Autonomous drone operations" } { "name": "Robotics Automation", "href": "/services/robotics-automation", "description": "Industrial robotics solutions" }]} { "title": "Micro SaaS Solutions",";
-      "icon": "Cod e", "color": "from-green-500 to-emerald-500",";
-        { "name": "AI Email Automation Suite", "href": "/services/ai-email-automation-suite", "description": "Intelligent email management & automation" } { "name": "AI Social Media Scheduler", "href": "/services/ai-social-media-scheduler", "description": "AI-powered social media automation" } { "name": "AI Customer Insights Platform", "href": "/services/ai-customer-insights-platform", "description": "Advanced customer analytics & insights" } { "name": "Micro CRM", "href": "/services/micro-crm", "description": "Lightweight customer management" } { "name": "Helpdesk Platform", "href": "/services/helpdesk-platform", "description": "Efficient support system" } { "name": "AI Content Marketing", "href": "/services/ai-content-marketing-suite", "description": "AI-powered content creation" } { "name": "Customer Support Automation", "href": "/services/ai-customer-support-automation", "description": "Intelligent support automation" } { "name": "Website Analytics", "href": "/services/website-analytics", "description": "Performance insights" }]} { "title": "DevOps & Automation",";
-      "icon": "Workflo w", "color": "from-blue-500 to-indigo-500",";
-        { "name": "AI-Powered DevOps Automation", "href": "/services/ai-powered-devops-automation", "description": "Intelligent CI/CD & infrastructure automation" } { "name": "Cloud DevOps", "href": "/services/cloud-devops", "description": "Infrastructure automation & scaling" } { "name": "IT Infrastructure", "href": "/services/it-infrastructure", "description": "Enterprise infrastructure solutions" } { "name": "FinOps Advisor", "href": "/services/finops-advisor", "description": "Cloud cost optimization" }]}
-;
-  // comment;
-  const services = []&apos;
-  const solutionsCategories = []} {;
-      "title": "&apos",Technology Solutions&apos,;
-      "icon": "Cp u",;
-      "solutions": "[",;
-        { nam,"e": "&apos",AI Solutions&apos, "href": "&apos",/ai-solutions&apos, "description": "&apos",Artificial intelligence integration&apos} { "name": "&apos",Digital Transformation&apos, "href": "&apos",/services/digital-transformation&apos, "description": "&apos",Business modernization&apos} { "name": "&apos",Research & Development&apos, "href": "&apos",/research-development&apos, "description": "&apos",Innovation and discovery&apos} { "name": "&apos",Green IT Solutions&apos, "href": "&apos",/green-it&apos, "description": "&apos",Sustainable technology&apos}]}
-;
-  const companyLinks = [];&apos;
-  const resourceLinks = [];&apos;
-  const supportLinks = [];&apos,;
-      "name": "AI Email Automation Suite", "description": "Intelligent email management & automation",";
-      "href": "/services/ai-email-automation-suite", "icon": "Mai l",";
-      "color": "from-blue-500 to-indigo-500", "featured": "tru e"} { "name": "AI Social Media Scheduler", "description": "AI-powered social media automation",";
-      "href": "/services/ai-social-media-scheduler", "icon": "Share 2",";
-      "color": "from-purple-500 to-pink-500", "featured": "tru e"} { "name": "AI Customer Insights Platform", "description": "Advanced customer analytics & insights",";
-      "href": "/services/ai-customer-insights-platform", "icon": "User s",";
-      "color": "from-green-500 to-emerald-500", "featured": "tru e"} { "name": "AI-Powered DevOps Automation", "description": "Intelligent CI/CD & infrastructure automation",";
-      "href": "/services/ai-powered-devops-automation", "icon": "Workflo w",";
-      "color": "from-blue-500 to-indigo-500", "featured": "tru e"} { "name": "AI Content Creation Studio Pro", "description": "Advanced AI-powered content creation platform",";
-      "href": "/services/AI-Content-Creation-Studio-Pro", "icon": "PenToo l",";
-      "color": "from-purple-500 to-pink-500", "featured": "tru e"} { "name": "Quantum AI Trading Platform", "description": "Revolutionary quantum-enhanced trading system",";
-      "href": "/services/Quantum-AI-Trading-Platform", "icon": "BarChart 3",";
-      "color": "from-orange-500 to-red-500", "featured": "tru e"} { "name": "AI Quantum Financial Analytics", "description": "Revolutionary quantum AI financial platform",";
-      "href": "/services/ai-quantum-financial-analytics-platform", "icon": "BarChart 3",";
-      "color": "from-blue-500 to-purple-600", "featured": "tru e"} { "name": "AI Autonomous Supply Chain", "description": "Self-learning supply chain management",";
-      "href": "/services/ai-autonomous-supply-chain-management-platform", "icon": "Truc k",";
-      "color": "from-green-500 to-blue-600", "featured": "tru e"} { "name": "AI Cybersecurity Operations", "description": "Autonomous security operations center",";
-      "href": "/services/ai-cybersecurity-operations-center", "icon": "Shiel d",";
-      "color": "from-red-500 to-orange-600", "featured": "tru e"} { "name": "2026 Services Showcase", "description": "Latest innovative services showcase",";
-      "href": "/innovative-services-showcase-2026", "icon": "Sparkle s",";
-      "color": "from-yellow-500 to-orange-500", "featured": "tru e"}";
-      "title": "Industry Solutions",;
-"icon": "Buildin g",";
-"color": "from-blue-500 to-purple-500",";
-"solutions": "[{ "name": "Enterprise Solutions"", "href": "/solutions/enterprise", "description": "Large-scale business transformation" }, { "name": "Healthcare Solutions", "href": "/solutions/healthcare", "description": "Medical technology innovation" }, { "name": "Financial Solutions", "href": "/financial-solutions", "description": "Fintech and banking solutions" }, { "name": "Manufacturing Solutions", "href": "/manufacturing-solutions", "description": "Industry 4.0 automation" }]}, {";
-      "title": "Technology Solutions",;
-"icon": "Cp u",";
-"solutions": "[ { "name": "AI Solutions"", "href": "/ai-solutions", "description": "Artificial intelligence integration" }, { "name": "Digital Transformation", "href": "/services/digital-transformation", "description": "Business modernization" }, { "name": "Research & Development", "href": "/research-development", "description": "Innovation and discovery" }, { "name": "Green IT Solutions", "href": "/green-it", "description": "Sustainable technology" }]}";
-  const companyLinks = [];
-  const resourceLinks = [];
-  const supportLinks = [];
-  const toggleDropdown = ("props": "any) => {",,;
-    setActiveDropdown(activeDropdown === dropdown ? null : "dropdown)"}
-;
-  const [servicesOpen, setServicesOpen] = useState<any>(false);
-}
-  const navLinks = []";
-} { "label": "Solutions", "href": "/solutions" } { "label": "Enterprise", "href": "/enterprise" } { "label": "About", "href": "/about" } { "label": "Case Studies", "href": "/case-studies" } { "label": "Careers", "href": "/careers" },";
-  const navLinks = []} { "title": "Technology Solutions",";
-      "icon": "Cp u", "color": "from-cyan-500 to-blue-500",";
-        { "name": "AI Solutions", "href": "/ai-solutions", "description": "Artificial intelligence integration" } { "name": "Digital Transformation", "href": "/services/digital-transformation", "description": "Business modernization" } { "name": "Research & Development", "href": "/research-development", "description": "Innovation and discovery" } { "name": "Green IT Solutions", "href": "/green-it", "description": "Sustainable technology" }]}";
-    { "name": "About Us", "href": "/about", "description": "Learn about our mission and values" } { "name": "Our Team", "href": "/team", "description": "Meet our expert professionals" } { "name": "Leadership", "href": "/leadership", "description": "Executive team and vision" } { "name": "Careers", "href": "/careers", "description": "Join our growing team" } { "name": "Partners", "href": "/partners", "description": "Strategic partnerships" } { "name": "Case Studies", "href": "/case-studies", "description": "Success stories and results" }],;
-    { "name": "Blog", "href": "/blog", "description": "Latest insights and updates" } { "name": "News", "href": "/news", "description": "Company announcements" } { "name": "Press", "href": "/press", "description": "Media resources" } { "name": "Webinars", "href": "/webinars", "description": "Educational sessions" } { "name": "White Papers", "href": "/white - papers", "description": "In-depth research" } { "name": "Documentation", "href": "/documentation", "description": "Technical guides" }],;
-    { "name": "Help Center", "href": "/help", "description": "Find answers and solutions" } { "name": "FAQ", "href": "/faq", "description": "Frequently asked questions" } { "name": "Support", "href": "/support", "description": "Technical assistance" } { "name": "Training", "href": "/training", "description": "Skill development programs" } { "name": "Contact Support", "href": "/contact", "description": "Get in touch with our team" } { "name": "Status Page", "href": "/status", "description": "Service availability" }];
-  const [mobileOpen, setMobileOpen] = useState();
-}
-export const "EnhancedHeader": "React.FC = () => {"}
-;
-  const;const;const [mobileOpen, setMobileOpen] = useState<any>(false);
-}
-    { "label": "&apos",Home&apos, "href": "&apos",/&apos} { "label": "&apos",Services&apos, "href": "&apos",/services&apos} { "label": "&apos",Solutions&apos, "href": "&apos",/solutions&apos} { "label": "&apos",Enterprise&apos, "href": "&apos",/enterprise&apos} { "label": "&apos",Request Quote&apos, "href": "&apos",/request-quote&apos} { "label": "&apos",Case Studies&apos, "href": "&apos",/case-studies&apos} { "label": "&apos",Careers&apos, "href": "&apos",/careers&apos} { "label": "&apos",Contact&apos, "href": "&apos",/contact&apos}
-;
-  return (&apos;&apos;";
-    <header className="&apos;bg-white" shadow-lg&apos;>&apos,";
-      <div className="&apos;max-w-7xl" mx-auto px-4 "sm": "p x-6 "lg": p x-8&apos",>&apos,";
-        <div className="&apos;flex" justify-between items-center py-6&apos;>&apos,";
-          <div className="&apos;flex" items-center&apos;>&apos,";
-            <a href="&apos;/&apos;" className="&apos;text-2xl" font-bold text-blue-900&apos,>,;
-              Zion Tech Group&apos;&apos,";
-          <nav className = "&apos,hidden" m,"d": "flex space-x-8&apos",>;
-            {navLinks.map((link, index) => (&apos}";
-              <a key="{index}" href="{link.href}" className="&apos;text-gray-700" "hover": "tex t-blue-600&apos",>;
-                {link.label}&apos;
-  return (";
-    <"header": "classNam e = "bg-white shadow-lg">"",",";
-      <"div": "classNam e="max-w-7xl mx-auto px-4 "sm": p x-"6": l "g":px-8">"",";";
-        <"div": "classNam e="flex justify - between items-center py-6">"",";
-          <"div": "classNam e="flex items-center">"",,",;
-            <"a": "hre f = "/" className="text-2xl font-bold text-blue-900">"",",;
-              "Zion": "Tech Group";
-    <header className="bg-white shadow-lg">";
-      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">";
-        <div className="flex justify-between items-center py-6">";
-          <div className="flex items-center">";
-            <a href="/" className="text-2xl font-bold text-blue-900">"",;
-          <nav className="hidden "md": "fle "x": space-x-8">""," {navLinks.map((link, index) => (";
-              <"a": "ke y="{index"}" href="{link.href}" className="text-gray-700 "hover": "tex t-blue-600">"",";";
-              <a key = "{index}" href="{link.href}" className="text-gray-700 "hover": "tex t-blue-600">",;
-                {link.label}";
-            <a href="/services/ai" className="hidden "lg": "inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md "hover": b g-blue-700 transition-colors">Explore AI</a>"",;
-          <button aria-label="Toggle navigation" onClick="{()" => setMobileOpen((v) => !v)} className=""md": "hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 "hover": tex t-gray-900 "hover": b g-gray-100">";
-            <svg xmlns=""http":// comment;
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2"}" d="M4 6h16M4 12h16M4 18h16"   />";
-            aria-label=""Toggle": "navigatio n"",",";
-            className=""md": "hidde "n": inline-flex items-center justify-center p-2 rounded-md text-gray-600 "hover": tex t-gray-"900": hove "r":bg-gray-100"",;
-          >"";
-            <"svg": "xmln s=""http": // comment;
-              <"path": strokeLineca p="round" strokeLinejoin="round" strokeWidth="{2"}" d="M4 6h16M4 12h16M4 18h16" />";
-          <button,";
-aria-label = "Toggle navigation>;
-          <;<button;";
-            aria-label="&apos;Toggle" navigation";";
-            className="&apos;"md": " hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 "hover": "tex t-gray-900 "hover": b g-gray-100&apos",>;
-          >&apos;&apos,";
-            <svg xmlns="&apos,htt,"p": " // comment;
-              <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos;        />&apos;";
-            className = ""md": "hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 "hover": tex t-gray-900 "hover": b g-gray-100"";
-            <svg xmlns=""http":// comment;
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2"}" d="M4 6h16M4 12h16M4 18h16"   />;
-            </svg>;
-          </button>;
-</div>;
-      </div>;
-      {mobileOpen && (;
-        <div className=""md": "hidden border-t border-gray-200 bg-white">;
-          <div className="px-4 py-3 space-y-2">;
-            {navLinks.map((link) => (;
-              <div key={link.href"}>;
-                <a href={link.href} className="block w-full py-2 text-gray-700 "hover": "tex t-blue-600">;
-                  {link.label"}
-                </a>;
-                {link.submenu && (;
-                  <div className="ml-4 space-y-1">;
-                    {link.submenu.map((subLink) => (;
-                      <a;
-                        key={subLink.href}
-                        href={subLink.href}
-                        className="block w-full py-1 text-sm text-gray-600 "hover": "tex t-blue-600";
-                      >;
-                        {subLink.label"}
-                      </a>;
-                    ))}
-                      </div>
-  );
-}
-              </div>
-                  </div>;
-                )}
-              </div>;  const handleSearch = async (e: React.FormEvent) =>  {,
-    e.preventDefault(),
-    if: (searchQuery.trim()) {",,
-      window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}""
-  const navigation = []
-  // comment
-  const servicesCategories = []},", {"
-      title: "Quantum: Computin g,","
-      icon: At o,m,"
-      color: "from - indigo-500: t o-purple-500,",",
-      services:  ,[ { name: "Quantum: AI Hybrid Platform,", href: "/services/quantum - ai-hybrid-platform,", description: "Revolutionary: quantu m-AI computing"},", { name: "Quantum: Computing Solutions,", href: "/services/quantum - computing,", description: "Next-generation: computing power"},", { name: "Quantum: Financial Trading,", href: "/services/ai - quantum-financial-trading-platform,", description: "Advanced: quantum trading"},", { name: "Quantum: Machine Learning,", href: "/services/quantum - machine-learning,", description: "Quantum-enhanced: ML algorithms"},", { name: "AI: Quantum Financial Analytics,", href: "/services/ai - quantum-financial-analytics-platform,", description: "Revolutionary: quantum AI financial platform"}]},", {"
-      title: "Cloud: & Infrastructure,","
-      icon: Clo u,d,"
-      color: "from - cyan-500: t o-blue-500,",",
-      services:  ,[ { name: "Cloud: DevOp s,", href: "/services/cloud - devops,", description: "Infrastructure: automatio n & scaling"},", { name: "IT: Infrastructur e,", href: "/services/it - infrastructure,", description: "Enterprise: infrastructure solutions"},", { name: "FinOps: Adviso r,", href: "/services/finops - advisor,", description: "Cloud: cost optimization"},", { name: "Cloud: FinOps Optimizer,", href: "/services/cloud - finops-optimizer,", description: "Financial: operations automation"}]},", {"
-      title: "Cybersecurity,","
-      icon: Shie l,d,"
-      color: "from - red-500: t o-orange-500,",",
-      services:  ,[ { name: "AI: Cybersecurity Platform,", href: "/services/ai - cybersecurity-platform,", description: "Advanced: A I-powered security"},", { name: "AI: Cybersecurity Operations,", href: "/services/ai - cybersecurity-operations-center,", description: "Autonomous: security operations center"},", { name: "Security: Header s & CSP,", href: "/services/security - headers-csp,", description: "Web: security hardening"},", { name: "DSR: Privacy Portal,", href: "/services/dsr - portal,", description: "GDPR/CCPA: complianc e"},", { name: "Zero: Trust Network Access,", href: "/services/zero - trust-network-access,", description: "Modern: security architecture"}]},", {"
-      title: "Supply: Chai n & Logistics,","
-      icon: Tru c,k,"
-      color: "from - green-500: t o-blue-600,",",
-      services:  ,[ { name: "AI: Autonomous Supply Chain,", href: "/services/ai - autonomous-supply-chain-management-platform,", description: "Self-learning: supply chain management"},", { name: "Autonomous: Logistic s,", href: "/services/autonomous - logistics,", description: "Smart: supply chain automation"}]},", {"
-      title: "Emerging: Technologie s,","
-      icon: Rock e,t,"
-      color: "from - purple-500: t o-pink-500,",",
-      services:  ,[ { name: "AI: Smart City Infrastructure,", href: "/services/ai - smart-city-infrastructure-management,", description: "Intelligent: urban management"},", { name: "AI: Autonomous Vehicles,", href: "/services/ai - autonomous-vehicle-management-platform,", description: "Autonomous: fleet management"},", { name: "IoT: Edge Computing,", href: "/services/iot - edge-computing,", description: "Connected: device intelligence"},", { name: "Digital: Twin Platform,", href: "/services/digital - twin,", description: "Virtual: replica technology"},", { name: "Space: Technolog y,", href: "/space - tech,", description: "Innovative: space solutions"}]},", {"
-      title: "Smart: Cit y & Infrastructure,","
-      icon: Buildin g,2,"
-      color: "from - green-500: t o-emerald-500,",",
-      services:  ,[ { name: "AI: Smart City Management,", href: "/services/ai - smart-city-infrastructure-management,", description: "Intelligent: urban infrastructure"},", { name: "Traffic: Managemen t,", href: "/services/traffic - management,", description: "AI-powered: traffic optimization"},", { name: "Energy: Grid Management,", href: "/services/energy - grid,", description: "Smart: energy distribution"},", { name: "Environmental: Monitorin g,", href: "/services/environmental - monitoring,", description: "Real-time: environmental tracking"}]},", {"
-      title: "Autonomous: System s,","
-      icon: C a,r,"
-      color: "from - blue-500: t o-cyan-500,",",
-      services:  ,[ { name: "AI: Autonomous Vehicle Platform,", href: "/services/ai - autonomous-vehicle-management-platform,", description: "Fleet: managemen t & safety"},", { name: "Drone: Managemen t,", href: "/services/drone - management,", description: "Autonomous: drone operations"},", { name: "Robotics: Automatio n,", href: "/services/robotics - automation,", description: "Industrial: robotics solutions"}]},", {"
-      title: "Micro: SaaS Solutions,","
-      icon: Co d,e,"
-      services:  ,[ { name: "AI: Email Automation Suite,", href: "/services/ai - email-automation-suite,", description: "Intelligent: email management & automation"},", { name: "AI: Social Media Scheduler,", href: "/services/ai - social-media-scheduler,", description: "AI-powered: social media automation"},", { name: "AI: Customer Insights Platform,", href: "/services/ai - customer-insights-platform,", description: "Advanced: customer analytics & insights"},", { name: "Micro: CR M,", href: "/services/micro - crm,", description: "Lightweight: customer management"},", { name: "Helpdesk: Platfor m,", href: "/services/helpdesk - platform,", description: "Efficient: support system"},", { name: "AI: Content Marketing,", href: "/services/ai - content-marketing-suite,", description: "AI-powered: content creation"},", { name: "Customer: Support Automation,", href: "/services/ai - customer-support-automation,", description: "Intelligent: support automation"},", { name: "Website: Analytic s,", href: "/services/website - analytics,", description: "Performance: insight s"}]},", {"
-      title: "DevOps: & Automation,","
-      icon: Workfl o,w,"
-      services:  ,[ { name: "AI - Powered: DevOps Automation,", href: "/services/ai-powered-devops-automation,", description: "Intelligent: C I/CD & infrastructure automation"},", { name: "Cloud: DevOp s,", href: "/services/cloud - devops,", description: "Infrastructure: automatio n & scaling"},", { name: "IT: Infrastructur e,", href: "/services/it - infrastructure,", description: "Enterprise: infrastructure solutions"},", { name: "FinOps: Adviso r,", href: "/services/finops-advisor,", description: "Cloud: cost optimization"}]}"
-  ]
-  // comment
-  const services = []},", {"
-      title: "Technology: Solution s,","
-      icon: C p,u,"
-      solutions:  ,[ { name: "AI: Solution s,", href: "/ai - solutions,", description: "Artificial: intelligence integration"},", { name: "Digital: Transformatio n,", href: "/services / digital - transformation,", description: "Business: modernizatio n"},", { name: "Research: & Development,", href: "/research - development,", description: "Innovation: and discovery"},", { name: "Green: IT Solutions,", href: "/green - it,", description: "Sustainable: technolog y"}]}",,
-  const companyLinks = [],,
-  const resourceLinks = [],
-  const supportLinks = []
-  const toggleDropdown = (props: any) => {,,
-    setActiveDropdown(activeDropdown: === dropdown ? null: dropdow n)}
-export: const EnhancedHeader: React.FC: = () => {,
-  const [mobileOpen, setMobileOpen] = useState()
-}
-  const navLinks = []
-  // comment
-      title: "AI & Machine Learning",
-icon: Brai n,"
-color: "from-blue-500 to-indigo-500","
-services: [{ name: "AI Autonomous Business Manager", href: "/services/ai-autonomous-business-manager", description: "Fully autonomous business operations" }, { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", description: "Advanced analytics & ML insights" }, { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant", description: "Automated regulatory compliance" }, { name: "AI Sales Copilot", href: "/services/ai-sales-copilot", description: "Intelligent sales optimization" }, { name: "AI-Powered SEO", href: "/services/ai-powered-seo", description: "Machine learning SEO optimization" }, { name: "AI Content Marketing Suite", href: "/services/ai-content-marketing-suite", description: "AI-powered content creation & optimization" }, { name: "AI Customer Support", href: "/services/ai-customer-support-automation", description: "Intelligent support automation" }, { name: "AI Project Management", href: "/services/ai-project-management", description: "AI-driven project optimization" }, { name: "AI Financial Analytics", href: "/services/ai-financial-analytics", description: "Intelligent financial insights" }]}, {"
-      title: "Quantum Computing",
-icon: Ato m,"
-color: "from-indigo-500 to-purple-500","
-services: [ { name: "Quantum AI Hybrid Platform", href: "/services/quantum-ai-hybrid-platform", description: "Revolutionary quantum-AI computing" }, { name: "Quantum Computing Solutions", href: "/services/quantum-computing", description: "Next-generation computing power" }, { name: "Quantum Financial Trading", href: "/services/ai-quantum-financial-trading-platform", description: "Advanced quantum trading" }, { name: "Quantum Machine Learning", href: "/services/quantum-machine-learning", description: "Quantum-enhanced ML algorithms" }, { name: "AI Quantum Financial Analytics", href: "/services/ai-quantum-financial-analytics-platform", description: "Revolutionary quantum AI financial platform" }]}, {"
-      title: "Cloud & Infrastructure",
-icon: Clou d,"
-color: "from-cyan-500 to-blue-500","
-services: [ { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" }, { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" }, { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" }, { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer", description: "Financial operations automation" }]}, {"
-      title: "Cybersecurity",
-icon: Shiel d,"
-color: "from-red-500 to-orange-500","
-services: [ { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-platform", description: "Advanced AI-powered security" }, { name: "AI Cybersecurity Operations", href: "/services/ai-cybersecurity-operations-center", description: "Autonomous security operations center" }, { name: "Security Headers & CSP", href: "/services/security-headers-csp", description: "Web security hardening" }, { name: "DSR Privacy Portal", href: "/services/dsr-portal", description: "GDPR/CCPA compliance" }, { name: "Zero Trust Network Access", href: "/services/zero-trust-network-access", description: "Modern security architecture" }]}, {"
-      title: "Supply Chain & Logistics",
-icon: Truc k,"
-color: "from-green-500 to-blue-600","
-services: [ { name: "AI Autonomous Supply Chain", href: "/services/ai-autonomous-supply-chain-management-platform", description: "Self-learning supply chain management" }, { name: "Autonomous Logistics", href: "/services/autonomous-logistics", description: "Smart supply chain automation" }]}, {"
-      title: "Emerging Technologies",
-icon: Rocke t,"
-color: "from-purple-500 to-pink-500","
-services: [ { name: "AI Smart City Infrastructure", href: "/services/ai-smart-city-infrastructure-management", description: "Intelligent urban management" }, { name: "AI Autonomous Vehicles", href: "/services/ai-autonomous-vehicle-management-platform", description: "Autonomous fleet management" }, { name: "IoT Edge Computing", href: "/services/iot-edge-computing", description: "Connected device intelligence" }, { name: "Digital Twin Platform", href: "/services/digital-twin", description: "Virtual replica technology" }, { name: "Space Technology", href: "/space-tech", description: "Innovative space solutions" }]}, {"
-      title: "Smart City & Infrastructure",
-icon: Building 2,"
-color: "from-green-500 to-emerald-500","
-services: [ { name: "AI Smart City Management", href: "/services/ai-smart-city-infrastructure-management", description: "Intelligent urban infrastructure" }, { name: "Traffic Management", href: "/services/traffic-management", description: "AI-powered traffic optimization" }, { name: "Energy Grid Management", href: "/services/energy-grid", description: "Smart energy distribution" }, { name: "Environmental Monitoring", href: "/services/environmental-monitoring", description: "Real-time environmental tracking" }]}, {"
-      title: "Autonomous Systems",
-icon: Ca r,"
-color: "from-blue-500 to-cyan-500","
-services: [ { name: "AI Autonomous Vehicle Platform", href: "/services/ai-autonomous-vehicle-management-platform", description: "Fleet management & safety" }, { name: "Drone Management", href: "/services/drone-management", description: "Autonomous drone operations" }, { name: "Robotics Automation", href: "/services/robotics-automation", description: "Industrial robotics solutions" }]}, {"
-      title: "Micro SaaS Solutions",
-icon: Cod e,"
-services: [ { name: "AI Email Automation Suite", href: "/services/ai-email-automation-suite", description: "Intelligent email management & automation" }, { name: "AI Social Media Scheduler", href: "/services/ai-social-media-scheduler", description: "AI-powered social media automation" }, { name: "AI Customer Insights Platform", href: "/services/ai-customer-insights-platform", description: "Advanced customer analytics & insights" }, { name: "Micro CRM", href: "/services/micro-crm", description: "Lightweight customer management" }, { name: "Helpdesk Platform", href: "/services/helpdesk-platform", description: "Efficient support system" }, { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite", description: "AI-powered content creation" }, { name: "Customer Support Automation", href: "/services/ai-customer-support-automation", description: "Intelligent support automation" }, { name: "Website Analytics", href: "/services/website-analytics", description: "Performance insights" }]}, {"
-      title: "DevOps & Automation",
-icon: Workflo w,"
-services: [ { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", description: "Intelligent CI/CD & infrastructure automation" }, { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" }, { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" }, { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" }]}
-  // comment
-      name: "AI Email Automation Suite""
-      description: "Intelligent email management & automation"",
-      href: "/services/ai-email-automation-suite",
-icon: Mai l,
-featured: tru e}, {"
-      name: "AI Social Media Scheduler""
-      description: "AI-powered social media automation"",
-      href: "/services/ai-social-media-scheduler",
-icon: Share 2,"
-name: "AI Customer Insights Platform""
-      description: "Advanced customer analytics & insights"",
-      href: "/services/ai-customer-insights-platform",
-icon: User s,"
-name: "AI-Powered DevOps Automation""
-      description: "Intelligent CI/CD & infrastructure automation""
-      href: "/services/ai-powered-devops-automation""
-      name: "AI Content Creation Studio Pro""
-      description: "Advanced AI-powered content creation platform"",
-      href: "/services/AI-Content-Creation-Studio-Pro",
-icon: PenToo l,"
-name: "Quantum AI Trading Platform""
-      description: "Revolutionary quantum-enhanced trading system"",
-      href: "/services/Quantum-AI-Trading-Platform",
-icon: BarChart 3,"
-color: "from-orange-500 to-red-500""
-      name: "AI Quantum Financial Analytics""
-      description: "Revolutionary quantum AI financial platform""
-      href: "/services/ai-quantum-financial-analytics-platform""
-      color: "from-blue-500 to-purple-600""
-      name: "AI Autonomous Supply Chain""
-      description: "Self-learning supply chain management""
-      href: "/services/ai-autonomous-supply-chain-management-platform""
-      name: "AI Cybersecurity Operations""
-      description: "Autonomous security operations center""
-      href: "/services/ai-cybersecurity-operations-center""
-      color: "from-red-500 to-orange-600""
-      name: "2026 Services Showcase""
-      description: "Latest innovative services showcase"",
-      href: "/innovative-services-showcase-2026",
-icon: Sparkle s,"
-color: "from-yellow-500 to-orange-500",
-    setActiveDropdown(null)}, [location.pathname]);&apos
-    setMobileMenuOpen(false)
-}
-    setActiveDropdown(null)}, []);"
-      router.push("/search?q = "${encodeURIComponent(searchQuery.trim())}")}"
-  const navigation = []
-  // comment
-  const servicesCategories = []} {
-      title: &apos,Quantum Computing&apos,
-      icon: Ato m,
-      color: &apos,from-indigo-500 to-purple-500&apos,
-      services: [,
-        { nam,e: &apos,Quantum AI Hybrid Platform&apos, href: &apos,/services/quantum-ai-hybrid-platform&apos, description: &apos,Revolutionary quantum-AI computing&apos} { name: &apos,Quantum Computing Solutions&apos, href: &apos,/services/quantum-computing&apos, description: &apos,Next-generation computing power&apos} { name: &apos,Quantum Financial Trading&apos, href: &apos,/services/ai-quantum-financial-trading-platform&apos, description: &apos,Advanced quantum trading&apos} { name: &apos,Quantum Machine Learning&apos, href: &apos,/services/quantum-machine-learning&apos, description: &apos,Quantum-enhanced ML algorithms&apos} { name: &apos,AI Quantum Financial Analytics&apos, href: &apos,/services/ai-quantum-financial-analytics-platform&apos, description: &apos,Revolutionary quantum AI financial platform&apos}]} {
-      title: &apos,Cloud & Infrastructure&apos,
-      icon: Clou d,
-      color: &apos,from-cyan-500 to-blue-500&apos,
-        { nam,e: &apos,Cloud DevOps&apos, href: &apos,/services/cloud-devops&apos, description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos, href: &apos,/services/it-infrastructure&apos, description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos, href: &apos,/services/finops-advisor&apos, description: &apos,Cloud cost optimization&apos} { name: &apos,Cloud FinOps Optimizer&apos, href: &apos,/services/cloud-finops-optimizer&apos, description: &apos,Financial operations automation&apos}]} {
-      title: &apos,Cybersecurity&apos,
-      icon: Shiel d,
-      color: &apos,from-red-500 to-orange-500&apos,
-        { nam,e: &apos,AI Cybersecurity Platform&apos, href: &apos,/services/ai-cybersecurity-platform&apos, description: &apos,Advanced AI-powered security&apos} { name: &apos,AI Cybersecurity Operations&apos, href: &apos,/services/ai-cybersecurity-operations-center&apos, description: &apos,Autonomous security operations center&apos} { name: &apos,Security Headers & CSP&apos, href: &apos,/services/security-headers-csp&apos, description: &apos,Web security hardening&apos} { name: &apos,DSR Privacy Portal&apos, href: &apos,/services/dsr-portal&apos, description: &apos,GDPR/CCPA compliance&apos} { name: &apos,Zero Trust Network Access&apos, href: &apos,/services/zero-trust-network-access&apos, description: &apos,Modern security architecture&apos}]} {
-      title: &apos,Supply Chain & Logistics&apos,
-      icon: Truc k,
-      color: &apos,from-green-500 to-blue-600&apos,
-        { nam,e: &apos,AI Autonomous Supply Chain&apos, href: &apos,/services/ai-autonomous-supply-chain-management-platform&apos, description: &apos,Self-learning supply chain management&apos} { name: &apos,Autonomous Logistics&apos, href: &apos,/services/autonomous-logistics&apos, description: &apos,Smart supply chain automation&apos}]} {
-      title: &apos,Emerging Technologies&apos,
-      icon: Rocke t,
-      color: &apos,from-purple-500 to-pink-500&apos,
-        { nam,e: &apos,AI Smart City Infrastructure&apos, href: &apos,/services/ai-smart-city-infrastructure-management&apos, description: &apos,Intelligent urban management&apos} { name: &apos,AI Autonomous Vehicles&apos, href: &apos,/services/ai-autonomous-vehicle-management-platform&apos, description: &apos,Autonomous fleet management&apos} { name: &apos,IoT Edge Computing&apos, href: &apos,/services/iot-edge-computing&apos, description: &apos,Connected device intelligence&apos} { name: &apos,Digital Twin Platform&apos, href: &apos,/services/digital-twin&apos, description: &apos,Virtual replica technology&apos} { name: &apos,Space Technology&apos, href: &apos,/space-tech&apos, description: &apos,Innovative space solutions&apos}]} {
-      title: &apos,Smart City & Infrastructure&apos,
-      icon: Building 2,
-      color: &apos,from-green-500 to-emerald-500&apos,
-        { nam,e: &apos,AI Smart City Management&apos, href: &apos,/services/ai-smart-city-infrastructure-management&apos, description: &apos,Intelligent urban infrastructure&apos} { name: &apos,Traffic Management&apos, href: &apos,/services/traffic-management&apos, description: &apos,AI-powered traffic optimization&apos} { name: &apos,Energy Grid Management&apos, href: &apos,/services/energy-grid&apos, description: &apos,Smart energy distribution&apos} { name: &apos,Environmental Monitoring&apos, href: &apos,/services/environmental-monitoring&apos, description: &apos,Real-time environmental tracking&apos}]} {
-      title: &apos,Autonomous Systems&apos,
-      icon: Ca r,
-      color: &apos,from-blue-500 to-cyan-500&apos,
-        { nam,e: &apos,AI Autonomous Vehicle Platform&apos, href: &apos,/services/ai-autonomous-vehicle-management-platform&apos, description: &apos,Fleet management & safety&apos} { name: &apos,Drone Management&apos, href: &apos,/services/drone-management&apos, description: &apos,Autonomous drone operations&apos} { name: &apos,Robotics Automation&apos, href: &apos,/services/robotics-automation&apos, description: &apos,Industrial robotics solutions&apos}]} {
-      title: &apos,Micro SaaS Solutions&apos,
-      icon: Cod e,
-        { nam,e: &apos,AI Email Automation Suite&apos, href: &apos,/services/ai-email-automation-suite&apos, description: &apos,Intelligent email management & automation&apos} { name: &apos,AI Social Media Scheduler&apos, href: &apos,/services/ai-social-media-scheduler&apos, description: &apos,AI-powered social media automation&apos} { name: &apos,AI Customer Insights Platform&apos, href: &apos,/services/ai-customer-insights-platform&apos, description: &apos,Advanced customer analytics & insights&apos} { name: &apos,Micro CRM&apos, href: &apos,/services/micro-crm&apos, description: &apos,Lightweight customer management&apos} { name: &apos,Helpdesk Platform&apos, href: &apos,/services/helpdesk-platform&apos, description: &apos,Efficient support system&apos} { name: &apos,AI Content Marketing&apos, href: &apos,/services/ai-content-marketing-suite&apos, description: &apos,AI-powered content creation&apos} { name: &apos,Customer Support Automation&apos, href: &apos,/services/ai-customer-support-automation&apos, description: &apos,Intelligent support automation&apos} { name: &apos,Website Analytics&apos, href: &apos,/services/website-analytics&apos, description: &apos,Performance insights&apos}]} {
-      title: &apos,DevOps & Automation&apos,
-      icon: Workflo w,
-        { nam,e: &apos,AI-Powered DevOps Automation&apos, href: &apos,/services/ai-powered-devops-automation&apos, description: &apos,Intelligent CI/CD & infrastructure automation&apos} { name: &apos,Cloud DevOps&apos, href: &apos,/services/cloud-devops&apos, description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos, href: &apos,/services/it-infrastructure&apos, description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos, href: &apos,/services/finops-advisor&apos, description: &apos,Cloud cost optimization&apos}]}
-    { name: "Home", href: "/", current: tru e } { name: "About", href: "/about", current: fals e } { name: "Services", href: "/services", current: fals e } { name: "Innovative Services 2028", href: "/innovative-services-showcase-2028", current: fals e } { name: "Pricing Guide", href: "/comprehensive-pricing-guide-2028", current: fals e } { name: "Solutions", href: "/solutions", current: fals e } { name: "Contact", href: "/contact", current: fals e }]
-  // comment
-    { title: "AI & Machine Learning", icon: Brai n,"
-      color: "from-blue-500 to-indigo-500", services: [{ name: "AI Autonomous Business Manager", href: "/services/ai-autonomous-business-manager", description: "Fully autonomous business operations" } { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", description: "Advanced analytics & ML insights" } { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant", description: "Automated regulatory compliance" } { name: "AI Sales Copilot", href: "/services/ai-sales-copilot", description: "Intelligent sales optimization" } { name: "AI-Powered SEO", href: "/services/ai-powered-seo", description: "Machine learning SEO optimization" } { name: "AI Content Marketing Suite", href: "/services/ai-content-marketing-suite", description: "AI-powered content creation & optimization" } { name: "AI Customer Support", href: "/services/ai-customer-support-automation", description: "Intelligent support automation" } { name: "AI Project Management", href: "/services/ai-project-management", description: "AI-driven project optimization" } { name: "AI Financial Analytics", href: "/services/ai-financial-analytics", description: "Intelligent financial insights" }]} { title: "Quantum Computing","
-      icon: Ato m, color: "from-indigo-500 to-purple-500","
-        { name: "Quantum AI Hybrid Platform", href: "/services/quantum-ai-hybrid-platform", description: "Revolutionary quantum-AI computing" } { name: "Quantum Computing Solutions", href: "/services/quantum-computing", description: "Next-generation computing power" } { name: "Quantum Financial Trading", href: "/services/ai-quantum-financial-trading-platform", description: "Advanced quantum trading" } { name: "Quantum Machine Learning", href: "/services/quantum-machine-learning", description: "Quantum-enhanced ML algorithms" } { name: "AI Quantum Financial Analytics", href: "/services/ai-quantum-financial-analytics-platform", description: "Revolutionary quantum AI financial platform" }]} { title: "Cloud & Infrastructure","
-      icon: Clou d, color: "from-cyan-500 to-blue-500","
-        { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" } { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" } { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" } { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer", description: "Financial operations automation" }]} { title: "Cybersecurity","
-      icon: Shiel d, color: "from-red-500 to-orange-500","
-        { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-platform", description: "Advanced AI-powered security" } { name: "AI Cybersecurity Operations", href: "/services/ai-cybersecurity-operations-center", description: "Autonomous security operations center" } { name: "Security Headers & CSP", href: "/services/security-headers-csp", description: "Web security hardening" } { name: "DSR Privacy Portal", href: "/services/dsr-portal", description: "GDPR/CCPA compliance" } { name: "Zero Trust Network Access", href: "/services/zero-trust-network-access", description: "Modern security architecture" }]} { title: "Supply Chain & Logistics","
-      icon: Truc k, color: "from-green-500 to-blue-600","
-        { name: "AI Autonomous Supply Chain", href: "/services/ai-autonomous-supply-chain-management-platform", description: "Self-learning supply chain management" } { name: "Autonomous Logistics", href: "/services/autonomous-logistics", description: "Smart supply chain automation" }]} { title: "Emerging Technologies","
-      icon: Rocke t, color: "from-purple-500 to-pink-500","
-        { name: "AI Smart City Infrastructure", href: "/services/ai-smart-city-infrastructure-management", description: "Intelligent urban management" } { name: "AI Autonomous Vehicles", href: "/services/ai-autonomous-vehicle-management-platform", description: "Autonomous fleet management" } { name: "IoT Edge Computing", href: "/services/iot-edge-computing", description: "Connected device intelligence" } { name: "Digital Twin Platform", href: "/services/digital-twin", description: "Virtual replica technology" } { name: "Space Technology", href: "/space-tech", description: "Innovative space solutions" }]} { title: "Smart City & Infrastructure","
-      icon: Building 2, color: "from-green-500 to-emerald-500","
-        { name: "AI Smart City Management", href: "/services/ai-smart-city-infrastructure-management", description: "Intelligent urban infrastructure" } { name: "Traffic Management", href: "/services/traffic-management", description: "AI-powered traffic optimization" } { name: "Energy Grid Management", href: "/services/energy-grid", description: "Smart energy distribution" } { name: "Environmental Monitoring", href: "/services/environmental-monitoring", description: "Real-time environmental tracking" }]} { title: "Autonomous Systems","
-      icon: Ca r, color: "from-blue-500 to-cyan-500","
-        { name: "AI Autonomous Vehicle Platform", href: "/services/ai-autonomous-vehicle-management-platform", description: "Fleet management & safety" } { name: "Drone Management", href: "/services/drone-management", description: "Autonomous drone operations" } { name: "Robotics Automation", href: "/services/robotics-automation", description: "Industrial robotics solutions" }]} { title: "Micro SaaS Solutions","
-      icon: Cod e, color: "from-green-500 to-emerald-500","
-        { name: "AI Email Automation Suite", href: "/services/ai-email-automation-suite", description: "Intelligent email management & automation" } { name: "AI Social Media Scheduler", href: "/services/ai-social-media-scheduler", description: "AI-powered social media automation" } { name: "AI Customer Insights Platform", href: "/services/ai-customer-insights-platform", description: "Advanced customer analytics & insights" } { name: "Micro CRM", href: "/services/micro-crm", description: "Lightweight customer management" } { name: "Helpdesk Platform", href: "/services/helpdesk-platform", description: "Efficient support system" } { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite", description: "AI-powered content creation" } { name: "Customer Support Automation", href: "/services/ai-customer-support-automation", description: "Intelligent support automation" } { name: "Website Analytics", href: "/services/website-analytics", description: "Performance insights" }]} { title: "DevOps & Automation","
-      icon: Workflo w, color: "from-blue-500 to-indigo-500","
-        { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", description: "Intelligent CI/CD & infrastructure automation" } { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" } { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" } { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" }]}
-  // comment
-  const services = []&apos
-  const solutionsCategories = []} {
-      title: &apos,Technology Solutions&apos,
-      icon: Cp u,
-      solutions: [,
-        { nam,e: &apos,AI Solutions&apos, href: &apos,/ai-solutions&apos, description: &apos,Artificial intelligence integration&apos} { name: &apos,Digital Transformation&apos, href: &apos,/services/digital-transformation&apos, description: &apos,Business modernization&apos} { name: &apos,Research & Development&apos, href: &apos,/research-development&apos, description: &apos,Innovation and discovery&apos} { name: &apos,Green IT Solutions&apos, href: &apos,/green-it&apos, description: &apos,Sustainable technology&apos}]}
-  const companyLinks = [];&apos
-  const resourceLinks = [];&apos
-  const supportLinks = [];&apos,
-      name: "AI Email Automation Suite", description: "Intelligent email management & automation","
-      href: "/services/ai-email-automation-suite", icon: Mai l,"
-      color: "from-blue-500 to-indigo-500", featured: tru e} { name: "AI Social Media Scheduler", description: "AI-powered social media automation","
-      href: "/services/ai-social-media-scheduler", icon: Share 2,"
-      color: "from-purple-500 to-pink-500", featured: tru e} { name: "AI Customer Insights Platform", description: "Advanced customer analytics & insights","
-      href: "/services/ai-customer-insights-platform", icon: User s,"
-      color: "from-green-500 to-emerald-500", featured: tru e} { name: "AI-Powered DevOps Automation", description: "Intelligent CI/CD & infrastructure automation","
-      href: "/services/ai-powered-devops-automation", icon: Workflo w,"
-      color: "from-blue-500 to-indigo-500", featured: tru e} { name: "AI Content Creation Studio Pro", description: "Advanced AI-powered content creation platform","
-      href: "/services/AI-Content-Creation-Studio-Pro", icon: PenToo l,"
-      color: "from-purple-500 to-pink-500", featured: tru e} { name: "Quantum AI Trading Platform", description: "Revolutionary quantum-enhanced trading system","
-      href: "/services/Quantum-AI-Trading-Platform", icon: BarChart 3,"
-      color: "from-orange-500 to-red-500", featured: tru e} { name: "AI Quantum Financial Analytics", description: "Revolutionary quantum AI financial platform","
-      href: "/services/ai-quantum-financial-analytics-platform", icon: BarChart 3,"
-      color: "from-blue-500 to-purple-600", featured: tru e} { name: "AI Autonomous Supply Chain", description: "Self-learning supply chain management","
-      href: "/services/ai-autonomous-supply-chain-management-platform", icon: Truc k,"
-      color: "from-green-500 to-blue-600", featured: tru e} { name: "AI Cybersecurity Operations", description: "Autonomous security operations center","
-      href: "/services/ai-cybersecurity-operations-center", icon: Shiel d,"
-      color: "from-red-500 to-orange-600", featured: tru e} { name: "2026 Services Showcase", description: "Latest innovative services showcase","
-      href: "/innovative-services-showcase-2026", icon: Sparkle s,"
-      color: "from-yellow-500 to-orange-500", featured: tru e}"
-      title: "Industry Solutions",
-icon: Buildin g,"
-color: "from-blue-500 to-purple-500","
-solutions: [{ name: "Enterprise Solutions", href: "/solutions/enterprise", description: "Large-scale business transformation" }, { name: "Healthcare Solutions", href: "/solutions/healthcare", description: "Medical technology innovation" }, { name: "Financial Solutions", href: "/financial-solutions", description: "Fintech and banking solutions" }, { name: "Manufacturing Solutions", href: "/manufacturing-solutions", description: "Industry 4.0 automation" }]}, {"
-      title: "Technology Solutions",
-icon: Cp u,"
-solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artificial intelligence integration" }, { name: "Digital Transformation", href: "/services/digital-transformation", description: "Business modernization" }, { name: "Research & Development", href: "/research-development", description: "Innovation and discovery" }, { name: "Green IT Solutions", href: "/green-it", description: "Sustainable technology" }]}"
-  const companyLinks = []
-  const resourceLinks = []
-  const supportLinks = []
-  const toggleDropdown = (props: any) => {,,
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
-  const [servicesOpen, setServicesOpen] = useState<any>(false)
-}
-  const navLinks = []"
-} { label: "Solutions", href: "/solutions" } { label: "Enterprise", href: "/enterprise" } { label: "About", href: "/about" } { label: "Case Studies", href: "/case-studies" } { label: "Careers", href: "/careers" },"
-  const navLinks = []} { title: "Technology Solutions","
-      icon: Cp u, color: "from-cyan-500 to-blue-500","
-        { name: "AI Solutions", href: "/ai-solutions", description: "Artificial intelligence integration" } { name: "Digital Transformation", href: "/services/digital-transformation", description: "Business modernization" } { name: "Research & Development", href: "/research-development", description: "Innovation and discovery" } { name: "Green IT Solutions", href: "/green-it", description: "Sustainable technology" }]}"
-    { name: "About Us", href: "/about", description: "Learn about our mission and values" } { name: "Our Team", href: "/team", description: "Meet our expert professionals" } { name: "Leadership", href: "/leadership", description: "Executive team and vision" } { name: "Careers", href: "/careers", description: "Join our growing team" } { name: "Partners", href: "/partners", description: "Strategic partnerships" } { name: "Case Studies", href: "/case-studies", description: "Success stories and results" }],
-    { name: "Blog", href: "/blog", description: "Latest insights and updates" } { name: "News", href: "/news", description: "Company announcements" } { name: "Press", href: "/press", description: "Media resources" } { name: "Webinars", href: "/webinars", description: "Educational sessions" } { name: "White Papers", href: "/white - papers", description: "In-depth research" } { name: "Documentation", href: "/documentation", description: "Technical guides" }],
-    { name: "Help Center", href: "/help", description: "Find answers and solutions" } { name: "FAQ", href: "/faq", description: "Frequently asked questions" } { name: "Support", href: "/support", description: "Technical assistance" } { name: "Training", href: "/training", description: "Skill development programs" } { name: "Contact Support", href: "/contact", description: "Get in touch with our team" } { name: "Status Page", href: "/status", description: "Service availability" }]
-  const [mobileOpen, setMobileOpen] = useState()
-}
-export const EnhancedHeader: React.FC = () => {}
-  const;const;const [mobileOpen, setMobileOpen] = useState<any>(false)
-}
-    { label: &apos,Home&apos, href: &apos,/&apos} { label: &apos,Services&apos, href: &apos,/services&apos} { label: &apos,Solutions&apos, href: &apos,/solutions&apos} { label: &apos,Enterprise&apos, href: &apos,/enterprise&apos} { label: &apos,Request Quote&apos, href: &apos,/request-quote&apos} { label: &apos,Case Studies&apos, href: &apos,/case-studies&apos} { label: &apos,Careers&apos, href: &apos,/careers&apos} { label: &apos,Contact&apos, href: &apos,/contact&apos}
-  return (&apos;&apos;"
-    <header className="&apos;bg-white" shadow-lg&apos;>&apos,"
-      <div className="&apos;max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8&apos,>&apos,"
-        <div className="&apos;flex" justify-between items-center py-6&apos;>&apos,"
-          <div className="&apos;flex" items-center&apos;>&apos,"
-            <a href="&apos;/&apos;" className="&apos;text-2xl" font-bold text-blue-900&apos,>,
-              Zion Tech Group&apos;&apos,"
-          <nav className = "&apos,hidden" m,d: flex space-x-8&apos,>
-            {navLinks.map((link, index) => (&apos}"
-              <a key="{index}" href="{link.href}" className="&apos;text-gray-700" hover: tex t-blue-600&apos,>
-                {link.label}&apos
-  return ("
-    <header: classNam e = "bg-white shadow-lg">",","
-      <div: classNam e="max-w-7xl mx-auto px-4 sm: p x-6: l g:px-8">",";"
-        <div: classNam e="flex justify - between items-center py-6">","
-          <div: classNam e="flex items-center">",,",
-            <a: hre f = "/" className="text-2xl font-bold text-blue-900">",",
-              Zion: Tech Group"
-    <header className="bg-white shadow-lg">"
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"
-        <div className="flex justify-between items-center py-6">"
-          <div className="flex items-center">"
-            <a href="/" className="text-2xl font-bold text-blue-900">",
-          <nav className="hidden md: fle x: space-x-8">"," {navLinks.map((link, index) => ("
-              <a: ke y="{index}" href="{link.href}" className="text-gray-700 hover: tex t-blue-600">",";"
-              <a key = "{index}" href="{link.href}" className="text-gray-700 hover: tex t-blue-600">,
-                {link.label}"
-            <a href="/services/ai" className="hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors">Explore AI</a>",
-          <button aria-label="Toggle navigation" onClick="{()" => setMobileOpen((v) => !v)} className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100">"
-            <svg xmlns="http:// comment
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"   />"
-            aria-label="Toggle: navigatio n",","
-            className="md: hidde n: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900: hove r:bg-gray-100",
-          >""
-            <svg: xmln s="http: // comment
-              <path: strokeLineca p="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />"
-          <button,"
-aria-label = "Toggle navigation>
-          <;<button;"
-            aria-label="&apos;Toggle" navigation";"
-            className="&apos;md: " hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100&apos,>
-          >&apos;&apos,"
-            <svg xmlns="&apos,htt,p: " // comment
-              <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos;        />&apos;"
-            className = "md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100""
-            <svg xmlns="http:// comment
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"   />
-            </svg>
-          </button>
-</div>
-      </div>
-      {mobileOpen && (
-        <div className="md: hidden border-t border-gray-200 bg-white">
-          <div className="px-4 py-3 space-y-2">
-            {navLinks.map((link) => (
-              <div key={link.href}>
-                <a href={link.href} className="block w-full py-2 text-gray-700 hover: tex t-blue-600">
-                  {link.label}
-                </a>
-                {link.submenu && (
-                  <div className="ml-4 space-y-1">
-                    {link.submenu.map((subLink) => (
-                      <a
-                        key={subLink.href}
-                        href={subLink.href}
-                        className="block w-full py-1 text-sm text-gray-600 hover: tex t-blue-600"
-                      >
-                        {subLink.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
+
+  const contactInfo = [
+    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+    { icon: Mail, text: 'hello@ziontechgroup.com', href: 'mailto:hello@ziontechgroup.com' },
+    { icon: MapPin, text: 'San Francisco, CA', href: '#' }
+  ];
+
+  return (
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' 
+          : 'bg-transparent'
+      }`}
+    >
+      {/* Top Contact Bar */}
+      <div className="bg-slate-800/90 text-slate-300 text-sm py-2">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <div className="hidden md:flex items-center space-x-6">
+            {contactInfo.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
+              >
+                <item.icon className="w-4 h-4" />
+                <span>{item.text}</span>
+              </a>
             ))}
-            <a href="/services/ai" className="block w-full py-2 text-blue-700 font-medium">Explore AI</a>
+          </div>
+          <div className="flex items-center space-x-4">
+            <span className="text-cyan-400 font-semibold">24/7 Support Available</span>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-400">Online</span>
+            </div>
           </div>
         </div>
-)}</header>
-  )}
+      </div>
 
-  )}"
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react""
-"
-export default Component
-</svg>
-</button>
-</svg>
-</svg>
-</button>
-</a>
-</a>
-</nav>
-</a>
-</div>
-</a>
-</div>
-</div>
-</div>
-</header>
-</a>
-</nav>
-</a>
-</div>
-</div>
-</div>
-</header>
-</any>
-</any>
-</string>
-</any>
-</any>
-</string>
-</any>
-</any>
-</div>
-</div>
-</nav>
-</div>
-</div>
-</header>
-</nav>
-</div>
-</div>
-</header>
-</div>
-</form>
-</div>
-</motion>
-</motion>
-</div>
-</div>
-</motion>
-</any>
-</any>';
-</any>;';;';</any>
-</any>
-</any>
-</any>
-import React from &apos;react&apos;; import { import { innovativeServices2025 } from &apos;../data/innovativeServices2025&apos;; import { motion,AnimatePresence } from &apos;framer-motion&apos;; params - Function parameters * @returns {*} Function return value */ function EnhancedHeader($1) {export function EnhancedHeader($1) { const [mobileMenuOpen,setMobileMenuOpen] = useState<any>(false); const [searchQuery,setSearchQuery] = useState<any>(&quot;); const [servicesDropdownOpen,setServicesDropdownOpen] = useState<any>(false); const [scrolled,setScrolled] = useState<any>(false); const [isSearching,setIsSearching] = useState<any>(false); ; useEffect(() => {; return () => {}},[]);,[])};&apos;; window.addEventListener(&apos;scroll&apos;,handleScroll);&apos;;&apos;; return () => window.removeEventListener(&apos;scroll&apos;,handleScroll)},[]); ; const handleSearch = async(e: React.FormEvent) => {; e.preventDefault(); if(searchQuery.trim()) {; setIsSearching(true); try {; await new Promise(resolve => setTimeout (resolve,1000) ) ; window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {; setIsSearching(false)} } }; ; return () <>; {} <div className=&quot;matrix -rain&quot;></div> {} <motion.header` className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled&apos; ? &apos;bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl&quot; : &apos;bg-transparent&apos;` }`} initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.8,ease: &apos;easeOut&apos; }} >&quot;; <div className=&quot;container mx-auto px-4&quot;>&quot;; <div className=&quot;flex items-center justify-between h-20&quot;>; {}&quot;; <Link to=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>; <motion.div&quot;; className=&quot;relative&quot;; whileHover={{ scale: 1.05,rotate: 5 }} whileTap={{ scale: 0.95 }} >&quot; <div className=&quot;w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50&quot;>&quot; <Zap className=&quot;w-7 h-7 text-white&quot; /> </div>&quot; <div className=&quot;absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover: opacit y-100 transition-opacity duration-500 blur-lg&quot; /> </motion.div>&quot; <div className=&quot;flex flex-col&quot;>&quot; <span className=&quot;text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;> Zion Tech </span>&quot; <span className=&quot;text-xs text-cyan-400 font-medium font-rajdhani tracking-wider&quot;> Innovation Group </span> </div> </Link> {}&quot; <nav className=&quot;hidden xl: flex items-center space-x-8&quot;> {navigation.slice(0,6).map(item => ( <Link key={item.name} to={item.href}` className={`nav-link font-medium transition-all duration-300 ${item.current&apos; ? &apos;text-cyan-400 border-b-2 border-cyan-400&quot; : &apos;text-gray-300 hover: tex t-cyan-400&apos;` }`} >; {item.name} </Link>) ) } ; {}&quot;; <div className=&quot;relative group&quot;>; <button&quot;; className=&quot;nav-link flex items-center space-x-2 font-medium text-gray-300 hover: tex t-cyan-400 transition-all duration-300&quot;; onMouseEnter={() => setServicesDropdownOpen(true)} onMouseLeave={() => setServicesDropdownOpen(false)} >; <span>Services</span>&quot;; <ChevronDown className=&quot;w-4 h-4 transition-transform group-hover: rotat e-180 duration-300&quot; /> </button>; <AnimatePresence>; {servicesDropdownOpen && (; <motion.div&quot;; className=&quot;absolute top-full left-0 mt-4 w-[1200px] bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20&quot;; initial={{ opacity: 0,y: -20,scale: 0.95 }} animate={{ opacity: 1,y: 0,scale: 1 }} exit={{ opacity: 0,y: -20,scale: 0.95 }} transition={{ duration: 0.3 }} onMouseEnter={ () => setServicesDropdownOpen(true) } onMouseLeave={ () => setServicesDropdownOpen(false) } >; {}&quot;; <div className=&quot;mb-8&quot;>&quot;; <h3 className=&quot;text-xl font-semibold text-cyan-400 mb-6 font-orbitron&quot;>; Featured Services; &quot;; <div className=&quot;grid grid-cols-3 gap-6&quot;>; {services; .filter(s => s.featured); .map(service => (; <Link; key={service.name} to={service.href}&quot;; className=&quot;group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover: borde r-cyan-500/50 transition-all duration-300 hover: b g-gray-800/70&quot;; >&quot;; <div className=&quot;flex items-center space-x-3 mb-3&quot;>&quot;; <service.icon className=&quot;w-6 h-6 text-cyan-400&quot; />&quot;; <span className=&quot;text-lg font-medium text-white group-hover: tex t-cyan-400 transition-colors&quot;>; {service.name} </span>; </div>&quot;; <p className=&quot;text-sm text-gray-400 group-hover: tex t-gray-300 transition-colors mb-3&quot;>; {service.description} </p> {service.badge && (&apos;; <span` className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === &apos;New&quot; ? &apos;bg-green-500/20 text-green-400&quot; : service.badge === &apos;Popular&quot; ? &apos;bg-blue-500/20 text-blue-400&quot; : service.badge === &apos;Featured&quot; ? &apos;bg-purple-500/20 text-purple-400&quot; : &apos;bg-cyan-500/20 text-cyan-400&apos;` }`} >; {service.badge} </span>; )} </Link>; ))} </div>; </div>; {}&quot;; <div className=&quot;grid grid-cols-2 gap-8&quot;>; {serviceCategories.map(category => (; <div key={category.name}>&quot;; <div className=&quot;flex items-center space-x-3 mb-4&quot;>; <div`; className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`} >&quot;; <category.icon className=&quot;w-5 h-5 text-white&quot; />; </div>&quot;; <h4 className=&quot;text-lg font-semibold text-gray-300 font-rajdhani&quot;>; {category.name} </h4>; </div>&quot;; <div className=&quot;space-y-2&quot;>; {category.services.slice(0,3).map(service => (; <Link; key={service.name} to={service.href}&quot;; className=&quot;flex items-center space-x-3 p-3 rounded-lg hover: b g-gray-800/50 transition-colors group&quot;; >&quot;; <service.icon className=&quot;w-4 h-4 text-cyan-400 group-hover: tex t-cyan-300 transition-colors&quot; />&quot;; <span className=&quot;text-sm text-gray-300 group-hover: tex t-white transition-colors&quot;>; {service.name} </span> {service.badge && (&apos;; <span` className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === &apos;New&quot; ? &apos;bg-green-500/20 text-green-400&quot; : service.badge === &apos;Popular&quot; ? &apos;bg-blue-500/20 text-blue-400&quot; : &apos;bg-cyan-500/20 text-cyan-400&apos;` }`} >; {service.badge} </span>; )} </Link>; ))} {category.services.length > 3 && (; <Link; to={category.href}&quot;; className=&quot;flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors text-sm font-medium group&quot;; >; View All {category.name}&quot;; <ArrowRight className=&quot;ml-2 w-4 h-4 group-hover: translat e-x-1 transition-transform&quot; /> </Link>; )} </div>; </div>) ) } </div>; {}&quot;; <div className=&quot;mt-8 pt-6 border-t border-gray-700&quot;>&quot;; <div className=&quot;flex items-center justify-between&quot;>; <Link&quot;; to=&quot;/innovative-services-showcase-2025&quot;; className=&quot;inline-flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors font-medium group text-lg&quot;; >; View All Innovative Services 2025&quot;; <ArrowRight className=&quot;ml-2 w-5 h-5 group-hover: translat e-x-1 transition-transform&quot; />; </Link>&quot; <div className=&quot;flex items-center space-x-4 text-sm text-gray-400&quot;>; <span>50+ Services Available</span>; <span>•</span>; <span > Proven ROI</span>; <span>•</span>; <span > 24 / 7 Support</span>; </div>; </div>; </div>; </motion.div>) } </AnimatePresence>; </div>; {} {navigation.slice(6,10).map(item => ( <Link key={item.name} to={item.href}` className={`nav-link font-medium transition-all duration-300 ${item.current&apos; ? &apos;text-cyan-400 border-b-2 border-cyan-400&quot; : &apos;text-gray-300 hover: tex t-cyan-400&apos;` }`} >; {item.name} </Link>) ) } </nav>; {}&quot;; <div className=&quot;hidden xl: flex items-center space-x-6&quot;>; {}&quot;; <form onSubmit={handleSearch} className=&quot;relative&quot;>&quot;; <div className=&quot;relative&quot;>&quot;; <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&quot; />; <input&quot;; type=&quot;text&quot;; placeholder=&quot;Search services...&quot; value={searchQuery} onChange={e => setSearchQuery(e.target.value)}&quot;; className=&quot;w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: borde r-cyan-500 focus: rin g-2 focus: rin g-cyan-500/20 transition-all duration-300&quot;; />; {isSearching && (&quot;; <div className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2&quot;>&quot;; <div className=&quot;animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-400&quot;></div>; </div>; ]; return (; <header className=&quot;sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200&quot;>; <div className=&quot;max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8&quot;>; <div className=&quot;flex justify-between items-center h-16&quot;>; <a href=&quot;/&quot; className=&quot;text-xl sm: tex t-2xl font-bold text-blue-900&quot;>Zion Tech Group</a>; <nav className=&quot;hidden md: flex items-center gap-6&quot;>; {navLinks.map((link) => (; <div key={link.href} className=&quot;relative group&quot;>; <a; href={link.href} ; className=&quot;text-gray-700 hover: tex t-blue-600 transition-colors flex items-center gap-1&quot;; onMouseEnter={() => link.submenu && setServicesOpen(true)} onMouseLeave={() => link.submenu && setServicesOpen(false)} >; {link.label} {link.submenu && (; <svg className=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>; <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M19 9l-7 7-7-7&quot; />; </svg>; )} </a>; {link.submenu && servicesOpen && (; <div; className=&quot;absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50&quot;; onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} >; {link.submenu.map((subLink) => (; <a; key={subLink.href} href={subLink.href} className=&quot;block px-4 py-2 text-sm text-gray-700 hover: b g-blue-50 hover: tex t-blue-600 transition-colors&quot;; >; {subLink.label} </a>; ))} </div> )} </div> ))} <a href=&quot;/contact&quot; className=&quot;hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors&quot;>Get Started</a>; return (<header className=&quot;bg-white shadow-lg&quot;>; &quot;; return (<header className=&quot;bg-white shadow-lg&quot;>&quot;; <div className=&quot;max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8&quot;>&quot;; <div className=&quot;flex justify-between items-center py-6&quot;>&quot;; <div className=&quot;flex items-center&quot;>&quot;; <a href=&quot;/&quot; className=&quot;text-2xl font-bold text-blue-900&quot;>; Zion Tech Group,; </a>; </div>&quot;; <nav className=&quot;hidden md: flex space-x-8&quot;>&quot;; <nav className=&quot;hidden md: flex space-x-6&quot;>&quot;; <a href=&quot;/&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Home</a>&quot;; <a href=&quot;/about&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>About</a>&quot;; <a href=&quot;/services&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Services</a>&quot;; <a href=&quot;/solutions&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Solutions</a>&quot;; <a href=&quot;/contact&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Contact</a>; </nav>; </header>&quot;; <a href=&quot;/micro-saas&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Micro SAAS</a>&quot;; <a href=&quot;/it-services&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>IT Services</a>&quot;; <a href=&quot;/marketplace&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Marketplace</a>&quot;; <a href=&quot;/news&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>News</a>&quot;; <a href=&quot;/blog&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Blog</a>&quot;; <a href=&quot;/careers&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Careers</a>,,; ),&quot;; ,&quot;});,&quot;})&quot;; ;,&quot;});,&quot;})&quot;; export const EnhancedHeader: React.FC = () => {,&quot;};);,&quot;})&quot;; return (<header className=&quot;bg-white shadow-lg&quot;>;,&quot;});,&quot;})&quot;; <div className=&quot;max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8&quot;>,&quot;});,&quot;})&quot;; <div className=&quot;flex justify-between items-center py-4 md: p y-6&quot;>,&quot;});,&quot;})&quot;; <div className=&quot;flex items-center&quot;>;,&quot;});,&quot;})&quot;; <a href=&quot;/&quot; className=&quot;text-xl md: tex t-2xl font-bold text-blue-900&quot;>,&quot;});,&quot;})&quot;; Zion Tech Group,&quot;});,&quot;})&quot;; </a>;,&quot;});,&quot;})&quot;; </div>;,&quot;});,&quot;})&quot;; <nav className=&quot;hidden md: flex gap-6&quot;>,&quot;});,&quot;})&quot;; <a href=&quot;/&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Home</a>,&quot;});,&quot;})&quot;; <a href=&quot;/services&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Services</a>,&quot;});,&quot;})&quot;; <a href=&quot;/solutions&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Solutions</a>,&quot;});,&quot;})&quot;; <a href=&quot;/pricing-guide&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Pricing</a>,&quot;});,&quot;})&quot;; <a href=&quot;/contact&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>Contact</a>,&quot;});,&quot;})&quot;; </nav>;,&quot;});,&quot;})&quot;; </header>;,&quot;});,&quot;})&quot;; );,&quot;});,&quot;});&quot;};,&quot;});,&quot;})&quot;; Menu,X,Search,User,Bell,ChevronDown,Zap,Brain,Shield,Cloud,; Rocket,Globe,Cpu,Lock,Heart,Users,ShoppingCart,BookOpen,; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,; Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,&quot;; Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,; PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from &quot;lucide-react; export function EnhancedHeader($1) {; const [mobileMenuOpen,setMobileMenuOpen] = useState()&quot;; const [searchQuery,setSearchQuery] = useState<any>(&quot;)} const [scrolled,setScrolled] = useState<any>(false)} const [activeDropdown,setActiveDropdown] = useState<string | null>(null)} useEffect(() => {; const handleScroll = (props) => {; setScrolled(window.scrollY > 50)} ; window.addEventListener()} return () => window.removeEventListener(&quot;scroll&quot;,handleScroll)},[]);react&quot;react - router-dom&quot;,framer-motion; Menu,X,Search,User,Bell,ChevronDown,Zap,Brain,Shield,Cloud,; Rocket,Globe,Cpu,Lock,Heart,Users,ShoppingCart,BookOpen,; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,; Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,; Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,&quot;; PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from &quot;lucide-react&quot;; export: function EnhancedHeader($1) {&quot;,; const [searchQuery,setSearchQuery] = useState<any>(&quot;)} setScrolled(window.scrollY: > 50)},; window.addEventListener()} return: () => window.removeEventListener(&quot;scroll&quot;,handleScroll)},[])} PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from &apos;lucide-react&quot;;&apos;&apos; export function EnhancedHeader($1) {}&quot;; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,&quot;; &quot;; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,; const router = useRouter()} const [searchQuery,setSearchQuery] = useState<any>(&apos;&apos);&apos;&apos; const [activeDropdown,setActiveDropdown] = useState<;<;<string | null>(null)} useEffect(() => {} ; window.addEventListener(&apos;scroll&apos,handleScroll)} return () => window.removeEventListener(&apos;scroll&apos,handleScroll)},[])} setIsMenuOpen(false)} setActiveDropdown(null)},[location.pathname])} const handleSearch = async (e: React.FormEvent) => {,; e.preventDefault(),; if: (searchQuery.trim()) {&quot;,,; window.location.href = &quot;/search?q=&quot;${encodeURIComponent(searchQuery.trim())}&quot;}&quot;}&quot;; const navigation = []; const servicesCategories = []};,&quot;,{&quot;; title: &quot;Quantum: Computin g,&quot;,&quot;; icon: At o,m,&quot;; color: &quot;from - indigo-500: t o-purple-500,&quot;,&quot;,; services: ,[ { name: &quot;Quantum: AI Hybrid Platform,&quot;,href: &quot;/services/quantum - ai-hybrid-platform,&quot;,description: &quot;Revolutionary: quantu m-AI computing&quot;},&quot;,{ name: &quot;Quantum: Computing Solutions,&quot;,href: &quot;/services/quantum - computing,&quot;,description: &quot;Next-generation: computing power&quot;},&quot;,{ name: &quot;Quantum: Financial Trading,&quot;,href: &quot;/services/ai - quantum-financial-trading-platform,&quot;,description: &quot;Advanced: quantum trading&quot;},&quot;,{ name: &quot;Quantum: Machine Learning,&quot;,href: &quot;/services/quantum - machine-learning,&quot;,description: &quot;Quantum-enhanced: ML algorithms&quot;},&quot;,{ name: &quot;AI: Quantum Financial Analytics,&quot;,href: &quot;/services/ai - quantum-financial-analytics-platform,&quot;,description: &quot;Revolutionary: quantum AI financial platform&quot;}]},&quot;,{&quot;; title: &quot;Cloud: & Infrastructure,&quot;,&quot;; icon: Clo u,d,&quot;; color: &quot;from - cyan-500: t o-blue-500,&quot;,&quot;,; services: ,[ { name: &quot;Cloud: DevOp s,&quot;,href: &quot;/services/cloud - devops,&quot;,description: &quot;Infrastructure: automatio n & scaling&quot;},&quot;,{ name: &quot;IT: Infrastructur e,&quot;,href: &quot;/services/it - infrastructure,&quot;,description: &quot;Enterprise: infrastructure solutions&quot;},&quot;,{ name: &quot;FinOps: Adviso r,&quot;,href: &quot;/services/finops - advisor,&quot;,description: &quot;Cloud: cost optimization&quot;},&quot;,{ name: &quot;Cloud: FinOps Optimizer,&quot;,href: &quot;/services/cloud - finops-optimizer,&quot;,description: &quot;Financial: operations automation&quot;}]},&quot;,{&quot;; title: &quot;Cybersecurity,&quot;,&quot;; icon: Shie l,d,&quot;; color: &quot;from - red-500: t o-orange-500,&quot;,&quot;,; services: ,[ { name: &quot;AI: Cybersecurity Platform,&quot;,href: &quot;/services/ai - cybersecurity-platform,&quot;,description: &quot;Advanced: A I-powered security&quot;},&quot;,{ name: &quot;AI: Cybersecurity Operations,&quot;,href: &quot;/services/ai - cybersecurity-operations-center,&quot;,description: &quot;Autonomous: security operations center&quot;},&quot;,{ name: &quot;Security: Header s & CSP,&quot;,href: &quot;/services/security - headers-csp,&quot;,description: &quot;Web: security hardening&quot;},&quot;,{ name: &quot;DSR: Privacy Portal,&quot;,href: &quot;/services/dsr - portal,&quot;,description: &quot;GDPR/CCPA: complianc e&quot;},&quot;,{ name: &quot;Zero: Trust Network Access,&quot;,href: &quot;/services/zero - trust-network-access,&quot;,description: &quot;Modern: security architecture&quot;}]},&quot;,{&quot;; title: &quot;Supply: Chai n & Logistics,&quot;,&quot;; icon: Tru c,k,&quot;; color: &quot;from - green-500: t o-blue-600,&quot;,&quot;,; services: ,[ { name: &quot;AI: Autonomous Supply Chain,&quot;,href: &quot;/services/ai - autonomous-supply-chain-management-platform,&quot;,description: &quot;Self-learning: supply chain management&quot;},&quot;,{ name: &quot;Autonomous: Logistic s,&quot;,href: &quot;/services/autonomous - logistics,&quot;,description: &quot;Smart: supply chain automation&quot;}]},&quot;,{&quot;; title: &quot;Emerging: Technologie s,&quot;,&quot;; icon: Rock e,t,&quot;; color: &quot;from - purple-500: t o-pink-500,&quot;,&quot;,; services: ,[ { name: &quot;AI: Smart City Infrastructure,&quot;,href: &quot;/services/ai - smart-city-infrastructure-management,&quot;,description: &quot;Intelligent: urban management&quot;},&quot;,{ name: &quot;AI: Autonomous Vehicles,&quot;,href: &quot;/services/ai - autonomous-vehicle-management-platform,&quot;,description: &quot;Autonomous: fleet management&quot;},&quot;,{ name: &quot;IoT: Edge Computing,&quot;,href: &quot;/services/iot - edge-computing,&quot;,description: &quot;Connected: device intelligence&quot;},&quot;,{ name: &quot;Digital: Twin Platform,&quot;,href: &quot;/services/digital - twin,&quot;,description: &quot;Virtual: replica technology&quot;},&quot;,{ name: &quot;Space: Technolog y,&quot;,href: &quot;/space - tech,&quot;,description: &quot;Innovative: space solutions&quot;}]},&quot;,{&quot;; title: &quot;Smart: Cit y & Infrastructure,&quot;,&quot;; icon: Buildin g,2,&quot;; color: &quot;from - green-500: t o-emerald-500,&quot;,&quot;,; services: ,[ { name: &quot;AI: Smart City Management,&quot;,href: &quot;/services/ai - smart-city-infrastructure-management,&quot;,description: &quot;Intelligent: urban infrastructure&quot;},&quot;,{ name: &quot;Traffic: Managemen t,&quot;,href: &quot;/services/traffic - management,&quot;,description: &quot;AI-powered: traffic optimization&quot;},&quot;,{ name: &quot;Energy: Grid Management,&quot;,href: &quot;/services/energy - grid,&quot;,description: &quot;Smart: energy distribution&quot;},&quot;,{ name: &quot;Environmental: Monitorin g,&quot;,href: &quot;/services/environmental - monitoring,&quot;,description: &quot;Real-time: environmental tracking&quot;}]},&quot;,{&quot;; title: &quot;Autonomous: System s,&quot;,&quot;; icon: C a,r,&quot;; color: &quot;from - blue-500: t o-cyan-500,&quot;,&quot;,; services: ,[ { name: &quot;AI: Autonomous Vehicle Platform,&quot;,href: &quot;/services/ai - autonomous-vehicle-management-platform,&quot;,description: &quot;Fleet: managemen t & safety&quot;},&quot;,{ name: &quot;Drone: Managemen t,&quot;,href: &quot;/services/drone - management,&quot;,description: &quot;Autonomous: drone operations&quot;},&quot;,{ name: &quot;Robotics: Automatio n,&quot;,href: &quot;/services/robotics - automation,&quot;,description: &quot;Industrial: robotics solutions&quot;}]},&quot;,{&quot;; title: &quot;Micro: SaaS Solutions,&quot;,&quot;; icon: Co d,e,&quot;; services: ,[ { name: &quot;AI: Email Automation Suite,&quot;,href: &quot;/services/ai - email-automation-suite,&quot;,description: &quot;Intelligent: email management & automation&quot;},&quot;,{ name: &quot;AI: Social Media Scheduler,&quot;,href: &quot;/services/ai - social-media-scheduler,&quot;,description: &quot;AI-powered: social media automation&quot;},&quot;,{ name: &quot;AI: Customer Insights Platform,&quot;,href: &quot;/services/ai - customer-insights-platform,&quot;,description: &quot;Advanced: customer analytics & insights&quot;},&quot;,{ name: &quot;Micro: CR M,&quot;,href: &quot;/services/micro - crm,&quot;,description: &quot;Lightweight: customer management&quot;},&quot;,{ name: &quot;Helpdesk: Platfor m,&quot;,href: &quot;/services/helpdesk - platform,&quot;,description: &quot;Efficient: support system&quot;},&quot;,{ name: &quot;AI: Content Marketing,&quot;,href: &quot;/services/ai - content-marketing-suite,&quot;,description: &quot;AI-powered: content creation&quot;},&quot;,{ name: &quot;Customer: Support Automation,&quot;,href: &quot;/services/ai - customer-support-automation,&quot;,description: &quot;Intelligent: support automation&quot;},&quot;,{ name: &quot;Website: Analytic s,&quot;,href: &quot;/services/website - analytics,&quot;,description: &quot;Performance: insight s&quot;}]},&quot;,{&quot;; title: &quot;DevOps: & Automation,&quot;,&quot;; icon: Workfl o,w,&quot;; services: ,[ { name: &quot;AI - Powered: DevOps Automation,&quot;,href: &quot;/services/ai-powered-devops-automation,&quot;,description: &quot;Intelligent: C I/CD & infrastructure automation&quot;},&quot;,{ name: &quot;Cloud: DevOp s,&quot;,href: &quot;/services/cloud - devops,&quot;,description: &quot;Infrastructure: automatio n & scaling&quot;},&quot;,{ name: &quot;IT: Infrastructur e,&quot;,href: &quot;/services/it - infrastructure,&quot;,description: &quot;Enterprise: infrastructure solutions&quot;},&quot;,{ name: &quot;FinOps: Adviso r,&quot;,href: &quot;/services/finops-advisor,&quot;,description: &quot;Cloud: cost optimization&quot;}]}&quot;; ]; const services = []};,&quot;,{&quot;; title: &quot;Technology: Solution s,&quot;,&quot;; icon: C p,u,&quot;; solutions: ,[ { name: &quot;AI: Solution s,&quot;,href: &quot;/ai - solutions,&quot;,description: &quot;Artificial: intelligence integration&quot;},&quot;,{ name: &quot;Digital: Transformatio n,&quot;,href: &quot;/services / digital - transformation,&quot;,description: &quot;Business: modernizatio n&quot;},&quot;,{ name: &quot;Research: & Development,&quot;,href: &quot;/research - development,&quot;,description: &quot;Innovation: and discovery&quot;},&quot;,{ name: &quot;Green: IT Solutions,&quot;,href: &quot;/green - it,&quot;,description: &quot;Sustainable: technolog y&quot;}]}&quot;,,; const companyLinks = [],,; const resourceLinks = [],; const supportLinks = []; const toggleDropdown = (props) => {,,; setActiveDropdown(activeDropdown: === dropdown ? null: dropdow n)} ; export: const EnhancedHeader: React.FC: = () => {,; const [mobileOpen,setMobileOpen] = useState()} const navLinks = []; title: &quot;AI & Machine Learning&quot;,; icon: Brai n,&quot;; color: &quot;from-blue-500 to-indigo-500&quot;,&quot;; services: [{ name: &quot;AI Autonomous Business Manager&quot;,href: &quot;/services/ai-autonomous-business-manager&quot;,description: &quot;Fully autonomous business operations&quot; },{ name: &quot;AI Business Intelligence&quot;,href: &quot;/services/ai-business-intelligence&quot;,description: &quot;Advanced analytics & ML insights&quot; },{ name: &quot;AI Compliance Assistant&quot;,href: &quot;/services/ai-compliance-assistant&quot;,description: &quot;Automated regulatory compliance&quot; },{ name: &quot;AI Sales Copilot&quot;,href: &quot;/services/ai-sales-copilot&quot;,description: &quot;Intelligent sales optimization&quot; },{ name: &quot;AI-Powered SEO&quot;,href: &quot;/services/ai-powered-seo&quot;,description: &quot;Machine learning SEO optimization&quot; },{ name: &quot;AI Content Marketing Suite&quot;,href: &quot;/services/ai-content-marketing-suite&quot;,description: &quot;AI-powered content creation & optimization&quot; },{ name: &quot;AI Customer Support&quot;,href: &quot;/services/ai-customer-support-automation&quot;,description: &quot;Intelligent support automation&quot; },{ name: &quot;AI Project Management&quot;,href: &quot;/services/ai-project-management&quot;,description: &quot;AI-driven project optimization&quot; },{ name: &quot;AI Financial Analytics&quot;,href: &quot;/services/ai-financial-analytics&quot;,description: &quot;Intelligent financial insights&quot; }]},{&quot;; title: &quot;Quantum Computing&quot;,; icon: Ato m,&quot;; color: &quot;from-indigo-500 to-purple-500&quot;,&quot;; services: [ { name: &quot;Quantum AI Hybrid Platform&quot;,href: &quot;/services/quantum-ai-hybrid-platform&quot;,description: &quot;Revolutionary quantum-AI computing&quot; },{ name: &quot;Quantum Computing Solutions&quot;,href: &quot;/services/quantum-computing&quot;,description: &quot;Next-generation computing power&quot; },{ name: &quot;Quantum Financial Trading&quot;,href: &quot;/services/ai-quantum-financial-trading-platform&quot;,description: &quot;Advanced quantum trading&quot; },{ name: &quot;Quantum Machine Learning&quot;,href: &quot;/services/quantum-machine-learning&quot;,description: &quot;Quantum-enhanced ML algorithms&quot; },{ name: &quot;AI Quantum Financial Analytics&quot;,href: &quot;/services/ai-quantum-financial-analytics-platform&quot;,description: &quot;Revolutionary quantum AI financial platform&quot; }]},{&quot;; title: &quot;Cloud & Infrastructure&quot;,; icon: Clou d,&quot;; color: &quot;from-cyan-500 to-blue-500&quot;,&quot;; services: [ { name: &quot;Cloud DevOps&quot;,href: &quot;/services/cloud-devops&quot;,description: &quot;Infrastructure automation & scaling&quot; },{ name: &quot;IT Infrastructure&quot;,href: &quot;/services/it-infrastructure&quot;,description: &quot;Enterprise infrastructure solutions&quot; },{ name: &quot;FinOps Advisor&quot;,href: &quot;/services/finops-advisor&quot;,description: &quot;Cloud cost optimization&quot; },{ name: &quot;Cloud FinOps Optimizer&quot;,href: &quot;/services/cloud-finops-optimizer&quot;,description: &quot;Financial operations automation&quot; }]},{&quot;; title: &quot;Cybersecurity&quot;,; icon: Shiel d,&quot;; color: &quot;from-red-500 to-orange-500&quot;,&quot;; services: [ { name: &quot;AI Cybersecurity Platform&quot;,href: &quot;/services/ai-cybersecurity-platform&quot;,description: &quot;Advanced AI-powered security&quot; },{ name: &quot;AI Cybersecurity Operations&quot;,href: &quot;/services/ai-cybersecurity-operations-center&quot;,description: &quot;Autonomous security operations center&quot; },{ name: &quot;Security Headers & CSP&quot;,href: &quot;/services/security-headers-csp&quot;,description: &quot;Web security hardening&quot; },{ name: &quot;DSR Privacy Portal&quot;,href: &quot;/services/dsr-portal&quot;,description: &quot;GDPR/CCPA compliance&quot; },{ name: &quot;Zero Trust Network Access&quot;,href: &quot;/services/zero-trust-network-access&quot;,description: &quot;Modern security architecture&quot; }]},{&quot;; title: &quot;Supply Chain & Logistics&quot;,; icon: Truc k,&quot;; color: &quot;from-green-500 to-blue-600&quot;,&quot;; services: [ { name: &quot;AI Autonomous Supply Chain&quot;,href: &quot;/services/ai-autonomous-supply-chain-management-platform&quot;,description: &quot;Self-learning supply chain management&quot; },{ name: &quot;Autonomous Logistics&quot;,href: &quot;/services/autonomous-logistics&quot;,description: &quot;Smart supply chain automation&quot; }]},{&quot;; title: &quot;Emerging Technologies&quot;,; icon: Rocke t,&quot;; color: &quot;from-purple-500 to-pink-500&quot;,&quot;; services: [ { name: &quot;AI Smart City Infrastructure&quot;,href: &quot;/services/ai-smart-city-infrastructure-management&quot;,description: &quot;Intelligent urban management&quot; },{ name: &quot;AI Autonomous Vehicles&quot;,href: &quot;/services/ai-autonomous-vehicle-management-platform&quot;,description: &quot;Autonomous fleet management&quot; },{ name: &quot;IoT Edge Computing&quot;,href: &quot;/services/iot-edge-computing&quot;,description: &quot;Connected device intelligence&quot; },{ name: &quot;Digital Twin Platform&quot;,href: &quot;/services/digital-twin&quot;,description: &quot;Virtual replica technology&quot; },{ name: &quot;Space Technology&quot;,href: &quot;/space-tech&quot;,description: &quot;Innovative space solutions&quot; }]},{&quot;; title: &quot;Smart City & Infrastructure&quot;,; icon: Building 2,&quot;; color: &quot;from-green-500 to-emerald-500&quot;,&quot;; services: [ { name: &quot;AI Smart City Management&quot;,href: &quot;/services/ai-smart-city-infrastructure-management&quot;,description: &quot;Intelligent urban infrastructure&quot; },{ name: &quot;Traffic Management&quot;,href: &quot;/services/traffic-management&quot;,description: &quot;AI-powered traffic optimization&quot; },{ name: &quot;Energy Grid Management&quot;,href: &quot;/services/energy-grid&quot;,description: &quot;Smart energy distribution&quot; },{ name: &quot;Environmental Monitoring&quot;,href: &quot;/services/environmental-monitoring&quot;,description: &quot;Real-time environmental tracking&quot; }]},{&quot;; title: &quot;Autonomous Systems&quot;,; icon: Ca r,&quot;; color: &quot;from-blue-500 to-cyan-500&quot;,&quot;; services: [ { name: &quot;AI Autonomous Vehicle Platform&quot;,href: &quot;/services/ai-autonomous-vehicle-management-platform&quot;,description: &quot;Fleet management & safety&quot; },{ name: &quot;Drone Management&quot;,href: &quot;/services/drone-management&quot;,description: &quot;Autonomous drone operations&quot; },{ name: &quot;Robotics Automation&quot;,href: &quot;/services/robotics-automation&quot;,description: &quot;Industrial robotics solutions&quot; }]},{&quot;; title: &quot;Micro SaaS Solutions&quot;,; icon: Cod e,&quot;; services: [ { name: &quot;AI Email Automation Suite&quot;,href: &quot;/services/ai-email-automation-suite&quot;,description: &quot;Intelligent email management & automation&quot; },{ name: &quot;AI Social Media Scheduler&quot;,href: &quot;/services/ai-social-media-scheduler&quot;,description: &quot;AI-powered social media automation&quot; },{ name: &quot;AI Customer Insights Platform&quot;,href: &quot;/services/ai-customer-insights-platform&quot;,description: &quot;Advanced customer analytics & insights&quot; },{ name: &quot;Micro CRM&quot;,href: &quot;/services/micro-crm&quot;,description: &quot;Lightweight customer management&quot; },{ name: &quot;Helpdesk Platform&quot;,href: &quot;/services/helpdesk-platform&quot;,description: &quot;Efficient support system&quot; },{ name: &quot;AI Content Marketing&quot;,href: &quot;/services/ai-content-marketing-suite&quot;,description: &quot;AI-powered content creation&quot; },{ name: &quot;Customer Support Automation&quot;,href: &quot;/services/ai-customer-support-automation&quot;,description: &quot;Intelligent support automation&quot; },{ name: &quot;Website Analytics&quot;,href: &quot;/services/website-analytics&quot;,description: &quot;Performance insights&quot; }]},{&quot;; title: &quot;DevOps & Automation&quot;,; icon: Workflo w,&quot;; services: [ { name: &quot;AI-Powered DevOps Automation&quot;,href: &quot;/services/ai-powered-devops-automation&quot;,description: &quot;Intelligent CI/CD & infrastructure automation&quot; },{ name: &quot;Cloud DevOps&quot;,href: &quot;/services/cloud-devops&quot;,description: &quot;Infrastructure automation & scaling&quot; },{ name: &quot;IT Infrastructure&quot;,href: &quot;/services/it-infrastructure&quot;,description: &quot;Enterprise infrastructure solutions&quot; },{ name: &quot;FinOps Advisor&quot;,href: &quot;/services/finops-advisor&quot;,description: &quot;Cloud cost optimization&quot; }]} ; name: &quot;AI Email Automation Suite&quot;; description: &quot;Intelligent email management & automation&quot;,; href: &quot;/services/ai-email-automation-suite&quot;,; icon: Mai l,; featured: tru e},{&quot;; name: &quot;AI Social Media Scheduler&quot;; description: &quot;AI-powered social media automation&quot;,; href: &quot;/services/ai-social-media-scheduler&quot;,; icon: Share 2,&quot;; name: &quot;AI Customer Insights Platform&quot;; description: &quot;Advanced customer analytics & insights&quot;,; href: &quot;/services/ai-customer-insights-platform&quot;,; icon: User s,&quot;; name: &quot;AI-Powered DevOps Automation&quot;; description: &quot;Intelligent CI/CD & infrastructure automation&quot;; href: &quot;/services/ai-powered-devops-automation&quot;; name: &quot;AI Content Creation Studio Pro&quot;; description: &quot;Advanced AI-powered content creation platform&quot;,; href: &quot;/services/AI-Content-Creation-Studio-Pro&quot;,; icon: PenToo l,&quot;; name: &quot;Quantum AI Trading Platform&quot;; description: &quot;Revolutionary quantum-enhanced trading system&quot;,; href: &quot;/services/Quantum-AI-Trading-Platform&quot;,; icon: BarChart 3,&quot;; color: &quot;from-orange-500 to-red-500&quot;; name: &quot;AI Quantum Financial Analytics&quot;; description: &quot;Revolutionary quantum AI financial platform&quot;; href: &quot;/services/ai-quantum-financial-analytics-platform&quot;; color: &quot;from-blue-500 to-purple-600&quot;; name: &quot;AI Autonomous Supply Chain&quot;; description: &quot;Self-learning supply chain management&quot;; href: &quot;/services/ai-autonomous-supply-chain-management-platform&quot;; name: &quot;AI Cybersecurity Operations&quot;; description: &quot;Autonomous security operations center&quot;; href: &quot;/services/ai-cybersecurity-operations-center&quot;; color: &quot;from-red-500 to-orange-600&quot;; name: &quot;2026 Services Showcase&quot;; description: &quot;Latest innovative services showcase&quot;,; href: &quot;/innovative-services-showcase-2026&quot;,; icon: Sparkle s,&quot;; color: &quot;from-yellow-500 to-orange-500&quot;,; setActiveDropdown(null)},[location.pathname]);&apos; setMobileMenuOpen(false)} setActiveDropdown(null)},[]);&quot;; router.push(&quot;/search?q = &quot;${encodeURIComponent(searchQuery.trim())}&quot;)}&quot;; const navigation = []; const servicesCategories = []}; {; title: &apos,Quantum Computing&apos,; icon: Ato m,; color: &apos,from-indigo-500 to-purple-500&apos,; services: [,; { nam,e: &apos,Quantum AI Hybrid Platform&apos,href: &apos,/services/quantum-ai-hybrid-platform&apos,description: &apos,Revolutionary quantum-AI computing&apos} { name: &apos,Quantum Computing Solutions&apos,href: &apos,/services/quantum-computing&apos,description: &apos,Next-generation computing power&apos} { name: &apos,Quantum Financial Trading&apos,href: &apos,/services/ai-quantum-financial-trading-platform&apos,description: &apos,Advanced quantum trading&apos} { name: &apos,Quantum Machine Learning&apos,href: &apos,/services/quantum-machine-learning&apos,description: &apos,Quantum-enhanced ML algorithms&apos} { name: &apos,AI Quantum Financial Analytics&apos,href: &apos,/services/ai-quantum-financial-analytics-platform&apos,description: &apos,Revolutionary quantum AI financial platform&apos}]} {; title: &apos,Cloud & Infrastructure&apos,; icon: Clou d,; color: &apos,from-cyan-500 to-blue-500&apos,; { nam,e: &apos,Cloud DevOps&apos,href: &apos,/services/cloud-devops&apos,description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos,href: &apos,/services/it-infrastructure&apos,description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos,href: &apos,/services/finops-advisor&apos,description: &apos,Cloud cost optimization&apos} { name: &apos,Cloud FinOps Optimizer&apos,href: &apos,/services/cloud-finops-optimizer&apos,description: &apos,Financial operations automation&apos}]} {; title: &apos,Cybersecurity&apos,; icon: Shiel d,; color: &apos,from-red-500 to-orange-500&apos,; { nam,e: &apos,AI Cybersecurity Platform&apos,href: &apos,/services/ai-cybersecurity-platform&apos,description: &apos,Advanced AI-powered security&apos} { name: &apos,AI Cybersecurity Operations&apos,href: &apos,/services/ai-cybersecurity-operations-center&apos,description: &apos,Autonomous security operations center&apos} { name: &apos,Security Headers & CSP&apos,href: &apos,/services/security-headers-csp&apos,description: &apos,Web security hardening&apos} { name: &apos,DSR Privacy Portal&apos,href: &apos,/services/dsr-portal&apos,description: &apos,GDPR/CCPA compliance&apos} { name: &apos,Zero Trust Network Access&apos,href: &apos,/services/zero-trust-network-access&apos,description: &apos,Modern security architecture&apos}]} {; title: &apos,Supply Chain & Logistics&apos,; icon: Truc k,; color: &apos,from-green-500 to-blue-600&apos,; { nam,e: &apos,AI Autonomous Supply Chain&apos,href: &apos,/services/ai-autonomous-supply-chain-management-platform&apos,description: &apos,Self-learning supply chain management&apos} { name: &apos,Autonomous Logistics&apos,href: &apos,/services/autonomous-logistics&apos,description: &apos,Smart supply chain automation&apos}]} {; title: &apos,Emerging Technologies&apos,; icon: Rocke t,; color: &apos,from-purple-500 to-pink-500&apos,; { nam,e: &apos,AI Smart City Infrastructure&apos,href: &apos,/services/ai-smart-city-infrastructure-management&apos,description: &apos,Intelligent urban management&apos} { name: &apos,AI Autonomous Vehicles&apos,href: &apos,/services/ai-autonomous-vehicle-management-platform&apos,description: &apos,Autonomous fleet management&apos} { name: &apos,IoT Edge Computing&apos,href: &apos,/services/iot-edge-computing&apos,description: &apos,Connected device intelligence&apos} { name: &apos,Digital Twin Platform&apos,href: &apos,/services/digital-twin&apos,description: &apos,Virtual replica technology&apos} { name: &apos,Space Technology&apos,href: &apos,/space-tech&apos,description: &apos,Innovative space solutions&apos}]} {; title: &apos,Smart City & Infrastructure&apos,; icon: Building 2,; color: &apos,from-green-500 to-emerald-500&apos,; { nam,e: &apos,AI Smart City Management&apos,href: &apos,/services/ai-smart-city-infrastructure-management&apos,description: &apos,Intelligent urban infrastructure&apos} { name: &apos,Traffic Management&apos,href: &apos,/services/traffic-management&apos,description: &apos,AI-powered traffic optimization&apos} { name: &apos,Energy Grid Management&apos,href: &apos,/services/energy-grid&apos,description: &apos,Smart energy distribution&apos} { name: &apos,Environmental Monitoring&apos,href: &apos,/services/environmental-monitoring&apos,description: &apos,Real-time environmental tracking&apos}]} {; title: &apos,Autonomous Systems&apos,; icon: Ca r,; color: &apos,from-blue-500 to-cyan-500&apos,; { nam,e: &apos,AI Autonomous Vehicle Platform&apos,href: &apos,/services/ai-autonomous-vehicle-management-platform&apos,description: &apos,Fleet management & safety&apos} { name: &apos,Drone Management&apos,href: &apos,/services/drone-management&apos,description: &apos,Autonomous drone operations&apos} { name: &apos,Robotics Automation&apos,href: &apos,/services/robotics-automation&apos,description: &apos,Industrial robotics solutions&apos}]} {; title: &apos,Micro SaaS Solutions&apos,; icon: Cod e,; { nam,e: &apos,AI Email Automation Suite&apos,href: &apos,/services/ai-email-automation-suite&apos,description: &apos,Intelligent email management & automation&apos} { name: &apos,AI Social Media Scheduler&apos,href: &apos,/services/ai-social-media-scheduler&apos,description: &apos,AI-powered social media automation&apos} { name: &apos,AI Customer Insights Platform&apos,href: &apos,/services/ai-customer-insights-platform&apos,description: &apos,Advanced customer analytics & insights&apos} { name: &apos,Micro CRM&apos,href: &apos,/services/micro-crm&apos,description: &apos,Lightweight customer management&apos} { name: &apos,Helpdesk Platform&apos,href: &apos,/services/helpdesk-platform&apos,description: &apos,Efficient support system&apos} { name: &apos,AI Content Marketing&apos,href: &apos,/services/ai-content-marketing-suite&apos,description: &apos,AI-powered content creation&apos} { name: &apos,Customer Support Automation&apos,href: &apos,/services/ai-customer-support-automation&apos,description: &apos,Intelligent support automation&apos} { name: &apos,Website Analytics&apos,href: &apos,/services/website-analytics&apos,description: &apos,Performance insights&apos}]} {; title: &apos,DevOps & Automation&apos,; icon: Workflo w,; { nam,e: &apos,AI-Powered DevOps Automation&apos,href: &apos,/services/ai-powered-devops-automation&apos,description: &apos,Intelligent CI/CD & infrastructure automation&apos} { name: &apos,Cloud DevOps&apos,href: &apos,/services/cloud-devops&apos,description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos,href: &apos,/services/it-infrastructure&apos,description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos,href: &apos,/services/finops-advisor&apos,description: &apos,Cloud cost optimization&apos}]} ; { name: &quot;Home&quot;,href: &quot;/&quot;,current: tru e } { name: &quot;About&quot;,href: &quot;/about&quot;,current: fals e } { name: &quot;Services&quot;,href: &quot;/services&quot;,current: fals e } { name: &quot;Innovative Services 2028&quot;,href: &quot;/innovative-services-showcase-2028&quot;,current: fals e } { name: &quot;Pricing Guide&quot;,href: &quot;/comprehensive-pricing-guide-2028&quot;,current: fals e } { name: &quot;Solutions&quot;,href: &quot;/solutions&quot;,current: fals e } { name: &quot;Contact&quot;,href: &quot;/contact&quot;,current: fals e }]; { title: &quot;AI & Machine Learning&quot;,icon: Brai n,&quot;; color: &quot;from-blue-500 to-indigo-500&quot;,services: [{ name: &quot;AI Autonomous Business Manager&quot;,href: &quot;/services/ai-autonomous-business-manager&quot;,description: &quot;Fully autonomous business operations&quot; } { name: &quot;AI Business Intelligence&quot;,href: &quot;/services/ai-business-intelligence&quot;,description: &quot;Advanced analytics & ML insights&quot; } { name: &quot;AI Compliance Assistant&quot;,href: &quot;/services/ai-compliance-assistant&quot;,description: &quot;Automated regulatory compliance&quot; } { name: &quot;AI Sales Copilot&quot;,href: &quot;/services/ai-sales-copilot&quot;,description: &quot;Intelligent sales optimization&quot; } { name: &quot;AI-Powered SEO&quot;,href: &quot;/services/ai-powered-seo&quot;,description: &quot;Machine learning SEO optimization&quot; } { name: &quot;AI Content Marketing Suite&quot;,href: &quot;/services/ai-content-marketing-suite&quot;,description: &quot;AI-powered content creation & optimization&quot; } { name: &quot;AI Customer Support&quot;,href: &quot;/services/ai-customer-support-automation&quot;,description: &quot;Intelligent support automation&quot; } { name: &quot;AI Project Management&quot;,href: &quot;/services/ai-project-management&quot;,description: &quot;AI-driven project optimization&quot; } { name: &quot;AI Financial Analytics&quot;,href: &quot;/services/ai-financial-analytics&quot;,description: &quot;Intelligent financial insights&quot; }]} { title: &quot;Quantum Computing&quot;,&quot;; icon: Ato m,color: &quot;from-indigo-500 to-purple-500&quot;,&quot;; { name: &quot;Quantum AI Hybrid Platform&quot;,href: &quot;/services/quantum-ai-hybrid-platform&quot;,description: &quot;Revolutionary quantum-AI computing&quot; } { name: &quot;Quantum Computing Solutions&quot;,href: &quot;/services/quantum-computing&quot;,description: &quot;Next-generation computing power&quot; } { name: &quot;Quantum Financial Trading&quot;,href: &quot;/services/ai-quantum-financial-trading-platform&quot;,description: &quot;Advanced quantum trading&quot; } { name: &quot;Quantum Machine Learning&quot;,href: &quot;/services/quantum-machine-learning&quot;,description: &quot;Quantum-enhanced ML algorithms&quot; } { name: &quot;AI Quantum Financial Analytics&quot;,href: &quot;/services/ai-quantum-financial-analytics-platform&quot;,description: &quot;Revolutionary quantum AI financial platform&quot; }]} { title: &quot;Cloud & Infrastructure&quot;,&quot;; icon: Clou d,color: &quot;from-cyan-500 to-blue-500&quot;,&quot;; { name: &quot;Cloud DevOps&quot;,href: &quot;/services/cloud-devops&quot;,description: &quot;Infrastructure automation & scaling&quot; } { name: &quot;IT Infrastructure&quot;,href: &quot;/services/it-infrastructure&quot;,description: &quot;Enterprise infrastructure solutions&quot; } { name: &quot;FinOps Advisor&quot;,href: &quot;/services/finops-advisor&quot;,description: &quot;Cloud cost optimization&quot; } { name: &quot;Cloud FinOps Optimizer&quot;,href: &quot;/services/cloud-finops-optimizer&quot;,description: &quot;Financial operations automation&quot; }]} { title: &quot;Cybersecurity&quot;,&quot;; icon: Shiel d,color: &quot;from-red-500 to-orange-500&quot;,&quot;; { name: &quot;AI Cybersecurity Platform&quot;,href: &quot;/services/ai-cybersecurity-platform&quot;,description: &quot;Advanced AI-powered security&quot; } { name: &quot;AI Cybersecurity Operations&quot;,href: &quot;/services/ai-cybersecurity-operations-center&quot;,description: &quot;Autonomous security operations center&quot; } { name: &quot;Security Headers & CSP&quot;,href: &quot;/services/security-headers-csp&quot;,description: &quot;Web security hardening&quot; } { name: &quot;DSR Privacy Portal&quot;,href: &quot;/services/dsr-portal&quot;,description: &quot;GDPR/CCPA compliance&quot; } { name: &quot;Zero Trust Network Access&quot;,href: &quot;/services/zero-trust-network-access&quot;,description: &quot;Modern security architecture&quot; }]} { title: &quot;Supply Chain & Logistics&quot;,&quot;; icon: Truc k,color: &quot;from-green-500 to-blue-600&quot;,&quot;; { name: &quot;AI Autonomous Supply Chain&quot;,href: &quot;/services/ai-autonomous-supply-chain-management-platform&quot;,description: &quot;Self-learning supply chain management&quot; } { name: &quot;Autonomous Logistics&quot;,href: &quot;/services/autonomous-logistics&quot;,description: &quot;Smart supply chain automation&quot; }]} { title: &quot;Emerging Technologies&quot;,&quot;; icon: Rocke t,color: &quot;from-purple-500 to-pink-500&quot;,&quot;; { name: &quot;AI Smart City Infrastructure&quot;,href: &quot;/services/ai-smart-city-infrastructure-management&quot;,description: &quot;Intelligent urban management&quot; } { name: &quot;AI Autonomous Vehicles&quot;,href: &quot;/services/ai-autonomous-vehicle-management-platform&quot;,description: &quot;Autonomous fleet management&quot; } { name: &quot;IoT Edge Computing&quot;,href: &quot;/services/iot-edge-computing&quot;,description: &quot;Connected device intelligence&quot; } { name: &quot;Digital Twin Platform&quot;,href: &quot;/services/digital-twin&quot;,description: &quot;Virtual replica technology&quot; } { name: &quot;Space Technology&quot;,href: &quot;/space-tech&quot;,description: &quot;Innovative space solutions&quot; }]} { title: &quot;Smart City & Infrastructure&quot;,&quot;; icon: Building 2,color: &quot;from-green-500 to-emerald-500&quot;,&quot;; { name: &quot;AI Smart City Management&quot;,href: &quot;/services/ai-smart-city-infrastructure-management&quot;,description: &quot;Intelligent urban infrastructure&quot; } { name: &quot;Traffic Management&quot;,href: &quot;/services/traffic-management&quot;,description: &quot;AI-powered traffic optimization&quot; } { name: &quot;Energy Grid Management&quot;,href: &quot;/services/energy-grid&quot;,description: &quot;Smart energy distribution&quot; } { name: &quot;Environmental Monitoring&quot;,href: &quot;/services/environmental-monitoring&quot;,description: &quot;Real-time environmental tracking&quot; }]} { title: &quot;Autonomous Systems&quot;,&quot;; icon: Ca r,color: &quot;from-blue-500 to-cyan-500&quot;,&quot;; { name: &quot;AI Autonomous Vehicle Platform&quot;,href: &quot;/services/ai-autonomous-vehicle-management-platform&quot;,description: &quot;Fleet management & safety&quot; } { name: &quot;Drone Management&quot;,href: &quot;/services/drone-management&quot;,description: &quot;Autonomous drone operations&quot; } { name: &quot;Robotics Automation&quot;,href: &quot;/services/robotics-automation&quot;,description: &quot;Industrial robotics solutions&quot; }]} { title: &quot;Micro SaaS Solutions&quot;,&quot;; icon: Cod e,color: &quot;from-green-500 to-emerald-500&quot;,&quot;; { name: &quot;AI Email Automation Suite&quot;,href: &quot;/services/ai-email-automation-suite&quot;,description: &quot;Intelligent email management & automation&quot; } { name: &quot;AI Social Media Scheduler&quot;,href: &quot;/services/ai-social-media-scheduler&quot;,description: &quot;AI-powered social media automation&quot; } { name: &quot;AI Customer Insights Platform&quot;,href: &quot;/services/ai-customer-insights-platform&quot;,description: &quot;Advanced customer analytics & insights&quot; } { name: &quot;Micro CRM&quot;,href: &quot;/services/micro-crm&quot;,description: &quot;Lightweight customer management&quot; } { name: &quot;Helpdesk Platform&quot;,href: &quot;/services/helpdesk-platform&quot;,description: &quot;Efficient support system&quot; } { name: &quot;AI Content Marketing&quot;,href: &quot;/services/ai-content-marketing-suite&quot;,description: &quot;AI-powered content creation&quot; } { name: &quot;Customer Support Automation&quot;,href: &quot;/services/ai-customer-support-automation&quot;,description: &quot;Intelligent support automation&quot; } { name: &quot;Website Analytics&quot;,href: &quot;/services/website-analytics&quot;,description: &quot;Performance insights&quot; }]} { title: &quot;DevOps & Automation&quot;,&quot;; icon: Workflo w,color: &quot;from-blue-500 to-indigo-500&quot;,&quot;; { name: &quot;AI-Powered DevOps Automation&quot;,href: &quot;/services/ai-powered-devops-automation&quot;,description: &quot;Intelligent CI/CD & infrastructure automation&quot; } { name: &quot;Cloud DevOps&quot;,href: &quot;/services/cloud-devops&quot;,description: &quot;Infrastructure automation & scaling&quot; } { name: &quot;IT Infrastructure&quot;,href: &quot;/services/it-infrastructure&quot;,description: &quot;Enterprise infrastructure solutions&quot; } { name: &quot;FinOps Advisor&quot;,href: &quot;/services/finops-advisor&quot;,description: &quot;Cloud cost optimization&quot; }]} ; const services = []&apos; const solutionsCategories = []}; {; title: &apos,Technology Solutions&apos,; icon: Cp u,; solutions: [,; { nam,e: &apos,AI Solutions&apos,href: &apos,/ai-solutions&apos,description: &apos,Artificial intelligence integration&apos} { name: &apos,Digital Transformation&apos,href: &apos,/services/digital-transformation&apos,description: &apos,Business modernization&apos} { name: &apos,Research & Development&apos,href: &apos,/research-development&apos,description: &apos,Innovation and discovery&apos} { name: &apos,Green IT Solutions&apos,href: &apos,/green-it&apos,description: &apos,Sustainable technology&apos}]} ; const companyLinks = [];&apos; const resourceLinks = [];&apos; const supportLinks = [];&apos,; name: &quot;AI Email Automation Suite&quot;,description: &quot;Intelligent email management & automation&quot;,&quot;; href: &quot;/services/ai-email-automation-suite&quot;,icon: Mai l,&quot;; color: &quot;from-blue-500 to-indigo-500&quot;,featured: tru e} { name: &quot;AI Social Media Scheduler&quot;,description: &quot;AI-powered social media automation&quot;,&quot;; href: &quot;/services/ai-social-media-scheduler&quot;,icon: Share 2,&quot;; color: &quot;from-purple-500 to-pink-500&quot;,featured: tru e} { name: &quot;AI Customer Insights Platform&quot;,description: &quot;Advanced customer analytics & insights&quot;,&quot;; href: &quot;/services/ai-customer-insights-platform&quot;,icon: User s,&quot;; color: &quot;from-green-500 to-emerald-500&quot;,featured: tru e} { name: &quot;AI-Powered DevOps Automation&quot;,description: &quot;Intelligent CI/CD & infrastructure automation&quot;,&quot;; href: &quot;/services/ai-powered-devops-automation&quot;,icon: Workflo w,&quot;; color: &quot;from-blue-500 to-indigo-500&quot;,featured: tru e} { name: &quot;AI Content Creation Studio Pro&quot;,description: &quot;Advanced AI-powered content creation platform&quot;,&quot;; href: &quot;/services/AI-Content-Creation-Studio-Pro&quot;,icon: PenToo l,&quot;; color: &quot;from-purple-500 to-pink-500&quot;,featured: tru e} { name: &quot;Quantum AI Trading Platform&quot;,description: &quot;Revolutionary quantum-enhanced trading system&quot;,&quot;; href: &quot;/services/Quantum-AI-Trading-Platform&quot;,icon: BarChart 3,&quot;; color: &quot;from-orange-500 to-red-500&quot;,featured: tru e} { name: &quot;AI Quantum Financial Analytics&quot;,description: &quot;Revolutionary quantum AI financial platform&quot;,&quot;; href: &quot;/services/ai-quantum-financial-analytics-platform&quot;,icon: BarChart 3,&quot;; color: &quot;from-blue-500 to-purple-600&quot;,featured: tru e} { name: &quot;AI Autonomous Supply Chain&quot;,description: &quot;Self-learning supply chain management&quot;,&quot;; href: &quot;/services/ai-autonomous-supply-chain-management-platform&quot;,icon: Truc k,&quot;; color: &quot;from-green-500 to-blue-600&quot;,featured: tru e} { name: &quot;AI Cybersecurity Operations&quot;,description: &quot;Autonomous security operations center&quot;,&quot;; href: &quot;/services/ai-cybersecurity-operations-center&quot;,icon: Shiel d,&quot;; color: &quot;from-red-500 to-orange-600&quot;,featured: tru e} { name: &quot;2026 Services Showcase&quot;,description: &quot;Latest innovative services showcase&quot;,&quot;; href: &quot;/innovative-services-showcase-2026&quot;,icon: Sparkle s,&quot;; color: &quot;from-yellow-500 to-orange-500&quot;,featured: tru e}&quot;; title: &quot;Industry Solutions&quot;,; icon: Buildin g,&quot;; color: &quot;from-blue-500 to-purple-500&quot;,&quot;; solutions: [{ name: &quot;Enterprise Solutions&quot;,href: &quot;/solutions/enterprise&quot;,description: &quot;Large-scale business transformation&quot; },{ name: &quot;Healthcare Solutions&quot;,href: &quot;/solutions/healthcare&quot;,description: &quot;Medical technology innovation&quot; },{ name: &quot;Financial Solutions&quot;,href: &quot;/financial-solutions&quot;,description: &quot;Fintech and banking solutions&quot; },{ name: &quot;Manufacturing Solutions&quot;,href: &quot;/manufacturing-solutions&quot;,description: &quot;Industry 4.0 automation&quot; }]},{&quot;; title: &quot;Technology Solutions&quot;,; icon: Cp u,&quot;; solutions: [ { name: &quot;AI Solutions&quot;,href: &quot;/ai-solutions&quot;,description: &quot;Artificial intelligence integration&quot; },{ name: &quot;Digital Transformation&quot;,href: &quot;/services/digital-transformation&quot;,description: &quot;Business modernization&quot; },{ name: &quot;Research & Development&quot;,href: &quot;/research-development&quot;,description: &quot;Innovation and discovery&quot; },{ name: &quot;Green IT Solutions&quot;,href: &quot;/green-it&quot;,description: &quot;Sustainable technology&quot; }]}&quot;; const companyLinks = []; const resourceLinks = []; const supportLinks = []; const toggleDropdown = (props) => {,,; setActiveDropdown(activeDropdown === dropdown ? null : dropdown)} ; const [servicesOpen,setServicesOpen] = useState<any>(false)} const navLinks = []&quot;} { label: &quot;Solutions&quot;,href: &quot;/solutions&quot; } { label: &quot;Enterprise&quot;,href: &quot;/enterprise&quot; } { label: &quot;About&quot;,href: &quot;/about&quot; } { label: &quot;Case Studies&quot;,href: &quot;/case-studies&quot; } { label: &quot;Careers&quot;,href: &quot;/careers&quot; },&quot;; const navLinks = []}; { title: &quot;Technology Solutions&quot;,&quot;; icon: Cp u,color: &quot;from-cyan-500 to-blue-500&quot;,&quot;; { name: &quot;AI Solutions&quot;,href: &quot;/ai-solutions&quot;,description: &quot;Artificial intelligence integration&quot; } { name: &quot;Digital Transformation&quot;,href: &quot;/services/digital-transformation&quot;,description: &quot;Business modernization&quot; } { name: &quot;Research & Development&quot;,href: &quot;/research-development&quot;,description: &quot;Innovation and discovery&quot; } { name: &quot;Green IT Solutions&quot;,href: &quot;/green-it&quot;,description: &quot;Sustainable technology&quot; }]}&quot;; { name: &quot;About Us&quot;,href: &quot;/about&quot;,description: &quot;Learn about our mission and values&quot; } { name: &quot;Our Team&quot;,href: &quot;/team&quot;,description: &quot;Meet our expert professionals&quot; } { name: &quot;Leadership&quot;,href: &quot;/leadership&quot;,description: &quot;Executive team and vision&quot; } { name: &quot;Careers&quot;,href: &quot;/careers&quot;,description: &quot;Join our growing team&quot; } { name: &quot;Partners&quot;,href: &quot;/partners&quot;,description: &quot;Strategic partnerships&quot; } { name: &quot;Case Studies&quot;,href: &quot;/case-studies&quot;,description: &quot;Success stories and results&quot; }],; { name: &quot;Blog&quot;,href: &quot;/blog&quot;,description: &quot;Latest insights and updates&quot; } { name: &quot;News&quot;,href: &quot;/news&quot;,description: &quot;Company announcements&quot; } { name: &quot;Press&quot;,href: &quot;/press&quot;,description: &quot;Media resources&quot; } { name: &quot;Webinars&quot;,href: &quot;/webinars&quot;,description: &quot;Educational sessions&quot; } { name: &quot;White Papers&quot;,href: &quot;/white - papers&quot;,description: &quot;In-depth research&quot; } { name: &quot;Documentation&quot;,href: &quot;/documentation&quot;,description: &quot;Technical guides&quot; }],; { name: &quot;Help Center&quot;,href: &quot;/help&quot;,description: &quot;Find answers and solutions&quot; } { name: &quot;FAQ&quot;,href: &quot;/faq&quot;,description: &quot;Frequently asked questions&quot; } { name: &quot;Support&quot;,href: &quot;/support&quot;,description: &quot;Technical assistance&quot; } { name: &quot;Training&quot;,href: &quot;/training&quot;,description: &quot;Skill development programs&quot; } { name: &quot;Contact Support&quot;,href: &quot;/contact&quot;,description: &quot;Get in touch with our team&quot; } { name: &quot;Status Page&quot;,href: &quot;/status&quot;,description: &quot;Service availability&quot; }]; const [mobileOpen,setMobileOpen] = useState()} export const EnhancedHeader: React.FC = () => {}; ; const;const;const [mobileOpen,setMobileOpen] = useState<any>(false)} { label: &apos,Home&apos,href: &apos,/&apos} { label: &apos,Services&apos,href: &apos,/services&apos} { label: &apos,Solutions&apos,href: &apos,/solutions&apos} { label: &apos,Enterprise&apos,href: &apos,/enterprise&apos} { label: &apos,Request Quote&apos,href: &apos,/request-quote&apos} { label: &apos,Case Studies&apos,href: &apos,/case-studies&apos} { label: &apos,Careers&apos,href: &apos,/careers&apos} { label: &apos,Contact&apos,href: &apos,/contact&apos} ; return (&apos;&apos;&quot;; <header className=&quot;&apos;bg-white&quot; shadow-lg&apos;>&apos,&quot;; <div className=&quot;&apos;max-w-7xl&quot; mx-auto px-4 sm: p x-6 lg: p x-8&apos,>&apos,&quot;; <div className=&quot;&apos;flex&quot; justify-between items-center py-6&apos;>&apos,&quot;; <div className=&quot;&apos;flex&quot; items-center&apos;>&apos,&quot;; <a href=&quot;&apos;/&apos;&quot; className=&quot;&apos;text-2xl&quot; font-bold text-blue-900&apos,>,; Zion Tech Group&apos;&apos,&quot;; <nav className = &quot;&apos,hidden&quot; m,d: flex space-x-8&apos,>; {navLinks.map((link,index) => (&apos}&quot;; <a key=&quot;{index}&quot; href=&quot;{link.href}&quot; className=&quot;&apos;text-gray-700&quot; hover: tex t-blue-600&apos,>; {link.label}&apos; return (&quot;; <header: classNam e = &quot;bg-white shadow-lg&quot;>&quot;,&quot;,&quot;; <div: classNam e=&quot;max-w-7xl mx-auto px-4 sm: p x-6: l g:px-8&quot;>&quot;,&quot;;&quot;; <div: classNam e=&quot;flex justify - between items-center py-6&quot;>&quot;,&quot;; <div: classNam e=&quot;flex items-center&quot;>&quot;,,&quot;,; <a: hre f = &quot;/&quot; className=&quot;text-2xl font-bold text-blue-900&quot;>&quot;,&quot;,; Zion: Tech Group&quot;; <header className=&quot;bg-white shadow-lg&quot;>&quot;; <div className=&quot;max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8&quot;>&quot;; <div className=&quot;flex justify-between items-center py-6&quot;>&quot;; <div className=&quot;flex items-center&quot;>&quot;; <a href=&quot;/&quot; className=&quot;text-2xl font-bold text-blue-900&quot;>&quot;,; <nav className=&quot;hidden md: fle x: space-x-8&quot;>&quot;,&quot; {navLinks.map((link,index) => (&quot;; <a: ke y=&quot;{index}&quot; href=&quot;{link.href}&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>&quot;,&quot;;&quot;; <a key = &quot;{index}&quot; href=&quot;{link.href}&quot; className=&quot;text-gray-700 hover: tex t-blue-600&quot;>,; {link.label}&quot;; <a href=&quot;/services/ai&quot; className=&quot;hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors&quot;>Explore AI</a>&quot;,; <button aria-label=&quot;Toggle navigation&quot; onClick=&quot;{()&quot; => setMobileOpen((v) => !v)} className=&quot;md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100&quot;>&quot;; <svg xmlns=&quot;http: <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth=&quot;{2}&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; />&quot;; aria-label=&quot;Toggle: navigatio n&quot;,&quot;,&quot;; className=&quot;md: hidde n: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900: hove r:bg-gray-100&quot;,; >&quot;; <svg: xmln s=&quot;http: <path: strokeLineca p=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth=&quot;{2}&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; />&quot;; <button,&quot;; aria-label = &quot;Toggle navigation>; <;<button;&quot;; aria-label=&quot;&apos;Toggle&quot; navigation&quot;;&quot;; className=&quot;&apos;md: &quot; hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100&apos,>; >&apos;&apos,&quot;; <svg xmlns=&quot;&apos,htt,p: &quot; <path strokeLinecap=&quot;&apos;round&apos;&quot; strokeLinejoin=&quot;&apos,round&apos,&quot; strokeWidth=&quot;{2}&quot; d=&quot;&apos;M4&quot; 6h16M4 12h16M4 18h16&apos; />&apos;&quot;; className = &quot;md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100&quot;; <svg xmlns=&quot;http: <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth=&quot;{2}&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; />; </svg>; </button>; </div>; </div>; {mobileOpen && (; <div className=&quot;md: hidden border-t border-gray-200 bg-white&quot;>; <div className=&quot;px-4 py-3 space-y-2&quot;>; {navLinks.map((link) => (; <div key={link.href}>; <a href={link.href} className=&quot;block w-full py-2 text-gray-700 hover: tex t-blue-600&quot;>; {link.label} </a>; {link.submenu && (; <div className=&quot;ml-4 space-y-1&quot;>; {link.submenu.map((subLink) => (; <a; key={subLink.href} href={subLink.href} className=&quot;block w-full py-1 text-sm text-gray-600 hover: tex t-blue-600&quot;; >; {subLink.label} </a>; ))} </div> )} </div> ))} <a href=&quot;/services/ai&quot; className=&quot;block w-full py-2 text-blue-700 font-medium&quot;>Explore AI</a>; </div>; </div>; )}</header>; )} )}&quot; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,&quot; PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from &quot;lucide-react&quot; &quot; export default Component </svg> </button> </svg> </button> </a> </nav> </a> </div> </a> </div> </header> </a> </nav> </a> </div> </header> </any> </string> </any> </string> </any> </div> </nav> </div> </header> </nav> </div> </header> </div> </form> </div> </motion> </div> </motion> </any> </any> </any>;&apos;;&apos;;
-const React from "react"; import { import { innovativeServices2025 } from "./data/innovativeServices2025"; import { motion,AnimatePresence } from "framer-motion"; params - Function parameters * @returns {*} Function return value */ function EnhancedHeader($1) {export function EnhancedHeader($1) { const [mobileMenuOpen,setMobileMenuOpen] = useState<any>(false); const [searchQuery,setSearchQuery] = useState<any>("
-  "); const [servicesDropdownOpen,setServicesDropdownOpen] = useState<any>(false); const [scrolled,setScrolled] = useState<any>(false); const [isSearching,setIsSearching] = useState<any>(false); ; useEffect(() => {; return () => {}},[]);,[])};"
-  "; window.addEventListener("
-  "scroll",handleScroll);"
-  ";"
-  "; return () => window.removeEventListener("
-  "scroll",handleScroll)},[]); ; const handleSearch = async(e: React.FormEvent) => {; e.preventDefault(); if(searchQuery.trim()) {; setIsSearching(true); try {; await new Promise(resolve => setTimeout (resolve,1000) ) ; window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {; setIsSearching(false)} } }; ; return () <>; {} <div className="matrix -rain"></div> {} <motion.header` className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled" ? "bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl" :"
-  "bg-transparent"` }`} initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.8,ease:"
-  "easeOut" }} >"; <div className="container mx-auto px-4">"; <div className="flex items-center justify-between h-20">; {}"; <Link to="/" className="flex items-center space-x-3 group">; <motion.div"; className="relative"; whileHover={{ scale: 1.05,rotate: 5 }} whileTap={{ scale: 0.95 }} >" <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">" <Zap className="w-7 h-7 text-white" /> </div>" <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover: opacit y-100 transition-opacity duration-500 blur-lg" /> </motion.div>" <div className="flex flex-col">" <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Zion Tech </span>" <span className="text-xs text-cyan-400 font-medium font-rajdhani tracking-wider"> Innovation Group </span> </div> </Link> {}" <nav className="hidden xl: flex items-center space-x-8"> {navigation.slice(0,6).map(item => ( <Link key={item.name} to={item.href}` className={`nav-link font-medium transition-all duration-300 ${item.current" ? "text-cyan-400 border-b-2 border-cyan-400" :"
-  "text-gray-300 hover: tex t-cyan-400"` }`} >; {item.name} </Link>) ) } ; {}"; <div className="relative group">; <button"; className="nav-link flex items-center space-x-2 font-medium text-gray-300 hover: tex t-cyan-400 transition-all duration-300"; onMouseEnter={() => setServicesDropdownOpen(true)} onMouseLeave={() => setServicesDropdownOpen(false)} >; <span>Services</span>"; <ChevronDown className="w-4 h-4 transition-transform group-hover: rotat e-180 duration-300" /> </button>; <AnimatePresence>; {servicesDropdownOpen && (; <motion.div"; className="absolute top-full left-0 mt-4 w-[1200px] bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20"; initial={{ opacity: 0,y: -20,scale: 0.95 }} animate={{ opacity: 1,y: 0,scale: 1 }} exit={{ opacity: 0,y: -20,scale: 0.95 }} transition={{ duration: 0.3 }} onMouseEnter={ () => setServicesDropdownOpen(true) } onMouseLeave={ () => setServicesDropdownOpen(false) } >; {}"; <div className="mb-8">"; <h3 className="text-xl font-semibold text-cyan-400 mb-6 font-orbitron">; Featured Services;"
-  "; <div className="grid grid-cols-3 gap-6">; {services; .filter(s => s.featured); .map(service => (; <Link; key={service.name} to={service.href}"; className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover: borde r-cyan-500/50 transition-all duration-300 hover: b g-gray-800/70"; >"; <div className="flex items-center space-x-3 mb-3">"; <service.icon className="w-6 h-6 text-cyan-400" />"; <span className="text-lg font-medium text-white group-hover: tex t-cyan-400 transition-colors">; {service.name} </span>; </div>"; <p className="text-sm text-gray-400 group-hover: tex t-gray-300 transition-colors mb-3">; {service.description} </p> {service.badge && ("
-  "; <span` className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === "New" ? "bg-green-500/20 text-green-400" : service.badge === "Popular" ? "bg-blue-500/20 text-blue-400" : service.badge === "Featured" ? "bg-purple-500/20 text-purple-400" :"
-  "bg-cyan-500/20 text-cyan-400"` }`} >; {service.badge} </span>; )} </Link>; ))} </div>; </div>; {}"; <div className="grid grid-cols-2 gap-8">; {serviceCategories.map(category => (; <div key={category.name}>"; <div className="flex items-center space-x-3 mb-4">; <div`; className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`} >"; <category.icon className="w-5 h-5 text-white" />; </div>"; <h4 className="text-lg font-semibold text-gray-300 font-rajdhani">; {category.name} </h4>; </div>"; <div className="space-y-2">; {category.services.slice(0,3).map(service => (; <Link; key={service.name} to={service.href}"; className="flex items-center space-x-3 p-3 rounded-lg hover: b g-gray-800/50 transition-colors group"; >"; <service.icon className="w-4 h-4 text-cyan-400 group-hover: tex t-cyan-300 transition-colors" />"; <span className="text-sm text-gray-300 group-hover: tex t-white transition-colors">; {service.name} </span> {service.badge && ("
-  "; <span` className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === "New" ? "bg-green-500/20 text-green-400" : service.badge === "Popular" ? "bg-blue-500/20 text-blue-400" :"
-  "bg-cyan-500/20 text-cyan-400"` }`} >; {service.badge} </span>; )} </Link>; ))} {category.services.length > 3 && (; <Link; to={category.href}"; className="flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors text-sm font-medium group"; >; View All {category.name}"; <ArrowRight className="ml-2 w-4 h-4 group-hover: translat e-x-1 transition-transform" /> </Link>; )} </div>; </div>) ) } </div>; {}"; <div className="mt-8 pt-6 border-t border-gray-700">"; <div className="flex items-center justify-between">; <Link"; to="/innovative-services-showcase-2025"; className="inline-flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors font-medium group text-lg"; >; View All Innovative Services 2025"; <ArrowRight className="ml-2 w-5 h-5 group-hover: translat e-x-1 transition-transform" />; </Link>" <div className="flex items-center space-x-4 text-sm text-gray-400">; <span>50+ Services Available</span>; <span></span>; <span > Proven ROI</span>; <span></span>; <span > 24 / 7 Support</span>; </div>; </div>; </div>; </motion.div>) } </AnimatePresence>; </div>; {} {navigation.slice(6,10).map(item => ( <Link key={item.name} to={item.href}` className={`nav-link font-medium transition-all duration-300 ${item.current" ? "text-cyan-400 border-b-2 border-cyan-400" :"
-  "text-gray-300 hover: tex t-cyan-400"` }`} >; {item.name} </Link>) ) } </nav>; {}"; <div className="hidden xl: flex items-center space-x-6">; {}"; <form onSubmit={handleSearch} className="relative">"; <div className="relative">"; <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />; <input"; type="text"; placeholder="Search services." value={searchQuery} onChange={e => setSearchQuery(e.target.value)}"; className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: borde r-cyan-500 focus: rin g-2 focus: rin g-cyan-500/20 transition-all duration-300"; />; {isSearching && ("
-  "; <div className="absolute right-3 top-1/2 transform -translate-y-1/2">"; <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-400"></div>; </div>; ]; return (; <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">; <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">; <div className="flex justify-between items-center h-16">; <a href="/" className="text-xl sm: tex t-2xl font-bold text-blue-900">Zion Tech Group</a>; <nav className="hidden md: flex items-center gap-6">; {navLinks.map((link) => (; <div key={link.href} className="relative group">; <a; href={link.href} ; className="text-gray-700 hover: tex t-blue-600 transition-colors flex items-center gap-1"; onMouseEnter={() => link.submenu && setServicesOpen(true)} onMouseLeave={() => link.submenu && setServicesOpen(false)} >; {link.label} {link.submenu && (; <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">; <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />; </svg>; )} </a>; {link.submenu && servicesOpen && (; <div; className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50"; onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} >; {link.submenu.map((subLink) => (; <a; key={subLink.href} href={subLink.href} className="block px-4 py-2 text-sm text-gray-700 hover: b g-blue-50 hover: tex t-blue-600 transition-colors"; >; {subLink.label} </a>; ))} </div> )} </div> ))} <a href="/contact" className="hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors">Get Started</a>; return (<header className="bg-white shadow-lg">;"
-  "; return (<header className="bg-white shadow-lg">"; <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"; <div className="flex justify-between items-center py-6">"; <div className="flex items-center">"; <a href="/" className="text-2xl font-bold text-blue-900">; Zion Tech Group,; </a>; </div>"; <nav className="hidden md: flex space-x-8">"; <nav className="hidden md: flex space-x-6">"; <a href="/" className="text-gray-700 hover: tex t-blue-600">Home</a>"; <a href="/about" className="text-gray-700 hover: tex t-blue-600">About</a>"; <a href="/services" className="text-gray-700 hover: tex t-blue-600">Services</a>"; <a href="/solutions" className="text-gray-700 hover: tex t-blue-600">Solutions</a>"; <a href="/contact" className="text-gray-700 hover: tex t-blue-600">Contact</a>; </nav>; </header>"; <a href="/micro-saas" className="text-gray-700 hover: tex t-blue-600">Micro SAAS</a>"; <a href="/it-services" className="text-gray-700 hover: tex t-blue-600">IT Services</a>"; <a href="/marketplace" className="text-gray-700 hover: tex t-blue-600">Marketplace</a>"; <a href="/news" className="text-gray-700 hover: tex t-blue-600">News</a>"; <a href="/blog" className="text-gray-700 hover: tex t-blue-600">Blog</a>"; <a href="/careers" className="text-gray-700 hover: tex t-blue-600">Careers</a>,; ),"
-  "; ,"
-  "});,"
-  "})"; ;,"
-  "});,"
-  "})"; export const EnhancedHeader: React.FC = () => {,"
-  "};);,"
-  "})"; return (<header className="bg-white shadow-lg">;,"
-  "});,"
-  "})"; <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,"
-  "});,"
-  "})"; <div className="flex justify-between items-center py-4 md: p y-6">,"
-  "});,"
-  "})"; <div className="flex items-center">;,"
-  "});,"
-  "})"; <a href="/" className="text-xl md: tex t-2xl font-bold text-blue-900">,"
-  "});,"
-  "})"; Zion Tech Group,"
-  "});,"
-  "})"; </a>;,"
-  "});,"
-  "})"; </div>;,"
-  "});,"
-  "})"; <nav className="hidden md: flex gap-6">,"
-  "});,"
-  "})"; <a href="/" className="text-gray-700 hover: tex t-blue-600">Home</a>,"
-  "});,"
-  "})"; <a href="/services" className="text-gray-700 hover: tex t-blue-600">Services</a>,"
-  "});,"
-  "})"; <a href="/solutions" className="text-gray-700 hover: tex t-blue-600">Solutions</a>,"
-  "});,"
-  "})"; <a href="/pricing-guide" className="text-gray-700 hover: tex t-blue-600">Pricing</a>,"
-  "});,"
-  "})"; <a href="/contact" className="text-gray-700 hover: tex t-blue-600">Contact</a>,"
-  "});,"
-  "})"; </nav>;,"
-  "});,"
-  "})"; </header>;,"
-  "});,"
-  "})"; );,"
-  "});,"
-  "});"
-  "};,"
-  "});,"
-  "})"; Menu,X,Search,User,Bell,ChevronDown,Zap,Brain,Shield,Cloud,; Rocket,Globe,Cpu,Lock,Heart,Users,ShoppingCart,BookOpen,; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,; Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,"
-  "; Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,; PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from "lucide-react; export function EnhancedHeader($1) {; const [mobileMenuOpen,setMobileMenuOpen] = useState()"; const [searchQuery,setSearchQuery] = useState<any>("
-  ")} const [scrolled,setScrolled] = useState<any>(false)} const [activeDropdown,setActiveDropdown] = useState<string | null>(null)} useEffect(() => {; const handleScroll = (props) => {; setScrolled(window.scrollY > 50)} ; window.addEventListener()} return () => window.removeEventListener("
-  "scroll",handleScroll)},[]);react"react - router-dom",framer-motion; Menu,X,Search,User,Bell,ChevronDown,Zap,Brain,Shield,Cloud,; Rocket,Globe,Cpu,Lock,Heart,Users,ShoppingCart,BookOpen,; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,; Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,; Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,"
-  "; PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from "lucide-react"; export: function EnhancedHeader($1) {"
-  ",; const [searchQuery,setSearchQuery] = useState<any>("
-  ")} setScrolled(window.scrollY: > 50)},; window.addEventListener()} return: () => window.removeEventListener("
-  "scroll",handleScroll)},[])} PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from &apos;lucide-react";&apos;&apos; export function EnhancedHeader($1) {}"; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,"
-  ";"
-  "; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,; const router = useRouter()} const [searchQuery,setSearchQuery] = useState<any>(&apos;&apos);&apos;&apos; const [activeDropdown,setActiveDropdown] = useState<;<;<string | null>(null)} useEffect(() => {} ; window.addEventListener(&apos;scroll&apos,handleScroll)} return () => window.removeEventListener(&apos;scroll&apos,handleScroll)},[])} setIsMenuOpen(false)} setActiveDropdown(null)},[location.pathname])} const handleSearch = async (e: React.FormEvent) => {,; e.preventDefault(),; if: (searchQuery.trim()) {"
-  ",; window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}"; const navigation = []; const servicesCategories = []};,"
-  ",{"
-  "; title:"
-  "Quantum: Computin g,"
-  ","
-  "; icon: At o,m,"
-  "; color:"
-  "from - indigo-500: t o-purple-500,"
-  ","
-  ",; services: ,[ { name:"
-  "Quantum: AI Hybrid Platform,"
-  ",href:"
-  "/services/quantum - ai-hybrid-platform,"
-  ",description:"
-  "Revolutionary: quantu m-AI computing"},"
-  ",{ name:"
-  "Quantum: Computing Solutions,"
-  ",href:"
-  "/services/quantum - computing,"
-  ",description:"
-  "Next-generation: computing power"},"
-  ",{ name:"
-  "Quantum: Financial Trading,"
-  ",href:"
-  "/services/ai - quantum-financial-trading-platform,"
-  ",description:"
-  "Advanced: quantum trading"},"
-  ",{ name:"
-  "Quantum: Machine Learning,"
-  ",href:"
-  "/services/quantum - machine-learning,"
-  ",description:"
-  "Quantum-enhanced: ML algorithms"},"
-  ",{ name:"
-  "AI: Quantum Financial Analytics,"
-  ",href:"
-  "/services/ai - quantum-financial-analytics-platform,"
-  ",description:"
-  "Revolutionary: quantum AI financial platform"}]},"
-  ",{"
-  "; title:"
-  "Cloud: & Infrastructure,"
-  ","
-  "; icon: Clo u,d,"
-  "; color:"
-  "from - cyan-500: t o-blue-500,"
-  ","
-  ",; services: ,[ { name:"
-  "Cloud: DevOp s,"
-  ",href:"
-  "/services/cloud - devops,"
-  ",description:"
-  "Infrastructure: automatio n & scaling"},"
-  ",{ name:"
-  "IT: Infrastructur e,"
-  ",href:"
-  "/services/it - infrastructure,"
-  ",description:"
-  "Enterprise: infrastructure solutions"},"
-  ",{ name:"
-  "FinOps: Adviso r,"
-  ",href:"
-  "/services/finops - advisor,"
-  ",description:"
-  "Cloud: cost optimization"},"
-  ",{ name:"
-  "Cloud: FinOps Optimizer,"
-  ",href:"
-  "/services/cloud - finops-optimizer,"
-  ",description:"
-  "Financial: operations automation"}]},"
-  ",{"
-  "; title:"
-  "Cybersecurity,"
-  ","
-  "; icon: Shie l,d,"
-  "; color:"
-  "from - red-500: t o-orange-500,"
-  ","
-  ",; services: ,[ { name:"
-  "AI: Cybersecurity Platform,"
-  ",href:"
-  "/services/ai - cybersecurity-platform,"
-  ",description:"
-  "Advanced: A I-powered security"},"
-  ",{ name:"
-  "AI: Cybersecurity Operations,"
-  ",href:"
-  "/services/ai - cybersecurity-operations-center,"
-  ",description:"
-  "Autonomous: security operations center"},"
-  ",{ name:"
-  "Security: Header s & CSP,"
-  ",href:"
-  "/services/security - headers-csp,"
-  ",description:"
-  "Web: security hardening"},"
-  ",{ name:"
-  "DSR: Privacy Portal,"
-  ",href:"
-  "/services/dsr - portal,"
-  ",description:"
-  "GDPR/CCPA: complianc e"},"
-  ",{ name:"
-  "Zero: Trust Network Access,"
-  ",href:"
-  "/services/zero - trust-network-access,"
-  ",description:"
-  "Modern: security architecture"}]},"
-  ",{"
-  "; title:"
-  "Supply: Chai n & Logistics,"
-  ","
-  "; icon: Tru c,k,"
-  "; color:"
-  "from - green-500: t o-blue-600,"
-  ","
-  ",; services: ,[ { name:"
-  "AI: Autonomous Supply Chain,"
-  ",href:"
-  "/services/ai - autonomous-supply-chain-management-platform,"
-  ",description:"
-  "Self-learning: supply chain management"},"
-  ",{ name:"
-  "Autonomous: Logistic s,"
-  ",href:"
-  "/services/autonomous - logistics,"
-  ",description:"
-  "Smart: supply chain automation"}]},"
-  ",{"
-  "; title:"
-  "Emerging: Technologie s,"
-  ","
-  "; icon: Rock e,t,"
-  "; color:"
-  "from - purple-500: t o-pink-500,"
-  ","
-  ",; services: ,[ { name:"
-  "AI: Smart City Infrastructure,"
-  ",href:"
-  "/services/ai - smart-city-infrastructure-management,"
-  ",description:"
-  "Intelligent: urban management"},"
-  ",{ name:"
-  "AI: Autonomous Vehicles,"
-  ",href:"
-  "/services/ai - autonomous-vehicle-management-platform,"
-  ",description:"
-  "Autonomous: fleet management"},"
-  ",{ name:"
-  "IoT: Edge Computing,"
-  ",href:"
-  "/services/iot - edge-computing,"
-  ",description:"
-  "Connected: device intelligence"},"
-  ",{ name:"
-  "Digital: Twin Platform,"
-  ",href:"
-  "/services/digital - twin,"
-  ",description:"
-  "Virtual: replica technology"},"
-  ",{ name:"
-  "Space: Technolog y,"
-  ",href:"
-  "/space - tech,"
-  ",description:"
-  "Innovative: space solutions"}]},"
-  ",{"
-  "; title:"
-  "Smart: Cit y & Infrastructure,"
-  ","
-  "; icon: Buildin g,2,"
-  "; color:"
-  "from - green-500: t o-emerald-500,"
-  ","
-  ",; services: ,[ { name:"
-  "AI: Smart City Management,"
-  ",href:"
-  "/services/ai - smart-city-infrastructure-management,"
-  ",description:"
-  "Intelligent: urban infrastructure"},"
-  ",{ name:"
-  "Traffic: Managemen t,"
-  ",href:"
-  "/services/traffic - management,"
-  ",description:"
-  "AI-powered: traffic optimization"},"
-  ",{ name:"
-  "Energy: Grid Management,"
-  ",href:"
-  "/services/energy - grid,"
-  ",description:"
-  "Smart: energy distribution"},"
-  ",{ name:"
-  "Environmental: Monitorin g,"
-  ",href:"
-  "/services/environmental - monitoring,"
-  ",description:"
-  "Real-time: environmental tracking"}]},"
-  ",{"
-  "; title:"
-  "Autonomous: System s,"
-  ","
-  "; icon: C a,r,"
-  "; color:"
-  "from - blue-500: t o-cyan-500,"
-  ","
-  ",; services: ,[ { name:"
-  "AI: Autonomous Vehicle Platform,"
-  ",href:"
-  "/services/ai - autonomous-vehicle-management-platform,"
-  ",description:"
-  "Fleet: managemen t & safety"},"
-  ",{ name:"
-  "Drone: Managemen t,"
-  ",href:"
-  "/services/drone - management,"
-  ",description:"
-  "Autonomous: drone operations"},"
-  ",{ name:"
-  "Robotics: Automatio n,"
-  ",href:"
-  "/services/robotics - automation,"
-  ",description:"
-  "Industrial: robotics solutions"}]},"
-  ",{"
-  "; title:"
-  "Micro: SaaS Solutions,"
-  ","
-  "; icon: Co d,e,"
-  "; services: ,[ { name:"
-  "AI: Email Automation Suite,"
-  ",href:"
-  "/services/ai - email-automation-suite,"
-  ",description:"
-  "Intelligent: email management & automation"},"
-  ",{ name:"
-  "AI: Social Media Scheduler,"
-  ",href:"
-  "/services/ai - social-media-scheduler,"
-  ",description:"
-  "AI-powered: social media automation"},"
-  ",{ name:"
-  "AI: Customer Insights Platform,"
-  ",href:"
-  "/services/ai - customer-insights-platform,"
-  ",description:"
-  "Advanced: customer analytics & insights"},"
-  ",{ name:"
-  "Micro: CR M,"
-  ",href:"
-  "/services/micro - crm,"
-  ",description:"
-  "Lightweight: customer management"},"
-  ",{ name:"
-  "Helpdesk: Platfor m,"
-  ",href:"
-  "/services/helpdesk - platform,"
-  ",description:"
-  "Efficient: support system"},"
-  ",{ name:"
-  "AI: Content Marketing,"
-  ",href:"
-  "/services/ai - content-marketing-suite,"
-  ",description:"
-  "AI-powered: content creation"},"
-  ",{ name:"
-  "Customer: Support Automation,"
-  ",href:"
-  "/services/ai - customer-support-automation,"
-  ",description:"
-  "Intelligent: support automation"},"
-  ",{ name:"
-  "Website: Analytic s,"
-  ",href:"
-  "/services/website - analytics,"
-  ",description:"
-  "Performance: insight s"}]},"
-  ",{"
-  "; title:"
-  "DevOps: & Automation,"
-  ","
-  "; icon: Workfl o,w,"
-  "; services: ,[ { name:"
-  "AI - Powered: DevOps Automation,"
-  ",href:"
-  "/services/ai-powered-devops-automation,"
-  ",description:"
-  "Intelligent: C I/CD & infrastructure automation"},"
-  ",{ name:"
-  "Cloud: DevOp s,"
-  ",href:"
-  "/services/cloud - devops,"
-  ",description:"
-  "Infrastructure: automatio n & scaling"},"
-  ",{ name:"
-  "IT: Infrastructur e,"
-  ",href:"
-  "/services/it - infrastructure,"
-  ",description:"
-  "Enterprise: infrastructure solutions"},"
-  ",{ name:"
-  "FinOps: Adviso r,"
-  ",href:"
-  "/services/finops-advisor,"
-  ",description:"
-  "Cloud: cost optimization"}]}"; ]; const services = []};,"
-  ",{"
-  "; title:"
-  "Technology: Solution s,"
-  ","
-  "; icon: C p,u,"
-  "; solutions: ,[ { name:"
-  "AI: Solution s,"
-  ",href:"
-  "/ai - solutions,"
-  ",description:"
-  "Artificial: intelligence integration"},"
-  ",{ name:"
-  "Digital: Transformatio n,"
-  ",href:"
-  "/services / digital - transformation,"
-  ",description:"
-  "Business: modernizatio n"},"
-  ",{ name:"
-  "Research: & Development,"
-  ",href:"
-  "/research - development,"
-  ",description:"
-  "Innovation: and discovery"},"
-  ",{ name:"
-  "Green: IT Solutions,"
-  ",href:"
-  "/green - it,"
-  ",description:"
-  "Sustainable: technolog y"}]}",; const companyLinks = [],; const resourceLinks = [],; const supportLinks = []; const toggleDropdown = (props) => {,; setActiveDropdown(activeDropdown: === dropdown ? null: dropdow n)} ; export: const EnhancedHeader: React.FC: = () => {,; const [mobileOpen,setMobileOpen] = useState()} const navLinks = []; title:"
-  "AI & Machine Learning",; icon: Brai n,"
-  "; color:"
-  "from-blue-500 to-indigo-500","
-  "; services: [{ name:"
-  "AI Autonomous Business Manager",href:"
-  "/services/ai-autonomous-business-manager",description:"
-  "Fully autonomous business operations" },{ name:"
-  "AI Business Intelligence",href:"
-  "/services/ai-business-intelligence",description:"
-  "Advanced analytics & ML insights" },{ name:"
-  "AI Compliance Assistant",href:"
-  "/services/ai-compliance-assistant",description:"
-  "Automated regulatory compliance" },{ name:"
-  "AI Sales Copilot",href:"
-  "/services/ai-sales-copilot",description:"
-  "Intelligent sales optimization" },{ name:"
-  "AI-Powered SEO",href:"
-  "/services/ai-powered-seo",description:"
-  "Machine learning SEO optimization" },{ name:"
-  "AI Content Marketing Suite",href:"
-  "/services/ai-content-marketing-suite",description:"
-  "AI-powered content creation & optimization" },{ name:"
-  "AI Customer Support",href:"
-  "/services/ai-customer-support-automation",description:"
-  "Intelligent support automation" },{ name:"
-  "AI Project Management",href:"
-  "/services/ai-project-management",description:"
-  "AI-driven project optimization" },{ name:"
-  "AI Financial Analytics",href:"
-  "/services/ai-financial-analytics",description:"
-  "Intelligent financial insights" }]},{"
-  "; title:"
-  "Quantum Computing",; icon: Ato m,"
-  "; color:"
-  "from-indigo-500 to-purple-500","
-  "; services: [ { name:"
-  "Quantum AI Hybrid Platform",href:"
-  "/services/quantum-ai-hybrid-platform",description:"
-  "Revolutionary quantum-AI computing" },{ name:"
-  "Quantum Computing Solutions",href:"
-  "/services/quantum-computing",description:"
-  "Next-generation computing power" },{ name:"
-  "Quantum Financial Trading",href:"
-  "/services/ai-quantum-financial-trading-platform",description:"
-  "Advanced quantum trading" },{ name:"
-  "Quantum Machine Learning",href:"
-  "/services/quantum-machine-learning",description:"
-  "Quantum-enhanced ML algorithms" },{ name:"
-  "AI Quantum Financial Analytics",href:"
-  "/services/ai-quantum-financial-analytics-platform",description:"
-  "Revolutionary quantum AI financial platform" }]},{"
-  "; title:"
-  "Cloud & Infrastructure",; icon: Clou d,"
-  "; color:"
-  "from-cyan-500 to-blue-500","
-  "; services: [ { name:"
-  "Cloud DevOps",href:"
-  "/services/cloud-devops",description:"
-  "Infrastructure automation & scaling" },{ name:"
-  "IT Infrastructure",href:"
-  "/services/it-infrastructure",description:"
-  "Enterprise infrastructure solutions" },{ name:"
-  "FinOps Advisor",href:"
-  "/services/finops-advisor",description:"
-  "Cloud cost optimization" },{ name:"
-  "Cloud FinOps Optimizer",href:"
-  "/services/cloud-finops-optimizer",description:"
-  "Financial operations automation" }]},{"
-  "; title:"
-  "Cybersecurity",; icon: Shiel d,"
-  "; color:"
-  "from-red-500 to-orange-500","
-  "; services: [ { name:"
-  "AI Cybersecurity Platform",href:"
-  "/services/ai-cybersecurity-platform",description:"
-  "Advanced AI-powered security" },{ name:"
-  "AI Cybersecurity Operations",href:"
-  "/services/ai-cybersecurity-operations-center",description:"
-  "Autonomous security operations center" },{ name:"
-  "Security Headers & CSP",href:"
-  "/services/security-headers-csp",description:"
-  "Web security hardening" },{ name:"
-  "DSR Privacy Portal",href:"
-  "/services/dsr-portal",description:"
-  "GDPR/CCPA compliance" },{ name:"
-  "Zero Trust Network Access",href:"
-  "/services/zero-trust-network-access",description:"
-  "Modern security architecture" }]},{"
-  "; title:"
-  "Supply Chain & Logistics",; icon: Truc k,"
-  "; color:"
-  "from-green-500 to-blue-600","
-  "; services: [ { name:"
-  "AI Autonomous Supply Chain",href:"
-  "/services/ai-autonomous-supply-chain-management-platform",description:"
-  "Self-learning supply chain management" },{ name:"
-  "Autonomous Logistics",href:"
-  "/services/autonomous-logistics",description:"
-  "Smart supply chain automation" }]},{"
-  "; title:"
-  "Emerging Technologies",; icon: Rocke t,"
-  "; color:"
-  "from-purple-500 to-pink-500","
-  "; services: [ { name:"
-  "AI Smart City Infrastructure",href:"
-  "/services/ai-smart-city-infrastructure-management",description:"
-  "Intelligent urban management" },{ name:"
-  "AI Autonomous Vehicles",href:"
-  "/services/ai-autonomous-vehicle-management-platform",description:"
-  "Autonomous fleet management" },{ name:"
-  "IoT Edge Computing",href:"
-  "/services/iot-edge-computing",description:"
-  "Connected device intelligence" },{ name:"
-  "Digital Twin Platform",href:"
-  "/services/digital-twin",description:"
-  "Virtual replica technology" },{ name:"
-  "Space Technology",href:"
-  "/space-tech",description:"
-  "Innovative space solutions" }]},{"
-  "; title:"
-  "Smart City & Infrastructure",; icon: Building 2,"
-  "; color:"
-  "from-green-500 to-emerald-500","
-  "; services: [ { name:"
-  "AI Smart City Management",href:"
-  "/services/ai-smart-city-infrastructure-management",description:"
-  "Intelligent urban infrastructure" },{ name:"
-  "Traffic Management",href:"
-  "/services/traffic-management",description:"
-  "AI-powered traffic optimization" },{ name:"
-  "Energy Grid Management",href:"
-  "/services/energy-grid",description:"
-  "Smart energy distribution" },{ name:"
-  "Environmental Monitoring",href:"
-  "/services/environmental-monitoring",description:"
-  "Real-time environmental tracking" }]},{"
-  "; title:"
-  "Autonomous Systems",; icon: Ca r,"
-  "; color:"
-  "from-blue-500 to-cyan-500","
-  "; services: [ { name:"
-  "AI Autonomous Vehicle Platform",href:"
-  "/services/ai-autonomous-vehicle-management-platform",description:"
-  "Fleet management & safety" },{ name:"
-  "Drone Management",href:"
-  "/services/drone-management",description:"
-  "Autonomous drone operations" },{ name:"
-  "Robotics Automation",href:"
-  "/services/robotics-automation",description:"
-  "Industrial robotics solutions" }]},{"
-  "; title:"
-  "Micro SaaS Solutions",; icon: Cod e,"
-  "; services: [ { name:"
-  "AI Email Automation Suite",href:"
-  "/services/ai-email-automation-suite",description:"
-  "Intelligent email management & automation" },{ name:"
-  "AI Social Media Scheduler",href:"
-  "/services/ai-social-media-scheduler",description:"
-  "AI-powered social media automation" },{ name:"
-  "AI Customer Insights Platform",href:"
-  "/services/ai-customer-insights-platform",description:"
-  "Advanced customer analytics & insights" },{ name:"
-  "Micro CRM",href:"
-  "/services/micro-crm",description:"
-  "Lightweight customer management" },{ name:"
-  "Helpdesk Platform",href:"
-  "/services/helpdesk-platform",description:"
-  "Efficient support system" },{ name:"
-  "AI Content Marketing",href:"
-  "/services/ai-content-marketing-suite",description:"
-  "AI-powered content creation" },{ name:"
-  "Customer Support Automation",href:"
-  "/services/ai-customer-support-automation",description:"
-  "Intelligent support automation" },{ name:"
-  "Website Analytics",href:"
-  "/services/website-analytics",description:"
-  "Performance insights" }]},{"
-  "; title:"
-  "DevOps & Automation",; icon: Workflo w,"
-  "; services: [ { name:"
-  "AI-Powered DevOps Automation",href:"
-  "/services/ai-powered-devops-automation",description:"
-  "Intelligent CI/CD & infrastructure automation" },{ name:"
-  "Cloud DevOps",href:"
-  "/services/cloud-devops",description:"
-  "Infrastructure automation & scaling" },{ name:"
-  "IT Infrastructure",href:"
-  "/services/it-infrastructure",description:"
-  "Enterprise infrastructure solutions" },{ name:"
-  "FinOps Advisor",href:"
-  "/services/finops-advisor",description:"
-  "Cloud cost optimization" }]} ; name:"
-  "AI Email Automation Suite"; description:"
-  "Intelligent email management & automation",; href:"
-  "/services/ai-email-automation-suite",; icon: Mai l,; featured: tru e},{"
-  "; name:"
-  "AI Social Media Scheduler"; description:"
-  "AI-powered social media automation",; href:"
-  "/services/ai-social-media-scheduler",; icon: Share 2,"
-  "; name:"
-  "AI Customer Insights Platform"; description:"
-  "Advanced customer analytics & insights",; href:"
-  "/services/ai-customer-insights-platform",; icon: User s,"
-  "; name:"
-  "AI-Powered DevOps Automation"; description:"
-  "Intelligent CI/CD & infrastructure automation"; href:"
-  "/services/ai-powered-devops-automation"; name:"
-  "AI Content Creation Studio Pro"; description:"
-  "Advanced AI-powered content creation platform",; href:"
-  "/services/AI-Content-Creation-Studio-Pro",; icon: PenToo l,"
-  "; name:"
-  "Quantum AI Trading Platform"; description:"
-  "Revolutionary quantum-enhanced trading system",; href:"
-  "/services/Quantum-AI-Trading-Platform",; icon: BarChart 3,"
-  "; color:"
-  "from-orange-500 to-red-500"; name:"
-  "AI Quantum Financial Analytics"; description:"
-  "Revolutionary quantum AI financial platform"; href:"
-  "/services/ai-quantum-financial-analytics-platform"; color:"
-  "from-blue-500 to-purple-600"; name:"
-  "AI Autonomous Supply Chain"; description:"
-  "Self-learning supply chain management"; href:"
-  "/services/ai-autonomous-supply-chain-management-platform"; name:"
-  "AI Cybersecurity Operations"; description:"
-  "Autonomous security operations center"; href:"
-  "/services/ai-cybersecurity-operations-center"; color:"
-  "from-red-500 to-orange-600"; name:"
-  "2026 Services Showcase"; description:"
-  "Latest innovative services showcase",; href:"
-  "/innovative-services-showcase-2026",; icon: Sparkle s,"
-  "; color:"
-  "from-yellow-500 to-orange-500",; setActiveDropdown(null)},[location.pathname]);&apos; setMobileMenuOpen(false)} setActiveDropdown(null)},[]);"
-  "; router.push("
-  "/search?q = "${encodeURIComponent(searchQuery.trim())}")}"; const navigation = []; const servicesCategories = []}; {; title: &apos,Quantum Computing&apos,; icon: Ato m,; color: &apos,from-indigo-500 to-purple-500&apos,; services: [,; { nam,e: &apos,Quantum AI Hybrid Platform&apos,href: &apos,/services/quantum-ai-hybrid-platform&apos,description: &apos,Revolutionary quantum-AI computing&apos} { name: &apos,Quantum Computing Solutions&apos,href: &apos,/services/quantum-computing&apos,description: &apos,Next-generation computing power&apos} { name: &apos,Quantum Financial Trading&apos,href: &apos,/services/ai-quantum-financial-trading-platform&apos,description: &apos,Advanced quantum trading&apos} { name: &apos,Quantum Machine Learning&apos,href: &apos,/services/quantum-machine-learning&apos,description: &apos,Quantum-enhanced ML algorithms&apos} { name: &apos,AI Quantum Financial Analytics&apos,href: &apos,/services/ai-quantum-financial-analytics-platform&apos,description: &apos,Revolutionary quantum AI financial platform&apos}]} {; title: &apos,Cloud & Infrastructure&apos,; icon: Clou d,; color: &apos,from-cyan-500 to-blue-500&apos,; { nam,e: &apos,Cloud DevOps&apos,href: &apos,/services/cloud-devops&apos,description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos,href: &apos,/services/it-infrastructure&apos,description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos,href: &apos,/services/finops-advisor&apos,description: &apos,Cloud cost optimization&apos} { name: &apos,Cloud FinOps Optimizer&apos,href: &apos,/services/cloud-finops-optimizer&apos,description: &apos,Financial operations automation&apos}]} {; title: &apos,Cybersecurity&apos,; icon: Shiel d,; color: &apos,from-red-500 to-orange-500&apos,; { nam,e: &apos,AI Cybersecurity Platform&apos,href: &apos,/services/ai-cybersecurity-platform&apos,description: &apos,Advanced AI-powered security&apos} { name: &apos,AI Cybersecurity Operations&apos,href: &apos,/services/ai-cybersecurity-operations-center&apos,description: &apos,Autonomous security operations center&apos} { name: &apos,Security Headers & CSP&apos,href: &apos,/services/security-headers-csp&apos,description: &apos,Web security hardening&apos} { name: &apos,DSR Privacy Portal&apos,href: &apos,/services/dsr-portal&apos,description: &apos,GDPR/CCPA compliance&apos} { name: &apos,Zero Trust Network Access&apos,href: &apos,/services/zero-trust-network-access&apos,description: &apos,Modern security architecture&apos}]} {; title: &apos,Supply Chain & Logistics&apos,; icon: Truc k,; color: &apos,from-green-500 to-blue-600&apos,; { nam,e: &apos,AI Autonomous Supply Chain&apos,href: &apos,/services/ai-autonomous-supply-chain-management-platform&apos,description: &apos,Self-learning supply chain management&apos} { name: &apos,Autonomous Logistics&apos,href: &apos,/services/autonomous-logistics&apos,description: &apos,Smart supply chain automation&apos}]} {; title: &apos,Emerging Technologies&apos,; icon: Rocke t,; color: &apos,from-purple-500 to-pink-500&apos,; { nam,e: &apos,AI Smart City Infrastructure&apos,href: &apos,/services/ai-smart-city-infrastructure-management&apos,description: &apos,Intelligent urban management&apos} { name: &apos,AI Autonomous Vehicles&apos,href: &apos,/services/ai-autonomous-vehicle-management-platform&apos,description: &apos,Autonomous fleet management&apos} { name: &apos,IoT Edge Computing&apos,href: &apos,/services/iot-edge-computing&apos,description: &apos,Connected device intelligence&apos} { name: &apos,Digital Twin Platform&apos,href: &apos,/services/digital-twin&apos,description: &apos,Virtual replica technology&apos} { name: &apos,Space Technology&apos,href: &apos,/space-tech&apos,description: &apos,Innovative space solutions&apos}]} {; title: &apos,Smart City & Infrastructure&apos,; icon: Building 2,; color: &apos,from-green-500 to-emerald-500&apos,; { nam,e: &apos,AI Smart City Management&apos,href: &apos,/services/ai-smart-city-infrastructure-management&apos,description: &apos,Intelligent urban infrastructure&apos} { name: &apos,Traffic Management&apos,href: &apos,/services/traffic-management&apos,description: &apos,AI-powered traffic optimization&apos} { name: &apos,Energy Grid Management&apos,href: &apos,/services/energy-grid&apos,description: &apos,Smart energy distribution&apos} { name: &apos,Environmental Monitoring&apos,href: &apos,/services/environmental-monitoring&apos,description: &apos,Real-time environmental tracking&apos}]} {; title: &apos,Autonomous Systems&apos,; icon: Ca r,; color: &apos,from-blue-500 to-cyan-500&apos,; { nam,e: &apos,AI Autonomous Vehicle Platform&apos,href: &apos,/services/ai-autonomous-vehicle-management-platform&apos,description: &apos,Fleet management & safety&apos} { name: &apos,Drone Management&apos,href: &apos,/services/drone-management&apos,description: &apos,Autonomous drone operations&apos} { name: &apos,Robotics Automation&apos,href: &apos,/services/robotics-automation&apos,description: &apos,Industrial robotics solutions&apos}]} {; title: &apos,Micro SaaS Solutions&apos,; icon: Cod e,; { nam,e: &apos,AI Email Automation Suite&apos,href: &apos,/services/ai-email-automation-suite&apos,description: &apos,Intelligent email management & automation&apos} { name: &apos,AI Social Media Scheduler&apos,href: &apos,/services/ai-social-media-scheduler&apos,description: &apos,AI-powered social media automation&apos} { name: &apos,AI Customer Insights Platform&apos,href: &apos,/services/ai-customer-insights-platform&apos,description: &apos,Advanced customer analytics & insights&apos} { name: &apos,Micro CRM&apos,href: &apos,/services/micro-crm&apos,description: &apos,Lightweight customer management&apos} { name: &apos,Helpdesk Platform&apos,href: &apos,/services/helpdesk-platform&apos,description: &apos,Efficient support system&apos} { name: &apos,AI Content Marketing&apos,href: &apos,/services/ai-content-marketing-suite&apos,description: &apos,AI-powered content creation&apos} { name: &apos,Customer Support Automation&apos,href: &apos,/services/ai-customer-support-automation&apos,description: &apos,Intelligent support automation&apos} { name: &apos,Website Analytics&apos,href: &apos,/services/website-analytics&apos,description: &apos,Performance insights&apos}]} {; title: &apos,DevOps & Automation&apos,; icon: Workflo w,; { nam,e: &apos,AI-Powered DevOps Automation&apos,href: &apos,/services/ai-powered-devops-automation&apos,description: &apos,Intelligent CI/CD & infrastructure automation&apos} { name: &apos,Cloud DevOps&apos,href: &apos,/services/cloud-devops&apos,description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos,href: &apos,/services/it-infrastructure&apos,description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos,href: &apos,/services/finops-advisor&apos,description: &apos,Cloud cost optimization&apos}]} ; { name:"
-  "Home",href:"
-  "/",current: tru e } { name:"
-  "About",href:"
-  "/about",current: fals e } { name:"
-  "Services",href:"
-  "/services",current: fals e } { name:"
-  "Innovative Services 2028",href:"
-  "/innovative-services-showcase-2028",current: fals e } { name:"
-  "Pricing Guide",href:"
-  "/comprehensive-pricing-guide-2028",current: fals e } { name:"
-  "Solutions",href:"
-  "/solutions",current: fals e } { name:"
-  "Contact",href:"
-  "/contact",current: fals e }]; { title:"
-  "AI & Machine Learning",icon: Brai n,"
-  "; color:"
-  "from-blue-500 to-indigo-500",services: [{ name:"
-  "AI Autonomous Business Manager",href:"
-  "/services/ai-autonomous-business-manager",description:"
-  "Fully autonomous business operations" } { name:"
-  "AI Business Intelligence",href:"
-  "/services/ai-business-intelligence",description:"
-  "Advanced analytics & ML insights" } { name:"
-  "AI Compliance Assistant",href:"
-  "/services/ai-compliance-assistant",description:"
-  "Automated regulatory compliance" } { name:"
-  "AI Sales Copilot",href:"
-  "/services/ai-sales-copilot",description:"
-  "Intelligent sales optimization" } { name:"
-  "AI-Powered SEO",href:"
-  "/services/ai-powered-seo",description:"
-  "Machine learning SEO optimization" } { name:"
-  "AI Content Marketing Suite",href:"
-  "/services/ai-content-marketing-suite",description:"
-  "AI-powered content creation & optimization" } { name:"
-  "AI Customer Support",href:"
-  "/services/ai-customer-support-automation",description:"
-  "Intelligent support automation" } { name:"
-  "AI Project Management",href:"
-  "/services/ai-project-management",description:"
-  "AI-driven project optimization" } { name:"
-  "AI Financial Analytics",href:"
-  "/services/ai-financial-analytics",description:"
-  "Intelligent financial insights" }]} { title:"
-  "Quantum Computing","
-  "; icon: Ato m,color:"
-  "from-indigo-500 to-purple-500","
-  "; { name:"
-  "Quantum AI Hybrid Platform",href:"
-  "/services/quantum-ai-hybrid-platform",description:"
-  "Revolutionary quantum-AI computing" } { name:"
-  "Quantum Computing Solutions",href:"
-  "/services/quantum-computing",description:"
-  "Next-generation computing power" } { name:"
-  "Quantum Financial Trading",href:"
-  "/services/ai-quantum-financial-trading-platform",description:"
-  "Advanced quantum trading" } { name:"
-  "Quantum Machine Learning",href:"
-  "/services/quantum-machine-learning",description:"
-  "Quantum-enhanced ML algorithms" } { name:"
-  "AI Quantum Financial Analytics",href:"
-  "/services/ai-quantum-financial-analytics-platform",description:"
-  "Revolutionary quantum AI financial platform" }]} { title:"
-  "Cloud & Infrastructure","
-  "; icon: Clou d,color:"
-  "from-cyan-500 to-blue-500","
-  "; { name:"
-  "Cloud DevOps",href:"
-  "/services/cloud-devops",description:"
-  "Infrastructure automation & scaling" } { name:"
-  "IT Infrastructure",href:"
-  "/services/it-infrastructure",description:"
-  "Enterprise infrastructure solutions" } { name:"
-  "FinOps Advisor",href:"
-  "/services/finops-advisor",description:"
-  "Cloud cost optimization" } { name:"
-  "Cloud FinOps Optimizer",href:"
-  "/services/cloud-finops-optimizer",description:"
-  "Financial operations automation" }]} { title:"
-  "Cybersecurity","
-  "; icon: Shiel d,color:"
-  "from-red-500 to-orange-500","
-  "; { name:"
-  "AI Cybersecurity Platform",href:"
-  "/services/ai-cybersecurity-platform",description:"
-  "Advanced AI-powered security" } { name:"
-  "AI Cybersecurity Operations",href:"
-  "/services/ai-cybersecurity-operations-center",description:"
-  "Autonomous security operations center" } { name:"
-  "Security Headers & CSP",href:"
-  "/services/security-headers-csp",description:"
-  "Web security hardening" } { name:"
-  "DSR Privacy Portal",href:"
-  "/services/dsr-portal",description:"
-  "GDPR/CCPA compliance" } { name:"
-  "Zero Trust Network Access",href:"
-  "/services/zero-trust-network-access",description:"
-  "Modern security architecture" }]} { title:"
-  "Supply Chain & Logistics","
-  "; icon: Truc k,color:"
-  "from-green-500 to-blue-600","
-  "; { name:"
-  "AI Autonomous Supply Chain",href:"
-  "/services/ai-autonomous-supply-chain-management-platform",description:"
-  "Self-learning supply chain management" } { name:"
-  "Autonomous Logistics",href:"
-  "/services/autonomous-logistics",description:"
-  "Smart supply chain automation" }]} { title:"
-  "Emerging Technologies","
-  "; icon: Rocke t,color:"
-  "from-purple-500 to-pink-500","
-  "; { name:"
-  "AI Smart City Infrastructure",href:"
-  "/services/ai-smart-city-infrastructure-management",description:"
-  "Intelligent urban management" } { name:"
-  "AI Autonomous Vehicles",href:"
-  "/services/ai-autonomous-vehicle-management-platform",description:"
-  "Autonomous fleet management" } { name:"
-  "IoT Edge Computing",href:"
-  "/services/iot-edge-computing",description:"
-  "Connected device intelligence" } { name:"
-  "Digital Twin Platform",href:"
-  "/services/digital-twin",description:"
-  "Virtual replica technology" } { name:"
-  "Space Technology",href:"
-  "/space-tech",description:"
-  "Innovative space solutions" }]} { title:"
-  "Smart City & Infrastructure","
-  "; icon: Building 2,color:"
-  "from-green-500 to-emerald-500","
-  "; { name:"
-  "AI Smart City Management",href:"
-  "/services/ai-smart-city-infrastructure-management",description:"
-  "Intelligent urban infrastructure" } { name:"
-  "Traffic Management",href:"
-  "/services/traffic-management",description:"
-  "AI-powered traffic optimization" } { name:"
-  "Energy Grid Management",href:"
-  "/services/energy-grid",description:"
-  "Smart energy distribution" } { name:"
-  "Environmental Monitoring",href:"
-  "/services/environmental-monitoring",description:"
-  "Real-time environmental tracking" }]} { title:"
-  "Autonomous Systems","
-  "; icon: Ca r,color:"
-  "from-blue-500 to-cyan-500","
-  "; { name:"
-  "AI Autonomous Vehicle Platform",href:"
-  "/services/ai-autonomous-vehicle-management-platform",description:"
-  "Fleet management & safety" } { name:"
-  "Drone Management",href:"
-  "/services/drone-management",description:"
-  "Autonomous drone operations" } { name:"
-  "Robotics Automation",href:"
-  "/services/robotics-automation",description:"
-  "Industrial robotics solutions" }]} { title:"
-  "Micro SaaS Solutions","
-  "; icon: Cod e,color:"
-  "from-green-500 to-emerald-500","
-  "; { name:"
-  "AI Email Automation Suite",href:"
-  "/services/ai-email-automation-suite",description:"
-  "Intelligent email management & automation" } { name:"
-  "AI Social Media Scheduler",href:"
-  "/services/ai-social-media-scheduler",description:"
-  "AI-powered social media automation" } { name:"
-  "AI Customer Insights Platform",href:"
-  "/services/ai-customer-insights-platform",description:"
-  "Advanced customer analytics & insights" } { name:"
-  "Micro CRM",href:"
-  "/services/micro-crm",description:"
-  "Lightweight customer management" } { name:"
-  "Helpdesk Platform",href:"
-  "/services/helpdesk-platform",description:"
-  "Efficient support system" } { name:"
-  "AI Content Marketing",href:"
-  "/services/ai-content-marketing-suite",description:"
-  "AI-powered content creation" } { name:"
-  "Customer Support Automation",href:"
-  "/services/ai-customer-support-automation",description:"
-  "Intelligent support automation" } { name:"
-  "Website Analytics",href:"
-  "/services/website-analytics",description:"
-  "Performance insights" }]} { title:"
-  "DevOps & Automation","
-  "; icon: Workflo w,color:"
-  "from-blue-500 to-indigo-500","
-  "; { name:"
-  "AI-Powered DevOps Automation",href:"
-  "/services/ai-powered-devops-automation",description:"
-  "Intelligent CI/CD & infrastructure automation" } { name:"
-  "Cloud DevOps",href:"
-  "/services/cloud-devops",description:"
-  "Infrastructure automation & scaling" } { name:"
-  "IT Infrastructure",href:"
-  "/services/it-infrastructure",description:"
-  "Enterprise infrastructure solutions" } { name:"
-  "FinOps Advisor",href:"
-  "/services/finops-advisor",description:"
-  "Cloud cost optimization" }]} ; const services = []&apos; const solutionsCategories = []}; {; title: &apos,Technology Solutions&apos,; icon: Cp u,; solutions: [,; { nam,e: &apos,AI Solutions&apos,href: &apos,/ai-solutions&apos,description: &apos,Artificial intelligence integration&apos} { name: &apos,Digital Transformation&apos,href: &apos,/services/digital-transformation&apos,description: &apos,Business modernization&apos} { name: &apos,Research & Development&apos,href: &apos,/research-development&apos,description: &apos,Innovation and discovery&apos} { name: &apos,Green IT Solutions&apos,href: &apos,/green-it&apos,description: &apos,Sustainable technology&apos}]} ; const companyLinks = [];&apos; const resourceLinks = [];&apos; const supportLinks = [];&apos,; name:"
-  "AI Email Automation Suite",description:"
-  "Intelligent email management & automation","
-  "; href:"
-  "/services/ai-email-automation-suite",icon: Mai l,"
-  "; color:"
-  "from-blue-500 to-indigo-500",featured: tru e} { name:"
-  "AI Social Media Scheduler",description:"
-  "AI-powered social media automation","
-  "; href:"
-  "/services/ai-social-media-scheduler",icon: Share 2,"
-  "; color:"
-  "from-purple-500 to-pink-500",featured: tru e} { name:"
-  "AI Customer Insights Platform",description:"
-  "Advanced customer analytics & insights","
-  "; href:"
-  "/services/ai-customer-insights-platform",icon: User s,"
-  "; color:"
-  "from-green-500 to-emerald-500",featured: tru e} { name:"
-  "AI-Powered DevOps Automation",description:"
-  "Intelligent CI/CD & infrastructure automation","
-  "; href:"
-  "/services/ai-powered-devops-automation",icon: Workflo w,"
-  "; color:"
-  "from-blue-500 to-indigo-500",featured: tru e} { name:"
-  "AI Content Creation Studio Pro",description:"
-  "Advanced AI-powered content creation platform","
-  "; href:"
-  "/services/AI-Content-Creation-Studio-Pro",icon: PenToo l,"
-  "; color:"
-  "from-purple-500 to-pink-500",featured: tru e} { name:"
-  "Quantum AI Trading Platform",description:"
-  "Revolutionary quantum-enhanced trading system","
-  "; href:"
-  "/services/Quantum-AI-Trading-Platform",icon: BarChart 3,"
-  "; color:"
-  "from-orange-500 to-red-500",featured: tru e} { name:"
-  "AI Quantum Financial Analytics",description:"
-  "Revolutionary quantum AI financial platform","
-  "; href:"
-  "/services/ai-quantum-financial-analytics-platform",icon: BarChart 3,"
-  "; color:"
-  "from-blue-500 to-purple-600",featured: tru e} { name:"
-  "AI Autonomous Supply Chain",description:"
-  "Self-learning supply chain management","
-  "; href:"
-  "/services/ai-autonomous-supply-chain-management-platform",icon: Truc k,"
-  "; color:"
-  "from-green-500 to-blue-600",featured: tru e} { name:"
-  "AI Cybersecurity Operations",description:"
-  "Autonomous security operations center","
-  "; href:"
-  "/services/ai-cybersecurity-operations-center",icon: Shiel d,"
-  "; color:"
-  "from-red-500 to-orange-600",featured: tru e} { name:"
-  "2026 Services Showcase",description:"
-  "Latest innovative services showcase","
-  "; href:"
-  "/innovative-services-showcase-2026",icon: Sparkle s,"
-  "; color:"
-  "from-yellow-500 to-orange-500",featured: tru e}"; title:"
-  "Industry Solutions",; icon: Buildin g,"
-  "; color:"
-  "from-blue-500 to-purple-500","
-  "; solutions: [{ name:"
-  "Enterprise Solutions",href:"
-  "/solutions/enterprise",description:"
-  "Large-scale business transformation" },{ name:"
-  "Healthcare Solutions",href:"
-  "/solutions/healthcare",description:"
-  "Medical technology innovation" },{ name:"
-  "Financial Solutions",href:"
-  "/financial-solutions",description:"
-  "Fintech and banking solutions" },{ name:"
-  "Manufacturing Solutions",href:"
-  "/manufacturing-solutions",description:"
-  "Industry 4.0 automation" }]},{"
-  "; title:"
-  "Technology Solutions",; icon: Cp u,"
-  "; solutions: [ { name:"
-  "AI Solutions",href:"
-  "/ai-solutions",description:"
-  "Artificial intelligence integration" },{ name:"
-  "Digital Transformation",href:"
-  "/services/digital-transformation",description:"
-  "Business modernization" },{ name:"
-  "Research & Development",href:"
-  "/research-development",description:"
-  "Innovation and discovery" },{ name:"
-  "Green IT Solutions",href:"
-  "/green-it",description:"
-  "Sustainable technology" }]}"; const companyLinks = []; const resourceLinks = []; const supportLinks = []; const toggleDropdown = (props) => {,; setActiveDropdown(activeDropdown === dropdown ? null : dropdown)} ; const [servicesOpen,setServicesOpen] = useState<any>(false)} const navLinks = []"} { label:"
-  "Solutions",href:"
-  "/solutions" } { label:"
-  "Enterprise",href:"
-  "/enterprise" } { label:"
-  "About",href:"
-  "/about" } { label:"
-  "Case Studies",href:"
-  "/case-studies" } { label:"
-  "Careers",href:"
-  "/careers" },"
-  "; const navLinks = []}; { title:"
-  "Technology Solutions","
-  "; icon: Cp u,color:"
-  "from-cyan-500 to-blue-500","
-  "; { name:"
-  "AI Solutions",href:"
-  "/ai-solutions",description:"
-  "Artificial intelligence integration" } { name:"
-  "Digital Transformation",href:"
-  "/services/digital-transformation",description:"
-  "Business modernization" } { name:"
-  "Research & Development",href:"
-  "/research-development",description:"
-  "Innovation and discovery" } { name:"
-  "Green IT Solutions",href:"
-  "/green-it",description:"
-  "Sustainable technology" }]}"; { name:"
-  "About Us",href:"
-  "/about",description:"
-  "Learn about our mission and values" } { name:"
-  "Our Team",href:"
-  "/team",description:"
-  "Meet our expert professionals" } { name:"
-  "Leadership",href:"
-  "/leadership",description:"
-  "Executive team and vision" } { name:"
-  "Careers",href:"
-  "/careers",description:"
-  "Join our growing team" } { name:"
-  "Partners",href:"
-  "/partners",description:"
-  "Strategic partnerships" } { name:"
-  "Case Studies",href:"
-  "/case-studies",description:"
-  "Success stories and results" }],; { name:"
-  "Blog",href:"
-  "/blog",description:"
-  "Latest insights and updates" } { name:"
-  "News",href:"
-  "/news",description:"
-  "Company announcements" } { name:"
-  "Press",href:"
-  "/press",description:"
-  "Media resources" } { name:"
-  "Webinars",href:"
-  "/webinars",description:"
-  "Educational sessions" } { name:"
-  "White Papers",href:"
-  "/white - papers",description:"
-  "In-depth research" } { name:"
-  "Documentation",href:"
-  "/documentation",description:"
-  "Technical guides" }],; { name:"
-  "Help Center",href:"
-  "/help",description:"
-  "Find answers and solutions" } { name:"
-  "FAQ",href:"
-  "/faq",description:"
-  "Frequently asked questions" } { name:"
-  "Support",href:"
-  "/support",description:"
-  "Technical assistance" } { name:"
-  "Training",href:"
-  "/training",description:"
-  "Skill development programs" } { name:"
-  "Contact Support",href:"
-  "/contact",description:"
-  "Get in touch with our team" } { name:"
-  "Status Page",href:"
-  "/status",description:"
-  "Service availability" }]; const [mobileOpen,setMobileOpen] = useState()} export const EnhancedHeader: React.FC = () => {}; ; const;const;const [mobileOpen,setMobileOpen] = useState<any>(false)} { label: &apos,Home&apos,href: &apos,/&apos} { label: &apos,Services&apos,href: &apos,/services&apos} { label: &apos,Solutions&apos,href: &apos,/solutions&apos} { label: &apos,Enterprise&apos,href: &apos,/enterprise&apos} { label: &apos,Request Quote&apos,href: &apos,/request-quote&apos} { label: &apos,Case Studies&apos,href: &apos,/case-studies&apos} { label: &apos,Careers&apos,href: &apos,/careers&apos} { label: &apos,Contact&apos,href: &apos,/contact&apos} ; return (&apos;&apos;"
-  "; <header className="&apos;bg-white" shadow-lg&apos;>&apos,"
-  "; <div className="&apos;max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8&apos,>&apos,"
-  "; <div className="&apos;flex" justify-between items-center py-6&apos;>&apos,"
-  "; <div className="&apos;flex" items-center&apos;>&apos,"
-  "; <a href="&apos;/&apos;"
-  " className="&apos;text-2xl" font-bold text-blue-900&apos,>,; Zion Tech Group&apos;&apos,"
-  "; <nav className = "&apos,hidden" m,d: flex space-x-8&apos,>; {navLinks.map((link,index) => (&apos}"; <a key="{index}" href="{link.href}" className="&apos;text-gray-700" hover: tex t-blue-600&apos,>; {link.label}&apos; return ("
-  "; <header: classNam e = "bg-white shadow-lg">","
-  ","
-  "; <div: classNam e="max-w-7xl mx-auto px-4 sm: p x-6: l g:px-8">","
-  ";"
-  "; <div: classNam e="flex justify - between items-center py-6">","
-  "; <div: classNam e="flex items-center">","
-  ",; <a: hre f = "/" className="text-2xl font-bold text-blue-900">","
-  ",; Zion: Tech Group"; <header className="bg-white shadow-lg">"; <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"; <div className="flex justify-between items-center py-6">"; <div className="flex items-center">"; <a href="/" className="text-2xl font-bold text-blue-900">",; <nav className="hidden md: fle x: space-x-8">","
-  " {navLinks.map((link,index) => ("
-  "; <a: ke y="{index}" href="{link.href}" className="text-gray-700 hover: tex t-blue-600">","
-  ";"
-  "; <a key = "{index}" href="{link.href}" className="text-gray-700 hover: tex t-blue-600">,; {link.label}"; <a href="/services/ai" className="hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors">Explore AI</a>",; <button aria-label="Toggle navigation" onClick="{()" => setMobileOpen((v) => !v)} className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100">"; <svg xmlns="http: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />"; aria-label="Toggle: navigatio n","
-  ","
-  "; className="md: hidde n: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900: hove r:bg-gray-100",; >"; <svg: xmln s="http: <path: strokeLineca p="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />"; <button,"
-  "; aria-label = "Toggle navigation>; <;<button;"
-  "; aria-label="&apos;Toggle" navigation";"
-  "; className="&apos;md:"
-  " hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100&apos,>; >&apos;&apos,"
-  "; <svg xmlns="&apos,htt,p:"
-  " <path strokeLinecap="&apos;round&apos;"
-  " strokeLinejoin="&apos,round&apos,"
-  " strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos; />&apos;"
-  "; className = "md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100"; <svg xmlns="http: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />; </svg>; </button>; </div>; </div>; {mobileOpen && (; <div className="md: hidden border-t border-gray-200 bg-white">; <div className="px-4 py-3 space-y-2">; {navLinks.map((link) => (; <div key={link.href}>; <a href={link.href} className="block w-full py-2 text-gray-700 hover: tex t-blue-600">; {link.label} </a>; {link.submenu && (; <div className="ml-4 space-y-1">; {link.submenu.map((subLink) => (; <a; key={subLink.href} href={subLink.href} className="block w-full py-1 text-sm text-gray-600 hover: tex t-blue-600"; >; {subLink.label} </a>; ))} </div> )} </div> ))} <a href="/services/ai" className="block w-full py-2 text-blue-700 font-medium">Explore AI</a>; </div>; </div>; )}</header>; )} )}" MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,"
-  " PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from "lucide-react" " export default Component </svg> </button> </svg> </button> </a> </nav> </a> </div> </a> </div> </header> </a> </nav> </a> </div> </header> </any> </string> </any> </string> </any> </div> </nav> </div> </header> </nav> </div> </header> </div> </form> </div> </motion> </div> </motion> </any> </any> </any>;"
-  ";"
-  ";"
-  ""`"`
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import { useRouter } from 'next/router';,
-import _React from 'react'; import { import { innovativeServices2025 } from '../data/innovativeServices2025'; import { motion,AnimatePresence } from 'framer-motion'; params - Function parameters * @returns {*} Function return value */ function EnhancedHeader(_) {export function EnhancedHeader(_) { const [mobileMenuOpen,setMobileMenuOpen] = useState<any>(false); const [searchQuery,setSearchQuery] = useState<any>("); const [servicesDropdownOpen,setServicesDropdownOpen] = useState<any>(false); const [scrolled,setScrolled] = useState<any>(false); const [isSearching,setIsSearching] = useState<any>(false); ; useEffect(() => {; return () => {}},[]);,[])};'; window.addEventListener('scroll',handleScroll);';'; return () => window.removeEventListener('scroll',handleScroll)},[]); ; const handleSearch = async(e: _React.FormEvent) => {; e.preventDefault(); if(searchQuery.trim()) {; setIsSearching(true); try {; await new Promise(resolve => setTimeout (resolve,1000) ) ; window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {; setIsSearching(false)} } }; ; return () <>; {} <div className="matrix -rain"></div> {} <motion.header` className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled' ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl" : 'bg-transparent'` }`} initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.8,ease: 'easeOut' }} >"; <div className="container mx-auto px-4">"; <div className="flex items-center justify-between h-20">; {}"; <Link to="/" className="flex items-center space-x-3 group">; <motion.div"; className="relative"; whileHover={{ scale: 1.05,rotate: 5 }} whileTap={{ scale: 0.95 }} >" <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">" <Zap className="w-7 h-7 text-white" /> </div>" <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover: opacit y-100 transition-opacity duration-500 blur-lg" /> </motion.div>" <div className="flex flex-col">" <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Zion Tech </span>" <span className="text-xs text-cyan-400 font-medium font-rajdhani tracking-wider"> Innovation Group </span> </div> </Link> {}" <nav className="hidden xl: flex items-center space-x-8"> {navigation.slice(0,6).map(item => ( <Link key={item.name} to={item.href}` className={`nav-link font-medium transition-all duration-300 ${item.current' ? 'text-cyan-400 border-b-2 border-cyan-400" : 'text-gray-300 hover: tex t-cyan-400'` }`} >; {item.name} </Link>) ) } ; {}"; <div className="relative group">; <button"; className="nav-link flex items-center space-x-2 font-medium text-gray-300 hover: tex t-cyan-400 transition-all duration-300"; onMouseEnter={() => setServicesDropdownOpen(true)} onMouseLeave={() => setServicesDropdownOpen(false)} >; <span>Services</span>"; <ChevronDown className="w-4 h-4 transition-transform group-hover: rotat e-180 duration-300" /> </button>; <AnimatePresence>; {servicesDropdownOpen && (; <motion.div"; className="absolute top-full left-0 mt-4 w-[1200px] bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20"; initial={{ opacity: 0,y: -20,scale: 0.95 }} animate={{ opacity: 1,y: 0,scale: 1 }} exit={{ opacity: 0,y: -20,scale: 0.95 }} transition={{ duration: 0.3 }} onMouseEnter={ () => setServicesDropdownOpen(true) } onMouseLeave={ () => setServicesDropdownOpen(false) } >; {}"; <div className="mb-8">"; <h3 className="text-xl font-semibold text-cyan-400 mb-6 font-orbitron">; Featured Services; "; <div className="grid grid-cols-3 gap-6">; {services; .filter(s => s.featured); .map(service => (; <Link; key={service.name} to={service.href}"; className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover: borde r-cyan-500/50 transition-all duration-300 hover: b g-gray-800/70"; >"; <div className="flex items-center space-x-3 mb-3">"; <service.icon className="w-6 h-6 text-cyan-400" />"; <span className="text-lg font-medium text-white group-hover: tex t-cyan-400 transition-colors">; {service.name} </span>; </div>"; <p className="text-sm text-gray-400 group-hover: tex t-gray-300 transition-colors mb-3">; {service.description} </p> {service.badge && ('; <span` className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New" ? 'bg-green-500/20 text-green-400" : service.badge === 'Popular" ? 'bg-blue-500/20 text-blue-400" : service.badge === 'Featured" ? 'bg-purple-500/20 text-purple-400" : 'bg-cyan-500/20 text-cyan-400'` }`} >; {service.badge} </span>; )} </Link>; ))} </div>; </div>; {}"; <div className="grid grid-cols-2 gap-8">; {serviceCategories.map(category => (; <div key={category.name}>"; <div className="flex items-center space-x-3 mb-4">; <div`; className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`} >"; <category.icon className="w-5 h-5 text-white" />; </div>"; <h4 className="text-lg font-semibold text-gray-300 font-rajdhani">; {category.name} </h4>; </div>"; <div className="space-y-2">; {category.services.slice(0,3).map(service => (; <Link; key={service.name} to={service.href}"; className="flex items-center space-x-3 p-3 rounded-lg hover: b g-gray-800/50 transition-colors group"; >"; <service.icon className="w-4 h-4 text-cyan-400 group-hover: tex t-cyan-300 transition-colors" />"; <span className="text-sm text-gray-300 group-hover: tex t-white transition-colors">; {service.name} </span> {service.badge && ('; <span` className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New" ? 'bg-green-500/20 text-green-400" : service.badge === 'Popular" ? 'bg-blue-500/20 text-blue-400" : 'bg-cyan-500/20 text-cyan-400'` }`} >; {service.badge} </span>; )} </Link>; ))} {category.services.length > 3 && (; <Link; to={category.href}"; className="flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors text-sm font-medium group"; >; View All {category.name}"; <ArrowRight className="ml-2 w-4 h-4 group-hover: translat e-x-1 transition-transform" /> </Link>; )} </div>; </div>) ) } </div>; {}"; <div className="mt-8 pt-6 border-t border-gray-700">"; <div className="flex items-center justify-between">; <Link"; to="/innovative-services-showcase-2025"; className="inline-flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors font-medium group text-lg"; >; View All Innovative Services 2025"; <ArrowRight className="ml-2 w-5 h-5 group-hover: translat e-x-1 transition-transform" />; </Link>" <div className="flex items-center space-x-4 text-sm text-gray-400">; <span>50+ Services Available</span>; <span>•</span>; <span > Proven ROI</span>; <span>•</span>; <span > 24 / 7 Support</span>; </div>; </div>; </div>; </motion.div>) } </AnimatePresence>; </div>; {} {navigation.slice(6,10).map(item => ( <Link key={item.name} to={item.href}` className={`nav-link font-medium transition-all duration-300 ${item.current' ? 'text-cyan-400 border-b-2 border-cyan-400" : 'text-gray-300 hover: tex t-cyan-400'` }`} >; {item.name} </Link>) ) } </nav>; {}"; <div className="hidden xl: flex items-center space-x-6">; {}"; <form onSubmit={handleSearch} className="relative">"; <div className="relative">"; <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />; <input"; type="text"; placeholder="Search services..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)}"; className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: borde r-cyan-500 focus: rin g-2 focus: rin g-cyan-500/20 transition-all duration-300"; />; {isSearching && ("; <div className="absolute right-3 top-1/2 transform -translate-y-1/2">"; <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-400"></div>; </div>; ]; return (; <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">; <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">; <div className="flex justify-between items-center h-16">; <a href="/" className="text-xl sm: tex t-2xl font-bold text-blue-900">Zion Tech Group</a>; <nav className="hidden md: flex items-center gap-6">; {navLinks.map((link) => (; <div key={link.href} className="relative group">; <a; href={link.href} ; className="text-gray-700 hover: tex t-blue-600 transition-colors flex items-center gap-1"; onMouseEnter={() => link.submenu && setServicesOpen(true)} onMouseLeave={() => link.submenu && setServicesOpen(false)} >; {link.label} {link.submenu && (; <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">; <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />; </svg>; )} </a>; {link.submenu && servicesOpen && (; <div; className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50"; onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} >; {link.submenu.map((subLink) => (; <a; key={subLink.href} href={subLink.href} className="block px-4 py-2 text-sm text-gray-700 hover: b g-blue-50 hover: tex t-blue-600 transition-colors"; >; {subLink.label} </a>; ))} </div> )} </div> ))} <a href="/contact" className="hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors">Get Started</a>; return (<header className="bg-white shadow-lg">; "; return (<header className="bg-white shadow-lg">"; <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"; <div className="flex justify-between items-center py-6">"; <div className="flex items-center">"; <a href="/" className="text-2xl font-bold text-blue-900">; Zion Tech Group,; </a>; </div>"; <nav className="hidden md: flex space-x-8">"; <nav className="hidden md: flex space-x-6">"; <a href="/" className="text-gray-700 hover: tex t-blue-600">Home</a>"; <a href="/about" className="text-gray-700 hover: tex t-blue-600">About</a>"; <a href="/services" className="text-gray-700 hover: tex t-blue-600">Services</a>"; <a href="/solutions" className="text-gray-700 hover: tex t-blue-600">Solutions</a>"; <a href="/contact" className="text-gray-700 hover: tex t-blue-600">Contact</a>; </nav>; </header>"; <a href="/micro-saas" className="text-gray-700 hover: tex t-blue-600">Micro SAAS</a>"; <a href="/it-services" className="text-gray-700 hover: tex t-blue-600">IT Services</a>"; <a href="/marketplace" className="text-gray-700 hover: tex t-blue-600">Marketplace</a>"; <a href="/news" className="text-gray-700 hover: tex t-blue-600">News</a>"; <a href="/blog" className="text-gray-700 hover: tex t-blue-600">Blog</a>"; <a href="/careers" className="text-gray-700 hover: tex t-blue-600">Careers</a>,,; ),"; ,"});,"})"; ;,"});,"})"; export const EnhancedHeader: _React.FC = () => {,"};);,"})"; return (<header className="bg-white shadow-lg">;,"});,"})"; <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,"});,"})"; <div className="flex justify-between items-center py-4 md: p y-6">,"});,"})"; <div className="flex items-center">;,"});,"})"; <a href="/" className="text-xl md: tex t-2xl font-bold text-blue-900">,"});,"})"; Zion Tech Group,"});,"})"; </a>;,"});,"})"; </div>;,"});,"})"; <nav className="hidden md: flex gap-6">,"});,"})"; <a href="/" className="text-gray-700 hover: tex t-blue-600">Home</a>,"});,"})"; <a href="/services" className="text-gray-700 hover: tex t-blue-600">Services</a>,"});,"})"; <a href="/solutions" className="text-gray-700 hover: tex t-blue-600">Solutions</a>,"});,"})"; <a href="/pricing-guide" className="text-gray-700 hover: tex t-blue-600">Pricing</a>,"});,"})"; <a href="/contact" className="text-gray-700 hover: tex t-blue-600">Contact</a>,"});,"})"; </nav>;,"});,"})"; </header>;,"});,"})"; );,"});,"});"};,"});,"})"; Menu,X,Search,User,Bell,ChevronDown,Zap,Brain,Shield,Cloud,; Rocket,Globe,Cpu,Lock,Heart,Users,ShoppingCart,BookOpen,; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,; Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,"; Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,; PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from "lucide-react; export function EnhancedHeader(_) {; const [mobileMenuOpen,setMobileMenuOpen] = useState()"; const [searchQuery,setSearchQuery] = useState<any>(")} const [scrolled,setScrolled] = useState<any>(false)} const [activeDropdown,setActiveDropdown] = useState<string | null>(null)} useEffect(() => {; const handleScroll = (props) => {; setScrolled(window.scrollY > 50)} ; window.addEventListener()} return () => window.removeEventListener("scroll",handleScroll)},[]);react"react - router-dom",framer-motion; Menu,X,Search,User,Bell,ChevronDown,Zap,Brain,Shield,Cloud,; Rocket,Globe,Cpu,Lock,Heart,Users,ShoppingCart,BookOpen,; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,; Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,; Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,"; PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from "lucide-react"; export: function EnhancedHeader(_) {",; const [searchQuery,setSearchQuery] = useState<any>(")} setScrolled(window.scrollY: > 50)},; window.addEventListener()} return: () => window.removeEventListener("scroll",handleScroll)},[])} PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from &apos;lucide-react";&apos;&apos; export function EnhancedHeader(_) {}"; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,"; "; MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight,; const router = useRouter()} const [searchQuery,setSearchQuery] = useState<any>(&apos;&apos);&apos;&apos; const [activeDropdown,setActiveDropdown] = useState<;<;<string | null>(null)} useEffect(() => {} ; window.addEventListener(&apos;scroll&apos,handleScroll)} return () => window.removeEventListener(&apos;scroll&apos,handleScroll)},[])} setIsMenuOpen(false)} setActiveDropdown(null)},[location.pathname])} const handleSearch = async (e: _React.FormEvent) => {,; e.preventDefault(),; if: (searchQuery.trim()) {",,; window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}"; const navigation = []; const servicesCategories = []};,",{"; title: "Quantum: Computin g,","; icon: At o,m,"; color: "from - indigo-500: t o-purple-500,",",; services: ,[ { name: "Quantum: AI Hybrid Platform,",href: "/services/quantum - ai-hybrid-platform,",description: "Revolutionary: quantu m-AI computing"},",{ name: "Quantum: Computing Solutions,",href: "/services/quantum - computing,",description: "Next-generation: computing power"},",{ name: "Quantum: Financial Trading,",href: "/services/ai - quantum-financial-trading-platform,",description: "Advanced: quantum trading"},",{ name: "Quantum: Machine Learning,",href: "/services/quantum - machine-learning,",description: "Quantum-enhanced: ML algorithms"},",{ name: "AI: Quantum Financial Analytics,",href: "/services/ai - quantum-financial-analytics-platform,",description: "Revolutionary: quantum AI financial platform"}]},",{"; title: "Cloud: & Infrastructure,","; icon: Clo u,d,"; color: "from - cyan-500: t o-blue-500,",",; services: ,[ { name: "Cloud: DevOp s,",href: "/services/cloud - devops,",description: "Infrastructure: automatio n & scaling"},",{ name: "IT: Infrastructur e,",href: "/services/it - infrastructure,",description: "Enterprise: infrastructure solutions"},",{ name: "FinOps: Adviso r,",href: "/services/finops - advisor,",description: "Cloud: cost optimization"},",{ name: "Cloud: FinOps Optimizer,",href: "/services/cloud - finops-optimizer,",description: "Financial: operations automation"}]},",{"; title: "Cybersecurity,","; icon: Shie l,d,"; color: "from - red-500: t o-orange-500,",",; services: ,[ { name: "AI: Cybersecurity Platform,",href: "/services/ai - cybersecurity-platform,",description: "Advanced: A I-powered security"},",{ name: "AI: Cybersecurity Operations,",href: "/services/ai - cybersecurity-operations-center,",description: "Autonomous: security operations center"},",{ name: "Security: Header s & CSP,",href: "/services/security - headers-csp,",description: "Web: security hardening"},",{ name: "DSR: Privacy Portal,",href: "/services/dsr - portal,",description: "GDPR/CCPA: complianc e"},",{ name: "Zero: Trust Network Access,",href: "/services/zero - trust-network-access,",description: "Modern: security architecture"}]},",{"; title: "Supply: Chai n & Logistics,","; icon: Tru c,k,"; color: "from - green-500: t o-blue-600,",",; services: ,[ { name: "AI: Autonomous Supply Chain,",href: "/services/ai - autonomous-supply-chain-management-platform,",description: "Self-learning: supply chain management"},",{ name: "Autonomous: Logistic s,",href: "/services/autonomous - logistics,",description: "Smart: supply chain automation"}]},",{"; title: "Emerging: Technologie s,","; icon: Rock e,t,"; color: "from - purple-500: t o-pink-500,",",; services: ,[ { name: "AI: Smart City Infrastructure,",href: "/services/ai - smart-city-infrastructure-management,",description: "Intelligent: urban management"},",{ name: "AI: Autonomous Vehicles,",href: "/services/ai - autonomous-vehicle-management-platform,",description: "Autonomous: fleet management"},",{ name: "IoT: Edge Computing,",href: "/services/iot - edge-computing,",description: "Connected: device intelligence"},",{ name: "Digital: Twin Platform,",href: "/services/digital - twin,",description: "Virtual: replica technology"},",{ name: "Space: Technolog y,",href: "/space - tech,",description: "Innovative: space solutions"}]},",{"; title: "Smart: Cit y & Infrastructure,","; icon: Buildin g,2,"; color: "from - green-500: t o-emerald-500,",",; services: ,[ { name: "AI: Smart City Management,",href: "/services/ai - smart-city-infrastructure-management,",description: "Intelligent: urban infrastructure"},",{ name: "Traffic: Managemen t,",href: "/services/traffic - management,",description: "AI-powered: traffic optimization"},",{ name: "Energy: Grid Management,",href: "/services/energy - grid,",description: "Smart: energy distribution"},",{ name: "Environmental: Monitorin g,",href: "/services/environmental - monitoring,",description: "Real-time: environmental tracking"}]},",{"; title: "Autonomous: System s,","; icon: C a,r,"; color: "from - blue-500: t o-cyan-500,",",; services: ,[ { name: "AI: Autonomous Vehicle Platform,",href: "/services/ai - autonomous-vehicle-management-platform,",description: "Fleet: managemen t & safety"},",{ name: "Drone: Managemen t,",href: "/services/drone - management,",description: "Autonomous: drone operations"},",{ name: "Robotics: Automatio n,",href: "/services/robotics - automation,",description: "Industrial: robotics solutions"}]},",{"; title: "Micro: SaaS Solutions,","; icon: Co d,e,"; services: ,[ { name: "AI: Email Automation Suite,",href: "/services/ai - email-automation-suite,",description: "Intelligent: email management & automation"},",{ name: "AI: Social Media Scheduler,",href: "/services/ai - social-media-scheduler,",description: "AI-powered: social media automation"},",{ name: "AI: Customer Insights Platform,",href: "/services/ai - customer-insights-platform,",description: "Advanced: customer analytics & insights"},",{ name: "Micro: CR M,",href: "/services/micro - crm,",description: "Lightweight: customer management"},",{ name: "Helpdesk: Platfor m,",href: "/services/helpdesk - platform,",description: "Efficient: support system"},",{ name: "AI: Content Marketing,",href: "/services/ai - content-marketing-suite,",description: "AI-powered: content creation"},",{ name: "Customer: Support Automation,",href: "/services/ai - customer-support-automation,",description: "Intelligent: support automation"},",{ name: "Website: Analytic s,",href: "/services/website - analytics,",description: "Performance: insight s"}]},",{"; title: "DevOps: & Automation,","; icon: Workfl o,w,"; services: ,[ { name: "AI - Powered: DevOps Automation,",href: "/services/ai-powered-devops-automation,",description: "Intelligent: C I/CD & infrastructure automation"},",{ name: "Cloud: DevOp s,",href: "/services/cloud - devops,",description: "Infrastructure: automatio n & scaling"},",{ name: "IT: Infrastructur e,",href: "/services/it - infrastructure,",description: "Enterprise: infrastructure solutions"},",{ name: "FinOps: Adviso r,",href: "/services/finops-advisor,",description: "Cloud: cost optimization"}]}"; ]; const services = []};,",{"; title: "Technology: Solution s,","; icon: C p,u,"; solutions: ,[ { name: "AI: Solution s,",href: "/ai - solutions,",description: "Artificial: intelligence integration"},",{ name: "Digital: Transformatio n,",href: "/services / digital - transformation,",description: "Business: modernizatio n"},",{ name: "Research: & Development,",href: "/research - development,",description: "Innovation: and discovery"},",{ name: "Green: IT Solutions,",href: "/green - it,",description: "Sustainable: technolog y"}]}",,; const companyLinks = [],,; const resourceLinks = [],; const supportLinks = []; const toggleDropdown = (props) => {,,; setActiveDropdown(activeDropdown: === dropdown ? null: dropdow, n)} ; export: const EnhancedHeader: _React.FC: = () => {,; const [mobileOpen,setMobileOpen] = useState()} const navLinks = []; title: "AI & Machine Learning",; icon: Brai n,"; color: "from-blue-500 to-indigo-500","; services: [{ name: "AI Autonomous Business Manager",href: "/services/ai-autonomous-business-manager",description: "Fully autonomous business operations" },{ name: "AI Business Intelligence",href: "/services/ai-business-intelligence",description: "Advanced analytics & ML insights" },{ name: "AI Compliance Assistant",href: "/services/ai-compliance-assistant",description: "Automated regulatory compliance" },{ name: "AI Sales Copilot",href: "/services/ai-sales-copilot",description: "Intelligent sales optimization" },{ name: "AI-Powered SEO",href: "/services/ai-powered-seo",description: "Machine learning SEO optimization" },{ name: "AI Content Marketing Suite",href: "/services/ai-content-marketing-suite",description: "AI-powered content creation & optimization" },{ name: "AI Customer Support",href: "/services/ai-customer-support-automation",description: "Intelligent support automation" },{ name: "AI Project Management",href: "/services/ai-project-management",description: "AI-driven project optimization" },{ name: "AI Financial Analytics",href: "/services/ai-financial-analytics",description: "Intelligent financial insights" }]},{"; title: "Quantum Computing",; icon: Ato m,"; color: "from-indigo-500 to-purple-500","; services: [ { name: "Quantum AI Hybrid Platform",href: "/services/quantum-ai-hybrid-platform",description: "Revolutionary quantum-AI computing" },{ name: "Quantum Computing Solutions",href: "/services/quantum-computing",description: "Next-generation computing power" },{ name: "Quantum Financial Trading",href: "/services/ai-quantum-financial-trading-platform",description: "Advanced quantum trading" },{ name: "Quantum Machine Learning",href: "/services/quantum-machine-learning",description: "Quantum-enhanced ML algorithms" },{ name: "AI Quantum Financial Analytics",href: "/services/ai-quantum-financial-analytics-platform",description: "Revolutionary quantum AI financial platform" }]},{"; title: "Cloud & Infrastructure",; icon: Clou d,"; color: "from-cyan-500 to-blue-500","; services: [ { name: "Cloud DevOps",href: "/services/cloud-devops",description: "Infrastructure automation & scaling" },{ name: "IT Infrastructure",href: "/services/it-infrastructure",description: "Enterprise infrastructure solutions" },{ name: "FinOps Advisor",href: "/services/finops-advisor",description: "Cloud cost optimization" },{ name: "Cloud FinOps Optimizer",href: "/services/cloud-finops-optimizer",description: "Financial operations automation" }]},{"; title: "Cybersecurity",; icon: Shiel d,"; color: "from-red-500 to-orange-500","; services: [ { name: "AI Cybersecurity Platform",href: "/services/ai-cybersecurity-platform",description: "Advanced AI-powered security" },{ name: "AI Cybersecurity Operations",href: "/services/ai-cybersecurity-operations-center",description: "Autonomous security operations center" },{ name: "Security Headers & CSP",href: "/services/security-headers-csp",description: "Web security hardening" },{ name: "DSR Privacy Portal",href: "/services/dsr-portal",description: "GDPR/CCPA compliance" },{ name: "Zero Trust Network Access",href: "/services/zero-trust-network-access",description: "Modern security architecture" }]},{"; title: "Supply Chain & Logistics",; icon: Truc k,"; color: "from-green-500 to-blue-600","; services: [ { name: "AI Autonomous Supply Chain",href: "/services/ai-autonomous-supply-chain-management-platform",description: "Self-learning supply chain management" },{ name: "Autonomous Logistics",href: "/services/autonomous-logistics",description: "Smart supply chain automation" }]},{"; title: "Emerging Technologies",; icon: Rocke t,"; color: "from-purple-500 to-pink-500","; services: [ { name: "AI Smart City Infrastructure",href: "/services/ai-smart-city-infrastructure-management",description: "Intelligent urban management" },{ name: "AI Autonomous Vehicles",href: "/services/ai-autonomous-vehicle-management-platform",description: "Autonomous fleet management" },{ name: "IoT Edge Computing",href: "/services/iot-edge-computing",description: "Connected device intelligence" },{ name: "Digital Twin Platform",href: "/services/digital-twin",description: "Virtual replica technology" },{ name: "Space Technology",href: "/space-tech",description: "Innovative space solutions" }]},{"; title: "Smart City & Infrastructure",; icon: Building 2,"; color: "from-green-500 to-emerald-500","; services: [ { name: "AI Smart City Management",href: "/services/ai-smart-city-infrastructure-management",description: "Intelligent urban infrastructure" },{ name: "Traffic Management",href: "/services/traffic-management",description: "AI-powered traffic optimization" },{ name: "Energy Grid Management",href: "/services/energy-grid",description: "Smart energy distribution" },{ name: "Environmental Monitoring",href: "/services/environmental-monitoring",description: "Real-time environmental tracking" }]},{"; title: "Autonomous Systems",; icon: Ca r,"; color: "from-blue-500 to-cyan-500","; services: [ { name: "AI Autonomous Vehicle Platform",href: "/services/ai-autonomous-vehicle-management-platform",description: "Fleet management & safety" },{ name: "Drone Management",href: "/services/drone-management",description: "Autonomous drone operations" },{ name: "Robotics Automation",href: "/services/robotics-automation",description: "Industrial robotics solutions" }]},{"; title: "Micro SaaS Solutions",; icon: Cod e,"; services: [ { name: "AI Email Automation Suite",href: "/services/ai-email-automation-suite",description: "Intelligent email management & automation" },{ name: "AI Social Media Scheduler",href: "/services/ai-social-media-scheduler",description: "AI-powered social media automation" },{ name: "AI Customer Insights Platform",href: "/services/ai-customer-insights-platform",description: "Advanced customer analytics & insights" },{ name: "Micro CRM",href: "/services/micro-crm",description: "Lightweight customer management" },{ name: "Helpdesk Platform",href: "/services/helpdesk-platform",description: "Efficient support system" },{ name: "AI Content Marketing",href: "/services/ai-content-marketing-suite",description: "AI-powered content creation" },{ name: "Customer Support Automation",href: "/services/ai-customer-support-automation",description: "Intelligent support automation" },{ name: "Website Analytics",href: "/services/website-analytics",description: "Performance insights" }]},{"; title: "DevOps & Automation",; icon: Workflo w,"; services: [ { name: "AI-Powered DevOps Automation",href: "/services/ai-powered-devops-automation",description: "Intelligent CI/CD & infrastructure automation" },{ name: "Cloud DevOps",href: "/services/cloud-devops",description: "Infrastructure automation & scaling" },{ name: "IT Infrastructure",href: "/services/it-infrastructure",description: "Enterprise infrastructure solutions" },{ name: "FinOps Advisor",href: "/services/finops-advisor",description: "Cloud cost optimization" }]} ; name: "AI Email Automation Suite"; description: "Intelligent email management & automation",; href: "/services/ai-email-automation-suite",; icon: Mai l,; featured: tru e},{"; name: "AI Social Media Scheduler"; description: "AI-powered social media automation",; href: "/services/ai-social-media-scheduler",; icon: Share 2,"; name: "AI Customer Insights Platform"; description: "Advanced customer analytics & insights",; href: "/services/ai-customer-insights-platform",; icon: User s,"; name: "AI-Powered DevOps Automation"; description: "Intelligent CI/CD & infrastructure automation"; href: "/services/ai-powered-devops-automation"; name: "AI Content Creation Studio Pro"; description: "Advanced AI-powered content creation platform",; href: "/services/AI-Content-Creation-Studio-Pro",; icon: PenToo l,"; name: "Quantum AI Trading Platform"; description: "Revolutionary quantum-enhanced trading system",; href: "/services/Quantum-AI-Trading-Platform",; icon: BarChart 3,"; color: "from-orange-500 to-red-500"; name: "AI Quantum Financial Analytics"; description: "Revolutionary quantum AI financial platform"; href: "/services/ai-quantum-financial-analytics-platform"; color: "from-blue-500 to-purple-600"; name: "AI Autonomous Supply Chain"; description: "Self-learning supply chain management"; href: "/services/ai-autonomous-supply-chain-management-platform"; name: "AI Cybersecurity Operations"; description: "Autonomous security operations center"; href: "/services/ai-cybersecurity-operations-center"; color: "from-red-500 to-orange-600"; name: "2026 Services Showcase"; description: "Latest innovative services showcase",; href: "/innovative-services-showcase-2026",; icon: Sparkle s,"; color: "from-yellow-500 to-orange-500",; setActiveDropdown(null)},[location.pathname]);&apos; setMobileMenuOpen(false)} setActiveDropdown(null)},[]);"; router.push("/search?q = "${encodeURIComponent(searchQuery.trim())}")}"; const navigation = []; const servicesCategories = []}; {; title: &apos,Quantum Computing&apos,; icon: Ato m,; color: &apos,from-indigo-500 to-purple-500&apos,; services: [,; { nam,e: &apos,Quantum AI Hybrid Platform&apos,href: &apos,/services/quantum-ai-hybrid-platform&apos,description: &apos,Revolutionary quantum-AI computing&apos} { name: &apos,Quantum Computing Solutions&apos,href: &apos,/services/quantum-computing&apos,description: &apos,Next-generation computing power&apos} { name: &apos,Quantum Financial Trading&apos,href: &apos,/services/ai-quantum-financial-trading-platform&apos,description: &apos,Advanced quantum trading&apos} { name: &apos,Quantum Machine Learning&apos,href: &apos,/services/quantum-machine-learning&apos,description: &apos,Quantum-enhanced ML algorithms&apos} { name: &apos,AI Quantum Financial Analytics&apos,href: &apos,/services/ai-quantum-financial-analytics-platform&apos,description: &apos,Revolutionary quantum AI financial platform&apos}]} {; title: &apos,Cloud & Infrastructure&apos,; icon: Clou d,; color: &apos,from-cyan-500 to-blue-500&apos,; { nam,e: &apos,Cloud DevOps&apos,href: &apos,/services/cloud-devops&apos,description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos,href: &apos,/services/it-infrastructure&apos,description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos,href: &apos,/services/finops-advisor&apos,description: &apos,Cloud cost optimization&apos} { name: &apos,Cloud FinOps Optimizer&apos,href: &apos,/services/cloud-finops-optimizer&apos,description: &apos,Financial operations automation&apos}]} {; title: &apos,Cybersecurity&apos,; icon: Shiel d,; color: &apos,from-red-500 to-orange-500&apos,; { nam,e: &apos,AI Cybersecurity Platform&apos,href: &apos,/services/ai-cybersecurity-platform&apos,description: &apos,Advanced AI-powered security&apos} { name: &apos,AI Cybersecurity Operations&apos,href: &apos,/services/ai-cybersecurity-operations-center&apos,description: &apos,Autonomous security operations center&apos} { name: &apos,Security Headers & CSP&apos,href: &apos,/services/security-headers-csp&apos,description: &apos,Web security hardening&apos} { name: &apos,DSR Privacy Portal&apos,href: &apos,/services/dsr-portal&apos,description: &apos,GDPR/CCPA compliance&apos} { name: &apos,Zero Trust Network Access&apos,href: &apos,/services/zero-trust-network-access&apos,description: &apos,Modern security architecture&apos}]} {; title: &apos,Supply Chain & Logistics&apos,; icon: Truc k,; color: &apos,from-green-500 to-blue-600&apos,; { nam,e: &apos,AI Autonomous Supply Chain&apos,href: &apos,/services/ai-autonomous-supply-chain-management-platform&apos,description: &apos,Self-learning supply chain management&apos} { name: &apos,Autonomous Logistics&apos,href: &apos,/services/autonomous-logistics&apos,description: &apos,Smart supply chain automation&apos}]} {; title: &apos,Emerging Technologies&apos,; icon: Rocke t,; color: &apos,from-purple-500 to-pink-500&apos,; { nam,e: &apos,AI Smart City Infrastructure&apos,href: &apos,/services/ai-smart-city-infrastructure-management&apos,description: &apos,Intelligent urban management&apos} { name: &apos,AI Autonomous Vehicles&apos,href: &apos,/services/ai-autonomous-vehicle-management-platform&apos,description: &apos,Autonomous fleet management&apos} { name: &apos,IoT Edge Computing&apos,href: &apos,/services/iot-edge-computing&apos,description: &apos,Connected device intelligence&apos} { name: &apos,Digital Twin Platform&apos,href: &apos,/services/digital-twin&apos,description: &apos,Virtual replica technology&apos} { name: &apos,Space Technology&apos,href: &apos,/space-tech&apos,description: &apos,Innovative space solutions&apos}]} {; title: &apos,Smart City & Infrastructure&apos,; icon: Building 2,; color: &apos,from-green-500 to-emerald-500&apos,; { nam,e: &apos,AI Smart City Management&apos,href: &apos,/services/ai-smart-city-infrastructure-management&apos,description: &apos,Intelligent urban infrastructure&apos} { name: &apos,Traffic Management&apos,href: &apos,/services/traffic-management&apos,description: &apos,AI-powered traffic optimization&apos} { name: &apos,Energy Grid Management&apos,href: &apos,/services/energy-grid&apos,description: &apos,Smart energy distribution&apos} { name: &apos,Environmental Monitoring&apos,href: &apos,/services/environmental-monitoring&apos,description: &apos,Real-time environmental tracking&apos}]} {; title: &apos,Autonomous Systems&apos,; icon: Ca r,; color: &apos,from-blue-500 to-cyan-500&apos,; { nam,e: &apos,AI Autonomous Vehicle Platform&apos,href: &apos,/services/ai-autonomous-vehicle-management-platform&apos,description: &apos,Fleet management & safety&apos} { name: &apos,Drone Management&apos,href: &apos,/services/drone-management&apos,description: &apos,Autonomous drone operations&apos} { name: &apos,Robotics Automation&apos,href: &apos,/services/robotics-automation&apos,description: &apos,Industrial robotics solutions&apos}]} {; title: &apos,Micro SaaS Solutions&apos,; icon: Cod e,; { nam,e: &apos,AI Email Automation Suite&apos,href: &apos,/services/ai-email-automation-suite&apos,description: &apos,Intelligent email management & automation&apos} { name: &apos,AI Social Media Scheduler&apos,href: &apos,/services/ai-social-media-scheduler&apos,description: &apos,AI-powered social media automation&apos} { name: &apos,AI Customer Insights Platform&apos,href: &apos,/services/ai-customer-insights-platform&apos,description: &apos,Advanced customer analytics & insights&apos} { name: &apos,Micro CRM&apos,href: &apos,/services/micro-crm&apos,description: &apos,Lightweight customer management&apos} { name: &apos,Helpdesk Platform&apos,href: &apos,/services/helpdesk-platform&apos,description: &apos,Efficient support system&apos} { name: &apos,AI Content Marketing&apos,href: &apos,/services/ai-content-marketing-suite&apos,description: &apos,AI-powered content creation&apos} { name: &apos,Customer Support Automation&apos,href: &apos,/services/ai-customer-support-automation&apos,description: &apos,Intelligent support automation&apos} { name: &apos,Website Analytics&apos,href: &apos,/services/website-analytics&apos,description: &apos,Performance insights&apos}]} {; title: &apos,DevOps & Automation&apos,; icon: Workflo w,; { nam,e: &apos,AI-Powered DevOps Automation&apos,href: &apos,/services/ai-powered-devops-automation&apos,description: &apos,Intelligent CI/CD & infrastructure automation&apos} { name: &apos,Cloud DevOps&apos,href: &apos,/services/cloud-devops&apos,description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos,href: &apos,/services/it-infrastructure&apos,description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos,href: &apos,/services/finops-advisor&apos,description: &apos,Cloud cost optimization&apos}]} ; { name: "Home",href: "/",current: tru e } { name: "About",href: "/about",current: fals e } { name: "Services",href: "/services",current: fals e } { name: "Innovative Services 2028",href: "/innovative-services-showcase-2028",current: fals e } { name: "Pricing Guide",href: "/comprehensive-pricing-guide-2028",current: fals e } { name: "Solutions",href: "/solutions",current: fals e } { name: "Contact",href: "/contact",current: fals e }]; { title: "AI & Machine Learning",icon: Brai n,"; color: "from-blue-500 to-indigo-500",services: [{ name: "AI Autonomous Business Manager",href: "/services/ai-autonomous-business-manager",description: "Fully autonomous business operations" } { name: "AI Business Intelligence",href: "/services/ai-business-intelligence",description: "Advanced analytics & ML insights" } { name: "AI Compliance Assistant",href: "/services/ai-compliance-assistant",description: "Automated regulatory compliance" } { name: "AI Sales Copilot",href: "/services/ai-sales-copilot",description: "Intelligent sales optimization" } { name: "AI-Powered SEO",href: "/services/ai-powered-seo",description: "Machine learning SEO optimization" } { name: "AI Content Marketing Suite",href: "/services/ai-content-marketing-suite",description: "AI-powered content creation & optimization" } { name: "AI Customer Support",href: "/services/ai-customer-support-automation",description: "Intelligent support automation" } { name: "AI Project Management",href: "/services/ai-project-management",description: "AI-driven project optimization" } { name: "AI Financial Analytics",href: "/services/ai-financial-analytics",description: "Intelligent financial insights" }]} { title: "Quantum Computing","; icon: Ato m,color: "from-indigo-500 to-purple-500","; { name: "Quantum AI Hybrid Platform",href: "/services/quantum-ai-hybrid-platform",description: "Revolutionary quantum-AI computing" } { name: "Quantum Computing Solutions",href: "/services/quantum-computing",description: "Next-generation computing power" } { name: "Quantum Financial Trading",href: "/services/ai-quantum-financial-trading-platform",description: "Advanced quantum trading" } { name: "Quantum Machine Learning",href: "/services/quantum-machine-learning",description: "Quantum-enhanced ML algorithms" } { name: "AI Quantum Financial Analytics",href: "/services/ai-quantum-financial-analytics-platform",description: "Revolutionary quantum AI financial platform" }]} { title: "Cloud & Infrastructure","; icon: Clou d,color: "from-cyan-500 to-blue-500","; { name: "Cloud DevOps",href: "/services/cloud-devops",description: "Infrastructure automation & scaling" } { name: "IT Infrastructure",href: "/services/it-infrastructure",description: "Enterprise infrastructure solutions" } { name: "FinOps Advisor",href: "/services/finops-advisor",description: "Cloud cost optimization" } { name: "Cloud FinOps Optimizer",href: "/services/cloud-finops-optimizer",description: "Financial operations automation" }]} { title: "Cybersecurity","; icon: Shiel d,color: "from-red-500 to-orange-500","; { name: "AI Cybersecurity Platform",href: "/services/ai-cybersecurity-platform",description: "Advanced AI-powered security" } { name: "AI Cybersecurity Operations",href: "/services/ai-cybersecurity-operations-center",description: "Autonomous security operations center" } { name: "Security Headers & CSP",href: "/services/security-headers-csp",description: "Web security hardening" } { name: "DSR Privacy Portal",href: "/services/dsr-portal",description: "GDPR/CCPA compliance" } { name: "Zero Trust Network Access",href: "/services/zero-trust-network-access",description: "Modern security architecture" }]} { title: "Supply Chain & Logistics","; icon: Truc k,color: "from-green-500 to-blue-600","; { name: "AI Autonomous Supply Chain",href: "/services/ai-autonomous-supply-chain-management-platform",description: "Self-learning supply chain management" } { name: "Autonomous Logistics",href: "/services/autonomous-logistics",description: "Smart supply chain automation" }]} { title: "Emerging Technologies","; icon: Rocke t,color: "from-purple-500 to-pink-500","; { name: "AI Smart City Infrastructure",href: "/services/ai-smart-city-infrastructure-management",description: "Intelligent urban management" } { name: "AI Autonomous Vehicles",href: "/services/ai-autonomous-vehicle-management-platform",description: "Autonomous fleet management" } { name: "IoT Edge Computing",href: "/services/iot-edge-computing",description: "Connected device intelligence" } { name: "Digital Twin Platform",href: "/services/digital-twin",description: "Virtual replica technology" } { name: "Space Technology",href: "/space-tech",description: "Innovative space solutions" }]} { title: "Smart City & Infrastructure","; icon: Building 2,color: "from-green-500 to-emerald-500","; { name: "AI Smart City Management",href: "/services/ai-smart-city-infrastructure-management",description: "Intelligent urban infrastructure" } { name: "Traffic Management",href: "/services/traffic-management",description: "AI-powered traffic optimization" } { name: "Energy Grid Management",href: "/services/energy-grid",description: "Smart energy distribution" } { name: "Environmental Monitoring",href: "/services/environmental-monitoring",description: "Real-time environmental tracking" }]} { title: "Autonomous Systems","; icon: Ca r,color: "from-blue-500 to-cyan-500","; { name: "AI Autonomous Vehicle Platform",href: "/services/ai-autonomous-vehicle-management-platform",description: "Fleet management & safety" } { name: "Drone Management",href: "/services/drone-management",description: "Autonomous drone operations" } { name: "Robotics Automation",href: "/services/robotics-automation",description: "Industrial robotics solutions" }]} { title: "Micro SaaS Solutions","; icon: Cod e,color: "from-green-500 to-emerald-500","; { name: "AI Email Automation Suite",href: "/services/ai-email-automation-suite",description: "Intelligent email management & automation" } { name: "AI Social Media Scheduler",href: "/services/ai-social-media-scheduler",description: "AI-powered social media automation" } { name: "AI Customer Insights Platform",href: "/services/ai-customer-insights-platform",description: "Advanced customer analytics & insights" } { name: "Micro CRM",href: "/services/micro-crm",description: "Lightweight customer management" } { name: "Helpdesk Platform",href: "/services/helpdesk-platform",description: "Efficient support system" } { name: "AI Content Marketing",href: "/services/ai-content-marketing-suite",description: "AI-powered content creation" } { name: "Customer Support Automation",href: "/services/ai-customer-support-automation",description: "Intelligent support automation" } { name: "Website Analytics",href: "/services/website-analytics",description: "Performance insights" }]} { title: "DevOps & Automation","; icon: Workflo w,color: "from-blue-500 to-indigo-500","; { name: "AI-Powered DevOps Automation",href: "/services/ai-powered-devops-automation",description: "Intelligent CI/CD & infrastructure automation" } { name: "Cloud DevOps",href: "/services/cloud-devops",description: "Infrastructure automation & scaling" } { name: "IT Infrastructure",href: "/services/it-infrastructure",description: "Enterprise infrastructure solutions" } { name: "FinOps Advisor",href: "/services/finops-advisor",description: "Cloud cost optimization" }]} ; const services = []&apos; const solutionsCategories = []}; {; title: &apos,Technology Solutions&apos,; icon: Cp u,; solutions: [,; { nam,e: &apos,AI Solutions&apos,href: &apos,/ai-solutions&apos,description: &apos,Artificial intelligence integration&apos} { name: &apos,Digital Transformation&apos,href: &apos,/services/digital-transformation&apos,description: &apos,Business modernization&apos} { name: &apos,Research & Development&apos,href: &apos,/research-development&apos,description: &apos,Innovation and discovery&apos} { name: &apos,Green IT Solutions&apos,href: &apos,/green-it&apos,description: &apos,Sustainable technology&apos}]} ; const companyLinks = [];&apos; const resourceLinks = [];&apos; const supportLinks = [];&apos,; name: "AI Email Automation Suite",description: "Intelligent email management & automation","; href: "/services/ai-email-automation-suite",icon: Mai l,"; color: "from-blue-500 to-indigo-500",featured: tru e} { name: "AI Social Media Scheduler",description: "AI-powered social media automation","; href: "/services/ai-social-media-scheduler",icon: Share 2,"; color: "from-purple-500 to-pink-500",featured: tru e} { name: "AI Customer Insights Platform",description: "Advanced customer analytics & insights","; href: "/services/ai-customer-insights-platform",icon: User s,"; color: "from-green-500 to-emerald-500",featured: tru e} { name: "AI-Powered DevOps Automation",description: "Intelligent CI/CD & infrastructure automation","; href: "/services/ai-powered-devops-automation",icon: Workflo w,"; color: "from-blue-500 to-indigo-500",featured: tru e} { name: "AI Content Creation Studio Pro",description: "Advanced AI-powered content creation platform","; href: "/services/AI-Content-Creation-Studio-Pro",icon: PenToo l,"; color: "from-purple-500 to-pink-500",featured: tru e} { name: "Quantum AI Trading Platform",description: "Revolutionary quantum-enhanced trading system","; href: "/services/Quantum-AI-Trading-Platform",icon: BarChart 3,"; color: "from-orange-500 to-red-500",featured: tru e} { name: "AI Quantum Financial Analytics",description: "Revolutionary quantum AI financial platform","; href: "/services/ai-quantum-financial-analytics-platform",icon: BarChart 3,"; color: "from-blue-500 to-purple-600",featured: tru e} { name: "AI Autonomous Supply Chain",description: "Self-learning supply chain management","; href: "/services/ai-autonomous-supply-chain-management-platform",icon: Truc k,"; color: "from-green-500 to-blue-600",featured: tru e} { name: "AI Cybersecurity Operations",description: "Autonomous security operations center","; href: "/services/ai-cybersecurity-operations-center",icon: Shiel d,"; color: "from-red-500 to-orange-600",featured: tru e} { name: "2026 Services Showcase",description: "Latest innovative services showcase","; href: "/innovative-services-showcase-2026",icon: Sparkle s,"; color: "from-yellow-500 to-orange-500",featured: tru e}"; title: "Industry Solutions",; icon: Buildin g,"; color: "from-blue-500 to-purple-500","; solutions: [{ name: "Enterprise Solutions",href: "/solutions/enterprise",description: "Large-scale business transformation" },{ name: "Healthcare Solutions",href: "/solutions/healthcare",description: "Medical technology innovation" },{ name: "Financial Solutions",href: "/financial-solutions",description: "Fintech and banking solutions" },{ name: "Manufacturing Solutions",href: "/manufacturing-solutions",description: "Industry 4.0 automation" }]},{"; title: "Technology Solutions",; icon: Cp u,"; solutions: [ { name: "AI Solutions",href: "/ai-solutions",description: "Artificial intelligence integration" },{ name: "Digital Transformation",href: "/services/digital-transformation",description: "Business modernization" },{ name: "Research & Development",href: "/research-development",description: "Innovation and discovery" },{ name: "Green IT Solutions",href: "/green-it",description: "Sustainable technology" }]}"; const companyLinks = []; const resourceLinks = []; const supportLinks = []; const toggleDropdown = (props) => {,,; setActiveDropdown(activeDropdown === dropdown ? null : dropdown)} ; const [servicesOpen,setServicesOpen] = useState<any>(false)} const navLinks = []"} { label: "Solutions",href: "/solutions" } { label: "Enterprise",href: "/enterprise" } { label: "About",href: "/about" } { label: "Case Studies",href: "/case-studies" } { label: "Careers",href: "/careers" },"; const navLinks = []}; { title: "Technology Solutions","; icon: Cp u,color: "from-cyan-500 to-blue-500","; { name: "AI Solutions",href: "/ai-solutions",description: "Artificial intelligence integration" } { name: "Digital Transformation",href: "/services/digital-transformation",description: "Business modernization" } { name: "Research & Development",href: "/research-development",description: "Innovation and discovery" } { name: "Green IT Solutions",href: "/green-it",description: "Sustainable technology" }]}"; { name: "About Us",href: "/about",description: "Learn about our mission and values" } { name: "Our Team",href: "/team",description: "Meet our expert professionals" } { name: "Leadership",href: "/leadership",description: "Executive team and vision" } { name: "Careers",href: "/careers",description: "Join our growing team" } { name: "Partners",href: "/partners",description: "Strategic partnerships" } { name: "Case Studies",href: "/case-studies",description: "Success stories and results" }],; { name: "Blog",href: "/blog",description: "Latest insights and updates" } { name: "News",href: "/news",description: "Company announcements" } { name: "Press",href: "/press",description: "Media resources" } { name: "Webinars",href: "/webinars",description: "Educational sessions" } { name: "White Papers",href: "/white - papers",description: "In-depth research" } { name: "Documentation",href: "/documentation",description: "Technical guides" }],; { name: "Help Center",href: "/help",description: "Find answers and solutions" } { name: "FAQ",href: "/faq",description: "Frequently asked questions" } { name: "Support",href: "/support",description: "Technical assistance" } { name: "Training",href: "/training",description: "Skill development programs" } { name: "Contact Support",href: "/contact",description: "Get in touch with our team" } { name: "Status Page",href: "/status",description: "Service availability" }]; const [mobileOpen,setMobileOpen] = useState()} export const EnhancedHeader: _React.FC = () => {}; ; const;const;const [mobileOpen,setMobileOpen] = useState<any>(false)} { label: &apos,Home&apos,href: &apos,/&apos} { label: &apos,Services&apos,href: &apos,/services&apos} { label: &apos,Solutions&apos,href: &apos,/solutions&apos} { label: &apos,Enterprise&apos,href: &apos,/enterprise&apos} { label: &apos,Request Quote&apos,href: &apos,/request-quote&apos} { label: &apos,Case Studies&apos,href: &apos,/case-studies&apos} { label: &apos,Careers&apos,href: &apos,/careers&apos} { label: &apos,Contact&apos,href: &apos,/contact&apos} ; return (&apos;&apos;"; <header className="&apos;bg-white" shadow-lg&apos;>&apos,"; <div className="&apos;max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8&apos,>&apos,"; <div className="&apos;flex" justify-between items-center py-6&apos;>&apos,"; <div className="&apos;flex" items-center&apos;>&apos,"; <a href="&apos;/&apos;" className="&apos;text-2xl" font-bold text-blue-900&apos,>,; Zion Tech Group&apos;&apos,"; <nav className = "&apos,hidden" m,d: flex space-x-8&apos,>; {navLinks.map((link,index) => (&apos}"; <a key="{index}" href="{link.href}" className="&apos;text-gray-700" hover: tex t-blue-600&apos,>; {link.label}&apos; return ("; <header: classNam e = "bg-white shadow-lg">",","; <div: classNam e="max-w-7xl mx-auto px-4 sm: p x-6: l g:px-8">",";"; <div: classNam e="flex justify - between items-center py-6">","; <div: classNam e="flex items-center">",,",; <a: hre f = "/" className="text-2xl font-bold text-blue-900">",",; Zion: Tech Group"; <header className="bg-white shadow-lg">"; <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"; <div className="flex justify-between items-center py-6">"; <div className="flex items-center">"; <a href="/" className="text-2xl font-bold text-blue-900">",; <nav className="hidden md: fle x: space-x-8">"," {navLinks.map((link,index) => ("; <a: ke y="{index}" href="{link.href}" className="text-gray-700 hover: tex t-blue-600">",";"; <a key = "{index}" href="{link.href}" className="text-gray-700 hover: tex t-blue-600">,; {link.label}"; <a href="/services/ai" className="hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors">Explore AI</a>",; <button aria-label="Toggle navigation" onClick="{()" => setMobileOpen((v) => !v)} className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100">"; <svg xmlns="http: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />"; aria-label="Toggle: navigatio n",","; className="md: hidde n: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900: hove r:bg-gray-100",; >"; <svg: xmln s="http: <path: strokeLineca p="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />"; <button,"; aria-label = "Toggle navigation>; <;<button;"; aria-label="&apos;Toggle" navigation";"; className="&apos;md: " hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100&apos,>; >&apos;&apos,"; <svg xmlns="&apos,htt,p: " <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos; />&apos;"; className = "md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100"; <svg xmlns="http: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />; </svg>; </button>; </div>; </div>; {mobileOpen && (; <div className="md: hidden border-t border-gray-200 bg-white">; <div className="px-4 py-3 space-y-2">; {navLinks.map((link) => (; <div key={link.href}>; <a href={link.href} className="block w-full py-2 text-gray-700 hover: tex t-blue-600">; {link.label} </a>; {link.submenu && (; <div className="ml-4 space-y-1">; {link.submenu.map((subLink) => (; <a; key={subLink.href} href={subLink.href} className="block w-full py-1 text-sm text-gray-600 hover: tex t-blue-600"; >; {subLink.label} </a>; ))} </div> )} </div> ))} <a href="/services/ai" className="block w-full py-2 text-blue-700 font-medium">Explore AI</a>; </div>; </div>; )}</header>; )} )}" MessageCircle,HelpCircle,DollarSign,Gauge,Workflow,Atom,Star,Target,TrendingUp,Award,Code,Truck,Building,BarChart3,PenTool,Eye,Server,Smartphone,Database,Network,Clock,ArrowRight," PanelLeft,Sparkles,Phone,Mail,MapPin,Satellite,FileText,Building2,Car,Share2 } from "lucide-react" " export default Component </svg> </button> </svg> </button> </a> </nav> </a> </div> </a> </div> </header> </a> </nav> </a> </div> </header> </any> </string> </any> </string> </any> </div> </nav> </div> </header> </nav> </div> </header> </div> </form> </div> </motion> </div> </motion> </any> </any> </any>;';';
+      {/* Main Navigation */}
+      <nav className="bg-slate-900/95 backdrop-blur-md">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
+                  <button
+                    onClick={() => item.dropdown && handleDropdownToggle(item.name)}
+                    className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
+                  >
+                    <span>{item.name}</span>
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  {item.dropdown && (
+                    <AnimatePresence>
+                      {activeDropdown === item.name && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          className="absolute top-full left-0 mt-2 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
+                        >
+                          <div className="p-4">
+                            <h3 className="text-sm font-semibold text-slate-900 dark:text-white mb-3">
+                              {item.name}
+                            </h3>
+                            <div className="grid grid-cols-1 gap-2">
+                              {item.dropdown.map((subItem) => (
+                                <Link
+                                  key={subItem.name}
+                                  to={subItem.href}
+                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors group"
+                                >
+                                  {subItem.icon && (
+                                    <subItem.icon className="w-5 h-5 text-cyan-500 mt-0.5 group-hover:text-cyan-600 transition-colors" />
+                                  )}
+                                  <div>
+                                    <div className="font-medium text-slate-900 dark:text-white group-hover:text-cyan-600 transition-colors">
+                                      {subItem.name}
+                                    </div>
+                                    {subItem.description && (
+                                      <div className="text-sm text-slate-600 dark:text-slate-400">
+                                        {subItem.description}
+                                      </div>
+                                    )}
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <button className="p-2 text-slate-300 hover:text-white transition-colors">
+                <Search className="w-5 h-5" />
+              </button>
+              <OptimizedButton
+                variant="outline"
+                size="sm"
+                onClick={() => window.location.href = '/contact'}
+              >
+                Get Quote
+              </OptimizedButton>
+              <OptimizedButton
+                variant="primary"
+                size="sm"
+                onClick={() => window.location.href = '/contact'}
+              >
+                Start Project
+              </OptimizedButton>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden p-2 text-slate-300 hover:text-white transition-colors"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-slate-800 border-t border-slate-700"
+            >
+              <div className="container mx-auto px-4 py-4">
+                {navigation.map((item) => (
+                  <div key={item.name} className="mb-4">
+                    <button
+                      onClick={() => item.dropdown && handleDropdownToggle(item.name)}
+                      className="flex items-center justify-between w-full text-left text-slate-300 hover:text-white transition-colors py-2"
+                    >
+                      <span className="font-medium">{item.name}</span>
+                      {item.icon && (
+                        <motion.div
+                          animate={{ rotate: activeDropdown === item.name ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <item.icon className="w-4 h-4" />
+                        </motion.div>
+                      )}
+                    </button>
+
+                    {/* Mobile Dropdown */}
+                    {item.dropdown && (
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="ml-4 mt-2 space-y-2"
+                          >
+                            {item.dropdown.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="block text-slate-400 hover:text-cyan-400 transition-colors py-1"
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    )}
+                  </div>
+                ))}
+
+                <div className="pt-4 border-t border-slate-700 space-y-3">
+                  <OptimizedButton
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Get Quote
+                  </OptimizedButton>
+                  <OptimizedButton
+                    variant="primary"
+                    size="sm"
+                    className="w-full"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Start Project
+                  </OptimizedButton>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </motion.header>
+  );
+});
+
+Header.displayName = 'Header';
+
+export default Header;

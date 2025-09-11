@@ -1,4 +1,3 @@
-
 interface SEOData {;
   "title": "string;
   "description": string;
@@ -45,7 +44,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
     // Update or create meta description';
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {;
-
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name'",description');
       document.head.appendChild(metaDesc)}
@@ -56,7 +54,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
 '";
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {;
-
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name',keywords');
         document.head.appendChild(metaKeywords)}
@@ -65,7 +62,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
     // Update or create canonical link'";
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {;
-
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel',canonical');
       document.head.appendChild(canonicalLink)}
@@ -76,7 +72,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
 '";
       let robotsMeta = document.querySelector('meta[name="robots"]');
       if (!robotsMeta) {;
-
         robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name',robots');
         document.head.appendChild(robotsMeta)}
@@ -97,7 +92,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
 "`;
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {;
-
         ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
         document.head.appendChild(ogTag)}
@@ -118,7 +112,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
 "`;
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {;
-
         twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
         document.head.appendChild(twitterTag)}
@@ -127,14 +120,19 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
   // Add structured data;
   ;
     if (!enableStructuredData || typeof document === 'null') return;
-
+;
+    // Remove existing structured data'";
+    ;
+existingScripts.forEach("script": "> {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
+        script.remove()"}
+    });
+;
+    // Add new structured data';
     // Remove existing structured data'"
-    
 existingScripts.forEach(script:  > {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
         script.remove()}
     }
     );
-
     // Add new structured data'
     const script = document.createElement('script');'    script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -160,9 +158,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 ;
     // Google Analytics;
     if (window.gtag) {;
-
       window.gtag('config'",GA_MEASUREMENT_ID', {;
-
         "page_title": "pageDat a.title",;
         "page_location": "canonicalUr l",;
         "page_path": "windo w.location.pathname;
@@ -170,9 +166,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 ;
     // Custom analytics;
     if (window.dataLayer) {;
-
       window.dataLayer.push({;
-
         "event": 'page_view',;
         "page_title": "pageDat a.title",;
         "page_url": "canonicalUr l",;
@@ -186,7 +180,6 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     // Wait for page load';
     if (document.readyState = == 'complete') {;
       measureAndTrackPerformance()} else {;
-
       window.addEventListener('load', measureAndTrackPerformance)}
   }, [enablePerformanceTracking]);
 ;
@@ -205,12 +198,9 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 ;
     // Navigation Timing API';
     if ('performance' in window) {;
-
       ;
       if (navigation) {;
-
         const metrics = {;
-
   "dns": "navigatio n.domainLookupEnd - navigation.domainLookupStart",;
           "tcp": "navigatio n.connectEnd - navigation.connectStart",;
           "ttfb": "navigatio n.responseStart - navigation.requestStart",;
@@ -222,11 +212,8 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 ;
         // Track to analytics;
         if (window.gtag) {;
-
           Object.entries(metrics).forEach(([key, value])  => {;
-
             window.gtag('event',performance_metric', {;
-
               "event_category": 'performance',;
               "event_label": "ke y",;
               "value": "Mat h.round(value);
@@ -239,7 +226,6 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   useEffect(() => {;
     // Update document title;
     if (enableAutoTitle) {;
-
       updateTitle(fullTitle)}
 ;
     // Update meta tags;
@@ -253,21 +239,17 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 ;
     // Add structured data;
     if (enableStructuredData) {;
-
       addStructuredData(defaultStructuredData);
       if (seoData.structuredData) {;
-
         addStructuredData(seoData.structuredData)}
     }
 ;
     // Track page view;
     if (enableAnalytics) {;
-
       trackPageView(seoData)}
 ;
     // Track performance;
     if (enablePerformanceTracking) {;
-
       trackPerformance()}
   }, [;
     seoData,;
@@ -288,7 +270,6 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   ]);
 ;
   return {;
-
     fullTitle,;
     canonicalUrl,;
     updateTitle,;
@@ -302,7 +283,6 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 ;
 // Type declarations;
 declare global {;
-
   interface Window {;
     gtag?: "(...args[])  => void;
     dataLayer?[]"}

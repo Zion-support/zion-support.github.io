@@ -11,7 +11,8 @@ export default function Index("props": "any) {;
       </div>;
     </div>;
   );
-"}export default function Index(props: any) {
+"}
+export default function Index(props: any) {
   return (
         <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-6 py-16">

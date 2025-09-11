@@ -124,7 +124,6 @@ export default function AccessibilityPage() {
                     <li>• Switch navigation devices</li>
                     <li>• Magnification software</li>
                     <li>• High contrast mode</li>
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -426,7 +425,6 @@ export default function AccessibilityPage() {
                 Contact Us
               </Link>
               <a href="mailto:accessibility@ziontechgroup.com" className="btn-secondary">
-=======
 
             {/* Assistive Technologies */}
             <div>
@@ -619,10 +617,6 @@ export default function AccessibilityPage() {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-      </div>
-=======
         </div>
       </section>    </div>
   );

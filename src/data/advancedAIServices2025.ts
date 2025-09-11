@@ -28,6 +28,11 @@ export interface AdvancedAIService {
 
 export const &quot;ADVANCED_AI_SERVICES_2025&quot;: AdvancedAIService[] = [];
 import React from 'react
+
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
 export interface AdvancedAIService {
   "id": string;
   title: string;

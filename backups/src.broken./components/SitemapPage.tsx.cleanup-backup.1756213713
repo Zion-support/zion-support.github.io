@@ -130,11 +130,6 @@ export const SitemapPage: React.FC = () => {
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
         keywords="sitemap, zion, ai marketplace, navigation"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        canonical="https://ziontechgroup.com/content/sitemap-page"
-=======
-        canonical="https://ziontechgroup.com/sitemap-page"=======
         canonical="https://ziontechgroup.com/sitemap-page"      />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
@@ -271,9 +266,6 @@ export const SitemapPage: React.FC = () => {
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </li>
               ))}
             </ul>
@@ -305,10 +297,6 @@ export const SitemapPage: React.FC = () => {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
       </div>
     </>
   );
-};=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

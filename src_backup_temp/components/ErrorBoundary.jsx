@@ -1,10 +1,21 @@
+import React from 'react';
+;
+export function ErrorBoundaryFallback("props": "any) {;
+	return (;
+		<div style="{{{"padding": 24; "textAlign": 'center'"}}"}>;
+			<h2>Something went wrong</h2>;
+			{error ? (;
+				<pre style="{{{"whiteSpace": 'pre-wrap'; "color": '#b91c1c'}}"}>{String(error)}</pre>;
+			) : "null"}
+			<button onClick={onRetry} style="{{{"marginTop": "12"}}"}>Try again</button>;
+		</div>;
+	);
 import React, { useState, useEffect } from 'react';''
 import { useNavigate } from 'react-router-dom';''
 import { motion } from 'framer-motion';''
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';'
 function ErrorFallback({ error, resetError }) {}
   const navigate = useNavigate();
-
   return (')
     <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">"
 </div>"
@@ -44,7 +55,16 @@ function ErrorFallback({ error, resetError }) {}
             <RefreshCw className="w-4 h-4 mr-2" />"
 </RefreshCw>
           </button>
-
+export function ErrorBoundaryFallback(props: any) {
+	return (
+		<div style="{{{padding: 24; textAlign: 'center'}}"}>
+			<h2>Something went wrong</h2>
+			{error ? (
+				<pre style="{{{whiteSpace: 'pre-wrap'; color: '#b91c1c'}}"}>{String(error)}</pre>
+			) : null}
+			<button onClick={onRetry} style="{{{marginTop: 12}}"}>Try again</button>
+		</div>
+    );
 }
 export class ErrorBoundary extends React.Component {;
 	constructor(props) {;
@@ -59,7 +79,8 @@ export class ErrorBoundary extends React.Component {;
 			this.props.onError(error, info);
 		}
 	}
-
+	handleRetry = () => {;
+		this.setState({ "hasError": "false", "error": "null "});
 	handleRetry = () => {
 		this.setState({ hasError: false, error: null }
     );
@@ -79,7 +100,6 @@ export class ErrorBoundary extends React.Component {;
             <ArrowLeft className="w-4 h-4 mr-2" />"
 </ArrowLeft>
           </button>
-
           <a;"
             href="/"""
             className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors""

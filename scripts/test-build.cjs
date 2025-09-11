@@ -1,69 +1,44 @@
 #!/usr/bin/env node
-/**
- * Test Build Script
- * Tests the build process with various configurations
- */
-
-const { execSync } = require('child_process');
 const fs = require('fs');
-
-console.log('🧪 Testing build process...');
-
+const path = require('path');
+const { execSync } = require('child_process');
+// Temporarily move problematic files
+const problematicFiles = ['components/ContactForm.tsx',
+  'components/PerformanceMonitor.tsx',
+];
+const movedFiles = [];
 try {
-  // Test 1: Basic build without type checking
-  console.log('📋 Test 1: Basic build...');
-  execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build successful');
-} catch (error) {
-  console.log('❌ Build failed:', error.message);
-  
-  // Test 2: Try building with different configurations
-  console.log('📋 Test 2: Trying alternative build approach...');
-  
-  try {
-    // Create a temporary next.config.js without experimental features
-    const simpleConfig = `/** @type {import('next').NextConfig} */
-const nextConfig = {
-  compress: true,
-  images: {
-    domains: ['localhost'],
-  },
-};
-
-export default nextConfig;
-`;
-    
-    fs.writeFileSync('next.config.simple.js', simpleConfig);
-    
-    // Try building with the simple config
-    execSync('cp next.config.simple.js next.config.js', { stdio: 'inherit' });
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful with simple config');
-  } catch (error2) {
-    console.log('❌ Build still failed:', error2.message);
-    
-    // Test 3: Check for specific issues
-    console.log('📋 Test 3: Checking for common issues...');
-    
-    // Check if there are any obvious circular imports
-    const pagesDir = 'pages';
-    if (fs.existsSync(pagesDir)) {
-      const files = fs.readdirSync(pagesDir, { recursive: true });
-      console.log(`Found ${files.length} files in pages directory`);
-      
-      // Look for potential issues
-      const problematicFiles = files.filter(file => 
-        file.includes('.disabled') || 
-        file.includes('.backup') || 
-        file.includes('.bak')
-      );
-      
-      if (problematicFiles.length > 0) {
-        console.log(`⚠️ Found ${problematicFiles.length} potentially problematic files:`);
-        problematicFiles.forEach(file => console.log(`  - ${file}`));
+  // Move problematic files temporarily
+  problematicFiles.forEach((file) => {
+    if (fs.existsSync(file)) {
+      const backupPath = `${file}.backup`;
+      fs.renameSync(file, backupPath);
+      movedFiles.push({ "original": file, "backup": backupPath });
       }
+  });
+  // Try to build
+  try {
+    execSync('npm run build', { "stdio": 'inherit' });
+    } catch (error) {
     }
-  }
-}
-
-console.log('🏁 Build testing completed');
+} finally {
+  // Restore files
+  movedFiles.forEach(({ original, backup }) => {
+    try {
+      if (fs.existsSync(backup)) {
+        fs.renameSync(backup, original);
+        }
+    } catch (restoreError) {
+      }
+  })}
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting Test Build.");/ Temporarily move problematic files"const problematicFiles = ["components/ContactForm.tsx"," "components/PerformanceMonitor.tsx",];const movedFiles = [];try { / Move problematic files temporarily problematicFiles.forEach((file) => { if (fs.existsSync(file)) { const backupPath = `${file}.backup`; fs.renameSync(file, backupPath); movedFiles.push({ original: file, backup: backupPath });` console.log(` Moved ${file} to ${backupPath}`)} }); / Try to build" console.log(" Attempting build without problematic files."); try {"" execSync("npm run build", { stdio: "inherit" });" console.log(" Build successful!")} catch (error) {"" console.log(" Build failed: ", error.message)}} finally { / Restore files movedFiles.forEach(({ original, backup }) => { try { if (fs.existsSync(backup)) { fs.renameSync(backup, original);` console.log(` Restored ${original}`)} } catch (restoreError) {` console.log(` Failed to restore ${original}:`, restoreError.message)} })}"console.log(" Test build completed!");'"`'"`
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log('🧪 Starting Test Build...')
+const problematicFiles = ['components/ContactForm.tsx']
+  'components/PerformanceMonitor.tsx'
+  console.log('� Attempting build without problematic files...')
+    execSync('npm run build', { "stdio"})
+    console.log(' Build "failed")

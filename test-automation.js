@@ -2,6 +2,7 @@ const { execSync } = require("child_process"); class TestAutomation { runTests()
 const { execSync } = require("child_process");
 class TestAutomation {
   runTests() {
+
   try {
   console.log("Running test suite...");
   runCoverage() {;

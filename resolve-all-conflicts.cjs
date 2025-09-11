@@ -2,132 +2,134 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-class ConflictResolver {
-  constructor() {
-    this.resolvedFiles = [];
-    this.failedFiles = [];
-    this.totalFiles = 0;
-  }
+console.log('🔧 Starting comprehensive conflict resolution...');
 
-<<<<<<< HEAD
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove merge conflict markers and keep HEAD version (our changes)
-  content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-  
-  // Clean up any remaining artifacts
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  // Remove any remaining conflict markers
-=======
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  resolveConflictsInFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        return false;
-      }
-
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Check if file has merge conflicts
-      if (!content.includes('<<<<<<< HEAD')) {
-        return true; // No conflicts
-      }
-
-      this.log(`🔧 Resolving conflicts in: ${filePath}`);
-      
-      // Remove merge conflict markers and keep HEAD version
-      content = content
-        .replace(/<<<<<<< HEAD\n?/g, '')
-        .replace(/=======.*?\n?/g, '')
-        .replace(/>>>>>>> [^\n]+\n?/g, '')
-        .replace(/<<<<<<< [^\n]+\n?/g, '')
-        .replace(/=======.*?\n?/g, '')
-        .replace(/>>>>>>> [^\n]+\n?/g, '');
-
-      // Clean up any remaining artifacts
-      content = content
-        .replace(/\n{3,}/g, '\n\n') // Remove excessive newlines
-        .replace(/^\s*\n/gm, '') // Remove empty lines at start
-        .trim();
-
-      fs.writeFileSync(filePath, content);
-      this.resolvedFiles.push(filePath);
-      return true;
-    } catch (error) {
-      this.log(`❌ Failed to resolve ${filePath}: ${error.message}`);
-      this.failedFiles.push({ file: filePath, error: error.message });
-      return false;
-    }
-  }
-
-  async resolveAllConflicts() {
-    this.log('🚀 Starting conflict resolution...');
+// Function to resolve modify/delete conflicts by accepting deletion
+function resolveModifyDeleteConflicts() {
+  try {
+    console.log('📁 Resolving modify/delete conflicts by accepting deletions...');
     
-    // Get all files with merge conflicts
-    try {
-      const result = execSync('grep -r "^<<<<<<< HEAD" . --include="*.js" --include="*.cjs" --include="*.ts" --include="*.tsx" --include="*.jsx" --include="*.json" --include="*.md" --include="*.sh" -l', { 
-        encoding: 'utf8',
-        cwd: process.cwd()
-      });
-      
-      const files = result.trim().split('\n').filter(f => f && !f.includes('node_modules'));
-      this.totalFiles = files.length;
-      
-      this.log(`📊 Found ${this.totalFiles} files with conflicts`);
-      
-      for (const file of files) {
-        this.resolveConflictsInFile(file);
+    // Get list of conflicted files
+    const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+    const conflictedFiles = gitStatus
+      .split('\n')
+      .filter(line => line.includes('CONFLICT (modify/delete)'))
+      .map(line => line.split(' ').pop())
+      .filter(file => file);
+
+    console.log(`Found ${conflictedFiles.length} modify/delete conflicts`);
+
+    // Remove all conflicted files (accept deletion)
+    conflictedFiles.forEach(file => {
+      try {
+        if (fs.existsSync(file)) {
+          fs.unlinkSync(file);
+          console.log(`✅ Deleted: ${file}`);
+        }
+      } catch (error) {
+        console.log(`❌ Error deleting ${file}: ${error.message}`);
       }
-      
-    } catch (error) {
-      this.log(`⚠️ Error finding conflict files: ${error.message}`);
-    }
+    });
 
-    // Generate report
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalFiles: this.totalFiles,
-      resolvedFiles: this.resolvedFiles.length,
-      failedFiles: this.failedFiles.length,
-      successRate: this.totalFiles > 0 ? (this.resolvedFiles.length / this.totalFiles * 100).toFixed(2) : 0,
-      resolved: this.resolvedFiles,
-      failed: this.failedFiles
-    };
-
-    fs.writeFileSync('conflict-resolution-report.json', JSON.stringify(report, null, 2));
-    
-    this.log('\n📊 Conflict Resolution Summary:');
-    this.log(`- Total files: ${this.totalFiles}`);
-    this.log(`- Resolved: ${this.resolvedFiles.length}`);
-    this.log(`- Failed: ${this.failedFiles.length}`);
-    this.log(`- Success rate: ${report.successRate}%`);
-    
-    if (this.failedFiles.length > 0) {
-      this.log('\n❌ Failed files:');
-      this.failedFiles.forEach(f => this.log(`  - ${f.file}: ${f.error}`));
-    }
-
-    return report;
+    return conflictedFiles.length;
+  } catch (error) {
+    console.log(`❌ Error resolving modify/delete conflicts: ${error.message}`);
+    return 0;
   }
 }
 
-// Run if called directly
-if (require.main === module) {
-  const resolver = new ConflictResolver();
-  resolver.run();
-    .then((result) => {
-  console.log("✅ Conflict resolution completed");
-      console.log(`📊 Resolved ${result.resolved} files`);
-      if (result.errors.length > 0) {
-  console.log(`⚠️  ${result.errors.length} errors occurred`);}
-      process.exit(0);});
-    .catch((error) => {
-  console.error("❌ Conflict resolution failed: ", error.message);
-      process.exit(1);});}
+// Function to resolve content conflicts by keeping HEAD version
+function resolveContentConflicts() {
+  try {
+    console.log('📝 Resolving content conflicts by keeping HEAD version...');
+    
+    const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+    const conflictedFiles = gitStatus
+      .split('\n')
+      .filter(line => line.includes('CONFLICT (content)'))
+      .map(line => line.split(' ').pop())
+      .filter(file => file);
 
-module.exports = ConflictResolver;
+    console.log(`Found ${conflictedFiles.length} content conflicts`);
+
+    let resolvedCount = 0;
+    conflictedFiles.forEach(file => {
+      try {
+        if (fs.existsSync(file)) {
+          let content = fs.readFileSync(file, 'utf8');
+          const originalContent = content;
+
+          // Remove merge conflict markers and keep HEAD version
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
+            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
+            return headMatch ? headMatch[1].trim() : '';
+          });
+
+          // Handle conflicts without proper closing markers
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, (match) => {
+            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
+            return headMatch ? headMatch[1].trim() : '';
+          });
+
+          // Remove any remaining conflict markers
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+          content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+
+          // Handle incomplete conflicts
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*$/g, (match) => {
+            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
+            return headMatch ? headMatch[1].trim() : '';
+          });
+
+          // Clean up extra whitespace
+          content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+
+          if (content !== originalContent) {
+            fs.writeFileSync(file, content);
+            console.log(`✅ Resolved: ${file}`);
+            resolvedCount++;
+          }
+        }
+      } catch (error) {
+        console.log(`❌ Error resolving ${file}: ${error.message}`);
+      }
+    });
+
+    return resolvedCount;
+  } catch (error) {
+    console.log(`❌ Error resolving content conflicts: ${error.message}`);
+    return 0;
+  }
+
+// Main execution
+async function main() {
+  try {
+    console.log('🚀 Starting conflict resolution process...');
+    
+    // Resolve modify/delete conflicts
+    const modifyDeleteCount = resolveModifyDeleteConflicts();
+    
+    // Resolve content conflicts
+    const contentCount = resolveContentConflicts();
+    
+    console.log(`\n📊 Resolution Summary:`);
+    console.log(`   - Modify/Delete conflicts resolved: ${modifyDeleteCount}`);
+    console.log(`   - Content conflicts resolved: ${contentCount}`);
+    console.log(`   - Total conflicts resolved: ${modifyDeleteCount + contentCount}`);
+    
+    // Check if there are any remaining conflicts
+    const remainingConflicts = execSync('git status --porcelain | grep -c "UU\\|AA\\|DD"', { encoding: 'utf8' }).trim();
+    
+    if (remainingConflicts === '0') {
+      console.log('\n✅ All conflicts resolved successfully!');
+      console.log('📝 Ready to commit changes...');
+    } else {
+      console.log(`\n⚠️  ${remainingConflicts} conflicts still remain. Manual resolution may be needed.`);
+    }
+    
+  } catch (error) {
+    console.log(`❌ Error in main process: ${error.message}`);
+  }
+}
+
+main();

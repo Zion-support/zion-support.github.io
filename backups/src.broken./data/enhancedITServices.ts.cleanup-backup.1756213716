@@ -565,8 +565,6 @@ export const IT_SERVICE_PRICING_MODELS = [
   { name: "Monthly", description: "Recurring monthly services for ongoing support", range: "$150-15,000/month" },
   { name: "Per Project", description: "Fixed project pricing for specific deliverables", range: "$5,000-100,000" }
 ];
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   pricing: {
     hourly: number;
     project: number;
@@ -1155,10 +1153,3 @@ export const getITServicesByCategory = (category: string): ITService[] => {
 export const getITServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))];
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

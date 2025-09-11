@@ -8,10 +8,10 @@ describe('Page', () => {
   });
   it('displays correct content', () => {
     render(<Page />);
-    // Add specific content checks based on component functionality
+    // Add specific content checks based on component functionality;
   });
   it('handles user interactions', () => {
     render(<Page />);
-    // Add interaction tests based on component functionality
+    // Add interaction tests based on component functionality;
   });
 });

@@ -77,6 +77,14 @@ export function ChatBotPanel("props": "any) {;
             else {// Reset failed attempts if successful;
                 setFailedAttempts(0)}
         }
+        catch(error) {;
+";
+            // console.error("Error in AI "chat":", error);
+            toast({;
+";
+                "variant": "destructive",";
+                "title": "Communication Error",";
+                "description": "We're having trouble connecting to our support service."});
         catch(error) {
 "
             // console.error("Error in AI chat:", error);
@@ -106,6 +114,8 @@ export function ChatBotPanel("props": "any) {;
 ";
                     messages[{ "role": "user"", "content": "message "}];
                 }),;
+            });
+            if(!response.ok) {;
             }
     );
             if(!response.ok) {
@@ -160,6 +170,30 @@ export function ChatBotPanel("props": "any) {;
                 "timestamp": "new Date();
             "}
         ]);
+        // In a real implementation, this would trigger a live chat request;
+        toast({";
+            "title": "Support request submitted",";
+            "description": "A support agent will be with you shortly."})};
+    const handleEmailSupport = ("props": "any) => {;
+        setMessages((prev) => [...prev",;
+            {;
+`;
+                "id": "`user-${Date.now()"}`,";
+                "content": "I'd like to email support",";
+                "sender": "user",;
+                "timestamp": "new Date();
+            "},;
+            {;
+`;
+                "id": "`bot-${Date.now()"}`,";
+                "content": "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",";
+                "sender": "bot",;
+                "timestamp": "new Date();
+            "}
+        ])};";
+    return (<div className="flex flex-col h-full">";
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>";
+        <div className="flex flex-col gap-4">";
         // In a real implementation, this would trigger a live chat request
         toast({"
             title: "Support request submitted","

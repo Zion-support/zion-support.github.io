@@ -3,6 +3,10 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
 import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
 ;
+export const AdvancedDataTable = ("props": "any) => {;
+    const { trackEvent "} = useAnalytics({"enableTracking": "true",;
+        "enableUserBehaviorTracking": "true;"});';
+    // State management'';
 export const AdvancedDataTable = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
@@ -186,7 +190,53 @@ a.download = filename,;
 a.click();
 }
         window.URL.revokeObjectURL(url)}
-
+;
+    // comment;
+const getSortIcon = ("props": "any) => {"}";
+        if(!enableSorting || sortConfig?.key !== key) {}"";
+""""";
+            return <ArrowUpDown className="w-4 h-4 text-gray-400"/" >}"""";
+        return sortConfig.direction === "asc"""""";
+            ? <ChevronUp className="w-4 h-4 text-blue-500"/" >""""";
+            : "<ChevronDown className="w-4 h-4 text-blue-500"/" >"}";
+    // comment;
+const renderCell = ("props": "any) => {"}
+;
+        const value = item[column.key]";
+        if (column.render) {}"""";
+"""""";
+            return column.render(value, item, index)}"""""""";
+        return (<span className="{"truncate" ${column.align === "center" ? "text-center" : "column.align === "right" ? "text-right" : "text-left""}"}" >"";
+        {value}"";
+      </span>)}"""";
+    return (";
+    <div className="{"bg-white" "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 "dark":border-gray-700 overflow-hidden ${className"}"}" >"""";
+      {/* comment */}""""";
+      <div className="p-4 border-b border-gray-200 "dark": "border-gray-700 bg-gray-50 "dark":bg-gray-700">"""";
+        <div className="flex items-center justify-between mb-4">"""";
+          <h3 className="text-lg font-semibold text-gray-900 "dark":text-white">"",;
+            Data Table ({processedData.length} items)"";
+          </h3>""""";
+          """"";
+          <div className="flex items-center gap-2">"""";
+            {enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 "hover": "bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"""";
+                <Download className="w-4 h-4"/" >";
+                Export""",;
+              </button>)}""""";
+            """"""";
+            <button onClick="{()" =" > setShowFilters(!showFilters)} className="{"px-3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters"""""";
+            ? "bg-blue-500 text-white""""""""";
+            : "bg-gray-200 "dark": "bg-gray-600 text-gray-700 "dark":text-gray-300 "hover":bg-gray-300 "dark":"hover":bg-gray-500""}"}>"""";
+              <Filter className="w-4 h-4"/" >";
+              Filters,;
+            </button>;
+          </div>";
+        </div>"";
+""""";
+        {/* comment */}""""";
+        {enableSearch && (<div className="relative">"""";
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/" >""""";
+            <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" =" > setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 "dark":text-gray-100" />"",;
     // comment
 const getSortIcon = (props: any) => {}"
         if(!enableSorting || sortConfig?.key !== key) {}""
@@ -197,7 +247,6 @@ const getSortIcon = (props: any) => {}"
             : <ChevronDown className="w-4 h-4 text-blue-500"/" >}"
     // comment
 const renderCell = (props: any) => {}
-
         const value = item[column.key]"
         if (column.render) {}""""
 """"""
@@ -368,10 +417,8 @@ const renderCell = (props: any) => {}
     </div>)}""""""";
 """"""`"";
 ";
-
   } catch (error) {console.error(error);}
 export default Component;
-
 </Trash2>;
 </Edit>;
 </Eye>;
