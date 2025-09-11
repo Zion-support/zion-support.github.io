@@ -1,211 +1,107 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface ContentItem {
-  title: string;
-  description: string;
-  href: string;
-  category: string;
-  readTime: string;
-  isNew?: boolean;
-  isHot?: boolean;
-  icon: string;
-  stats?: string;
-}
-
-const hotContent: ContentItem[] = [
-  {
-    title: "AI Business Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
-    href: "/blog/ai-business-automation-2025",
-    category: "AI & Automation",
-    readTime: "12 min read",
-    isNew: true,
-    isHot: true,
-    icon: "🤖",
-    stats: "40% productivity boost"
-  },
-  {
-    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
-    href: "/blog/ai-startup-funding-playbook-2025",
-    category: "Startup Strategy",
-    readTime: "22 min read",
-    isNew: true,
-    isHot: true,
-    icon: "💰",
-    stats: "$47B+ funding insights"
-  },
-  {
-    title: "AI Financial Services Transformation: $50M Cost Savings Case Study",
-    description: "Discover how a leading financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
-    href: "/case-studies/ai-financial-services-transformation-2025",
-    category: "Case Study",
-    readTime: "18 min read",
-    isNew: true,
-    isHot: true,
-    icon: "🏦",
-    stats: "$50M savings achieved"
-  },
-  {
-    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
-    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
-    href: "/resources/ai-implementation-master-guide-2025",
-    category: "Master Guide",
-    readTime: "150 pages",
-    isNew: true,
-    isHot: true,
-    icon: "📚",
-    stats: "500+ companies using this"
-  }
-];
-
 interface NewContentBannerProps {
-  variant?: 'default' | 'gradient' | 'minimal';
-  showStats?: boolean;
-  maxItems?: number;
+  variant?: 'default' | 'featured' | 'urgent';
+  className?: string;
 }
 
-const NewContentBanner: React.FC<NewContentBannerProps> = ({ 
-  variant = 'default',
-  showStats = true,
-  maxItems = 4 
-}) => {
-  const content = hotContent.slice(0, maxItems);
-
-  const getVariantClasses = () => {
+export default function NewContentBanner({ 
+  variant = 'default', 
+  className = '' 
+}: NewContentBannerProps) {
+  const getVariantStyles = () => {
     switch (variant) {
-      case 'gradient':
-        return 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden';
-      case 'minimal':
-        return 'bg-white border-2 border-blue-200 text-gray-900';
+      case 'featured':
+        return {
+          container: 'bg-gradient-to-r from-purple-600 via-pink-600 to-red-600',
+          text: 'text-white',
+          button: 'bg-white text-purple-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-purple-600'
+        };
+      case 'urgent':
+        return {
+          container: 'bg-gradient-to-r from-red-600 to-orange-600',
+          text: 'text-white',
+          button: 'bg-white text-red-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-red-600'
+        };
       default:
-        return 'bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden';
+        return {
+          container: 'bg-gradient-to-r from-blue-600 to-indigo-600',
+          text: 'text-white',
+          button: 'bg-white text-blue-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-blue-600'
+        };
     }
   };
 
-  const getCardClasses = () => {
-    switch (variant) {
-      case 'gradient':
-        return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20';
-      case 'minimal':
-        return 'bg-gray-50 hover:bg-gray-100 border border-gray-200';
-      default:
-        return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20';
-    }
-  };
-
-  const getTextClasses = () => {
-    switch (variant) {
-      case 'gradient':
-        return 'text-white';
-      case 'minimal':
-        return 'text-gray-900';
-      default:
-        return 'text-white';
-    }
-  };
+  const styles = getVariantStyles();
 
   return (
-    <section className={`py-20 ${getVariantClasses()}`}>
-      {variant !== 'minimal' && <div className="absolute inset-0 bg-black opacity-10"></div>}
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className={`inline-flex items-center ${variant === 'minimal' ? 'bg-blue-100 text-blue-800' : 'bg-white bg-opacity-20'} rounded-full px-6 py-2 mb-6`}>
-            <span className="text-sm font-medium">🔥 HOT THIS WEEK - JANUARY 2025</span>
+    <section className={`py-12 ${styles.container} ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium text-white">
+              🚀 JUST PUBLISHED - NEW CONTENT
+            </span>
           </div>
           
-          <h2 className={`text-4xl md:text-6xl font-bold mb-6 ${getTextClasses()}`}>
-            🚀 Fresh AI & Business Content Just Dropped
+          <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${styles.text}`}>
+            Revolutionary AI Content Just Released
           </h2>
           
-          <p className={`text-xl md:text-2xl ${variant === 'minimal' ? 'text-gray-600' : 'opacity-90'} mb-8 max-w-4xl mx-auto leading-relaxed`}>
-            Discover our latest expert insights, case studies, and resources. From AI predictions and automation trends 
-            to retail transformation success stories, get the knowledge you need to succeed in 2025.
+          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.text} opacity-90`}>
+            Discover the latest AI transformation strategies, real-world case studies, and implementation guides that are helping businesses achieve 300% growth and 95% customer satisfaction.
           </p>
-          
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-white mb-2">300%</div>
+              <div className="text-sm text-white opacity-90">Revenue Growth</div>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-white mb-2">95%</div>
+              <div className="text-sm text-white opacity-90">Customer Satisfaction</div>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-white mb-2">80%</div>
+              <div className="text-sm text-white opacity-90">Cost Reduction</div>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
-              href="/blog"
-              className={`${variant === 'minimal' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-white text-blue-600 hover:bg-gray-100'} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
+              href="/blog/ai-enterprise-transformation-2025"
+              className={`${styles.button} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
             >
-              📚 Read Latest Articles
+              📚 Read Enterprise Guide
+            </Link>
+            <Link
+              href="/blog/ai-customer-experience-revolution-2025"
+              className={`${styles.buttonSecondary} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
+            >
+              🎯 CX Revolution Guide
+            </Link>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/case-studies/ai-retail-transformation-success-2025"
+              className={`${styles.buttonSecondary} px-8 py-3 rounded-lg font-semibold transition-colors`}
+            >
+              📊 View Success Stories
             </Link>
             <Link
               href="/resources"
-              className={`${variant === 'minimal' ? 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-600'} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
+              className={`${styles.buttonSecondary} px-8 py-3 rounded-lg font-semibold transition-colors`}
             >
-              📋 Download Free Resources
+              📋 Download Resources
             </Link>
           </div>
-        </div>
-
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {content.map((item, index) => (
-            <Link key={item.href} href={item.href} className="group">
-              <div className={`${getCardClasses()} p-6 rounded-xl transition-all duration-300`}>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                
-                <div className="flex items-center gap-2 mb-3">
-                  {item.isNew && (
-                    <span className={`${variant === 'minimal' ? 'bg-green-100 text-green-800' : 'bg-white bg-opacity-20 text-white'} text-xs font-medium px-2 py-1 rounded-full`}>
-                      NEW
-                    </span>
-                  )}
-                  {item.isHot && (
-                    <span className={`${variant === 'minimal' ? 'bg-orange-100 text-orange-800' : 'bg-white bg-opacity-20 text-white'} text-xs font-medium px-2 py-1 rounded-full`}>
-                      HOT
-                    </span>
-                  )}
-                </div>
-                
-                <h3 className={`text-lg font-semibold mb-2 ${getTextClasses()}`}>
-                  {item.title}
-                </h3>
-                
-                <p className={`text-sm ${variant === 'minimal' ? 'text-gray-600' : 'opacity-90'} mb-3 line-clamp-3`}>
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className={`flex items-center text-xs ${variant === 'minimal' ? 'text-gray-500' : 'opacity-75'}`}>
-                    <span>{item.readTime}</span>
-                    <span className="mx-2">•</span>
-                    <span>{item.category}</span>
-                  </div>
-                  {showStats && item.stats && (
-                    <div className={`text-xs ${variant === 'minimal' ? 'text-blue-600' : 'opacity-75'}`}>
-                      {item.stats}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <div className="text-center mt-8">
-          <Link
-            href="/blog"
-            className={`${variant === 'minimal' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-white text-blue-600 hover:bg-gray-100'} px-8 py-3 rounded-lg font-semibold transition-colors inline-block mr-4`}
-          >
-            View All Articles
-          </Link>
-          <Link
-            href="/resources"
-            className={`${variant === 'minimal' ? 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-600'} px-8 py-3 rounded-lg font-semibold transition-colors inline-block`}
-          >
-            Download Resources
-          </Link>
         </div>
       </div>
     </section>
   );
-};
-
-export default NewContentBanner;
-export { hotContent };
+}
