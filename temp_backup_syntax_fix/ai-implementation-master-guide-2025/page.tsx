@@ -9,18 +9,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Implementation Master Guide 2025: Complete Playbook',
     description: 'The definitive guide to implementing AI in your organization. 200+ pages of strategies, frameworks, and best practices for successful AI transformation.',
-  title: 'AI Implementation Master Guide 2025: Complete Blueprint for Success',
-  description: 'Comprehensive 150-page guide covering AI strategy, implementation, governance, and optimization. Download our free master guide for enterprise AI success.',
-  keywords: 'AI implementation guide, enterprise AI, AI strategy, AI governance, AI best practices, AI roadmap',
-  openGraph: {
-    title: 'AI Implementation Master Guide 2025: Complete Blueprint for Success',
-    description: 'Comprehensive 150-page guide covering AI strategy, implementation, governance, and optimization.',
-  title: 'AI Implementation Master Guide 2025: Complete Roadmap for Enterprise AI Success',
-  description: 'Download our comprehensive 150-page AI implementation guide covering strategy, technology selection, implementation phases, and best practices for enterprise AI success.',
-  keywords: 'AI implementation guide, enterprise AI, AI strategy, AI roadmap, free download',
-  openGraph: {
-    title: 'AI Implementation Master Guide 2025: Complete Roadmap for Enterprise AI Success',
-    description: 'Download our comprehensive 150-page AI implementation guide for enterprise success.',
     type: 'article',
   },
 };

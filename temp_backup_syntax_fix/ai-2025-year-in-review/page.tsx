@@ -9,12 +9,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI 2025: Year in Review - Major Breakthroughs and Industry Impact',
     description: 'Comprehensive review of AI breakthroughs, enterprise adoption, and market trends that defined 2025.',
-  title: 'AI 2025: The Year in Review - Major Breakthroughs and Industry Impact',
-  description: 'Comprehensive analysis of AI developments in 2025, including major breakthroughs, industry transformations, and what it means for businesses.',
-  keywords: 'AI 2025, artificial intelligence trends, AI breakthroughs, industry impact, AI adoption',
-  openGraph: {
-    title: 'AI 2025: The Year in Review - Major Breakthroughs and Industry Impact',
-    description: 'Comprehensive analysis of AI developments in 2025, including major breakthroughs, industry transformations, and what it means for businesses.',
     type: 'article',
   },
 };
