@@ -5,6 +5,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import ThemeToggle from './components/ThemeToggle';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';
 
 // Lazy load components for better performance
@@ -71,6 +72,9 @@ export default function AppMinimal() {
             </div>
           </footer>
         </div>
+        
+        {/* Performance Monitor - Development Only */}
+        <PerformanceMonitor />
       </ErrorBoundary>
     </ThemeProvider>
   );
