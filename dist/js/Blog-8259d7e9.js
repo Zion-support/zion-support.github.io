@@ -569,19 +569,17 @@ const O = () => {
                               }),
                               e.jsx('div', {
                                 className: 'flex flex-wrap gap-2 mb-4',
-                                children: t.tags
-                                  .slice(0, 3)
-                                  .map((o, c) =>
-                                    e.jsx(
-                                      'span',
-                                      {
-                                        className:
-                                          'px-2 py-1 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-full text-zion-cyan text-xs',
-                                        children: o,
-                                      },
-                                      c
-                                    )
-                                  ),
+                                children: t.tags.slice(0, 3).map((o, c) =>
+                                  e.jsx(
+                                    'span',
+                                    {
+                                      className:
+                                        'px-2 py-1 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-full text-zion-cyan text-xs',
+                                      children: o,
+                                    },
+                                    c
+                                  )
+                                ),
                               }),
                               e.jsxs(m, {
                                 to: `/blog/${t.id}`,
