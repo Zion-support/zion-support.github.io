@@ -1,0 +1,20 @@
+import React from 'react';
+
+export default ServiceComparison;
+=======
+<<<<<<< HEAD:temp_exclude/hooks.disabled/useWallet.ts
+interface UseWalletProps {
+  // Add props here as needed
+}
+
+export default function UseWallet({ }: UseWalletProps) {
+  return (
+    <div>
+      <h1>UseWallet</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}
+}
+

@@ -10,8 +10,3 @@ export default function InnovativeITInfrastructure2025({ }: InnovativeITInfrastr
     </div>
   );
 }
-<<<<<<< HEAD:backup-merge-conflicts/innovativeITInfrastructure2025.ts.backup>>>>>>> main:src_backup_temp/data/innovativeITInfrastructure2025.ts
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/data/innovativeITInfrastructure2025.ts

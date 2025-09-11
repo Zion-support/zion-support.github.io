@@ -1,9 +1,18 @@
 ;
 
-;
+export function SidebarProvider({ children }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
-;
-}}>;
+  return (
+    <SidebarContext.Provider value={{
+      isSidebarOpen,
+      setIsSidebarOpen,
+      toggleSidebar
+    }}>
       {children}
     </SidebarContext.Provider>)}
 export function useSidebar("props": "any) {;

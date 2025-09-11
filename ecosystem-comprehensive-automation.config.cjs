@@ -532,4 +532,3 @@ module.exports = {
       "pre-setup": ",,,
 },,,
 },,,
-}

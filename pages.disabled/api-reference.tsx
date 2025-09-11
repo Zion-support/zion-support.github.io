@@ -16,4 +16,3 @@ const APIReference: NextPage = () => {;
     </MainLayout>;
   );
 };
-export default APIReference;

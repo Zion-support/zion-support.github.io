@@ -93,7 +93,6 @@ files.forEach(file => {
 
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -107,7 +106,3 @@ const util = require('util')
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

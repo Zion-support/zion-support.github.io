@@ -204,7 +204,6 @@ export default function HomePage() {
                   Spin up a new instance with marketplace, governance, and more
                 </p>
               </a>
-=======
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -405,53 +404,6 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Featured Services */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="featured-services-heading">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 id="featured-services-heading" className="text-3xl md:text-4xl font-bold mb-4">
-                Featured Services
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Discover our cutting-edge solutions that drive digital transformation
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list" aria-label="Featured services">
-              <div className="card group" role="listitem">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors" aria-hidden="true">
-                  <span className="text-2xl">🤖</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">AI & Machine Learning</h3>
-                <p className="text-gray-400">
-                  Advanced AI solutions including ZionGPT Enterprise, content moderation, and intelligent automation.
-                </p>
-                <a href="/services" className="text-blue-400 hover:underline text-sm mt-4 inline-block" aria-label="Learn more about AI services">Learn More →</a>
-              </div>
-              
-              <div className="card group" role="listitem">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors" aria-hidden="true">
-                  <span className="text-2xl">☁️</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Cloud & Infrastructure</h3>
-                <p className="text-gray-400">
-                  Scalable cloud solutions, DevOps automation, and infrastructure management services.
-                </p>
-                <a href="/services" className="text-blue-400 hover:underline text-sm mt-4 inline-block" aria-label="Learn more about cloud services">Learn More →</a>
-              </div>
-              
-              <div className="card group" role="listitem">
-                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors" aria-hidden="true">
-                  <span className="text-2xl">🔒</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
-                <p className="text-gray-400">
-                  Comprehensive security solutions, compliance management, and threat detection systems.
-                </p>
-                <a href="/services" className="text-blue-400 hover:underline text-sm mt-4 inline-block" aria-label="Learn more about cybersecurity services">Learn More →</a>
-              </div>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -470,7 +422,6 @@ export default function HomePage() {
               <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
                 View Success Stories
               </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-ce0d
             </div>
           </div>
         </section>

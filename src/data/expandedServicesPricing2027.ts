@@ -1,3 +1,10 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const integrations = [];
+const industries = [];
+const services = [];
+const implementation = [];
+
 // Expanded Services Pricing Guide 2027 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
 export interface ExpandedServicePricing {
@@ -1121,17 +1128,17 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
   ...healthcarePricing;
 ];
 // Helper functions
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
+export const _getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
-export const getPricingByCategory = (category: string): ExpandedServicePricing[] => {;
+export const _getPricingByCategory = (category: string): ExpandedServicePricing[] => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
 };
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
+export const _getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
 };
-export const searchPricing = (query: string): ExpandedServicePricing[] => {;
-  const lowercaseQuery = query.toLowerCase();
+export const _searchPricing = (query: string): ExpandedServicePricing[] => {;
+  const _lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
     pricing.category.toLowerCase().includes(lowercaseQuery) ||

@@ -1,3 +1,15 @@
+import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''';';
+import React from 'react';
+;
+import {Badge} from "./ui/badge";';
+import {Button} from "./ui/button";';';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';';
+import {}';';
+  COMPREHENSIVE_SERVICES,'';';
+  CONTACT_INFO} from '@/data/comprehensiveServices';';
+export function ServicesComparisonTable(props: any) {}';';
+''';';
+'''';';
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''
 import React from 'react';
@@ -8,6 +20,9 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/ca
 import {}
   COMPREHENSIVE_SERVICES,'
   CONTACT_INFO} from '@/data/comprehensiveServices';
+export function ServicesComparisonTable("props": "any) {"}
+'';
+''';
   const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (;
@@ -621,6 +636,8 @@ export default Component
 </Mail>
 </Phone>
 </X>
+</Check>';
+</div>;';;';
 ;
           </div>;
   );";

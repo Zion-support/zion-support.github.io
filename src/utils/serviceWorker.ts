@@ -1,1 +1,1 @@
-export const serviceWorker = {} export default serviceWorker
+export const _serviceWorker = {} export default serviceWorker

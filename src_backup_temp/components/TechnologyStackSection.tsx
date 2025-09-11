@@ -1,4 +1,5 @@
 import {  import { motion  } from 'framer-motion';
+;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -9,16 +10,16 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
         <motion.div ";
           className="text-center mb-16";
           initial = {;
-  { opacity: 0,
-  y: 20;
-}}
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}        >";
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
+          transition={{ "duration": "0.6 "}}
+        >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Technology Stack;
           </h2>";
@@ -41,7 +42,8 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                   <span className="text-sm">⚡</span>;
                 </div>;
                 {category.category}
-              </h3>;              <div className="space - y-4">;
+              </h3>;
+              <div className="space - y-4">;
                 {category.technologies.map((tech, techIndex) => (<div key={tech.name} className="flex items - center justify -between">;
                     <div className="flex items - center gap-3">;
                       <span className="text-xl">{tech.icon}</span>;
@@ -54,9 +56,10 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                           initial={{ "width": "0 "}}                          whileInView={{ "width": "`${tech.proficiency"}%` }}
                           viewport={{ "once": "tru e "}}
                           transition = {;
-  { duration: 1,
-  delay: 0.8 + techIndex * 0.1;
-}}                        />;
+  { "duration": "1",;
+  "delay": "0.8 + techIndex * 0.1;
+"}}
+                        />;
                       </div>";
                       <span className="text-blue-400 text-sm font-semibold w-8 text-right">;
                         {tech.proficiency}%;
@@ -69,27 +72,26 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
         {/* Emerging Technologies */}
         <motion.div;
           className="mb-16"          initial = {;
-  { opacity: 0,
-  y: 30;
-}}
+  { "opacity": "0",;
+  "y": "3 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
           transition = {;
-
-  { duration: 0.6,
-  delay: 0.4;
-}}        >";
+  { "duration": "0.6",;
+  "delay": "0.4;
+"}}
+        >";
           <h3 className="text-3xl font-bold text-white text-center mb-8">;
             Emerging Technologies;
-          </h3>;}}
+          </h3>;
+}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies
-
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 3 gap-6">;
             {emergingTech.map((tech", index) => (<motion.div;
                 key={tech.name}
@@ -103,29 +105,31 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                 </div>;
               )})}
           </div>;
-  { opacity: 0,
-  y: 30;
-}}
+        </motion.div> {/* Technology Philosophy */}
+        <motion.div;
+          className="mb-12"          initial = {;
+  { "opacity": "0",;
+  "y": "3 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
           transition = {;
-
-  { duration: 0.6,
-  delay: 0.8;
-}}        >";
+  { "duration": "0.6",;
+  "delay": "0.8;
+"}}
+        >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-6">;
               Our Technology Philosophy;
-            </h3>;}}
+            </h3>;
+}}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Our Technology Philosophy
-
             <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-6">;
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - green - 500 to - emerald - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
@@ -152,20 +156,19 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
         </motion.div>;
         <motion.div;
           className="text-center"          initial = {;
-  { opacity: 0,
-  y: 20;
-}}
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
           transition = {;
-
-  { duration: 0.6,
-  delay: 1.0;
-}}        >";
+  { "duration": "0.6",;
+  "delay": "1.0;
+"}}
+        >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold mb-4">;
               Ready to Build with Modern Tech?;
@@ -183,7 +186,8 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                 <Server className="ml-2 h-5 w-5"   />              </button>;
             </div>;
           </div>;
-        </motion.div>;}}
+        </motion.div>;
+}}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold mb-4">
@@ -206,7 +210,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
       </div>;
     </section>;) "};
 ;
-    </section>;) };
 export default TechnologyStackSection;";
             <span className="text-2xl">→</span>;
           </div>;

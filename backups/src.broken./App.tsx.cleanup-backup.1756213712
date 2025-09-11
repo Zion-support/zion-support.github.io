@@ -248,7 +248,6 @@ const LoadingFallback = () => (
   </div>
 );
 
-=======
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -293,13 +292,6 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-<<<<<<< HEAD
-              <Route path="/accessibility" element={<Accessibility />} />
-              <Route path="/gdpr" element={<GDPR />} />
-              <Route path="/api" element={<API />} />
-              <Route path="/status" element={<Status />} />
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </Routes>
           </Suspense>
         </main>

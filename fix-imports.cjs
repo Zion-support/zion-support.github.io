@@ -9,13 +9,6 @@ function walkDirectory(dir) {;  const files = fs.readdirSync(dir);
   for (const file of files) {}
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-<<<<<<< HEAD
-    if (stat.isDirectory()) {}
-      walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {}
-      fixImportsInFile(filePath)};
-  };
-};
-=======
     if (stat.isDirectory()) {;
   walkDirectory(filePath);,
 } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {;
@@ -23,8 +16,3 @@ function walkDirectory(dir) {;  const files = fs.readdirSync(dir);
 }
   }
 }
-
->>>>>>> origin/automation-fixes
-// Fix components directory;
-walkDirectory('./components');
-console.log('Import fixing completed!');

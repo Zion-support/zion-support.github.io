@@ -5,5 +5,3 @@ export default function MobileDevelopment() {;
       <h1 className="text-3xl font-bold mb-4">Mobile Development</h1>;
       <p className="text-gray-700">Native and cross-platform mobile apps.</p>;
     </main>;
-  );
-}

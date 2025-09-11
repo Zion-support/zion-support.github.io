@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix all remaining semicolons in JSX;
-function fixFinalSemicolons(filePath) {
+function fixFinalSemicolons() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
@@ -32,39 +33,3 @@ function fixFinalSemicolons(filePath) {
     ];
     fixes.forEach(fix => {;
   const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-  content = newContent;
-        modified = true;,
-}
-    });
-    if (modified) {
-  fs.writeFileSync(filePath, content, `utf8`);
-      console.log(`Fixed final semicolons in: ${filePath}`);
-      return true;,
-}
-    return false;,
-} catch (error) {;
-  console.error(`Error fixing ${filePath }:`, error.message);
-    return false;,
-}
-}
-
-// Specific files that need fixing;
-const filesToFix = [;
-  `components/SEO.tsx`,
-  "components/ui/Badge.tsx",
-  "pages/NotFound.tsx",
-  "pages/enhanced-home.tsx",
-  "pages/index.p.tsx",
-];
-console.log("🔧 Fixing final semicolons...");
-let fixedCount = 0;
-filesToFix.forEach(file => {;
-  if (fs.existsSync(file)) {;
-  if (fixFinalSemicolons(file)) {;
-  fixedCount++;,
-}
-  }
-});
-
-console.log(`✅ Fixed final semicolons in ${fixedCount} files`);

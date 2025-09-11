@@ -5,4 +5,3 @@ module.exports = {;
     e: jest.fn(),
     language: "en";,
 },,,
-}
