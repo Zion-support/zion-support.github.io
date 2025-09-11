@@ -1,192 +1,244 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, memo, useCallback, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Search, 
+  Phone, 
+  Mail,
+  MapPin,
+  Brain,
+  Shield,
+  Cloud,
+  Code,
+  Smartphone,
+  Zap,
+  Rocket
+} from 'lucide-react';
+import { OptimizedButton } from './PerformanceOptimizer';
 
-export function EnhancedHeader() {
+const Header = memo(() => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  }, []);
+
+  const handleDropdownToggle = useCallback((dropdown: string) => {
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
+  }, []);
+
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigationItems = [
-    {
-      name: 'Home',
-      path: '/',
-      type: 'link'
+  // Close menu on route change
+  useEffect(() => {
+    closeMenu();
+  }, [location.pathname, closeMenu]);
+
+  const navigation = [
+    { 
+      name: 'Home', 
+      href: '/',
+      icon: null
     },
-    {
-      name: 'Services',
-      type: 'dropdown',
-      items: [
-        { name: 'All Services', path: '/services', description: 'Complete service catalog' },
-        { name: 'AI Solutions', path: '/ai-solutions', description: 'Artificial Intelligence services' },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', description: 'Quantum computing solutions' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Security & compliance' },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Infrastructure management' },
-        { name: 'Micro SaaS Solutions', path: '/services/micro-saas-solutions', description: 'Custom SaaS platforms' },
-        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', description: 'Web3 & blockchain' },
-        { name: 'IoT Analytics', path: '/iot-data-analytics', description: 'Internet of Things' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' }
+    { 
+      name: 'Services', 
+      href: '/services',
+      icon: ChevronDown,
+      dropdown: [
+        { 
+          name: 'AI Services', 
+          href: '/services/ai-services',
+          icon: Brain,
+          description: 'AI-powered solutions for business transformation'
+        },
+        { 
+          name: 'Micro SaaS', 
+          href: '/services/micro-saas',
+          icon: Rocket,
+          description: 'Complete micro-SaaS development platform'
+        },
+        { 
+          name: 'Cloud Solutions', 
+          href: '/services/cloud-solutions',
+          icon: Cloud,
+          description: 'Scalable cloud infrastructure and migration'
+        },
+        { 
+          name: 'Cybersecurity', 
+          href: '/services/cybersecurity',
+          icon: Shield,
+          description: 'Advanced security and compliance solutions'
+        },
+        { 
+          name: 'Mobile Development', 
+          href: '/services/mobile-development',
+          icon: Smartphone,
+          description: 'Native and cross-platform mobile apps'
+        },
+        { 
+          name: 'DevOps & Automation', 
+          href: '/services/devops',
+          icon: Code,
+          description: 'CI/CD pipelines and infrastructure automation'
+        }
       ]
     },
-    {
-      name: 'Solutions',
-      type: 'dropdown',
-      items: [
-        { name: 'Enterprise Solutions', path: '/services/enterprise', description: 'Large-scale deployments' },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Medical technology' },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', description: 'Sector-specific solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
-        { name: 'Smart Cities', path: '/iot-smart-city-platform', description: 'Urban infrastructure' },
-        { name: 'Financial Technology', path: '/autonomous-financial-trading', description: 'Fintech solutions' }
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      icon: ChevronDown,
+      dropdown: [
+        { 
+          name: 'Enterprise', 
+          href: '/solutions/enterprise',
+          description: 'Large-scale enterprise solutions'
+        },
+        { 
+          name: 'Startup', 
+          href: '/solutions/startup',
+          description: 'Rapid development for startups'
+        },
+        { 
+          name: 'SMB', 
+          href: '/solutions/smb',
+          description: 'Cost-effective solutions for small businesses'
+        }
       ]
     },
-    {
-      name: 'Innovation',
-      type: 'dropdown',
-      items: [
-        { name: 'Emerging Tech', path: '/emerging-tech', description: 'Cutting-edge technology' },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Advanced AI' },
-        { name: 'Autonomous Operations', path: '/autonomous-business-operations-platform', description: 'Self-managing systems' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'Research automation' },
-        { name: '5G Solutions', path: '/5g-enterprise-solutions', description: 'Next-gen connectivity' }
-      ]
+    { 
+      name: 'Pricing', 
+      href: '/pricing',
+      icon: null
     },
-    {
-      name: 'Company',
-      type: 'dropdown',
-      items: [
-        { name: 'About Us', path: '/about', description: 'Our story and mission' },
-        { name: 'Our Mission', path: '/mission', description: 'What drives us' },
-        { name: 'Team', path: '/team', description: 'Meet our experts' },
-        { name: 'Careers', path: '/careers', description: 'Join our team' },
-        { name: 'Partners', path: '/partners', description: 'Strategic partnerships' },
-        { name: 'Contact', path: '/contact', description: 'Get in touch' }
-      ]
+    { 
+      name: 'About', 
+      href: '/about',
+      icon: null
     },
-    {
-      name: 'Resources',
-      type: 'dropdown',
-      items: [
-        { name: 'Blog', path: '/blog', description: 'Latest insights' },
-        { name: 'News', path: '/news', description: 'Company updates' },
-        { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
-        { name: 'Help Center', path: '/help', description: 'Support & documentation' },
-        { name: 'AI Matcher', path: '/ai-matcher', description: 'Find your AI solution' },
-        { name: 'Talent Directory', path: '/talent-directory', description: 'Expert network' },
-        { name: 'White Papers', path: '/white-papers', description: 'In-depth research' },
-        { name: 'Webinars', path: '/webinars', description: 'Educational content' }
-      ]
+    { 
+      name: 'Contact', 
+      href: '/contact',
+      icon: null
     }
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const contactInfo = [
+    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+    { icon: Mail, text: 'hello@ziontechgroup.com', href: 'mailto:hello@ziontechgroup.com' },
+    { icon: MapPin, text: 'San Francisco, CA', href: '#' }
+  ];
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-nav ${
-        isScrolled 
-          ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/50 shadow-neon' 
-          : 'bg-transparent'
-      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' 
+          : 'bg-transparent'
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          
-          {/* Logo */}
-          <motion.div
-            className="flex items-center"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400 }}
-          >
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-neon group-hover:shadow-cyber transition-all duration-300">
-                <span className="text-white font-bold text-2xl">Z</span>
+      {/* Top Contact Bar */}
+      <div className="bg-slate-800/90 text-slate-300 text-sm py-2">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <div className="hidden md:flex items-center space-x-6">
+            {contactInfo.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
+              >
+                <item.icon className="w-4 h-4" />
+                <span>{item.text}</span>
+              </a>
+            ))}
+          </div>
+          <div className="flex items-center space-x-4">
+            <span className="text-cyan-400 font-semibold">24/7 Support Available</span>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-400">Online</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="bg-slate-900/95 backdrop-blur-md">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                  Zion Tech Group
-                </h1>
-                <p className="text-xs text-cyan-400/70 group-hover:text-cyan-400 transition-colors duration-300">
-                  Future Technology Solutions
-                </p>
-              </div>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
-          </motion.div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative">
-                {item.type === 'link' ? (
-                  <Link
-                    to={item.path}
-                    className={`cyber-nav-item px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-300 ${
-                      isActive(item.path) ? 'text-cyan-400' : ''
-                    }`}
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
+                  <button
+                    onClick={() => item.dropdown && handleDropdownToggle(item.name)}
+                    className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
                   >
-                    {item.name}
-                  </Link>
-                ) : (
-                  <div
-                    className="relative"
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <button className="cyber-nav-item px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1">
-                      <span>{item.name}</span>
-                      <motion.svg
-                        className="w-4 h-4"
-                        animate={{ rotate: activeDropdown === item.name ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </motion.svg>
-                    </button>
+                    <span>{item.name}</span>
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                  </button>
 
+                  {/* Dropdown Menu */}
+                  {item.dropdown && (
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-neon overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
                         >
                           <div className="p-4">
-                            <div className="grid gap-3">
-                              {item.items.map((subItem) => (
+                            <h3 className="text-sm font-semibold text-slate-900 dark:text-white mb-3">
+                              {item.name}
+                            </h3>
+                            <div className="grid grid-cols-1 gap-2">
+                              {item.dropdown.map((subItem) => (
                                 <Link
                                   key={subItem.name}
-                                  to={subItem.path}
-                                  className="group p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 border border-transparent hover:border-cyan-500/30"
-                                  onClick={() => setActiveDropdown(null)}
+                                  to={subItem.href}
+                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors group"
                                 >
-                                  <div className="flex items-start space-x-3">
-                                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 group-hover:bg-cyan-300 transition-colors duration-300"></div>
-                                    <div className="flex-1">
-                                      <h4 className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-300">
-                                        {subItem.name}
-                                      </h4>
-                                      <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mt-1">
-                                        {subItem.description}
-                                      </p>
+                                  {subItem.icon && (
+                                    <subItem.icon className="w-5 h-5 text-cyan-500 mt-0.5 group-hover:text-cyan-600 transition-colors" />
+                                  )}
+                                  <div>
+                                    <div className="font-medium text-slate-900 dark:text-white group-hover:text-cyan-600 transition-colors">
+                                      {subItem.name}
                                     </div>
+                                    {subItem.description && (
+                                      <div className="text-sm text-slate-600 dark:text-slate-400">
+                                        {subItem.description}
+                                      </div>
+                                    )}
                                   </div>
                                 </Link>
                               ))}
@@ -195,112 +247,122 @@ export function EnhancedHeader() {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="px-4 py-2 text-cyan-400 hover:text-white border border-cyan-400/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-400/10"
-            >
-              Get Quote
-            </Link>
-            <Link
-              to="/contact"
-              className="neon-button px-6 py-2 rounded-lg"
-            >
-              Contact Us
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors duration-300"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/30"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  {item.type === 'link' ? (
-                    <Link
-                      to={item.path}
-                      className="block py-2 text-white hover:text-cyan-400 transition-colors duration-300"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ) : (
-                    <div>
-                      <div className="py-2 text-white font-medium">{item.name}</div>
-                      <div className="ml-4 space-y-2">
-                        {item.items.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.path}
-                            className="block py-1 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
                   )}
                 </div>
               ))}
-              
-              <div className="pt-4 border-t border-cyan-500/30 space-y-3">
-                <Link
-                  to="/contact"
-                  className="block w-full text-center py-2 text-cyan-400 border border-cyan-400/50 rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Get Quote
-                </Link>
-                <Link
-                  to="/contact"
-                  className="block w-full text-center py-2 bg-gradient-to-r from-cyan-400 to-purple-500 text-white rounded-lg hover:from-cyan-500 hover:to-purple-600 transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Contact Us
-                </Link>
-              </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <button className="p-2 text-slate-300 hover:text-white transition-colors">
+                <Search className="w-5 h-5" />
+              </button>
+              <OptimizedButton
+                variant="outline"
+                size="sm"
+                onClick={() => window.location.href = '/contact'}
+              >
+                Get Quote
+              </OptimizedButton>
+              <OptimizedButton
+                variant="primary"
+                size="sm"
+                onClick={() => window.location.href = '/contact'}
+              >
+                Start Project
+              </OptimizedButton>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden p-2 text-slate-300 hover:text-white transition-colors"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-slate-800 border-t border-slate-700"
+            >
+              <div className="container mx-auto px-4 py-4">
+                {navigation.map((item) => (
+                  <div key={item.name} className="mb-4">
+                    <button
+                      onClick={() => item.dropdown && handleDropdownToggle(item.name)}
+                      className="flex items-center justify-between w-full text-left text-slate-300 hover:text-white transition-colors py-2"
+                    >
+                      <span className="font-medium">{item.name}</span>
+                      {item.icon && (
+                        <motion.div
+                          animate={{ rotate: activeDropdown === item.name ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <item.icon className="w-4 h-4" />
+                        </motion.div>
+                      )}
+                    </button>
+
+                    {/* Mobile Dropdown */}
+                    {item.dropdown && (
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="ml-4 mt-2 space-y-2"
+                          >
+                            {item.dropdown.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="block text-slate-400 hover:text-cyan-400 transition-colors py-1"
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    )}
+                  </div>
+                ))}
+
+                <div className="pt-4 border-t border-slate-700 space-y-3">
+                  <OptimizedButton
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Get Quote
+                  </OptimizedButton>
+                  <OptimizedButton
+                    variant="primary"
+                    size="sm"
+                    className="w-full"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Start Project
+                  </OptimizedButton>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
     </motion.header>
   );
-}
+});
 
-export default EnhancedHeader;
+Header.displayName = 'Header';
+
+export default Header;

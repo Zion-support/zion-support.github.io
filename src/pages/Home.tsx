@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect, memo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -58,7 +58,7 @@ import {
 import { SEO } from '@/components/SEO';
 
 // Optimized futuristic animated background component
-const FuturisticBackground = React.memo(() => {
+const FuturisticBackground = memo(() => {
   const particles = React.useMemo(() =>
     [...Array(20)].map((_, i) => ({
       id: i,

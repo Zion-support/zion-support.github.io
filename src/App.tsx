@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
-import Header from './components/Header';
+import Header from './components/EnhancedHeader';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -12,8 +12,8 @@ import ServiceCard from './components/ServiceCard';
 // Lazy load pages with better error handling
 const Home = React.lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading Home page</div> })));
 const About = React.lazy(() => import('./pages/About').catch(() => ({ default: () => <div>Error loading About page</div> })));
-const Services = React.lazy(() => import('./pages/Services').catch(() => ({ default: () => <div>Error loading Services page</div> })));
-const Pricing = React.lazy(() => import('./pages/Pricing').catch(() => ({ default: () => <div>Error loading Pricing page</div> })));
+const Services = React.lazy(() => import('./pages/EnhancedServices').catch(() => ({ default: () => <div>Error loading Services page</div> })));
+const Pricing = React.lazy(() => import('./pages/EnhancedPricing').catch(() => ({ default: () => <div>Error loading Pricing page</div> })));
 const Contact = React.lazy(() => import('./pages/Contact').catch(() => ({ default: () => <div>Error loading Contact page</div> })));
 
 // Service pages with error handling
