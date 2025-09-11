@@ -23423,3 +23423,5 @@
 2025-09-11 19:16:18 - Resolving conflicts in zion-os.disabled/zion-os/src/components/Navigation.tsx.backup.1756001022.backup.1757618052 for branch backup-critical-fixes-20250824-224408
 2025-09-11 19:16:18 - Resolving conflicts in zion-os/src/components/Footer.tsx for branch backup-critical-fixes-20250824-224408
 2025-09-11 19:16:18 - Resolving conflicts in zion-os/src/components/Navigation.tsx for branch backup-critical-fixes-20250824-224408
+2025-09-11 19:16:21 - Merge conflicts detected in backup/local-main-20250818-130857
+2025-09-11 19:16:21 - Resolving conflicts in netlify/functions/functions-manifest.json for branch backup/local-main-20250818-130857
