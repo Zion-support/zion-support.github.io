@@ -1,9 +1,4 @@
-
-
-
-
 interface ExportToCSVProps {
-
   quotes: QuoteRequest[]
   filename?: string
 }
@@ -14,7 +9,6 @@ interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;
 }
-
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
   const handleExport = () => {;
     // Define CSV Headers;
@@ -48,8 +42,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       quote.requester_email;
       quote.project_name;
       quote.project_summary;
-
-
     // Format quote data for CSV;
     const rows = quotes && quotes.map(quote => [;
       quote && quote.id;
@@ -68,13 +60,10 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       quote && quote.status;
       new Date(quote && quote.created_at).toLocaleDateString();
     ]);
-
     const headers = [
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
-
       'StatusCreated Date'
     ],
-    
     // Format quote data for CSV
     const rows = quotes.map(quote => [
       quote.id,
@@ -93,7 +82,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       quote.status,
       new Date(quote.created_at).toLocaleDateString()
     ]),
-    
     // Create CSV content
     const csvContent = [
       headers.join(),
@@ -105,7 +93,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
             : cell
         ).join()
       )
-    
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
     const url = URL.createObjectURL(blob),
@@ -113,8 +100,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     link.setAttribute('href', url),
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),
     document.body.appendChild(link),
-    
-
     link.click();
     setTimeout(() => {
       document.body.removeChild(link);
@@ -132,7 +117,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
         ).join();
       );
     ].join('\n');
-
     // Create download link;
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL && URL.createObjectURL(blob);
@@ -140,7 +124,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     link && link.setAttribute('href', url);
     link && link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
     document && document.body.appendChild(link);
-
     // Download file and clean up;
     link && link.click();
     setTimeout(() => {;
@@ -148,7 +131,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       URL && URL.revokeObjectURL(url);
     }, 100);
   };
-
   return (
     <Button
       variant="outline" 
@@ -160,7 +142,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     <Button
       variant="outline"
   },
-  
   return (
     <Button 
       variant="outline" 
@@ -196,26 +177,17 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes && quotes.length === 0}>;
-
   },
-  
   return (
     <Button 
       variant="outline" 
-
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
-
-
       <Download size={16} />;
       Export CSV;
     </Button>;
   );
-
-
-
-
     >;
       <Download size={16} />;
       Export CSV;
@@ -265,4 +237,4 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       Export CSV;
     </Button>);
 }
-;<<<<<<< HEAD
+;

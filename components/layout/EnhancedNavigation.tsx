@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -48,10 +47,6 @@ import {;
   Factory,;
   Car,;
 
-=======
-
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -59,8 +54,7 @@ import {
   Settings, LogOut, Bell, Globe, Zap
 } from 'lucide-react';
 import Link from 'next/link';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -87,21 +81,85 @@ import {
   Factory,
   Car,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import Link from "next/link";
-<<<<<<< HEAD
 interface EnhancedNavigationProps {;
-=======
->>>>>>> origin/main
+
 interface EnhancedNavigationProps {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
   className?: string;
 }
 
-
-
-
+const navigationItems: NavigationItem[] = [
+  {
+    name: 'AI Services',
+    href: '/ai-services',
+    icon: <Brain className="w-5 h-5" />,
+    description: 'Advanced AI and machine learning solutions',
+    children: [
+      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-platform' },
+      { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
+      { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis' },
+      { name: 'AI Healthcare Analytics', href: '/ai-healthcare-analytics' },
+      { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization' }
+    ]
+  },
+  {
+    name: 'Quantum Computing',
+    href: '/quantum-cloud-infrastructure',
+    icon: <Atom className="w-5 h-5" />,
+    description: 'Quantum computing and quantum AI solutions',
+    children: [
+      { name: 'Quantum AI Drug Discovery', href: '/quantum-ai-drug-discovery' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
+      { name: 'Quantum AI Supercomputer', href: '/quantum-ai-supercomputer' }
+    ]
+  },
+  {
+    name: 'Emerging Tech',
+    href: '/emerging-tech-services',
+    icon: <Rocket className="w-5 h-5" />,
+    description: 'Blockchain, IoT, and cutting-edge technologies',
+    children: [
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
+      { name: 'IoT Edge Computing', href: '/iot-edge-computing-orchestration' },
+      { name: '5G Private Networks', href: '/5g-private-network-solutions' },
+      { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }
+    ]
+  },
+  {
+    name: 'Cybersecurity',
+    href: '/security',
+    icon: <Shield className="w-5 h-5" />,
+    description: 'Advanced security and compliance solutions',
+    children: [
+      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
+      { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' }
+    ]
+  },
+  {
+    name: 'Space Technology',
+    href: '/space-technology',
+    icon: <Globe className="w-5 h-5" />,
+    description: 'Space mission control and satellite operations',
+    children: [
+      { name: 'Space Mission Control', href: '/space-mission-control' },
+      { name: 'Satellite Operations', href: '/satellite-operations' }
+    ]
+  },
+  {
+    name: 'Enterprise IT',
+    href: '/it-services',
+    icon: <Database className="w-5 h-5" />,
+    description: 'Enterprise infrastructure and solutions',
+    children: [
+      { name: 'Cloud Migration', href: '/cloud-migration' },
+      { name: 'DevOps Automation', href: '/devops-automation' },
+      { name: 'Data Analytics', href: '/data-analytics' }
+    ]
+  }
+];
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""

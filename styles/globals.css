@@ -161,6 +161,37 @@ body {
 /* Enhanced Loading States */
 .loading-dots {
   @apply inline-flex space-x-1;
+
+/* Glow utilities for futuristic buttons */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.35), 0 0 40px rgba(99, 102, 241, 0.25);
+}
+.hover\:shadow-glow-lg:hover {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.5), 0 0 60px rgba(99, 102, 241, 0.35);
+}
+
+/* Enhanced Background Patterns */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 10% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 30% 90%, rgba(0, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+  animation: backgroundFloat 30s ease-in-out infinite;
+
 }
 
 .loading-dots > div {

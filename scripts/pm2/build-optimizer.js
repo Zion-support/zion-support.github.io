@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }};
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ; async analyzeBuild() {; try {; this && this.log('🏗️ Analyzing current build...');
 ; if (!fs && fs.existsSync('dist')) {; this && this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this && this.projectRoot,
     stdio: 'pipe'})};
@@ -30,10 +10,6 @@
 ; buildStats && buildStats.totalSize + = stat && stat.size; buildStats && buildStats.fileCount++;
 ; if (item && item.endsWith('.js')) {; buildStats && buildStats.jsFiles.push(fileInfo)} else if (item && item.endsWith('.css')) {; buildStats && buildStats.cssFiles.push(fileInfo)} else {; buildStats && buildStats.assetFiles.push(fileInfo)}}})};
 ; analyzeDirectory('dist');
-
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }}; async analyzeBuild() {try {; this.log('🏗️ Analyzing current build...'); if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this.projectRoot
     stdio: 'pipe'})}; const buildStats = {totalSize: 0, fileCount: 0, largestFiles: [], jsFiles: [], cssFiles: []
     assetFiles: []}; const analyzeDirectory = (dir) = > {const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; analyzeDirectory(fullPath)} else {const fileInfo = {; path: fullPath.replace(this.projectRoot + '/dist/', ''); size: stat.size
@@ -43,11 +19,7 @@
     compression: false}; // Check Next.js config; if (fs.existsSync('next.config.js')) {const nextConfig = fs.readFileSync('next.config.js', 'utf8'); settings.minification = nextConfig.includes('swcMinify: true') |nextConfig.includes('swcMinify: true'); settings.compression = nextConfig.includes('compress: true') |nextConfig.includes('compress: true')}; // Check package.json for optimization scripts; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const scripts = packageJson.scripts |{}; settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'); settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode'); return {success: true
     settings: settings}} catch (error) {return {; success: false, error: error.message, settings: null}}}; async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {const report = {; timestamp: new Date().toISOString(), summary: {
       , buildSize: buildStats?.stats?.totalSizeMB |0, fileCount: buildStats?.stats?.fileCount |0, optimizationScore: 0
-
     recommendations: []
-<<<<<<< HEAD
-
-
     };
   };
 ,
@@ -380,29 +352,8 @@ optimizer.run().catch(error => {,
 ; settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'); settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode');
 ; return {_; success: true, settings: settings}} catch (error) {_; return {; success: false, error: error.message; settings: null}}};
 ; async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {_; const report = {; timestamp: new Date().toISOString(); summary: {; buildSize: buildStats?.stats?.totalSizeMB || 0; fileCount: buildStats?.stats?.fileCount || 0; optimizationScore: 0, recommendations: []}; details: {_; build: buildStats, analyzer: analyzerInfo, settings: settingsInfo}; optimizations: []};
-=======
-
-
-
-=======>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
-
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 optimizer.run().catch(error = > {process.exit(1)});
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 optimizer.run().catch(error = > {process.exit(1)});
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     },
     details: {, build: buildStats, analyzer: analyzerInfo,
     settings: settingsInfo}; optimizations: []};
@@ -418,17 +369,11 @@ const optimizer = new BuildOptimizer(),
 optimizer.run().catch(error => {,
   process.exit(1)
 }),
-
-
-
 optimizer.run().catch(error = > {process.exit(1)});
-
 ;
-==============
 ; // Calculate optimization score; let score = 0; const maxScore = 100;
 ; if (buildStats?.stats?.totalSizeMB < 2) score + = 30; else if (buildStats?.stats?.totalSizeMB < 5) score + = 20; else if (buildStats?.stats?.totalSizeMB < 10) score + = 10;
 ; if (settingsInfo?.settings?.minification) score + = 20; if (settingsInfo?.settings?.compression) score + = 15; if (settingsInfo?.settings?.treeShaking) score + = 15; if (settingsInfo?.settings?.codeSplitting) score + = 10; if (analyzerInfo?.available) score + = 10;
-<<<<<<< HEAD
 ; report && report.summary.optimizationScore = Math && Math.min(score, maxScore);
 ; // Generate optimization recommendations; if (buildStats?.stats?.totalSizeMB > 5) {; report && report.optimizations.push({; priority: 'high', type: 'bundle-size', message: 'Bundle size is large', action: 'Implement code splitting and tree shaking', impact: 'high'})};
 ; if (!settingsInfo?.settings?.minification) {; report && report.optimizations.push({; priority: 'high', type: 'minification', message: 'Minification not enabled', action: 'Enable SWC minification in Next && Next.js config', impact: 'high'})};
@@ -446,13 +391,9 @@ optimizer.run().catch(error = > {process.exit(1)});
 ; // Log summary; this && this.log('\n📊 Build Optimizer Summary: '); this && this.log(`Build size: ${report && report.summary.buildSize} MB`); this && this.log(`File count: ${report && report.summary.fileCount}`); this && this.log(`Optimization score: ${report && report.summary.optimizationScore}/100`); this && this.log(`Duration: ${duration}ms`);
 ; if (report && report.optimizations.length > 0) {; this && this.log('\n💡 Optimization Recommendations: '), report && report.optimizations.forEach(opt = > {, this && this.log(` [${opt && opt.priority.toUpperCase()}] ${opt && opt.message}`); this && this.log(` Action: ${opt && opt.action}`); this && this.log(` Impact: ${opt && opt.impact}`)})} else {; this && this.log('\n✨ Build is well optimized!')};
 } catch (error) {; this && this.log(`❌ Error running build optimizer: ${error && error.message}`); process && process.exit(1)}}};
-
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
-optimizer && optimizer.run().catch(error = > {; process && process.exit(1)});=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-}}
+optimizer && optimizer.run().catch(error = > {; process && process.exit(1)});}}
 ; async analyze_build () { try { this.log ('🏗️ Analyzing current build...');
 ; if () {) {
   $2
@@ -558,8 +499,6 @@ if ( {) {
 } this.log ('\n💡 Optimization Recommendations: '), report.optimizations.for_each (opt = > {, this.log (` [${opt.priority.toUpperCase ()}] ${opt.message}`); this.log (` Action: ${opt.action}`); this.log (` Impact: ${opt.impact}`)})} else { this.log ('\n✨ Build is well optimized!')}
 } catch (error) { this.log (`❌ Error running build optimizer: ${error.message}`); process.exit (1)}}}
 ;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {,;
       this.log(`❌ Error running build: optimizer: ${error.message}`),;
       process.exit(1);
@@ -572,12 +511,6 @@ const optimizer = new BuildOptimizer(),;
 optimizer.run().catch(error => {,;
   process.exit(1);
 }),;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ; report.summary.optimizationScore = Math.min(score, maxScore);
 ; // Generate optimization recommendations; if (buildStats?.stats?.totalSizeMB > 5) {; report.optimizations.push({; priority: 'high', type: 'bundle-size', message: 'Bundle size is large', action: 'Implement code splitting and tree shaking', impact: 'high'})};
 ; if (!settingsInfo?.settings?.minification) {; report.optimizations.push({; priority: 'high', type: 'minification', message: 'Minification not enabled', action: 'Enable SWC minification in Next.js config', impact: 'high'})};
@@ -599,4 +532,3 @@ optimizer.run().catch(error => {,;
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
 optimizer.run().catch(error = > {; process.exit(1)});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

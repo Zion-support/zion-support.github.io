@@ -1,1 +1,0 @@
-import React from, react""; "framer-motion""; "lucide-react""; "../../components/SEO" export default function AIRealEstateAnalyticsPlatform() { const contactInfo = { phone: "+1 302 464 095,0, email:," kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 1970,9, website:," https: ","}}

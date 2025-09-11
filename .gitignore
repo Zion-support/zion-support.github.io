@@ -28,9 +28,11 @@ core
 
 # npm cache
 .npm-cache/
+core
+*.core
 
-# Large files and build artifacts
-.next/cache/
-deployment.tar.gz
-tsconfig.tsbuildinfo
-*.log
+core
+*.core
+
+# Ignore core dumps
+core

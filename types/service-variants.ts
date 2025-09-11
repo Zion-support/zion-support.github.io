@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export type ServiceVariant =
   | 'default'
   | 'holographic'
@@ -38,325 +24,42 @@ export type ServiceVariant =
   | 'quantum-iot'
   | 'quantum-logistics'
   | 'quantum-financial'
-  | 'quantum-holographic'
-  | 'quantum-neural'
-  | 'quantum-cyberpunk'
-  | 'neural-quantum-cyberpunk'
   | 'quantum-energy'
   | 'quantum-futuristic'
   | 'cloud-futuristic'
   | 'devops-futuristic'
   | 'security-futuristic'
   | 'data-futuristic'
-  | 'mobility-futuristic'
-  | 'network-futuristic'
-  | 'backup-futuristic'
-  | 'itsm-futuristic'
-  | 'monitoring-futuristic'
+  | 'ai-automation-futuristic'
   | 'blockchain-futuristic'
-  | 'metaverse-futuristic'
   | 'iot-futuristic'
-  | 'edge-futuristic'
-  | 'ar-futuristic'
-  | 'digital-twin-futuristic'
-  | '5g-futuristic'
-  | 'biometric-futuristic'
-  | 'autonomous-futuristic'
-  | 'enterprise-futuristic'
-  | 'holographic-futuristic'
-  | 'biotech-futuristic'
-  | 'simulation-futuristic'
-  | 'micro-saas-futuristic'
-  | 'hr-futuristic'
-  | 'marketing-futuristic'
-  | 'legal-futuristic'
-  | 'customer-service-futuristic'
-  | 'project-management-futuristic'
-  | 'fintech'
-  | 'fintech-futuristic'
-  | 'defi-futuristic'
-  | 'quantum-bio-enterprise'
-  | 'quantum-materials-enterprise'
-  | 'supply-chain-futuristic'
-  | 'ai-content'
-  | 'ai-education'
-  | 'it-futuristic'
-  | 'ai-consciousness'
-  | 'healthcare-futuristic'
-  | 'cybersecurity'
-  | 'ai-revolutionary'
-  | 'quantum-revolutionary'
-  | 'ai-quantum-revolutionary'
-  | 'quantum-ai-revolutionary'
-  | 'quantum-space-revolutionary'
-  | 'quantum-iot-revolutionary'
-  | 'quantum-energy-revolutionary'
-  | 'quantum-logistics-revolutionary'
-  | 'quantum-ai-finance'
-  | 'ai-emotional'
-  | 'ai-multimodal'
-  | 'ai-autonomous'
-  | 'ai-creative'
-  | 'ai-healthcare'
-  | 'ai-prediction'
-  | 'neural-revolutionary'
-  | 'quantum-security'
-  | 'quantum-ai-interface'
-  | 'ai-autonomous-vehicles'
-  | 'quantum-iot-revolutionary'
-  | 'space-futuristic'
-  | 'consulting-futuristic'
+  | 'mobile-futuristic'
+  | 'web-futuristic'
   | 'api-futuristic'
-  | 'integration-futuristic'
-  | 'monitoring-futuristic'
-  | 'backup-futuristic'
-  | 'analytics-futuristic'
-  | 'it-futuristic'
-  | 'saas-futuristic'
-  | 'micro-saas-futuristic'
-  | 'business-intelligence-futuristic'
-  | 'customer-service-futuristic'
-  | 'marketing-futuristic'
-  | 'sales-futuristic'
-  | 'hr-futuristic'
-  | 'finance-futuristic'
-  | 'project-management-futuristic'
-  | 'supply-chain-futuristic'
-  | 'legal-futuristic'
-  | 'healthcare-futuristic'
-  | 'biotech-futuristic'
-  | 'simulation-futuristic'
-  | 'space-futuristic'
-  | 'neuromorphic-futuristic'
-  | 'bio-futuristic'
-  | 'fusion-futuristic'
+  | 'microservices-futuristic'
+  | 'container-futuristic'
+  | 'serverless-futuristic'
+  | 'edge-futuristic'
+  | 'quantum-computing-futuristic'
+  | 'machine-learning-futuristic'
+  | 'deep-learning-futuristic'
+  | 'computer-vision-futuristic'
+  | 'nlp-futuristic'
+  | 'robotics-futuristic'
   | 'automation-futuristic'
+  | 'analytics-futuristic'
+  | 'business-intelligence-futuristic'
+  | 'crm-futuristic'
+  | 'erp-futuristic'
+  | 'ecommerce-futuristic'
+  | 'fintech-futuristic'
+  | 'healthtech-futuristic'
+  | 'edtech-futuristic'
+  | 'proptech-futuristic'
   | 'retail-futuristic'
   | 'energy-futuristic'
   | 'transportation-futuristic'
   | 'education-futuristic'
   | 'real-estate-futuristic'
   | 'industrial-futuristic'
-  | 'neural-futuristic',
-<<<<<<< HEAD
-
-
-
   | 'neural-futuristic';
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
-  | 'quantum - hologographic';
-  | 'quantum - advanced';
-  | 'holographic - advanced';
-  | 'neural - quantum';
-  | 'quantum - cyberpunk';
-  | 'holographic - neural';
-  | 'quantum - holographic - advanced';
-  | 'quantum - matrix';
-  | 'neural - cyberpunk';
-  | 'holographic - quantum';
-  | 'quantum - neural - advanced';
-  | 'cyberpunk - holographic';
-  | 'quantum - space';
-  | 'ai - futuristic';
-  | 'quantum - entanglement';
-  | 'holographic - matrix';
-  | 'neural - quantum - cyberpunk';
-  | 'quantum - iot';
-  | 'quantum - logistics';
-  | 'quantum - financial';
-  | 'quantum - holographic';
-  | 'quantum - neural';
-  | 'quantum - cyberpunk';
-  | 'neural - quantum - cyberpunk';
-  | 'quantum - energy';
-  | 'quantum - futuristic';
-  | 'cloud - futuristic';
-  | 'devops - futuristic';
-  | 'security - futuristic';
-  | 'data - futuristic';
-  | 'mobility - futuristic';
-  | 'network - futuristic';
-  | 'backup - futuristic';
-  | 'itsm - futuristic';
-  | 'monitoring - futuristic';
-  | 'blockchain - futuristic';
-  | 'metaverse - futuristic';
-  | 'iot - futuristic';
-  | 'edge - futuristic';
-  | 'ar - futuristic';
-  | 'digital - twin - futuristic';
-  | '5g - futuristic';
-  | 'biometric - futuristic';
-  | 'autonomous - futuristic';
-  | 'enterprise - futuristic';
-  | 'holographic - futuristic';
-  | 'ai - revolutionary';
-  | 'quantum - revolutionary';
-  | 'ai - quantum - revolutionary';
-  | 'quantum - ai - revolutionary';
-  | 'quantum - space - revolutionary';
-  | 'quantum - iot - revolutionary';
-  | 'quantum - energy - revolutionary';
-  | 'quantum - logistics - revolutionary';
-  | 'quantum - ai - finance';
-  | 'ai - emotional';
-  | 'ai - multimodal';
-  | 'ai - autonomous';
-  | 'ai - creative';
-  | 'ai - healthcare';
-  | 'ai - prediction';
-  | 'neural - revolutionary';
-  | 'quantum - security';
-  | 'quantum - ai - interface';
-  | 'ai - autonomous - vehicles';
-  | 'quantum - iot - revolutionary';
-  | 'space - futuristic';
-  | 'consulting - futuristic';
-  | 'api - futuristic';
-  | 'integration - futuristic';
-  | 'monitoring - futuristic';
-  | 'backup - futuristic';
-  | 'analytics - futuristic';
-  | 'it - futuristic';
-  | 'saas - futuristic';
-  | 'micro - saas - futuristic';
-  | 'business - intelligence - futuristic';
-  | 'customer - service - futuristic';
-  | 'marketing - futuristic';
-  | 'sales - futuristic';
-  | 'hr - futuristic';
-  | 'finance - futuristic';
-  | 'project - management - futuristic';
-  | 'supply - chain - futuristic';
-  | 'legal - futuristic';
-  | 'healthcare - futuristic';
-  | 'biotech - futuristic';
-  | 'simulation - futuristic';
-  | 'space - futuristic';
-  | 'neuromorphic - futuristic';
-  | 'bio - futuristic';
-  | 'fusion - futuristic';
-  | 'automation - futuristic';
-  | 'retail - futuristic';
-  | 'energy - futuristic';
-  | 'transportation - futuristic';
-  | 'education - futuristic';
-  | 'real - estate - futuristic';
-  | 'industrial - futuristic';
-  | 'neural - futuristic';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-export type ServiceVariant =;
-  | 'default';
-  | 'holographic';
-  | 'quantum';
-  | 'cyberpunk';
-  | 'neural';
-  | 'quantum-hologographic';
-  | 'quantum-advanced';
-  | 'holographic-advanced';
-  | 'neural-quantum';
-  | 'quantum-cyberpunk';
-  | 'holographic-neural';
-  | 'quantum-holographic-advanced';
-  | 'quantum-matrix';
-  | 'neural-cyberpunk';
-  | 'holographic-quantum';
-  | 'quantum-neural-advanced';
-  | 'cyberpunk-holographic';
-  | 'quantum-space';
-  | 'ai-futuristic';
-  | 'quantum-entanglement';
-  | 'holographic-matrix';
-  | 'neural-quantum-cyberpunk';
-  | 'quantum-iot';
-  | 'quantum-logistics';
-  | 'quantum-financial';
-  | 'quantum-holographic';
-  | 'quantum-neural';
-  | 'quantum-cyberpunk';
-  | 'neural-quantum-cyberpunk';
-  | 'quantum-energy';
-  | 'quantum-futuristic';
-  | 'cloud-futuristic';
-  | 'devops-futuristic';
-  | 'security-futuristic';
-  | 'data-futuristic';
-  | 'mobility-futuristic';
-  | 'network-futuristic';
-  | 'backup-futuristic';
-  | 'itsm-futuristic';
-  | 'monitoring-futuristic';
-  | 'blockchain-futuristic';
-  | 'metaverse-futuristic';
-  | 'iot-futuristic';
-  | 'edge-futuristic';
-  | 'ar-futuristic';
-  | 'digital-twin-futuristic';
-  | '5g-futuristic';
-  | 'biometric-futuristic';
-  | 'autonomous-futuristic';
-  | 'enterprise-futuristic';
-  | 'holographic-futuristic';
-  | 'ai-revolutionary';
-  | 'quantum-revolutionary';
-  | 'ai-quantum-revolutionary';
-  | 'quantum-ai-revolutionary';
-  | 'quantum-space-revolutionary';
-  | 'quantum-iot-revolutionary';
-  | 'quantum-energy-revolutionary';
-  | 'quantum-logistics-revolutionary';
-  | 'quantum-ai-finance';
-  | 'ai-emotional';
-  | 'ai-multimodal';
-  | 'ai-autonomous';
-  | 'ai-creative';
-  | 'ai-healthcare';
-  | 'ai-prediction';
-  | 'neural-revolutionary';
-  | 'quantum-security';
-  | 'quantum-ai-interface';
-  | 'ai-autonomous-vehicles';
-  | 'quantum-iot-revolutionary';
-  | 'space-futuristic';
-  | 'consulting-futuristic';
-  | 'api-futuristic';
-  | 'integration-futuristic';
-  | 'monitoring-futuristic';
-  | 'backup-futuristic';
-  | 'analytics-futuristic';
-  | 'it-futuristic';
-  | 'saas-futuristic';
-  | 'micro-saas-futuristic';
-  | 'business-intelligence-futuristic';
-  | 'customer-service-futuristic';
-  | 'marketing-futuristic';
-  | 'sales-futuristic';
-  | 'hr-futuristic';
-  | 'finance-futuristic';
-  | 'project-management-futuristic';
-  | 'supply-chain-futuristic';
-  | 'legal-futuristic';
-  | 'healthcare-futuristic';
-  | 'biotech-futuristic';
-  | 'simulation-futuristic';
-  | 'space-futuristic';
-  | 'neuromorphic-futuristic';
-  | 'bio-futuristic';
-  | 'fusion-futuristic';
-  | 'automation-futuristic';
-  | 'retail-futuristic';
-  | 'energy-futuristic';
-  | 'transportation-futuristic';
-  | 'education-futuristic';
-  | 'real-estate-futuristic';
-  | 'industrial-futuristic';
-  | 'neural-futuristic';
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

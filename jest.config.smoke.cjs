@@ -18,13 +18,15 @@ module.exports = {
     '/temp_/',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
     '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
     '^@/types/(.*)$': '<rootDir>/src/types/$1',
+    '^next/router$': '<rootDir>/__mocks__/nextRouterMock.js',
+    '^next/navigation$': '<rootDir>/__mocks__/nextNavigationMock.js',
   },
   testEnvironment: 'jsdom',
   collectCoverageFrom: [
