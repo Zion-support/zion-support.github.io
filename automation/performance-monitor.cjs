@@ -45,8 +45,6 @@ class PerformanceMonitor {
     this.ensureLogsDir();
   }
   log(message, level = 'INFO') {=======    const timestamp = new Date().toISOString();
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -243,7 +241,6 @@ main
     try {
       execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
       return Date.now() - startTime;
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const recommendations = [];
     if (!this.lastCheck) return recommendations;
     const metrics = this.lastCheck.systemMetrics;
@@ -363,18 +360,9 @@ monitor.start().catch(error => {})
   process.exit(1);
 });
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run if called directly
 if (require.main === module) {
     const monitor = new PerformanceMonitor(),
     monitor.monitorPerformance().catch(console.error)
   }
 module.exports = PerformanceMonitor;<<<<<<< HEAD=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,3 @@ describe('Navigation Integration', () => {;
         <App />;
       </BrowserRouter>;
     );
-<<<<<<< HEAD

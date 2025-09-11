@@ -1,4 +1,3 @@
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -171,69 +170,3 @@ if (require.main === module) {
 }
 
 module.exports = AutoFixer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-const { execSync } = require('child_process');
-function run(cmd) {
-	console.log(`$ ${cmd}`);
-	return execSync(cmd, { stdio: 'inherit' });
-}
-try {
-	// Lint (non-fatal), Type-check, Build
-	try { run('npm run lint'); } catch {}
-	run('npm run type-check');
-	run('npm run build');
-	// Restart preview app if running
-	try { run('pm2 reload bolt-zion-app'); } catch {}
-	console.log('Auto-fix run completed successfully.');
-} catch (e) {
-	console.error('Auto-fix run failed:', e.message);
-	process.exit(1);
-}
-#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");function run(cmd) {console.log(`$ ${cmd}`);"return execSync(cmd, { stdio: "inherit" })}try {/ Lint (non-fatal), Type-check, Build"try { run("npm run lint")} catch {}"run("npm run type-check");"run("npm run build");/ Restart preview app if running"try { run("pm2 reload bolt-zion-app")} catch {}"console.log("Auto-fix run completed successfully.")} catch (e) {""console.error("Auto-fix run failed: ", e.message);process.exit(1)}""`"`
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
-function run(cmd) {
-	return execSync(cmd, { "stdio": 'inherit' })}
-try {
-	// Lint (non-fatal), Type-check, Build
-	try { run('npm run lint')} catch {}
-	run('npm run type-check');
-	run('npm run build');
-	// Restart preview app if running
-	try { run('pm2 reload bolt-zion-app')} catch {}
-	} catch (e) {
-function run(cmd) {}
-	console.log(`$ ${cmd}`);
-	return execSync(cmd, { "stdio": 'inherit' })};
-try {}
-	// Lint (non-fatal), Type-check, Build;
-	try { run('npm run lint')} catch {};
-	run('npm run type-check');
-	run('npm run build');
-	// Restart preview app if running;
-	try { run('pm2 reload bolt-zion-app')} catch {};
-	console.log('Auto-fix run completed successfully.')} catch (e) {}
-	console.error('Auto-fix run "failed": ', e.message);
-	process.exit(1)};=======<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

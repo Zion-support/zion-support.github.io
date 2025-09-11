@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -6,19 +5,6 @@
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
           console.log('"Output": ', output);
-<<<<<<< HEAD
-=======
-                    // Log outdated packages but don't auto-update;
-          this.logOutdatedPackages(output)};
-      })} catch (error) {}
-      console.error('Error running dependency "check": ', error.message)};
-  };
-  logOutdatedPackages(output) {}
-    const lines = output.split('\n';);
-    const outdatedPackages = lines.filter(line => )
-      line.includes('→') && !line.includes('Package');
-   ;);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -54,7 +40,3 @@ if ( {})
     process.exit(0)}
 });
   monitor.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = DependencyMonitor;
-=======
-module.exports = DependencyMonitor;

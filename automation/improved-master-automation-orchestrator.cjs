@@ -93,12 +93,4 @@ const { execSync, spawn } = require('child_process')
       this.log('Build test completed successfully', 'SUCCESS')
       this.log(`Build test failed: ${error.message}`, 'ERROR'`)
         output: error.stdout || error.stderr || ''
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

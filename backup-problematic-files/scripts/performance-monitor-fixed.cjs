@@ -1,47 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node;#!/usr/bin/env node;
-#!/usr/bin/env node;#!/usr/bin/env node;
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class PerformanceMonitor { constructor() { this.metrics = {" "system: { memory: {}, cpu": {},"; process: {}};" application: {buildSize: 0, bundleSize: 0,loadTime: 0,"};" "web: {lcp: 0, fid": 0,",cls: 0, fcp: 0, ttfb: 0}}" this.reportFile = path.join(process.cwd(), "performance-report.json");"}" async collectSystemMetrics() { try {"const fs = require("child_process");"const path = require("path")class PerformanceMonitor { constructor() { this.projectRoot = process.cwd() this.metrics = {" timestamp: new Date().toISOString(); system: { memory: {};" cpu: {};" process: {} };" application: { buildSize: 0; dependenciesSize: 0; sourceSize: 0; fileCounts: {} };" build: {hasBuildArtifacts: false,buildTime: 0; bundleSize: 0} } } async sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms))} async monitor() { try {" console.log(" Collecting performance metrics.") / Collect system metrics await this.collectSystemMetrics() / Collect application metrics await this.collectApplicationMetrics() / Collect build metrics await this.collectBuildMetrics() / Save metrics await this.saveMetrics() / Display summary this.displaySummary()" console.log(" Performance monitoring completed")} catch (error) {" console.error(" Error during performance monitoring: ", error.message)}"const { execSync } = require("child_process")class PerformanceMonitor { constructor() { this.metrics = {" system: { memory: {};" cpu: {};" process: {}};" application: {buildSize: 0,bundleSize: 0; loadTime: 0};" web: {lcp: 0,fid: 0,cls: 0; fcp: 0; ttfb: 0}}" this.reportFile = path.join(process.cwd(), "performance-report.json")} try {}async collectSystemMetrics() { try {" console.log(" Collecting system metrics.") / Memory usage const memoryInfo = process.memoryUsage() this.metrics.system.memory = {" rss: Math.round(memoryInfo.rss / 1024 / 1024), / MB" heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), / MB" heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), / MB" external: Math.round(memoryInfo.external / 1024 / 1024) / MB} / CPU usage const startUsage = process.cpuUsage() await this.sleep(100); / Wait 100ms const endUsage = process.cpuUsage(startUsage) this.metrics.system.cpu = {" user: Math.round(endUsage.user / 1000), / ms" system: Math.round(endUsage.system / 1000) / ms} / Process info" this.metrics.system.process = {pid: process.pid,uptime: Math.round(process.uptime()),version: process.version; platform: process.platform; arch: process.arch}" console.log(" System metrics collected")} catch (error) {" console.warn(" Could not collect system metrics: ", error.message)} } async collectApplicationMetrics() { try {" console.log(" Collecting application metrics.") / Check file sizes" const distPath = path.join(this.projectRoot, "dist") if (fs.existsSync(distPath)) {const distSize = this.getDirectorySize(distPath) this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024),/ MB} / Check node_modules size" const nodeModulesPath = path.join(this.projectRoot, "node_modules") if (fs.existsSync(nodeModulesPath)) {const nodeModulesSize = this.getDirectorySize(nodeModulesPath) this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024),/ MB} / Check source code size" const srcPath = path.join(this.projectRoot, "src") if (fs.existsSync(srcPath)) {const srcSize = this.getDirectorySize(srcPath) this.metrics.application.sourceSize = Math.round(srcSize / 1024),/ KB} / Count files" this.metrics.application.fileCounts = {source: this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),components: this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),pages: this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"])}" console.log(" Application metrics collected")} catch (error) {" console.warn(" Could not collect application metrics: ", error.message)} } async collectBuildMetrics() { try {" console.log(" Collecting build metrics.") / Check if build artifacts exist" const buildFiles = ["dist/index.html","dist/css","dist/js";" "dist/assets"] this.metrics.build.hasBuildArtifacts = buildFiles.some(file => fs.existsSync(path.join(this.projectRoot, file))) / Check build configuration" const packageJsonPath = path.join(this.projectRoot, "package.json") if (fs.existsSync(packageJsonPath)) {" const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")) this.metrics.build.scripts = Object.keys(packageJson.scripts | {})}" console.log(" Build metrics collected")} catch (error) {" console.warn(" Could not collect build metrics: ", error.message) / Check if build directory exists" const buildDir = path.join(process.cwd(), ".next") if (fs.existsSync(buildDir)) { const buildSize = this.getDirectorySize(buildDir) this.metrics.application.buildSize = Math.round( buildSize / 1024 / 1024)} / Check bundle size" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")) const dependencies = Object.keys(packageJson.dependencies | {}).length const devDependencies = Object.keys( packageJson.devDependencies | {} ).length this.metrics.application.bundleSize = dependencies + devDependencies} catch (error) {" console.error("Error collecting application metrics: ", error.message)} } async collectWebMetrics() { try { / Simulate web vitals collection this.metrics.web = {" lcp: Math.random() * 3000 + 1000, / 1-4 seconds" fid: Math.random() * 100 + 10, / 10-110ms" cls: Math.random() * 0.1, / 0-0.1" fcp: Math.random() * 2000 + 500, / 0.5-2.5 seconds" ttfb: Math.random() * 500 + 100, / 100-600ms} } catch (error) {" console.error("Error collecting web metrics: ", error.message)}" console.warn(" Could not collect build metrics: ", error.message)}#!/usr/bin/env node;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;#!/usr/bin/env node;
-=======
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class PerformanceMonitor { constructor() { this.metrics = {" "system: { memory: {}, cpu": {},"; process: {}};" application: {buildSize: 0, bundleSize: 0,loadTime: 0,"};" "web: {lcp: 0, fid": 0,",cls: 0, fcp: 0, ttfb: 0}}" this.reportFile = path.join(process.cwd(), "performance-report.json");"}" async collectSystemMetrics() { try {"const fs = require("child_process");"const path = require("path")class PerformanceMonitor { constructor() { this.projectRoot = process.cwd() this.metrics = {" timestamp: new Date().toISOString(); system: { memory: {};" cpu: {};" process: {} };" application: { buildSize: 0; dependenciesSize: 0; sourceSize: 0; fileCounts: {} };" build: {hasBuildArtifacts: false,buildTime: 0; bundleSize: 0} } } async sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms))} async monitor() { try {" console.log(" Collecting performance metrics.") / Collect system metrics await this.collectSystemMetrics() / Collect application metrics await this.collectApplicationMetrics() / Collect build metrics await this.collectBuildMetrics() / Save metrics await this.saveMetrics() / Display summary this.displaySummary()" console.log(" Performance monitoring completed")} catch (error) {" console.error(" Error during performance monitoring: ", error.message)}"const { execSync } = require("child_process")class PerformanceMonitor { constructor() { this.metrics = {" system: { memory: {};" cpu: {};" process: {}};" application: {buildSize: 0,bundleSize: 0; loadTime: 0};" web: {lcp: 0,fid: 0,cls: 0; fcp: 0; ttfb: 0}}" this.reportFile = path.join(process.cwd(), "performance-report.json")} try {}async collectSystemMetrics() { try {" console.log(" Collecting system metrics.") / Memory usage const memoryInfo = process.memoryUsage() this.metrics.system.memory = {" rss: Math.round(memoryInfo.rss / 1024 / 1024), / MB" heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), / MB" heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), / MB" external: Math.round(memoryInfo.external / 1024 / 1024) / MB} / CPU usage const startUsage = process.cpuUsage() await this.sleep(100); / Wait 100ms const endUsage = process.cpuUsage(startUsage) this.metrics.system.cpu = {" user: Math.round(endUsage.user / 1000), / ms" system: Math.round(endUsage.system / 1000) / ms} / Process info" this.metrics.system.process = {pid: process.pid,uptime: Math.round(process.uptime()),version: process.version; platform: process.platform; arch: process.arch}" console.log(" System metrics collected")} catch (error) {" console.warn(" Could not collect system metrics: ", error.message)} } async collectApplicationMetrics() { try {" console.log(" Collecting application metrics.") / Check file sizes" const distPath = path.join(this.projectRoot, "dist") if (fs.existsSync(distPath)) {const distSize = this.getDirectorySize(distPath) this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024),/ MB} / Check node_modules size" const nodeModulesPath = path.join(this.projectRoot, "node_modules") if (fs.existsSync(nodeModulesPath)) {const nodeModulesSize = this.getDirectorySize(nodeModulesPath) this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024),/ MB} / Check source code size" const srcPath = path.join(this.projectRoot, "src") if (fs.existsSync(srcPath)) {const srcSize = this.getDirectorySize(srcPath) this.metrics.application.sourceSize = Math.round(srcSize / 1024),/ KB} / Count files" this.metrics.application.fileCounts = {source: this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),components: this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),pages: this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"])}" console.log(" Application metrics collected")} catch (error) {" console.warn(" Could not collect application metrics: ", error.message)} } async collectBuildMetrics() { try {" console.log(" Collecting build metrics.") / Check if build artifacts exist" const buildFiles = ["dist/index.html","dist/css","dist/js";" "dist/assets"] this.metrics.build.hasBuildArtifacts = buildFiles.some(file => fs.existsSync(path.join(this.projectRoot, file))) / Check build configuration" const packageJsonPath = path.join(this.projectRoot, "package.json") if (fs.existsSync(packageJsonPath)) {" const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")) this.metrics.build.scripts = Object.keys(packageJson.scripts | {})}" console.log(" Build metrics collected")} catch (error) {" console.warn(" Could not collect build metrics: ", error.message) / Check if build directory exists" const buildDir = path.join(process.cwd(), ".next") if (fs.existsSync(buildDir)) { const buildSize = this.getDirectorySize(buildDir) this.metrics.application.buildSize = Math.round( buildSize / 1024 / 1024)} / Check bundle size" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")) const dependencies = Object.keys(packageJson.dependencies | {}).length const devDependencies = Object.keys( packageJson.devDependencies | {} ).length this.metrics.application.bundleSize = dependencies + devDependencies} catch (error) {" console.error("Error collecting application metrics: ", error.message)} } async collectWebMetrics() { try { / Simulate web vitals collection this.metrics.web = {" lcp: Math.random() * 3000 + 1000, / 1-4 seconds" fid: Math.random() * 100 + 10, / 10-110ms" cls: Math.random() * 0.1, / 0-0.1" fcp: Math.random() * 2000 + 500, / 0.5-2.5 seconds" ttfb: Math.random() * 500 + 100, / 100-600ms} } catch (error) {" console.error("Error collecting web metrics: ", error.message)}" console.warn(" Could not collect build metrics: ", error.message)}#!/usr/bin/env node;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;#!/usr/bin/env node;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
 #!/usr/bin/env node;
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 #!/usr/bin/env node;#!/usr/bin/env node;
 #!/usr/bin/env node;#!/usr/bin/env node;
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
       "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
@@ -49,24 +11,6 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
 const fs = require("child_process")
 const path = require("path")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()
@@ -144,28 +88,6 @@ async collectSystemMetrics() {
   async collectApplicationMetrics() {
     try {
       // Check file sizes
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "timestamp"
         "cpu"
         "process"
@@ -195,24 +117,6 @@ const { execSync } = require("child_process")
       const distPath = path.join(this.projectRoot, "dist")
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const srcPath = path.join(this.projectRoot, "src")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       if (fs.existsSync(srcPath)) {const srcSize = this.getDirectorySize(srcPath)
         this.metrics.application.sourceSize = Math.round(srcSize / 1024),// KB}
       // Count files
@@ -260,27 +164,6 @@ const { execSync } = require("child_process")
     } catch (error) {
       console.error("Error collecting web "metrics": ", error.message)}
       }
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0
@@ -559,23 +442,6 @@ class PerformanceMonitor {
       "} catch (error) {console.error("Error saving report":", error.message),"}"}
   getRecommendations() {
     const recommendations = []
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")
@@ -630,44 +496,8 @@ class PerformanceMonitor {
         "Reduce First Input Delay - minimize JavaScript execution time"
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
-<<<<<<< HEAD
-        "Optimize memory usage - check for memory leaks and optimize data structures"
-=======
-        "Optimize memory usage - check for memory leaks and optimize data structures"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  console.error("Fatal "error": ")  console.error("Fatal "error": ")
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
   console.error("Fatal "error": ")
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
-=======
+  console.error("Fatal "error": ")  console.error("Fatal "error": ")
   console.error("Fatal "error": ")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-  console.error("Fatal "error": ")
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-  console.error("Fatal "error": ")  console.error("Fatal "error": ")
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

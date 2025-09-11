@@ -33,11 +33,3 @@ export interface InnovativeMicroSaas2029 {
   rating: number;
 export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] = [;
   // AI & Machine Learning Services;
-<<<<<<< HEAD:data-disabled/2029-innovative-micro-saas.ts
-  {
-    id: "ai-emotional-intelligence-platform",;
-    name: "AI Emotional Intelligence Platform",;
-    tagline: "Advanced AI that understands and responds to human emotions",;
-    price: "$2,999",;
-    period: "/month",;
-    description: "Revolutionary AI platform that understands, analyzes, and responds to human emotions in real-time. Perfect for customer service, mental health support, and human-AI interaction enhancement.",;

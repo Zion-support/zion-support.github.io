@@ -36,11 +36,3 @@ export interface NextGenerationAIService {
   customers: number;
   rating: number;
 export const nextGenerationAIServices: NextGenerationAIService[] = [;
-<<<<<<< HEAD:data-disabled/next-generation-ai-services.ts
-  {
-    id: "quantum-ai-brain-computer-interface",;
-    name: "Quantum AI Brain-Computer Interface",;
-    tagline: "World\"s first quantum-enhanced AI with human-like reasoning",;
-    price: "$2,999",;
-    period: "/month",;
-    description: "Revolutionary quantum AI platform that interfaces directly with neural signals, enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.",;

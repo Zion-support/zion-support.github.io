@@ -15,6 +15,9 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+  ];
+=======
     return this.props.children;
   }
 }
@@ -42,6 +45,7 @@ import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-service
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
+>>>>>>> main
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }

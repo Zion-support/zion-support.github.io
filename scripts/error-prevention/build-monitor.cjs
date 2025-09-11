@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -16,14 +15,6 @@
   async attemptBuildFix() {}
     try {}
       console.log('Attempting to fix build issues...');
-<<<<<<< HEAD
-=======
-            // Clean build directory;
-      const cleanChild = spawn('npm', ['run', 'clean'], {})
-        "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -59,7 +50,3 @@ if ( {})
     process.exit(0)}
 });
   monitor.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = BuildMonitor;
-=======
-module.exports = BuildMonitor;

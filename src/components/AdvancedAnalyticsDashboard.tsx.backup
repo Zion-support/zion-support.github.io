@@ -11,7 +11,6 @@ const _AdvancedAnalyticsDashboard = () => {
     const [selectedMetric, setSelectedMetric] = useState('overview');
     // Mock data - in real app this would come from API
     const _metrics = [
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
@@ -56,7 +55,6 @@ const AdvancedAnalyticsDashboard = () => {
       {/* Metrics Cards */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {metrics.map((metric, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
-=======
                 return 'bg-gray-100 text-gray-800'}
     };
     return (<div className="max-w-7xl mx-auto p-6">
@@ -271,38 +269,3 @@ const AdvancedAnalyticsDashboard = () => {
                   <h4 className="font-semibold text-zion-slate-dark">Satisfaction Score</h4>
                   <p className="text-sm text-zion-slate-light">
       {/* CTA Section */}
-<<<<<<< HEAD
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-center">
-=======
-      <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-}} transition={{ delay: 0.4 }} className="text-center">        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
-          <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>
-          <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Access comprehensive analytics, custom reports, and real-time insights 
-            to optimize your business performance and make data-driven decisions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-}>
-              <Rocket className="w-5 h-5 mr-2"/>
-              Request Access
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
-  () => window.open('tel:+13024640950',
-  '_blank')
-
-}>              <Shield className="w-5 h-5 mr-2"/>
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </motion.div>
-=======
-    </div>)};
-export default AdvancedAnalyticsDashboard;

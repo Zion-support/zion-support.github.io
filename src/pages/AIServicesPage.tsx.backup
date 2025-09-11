@@ -12,7 +12,6 @@ const services = [];
 const solutions = [];
 const implementation = [];
 const _AIServices = [
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -202,8 +201,3 @@ const AIServices = [    {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}
-=======
-    </div>)}

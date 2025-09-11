@@ -44,11 +44,3 @@ export interface Revolutionary2025Service {;
   rating: number;
 export const revolutionary2025Services: Revolutionary2025Service[] = [;
   // Revolutionary AI Services 2025;
-<<<<<<< HEAD:data-disabled/revolutionary-2025-services.ts
-  {
-    id: "ai-consciousness-simulator",;
-    name: "AI Consciousness Simulator",;
-    tagline: "Simulate and test AI consciousness emergence patterns",;
-    price: "$15,999",;
-    period: "/month",;
-    description: "Advanced AI consciousness simulation platform for researchers, ethicists, and AI safety organizations. Test consciousness emergence, ethical boundaries, and safety protocols in controlled environments.",;
