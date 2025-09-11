@@ -280,6 +280,40 @@ export default function BlogPage() {
 	    category: 'Startup Strategy',
 	    featured: true,
 	    image: '/api/placeholder/600/400',
+	  },
+	  // New articles added
+	  {
+	    id: 'ai-productivity-automation-2025',
+	    title: 'AI Productivity Automation: The 2025 Complete Guide',
+	    excerpt:
+	      'Discover how AI automation is revolutionizing workplace productivity in 2025 with practical strategies and implementation frameworks.',
+	    date: '2025-01-28',
+	    readTime: '12 min read',
+	    category: 'AI & Productivity',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'cloud-native-architecture-2025',
+	    title: 'Cloud-Native Architecture in 2025: Building for Scale and Resilience',
+	    excerpt:
+	      'Explore the latest trends and best practices in cloud-native architecture for scalable, resilient, and cost-effective systems.',
+	    date: '2025-01-28',
+	    readTime: '14 min read',
+	    category: 'Cloud & DevOps',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-growth-hacking-2025',
+	    title: 'Startup Growth Hacking in 2025: Data-Driven Strategies That Actually Work',
+	    excerpt:
+	      'Discover the latest growth hacking strategies driving explosive growth for startups with data-driven techniques and proven frameworks.',
+	    date: '2025-01-28',
+	    readTime: '11 min read',
+	    category: 'Growth & Marketing',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
 	  }
 	];
 
