@@ -354,7 +354,7 @@ export const verified2025Additions: VerifiedService2025[] = [
       'CSV/JSON exports'
     ],
     popular: false,
-    icon: '⏱️',
+    icon: '⏱️',;
     color: 'from-slate-600 to-gray-700',;
     textColor: 'text-slate-300',;
     link: 'https://ziontechgroup.com/services/advanced-uptime-and-slo-checks',;
