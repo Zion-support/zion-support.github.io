@@ -32,3 +32,6 @@ automation/data/*.json
 core
 core.*
 *.core
+
+core
+
