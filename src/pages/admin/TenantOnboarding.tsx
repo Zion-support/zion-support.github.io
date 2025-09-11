@@ -1,53 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react"
-import {Header} from "@/components/Header"
-import {SEO} from "@/components/SEO"
-import {useAuth} from "@/hooks/useAuth"
-import {useRouter} from "next/router"
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
-import {Input} from "@/components/ui/input"
-import {Label} from "@/components/ui/label"
-import {Button} from "@/components/ui/button"
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
-import {toast} from "sonner"
-import {supabase} from "@/integrations/supabase/client"
-import {Switch} from "@/components/ui/switch"
-import {logErrorToProduction} from '@/utils/productionLogger'
-export default function TenantOnboarding() {
-  const { user } = useAuth()
-  const [activeTab, setActiveTab] = useState("company")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from "next/router",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-import { supabase } from "@/integrations/supabase/client",
-import { Switch } from "@/components/ui/switch";
-export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-import { Switch } from "@/components/ui/switch",
-import { logErrorToProduction } from '@/utils/productionLogger',
-export default function TenantOnboarding() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("company"),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [formData, setFormData] = useState({
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 const [formData, setFormData] = useState({
 
     brand_name: ""
@@ -60,22 +11,7 @@ const [formData, setFormData] = useState({
     custom_domain: ""
 
     is_co_branded: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-  });
-  // Check if user has admin role
-  const isAdmin = null;
-  });
-  // Check if user has admin role
-  const isAdmin = null;
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   })
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
@@ -168,18 +104,8 @@ const [formData, setFormData] = useState({
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
   return (
-=======
 
-  return (
-    <>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SEO 
         title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
@@ -389,14 +315,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </main>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-ursor/fix-website-loading-errors-and-merge-6662
-}
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -419,8 +337,7 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 }
 
 import React, { useState } from "react";
@@ -741,12 +658,6 @@ export default function TenantOnboarding() {;
     </>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -785,11 +696,4 @@ function TenantOnboarding() {
       }
   );
 }
-<<<<<<< HEAD
-;
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+

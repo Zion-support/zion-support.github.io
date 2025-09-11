@@ -5,10 +5,7 @@ import Button from './Button';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-<<<<<<< HEAD
-=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -32,13 +29,16 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleDropdownToggle = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white shadow-lg">
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -46,16 +46,16 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-6 mb-2 md:mb-0">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <span>+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <span>info@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+              <span>New York, NY</span>
             </div>
           </div>
         </div>
@@ -65,30 +65,52 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
-              <p className="text-sm text-gray-600">AI & Technology Solutions</p>
+              <p className="text-sm text-gray-600">Innovation & Excellence</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
-            </Link>
-            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
-            </Link>
+            {navigation.map((item) => (
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div>
+                    <button
+                      onClick={() => handleDropdownToggle(item.name)}
+                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 flex items-center space-x-1"
+                    >
+                      <span>{item.name}</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {activeDropdown === item.name && (
+                      <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50">
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link to={item.href} className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
             <Button variant="primary" size="small">
               Get Started
             </Button>
@@ -103,9 +125,6 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
-export default Header;
-=======
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-slate-700">
@@ -128,10 +147,9 @@ export default Header;
             </nav>
           </div>
         )}
-      </nav>
+      </div>
     </header>
   );
 };
 
 export default Header;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-
-// https://vitejs.dev/config/
-=======
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-<<<<<<< HEAD
       '@components': path.resolve(__dirname, './src/components'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@utils': path.resolve(__dirname, './src/utils'),
@@ -20,34 +15,11 @@ export default defineConfig({
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
       '@assets': path.resolve(__dirname, './src/assets')
-=======
     },
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          router: ['react-router-dom']
-        }
-      }
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-    }
   },
   server: {
     port: 3000,
     open: true,
-<<<<<<< HEAD
     host: true,
   },
   css: {
@@ -72,12 +44,8 @@ export default defineConfig({
         }
       }
     }
-  }
-});
-=======
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

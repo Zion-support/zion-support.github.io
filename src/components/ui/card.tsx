@@ -1,24 +1,5 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
-<<<<<<< HEAD
-
-const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-  ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn(
-        'rounded-lg border bg-card text-card-foreground shadow-sm',
-        className
-      )}
-      {...props}
-    />
-  )
-);
-=======
-const Card = React.forwardRef((_a, ref) => {
-    let { className } = _a, props = __rest(_a, ["className"]);
-    return (_jsx("div", Object.assign({ ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))});
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Card.displayName = 'Card';
 
 const CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
