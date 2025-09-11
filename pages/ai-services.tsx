@@ -1,119 +1,149 @@
 import React from 'react';
 import Head from 'next/head';
 import { Brain, Cpu, Database, Network, Rocket, Phone, Mail, MapPin, Check, FlaskConical } from 'lucide-react';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import Button from '../components/ui/Button';
-import ServiceAds from '../components/sections/ServiceAds';
 
-export default function AIServicesPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const tracks = [
-    { icon: <Brain className="w-6 h-6 text-cyan-400" />, title: 'LLM Applications', desc: 'Custom GPT-style apps, copilots, and autonomous agents integrated with your systems.' },
-    { icon: <Database className="w-6 h-6 text-emerald-400" />, title: 'RAG & Vector Search', desc: 'Retrieval augmented generation with hybrid search, chunking, and evaluation frameworks.' },
-    { icon: <Cpu className="w-6 h-6 text-purple-400" />, title: 'MLOps', desc: 'Model lifecycle, feature stores, experiment tracking, CI/CD for ML, model registries.' },
-    { icon: <FlaskConical className="w-6 h-6 text-amber-400" />, title: 'AI for Research', desc: 'Knowledge graphs, literature mining, hypothesis generation and automated reviews.' },
-  ];
-
-  const packages = [
-    { name: 'Prototype', price: '$6,900 fixed', items: ['Problem framing workshop', 'Clickable demo in 2 weeks', 'Data feasibility check', 'T-shirt sizing for scale'] },
-    { name: 'Production', price: '$18,900 fixed', items: ['RAG pipeline + evals', 'Observability & guardrails', 'Cost/perf tuning', 'Rollout playbook'] },
-    { name: 'Managed AI', price: 'From $3,500/month', items: ['SLA-backed ops', 'Drift monitoring', 'A/B and feedback loops', 'Quarterly roadmap review'] },
-  ];
-
-  const featuredAIAds = [
+const AIServicesPage: React.FC = () => {
+  const services = [
     {
-      title: '🤖 AI Assistant Pro',
-      description: 'Secure, branded copilot with RAG, handoff, and analytics to cut support tickets 30-50%.',
-      price: 'Starting at $149/month',
-      features: ['RAG over your docs', 'Slack/Teams channels', 'Human handoff', 'Conversation analytics'],
-      link: 'https://ziontechgroup.com/ai-assistant',
-      contactInfo
+      icon: Brain,
+      title: "AI Development",
+      description: "Custom AI solutions tailored to your business needs",
+      features: ["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
     },
     {
-      title: '🧪 AI Evals & Observability',
-      description: 'Ship reliable LLM features with regression testing, red-teaming, and live metrics.',
-      price: 'Starting at $99/month',
-      features: ['Dataset/version mgmt', 'Guardrail checks', 'Latency/cost KPIs', 'Prompt diffing'],
-      link: 'https://ziontechgroup.com/ai-evals',
-      contactInfo
+      icon: Cpu,
+      title: "Automation",
+      description: "Streamline your operations with intelligent automation",
+      features: ["Process Automation", "Workflow Optimization", "Data Processing", "System Integration"]
     },
     {
-      title: '🔗 Agentic RAG Platform',
-      description: 'Production RAG with hybrid search, chunking strategies, and agentic tools.',
-      price: 'Starting at $179/month',
-      features: ['Hybrid vector+BM25', 'Chunking + citations', 'Toolformer-style agents', 'Eval suite'],
-      link: 'https://ziontechgroup.com/agentic-rag',
-      contactInfo
+      icon: Shield,
+      title: "AI Security",
+      description: "Protect your systems with AI-powered security solutions",
+      features: ["Threat Detection", "Anomaly Detection", "Security Monitoring", "Incident Response"]
     },
     {
-      title: '🛡️ AI Guardrails Suite',
-      description: 'Policy enforcement, jailbreak detection, PII/PHI controls, and audit trails.',
-      price: 'Starting at $199/month',
-      features: ['Prompt/output policy engine', 'Jailbreak detection', 'PII/PHI redaction', 'Audit logs & alerts'],
-      link: 'https://ziontechgroup.com/ai-guardrails',
-      contactInfo
+      icon: Users,
+      title: "AI Consulting",
+      description: "Expert guidance on AI strategy and implementation",
+      features: ["AI Strategy", "Technology Assessment", "Implementation Planning", "Training & Support"]
     }
   ];
 
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced decision-making capabilities",
+    "Improved customer experience",
+    "Competitive advantage in the market"
+  ];
+
   return (
-    <QuantumHolographicMatrixBackground intensity="high">
+    <>
       <Head>
-        <title>AI Services | Zion Tech Group</title>
-        <meta name="description" content="LLM apps, RAG, MLOps, and AI research enablement with transparent pricing and measurable outcomes." />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including development, automation, security, and consulting. Transform your business with cutting-edge AI solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, AI consulting" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
 
-      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <ServiceAds heading="Featured AI Services" subheading="Production-ready offerings with transparent pricing." items={featuredAIAds} />
-        <div className="text-center max-w-4xl mx-auto mb-12">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Services</h1>
-          <p className="text-xl text-gray-300">From prototype to production, we build AI systems that are safe, observable, and cost-efficient.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {tracks.map((t) => (
-            <div key={t.title} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-              <div className="mb-4">{t.icon}</div>
-              <h3 className="text-white font-semibold mb-2">{t.title}</h3>
-              <p className="text-gray-400 text-sm">{t.desc}</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Services</span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions. From development to deployment, we provide comprehensive AI services that drive real results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="primary" size="lg">
+                Get Started
+              </Button>
+              <Button variant="outline" size="lg">
+                Learn More
+              </Button>
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
-        <div className="max-w-6xl mx-auto mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {packages.map((p) => (
-              <div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>
-                <div className="text-cyan-400 font-semibold mb-4">{p.price}</div>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  {p.items.map((i) => (
-                    <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 mt-0.5 text-emerald-400" /> <span>{i}</span></li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Our AI Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-colors"
+                >
+                  <div className="mb-4">
+                    <service.icon className="h-12 w-12 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-slate-400 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-slate-300">
+                        <Check className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div className="max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-            <div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><span>{contactInfo.mobile}</span></div>
-            <div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><span>{contactInfo.email}</span></div>
-            <div className="flex items-center justify-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><span className="text-xs">{contactInfo.address}</span></div>
+        {/* Benefits Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Why Choose Our AI Services?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="bg-slate-800 rounded-xl p-6 border border-slate-700"
+                >
+                  <div className="flex items-center mb-4">
+                    <Check className="h-6 w-6 text-green-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="text-center">
-            <Button href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Start Your AI Journey</Button>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Contact us today for a free consultation and discover how AI can revolutionize your operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="primary" size="lg">
+                Schedule Consultation
+              </Button>
+              <Button variant="outline" size="lg">
+                View Portfolio
+              </Button>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </QuantumHolographicMatrixBackground>
+    </>
   );
-}
+};
 
+export default AIServicesPage;

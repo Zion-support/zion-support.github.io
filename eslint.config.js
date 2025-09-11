@@ -1,164 +1,18 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
 import js from '@eslint/js';
-import react from 'eslint-plugin-react';
+import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
+// import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import tsparser from "@typescript-eslint/parser";
-import react from "eslint-plugin-react";
-import jsxA11y from "eslint-plugin-jsx-a11y";
-import js from '@eslint/js';
-import js from '@eslint/js';
-    files: ["**/*.{js,jsx,ts,tsx}"],
-    ignores: [
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-      'coverage/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
-      'backup-merge-conflicts/**',
-      '**/*.backup.*',
-      '**/*.old.*',
-      '**/*.disabled.*',
-      '**/*.broken.*',
-      '**/*.corrupted.*',
-      '**/*.temp.*',
-      '**/*.test.*',
-      '**/*.spec.*',
-      '**/performance-*.txt'
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/zion-academy/**',
-      '**/zion-film/**',
-      '**/zion-ai-assistant/**',
-      '**/*.min.js',
-      '**/*.bundle.js',
-      '**/public/**',
-      '**/static/**',
-    ],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
-        // Browser globals
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        // Node.js globals
-        process: 'readonly',
-        global: 'readonly',
-        // Testing globals
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
-        // Deno globals
-        Deno: 'readonly',
-        // React globals
-        React: 'readonly',
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-    },
-    rules: {
-      ...react && react.configs.recommended && recommended.rules,
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "prefer-const": "error",
-      "no-var": "error",
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off"
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
-        ...globals && globals.browser,
-        ...globals && globals.node,
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+
 export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: typescriptParser,
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -167,6 +21,8 @@ export default [
         }
       },
       globals: {
+        ...globals.browser,
+        ...globals.node,
         React: 'readonly',
         console: 'readonly',
         process: 'readonly',
@@ -184,67 +40,29 @@ export default [
         jest: 'readonly',
         test: 'readonly',
         expect: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "prefer-const": "error",
-      "no-var": "error",
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-    },
-  },
-  {
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "module",
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: "readonly",
-        jest: "readonly",
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        React: 'readonly',
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-export default [
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-        afterAll: "readonly"
-        afterAll: "readonly",
-      },
+      }
     },
     plugins: {
       react,
       'react-hooks': reactHooks,
       '@typescript-eslint': tseslint,
+      'jsx-a11y': jsxA11y
     },
     rules: {
-      ...tseslint && tseslint.configs.recommended && recommended.rules,
-      ...react && react.configs.recommended && recommended.rules,
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
-      ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true }
-      ],
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      // "react-refresh/only-export-components": [
+      //   "warn",
+      //   { allowConstantExport: true }
+      // ],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "react-hooks/exhaustive-deps": "warn",
@@ -252,50 +70,12 @@ export default [
       "no-unused-vars": "off",
       "no-console": "warn",
       "react/prop-types": "off",
-        describe: 'readonly',
-        it: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly'
-      }
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks
-    },
-    rules: {
       "react/react-in-jsx-scope": "off"
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "react-hooks/exhaustive-deps": "warn",
-      "no-undef": "off",
-      "no-unused-vars": "off",
-      "no-console": "warn",
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
     },
     settings: {
       react: {
-        version: 'detect',
-      },
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'no-undef': 'error'
-    }
-  }
-];
-      'no-unused-vars': 'warn'
+        version: 'detect'
+      }
     }
   },
   {
@@ -323,6 +103,14 @@ export default [
       '**/src_backup/**',
       '**/src_disabled/**',
       '**/services.disabled.temp/**',
+      '**/zion-os/**',
+      '**/zion-website/**',
+      '**/zion-academy/**',
+      '**/zion-film/**',
+      '**/zion-ai-assistant/**',
+      '**/utils/**',
+      '**/pages-disabled/**',
+      '**/pages._archive_corrupted/**',
       'test-*.js',
       'workbox-config.js',
       '*.backup.*',
@@ -395,12 +183,4 @@ export default [
       'test*.tsx'
     ]
   }
-];
-  }
-];
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "no-undef": "error",
-    },
-  },
 ];
