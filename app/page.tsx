@@ -330,8 +330,8 @@ export default function HomePage() {
               🚀 Fresh Insights & Expert Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: Startup SEO Playbook 2025, LLM Evals in Production, and
-              the Startup SEO Content Engine. Practical guides to grow faster in 2025.
+              New this week: AI Sales Automation 2025 and Edge AI in Logistics 2025. Pragmatic playbooks to drive revenue
+              and real-time operations with guardrails.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -348,25 +348,25 @@ export default function HomePage() {
               </Link>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
-              <Link href='/resources/startup-seo-playbook-2025' className='group'>
+              <Link href='/blog/ai-sales-automation-2025' className='group'>
                 <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
-                  <div className='text-3xl mb-3'>📈</div>
-                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Startup SEO Playbook 2025</h3>
-                  <p className='text-white/80 text-sm mt-2'>Ship weekly. Compound traffic and pipeline.</p>
+                  <div className='text-3xl mb-3'>🤝</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>AI Sales Automation 2025</h3>
+                  <p className='text-white/80 text-sm mt-2'>More pipeline with brand-safe automation.</p>
                 </div>
               </Link>
-              <Link href='/blog/llm-evals-in-production-2025' className='group'>
+              <Link href='/blog/edge-ai-in-logistics-2025' className='group'>
                 <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
-                  <div className='text-3xl mb-3'>🧪</div>
-                  <h3 className='text-xl font-semibold text-white group-hover:underline'>LLM Evals in Production</h3>
-                  <p className='text-white/80 text-sm mt-2'>CI evals, judge models, budgets tied to outcomes.</p>
+                  <div className='text-3xl mb-3'>🚚</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Edge AI in Logistics 2025</h3>
+                  <p className='text-white/80 text-sm mt-2'>Real-time ops with privacy by design.</p>
                 </div>
               </Link>
-              <Link href='/blog/startup-seo-content-engine-2025' className='group'>
+              <Link href='/blog/ai-productivity-playbook-2025' className='group'>
                 <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
-                  <div className='text-3xl mb-3'>🧱</div>
-                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Startup SEO Content Engine</h3>
-                  <p className='text-white/80 text-sm mt-2'>A lean system to publish weekly, consistently.</p>
+                  <div className='text-3xl mb-3'>⚙️</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>AI Productivity Playbook 2025</h3>
+                  <p className='text-white/80 text-sm mt-2'>Ship faster without breaking things.</p>
                 </div>
               </Link>
             </div>
@@ -383,17 +383,17 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[{
+              id: 'ai-sales-automation-2025',
+              title: 'AI Sales Automation 2025',
+              excerpt: 'Pipeline growth with brand-safe automation and evals.'
+            }, {
+              id: 'edge-ai-in-logistics-2025',
+              title: 'Edge AI in Logistics 2025',
+              excerpt: 'On-device intelligence for routing, ETA, and cold-chain.'
+            }, {
               id: 'ai-productivity-playbook-2025',
               title: 'AI Productivity Playbook 2025',
-              excerpt: 'Boost throughput with AI while keeping quality and costs in check.'
-            }, {
-              id: 'cloud-cost-optimization-2025',
-              title: 'Cloud Cost Optimization 2025',
-              excerpt: 'Cut 30–50% without downtime: quick wins and architecture moves.'
-            }, {
-              id: 'edge-ai-retail-2025',
-              title: 'Edge AI in Retail 2025',
-              excerpt: 'Real-time CX with privacy by design and on-device intelligence.'
+              excerpt: 'Boost throughput without breaking things or budgets.'
             }].map((post) => (
               <Link key={post.id} href={`/blog/${post.id}`} className='group'>
                 <article className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow'>
