@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 export default function BlogPage() {
@@ -36,6 +37,8 @@ export default function BlogPage() {
       image: '/api/placeholder/600/400',
     },
     {
+<<<<<<< HEAD
+=======
       id: 'blockchain-business-applications',
       title: 'Blockchain Beyond Crypto: Real Business Applications',
       excerpt:
@@ -47,6 +50,7 @@ export default function BlogPage() {
       image: '/api/placeholder/600/400',
     },
     {
+>>>>>>> origin/main
       id: 'cybersecurity-2025-trends',
       title: 'Cybersecurity Trends Every Business Should Know in 2025',
       excerpt:
@@ -173,7 +177,9 @@ export default function BlogPage() {
   );
 }
 
-function FeaturedPostCard({ post }: { post: any }) {
+import type { FC } from 'react';
+
+const FeaturedPostCard: FC<{ post: any }> = ({ post }) => {
   return (
     <Link href={`/blog/${post.id}`} className='group'>
       <article className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
@@ -201,9 +207,9 @@ function FeaturedPostCard({ post }: { post: any }) {
       </article>
     </Link>
   );
-}
+};
 
-function PostCard({ post }: { post: any }) {
+const PostCard: FC<{ post: any }> = ({ post }) => {
   return (
     <Link href={`/blog/${post.id}`} className='group'>
       <article className='bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow'>
@@ -231,4 +237,8 @@ function PostCard({ post }: { post: any }) {
       </article>
     </Link>
   );
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> origin/main
