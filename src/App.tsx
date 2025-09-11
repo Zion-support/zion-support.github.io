@@ -22,14 +22,14 @@ const CloudMigration = React.lazy(() => import('./pages/CloudMigrationServices')
 const DevOps = React.lazy(() => import('./pages/CloudDevOpsServices').catch(() => ({ default: () => <div>Error loading DevOps page</div> })));
 const MobileDevelopment = React.lazy(() => import('./pages/MobileAppPage').catch(() => ({ default: () => <div>Error loading Mobile Development page</div> })));
 
-// Additional service pages
-const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite').catch(() => ({ default: () => <div>Error loading AI Content Generation Suite</div> })));
-const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services').catch(() => ({ default: () => <div>Error loading Cloud Migration Services</div> })));
-const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform').catch(() => ({ default: () => <div>Error loading Smart CRM Platform</div> })));
+// Additional service pages (only existing ones)
 const AIEmailResponder = lazy(() => import('./pages/services/ai-email-responder').catch(() => ({ default: () => <div>Error loading AI Email Responder</div> })));
 const MobileSurveyTool = lazy(() => import('./pages/services/mobile-survey-tool').catch(() => ({ default: () => <div>Error loading Mobile Survey Tool</div> })));
 const AITalentMatching = lazy(() => import('./pages/services/ai-talent-matching').catch(() => ({ default: () => <div>Error loading AI Talent Matching</div> })));
 const EcommerceReturnManagement = lazy(() => import('./pages/services/ecommerce-return-management').catch(() => ({ default: () => <div>Error loading Ecommerce Return Management</div> })));
+const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation').catch(() => ({ default: () => <div>Error loading AI Content Creation</div> })));
+const CloudDevOpsServices = lazy(() => import('./pages/services/CloudDevOpsServices').catch(() => ({ default: () => <div>Error loading Cloud DevOps Services</div> })));
+const CybersecurityServices = lazy(() => import('./pages/services/CybersecurityServices').catch(() => ({ default: () => <div>Error loading Cybersecurity Services</div> })));
 
 const App = () => {
   return (
@@ -53,13 +53,13 @@ const App = () => {
               <Route path="/mobile-development" element={<MobileDevelopment />} />
               
               {/* Additional service routes */}
-              <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
-              <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
-              <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
               <Route path="/services/ai-email-responder" element={<AIEmailResponder />} />
               <Route path="/services/mobile-survey-tool" element={<MobileSurveyTool />} />
               <Route path="/services/ai-talent-matching" element={<AITalentMatching />} />
               <Route path="/services/ecommerce-return-management" element={<EcommerceReturnManagement />} />
+              <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+              <Route path="/services/cloud-devops-services" element={<CloudDevOpsServices />} />
+              <Route path="/services/cybersecurity-services" element={<CybersecurityServices />} />
             </Routes>
           </Suspense>
           <Footer />
