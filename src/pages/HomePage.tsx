@@ -75,8 +75,6 @@ const HomePage: React.FC = () => {
         </AnimatedSection>
 
         <AnimatedSection animation="slideUp" delay={200}>
-<<<<<<< HEAD
-=======
           <section className="latest-blog">
             <div className="container">
               <h2 className="section-title">Latest from the Blog</h2>
@@ -150,7 +148,6 @@ const HomePage: React.FC = () => {
         </AnimatedSection>
 
         <AnimatedSection animation="slideUp" delay={200}>
->>>>>>> cursor/create-and-deploy-new-content-77d6
           <section className="services-preview">
             <div className="container">
               <h2 className="section-title">Our Core Services</h2>

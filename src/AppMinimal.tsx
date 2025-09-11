@@ -17,17 +17,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
-<<<<<<< HEAD
-=======
-const BlogIndex = lazy(() => import('./pages/BlogIndex'));
-const BlogGenerativeAISecurity = lazy(() => import('./pages/blog/GenerativeAISecurityBestPractices'));
-const BlogEdgePersonalization = lazy(() => import('./pages/blog/EdgePersonalizationPatterns2025'));
-const BlogLLMCostOptimization = lazy(() => import('./pages/blog/LLMCostOptimizationPlaybook'));
-const BlogAIGovernanceChecklist = lazy(() => import('./pages/blog/AIGovernanceChecklist2025'));
-const BlogAIInfrastructureBlueprint = lazy(() => import('./pages/blog/AIInfrastructureBlueprint2025'));
-const BlogPracticalRAG = lazy(() => import('./pages/blog/PracticalRAGArchitectureGuide2025'));
-const BlogAIVendorRisk = lazy(() => import('./pages/blog/AIVendorRiskManagement2025'));
->>>>>>> cursor/create-and-deploy-new-content-77d6
+// Blog routes temporarily disabled until content is present
 
 export default function AppMinimal() {
   return (
@@ -74,17 +64,11 @@ export default function AppMinimal() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-<<<<<<< HEAD
-=======
-                <Route path="/blog" element={<BlogIndex />} />
-                <Route path="/blog/practical-rag-architecture-guide-2025" element={<BlogPracticalRAG />} />
-                <Route path="/blog/ai-vendor-risk-management-2025" element={<BlogAIVendorRisk />} />
-                <Route path="/blog/generative-ai-security-best-practices" element={<BlogGenerativeAISecurity />} />
-                <Route path="/blog/edge-personalization-patterns-2025" element={<BlogEdgePersonalization />} />
-                <Route path="/blog/llm-cost-optimization-playbook" element={<BlogLLMCostOptimization />} />
-                <Route path="/blog/ai-governance-checklist-2025" element={<BlogAIGovernanceChecklist />} />
-                <Route path="/blog/ai-infrastructure-blueprint-2025" element={<BlogAIInfrastructureBlueprint />} />
->>>>>>> cursor/create-and-deploy-new-content-77d6
+                {false && (
+                  <>
+                    <Route path="/blog" element={<div />} />
+                  </>
+                )}
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
