@@ -22,6 +22,7 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "strict": false,
     "noUnusedLocals": false,
@@ -41,7 +42,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "app",

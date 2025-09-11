@@ -1,6 +1,28 @@
 const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
+  '/index.html',
+  '/manifest.json',
+  '/favicon.ico',
+  '/images/zion-logo.png',
+  '/images/placeholder.jpg'
+];
+
+// Install event - cache static files
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(STATIC_CACHE_NAME)
+      .then((cache) => {
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
+      })
+      .then(() => {
+        console.log('Static files cached successfully');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Error caching static files:', error);
+      })
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
@@ -36,6 +58,23 @@ self.addEventListener('fetch', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE_NAME && 
+                cacheName !== DYNAMIC_CACHE_NAME && 
+                cacheName !== CACHE_NAME) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service worker activated');
+        return self.clients.claim();
+      })
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
@@ -89,6 +128,9 @@ async function getStoredRequests() {
   return stored ? JSON.parse(stored) : [];
 }
 
+self.addEventListener('unhandledrejection', (event) => {
+  console.error('Service worker unhandled rejection:', event.reason);
+});
 // Remove stored request
 async function removeStoredRequest(id) {
   const requests = await getStoredRequests();
