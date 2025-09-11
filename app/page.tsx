@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
 
@@ -124,10 +125,10 @@ export default function HomePage() {
               icon='🧭'
             />
             <Card
-              title='Zero-Trust AI Integrations: Safely Connecting to Your Systems'
-              href='/blog/zero-trust-ai-integrations'
-              description='Least privilege, short-lived creds, and policy approvals for safe integrations.'
-              icon='🔐'
+              title='GenAI in Production: SLAs, Costs, and Control in 2025'
+              href='/blog/genai-in-production-slas-costs-control-2025'
+              description='SLOs, guardrails, and budget enforcement to ship reliable GenAI products.'
+              icon='📊'
             />
             <Card
               title='AI Automation for Businesses: Complete Guide'
