@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-09-01T08:49:12.881Z",
+  "summary": {
+    "totalFilesFixed": 0,
+    "totalErrors": 6,
+    "successCount": 0,
+    "errorCount": 0,
+    "warningCount": 1
+  },
+  "fixedFiles": [],
+  "errorLog": [
+    {
+      "timestamp": "2025-09-01T08:48:43.059Z",
+      "type": "info",
+      "message": "Starting build error fixing process..."
+    },
+    {
+      "timestamp": "2025-09-01T08:48:43.075Z",
+      "type": "info",
+      "message": "Fixing build errors..."
+    },
+    {
+      "timestamp": "2025-09-01T08:48:43.728Z",
+      "type": "info",
+      "message": "Fixing Next.js specific errors..."
+    },
+    {
+      "timestamp": "2025-09-01T08:48:44.018Z",
+      "type": "info",
+      "message": "Fixing React specific errors..."
+    },
+    {
+      "timestamp": "2025-09-01T08:48:44.293Z",
+      "type": "info",
+      "message": "Running build check..."
+    },
+    {
+      "timestamp": "2025-09-01T08:49:12.879Z",
+      "type": "warning",
+      "message": "Build check failed: Command failed: npm run build\n ⨯ ESLint: Cannot find module 'find-up' Require stack: - /workspace/node_modules/eslint/lib/eslint/flat-eslint.js - /workspace/node_modules/eslint/lib/eslint/index.js - /workspace/node_modules/eslint/lib/api.js - /workspace/node_modules/next/dist/lib/eslint/runLintCheck.js - /workspace/node_modules/next/dist/compiled/jest-worker/processChild.js\nFailed to compile.\n\n./automation/browser-error-fixer.js:15:20\nType error: ';' expected.\n\n\u001b[0m \u001b[90m 13 | \u001b[39m\u001b[90m */\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 | \u001b[39m\u001b[36mimport\u001b[39m fs \u001b[36mfrom\u001b[39m \u001b[32m'fs'\u001b[39m)\u001b[33m.\u001b[39mpromises\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 | \u001b[39m\u001b[36mimport\u001b[39m path \u001b[36mfrom\u001b[39m \u001b[32m'path'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 | \u001b[39m\u001b[36mconst\u001b[39m { execSync } \u001b[33m=\u001b[39m require(\u001b[32m'child_process'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 | \u001b[39m\u001b[0m\n"
+    }
+  ]
+}

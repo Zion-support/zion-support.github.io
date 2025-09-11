@@ -1,0 +1,34 @@
+[2025-09-11 00:59:04] 🚀 Starting final PR merge process
+[2025-09-11 00:59:04] 📋 Processing PR #12994: Fix netlify build and merge to main
+[2025-09-11 00:59:04] 🔄 Attempting to merge PR #12994 via GitHub API
+[2025-09-11 00:59:04] ❌ Failed to merge PR #12994 via API (HTTP 401)
+[2025-09-11 00:59:04] Response: {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+[2025-09-11 00:59:04] 🔄 API merge failed, trying Git merge for PR #12994
+[2025-09-11 00:59:04] 🔄 Attempting to merge PR #12994 via Git
+[2025-09-11 00:59:08] 📋 Processing PR #12993: Check
+[2025-09-11 00:59:08] 🔄 Attempting to merge PR #12993 via GitHub API
+[2025-09-11 00:59:08] ❌ Failed to merge PR #12993 via API (HTTP 401)
+[2025-09-11 00:59:08] Response: {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+[2025-09-11 00:59:08] 🔄 API merge failed, trying Git merge for PR #12993
+[2025-09-11 00:59:08] 🔄 Attempting to merge PR #12993 via Git
+[2025-09-11 00:59:11] 📊 Final Results: 0/2 PRs merged successfully
+[2025-09-11 00:59:12] 📋 Recent commits on main:
+[2025-09-11 00:59:12]   3c176774f85f Auto-commit before PR merge process
+[2025-09-11 00:59:12]   7232590261f4 Implement comprehensive improvements and optimizations
+[2025-09-11 00:59:12]   5e04aa0e487a Fix automation scripts: resolve merge conflicts and create clean versions
+[2025-09-11 00:59:12]   858a43f4118a Merge build fixes into main branch
+[2025-09-11 00:59:12]   320254d7f913 Fix build errors: resolve merge conflicts and syntax issues
+[2025-09-11 00:59:12]   f10b19083259 Resolve merge conflicts
+[2025-09-11 00:59:12]   74e24c92ba72 Fix merge conflicts and build errors
+[2025-09-11 00:59:12]   19889d844f82 Fix merge conflicts and resolve build issues
+[2025-09-11 00:59:12]   bd43110d7876 Merge cursor/fix-netlify-build-and-merge-to-main-c1d9 into main
+[2025-09-11 00:59:12]   e49f5d36bb7e Resolve final merge conflicts and push improvements
+[2025-09-11 00:59:12] 🎉 Final PR merge process completed

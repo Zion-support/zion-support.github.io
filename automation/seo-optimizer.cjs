@@ -1,92 +1,105 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-class SEOOptimizer {
-  constructor() {
-    this.seoData = new Map();
-  }
-
-  async analyzeSEO() {
-    const pagesDir = path.join(__dirname, '..', '..', 'pages');
-    this.scanPages(pagesDir);
-    
-    const issues = this.findSEOIssues();
-    const suggestions = this.generateSuggestions(issues);
-    
-    console.log('SEO analysis completed');
-    return { issues, suggestions };
-  }
-
-  scanPages(dir) {
-    if (!fs.existsSync(dir)) return;
-    
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        this.scanPages(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-        this.analyzePage(filePath);
-      }
-    }
-  }
-
-  analyzePage(filePath) {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const route = filePath.replace(path.join(__dirname, '..', '..', 'pages'), '').replace(/\.[jt]sx?$/, '');
-    
-    const seoData = {
-      hasTitle: /<title>/.test(content),
-      hasDescription: /meta.*description/.test(content),
-      hasKeywords: /meta.*keywords/.test(content),
-      hasOpenGraph: /og:/i.test(content),
-      hasTwitterCard: /twitter:/i.test(content),
-      hasStructuredData: /application\/ld\+json/.test(content)
-    };
-    
-    this.seoData.set(route, seoData);
-  }
-
-  findSEOIssues() {
-    const issues = [];
-    
-    for (const [route, data] of this.seoData) {
-      if (!data.hasTitle) issues.push({ route, type: 'missing-title', severity: 'high' });
-      if (!data.hasDescription) issues.push({ route, type: 'missing-description', severity: 'medium' });
-      if (!data.hasOpenGraph) issues.push({ route, type: 'missing-og', severity: 'medium' });
-      if (!data.hasStructuredData) issues.push({ route, type: 'missing-structured-data', severity: 'low' });
-    }
-    
-    return issues;
-  }
-
-  generateSuggestions(issues) {
-    const suggestions = [];
-    
-    for (const issue of issues) {
-      switch (issue.type) {
-        case 'missing-title':
-          suggestions.push(`Add <title> tag to ${issue.route}`);
-          break;
-        case 'missing-description':
-          suggestions.push(`Add meta description to ${issue.route}`);
-          break;
-        case 'missing-og':
-          suggestions.push(`Add Open Graph tags to ${issue.route}`);
-          break;
-        case 'missing-structured-data':
-          suggestions.push(`Add structured data to ${issue.route}`);
-          break;
-      }
-    }
-    
-    return suggestions;
-  }
+function log(message, type = "INFO") {
+  const icons = { INFO: "ℹ️", SUCCESS: "✅", ERROR: "❌", WARNING: "⚠️" };
+  console.log(`[${new Date().toISOString()}] [${type}] ${message}`);
 }
 
-const optimizer = new SEOOptimizer();
-optimizer.analyzeSEO();
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+function findFiles(dir, exts) {
+  if (!fs.existsSync(dir)) return [];
+  const results = [];
+  for (const entry of fs.readdirSync(dir)) {
+    const p = path.join(dir, entry);
+    const stat = fs.statSync(p);
+    if (stat.isDirectory()) {
+      results.push(...findFiles(p, exts));
+    } else if (exts.includes(path.extname(entry).toLowerCase())) {
+      results.push(p);
+    }
+  }
+  return results;
+}
+
+function optimizeSEO(rootDir, report) {
+  const htmlFiles = findFiles(rootDir, [".html", ".tsx", ".jsx"]);
+  let optimizedCount = 0;
+  
+  for (const file of htmlFiles) {
+    try {
+      const content = fs.readFileSync(file, "utf8");
+      let updated = content;
+      let modified = false;
+      
+      // Add meta description if missing
+      if (!content.includes('name="description"') && !content.includes('property="og:description"')) {
+        const metaDescription = '    <meta name="description" content="Zion Tech Group - Advanced AI, IT Solutions, and Digital Transformation Services" />';
+        if (content.includes('<head>')) {
+          updated = updated.replace('<head>', `<head>\n${metaDescription}`);
+          modified = true;
+        }
+      }
+      
+      // Add Open Graph tags if missing
+      if (!content.includes('property="og:title"')) {
+        const ogTags = `    <meta property="og:title" content="Zion Tech Group" />
+    <meta property="og:description" content="Advanced AI, IT Solutions, and Digital Transformation Services" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com" />`;
+        if (content.includes('<head>')) {
+          updated = updated.replace('<head>', `<head>\n${ogTags}`);
+          modified = true;
+        }
+      }
+      
+      if (modified) {
+        fs.writeFileSync(file, updated);
+        optimizedCount++;
+        report.actions.push(`Optimized SEO for ${path.basename(file)}`);
+      }
+    } catch (e) {
+      report.errors.push(`Failed optimizing ${file}: ${e.message}`);
+    }
+  }
+  
+  report.actions.push(`Optimized SEO for ${optimizedCount} files`);
+}
+
+function main() {
+  const root = process.cwd();
+  const timestamp = Date.now();
+  const report = {
+    timestamp,
+    actions: [],
+    modifiedFiles: [],
+    errors: []
+  };
+  
+  log("Starting SEO Optimizer");
+  
+  ensureDir(path.join(root, "automation-reports"));
+  
+  // Optimize SEO in src/ directory
+  optimizeSEO(path.join(root, "src"), report);
+  
+  const outFile = path.join(
+    root,
+    `automation-reports/seo-optimizer-report-${timestamp}.json`
+  );
+  fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
+  
+  log(`SEO optimization complete. Report: ${path.basename(outFile)}`, "SUCCESS");
+}
+
+try {
+  main();
+} catch (e) {
+  log(`SEO optimizer failed: ${e.message}`, "ERROR");
+  process.exit(1);
+}

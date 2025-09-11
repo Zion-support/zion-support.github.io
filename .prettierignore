@@ -1,0 +1,45 @@
+node_modules/
+# Build artifacts
+/dist/
+/build/
+/.next/
+/.cache/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+
+# Experimental/conflict-heavy areas
+/zkion-os/**
+/zion-os/**
+/zion-website/**
+/zion-ai-assistant/**
+/zion_academy/**
+
+# Temporary and backups
+/temp-backup/**
+/temp_backup/**
+/temp-disabled/**
+/backup-merge-conflicts/**
+/backup-pages/**
+/components_backup/**
+/components-disabled/**
+/components.disabled/**
+/components.disabled_full/**
+
+# Disabled or archived pages
+/src.pages.disabled/**
+/src_backup/**
+
+# Generated/tooling artifacts
+/coverage/
+/reports/
+/report*/
+**/*.cleanup-backup.*
+
+# Automation outputs
+/automation_logs/**
+/all-automations-reports/**
+/ci-cd-reports/**
+/workflow-local-reports/**

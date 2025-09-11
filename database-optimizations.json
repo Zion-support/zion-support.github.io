@@ -1,0 +1,12 @@
+{
+  "indexes": [
+    "CREATE INDEX idx_users_email ON users(email);",
+    "CREATE INDEX idx_services_category ON services(category);",
+    "CREATE INDEX idx_orders_created_at ON orders(created_at);"
+  ],
+  "queries": [
+    "Use prepared statements for repeated queries",
+    "Implement connection pooling",
+    "Add query result caching"
+  ]
+}

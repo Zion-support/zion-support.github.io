@@ -1,0 +1,134 @@
+{
+  "timestamp": "2025-09-06T14:18:33.428Z",
+  "totalDuration": 97764,
+  "successfulTasks": 0,
+  "totalTasks": 8,
+  "results": {
+    "performanceOptimization": {
+      "success": false,
+      "duration": 49941,
+      "errors": [
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"build:analyze\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_16_55_707Z-debug-0.log\n",
+        "Command failed: npm run optimize:images\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"optimize:images\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_16_56_015Z-debug-0.log\n"
+      ],
+      "improvements": [
+        "Implement code splitting for better bundle size",
+        "Add image optimization and lazy loading",
+        "Set up performance monitoring and alerts",
+        "Optimize critical rendering path",
+        "Implement service worker for caching"
+      ]
+    },
+    "securityEnhancement": {
+      "success": false,
+      "duration": 649,
+      "errors": [
+        "Command failed: npm run security:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"security:audit\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_17_45_837Z-debug-0.log\n"
+      ],
+      "improvements": [
+        "Implement Content Security Policy (CSP)",
+        "Add security headers middleware",
+        "Set up rate limiting and DDoS protection",
+        "Implement input validation and sanitization",
+        "Add security monitoring and logging"
+      ]
+    },
+    "accessibilityImprovement": {
+      "success": false,
+      "duration": 80,
+      "errors": [
+        "Command failed: npm run automation:accessibility\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"automation:accessibility\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_17_46_566Z-debug-0.log\n"
+      ],
+      "improvements": [
+        "Add ARIA labels and roles",
+        "Implement keyboard navigation",
+        "Ensure color contrast compliance",
+        "Add screen reader support",
+        "Implement focus management"
+      ]
+    },
+    "seoOptimization": {
+      "success": false,
+      "duration": 119,
+      "errors": [
+        "Command failed: node scripts/generate-sitemap.cjs\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/generate-sitemap.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n",
+        "Command failed: node scripts/generate-search-index.cjs\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/generate-search-index.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n"
+      ],
+      "improvements": [
+        "Optimize meta tags and descriptions",
+        "Implement structured data markup",
+        "Add Open Graph and Twitter Card tags",
+        "Optimize page loading speed",
+        "Implement proper heading hierarchy"
+      ]
+    },
+    "codeQualityEnhancement": {
+      "success": false,
+      "duration": 46248,
+      "errors": [
+        "Command failed: npm run quality:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"quality:analyze\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_17_46_765Z-debug-0.log\n",
+        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:13364) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      ],
+      "improvements": [
+        "Implement comprehensive error handling",
+        "Add unit and integration tests",
+        "Set up code coverage reporting",
+        "Implement code review guidelines",
+        "Add automated code quality checks"
+      ]
+    },
+    "userExperienceImprovement": {
+      "success": false,
+      "duration": 107,
+      "errors": [
+        "Command failed: npm run optimize:ux\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"optimize:ux\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_18_33_034Z-debug-0.log\n"
+      ],
+      "improvements": [
+        "Implement responsive design improvements",
+        "Add loading states and error boundaries",
+        "Optimize form validation and user feedback",
+        "Implement progressive web app features",
+        "Add user analytics and feedback collection"
+      ]
+    },
+    "monitoringSetup": {
+      "success": false,
+      "duration": 177,
+      "errors": [
+        "Command failed: npm run monitor:health\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"monitor:health\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_18_33_123Z-debug-0.log\n",
+        "Command failed: npm run monitor:continuous\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"monitor:continuous\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_18_33_212Z-debug-0.log\n"
+      ],
+      "improvements": [
+        "Set up application performance monitoring",
+        "Implement error tracking and alerting",
+        "Add user behavior analytics",
+        "Set up uptime monitoring",
+        "Implement log aggregation and analysis"
+      ]
+    },
+    "deploymentOptimization": {
+      "success": false,
+      "duration": 167,
+      "errors": [
+        "Command failed: npm run build:production\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"build:production\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T14_18_33_299Z-debug-0.log\n"
+      ],
+      "improvements": [
+        "Implement CI/CD pipeline optimization",
+        "Set up automated testing in deployment",
+        "Add environment-specific configurations",
+        "Implement blue-green deployment strategy",
+        "Set up automated rollback mechanisms"
+      ]
+    }
+  },
+  "summary": {
+    "performanceOptimized": false,
+    "securityEnhanced": false,
+    "accessibilityImproved": false,
+    "seoOptimized": false,
+    "codeQualityEnhanced": false,
+    "userExperienceImproved": false,
+    "monitoringSetup": false,
+    "deploymentOptimized": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "pages": [
+    {
+      "title": "Home",
+      "url": "/",
+      "content": "Zion Holdings - Technology Solutions"
+    },
+    {
+      "title": "Services",
+      "url": "/services",
+      "content": "Our comprehensive technology services"
+    },
+    {
+      "title": "About",
+      "url": "/about",
+      "content": "About Zion Holdings"
+    }
+  ],
+  "generated": "2025-09-06T12:00:30.917Z"
+}

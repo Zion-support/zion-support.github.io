@@ -1,0 +1,159 @@
+{
+  "timestamp": "2025-09-09T05:32:18.903Z",
+  "analysis": {
+    "totalSize": 625709,
+    "totalSizeKB": "611.04",
+    "totalSizeMB": "0.60",
+    "fileCount": 14,
+    "categories": {
+      "react-core": {
+        "count": 1,
+        "totalSize": 163004,
+        "files": [
+          {
+            "name": "react-core-B1LcFCqU.js",
+            "size": 163004,
+            "sizeKB": 159.18,
+            "category": "react-core",
+            "gzipSize": 48901
+          }
+        ]
+      },
+      "animation": {
+        "count": 1,
+        "totalSize": 106401,
+        "files": [
+          {
+            "name": "motion-CRAysFof.js",
+            "size": 106401,
+            "sizeKB": 103.91,
+            "category": "animation",
+            "gzipSize": 31920
+          }
+        ]
+      },
+      "styles": {
+        "count": 1,
+        "totalSize": 94513,
+        "files": [
+          {
+            "name": "index-CUw36I0g.css",
+            "size": 94513,
+            "sizeKB": 92.3,
+            "category": "styles",
+            "gzipSize": 28354
+          }
+        ]
+      },
+      "pages": {
+        "count": 5,
+        "totalSize": 134542,
+        "files": [
+          {
+            "name": "pages-8mnT8kN1.js",
+            "size": 78403,
+            "sizeKB": 76.57,
+            "category": "pages",
+            "gzipSize": 23521
+          },
+          {
+            "name": "service-pages-CY8uBsT8.js",
+            "size": 29352,
+            "sizeKB": 28.66,
+            "category": "pages",
+            "gzipSize": 8806
+          },
+          {
+            "name": "main-pages-C18LIdqg.js",
+            "size": 19677,
+            "sizeKB": 19.22,
+            "category": "pages",
+            "gzipSize": 5903
+          },
+          {
+            "name": "talent-pages-BMOedMYk.js",
+            "size": 4707,
+            "sizeKB": 4.6,
+            "category": "pages",
+            "gzipSize": 1412
+          },
+          {
+            "name": "auth-pages-CeahdUpu.js",
+            "size": 2403,
+            "sizeKB": 2.35,
+            "category": "pages",
+            "gzipSize": 721
+          }
+        ]
+      },
+      "vendor": {
+        "count": 1,
+        "totalSize": 61927,
+        "files": [
+          {
+            "name": "vendor-DlDwwZFJ.js",
+            "size": 61927,
+            "sizeKB": 60.48,
+            "category": "vendor",
+            "gzipSize": 18578
+          }
+        ]
+      },
+      "components": {
+        "count": 2,
+        "totalSize": 40775,
+        "files": [
+          {
+            "name": "components-CUqh7V0G.js",
+            "size": 35790,
+            "sizeKB": 34.95,
+            "category": "components",
+            "gzipSize": 10737
+          },
+          {
+            "name": "ui-components-CndVxDU1.js",
+            "size": 4985,
+            "sizeKB": 4.87,
+            "category": "components",
+            "gzipSize": 1496
+          }
+        ]
+      },
+      "other": {
+        "count": 3,
+        "totalSize": 24547,
+        "files": [
+          {
+            "name": "index-CAsiqLzL.js",
+            "size": 12610,
+            "sizeKB": 12.31,
+            "category": "other",
+            "gzipSize": 3783
+          },
+          {
+            "name": "router-DJErntid.js",
+            "size": 10817,
+            "sizeKB": 10.56,
+            "category": "other",
+            "gzipSize": 3245
+          },
+          {
+            "name": "utils-BE1ogIA6.js",
+            "size": 1120,
+            "sizeKB": 1.09,
+            "category": "other",
+            "gzipSize": 336
+          }
+        ]
+      }
+    },
+    "performanceScore": 70
+  },
+  "recommendations": [
+    "Implement code splitting with React.lazy",
+    "Use dynamic imports for heavy libraries",
+    "Optimize images and assets",
+    "Remove unused dependencies",
+    "Implement service worker caching"
+  ]
+}

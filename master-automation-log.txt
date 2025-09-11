@@ -1,0 +1,318 @@
+[2025-09-03T14:26:20.208Z] 🚀 Starting Master Automation Orchestrator...
+[2025-09-03T14:26:20.212Z] 🔍 Phase 1: Running Health Check...
+[2025-09-03T14:26:20.212Z] 🚀 Running: Health Check
+[2025-09-03T14:26:20.213Z] ❌ Failed: Health Check - Class constructor HealthChecker cannot be invoked without 'new'
+[2025-09-03T14:26:20.213Z] 📊 Phase 2: Running Performance Monitor...
+[2025-09-03T14:26:20.213Z] 🚀 Running: Performance Monitor
+[2025-09-03T14:26:20.214Z] ✅ Completed: Performance Monitor
+[2025-09-03T14:26:20.214Z] 🔍 Phase 3: Running Code Quality Check...
+[2025-09-03T14:26:20.214Z] 🚀 Running: Code Quality Check
+[2025-09-03T14:26:20.215Z] ✅ Completed: Code Quality Check
+[2025-09-03T14:26:20.215Z] 🧪 Phase 4: Running Test Runner...
+[2025-09-03T14:26:20.215Z] 🚀 Running: Test Runner
+[2025-09-03T14:26:20.216Z] ❌ Failed: Test Runner - Class constructor AutomationTestRunner cannot be invoked without 'new'
+[2025-09-03T14:26:20.216Z] 🔧 Creating additional improvement scripts...
+[2025-09-03T14:26:20.216Z] ✅ Created comprehensive build script
+[2025-09-03T14:26:20.216Z] ✅ Created monitoring dashboard script
+[2025-09-03T14:26:20.216Z] 📝 Phase 5: Running Git Operations...
+[2025-09-03T14:26:20.216Z] 🚀 Running: Git Operations
+[2025-09-03T14:26:20.217Z] ❌ Failed: Git Operations - Class constructor GitAutomation cannot be invoked without 'new'
+[2025-09-03T14:26:20.217Z]
+🎉 Master Automation Orchestrator completed successfully!
+[2025-09-03T14:26:20.217Z] 📄 Final report saved to: automation-reports/master-automation-report.json
+[2025-09-03T14:26:20.217Z] 📝 Detailed log saved to: master-automation-log.txt
+[2025-09-05T00:20:16.312Z] 🚀 Starting Master Automation Orchestrator...
+[2025-09-05T00:20:16.315Z] 🔍 Phase 1: Running Health Check...
+[2025-09-05T00:20:16.315Z] 🚀 Running: Health Check
+[2025-09-05T00:20:16.316Z] ❌ Failed: Health Check - Unexpected token ')'
+[2025-09-05T00:20:16.316Z] 📊 Phase 2: Running Performance Monitor...
+[2025-09-05T00:20:16.316Z] 🚀 Running: Performance Monitor
+[2025-09-05T00:20:16.317Z] ✅ Completed: Performance Monitor
+[2025-09-05T00:20:16.317Z] 🔍 Phase 3: Running Code Quality Check...
+[2025-09-05T00:20:16.317Z] 🚀 Running: Code Quality Check
+[2025-09-05T00:20:16.318Z] ✅ Completed: Code Quality Check
+[2025-09-05T00:20:16.318Z] 🧪 Phase 4: Running Test Runner...
+[2025-09-05T00:20:16.318Z] 🚀 Running: Test Runner
+[2025-09-05T00:20:16.319Z] ❌ Failed: Test Runner - Class constructor AutomationTestRunner cannot be invoked without 'new'
+[2025-09-05T00:20:16.319Z] 🔧 Creating additional improvement scripts...
+[2025-09-05T00:20:16.319Z] ✅ Created comprehensive build script
+[2025-09-05T00:20:16.319Z] ✅ Created monitoring dashboard script
+[2025-09-05T00:20:16.319Z] 📝 Phase 5: Running Git Operations...
+[2025-09-05T00:20:16.319Z] 🚀 Running: Git Operations
+[2025-09-05T00:20:16.320Z] ❌ Failed: Git Operations - Unexpected token ')'
+[2025-09-05T00:20:16.320Z]
+🎉 Master Automation Orchestrator completed successfully!
+[2025-09-05T00:20:16.320Z] 📄 Final report saved to: automation-reports/master-automation-report.json
+[2025-09-05T00:20:16.320Z] 📝 Detailed log saved to: master-automation-log.txt
+[2025-09-04T23:24:14.827Z] 🚀 Starting Master Automation Orchestrator...
+[2025-09-04T23:24:14.832Z] 🔍 Phase 1: Running Health Check...
+[2025-09-04T23:24:14.832Z] 🚀 Running: Health Check
+[2025-09-04T23:24:14.833Z] ❌ Failed: Health Check - Unexpected token ';'
+[2025-09-04T23:24:14.833Z] 📊 Phase 2: Running Performance Monitor...
+[2025-09-04T23:24:14.833Z] 🚀 Running: Performance Monitor
+[2025-09-04T23:24:14.834Z] ✅ Completed: Performance Monitor
+[2025-09-04T23:24:14.834Z] 🔍 Phase 3: Running Code Quality Check...
+[2025-09-04T23:24:14.834Z] 🚀 Running: Code Quality Check
+[2025-09-04T23:24:14.835Z] ✅ Completed: Code Quality Check
+[2025-09-04T23:24:14.835Z] 🧪 Phase 4: Running Test Runner...
+[2025-09-04T23:24:14.835Z] 🚀 Running: Test Runner
+[2025-09-04T23:24:14.836Z] ❌ Failed: Test Runner - Class constructor AutomationTestRunner cannot be invoked without 'new'
+[2025-09-04T23:24:14.836Z] 🔧 Creating additional improvement scripts...
+[2025-09-04T23:24:14.837Z] ✅ Created comprehensive build script
+[2025-09-04T23:24:14.837Z] ✅ Created monitoring dashboard script
+[2025-09-04T23:24:14.837Z] 📝 Phase 5: Running Git Operations...
+[2025-09-04T23:24:14.837Z] 🚀 Running: Git Operations
+[2025-09-04T23:24:14.837Z] ❌ Failed: Git Operations - Unexpected token ')'
+[2025-09-04T23:24:14.837Z]
+🎉 Master Automation Orchestrator completed successfully!
+[2025-09-04T23:24:14.837Z] 📄 Final report saved to: automation-reports/master-automation-report.json
+[2025-09-04T23:24:14.837Z] 📝 Detailed log saved to: master-automation-log.txt
+[2025-09-05T14:44:36.403Z] 🚀 Starting Master Automation Orchestrator...
+
+[2025-09-05T14:29:59.640Z] 🔍 Phase 1: Running Health Check...
+[2025-09-05T14:29:59.640Z] ✅ Package.json exists
+[2025-09-05T14:29:59.640Z] ❌ Node modules exist
+[2025-09-05T14:29:59.640Z] ✅ Next.js config exists
+[2025-09-05T14:29:59.640Z] 📊 Phase 2: Running Performance Monitor...
+[2025-09-05T14:29:59.640Z] 🚀 Running: Performance Monitor
+[2025-09-05T14:29:59.663Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+<<<<<<< HEAD
+^^
+
+SyntaxError: Unexpected token '<<'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:29:59.663Z] 🚀 Running: Performance Monitor
+[2025-09-05T14:29:59.685Z] ❌ Failed: Performance Monitor - Command failed: node performance-optimizer.cjs
+/workspace/performance-optimizer.cjs:1
+SyntaxError: Unexpected token '<<'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:29:59.685Z] 🚀 Running: Performance Monitor
+[2025-09-05T14:29:59.704Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-optimizer.cjs
+/workspace/scripts/performance-optimizer.cjs:1
+<<<<<<< HEAD
+^^
+
+SyntaxError: Unexpected token '<<'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:29:59.704Z] 🔍 Phase 3: Running Code Quality Check...
+[2025-09-05T14:29:59.704Z] Running ESLint...
+[2025-09-05T14:30:00.008Z] ⚠️ ESLint found issues, but continuing...
+[2025-09-05T14:30:00.008Z] Running TypeScript check...
+[2025-09-05T14:30:00.864Z] ⚠️ TypeScript check found issues, but continuing...
+[2025-09-05T14:30:00.864Z] 🧪 Phase 4: Running Test Runner...
+[2025-09-05T14:30:00.864Z] 🚀 Running: Test Runner
+[2025-09-05T14:30:00.882Z] ❌ Failed: Test Runner - Command failed: node scripts/automation-test-runner.cjs
+/workspace/scripts/automation-test-runner.cjs:1
+<<<<<<< HEAD
+^^
+
+SyntaxError: Unexpected token '<<'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:30:00.882Z] 🚀 Running: Test Runner
+[2025-09-05T14:30:00.900Z] ❌ Failed: Test Runner - Command failed: node scripts/automated-testing-suite.cjs
+/workspace/scripts/automated-testing-suite.cjs:1
+<<<<<<< HEAD
+^^
+
+SyntaxError: Unexpected token '<<'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:30:00.900Z] 🚀 Running: Test Runner
+[2025-09-05T14:30:00.918Z] ❌ Failed: Test Runner - Command failed: node scripts/test-runner.js
+/workspace/scripts/test-runner.js:1
+<<<<<<< HEAD
+^^
+
+SyntaxError: Unexpected token '<<'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:30:00.994Z] ⚠️ NPM tests not configured or failed
+[2025-09-05T14:30:00.995Z] 🔧 Creating additional improvement scripts...
+[2025-09-05T14:30:00.995Z] ✅ Created comprehensive build script
+[2025-09-05T14:30:00.995Z] ✅ Created monitoring dashboard script
+[2025-09-05T14:30:00.995Z] 📝 Phase 5: Running Git Operations...
+[2025-09-05T14:30:00.995Z] Checking git status...
+[2025-09-05T14:30:01.050Z] 📝 Uncommitted changes found, staging them...
+[2025-09-05T14:30:01.123Z] 💾 Committing changes...
+[2025-09-05T14:30:01.182Z] 📤 Pushing changes...
+[2025-09-05T14:30:02.778Z] 
+🎉 Master Automation Orchestrator completed successfully!
+[2025-09-05T14:30:02.778Z] 📄 Final report saved to: automation-reports/master-automation-report.json
+[2025-09-05T14:30:02.778Z] 📝 Detailed log saved to: master-automation-log.txt
+[2025-09-05T14:30:32.750Z] 🚀 Starting Master Automation Orchestrator...
+
+[2025-09-05T14:30:32.751Z] 🔍 Phase 1: Running Health Check...
+[2025-09-05T14:30:32.751Z] ✅ Package.json exists
+[2025-09-05T14:30:32.752Z] ✅ Node modules exist
+[2025-09-05T14:30:32.752Z] ✅ Next.js config exists
+[2025-09-05T14:30:32.752Z] 📊 Phase 2: Running Performance Monitor...
+[2025-09-05T14:30:32.752Z] 🚀 Running: Performance Monitor
+[2025-09-05T14:30:32.774Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
+/workspace/scripts/performance-monitor-enhanced.cjs:27
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class PerformanceMonitor { constructor() { this.metrics = { timestamp: new Date().toISOString()," memory: process.memoryUsage()," uptime: process.uptime()," cpu: process.cpuUsage() }} collectMetrics() { this.metrics = {" timestamp: new Date().toISOString()," memory: process.memoryUsage()," uptime: process.uptime()," cpu: process.cpuUsage() }; " const reportPath = path.join(process.cwd(), "performance-metrics.json"); fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));" console.log(" Performance metrics collected and saved")}}if (require.main === module) { const monitor = new PerformanceMonitor(); monitor.collectMetrics()}module.exports = PerformanceMonitor;"""
+^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:30:32.774Z] 🚀 Running: Performance Monitor
+[2025-09-05T14:30:32.796Z] ❌ Failed: Performance Monitor - Command failed: node performance-optimizer.cjs
+/workspace/performance-optimizer.cjs:2
+#!/usr/bin/env node;
+^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:30:32.796Z] 🚀 Running: Performance Monitor
+[2025-09-05T14:30:32.815Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-optimizer.cjs
+/workspace/scripts/performance-optimizer.cjs:131
+}
+^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-05T14:30:32.816Z] 🔍 Phase 3: Running Code Quality Check...
+[2025-09-05T14:30:32.816Z] Running ESLint...
+[2025-09-05T14:30:33.348Z] ⚠️ ESLint found issues, but continuing...
+[2025-09-05T14:30:33.348Z] Running TypeScript check...
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
