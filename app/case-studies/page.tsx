@@ -242,6 +242,34 @@ export default function CaseStudiesPage() {
       image: '/api/placeholder/600/400',
       featured: false,
     },
+    {
+      id: 'ai-healthcare-diagnosis-2025',
+      title: 'AI-Powered Medical Diagnosis Platform',
+      client: 'MedCenter Plus',
+      industry: 'Healthcare',
+      challenge:
+        'Diagnostic accuracy varied significantly between physicians (60-85%) with average diagnosis time of 45 minutes per patient',
+      solution:
+        'Comprehensive AI diagnostic platform combining computer vision, NLP, and machine learning to analyze medical images, lab results, and symptoms',
+      results: [
+        '95% diagnostic accuracy achieved',
+        '70% reduction in diagnosis time',
+        '85% reduction in misdiagnosis rate',
+        '$2.3M annual cost savings',
+      ],
+      technologies: [
+        'TensorFlow',
+        'PyTorch',
+        'OpenCV',
+        'BERT',
+        'AWS SageMaker',
+        'Kubernetes',
+      ],
+      duration: '12 months',
+      team: '15 developers',
+      image: '/api/placeholder/600/400',
+      featured: true,
+    },
   ];
 
   const featuredStudies = caseStudies.filter(study => study.featured);

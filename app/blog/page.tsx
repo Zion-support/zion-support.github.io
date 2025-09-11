@@ -3,7 +3,84 @@ import Link from 'next/link';
 
 export default function BlogPage() {
 	const blogPosts = [
- 	  // New posts (2025-09)
+	  {
+	    id: 'genai-evaluation-playbook-2025',
+	    title: 'GenAI Evaluation Playbook 2025: Ship Quality with Confidence',
+	    excerpt:
+	      'Practical evals for quality, safety, and cost. Judge models, CI gates, and dashboards that teams actually use.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'AI Evaluation',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'founder-led-sales-ai-2025',
+	    title: 'Founder-Led Sales for AI Startups (2025): A Field Guide',
+	    excerpt:
+	      'Talk tracks, discovery questions, and repeatable motions to close your first 50 customers.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'Growth',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'product-analytics-2025',
+	    title: 'Product Analytics 2025: From Dashboards to Decisions',
+	    excerpt:
+	      'A concise framework to turn product data into action and roadmap changes.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'Analytics',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'finops-ai-2025',
+	    title: 'FinOps for AI 2025: Cut LLM Spend Without Slowing Teams',
+	    excerpt:
+	      'Caching, quantization, retrieval tuning, and eval-driven budgets that work.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'FinOps',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-roadmap-2026',
+	    title: 'AI Product Roadmap 2026: Ship Impactful Features with Guardrails',
+	    excerpt:
+	      'Outcome-first planning, technical guardrails, and an operating model that scales.',
+	    date: '2026-02-01',
+	    readTime: '12 min read',
+	    category: 'Strategy',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  // New posts (2025-09)
+	  {
+	    id: 'ai-procurement-playbook-2025',
+	    title: 'AI Procurement Playbook 2025: Buy Fast, Avoid Regret',
+	    excerpt:
+	      'Evaluate, pilot, and buy AI software without lock-in, with clear ROI and risk controls.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'Procurement',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'agent-safety-guardrails-2025',
+	    title: 'Agent Safety & Guardrails 2025: Ship Reliable Agentic Systems',
+	    excerpt:
+	      'Controls, budgets, approvals, and observability to keep agent systems safe and affordable.',
+	    date: '2025-09-11',
+	    readTime: '11 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
  	  {
  	    id: 'ai-productivity-playbook-2025',
  	    title: 'AI Productivity Playbook 2025: Ship Faster Without Breaking Things',
@@ -389,6 +466,62 @@ export default function BlogPage() {
 	    date: '2025-01-27',
 	    readTime: '12 min read',
 	    category: 'Startup Strategy',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  // New content added
+	  {
+	    id: 'ai-productivity-automation-2025',
+	    title: 'AI Productivity Automation 2025: The Complete Guide',
+	    excerpt:
+	      'Transform your workflow with cutting-edge AI automation tools and strategies. Boost productivity by 300% while reducing manual work by 80%.',
+	    date: '2025-01-28',
+	    readTime: '12 min read',
+	    category: 'AI & Productivity',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'cloud-native-architecture-2025',
+	    title: 'Cloud-Native Architecture 2025: The Complete Blueprint',
+	    excerpt:
+	      'Build scalable, resilient, and cost-effective applications with modern cloud-native patterns and practices.',
+	    date: '2025-01-28',
+	    readTime: '15 min read',
+	    category: 'Cloud Architecture',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-funding-ai-era-2025',
+	    title: 'Startup Funding in the AI Era: A Complete Guide for 2025',
+	    excerpt:
+	      'Navigate the new funding landscape and position your AI startup for success. Learn from successful AI companies and discover the strategies that work in 2025.',
+	    date: '2025-01-28',
+	    readTime: '14 min read',
+	    category: 'Startup Strategy',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-governance-in-practice-2025',
+	    title: 'AI Governance in Practice 2025: Controls That Actually Work',
+	    excerpt:
+	      'Pragmatic policies, processes, and technical controls that reduce risk without blocking delivery.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'Governance',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'edge-ai-privacy-by-design-2025',
+	    title: 'Edge AI 2025: Privacy by Design, Real-Time Customer Experiences',
+	    excerpt:
+	      'On-device intelligence to reduce latency, cut cloud costs, and protect PII by default.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'Edge & IoT',
 	    featured: true,
 	    image: '/api/placeholder/600/400',
 	  }
