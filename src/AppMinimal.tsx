@@ -17,6 +17,9 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const BlogIndex = lazy(() => import('./pages/BlogIndex'));
+const BlogGenerativeAISecurity = lazy(() => import('./pages/blog/GenerativeAISecurityBestPractices'));
+const BlogEdgePersonalization = lazy(() => import('./pages/blog/EdgePersonalizationPatterns2025'));
 
 export default function AppMinimal() {
   return (
@@ -63,6 +66,9 @@ export default function AppMinimal() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog" element={<BlogIndex />} />
+                <Route path="/blog/generative-ai-security-best-practices" element={<BlogGenerativeAISecurity />} />
+                <Route path="/blog/edge-personalization-patterns-2025" element={<BlogEdgePersonalization />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
