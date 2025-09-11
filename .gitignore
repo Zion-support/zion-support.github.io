@@ -28,9 +28,14 @@ core
 
 # npm cache
 .npm-cache/
+core
+*.core
 
-# Large files and build artifacts
-.next/cache/
-deployment.tar.gz
-tsconfig.tsbuildinfo
-*.log
+core
+*.core
+<<<<<<< HEAD
+
+# Ignore core dumps
+core
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e10e

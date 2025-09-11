@@ -73,6 +73,7 @@ function Footer() {
 						<h3 className="font-semibold text-gray-900 mb-3">Company</h3>
 						<div className="space-y-2">
 							<Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
+							<Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
 							<Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
 							<a href="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600 transition-colors">Website</a>
 						</div>
