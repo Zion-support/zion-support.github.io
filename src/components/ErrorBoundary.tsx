@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -223,12 +222,12 @@ export class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="max-w-2xl w-full bg-white dark:bg-zion-slate-dark rounded-2xl shadow-2xl border border-zion-slate-light/20 overflow-hidden"
+            className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-300/20 overflow-hidden"
           >
             {/* Header */}
             <div className={`px-8 py-6 ${
@@ -254,18 +253,18 @@ export class ErrorBoundary extends Component<Props, State> {
             {/* Error Content */}
             <div className="px-8 py-6 space-y-6">
               {/* Error Summary */}
-              <div className="bg-zion-slate-light/10 rounded-xl p-4">
+              <div className="bg-slate-100/10 rounded-xl p-4">
                 <div className="flex items-start space-x-3">
-                  <Bug className="w-5 h-5 text-zion-cyan mt-0.5" />
+                  <Bug className="w-5 h-5 text-cyan-400 mt-0.5" />
                   <div className="flex-1">
-                    <h2 className="font-semibold text-zion-slate-dark dark:text-white mb-2">
+                    <h2 className="font-semibold text-slate-800 dark:text-white mb-2">
                       {errorType}
                     </h2>
-                    <p className="text-zion-slate-light dark:text-zion-slate-light text-sm">
+                    <p className="text-slate-600 dark:text-slate-300 text-sm">
                       {this.state.error?.message || 'An unexpected error occurred'}
                     </p>
                     {this.state.errorId && (
-                      <p className="text-xs text-zion-slate-light/70 mt-2 font-mono">
+                      <p className="text-xs text-slate-500/70 mt-2 font-mono">
                         Error ID: {this.state.errorId}
                       </p>
                     )}
@@ -276,7 +275,7 @@ export class ErrorBoundary extends Component<Props, State> {
               {/* Recovery Options */}
               {this.props.enableRecovery && (
                 <div className="space-y-3">
-                  <h3 className="font-semibold text-zion-slate-dark dark:text-white flex items-center space-x-2">
+                  <h3 className="font-semibold text-slate-800 dark:text-white flex items-center space-x-2">
                     <Shield className="w-4 h-4" />
                     <span>Recovery Options</span>
                   </h3>
@@ -284,7 +283,7 @@ export class ErrorBoundary extends Component<Props, State> {
                     <button
                       onClick={this.handleRetry}
                       disabled={this.state.isRecovering}
-                      className="flex items-center justify-center space-x-2 px-4 py-3 bg-zion-cyan hover:bg-zion-cyan-light disabled:bg-zion-slate-light/30 text-zion-slate-dark disabled:text-zion-slate-light rounded-lg transition-colors font-medium"
+                      className="flex items-center justify-center space-x-2 px-4 py-3 bg-cyan-500 hover:bg-cyan-600 disabled:bg-slate-300/30 text-white disabled:text-slate-500 rounded-lg transition-colors font-medium"
                     >
                       {this.state.isRecovering ? (
                         <>
@@ -301,7 +300,7 @@ export class ErrorBoundary extends Component<Props, State> {
                     
                     <button
                       onClick={this.handleGoHome}
-                      className="flex items-center justify-center space-x-2 px-4 py-3 bg-zion-slate-light/20 hover:bg-zion-slate-light/30 text-zion-slate-dark dark:text-white rounded-lg transition-colors font-medium"
+                      className="flex items-center justify-center space-x-2 px-4 py-3 bg-slate-200/20 hover:bg-slate-200/30 text-slate-800 dark:text-white rounded-lg transition-colors font-medium"
                     >
                       <Home className="w-4 h-4" />
                       <span>Go Home</span>
@@ -309,7 +308,7 @@ export class ErrorBoundary extends Component<Props, State> {
                     
                     <button
                       onClick={this.handleGoBack}
-                      className="flex items-center justify-center space-x-2 px-4 py-3 bg-zion-slate-light/20 hover:bg-zion-slate-light/30 text-zion-slate-dark dark:text-white rounded-lg transition-colors font-medium"
+                      className="flex items-center justify-center space-x-2 px-4 py-3 bg-slate-200/20 hover:bg-slate-200/30 text-slate-800 dark:text-white rounded-lg transition-colors font-medium"
                     >
                       <ArrowLeft className="w-4 h-4" />
                       <span>Go Back</span>
@@ -317,7 +316,7 @@ export class ErrorBoundary extends Component<Props, State> {
                     
                     <button
                       onClick={this.handleReload}
-                      className="flex items-center justify-center space-x-2 px-4 py-3 bg-zion-slate-light/20 hover:bg-zion-slate-light/30 text-zion-slate-dark dark:text-white rounded-lg transition-colors font-medium"
+                      className="flex items-center justify-center space-x-2 px-4 py-3 bg-slate-200/20 hover:bg-slate-200/30 text-slate-800 dark:text-white rounded-lg transition-colors font-medium"
                     >
                       <Zap className="w-4 h-4" />
                       <span>Reload Page</span>
@@ -349,22 +348,22 @@ export class ErrorBoundary extends Component<Props, State> {
               {/* Technical Details */}
               {this.props.showDetails && this.state.errorInfo && (
                 <div className="space-y-3">
-                  <h3 className="font-semibold text-zion-slate-dark dark:text-white flex items-center space-x-2">
+                  <h3 className="font-semibold text-slate-800 dark:text-white flex items-center space-x-2">
                     <XCircle className="w-4 h-4" />
                     <span>Technical Details</span>
                   </h3>
-                  <div className="bg-zion-slate-dark text-zion-slate-light rounded-lg p-4 font-mono text-xs overflow-x-auto">
+                  <div className="bg-slate-800 text-slate-200 rounded-lg p-4 font-mono text-xs overflow-x-auto">
                     <div className="space-y-2">
                       <div>
-                        <span className="text-zion-cyan">Component Stack:</span>
-                        <pre className="mt-1 text-zion-slate-light/80">
+                        <span className="text-cyan-400">Component Stack:</span>
+                        <pre className="mt-1 text-slate-300/80">
                           {this.state.errorInfo.componentStack}
                         </pre>
                       </div>
                       {this.state.error?.stack && (
                         <div>
-                          <span className="text-zion-cyan">Error Stack:</span>
-                          <pre className="mt-1 text-zion-slate-light/80">
+                          <span className="text-cyan-400">Error Stack:</span>
+                          <pre className="mt-1 text-slate-300/80">
                             {this.state.error.stack}
                           </pre>
                         </div>
@@ -375,11 +374,11 @@ export class ErrorBoundary extends Component<Props, State> {
               )}
 
               {/* Contact Support */}
-              <div className="text-center pt-4 border-t border-zion-slate-light/20">
-                <p className="text-zion-slate-light dark:text-zion-slate-light text-sm">
+              <div className="text-center pt-4 border-t border-slate-300/20">
+                <p className="text-slate-600 dark:text-slate-300 text-sm">
                   If this problem persists, please contact our support team
                 </p>
-                <p className="text-zion-slate-light/70 dark:text-zion-slate-light/70 text-xs mt-1">
+                <p className="text-slate-500/70 dark:text-slate-400/70 text-xs mt-1">
                   Include the Error ID when reporting: {this.state.errorId}
                 </p>
               </div>
@@ -392,107 +391,3 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-=======
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
-function ErrorFallback({ error, resetError }) {
-    const navigate = useNavigate();
-    return (<div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">
-      <div className="max-w-md w-full text-center">
-        <div className="mb-6">
-          <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <AlertTriangle className="w-10 h-10 text-zion-purple"/>
-          </div>
-          <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
-          <p className="text-zion-slate-light">
-            We encountered an unexpected error. Don't worry, our team has been notified.
-          </p>
-        </div>
-
-        {error && process.env.NODE_ENV === 'development' && (<details className="mb-6 text-left">
-            <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-2">
-              Error Details (Development)
-            </summary>
-            <div className="bg-zion-slate-dark p-3 rounded text-xs text-zion-slate-light overflow-auto">
-              <pre>{error.stack}</pre>
-            </div>
-          </details>)}
-
-        <div className="space-y-3">
-          <Button onClick={resetError} className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
-            <RefreshCw className="w-4 h-4 mr-2"/>
-            Try Again
-          </Button>
-          
-          <Button variant="outline" onClick={() => router(-1)} className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
-            <ArrowLeft className="w-4 h-4 mr-2"/>
-            Go Back
-          </Button>
-          
-          <Link to="/" className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors">
-            <Home className="w-4 h-4 inline mr-2"/>
-            Go Home
-          </Link>
-        </div>
-
-        <div className="mt-6 text-xs text-zion-slate-light">
-          <p>If this problem persists, please contact our support team.</p>
-          <p className="mt-1">
-            Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
-          </p>
-        </div>
-      </div>
-    </div>)}
-export function ErrorBoundary({ children, fallback, onError }) {
-    const [hasError, setHasError] = useState(false);
-    const [error, setError] = useState(null);
-    useEffect(() => {
-        const handleError = (event) => {
-            setHasError(true);
-            setError(event.error);
-            if (onError) {
-                onError(event.error, { componentStack: event.error?.stack })}
-            // Log error to console in development
-            if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:', event.error)}
-        };
-        const handleUnhandledRejection = (event) => {
-            setHasError(true);
-            setError(new Error(event.reason));
-            if (onError) {
-                onError(new Error(event.reason), { componentStack: event.reason?.stack })}
-            // Log error to console in development
-            if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an unhandled rejection:', event.reason)}
-        };
-        window.addEventListener('error', handleError);
-        window.addEventListener('unhandledrejection', handleUnhandledRejection);
-        return () => {
-            window.removeEventListener('error', handleError);
-            window.removeEventListener('unhandledrejection', handleUnhandledRejection)}}, [onError]);
-    const resetError = () => {
-        setHasError(false);
-        setError(null)};
-    if (hasError) {
-        if (fallback) {
-            return fallback}
-        return (<ErrorFallback error={error || null} resetError={resetError}/>)}
-    return <>{children}</>}
-// Hook for functional components to handle errors
-export function useErrorHandler() {
-    const [error, setError] = useState(null);
-    const handleError = React.useCallback((error) => {
-        setError(error);
-        console.error('Error caught by useErrorHandler:', error)}, []);
-    const clearError = React.useCallback(() => {
-        setError(null)}, []);
-    return { error, handleError, clearError }}
-// Higher-order component for wrapping components with error handling
-export function withErrorBoundary(Component, errorBoundaryProps) {
-    return function WithErrorBoundary(props) {
-        return (<ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props}/>
-      </ErrorBoundary>)}}
->>>>>>> origin/clean-error-fixing-automation

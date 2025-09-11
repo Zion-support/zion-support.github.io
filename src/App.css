@@ -1,0 +1,56 @@
+/* App.css - Main application styles */
+
+.app {
+  text-align: center;
+}
+
+.app-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.app-link {
+  color: #61dafb;
+}
+
+/* Futuristic theme styles */
+.bg-futuristic {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 10px;
+  }
+}
+
+/* Dark theme overrides */
+.dark {
+  color-scheme: dark;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .loading-spinner {
+    animation: none;
+  }
+}

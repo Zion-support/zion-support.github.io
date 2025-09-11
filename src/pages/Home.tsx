@@ -1,17 +1,17 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { FuturisticBackground } from "@/components/ui/FuturisticBackground";
-import { ServicesShowcase } from "@/components/home/ServicesShowcase";
+import { SEO } from "../components/SEO";
+import { EnhancedHeroSection } from "../components/home/EnhancedHeroSection";
+import { QuickAccess } from "../components/home/QuickAccess";
+import { FeatureCTAs } from "../components/home/FeatureCTAs";
+import { FeatureHighlights } from "../components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "../components/home/ITServiceRequestHero";
+import { FuturisticBackground } from "../components/ui/FuturisticBackground";
+import { ServicesShowcase } from "../components/home/ServicesShowcase";
 
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { BenefitsSection } from "../components/BenefitsSection";
+import { HowItWorksSection } from "../components/HowItWorksSection";
+import { NewsletterSection } from "../components/NewsletterSection";
+import { FeaturedListingsSection } from "../components/FeaturedListingsSection";
 
 export default function Home() {
   return (
