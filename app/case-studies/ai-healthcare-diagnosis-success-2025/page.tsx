@@ -61,7 +61,8 @@ export default function AIHealthcareDiagnosisSuccess2025() {
                 <div className="text-3xl font-bold">50%</div>
                 <div className="text-sm opacity-90">Cost Reduction</div>
               </div>
-              <div className="text-3xl font-bold">75%</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold">75%</div>
                 <div className="text-sm opacity-90">Faster Diagnosis</div>
               </div>
               <div className="text-center">

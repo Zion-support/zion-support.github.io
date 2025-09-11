@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
@@ -17,8 +16,8 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting',
   image = '/images/zion-tech-group-og.jpg',
   url = 'https://zion.app',
   type = 'website',
@@ -33,8 +32,7 @@ const SEO: React.FC<SEOProps> = ({
   const fullImage = image.startsWith('http') ? image : `https://zion.app${image}`;
 
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
+    <>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -86,37 +84,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Theme Color */}
       <meta name="theme-color" content="#2563eb" />
       <meta name="msapplication-TileColor" content="#2563eb" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": type === 'article' ? 'Article' : 'Organization',
-          "name": fullTitle,
-          "description": description,
-          "url": fullUrl,
-          "image": fullImage,
-          "author": type === 'article' ? {
-            "@type": "Organization",
-            "name": author
-          } : undefined,
-          "publisher": {
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://zion.app/images/zion-tech-group-logo.png"
-            }
-          },
-          "datePublished": publishedTime,
-          "dateModified": modifiedTime || publishedTime,
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": fullUrl
-          }
-        })}
-      </script>
-    </Helmet>
+    </>
   );
 };
 

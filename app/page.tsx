@@ -269,6 +269,14 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Productivity Automation</h3>
                 <p className='text-sm opacity-90 mb-3'>300% productivity boost with AI automation</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>12 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
             <Link href='/blog/ai-2025-year-in-review' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
@@ -287,11 +295,29 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
                 <h3 className='text-lg font-semibold mb-2'>Startup Funding in AI Era</h3>
                 <p className='text-sm opacity-90 mb-3'>Navigate $50B+ AI funding landscape</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>15 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
             <Link href='/blog/ai-2026-predictions' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
                 <h3 className='text-lg font-semibold mb-2'>AI 2026 Predictions</h3>
                 <p className='text-sm opacity-90 mb-3'>The next frontier of AI technology</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>20 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/ai-multimodal-revolution-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎯</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Multimodal Revolution</h3>
                 <p className='text-sm opacity-90 mb-3'>Beyond text to vision, audio, and code</p>
@@ -308,6 +334,14 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔐</div>
                 <h3 className='text-lg font-semibold mb-2'>Edge AI: Privacy by Design</h3>
                 <p className='text-sm opacity-90 mb-3'>On-device intelligence with complete privacy</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>18 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
             <Link href='/case-studies/ai-transformation-retail-giant-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏪</div>
@@ -326,11 +360,8 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Transformation Playbook</h3>
                 <p className='text-sm opacity-90 mb-3'>Complete 2026 implementation guide</p>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Architecture</h3>
-                <p className='text-sm opacity-90 mb-3'>Scalable, secure, cost-effective systems</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>18 min read</span>
+                  <span>25 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
@@ -574,6 +605,18 @@ export default function HomePage() {
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             <Link href='/blog/ai-enterprise-integration-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Integration</h3>
+                <p className='text-sm opacity-90 mb-3'>Seamless AI integration strategies</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>16 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
             <Link href='/blog/ai-2025-year-in-review' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
