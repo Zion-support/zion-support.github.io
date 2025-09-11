@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
 
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
@@ -177,6 +176,4 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
       </div>
     </div>
   );
-};
-
-export default FuturisticBackground;
+}

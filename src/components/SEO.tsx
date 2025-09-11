@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -7,12 +6,13 @@ interface SEOProps {
   description: string;
   keywords?: string;
   canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
+  image?: string;
+  type?: 'website' | 'article' | 'product';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 export function SEO({
@@ -20,39 +20,46 @@ export function SEO({
   description,
   keywords,
   canonical,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false
+  image = '/images/zion-og-image.jpg',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = []
 }: SEOProps) {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const fullCanonicalUrl = canonical || 'https://ziontechgroup.com';
-  const fullImageUrl = ogImage.startsWith('http') ? ogImage : `https://ziontechgroup.com${ogImage}`;
-  
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "The premier AI and tech marketplace connecting talent, services, and innovation.",
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-ZION-TECH",
-      "contactType": "customer service",
-      "areaServed": "Worldwide"
-    }
-  };
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullTitle = `${title} | Zion Tech Group`;
+  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+  const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  // Structured data for better SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": type === 'article' ? 'Article' : 'WebSite',
+    "name": fullTitle,
+    "description": description,
+    "url": fullCanonical,
+    "image": fullImage,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/images/zion-logo.png`
+      }
+    },
+    ...(type === 'article' && {
+      "author": {
+        "@type": "Person",
+        "name": author
+      },
+      "datePublished": publishedTime,
+      "dateModified": modifiedTime,
+      "articleSection": section,
+      "keywords": tags.join(', ')
+    })
+  };
 
   return (
     <Helmet>
@@ -60,132 +67,77 @@ export function SEO({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullCanonicalUrl} />
+      <meta name="author" content={author} />
+      <link rel="canonical" href={fullCanonical} />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonicalUrl} />
-      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={fullImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImageUrl} />
+      <meta name="twitter:image" content={fullImage} />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Language and Region */}
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta name="language" content="English" />
+      <meta name="geo.region" content="US" />
+      <meta name="geo.placename" content="United States" />
+      
+      {/* Social Media Verification */}
+      <meta name="google-site-verification" content="your-verification-code" />
+      <meta name="msvalidate.01" content="your-bing-verification-code" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+        {JSON.stringify(structuredData)}
       </script>
       
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {/* Additional Meta Tags for Tech Companies */}
       <meta name="theme-color" content="#1e40af" />
       <meta name="msapplication-TileColor" content="#1e40af" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content={siteName} />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
       
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://ziontechgroup.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Additional Performance Optimizations */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
-  );
-}
-
-// Specialized SEO components for different page types
-export function HomePageSEO() {
-  return (
-    <SEO
-      title="Zion - The Tech & AI Marketplace"
-      description="Discover top AI and tech talent, services, and equipment in one place. Connect with experts, find innovative solutions, and accelerate your tech projects."
-      keywords="AI marketplace, tech talent, IT services, tech equipment, AI experts, developers, tech consulting, innovation"
-      canonical="/"
-      image="/images/zion-homepage-og.jpg"
-      structuredData={{
-        "@type": "WebSite",
-        "name": "Zion Tech Group",
-        "url": "https://ziontechgroup.com",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://ziontechgroup.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }}
-    />
-  );
-}
-
-export function ServicePageSEO({ 
-  serviceName, 
-  description, 
-  category 
-}: { 
-  serviceName: string;
-  description: string;
-  category: string;
-}) {
-  return (
-    <SEO
-      title={`${serviceName} - Zion Tech Group`}
-      description={description}
-      keywords={`${serviceName}, ${category}, tech services, IT solutions, Zion Tech Group`}
-      canonical={`/services/${serviceName.toLowerCase().replace(/\s+/g, '-')}`}
-      type="product"
-      structuredData={{
-        "@type": "Service",
-        "name": serviceName,
-        "description": description,
-        "provider": {
-          "@type": "Organization",
-          "name": "Zion Tech Group"
-        },
-        "category": category,
-        "areaServed": "Worldwide"
-      }}
-    />
-  );
-}
-
-export function TalentPageSEO({ 
-  talentName, 
-  skills, 
-  description 
-}: { 
-  talentName: string;
-  skills: string[];
-  description: string;
-}) {
-  return (
-    <SEO
-      title={`${talentName} - Tech Talent | Zion Tech Group`}
-      description={description}
-      keywords={`${talentName}, ${skills.join(', ')}, tech talent, AI expert, developer, Zion Tech Group`}
-      canonical={`/talent/${talentName.toLowerCase().replace(/\s+/g, '-')}`}
-      type="profile"
-      structuredData={{
-        "@type": "Person",
-        "name": talentName,
-        "description": description,
-        "knowsAbout": skills,
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Zion Tech Group"
-        }
-      }}
-    />
   );
 }

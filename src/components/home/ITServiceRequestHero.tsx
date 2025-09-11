@@ -1,18 +1,10 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
-import { 
-  MapPin, 
-  Clock, 
-  Globe, 
-  Shield, 
-  Zap,
-  CheckCircle,
-  Star
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { MapPin, Clock, Globe, Shield } from "lucide-react";
 
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState("");
@@ -30,33 +22,34 @@ export function ITServiceRequestHero() {
     }
   };
 
-  const benefits = [
-    { icon: Clock, text: "24/7 Availability", color: "text-green-400" },
-    { icon: Globe, text: "Global Coverage", color: "text-blue-400" },
-    { icon: Shield, text: "Certified Technicians", color: "text-purple-400" },
-    { icon: Zap, text: "Same Day Service", color: "text-yellow-400" }
-  ];
-
-  const stats = [
-    { number: "50+", label: "Countries Served" },
-    { number: "10K+", label: "Happy Customers" },
-    { number: "99.9%", label: "Success Rate" },
-    { number: "<2hr", label: "Response Time" }
+  const features = [
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "24/7 Availability",
+      description: "Round-the-clock support worldwide"
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Global Coverage",
+      description: "Technicians available in 150+ countries"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Certified Experts",
+      description: "Vetted and certified professionals"
+    }
   ];
 
   return (
-    <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark py-20 md:py-28 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fillRule="evenodd">
-            <g fill="#ffffff" fillOpacity="0.03">
-              <circle cx="30" cy="30" r="2"/>
-            </g>
-          </g>
-        </svg>
+    <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: '30px 30px'
+        }}></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -91,90 +84,60 @@ export function ITServiceRequestHero() {
                 </motion.div>
               ))}
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-zion-slate-light">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
-          {/* Right Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-2xl">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Request Service Now
-                </h3>
-                <p className="text-zion-slate-light">
-                  Get matched with a certified technician in your area
-                </p>
+            <div className="bg-gradient-to-br from-zion-blue-light/10 to-zion-purple/10 backdrop-blur-sm p-8 rounded-2xl border border-zion-purple/20 shadow-2xl shadow-zion-purple/10">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-zion-purple" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
+                <p className="text-zion-slate-light">Enter your location to get started</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="relative">
-                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                   <Input
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
-                    placeholder="Enter your location or address"
-                    className="pl-10 bg-zion-blue-dark/50 border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white placeholder-zion-slate-light h-12"
+                    placeholder="Enter service location (city, country)"
+                    className="bg-zion-blue-dark/50 border-zion-purple/30 focus:border-zion-purple focus:ring-zion-purple/20 text-white placeholder-zion-slate-light text-lg py-4 px-6 rounded-xl h-14"
                     required
                   />
+                  <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-purple/50" />
                 </div>
-
+                
                 <Button 
                   type="submit" 
                   disabled={isSubmitting || !location.trim()}
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 h-12 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-zion-purple via-zion-purple-dark to-zion-purple hover:from-zion-purple-light hover:via-zion-purple hover:to-zion-purple-dark text-lg py-4 rounded-xl h-14 font-semibold shadow-lg shadow-zion-purple/25 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
-                    <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      Finding Technicians...
+                    <div className="flex items-center justify-center">
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                      Processing...
                     </div>
                   ) : (
-                    "Find Available Technicians"
+                    'Request Service Now'
                   )}
                 </Button>
               </form>
 
-              {/* Trust Indicators */}
-              <div className="mt-6 pt-6 border-t border-white/20">
-                <div className="flex items-center justify-center gap-4 text-sm text-zion-slate-light">
-                  <div className="flex items-center gap-1">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span>Verified</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400" />
-                    <span>4.9/5 Rating</span>
-                  </div>
-                </div>
-                <p className="text-xs text-center text-zion-slate-light mt-3">
-                  Available worldwide, 24 hours a day • Instant quotes • No hidden fees
+              <div className="mt-6 text-center">
+                <p className="text-xs text-zion-slate-light">
+                  Available worldwide, 24 hours a day
                 </p>
+                <div className="flex items-center justify-center mt-2 text-zion-purple/60">
+                  <div className="w-2 h-2 bg-zion-purple rounded-full mr-2 animate-pulse"></div>
+                  <span className="text-xs">Average response time: 15 minutes</span>
+                </div>
               </div>
             </div>
 

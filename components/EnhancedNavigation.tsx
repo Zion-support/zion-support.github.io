@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
-  Menu, X, ChevronDown, Brain, Shield, Rocket, 
-  Cpu, Users, Award, Phone, Mail, MapPin
+  Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
+  Cpu, Database, Users, Award, BookOpen, Phone
 } from 'lucide-react';
 
 const EnhancedNavigation: React.FC = () => {
@@ -21,19 +21,20 @@ const EnhancedNavigation: React.FC = () => {
   }, []);
 
   const services = [
-    { name: 'AI Development', href: '/services/ai-development', icon: Brain },
-    { name: 'Cloud Services', href: '/services/cloud-services', icon: Shield },
-    { name: 'Web Development', href: '/services/web-development', icon: Cpu },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-    { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
-    { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Users }
+    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
+    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
+    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
+    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
 
   const company = [
-    { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Our Work', href: '/portfolio', icon: Award },
-    { name: 'Blog', href: '/blog', icon: Award },
-    { name: 'Contact', href: '/contact', icon: Phone }
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
 
   const toggleDropdown = (dropdown: string) => {
@@ -101,14 +102,10 @@ const EnhancedNavigation: React.FC = () => {
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-2 flex items-center justify-center">
                               <service.icon className="w-4 h-4 text-cyan-400" />
                             </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-200">
-                                {service.name}
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
+                            <div className="text-sm text-white/60">{service.description}</div>
+                          </div>
+                        </Link>
+                      ))}
                     </div>
                   </motion.div>
                 )}
@@ -151,14 +148,10 @@ const EnhancedNavigation: React.FC = () => {
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-2 flex items-center justify-center">
                               <item.icon className="w-4 h-4 text-purple-400" />
                             </div>
-                            <div>
-                              <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
-                                {item.name}
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
+                            <div className="text-sm text-white/60">{item.description}</div>
+                          </div>
+                        </Link>
+                      ))}
                     </div>
                   </motion.div>
                 )}
@@ -194,11 +187,10 @@ const EnhancedNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="lg:hidden py-6 border-t border-white/10"
           >
             <div className="px-6 py-6 space-y-6">
               {/* Services Section */}
@@ -214,12 +206,8 @@ const EnhancedNavigation: React.FC = () => {
                       onClick={closeAllDropdowns}
                       className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-2 flex items-center justify-center">
-                        <service.icon className="w-4 h-4 text-cyan-400" />
-                      </div>
-                      <div>
-                        <div className="text-white font-medium">{service.name}</div>
-                      </div>
+                      <service.icon className="w-5 h-5 text-white" />
+                      <span className="text-white">{service.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -238,35 +226,16 @@ const EnhancedNavigation: React.FC = () => {
                       onClick={closeAllDropdowns}
                       className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-2 flex items-center justify-center">
-                        <item.icon className="w-4 h-4 text-purple-400" />
-                      </div>
-                      <div>
-                        <div className="text-white font-medium">{item.name}</div>
-                      </div>
+                      <item.icon className="w-5 h-5 text-white" />
+                      <span className="text-white">{item.name}</span>
                     </Link>
                   ))}
                 </div>
               </div>
-
-              {/* CTA Button */}
-              <div className="pt-4">
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300">
-                  Get Started
-                </button>
-              </div>
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
-
-      {/* Backdrop for dropdowns */}
-      {activeDropdown && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => setActiveDropdown(null)}
-        />
-      )}
+      </div>
     </nav>
   );
 };

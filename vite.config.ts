@@ -1,25 +1,27 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import path from 'node:path'
+import { SAMPLE_SERVICES } from './src/data/sampleServices'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './components'),
-      '@app': resolve(__dirname, './app'),
-      '@styles': resolve(__dirname, './styles'),
-    },
-  },
-  build: {
-    target: 'esnext',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
+  plugins: [
+    react(),
+    {
+      name: 'mock-api',
+      configureServer(server) {
+        server.middlewares.use('/api/services', (req, res) => {
+          const url = new URL(req.originalUrl || req.url, 'http://localhost')
+          const category = url.searchParams.get('category')
+          const q = (url.searchParams.get('q') || '').toLowerCase()
+          const data = SAMPLE_SERVICES.filter((item) => {
+            if (category && item.category !== category) return false
+            if (q && !item.title.toLowerCase().includes(q)) return false
+            return true
+          })
+          res.setHeader('Content-Type', 'application/json')
+          res.end(JSON.stringify(data))
+        })
       },
     },
     rollupOptions: {
@@ -31,30 +33,6 @@ export default defineConfig({
         },
       },
     },
-    sourcemap: false,
-    reportCompressedSize: false,
-  },
-  server: {
-    port: 3000,
-    host: true,
-  },
-  preview: {
-    port: 3000,
-    host: true,
-  },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      '@tanstack/react-query',
-      'framer-motion',
-    ],
-  },
-  css: {
-    devSourcemap: true,
-  },
-  define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-  },
+    chunkSizeWarningLimit: 1000
+  }
 })

@@ -24,6 +24,20 @@ import {
 
 const footerSections = [
   {
+<<<<<<< HEAD
+    title: 'Core Services',
+    description: 'Our flagship technology solutions',
+    icon: <Star className="w-5 h-5 text-yellow-400" />,
+    links: [
+      { name: 'AI & Machine Learning', href: '/ai-services', featured: true },
+      { name: 'Quantum Computing', href: '/quantum-services', featured: true },
+      { name: 'Space Technology', href: '/space-technology', featured: true },
+      { name: 'Enterprise IT', href: '/it-services', featured: true },
+      { name: 'Micro SAAS Solutions', href: '/micro-saas', featured: true },
+      { name: 'Cybersecurity', href: '/security', featured: true },
+      { name: 'Cloud Infrastructure', href: '/cloud-platform', featured: true },
+      { name: 'Process Automation', href: '/automation', featured: true }
+=======
     title: '2038 Featured Services',
     description: 'Our latest revolutionary solutions',
     icon: <Star className="w-5 h-5 text-yellow-400" />,
@@ -38,6 +52,7 @@ const footerSections = [
       { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
       { name: 'Retail Technology', href: '/retail-technology-solutions' },
       { name: 'Education Technology', href: '/education-technology-solutions' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     ]
   },
   {
@@ -45,6 +60,16 @@ const footerSections = [
     description: 'Revolutionary AI platforms and solutions',
     icon: <Brain className="w-5 h-5 text-cyan-400" />,
     links: [
+<<<<<<< HEAD
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training' },
+      { name: 'AI Autonomous Operations', href: '/ai-autonomous-business-operations-platform' },
+      { name: 'AI Research Assistant', href: '/ai-autonomous-research-assistant' },
+      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform' },
+      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine' },
+      { name: 'AI Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' }
+=======
       { name: 'AI Services', href: '/ai-services' },
       { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
       { name: 'AI Predictive Maintenance Platform', href: '/ai-predictive-maintenance-platform' },
@@ -53,6 +78,7 @@ const footerSections = [
       { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework' },
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform' },
       { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     ]
   },
   {
@@ -60,6 +86,46 @@ const footerSections = [
     description: 'Breakthrough quantum and space technologies',
     icon: <Atom className="w-5 h-5 text-blue-400" />,
     links: [
+<<<<<<< HEAD
+      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' },
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' }
+    ]
+  },
+  {
+    title: 'Enterprise Solutions',
+    description: 'Advanced enterprise infrastructure solutions',
+    icon: <Shield className="w-5 h-5 text-purple-400" />,
+    links: [
+      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' },
+      { name: 'Edge Computing Platform', href: '/edge-computing-orchestration-platform' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' },
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
+      { name: 'AI Cybersecurity', href: '/ai-powered-cybersecurity' },
+      { name: 'SOC 2 Compliance', href: '/soc2-compliance-automation' }
+    ]
+  },
+  {
+    title: 'Business Solutions',
+    description: 'Innovative business automation tools',
+    icon: <Rocket className="w-5 h-5 text-emerald-400" />,
+    links: [
+      { name: 'AI Content Generator', href: '/ai-content-generator' },
+      { name: 'AI Code Review', href: '/ai-code-review' },
+      { name: 'AI HR Analytics', href: '/intelligent-hr-analytics-platform' },
+      { name: 'AI Financial Planning', href: '/ai-financial-planning-platform' },
+      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization' },
+      { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
+      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform' },
+      { name: 'AI Customer Success', href: '/ai-customer-success-platform' }
+=======
       { name: 'Quantum Services', href: '/quantum-services' },
       { name: 'Space Technology', href: '/space-technology' },
       { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' },
@@ -83,10 +149,24 @@ const footerSections = [
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
       { name: 'AI-Powered Cybersecurity Platform', href: '/ai-powered-cybersecurity' },
       { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     ]
   },
   {
     title: 'Industry Solutions',
+<<<<<<< HEAD
+    description: 'Specialized solutions by industry',
+    icon: <Target className="w-5 h-5 text-orange-400" />,
+    links: [
+      { name: 'Healthcare AI', href: '/healthcare-ai-solutions' },
+      { name: 'Financial Technology', href: '/financial-solutions' },
+      { name: 'Government Tech', href: '/government-technology-solutions' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
+      { name: 'Retail Technology', href: '/retail-technology-solutions' },
+      { name: 'Education Technology', href: '/education-technology-solutions' },
+      { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
+      { name: 'Space Technology', href: '/space-technology' }
+=======
     description: 'Tailored solutions for specific industries',
     icon: <Target className="w-5 h-5 text-emerald-400" />,
     links: [
@@ -115,6 +195,7 @@ const footerSections = [
       { name: 'Blog & News', href: '/news' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Partners', href: '/partners' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     ]
   }
 ];

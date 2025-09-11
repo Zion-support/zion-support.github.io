@@ -60,60 +60,8 @@ const categories = [
     features: ["AWS", "Azure", "Google Cloud", "Hybrid Solutions"]
   },
   {
-    title: "Cybersecurity",
-    description: "Protect your digital assets",
-    icon: <Shield className="w-8 h-8" />,
-    color: "from-red-500 to-pink-600",
-    link: "/services",
-    features: ["Penetration Testing", "Security Audits", "Incident Response", "Compliance"]
-  },
-  {
-    title: "Mobile Development",
-    description: "Native and cross-platform apps",
-    icon: <Smartphone className="w-8 h-8" />,
-    color: "from-yellow-500 to-orange-600",
-    link: "/services",
-    features: ["iOS", "Android", "React Native", "Flutter"]
-  },
-  {
-    title: "Blockchain & Web3",
-    description: "Decentralized solutions and smart contracts",
-    icon: <LinkIcon className="w-8 h-8" />,
-    color: "from-teal-500 to-blue-600",
-    link: "/services",
-    features: ["Smart Contracts", "DeFi", "NFTs", "DApps"]
-  },
-  {
-    title: "Micro SAAS",
-    description: "Scalable software solutions",
-    icon: <Rocket className="w-8 h-8" />,
-    color: "from-pink-500 to-rose-600",
-    link: "/micro-saas",
-    features: ["Custom Development", "API Integration", "Scalability", "Support"]
-  },
-  {
-    title: "UI/UX Design",
-    description: "Beautiful and functional interfaces",
-    icon: <Palette className="w-8 h-8" />,
-    color: "from-violet-500 to-purple-600",
-    link: "/services",
-    features: ["User Research", "Wireframing", "Prototyping", "Testing"]
-  },
-  {
-    title: "Data Analytics",
-    description: "Turn data into insights",
-    icon: <Zap className="w-8 h-8" />,
-    color: "from-amber-500 to-yellow-600",
-    link: "/services",
-    features: ["Big Data", "Business Intelligence", "Data Mining", "Visualization"]
-  },
-  {
-    title: "All Services",
-    description: "Complete service catalog",
-    icon: <Globe className="w-8 h-8" />,
-    color: "from-slate-500 to-gray-600",
-    link: "/comprehensive-services",
-    features: ["Full Catalog", "Custom Solutions", "Enterprise", "Consulting"]
+    title: "Comprehensive Services",
+    link: "/comprehensive-services"
   }
 ];
 
@@ -213,18 +161,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   </div>
                 </div>
               </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Bottom CTA */}
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-12 flex justify-center">
           <Link 
             to="/comprehensive-services"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20"
@@ -232,7 +173,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             View All Services
             <Rocket className="w-5 h-5" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

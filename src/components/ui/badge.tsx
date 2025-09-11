@@ -5,26 +5,28 @@ type BadgeVariant = 'default' | 'outline' | 'secondary' | 'destructive';
 interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   variant?: BadgeVariant;
   children: React.ReactNode;
+  variant?: 'default' | 'secondary' | 'outline';
+  className?: string;
 }
 
-const baseClass =
-  'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
-
-const variantClasses: Record<BadgeVariant, string> = {
-  default: 'bg-zion-purple text-white',
-  outline: 'border border-current text-zion-slate-light',
-  secondary: 'bg-zion-blue-light/20 text-zion-slate-light',
-  destructive: 'bg-red-600 text-white',
-};
-
-export function Badge({ variant = 'default', className = '', children, ...rest }: BadgeProps) {
-  const classes = `${baseClass} ${variantClasses[variant]} ${className}`.trim();
+export const Badge: React.FC<BadgeProps> = ({ 
+  children, 
+  variant = 'default', 
+  className = '' 
+}) => {
+  const baseClasses = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2';
+  
+  const variantClasses = {
+    default: 'bg-zion-cyan text-white',
+    secondary: 'bg-zion-blue-light text-zion-cyan',
+    outline: 'border border-zion-cyan text-zion-cyan'
+  };
+  
+  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
+  
   return (
-    <span className={classes} {...rest}>
+    <span className={classes}>
       {children}
     </span>
   );
-}
-
-export default Badge;
-
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -45,3 +46,13 @@ const NotFound: React.FC = () => {
 };
 
 export default NotFound;
+=======
+export function App() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-63e3

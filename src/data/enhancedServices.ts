@@ -1,458 +1,440 @@
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: {
-    basic: number;
-    professional: number;
-    enterprise: number;
-  };
-  features: string[];
-  tags: string[];
-  featured: boolean;
-  popular: boolean;
-  estimatedTime: string;
-  included: string[];
-  notIncluded: string[];
-  requirements: string[];
-  deliverables: string[];
-  technologies: string[];
-  certifications: string[];
-  support: string[];
-  warranty: string;
-  location: string[];
-  languages: string[];
-  availability: string;
-  rating: number;
-  reviews: number;
-  provider: {
-    name: string;
-    verified: boolean;
-    rating: number;
-    completedProjects: number;
-    responseTime: string;
-    location: string;
-    languages: string[];
-    certifications: string[];
-    specialties: string[];
-  };
-}
+import { ProductListing } from "@/types/listings";
 
-export const ENHANCED_SERVICES: Service[] = [
+export const ENHANCED_SERVICES: ProductListing[] = [
+  // AI & Machine Learning Services
   {
-    id: "ai-ml-consulting",
-    title: "AI & Machine Learning Consulting",
-    description: "Expert consultation on implementing AI and ML solutions for your business",
-    category: "AI & Machine Learning",
-    subcategory: "Consulting",
-    price: {
-      basic: 150,
-      professional: 250,
-      enterprise: 400
+    id: "ai-automation-suite",
+    title: "AI Process Automation Suite",
+    description: "Complete workflow automation platform using AI to streamline business processes, reduce manual work by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.",
+    category: "AI Automation",
+    subcategory: "Process Optimization",
+    price: 2999,
+    currency: "$",
+    tags: ["RPA", "Workflow Automation", "AI", "Process Mining", "Business Intelligence"],
+    author: {
+      name: "ZionTech AI Solutions",
+      id: "ziontech-ai",
+      email: "kleber@ziontechgroup.com",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
-    features: [
-      "AI Strategy Development",
-      "Technology Assessment",
-      "Implementation Roadmap",
-      "ROI Analysis",
-      "Team Training",
-      "Ongoing Support"
-    ],
-    tags: ["AI", "Machine Learning", "Consulting", "Strategy", "Digital Transformation"],
-    featured: true,
-    popular: true,
-    estimatedTime: "2-4 weeks",
-    included: [
-      "Initial Assessment",
-      "Strategy Document",
-      "Implementation Plan",
-      "Technology Recommendations",
-      "Cost Analysis"
-    ],
-    notIncluded: [
-      "Actual Implementation",
-      "Hardware/Software",
-      "Ongoing Maintenance"
-    ],
-    requirements: [
-      "Business Requirements Document",
-      "Current Technology Stack",
-      "Budget Constraints",
-      "Timeline Expectations"
-    ],
-    deliverables: [
-      "AI Strategy Report",
-      "Implementation Roadmap",
-      "Technology Architecture",
-      "Cost-Benefit Analysis",
-      "Risk Assessment"
-    ],
-    technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "AWS SageMaker"],
-    certifications: ["AWS ML Specialty", "Google Cloud ML Engineer", "Microsoft Azure AI Engineer"],
-    support: ["Email Support", "Phone Consultation", "Monthly Review Calls"],
-    warranty: "30-day satisfaction guarantee",
-    location: ["Remote", "On-site", "Hybrid"],
-    languages: ["English", "Spanish", "Portuguese"],
-    availability: "24/7",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
-    reviews: 127,
-    provider: {
-      name: "AI Solutions Pro",
-      verified: true,
-      rating: 4.9,
-      completedProjects: 89,
-      responseTime: "<2 hours",
-      location: "United States",
-      languages: ["English", "Spanish"],
-      certifications: ["AWS ML Specialty", "Google Cloud ML Engineer"],
-      specialties: ["Computer Vision", "Natural Language Processing", "Predictive Analytics"]
-    }
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 96
   },
   {
-    id: "cybersecurity-audit",
-    title: "Cybersecurity Audit & Assessment",
-    description: "Comprehensive security assessment to identify vulnerabilities and improve protection",
-    category: "Cybersecurity",
-    subcategory: "Audit & Assessment",
-    price: {
-      basic: 200,
-      professional: 350,
-      enterprise: 600
+    id: "ai-customer-intelligence",
+    title: "AI Customer Intelligence Platform",
+    description: "Advanced customer behavior analysis using machine learning to predict churn, optimize pricing, and personalize customer experiences. Real-time insights with 95% prediction accuracy.",
+    category: "AI Analytics",
+    subcategory: "Customer Intelligence",
+    price: 4499,
+    currency: "$",
+    tags: ["Customer Analytics", "Predictive Modeling", "Personalization", "Churn Prevention", "ML"],
+    author: {
+      name: "ZionTech AI Solutions",
+      id: "ziontech-ai",
+      email: "kleber@ziontechgroup.com",
     },
-    features: [
-      "Vulnerability Assessment",
-      "Penetration Testing",
-      "Security Policy Review",
-      "Compliance Check",
-      "Risk Analysis",
-      "Remediation Plan"
-    ],
-    tags: ["Cybersecurity", "Security Audit", "Penetration Testing", "Compliance", "Risk Assessment"],
-    featured: true,
-    popular: true,
-    estimatedTime: "1-3 weeks",
-    included: [
-      "Security Assessment",
-      "Vulnerability Report",
-      "Risk Analysis",
-      "Remediation Recommendations",
-      "Compliance Report"
-    ],
-    notIncluded: [
-      "Security Tool Implementation",
-      "Ongoing Monitoring",
-      "Incident Response"
-    ],
-    requirements: [
-      "Network Access",
-      "System Documentation",
-      "Security Policies",
-      "Compliance Requirements"
-    ],
-    deliverables: [
-      "Security Assessment Report",
-      "Vulnerability Database",
-      "Risk Matrix",
-      "Remediation Roadmap",
-      "Compliance Checklist"
-    ],
-    technologies: ["Nmap", "Metasploit", "Wireshark", "Nessus", "OpenVAS"],
-    certifications: ["CISSP", "CEH", "OSCP", "CISM", "CompTIA Security+"],
-    support: ["24/7 Emergency Support", "Weekly Status Updates", "Monthly Review"],
-    warranty: "90-day remediation support",
-    location: ["Remote", "On-site"],
-    languages: ["English", "French", "German"],
-    availability: "Business Hours + Emergency",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-20T14:30:00.000Z",
     rating: 4.8,
-    reviews: 94,
-    provider: {
-      name: "SecureNet Solutions",
-      verified: true,
-      rating: 4.8,
-      completedProjects: 156,
-      responseTime: "<1 hour",
-      location: "United Kingdom",
-      languages: ["English", "French", "German"],
-      certifications: ["CISSP", "CEH", "OSCP"],
-      specialties: ["Network Security", "Application Security", "Cloud Security"]
-    }
+    reviewCount: 89,
+    location: "Global",
+    availability: "3-4 Weeks",
+    aiScore: 94
   },
   {
-    id: "cloud-migration",
-    title: "Cloud Migration & DevOps",
-    description: "Seamless migration to cloud platforms with DevOps automation and best practices",
-    category: "Cloud & Infrastructure",
-    subcategory: "Migration",
-    price: {
-      basic: 300,
-      professional: 500,
-      enterprise: 800
+    id: "ai-content-optimization",
+    title: "AI Content Optimization Engine",
+    description: "SEO and content performance optimization using natural language processing. Automatically analyzes content quality, suggests improvements, and tracks performance metrics for better search rankings.",
+    category: "AI Marketing",
+    subcategory: "Content Optimization",
+    price: 1999,
+    currency: "$",
+    tags: ["SEO", "Content Marketing", "NLP", "Performance Analytics", "Automation"],
+    author: {
+      name: "ZionTech AI Solutions",
+      id: "ziontech-ai",
+      email: "kleber@ziontechgroup.com",
     },
-    features: [
-      "Cloud Strategy Planning",
-      "Migration Execution",
-      "DevOps Implementation",
-      "CI/CD Pipeline Setup",
-      "Monitoring & Alerting",
-      "Cost Optimization"
-    ],
-    tags: ["Cloud Migration", "DevOps", "AWS", "Azure", "Google Cloud", "CI/CD"],
-    featured: true,
-    popular: true,
-    estimatedTime: "4-8 weeks",
-    included: [
-      "Migration Strategy",
-      "Infrastructure as Code",
-      "CI/CD Pipeline",
-      "Monitoring Setup",
-      "Documentation",
-      "Team Training"
-    ],
-    notIncluded: [
-      "Cloud Infrastructure Costs",
-      "Third-party Tools",
-      "Ongoing Operations"
-    ],
-    requirements: [
-      "Current Infrastructure Documentation",
-      "Application Dependencies",
-      "Performance Requirements",
-      "Budget Approval"
-    ],
-    deliverables: [
-      "Migration Plan",
-      "Infrastructure Code",
-      "CI/CD Pipeline",
-      "Monitoring Dashboard",
-      "Runbooks",
-      "Training Materials"
-    ],
-    technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "Docker", "Kubernetes"],
-    certifications: ["AWS Solutions Architect", "Azure Solutions Architect", "Google Cloud Professional"],
-    support: ["24/7 Support", "Weekly Reviews", "Monthly Optimization"],
-    warranty: "6-month post-migration support",
-    location: ["Remote", "On-site"],
-    languages: ["English", "Spanish", "Portuguese"],
-    availability: "24/7",
+    images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-25T09:15:00.000Z",
     rating: 4.7,
-    reviews: 203,
-    provider: {
-      name: "CloudTech Experts",
-      verified: true,
-      rating: 4.7,
-      completedProjects: 234,
-      responseTime: "<4 hours",
-      location: "Canada",
-      languages: ["English", "French"],
-      certifications: ["AWS Solutions Architect", "Azure Solutions Architect"],
-      specialties: ["AWS", "Azure", "Kubernetes", "Terraform"]
-    }
+    reviewCount: 234,
+    location: "Global",
+    availability: "1-2 Weeks",
+    aiScore: 92
+  },
+
+  // Cybersecurity Services
+  {
+    id: "zero-trust-security",
+    title: "Zero Trust Security Implementation",
+    description: "Complete zero trust architecture implementation including identity verification, device trust scoring, network segmentation, and continuous monitoring. Reduces security incidents by 90%.",
+    category: "Cybersecurity",
+    subcategory: "Zero Trust",
+    price: 8999,
+    currency: "$",
+    tags: ["Zero Trust", "Identity Management", "Network Security", "Compliance", "Monitoring"],
+    author: {
+      name: "ZionTech Security",
+      id: "ziontech-security",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-01T11:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 67,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 95
   },
   {
-    id: "data-analytics",
-    title: "Data Analytics & Business Intelligence",
-    description: "Transform raw data into actionable insights with advanced analytics solutions",
-    category: "Data & Analytics",
-    subcategory: "Business Intelligence",
-    price: {
-      basic: 180,
-      professional: 300,
-      enterprise: 500
+    id: "threat-intelligence-platform",
+    title: "AI-Powered Threat Intelligence Platform",
+    description: "Real-time threat detection and response using machine learning algorithms. Monitors network traffic, detects anomalies, and provides automated incident response with 99.9% accuracy.",
+    category: "Cybersecurity",
+    subcategory: "Threat Detection",
+    price: 6499,
+    currency: "$",
+    tags: ["Threat Intelligence", "ML", "Incident Response", "Network Monitoring", "Automation"],
+    author: {
+      name: "ZionTech Security",
+      id: "ziontech-security",
+      email: "kleber@ziontechgroup.com",
     },
-    features: [
-      "Data Strategy Development",
-      "ETL Pipeline Design",
-      "Dashboard Creation",
-      "Predictive Analytics",
-      "Data Governance",
-      "Performance Optimization"
-    ],
-    tags: ["Data Analytics", "Business Intelligence", "ETL", "Data Visualization", "Predictive Analytics"],
-    featured: true,
-    popular: false,
-    estimatedTime: "3-6 weeks",
-    included: [
-      "Data Assessment",
-      "ETL Pipeline",
-      "Analytics Dashboard",
-      "Data Dictionary",
-      "Governance Framework"
-    ],
-    notIncluded: [
-      "Data Sources",
-      "Third-party Tools",
-      "Ongoing Data Processing"
-    ],
-    requirements: [
-      "Data Sources Access",
-      "Business Requirements",
-      "Performance Expectations",
-      "Compliance Requirements"
-    ],
-    deliverables: [
-      "Data Strategy Document",
-      "ETL Pipeline",
-      "Analytics Dashboard",
-      "Data Dictionary",
-      "Governance Policy",
-      "Training Materials"
-    ],
-    technologies: ["Python", "SQL", "Tableau", "Power BI", "Apache Spark", "Snowflake"],
-    certifications: ["Tableau Desktop Specialist", "Power BI Data Analyst", "Google Data Analytics"],
-    support: ["Email Support", "Weekly Reviews", "Monthly Optimization"],
-    warranty: "60-day support period",
-    location: ["Remote", "On-site"],
-    languages: ["English", "Spanish"],
-    availability: "Business Hours",
-    rating: 4.6,
-    reviews: 78,
-    provider: {
-      name: "DataInsight Pro",
-      verified: true,
-      rating: 4.6,
-      completedProjects: 67,
-      responseTime: "<8 hours",
-      location: "Australia",
-      languages: ["English"],
-      certifications: ["Tableau Desktop Specialist", "Power BI Data Analyst"],
-      specialties: ["Data Engineering", "Business Intelligence", "Predictive Analytics"]
-    }
-  },
-  {
-    id: "web-development",
-    title: "Custom Web Application Development",
-    description: "Full-stack web applications built with modern technologies and best practices",
-    category: "Web & Mobile",
-    subcategory: "Development",
-    price: {
-      basic: 250,
-      professional: 450,
-      enterprise: 750
-    },
-    features: [
-      "Custom Design",
-      "Full-stack Development",
-      "Responsive Layout",
-      "Performance Optimization",
-      "Security Implementation",
-      "Testing & Deployment"
-    ],
-    tags: ["Web Development", "React", "Node.js", "Full-stack", "Custom Development"],
-    featured: false,
-    popular: true,
-    estimatedTime: "6-12 weeks",
-    included: [
-      "UI/UX Design",
-      "Frontend Development",
-      "Backend Development",
-      "Database Design",
-      "Testing",
-      "Deployment"
-    ],
-    notIncluded: [
-      "Hosting",
-      "Domain Registration",
-      "Ongoing Maintenance",
-      "Content Creation"
-    ],
-    requirements: [
-      "Project Requirements",
-      "Design Preferences",
-      "Target Audience",
-      "Performance Requirements"
-    ],
-    deliverables: [
-      "Source Code",
-      "Documentation",
-      "Deployment Guide",
-      "User Manual",
-      "Maintenance Guide"
-    ],
-    technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS", "Docker"],
-    certifications: ["AWS Developer Associate", "Microsoft Certified Developer", "Google Cloud Developer"],
-    support: ["3-month post-launch support", "Bug fixes", "Performance optimization"],
-    warranty: "90-day bug-free guarantee",
-    location: ["Remote", "On-site"],
-    languages: ["English", "Spanish", "Portuguese"],
-    availability: "Business Hours",
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-05T15:45:00.000Z",
     rating: 4.8,
-    reviews: 156,
-    provider: {
-      name: "WebDev Masters",
-      verified: true,
-      rating: 4.8,
-      completedProjects: 189,
-      responseTime: "<6 hours",
-      location: "Brazil",
-      languages: ["English", "Portuguese", "Spanish"],
-      certifications: ["AWS Developer Associate", "Microsoft Certified Developer"],
-      specialties: ["React", "Node.js", "Full-stack Development", "E-commerce"]
-    }
+    reviewCount: 45,
+    location: "Global",
+    availability: "3-4 Weeks",
+    aiScore: 93
+  },
+  {
+    id: "compliance-automation",
+    title: "Compliance Automation Suite",
+    description: "Automated compliance management for GDPR, HIPAA, SOC2, and ISO27001. Continuous monitoring, automated reporting, and risk assessment with AI-powered insights.",
+    category: "Cybersecurity",
+    subcategory: "Compliance",
+    price: 3999,
+    currency: "$",
+    tags: ["Compliance", "GDPR", "HIPAA", "SOC2", "Automation", "Risk Management"],
+    author: {
+      name: "ZionTech Security",
+      id: "ziontech-security",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-10T13:20:00.000Z",
+    rating: 4.7,
+    reviewCount: 78,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 91
+  },
+
+  // Cloud & DevOps Services
+  {
+    id: "multi-cloud-orchestration",
+    title: "Multi-Cloud Orchestration Platform",
+    description: "Unified management platform for AWS, Azure, and Google Cloud. Automated resource provisioning, cost optimization, and performance monitoring across all cloud providers.",
+    category: "Cloud Services",
+    subcategory: "Multi-Cloud",
+    price: 5499,
+    currency: "$",
+    tags: ["Multi-Cloud", "AWS", "Azure", "GCP", "Orchestration", "Cost Optimization"],
+    author: {
+      name: "ZionTech Cloud",
+      id: "ziontech-cloud",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-15T10:30:00.000Z",
+    rating: 4.8,
+    reviewCount: 112,
+    location: "Global",
+    availability: "3-4 Weeks",
+    aiScore: 94
+  },
+  {
+    id: "devops-automation",
+    title: "DevOps Automation & CI/CD Pipeline",
+    description: "End-to-end DevOps automation including automated testing, deployment, monitoring, and rollback capabilities. Reduces deployment time by 80% and increases reliability.",
+    category: "DevOps",
+    subcategory: "Automation",
+    price: 3999,
+    currency: "$",
+    tags: ["DevOps", "CI/CD", "Automation", "Testing", "Monitoring", "Deployment"],
+    author: {
+      name: "ZionTech Cloud",
+      id: "ziontech-cloud",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-20T16:15:00.000Z",
+    rating: 4.9,
+    reviewCount: 89,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 95
+  },
+  {
+    id: "serverless-architecture",
+    title: "Serverless Architecture Design & Implementation",
+    description: "Complete serverless solution design using AWS Lambda, Azure Functions, and Google Cloud Functions. Event-driven architecture with auto-scaling and pay-per-use pricing.",
+    category: "Cloud Services",
+    subcategory: "Serverless",
+    price: 6999,
+    currency: "$",
+    tags: ["Serverless", "Lambda", "Event-Driven", "Auto-scaling", "Cost Optimization"],
+    author: {
+      name: "ZionTech Cloud",
+      id: "ziontech-cloud",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-25T12:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 56,
+    location: "Global",
+    availability: "4-5 Weeks",
+    aiScore: 93
+  },
+
+  // Data & Analytics Services
+  {
+    id: "real-time-analytics",
+    title: "Real-Time Data Analytics Platform",
+    description: "Streaming analytics platform for real-time business intelligence. Processes millions of events per second with sub-second latency for instant decision making.",
+    category: "Data Analytics",
+    subcategory: "Real-Time",
+    price: 7999,
+    currency: "$",
+    tags: ["Real-Time Analytics", "Streaming", "Business Intelligence", "Low Latency", "Big Data"],
+    author: {
+      name: "ZionTech Data",
+      id: "ziontech-data",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-01T09:45:00.000Z",
+    rating: 4.8,
+    reviewCount: 34,
+    location: "Global",
+    availability: "5-6 Weeks",
+    aiScore: 94
+  },
+  {
+    id: "data-governance-suite",
+    title: "Data Governance & Quality Management",
+    description: "Comprehensive data governance platform with data lineage, quality scoring, privacy controls, and compliance monitoring. Ensures data accuracy and regulatory compliance.",
+    category: "Data Management",
+    subcategory: "Governance",
+    price: 5499,
+    currency: "$",
+    tags: ["Data Governance", "Data Quality", "Lineage", "Privacy", "Compliance"],
+    author: {
+      name: "ZionTech Data",
+      id: "ziontech-data",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-05T14:20:00.000Z",
+    rating: 4.7,
+    reviewCount: 67,
+    location: "Global",
+    availability: "3-4 Weeks",
+    aiScore: 92
+  },
+  {
+    id: "predictive-maintenance",
+    title: "AI-Powered Predictive Maintenance",
+    description: "IoT-based predictive maintenance system using machine learning to predict equipment failures before they occur. Reduces downtime by 60% and maintenance costs by 40%.",
+    category: "IoT & Analytics",
+    subcategory: "Predictive Maintenance",
+    price: 8999,
+    currency: "$",
+    tags: ["IoT", "Predictive Maintenance", "ML", "Equipment Monitoring", "Cost Reduction"],
+    author: {
+      name: "ZionTech IoT",
+      id: "ziontech-iot",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-10T11:30:00.000Z",
+    rating: 4.9,
+    reviewCount: 23,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 96
+  },
+
+  // Blockchain & Web3 Services
+  {
+    id: "blockchain-enterprise",
+    title: "Enterprise Blockchain Solutions",
+    description: "Custom blockchain development for supply chain transparency, digital identity, and smart contracts. Built on Hyperledger Fabric, Ethereum, or custom protocols.",
+    category: "Blockchain",
+    subcategory: "Enterprise",
+    price: 14999,
+    currency: "$",
+    tags: ["Blockchain", "Smart Contracts", "Supply Chain", "Digital Identity", "Hyperledger"],
+    author: {
+      name: "ZionTech Blockchain",
+      id: "ziontech-blockchain",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-15T13:45:00.000Z",
+    rating: 4.8,
+    reviewCount: 18,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 93
+  },
+  {
+    id: "defi-platform",
+    title: "DeFi Platform Development",
+    description: "Complete decentralized finance platform including yield farming, liquidity pools, and governance tokens. Built with security best practices and audited smart contracts.",
+    category: "Blockchain",
+    subcategory: "DeFi",
+    price: 19999,
+    currency: "$",
+    tags: ["DeFi", "Yield Farming", "Liquidity Pools", "Smart Contracts", "Security"],
+    author: {
+      name: "ZionTech Blockchain",
+      id: "ziontech-blockchain",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-20T10:15:00.000Z",
+    rating: 4.9,
+    reviewCount: 12,
+    location: "Global",
+    availability: "10-12 Weeks",
+    aiScore: 95
+  },
+
+  // Edge Computing & 5G Services
+  {
+    id: "edge-computing-platform",
+    title: "Edge Computing & 5G Integration Platform",
+    description: "Edge computing platform for ultra-low latency applications. Integrates with 5G networks for real-time processing, IoT device management, and distributed computing.",
+    category: "Edge Computing",
+    subcategory: "5G Integration",
+    price: 12999,
+    currency: "$",
+    tags: ["Edge Computing", "5G", "IoT", "Low Latency", "Distributed Computing"],
+    author: {
+      name: "ZionTech Edge",
+      id: "ziontech-edge",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-25T15:30:00.000Z",
+    rating: 4.7,
+    reviewCount: 8,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 94
+  },
+
+  // Quantum Computing Services
+  {
+    id: "quantum-algorithms",
+    title: "Quantum Algorithm Development & Optimization",
+    description: "Custom quantum algorithms for optimization problems, cryptography, and machine learning. Optimized for current quantum hardware with hybrid classical-quantum approaches.",
+    category: "Quantum Computing",
+    subcategory: "Algorithm Development",
+    price: 24999,
+    currency: "$",
+    tags: ["Quantum Computing", "Algorithms", "Optimization", "Cryptography", "ML"],
+    author: {
+      name: "ZionTech Quantum",
+      id: "ziontech-quantum",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-30T12:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 5,
+    location: "Global",
+    availability: "12-16 Weeks",
+    aiScore: 97
+  },
+
+  // AR/VR & Metaverse Services
+  {
+    id: "metaverse-platform",
+    title: "Metaverse Platform Development",
+    description: "Complete metaverse platform with 3D environments, avatar customization, social features, and virtual commerce. Built for scalability and cross-platform compatibility.",
+    category: "AR/VR",
+    subcategory: "Metaverse",
+    price: 29999,
+    currency: "$",
+    tags: ["Metaverse", "3D Environments", "Avatars", "Social VR", "Virtual Commerce"],
+    author: {
+      name: "ZionTech AR/VR",
+      id: "ziontech-arvr",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1593508512255-aaab0b0f8c0f?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-04-01T09:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 3,
+    location: "Global",
+    availability: "16-20 Weeks",
+    aiScore: 95
+  },
+
+  // FinTech Services
+  {
+    id: "fintech-platform",
+    title: "FinTech Platform & Payment Solutions",
+    description: "Complete financial technology platform including payment processing, digital banking, lending algorithms, and regulatory compliance. Built with security and scalability in mind.",
+    category: "FinTech",
+    subcategory: "Platform Development",
+    price: 34999,
+    currency: "$",
+    tags: ["FinTech", "Payments", "Digital Banking", "Lending", "Compliance"],
+    author: {
+      name: "ZionTech FinTech",
+      id: "ziontech-fintech",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-04-05T14:45:00.000Z",
+    rating: 4.9,
+    reviewCount: 7,
+    location: "Global",
+    availability: "20-24 Weeks",
+    aiScore: 96
   }
 ];
 
-export const SERVICE_CATEGORIES = [
-  {
-    id: "ai-ml",
-    name: "AI & Machine Learning",
-    description: "Artificial intelligence and machine learning solutions",
-    services: ["ai-ml-consulting"],
-    icon: "🤖",
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    id: "cybersecurity",
-    name: "Cybersecurity",
-    description: "Security solutions and protection services",
-    services: ["cybersecurity-audit"],
-    icon: "🔒",
-    color: "from-red-500 to-orange-500"
-  },
-  {
-    id: "cloud-infrastructure",
-    name: "Cloud & Infrastructure",
-    description: "Cloud migration and infrastructure management",
-    services: ["cloud-migration"],
-    icon: "☁️",
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    id: "data-analytics",
-    name: "Data & Analytics",
-    description: "Data processing and business intelligence",
-    services: ["data-analytics"],
-    icon: "📊",
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-    id: "web-mobile",
-    name: "Web & Mobile",
-    description: "Custom application development",
-    services: ["web-development"],
-    icon: "💻",
-    color: "from-indigo-500 to-purple-500"
-  }
+// Service categories for filtering
+export const ENHANCED_SERVICE_CATEGORIES = [
+  { label: 'AI & Machine Learning', value: 'ai-ml' },
+  { label: 'Cybersecurity', value: 'cybersecurity' },
+  { label: 'Cloud & DevOps', value: 'cloud-devops' },
+  { label: 'Data & Analytics', value: 'data-analytics' },
+  { label: 'Blockchain & Web3', value: 'blockchain-web3' },
+  { label: 'Edge Computing & 5G', value: 'edge-5g' },
+  { label: 'Quantum Computing', value: 'quantum-computing' },
+  { label: 'AR/VR & Metaverse', value: 'arvr-metaverse' },
+  { label: 'FinTech', value: 'fintech' },
+  { label: 'IoT Solutions', value: 'iot-solutions' }
 ];
 
-export const FEATURED_SERVICES = ENHANCED_SERVICES.filter(service => service.featured);
-
-export const POPULAR_SERVICES = ENHANCED_SERVICES.filter(service => service.popular);
-
-export const getServiceById = (id: string): Service | undefined => {
-  return ENHANCED_SERVICES.find(service => service.id === id);
-};
-
-export const getServicesByCategory = (category: string): Service[] => {
-  return ENHANCED_SERVICES.filter(service => service.category === category);
-};
-
-export const searchServices = (query: string): Service[] => {
-  const searchTerm = query.toLowerCase();
-  return ENHANCED_SERVICES.filter(service => 
-    service.title.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
-    service.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-  );
+// Service pricing tiers
+export const SERVICE_PRICING_TIERS = {
+  starter: { min: 1999, max: 4999, description: "Essential services for small businesses" },
+  professional: { min: 5000, max: 14999, description: "Advanced solutions for growing companies" },
+  enterprise: { min: 15000, max: 50000, description: "Custom enterprise-grade solutions" }
 };

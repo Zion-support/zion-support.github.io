@@ -1,33 +1,3 @@
-const CACHE_NAME = 'zion-tech-v1';
-const STATIC_CACHE_NAME = 'zion-static-v1';
-const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1';
-
-// Files to cache immediately
-const STATIC_FILES = [
-  '/',
-<<<<<<< HEAD
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json',
-];
-
-// Install event - cache resources
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
-  );
-});
-
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      // Return cached version or fetch from network
-      return response || fetch(event.request);
-    })
-=======
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
@@ -36,40 +6,56 @@ self.addEventListener('fetch', event => {
 ];
 
 // Install event - cache static files
+=======
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
+];
+
+// Install event - cache resources
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE_NAME)
+    caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
       })
-      .then(() => {
-        console.log('Static files cached successfully');
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Error caching static files:', error);
-      })
->>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
+  );
+});
+
+// Fetch event - serve from cache when offline
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', event => {
   event.waitUntil(
-<<<<<<< HEAD
-    caches.keys().then(cacheNames => {
+    caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map(cacheName => {
+        cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
     })
   );
-});
-=======
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
@@ -260,4 +246,5 @@ self.addEventListener('error', (event) => {
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service worker unhandled rejection:', event.reason);
 });
->>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
+=======
+});

@@ -1,77 +1,72 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
-interface PageLoaderProps {
-  text?: string;
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
+  text?: string;
+  variant?: 'default' | 'pulse' | 'dots';
 }
 
-export function PageLoader({ text = "Loading...", className = "" }: PageLoaderProps) {
+export function LoadingSpinner({ 
+  size = 'md', 
+  className, 
+  text,
+  variant = 'default' 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'pulse':
+        return (
+          <div className={cn(
+            'animate-pulse rounded-full bg-zion-cyan',
+            sizeClasses[size]
+          )} />
+        );
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            <div className={cn(
+              'animate-bounce rounded-full bg-zion-cyan',
+              size === 'sm' ? 'w-1 h-1' : size === 'md' ? 'w-2 h-2' : size === 'lg' ? 'w-3 h-3' : 'w-4 h-4'
+            )} style={{ animationDelay: '0ms' }} />
+            <div className={cn(
+              'animate-bounce rounded-full bg-zion-purple',
+              size === 'sm' ? 'w-1 h-1' : size === 'md' ? 'w-2 h-2' : size === 'lg' ? 'w-3 h-3' : 'w-4 h-4'
+            )} style={{ animationDelay: '150ms' }} />
+            <div className={cn(
+              'animate-bounce rounded-full bg-zion-cyan-light',
+              size === 'sm' ? 'w-1 h-1' : size === 'md' ? 'w-2 h-2' : size === 'lg' ? 'w-3 h-3' : 'w-4 h-4'
+            )} style={{ animationDelay: '300ms' }} />
+          </div>
+        );
+      default:
+        return (
+          <div className={cn(
+            'animate-spin rounded-full border-2 border-zion-blue-light border-t-zion-cyan',
+            sizeClasses[size]
+          )} />
+        );
+    }
+  };
+
   return (
-    <div className={`min-h-screen flex items-center justify-center ${className}`}>
-      <div className="text-center">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full mx-auto mb-4"
-        />
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-          className="text-zion-cyan text-lg font-medium"
-        >
-          {text}
-        </motion.p>
+    <div className={cn('flex flex-col items-center justify-center', className)}>
+      <div className="relative">
+        {renderSpinner()}
       </div>
+      {text && (
+        <p className="mt-3 text-sm text-zion-slate-light text-center animate-pulse">
+          {text}
+        </p>
+      )}
     </div>
-  );
-}
-
-export function LoadingSpinner({ className = "" }: { className?: string }) {
-  return (
-    <motion.div
-      animate={{ rotate: 360 }}
-      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-      className={`w-6 h-6 border-2 border-zion-cyan border-t-transparent rounded-full ${className}`}
-    />
-  );
-}
-
-export function LoadingDots({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex space-x-1 ${className}`}>
-      {[0, 1, 2].map((i) => (
-        <motion.div
-          key={i}
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.2 }}
-          className="w-2 h-2 bg-zion-cyan rounded-full"
-        />
-      ))}
-    </div>
-  );
-}
-
-export function LoadingBar({ className = "" }: { className?: string }) {
-  return (
-    <div className={`w-full bg-zion-blue-dark rounded-full h-2 ${className}`}>
-      <motion.div
-        className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
-        initial={{ width: "0%" }}
-        animate={{ width: "100%" }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      />
-    </div>
-  );
-}
-
-export function LoadingPulse({ className = "" }: { className?: string }) {
-  return (
-    <motion.div
-      animate={{ scale: [1, 1.1, 1] }}
-      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-      className={`w-8 h-8 bg-zion-cyan rounded-full ${className}`}
-    />
   );
 }

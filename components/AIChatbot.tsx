@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
 
@@ -286,6 +286,15 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       </AnimatePresence>
     </div>
   );
+};
+
+export default AIChatbot;
+=======
+import React from 'react';
+
+const AIChatbot: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">AIChatbot temporarily disabled</div>;
 };
 
 export default AIChatbot;
