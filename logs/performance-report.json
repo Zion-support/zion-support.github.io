@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-09-11T15:05:30.633Z",
+  "timestamp": "2025-09-11T16:13:15.231Z",
   "bundleSize": {
-    "totalBytes": 7079932,
-    "totalSize": "6.75 MB",
-    "gzippedEstimate": 2123979,
+    "totalBytes": 7095299,
+    "totalSize": "6.77 MB",
+    "gzippedEstimate": 2128589,
     "gzippedSize": "2.03 MB",
     "fileCount": 205,
     "recommendations": [
