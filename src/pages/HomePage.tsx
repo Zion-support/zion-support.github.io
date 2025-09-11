@@ -93,6 +93,20 @@ const HomePage: React.FC = () => {
                   <p>Geo and audience‑aware experiences with flags and experiments at the edge.</p>
                   <a className="service-link" href="/blog/edge-personalization-patterns-2025">Read more →</a>
                 </div>
+                <div className="blog-card">
+                  <h3>
+                    <a href="/blog/llm-cost-optimization-playbook">LLM Cost Optimization Playbook</a>
+                  </h3>
+                  <p>Cut inference spend 20–50% with routing, retrieval, and batching.</p>
+                  <a className="service-link" href="/blog/llm-cost-optimization-playbook">Read more →</a>
+                </div>
+                <div className="blog-card">
+                  <h3>
+                    <a href="/blog/ai-governance-checklist-2025">AI Governance Checklist 2025</a>
+                  </h3>
+                  <p>Operationalize policy with evals, guardrails, and clear ownership.</p>
+                  <a className="service-link" href="/blog/ai-governance-checklist-2025">Read more →</a>
+                </div>
               </div>
             </div>
           </section>

@@ -20,6 +20,8 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 const BlogIndex = lazy(() => import('./pages/BlogIndex'));
 const BlogGenerativeAISecurity = lazy(() => import('./pages/blog/GenerativeAISecurityBestPractices'));
 const BlogEdgePersonalization = lazy(() => import('./pages/blog/EdgePersonalizationPatterns2025'));
+const BlogLLMCostOptimization = lazy(() => import('./pages/blog/LLMCostOptimizationPlaybook'));
+const BlogAIGovernanceChecklist = lazy(() => import('./pages/blog/AIGovernanceChecklist2025'));
 
 export default function AppMinimal() {
   return (
@@ -69,6 +71,8 @@ export default function AppMinimal() {
                 <Route path="/blog" element={<BlogIndex />} />
                 <Route path="/blog/generative-ai-security-best-practices" element={<BlogGenerativeAISecurity />} />
                 <Route path="/blog/edge-personalization-patterns-2025" element={<BlogEdgePersonalization />} />
+                <Route path="/blog/llm-cost-optimization-playbook" element={<BlogLLMCostOptimization />} />
+                <Route path="/blog/ai-governance-checklist-2025" element={<BlogAIGovernanceChecklist />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
