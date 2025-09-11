@@ -6,7 +6,6 @@ export function Navigation() {
   const [isAIOpen, setIsAIOpen] = useState(false);
   const [isQuantumOpen, setIsQuantumOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-=======
 import { useState, useEffect } from "react";
 
 export function Navigation() {
@@ -36,126 +35,6 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <div className="hidden lg:flex items-center space-x-6">
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-white transition-colors duration-200 font-medium flex items-center">
-                Services
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="p-4 grid grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold text-white mb-2">AI & Automation</h4>
-                    <ul className="space-y-1 text-sm text-gray-300">
-                      <li><Link href="/ai-automation-services" className="hover:text-white transition-colors">AI Automation</Link></li>
-                      <li><Link href="/ai-business-intelligence" className="hover:text-white transition-colors">Business Intelligence</Link></li>
-                      <li><Link href="/ai-content-generation" className="hover:text-white transition-colors">Content Generation</Link></li>
-                      <li><Link href="/ai-autonomous-systems" className="hover:text-white transition-colors">Autonomous Systems</Link></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-2">Infrastructure</h4>
-                    <ul className="space-y-1 text-sm text-gray-300">
-                      <li><Link href="/enterprise-it" className="hover:text-white transition-colors">Enterprise IT</Link></li>
-                      <li><Link href="/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</Link></li>
-                      <li><Link href="/quantum-services" className="hover:text-white transition-colors">Quantum Services</Link></li>
-                      <li><Link href="/space-tech" className="hover:text-white transition-colors">Space Tech</Link></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* AI Solutions Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-white transition-colors duration-200 font-medium flex items-center">
-                AI Solutions
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="p-4 grid grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold text-white mb-2">AI Agents</h4>
-                    <ul className="space-y-1 text-sm text-gray-300">
-                      <li><Link href="/ai-agents" className="hover:text-white transition-colors">AI Agents</Link></li>
-                      <li><Link href="/ai-assistant" className="hover:text-white transition-colors">AI Assistant</Link></li>
-                      <li><Link href="/ai-autonomous-research" className="hover:text-white transition-colors">Research Assistant</Link></li>
-                      <li><Link href="/ai-autonomous-business-manager" className="hover:text-white transition-colors">Business Manager</Link></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-2">Specialized AI</h4>
-                    <ul className="space-y-1 text-sm text-gray-300">
-                      <li><Link href="/ai-consciousness-evolution" className="hover:text-white transition-colors">Consciousness Evolution</Link></li>
-                      <li><Link href="/ai-blockchain-analytics" className="hover:text-white transition-colors">Blockchain Analytics</Link></li>
-                      <li><Link href="/ai-climate-prediction" className="hover:text-white transition-colors">Climate Prediction</Link></li>
-                      <li><Link href="/ai-biomedical-research" className="hover:text-white transition-colors">Biomedical Research</Link></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Quantum Solutions */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-white transition-colors duration-200 font-medium flex items-center">
-                Quantum
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="p-4">
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li><Link href="/quantum-neural-network-platform" className="hover:text-white transition-colors">Neural Network Platform</Link></li>
-                    <li><Link href="/quantum-cloud-infrastructure" className="hover:text-white transition-colors">Cloud Infrastructure</Link></li>
-                    <li><Link href="/quantum-financial-trading" className="hover:text-white transition-colors">Financial Trading</Link></li>
-                    <li><Link href="/quantum-services" className="hover:text-white transition-colors">Quantum Services</Link></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Company */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-white transition-colors duration-200 font-medium flex items-center">
-                Company
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="p-4">
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                    <li><Link href="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
-                    <li><Link href="/news" className="hover:text-white transition-colors">News</Link></li>
-                    <li><Link href="/events" className="hover:text-white transition-colors">Events</Link></li>
-                    <li><Link href="/webinars" className="hover:text-white transition-colors">Webinars</Link></li>
-                    <li><Link href="/white-papers" className="hover:text-white transition-colors">White Papers</Link></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Resources */}
-            <Link href="/docs" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
-              Resources
-            </Link>
-
-            {/* Zion OS Platform */}
-            <Link href="/multiverse/launch" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
-              Zion OS
-            </Link>
-
-            <button className="btn-primary text-sm">
-=======
           <div className="hidden md:flex items-center space-x-8">
             <a 
               href="/multiverse/launch" 
@@ -295,7 +174,6 @@ export function Navigation() {
               </Link>
               <button className="w-full mt-4 btn-primary text-sm">
                 Get Started
-=======
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>

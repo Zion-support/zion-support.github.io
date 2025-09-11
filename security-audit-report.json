@@ -277,7 +277,6 @@
   ],
   "recommendations": [
     {
-
       "priority": "high",
       "category": "dependencies",
       "message": "Update dependencies with known vulnerabilities",

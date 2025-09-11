@@ -86,9 +86,6 @@ for (const file of conflictFiles) {
     let modified = false;
 
     // Check for merge conflict markers
-<<<<<<< HEAD
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${file}`);
       content = resolveMergeConflicts(content);
       modified = true;

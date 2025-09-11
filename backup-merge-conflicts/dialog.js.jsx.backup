@@ -1,9 +1,5 @@
 }}>;
       <div className="relative">;
-=======
-<<<<<<< HEAD
-}}>
-      <div className="relative">=======
         {children}
       </div>;
     </DialogContext.Provider>)}
@@ -13,8 +9,3 @@ export function DialogTrigger("props": "any) {;
         throw new Error('DialogTrigger must be used within Dialog');
 </div>
 </DialogContext>
-<<<<<<< HEAD:backup-merge-conflicts/dialog.js.jsx.backup
-=======>>>>>>> main
->>>>>>> main
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/dialog.js.jsx

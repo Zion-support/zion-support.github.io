@@ -1,3 +1,10 @@
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const services = [];
+const applications = [];
+
 export interface InnovativeBlockchainWeb3Service {
   id: string;
   title: string;

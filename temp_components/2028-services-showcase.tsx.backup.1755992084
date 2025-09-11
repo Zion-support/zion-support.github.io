@@ -70,7 +70,6 @@ export default function ServicesShowcase2028() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2028 Services Showcase - Zion Tech Group" />
         <meta name="twitter:description" content="Revolutionary 2028 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and practical business solutions." />
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -155,7 +154,6 @@ export default function ServicesShowcase2028() {
 
       {/* Hero Section */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-=======
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
@@ -216,7 +214,6 @@ export default function ServicesShowcase2028() {
                 <div className="text-sm text-cyan-400/70">{stat.label}</div>
               </motion.div>
             ))}
-=======
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -438,7 +435,6 @@ export default function ServicesShowcase2028() {
               </button>
             </motion.div>
           )}
-=======
       {/* Services Categories */}
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -677,7 +673,6 @@ export default function ServicesShowcase2028() {
                 </div>
                 <div className="text-white font-semibold mb-2">Visit Us</div>
                 <div className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</div>
-=======
             className="space-y-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -721,12 +716,7 @@ export default function ServicesShowcase2028() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-      
-      {/* Footer */}
-=======
 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1bb4
       <UltraFuturisticFooter2028 />
     </>
   );

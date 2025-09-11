@@ -90,9 +90,6 @@ for (const file of filesToFix) {
     let modified = false;
 
     // Check for merge conflict markers
-<<<<<<< HEAD
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${file}`);
       content = resolveMergeConflicts(content);
       modified = true;

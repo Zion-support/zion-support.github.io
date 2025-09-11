@@ -9,17 +9,6 @@ Disallow: /admin/
 # Allow important pages
 Allow: /about/
 Allow: /services/
-<<<<<<< HEAD
-Allow: /ai-solutions/
-Allow: /quantum-computing/
-Allow: /research-development/
-Allow: /case-studies/
-Allow: /news/
-Allow: /contact/
-
-# Crawl delay (optional)
-Crawl-delay: 1
-=======
 Allow: /ai-services/
 Allow: /quantum-services/
 Allow: /enterprise-it/

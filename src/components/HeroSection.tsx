@@ -1,324 +1,255 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page("props": "any) {;
-[]"}
-;
-const "heroSlides": "HeroSlid e[] = [  {;
-    "id": 'ai-solutions'",;
-    "title": 'AI-Powered Business Solutions',;
-    "subtitle":';
-      'Transform your business with cutting-edge artificial intelligence',;
-    "description":';
-      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.',;
-    "image": '/images/hero-ai-solutions.jpg',;
-    "cta": 'Explore AI Solutions',;
-    "path": '/services/ai-business-intelligence',;
-    "features": "[';
-      'Machine Learning'",Predictive Analytics',Process Automation',Real-time Insights',;
-    ],;
-    "gradient": 'from-zion-cyan via-zion-purple to-zion-blue',;
-    "icon": "Brai n",;
-    "stats": "[';
-      { "label": 'Accuracy Rate'", "value": '95%+', "icon": "Targe t "},;
-      { "label": 'ROI Increase', "value": '450%', "icon": "TrendingU p "},;
-      { "label": 'Market Growth', "value": '280%', "icon": "Rocke t "},;
-    ]},;
-  {;
-    "id": 'it-services',;
-    "title": 'Comprehensive IT Services',;
-    "subtitle": 'End-to-end technology solutions for modern businesses',;
-    "description":';
-      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",;
-    "image": '/images/hero-it-services.jpg',;
-    "cta": 'View Our Services',;
-    "path": '/services',;
-    "features": "[';
-      'Cloud Infrastructure'",Cybersecurity',DevOps Automation',24/7 Support',;
-    ],;
-    "gradient": 'from-zion-blue via-zion-cyan to-zion-purple',;
-    "icon": "Shiel d",;
-    "stats": "[';
-      { "label": 'Uptime'", "value": '99.99%', "icon": "Targe t "},;
-      { "label": 'Cost Savings', "value": '700%', "icon": "TrendingU p "},;
-      { "label": 'Response Time', "value": '<5min', "icon": "Rocke t "},;
-    ]},;
-  {;
-    "id": 'green-it',;
-    "title": 'Green IT Solutions',;
-    "subtitle": 'Sustainable technology for a better future',;
-    "description":';
-      'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.',;
-    "image": '/images/hero-green-it.jpg',;
-    "cta": 'Learn More',;
-    "path": '/green-it',;
-    "features": "[';
-      'Energy Efficiency'",Carbon Reduction',Sustainable Practices',Cost Savings',;
-    ],;
-    "gradient": 'from-zion-cyan via-zion-blue to-zion-purple',;
-    "icon": "Glob e",;
-    "stats": "[';
-      { "label": 'Energy Savings'", "value": '60%', "icon": "Targe t "},;
-      { "label": 'Carbon Reduction', "value": '75%', "icon": "TrendingU p "},;
-      { "label": 'Cost Reduction', "value": '40%', "icon": "Rocke t "},;
-    ]},;
-];
-};
-  const [currentSlide, setCurrentSlide] = useState<any>(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true);
-  const [direction, setDirection] = useState<any>(0);
-  const [isLoading, setIsLoading] = useState<any>(true);
-;
-  // Memoize slides to prevent unnecessary re - renders;
-  ;
-  // Optimized slide navigation with useCallback;
-  ;
-    setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
-    setIsAutoPlaying(false)}, [memoizedSlides.length]);
-;
-    setCurrentSlide();
-      prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length;
-    );
-    setIsAutoPlaying(false)}, [memoizedSlides.length]);
-;
-      setCurrentSlide(index);
-      setIsAutoPlaying(false)},;
-    [currentSlide];
-  );
-  // Auto-play functionality with pause on hover;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-    if(!isAutoPlaying) return;
-;
-      setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
-;
-    return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ;
-;
-  // Handle keyboard navigation;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-    ;
-      if(e.key === 'ArrowRight') nextSlide();
-      if(e.key === ' ') {;
-        e.preventDefault();
-        setIsAutoPlaying(!isAutoPlaying)}
+import { Button } from "@/components/ui/button";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
+import { useRef } from "react";
+export function HeroSection() {
+    const { t } = useTranslation();
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset["start start", "end start"]
+    });
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1
+            }
+        }
     };
-;
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
-;
-  // Handle image loading;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-    ;
-          img.onload = resolve;
-          img.onerror = resolve;
-          img.src = slide.image}) }) ;
-;
-          img.src = slide.image}) }
-    );      await Promise.all(imagePromises) ;
-      setIsLoading(false) };
-;
-    preloadImages () }, [memoizedSlides]) ;
-;
-  if(isLoading) {;
-    return (";
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">";
-        <div className="text-center">";
-          <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>";
-          <p className="text-cyan-400 text-lg">;
-            Loading amazing experiences...;
-          </p>;
-        </div>;
-      </div>) }
-  return (";
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      {/* Background Pattern */}";
-      <div className="absolute inset-0 opacity-10">";
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"  />";
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"  />;
-      </div>;
-      {/* Hero Content */}";
-      <div className="relative z-10 container mx-auto px-4 "sm": "p x-6 "lg": p x-8 pt-20 pb-16">";
-        <div className="grid "lg": gri d-cols-2 gap-12 items-center min-h-[80vh]">;
-          {/* Text Content */"}
-          <motion.div;
-            initial={{ "opacity": "0", "x": "-50 "}}
-            animate={{ "opacity": "1", "x": "0 "}}
-            transition={{ "duration": "0.8", "delay": "0.2 "}}";
-            className="space-y-8";
-          >";
-            <div className="space-y-4">;
-              <motion.div;
-                initial={{ "opacity": "0", "y": "2 0 "}}
-                animate={{ "opacity": "1", "y": "0 "}}
-                transition={{ "duration": "0.6", "delay": "0.4 "}}";
-                className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-300 text-sm font-medium";
-              >";
-                <Star className="w-4 h-4 mr-2 text-yellow-400"   />                Leading Technology Solutions;
-              </motion.div>;
-              <motion.h1;
-                initial={{ "opacity": "0", "y": "2 0 "}}
-                animate={{ "opacity": "1", "y": "0 "}}
-                transition={{ "duration": "0.6", "delay": "0.6 "}}";
-                className="text-4xl "sm": "tex t-5xl "lg": tex t-6xl font-bold text-white leading-tight";
-              >";
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
-                  {currentSlideData.title"}
-                </span>;
-              </motion.h1>;
-              <motion.p;
-                initial={{ "opacity": "0", "y": "2 0 "}}
-                animate={{ "opacity": "1", "y": "0 "}}
-                transition={{ "duration": "0.6", "delay": "0.8 "}}";
-                className="text-xl text-slate-300 leading-relaxed";
-              >;
-                {currentSlideData.subtitle}
-              </motion.p>;
-              <motion.p;
-                initial={{ "opacity": "0", "y": "2 0 "}}
-                animate={{ "opacity": "1", "y": "0 "}}
-                transition={{ "duration": "0.6", "delay": "1.0 "}}";
-                className="text-lg text-slate-400 leading-relaxed";
-              >;
-                {currentSlideData.description}
-              </motion.p>;
-            </div>;
-            {/* Features */}
-            <motion.div;
-              initial={{ "opacity": "0", "y": "2 0 "}}
-              animate={{ "opacity": "1", "y": "0 "}}
-              transition={{ "duration": "0.6", "delay": "1.2 "}}";
-              className="grid grid-cols-2 gap-3";
-            >;
-              {currentSlideData.features.map((feature, index) => (";
-                <div key={feature} className="flex items-center space-x-2">";
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"   />"                  <span className="text-slate-300 text-sm">{feature}</span>;
-                </div>;
-              ))}
-            </motion.div>;
-            {/* CTA Button */}
-            <motion.div;
-              initial={{ "opacity": "0", "y": "2 0 "}}
-              animate={{ "opacity": "1", "y": "0 "}}
-              transition={{ "duration": "0.6", "delay": "1.4 "}}";
-              className="flex flex-col "sm": "fle x-row gap-4";
-            >;
-              <Link;
-                to={currentSlideData.path"}";
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 "hover": "fro m-cyan-600 "hover": t o-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform "hover": scal e-105 "hover": shado w-2xl "hover": shado w-cyan-500/25";
-              >;
-                {currentSlideData.cta"}";
-                <ArrowRight className="w-5 h-5 ml-2"   />              </Link>;
-              <button;
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}";
-                className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 "hover": "borde r-cyan-400 text-slate-300 "hover": tex t-cyan-400 font-medium rounded-lg transition-all duration-300";
-                aria-label={;
-                  isAutoPlaying ? 'Pause slideshow' : 'Play slideshow';
-                "}
-              >;
-                {isAutoPlaying ? (";
-                  <Pause className="w-5 h-5"   />;
-                ) : "(";
-                  <Play className="w-5 h-5"   />;
-                )"}              </button>;
-            </motion.div>;
-            {/* Stats */}
-            <motion.div;
-              initial={{ "opacity": "0", "y": "2 0 "}}
-              animate={{ "opacity": "1", "y": "0 "}}
-              transition={{ "duration": "0.6", "delay": "1.6 "}}";
-              className="grid grid-cols-3 gap-6 pt-8";
-            >;
-              {currentSlideData.stats.map((stat, index) => (";
-                <div key={stat.label} className="text-center">";
-                  <div className="text-2xl font-bold text-cyan-400 mb-1">;
-                    {stat.value}
-                  </div>";
-                  <div className="text-sm text-slate-400">{stat.label}</div>;
-                </div>;
-              ))}
-            </motion.div>;
-          </motion.div>;
-          {/* Visual Content */}
-          <motion.div;
-            initial={{ "opacity": "0", "x": "5 0 "}}
-            animate={{ "opacity": "1", "x": "0 "}}
-            transition={{ "duration": "0.8", "delay": "0.4 "}}";
-            className="relative";
-          >";
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-8">;
-              <div;
-                className={`w-24 h-24 bg-gradient-to-br ${currentSlideData.gradient} rounded-2xl flex items-center justify-center mb-6 mx-auto`}
-              >";
-                <currentSlideData.icon className="w-12 h-12 text-white" />;
-              </div>;
-";
-              <div className="text-center space-y-4">";
-                <h3 className="text-2xl font-bold text-white">;
-                  {currentSlideData.title}
-                </h3>";
-                <p className="text-slate-300">{currentSlideData.subtitle}</p>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;      {/* Navigation Controls */}";
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">";
-        <div className="flex space-x-2">;
-          {memoizedSlides.map((_, index) => (;
-            <button;
-              key={index}
-              onClick={() => goToSlide(index)}`;
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide';
-                  ? 'bg-cyan-400 scale-125'';
-                  : 'bg-slate-600 "hover": "b g-slate-500'`;
-              "}`}`;
-              aria-label={`Go to slide ${index + 1}`}
-            />;
-          ))}
-        </div>;
-      </div>;
-      {/* Arrow Navigation */}
-      <button;
-        onClick={prevSlide}";
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 "hover": "b g-slate-700/70 text-slate-300 "hover": tex t-white transition-all duration-300 backdrop-blur-sm";
-        ;
-      >";
-        <ChevronLeft className="w-6 h-6"   />      </button>;
-      <button;
-        onClick={nextSlide"}";
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 "hover": "b g-slate-700/70 text-slate-300 "hover": tex t-white transition-all duration-300 backdrop-blur-sm";
-        ;
-      >";
-        <ChevronRight className="w-6 h-6"   />;
-      </button>;
-    </section>) "}
-export { HeroSection };
-'"`;
-</button>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</any>;
-</any>;
-</5min>
+    const itemVariants = {
+  hidden: { y: 30,
+  opacity: 0 
+
+},
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut"
+            }
+        }
+    };
+    const floatingVariants = {
+  animate: {
+            y[-15, 15, -15],
+            rotate[0, 5, 0],
+            transition: {
+                duration: 4,
+                repeat: Infinity,
+  ease: "easeInOut"
+            
+
+}
+        }
+    };
+    const pulseVariants = {
+  animate: {
+            scale[1, 1.1, 1],
+            opacity[0.5, 0.8, 0.5],
+            transition: {
+                duration: 2,
+                repeat: Infinity,
+  ease: "easeInOut"
+            
+
+}
+        }
+    };
+    return (<section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
+      {/* Enhanced background with parallax effect */}
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90" style = {
+  { y,
+  opacity 
+
+}}/>
+      
+      {/* Animated floating particles with better positioning and variety */}
+      <div className="absolute inset-0">
+        <motion.div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60" variants={floatingVariants} animate="animate"/>
+        <motion.div className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50" variants={floatingVariants} animate="animate" style={{ animationDelay: '1s' }}/>
+        <motion.div className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70" variants={floatingVariants} animate="animate" style={{ animationDelay: '2s' }}/>
+        <motion.div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light" variants={particleVariants} animate="animate" style={{ animationDelay: '0.5s' }}/>
+        <motion.div className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80" variants={floatingVariants} animate="animate" style={{ animationDelay: '1.5s' }}/>
+        <motion.div className="absolute top-1/6 right-1/6 w-4 h-4 rounded-full bg-zion-cyan opacity-40" variants={floatingVariants} animate="animate" style={{ animationDelay: '2.5s' }}/>
+      </div>
+
+      {/* Enhanced decorative geometric shapes with animations */}
+      <motion.div className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition = {
+  { duration: 20, repeat: Infinity,
+  ease: "linear" 
+
+}}/>
+      <motion.div className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30" animate={{ rotate: -360 }} transition = {
+  { duration: 25, repeat: Infinity,
+  ease: "linear" 
+
+}}/>
+      
+      {/* New floating elements */}
+      <motion.div className="absolute top-1/3 left-10 w-16 h-16 border border-zion-cyan/30 rounded-full opacity-20" variants={pulseVariants} animate="animate"/>
+      <motion.div className="absolute bottom-1/3 right-10 w-20 h-20 border border-zion-purple/30 rounded-full opacity-20" variants={pulseVariants} animate="animate" style={{ animationDelay: '1s' }}/>
+      
+      <motion.div className="container relative z-10 px-4 mx-auto text-center" variants={containerVariants} initial="hidden" animate="visible">
+        {/* Enhanced title with better typography and animations */}
+        <motion.div variants={itemVariants} className="mb-8">
+          <GradientHeading className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight">
+            {t('home.hero_title') || "The Future of Tech & AI"}
+          </GradientHeading>
+        </motion.div>
+
+        {/* Enhanced subtitle with better spacing and animations */}
+        <motion.p variants={itemVariants} className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light">
+          {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
+        </motion.p>
+
+        {/* Enhanced feature highlights with icons and animations */}
+        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-16 text-zion-slate-light">
+          <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}>
+            <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
+              <Sparkles className="w-6 h-6 text-zion-cyan"/>
+            </div>
+            <span className="font-medium">AI-Powered Matching</span>
+          </motion.div>
+          
+          <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}>
+            <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
+              <Zap className="w-6 h-6 text-zion-purple"/>
+            </div>
+            <span className="font-medium">Global Talent Pool</span>
+          </motion.div>
+          
+          <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}>
+            <div className="p-2 bg-zion-cyan-light/20 rounded-full group-hover:bg-zion-cyan-light/30 transition-colors">
+              <Users className="w-6 h-6 text-zion-cyan-light"/>
+            </div>
+            <span className="font-medium">24/7 Support</span>
+          </motion.div>
+        </motion.div>
+
+        {/* Enhanced CTA buttons with better animations and effects */}
+        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition = {
+  { type: "spring", stiffness: 400,
+  damping: 10 
+
+}}>
+            <Link to="/signup" className="group bg-gradient-to-r from-zion-purple via-zion-purple-dark to-zion-purple hover:from-zion-purple-light hover:via-zion-purple hover:to-zion-purple-light text-lg py-6 px-10 shadow-2xl hover:shadow-zion-purple/25 transition-all duration-300 transform inline-flex items-center justify-center rounded-2xl font-semibold text-white border-0">
+              {t('auth.signup') || "Get Started Free"}
+              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300"/>
+            </Link>
+          </motion.div>
+          
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition = {
+  { type: "spring", stiffness: 400,
+  damping: 10 
+
+}}>
+            <Link id="browse-marketplace" to="/marketplace" className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-10 rounded-2xl inline-flex items-center justify-center transition-all duration-300 transform hover:shadow-2xl hover:shadow-zion-cyan/25 font-semibold backdrop-blur-sm bg-white/10">
+              {t('home.browse_marketplace') || "Explore Marketplace"}
+              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300"/>
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* Enhanced trust indicators with better visuals */}
+        <motion.div variants={itemVariants} className="mt-20 text-zion-slate-light/80">
+          <p className="text-lg mb-6 font-medium">Trusted by leading companies worldwide</p>
+          <div className="flex justify-center items-center gap-12 opacity-60">
+            <motion.div className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" whileHover = {
+  { scale: 1.1,
+  opacity: 1 
+
+}} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}/>
+            <motion.div className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" whileHover = {
+  { scale: 1.1,
+  opacity: 1 
+
+}} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}/>
+            <motion.div className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" whileHover = {
+  { scale: 1.1,
+  opacity: 1 
+
+}} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}/>
+            <motion.div className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" whileHover = {
+  { scale: 1.1,
+  opacity: 1 
+
+}} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}/>
+          </div>
+        </motion.div>
+
+        {/* New stats section */}
+        <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <motion.div className="text-center group" whileHover={{ y: -5 }} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}>
+            <div className="text-4xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors">
+              10K+
+            </div>
+            <div className="text-zion-slate-light">Active Users</div>
+          </motion.div>
+          
+          <motion.div className="text-center group" whileHover={{ y: -5 }} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}>
+            <div className="text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors">
+              500+
+            </div>
+            <div className="text-zion-slate-light">AI Services</div>
+          </motion.div>
+          
+          <motion.div className="text-center group" whileHover={{ y: -5 }} transition = {
+  { type: "spring",
+  stiffness: 400 
+
+}}>
+            <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover:text-zion-cyan transition-colors">
+              99.9%
+            </div>
+            <div className="text-zion-slate-light">Uptime</div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </section>
+  )}

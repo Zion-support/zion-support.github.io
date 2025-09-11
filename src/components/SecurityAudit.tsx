@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { _Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 ;
 interface SecurityCheck {;
   "name": "string;
@@ -12,7 +17,7 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
   const [isLoading, setIsLoading] = useState<any>(true);
 ;
   useEffect(() => {;
-    const performSecurityChecks = async () => {;
+    const _performSecurityChecks = async () => {;
       const "securityChecks": "SecurityCheck[] = [;
         {;
           "name": 'HTTPS Enabled'",;
@@ -45,7 +50,7 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
     performSecurityChecks();
   }, []);
 ;
-  const getStatusIcon = ("props": "any) => {;
+  const _getStatusIcon = ("props": "any) => {;
     switch (status) {;
       case 'pass':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -58,7 +63,7 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
     "}
   };
 ;
-  const getStatusColor = ("props": "any) => {;
+  const _getStatusColor = ("props": "any) => {;
     switch (status) {;
       case 'pass':;
         return 'bg-green-50 border-green-200';
@@ -96,31 +101,3 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
       <div className="flex items-center mb-4">
         <Shield className="w-5 h-5 mr-2 text-blue-500" />
         <h3 className="text-lg font-semibold">Security Audit
-      </div>
-      <div className="space-y-3">
-        {checks.map((check, index) => (
-          <div
-            key={index}
-            className={`p-3 rounded-lg border ${getStatusColor(check.status)}`}
-          >;
-            <div className="flex items-center justify-between">;
-              <div className="flex items-center">;
-                {getStatusIcon(check.status)}
-                <span className="ml-2 font-medium">{check.name}</span>;
-              </div>;
-            </div>;
-            <p className="text-sm text-gray-600 mt-1">{check.message}</p>;
-          </div>;
-        ))}
-      </div>;
-    </div>;
-  );
-      </div>
-    </div>
-    );
-};
-;
-export default SecurityAudit;
-;
-</any>;
-</SecurityCheck>

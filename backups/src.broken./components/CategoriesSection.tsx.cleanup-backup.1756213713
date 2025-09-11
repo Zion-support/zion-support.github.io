@@ -5,13 +5,6 @@ const categories = [
     title: "Comprehensive Services",
     description: "Micro SAAS, IT services, and AI solutions",
     icon: <Briefcase className="w-10 h-10" />,
-<<<<<<< HEAD
-    link: "/services",
-    color: "from-zion-purple to-zion-purple-dark",
-    gradient: "from-zion-purple/20 to-zion-purple-dark/20",
-    features: ["24/7 Support", "Expert Team", "Custom Solutions"],
-    stats: "500+ Services"
-=======
     link: "/comprehensive-services",
     color: "from-purple-500 to-indigo-600",
   },
@@ -33,29 +26,6 @@ const specialServices = [
   },
   {
     title: "IT Onsite Services",
-<<<<<<< HEAD
-    link: "/it-onsite-services",
-    icon: <Shield className="w-5 h-5" />,
-    description: "Professional on-site technical support"
-  },
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive-services",
-    icon: <Rocket className="w-5 h-5" />,
-    description: "End-to-end technology solutions"
-  },
-  {
-    title: "AI Integration",
-    link: "/ai-integration",
-    icon: <Sparkles className="w-5 h-5" />,
-    description: "Seamless AI implementation"
-  },
-  {
-    title: "Cloud Solutions",
-    link: "/cloud-solutions",
-    icon: <Zap className="w-5 h-5" />,
-    description: "Scalable cloud infrastructure"
-=======
     link: "/it-onsite-services"
   },
   {
@@ -243,7 +213,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </Link>
           </motion.div>
         </motion.div>
-=======
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4">

@@ -138,15 +138,8 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     return 'Poor';
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!isVisible) return null;
-=======
   if (!isOpen) return null;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
   if (!isVisible) return null;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   return (
     <>

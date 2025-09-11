@@ -3,9 +3,9 @@ export function TalentResults(props: any) {
         <div className="flex-1">
       {/* Active filters */}
 import React from 'react';
-import { ActiveFilters } from "@/components/talent/ActiveFilters";
-import { ResultsHeader } from "@/components/talent/ResultsHeader";
-import { TalentGrid } from "@/components/talent/TalentGrid";
+import { ActiveFilters } from "../../components/talent/ActiveFilters";
+import { ResultsHeader } from "../../components/talent/ResultsHeader";
+import { TalentGrid } from "../../components/talent/TalentGrid";
 
 export function TalentResults({
   activeFiltersProps,

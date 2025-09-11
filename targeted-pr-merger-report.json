@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "totalBranches": 10,
+    "successfullyMerged": 0,
+    "failedBranches": 10,
+    "conflictsResolved": 0,
+    "duration": "23 seconds"
+  },
+  "processedBranches": [
+    "0nylrk-codex/fix-footer-contact-link",
+    "0parff-codex/centralize-api-error-handling-and-add-errorboundary",
+    "0smfo8-codex/fix-404-error-for-non-existent-route",
+    "0t8m4m-codex/update-project-color-palette",
+    "0une71-codex/fix-unsupported-shell-syntax-in-setup.sh",
+    "14gqd5-codex/implement-checkout-flow-with-auth-redirect",
+    "1dcwqi-codex/implement-global-pricing-with-currency-selection",
+    "1fjs4s-codex/implement-instant-messaging-for-negotiations",
+    "1m9jcs-codex/fix-client-side-rendering-and-javascript-errors",
+    "1nc0kn-codex/fix-blank-screen-on-app-load"
+  ],
+  "mergedBranches": [],
+  "failedBranches": [
+    {
+      "branch": "0nylrk-codex/fix-footer-contact-link",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "0parff-codex/centralize-api-error-handling-and-add-errorboundary",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "0smfo8-codex/fix-404-error-for-non-existent-route",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "0t8m4m-codex/update-project-color-palette",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "0une71-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "14gqd5-codex/implement-checkout-flow-with-auth-redirect",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "1dcwqi-codex/implement-global-pricing-with-currency-selection",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "1fjs4s-codex/implement-instant-messaging-for-negotiations",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "1m9jcs-codex/fix-client-side-rendering-and-javascript-errors",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    },
+    {
+      "branch": "1nc0kn-codex/fix-blank-screen-on-app-load",
+      "error": "Command failed: git pull --rebase origin main\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.\n"
+    }
+  ],
+  "timestamp": "2025-09-10T19:01:46.359Z"
+}

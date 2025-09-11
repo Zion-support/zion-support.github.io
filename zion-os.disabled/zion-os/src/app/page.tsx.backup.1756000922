@@ -7,7 +7,6 @@ export default function HomePage() {
 
   useEffect(() => {
     setIsVisible(true);
-=======
 "use client";
 
 import Link from "next/link";
@@ -55,7 +54,6 @@ export default function HomePage() {
       author: "Lisa Thompson",
       position: "Security Director",
       company: "Global Finance Corp"
-=======
       icon: (
         <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -203,7 +201,6 @@ export default function HomePage() {
       </section>
 
       {/* Services Overview */}
-=======
         
         {/* Enhanced Background Elements */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -361,7 +358,6 @@ export default function HomePage() {
                   All Quantum Services
                 </Link>
               </div>
-=======
             {features.map((feature, index) => (
               <div 
                 key={index}
@@ -420,19 +416,11 @@ export default function HomePage() {
               Our cutting-edge solutions are designed to drive innovation and accelerate your digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Start Your Journey
-              </Link>
-              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-                View Success Stories
-=======
               <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
                 🚀 Start Deployment
               </Link>
               <Link href="/admin/instances" className="btn-secondary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
                 👀 View Examples
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
               </Link>
             </div>
           </div>

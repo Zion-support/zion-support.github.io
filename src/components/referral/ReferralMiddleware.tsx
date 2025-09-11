@@ -1,7 +1,11 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
+import { _useEffect } from 'react';
+import { _supabase } from '../../integrations/supabase/client';
+import { _useAuth } from '../../hooks/useAuth';
+
+import { Code } from 'lucide-react';
+import { useAuth } from '../../hooks/useAuth';
+const integrations = [];
 ;
 export function ReferralMiddleware("props": "any) {;
   const { user "} = useAuth();
@@ -9,8 +13,8 @@ export function ReferralMiddleware("props": "any) {;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
-    const params = new URLSearchParams(window.location.search);
-    const code = params.get('ref');
+    const _params = new URLSearchParams(window.location.search);
+    const _code = params.get('ref');
     if(code) {;
       localStorage.setItem('referralCode', code);
     }
@@ -20,7 +24,7 @@ export function ReferralMiddleware("props": "any) {;
   // "TODO": "Add dependencies if needed;
 "}, []);
     async function sendReferral("props": "any) {;
-      const code = localStorage.getItem('referralCode');
+      const _code = localStorage.getItem('referralCode');
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well;
       try {;
         await supabase.functions.invoke('track-referral'", {;
@@ -34,10 +38,3 @@ export function ReferralMiddleware("props": "any) {;
     );
         localStorage.removeItem('referralCode');
       } catch(err) {;
-        console.error('Error tracking referral', err);
-      }
-    }
-    sendReferral();
-  }, [user?.id, user?.email]); // Added user?.email;
-  return <>{children}</>;
-}

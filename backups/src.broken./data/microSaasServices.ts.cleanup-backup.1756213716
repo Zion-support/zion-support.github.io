@@ -414,12 +414,6 @@ export const CONTACT_INFO = {
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
-=======
-==============
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface MicroSaasService {
   id: string;
   title: string;
@@ -433,7 +427,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "AI-powered invoice processing, expense tracking, and financial reporting for small businesses and freelancers.",
     category: "Micro SAAS",
     subcategory: "Finance",
-==============      "Automated reporting",
       "Custom dashboards",
       "Data visualization",
       "API integrations",
@@ -502,10 +495,6 @@ export const getServicesByCategory = (category: string): MicroSaasService[] => {
 };
 
 export const getServicesBySubcategory = (subcategory: string): MicroSaasService[] => {
-  return MICRO_SAAS_SERVICES.filter(service => service.subcategory === subcategory);=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "AI code completion",
       "Bug detection & fixing",
       "Code optimization",
@@ -928,8 +917,6 @@ export const searchMicroSaasServices = (query: string) => {
     service.description.toLowerCase().includes(searchTerm) ||
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
     service.category.toLowerCase().includes(searchTerm)
-  );==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "Reduce response time by 90%",
       "Handle 70% of queries automatically",
       "Improve customer satisfaction by 45%",
@@ -1190,11 +1177,4 @@ export const getMicroSaasServicesByCategory = (category: string): MicroSaasServi
 
 export const getMicroSaasCategories = (): string[] => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 };

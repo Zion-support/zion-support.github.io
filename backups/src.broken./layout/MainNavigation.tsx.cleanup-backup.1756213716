@@ -27,15 +27,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }, []);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-=======
-=======
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const baseLinks: NavigationLink[] = [
@@ -44,8 +39,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/',
   const moreLinks = [
     {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </li>
         
         {/* Messages link with unread counter */}
@@ -54,38 +47,22 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-<<<<<<< HEAD
-=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               )}
               onClick={closeDropdown}
             >
               <MessageSquare className="w-4 h-4 mr-1" />
               Messages
               {unreadCount > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-=======
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   {unreadCount}
                 </span>
               )}

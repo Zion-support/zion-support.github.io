@@ -440,8 +440,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               <MapPin className="w-6 h-6" />
               <span className="font-semibold">364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase';
 
@@ -699,8 +697,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               </a>
             </div>
           </motion.div>
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -933,13 +929,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               Schedule Consultation
             </a>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
     </div>
