@@ -1,10 +1,40 @@
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+
+import type { NextPage } from 'next'
+import Head from 'next/head'
+const Page: NextPage = () => {
+  return (
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+import type { NextPage } from 'next'
+import Head from 'next/head'
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import type { NextPage } from 'next'
+import Head from 'next/head'
+<<<<<<< HEAD
+=======
 =======
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
@@ -12,12 +42,26 @@ import Head from 'next/head',;
 import type { NextPage } from 'next'
 import Head from 'next/head'
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Page: NextPage = () => {
   return (
 import type {_NextPage} from 'next';
 import Head from 'next/head';
 const Page: NextPage = () => {_return (
+<<<<<<< HEAD
+const Page: NextPage = () => {
+  return (
 ursor/fix-lint-push-and-merge-to-main-ce13
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const Page: NextPage = () => {
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+ursor/fix-lint-push-and-merge-to-main-ce13
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>Auto Update 2025-08-23T23-59-59-376Z</title>
@@ -31,9 +75,26 @@ ursor/fix-lint-push-and-merge-to-main-ce13
   )
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+},
+
+
+export default Page
+
+}
+export default Page;
+
+},
+;
+export default Page
+=======
+export default Page;
+=======
 export default Page;
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextPage } from 'next',
 import Head from 'next / head',
 const Page: NextPage = () => {
@@ -51,10 +112,31 @@ const Page: NextPage = () => {
 },
 export default Page,
 ;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+export default Page
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 export default Page
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 
 
 export default Page
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

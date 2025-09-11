@@ -1,8 +1,67 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+import React from 'react'
+import React from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import Image from "next/image",
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+}
+export interface Testimonial {
+  name: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 name: string;
   role?: string;
   text: string;
   avatar?: string
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface ServiceLandingTemplateProps {
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+import React from 'react'
+xport interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+=======
+
+
+interface ServiceLandingTemplateProps {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  title: string;
+  subtitle: string;
+  heroImage?: string;
+  description: string;
+  benefits: Benefit[];
+  testimonials: Testimonial[];
+  ctaText: string;
+<<<<<<< HEAD
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import Image from "next/image",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from "react";
+<<<<<<< HEAD
+import { _GradientHeading } from "@/components/GradientHeading";
+import { _Button } from "@/components/ui/button";
+import { _Card, CardContent, CardFooter } from "@/components/ui/card";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 interface ServiceLandingTemplateProps {;
@@ -44,9 +103,18 @@ interface ServiceLandingTemplateProps {
   description: string;
   benefits: Benefit[];
   features?: string[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   stats?: Array<{ label: string; value: string }>
   ctaText: string
   ctaLink: string
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -57,6 +125,9 @@ export interface Benefit {;
   description: string,;
   icon?: React.ReactNode;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
 
 
@@ -80,6 +151,7 @@ export interface Benefit {;
   description: string,;
   icon?: React.ReactNode;
 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export interface Testimonial {;
   name: string,;
@@ -97,17 +169,52 @@ interface ServiceLandingTemplateProps {;
   testimonials: Testimonial[],;
   ctaText: string,;
   ctaLink: string;
+<<<<<<< HEAD
+  stats?: Array<{ label: string; value: string }>;
+  cta_text: string;
+  cta_link: string;
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
+
+
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+
+
+=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title,
   subtitle,
   heroImage,
   description,
   benefits,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ctaLink}) => {
+  ctaLink,
+}) => {
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
@@ -124,10 +231,20 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   return (
 
           </p>
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  testimonials,
+  ctaText,
+  ctaLink}) => {
+  ctaLink,
+}) => {
+  ctaLink}) => {
+=======
   testimonials,
   ctaText,
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -137,7 +254,58 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </GradientHeading>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
+<<<<<<< HEAD
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           </p>
+<<<<<<< HEAD
+        </div>
+      </section>
+}
+=======
+          </p>
+
+
+          {heroImage && (
+            <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
+              <Image
+                src={heroImage}
+                alt={title}
+                className="object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className="py-12 px-4">
+        <div className="container mx-auto text-center">
+          <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+            {description}
+
+    <div className="min - h-screen bg - white">;
+      <section className="py - 20 px - 4 bg - gradient - to - br from - blue - 50 to - indigo - 100">;
+        <div className="max - w-7xl mx - auto text - center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold text - gray - 900 mb - 6">;
+            {title}
+          </h1>;
+          <p className="text - xl text - gray - 600 max - w-3xl mx - auto mb - 8">;
+            {subtitle}
+          </p>;
+          <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+
+            {description}
+          </p>;
+        </div>;
+      </section>;
+<<<<<<< HEAD
+          </p>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           {heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
@@ -159,6 +327,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 
 
             {description}
+<<<<<<< HEAD
+          </p>
+        </div>
+      </section>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
     <div className="min - h-screen bg - white">;
       <section className="py - 20 px - 4 bg - gradient - to - br from - blue - 50 to - indigo - 100">;
@@ -175,6 +350,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </p>;
         </div>;
       </section>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {benefits.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -187,6 +363,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                   {benefit.icon && (
                     <div className="mb-4 text-blue-600">
                       {benefit.icon}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    </div>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </p>;
         </div>;
@@ -206,6 +388,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                       {benefit && benefit.icon}
                     </div>;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )}
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -215,6 +401,23 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </div>
         </section>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {features.length > 0 && (
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
+                  <span className="text-gray-700">{feature}</span>
+                </div>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {features && features.length > 0 && (;
@@ -230,11 +433,20 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                   <span className="text-gray-700">{feature}</span>;
                 </div>;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
             </div>
           </div>
         </section>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </div>)}
                   <h3 className="text - xl font - semibold mb - 3">{benefit.title}</h3>;
@@ -259,6 +471,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </div>;
         </section>)}
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {stats.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -267,6 +483,14 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 <div key={index}>
                   <div className="text-4xl font-bold text-blue-600 mb-2">
                     {stat.value}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </div>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {stats && stats.length > 0 && (;
@@ -281,11 +505,28 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                   <div className="text-gray-600">{stat && stat.label}</div>;
                 </div>;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
             </div>
           </div>
         </section>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our services.
+          </p>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       <section className="py-16 px-4 bg-blue-600">;
@@ -297,11 +538,31 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             Contact us today to learn more about our services.;
           </p>;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <a
             href={ctaLink}
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             {ctaText}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+
+};
+;
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </a>;
         </div>;
@@ -385,3 +646,43 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       </section>
     </div>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+},
+},
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+                  </div>;
+                  <div className="text - gray - 600">{stat.label}</div>;
+                </div>))}
+            </div>;
+          </div>;
+        </section>)}
+      <section className="py - 16 px - 4 bg - blue - 600">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <h2 className="text - 3xl font - bold text - white mb - 4">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text - xl text - blue - 100 mb - 8">;
+            Contact us today to learn more about our services.;
+          </p>;
+          <a;
+            href={cta_link}
+            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
+          >;
+            {cta_text}
+          </a>;
+        </div>;
+      </section>;
+    </div>);
+}
+
+<<<<<<< HEAD
+},
+=======
+},
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

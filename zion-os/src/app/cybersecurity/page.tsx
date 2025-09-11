@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
 import Link from "next/link";
 export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
   description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
   keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
 export default function CybersecurityPage() {return (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from "next/link",;
 export const metadata = {;
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
@@ -10,8 +18,18 @@ export const metadata = {;
   keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},;
 export default function CybersecurityPage() {;
   return (;
+<<<<<<< HEAD
+
+
+    <div className="min-h-screen">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
     <div className="min-h-screen">;
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from './next / link';,
 export const metadata = {
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",
@@ -23,7 +41,15 @@ export default /**
 function CybersecurityPage() {
   return (
     <div className="min - h-screen">;
+<<<<<<< HEAD
+import Link from "next/link";
+export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
+  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
+  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
+export default function CybersecurityPage() {return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from "next/link",;
 export const metadata = {;
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
@@ -33,15 +59,32 @@ export default function CybersecurityPage() {;
   return (;
     <div className="min-h-screen">;
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto text-center">;
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">;
-            <span className="gradient-text">Cybersecurity Services</span>;
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto text - center">;
+          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
+            <span className="gradient - text">Cybersecurity Services</span>;
           </h1>;
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
+          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
             Protect your organization from evolving cyber threats with our comprehensive;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+            security solutions. From threat detection to compliance management;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+            security solutions. From threat detection to compliance management,;
+
             security solutions. From threat detection to compliance management;
             security solutions. From threat detection to compliance management,;
+=======
+            security solutions. From threat detection to compliance management,
+
+=======
+
+            security solutions. From threat detection to compliance management,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             we secure your digital assets and ensure business continuity.;
           </p>;
         </div>;
@@ -135,10 +178,29 @@ export default function CybersecurityPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 5H7a2 2 0 00 - 2 2v10a2 2 0 002 2h8a2 2 0 002 - 2V7a2 2 0 00 - 2-2h - 2M9 5a2 2 0 002 2h2a2 2 0 002 - 2M9 5a2 2 0 012 - 2h2a2 2 0 012 2m - 3 7h3m - 3 4h3m - 6-4h.01M9 16h.01" />;
                 </svg>;
               </div>;
+
+              <h3 className="text - xl font - semibold mb - 3">Security Assessment</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Comprehensive security assessments including penetration testing,
+
+<<<<<<< HEAD
+
+                Comprehensive security assessments including penetration testing,;
+
+              <h3 className="text - xl font - semibold mb - 3">Security Assessment</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Comprehensive security assessments including penetration testing,
               <h3 className="text-xl font-semibold mb-3">Security Assessment</h3>;
               <p className="text-gray-400 mb-4">;
                 Comprehensive security assessments including penetration testing;
                 Comprehensive security assessments including penetration testing,;
+=======
+=======
+
+                Comprehensive security assessments including penetration testing,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 vulnerability scanning, and risk analysis.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -158,9 +220,25 @@ export default function CybersecurityPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
                 </svg>;
               </div>;
+
+
+                Ensure compliance with industry standards including SOC2, ISO 27001,;
+
+
+                GDPR, and industry-specific regulations.;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <h3 className="text - xl font - semibold mb - 3">Compliance Management</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Ensure compliance with industry standards including SOC2, ISO 27001,
+                GDPR, and industry - specific regulations.;
               <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>;
               <p className="text-gray-400 mb-4">;
                 Ensure compliance with industry standards including SOC2, ISO 27001;
+<<<<<<< HEAD
+=======
                 Ensure compliance with industry standards including SOC2, ISO 27001,;
                 GDPR, and industry-specific regulations.;
 =======
@@ -171,6 +249,7 @@ export default function CybersecurityPage() {;
 =======
               <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>;
               <p className="text-gray-400 mb-4">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Ensure compliance with industry standards including SOC2, ISO 27001,;
                 GDPR, and industry-specific regulations.;
               </p>;

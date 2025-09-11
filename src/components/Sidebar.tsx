@@ -1,129 +1,81 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  HardDrive, 
-  TrendingUp, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
-  BarChart3, 
-  Settings, 
-  ChevronRight, 
-  ChevronDown,
-  Cloud,
-  Smartphone,
-  Database,
-  Globe
-} from 'lucide-react';
+import { _Link, useLocation } from 'react-router-dom';import {;
 
-const Sidebar: React.FC = () => {
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
-  const location = useLocation();
+import { Link } from 'react-router-dom';
+import { X } from 'lucide-react';
 
-  const toggleExpanded = (item: string) => {
-    setExpandedItems(prev => 
-      prev.includes(item) 
-        ? prev.filter(i => i !== item)
-        : [...prev, item]
-    );
-  };
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
-  const menuItems = [
-    {
-      name: 'Home',
-      icon: Home,
-      path: '/',
-      children: []
-    },
-    {
-      name: 'Services',
-      icon: Zap,
-      path: '/services',
-      children: [
-        { name: 'AI Services', path: '/services/ai-services' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity' },
-        { name: 'Cloud Migration', path: '/services/cloud-migration' },
-        { name: 'DevOps', path: '/services/devops' },
-        { name: 'Mobile Development', path: '/services/mobile-development' }
-      ]
-    },
-    {
-      name: 'About',
-      icon: Brain,
-      path: '/about',
-      children: []
-    },
-    {
-      name: 'Pricing',
-      icon: TrendingUp,
-      path: '/pricing',
-      children: []
-    },
-    {
-      name: 'Contact',
-      icon: Users,
-      path: '/contact',
-      children: []
-    }
-  ];
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
 
   return (
-    <div className="w-64 bg-slate-800 text-white min-h-screen p-4">
-      <div className="mb-8">
-        <h2 className="text-xl font-bold">Navigation</h2>
+    <div className="fixed inset-0 z-50 lg:hidden">
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
+      <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg">
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-lg font-semibold">Menu</h2>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-gray-100 rounded-lg"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+        
+        <nav className="p-4">
+          <ul className="space-y-2">
+            <li>
+              <Link
+                to="/"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                onClick={onClose}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                onClick={onClose}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                onClick={onClose}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/pricing"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                onClick={onClose}
+              >
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                onClick={onClose}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      
-      <nav className="space-y-2">
-        {menuItems.map((item) => (
-          <div key={item.name}>
-            <div
-              className={`flex items-center justify-between p-3 rounded-lg cursor-pointer transition-colors ${
-                location.pathname === item.path
-                  ? 'bg-blue-600 text-white'
-                  : 'hover:bg-slate-700'
-              }`}
-              onClick={() => {
-                if (item.children.length > 0) {
-                  toggleExpanded(item.name);
-                }
-              }}
-            >
-              <div className="flex items-center space-x-3">
-                <item.icon className="w-5 h-5" />
-                <span className="font-medium">{item.name}</span>
-              </div>
-              {item.children.length > 0 && (
-                expandedItems.includes(item.name) ? 
-                  <ChevronDown className="w-4 h-4" /> : 
-                  <ChevronRight className="w-4 h-4" />
-              )}
-            </div>
-            
-            {item.children.length > 0 && expandedItems.includes(item.name) && (
-              <div className="ml-6 mt-2 space-y-1">
-                {item.children.map((child) => (
-                  <Link
-                    key={child.name}
-                    to={child.path}
-                    className={`block p-2 rounded-lg text-sm transition-colors ${
-                      location.pathname === child.path
-                        ? 'bg-blue-500 text-white'
-                        : 'text-gray-300 hover:bg-slate-700'
-                    }`}
-                  >
-                    {child.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </nav>
     </div>
   );
 };

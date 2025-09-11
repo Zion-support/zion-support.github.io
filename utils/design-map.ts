@@ -1,3 +1,75 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+export type UIKitKind = 'ios' | 'android' | 'web';
+export interface TokenSet {
+
+export interface TokenSet {;
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
+}
+export interface UIKit {
+
+export interface UIKit {;
+  components: Record<string, any>;
+  tokens: TokenSet;
+}
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {
+  // Placeholder implementation
+  return {
+    colors: {
+      primary: '#007AFF'
+      secondary: '#5856D6'
+      success: '#34C759'
+      warning: '#FF9500'
+      error: '#FF3B30'
+    }
+    typography: {
+      heading1: { fontSize: 32, fontWeight: 'bold' }
+      heading2: { fontSize: 24, fontWeight: 'bold' }
+      body: { fontSize: 16, fontWeight: 'normal' }
+    }
+    spacing: {
+      xs: 4
+      sm: 8
+      md: 16
+      lg: 24
+      xl: 32
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  tokens: TokenSet;
+}
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+// Mock design map utility
+export function getDesignMap() {
+  return {
+=======
 
 
   tokens: TokenSet;
@@ -5,6 +77,7 @@
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     components: [],
     pages: [],
     styles: []
@@ -53,9 +126,13 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
+<<<<<<< HEAD
+
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
   }
   if (kind === 'chakra') {
@@ -86,7 +163,10 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return null;
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -153,6 +233,77 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
 
   const tokens = await buildTokenSet(fileId);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  }
+}
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    };
+  };
+}
+
+
+
+
+  };
+}
+
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+  const tokens = await buildTokenSet(fileId);
+  return {
+<<<<<<< HEAD
+    components: {
+      button: {
+        primary: {
+          backgroundColor: tokens.colors.primary
+          padding: tokens.spacing.md
+        }
+      }
+    }
+    tokens
+  }
+
+=======
+
+    id,
+    type,
+    name,
+    properties,
+    children: []
+=======
+
+
+
+=======
+
+  };
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+          background_color: tokens.colors.primary,
+          padding: tokens.spacing.md;
+        }
+      }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    },
+    tokens;
+  }
+}
+<<<<<<< HEAD
+
+  };
+
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
     };
   };
@@ -187,3 +338,4 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

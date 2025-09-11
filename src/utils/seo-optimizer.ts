@@ -11,6 +11,20 @@ export const optimize_headings = () =>: any {
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
+<<<<<<< HEAD
+}
+
+
+}
+export const optimizeHeadings = () => {
+  console.log('Optimizing headings...');
+}
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+// SEO optimizer utilities
+export const generateMetaTags = () => {;
+  console.log('Generating meta tags...');
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 };
@@ -19,6 +33,14 @@ export const optimizeHeadings = () => {;
   console.log('Optimizing headings...');
 };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       telephone: '+1-555-0123',
       contactType: 'customer service'}};
 };
@@ -42,4 +64,12 @@ export const generateStructuredData = pageData => {;
       contactTyp: e: 'customer service';
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

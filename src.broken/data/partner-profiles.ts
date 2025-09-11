@@ -1,4 +1,4 @@
-// Module for partner-profiles,
-export const partner-profiles = $2;
-  // TODO: Implement module functionality
-},
+// Module for partner-profiles,;
+export const partner-profiles = {,;
+  // TODO: Implement module functionality;
+};

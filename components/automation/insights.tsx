@@ -1,15 +1,40 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
+}</ul> </div> </div>)
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+}</ul> </div> </div>) 
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+
+<<<<<<< HEAD
+
+
+export default function AutomationInsightsPage() {;
+
+=======
+=======
 =======
 import { useEffect, useState } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -17,13 +42,26 @@ export default function AutomationInsightsPage() {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function AutomationInsightsPage() {
+export default function AutomationInsightsPage() {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) ;
 }</ul> </div> </div>) ;
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {;
@@ -68,6 +106,10 @@ export default function AutomationInsightsPage() {;
           </div>;
         )}
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </section>;
       <section id="talent" className="mb-8">;
         <h2 className="font-medium">Talent Highlights</h2>;
@@ -76,6 +118,17 @@ export default function AutomationInsightsPage() {;
         ) : (;
           <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>;
         )}
+<<<<<<< HEAD
+      </section>;
+    </div>;
+  );
+}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
       </section>
     </div>
 );
@@ -84,6 +137,7 @@ export default function AutomationInsightsPage() {;
 }
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (<div> <Head><title > Automation Insights — Zion</title></Head>) );
 }</ul> </div> </div>);
 }</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800" > {
@@ -151,7 +205,10 @@ function AutomationInsightsPage() {
             <div className=&quot;mt-3&quot;>
               <h3 className=&quot;font-medium&quot;>Top Keywords</h3>
               <ul className=&quot;list-disc list-inside&quot;>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
   return (
     <div>
@@ -186,5 +243,32 @@ function AutomationInsightsPage() {
 
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      <section id="talent" className="mb-8">
+        <h2 className="font-medium">Talent Highlights</h2>
+        {!talentMd ? (
+          <div className="text-sm text-gray-500">Loading…</div>
+        ) : (
+          <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>
+        )}
+      </section>
+    </div>
+);
+}
+  );
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

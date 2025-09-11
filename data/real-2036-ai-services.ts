@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
@@ -322,16 +327,53 @@ export const real2036AIServices = [
       'Predictive maintenance'
     ]
     useCases: [
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+export const real2036AIServices = [
+  {
+
+
+<<<<<<< HEAD
+      'Autonomous vehicles'
+      'Fleet management'
+      'Traffic optimization'
+      'Safety systems'
+    ]
+  }
+];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+    ]
+  }
+];
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',
       'Safety systems',
     ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -352,6 +394,11 @@ export const real2036AIServices = [;
     ],;
     useCases: [;
       'Customer serviceMental health supportEducation technologyHuman resources';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ];
   },;
   {;
@@ -373,6 +420,7 @@ export const real2036AIServices = [;
     ],;
     useCases: [;
       'Marketing campaignsProduct designContent creationResearch and development';
+<<<<<<< HEAD
     ];
   },;
   {;
@@ -523,6 +571,203 @@ export const real2036AIServices = [;
     ];
   },;
   {;
+    id: 'ai-autonomous-vehicle-ai',;
+    name: 'AI Autonomous Vehicle AI',;
+    tagline: 'Next-generation vehicle intelligence',;
+    description: 'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.',;
+    price: '$9,999',;
+    period: 'month',;
+    features: [;
+      'Autonomous navigationSafety monitoringTraffic managementVehicle optimizationPredictive maintenanceSafety systems';
+    ],;
+    popular: true,;
+    category: 'Vehicle AI',;
+    icon: '🚗🤖',;
+    marketPrice: '$15,000-25,000/month',;
+    benefits: [;
+      'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance';
+    ],;
+    useCases: [;
+      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
+    ];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+  }
+];
+;
+  },;
+];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+    ]
+    popular: true;
+    category: "Creative AI"
+    icon: "🎨🤖"
+    marketPrice: "$4,000-7,000/month"
+    benefits[;
+      "Enhanced creativity"
+      "Faster innovation cycles"
+      "Better collaboration"
+      "Creative process optimization";
+    ]
+    useCases[;
+      "Marketing campaigns"
+      "Product design"
+      "Content creation"
+      "Research and development";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    ];
+  },;
+  {;
+    id: 'ai-dream-interpreter-platform',;
+    name: 'AI Dream Interpreter Platform',;
+    tagline: 'Intelligent dream analysis',;
+    description: 'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.',;
+    price: '$1,999',;
+    period: 'month',;
+    features: [;
+      'Dream pattern analysisPsychological interpretationSymbolic analysisDream journalingPattern recognitionPsychological insights';
+    ],;
+    popular: false,;
+    category: 'Psychological AI',;
+    icon: '💭🤖',;
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;
+      'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness';
+    ],;
+    useCases: [;
+      'Mental health supportPsychological researchPersonal developmentTherapeutic applications';
+    ];
+  },;
+  {;
+    id: 'ai-content-factory-pro',;
+    name: 'AI Content Factory Pro',;
+    tagline: 'Professional content generation',;
+    description: 'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.',;
+    price: '$4,999',;
+    period: 'month',;
+    features: [;
+      'Multi-format content creationBrand voice consistencyContent optimizationSEO integrationContent analyticsAutomated publishing';
+    ],;
+    popular: true,;
+    category: 'Content AI',;
+    icon: '📝🤖',;
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;
+      '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production';
+    ],;
+    useCases: [;
+      'Marketing contentBlog writingSocial media contentProduct descriptions';
+    ];
+  },;
+  {;
+    id: 'ai-customer-intelligence-platform',;
+    name: 'AI Customer Intelligence Platform',;
+    tagline: 'Deep customer understanding',;
+    description: 'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.',;
+    price: '$5,999',;
+    period: 'month',;
+    features: [;
+      'Customer journey mappingPredictive analyticsPersonalized recommendationsBehavior analysisCustomer segmentationPredictive modeling';
+    ],;
+    popular: true,;
+    category: 'Customer AI',;
+    icon: '👥🤖',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention';
+    ],;
+    useCases: [;
+      'E-commerce optimizationCustomer serviceMarketing campaignsProduct development';
+    ];
+  },;
+  {;
+    id: 'ai-autonomous-marketing-platform',;
+    name: 'AI Autonomous Marketing Platform',;
+    tagline: 'Self-optimizing marketing',;
+    description: 'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.',;
+    price: '$6,999',;
+    period: 'month',;
+    features: [;
+      'Autonomous campaign managementReal-time optimizationPredictive marketing strategiesPerformance maximizationAutomated A/B testingROI optimization';
+    ],;
+    popular: true,;
+    category: 'Marketing AI',;
+    icon: '📈🤖',;
+    marketPrice: '$8,000-15,000/month',;
+    benefits: [;
+      'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation';
+    ],;
+    useCases: [;
+      'Digital advertisingEmail marketingSocial media marketingContent marketing';
+    ];
+  },;
+  {;
+    id: 'ai-autonomous-research-assistant',;
+    name: 'AI Autonomous Research Assistant',;
+    tagline: 'Intelligent research automation',;
+    description: 'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.',;
+    price: '$3,499',;
+    period: 'month',;
+    features: [;
+      'Automated research workflowsData analysisInsight generationResearch automationData synthesisReport generation';
+    ],;
+    popular: true,;
+    category: 'Research AI',;
+    icon: '🔬🤖',;
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;
+      'Automated research processesFaster insight generationComprehensive data analysisScalable research operations';
+    ],;
+    useCases: [;
+      'Market researchAcademic researchBusiness intelligenceCompetitive analysis';
+    ];
+  },;
+  {;
+    id: 'ai-autonomous-decision-engine',;
+    name: 'AI Autonomous Decision Engine',;
+    tagline: 'Intelligent decision automation',;
+    description: 'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.',;
+    price: '$7,999',;
+    period: 'month',;
+    features: [;
+      'Decision automationRisk assessmentOutcome predictionBusiness rule enginePredictive modelingDecision analytics';
+    ],;
+    popular: true,;
+    category: 'Decision AI',;
+    icon: '🎯🤖',;
+    marketPrice: '$10,000-18,000/month',;
+    benefits: [;
+      'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions';
+    ],;
+    useCases: [;
+      'Financial decisionsOperational decisionsStrategic planningRisk management';
+    ];
+  },;
+  {;
+    id: 'ai-autonomous-ecosystem-manager',;
+    name: 'AI Autonomous Ecosystem Manager',;
+    tagline: 'Intelligent ecosystem orchestration',;
+    description: 'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.',;
+    price: '$8,999',;
+    period: 'month',;
+    features: [;
+      'Ecosystem mappingRelationship managementAutonomous optimizationPartnership orchestrationIntegration managementEcosystem analytics';
+    ],;
+    popular: false,;
+    category: 'Ecosystem AI',;
+    icon: '🌐🤖',;
+    marketPrice: '$12,000-20,000/month',;
+    benefits: [;
+      'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management';
+    ],;
+    useCases: [;
+      'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation';
+    ];
+  },;
+  {;
+<<<<<<< HEAD
+=======
     id: 'ai-autonomous-vehicle-ai',;
     name: 'AI Autonomous Vehicle AI',;
     tagline: 'Next-generation vehicle intelligence',;
@@ -741,6 +986,7 @@ export const real2036AIServices = [;
     ];
   },;
   {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai-autonomous-ecosystem-manager',;
     name: 'AI Autonomous Ecosystem Manager',;
     tagline: 'Intelligent ecosystem orchestration',;
@@ -781,10 +1027,13 @@ export const real2036AIServices = [;
     useCases: [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
+<<<<<<< HEAD
+=======
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

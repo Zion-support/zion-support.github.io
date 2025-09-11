@@ -96,6 +96,65 @@ const Services: React.FC = () => {
             Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>
+<<<<<<< HEAD
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-2xl font-semibold mb-4 text-gray-900">AI Services</h3>
+            <p className="text-gray-600 mb-4">Cutting-edge AI solutions for your business including machine learning, natural language processing, and computer vision.</p>
+            <ul className="text-gray-600 space-y-2">
+              <li>• Machine Learning Models</li>
+              <li>• Natural Language Processing</li>
+              <li>• Computer Vision</li>
+              <li>• Predictive Analytics</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">⚙️</div>
+            <h3 className="text-2xl font-semibold mb-4 text-gray-900">IT Services</h3>
+            <p className="text-gray-600 mb-4">Comprehensive IT solutions and support including cloud migration, DevOps, and security solutions.</p>
+            <ul className="text-gray-600 space-y-2">
+              <li>• Cloud Migration</li>
+              <li>• DevOps + SRE</li>
+              <li>• Security Solutions</li>
+              <li>• Infrastructure Automation</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">☁️</div>
+            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Cloud Solutions</h3>
+            <p className="text-gray-600 mb-4">Scalable cloud infrastructure and services to help your business grow and scale efficiently.</p>
+            <ul className="text-gray-600 space-y-2">
+              <li>• Cloud Infrastructure</li>
+              <li>• Auto-scaling</li>
+              <li>• Cost Optimization</li>
+              <li>• Multi-cloud Solutions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Talk to our experts about your project. We'll help you choose the right service and create a custom solution for your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us
+            </a>
+=======
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <ServiceCard
@@ -205,6 +264,7 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
             </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </div>
@@ -212,4 +272,8 @@ const Services: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Services;
+=======
+export default Services;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

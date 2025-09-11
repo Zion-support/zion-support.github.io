@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -7,8 +14,56 @@ export default function ProfileDetail() {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+import { useState, useEffect } from "react",
+import { useRouter } from "next/router",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { Header } from "@/components/Header",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+          setError("Profile ID is missing.");
+          return;
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const router = useRouter(),
+  const profileId = router.query.profileId as string,
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+=======
 
   useEffect(() => {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  useEffect(() => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const fetchProfile = async () => {
   useEffect((,) => {;
     const fetchProfile = async () => {;
@@ -30,27 +85,85 @@ export default function ProfileDetail() {;
           return;
           setError("Profile ID is missing."),
           return
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
           .single();
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+        }
+
+
           .single(),
 
-        if (error) {
-          throw new Error(error.message)
+
+
+<<<<<<< HEAD
+          throw new Error(error.message);
         }
         if (!data) {
           setError("Profile not found.");
           return;
 
+          .single();
+          .single(),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          .single(),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+        if (error) {
+          throw new Error(error.message)
+        }
+        if (!data) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+          setError("Profile not found.");
+          return;
+=======
+
+
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+          .single();
+
+        if (error) {;
+          throw new Error(error && error.message);
+        }
+
+        if (!data) {;
+
+          setError("Profile not found.");
+          return;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          setError("Profile not found.");
+          return;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setError("Profile not found."),
           return
 
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setProfileData(data)
       } catch (err: any) {
         setError(err.message |"Failed to fetch profile.")
@@ -58,6 +171,22 @@ export default function ProfileDetail() {;
           title: "Error"
           description: err.message |"Failed to fetch profile."
           variant: "destructive"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+    fetchProfile()
+
+  }, [profileId]);
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    fetchProfile()
+  }, [profileId]);
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       } finally {
       } catch (err: any) {;
@@ -69,11 +198,19 @@ export default function ProfileDetail() {;
       } finally {;
         setIsLoading(false);
       }
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     fetchProfile()
 
   }, [profileId]);
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
 
     fetchProfile()
@@ -100,19 +237,149 @@ export default function ProfileDetail() {;
         <p>Profile not found.</p>
       </div>
 
+<<<<<<< HEAD
+  }, [profileId]);
+
+    )
+<<<<<<< HEAD
+        description = {profileData.bio |"Check out this talent's profile on Zion!",}
+  }
+  return (
+    <>
+      <SEO
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+        description = {profileData.bio |"Check out this talent's profile on Zion!",}
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+=======
+
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { useState, useEffect } from "react",;
+import { useRouter } from "next/router",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { Header } from "@/components/Header",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react';
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+export default function ProfileDetail() {;
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const router = useRouter(),;
+  const profileId = router.query.profileId as string,;
+  const [profileData, setProfileData] = useState<any>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  useEffect(() => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true),;
+      setError(null),;
+      try {;
+        if (!profileId) {;
+          setError("Profile ID is missing."),;
+          return;
+        }
+;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+          .single(),;
+        if (error) {;
+          throw new Error(error.message);
+        }
+;
+        if (!data) {;
+          setError("Profile not found."),;
+          return;
+        }
+;
+        setProfileData(data);
+      } catch (err: any) {;
+        setError(err.message || "Failed to fetch profile."),;
+        toast({;
+          title: "Error",;
+          description: err.message || "Failed to fetch profile.",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    fetchProfile();
+  }, [profileId]),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  if (isLoading) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Loading profile...</p>;
+      </div>;
+    );
+  }
+;
+  if (error) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Error: {error}</p>;
+      </div>;
+    );
+  }
+;
+  if (!profileData) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Profile not found.</p>;
+      </div>;
+    );
+  }
+;
+  return (;
+    <>;
+<<<<<<< HEAD
+      <SEO;
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+        description={profileData.bio || "Check out this talent's profile on Zion!"}
+=======
+
+        description = {profileData.bio |"Check out this talent's profile on Zion!",}
+
+      <SEO;
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+        description={profileData.bio || "Check out this talent's profile on Zion!"}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
         description = {profileData.bio || "Check out this talent's profile on Zion!",}
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
         description = {profileData && profileData.bio || "Check out this talent's profile on Zion!",}
       />;
       <Header />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -132,6 +399,45 @@ export default function ProfileDetail() {;
                       {profileData.is_verified && (
                         <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    </CardTitle>
+                    <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {profileData.location && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{profileData.location}</span>
+                    </div>
+                  )}
+                  {profileData.availability && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{profileData.availability}</span>
+                    </div>
+                  )}
+                  {profileData.hourly_rate && (
+                    <div className="text-white font-bold">
+                      ${profileData.hourly_rate}
+                      <span className="text-zion-slate-light font-normal">/hr</span>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+      />
+      <Header />
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-12 gap-6">
+        title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
+        description = {profileData && profileData.bio || "Check out this talent's profile on Zion!",}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </CardTitle>;
                     <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
 export default /**
@@ -224,6 +530,68 @@ if ( {) {
       <SEO;
         title={`${profile_data.full_name} | Zion AI Marketplace`}
         description = {profile_data.bio || "Check out this talent's profile on Zion!", }
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      />;
+      <Header />;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="grid grid-cols-12 gap-6">;
+          {/* Main Content */}
+          <div className="col-span-12 lg:col-span-8">
+            {/* Profile Header */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <Avatar className="w-20 h-20">
+                    {profileData.profile_picture_url ? (
+                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                    ) : (
+                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
+                    )}
+                  </Avatar>
+                  <div>
+                    <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
+                      {profileData.full_name}
+                      {profileData.is_verified && (
+                        <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                      )}
+                    </CardTitle>
+                    <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {profileData.location && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{profileData.location}</span>
+                    </div>
+                  )}
+                  {profileData.availability && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{profileData.availability}</span>
+                    </div>
+                  )}
+                  {profileData.hourly_rate && (
+                    <div className="text-white font-bold">
+                      ${profileData.hourly_rate}
+                      <span className="text-zion-slate-light font-normal">/hr</span>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+                </div>;
+              </CardContent>;
+            </Card>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
       />;
       <Header />;
       <div className="container mx - auto px - 4 py - 8">;
@@ -257,6 +625,7 @@ if ( {) {
             </Card>;
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -316,7 +685,16 @@ if ( {) {
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        {link.title |link.url}
+                      </a>
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </CardContent>;
             </Card>;
@@ -365,6 +743,10 @@ if ( {) {
 
                         {link.title || link.url}
                       </Link>
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </div>
                 ) : (
@@ -392,31 +774,76 @@ if ( {) {
                         <LinkIcon className="h-4 w-4" />;
                         {link && link.title || link && link.url}
                       </a>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        {link.title |link.url}
+                      </a>
+                        {link.title || link.url}
+                      </Link>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </div>
                 ) : (
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              </CardContent>
+            </Card>
+          </div>
+=======
+=======
+
+              </CardContent>;
+            </Card>;
+          </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </CardContent>;
             </Card>;
           </div>;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
+<<<<<<< HEAD
+                hourly_rate: profileData?.hourly_rate || 0
+                hourly_rate: profileData?.hourly_rate || 0,
+                hourly_rate: profileData?.hourly_rate || 0
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
             />
             {/* Contact Information */}
@@ -445,6 +872,11 @@ if ( {) {
                 )}
               </div>
             </div>
+<<<<<<< HEAD
+              </div>
+            </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
 
@@ -455,26 +887,56 @@ if ( {) {
               <h3 className="text-xl font-bold mb-4">Social</h3>;
               <div className="flex flex-col space-y-3">;
                 {profileData && profileData.github_url && (;
+<<<<<<< HEAD
+
+                    href = {profileData && profileData.github_url,}
+
+<<<<<<< HEAD
+                  <a
+                    href={profileData.github_url}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
                   <a
 
                     href = {profileData && profileData.github_url,}
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
                     href = {profileData && profileData.twitter_url,}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                    href = {profileData && profileData.twitter_url,}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     title="GitHub"
                   >
                     <Github className="h-4 w-4" />
                     GitHub
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>
                 )}
                 {profileData.twitter_url && (
                   <a
                     href = {profileData.twitter_url,}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Link>
                 )}
                 {profileData.twitter_url && (;
@@ -482,21 +944,42 @@ if ( {) {
                     href={profileData.twitter_url}
 
                     target="_blank"
+<<<<<<< HEAD
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="Twitter"
+<<<<<<< HEAD
+=======
+
+                    href = {profileData && profileData.linkedin_url,}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
 
                     href = {profileData && profileData.linkedin_url,}
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     title="Twitter"
                   >
                     <Twitter className="h-4 w-4" />
                     Twitter
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>
                 )}
                 {profileData.linkedin_url && (
                   <a
                     href = {profileData.linkedin_url,}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Link>
                 )}
                 {profileData.linkedin_url && (;
@@ -504,9 +987,16 @@ if ( {) {
                     href={profileData.linkedin_url}
 
                     target="_blank"
+<<<<<<< HEAD
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="LinkedIn"
+<<<<<<< HEAD
+=======
+=======
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <div className="flex flex - wrap gap - 4 text - sm">;
                   {profile_data.location && (
@@ -663,10 +1153,29 @@ if ( {) {
                     LinkedIn;
                   </a>)}
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     title="LinkedIn"
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </a>
+=======
+
+                  </Link>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                )}
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+=======
                   </a>
                 )}
               </div>
@@ -675,12 +1184,27 @@ if ( {) {
         </div>
       </div>
     </>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 );
 }
 }, [profileId]);
 <p>Error: {error ;
 }</p> </div>) ;
+<<<<<<< HEAD
+
+    </>);
+;
+<<<<<<< HEAD
+}
+}, [profile_id]);
+<p > Error: {
+  error ;
+}</p> </div>) ;
+}return (<> <SEO) : (<AvatarFallback> {
+  profile_data.full name?.char_at (0) ;
+=======
 }return (<> <SEO) : (<AvatarFallback> {profileData.full name?.charAt (0) ;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</AvatarFallback>) ;
 }</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {profileData.hourly rate ";
 }<span className="text-zion-slate-light font-normal" >/hr</span> </div>) ";
@@ -707,6 +1231,17 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+    </>;
+  );
+}
+;
+    </>;
+  );
+}
+;
+=======
+=======
 
 );
 }
@@ -716,6 +1251,7 @@ if ( {) {
 
     </>);
 ;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 }/> Website </Link> </div>) ;
@@ -735,4 +1271,9 @@ if ( {) {
     </>;
   );
 }
+<<<<<<< HEAD
 ;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

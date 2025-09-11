@@ -1,5 +1,29 @@
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import type { NextApiRequest, NextApiResponse } from 'next';
+export type DevRole = 'admin' | 'maintainer' | 'contributor';
+export interface DevIdentity {
+
+export interface DevIdentity {;
+  isAuthenticated: boolean;
+  roles: DevRole[];
+  userId?: string;
+}
+    const gitDir = path && path.join(process && process.cwd(), '.git');
+    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
+export function getGitStatus(): { connected: boolean; branch?: string } {
+  try {
+    const gitDir = path.join(process.cwd(), '.git');
+    if (!fs.existsSync(gitDir)) return { connected: false }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   roles: DevRole[];
   userId?: string;
 }
@@ -7,6 +31,28 @@
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+      stdio: ['ignore', 'pipe', 'ignore'],
+    })
+      .toString()
+      .trim();
+export function getGitStatus (): { connected: boolean; branch?: string } {
+  try {
+    const git_dir = path.join (process.cwd (), '.git');
+    if () return { connected: false }) {
+  $2
+}
+    const branch = exec_sync ('git rev - parse --abbrev - ref HEAD', {
+      stdio: ['ignore', 'pipe', 'ignore'],
+    });
+      .to_string ();
+      .trim ();
+    return { connected: true, branch }
+  } catch {
+    return { connected: false };
+=======
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -15,6 +61,7 @@
     return { connected: true, branch }
   } catch {
     return { connected: false }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 
@@ -28,22 +75,66 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return { connected: true, branch }
+  } catch {
+    return { connected: false }
+  }
+}
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
+
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+  // TODO: integrate real auth; for now, check a header and env var for dev
+  const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
+  const adminToken = process.env.ADMIN_TOKEN;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (token && adminToken && token === adminToken) {
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+=======
+  if (token && adminToken && token === adminToken) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
   }
   return { isAuthenticated: false, roles: [] }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+
+=======
 =======
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return { isAuthenticated: false, roles: [] }
 }
 
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export function requireRoles(
+  req: ApiRequest,
+  res: ApiResponse,
+=======
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   allowed: DevRole[]
 ): DevIdentity | undefined {;
   const identity = getDevIdentity(req);
@@ -53,13 +144,20 @@ export function requireRoles(
   }
   const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {
+<<<<<<< HEAD
+    res.status(403).json({ error: 'Forbidden' });
+=======
     res && res.status(403).json({ error: 'Forbidden' });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return undefined;
   }
   return identity;
 
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -194,7 +292,10 @@ export function getClientIp(req: any): string {
          'unknown';
 }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -229,8 +330,20 @@ if ( {) {
   }
   return identity;
 }
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+}
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,16 +1,46 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { authenticateRequest } from '@/utils/auth';
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+import { authenticateRequest } from '@/utils/auth';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const method = (req && req.method || 'GET').toUpperCase(),
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {
+  createTenant
+  getTenants
+  rotateTenantApiKey
+  updateTenant;
+} from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const method = (req && req.method || 'GET').toUpperCase(),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (method === 'GET') {
     return res && res.status(200).json({ tenants: getTenants() });
   }
   const auth = authenticateRequest(req, false);
+<<<<<<< HEAD
+<<<<<<< HEAD
+  if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
+  if (method === 'POST') {
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
   if (method === 'POST') {
@@ -23,14 +53,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(201).json({ tenant })
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { branding } = req.body || {};
     if (!branding?.name) return res.status(400).json({ error: 'branding.name required' });
     const tenant = createTenant(branding);
     return res.status(201).json({ tenant })
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+  if (method === 'PUT') {
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+  if (method === 'PUT') {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
   }
   if (method === 'PUT') {
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { tenantId, update } = req && req.body || {};
     if (!tenantId) return res && res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
@@ -40,6 +87,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, rotateKey } = req && req.body || {};
     if (!tenantId || !rotateKey)
       return res && res.status(400).json({ error: 'tenantId and rotateKey required' });    return res && res.status(200).json({ tenant: result })
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req && req.body || {};
+    if (!tenantId || !rotateKey)
+      return res && res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const { tenantId, update } = req.body || {};
+    if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
+    const result = updateTenant(tenantId, update || {});
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+  return res && res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
+    return res && res.status(200).json({ tenant: result })
+  }
+  return res && res.status(405).json({ error: 'Method not allowed' });
+}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
   if (method === 'PATCH') {
@@ -48,6 +115,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!tenantId || !rotateKey)
       return res && res.status(400).json({ error: 'tenantId and rotateKey required' });
 
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const result = rotateTenantApiKey(tenantId);
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });
@@ -57,6 +128,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { authenticate_request } from '@/utils / auth';
 import {
   create_tenant,
@@ -142,9 +217,34 @@ if ( {) {
 return res.status (405).json ({ error: 'Method not allowed' });
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    return res.status(200).json({ tenant: result });  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body |{}
+    if (!tenantId |!rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });    return res.status(200).json({ tenant: result })
+  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body |{}
+    if (!tenantId |!rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result });
+  }
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   createTenant,
   getTenants,
@@ -175,9 +275,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, update } = req.body || {};
     if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+=======
+
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
@@ -185,6 +299,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (method === 'PATCH') {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
       return res.status(400).json({ error: 'tenantId and rotateKey required' });
@@ -193,4 +311,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ tenant: result });
   }
 
+<<<<<<< HEAD
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result })
+  }
+return res.status(405).json({ error: 'Method not allowed' });
+}
+
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+    const { tenantId, rotateKey } = req.body || {};
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

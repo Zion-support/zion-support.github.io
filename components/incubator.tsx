@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+export default function IncubatorPage() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <EnhancedLayout>;
       <div className='max-w-3xl'>;
@@ -34,18 +43,36 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
       <div className="max-w-3xl">
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
@@ -81,6 +108,17 @@ export default function IncubatorPage() {
       </div>
     </EnhancedLayout>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+
+  );
+  );
+}
+  );
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next / link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**
@@ -126,4 +164,10 @@ function IncubatorPage() {
 
   );
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

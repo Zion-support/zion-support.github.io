@@ -1,9 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Link from 'next/link';
+=======
 import Link from 'next / link';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import Link from 'next / link';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import AnimatedBackground from './AnimatedBackground';
 
 
 export default function FuturisticHero() {
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function FuturisticHero() {
   return (
@@ -42,17 +59,36 @@ function FuturisticHero() {
             </a>;
           </Link>;
           <Link href='/services'>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
+=======
 
             <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Explore Services;
             </a>;
           </Link>;
         </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function FuturisticHero() {
   return (
     <section className="relative py-20 sm:py-28">
@@ -74,9 +110,21 @@ export default function FuturisticHero() {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
+
+  );
+
+<<<<<<< HEAD
+    </section>
+);
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
     </section>;
   );
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
             Talent marketplace • Project accelerators • Secure contracts •;
@@ -107,6 +155,25 @@ function FuturisticHero() {
     </section>);
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </section>;
+  );
+}
+
+}
+    </section>
+  );
+}
+}
+=======
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

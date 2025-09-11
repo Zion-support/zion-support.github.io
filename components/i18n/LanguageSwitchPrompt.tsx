@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import { useTranslation  } from 'react-i18next';
+import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+
+const localeLabelKey: Record<string, string> = {
+
+  en: "lang.english"
+  pt: "lang.portuguese"
+  es: "lang.spanish"
+  ar: "lang.arabic"
+}
+export default function LanguageSwitchPrompt() {
+
+const localeLabelKey: Record<string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
+};
+export default function LanguageSwitchPrompt() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
@@ -7,21 +37,41 @@ const localeLabelKey: Record<string, string> = {
   es: 'lang.spanish',
   ar: 'lang.arabic'
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function LanguageSwitchPrompt() {
+=======
 
 
 export default function LanguageSwitchPrompt() {
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
 
+<<<<<<< HEAD
+  const { t } = useTranslation();
+  const [suggested, setSuggested] = useState<string | null>(null);
+  useEffect(() => {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -63,10 +113,20 @@ export default function LanguageSwitchPrompt() {;
     const suggestion =;
       supportedLocales && supportedLocales.includes(normalized as any) && normalized !== "en";
         ? normalized;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        : null;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         : null;
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const key = 'langPromptShown';
     const preferred = localStorage.getItem('preferredLanguage');
     if (preferred) return; // user has chosen
@@ -74,12 +134,26 @@ export default function LanguageSwitchPrompt() {;
     const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
     const normalized = detected.split('-')[0];
     const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (suggestion) setSuggested(suggestion);
+  }, []);
+  if (!suggested) return null;
+=======
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (suggestion) setSuggested(suggestion);
   }, []);
   if (!suggested) return null;
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const accept = async () => {;
     await i18n && i18n.changeLanguage(suggested!);
     localStorage && localStorage.setItem("preferredLanguage", suggested!);
@@ -87,6 +161,17 @@ export default function LanguageSwitchPrompt() {;
     document && document.documentElement.setAttribute(;
       "dir",;
       isRtl(suggested!) ? "rtl" : "ltr",;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    );
+    document && document.documentElement.setAttribute("lang", suggested!);
+    setSuggested(null);
+  };
+  const decline = () => {;
+    localStorage && localStorage.setItem("langPromptShown1", "true");
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     );
     document && document.documentElement.setAttribute("lang", suggested!);
@@ -96,6 +181,10 @@ export default function LanguageSwitchPrompt() {;
   const decline = () => {;
     localStorage && localStorage.setItem("langPromptShown1", "true");
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setSuggested(null);
   }
   return (
@@ -145,6 +234,22 @@ export default function LanguageSwitchPrompt() {;
     </div>
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React, { useEffect, useState } from './react';
+import { use_translation  } from './react - i18next';
+import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
+const localeLabelKey: Record < string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default /**
  * LanguageSwitchPrompt - Function description
@@ -250,4 +355,88 @@ if (return null) {
   )
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+const localeLabelKey: Record<string, string> = {
+
+  en: "lang.english"
+  pt: "lang.portuguese"
+  es: "lang.spanish"
+  ar: "lang.arabic"
+}
+export default function LanguageSwitchPrompt() {
+
+const localeLabelKey: Record<string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
+};
+export default function LanguageSwitchPrompt() {;
+
+  const { t } = useTranslation();
+  const [suggested, setSuggested] = useState<string | null>(null);
+  useEffect(() => {
+    const key = "langPromptShown";
+    const preferred = localStorage.getItem("preferredLanguage");
+    if (preferred) return; // user has chosen
+    if (localStorage.getItem(key)) return; // already prompted
+    const detected =
+      i18n.language |i18n.resolvedLanguage |navigator.language |"en";
+    const normalized = detected.split("-")[0];
+    const suggestion =
+      supportedLocales.includes(normalized as any) && normalized !== "en"
+        ? normalized
+        : null;
+    if (suggestion) setSuggested(suggestion);
+  }, []);
+  if (!suggested) return null;
+  const accept = async () => {
+    await i18n.changeLanguage(suggested!);
+    localStorage.setItem("preferredLanguage", suggested!);
+    localStorage.setItem("langPromptShown1", "true");
+    document.documentElement.setAttribute(
+      "dir"
+      isRtl(suggested!) ? "rtl" : "ltr"
+    );
+    document.documentElement.setAttribute("lang", suggested!);
+    setSuggested(null);
+  }
+  const decline = () => {
+    localStorage.setItem("langPromptShown1", "true");
+    setSuggested(null);
+  }
+
+  return (
+    <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">
+        <div>
+          {t("lang.switch_prompt", { language: t(localeLabelKey[suggested]) })}
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            className="px-3 py-1 rounded bg-amber-600 text-white"
+            onClick={accept}
+          >
+            {t("lang.switch_accept")}
+          </button>
+          <button
+            className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700"
+            onClick={decline}
+          >
+            {t("lang.switch_decline")}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+);
+  );
+}
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

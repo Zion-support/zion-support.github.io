@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import React from "react",
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+import { Bot, Users, TrendingUp } from 'lucide-react'
+
+import React from "react"
+import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
+import { Bot, Users, TrendingUp, Star } from 'lucide-react'
+export default function AITalentMatchingPage() {
+
+  const benefits = [
+    {
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Bot, Users, TrendingUp } from 'lucide-react'
+
+import React from "react"
+import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
+import { Bot, Users, TrendingUp, Star } from 'lucide-react'
+xport default function AITalentMatchingPage() {
+
+  const benefits = [
+    {
+      benefits={benefits}
+      features={features}
+      stats={stats}
+      ctaText="Start Matching Talent"
+      ctaLink="/contact"
+    />
+  )
+}
+      icon: Bot
+      title: "AI-Powered Matching"
+      description: "Advanced algorithms match the right talent with the right opportunities"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -15,9 +56,44 @@ export default function AITalentMatchingPage() {;
       title: "Success Tracking",;
       description: "Monitor performance and success rates of placements";
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    {
+      icon: Users
+      title: "Verified Professionals"
+      description: "All candidates are pre-screened and verified for quality"
+    }
+    {
+      icon: TrendingUp
+      title: "Success Tracking"
+      description: "Monitor performance and success rates of placements"
+    }
+  ]
+  const features = [
+    "Machine learning-based candidate matching"
+    "Comprehensive skill assessment tools"
+    "Real-time market analysis"
+    "Automated interview scheduling"
+    "Performance analytics dashboard"
+    "Custom matching criteria"
+  ]
+  const stats = [
+    { label: "Successful Placements", value: "95%" }
+    { label: "Client Satisfaction", value: "98%" }
+    { label: "Time to Hire", value: "50% faster" }
+  ]
+
+
+=======
   ];
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
@@ -25,8 +101,16 @@ import { Bot, Users, TrendingUp } from 'lucide-react'
 export default function AITalentMatchingPage() {
   const benefits = [
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
@@ -102,6 +186,14 @@ function AITalentMatchingPage() {
     { label: "Client Satisfaction", value: "98%" },
     { label: "Time to Hire", value: "50% faster" }
   ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+      avatar: "/placeholder.svg"}],
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -151,14 +243,41 @@ export default function AITalentMatchingPage() {;
       benefits={benefits}
       features={features}
       stats={stats}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      ctaText="Start Matching Talent"
+      ctaLink="/contact"
+    />;
+  );
+};
+};
+}
+;
+}
+;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     />;
   );
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);
 }
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

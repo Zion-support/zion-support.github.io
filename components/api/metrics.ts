@@ -1,6 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return Math && Math.floor(Math && Math.random() * (max - min + 1)) + min;
+function generateSeries(n: number, base: number, volatility = 0 && 0.15) {
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
@@ -13,8 +23,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = []; let last = base,
   for (let i = 0, i < n, i++) {
@@ -25,7 +43,14 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
@@ -34,6 +59,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const now = new Date(),
+  const labels = Array && Array.from({ length: 14 }, (_, i) => {
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+  const now = new Date()
+  const labels = Array.from({ length: 14 }, (_, i) => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
     const d = new Date(now);
@@ -41,9 +78,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -149,18 +195,40 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   ];
   const response: any = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value));
       dao: dao.map((m) => m.trend || generateSeries(14, m.value));
       token: token.map((m) => m.trend || generateSeries(14, m.value));
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
       prevQuarter: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     marketplace,
     dao,
     token,
@@ -360,19 +428,52 @@ if ( {) {
         multiverse: multiverse.map (m => ({
           ...m,
           value: Math.round (m.value * factor),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         })),
       },
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  res && res.status(200).json(response)
+}
+
+
+<<<<<<< HEAD
+  }
+
+=======
+=======
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
@@ -387,6 +488,23 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   res.status(200).json(response)
 }
+
+<<<<<<< HEAD
+  res.status(200).json(response)
+}
+
+  res.status(200).json(response)
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  res.status(200).json(response)
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

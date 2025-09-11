@@ -213,7 +213,8 @@ export function About() {
             </a>
           </div>
         </div>
-      </section>export default function About() {
+      </section>
+export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>

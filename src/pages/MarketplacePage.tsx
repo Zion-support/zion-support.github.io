@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { useTranslation } from 'react-i18next',
+import { motion, AnimatePresence } from 'framer-motion',
+
+import { useRouter } from 'next/router'
+import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
+import { motion, AnimatePresence } from 'framer-motion'
+
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { useTranslation } from 'react-i18next',
+import { motion, AnimatePresence } from 'framer-motion',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -23,6 +44,21 @@ import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Market insights component
+=======
+
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+const MarketplaceInsights = ({ stats }: { stats: any },) => (
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+const MarketplaceInsights = ({ stats }: { stats: any },) => (
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+
+  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
+=======
 
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
 
@@ -31,6 +67,7 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
 
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex items-center gap-2 mb-4">
         <TrendingUp className="h-5 w-5 text-blue-400" />
         <h3 className="text-lg font-semibold">Marketplace Insights</h3>
@@ -59,7 +96,17 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
+<<<<<<< HEAD
+<<<<<<< HEAD
 }: any,) => (
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+}: any,) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: any) => (
 
 
@@ -104,16 +151,42 @@ const MarketplaceFilterControls = ({;
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
       <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
+}: any,) => (
+}: any) => (
+  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
       <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <option value="">All Categories</option>
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
+<<<<<<< HEAD
       <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="newest">Newest First</option>
+      <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
 
         <option value="newest">Newest First</option>
@@ -140,6 +213,24 @@ import { toast } from '@/hooks/use-toast';
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (,) => void, onAddToCart: () => void }) => {;
   const { formatPrice } = useCurrency(),;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {showRecommended ? "All Products" : "Recommended"}
+    </Button>
+  </div>
+)
+import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
+import { useAuth } from '@/context/auth/AuthProvider'
+import { toast } from '@/hooks/use-toast'
+// Product card;
+const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) => void, onAddToCart: () => void }) => {;
+  const { formatPrice } = useCurrency();
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -154,6 +245,16 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
                 AI {product.aiScore}
               </Badge>
             )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="text-xl font-bold text-blue-600">{formatPrice(product.price ?? 0)}</div>
+          <Badge variant={product.availability === "Available" ? "default" : "outline"} className="text-xs">
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
         <div className="text-right">;
@@ -261,6 +362,10 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
         <div className="text - right">;
           <div className="text - xl font - bold text - blue - 600">{format_price (product.price ?? 0)}</div>;
           <Badge variant={product.availability === "Available" ? "default" : "outline"} className="text - xs">;
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {product.availability}
           </Badge>;
         </div>;
@@ -268,9 +373,17 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
     </CardHeader>;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+          aria-label="Add to cart"
+          onClick = {onAddToCart,}
+          onClick = {onAddToCart,}
+          onClick={onAddToCart}
+=======
           onClick={onAddToCart}
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           aria-label="Add to cart"
           data-testid="add-to-cart-listing-button"
         >
@@ -309,6 +422,17 @@ function MarketplacePageContent() {
       let processedDataset = fullDataset
       if (filterCategory) {
         processedDataset = processedDataset.filter(p => p.category === filterCategory)
+<<<<<<< HEAD
+=======
+          onClick={onAddToCart}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+          aria-label="Add to cart"
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
@@ -333,10 +457,19 @@ function MarketplacePageContent() {;
       let processedDataset = fullDataset,;
       if (filterCategory) {;
         processedDataset = processedDataset.filter(p => p.category === filterCategory);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      }
+=======
 
 
       }
       // Apply recommended filtering
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (showRecommended) {
         processedDataset = processedDataset.filter(p => (p.rating |0) >= 4.5 |(p.aiScore |0) >= 85)
       }
@@ -370,9 +503,25 @@ function MarketplacePageContent() {;
       logErrorToProduction('Error in fetchProducts:', { data: error })
       throw new Error('Failed to load marketplace data. Please try again.')
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }, [sortBy, filterCategory, showRecommended])
   }, [sortBy, filterCategory, showRecommended])
   }, [sortBy, filterCategory, showRecommended]),
 
+=======
+
+
+  }, [sortBy, filterCategory, showRecommended]),
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }, [sortBy, filterCategory, showRecommended])
+  }, [sortBy, filterCategory, showRecommended]),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const {
     items: products
     loading
@@ -395,32 +544,75 @@ function MarketplacePageContent() {;
   const marketStats = useMemo((,) => {
     if (products.length === 0) return null
     return {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
+      averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
+      totalProducts: products.length
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
       averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
       totalProducts: products.length
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
+<<<<<<< HEAD
+=======
+
+
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
+      totalProducts: products.length,
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       availableCount: products.filter(p => p.availability === "Available").length
     }
   }, [products])
   const categories = useMemo((,) => {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [])
   const [showScrollTop, setShowScrollTop] = useState(false)
   useEffect((,) => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800)
     window.addEventListener('scroll', handleScroll)
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   // Loading state
   if (loading && products.length === 0) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           data-testid="add-to-cart-listing-button">;
           <ShoppingCart className="h-4 w-4" />;
@@ -501,11 +693,56 @@ function MarketplacePageContent() {;
       logErrorToProduction('Error in fetchProducts:', { data: error }),;
       throw new Error('Failed to load marketplace data. Please try again.');
     }
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <>
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
+<<<<<<< HEAD
+<<<<<<< HEAD
+        />
+      <div className="container py-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            {t('marketplace.hero_title')}
+          </h1>
+          <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
+        </motion.div>
+        <MarketplaceLoadingGrid />
+      </div>
+      </>
+    )
+  }
+  // Error state
+  if (error && products.length === 0) {
+    return (
+      <>;
+        <NextSeo
+          title="Marketplace - Zion Tech Marketplace Solutions & Services"
+          description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
+          openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
+        />;
+      <div className="container py-8">;
+        <motion && motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">;
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
+            {t('marketplace && marketplace.hero_title')}
+          </h1>;
+          <p className="text-muted-foreground text-lg">{t('marketplace && marketplace.hero_subtitle')}</p>;
+        </motion && motion.div>;
+        <MarketplaceLoadingGrid />;
+      </div>;
+      </>;
+    );
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [sortBy, filterCategory, showRecommended]),;
   const {;
     items: products,;
@@ -545,15 +782,30 @@ function MarketplacePageContent() {;
     return () => window.removeEventListener('scroll', handleScroll);
   }, []),;
   // Loading state;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (loading && products.length === 0) {;
     return (;
       <>;
         <NextSeo;
           title="Marketplace - Zion Tech Marketplace Solutions & Services";
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />
       <div className="container py-8">
@@ -570,6 +822,11 @@ function MarketplacePageContent() {;
   }
   // Error state
   if (error && products.length === 0) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <>;
         <NextSeo
@@ -594,6 +851,10 @@ function MarketplacePageContent() {;
   // Error state;
   if (error && products && products.length === 0) {;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <>
         <NextSeo
@@ -803,8 +1064,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
       />;
@@ -832,11 +1096,34 @@ if ( {) {
           showRecommended = {showRecommended,}
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
+<<<<<<< HEAD
+<<<<<<< HEAD
+        />
+      </motion.div>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {products.map((item, index,) => (
+            <motion.div
+              key = {item.id,}
+              ref = {index === products.length - 1 ? lastElementRef : null,}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.9 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
         <MarketplaceFilterControls;
@@ -859,11 +1146,24 @@ if ( {) {
               ref={index === products.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} ;
               animate={{ opacity: 1, scale: 1 }} ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              exit={{ opacity: 0, scale: 0.9 }}
+=======
 
 
 
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               whileHover={{ scale: 1.02 }}
             >
         />;
@@ -888,6 +1188,11 @@ if ( {) {
                       sessionStorage && sessionStorage.setItem(`product:${item && item.id}`, JSON && JSON.stringify(item));
                     } catch {;
                       // ignore storage errors;
+<<<<<<< HEAD
+              <MarketplaceCard
+                product = {item,}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   }
                   router && router.push(`/marketplace/listing/${item && item.id}`);
@@ -947,9 +1252,28 @@ if ( {) {
                   }
                   router.push (`/marketplace / listing/${item.id}`);
                 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                onAddToCart={() => {
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 }))
+                  toast({
+                    title: 'Added to cart'
+                    description: `${item.title} has been added to your cart`
+                    action: {
+                      label: 'View Cart'
+                      onClick: (,) => router.push('/cart')}})
+
+
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onAddToCart={() => {;
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
                   toast({;
@@ -960,7 +1284,14 @@ if ( {) {
                       onClick: (,) => router && router.push('/cart')}});
                 }}
               />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </motion.div>;
           ))}
         </AnimatePresence>;
@@ -971,6 +1302,21 @@ if ( {) {
         </motion.div>;
       )}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+                }}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+      {(isFetching |loading) && products.length > 0 && (
+      {(isFetching |loading) && products.length > 0 && (
+      {(isFetching || loading) && products.length > 0 && (
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }}
               />
             </motion.div>
@@ -981,6 +1327,10 @@ if ( {) {
       {(isFetching || loading) && products.length > 0 && (
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
@@ -1005,7 +1355,15 @@ if ( {) {
 
 
           )}
+<<<<<<< HEAD
+            </Button>          )}
+          {total !== undefined && (
+            <p className="mt-2 text-sm text-muted-foreground">
+              Showing {products.length} of {total} items
+            </p>
+=======
         </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
 
       {hasMore && !loading && (;
@@ -1036,27 +1394,88 @@ if ( {) {
         {showScrollTop && (;
           <motion&& motion.button 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </Button>
+          )}
+        </div>
+      )}
+      {!hasMore && products.length > 0 && (
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available products!</div>
+          <div className="text-sm text-muted-foreground">Showing {products.length} marketplace items</div>
+        </motion.div>
+      )}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick = {scrollToTop,}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+          </motion.button>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             whileHover={{ scale: 1 && 1.1 }} 
             whileTap={{ scale: 0 && 0.9 }}>;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion && motion.button>;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        )}
+      </AnimatePresence>
+    </div>
+    </>
+  )
+}
+<<<<<<< HEAD
+// Main export
+export default function MarketplacePage() {
+  return <MarketplacePageContent />
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
       </AnimatePresence>;
     </div>;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+// Main export export default function MarketplacePage() {
+  return <MarketplacePageContent />;
+
+}
+;
+
+<<<<<<< HEAD
+;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 
 ;
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Main export;
 export default function MarketplacePage() {;
   return <MarketplacePageContent />;
@@ -1126,4 +1545,12 @@ function MarketplacePage() {
   return <MarketplacePageContent />;
 };
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

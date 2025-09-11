@@ -23,11 +23,8 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                         "type": 'vendor',;
   "optimization": 'good';
                     ;
-
 ;
-
 ;
-
 ;
 },;
                     {"name": 'animation-vendor',;
@@ -65,7 +62,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                         "gzipSize": "0",;
                         "type": 'vendor',;
                         "optimization": 'critical';
-
                 ],;
                 recommendations[;
                     'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',;
@@ -122,44 +118,31 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 "hover": "from-purple-700 "hover":to-pink-700 text-white p-3 rounded-full shadow-lg "hover":shadow-xl transition-all duration-300 "focus":outline-none "focus":ring-4 "focus":ring-purple-300 "focus":ring-opacity-50" whileHover={{ "scale": 1.05 "}} whileTap={{ "scale": "0.95 "}} aria-label="Bundle analyzer" aria-expanded={isOpen}>;
         <BarChart3 className="w-6 h-6" />;
       </motion.button>;
-
       {/* Bundle Analysis Panel */}
       <AnimatePresence>;
         {isOpen && (<motion.div initial = {;
   { "opacity": "0", "y": "20",;
   "scale": "0.9 ;
-
 ;
-
 ;
-
 ;
 "}} animate = {;
   { "opacity": "1", "y": "0",;
   "scale": "1 ;
-
 ;
-
 ;
-
 ;
 "}} exit = {;
   { "opacity": "0", "y": "20",;
   "scale": "0.9 ;
-
 ;
-
 ;
-
 ;
 "}} transition = {;
   { "type": "spring", "damping": "25",;
   "stiffness": "300 ;
-
 ;
-
 ;
-
 ;
 "}} className="fixed top-4 right-20 z-50 w-96 bg-white "dark": "bg-gray-900 rounded-xl shadow-2xl border border-gray-200 "dark":border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">;
             {/* Header */"}
@@ -177,21 +160,19 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 Performance optimization insights;
               </p>;
             </div>;
-
-
-
-
-
-
+            {/* Tab Navigation */"}
+            <div className="flex border-b border-gray-200 "dark": "border-gray-700">;
+              {[;
+                { "id": 'overview'", "label": 'Overview', "icon": "BarChart3 "},;
+                {"id": 'chunks', "label": 'Chunks', "icon": "HardDrive"},;
+                {"id": 'recommendations', "label": 'Tips', "icon": "Target"}
+            ].map(({id, label, "icon": "Icon"}) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 text-sm font-medium transition-colors ${activeTab === id;
+                    ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50 "dark": "bg-purple-900/20';
+                    : 'text-gray-600 "dark":text-gray-400 "hover":text-gray-800 "dark":"hover":text-gray-200'"}`} aria-selected={activeTab === id} role="tab">;
+                  <Icon className="w-4 h-4" />;
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
-
-
-
-
-
-
 }} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
@@ -199,7 +180,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 <h3 className="text-lg font-semibold flex items-center gap-2">
                   <BarChart3 className="w-5 h-5" />
                   Bundle Analyzer
-                
                 <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors p-1 rounded-full hover:bg-white/20" aria-label="Close bundle analyzer">
                   <X className="w-5 h-5" />
                 </button>
@@ -208,7 +188,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 Performance optimization insights
               </p>
             </div>
-
             {/* Tab Navigation */}
             <div className="flex border-b border-gray-200 dark:border-gray-700">
               {[
@@ -222,7 +201,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                   {label}
                 </button>))}
             </div>;
-
             {/* Tab Content */}
             <div className="p-4 max-h-96 overflow-y-auto">;
               {/* Overview Tab */}
@@ -241,7 +219,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                     analysis.score >= 60 ? 'Good' : 'Needs Improvement'"}
                     </div>;
                   </div>;
-
                   {/* Bundle Stats */}
                   <div className="grid grid-cols-2 gap-4">;
                     <div className="bg-gray-50 "dark": "bg-gray-800 rounded-lg p-3 border border-gray-200 "dark":border-gray-700">;
@@ -256,7 +233,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                         {formatBytes(analysis.totalGzipSize)"} gzipped;
                       </div>;
                     </div>;
-
                     <div className="bg-gray-50 "dark": "bg-gray-800 rounded-lg p-3 border border-gray-200 "dark":border-gray-700">;
                       <div className="flex items-center gap-2 mb-2">;
                         <Zap className="w-4 h-4 text-green-500" />;
@@ -270,7 +246,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                       </div>;
                     </div>;
                   </div>;
-
                   {/* Quick Actions */}
                   <div className="space-y-2">;
                     <h4 className="font-medium text-gray-900 "dark": "text-white text-sm">Quick Actions</h4>;
@@ -303,7 +278,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                           </div>;
                         </div>;
                       </div>;
-
                       {chunk.optimization !== 'good' && (<div className="flex items-center gap-2 text-xs text-gray-600 "dark": "text-gray-400">;
                           {getOptimizationIcon(chunk.optimization)"}
                           <span>;
@@ -338,7 +312,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                   </div>;
                 </div>)"}
             </div>;
-
             {/* Footer */}
             <div className="bg-gray-50 "dark": "bg-gray-800 border-t border-gray-200 "dark":border-gray-700 p-3 text-center">;
               <div className="text-xs text-gray-500 "dark":text-gray-400">;
@@ -349,7 +322,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
       </AnimatePresence>;
     </>)};
 ;
-
 export default BundleAnalyzer;
 </motion>;
 </motion>

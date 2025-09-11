@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
+
+import { Facebook, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+=======
 import { Facebook, Twitter } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
@@ -26,6 +33,14 @@ export function SocialLogin() {
       </div>
       <div className="mt-6 grid grid-cols-4 gap-3">
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  );
+}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
         <Button
           type="button"
@@ -68,25 +83,49 @@ export function SocialLogin() {
 
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function SocialLogin() {;
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
+  return (;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function SocialLogin() {;
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
 
   return (
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
         <div className="relative flex justify-center text-sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Facebook, Twitter  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -106,7 +145,10 @@ function SocialLogin() {
         </div>;
         <div className="relative flex justify - center text - sm">;
           <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Or continue with;
           </span>;
         </div>;
@@ -120,3 +162,22 @@ function SocialLogin() {
   );
 }
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
+        </div>;
+      </div>;
+      <div className="mt-6 grid grid-cols-4 gap-3">;
+        <Button;
+          type="button";
+          variant="outline";
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+  );
+}
+;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -39,6 +39,17 @@ function UserTypeSelection() {
 import { Briefcase, Star, User } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 interface UserTypeOption {
+<<<<<<< HEAD
+
+import { useState } from 'react'
+
+import { useState } from "react";
+import { useState } from "react",
+import { Briefcase, Star, User } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+interface UserTypeOption {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: "serviceProvider" | "talent" | "client";
   name: string;
   description: string;
@@ -50,6 +61,16 @@ export function UserTypeSelection({
   onSelect
   selectedType
 }: UserTypeSelectionProps) {
+<<<<<<< HEAD
+import { useState } from 'react'
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+interface UserTypeOption {
+  const userTypes: UserTypeOption[] = [
+    {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const userTypes: UserTypeOption[] = [
     {
   id: "serviceProvider" | "talent" | "client",
@@ -58,7 +79,19 @@ export function UserTypeSelection({
   icon: React.ElementType
 }
 
+<<<<<<< HEAD
+interface UserTypeSelectionProps {
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
+  selectedType: string | null
+}
 
+export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
+}
+
+export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider",
@@ -73,7 +106,53 @@ export function UserTypeSelection({
       icon: Star
     },
     {
+<<<<<<< HEAD
+      id: 'client',
+      name: 'Client',
+      description: 'I want to discover and hire talent or services',
+      icon: User,
+    },
+  ]
+      id: "client",
+      name: "Client",
+      description: "I want to discover and hire talent or services",
+      icon: User
+    }
+  ],
 
+      id: 'serviceProvider'
+      name: 'Service Provider'
+      description: 'I want to offer services on the platform'
+      icon: Briefcase
+    }
+    {
+      id: "talent",
+      name: "Talent",
+      description: "I want to showcase my skills and find opportunities",
+      icon: Star
+    },
+    {
+      id: 'client'
+      name: 'Client'
+      description: 'I want to discover and hire talent or services'
+      icon: User
+    }
+  ]
+  return (
+    <div className="space-y-6">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-white">Choose your role</h3>
+        <p className="text-zion-slate-light mt-2">
+          This helps us personalize your experience
+        </p>
+      </div>
+      <div className='grid gap-4 md:grid-cols-3'>
+        {userTypes.map(type => {
+          const Icon = type.icon
+          const isSelected = selectedType === type.id
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -107,13 +186,51 @@ export function UserTypeSelection({
                 <Icon
                   className={`h-6 w-6 ${isSelected ? 'text-white' : 'text-zion-slate-light'}`}
 
+<<<<<<< HEAD
+=======
       id: 'client',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Client',
       description: 'I want to discover and hire talent or services',
       icon: User,
     },
+<<<<<<< HEAD
+  ]
+      id: "client",
+      name: "Client",
+      description: "I want to discover and hire talent or services",
+      icon: User
+    }
+  ],
+      id: 'serviceProvider'
+      name: 'Service Provider'
+      description: 'I want to offer services on the platform'
+      icon: Briefcase
+    }
+    {
+      id: 'talent'
+      name: 'Talent'
+      description: 'I want to showcase my skills and find opportunities'
+      icon: Star
+    }
+    {
+      id: 'client'
+      name: 'Client'
+      description: 'I want to discover and hire talent or services'
+      icon: User
+    }
+  ]
+    <div className="space-y-6">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-white">Choose your role</h3>
+        <p className="text-zion-slate-light mt-2">
+          This helps us personalize your experience
+        </p>
+      </div>
+=======
   ];
   return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space - y-6'>;
       <div className='text - center mb - 6'>;
         <h3 className='text - 2xl font - bold text - white'>Choose your role</h3>;
@@ -151,6 +268,15 @@ export function UserTypeSelection({
 
                 />;
 
+<<<<<<< HEAD
+              }`}
+      <div className='grid gap-4 md:grid-cols-3'>
+        {userTypes.map(type => {
+          const Icon = type.icon
+          const isSelected = selectedType === type.id
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={() => onSelect(type.id)}
               variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
@@ -171,13 +297,24 @@ export function UserTypeSelection({
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
               </div>
+<<<<<<< HEAD
+        })}
+      </div>
+    </div>
+  )
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               <div className="text-center">
@@ -258,6 +395,24 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     </div>;
   );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </div>;
+    </div>;
+  );
+};
+}
+};
+}
+}
+}
+;
+
+}
+;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       </div>;
@@ -265,4 +420,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 }
 
 }
+<<<<<<< HEAD
 ;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

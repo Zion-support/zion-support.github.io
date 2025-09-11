@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -22,6 +29,7 @@ export default function SignUpPage() {const [name, setName] = useState("");
     } finally {setIsLoading(false);
     }
   }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import { useState } from "react",;
 import Link from "next/link",;
@@ -52,6 +60,11 @@ export default function SignUpPage() {;
       setIsLoading(false);
     }
   };
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -59,7 +72,14 @@ export default function SignUpPage() {;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import { useState  } from './react';,
 import Link from './next / link';,
@@ -85,8 +105,38 @@ if ( {) {
 }
       set_error ("Passwords do not match"),
       setIsLoading (false);
+<<<<<<< HEAD
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext";
+export default function SignUpPage() {const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const { register } = useAuth();
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
+    setIsLoading(true);
+    setError("");
+    if (password !== confirmPassword) {;
+      setError("Passwords do not match");
+      setIsLoading(false);
+      return;
+    }
+    try {
+      await register (name, email, password);
+    } catch (error) {
+      set_error (error instanceof Error ? error.message : "Registration failed");
+    } finally {
+      setIsLoading (false);
+    }
+  }
 =======
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import { useState } from "react",;
 import Link from "next/link",;
@@ -161,7 +211,32 @@ export default function SignUpPage() {;
                 <p className="text-red-400 text-sm">{error}</p>;
               </div>;
             )}
+=======
+
+        <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
+          <form on_submit={handle_submit} className="space - y-6">;
+            {error && (
+              <div className="bg - red - 500 / 10 border border - red - 500 / 20 rounded - lg p - 3">;
+                <p className="text - red - 400 text - sm">{error}</p>;
+              </div>)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
+          <form on_submit={handle_submit} className="space - y-6">;
+            {error && (
+              <div className="bg - red - 500 / 10 border border - red - 500 / 20 rounded - lg p - 3">;
+                <p className="text - red - 400 text - sm">{error}</p>;
+              </div>)}
+
+
 ;
+
+<<<<<<< HEAD
+;
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

@@ -4,6 +4,9 @@ import path from 'node:path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+<<<<<<< HEAD
+  plugins: [react()],
+=======
   plugins: [
     react({
       include: '**/*.{jsx,js,ts,tsx}',
@@ -11,6 +14,7 @@ export default defineConfig({
       jsxRuntime: 'automatic',
     }),
   ],
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -20,16 +24,45 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
+<<<<<<< HEAD
+      '@assets': path.resolve(__dirname, './src/assets'),
+=======
       '@assets': path.resolve(__dirname, './src/assets')
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   },
+  css: {
+    postcss: false
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [],
+  },
   build: {
+<<<<<<< HEAD
+    outDir: 'dist',
+    sourcemap: true,
+=======
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom']
+        }
+      }
+    }
+  },
+  server: {
+    port: 3000,
+    host: true,
+    open: true
+=======
           'react-vendor': ['react', 'react-dom'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
@@ -315,5 +348,6 @@ export default defineConfig({
     port: 4173, 
     host: true, 
     open: true 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 });

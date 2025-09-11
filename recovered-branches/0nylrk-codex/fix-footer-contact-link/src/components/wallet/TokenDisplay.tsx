@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
+
+import React from "react";
+import {BadgeDollarSign} from "lucide-react";
+import {useWallet} from "@/hooks/useWallet";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+
+export function TokenDisplay() {
+export function TokenDisplay() {;
+=======
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
@@ -7,6 +21,7 @@ export function TokenDisplay() {;
 
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { wallet, loading } = useWallet();
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
@@ -44,21 +59,61 @@ export function TokenDisplay() {
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+export function TokenDisplay() {;
+
+
+
+  const { wallet, loading } = useWallet();
+  return (
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
       </CardContent>
     </Card>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { BadgeDollarSign } from "lucide-react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Skeleton } from "@/components/ui/skeleton",;
+<<<<<<< HEAD
+;
+export function TokenDisplay() {;
+  const { wallet, loading } = useWallet(),;
+;
+  return (;
+export function TokenDisplay() {;
+  const { wallet, loading } = useWallet();
+  return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
   return (;
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
@@ -70,6 +125,10 @@ export function TokenDisplay() {;
       <CardContent>;
         {loading ? (;
           <Skeleton className="h-12 w-28" />;
+<<<<<<< HEAD
+        ) :(;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ) : (;
           <div className="flex flex-col gap-2">;
             <div className="flex items-end">;
@@ -80,6 +139,11 @@ export function TokenDisplay() {;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
             <div className="mt-2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / wallet / TokenDisplay.tsx;
 import React from './react';
@@ -116,10 +180,29 @@ function TokenDisplay() {
             </p>;
             <div className="mt - 2">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+;
+
+          </div>;
+        )}
+      </CardContent>;
+    </Card>;
+  );
+}
+;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>)}
       </CardContent>;
@@ -130,4 +213,10 @@ function TokenDisplay() {
 }
 ;
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

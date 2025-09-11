@@ -1,15 +1,34 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 
 export interface TokenTransaction {
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export interface TokenTransaction {;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface TokenTransaction {
+
+export interface TokenTransaction {;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -24,6 +43,15 @@ export interface TokenTransaction {;
 export interface TokenConfig {;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface TokenConfig {
+
+export interface TokenConfig {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name: string;
   symbol: string;
   total_supply: number;
@@ -32,6 +60,14 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
+const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
@@ -39,6 +75,10 @@ const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && tra
 const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -76,7 +116,14 @@ function load_transactions (): TokenTransaction[] {
     return [];
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
   fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
@@ -91,19 +138,41 @@ function load_config (): TokenConfig {
     }
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {
     return getDefaultConfig ();
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function save_config (config: TokenConfig): void {
   ensureDataDir ();
   fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2));
 }
 function getDefaultConfig (): TokenConfig {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
   return {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  return {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     name: 'ZION Token',
     symbol: 'ZION$',
@@ -151,7 +220,17 @@ export function getUserBalance(userId: string): number {;
   return Math && Math.max(0, balance);
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return {
+    name: 'ZION Token',
+    symbol: 'ZION$',
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -159,6 +238,13 @@ export function getUserBalance(userId: string): number {;
     stakingRewardRate: 12.5;
   }
 }
+<<<<<<< HEAD
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function getAllTransactions(): TokenTransaction[] {;
   return loadTransactions();
@@ -176,8 +262,18 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   save_transactions (transactions);
   return new_transaction;
 }
+<<<<<<< HEAD
+export function getConfig(): TokenConfig {
+  return loadConfig();
+}
+export function set_config (config: TokenConfig): void {
+  save_config (config);
+}
 export function getUserBalance(userId: string): number {
 =======
+export function getUserBalance(userId: string): number {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function getConfig(): TokenConfig {;
   return loadConfig();

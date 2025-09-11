@@ -1,6 +1,53 @@
+#!/usr/bin/env node
+/**
+ * Error Monitor - PM2 Automation Script
+ * Monitors the application for errors and automatically fixes common issues
+ */
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+class ErrorMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.monitoringReport = {
+      timestamp: new Date().toISOString(),
+      duration: 0,
+      errorsDetected: [],
+      warnings: [],
+      healthStatus: 'healthy',
+      metrics: {
+        totalErrors: 0,
+        totalWarnings: 0,
+        buildSuccess: false,
+        typeCheckSuccess: false,
+        lintSuccess: false,
+      },
+    };
+    this.startTime = Date.now();
+    this.isRunning = false;
+    this.checkInterval = 60000; // 1 minute
+    this.alertThreshold = 10;
+  }
+  async start() {
+    console.log('🔍 Starting Error Monitor...');
+    this.isRunning = true;
+    // Create logs directory
+    const logsDir = path.join(this.projectRoot, 'automation', 'logs');
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
 
 >
 
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -35,18 +82,18 @@
         message: error.message,
 
         timestamp: new Date().toISOString()
-
->
-
-timestamp: new Date().toISOString()
-
-timestamp: new Date().toISOString()
+<<<<<<< HEAD
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         timestamp: new Date().toISOString(),
       });
     }
@@ -126,6 +173,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           type: 'missing_critical_file',
           file: file,
           message: `Critical file ${file} is missing`,
+
+
+     is missing`,
+     is missing`,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+     is missing`,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -135,17 +193,60 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-
->
-
-timestamp: new Date().toISOString()
+<<<<<<< HEAD
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(
+          /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
+        );
+        if (match) {
+          errors.push({
+            type: 'typescript_error',
+            file: match[1].trim(),
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            message: match[4].trim(),
+            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+            timestamp: new Date().toISOString(),
+          });
 
             timestamp: new Date().toISOString(),
           });
+
+    );
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         }
       }
     }
 
+
+
+            timestamp: new Date().toISOString()
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            timestamp: new Date().toISOString(),
+          });
+    );
+        }
+      }
+    }
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return errors;
   }
   parseESLintErrors(output) {
@@ -161,14 +262,28 @@ timestamp: new Date().toISOString()
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
-
+ursor/fix-syntax-push-and-merge-to-main-40de
           timestamp: new Date().toISOString()
         });
       }
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    );
+      }
+    }
+    );
+      }
+    }
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
           timestamp: new Date().toISOString(),
         });
       }
@@ -176,6 +291,15 @@ timestamp: new Date().toISOString()
 
 >
 
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return errors;
           timestamp: new Date().toISOString()
         });
@@ -202,34 +326,83 @@ timestamp: new Date().toISOString()
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 
->
-
-console.log('✅ Error fixer completed');
-
-console.log('✅ Error fixer completed');
-
-      console.log('✅ Error fixer completed');
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);      console.log('✅ Error fixer completed');    } catch (error) {
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+<<<<<<< HEAD
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    console.log(
+      `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
+    );
+    console.log(
+      `🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`
+    );
+    console.log(
+      `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
+    );
+  }
+  async triggerErrorFixer() {
+    console.log('🚀 Triggering error fixer...');
+    try {
+      const ErrorFixerAutomation = require('./error-fixer-automation.js');
+      const automation = new ErrorFixerAutomation();
+      await automation.run();
+
+
+<<<<<<< HEAD
+      console.log('✅ Error fixer completed');
+      console.log('✅ Error fixer completed');
+      console.log('✅ Error fixer completed');
+      console.log('✅ Error fixer completed');
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+      console.log('✅ Error fixer completed');
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      console.log('✅ Error fixer completed');
+    } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
 
         timestamp: new Date().toISOString()
-
->
-
-timestamp: new Date().toISOString()
-
-timestamp: new Date().toISOString()
+<<<<<<< HEAD
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         timestamp: new Date().toISOString(),
       });
     }
@@ -258,6 +431,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 >
 
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Add duration to report
         timestamp: new Date().toISOString()    // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
@@ -297,11 +479,28 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
+
+
 }
+
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
 }
 module.exports = ErrorMonitor;
-#!/usr/bin/env node 
+
+
+module.exports = ErrorMonitor;
+module.exports = ErrorMonitor;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+module.exports = ErrorMonitor;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

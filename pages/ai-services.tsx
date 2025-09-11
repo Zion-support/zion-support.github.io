@@ -1,10 +1,25 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+=======
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -14,11 +29,15 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
     
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -28,6 +47,13 @@ import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from 'react';
+import Layout from '../components/Layout';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import Layout from '../components/Layout';
@@ -42,6 +68,11 @@ origin/automation-improvements-final
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
+<<<<<<< HEAD
+
+<h1 className="text-4xl font-bold text-gray-900 mb-4">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Services
             </h1>
@@ -54,6 +85,13 @@ origin/automation-improvements-final
             <p className="text-gray-600">
               AI Services page is under construction.
             </p>
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -61,12 +99,34 @@ origin/automation-improvements-final
           </div>
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
 origin/automation-improvements-final
+=======
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
 import { ContactInfo  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 origin/main
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -83,6 +143,16 @@ export default function AIServices() {
         </div>
       </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </div>
+        </div>
+      </div>
+</Layout>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -97,7 +167,10 @@ export default function AIServices() {
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import Layout from "../components / Layout";
 export default /**
@@ -122,19 +195,41 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </Layout>;
   );
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -143,7 +238,10 @@ import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
+<<<<<<< HEAD
+=======
   
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
@@ -154,8 +252,12 @@ export default function AIServices() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
+<<<<<<< HEAD
+};
+=======
   };
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
     { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
@@ -164,8 +266,12 @@ export default function AIServices() {
     { id: 'predictive', name: 'Predictive Analytics', count: 15 },
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
+<<<<<<< HEAD
+];
+=======
   ];
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const services = [
     {
       id: 1,
@@ -176,17 +282,29 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
       description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
+<<<<<<< HEAD
+category: 'predictive',
+=======
     category: 'predictive',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 3,
       name: 'AI Legal Document Analysis',
@@ -196,17 +314,29 @@ export default function AIServices() {
       price: '$199/month',
       popular: false,
       useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
+<<<<<<< HEAD
+category: 'nlp',
+=======
     category: 'nlp',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
       useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 5,
       name: 'AI-Powered Search & Discovery',
@@ -216,17 +346,29 @@ export default function AIServices() {
       price: '$99/month',
       popular: false,
       useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 6,
       name: 'Computer Vision Solutions',
       description: 'Advanced image and video analysis for object detection, recognition, and processing.',
+<<<<<<< HEAD
+category: 'computer-vision',
+=======
     category: 'computer-vision',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
       useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 7,
       name: 'Machine Learning Model Training',
@@ -236,17 +378,29 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: false,
       useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 8,
       name: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
+<<<<<<< HEAD
+category: 'nlp',
+=======
     category: 'nlp',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
       useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 9,
       name: 'AI Process Automation',
@@ -256,27 +410,47 @@ export default function AIServices() {
       price: '$159/month',
       popular: false,
       useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 10,
       name: 'Predictive Analytics Engine',
       description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
+<<<<<<< HEAD
+category: 'predictive',
+=======
     category: 'predictive',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
       useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 11,
       name: 'AI Content Generation',
       description: 'Intelligent content creation for marketing, documentation, and communication.',
+<<<<<<< HEAD
+category: 'specialized',
+=======
     category: 'specialized',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,
       useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 12,
       name: 'AI Chatbot Development',
@@ -287,8 +461,12 @@ export default function AIServices() {
       popular: true,
       useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
+<<<<<<< HEAD
+];
+=======
   ];
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
@@ -296,13 +474,20 @@ export default function AIServices() {
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
+<<<<<<< HEAD
+<meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
+=======
         <meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/ai-services`} />
       </Head>
+<<<<<<< HEAD
+=======
       
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
@@ -323,13 +508,28 @@ export default function AIServices() {
               </p>
             </div>
           </section>
+<<<<<<< HEAD
+          {/* Category Filter */}
+<<<<<<< HEAD
+}
+
+}
+
+}
+=======
+=======
 
           {/* Category Filter */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -375,11 +575,24 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -396,6 +609,12 @@ export default function AIServices() {
           </section>
 
           {/* Services Grid */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -431,24 +650,77 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+          {/* Services Grid */}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
+<<<<<<< HEAD
+                  <div
+                    key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    style={{ transitionDelay: `${index * 100}ms` }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
                   <div 
                     key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     {service.popular && (
                       <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                     
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
                     
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -456,17 +728,38 @@ export default function AIServices() {
 }
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+<<<<<<< HEAD
+)}
+                    <h3 className="text-xl font-bold mb-3">{service.name}</h3>
+                    <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
                       <ul className="text-slate-400 text-sm space-y-1">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 flex-shrink-0"></span>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                             {feature  } catch (error) {
     console.error("Error:", error);
@@ -479,6 +772,15 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+{feature}
+                          </li>
+                        ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </ul>
                     </div>
                     <div className="mb-4">
@@ -486,6 +788,11 @@ export default function AIServices() {
                       <div className="flex flex-wrap gap-1">
                         {service.useCases.map((useCase, useCaseIndex) => (
                           <span key={useCaseIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             {useCase}
                           </span>
                         ))}
@@ -497,6 +804,12 @@ export default function AIServices() {
                       <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
                     </div>
                     
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             {useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -508,22 +821,50 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+{useCase}
+                          </span>
+                        ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>
                     </div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
                       <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
                     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                       Learn More
                     </button>
                   </div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))}
               </div>
             </div>
           </section>
 
           {/* AI Capabilities Section */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -537,12 +878,36 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+))}
+              </div>
+            </div>
+          </section>
+
+<<<<<<< HEAD
+{/* AI Capabilities Section */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Our AI Capabilities
               </h2>
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
               
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -553,7 +918,18 @@ export default function AIServices() {
                   <h3 className="text-xl font-bold mb-2">Machine Learning</h3>
                   <p className="text-slate-400">Advanced ML algorithms for pattern recognition and predictive modeling</p>
                 </div>
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -564,7 +940,18 @@ export default function AIServices() {
                   <h3 className="text-xl font-bold mb-2">Computer Vision</h3>
                   <p className="text-slate-400">Image and video analysis with object detection and recognition</p>
                 </div>
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -574,7 +961,18 @@ export default function AIServices() {
                   <h3 className="text-xl font-bold mb-2">Natural Language</h3>
                   <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>
                 </div>
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -588,18 +986,35 @@ export default function AIServices() {
             </div>
           </section>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* CTA Section */}
           {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 Ready to Harness AI Power?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Contact our AI experts to discuss how our advanced artificial intelligence services 
                 can transform your business operations and drive innovation.
               </p>
@@ -607,16 +1022,41 @@ export default function AIServices() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link 
                   href="/contact" 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Contact our AI experts to discuss how our advanced artificial intelligence services
                 can transform your business operations and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="/contact"
+<<<<<<< HEAD
+<<<<<<< HEAD
+Contact our AI experts to discuss how our advanced artificial intelligence services 
+                can transform your business operations and drive innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link 
+                  href="/contact"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Get AI Consultation
                 </Link>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
                   className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
@@ -626,6 +1066,12 @@ export default function AIServices() {
                 <a 
                   href={`mailto:${contact.email}`} 
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <a
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
     console.error("Error:", error);
@@ -633,6 +1079,15 @@ export default function AIServices() {
   }
 }
                   className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<a 
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
+className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   Call {contact.phone  } catch (error) {
     console.error("Error:", error);
@@ -649,13 +1104,26 @@ export default function AIServices() {
                   className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Email Us
+<<<<<<< HEAD
+</a>
+=======
                 </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+}
+
+
+)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
 import SEO from '../components/SEO';
@@ -677,7 +1145,11 @@ export default function AIServicesPage() {
               { title: 'AI Content Generator', href: '/intelligent-content-automation-platform' },
               { title: 'AI Customer Service', href: '/ai-customer-service' },
               { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
+<<<<<<< HEAD
+<Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
+=======
               <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-xl font-semibold">{c.title}</div>
                 <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
               </Link>
@@ -688,6 +1160,16 @@ export default function AIServicesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
+  );}
+
+}
+}
+
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -702,7 +1184,23 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+}
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+}
+}
+    </Layout>);
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
@@ -841,5 +1339,13 @@ export default function AIServicesPage(req, res) {
 ;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

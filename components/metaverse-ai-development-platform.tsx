@@ -1,9 +1,61 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+
+import React from 'react';
+
+import Head from 'next/head';
+
+import {
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
 
 import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Sparkles
+  Star;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Phone,
   Mail,
   MapPin,
@@ -11,8 +63,16 @@ import {
   ArrowRight,
   Sparkles,;
   Star,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -21,12 +81,22 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 
+<<<<<<< HEAD
+export default function MetaverseAIPlatformPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/metaverse-ai-development-platform')
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/metaverse-ai-development-platform')
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
@@ -35,6 +105,11 @@ export default function MetaverseAIPlatformPage() {
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function MetaverseAIPlatformPage() {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/metaverse-ai-development-platform'));
   if (!service) return null;
 
@@ -128,6 +203,10 @@ export default function MetaverseAIPlatformPage() {;
   );
 }
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -140,6 +219,11 @@ export default function MetaverseAIPlatformPage() {
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/metaverse-ai-development-platform" />
       </Head>
@@ -169,6 +253,10 @@ export default function MetaverseAIPlatformPage() {
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -248,12 +336,71 @@ export default function MetaverseAIPlatformPage() {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
               </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+
+
+
+  );
+=======
+
+  );
+
+import Head from 'next / head';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Sparkles,
+  Star,
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import Button from '../components / ui / Button';
+import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
+export default /**
+ * MetaverseAIPlatformPage - Function description
+ */
+function MetaverseAIPlatformPage() {
+  const service = enhancedRealMicroSaasServices.find (string =>;
+    s.link.ends_with ('/metaverse - ai - development - platform'));  // Check condition
+if (return null) {
+  $2
+}import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import Button from '../components / ui / Button';
+import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
+export default /**
+ * MetaverseAIPlatformPage - Function description
+ */
+function MetaverseAIPlatformPage() {
+  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/metaverse - ai - development - platform'));
+  // Check condition
+if (return null) {
+  $2
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+}
+<<<<<<< HEAD
+;
+}
+=======
+=======
 
   );
 }
@@ -345,6 +492,7 @@ export default function MetaverseAIPlatformPage() {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
@@ -353,4 +501,10 @@ export default function MetaverseAIPlatformPage() {
 =======
 
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

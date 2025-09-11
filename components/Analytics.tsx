@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
+import Head from 'next / head';
+;
+interface AnalyticsProps {
+  tracking_id?: string;
+}
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,6 +36,38 @@ interface AnalyticsProps {
 }
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect } from 'react';
+
+import Head from 'next / head';
+;
+
+interface AnalyticsProps {
+  tracking_id?: string;
+}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AnalyticsProps {;
   trackingId?: string;
 }
@@ -43,11 +84,23 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       window && window.dataLayer = window && window.dataLayer || [];
       function gtag(): any (...args: unknown[]) {;
         window && window.dataLayer.push(args),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      }
+      window && window.gtag = gtag;
+      gtag('js', new Date());
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       }
       window && window.gtag = gtag;
       gtag('js', new Date());
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       gtag('config', trackingId, {;
         page_title: document && document.title,;
         page_location: window && window.location.href,;
@@ -104,7 +157,14 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   };
   // Expose tracking functions globally for use in other components;
   if (typeof window !== 'undefined') {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     (window as any).trackEvent = trackEvent;
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
@@ -208,6 +268,49 @@ if ( {) {
   }
   return (
     <Head>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <script;
+        dangerouslySetInnerHTML={{
+=======
+
+      <script;
+        dangerouslySetInnerHTML={{
+<<<<<<< HEAD
+          __html: `;
+            // Performance monitoring;
+            // Check condition
+if ( {) {
+  $2
+}
+              window.addEventListener ('load', function () {
+                set_timeout (function () {
+                  const perf_data = performance.getEntriesByType ('navigation')[0];
+                  // Check condition
+if ( {) {
+  $2
+}
+                    const load_time = perf_data.loadEventEnd - perf_data.loadEventStart;
+                    // Check condition
+if ( {) {
+  $2
+}
+                      window.gtag ('event', 'timing_complete', {
+                        name: 'load',
+                        value: Math.round (load_time),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+                        name: 'load',
+                        value: Math.round(loadTime),
+
+                      });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
       <script;
         dangerouslySetInnerHTML={{
@@ -216,6 +319,7 @@ if ( {) {
                         value: Math.round(loadTime),
                       });
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           __html: `
             // Performance monitoring
             if ('performance' in window) {
@@ -226,6 +330,11 @@ if ( {) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
+<<<<<<< HEAD
+                        name: 'load'
+                        value: Math.round(loadTime)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         name: 'load',
                         value: Math.round(loadTime),
                       });
@@ -237,3 +346,48 @@ if ( {) {
                       })
                     }
                   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+                }, 0);
+              });
+            }
+          `
+          `,
+        }}
+=======
+<<<<<<< HEAD
+                }, 0)
+              })
+            }
+
+    </Head>);
+}
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+          `,
+
+        }}
+export default Analytics;
+      />
+    </Head>
+  );
+
+};
+
+
+<<<<<<< HEAD
+export default Analytics;
+}
+};
+
+export default Analytics;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default Analytics;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

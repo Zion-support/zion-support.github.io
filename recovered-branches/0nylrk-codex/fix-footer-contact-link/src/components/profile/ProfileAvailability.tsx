@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Availability } from '@/types / profile';
 import { Badge } from '@/components / ui / badge';
 import { Calendar, Clock, Check } from './lucide-react';
@@ -7,10 +10,93 @@ interface ProfileAvailabilityProps {
   availability: Availability;
 }
 
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import { Availability } from "@/types/profile",
+import { Badge } from "@/components/ui/badge";
+import { Calendar, Clock, Check } from "lucide-react";
+import {Availability} from "@/types/profile";
+import {Badge} from "@/components/ui/badge";
+import {Calendar, Clock, Check} from "lucide-react";
+interface ProfileAvailabilityProps {
+  availability: Availability
+}
+export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
+
+  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
+    switch(status) {;
+      case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+      case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+      case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30'
+      default: return ''
+    }
+  }
+  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
+    switch(status) {
+      case 'available': return 'Available Now';
+      case 'limited': return 'Limited Availability';
+      case 'unavailable': return 'Currently Unavailable'
+      default: return ''
+    }
+=======
+import { Availability } from '@/types / profile';
+import { Badge } from '@/components / ui / badge';
+import { Calendar, Clock, Check } from './lucide-react';
+
+interface ProfileAvailabilityProps {
+  availability: Availability;
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+  };
+import { Availability } from "@/types/profile",
+import { Badge } from "@/components/ui/badge",
+import { Calendar, Clock, Check } from "lucide-react",
+
+interface ProfileAvailabilityProps {
+  availability: Availability
+import { Availability } from "@/types/profile",;
+import { Badge } from "@/components/ui/badge",;
+import { Calendar, Clock, Check } from "lucide-react",;
+interface ProfileAvailabilityProps {;
+  availability: Availability;
+}
+;
+export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {;
+  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {;
+    switch(status) {;
+      case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',;
+      case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30',;
+      case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30',;
+      default: return '';
+    }
+  },;
+  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {;
+    switch(status) {;
+      case 'available': return 'Available Now',;
+      case 'limited': return 'Limited Availability',;
+      case 'unavailable': return 'Currently Unavailable';
+      default: return '';
+    }
+  },
+
+  return (
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
+      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProfileAvailabilityProps {;
   availability: Availability;
 }
@@ -33,6 +119,21 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
       default: return '';
 
     }
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }
+
+
+
+  return (
+
+
+        <Badge 
+          variant="outline" 
+
+
+<<<<<<< HEAD
+=======
   }
 =======
 
@@ -43,10 +144,16 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Badge
           variant="outline"
         <Badge 
           variant="outline" 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
           {getStatusText(availability.status)}
@@ -73,17 +180,32 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
                   <span>{slot.hours}</span>
                 </div>
               </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  }
+  return (
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
+      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
+=======
 =======
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;
         <Badge
           variant="outline" 
           className={`${getStatusColor(availability && availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}>;
           {getStatusText(availability && availability.status)}
         </Badge>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {availability && availability.nextAvailable && availability && availability.status !== 'available' && (;
           <div className="flex items-center gap-2 text-zion-slate-light">;
             <Calendar className="h-4 w-4" />;
@@ -91,11 +213,17 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
           </div>;
         )}
       </div>;
+<<<<<<< HEAD
+      {availability && availability.message && (;
+        <p className="text-zion-slate mb-4">{availability && availability.message}</p>;
+      )}
+=======
 
       {availability && availability.message && (;
         <p className="text-zion-slate mb-4">{availability && availability.message}</p>;
       )}
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {availability && availability.availableHours && availability && availability.availableHours.length > 0 && (;
         <div className="mt-4">;
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>;
@@ -108,6 +236,76 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
                   <span>{slot && slot.hours}</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+            ))}
+
+import { Availability } from "@/types/profile",;
+import { Badge } from "@/components/ui/badge",;
+import { Calendar, Clock, Check } from "lucide-react",;
+;
+interface ProfileAvailabilityProps {;
+  availability:Availability;
+}
+;
+export function ProfileAvailability({ availability } ProfileAvailabilityProps) {;
+  const getStatusColor = (status:'available' | 'limited' | 'unavailable') => {;
+    switch(status) {;
+      case 'available':return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',;
+      case 'limited':return 'bg-amber-500/20 text-amber-400 border-amber-500/30',;
+      case 'unavailable':return 'bg-rose-500/20 text-rose-400 border-rose-500/30',;
+      default:return '';    }
+  },;
+  ;
+  const getStatusText = (status:'available' | 'limited' | 'unavailable') => {;
+    switch(status) {;
+      case 'available':return 'Available Now',;
+      case 'limited':return 'Limited Availability',;
+      case 'unavailable':return 'Currently Unavailable',;
+      default:return '';
+    }
+  },;
+;
+  return (;
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
+      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
+      ;
+      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;
+        <Badge ;
+          variant="outline" ;
+          className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
+        >;
+          {getStatusText(availability.status)}
+        </Badge>;
+        ;
+        {availability.nextAvailable && availability.status !== 'available' && (;
+          <div className="flex items-center gap-2 text-zion-slate-light">;
+            <Calendar className="h-4 w-4" />;
+            <span>Next available:{availability.nextAvailable}</span>;
+          </div>;
+        )}
+      </div>;
+      ;
+      {availability.message && (;
+        <p className="text-zion-slate mb-4">{availability.message}</p>;
+      )}
+      ;
+      {availability.availableHours && availability.availableHours.length > 0 && (;
+        <div className="mt-4">;
+          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">;
+            {availability.availableHours.map((slot, index) => (;
+              <div key={index} className="flex items-center gap-2 text-zion-slate">;
+                <div className="w-20 text-zion-slate-light">{slot.day} </div>;
+                <div className="flex items-center gap-1">;
+                  <Clock className="h-4 w-4 text-zion-cyan" />;
+                  <span>{slot.hours}</span>;
+                </div>;
+              </div>;            ))}
+          </div>;
+        </div>;
+      )}
+    </div>;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
           </div>;
@@ -119,6 +317,7 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
 }
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * ProfileAvailability - Function description
  */
@@ -175,4 +374,34 @@ function ProfileAvailability() {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ),;}
+ interface ProfileAvailabilityProps {
+  availability: Availability 
+}availability 
+}: ProfileAvailabilityProps) {
+  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
+  switch (status) {
+  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Availability</h3> <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4" > <Badge > {
+  getStatusText (availability.status) 
+}</Badge> <span>Next available: {
+  availability.nextAvailable 
+}</span> </div>) 
+}</div> </div> </div>) ) 
+}</div> </div>) 
+}</div>) 
+}
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

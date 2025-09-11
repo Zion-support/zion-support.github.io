@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -17,6 +22,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from 'react';
+import Head from 'next / head';
+import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
+
+=======
 import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
@@ -25,6 +37,7 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
 export default function WCAGScannerPage() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function WCAGScannerPage() {;
@@ -215,14 +228,28 @@ if (return null) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
 =======
+import { Star } from 'lucide-react';
+export default function WCAGScannerPage() {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
@@ -240,6 +267,11 @@ export default function WCAGScannerPage() {;
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/wcag-accessibility-scanner" />
       </Head>
@@ -268,6 +300,10 @@ export default function WCAGScannerPage() {;
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -343,15 +379,47 @@ export default function WCAGScannerPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
               </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    </UltraAdvancedFuturisticBackground>);
+}
+;
+
+
+}
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 }
 
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

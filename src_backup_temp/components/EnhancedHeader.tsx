@@ -5,7 +5,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
  * @returns {*} Function return value
  */
 function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) {';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);';';;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);';';
+;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -25,7 +26,8 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
-  "};  useEffect(() => {
+  "};
+  useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
     // Cleanup function
@@ -34,7 +36,8 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
     };';
 ';';
     window.addEventListener('scroll', handleScroll);';';
-;    };
+;
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 ;
@@ -43,13 +46,13 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
       setIsSearching(true);
       try {;
         await new Promise(resolve => setTimeout (resolve", 1000) ) ;
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {;  const handleSearch = async(e: React.FormEvent) => {
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {;
+  const handleSearch = async(e: React.FormEvent) => {
     e.preventDefault();    if(searchQuery.trim()) {
       setIsSearching(true);
       try {
         await new Promise(resolve => setTimeout (resolve, 1000) ) ;
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {
-
         setIsSearching(false)}    }
   };
   // Enhanced navigation with better organization
@@ -62,7 +65,14 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
       <motion.header`';';
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'';';
             ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl''';';
-            : 'bg-transparent'`      <div  className="matrix -rain"></div>
+            : 'bg-transparent'`
+      <div  className="matrix -rain"></div>;
+      {/* Enhanced Header */}
+      <motion.header`;
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled';
+            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl'';
+            : 'bg-transparent'`;
+      <div  className="matrix -rain"></div>
       {/* Enhanced Header */}
       <motion.header`
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'
@@ -125,7 +135,43 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                       initial={{ "opacity": 0", "y": "-20", "scale": "0.95 "}}
                       animate={{ "opacity": "1", "y": "0", "scale": "1 "}}
                       exit={{ "opacity": "0", "y": "-20", "scale": "0.95 "}}
-                      transition={{ "duration": "0.3 "}}              >";
+                      transition={{ "duration": "0.3 "}}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >"
+        <div className="container mx-auto px-4">"
+          <div className="flex items-center justify-between h-20">
+            {/* Enhanced Logo */}"
+            <Link to="/" className="flex items-center space-x-3 group">
+              <motion.div"
+                className="relative"
+                whileHover={{ scale: 1.05, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+              >"
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">"
+                  <Zap className="w-7 h-7 text-white"   />
+                </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover: opacit y-100 transition-opacity duration-500 blur-lg"  />
+              </motion.div>"
+              <div className="flex flex-col">"
+                <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech
+                </span>"
+                <span className="text-xs text-cyan-400 font-medium font-rajdhani tracking-wider">
+                  Innovation Group
+                </span>
+              </div>
+            </Link>
+            {/* Desktop Navigation */}"
+            <nav className="hidden xl: flex items-center space-x-8">
+              {navigation.slice(0, 6).map(item => (
+                <Link
+                  key={item.name}';
+                  to={item.href}`';';
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'';';
+                      ? 'text-cyan-400 border-b-2 border-cyan-400''';';
+                      : 'text-gray-300 hover: tex t-cyan-400'`
+              >";
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">";
                   <Zap className="w-7 h-7 text-white"   />;
                 </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover: opacit y-100 transition-opacity duration-500 blur-lg"  />;
@@ -148,6 +194,67 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   className={`nav-link font-medium transition-all duration-300 ${item.current';
                       ? 'text-cyan-400 border-b-2 border-cyan-400'';
                       : 'text-gray-300 hover: tex t-cyan-400'`;
+                  key={item.name}
+                  to={item.href}`
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'
+                      ? 'text-cyan-400 border-b-2 border-cyan-400''
+                      : 'text-gray-300 hover: tex t-cyan-400'`
+                  }`}
+                >
+                  {item.name}
+                </Link>) ) }
+              {/* Enhanced Services Mega Menu */}"
+              <div className="relative group">
+                <button"
+                  className="nav-link flex items-center space-x-2 font-medium text-gray-300 hover: tex t-cyan-400 transition-all duration-300"
+                  onMouseEnter={() => setServicesDropdownOpen(true)}
+                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                >
+                  <span>Services</span>"
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover: rotat e-180 duration-300"   />                </button>
+                <AnimatePresence>
+                  {servicesDropdownOpen && (
+                    <motion.div"
+                      className="absolute top-full left-0 mt-4 w-[1200px] bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20"
+                      initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                      transition={{ duration: 0.3 }}
+                      onMouseEnter={ () => setServicesDropdownOpen(true) }
+                      onMouseLeave={ () => setServicesDropdownOpen(false) }
+                    >
+                      {/* Featured Services */}"
+                      <div className="mb-8">"
+                        <h3 className="text-xl font-semibold text-cyan-400 mb-6 font-orbitron">
+                          Featured Services
+                        "
+                        <div className="grid grid-cols-3 gap-6">
+                          {services
+                            .filter(s => s.featured)
+                            .map(service => (
+                              <Link
+                                key={service.name}
+                                to={service.href}";
+                                className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 "hover": "borde r-cyan-500/50 transition-all duration-300 "hover": b g-gray-800/70";
+                              >";
+                                <div className="flex items-center space-x-3 mb-3">";
+                                  <service.icon className="w-6 h-6 text-cyan-400" />";
+                                  <span className="text-lg font-medium text-white group-"hover": tex t-cyan-400 transition-colors">;
+                                    {service.name"}
+                                  </span>;
+                                </div>";
+                                <p className="text-sm text-gray-400 group-hover: tex t-gray-300 transition-colors mb-3">;
+                                  {service.description}
+                                </p>
+                                {service.badge && (';
+                                  <span`';';
+                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New''';';
+                                        ? 'bg-green-500/20 text-green-400''';';
+                                        : service.badge === 'Popular''';';
+                                          ? 'bg-blue-500/20 text-blue-400''';';
+                                          : service.badge === 'Featured''';';
+                                            ? 'bg-purple-500/20 text-purple-400''';';
+                                            : 'bg-cyan-500/20 text-cyan-400'`
                                 <p className="text-sm text-gray-400 group-"hover": "tex t-gray-300 transition-colors mb-3">;
                                   {service.description"}
                                 </p>;
@@ -160,7 +267,31 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                           : service.badge === 'Featured'';
                                             ? 'bg-purple-500/20 text-purple-400'';
                                             : 'bg-cyan-500/20 text-cyan-400'`;
-                                    }`}                                    }`}
+                                    }`}
+                                    "}`}
+                                  >;
+                                to={service.href}"
+                                className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover: borde r-cyan-500/50 transition-all duration-300 hover: b g-gray-800/70"
+                              >"
+                                <div className="flex items-center space-x-3 mb-3">"
+                                  <service.icon className="w-6 h-6 text-cyan-400" />"
+                                  <span className="text-lg font-medium text-white group-hover: tex t-cyan-400 transition-colors">
+                                    {service.name}
+                                  </span>
+                                </div>"
+                                <p className="text-sm text-gray-400 group-hover: tex t-gray-300 transition-colors mb-3">
+                                  {service.description}
+                                </p>
+                                {service.badge && (
+                                  <span`
+                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New''
+                                        ? 'bg-green-500/20 text-green-400''
+                                        : service.badge === 'Popular''
+                                          ? 'bg-blue-500/20 text-blue-400''
+                                          : service.badge === 'Featured''
+                                            ? 'bg-purple-500/20 text-purple-400''
+                                            : 'bg-cyan-500/20 text-cyan-400'`
+                                    }`}
                                   >
                                     {service.badge}
                                   </span>
@@ -201,7 +332,63 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                           : "service.badge === 'Popular'';
                                             ? 'bg-blue-500/20 text-blue-400'';
                                             : 'bg-cyan-500/20 text-cyan-400'`;
-                                      }`}                              {category.services.length > 3 && (
+                                      }`}
+                                      "}`}
+                                    >;
+                                  to={service.href}"
+                                  className="flex items-center space-x-3 p-3 rounded-lg hover: b g-gray-800/50 transition-colors group"
+                                >"
+                                  <service.icon className="w-4 h-4 text-cyan-400 group-hover: tex t-cyan-300 transition-colors" />"
+                                  <span className="text-sm text-gray-300 group-hover: tex t-white transition-colors">
+                                    {service.name}
+                                  </span>
+                                  {service.badge && (
+                                    <span`
+                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New''
+                                          ? 'bg-green-500/20 text-green-400''
+                                          : service.badge === 'Popular''
+                                            ? 'bg-blue-500/20 text-blue-400''
+                                            : 'bg-cyan-500/20 text-cyan-400'`
+                                      }`}
+                                    >
+                                      {service.badge}
+                                    </span>
+                                  )}
+                                </Link>
+                              ))}
+                              {category.services.length > 3 && (;
+                                <Link;
+                                  to={category.href}";
+                                  className="flex items-center text-cyan-400 "hover": "tex t-cyan-300 transition-colors text-sm font-medium group";
+                                >;
+                                  View All {category.name"}";
+                                  <ArrowRight className="ml-2 w-4 h-4 group-"hover": "translat e-x-1 transition-transform"   />                                </Link>;
+                              )"}
+                            </div>;
+                          </div>) ) }
+                      </div>;
+                      {/* View All Services Link */}";
+                      <div className="mt-8 pt-6 border-t border-gray-700">";
+                        <div className="flex items-center justify-between">;
+                          <Link";
+                            to="/innovative-services-showcase-2025";
+                            className="inline-flex items-center text-cyan-400 "hover": "tex t-cyan-300 transition-colors font-medium group text-lg";
+                          >;
+                            View All Innovative Services 2025";
+                            <ArrowRight className="ml-2 w-5 h-5 group-"hover": translat e-x-1 transition-transform"   />;
+                          </Link>"                          <div className="flex items-center space-x-4 text-sm text-gray-400">;
+                            <span>50+ Services Available</span>;
+                            <span>•</span>;
+                            <span > Proven ROI</span>;
+                            <span>•</span>;
+                            <span > 24 / 7 Support</span>;
+                          </div>;
+                        </div>;
+                      </div>;
+                    </motion.div>) "}
+                </AnimatePresence>;
+              </div>;
+                              {category.services.length > 3 && (
                                 <Link
                                   to={category.href}"
                                   className="flex items-center text-cyan-400 hover: tex t-cyan-300 transition-colors text-sm font-medium group"
@@ -240,7 +427,8 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   to={item.href}`';';
                   className={`nav-link font-medium transition-all duration-300 ${item.current'';';
                       ? 'text-cyan-400 border-b-2 border-cyan-400''';';
-                      : 'text-gray-300 hover: tex t-cyan-400'`              {navigation.slice(6, 10).map(item => (;
+                      : 'text-gray-300 hover: tex t-cyan-400'`
+              {navigation.slice(6, 10).map(item => (;
                 <Link;
               {navigation.slice(6, 10).map(item => (
                 <Link
@@ -249,7 +437,104 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   className={`nav-link font-medium transition-all duration-300 ${item.current';
                       ? 'text-cyan-400 border-b-2 border-cyan-400'';
                       : 'text-gray-300 hover: tex t-cyan-400'`;
-                  }`}                        className="block px-4 py-2 text-sm text-gray-700 hover: b g-blue-50 hover: tex t-blue-600 transition-colors"
+                  }`}
+                      : 'text-gray-300 "hover": "tex t-cyan-400'`;
+                  "}`}
+                >;
+                  {item.name}
+                </Link>) ) }
+            </nav>;
+            {/* Right Side Actions */}";
+            <div className="hidden "xl": "flex items-center space-x-6">;
+              {/* Enhanced Search */"}";
+              <form onSubmit={handleSearch} className="relative">";
+                <div className="relative">";
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />;
+                  <input";
+                    type="text";
+                    placeholder="Search services..."                    value={searchQuery}
+                    onChange={e => setSearchQuery(e.target.value)}";
+                    className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 "focus": "outlin e-none "focus": borde r-cyan-500 "focus": rin g-2 "focus": rin g-cyan-500/20 transition-all duration-300";
+                  />;
+                  {isSearching && (";
+                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2">";
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-400"></div>;
+                    </div>;
+];
+  return (;
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">;
+      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">;
+        <div className="flex justify-between items-center h-16">;
+          <a href="/" className="text-xl "sm": tex t-2xl font-bold text-blue-900">Zion Tech Group</a>;
+          <nav className="hidden "md": flex items-center gap-6">;
+            {navLinks.map((link) => (;
+              <div key={link.href"} className="relative group">;
+                <a;
+                  href={link.href} ;
+                  className="text-gray-700 "hover": "tex t-blue-600 transition-colors flex items-center gap-1";
+                  onMouseEnter={() => link.submenu && setServicesOpen(true)"}
+                  to={item.href}`
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'
+                      ? 'text-cyan-400 border-b-2 border-cyan-400''
+                      : 'text-gray-300 hover: tex t-cyan-400'`
+                  }`}
+                >
+                  {item.name}
+                </Link>) ) }
+            </nav>
+            {/* Right Side Actions */}"
+            <div className="hidden xl: flex items-center space-x-6">
+              {/* Enhanced Search */}"
+              <form onSubmit={handleSearch} className="relative">"
+                <div className="relative">"
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />
+                  <input"
+                    type="text"
+                    placeholder="Search services..."                    value={searchQuery}
+                    onChange={e => setSearchQuery(e.target.value)}"
+                    className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: borde r-cyan-500 focus: rin g-2 focus: rin g-cyan-500/20 transition-all duration-300"
+                  />
+                  {isSearching && ("
+                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2">"
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-400"></div>
+                    </div>
+];
+  return (
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+        <div className="flex justify-between items-center h-16">
+          <a href="/" className="text-xl sm: tex t-2xl font-bold text-blue-900">Zion Tech Group</a>
+          <nav className="hidden md: flex items-center gap-6">
+            {navLinks.map((link) => (
+              <div key={link.href} className="relative group">
+                <a 
+                  href={link.href} 
+                  className="text-gray-700 hover: tex t-blue-600 transition-colors flex items-center gap-1"
+                  onMouseEnter={() => link.submenu && setServicesOpen(true)}
+                  onMouseLeave={() => link.submenu && setServicesOpen(false)}
+                >
+                  {link.label}
+                  {link.submenu && (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
+                    </svg>
+)}
+                </a>
+                {link.submenu && servicesOpen && (
+                  <div 
+                    className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    {link.submenu.map((subLink) => (
+                      <a
+                        key={subLink.href}
+                        href={subLink.href}
+                        className="block px-4 py-2 text-sm text-gray-700 "hover": "b g-blue-50 "hover": tex t-blue-600 transition-colors";
+                      >;
+                        {subLink.label"}
+                      </a>;
+                        className="block px-4 py-2 text-sm text-gray-700 hover: b g-blue-50 hover: tex t-blue-600 transition-colors"
                       >
                         {subLink.label}
                       </a>
@@ -260,7 +545,8 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
               </div>
                   </div>;
                 )}
-              </div>;                  </div>
+              </div>;
+                  </div>
                 )}
               </div>
             ))}
@@ -320,7 +606,120 @@ export const "EnhancedHeader": "React.FC = () => {","});,"})";
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react;
 export function EnhancedHeader("props": "any) {;
   const [mobileMenuOpen", setMobileMenuOpen] = useState()";
-  const [searchQuery, setSearchQuery] = useState<any>(");  useEffect(() => {
+  const [searchQuery, setSearchQuery] = useState<any>(");
+            <a href="/contact" className="hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors">Get Started</a>
+return (<header className="bg-white shadow-lg">
+"
+  return (<header className="bg-white shadow-lg">"
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"
+        <div className="flex justify-between items-center py-6">"
+          <div className="flex items-center">"
+            <a href="/" className="text-2xl font-bold text-blue-900">
+              Zion Tech Group,
+            </a>
+          </div>"
+          <nav className="hidden md: flex space-x-8">"
+          <nav className="hidden md: flex space-x-6">"
+            <a href="/" className="text-gray-700 hover: tex t-blue-600">Home</a>"
+            <a href="/about" className="text-gray-700 hover: tex t-blue-600">About</a>"
+            <a href="/services" className="text-gray-700 hover: tex t-blue-600">Services</a>"
+            <a href="/solutions" className="text-gray-700 hover: tex t-blue-600">Solutions</a>"
+            <a href="/contact" className="text-gray-700 hover: tex t-blue-600">Contact</a>
+</nav>
+    </header>"
+            <a href="/micro-saas" className="text-gray-700 hover: tex t-blue-600">Micro SAAS</a>"
+            <a href="/it-services" className="text-gray-700 hover: tex t-blue-600">IT Services</a>"
+            <a href="/marketplace" className="text-gray-700 hover: tex t-blue-600">Marketplace</a>"
+            <a href="/news" className="text-gray-700 hover: tex t-blue-600">News</a>"
+            <a href="/blog" className="text-gray-700 hover: tex t-blue-600">Blog</a>"
+            <a href="/careers" className="text-gray-700 hover: tex t-blue-600">Careers</a>,,
+  ),"
+,"}
+    );,"})"
+;,"}
+    );,"})"
+export const EnhancedHeader: React.FC = () => {,"}
+    );,"})"
+  return (<header className="bg-white shadow-lg">;,"}
+    );,"})"
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,"}
+    );,"})"
+        <div className="flex justify-between items-center py-4 md: p y-6">,"}
+    );,"})"
+          <div className="flex items-center">;,"}
+    );,"})"
+            <a href="/" className="text-xl md: tex t-2xl font-bold text-blue-900">,"}
+    );,"})"
+              Zion Tech Group,"}
+    );,"})"
+            </a>;,"}
+    );,"})"
+          </div>;,"}
+    );,"})"
+          <nav className="hidden md: flex gap-6">,"}
+    );,"})"
+            <a href="/" className="text-gray-700 hover: tex t-blue-600">Home</a>,"}
+    );,"})"
+            <a href="/services" className="text-gray-700 hover: tex t-blue-600">Services</a>,"}
+    );,"})"
+            <a href="/solutions" className="text-gray-700 hover: tex t-blue-600">Solutions</a>,"}
+    );,"})"
+            <a href="/pricing-guide" className="text-gray-700 hover: tex t-blue-600">Pricing</a>,"}
+    );,"})"
+            <a href="/contact" className="text-gray-700 hover: tex t-blue-600">Contact</a>,"}
+    );,"})"
+          </nav>;,"}
+    );,"})"
+    </header>;,"}
+    );,"})"
+  );,"}
+    );,"}
+    );"
+};,"}
+    );,"})""
+  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
+  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
+  Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,"
+  Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react
+export function EnhancedHeader(props: any) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState()"
+  const [searchQuery, setSearchQuery] = useState<any>(")
+}
+  const [scrolled, setScrolled] = useState<any>(false)
+}
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+}
+  useEffect(() => {;
+    const handleScroll = ("props": "any) => {;
+      setScrolled(window.scrollY > 50)"}
+;
+    window.addEventListener();
+}
+    return () => window.removeEventListener("scroll", handleScroll)}, []);react"react - router-dom",framer-motion;
+  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,;
+  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,;
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,;
+  Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,;
+  Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,";
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react";
+"export": "function EnhancedHeader("props": any) {"",;
+  const [searchQuery, setSearchQuery] = useState<any>("");
+}
+      setScrolled(window."scrollY": "> 50)"},;
+    window.addEventListener();
+}
+    "return": "() => window.removeEventListener("scroll"", handleScroll)}, []);
+}
+    // comment;
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from &apos;lucide-react";&apos;&apos;
+export function EnhancedHeader("props": "any) {"}""""""";
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,""";
+"";
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;
+  const router = useRouter();
+  useEffect(() => {
     const handleScroll = (props: any) => {
       setScrolled(window.scrollY > 50)}
     window.addEventListener()
@@ -706,7 +1105,8 @@ aria-label = "Toggle navigation>;
               </div>
                   </div>;
                 )}
-              </div>;  const handleSearch = async (e: React.FormEvent) =>  {,
+              </div>;
+  const handleSearch = async (e: React.FormEvent) =>  {,
     e.preventDefault(),
     if: (searchQuery.trim()) {",,
       window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}""
@@ -1046,7 +1446,6 @@ aria-label = "Toggle navigation>
         </div>
 )}</header>
   )}
-
   )}"
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react""
@@ -1102,7 +1501,67 @@ export default Component
 </motion>
 </any>
 </any>';
-</any>;';;';</any>
+</any>;';;';
+;
+  )}";
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,";
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react"";
+";
+export default Component;
+</svg>;
+</button>;
+</svg>;
+</svg>;
+</button>;
+</a>;
+</a>;
+</nav>;
+</a>;
+</div>;
+</a>;
+</div>;
+</div>;
+</div>;
+</header>;
+</a>;
+</nav>;
+</a>;
+</div>;
+</div>;
+</div>;
+</header>;
+</any>;
+</any>;
+</string>;
+</any>;
+</any>;
+</string>;
+</any>;
+</any>;
+</div>;
+</div>;
+</nav>;
+</div>;
+</div>;
+</header>;
+</nav>;
+</div>;
+</div>;
+</header>;
+</div>;
+</form>;
+</div>;
+</motion>;
+</motion>;
+</div>;
+</div>;
+</motion>;
+</any>;
+</any>;
+</any>;
+</any>;
+</any>;
+</any>
 </any>
 </any>
 </any>

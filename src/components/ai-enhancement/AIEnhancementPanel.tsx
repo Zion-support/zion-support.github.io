@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from 'react'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardFooter
+import React, { useState } from 'react'
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,;
+  CardFooter;
+} from '@/components/ui/card'; import React, { useState } from 'react'
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
+  useAIContentEnhancer
+  AIEnhancementOptions
+} from '@/hooks/useAIContentEnhancer'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import {;
   Card,;
@@ -16,12 +46,63 @@ import {;
   AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface AIEnhancementPanelProps {
+=======
 interface AIEnhancementPanelProps {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+interface AIEnhancementPanelProps {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  initialContent?: string
+export function AIEnhancementPanel({
+
+  title
+  defaultOptions
+  onApply
+  onClose
+  showInstructions = true
+  initialContent = ''
+}: AIEnhancementPanelProps) {
+  const [options, setOptions] = useState<AIEnhancementOptions>({
+    ...defaultOptions
+    content: initialContent |defaultOptions.content
+  })
+  const [generatedContent, setGeneratedContent] = useState<string>('')
+  const [copied, setCopied] = useState(false)
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
+  const handleGenerate = async () => {
+    const result = await enhanceContent(options)
+    if (result) {
+      setGeneratedContent(result)
+    }
+  }
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
+}
+;
+export function AIEnhancementPanel({;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from 'react';
 import {
@@ -66,6 +147,22 @@ if ( {) {
       setGeneratedContent (result);
     }
   }
+<<<<<<< HEAD
+  const handleInputChange = (
+    e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,
+    field: keyof AIEnhancementOptions;
+  , ) =>: any {
+    set_options ({
+      ...options,
+      [field]: e.target.value,
+    });
+
+  }
+  const handle_apply = () =>: any {
+    on_apply (generated_content);
+    if (on_close ()) {
+  $2
+=======
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -78,6 +175,7 @@ interface AIEnhancementPanelProps {;
   onClose?: () => void,;
   showInstructions?: boolean,;
   initialContent?: string;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   }
   const handle_copy = () =>: any {
@@ -88,11 +186,20 @@ interface AIEnhancementPanelProps {;
 
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title,;
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   initialContent = '',;
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -110,6 +217,10 @@ export function AIEnhancementPanel(): any ({;
     }
   };
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
@@ -128,6 +239,24 @@ export function AIEnhancementPanel(): any ({;
         </div>;
 
 
+<<<<<<< HEAD
+  initialContent = '';
+}: AIEnhancementPanelProps) {;
+  const [options, setOptions] = useState<AIEnhancementOptions>({;
+    ...defaultOptions,;
+    content: initialContent || defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>(''),;
+  const [copied, setCopied] = useState(false),;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const handleGenerate = async () => {;
+    const result = await enhanceContent(options),;
+    if (result) {;
+      setGeneratedContent(result);
+    }
+  },
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const handleInputChange = (
@@ -135,15 +264,58 @@ export function AIEnhancementPanel(): any ({;
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD
+<<<<<<< HEAD
+      ...options
+      [field]: e.target.value
+      [field]: e.target.value,
+      ...options
+      [field]: e.target.value
+      ...options,
+    })
+  }
+  const handleApply = () => {
+    onApply(generatedContent)
+    if (onClose) onClose()
+  }
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+      ...options,
+      [field]: e.target.value})
+  },
+
+      ...options,
+      [field]: e.target.value})
+  },
+
+  const handleApply = () => {
+    onApply(generatedContent),
+    if (onClose) onClose()
+  },
+=======
 
       ...options,
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
+<<<<<<< HEAD
+  return (
+=======
+
+      ...options,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return (
@@ -159,6 +331,10 @@ export function AIEnhancementPanel(): any ({;
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             placeholder='Enter your content to enhance...'
             className='min-h-[100px]'
             value={options.content}
@@ -173,6 +349,13 @@ export function AIEnhancementPanel(): any ({;
             value={options.context}
             onChange={e => handleInputChange(e, 'context')}          />
         </div>
+<<<<<<< HEAD
+          disabled={isEnhancing |(!options.content && !options.context)}        >
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -191,6 +374,25 @@ export function AIEnhancementPanel(): any ({;
         </div>;
 
         {/* Instructions input (optional) */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {showInstructions && (
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Special instructions (optional)</label>
+            <Input
+              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              value={options.instructions}
+              onChange={e => handleInputChange(e, 'instructions')}            />
+          </div>
+        )}
+        {/* Generate button */}
+        <Button
+          onClick={handleGenerate}
+          className='w-full'
+          disabled={isEnhancing |(!options.content && !options.context)}        >
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {showInstructions && (;
           <div className='space-y-2'>;
             <label className='text-sm font-medium'>;
@@ -201,6 +403,10 @@ export function AIEnhancementPanel(): any ({;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
               onChange={(e) => handleInputChange(e, 'instructions')}
@@ -214,17 +420,43 @@ export function AIEnhancementPanel(): any ({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
+<<<<<<< HEAD
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+          {isEnhancing ? (
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           {isEnhancing ? (
             <>
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+=======
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Enhancing...
             </>
           ) : (
             <>
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <Sparkles className="mr-2 h-4 w-4" />
+=======
               <Sparkles className='mr-2 h-4 w-4' />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Sparkles className='mr-2 h-4 w-4' />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Generate Enhanced Content
             </>
           )}
@@ -245,6 +477,10 @@ export function AIEnhancementPanel(): any ({;
 
         {/* Output area */}
         {generatedContent && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='space-y-2 mt-4'>
             <div className='flex justify-between items-center'>
               <label className='text-sm font-medium'>Generated content</label>
@@ -253,6 +489,22 @@ export function AIEnhancementPanel(): any ({;
                 size='sm'
                 onClick={handleCopy}
                 className='h-8'              >
+<<<<<<< HEAD
+                onChange={e => setGeneratedContent(e.target.value)}
+                className='min-h-[200px]'              />
+          </div>
+        )}
+      </CardContent>
+        <CardFooter className="flex justify-between">
+ursor/fix-website-loading-errors-and-merge-6662
+      {generatedContent && (
+        <CardFooter className='flex justify-between'>
+            <Button variant='outline' onClick={onClose}>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
               <label className="text-sm font-medium">Generated content</label>
@@ -262,20 +514,56 @@ export function AIEnhancementPanel(): any ({;
                 onClick={handleCopy}
                 className="h-8"
               >
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
                 )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              </Button>
+            </div>
+            <div className="relative">
+=======
+              </Button>;
+            </div>;
+            <div className='relative'>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+              <Textarea
+                value={generatedContent}
+                onChange={e => setGeneratedContent(e.target.value)}
+                className='min-h-[200px]'              />
+                onChange={(e) => setGeneratedContent(e.target.value)}
+                className="min-h-[200px]"
+              />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+            </div>
+          </div>
+        )}
+      </CardContent>
+<<<<<<< HEAD
+=======
               </Button>;
             </div>;
             <div className='relative'>;
               <Textarea
                 value={generatedContent}
-                onChange={e => setGeneratedContent(e.target.value)}
-                className='min-h-[200px]'              />
+
+
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />
@@ -284,14 +572,30 @@ export function AIEnhancementPanel(): any ({;
             </div>
           </div>
         )}
-      </CardContent>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
 
 
       {generatedContent && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <CardFooter className="flex justify-between">
+          {onClose && (
+            <Button variant="outline" onClick={onClose}>
+=======
         <CardFooter className='flex justify-between'>
           {onClose && (
             <Button variant='outline' onClick={onClose}>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <CardFooter className='flex justify-between'>
+          {onClose && (
+            <Button variant='outline' onClick={onClose}>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Cancel
             </Button>
       </CardContent>;
@@ -303,7 +607,18 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
+<<<<<<< HEAD
+          <Button onClick={handleApply}>Apply to Form</Button>
+        </CardFooter>
+          <Button onClick={handleApply}>Apply to Form</Button>
+        </CardFooter>
+      )}
+    </Card>
+  )
+}
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </Card>;
   );
 }
@@ -402,7 +717,14 @@ export function AIEnhancementPanel(): any ({;
     </Card>;
   );
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
@@ -411,4 +733,12 @@ export function AIEnhancementPanel(): any ({;
     </Card>;
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

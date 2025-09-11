@@ -1,3 +1,67 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {
+    try {
+      const content = fs.existsSync(filePath)
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"))
+        : { content: "" }
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"));
+        : { content: "" };
+      res.status(200).json(content);
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message |"Failed to read changelog" });
+    }
+    return;
+
+const content = fs && fs.existsSync(filePath)
+        ? JSON && JSON.parse(fs && fs.readFileSync(filePath, "utf8"))
+        : { content: "" };
+      res && res.status(200).json(content);
+    } catch (e: any) {
+      res && res.status(500).json({ error: e?.message || "Failed to read changelog" });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {
+    try {
+      const content = fs.existsSync(filePath)
+? JSON.parse(fs.readFileSync(filePath, "utf8"))
+        : { content: "" }
+      res.status(200).json(content);
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message |"Failed to read changelog" });
+
+    }
+    return;
+  }
+  if (req && req.method === "POST") {
+    try {
+      const body =
+        typeof req && req.body === "string" ? JSON && JSON.parse(req && req.body) : req && req.body;
+      const payload = { content: body?.content || "" };
+      fs && fs.mkdirSync(path && path.dirname(filePath), { recursive: true });
+      fs && fs.writeFileSync(filePath, JSON && JSON.stringify(payload, null, 2));
+      res && res.status(200).json({ ok: true });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const filePath = path.join(process.cwd(), 'dataapi-docschangelog.json');
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    try {
+const content = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, 'utf8')) : { content: '' };
+      res.status(200).json(content)
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || 'Failed to read changelog' })
+    }
+    return
+  }
+if (req.method === 'POST') {
+    try {
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
@@ -5,12 +69,23 @@
   if (req.method === 'POST') {
     try {
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (e: any) {
       res
         .status(500)
@@ -27,10 +102,22 @@
 
 
 
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * handler - Function description
  */
@@ -71,6 +158,13 @@ if ( {) {
   res.status (405).end ("Method Not Allowed");
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -96,3 +190,7 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

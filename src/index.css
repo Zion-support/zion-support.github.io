@@ -1,5 +1,8 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
+@tailwind utilities;
+=======
 @tailwind utilities;
 
 @layer base {
@@ -989,3 +992,4 @@
     animation: none !important;
   }
 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

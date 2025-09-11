@@ -1,24 +1,44 @@
 
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs - extra';
+import path from 'path';
+
+
+
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const CERTS_FILE = path.join(
   process.cwd()
   'data'
   'certifications'
   'certifications.json'
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const CERTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
   'certifications',
   'certifications && certifications.json'
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -33,6 +53,17 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+};
+
+    return res.status(200).json({ certifications })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load certifications" })
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -52,7 +83,34 @@ res.setHeader("Allow", "GET");
 
 
 };
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');
+    return res && res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  try {
+    const certifications = (await fs && fs.pathExists(CERTS_FILE))
+      ? await fs && fs.readJSON(CERTS_FILE)
+      : [];
+    return res && res.status(200).json({ certifications });
+  } catch (e) {
+    return res && res.status(500).json({ error: 'Failed to load certifications' });
+  }  }
+  try {
+    const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];
+    return res && res.status(200).json({ certifications })
+  } catch (e) {
+    return res && res.status(500).json({ error: "Failed to load certifications" })
   };
+<<<<<<< HEAD
+}
+=======
+=======
+  };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -61,6 +119,10 @@ res.setHeader("Allow", "GET");
 
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const CERTS_FILE = path.join (
   process.cwd (),
@@ -80,6 +142,24 @@ if ( {) {
     return res.status (405).json ({ error: 'Method Not Allowed' });
   }
   try {
+<<<<<<< HEAD
+    const certifications = (await fs.path_exists (CERTS_FILE));
+      ? await fs.readJSON (CERTS_FILE);
+      : [];
+    return res.status (200).json ({ certifications });
+  } catch (e) {
+    return res.status (500).json ({ error: 'Failed to load certifications' });
+  }  }
+  try {
+    const certifications = (await fs.path_exists (CERTS_FILE)) ? await fs.readJSON (CERTS_FILE) : [];
+    return res.status (200).json ({ certifications });
+  } catch (e) {
+    return res.status (500).json ({ error: "Failed to load certifications" });
+}
+  }
+  try {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : []
     return res.status(200).json({ certifications })
   } catch (e) {
@@ -101,5 +181,28 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   }
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  if (req.method !== 'GET') {;
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+
+  }
+  try {
+    const certifications = null;
+    return res.status(200).json({ certifications })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load certifications" })
+};
   };
 }
+}
+  };
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  };
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

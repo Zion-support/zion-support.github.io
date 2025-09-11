@@ -5,7 +5,10 @@ import Button from './Button';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+<<<<<<< HEAD
+=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -100,6 +103,9 @@ const Header: React.FC = () => {
           </button>
         </div>
 
+<<<<<<< HEAD
+export default Header;
+=======
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-slate-700">
@@ -128,3 +134,4 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

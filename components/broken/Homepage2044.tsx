@@ -1,6 +1,13 @@
 
 
+<<<<<<< HEAD
+</div>);
+ </div>);
+</div>);
+ </div>);
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 //Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices ], []);
@@ -69,23 +76,41 @@ top: `$ {
   scale: 0.95
 }initial= {
   {
+<<<<<<< HEAD
+
+
+//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
+...revolutionary2044ITServices;
+...revolutionary2044AIServices ], []);
+
+
+=======
   opacity: 0, y: 20
 }animate= {
   {
   opacity: 1, y: 0
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   opacity: 0, y: 20 
 
 }animate= {
   {
   opacity: 1, y: 0 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }transition= {
   {
   duration: 0.5, delay: index * 0.1
 }> <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] hover:shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-hover:border-cyan-500/50" > <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" ></div> <div className="relative z-10" > <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6" > <feature.icon className="w-8 h-8 text-white" /> </div> </p> </div> </div> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }window && window.location.href = '/revolutionary-2044-pricing-showcase' ;
 }, []);
@@ -167,18 +192,37 @@ top: `$ {;
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   duration: 0 && 0.8 
 }viewport= {
   {
   once: true 
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) ;
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+export default Homepage2044;export default Homepage2044;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default Homepage2044;export default Homepage2044;
 
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -748,6 +792,16 @@ return(<>
   )
 };
 export default Homepage2044;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const featured_services = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
+ </div>);
+</div>);
+=======
 
 =======
 const featured_services = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
@@ -756,6 +810,7 @@ const featured_services = useMemo ( () => allRevolutionaryServices.slice (0, 6),
 =======
 </div>);
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  </div>);
 //Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
@@ -836,6 +891,13 @@ top: `$ {
   scale: 0.95;
 }initial= {
   {
+<<<<<<< HEAD
+  opacity: 0, y: 20
+}animate= {
+  {
+  opacity: 1, y: 0
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   opacity: 0, y: 20 
 
 }animate= {
@@ -862,6 +924,23 @@ top: `$ {
 }> <h2 className="text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max - w-3xl mx - auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify - center items - center" > <button > <span className="flex items - center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition - transform duration - 300" /> </span> </button> <button > <span className="flex items - center" > Schedule Demo <Play className="w - 7 h - 7 ml - 4" /> </span> </button> </div> </div> </section> </main> </Layout> </>);
 }
 export default Homepage2044;export default Homepage2044;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

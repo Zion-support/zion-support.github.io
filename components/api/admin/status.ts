@@ -1,11 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 import {
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   getSessionFromReq,;
   isInternalAgentRequest,;
@@ -20,6 +29,45 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  res.status(200).json({ status, insights })
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+
+
+<<<<<<< HEAD
+
+import {
+  getSessionFromReq
+  isInternalAgentRequest;
+  getSessionFromReq,;
+  isInternalAgentRequest,;
+} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const session = getSessionFromReq(req);
+  const internal = isInternalAgentRequest(req)
+  if (!session && !internal) {
+    res.status(401).json({ error: 'Unauthorized' });
+    return;
+  }
+  const dataDir = path.join(process.cwd(), 'data', 'admin');  const statusPath = path.join(dataDir, 'agents-status.json');    return
+  }
+  const dataDir = path.join(process.cwd(), 'dataadmin');
+  const insightsPath = path.join(dataDir, 'insights.json');
+  const status = fs.existsSync(statusPath)
+    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
+    : { agents: [], updatedAt: null }
+  const insights = fs.existsSync(insightsPath)
+    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
+    : { items: [], updatedAt: null }
+res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
+}
+
+=======
+=======
 =======
   res.status(200).json({ status, insights })
 }
@@ -60,6 +108,7 @@ res.status (200).json ({ status, insights });  res.status (200).json ({ status, 
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
     : { items: [], updatedAt: null },
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.status(200).json({ status, insights })
 
 }
@@ -69,3 +118,7 @@ res.status (200).json ({ status, insights });  res.status (200).json ({ status, 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

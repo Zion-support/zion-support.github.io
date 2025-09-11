@@ -3,6 +3,12 @@
 
 
 
+<<<<<<< HEAD
+export default function CloudAutomationsPage() {;
+
+
+export default function CloudAutomationsPage() {
+=======
 =======
 export default function CloudAutomationsPage() {;
 =======
@@ -11,6 +17,7 @@ export default function CloudAutomationsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CloudAutomationsPage() {
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function CloudAutomationsPage() {;
   const [data, setData] = useState<any>(null);
@@ -21,8 +28,16 @@ export default function CloudAutomationsPage() {;
       .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
       .then(setData);
       .catch(() => setData({ ok: false }));
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
@@ -30,13 +45,133 @@ export default function CloudAutomationsPage() {
       .then((r) => r.json())
       .then(setData)
       .catch(() => setData({ ok: false }))
+<<<<<<< HEAD
+<<<<<<< HEAD
+}, []);
+  const items = data?.data ? Object && Object.entries(data && data.data) : [];
+  return (
 
+export default /**
+ * CloudAutomationsPage - Function description
+ */
+function CloudAutomationsPage() {
+  const [data, set_data] = useState < any>(null);
+  useEffect (() => {
+    fetch ('/api / cloud - automations - status');
+      .then (r => r.json ());
+      .then (set_data);
+      .catch (() => set_data ({ ok: false }));  }, []);      .then ((r) => r.json ());
+      .then (set_data);
+      .catch (() => set_data ({ ok: false }));
+  }, []);
+;
+  const items = data?.data ? Object.entries (data.data) : [];
+;
+  return (
+    <div className='space - y-6'>;
+      <h1 className='text - 3xl font - bold'>Cloud Automations</h1>;
+      <p className='text - gray - 600 dark:text - gray - 300'>;
+        Autonomous agents running in the cloud. No servers to babysit. No manual;
+        ops.;
+      </p>;
+      <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+        {items.map (([key, value]: any) => (
+          <div;
+            key={key}
+            className='border rounded p - 4 bg - gray - 50 dark:bg - gray - 900';
+          >;
+            <h2 className='text - xl font - semibold'>{value.name || key}</h2>;
+            <p className='text - sm text - gray - 500'>;
+              Started: {value.started_at || '—'}
+            </p>;
+            <p className='text - sm text - gray - 500'>;
+              Finished: {value.finished_at || '—'}
+            </p>;
+            <p;
+              className={`text - sm ${value.success ? 'text - green - 600' : 'text - red - 600'}`}
+            >;
+              {value.success ? 'Success' : 'Failed'}
+            </p>;
+            {value.metrics ? (
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold">Cloud Automations</h1>
+      <p className="text-gray-600 dark:text-gray-300">Autonomous agents running in the cloud. No servers to babysit. No manual ops.</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {items.map(([key, value]: any) => (
+import React, { useEffect, useState } from 'react';
+
+export default function CloudAutomationsPage() {;
+
+export default function CloudAutomationsPage() {
+  const [data, setData] = useState<any>(null);
+  useEffect(() => {
+    fetch('/api/cloud-automations-status')
+      .then(r => r.json())
+      .then(setData)
+      .catch(() => setData({ ok: false }));  }, []);      .then((r) => r.json())
+      .then(setData)
+      .catch(() => setData({ ok: false }))
+  }, []);
+
+  const items = data?.data ? Object.entries(data.data) : [];
+
+  return (
+    <div className='space-y-6'>
+      <h1 className='text-3xl font-bold'>Cloud Automations</h1>
+      <p className='text-gray-600 dark:text-gray-300'>
+        Autonomous agents running in the cloud. No servers to babysit. No manual
+        ops.
+      </p>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        {items.map(([key, value]: any) => (
+          <div
+            key={key}
+            className='border rounded p-4 bg-gray-50 dark:bg-gray-900'
+          >
+            <h2 className='text-xl font-semibold'>{value.name |key}</h2>
+            <p className='text-sm text-gray-500'>
+              Started: {value.startedAt |'—'}
+            </p>
+            <p className='text-sm text-gray-500'>
+              Finished: {value.finishedAt |'—'}
+            </p>
+            <p
+              className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}
+            >
+              {value.success ? 'Success' : 'Failed'}
+            </p>
+            {value.metrics ? (
+              <pre className='mt-2 text-xs whitespace-pre-wrap'>
+                {JSON.stringify(value.metrics, null, 2)}
+              </pre>            ) : null}        {items.map(([key, value]: any) => (
+          <div key={key} className="border rounded p-4 bg-gray-50 dark:bg-gray-900">
+            <h2 className="text-xl font-semibold">{value.name |key}</h2>
+            <p className="text-sm text-gray-500">Started: {value.startedAt |'—'}</p>
+            <p className="text-sm text-gray-500">Finished: {value.finishedAt |'—'}</p>
+            <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
+            {value.metrics ? (
+              <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
   return (
 
 
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ) : null}
+          </div>;
+        ))}
+
+      </div>;
+    </div>;
+=======
             ) : null}
           </div>;
         ))}
@@ -44,10 +179,15 @@ export default function CloudAutomationsPage() {
     </div>
 );
 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
@@ -78,7 +218,10 @@ export default function CloudAutomationsPage() {
             <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
             {value.metrics ? (
               <pre className=&quot;mt-2 text-xs whitespace-pre-wrap&quot;>{JSON.stringify(value.metrics, null, 2)}</pre>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ) : null}
           </div>
         ))}
@@ -87,5 +230,23 @@ export default function CloudAutomationsPage() {
 
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+);
+}
+  );
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -31,6 +37,7 @@ export function FeatureCard({title;
       } ${colorClasses[color as keyof typeof colorClasses]}`}
       onClick={onClick}
       onKeyDown={(e) => {if (e.key === 'Enter' |e.key === ' ') {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -70,9 +77,19 @@ export function FeatureCard({;
       onClick={onClick}
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
+<<<<<<< HEAD
+
+          e.preventDefault();
+          onClick();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
           e.preventDefault();
           onClick();
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -85,12 +102,44 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
+<<<<<<< HEAD
+"use client";
+import Link from "next/link";
+import { ReactNode } from "react";
+interface FeatureCardProps {id: number;
+  title: string;
+  description: string;
+  icon: ReactNode;
+  color: string;
+  href: string;
+  isActive: boolean;
+  onClick: () => void;
+}
+export /**
+ * FeatureCard - Function description
+ */
+function FeatureCard() {
+  const color_classes = {
+    blue: "bg - blue - 500 / 20 hover:bg - blue - 500 / 30 border - blue - 500 / 30",
+    purple: "bg - purple - 500 / 20 hover:bg - purple - 500 / 30 border - purple - 500 / 30",
+    green: "bg - green - 500 / 20 hover:bg - green - 500 / 30 border - green - 500 / 30",
+    red: "bg - red - 500 / 20 hover:bg - red - 500 / 30 border - red - 500 / 30",
+    yellow: "bg - yellow - 500 / 20 hover:bg - yellow - 500 / 30 border - yellow - 500 / 30",
+    indigo: "bg - indigo - 500 / 20 hover:bg - indigo - 500 / 30 border - indigo - 500 / 30";
+  }
+  return (
+    <div;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       className={`card group cursor-pointer transition-all duration-300 ${isActive ? 'scale-105 shadow-2xl' : 'hover:scale-105';
       } ${colorClasses[color as keyof typeof colorClasses]}`}
       onClick={onClick}
       onKeyDown={(e) => {if (e.key === 'Enter' |e.key === ' ') {;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;

@@ -1,12 +1,167 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import {
+  Home,
+  Users,
+  Settings,
+  DollarSign,
+  Phone
+} from 'lucide-react'
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {;
+export const Sidebar: React.FC = () => {
+  const navigation = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ]
+
   return (
+  );
+};
+
+export default Sidebar
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Sidebar: React.FC = () => {
+  return (
+<<<<<<< HEAD
+    <aside className="hidden lg:block fixed left-0 top-16 w-80 h-full bg-white border-r border-gray-200 overflow-y-auto">
+      <nav className="p-4">
+        <ul className="space-y-2">
+          <li>
+            <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/pricing" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              Pricing
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    </div>
+  );
+};
+
+export default Sidebar;
+import React from 'react';
+
+export const Sidebar: React.FC = () => {
+  return (
+    <aside className="w-64 bg-gray-800 text-white min-h-screen">
+      <div className="p-4">
+        <h2 className="text-lg font-semibold mb-4">Navigation</h2>
+        <nav className="space-y-2">
+          <a
+            href="/"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            About
+          </a>
+          <a
+            href="/services"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Services
+          </a>
+          <a
+            href="/contact"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </aside>
+  );
+};
+=======
+
+const Sidebar: React.FC = () => {;
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">;
       <div className="p-6">;
         <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>;
         <nav className="space-y-2">;
+<<<<<<< HEAD
+=======
+    <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">
+      <div className="p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>
+        <nav className="space-y-2">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Link
+            to="/"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            About
+          </Link>
+          <Link
+            to="/services"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Services
+          </Link>
+          <Link
+            to="/contact"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Contact
+          </Link>
+          <Link
+            to="/pricing"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Pricing
+          </Link>
+        </nav>
+      </div>
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+=======
           <Link
             to="/"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
@@ -38,6 +193,7 @@ const Sidebar: React.FC = () => {;
   );
 };
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default Sidebar;
 
@@ -247,4 +403,11 @@ export default Sidebar;
 };
   );
 };
+<<<<<<< HEAD
 export default Sidebar;
+=======
+export default Sidebar;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default Sidebar;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

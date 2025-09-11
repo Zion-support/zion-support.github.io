@@ -5,11 +5,17 @@ interface UseIntersectionObserverProps {
   rootMargin?: string;
   freezeOnceVisible?: boolean;
 }
+<<<<<<< HEAD
+    const hasIOSupport = !!window && window.IntersectionObserver;
+    if (!hasIOSupport || frozen || !node) return;
+    const observerParams = { threshold, root, rootMargin };
+=======
 
     const hasIOSupport = !!window && window.IntersectionObserver;
     if (!hasIOSupport || frozen || !node) return;
     const observerParams = { threshold, root, rootMargin };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer && observer.current = currentObserver;
     currentObserver && currentObserver.observe(node);
@@ -28,7 +34,6 @@ interface UseIntersectionObserverProps {
     }
     prevNode.current = node;
   }, [node]);
-
   return [setNode, entry] as const
 export /**
  * useIntersectionObserver - Function description
