@@ -113,20 +113,23 @@ export default function HomePage() {
             <Link href='/blog' className='text-blue-600 font-semibold hover:underline'>View all</Link>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <ArticleCard
-              title='AI Marketing Content Engine 2025'
-              href='/blog/ai-marketing-content-engine-2025'
-              description='From brief to multi-channel campaign in hours, with governance built-in.'
+            <Card
+              title='AI Agent Guardrails in Production'
+              href='/blog/ai-agent-guardrails-in-production'
+              description='Make agents predictable with scoped tools, approvals, evals, and budgets.'
+              icon='🛡️'
             />
-            <ArticleCard
-              title='AI Governance Checklist 2025'
-              href='/blog/ai-governance-checklist-2025'
-              description='Operationalize policy with risk tiering, evals, and release gates.'
+            <Card
+              title='Micro SaaS Distribution 2025'
+              href='/blog/startup-micro-saas-distribution-2025'
+              description='Repeatable channels to land the first 100–500 customers efficiently.'
+              icon='📈'
             />
-            <ArticleCard
+            <Card
               title='AI Copilots for Engineering Teams'
               href='/blog/ai-copilots-for-engineering'
-              description='Secure, repo-aware copilots to speed reviews and reduce toil.'
+              description='Secure, repo-aware copilots that improve reviews and reduce toil.'
+              icon='🧠'
             />
           </div>
         </div>
