@@ -20,7 +20,7 @@ import {
   Mail
 } from 'lucide-react';
 import { SEO, useSEO } from '@/components/SEO';
-import { OptimizedButton, useIntersectionObserver } from '@/components/PerformanceOptimizer';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 const PricingCard = memo(({ 
   plan, 
