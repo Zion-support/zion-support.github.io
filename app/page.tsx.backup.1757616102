@@ -330,8 +330,13 @@ export default function HomePage() {
               🚀 Fresh Insights & Expert Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+<<<<<<< HEAD
+              New this week: AI Sales Automation 2025 and Edge AI in Logistics 2025. Pragmatic playbooks to drive revenue
+              and real-time operations with guardrails.
+=======
               New this week: AI Automation ROI Calculator, Enterprise AI Security Best Practices, 
               and Fortune 500 Transformation Case Study. Practical tools to accelerate your AI journey.
+>>>>>>> origin/cursor/create-and-deploy-new-content-c8db
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -348,6 +353,27 @@ export default function HomePage() {
               </Link>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
+<<<<<<< HEAD
+              <Link href='/blog/ai-sales-automation-2025' className='group'>
+                <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                  <div className='text-3xl mb-3'>🤝</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>AI Sales Automation 2025</h3>
+                  <p className='text-white/80 text-sm mt-2'>More pipeline with brand-safe automation.</p>
+                </div>
+              </Link>
+              <Link href='/blog/edge-ai-in-logistics-2025' className='group'>
+                <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                  <div className='text-3xl mb-3'>🚚</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Edge AI in Logistics 2025</h3>
+                  <p className='text-white/80 text-sm mt-2'>Real-time ops with privacy by design.</p>
+                </div>
+              </Link>
+              <Link href='/blog/ai-productivity-playbook-2025' className='group'>
+                <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                  <div className='text-3xl mb-3'>⚙️</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>AI Productivity Playbook 2025</h3>
+                  <p className='text-white/80 text-sm mt-2'>Ship faster without breaking things.</p>
+=======
               <Link href='/resources/ai-automation-roi-calculator' className='group'>
                 <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
                   <div className='text-3xl mb-3'>🧮</div>
@@ -367,6 +393,7 @@ export default function HomePage() {
                   <div className='text-3xl mb-3'>🏆</div>
                   <h3 className='text-xl font-semibold text-white group-hover:underline'>Fortune 500 Success Story</h3>
                   <p className='text-white/80 text-sm mt-2'>40% cost reduction through AI transformation.</p>
+>>>>>>> origin/cursor/create-and-deploy-new-content-c8db
                 </div>
               </Link>
             </div>
@@ -453,6 +480,19 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[{
+<<<<<<< HEAD
+              id: 'ai-sales-automation-2025',
+              title: 'AI Sales Automation 2025',
+              excerpt: 'Pipeline growth with brand-safe automation and evals.'
+            }, {
+              id: 'edge-ai-in-logistics-2025',
+              title: 'Edge AI in Logistics 2025',
+              excerpt: 'On-device intelligence for routing, ETA, and cold-chain.'
+            }, {
+              id: 'ai-productivity-playbook-2025',
+              title: 'AI Productivity Playbook 2025',
+              excerpt: 'Boost throughput without breaking things or budgets.'
+=======
               id: 'ai-automation-roi-calculator-2025',
               title: 'AI Automation ROI Calculator 2025',
               excerpt: 'Measure the true business impact of AI automation with our comprehensive ROI framework.'
@@ -464,6 +504,7 @@ export default function HomePage() {
               id: 'fortune-500-ai-transformation-success',
               title: 'Fortune 500 AI Transformation Success',
               excerpt: 'How a leading manufacturer achieved 40% cost reduction through AI automation.'
+>>>>>>> origin/cursor/create-and-deploy-new-content-c8db
             }].map((post) => (
               <Link key={post.id} href={`/blog/${post.id}`} className='group'>
                 <article className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow'>
