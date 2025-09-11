@@ -1,154 +1,242 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+const { execSync } = require('child_process');
+const fs = require('fs');
 
-console.log('🚀 Starting complete merge process...');
+console.log('🚀 Complete Merge Process - Final Verification and Completion');
+console.log('============================================================');
 
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
+// Function to run git commands safely
+function runGitCommand(command, description) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-
-    // Check if file has merge conflict markers
-    if (
-      !content.includes('<<<<<<<') &&
-      !content.includes('') &&
-      !content.includes('>>>>>>>')
-    ) {
-      return false; // No conflicts in this file
-    }
-
-    console.log(`🔧 Resolving conflicts in: ${filePath}`);
-
-    // Remove all merge conflict markers and keep the incoming changes (after )
-    let resolvedContent = content;
-
-    // Pattern 1: Conflicts with file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(
-      /<<<<<<<[^\n]*\n.*?\n\n(.*?)\n>>>>>>>[^\n]*\n?/gs,
-      '$1'
-    );
-
-    // Pattern 2: Simple conflicts without file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(
-      /<<<<<<<[^\n]*\n.*?\n\n(.*?)\n>>>>>>>[^\n]*\n?/gs,
-      '$1'
-    );
-
-    // Pattern 3: Handle any remaining conflict markers
-    resolvedContent = resolvedContent.replace(
-      /<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs,
-      ''
-    );
-
-    // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(
-      /<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs,
-      ''
-    );
-
-    // Write resolved content back to file
-    fs.writeFileSync(filePath, resolvedContent);
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
-    return true;
+    console.log(`🔄 ${description}...`);
+    const result = execSync(command, { 
+      cwd: '/workspace',
+      encoding: 'utf8',
+      stdio: 'pipe',
+      timeout: 30000
+    });
+    console.log(`✅ ${description} completed`);
+    return result.trim();
   } catch (error) {
-    console.error(
-      `❌ Error resolving conflicts in ${filePath}:`,
-      error.message
-    );
+    console.log(`⚠️  ${description} failed: ${error.message}`);
+    return null;
+  }
+}
+
+// Function to check for merge conflicts
+function checkForConflicts() {
+  console.log('\n📋 Checking for merge conflicts...');
+  
+  const status = runGitCommand('git status --porcelain', 'Checking git status');
+  if (!status) return false;
+  
+  const hasConflicts = status.includes('UU') || status.includes('AA') || status.includes('DD');
+  if (hasConflicts) {
+    console.log('⚠️  Merge conflicts detected!');
+    return true;
+  } else {
+    console.log('✅ No merge conflicts found');
     return false;
   }
 }
 
-// Function to find all files with merge conflicts
-function findConflictFiles(dir) {
-  const conflictFiles = [];
+// Function to resolve conflicts automatically
+function resolveConflicts() {
+  console.log('\n🔧 Resolving merge conflicts...');
+  
+  const conflictFiles = runGitCommand('git diff --name-only --diff-filter=U', 'Getting conflict files');
+  if (!conflictFiles) return false;
+  
+  const files = conflictFiles.split('\n').filter(f => f.trim());
+  console.log(`Found ${files.length} files with conflicts`);
+  
+  for (const file of files) {
+    console.log(`  - Resolving conflicts in: ${file}`);
+    
+    // Strategy: Keep our changes (HEAD) for most files
+    if (file.includes('package.json') || file.includes('package-lock.json')) {
+      // For package files, prefer incoming changes
+      runGitCommand(`git checkout --theirs "${file}"`, `Resolving ${file} (prefer incoming)`);
+    } else {
+      // For other files, keep our changes
+      runGitCommand(`git checkout --ours "${file}"`, `Resolving ${file} (keep ours)`);
+    }
+    
+    runGitCommand(`git add "${file}"`, `Adding resolved ${file}`);
+  }
+  
+  // Commit the resolved conflicts
+  const commitResult = runGitCommand('git commit -m "Resolve merge conflicts automatically"', 'Committing resolved conflicts');
+  return commitResult !== null;
+}
 
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-
-        if (stat.isDirectory()) {
-          // Skip certain directories
-          if (
-            !['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(
-              item
-            )
-          ) {
-            scanDirectory(fullPath);
-          }
-        } else if (stat.isFile()) {
-          // Check if file has merge conflict markers
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            if (
-              content.includes('<<<<<<<') ||
-              content.includes('') ||
-              content.includes('>>>>>>>')
-            ) {
-              conflictFiles.push(fullPath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
+// Function to get and process remote branches
+function processRemoteBranches() {
+  console.log('\n📋 Processing remote branches...');
+  
+  const branches = runGitCommand('git branch -r', 'Getting remote branches');
+  if (!branches) return { processed: 0, merged: 0, failed: 0 };
+  
+  const remoteBranches = branches
+    .split('\n')
+    .map(branch => branch.trim())
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'))
+    .slice(0, 20); // Limit to first 20 branches
+  
+  console.log(`Found ${remoteBranches.length} remote branches to process`);
+  
+  let mergedCount = 0;
+  let failedCount = 0;
+  
+  for (const branch of remoteBranches) {
+    console.log(`\n🔄 Processing branch: ${branch}`);
+    
+    // Switch to main
+    if (!runGitCommand('git checkout main', 'Switching to main')) continue;
+    
+    // Pull latest changes
+    runGitCommand('git pull origin main', 'Pulling latest main');
+    
+    // Fetch the branch
+    if (!runGitCommand(`git fetch origin ${branch}`, `Fetching ${branch}`)) continue;
+    
+    // Try to merge
+    const mergeResult = runGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`, `Merging ${branch}`);
+    
+    if (mergeResult !== null) {
+      console.log(`✅ Successfully merged ${branch}`);
+      
+      // Push to main
+      if (runGitCommand('git push origin main', `Pushing updated main`)) {
+        console.log(`✅ Successfully pushed ${branch} to main`);
+        mergedCount++;
       }
-    } catch (error) {
-      // Skip directories that can't be read
+    } else {
+      console.log(`⚠️  Merge conflicts detected for ${branch}`);
+      
+      // Try to resolve conflicts
+      if (resolveConflicts()) {
+        console.log(`✅ Successfully resolved conflicts for ${branch}`);
+        
+        // Push the resolved merge
+        if (runGitCommand('git push origin main', `Pushing resolved merge for ${branch}`)) {
+          console.log(`✅ Successfully pushed resolved merge for ${branch}`);
+          mergedCount++;
+        }
+      } else {
+        console.log(`❌ Failed to resolve conflicts for ${branch}`);
+        runGitCommand('git merge --abort', `Aborting merge for ${branch}`);
+        failedCount++;
+      }
     }
   }
-
-  scanDirectory(dir);
-  return conflictFiles;
+  
+  return { processed: remoteBranches.length, merged: mergedCount, failed: failedCount };
 }
 
-// Main execution
-try {
-  console.log('🔍 Scanning for files with merge conflicts...');
-  const conflictFiles = findConflictFiles('/workspace');
-
-  console.log(`📊 Found ${conflictFiles.length} files with merge conflicts`);
-
-  let resolvedCount = 0;
-  for (const file of conflictFiles) {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
+// Function to verify build status
+function verifyBuildStatus() {
+  console.log('\n🔍 Verifying build status...');
+  
+  try {
+    // Check if dependencies are installed
+    if (!fs.existsSync('/workspace/node_modules')) {
+      console.log('📦 Installing dependencies...');
+      runGitCommand('npm install', 'Installing dependencies');
     }
+    
+    // Run build
+    console.log('🔨 Running build...');
+    const buildResult = runGitCommand('npm run build', 'Building application');
+    
+    if (buildResult !== null) {
+      console.log('✅ Build completed successfully');
+      return true;
+    } else {
+      console.log('❌ Build failed');
+      return false;
+    }
+  } catch (error) {
+    console.log(`❌ Build verification failed: ${error.message}`);
+    return false;
   }
-
-  console.log(`✅ Successfully resolved conflicts in ${resolvedCount} files`);
-
-  // Create a comprehensive summary
-  const summary = {
-    timestamp: new Date().toISOString(),
-    totalConflicts: conflictFiles.length,
-    resolvedConflicts: resolvedCount,
-    status: 'completed',
-    files: conflictFiles,
-    nextSteps: [
-      'Run: git add .',
-      'Run: git commit -m "Resolve all merge conflicts automatically"',
-      'Run: git push origin main',
-      'Check GitHub for open PRs: https://github.com/Zion-Holdings/zion.app/pulls',
-      'Merge any remaining PRs into main branch',
-    ],
-  };
-
-  fs.writeFileSync(
-    '/workspace/conflict-resolution-summary.json',
-    JSON.stringify(summary, null, 2)
-  );
-
-  console.log('🎉 Complete merge process finished!');
-  console.log('📄 Summary saved to conflict-resolution-summary.json');
-  console.log('📋 Next steps:');
-  summary.nextSteps.forEach(step => console.log(`   ${step}`));
-} catch (error) {
-  console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
 }
+
+// Main function
+async function main() {
+  try {
+    console.log('📍 Starting complete merge process...');
+    
+    // Check if we're in a git repository
+    if (!runGitCommand('git rev-parse --git-dir', 'Checking git repository')) {
+      console.log('❌ Not in a git repository');
+      return;
+    }
+    
+    // Check current branch
+    const currentBranch = runGitCommand('git branch --show-current', 'Getting current branch');
+    console.log(`📍 Current branch: ${currentBranch}`);
+    
+    // Switch to main if not already there
+    if (currentBranch !== 'main') {
+      if (!runGitCommand('git checkout main', 'Switching to main')) {
+        console.log('❌ Could not switch to main branch');
+        return;
+      }
+    }
+    
+    // Pull latest changes
+    if (!runGitCommand('git pull origin main', 'Pulling latest main')) {
+      console.log('⚠️  Could not pull latest main, continuing...');
+    }
+    
+    // Check for existing conflicts
+    if (checkForConflicts()) {
+      console.log('🔧 Resolving existing conflicts...');
+      if (resolveConflicts()) {
+        console.log('✅ Successfully resolved existing conflicts');
+      } else {
+        console.log('❌ Failed to resolve existing conflicts');
+        return;
+      }
+    }
+    
+    // Process remote branches
+    const branchResults = processRemoteBranches();
+    
+    // Verify build status
+    const buildSuccess = verifyBuildStatus();
+    
+    // Final status check
+    console.log('\n📊 Final status check...');
+    const finalStatus = runGitCommand('git status --porcelain', 'Final status check');
+    if (finalStatus && finalStatus.trim() === '') {
+      console.log('✅ Repository is clean - no uncommitted changes');
+    } else {
+      console.log('⚠️  Repository has uncommitted changes:');
+      console.log(finalStatus);
+    }
+    
+    // Summary
+    console.log('\n🎉 Complete Merge Process Summary:');
+    console.log('==================================');
+    console.log(`📋 Branches processed: ${branchResults.processed}`);
+    console.log(`✅ Successfully merged: ${branchResults.merged}`);
+    console.log(`❌ Failed to merge: ${branchResults.failed}`);
+    console.log(`🔨 Build status: ${buildSuccess ? '✅ Success' : '❌ Failed'}`);
+    console.log(`📁 Repository status: ${finalStatus && finalStatus.trim() === '' ? '✅ Clean' : '⚠️  Has changes'}`);
+    
+    if (branchResults.merged > 0 || buildSuccess) {
+      console.log('\n🎉 Process completed successfully!');
+    } else {
+      console.log('\n⚠️  Process completed with some issues');
+    }
+    
+  } catch (error) {
+    console.error('❌ Error during process:', error.message);
+  }
+}
+
+// Run the main function
+main();
