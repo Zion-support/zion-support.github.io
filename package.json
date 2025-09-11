@@ -28,6 +28,8 @@
     "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
     "analyze": "ANALYZE=true npm run build",
     "dev:fast": "npm run dev -- --turbo",
+    "optimize": "node optimize.js",
+    "lighthouse": "npx lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
     "lint:check": "next lint --max-warnings 0",
