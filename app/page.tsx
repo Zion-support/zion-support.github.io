@@ -56,7 +56,7 @@ export default function HomePage() {
               Comprehensive technology solutions tailored to your business needs
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             <Card
               title='Micro SaaS'
               href='/services/micro-saas'
@@ -68,6 +68,12 @@ export default function HomePage() {
               href='/services/ai-services'
               description='LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.'
               icon='🤖'
+            />
+            <Card
+              title='Edge Computing'
+              href='/services/edge-computing'
+              description='Real-time processing, IoT integration, and distributed infrastructure solutions.'
+              icon='⚡'
             />
             <Card
               title='IT Services'
@@ -311,16 +317,4 @@ export default function HomePage() {
               <div className='flex items-center gap-2'>
                 <span className='w-2 h-2 bg-green-400 rounded-full'></span>
                 <span>Updated Daily</span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <span className='w-2 h-2 bg-blue-400 rounded-full'></span>
-                <span>Expert Authored</span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <span className='w-2 h-2 bg-purple-400 rounded-full'></span>
-                <span>Actionable Insights</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              <p className='text-sm opacity-90'>Complete step-by-step guide for successful AI deployment</p>
