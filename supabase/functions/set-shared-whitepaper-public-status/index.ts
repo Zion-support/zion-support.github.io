@@ -1,10 +1,11 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers':
+    'authorization, x-client-info, apikey, content-type',
 };
 
 interface UpdateParams {
@@ -12,8 +13,8 @@ interface UpdateParams {
   isPublic: boolean;
 }
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
+serve(async req => {
+  if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
@@ -22,8 +23,14 @@ serve(async (req) => {
 
     if (whitepaperId === undefined || typeof isPublic !== 'boolean') {
       return new Response(
-        JSON.stringify({ error: "Missing required parameters: whitepaperId (string) and isPublic (boolean) are required." }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        JSON.stringify({
+          error:
+            'Missing required parameters: whitepaperId (string) and isPublic (boolean) are required.',
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
       );
     }
 
@@ -44,7 +51,7 @@ serve(async (req) => {
       .from('shared_whitepapers')
       .update({
         is_public: isPublic,
-        updated_at: new Date().toISOString() // Also update an 'updated_at' timestamp
+        updated_at: new Date().toISOString(), // Also update an 'updated_at' timestamp
       })
       .eq('id', whitepaperId)
       .select('id, is_public') // Return the updated status
@@ -52,26 +59,36 @@ serve(async (req) => {
 
     if (error) {
       // console.error(`Error updating public status for whitepaper ${whitepaperId}:`, error);
-      if (error.code === 'PGRST116') { // Not found
-          return new Response(JSON.stringify({ error: "Whitepaper not found." }), { status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" }});
+      if (error.code === 'PGRST116') {
+        // Not found
+        return new Response(
+          JSON.stringify({ error: 'Whitepaper not found.' }),
+          {
+            status: 404,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          }
+        );
       }
       throw new Error(`Failed to update public status: ${error.message}`);
     }
 
     if (!data) {
-        throw new Error("Failed to update, no data returned.");
+      throw new Error('Failed to update, no data returned.');
     }
 
     return new Response(
-      JSON.stringify({ id: data.id, is_public: data.is_public, message: "Public status updated successfully." }),
-      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      JSON.stringify({
+        id: data.id,
+        is_public: data.is_public,
+        message: 'Public status updated successfully.',
+      }),
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
-
   } catch (error) {
     // console.error("Error in set-shared-whitepaper-public-status function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   }
 });

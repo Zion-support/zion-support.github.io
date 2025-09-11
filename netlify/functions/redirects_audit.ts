@@ -2,7 +2,7 @@
 // Scheduled in netlify.toml -> [[scheduled]] path = "/.netlify/functions/redirects_audit"
 
 export const config = {
-  path: "/.netlify/functions/redirects_audit",
+  path: '/.netlify/functions/redirects_audit',
 };
 
 import type { Handler } from '@netlify/functions';
@@ -14,7 +14,9 @@ const REDIRECTS: Array<{ from: string; expect: string; status?: number }> = [
   { from: '/home', expect: '/' },
 ];
 
-function absolute(path: string) { return `${BASE}${path}`; }
+function absolute(path: string) {
+  return `${BASE}${path}`;
+}
 
 function stamp() {
   const d = new Date();
@@ -27,14 +29,28 @@ export const handler: Handler = async () => {
     const results: any[] = [];
     for (const r of REDIRECTS) {
       const url = absolute(r.from);
-      const res = await fetch(url, { redirect: 'manual', headers: { 'User-Agent': 'zion-app-redirects-audit' } });
+      const res = await fetch(url, {
+        redirect: 'manual',
+        headers: { 'User-Agent': 'zion-app-redirects-audit' },
+      });
       const loc = res.headers.get('location');
-      const ok = res.status >= 300 && res.status < 400 && loc === absolute(r.expect);
+      const ok =
+        res.status >= 300 && res.status < 400 && loc === absolute(r.expect);
       results.push({ from: url, status: res.status, location: loc, ok });
     }
-    const content = JSON.stringify({ timestamp: new Date().toISOString(), results }, null, 2) + '\n';
+    const content =
+      JSON.stringify(
+        { timestamp: new Date().toISOString(), results },
+        null,
+        2
+      ) + '\n';
     const dest = `data/reports/redirects/redirects-${stamp()}.json`;
-    const commit = await commitToRepo({ path: dest, content, message: 'chore(redirects): redirects audit', branch: 'main' });
+    const commit = await commitToRepo({
+      path: dest,
+      content,
+      message: 'chore(redirects): redirects audit',
+      branch: 'main',
+    });
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit }) };
   } catch (e: any) {
     return { statusCode: 500, body: String(e?.message || e) };

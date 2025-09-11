@@ -7,29 +7,32 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
   {
     id: 'ai-guardrails-governance-suite',
     name: 'AI Guardrails & Governance Suite',
-    tagline: 'Policy enforcement, redaction, evals, and audit logs for LLM apps',
+    tagline:
+      'Policy enforcement, redaction, evals, and audit logs for LLM apps',
     price: '$299',
     period: '/month',
-    description: 'Enterprise-ready guardrails: policy engine, PII/PHI redaction, jailbreak prevention, eval pipelines, and immutable audit logs.',
+    description:
+      'Enterprise-ready guardrails: policy engine, PII/PHI redaction, jailbreak prevention, eval pipelines, and immutable audit logs.',
     features: [
       'Prompt/output policy engine',
       'PII/PHI detection and redaction',
       'Evals with drift monitoring',
-      'Audit logs and SIEM export'
+      'Audit logs and SIEM export',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/ai-guardrails',
-    marketPosition: 'Comparable to Lakera and Azure AI Safety; simpler integration, bundled observability. See openai.com/index/safety and anthropic.com/pricing for model-side costs.',
+    marketPosition:
+      'Comparable to Lakera and Azure AI Safety; simpler integration, bundled observability. See openai.com/index/safety and anthropic.com/pricing for model-side costs.',
     targetAudience: 'Security, data and platform teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -45,11 +48,12 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     variant: 'neural-quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Inline middleware and proxy with observability hooks.',
+    implementationDetails:
+      'Inline middleware and proxy with observability hooks.',
     launchDate: '2025-02-10',
     customers: 42,
     rating: 4.8,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'cloud-landing-zone-starter',
@@ -57,19 +61,21 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     tagline: 'Secure multi-account baseline with IaC and guardrails',
     price: '$7,500',
     period: '/project',
-    description: 'Deploy a production-ready AWS/GCP/Azure landing zone with SSO, baseline policies, network segmentation, logging, and cost controls.',
+    description:
+      'Deploy a production-ready AWS/GCP/Azure landing zone with SSO, baseline policies, network segmentation, logging, and cost controls.',
     features: [
       'IaC (Terraform) blueprints',
       'SSO/SCIM and baseline RBAC',
       'Centralized logging and metrics',
-      'Guardrails for costs and security'
+      'Guardrails for costs and security',
     ],
     popular: true,
     icon: '☁️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/cloud-landing-zone',
-    marketPosition: 'Faster than SI partners; aligns with AWS Control Tower/Azure Landing Zones. See calculator.aws and azure.microsoft.com/pricing for infra costs.',
+    marketPosition:
+      'Faster than SI partners; aligns with AWS Control Tower/Azure Landing Zones. See calculator.aws and azure.microsoft.com/pricing for infra costs.',
     targetAudience: 'Platform and security teams',
     trialDays: 0,
     setupTime: '2–4 weeks',
@@ -85,11 +91,12 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Accounts/projects, networks, policies, and CI pipelines.',
+    implementationDetails:
+      'Accounts/projects, networks, policies, and CI pipelines.',
     launchDate: '2025-02-05',
     customers: 9,
     rating: 4.7,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'ai-code-review-copilot',
@@ -97,19 +104,21 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     tagline: 'Policy-aware code insights with secure remediation tips',
     price: '$99',
     period: '/month per repo',
-    description: 'Augment PR reviews with static checks, secret scanning, dependency risks, and AI suggestions aligned to your standards and threat model.',
+    description:
+      'Augment PR reviews with static checks, secret scanning, dependency risks, and AI suggestions aligned to your standards and threat model.',
     features: [
       'Policy-aware PR comments',
       'Secret and key scanning',
       'SBOM and dependency risk',
-      'CI integration and scorecards'
+      'CI integration and scorecards',
     ],
     popular: false,
     icon: '🧰',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/ai-code-review-copilot',
-    marketPosition: 'Complements GitHub Advanced Security and Snyk; cheaper than full SAST seats for SMBs.',
+    marketPosition:
+      'Complements GitHub Advanced Security and Snyk; cheaper than full SAST seats for SMBs.',
     targetAudience: 'Engineering teams',
     trialDays: 14,
     setupTime: '30–60 minutes',
@@ -125,11 +134,12 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'CI plugin, Git app, and dashboard with policy packs.',
+    implementationDetails:
+      'CI plugin, Git app, and dashboard with policy packs.',
     launchDate: '2025-02-08',
     customers: 24,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: '5g-private-networks-readiness',
@@ -137,19 +147,21 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     tagline: 'Site survey, spectrum plan, edge stack and security',
     price: '$15,000',
     period: '/engagement',
-    description: 'Plan and pilot private 5G: coverage models, spectrum/licensing, edge compute, and zero-trust design for factories and campuses.',
+    description:
+      'Plan and pilot private 5G: coverage models, spectrum/licensing, edge compute, and zero-trust design for factories and campuses.',
     features: [
       'RF survey and topology',
       'Spectrum/licensing advisory',
       'Edge compute blueprint',
-      'Zero-trust segmentation'
+      'Zero-trust segmentation',
     ],
     popular: false,
     icon: '📡',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/5g-private-network-solutions',
-    marketPosition: 'Aligns with hyperscaler 5G edge offers; see aws.amazon.com/wavelength and azure private MEC. Costs vary by spectrum/equipment.',
+    marketPosition:
+      'Aligns with hyperscaler 5G edge offers; see aws.amazon.com/wavelength and azure private MEC. Costs vary by spectrum/equipment.',
     targetAudience: 'Manufacturing, logistics, campuses',
     trialDays: 0,
     setupTime: '4–8 weeks',
@@ -169,7 +181,7 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-09',
     customers: 4,
     rating: 4.5,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'cloud-cost-optimizer',
@@ -177,19 +189,21 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     tagline: 'Rightsizing, reservations and waste hunting with automation',
     price: '$2,000',
     period: '/month',
-    description: 'FinOps playbook and automations: idle detection, waste alerts, RI/SP planning, and cost KPIs with monthly savings reports.',
+    description:
+      'FinOps playbook and automations: idle detection, waste alerts, RI/SP planning, and cost KPIs with monthly savings reports.',
     features: [
       'Idle and waste detection',
       'RI and Savings Plans modeling',
       'Anomaly alerts and KPIs',
-      'Monthly savings reporting'
+      'Monthly savings reporting',
     ],
     popular: true,
     icon: '💸',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-    marketPosition: 'Comparable to CloudZero/Kubecost with human-in-the-loop and runbooks; see cloudzero.com/pricing and kubecost.com/pricing for benchmarks.',
+    marketPosition:
+      'Comparable to CloudZero/Kubecost with human-in-the-loop and runbooks; see cloudzero.com/pricing and kubecost.com/pricing for benchmarks.',
     targetAudience: 'Finance/Platform leaders',
     trialDays: 0,
     setupTime: '1–2 weeks',
@@ -209,7 +223,6 @@ export const verified2025Batch3Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-06',
     customers: 17,
     rating: 4.7,
-    reviews: 10
-  }
+    reviews: 10,
+  },
 ];
-

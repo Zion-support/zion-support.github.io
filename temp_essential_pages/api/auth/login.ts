@@ -1,4 +1,8 @@
-import { createClient, User as SupabaseUser, Session as SupabaseSession } from '@supabase/supabase-js';
+import {
+  createClient,
+  User as SupabaseUser,
+  Session as SupabaseSession,
+} from '@supabase/supabase-js';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import * as Sentry from '@sentry/nextjs';
 import { withErrorLogging } from '@/utils/withErrorLogging';
@@ -12,7 +16,7 @@ const getDevUsers = () => {
   }
 
   const devUsers: DevUser[] = [];
-  
+
   // Load development users from environment variables
   const devUser1Email = process.env.DEV_USER_1_EMAIL;
   const devUser1Password = process.env.DEV_USER_1_PASSWORD;
@@ -22,37 +26,47 @@ const getDevUsers = () => {
   const devUser3Password = process.env.DEV_USER_3_PASSWORD;
 
   if (devUser1Email && devUser1Password) {
-    devUsers.push({ 
-      id: 'dev-user-1', 
-      email: devUser1Email, 
+    devUsers.push({
+      id: 'dev-user-1',
+      email: devUser1Email,
       password: devUser1Password,
-      name: 'Development User 1'
+      name: 'Development User 1',
     });
   }
 
   if (devUser2Email && devUser2Password) {
-    devUsers.push({ 
-      id: 'dev-user-2', 
-      email: devUser2Email, 
+    devUsers.push({
+      id: 'dev-user-2',
+      email: devUser2Email,
       password: devUser2Password,
-      name: 'Development User 2'
+      name: 'Development User 2',
     });
   }
 
   if (devUser3Email && devUser3Password) {
-    devUsers.push({ 
-      id: 'dev-user-3', 
-      email: devUser3Email, 
+    devUsers.push({
+      id: 'dev-user-3',
+      email: devUser3Email,
       password: devUser3Password,
-      name: 'Development User 3'
+      name: 'Development User 3',
     });
   }
 
   // Fallback to basic test users if no env vars are set
   if (devUsers.length === 0) {
     devUsers.push(
-      { id: 'dev-user-1', email: 'dev@example.com', password: 'dev123', name: 'Dev User' },
-      { id: 'dev-user-2', email: 'test@example.com', password: 'test123', name: 'Test User' }
+      {
+        id: 'dev-user-1',
+        email: 'dev@example.com',
+        password: 'dev123',
+        name: 'Dev User',
+      },
+      {
+        id: 'dev-user-2',
+        email: 'test@example.com',
+        password: 'test123',
+        name: 'Test User',
+      }
     );
   }
 
@@ -100,15 +114,18 @@ async function handler(
 ) {
   // 🔧 Enable verbose logging (only in development)
   const isDevelopment = process.env.NODE_ENV === 'development';
-  
+
   if (isDevelopment) {
     console.log('🔧 LOGIN TRACE: Starting login attempt');
     console.log('🔧 LOGIN TRACE: Request method:', req.method);
-    console.log('🔧 LOGIN TRACE: Request body keys:', Object.keys(req.body || {}));
+    console.log(
+      '🔧 LOGIN TRACE: Request body keys:',
+      Object.keys(req.body || {})
+    );
     console.log('🔧 LOGIN TRACE: Environment config status:', {
       supabaseConfigured: ENV_CONFIG.supabase.isConfigured,
       sentryConfigured: ENV_CONFIG.sentry.isConfigured,
-      environment: ENV_CONFIG.app.environment
+      environment: ENV_CONFIG.app.environment,
     });
   }
 
@@ -118,39 +135,55 @@ async function handler(
 
   const { email, password } = req.body as LoginRequestBody;
 
-  if (typeof email !== 'string' || typeof password !== 'string' || !email || !password) {
-    return res.status(400).json({ error: 'Email and password are required and must be strings' });
+  if (
+    typeof email !== 'string' ||
+    typeof password !== 'string' ||
+    !email ||
+    !password
+  ) {
+    return res
+      .status(400)
+      .json({ error: 'Email and password are required and must be strings' });
   }
 
   // Check if Supabase is configured
   if (!ENV_CONFIG.supabase.isConfigured) {
     if (isDevelopment) {
-      console.log('🔧 LOGIN TRACE: Supabase not configured - using development authentication');
+      console.log(
+        '🔧 LOGIN TRACE: Supabase not configured - using development authentication'
+      );
     }
-    
+
     // 🔐 SECURITY: Use environment-based development authentication
     const devUsers = getDevUsers();
-    const user: DevUser | undefined = devUsers.find(u => u.email === email && u.password === password);
-    
+    const user: DevUser | undefined = devUsers.find(
+      u => u.email === email && u.password === password
+    );
+
     if (user) {
       if (isDevelopment) {
-        console.log('🔧 LOGIN TRACE: Development user authenticated successfully');
+        console.log(
+          '🔧 LOGIN TRACE: Development user authenticated successfully'
+        );
       }
       const responseUser: AuthenticatedUser = {
         id: user.id,
         email: user.email,
         name: user.name,
         email_verified: true,
-        created_at: new Date().toISOString()
+        created_at: new Date().toISOString(),
       };
       return res.status(200).json({
         user: responseUser,
-        message: 'Development authentication successful'
+        message: 'Development authentication successful',
       });
     } else {
       if (isDevelopment) {
         console.log('🔧 LOGIN TRACE: Development authentication failed');
-        console.log('🔧 LOGIN TRACE: Available dev users:', devUsers.map(u => u.email));
+        console.log(
+          '🔧 LOGIN TRACE: Available dev users:',
+          devUsers.map(u => u.email)
+        );
       }
       return res.status(401).json({ error: 'Invalid credentials' });
     }
@@ -176,14 +209,14 @@ async function handler(
       if (isDevelopment) {
         console.error('🔧 LOGIN TRACE: Supabase authentication error:', error);
       }
-      
+
       if (ENV_CONFIG.sentry.isConfigured) {
         Sentry.captureException(error, {
           tags: { context: 'login_api' },
-          extra: { email }
+          extra: { email },
         });
       }
-      
+
       return res.status(401).json({ error: error.message });
     }
 
@@ -197,7 +230,7 @@ async function handler(
     if (isDevelopment) {
       console.log('🔧 LOGIN TRACE: Supabase authentication successful');
     }
-    
+
     // Ensure data.user conforms to AuthenticatedUser
     const responseUser: AuthenticatedUser = {
       id: data.user.id,
@@ -211,25 +244,30 @@ async function handler(
     return res.status(200).json({
       user: responseUser,
       session: data.session, // data.session is already SupabaseSession type
-      message: 'Authentication successful'
+      message: 'Authentication successful',
     });
-
-  } catch (error: unknown) { // Changed from any to unknown
-    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+  } catch (error: unknown) {
+    // Changed from any to unknown
+    const errorMessage =
+      error instanceof Error ? error.message : 'An unknown error occurred';
     if (isDevelopment) {
-      console.error('🔧 LOGIN TRACE: Unexpected error during authentication:', error);
+      console.error(
+        '🔧 LOGIN TRACE: Unexpected error during authentication:',
+        error
+      );
     }
-    
+
     if (ENV_CONFIG.sentry.isConfigured) {
-      Sentry.captureException(error, { // Sentry can often handle 'unknown'
+      Sentry.captureException(error, {
+        // Sentry can often handle 'unknown'
         tags: { context: 'login_api_unexpected' },
-        extra: { email }
+        extra: { email },
       });
     }
-    
-    return res.status(500).json({ 
+
+    return res.status(500).json({
       error: 'Internal server error',
-      details: ENV_CONFIG.app.isDevelopment ? errorMessage : undefined
+      details: ENV_CONFIG.app.isDevelopment ? errorMessage : undefined,
     });
   }
 }

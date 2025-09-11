@@ -7,7 +7,7 @@ console.log('🚀 Starting application improvements...');
 function improvePackageJson() {
   const packagePath = 'package.json';
   const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-  
+
   // Add useful scripts
   packageJson.scripts = {
     ...packageJson.scripts,
@@ -18,23 +18,25 @@ function improvePackageJson() {
     'lint:fix-all': 'eslint . --fix --ext .ts,.tsx,.js,.jsx',
     'format:all': 'prettier --write "**/*.{ts,tsx,js,jsx,json,css,md}"',
     'clean:all': 'rm -rf dist node_modules/.vite .next coverage',
-    'dev:clean': 'npm run clean:all && npm install && npm run dev'
+    'dev:clean': 'npm run clean:all && npm install && npm run dev',
   };
-  
+
   // Add useful dev dependencies
   const newDevDeps = {
     'vite-bundle-analyzer': '^1.0.0',
     'cross-env': '^7.0.3',
-    'concurrently': '^8.2.2'
+    concurrently: '^8.2.2',
   };
-  
+
   packageJson.devDependencies = {
     ...packageJson.devDependencies,
-    ...newDevDeps
+    ...newDevDeps,
   };
-  
+
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
-  console.log('✅ Improved package.json with additional scripts and dependencies');
+  console.log(
+    '✅ Improved package.json with additional scripts and dependencies'
+  );
 }
 
 // Function to create a better README
@@ -121,10 +123,10 @@ This project is proprietary software owned by Zion Tech Group.
 // Function to improve Vite config
 function improveViteConfig() {
   const viteConfigPath = 'vite.config.ts';
-  
+
   if (fs.existsSync(viteConfigPath)) {
     const configContent = fs.readFileSync(viteConfigPath, 'utf8');
-    
+
     // Add performance optimizations
     const improvedConfig = configContent.replace(
       'export default defineConfig({',
@@ -150,9 +152,11 @@ function improveViteConfig() {
     }
   },`
     );
-    
+
     fs.writeFileSync(viteConfigPath, improvedConfig);
-    console.log('✅ Improved Vite configuration with performance optimizations');
+    console.log(
+      '✅ Improved Vite configuration with performance optimizations'
+    );
   }
 }
 
@@ -353,19 +357,18 @@ function createDevGuide() {
 // Main execution
 try {
   console.log('🔧 Applying application improvements...\n');
-  
+
   improvePackageJson();
   createBetterReadme();
   improveViteConfig();
   improveGitignore();
   createDevGuide();
-  
+
   console.log('\n🎉 Application improvements completed successfully!');
   console.log('\nNext steps:');
   console.log('1. Run npm install to install new dependencies');
   console.log('2. Run npm run build to test the build');
   console.log('3. Commit and push your changes');
-  
 } catch (error) {
   console.error('❌ Error during improvements:', error.message);
   process.exit(1);

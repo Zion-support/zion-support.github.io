@@ -1,4 +1,9 @@
-export type InterviewStatus = 'requested' | 'confirmed' | 'declined' | 'completed' | 'proposed';
+export type InterviewStatus =
+  | 'requested'
+  | 'confirmed'
+  | 'declined'
+  | 'completed'
+  | 'proposed';
 
 export interface Interview {
   id: string;

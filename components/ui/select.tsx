@@ -8,10 +8,18 @@ interface SelectProps {
   className?: string;
 }
 
-export function Select({ children, value, onValueChange, defaultValue, className = '' }: SelectProps) {
+export function Select({
+  children,
+  value,
+  onValueChange,
+  defaultValue,
+  className = '',
+}: SelectProps) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState(value || defaultValue || '');
-  
+  const [selectedValue, setSelectedValue] = React.useState(
+    value || defaultValue || ''
+  );
+
   const handleValueChange = (newValue: string) => {
     setSelectedValue(newValue);
     onValueChange?.(newValue);
@@ -20,13 +28,13 @@ export function Select({ children, value, onValueChange, defaultValue, className
 
   return (
     <div className={`relative ${className}`}>
-      {React.Children.map(children, (child) => {
+      {React.Children.map(children, child => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, { 
-            isOpen, 
-            setIsOpen, 
-            selectedValue, 
-            onValueChange: handleValueChange 
+          return React.cloneElement(child, {
+            isOpen,
+            setIsOpen,
+            selectedValue,
+            onValueChange: handleValueChange,
           } as any);
         }
         return child;
@@ -43,10 +51,15 @@ interface SelectTriggerProps {
   selectedValue?: string;
 }
 
-export function SelectTrigger({ children, className = '', isOpen, setIsOpen }: SelectTriggerProps) {
+export function SelectTrigger({
+  children,
+  className = '',
+  isOpen,
+  setIsOpen,
+}: SelectTriggerProps) {
   return (
     <button
-      type="button"
+      type='button'
       onClick={() => setIsOpen?.(!isOpen)}
       className={`w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white text-left flex items-center justify-between hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-purple-500 ${className}`}
     >
@@ -75,12 +88,19 @@ interface SelectContentProps {
   onValueChange?: (value: string) => void;
 }
 
-export function SelectContent({ children, className = '', isOpen, onValueChange }: SelectContentProps) {
+export function SelectContent({
+  children,
+  className = '',
+  isOpen,
+  onValueChange,
+}: SelectContentProps) {
   if (!isOpen) return null;
-  
+
   return (
-    <div className={`absolute z-50 w-full mt-1 bg-slate-700 border border-slate-600 rounded-lg shadow-lg ${className}`}>
-      {React.Children.map(children, (child) => {
+    <div
+      className={`absolute z-50 w-full mt-1 bg-slate-700 border border-slate-600 rounded-lg shadow-lg ${className}`}
+    >
+      {React.Children.map(children, child => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { onValueChange } as any);
         }
@@ -97,10 +117,15 @@ interface SelectItemProps {
   onValueChange?: (value: string) => void;
 }
 
-export function SelectItem({ children, value, className = '', onValueChange }: SelectItemProps) {
+export function SelectItem({
+  children,
+  value,
+  className = '',
+  onValueChange,
+}: SelectItemProps) {
   return (
     <button
-      type="button"
+      type='button'
       onClick={() => onValueChange?.(value)}
       className={`w-full px-4 py-2 text-left text-white hover:bg-slate-600 first:rounded-t-lg last:rounded-b-lg ${className}`}
     >

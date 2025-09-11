@@ -7,10 +7,9 @@ import SitemapPage from '@/pages/SitemapPage';
 export default function ContentRoutes() {
   return (
     <Routes>
-      <Route path="/search" element={<SearchPage />} />
-      <Route path="/sitemap" element={<Sitemap />} />
-      <Route path="/sitemap-page" element={<SitemapPage />} />
+      <Route path='/search' element={<SearchPage />} />
+      <Route path='/sitemap' element={<Sitemap />} />
+      <Route path='/sitemap-page' element={<SitemapPage />} />
     </Routes>
   );
 }
-

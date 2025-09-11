@@ -16,10 +16,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -38,10 +35,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -60,10 +54,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -82,10 +73,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -104,10 +92,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -126,10 +111,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -148,10 +130,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -170,10 +149,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -192,10 +168,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -214,10 +187,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -236,10 +206,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -258,10 +225,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -280,10 +244,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -302,10 +263,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -324,10 +282,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -346,10 +301,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -368,10 +320,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -390,10 +339,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -412,10 +358,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -434,10 +377,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -456,10 +396,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -478,10 +415,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -500,10 +434,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -522,10 +453,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -544,10 +472,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -566,10 +491,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -588,10 +510,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -610,10 +529,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -632,10 +548,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -654,10 +567,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -676,10 +586,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -698,10 +605,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -720,10 +624,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -742,10 +643,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -764,10 +662,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -786,10 +681,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -808,10 +700,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -830,10 +719,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -852,10 +738,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -874,10 +757,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -896,10 +776,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -918,10 +795,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -940,10 +814,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -962,9 +833,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch"
-        ],
+        "triggers": ["workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -983,11 +852,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule",
-          "pull_request"
-        ],
+        "triggers": ["workflow_dispatch", "schedule", "pull_request"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1006,9 +871,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch"
-        ],
+        "triggers": ["workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1027,10 +890,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1049,10 +909,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1071,10 +928,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1093,10 +947,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1115,10 +966,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1137,10 +985,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1159,10 +1004,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1181,10 +1023,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1203,10 +1042,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1225,10 +1061,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1247,10 +1080,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1269,10 +1099,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1291,10 +1118,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1313,10 +1137,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1335,10 +1156,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1357,10 +1175,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1379,10 +1194,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1401,10 +1213,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1423,10 +1232,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1445,10 +1251,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1467,10 +1270,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1489,10 +1289,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1511,10 +1308,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1533,10 +1327,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1555,10 +1346,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1577,10 +1365,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1599,10 +1384,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1621,10 +1403,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1643,10 +1422,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1665,10 +1441,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": false,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1687,10 +1460,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1709,10 +1479,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1731,10 +1498,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1753,10 +1517,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1775,10 +1536,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1797,10 +1555,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1819,10 +1574,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1841,10 +1593,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1863,10 +1612,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1885,10 +1631,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1907,9 +1650,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch"
-        ],
+        "triggers": ["workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1928,10 +1669,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "pull_request"
-        ],
+        "triggers": ["push", "pull_request"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1950,10 +1688,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1972,10 +1707,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -1994,10 +1726,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2016,11 +1745,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "pull_request",
-          "workflow_dispatch"
-        ],
+        "triggers": ["push", "pull_request", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2039,10 +1764,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2061,10 +1783,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2083,10 +1802,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2105,10 +1821,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2127,10 +1840,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2149,10 +1859,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2171,10 +1878,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2193,10 +1897,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2215,10 +1916,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2237,10 +1935,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2259,10 +1954,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2281,10 +1973,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2303,10 +1992,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2325,10 +2011,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2347,12 +2030,7 @@
         "hasJobs": true,
         "jobCount": 3,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "push",
-          "pull_request",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "push", "pull_request", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2371,10 +2049,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2393,10 +2068,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2415,10 +2087,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2437,10 +2106,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2459,10 +2125,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2481,10 +2144,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2503,10 +2163,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2525,10 +2182,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2547,10 +2201,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2569,10 +2220,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2591,10 +2239,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": false,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2613,10 +2258,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2635,10 +2277,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2657,10 +2296,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2679,10 +2315,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2701,10 +2334,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2723,10 +2353,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2745,10 +2372,7 @@
         "hasJobs": true,
         "jobCount": 2,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2767,10 +2391,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2789,10 +2410,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2811,10 +2429,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2833,10 +2448,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2855,10 +2467,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2877,11 +2486,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["push", "schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2900,10 +2505,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2922,10 +2524,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2944,10 +2543,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2966,10 +2562,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -2988,10 +2581,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3010,10 +2600,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3032,10 +2619,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3054,10 +2638,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3076,10 +2657,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3098,10 +2676,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3120,10 +2695,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3142,10 +2714,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3164,10 +2733,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3186,10 +2752,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3208,10 +2771,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3230,10 +2790,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3252,10 +2809,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3274,10 +2828,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3296,10 +2847,7 @@
         "hasJobs": true,
         "jobCount": 4,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3318,10 +2866,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3340,10 +2885,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3362,10 +2904,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3384,10 +2923,7 @@
         "hasJobs": true,
         "jobCount": 2,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3406,10 +2942,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3428,10 +2961,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3450,10 +2980,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3472,9 +2999,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch"
-        ],
+        "triggers": ["workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3493,10 +3018,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3515,10 +3037,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3537,10 +3056,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3559,10 +3075,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3581,10 +3094,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3603,10 +3113,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3625,10 +3132,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3647,10 +3151,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3669,10 +3170,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3691,12 +3189,7 @@
         "hasJobs": true,
         "jobCount": 2,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "pull_request",
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["push", "pull_request", "workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3715,10 +3208,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3737,10 +3227,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3759,12 +3246,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "pull_request",
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["push", "pull_request", "workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3783,10 +3265,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3805,10 +3284,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3827,10 +3303,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3849,10 +3322,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3871,10 +3341,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3893,10 +3360,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3915,10 +3379,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3937,10 +3398,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3959,10 +3417,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -3981,10 +3436,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "workflow_dispatch"
-        ],
+        "triggers": ["push", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4003,10 +3455,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4025,10 +3474,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4047,10 +3493,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4069,10 +3512,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4091,10 +3531,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4113,10 +3550,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4135,10 +3569,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4157,10 +3588,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4179,9 +3607,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch"
-        ],
+        "triggers": ["workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4200,10 +3626,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4222,10 +3645,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4244,10 +3664,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4266,12 +3683,7 @@
         "hasJobs": true,
         "jobCount": 2,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "pull_request",
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["push", "pull_request", "workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4290,10 +3702,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4312,10 +3721,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4334,10 +3740,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4356,10 +3759,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4378,10 +3778,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4400,10 +3797,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4422,10 +3816,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4444,10 +3835,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4466,10 +3854,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4488,10 +3873,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4510,10 +3892,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4532,10 +3911,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4554,12 +3930,7 @@
         "hasJobs": true,
         "jobCount": 3,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "pull_request",
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["push", "pull_request", "workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4578,10 +3949,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4600,10 +3968,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4622,10 +3987,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4644,10 +4006,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4666,10 +4025,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4688,10 +4044,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4710,10 +4063,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4732,10 +4082,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4754,10 +4101,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4776,10 +4120,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4798,9 +4139,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch"
-        ],
+        "triggers": ["workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4819,10 +4158,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4841,10 +4177,7 @@
         "hasJobs": true,
         "jobCount": 4,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch",
-          "schedule"
-        ],
+        "triggers": ["workflow_dispatch", "schedule"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4863,10 +4196,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4885,10 +4215,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4907,11 +4234,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "push",
-          "pull_request",
-          "workflow_dispatch"
-        ],
+        "triggers": ["push", "pull_request", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4930,10 +4253,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4952,9 +4272,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch"
-        ],
+        "triggers": ["workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4973,9 +4291,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "workflow_dispatch"
-        ],
+        "triggers": ["workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,
@@ -4994,10 +4310,7 @@
         "hasJobs": true,
         "jobCount": 1,
         "hasTriggers": true,
-        "triggers": [
-          "schedule",
-          "workflow_dispatch"
-        ],
+        "triggers": ["schedule", "workflow_dispatch"],
         "hasPermissions": true,
         "hasConcurrency": true,
         "hasTimeout": false,

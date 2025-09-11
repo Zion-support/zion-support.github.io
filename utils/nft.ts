@@ -1,6 +1,11 @@
 import { createHash } from 'crypto';
 
-export type SupportedChain = 'ethereum' | 'polygon' | 'base' | 'starknet' | 'arbitrum';
+export type SupportedChain =
+  | 'ethereum'
+  | 'polygon'
+  | 'base'
+  | 'starknet'
+  | 'arbitrum';
 
 export interface OriginNftInput {
   title?: string;
@@ -26,14 +31,15 @@ export function computeZionLaunchHash(payload: OriginNftInput): string {
   const stable = JSON.stringify(
     {
       title: payload.title ?? 'Zion Genesis Artifact #0001',
-      description: payload.description ?? 'This NFT marks the moment Zion OS was born.',
+      description:
+        payload.description ?? 'This NFT marks the moment Zion OS was born.',
       manifestoLink: payload.manifestoLink ?? '',
       genesisDaoHash: payload.genesisDaoHash ?? '',
       coverArtLink: payload.coverArtLink ?? '',
       firstFundingVoteLink: payload.firstFundingVoteLink ?? '',
       founderAddress: (payload.founderAddress ?? '').toLowerCase(),
       chain: payload.chain ?? 'ethereum',
-      manifestoQuote: payload.manifestoQuote ?? ''
+      manifestoQuote: payload.manifestoQuote ?? '',
     },
     Object.keys(payload).sort()
   );
@@ -44,7 +50,11 @@ export function computeZionLaunchHash(payload: OriginNftInput): string {
 export function normalizeLink(link?: string): string | undefined {
   if (!link) return undefined;
   const trimmed = link.trim();
-  if (trimmed.startsWith('ipfs://') || trimmed.startsWith('https://') || trimmed.startsWith('http://')) {
+  if (
+    trimmed.startsWith('ipfs://') ||
+    trimmed.startsWith('https://') ||
+    trimmed.startsWith('http://')
+  ) {
     return trimmed;
   }
   // Treat bare CID as ipfs://CID
@@ -54,16 +64,22 @@ export function normalizeLink(link?: string): string | undefined {
   return trimmed;
 }
 
-export function buildOriginMetadata(baseUrl: string, input: OriginNftInput): BuiltOriginMetadata {
+export function buildOriginMetadata(
+  baseUrl: string,
+  input: OriginNftInput
+): BuiltOriginMetadata {
   const title = input.title ?? 'Zion Genesis Artifact #0001';
-  const description = input.description ?? 'This NFT marks the moment Zion OS was born.';
+  const description =
+    input.description ?? 'This NFT marks the moment Zion OS was born.';
   const manifestoLink = normalizeLink(input.manifestoLink);
   const genesisDaoHash = input.genesisDaoHash?.trim();
   const coverArtLink = normalizeLink(input.coverArtLink);
   const firstFundingVoteLink = normalizeLink(input.firstFundingVoteLink);
   const founderAddress = input.founderAddress?.trim();
   const chain = input.chain ?? 'ethereum';
-  const manifestoQuote = input.manifestoQuote ?? 'Sovereign AI belongs to its creators and communities.';
+  const manifestoQuote =
+    input.manifestoQuote ??
+    'Sovereign AI belongs to its creators and communities.';
 
   const computedZionHash = computeZionLaunchHash(input);
 
@@ -79,7 +95,7 @@ export function buildOriginMetadata(baseUrl: string, input: OriginNftInput): Bui
     { trait_type: 'Utility', value: 'Vault Access' },
     { trait_type: 'Utility', value: 'Founder Profile Display' },
     { trait_type: 'Utility', value: 'Signature on DAO Proposals' },
-    { trait_type: 'Theme', value: 'Sovereign AI Protocol' }
+    { trait_type: 'Theme', value: 'Sovereign AI Protocol' },
   ];
 
   const metadata: Record<string, unknown> = {
@@ -98,8 +114,8 @@ export function buildOriginMetadata(baseUrl: string, input: OriginNftInput): Bui
       first_funding_vote: firstFundingVoteLink,
       founder_sig: founderAddress,
       chain,
-      zion_hash: computedZionHash
-    }
+      zion_hash: computedZionHash,
+    },
   };
 
   return { metadata, computedZionHash, imageUrl, animationUrl };
@@ -115,7 +131,9 @@ export interface SvgOptions {
 export function generateOriginSvg(options: SvgOptions = {}): string {
   const width = options.width ?? 1200;
   const height = options.height ?? 1200;
-  const quote = (options.quote ?? 'Sovereign AI Protocol').replace(/</g, '<').replace(/>/g, '>');
+  const quote = (options.quote ?? 'Sovereign AI Protocol')
+    .replace(/</g, '<')
+    .replace(/>/g, '>');
   const animated = options.animated ?? true;
 
   const animationDefs = animated

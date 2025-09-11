@@ -1,5 +1,8 @@
 const express = require('express');
-const { receiveSyncUpdate, getSyncState } = require('../controllers/syncController');
+const {
+  receiveSyncUpdate,
+  getSyncState,
+} = require('../controllers/syncController');
 
 const router = express.Router();
 

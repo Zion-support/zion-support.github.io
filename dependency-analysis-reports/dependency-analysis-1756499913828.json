@@ -16,17 +16,13 @@
       {
         "name": "date-fns",
         "impact": "high",
-        "alternatives": [
-          "Check for lighter alternatives"
-        ],
+        "alternatives": ["Check for lighter alternatives"],
         "recommendation": "Consider using lighter alternatives or implementing tree-shaking for date-fns"
       }
     ],
     "updateRecommendations": [],
     "compatibilityIssues": []
   },
-  "nextActions": [
-    "⚡ Optimize bundle size by reviewing heavy dependencies"
-  ],
+  "nextActions": ["⚡ Optimize bundle size by reviewing heavy dependencies"],
   "status": "completed"
 }

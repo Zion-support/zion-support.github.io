@@ -7,7 +7,9 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
-    <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
+    <div
+      className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
+    >
       {children}
     </div>
   );
@@ -23,7 +25,9 @@ const CardHeader: React.FC<CardProps> = ({ children, className = '' }) => {
 
 const CardTitle: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
-    <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
+    <h3
+      className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
+    >
       {children}
     </h3>
   );
@@ -31,26 +35,25 @@ const CardTitle: React.FC<CardProps> = ({ children, className = '' }) => {
 
 const CardDescription: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
-    <p className={`text-sm text-muted-foreground ${className}`}>
-      {children}
-    </p>
+    <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
   );
 };
 
 const CardContent: React.FC<CardProps> = ({ children, className = '' }) => {
-  return (
-    <div className={`p-6 pt-0 ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;
 };
 
 const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
-    <div className={`flex items-center p-6 pt-0 ${className}`}>
-      {children}
-    </div>
+    <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
   );
 };
 
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+};

@@ -38,9 +38,7 @@
         "status": "warning",
         "message": "Missing environment variables: VITE_API_URL",
         "details": {
-          "missing": [
-            "VITE_API_URL"
-          ]
+          "missing": ["VITE_API_URL"]
         }
       }
     },
@@ -75,8 +73,6 @@
       "Fix build issues before deployment"
     ]
   },
-  "nextActions": [
-    "🔴 Fix failing pre-deployment checks before deploying"
-  ],
+  "nextActions": ["🔴 Fix failing pre-deployment checks before deploying"],
   "status": "completed"
 }

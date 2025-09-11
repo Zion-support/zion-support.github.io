@@ -12,7 +12,12 @@ interface SearchBarProps {
   placeholder?: string;
 }
 
-export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
+export function SearchBar({
+  value,
+  onChange,
+  onSelectSuggestion,
+  placeholder = 'Search...',
+}: SearchBarProps) {
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [focused, setFocused] = useState(false);
   const debounced = useDebounce(value, 150);
@@ -25,7 +30,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
       return;
     }
     const controller = new AbortController();
-    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
+    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
+      signal: controller.signal,
+    })
       .then(res => res.json())
       .then(data => setSuggestions(data || []))
       .catch(() => setSuggestions([]));
@@ -34,7 +41,10 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 
   useEffect(() => {
     function outside(e: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
         setFocused(false);
       }
     }
@@ -50,25 +60,25 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
   };
 
   return (
-    <div className="relative w-full" ref={containerRef}>
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
+    <div className='relative w-full' ref={containerRef}>
+      <div className='relative'>
+        <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate' />
         <Input
           ref={inputRef}
-          type="text"
+          type='text'
           value={value}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={e => onChange(e.target.value)}
           onFocus={() => setFocused(true)}
           placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate'
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
+            className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
             onClick={() => onChange('')}
-            aria-label="Clear search"
+            aria-label='Clear search'
           >
-            <X className="h-4 w-4" />
+            <X className='h-4 w-4' />
           </button>
         )}
       </div>

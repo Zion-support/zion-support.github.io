@@ -7,7 +7,7 @@ const buildSteps = [
   { name: 'Install Dependencies', cmd: 'npm install' },
   { name: 'Lint Check', cmd: 'npm run lint' },
   { name: 'Type Check', cmd: 'npx tsc --noEmit' },
-  { name: 'Build Project', cmd: 'npm run build' }
+  { name: 'Build Project', cmd: 'npm run build' },
 ];
 
 for (const step of buildSteps) {

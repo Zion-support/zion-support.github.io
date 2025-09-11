@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('cloud_orchestrator function triggered');
-    
+
     // Cloud orchestration simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Cloud orchestrator executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         orchestration: {
           status: 'active',
           cloudServices: 0,
-          lastOrchestration: new Date().toISOString()
-        }
-      })
+          lastOrchestration: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in cloud_orchestrator:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'cloud_orchestrator'
-      })
+        function: 'cloud_orchestrator',
+      }),
     };
   }
 };

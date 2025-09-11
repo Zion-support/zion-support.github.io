@@ -21,7 +21,7 @@ describe('Critical user journeys', () => {
     cy.visit('/marketplace');
     cy.contains('Buy Now').first().click();
     cy.url().should('include', '/checkout');
-    cy.get('iframe[name^="__privateStripeFrame"]').then(($iframe) => {
+    cy.get('iframe[name^="__privateStripeFrame"]').then($iframe => {
       // fill Stripe test card 4242 4242 4242 4242
     });
     cy.contains('Payment successful').should('be.visible');
@@ -38,9 +38,10 @@ describe('Critical user journeys', () => {
     cy.visit('/community');
     cy.contains('Create New Post').click();
     cy.get('input[name="title"]').type('Automated test post');
-    cy.get('textarea[name="content"]').type('This post was created by Cypress.');
+    cy.get('textarea[name="content"]').type(
+      'This post was created by Cypress.'
+    );
     cy.contains('Publish').click();
     cy.contains('Post published successfully').should('be.visible');
   });
 });
-

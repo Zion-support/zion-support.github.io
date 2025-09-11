@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovativeAIServicesExpansion: InnovativeAIService[] = [
@@ -55,7 +55,8 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     tagline: 'Advanced AI consciousness research and development platform',
     price: '$5,999',
     period: '/month',
-    description: 'Cutting-edge platform for researching and developing AI consciousness, self-awareness, and cognitive evolution. Features advanced neural architectures, consciousness metrics, and ethical development tools.',
+    description:
+      'Cutting-edge platform for researching and developing AI consciousness, self-awareness, and cognitive evolution. Features advanced neural architectures, consciousness metrics, and ethical development tools.',
     features: [
       'Advanced neural consciousness models',
       'Self-awareness development tools',
@@ -66,7 +67,7 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
       'Consciousness validation tests',
       'Ethical guidelines and compliance',
       'Real-time consciousness monitoring',
-      'Research documentation and sharing'
+      'Research documentation and sharing',
     ],
     popular: false,
     icon: '🧠',
@@ -74,13 +75,18 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-consciousness-evolution-platform',
     marketPosition: 'Leading AI consciousness research platform',
-    targetAudience: 'AI researchers, Universities, Research institutions, Tech companies',
+    targetAudience:
+      'AI researchers, Universities, Research institutions, Tech companies',
     trialDays: 60,
     setupTime: '4-6 weeks',
     category: 'AI Research',
     realService: true,
-    technology: ['Advanced AI/ML, Neural networks, Consciousness research, Python, PyTorch'],
-    integrations: ['Research databases, Academic platforms, AI development tools'],
+    technology: [
+      'Advanced AI/ML, Neural networks, Consciousness research, Python, PyTorch',
+    ],
+    integrations: [
+      'Research databases, Academic platforms, AI development tools',
+    ],
     useCases: ['AI consciousness research, Cognitive development, Ethical AI'],
     roi: 'Advance AI consciousness research and development capabilities',
     competitors: ['OpenAI, DeepMind, Anthropic, Research institutions'],
@@ -89,11 +95,12 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Research-grade platform with advanced consciousness models and ethical frameworks',
+    implementationDetails:
+      'Research-grade platform with advanced consciousness models and ethical frameworks',
     launchDate: '2025-04-01',
     customers: 23,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'autonomous-ai-ecosystem-manager',
@@ -101,7 +108,8 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     tagline: 'Self-managing AI ecosystem orchestration platform',
     price: '$3,299',
     period: '/month',
-    description: 'Intelligent platform that autonomously manages and orchestrates multiple AI systems, models, and workflows. Features self-optimization, resource management, and intelligent decision-making.',
+    description:
+      'Intelligent platform that autonomously manages and orchestrates multiple AI systems, models, and workflows. Features self-optimization, resource management, and intelligent decision-making.',
     features: [
       'Autonomous AI orchestration',
       'Self-optimizing workflows',
@@ -112,7 +120,7 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
       'Resource allocation',
       'Workflow automation',
       'Real-time monitoring',
-      'Predictive maintenance'
+      'Predictive maintenance',
     ],
     popular: true,
     icon: '🌐',
@@ -120,14 +128,17 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-ai-ecosystem-manager',
     marketPosition: 'Leading autonomous AI ecosystem management platform',
-    targetAudience: 'AI teams, Data scientists, Platform engineers, Enterprise AI users',
+    targetAudience:
+      'AI teams, Data scientists, Platform engineers, Enterprise AI users',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI & Automation',
     realService: true,
     technology: ['AI/ML, Orchestration, Automation, Kubernetes, Python'],
     integrations: ['ML platforms, Cloud services, AI models, Data platforms'],
-    useCases: ['AI ecosystem management, Workflow automation, Resource optimization'],
+    useCases: [
+      'AI ecosystem management, Workflow automation, Resource optimization',
+    ],
     roi: 'Reduce AI management overhead by 70% and improve performance by 40%',
     competitors: ['MLflow, Kubeflow, Weights & Biases, Databricks'],
     marketSize: '$15B+ AI platform market',
@@ -135,11 +146,12 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with autonomous AI management and orchestration',
+    implementationDetails:
+      'Enterprise platform with autonomous AI management and orchestration',
     launchDate: '2025-02-01',
     customers: 145,
     rating: 4.8,
-    reviews: 112
+    reviews: 112,
   },
   {
     id: 'ai-emotional-intelligence-trainer',
@@ -147,7 +159,8 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     tagline: 'Advanced AI emotional intelligence development and training',
     price: '$2,199',
     period: '/month',
-    description: 'Comprehensive platform for developing and training AI systems with emotional intelligence capabilities. Features emotion recognition, empathy modeling, and human-AI interaction training.',
+    description:
+      'Comprehensive platform for developing and training AI systems with emotional intelligence capabilities. Features emotion recognition, empathy modeling, and human-AI interaction training.',
     features: [
       'Emotion recognition and analysis',
       'Empathy modeling and training',
@@ -158,7 +171,7 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
       'Emotional intelligence metrics',
       'Behavioral pattern recognition',
       'Real-time emotion processing',
-      'Comprehensive training modules'
+      'Comprehensive training modules',
     ],
     popular: false,
     icon: '😊',
@@ -166,14 +179,19 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-emotional-intelligence-trainer',
     marketPosition: 'Leading AI emotional intelligence training platform',
-    targetAudience: 'AI developers, Customer service teams, Healthcare AI, Educational AI',
+    targetAudience:
+      'AI developers, Customer service teams, Healthcare AI, Educational AI',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'AI & Psychology',
     realService: true,
     technology: ['AI/ML, NLP, Computer vision, Psychology models, Python'],
-    integrations: ['Chat platforms, Video systems, Audio processing, CRM systems'],
-    useCases: ['Customer service AI, Healthcare AI, Educational AI, Social robots'],
+    integrations: [
+      'Chat platforms, Video systems, Audio processing, CRM systems',
+    ],
+    useCases: [
+      'Customer service AI, Healthcare AI, Educational AI, Social robots',
+    ],
     roi: 'Improve AI-human interactions and increase user satisfaction by 60%',
     competitors: ['Affectiva, Realeyes, Emotient, Kairos'],
     marketSize: '$8B+ emotional AI market',
@@ -181,11 +199,12 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced platform with emotional intelligence training and development tools',
+    implementationDetails:
+      'Advanced platform with emotional intelligence training and development tools',
     launchDate: '2025-01-15',
     customers: 89,
     rating: 4.7,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'quantum-ai-fusion-platform',
@@ -193,7 +212,8 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     tagline: 'Quantum computing enhanced AI platform',
     price: '$4,999',
     period: '/month',
-    description: 'Revolutionary platform that combines quantum computing with artificial intelligence to solve complex problems. Features quantum-enhanced ML algorithms, hybrid quantum-classical workflows, and quantum advantage optimization.',
+    description:
+      'Revolutionary platform that combines quantum computing with artificial intelligence to solve complex problems. Features quantum-enhanced ML algorithms, hybrid quantum-classical workflows, and quantum advantage optimization.',
     features: [
       'Quantum-enhanced ML algorithms',
       'Hybrid quantum-classical workflows',
@@ -204,7 +224,7 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
       'Real-time quantum processing',
       'Quantum error correction',
       'Performance benchmarking',
-      'Research collaboration tools'
+      'Research collaboration tools',
     ],
     popular: true,
     icon: '⚛️',
@@ -212,14 +232,19 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-ai-fusion-platform',
     marketPosition: 'Leading quantum-AI fusion platform',
-    targetAudience: 'AI researchers, Quantum computing teams, Research institutions, Tech companies',
+    targetAudience:
+      'AI researchers, Quantum computing teams, Research institutions, Tech companies',
     trialDays: 45,
     setupTime: '3-4 weeks',
     category: 'Quantum & AI',
     realService: true,
-    technology: ['Quantum computing, AI/ML, Quantum algorithms, Python, Qiskit'],
+    technology: [
+      'Quantum computing, AI/ML, Quantum algorithms, Python, Qiskit',
+    ],
     integrations: ['IBM Quantum, Google Quantum, D-Wave, Quantum simulators'],
-    useCases: ['Complex optimization, Drug discovery, Financial modeling, AI research'],
+    useCases: [
+      'Complex optimization, Drug discovery, Financial modeling, AI research',
+    ],
     roi: 'Solve complex problems 1000x faster than classical computing',
     competitors: ['IBM Quantum, Google Quantum, D-Wave, Rigetti'],
     marketSize: '$10B+ quantum computing market',
@@ -227,11 +252,12 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Research-grade platform with quantum-AI fusion capabilities',
+    implementationDetails:
+      'Research-grade platform with quantum-AI fusion capabilities',
     launchDate: '2025-03-01',
     customers: 56,
     rating: 4.8,
-    reviews: 42
+    reviews: 42,
   },
   {
     id: 'ai-autonomous-robotics-platform',
@@ -239,7 +265,8 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     tagline: 'Intelligent autonomous robotics development and management',
     price: '$3,799',
     period: '/month',
-    description: 'Advanced platform for developing, training, and managing autonomous robotic systems. Features AI-powered navigation, learning algorithms, and multi-robot coordination.',
+    description:
+      'Advanced platform for developing, training, and managing autonomous robotic systems. Features AI-powered navigation, learning algorithms, and multi-robot coordination.',
     features: [
       'AI-powered navigation systems',
       'Autonomous learning algorithms',
@@ -250,7 +277,7 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
       'Performance optimization',
       'Remote monitoring and control',
       'Integration with IoT systems',
-      'Comprehensive analytics'
+      'Comprehensive analytics',
     ],
     popular: false,
     icon: '🤖',
@@ -258,14 +285,19 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/ai-autonomous-robotics-platform',
     marketPosition: 'Leading autonomous robotics development platform',
-    targetAudience: 'Robotics companies, Manufacturing, Logistics, Research institutions',
+    targetAudience:
+      'Robotics companies, Manufacturing, Logistics, Research institutions',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI & Robotics',
     realService: true,
     technology: ['AI/ML, Robotics, Computer vision, Sensor fusion, Python'],
-    integrations: ['ROS, IoT platforms, Manufacturing systems, Logistics platforms'],
-    useCases: ['Manufacturing automation, Logistics, Research robotics, Service robots'],
+    integrations: [
+      'ROS, IoT platforms, Manufacturing systems, Logistics platforms',
+    ],
+    useCases: [
+      'Manufacturing automation, Logistics, Research robotics, Service robots',
+    ],
     roi: 'Reduce robotics development time by 50% and improve performance by 80%',
     competitors: ['Boston Dynamics, ABB Robotics, KUKA, Universal Robots'],
     marketSize: '$25B+ autonomous robotics market',
@@ -273,11 +305,12 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with autonomous robotics development and management',
+    implementationDetails:
+      'Enterprise platform with autonomous robotics development and management',
     launchDate: '2025-02-15',
     customers: 78,
     rating: 4.6,
-    reviews: 56
+    reviews: 56,
   },
   {
     id: 'ai-creativity-orchestrator',
@@ -285,7 +318,8 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     tagline: 'AI-powered creative content generation and orchestration',
     price: '$1,899',
     period: '/month',
-    description: 'Intelligent platform that orchestrates multiple AI creative tools to generate comprehensive content. Features multi-modal content creation, creative workflow automation, and brand consistency management.',
+    description:
+      'Intelligent platform that orchestrates multiple AI creative tools to generate comprehensive content. Features multi-modal content creation, creative workflow automation, and brand consistency management.',
     features: [
       'Multi-modal content creation',
       'Creative workflow automation',
@@ -296,7 +330,7 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
       'Integration with creative tools',
       'Automated quality control',
       'Creative collaboration tools',
-      'ROI tracking and reporting'
+      'ROI tracking and reporting',
     ],
     popular: true,
     icon: '🎨',
@@ -304,14 +338,19 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-creativity-orchestrator',
     marketPosition: 'Leading AI creativity orchestration platform',
-    targetAudience: 'Creative agencies, Marketing teams, Content creators, Designers',
+    targetAudience:
+      'Creative agencies, Marketing teams, Content creators, Designers',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI & Creativity',
     realService: true,
     technology: ['AI/ML, Creative AI, Workflow automation, Python, JavaScript'],
-    integrations: ['Adobe Creative Suite, Canva, Figma, Social media platforms'],
-    useCases: ['Content creation, Marketing campaigns, Brand development, Creative workflows'],
+    integrations: [
+      'Adobe Creative Suite, Canva, Figma, Social media platforms',
+    ],
+    useCases: [
+      'Content creation, Marketing campaigns, Brand development, Creative workflows',
+    ],
     roi: 'Increase creative output by 300% while reducing production time by 60%',
     competitors: ['Jasper, Midjourney, DALL-E, Runway ML'],
     marketSize: '$20B+ creative AI market',
@@ -319,11 +358,12 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with AI creativity orchestration and workflow automation',
+    implementationDetails:
+      'Enterprise platform with AI creativity orchestration and workflow automation',
     launchDate: '2025-01-20',
     customers: 234,
     rating: 4.8,
-    reviews: 178
+    reviews: 178,
   },
   {
     id: 'ai-autonomous-business-process-automation',
@@ -331,7 +371,8 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     tagline: 'Fully autonomous business process optimization and automation',
     price: '$2,499',
     period: '/month',
-    description: 'Advanced platform that autonomously analyzes, optimizes, and automates business processes. Features intelligent process discovery, optimization algorithms, and autonomous implementation.',
+    description:
+      'Advanced platform that autonomously analyzes, optimizes, and automates business processes. Features intelligent process discovery, optimization algorithms, and autonomous implementation.',
     features: [
       'Autonomous process discovery',
       'Intelligent optimization algorithms',
@@ -342,7 +383,7 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
       'Integration with business systems',
       'Compliance management',
       'ROI tracking',
-      'Comprehensive reporting'
+      'Comprehensive reporting',
     ],
     popular: true,
     icon: '⚙️',
@@ -350,14 +391,19 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-autonomous-business-process-automation',
     marketPosition: 'Leading autonomous business process automation platform',
-    targetAudience: 'Business analysts, Operations teams, Process engineers, IT managers',
+    targetAudience:
+      'Business analysts, Operations teams, Process engineers, IT managers',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI & Automation',
     realService: true,
     technology: ['AI/ML, Process mining, RPA, Workflow automation, Python'],
-    integrations: ['ERP systems, CRM platforms, Workflow tools, Business intelligence'],
-    useCases: ['Process optimization, Business automation, Operations improvement, Cost reduction'],
+    integrations: [
+      'ERP systems, CRM platforms, Workflow tools, Business intelligence',
+    ],
+    useCases: [
+      'Process optimization, Business automation, Operations improvement, Cost reduction',
+    ],
     roi: 'Reduce process costs by 40% and improve efficiency by 60%',
     competitors: ['UiPath, Automation Anywhere, Blue Prism, Celonis'],
     marketSize: '$30B+ business process automation market',
@@ -365,11 +411,12 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     variant: 'autonomous-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with autonomous process automation and optimization',
+    implementationDetails:
+      'Enterprise platform with autonomous process automation and optimization',
     launchDate: '2025-02-01',
     customers: 189,
     rating: 4.7,
-    reviews: 145
+    reviews: 145,
   },
   {
     id: 'ai-autonomous-customer-service',
@@ -377,7 +424,8 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     tagline: 'Fully autonomous customer service with emotional intelligence',
     price: '$1,999',
     period: '/month',
-    description: 'Intelligent customer service platform that autonomously handles customer inquiries with emotional intelligence. Features natural language understanding, sentiment analysis, and autonomous problem resolution.',
+    description:
+      'Intelligent customer service platform that autonomously handles customer inquiries with emotional intelligence. Features natural language understanding, sentiment analysis, and autonomous problem resolution.',
     features: [
       'Autonomous customer interaction',
       'Emotional intelligence',
@@ -388,7 +436,7 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
       '24/7 availability',
       'Performance analytics',
       'Integration with CRM systems',
-      'Continuous learning'
+      'Continuous learning',
     ],
     popular: true,
     icon: '💬',
@@ -396,14 +444,19 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-customer-service',
     marketPosition: 'Leading autonomous customer service platform',
-    targetAudience: 'Customer service teams, E-commerce businesses, Support organizations',
+    targetAudience:
+      'Customer service teams, E-commerce businesses, Support organizations',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI & Customer Service',
     realService: true,
     technology: ['AI/ML, NLP, Sentiment analysis, Chatbots, Python'],
-    integrations: ['CRM systems, Help desk tools, E-commerce platforms, Social media'],
-    useCases: ['Customer support, Sales support, Technical support, General inquiries'],
+    integrations: [
+      'CRM systems, Help desk tools, E-commerce platforms, Social media',
+    ],
+    useCases: [
+      'Customer support, Sales support, Technical support, General inquiries',
+    ],
     roi: 'Reduce customer service costs by 70% and improve satisfaction by 40%',
     competitors: ['Intercom, Zendesk, Freshdesk, Help Scout'],
     marketSize: '$18B+ customer service market',
@@ -411,10 +464,11 @@ export const innovativeAIServicesExpansion: InnovativeAIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with autonomous customer service and emotional intelligence',
+    implementationDetails:
+      'Enterprise platform with autonomous customer service and emotional intelligence',
     launchDate: '2025-01-25',
     customers: 312,
     rating: 4.8,
-    reviews: 234
-  }
+    reviews: 234,
+  },
 ];

@@ -32,7 +32,8 @@ const getDevMockUsers = (): Record<string, MockUser> => {
         id: '1',
         name: 'Development User 1',
         email: devUser1Email,
-        avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
+        avatarUrl:
+          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
         bio: 'Development test user',
         points: 150,
         notifications: { email: true, push: true },
@@ -116,7 +117,10 @@ export const findUserById = (id: string): MockUser | undefined => {
 };
 
 // Mock user validation (for testing purposes only)
-export const validateUser = (email: string, password: string): MockUser | null => {
+export const validateUser = (
+  email: string,
+  password: string
+): MockUser | null => {
   // 🔐 SECURITY: Only work in development mode
   if (process.env.NODE_ENV !== 'development') {
     return null;
@@ -140,13 +144,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   // Return users without passwords for security
-  const safeUsers = Object.entries(users).reduce((acc, [id, user]) => {
-    acc[id] = {
-      ...user,
-      password: undefined, // Remove password from response
-    };
-    return acc;
-  }, {} as Record<string, Partial<MockUser>>);
+  const safeUsers = Object.entries(users).reduce(
+    (acc, [id, user]) => {
+      acc[id] = {
+        ...user,
+        password: undefined, // Remove password from response
+      };
+      return acc;
+    },
+    {} as Record<string, Partial<MockUser>>
+  );
 
   res.status(200).json(safeUsers);
 }

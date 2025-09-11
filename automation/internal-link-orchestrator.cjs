@@ -24,9 +24,13 @@ function main() {
   status = runNode('../scripts/generate-sitemap.js');
   if (status !== 0) process.exit(status);
   // external link check (non-blocking)
-  try { runNode('./external-link-check.cjs'); } catch {}
+  try {
+    runNode('./external-link-check.cjs');
+  } catch {}
   // SEO audit (non-blocking)
-  try { runNode('../scripts/seo-audit.js'); } catch {}
+  try {
+    runNode('../scripts/seo-audit.js');
+  } catch {}
   console.log('Internal link orchestration complete.');
 }
 

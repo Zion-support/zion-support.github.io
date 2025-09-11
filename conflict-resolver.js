@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Conflict Resolver - Starting systematic conflict resolution...\n');
+console.log(
+  '🚀 Conflict Resolver - Starting systematic conflict resolution...\n'
+);
 
 function resolveConflictsInFile(filePath) {
   try {
@@ -58,7 +60,9 @@ function findConflictFiles() {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-          if (!['node_modules', '.git', 'dist', 'build', 'out'].includes(item)) {
+          if (
+            !['node_modules', '.git', 'dist', 'build', 'out'].includes(item)
+          ) {
             scanDirectory(fullPath);
           }
         } else if (stat.isFile()) {

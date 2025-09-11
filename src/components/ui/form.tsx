@@ -22,7 +22,7 @@ interface FormItemProps {
 }
 
 export function FormItem({ children }: FormItemProps) {
-  return <div className="space-y-2">{children}</div>;
+  return <div className='space-y-2'>{children}</div>;
 }
 
 interface FormLabelProps {
@@ -31,7 +31,11 @@ interface FormLabelProps {
 }
 
 export function FormLabel({ children, className = '' }: FormLabelProps) {
-  return <label className={`block text-sm font-medium ${className}`}>{children}</label>;
+  return (
+    <label className={`block text-sm font-medium ${className}`}>
+      {children}
+    </label>
+  );
 }
 
 interface FormFieldProps {

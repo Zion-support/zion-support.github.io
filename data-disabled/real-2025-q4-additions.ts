@@ -27,7 +27,7 @@ export const real2025Q4Additions: RealQ4Service[] = [
     features: [
       'Latest features',
       'Advanced capabilities',
-      'Modern architecture'
+      'Modern architecture',
     ],
     popular: true,
     icon: '🚀',
@@ -36,6 +36,6 @@ export const real2025Q4Additions: RealQ4Service[] = [
     link: '/services/q4-2025-service',
     marketPosition: 'Leading',
     targetAudience: 'Enterprises',
-    realImplementation: true
-  }
+    realImplementation: true,
+  },
 ];

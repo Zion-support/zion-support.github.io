@@ -4,17 +4,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovative2036ITServices: MicroSaasService[] = [
   {
     id: 'quantum-secure-cloud-infrastructure',
     name: 'Quantum-Secure Cloud Infrastructure',
-    tagline: 'Post-quantum cryptography cloud infrastructure for future-proof security',
+    tagline:
+      'Post-quantum cryptography cloud infrastructure for future-proof security',
     price: '$3,999',
     period: '/month',
-    description: 'Revolutionary cloud infrastructure platform that implements post-quantum cryptography to ensure security against future quantum attacks. Includes quantum-resistant encryption, secure key management, and compliance frameworks.',
+    description:
+      'Revolutionary cloud infrastructure platform that implements post-quantum cryptography to ensure security against future quantum attacks. Includes quantum-resistant encryption, secure key management, and compliance frameworks.',
     features: [
       'Post-quantum cryptography algorithms',
       'Quantum-resistant encryption',
@@ -23,7 +25,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Quantum threat monitoring',
       'Security audit tools',
       'Zero-trust architecture',
-      'Quantum-safe protocols'
+      'Quantum-safe protocols',
     ],
     popular: true,
     icon: '🔐',
@@ -31,12 +33,15 @@ export const innovative2036ITServices: MicroSaasService[] = [
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/quantum-secure-cloud-infrastructure',
     marketPosition: 'Leading quantum-secure cloud infrastructure',
-    targetAudience: 'Financial institutions, Government agencies, Healthcare, Enterprise',
+    targetAudience:
+      'Financial institutions, Government agencies, Healthcare, Enterprise',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Cloud Security',
     realService: true,
-    technology: ['Post-quantum cryptography, Cloud computing, Zero-trust security'],
+    technology: [
+      'Post-quantum cryptography, Cloud computing, Zero-trust security',
+    ],
     integrations: ['AWS, Azure, Google Cloud, Kubernetes'],
     useCases: ['Secure cloud deployment, Compliance, Future-proof security'],
     roi: 'Future-proof security investment with 10-year protection',
@@ -46,11 +51,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum-secure cloud infrastructure with compliance tools',
+    implementationDetails:
+      'Complete quantum-secure cloud infrastructure with compliance tools',
     launchDate: '2026-01-10',
     customers: 11,
     rating: 4.9,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'autonomous-it-operations-center',
@@ -58,7 +64,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     tagline: 'Fully autonomous IT operations with AI-powered decision making',
     price: '$2,499',
     period: '/month',
-    description: 'Revolutionary IT operations center that operates autonomously with minimal human intervention. AI agents handle incident response, capacity planning, performance optimization, and strategic IT decisions.',
+    description:
+      'Revolutionary IT operations center that operates autonomously with minimal human intervention. AI agents handle incident response, capacity planning, performance optimization, and strategic IT decisions.',
     features: [
       'Autonomous incident response',
       'AI-powered capacity planning',
@@ -67,7 +74,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Predictive maintenance',
       'Automated troubleshooting',
       'Resource optimization',
-      'Continuous improvement'
+      'Continuous improvement',
     ],
     popular: true,
     icon: '🏢',
@@ -82,7 +89,9 @@ export const innovative2036ITServices: MicroSaasService[] = [
     realService: true,
     technology: ['AI, Machine learning, IT automation, Predictive analytics'],
     integrations: ['ServiceNow, Jira, PagerDuty, Monitoring tools'],
-    useCases: ['IT operations automation, Incident management, Capacity planning'],
+    useCases: [
+      'IT operations automation, Incident management, Capacity planning',
+    ],
     roi: 'Reduce IT operational costs by 50-70%',
     competitors: ['ServiceNow, BMC, IBM'],
     marketSize: '$30B IT operations market',
@@ -90,11 +99,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'autonomous-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete autonomous IT operations center with AI agents',
+    implementationDetails:
+      'Complete autonomous IT operations center with AI agents',
     launchDate: '2026-01-25',
     customers: 14,
     rating: 4.8,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'edge-computing-orchestration-platform',
@@ -102,7 +112,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     tagline: 'Intelligent edge computing orchestration for distributed systems',
     price: '$1,899',
     period: '/month',
-    description: 'Advanced platform for orchestrating edge computing resources across distributed systems. Includes intelligent workload distribution, edge AI deployment, and real-time optimization.',
+    description:
+      'Advanced platform for orchestrating edge computing resources across distributed systems. Includes intelligent workload distribution, edge AI deployment, and real-time optimization.',
     features: [
       'Intelligent workload distribution',
       'Edge AI deployment',
@@ -111,7 +122,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Latency optimization',
       'Edge security management',
       'Performance monitoring',
-      'Scalable edge deployment'
+      'Scalable edge deployment',
     ],
     popular: true,
     icon: '🌐',
@@ -119,7 +130,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/edge-computing-orchestration-platform',
     marketPosition: 'Leading edge computing orchestration platform',
-    targetAudience: 'IoT companies, Edge computing providers, Telecommunications',
+    targetAudience:
+      'IoT companies, Edge computing providers, Telecommunications',
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Edge Computing',
@@ -134,11 +146,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'edge-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete edge computing orchestration platform with AI optimization',
+    implementationDetails:
+      'Complete edge computing orchestration platform with AI optimization',
     launchDate: '2026-02-05',
     customers: 16,
     rating: 4.7,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'blockchain-infrastructure-platform',
@@ -146,7 +159,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     tagline: 'Enterprise-grade blockchain infrastructure with AI optimization',
     price: '$2,999',
     period: '/month',
-    description: 'Comprehensive blockchain infrastructure platform designed for enterprise use cases. Includes AI-powered optimization, smart contract management, and enterprise integration tools.',
+    description:
+      'Comprehensive blockchain infrastructure platform designed for enterprise use cases. Includes AI-powered optimization, smart contract management, and enterprise integration tools.',
     features: [
       'AI-powered optimization',
       'Smart contract management',
@@ -155,7 +169,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Security frameworks',
       'Compliance tools',
       'Performance monitoring',
-      'Multi-chain support'
+      'Multi-chain support',
     ],
     popular: true,
     icon: '⛓️',
@@ -163,7 +177,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     textColor: 'text-yellow-300',
     link: 'https://ziontechgroup.com/services/blockchain-infrastructure-platform',
     marketPosition: 'Leading enterprise blockchain infrastructure',
-    targetAudience: 'Financial institutions, Supply chain, Healthcare, Government',
+    targetAudience:
+      'Financial institutions, Supply chain, Healthcare, Government',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Blockchain',
@@ -178,11 +193,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'blockchain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete enterprise blockchain infrastructure with AI optimization',
+    implementationDetails:
+      'Complete enterprise blockchain infrastructure with AI optimization',
     launchDate: '2026-01-30',
     customers: 12,
     rating: 4.8,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'ai-powered-devops-platform',
@@ -190,7 +206,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     tagline: 'Intelligent DevOps automation with AI-driven optimization',
     price: '$1,599',
     period: '/month',
-    description: 'Revolutionary DevOps platform that leverages AI to automate and optimize the entire software development lifecycle. Includes intelligent CI/CD, automated testing, and performance optimization.',
+    description:
+      'Revolutionary DevOps platform that leverages AI to automate and optimize the entire software development lifecycle. Includes intelligent CI/CD, automated testing, and performance optimization.',
     features: [
       'Intelligent CI/CD pipelines',
       'Automated testing',
@@ -199,7 +216,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Deployment automation',
       'Monitoring and alerting',
       'Resource optimization',
-      'Predictive analytics'
+      'Predictive analytics',
     ],
     popular: true,
     icon: '⚡',
@@ -222,11 +239,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'devops-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI-powered DevOps platform with intelligent automation',
+    implementationDetails:
+      'Complete AI-powered DevOps platform with intelligent automation',
     launchDate: '2026-02-10',
     customers: 20,
     rating: 4.9,
-    reviews: 16
+    reviews: 16,
   },
   {
     id: 'quantum-cloud-infrastructure-platform',
@@ -234,7 +252,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     tagline: 'Quantum-ready cloud infrastructure for next-generation computing',
     price: '$4,999',
     period: '/month',
-    description: 'Advanced cloud infrastructure platform designed to be quantum-ready and future-proof. Includes quantum computing integration, hybrid classical-quantum workflows, and quantum algorithm optimization.',
+    description:
+      'Advanced cloud infrastructure platform designed to be quantum-ready and future-proof. Includes quantum computing integration, hybrid classical-quantum workflows, and quantum algorithm optimization.',
     features: [
       'Quantum computing integration',
       'Hybrid classical-quantum workflows',
@@ -243,7 +262,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Quantum security protocols',
       'Performance optimization',
       'Scalability solutions',
-      'Future-proof architecture'
+      'Future-proof architecture',
     ],
     popular: false,
     icon: '☁️',
@@ -251,14 +270,17 @@ export const innovative2036ITServices: MicroSaasService[] = [
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/quantum-cloud-infrastructure-platform',
     marketPosition: 'First quantum-ready cloud infrastructure',
-    targetAudience: 'Quantum computing companies, Research institutions, Enterprise',
+    targetAudience:
+      'Quantum computing companies, Research institutions, Enterprise',
     trialDays: 60,
     setupTime: '1-2 months',
     category: 'Quantum Computing',
     realService: true,
     technology: ['Quantum computing, Cloud computing, Hybrid systems'],
     integrations: ['IBM Quantum, Google Quantum, AWS, Azure'],
-    useCases: ['Quantum research, Hybrid computing, Future-proof infrastructure'],
+    useCases: [
+      'Quantum research, Hybrid computing, Future-proof infrastructure',
+    ],
     roi: 'Future-proof infrastructure investment with quantum capabilities',
     competitors: ['IBM Cloud, Google Cloud, AWS'],
     marketSize: '$150B quantum computing market',
@@ -266,19 +288,22 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum-ready cloud infrastructure platform',
+    implementationDetails:
+      'Complete quantum-ready cloud infrastructure platform',
     launchDate: '2026-03-01',
     customers: 5,
     rating: 4.9,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
-    tagline: 'Comprehensive zero trust security with AI-powered threat detection',
+    tagline:
+      'Comprehensive zero trust security with AI-powered threat detection',
     price: '$2,199',
     period: '/month',
-    description: 'Advanced zero trust security platform that implements comprehensive security measures with AI-powered threat detection. Includes identity verification, network segmentation, and continuous monitoring.',
+    description:
+      'Advanced zero trust security platform that implements comprehensive security measures with AI-powered threat detection. Includes identity verification, network segmentation, and continuous monitoring.',
     features: [
       'Identity verification',
       'Network segmentation',
@@ -287,7 +312,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Access control',
       'Security analytics',
       'Compliance tools',
-      'Incident response'
+      'Incident response',
     ],
     popular: true,
     icon: '🛡️',
@@ -310,11 +335,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete zero trust security platform with AI threat detection',
+    implementationDetails:
+      'Complete zero trust security platform with AI threat detection',
     launchDate: '2026-02-15',
     customers: 18,
     rating: 4.8,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'ai-powered-cybersecurity',
@@ -322,7 +348,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     tagline: 'Intelligent cybersecurity with AI-driven threat prevention',
     price: '$1,899',
     period: '/month',
-    description: 'Revolutionary cybersecurity platform that leverages AI to detect, prevent, and respond to cyber threats in real-time. Includes behavioral analysis, threat intelligence, and automated response.',
+    description:
+      'Revolutionary cybersecurity platform that leverages AI to detect, prevent, and respond to cyber threats in real-time. Includes behavioral analysis, threat intelligence, and automated response.',
     features: [
       'Behavioral analysis',
       'Threat intelligence',
@@ -331,7 +358,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Predictive analytics',
       'Vulnerability assessment',
       'Security automation',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     popular: true,
     icon: '🔒',
@@ -354,11 +381,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI-powered cybersecurity platform with threat prevention',
+    implementationDetails:
+      'Complete AI-powered cybersecurity platform with threat prevention',
     launchDate: '2026-02-20',
     customers: 22,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'quantum-internet-security-platform',
@@ -366,7 +394,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     tagline: 'Quantum-secure internet infrastructure for future communications',
     price: '$5,999',
     period: '/month',
-    description: 'Groundbreaking platform that implements quantum-secure internet protocols and infrastructure. Includes quantum key distribution, quantum-resistant encryption, and future-proof security measures.',
+    description:
+      'Groundbreaking platform that implements quantum-secure internet protocols and infrastructure. Includes quantum key distribution, quantum-resistant encryption, and future-proof security measures.',
     features: [
       'Quantum key distribution',
       'Quantum-resistant encryption',
@@ -375,7 +404,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Network security',
       'Compliance frameworks',
       'Performance optimization',
-      'Scalability solutions'
+      'Scalability solutions',
     ],
     popular: false,
     icon: '🌍',
@@ -389,8 +418,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     category: 'Quantum Security',
     realService: true,
     technology: ['Quantum computing, Internet protocols, Security'],
-    integrations: ['Internet infrastructure, Security protocols, Network devices'],
-    useCases: ['Secure communications, Government networks, Financial networks'],
+    integrations: [
+      'Internet infrastructure, Security protocols, Network devices',
+    ],
+    useCases: [
+      'Secure communications, Government networks, Financial networks',
+    ],
     roi: 'Future-proof internet security with quantum protection',
     competitors: ['None - First to market'],
     marketSize: '$200B internet security market',
@@ -398,11 +431,12 @@ export const innovative2036ITServices: MicroSaasService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum internet security platform with future-proof protocols',
+    implementationDetails:
+      'Complete quantum internet security platform with future-proof protocols',
     launchDate: '2026-04-01',
     customers: 3,
     rating: 4.9,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'ai-powered-it-asset-management',
@@ -410,7 +444,8 @@ export const innovative2036ITServices: MicroSaasService[] = [
     tagline: 'Intelligent IT asset management with predictive analytics',
     price: '$999',
     period: '/month',
-    description: 'Advanced IT asset management platform that uses AI to optimize asset utilization, predict maintenance needs, and optimize resource allocation. Includes lifecycle management and cost optimization.',
+    description:
+      'Advanced IT asset management platform that uses AI to optimize asset utilization, predict maintenance needs, and optimize resource allocation. Includes lifecycle management and cost optimization.',
     features: [
       'Asset lifecycle management',
       'Predictive maintenance',
@@ -419,7 +454,7 @@ export const innovative2036ITServices: MicroSaasService[] = [
       'Performance monitoring',
       'Compliance tracking',
       'Automated reporting',
-      'Integration tools'
+      'Integration tools',
     ],
     popular: true,
     icon: '💻',
@@ -446,6 +481,6 @@ export const innovative2036ITServices: MicroSaasService[] = [
     launchDate: '2026-02-25',
     customers: 25,
     rating: 4.7,
-    reviews: 20
-  }
+    reviews: 20,
+  },
 ];

@@ -36,7 +36,13 @@ class CSSPurger {
     console.log('🔍 Scanning for used CSS classes...');
 
     // Scan all HTML, JS, and TSX files for class usage
-    const files = this.getAllFiles(this.srcPath, ['.html', '.js', '.jsx', '.ts', '.tsx']);
+    const files = this.getAllFiles(this.srcPath, [
+      '.html',
+      '.js',
+      '.jsx',
+      '.ts',
+      '.tsx',
+    ]);
 
     for (const file of files) {
       const content = fs.readFileSync(file, 'utf8');
@@ -60,9 +66,16 @@ class CSSPurger {
     for (const item of items) {
       const fullPath = path.join(dir, item.name);
 
-      if (item.isDirectory() && !item.name.startsWith('.') && item.name !== 'node_modules') {
+      if (
+        item.isDirectory() &&
+        !item.name.startsWith('.') &&
+        item.name !== 'node_modules'
+      ) {
         files = files.concat(this.getAllFiles(fullPath, extensions));
-      } else if (item.isFile() && extensions.some(ext => item.name.endsWith(ext))) {
+      } else if (
+        item.isFile() &&
+        extensions.some(ext => item.name.endsWith(ext))
+      ) {
         files.push(fullPath);
       }
     }
@@ -104,7 +117,8 @@ class CSSPurger {
   }
 
   async purgeCSSFiles() {
-    const cssFiles = fs.readdirSync(this.distPath, { recursive: true })
+    const cssFiles = fs
+      .readdirSync(this.distPath, { recursive: true })
       .filter(file => typeof file === 'string' && file.endsWith('.css'))
       .map(file => path.join(this.distPath, file));
 
@@ -129,11 +143,16 @@ class CSSPurger {
 
     const purgedContent = purgedLines.join('\n');
     const purgedSize = purgedContent.length;
-    const savings = ((originalSize - purgedSize) / originalSize * 100).toFixed(2);
+    const savings = (
+      ((originalSize - purgedSize) / originalSize) *
+      100
+    ).toFixed(2);
 
     if (savings > 0) {
       fs.writeFileSync(cssFile, purgedContent);
-      console.log(`📦 ${path.basename(cssFile)}: ${originalSize} → ${purgedSize} bytes (${savings}% reduction)`);
+      console.log(
+        `📦 ${path.basename(cssFile)}: ${originalSize} → ${purgedSize} bytes (${savings}% reduction)`
+      );
     } else {
       console.log(`📦 ${path.basename(cssFile)}: No unused CSS found`);
     }
@@ -141,7 +160,11 @@ class CSSPurger {
 
   isCSSRuleUsed(line) {
     // Skip comments and empty lines
-    if (line.trim().startsWith('/*') || line.trim().startsWith('*') || line.trim() === '') {
+    if (
+      line.trim().startsWith('/*') ||
+      line.trim().startsWith('*') ||
+      line.trim() === ''
+    ) {
       return true;
     }
 

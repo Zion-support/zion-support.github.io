@@ -36,9 +36,9 @@ export function useWallet() {
         id: '1',
         user_id: user.id,
         balance: 1000,
-        updated_at: new Date().toISOString()
+        updated_at: new Date().toISOString(),
       };
-      
+
       setWallet(mockWallet);
     } catch (err: any) {
       console.error('Error fetching wallet:', err);
@@ -62,10 +62,10 @@ export function useWallet() {
           amount: 100,
           transaction_type: 'earn',
           reason: 'Welcome bonus',
-          created_at: new Date().toISOString()
-        }
+          created_at: new Date().toISOString(),
+        },
       ];
-      
+
       setTransactions(mockTransactions);
     } catch (err: any) {
       console.error('Error fetching transactions:', err);
@@ -76,42 +76,56 @@ export function useWallet() {
   const earnTokens = async (amount: number, reason?: string) => {
     if (!user?.id) return;
 
-    setWallet(prev => prev ? { 
-      ...prev, 
-      balance: prev.balance + amount 
-    } : {
-      balance: amount,
-      user_id: user.id,
-      id: crypto.randomUUID(),
-      updated_at: new Date().toISOString()
-    });
+    setWallet(prev =>
+      prev
+        ? {
+            ...prev,
+            balance: prev.balance + amount,
+          }
+        : {
+            balance: amount,
+            user_id: user.id,
+            id: crypto.randomUUID(),
+            updated_at: new Date().toISOString(),
+          }
+    );
 
-    setTransactions(prev => [{
-      id: crypto.randomUUID(),
-      user_id: user.id,
-      amount,
-      transaction_type: 'earn',
-      reason: reason || null,
-      created_at: new Date().toISOString()
-    }, ...prev]);
+    setTransactions(prev => [
+      {
+        id: crypto.randomUUID(),
+        user_id: user.id,
+        amount,
+        transaction_type: 'earn',
+        reason: reason || null,
+        created_at: new Date().toISOString(),
+      },
+      ...prev,
+    ]);
   };
 
   const spendTokens = async (amount: number, reason?: string) => {
     if (!user?.id) return;
 
-    setWallet(prev => prev ? { 
-      ...prev, 
-      balance: Math.max(0, prev.balance - amount) 
-    } : null);
+    setWallet(prev =>
+      prev
+        ? {
+            ...prev,
+            balance: Math.max(0, prev.balance - amount),
+          }
+        : null
+    );
 
-    setTransactions(prev => [{
-      id: crypto.randomUUID(),
-      user_id: user.id,
-      amount: -amount,
-      transaction_type: 'burn',
-      reason: reason || null,
-      created_at: new Date().toISOString()
-    }, ...prev]);
+    setTransactions(prev => [
+      {
+        id: crypto.randomUUID(),
+        user_id: user.id,
+        amount: -amount,
+        transaction_type: 'burn',
+        reason: reason || null,
+        created_at: new Date().toISOString(),
+      },
+      ...prev,
+    ]);
   };
 
   useEffect(() => {
@@ -140,6 +154,6 @@ export function useWallet() {
     fetchWallet,
     fetchTransactions,
     earnTokens,
-    spendTokens
+    spendTokens,
   };
 }

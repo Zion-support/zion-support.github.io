@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovativeServicesExpansion2025: MicroSaasService[] = [
@@ -12,10 +12,12 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
   {
     id: 'ai-business-intelligence-suite',
     name: 'AI Business Intelligence Suite',
-    tagline: 'Transform raw data into actionable insights with AI-powered analytics',
+    tagline:
+      'Transform raw data into actionable insights with AI-powered analytics',
     price: '$399',
     period: '/month',
-    description: 'Advanced BI platform combining traditional analytics with AI-powered insights, predictive modeling, and natural language querying. Automatically identifies trends, anomalies, and opportunities in your business data.',
+    description:
+      'Advanced BI platform combining traditional analytics with AI-powered insights, predictive modeling, and natural language querying. Automatically identifies trends, anomalies, and opportunities in your business data.',
     features: [
       'AI-powered anomaly detection and trend analysis',
       'Natural language query interface (Ask your data in plain English)',
@@ -26,22 +28,28 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Advanced visualization library with 50+ chart types',
       'Collaborative workspace with role-based access',
       'Export to PowerPoint, PDF, and Excel',
-      'API access for custom integrations'
+      'API access for custom integrations',
     ],
     popular: true,
     icon: '📊',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite',
-    marketPosition: 'Competes with Tableau and Power BI while adding AI capabilities and natural language processing.',
-    targetAudience: 'Business analysts, data scientists, executives, marketing teams',
+    marketPosition:
+      'Competes with Tableau and Power BI while adding AI capabilities and natural language processing.',
+    targetAudience:
+      'Business analysts, data scientists, executives, marketing teams',
     trialDays: 21,
     setupTime: '2-5 days',
     category: 'AI & Data',
     realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['Salesforce, HubSpot, Shopify, Google Analytics, AWS, Azure'],
-    useCases: ['Sales performance analysis, Customer behavior insights, Financial forecasting, Marketing ROI optimization'],
+    integrations: [
+      'Salesforce, HubSpot, Shopify, Google Analytics, AWS, Azure',
+    ],
+    useCases: [
+      'Sales performance analysis, Customer behavior insights, Financial forecasting, Marketing ROI optimization',
+    ],
     roi: 'Increase data-driven decision making by 300% and reduce reporting time by 80%',
     competitors: ['Tableau, Power BI, Looker, Qlik'],
     marketSize: '$29B Business Intelligence market',
@@ -49,21 +57,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom data connectors, AI model training, and white-label options.',
+    implementationDetails:
+      'Cloud-hosted platform with custom data connectors, AI model training, and white-label options.',
     launchDate: '2025-01-15',
     customers: 23,
     rating: 4.8,
-    reviews: 18
+    reviews: 18,
   },
 
   // Cybersecurity & Compliance Services
   {
     id: 'zero-trust-security-orchestrator',
     name: 'Zero Trust Security Orchestrator',
-    tagline: 'Comprehensive zero-trust security framework with automated threat response',
+    tagline:
+      'Comprehensive zero-trust security framework with automated threat response',
     price: '$599',
     period: '/month',
-    description: 'Enterprise-grade zero-trust security platform that continuously validates every user, device, and transaction. Features automated threat detection, response orchestration, and compliance reporting for SOC 2, ISO 27001, and GDPR.',
+    description:
+      'Enterprise-grade zero-trust security platform that continuously validates every user, device, and transaction. Features automated threat detection, response orchestration, and compliance reporting for SOC 2, ISO 27001, and GDPR.',
     features: [
       'Continuous identity verification and device health checks',
       'Micro-segmentation and least-privilege access control',
@@ -74,14 +85,15 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Multi-factor authentication with biometric support',
       'Network traffic analysis and anomaly detection',
       'Vulnerability assessment and patch management',
-      '24/7 security operations center (SOC) support'
+      '24/7 security operations center (SOC) support',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/zero-trust-security-orchestrator',
-    marketPosition: 'Enterprise-grade zero-trust solution competing with Palo Alto Networks and CrowdStrike.',
+    marketPosition:
+      'Enterprise-grade zero-trust solution competing with Palo Alto Networks and CrowdStrike.',
     targetAudience: 'CISOs, security teams, compliance officers, enterprise IT',
     trialDays: 30,
     setupTime: '1-2 weeks',
@@ -89,7 +101,9 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     realService: true,
     technology: ['Kubernetes, Istio, Envoy, OPA, Falco, Next.js'],
     integrations: ['Okta, Azure AD, AWS IAM, Splunk, CrowdStrike, Palo Alto'],
-    useCases: ['Enterprise security, Compliance automation, Threat detection, Access management'],
+    useCases: [
+      'Enterprise security, Compliance automation, Threat detection, Access management',
+    ],
     roi: 'Reduce security incidents by 85% and achieve 99.9% compliance audit success',
     competitors: ['Palo Alto Networks, CrowdStrike, Zscaler, Okta'],
     marketSize: '$45B Cybersecurity market',
@@ -97,21 +111,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'On-premise or cloud deployment with custom security policies, integration services, and dedicated support.',
+    implementationDetails:
+      'On-premise or cloud deployment with custom security policies, integration services, and dedicated support.',
     launchDate: '2025-01-20',
     customers: 15,
     rating: 4.9,
-    reviews: 12
+    reviews: 12,
   },
 
   // DevOps & Infrastructure Services
   {
     id: 'intelligent-devops-automation',
     name: 'Intelligent DevOps Automation Platform',
-    tagline: 'AI-powered DevOps automation with intelligent pipeline optimization',
+    tagline:
+      'AI-powered DevOps automation with intelligent pipeline optimization',
     price: '$299',
     period: '/month',
-    description: 'Next-generation DevOps platform that uses machine learning to optimize CI/CD pipelines, automatically detect deployment risks, and provide intelligent recommendations for infrastructure scaling and cost optimization.',
+    description:
+      'Next-generation DevOps platform that uses machine learning to optimize CI/CD pipelines, automatically detect deployment risks, and provide intelligent recommendations for infrastructure scaling and cost optimization.',
     features: [
       'AI-powered pipeline optimization and failure prediction',
       'Automated testing with intelligent test case generation',
@@ -122,14 +139,15 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Automated rollback and disaster recovery',
       'Security scanning in CI/CD pipeline',
       'Performance testing and load simulation',
-      'Team collaboration and knowledge sharing'
+      'Team collaboration and knowledge sharing',
     ],
     popular: true,
     icon: '⚡',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/intelligent-devops-automation',
-    marketPosition: 'Competes with GitLab CI/CD and Jenkins while adding AI capabilities and intelligent automation.',
+    marketPosition:
+      'Competes with GitLab CI/CD and Jenkins while adding AI capabilities and intelligent automation.',
     targetAudience: 'DevOps engineers, platform teams, development teams, SREs',
     trialDays: 14,
     setupTime: '3-7 days',
@@ -137,7 +155,9 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     realService: true,
     technology: ['Kubernetes, Docker, Terraform, Ansible, Python, React'],
     integrations: ['GitHub, GitLab, Bitbucket, AWS, Azure, GCP, Slack, Teams'],
-    useCases: ['CI/CD automation, Infrastructure management, Cloud optimization, Deployment orchestration'],
+    useCases: [
+      'CI/CD automation, Infrastructure management, Cloud optimization, Deployment orchestration',
+    ],
     roi: 'Reduce deployment time by 70% and infrastructure costs by 30%',
     competitors: ['GitLab CI/CD, Jenkins, CircleCI, GitHub Actions'],
     marketSize: '$8B DevOps market',
@@ -145,11 +165,12 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'devops-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'SaaS platform with custom integrations, dedicated support, and on-premise deployment options.',
+    implementationDetails:
+      'SaaS platform with custom integrations, dedicated support, and on-premise deployment options.',
     launchDate: '2025-01-25',
     customers: 31,
     rating: 4.7,
-    reviews: 25
+    reviews: 25,
   },
 
   // Customer Experience & Support Services
@@ -159,7 +180,8 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     tagline: 'Omnichannel customer experience with AI-powered personalization',
     price: '$449',
     period: '/month',
-    description: 'Unified customer experience platform that combines customer support, marketing automation, and AI-powered personalization. Delivers consistent, personalized experiences across all customer touchpoints.',
+    description:
+      'Unified customer experience platform that combines customer support, marketing automation, and AI-powered personalization. Delivers consistent, personalized experiences across all customer touchpoints.',
     features: [
       'AI-powered customer journey mapping and optimization',
       'Omnichannel support (chat, email, phone, social media)',
@@ -170,22 +192,28 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Self-service knowledge base with AI search',
       'Customer feedback and survey management',
       'Integration with CRM and marketing tools',
-      'Advanced analytics and reporting dashboard'
+      'Advanced analytics and reporting dashboard',
     ],
     popular: true,
     icon: '💬',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/ai-customer-experience-platform',
-    marketPosition: 'Competes with Zendesk and Intercom while adding AI capabilities and omnichannel orchestration.',
-    targetAudience: 'Customer success teams, marketing teams, support teams, product managers',
+    marketPosition:
+      'Competes with Zendesk and Intercom while adding AI capabilities and omnichannel orchestration.',
+    targetAudience:
+      'Customer success teams, marketing teams, support teams, product managers',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Customer Experience',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis'],
-    integrations: ['Salesforce, HubSpot, Shopify, Slack, Teams, WhatsApp, Facebook'],
-    useCases: ['Customer support automation, Marketing personalization, Customer journey optimization, Support analytics'],
+    integrations: [
+      'Salesforce, HubSpot, Shopify, Slack, Teams, WhatsApp, Facebook',
+    ],
+    useCases: [
+      'Customer support automation, Marketing personalization, Customer journey optimization, Support analytics',
+    ],
     roi: 'Increase customer satisfaction by 40% and reduce support costs by 50%',
     competitors: ['Zendesk, Intercom, Freshdesk, Help Scout'],
     marketSize: '$15B Customer Experience market',
@@ -193,21 +221,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'customer-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom integrations, white-label options, and dedicated support.',
+    implementationDetails:
+      'Cloud-hosted platform with custom integrations, white-label options, and dedicated support.',
     launchDate: '2025-02-01',
     customers: 28,
     rating: 4.8,
-    reviews: 22
+    reviews: 22,
   },
 
   // Financial Technology Services
   {
     id: 'fintech-compliance-automation',
     name: 'FinTech Compliance Automation Suite',
-    tagline: 'Automated regulatory compliance for financial services and fintech companies',
+    tagline:
+      'Automated regulatory compliance for financial services and fintech companies',
     price: '$799',
     period: '/month',
-    description: 'Comprehensive compliance automation platform designed specifically for fintech companies. Automates KYC/AML processes, regulatory reporting, risk assessment, and audit trail management for multiple jurisdictions.',
+    description:
+      'Comprehensive compliance automation platform designed specifically for fintech companies. Automates KYC/AML processes, regulatory reporting, risk assessment, and audit trail management for multiple jurisdictions.',
     features: [
       'Automated KYC/AML verification and screening',
       'Multi-jurisdiction regulatory compliance (US, EU, UK, APAC)',
@@ -218,22 +249,28 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Integration with banking and payment systems',
       'Custom compliance rule engine',
       'Regulatory update notifications and impact analysis',
-      'Compliance dashboard and reporting'
+      'Compliance dashboard and reporting',
     ],
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-300',
     link: 'https://ziontechgroup.com/services/fintech-compliance-automation',
-    marketPosition: 'Specialized fintech compliance solution competing with Jumio and Onfido.',
-    targetAudience: 'Fintech companies, banks, payment processors, compliance officers',
+    marketPosition:
+      'Specialized fintech compliance solution competing with Jumio and Onfido.',
+    targetAudience:
+      'Fintech companies, banks, payment processors, compliance officers',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'FinTech',
     realService: true,
     technology: ['Python, React, Node.js, PostgreSQL, Redis, AWS'],
-    integrations: ['Stripe, Plaid, Adyen, banking APIs, identity verification services'],
-    useCases: ['KYC/AML automation, Regulatory reporting, Risk management, Compliance monitoring'],
+    integrations: [
+      'Stripe, Plaid, Adyen, banking APIs, identity verification services',
+    ],
+    useCases: [
+      'KYC/AML automation, Regulatory reporting, Risk management, Compliance monitoring',
+    ],
     roi: 'Reduce compliance costs by 60% and achieve 99.9% regulatory compliance rate',
     competitors: ['Jumio, Onfido, Sumsub, ComplyAdvantage'],
     marketSize: '$12B Fintech Compliance market',
@@ -241,21 +278,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'fintech-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom integrations, dedicated compliance experts, and 24/7 support.',
+    implementationDetails:
+      'Cloud-hosted platform with custom integrations, dedicated compliance experts, and 24/7 support.',
     launchDate: '2025-02-05',
     customers: 12,
     rating: 4.9,
-    reviews: 10
+    reviews: 10,
   },
 
   // Healthcare & Telemedicine Services
   {
     id: 'telehealth-ai-platform',
     name: 'Telehealth AI Platform',
-    tagline: 'AI-powered telemedicine platform with diagnostic assistance and patient management',
+    tagline:
+      'AI-powered telemedicine platform with diagnostic assistance and patient management',
     price: '$599',
     period: '/month',
-    description: 'Comprehensive telehealth platform that combines video consultations with AI-powered diagnostic assistance, patient monitoring, and healthcare analytics. Designed for healthcare providers, clinics, and telemedicine startups.',
+    description:
+      'Comprehensive telehealth platform that combines video consultations with AI-powered diagnostic assistance, patient monitoring, and healthcare analytics. Designed for healthcare providers, clinics, and telemedicine startups.',
     features: [
       'HD video consultations with screen sharing',
       'AI-powered symptom analysis and preliminary diagnosis',
@@ -266,22 +306,28 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Healthcare analytics and reporting',
       'HIPAA and GDPR compliance',
       'Mobile apps for patients and providers',
-      'Integration with medical devices and wearables'
+      'Integration with medical devices and wearables',
     ],
     popular: true,
     icon: '🏥',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/telehealth-ai-platform',
-    marketPosition: 'Competes with Doxy.me and Amwell while adding AI capabilities and comprehensive patient management.',
-    targetAudience: 'Healthcare providers, clinics, telemedicine startups, health systems',
+    marketPosition:
+      'Competes with Doxy.me and Amwell while adding AI capabilities and comprehensive patient management.',
+    targetAudience:
+      'Healthcare providers, clinics, telemedicine startups, health systems',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Healthcare & Biotech',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, WebRTC, PostgreSQL'],
-    integrations: ['Epic, Cerner, Practice Fusion, Stripe, Twilio, medical devices'],
-    useCases: ['Telemedicine consultations, Patient monitoring, Healthcare analytics, Medical device integration'],
+    integrations: [
+      'Epic, Cerner, Practice Fusion, Stripe, Twilio, medical devices',
+    ],
+    useCases: [
+      'Telemedicine consultations, Patient monitoring, Healthcare analytics, Medical device integration',
+    ],
     roi: 'Increase patient engagement by 200% and reduce no-show rates by 60%',
     competitors: ['Doxy.me, Amwell, Teladoc, MDLive'],
     marketSize: '$185B Telehealth market',
@@ -289,21 +335,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'healthcare-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom integrations, HIPAA compliance certification, and dedicated support.',
+    implementationDetails:
+      'Cloud-hosted platform with custom integrations, HIPAA compliance certification, and dedicated support.',
     launchDate: '2025-02-10',
     customers: 18,
     rating: 4.8,
-    reviews: 15
+    reviews: 15,
   },
 
   // E-commerce & Retail Services
   {
     id: 'ai-ecommerce-optimization',
     name: 'AI E-commerce Optimization Platform',
-    tagline: 'AI-powered e-commerce optimization with personalized recommendations and dynamic pricing',
+    tagline:
+      'AI-powered e-commerce optimization with personalized recommendations and dynamic pricing',
     price: '$349',
     period: '/month',
-    description: 'Intelligent e-commerce platform that uses AI to optimize product recommendations, dynamic pricing, inventory management, and customer segmentation. Increases conversion rates and customer lifetime value.',
+    description:
+      'Intelligent e-commerce platform that uses AI to optimize product recommendations, dynamic pricing, inventory management, and customer segmentation. Increases conversion rates and customer lifetime value.',
     features: [
       'AI-powered product recommendations and personalization',
       'Dynamic pricing optimization based on demand and competition',
@@ -314,22 +363,28 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Multi-channel sales integration',
       'Advanced analytics and reporting',
       'Mobile app optimization',
-      'Integration with major e-commerce platforms'
+      'Integration with major e-commerce platforms',
     ],
     popular: true,
     icon: '🛒',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/ai-ecommerce-optimization',
-    marketPosition: 'Competes with Dynamic Yield and Algolia while adding comprehensive e-commerce optimization.',
-    targetAudience: 'E-commerce businesses, online retailers, DTC brands, marketplace operators',
+    marketPosition:
+      'Competes with Dynamic Yield and Algolia while adding comprehensive e-commerce optimization.',
+    targetAudience:
+      'E-commerce businesses, online retailers, DTC brands, marketplace operators',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'E-commerce & Retail',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis'],
-    integrations: ['Shopify, WooCommerce, Magento, BigCommerce, Stripe, PayPal'],
-    useCases: ['Product recommendations, Dynamic pricing, Inventory optimization, Customer segmentation'],
+    integrations: [
+      'Shopify, WooCommerce, Magento, BigCommerce, Stripe, PayPal',
+    ],
+    useCases: [
+      'Product recommendations, Dynamic pricing, Inventory optimization, Customer segmentation',
+    ],
     roi: 'Increase conversion rates by 35% and average order value by 25%',
     competitors: ['Dynamic Yield, Algolia, Klevu, Nosto'],
     marketSize: '$18B E-commerce optimization market',
@@ -337,21 +392,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'ecommerce-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'SaaS platform with custom integrations, dedicated optimization experts, and white-label options.',
+    implementationDetails:
+      'SaaS platform with custom integrations, dedicated optimization experts, and white-label options.',
     launchDate: '2025-02-15',
     customers: 35,
     rating: 4.7,
-    reviews: 28
+    reviews: 28,
   },
 
   // Supply Chain & Logistics Services
   {
     id: 'intelligent-supply-chain-platform',
     name: 'Intelligent Supply Chain Platform',
-    tagline: 'AI-powered supply chain optimization with real-time visibility and predictive analytics',
+    tagline:
+      'AI-powered supply chain optimization with real-time visibility and predictive analytics',
     price: '$499',
     period: '/month',
-    description: 'Comprehensive supply chain management platform that provides real-time visibility, predictive analytics, and automated optimization for inventory, logistics, and supplier management.',
+    description:
+      'Comprehensive supply chain management platform that provides real-time visibility, predictive analytics, and automated optimization for inventory, logistics, and supplier management.',
     features: [
       'Real-time supply chain visibility and tracking',
       'AI-powered demand forecasting and inventory optimization',
@@ -362,22 +420,26 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Multi-warehouse management',
       'Integration with ERP and WMS systems',
       'Mobile apps for field operations',
-      'Advanced analytics and reporting'
+      'Advanced analytics and reporting',
     ],
     popular: true,
     icon: '🚚',
     color: 'from-green-600 to-blue-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/intelligent-supply-chain-platform',
-    marketPosition: 'Competes with SAP SCM and Oracle SCM while offering modern AI capabilities and cloud-native architecture.',
-    targetAudience: 'Manufacturing companies, retailers, logistics providers, supply chain managers',
+    marketPosition:
+      'Competes with SAP SCM and Oracle SCM while offering modern AI capabilities and cloud-native architecture.',
+    targetAudience:
+      'Manufacturing companies, retailers, logistics providers, supply chain managers',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Supply Chain & Logistics',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, IoT'],
     integrations: ['SAP, Oracle, NetSuite, Shopify, FedEx, UPS, DHL'],
-    useCases: ['Inventory optimization, Logistics planning, Supplier management, Risk mitigation'],
+    useCases: [
+      'Inventory optimization, Logistics planning, Supplier management, Risk mitigation',
+    ],
     roi: 'Reduce inventory costs by 25% and improve delivery times by 30%',
     competitors: ['SAP SCM, Oracle SCM, Manhattan Associates, JDA Software'],
     marketSize: '$22B Supply Chain Management market',
@@ -385,21 +447,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'supply-chain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom integrations, dedicated implementation team, and 24/7 support.',
+    implementationDetails:
+      'Cloud-hosted platform with custom integrations, dedicated implementation team, and 24/7 support.',
     launchDate: '2025-02-20',
     customers: 22,
     rating: 4.8,
-    reviews: 18
+    reviews: 18,
   },
 
   // Education & Learning Services
   {
     id: 'ai-learning-management-system',
     name: 'AI Learning Management System',
-    tagline: 'Intelligent learning platform with personalized education paths and adaptive content',
+    tagline:
+      'Intelligent learning platform with personalized education paths and adaptive content',
     price: '$199',
     period: '/month',
-    description: 'Modern learning management system powered by AI that delivers personalized learning experiences, adaptive content, and comprehensive analytics for educational institutions and corporate training.',
+    description:
+      'Modern learning management system powered by AI that delivers personalized learning experiences, adaptive content, and comprehensive analytics for educational institutions and corporate training.',
     features: [
       'AI-powered personalized learning paths',
       'Adaptive content delivery based on learning style',
@@ -410,22 +475,28 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Mobile learning apps for students and teachers',
       'Integration with existing educational tools',
       'Advanced analytics and reporting',
-      'Multi-language support and accessibility'
+      'Multi-language support and accessibility',
     ],
     popular: true,
     icon: '🎓',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/ai-learning-management-system',
-    marketPosition: 'Competes with Canvas and Blackboard while adding AI capabilities and modern user experience.',
-    targetAudience: 'Educational institutions, corporate training departments, online learning platforms',
+    marketPosition:
+      'Competes with Canvas and Blackboard while adding AI capabilities and modern user experience.',
+    targetAudience:
+      'Educational institutions, corporate training departments, online learning platforms',
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'Education & Research',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, WebRTC'],
-    integrations: ['Google Workspace, Microsoft 365, Zoom, Stripe, payment gateways'],
-    useCases: ['K-12 education, Higher education, Corporate training, Online courses'],
+    integrations: [
+      'Google Workspace, Microsoft 365, Zoom, Stripe, payment gateways',
+    ],
+    useCases: [
+      'K-12 education, Higher education, Corporate training, Online courses',
+    ],
     roi: 'Increase student engagement by 150% and improve learning outcomes by 40%',
     competitors: ['Canvas, Blackboard, Moodle, D2L Brightspace'],
     marketSize: '$28B Learning Management System market',
@@ -433,21 +504,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'education-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom branding, integration services, and dedicated support.',
+    implementationDetails:
+      'Cloud-hosted platform with custom branding, integration services, and dedicated support.',
     launchDate: '2025-02-25',
     customers: 45,
     rating: 4.7,
-    reviews: 38
+    reviews: 38,
   },
 
   // Real Estate & Property Services
   {
     id: 'ai-real-estate-analytics',
     name: 'AI Real Estate Analytics Platform',
-    tagline: 'Data-driven real estate insights with AI-powered market analysis and investment recommendations',
+    tagline:
+      'Data-driven real estate insights with AI-powered market analysis and investment recommendations',
     price: '$399',
     period: '/month',
-    description: 'Comprehensive real estate analytics platform that combines market data, AI-powered insights, and predictive modeling to help investors, agents, and developers make informed decisions.',
+    description:
+      'Comprehensive real estate analytics platform that combines market data, AI-powered insights, and predictive modeling to help investors, agents, and developers make informed decisions.',
     features: [
       'AI-powered market analysis and trend prediction',
       'Property valuation and investment analysis',
@@ -458,22 +532,26 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Mobile apps for field agents',
       'Advanced reporting and visualization',
       'Custom market research reports',
-      'API access for custom integrations'
+      'API access for custom integrations',
     ],
     popular: true,
     icon: '🏠',
     color: 'from-blue-600 to-green-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/ai-real-estate-analytics',
-    marketPosition: 'Competes with CoStar and Real Capital Analytics while offering AI capabilities and modern analytics.',
-    targetAudience: 'Real estate investors, agents, developers, property managers',
+    marketPosition:
+      'Competes with CoStar and Real Capital Analytics while offering AI capabilities and modern analytics.',
+    targetAudience:
+      'Real estate investors, agents, developers, property managers',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Real Estate',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis'],
     integrations: ['MLS systems, Zillow API, Redfin API, property databases'],
-    useCases: ['Market analysis, Investment analysis, Portfolio management, Risk assessment'],
+    useCases: [
+      'Market analysis, Investment analysis, Portfolio management, Risk assessment',
+    ],
     roi: 'Improve investment returns by 20% and reduce market research time by 70%',
     competitors: ['CoStar, Real Capital Analytics, CoreLogic, Attom Data'],
     marketSize: '$15B Real Estate Analytics market',
@@ -481,21 +559,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'real-estate-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom data feeds, dedicated analysts, and white-label options.',
+    implementationDetails:
+      'Cloud-hosted platform with custom data feeds, dedicated analysts, and white-label options.',
     launchDate: '2025-03-01',
     customers: 28,
     rating: 4.8,
-    reviews: 22
+    reviews: 22,
   },
 
   // Legal & Compliance Services
   {
     id: 'ai-legal-research-platform',
     name: 'AI Legal Research Platform',
-    tagline: 'Intelligent legal research with AI-powered case analysis and document automation',
+    tagline:
+      'Intelligent legal research with AI-powered case analysis and document automation',
     price: '$299',
     period: '/month',
-    description: 'Advanced legal research platform that uses AI to analyze case law, automate document generation, and provide intelligent legal insights for law firms and legal professionals.',
+    description:
+      'Advanced legal research platform that uses AI to analyze case law, automate document generation, and provide intelligent legal insights for law firms and legal professionals.',
     features: [
       'AI-powered case law analysis and precedent identification',
       'Intelligent document generation and automation',
@@ -506,22 +587,28 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Collaborative workspace for legal teams',
       'Mobile apps for lawyers and paralegals',
       'Advanced search and filtering capabilities',
-      'Export and sharing tools'
+      'Export and sharing tools',
     ],
     popular: true,
     icon: '⚖️',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-300',
     link: 'https://ziontechgroup.com/services/ai-legal-research-platform',
-    marketPosition: 'Competes with Westlaw and LexisNexis while adding AI capabilities and modern user experience.',
-    targetAudience: 'Law firms, legal professionals, corporate legal departments, law schools',
+    marketPosition:
+      'Competes with Westlaw and LexisNexis while adding AI capabilities and modern user experience.',
+    targetAudience:
+      'Law firms, legal professionals, corporate legal departments, law schools',
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'Legal & Compliance',
     realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Elasticsearch'],
+    technology: [
+      'React, Node.js, Python, TensorFlow, PostgreSQL, Elasticsearch',
+    ],
     integrations: ['Westlaw, LexisNexis, court systems, legal databases'],
-    useCases: ['Legal research, Document automation, Case analysis, Contract review'],
+    useCases: [
+      'Legal research, Document automation, Case analysis, Contract review',
+    ],
     roi: 'Reduce research time by 60% and improve case outcomes by 25%',
     competitors: ['Westlaw, LexisNexis, Bloomberg Law, Fastcase'],
     marketSize: '$8B Legal Technology market',
@@ -529,21 +616,24 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'legal-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom integrations, legal expert consultation, and dedicated support.',
+    implementationDetails:
+      'Cloud-hosted platform with custom integrations, legal expert consultation, and dedicated support.',
     launchDate: '2025-03-05',
     customers: 19,
     rating: 4.8,
-    reviews: 15
+    reviews: 15,
   },
 
   // Marketing & Advertising Services
   {
     id: 'ai-marketing-automation-suite',
     name: 'AI Marketing Automation Suite',
-    tagline: 'Intelligent marketing automation with AI-powered optimization and personalization',
+    tagline:
+      'Intelligent marketing automation with AI-powered optimization and personalization',
     price: '$449',
     period: '/month',
-    description: 'Comprehensive marketing automation platform that uses AI to optimize campaigns, personalize content, and automate customer journey management across all marketing channels.',
+    description:
+      'Comprehensive marketing automation platform that uses AI to optimize campaigns, personalize content, and automate customer journey management across all marketing channels.',
     features: [
       'AI-powered campaign optimization and A/B testing',
       'Customer journey mapping and automation',
@@ -554,22 +644,28 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
       'Social media management and scheduling',
       'Marketing analytics and ROI tracking',
       'Integration with CRM and sales tools',
-      'Mobile app for marketing teams'
+      'Mobile app for marketing teams',
     ],
     popular: true,
     icon: '📢',
     color: 'from-pink-600 to-purple-700',
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/services/ai-marketing-automation-suite',
-    marketPosition: 'Competes with HubSpot and Marketo while adding AI capabilities and advanced automation.',
-    targetAudience: 'Marketing teams, agencies, B2B companies, e-commerce businesses',
+    marketPosition:
+      'Competes with HubSpot and Marketo while adding AI capabilities and advanced automation.',
+    targetAudience:
+      'Marketing teams, agencies, B2B companies, e-commerce businesses',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Marketing & Advertising',
     realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis'],
-    integrations: ['Salesforce, HubSpot, Mailchimp, Facebook, Google Ads, LinkedIn'],
-    useCases: ['Lead generation, Customer acquisition, Campaign optimization, Marketing analytics'],
+    integrations: [
+      'Salesforce, HubSpot, Mailchimp, Facebook, Google Ads, LinkedIn',
+    ],
+    useCases: [
+      'Lead generation, Customer acquisition, Campaign optimization, Marketing analytics',
+    ],
     roi: 'Increase lead generation by 200% and improve conversion rates by 40%',
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],
     marketSize: '$25B Marketing Automation market',
@@ -577,10 +673,11 @@ export const innovativeServicesExpansion2025: MicroSaasService[] = [
     variant: 'marketing-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-hosted platform with custom integrations, dedicated marketing consultants, and white-label options.',
+    implementationDetails:
+      'Cloud-hosted platform with custom integrations, dedicated marketing consultants, and white-label options.',
     launchDate: '2025-03-10',
     customers: 52,
     rating: 4.7,
-    reviews: 41
-  }
+    reviews: 41,
+  },
 ];

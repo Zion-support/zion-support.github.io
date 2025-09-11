@@ -30,7 +30,10 @@ interface MappedUser {
   updatedAt?: string;
 }
 
-export const mapProfileToUser = (supabaseUser: SupabaseUser, profile: Profile): MappedUser => {
+export const mapProfileToUser = (
+  supabaseUser: SupabaseUser,
+  profile: Profile
+): MappedUser => {
   return {
     id: supabaseUser.id,
     email: supabaseUser.email || '',
@@ -39,6 +42,6 @@ export const mapProfileToUser = (supabaseUser: SupabaseUser, profile: Profile): 
     role: profile.role,
     isEmailVerified: profile.is_email_verified || false,
     createdAt: profile.created_at || supabaseUser.created_at,
-    updatedAt: profile.updated_at || supabaseUser.updated_at
+    updatedAt: profile.updated_at || supabaseUser.updated_at,
   };
 };

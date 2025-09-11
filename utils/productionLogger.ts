@@ -9,7 +9,11 @@ export function logInfo(message: string, data?: LogData) {
   // In production, you might want to send this to a logging service
 }
 
-export function logErrorToProduction(message: string, error?: Error, data?: LogData) {
+export function logErrorToProduction(
+  message: string,
+  error?: Error,
+  data?: LogData
+) {
   console.error(`[ERROR] ${message}`, error, data);
   // In production, you might want to send this to an error tracking service
 }

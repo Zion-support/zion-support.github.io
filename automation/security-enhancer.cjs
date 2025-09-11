@@ -9,7 +9,14 @@ class SecurityEnhancer {
   }
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
+    const prefix =
+      type === 'ERROR'
+        ? '❌'
+        : type === 'SUCCESS'
+          ? '✅'
+          : type === 'WARNING'
+            ? '⚠️'
+            : 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
   async runCommand(command, description) {
@@ -66,10 +73,14 @@ class SecurityEnhancer {
       securityChecks: [
         'Dependency audit completed',
         'Vulnerability check performed',
-        'Security headers verified'
-      ]
+        'Security headers verified',
+      ],
     };
-    const reportPath = path.join(this.projectRoot, 'automation-reports', 'security-enhancement-report.json');
+    const reportPath = path.join(
+      this.projectRoot,
+      'automation-reports',
+      'security-enhancement-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);
   }

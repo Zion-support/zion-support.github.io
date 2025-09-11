@@ -10,7 +10,7 @@ const sampleTitles = [
   'Blockchain Development Service',
   'Machine Learning Platform',
   'DevOps Automation Tool',
-  'Network Security Solution'
+  'Network Security Solution',
 ];
 
 const sampleDescriptions = [
@@ -23,7 +23,7 @@ const sampleDescriptions = [
   'Blockchain development and implementation services for decentralized applications.',
   'Machine learning platform with pre-trained models and custom training capabilities.',
   'DevOps automation tools for continuous integration and deployment pipelines.',
-  'Network security solution with advanced threat detection and prevention.'
+  'Network security solution with advanced threat detection and prevention.',
 ];
 
 const sampleTags = [
@@ -36,7 +36,7 @@ const sampleTags = [
   ['Blockchain', 'Development', 'DApps'],
   ['Machine Learning', 'AI', 'Platform'],
   ['DevOps', 'Automation', 'CI/CD'],
-  ['Network', 'Security', 'Threat Detection']
+  ['Network', 'Security', 'Threat Detection'],
 ];
 
 const sampleImages = [
@@ -45,19 +45,34 @@ const sampleImages = [
   'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
   'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
   'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
 ];
 
 const categories: Array<'products' | 'talent' | 'equipment' | 'services'> = [
-  'products', 'talent', 'equipment', 'services'
+  'products',
+  'talent',
+  'equipment',
+  'services',
 ];
 
 const priceRanges = [
-  '$500', '$1,200', '$2,500', '$5,000', '$8,500', '$15,000', '$25,000', '$50,000'
+  '$500',
+  '$1,200',
+  '$2,500',
+  '$5,000',
+  '$8,500',
+  '$15,000',
+  '$25,000',
+  '$50,000',
 ];
 
 const locations = [
-  'San Francisco, CA', 'New York, NY', 'Austin, TX', 'Seattle, WA', 'Boston, MA', 'Remote'
+  'San Francisco, CA',
+  'New York, NY',
+  'Austin, TX',
+  'Seattle, WA',
+  'Boston, MA',
+  'Remote',
 ];
 
 const sellerNames = [
@@ -68,7 +83,7 @@ const sellerNames = [
   'IoT Solutions Pro',
   'DataGenius Consulting',
   'Innovation Labs',
-  'FutureTech Systems'
+  'FutureTech Systems',
 ];
 
 export function generateRandomListing(): MarketplaceItem {
@@ -78,13 +93,13 @@ export function generateRandomListing(): MarketplaceItem {
   const locationIndex = Math.floor(Math.random() * locations.length);
   const sellerNameIndex = Math.floor(Math.random() * sellerNames.length);
   const imageIndex = Math.floor(Math.random() * sampleImages.length);
-  
+
   const category = categories[categoryIndex];
   const price = priceRanges[priceIndex];
   const location = locations[locationIndex];
   const sellerName = sellerNames[sellerNameIndex];
   const image = sampleImages[imageIndex];
-  
+
   return {
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
     title: sampleTitles[randomIndex] || 'Default Title',
@@ -95,18 +110,26 @@ export function generateRandomListing(): MarketplaceItem {
     reviews: Math.floor(Math.random() * 200) + 10,
     views: Math.floor(Math.random() * 5000) + 100,
     likes: Math.floor(Math.random() * 300) + 20,
-    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    image:
+      image ||
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: sampleTags[randomIndex] || ['Technology', 'Solution'],
     featured: Math.random() > 0.7,
     seller: {
       name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random() * 1.0,
-      verified: Math.random() > 0.3
+      verified: Math.random() > 0.3,
     },
     location: location || 'Remote',
     availability: Math.random() > 0.8 ? 'limited' : 'available',
-    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,
-    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`
+    deliveryTime:
+      category === 'talent'
+        ? 'Immediate'
+        : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,
+    warranty:
+      category === 'talent'
+        ? 'N/A'
+        : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`,
   };
 }
 

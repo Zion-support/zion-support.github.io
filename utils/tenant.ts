@@ -15,24 +15,25 @@ export type Tenant = {
 };
 
 export const defaultTenant: Tenant = {
-  id: "default",
-  brandName: "Zion Tech Group",
+  id: 'default',
+  brandName: 'Zion Tech Group',
   subdomain: null,
   customDomain: null,
-  primaryColor: "#4f46e5",
+  primaryColor: '#4f46e5',
   logoUrl: null,
-  themePreset: "light",
+  themePreset: 'light',
   navbarLinks: [
-    { label: "Services", href: "/services" },
-    { label: "Autonomy", href: "/autonomy" },
-    { label: "Products", href: "/products" },
-    { label: "Blog", href: "/blog" },
-    { label: "Talent", href: "/talent" },
-    { label: "Contact", href: "/contact" }
+    { label: 'Services', href: '/services' },
+    { label: 'Autonomy', href: '/autonomy' },
+    { label: 'Products', href: '/products' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Talent', href: '/talent' },
+    { label: 'Contact', href: '/contact' },
   ],
-  footerText: "© " + new Date().getFullYear() + " Zion Tech Group",
-  heroTitle: "Intelligent AI Platforms for the Next Decade",
-  heroSubtitle: "Ship faster with our high‑performance, white‑label platform and expert services.",
+  footerText: '© ' + new Date().getFullYear() + ' Zion Tech Group',
+  heroTitle: 'Intelligent AI Platforms for the Next Decade',
+  heroSubtitle:
+    'Ship faster with our high‑performance, white‑label platform and expert services.',
   suspended: false,
 };
 
@@ -43,7 +44,9 @@ export function getSubdomainFromHost(host?: string): string | null {
   return parts[0];
 }
 
-export async function fetchTenantBySubdomain(subdomain: string): Promise<Tenant | null> {
+export async function fetchTenantBySubdomain(
+  subdomain: string
+): Promise<Tenant | null> {
   if (isSupabaseConfigured()) {
     const { data, error } = await supabase
       .from('tenants')
@@ -79,7 +82,8 @@ const isSupabaseConfigured = () => {
   return (
     typeof process !== 'undefined' &&
     !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co' &&
+    process.env.NEXT_PUBLIC_SUPABASE_URL !==
+      'https://placeholder.supabase.co' &&
     !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY &&
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY !== 'placeholder-key'
   );

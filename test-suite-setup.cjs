@@ -1,32 +1,35 @@
 #!/usr/bin/env node
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-console.log('🧪 Test Suite Setup - Comprehensive Testing Implementation')
-console.log('==========================================================')
+console.log('🧪 Test Suite Setup - Comprehensive Testing Implementation');
+console.log('==========================================================');
 
 class TestSuiteSetup {
   constructor() {
-    this.testsCreated = []
-    this.startTime = Date.now()
+    this.testsCreated = [];
+    this.startTime = Date.now();
   }
 
   log(message, type = 'info') {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    console.log(logEntry)
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logEntry);
   }
 
   async setupJest() {
-    this.log('Setting up Jest testing framework...')
-    
+    this.log('Setting up Jest testing framework...');
+
     // Install Jest and testing dependencies
     try {
-      execSync('npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event jest-environment-jsdom', { stdio: 'pipe' })
-      this.log('✅ Jest and testing libraries installed')
+      execSync(
+        'npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event jest-environment-jsdom',
+        { stdio: 'pipe' }
+      );
+      this.log('✅ Jest and testing libraries installed');
     } catch (error) {
-      this.log('Jest installation failed, continuing...', 'warning')
+      this.log('Jest installation failed, continuing...', 'warning');
     }
 
     // Create Jest configuration
@@ -34,36 +37,38 @@ class TestSuiteSetup {
       testEnvironment: 'jsdom',
       setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
       moduleNameMapping: {
-        '^@/(.*)$': '<rootDir>/src/$1'
+        '^@/(.*)$': '<rootDir>/src/$1',
       },
       collectCoverageFrom: [
         'src/**/*.{js,jsx,ts,tsx}',
         '!src/**/*.d.ts',
         '!src/index.tsx',
-        '!src/setupTests.ts'
+        '!src/setupTests.ts',
       ],
       coverageThreshold: {
         global: {
           branches: 70,
           functions: 70,
           lines: 70,
-          statements: 70
-        }
-      }
-    }
+          statements: 70,
+        },
+      },
+    };
 
-    fs.writeFileSync('jest.config.json', JSON.stringify(jestConfig, null, 2))
-    this.testsCreated.push('Jest configuration')
+    fs.writeFileSync('jest.config.json', JSON.stringify(jestConfig, null, 2));
+    this.testsCreated.push('Jest configuration');
   }
 
   async setupCypress() {
-    this.log('Setting up Cypress for E2E testing...')
-    
+    this.log('Setting up Cypress for E2E testing...');
+
     try {
-      execSync('npm install --save-dev cypress @cypress/react', { stdio: 'pipe' })
-      this.log('✅ Cypress installed')
+      execSync('npm install --save-dev cypress @cypress/react', {
+        stdio: 'pipe',
+      });
+      this.log('✅ Cypress installed');
     } catch (error) {
-      this.log('Cypress installation failed, continuing...', 'warning')
+      this.log('Cypress installation failed, continuing...', 'warning');
     }
 
     // Create Cypress configuration
@@ -73,23 +78,26 @@ class TestSuiteSetup {
         supportFile: 'cypress/support/e2e.ts',
         specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
         viewportWidth: 1280,
-        viewportHeight: 720
+        viewportHeight: 720,
       },
       component: {
         devServer: {
           framework: 'react',
-          bundler: 'vite'
-        }
-      }
-    }
+          bundler: 'vite',
+        },
+      },
+    };
 
-    fs.writeFileSync('cypress.config.ts', `export default ${JSON.stringify(cypressConfig, null, 2)}`)
-    this.testsCreated.push('Cypress configuration')
+    fs.writeFileSync(
+      'cypress.config.ts',
+      `export default ${JSON.stringify(cypressConfig, null, 2)}`
+    );
+    this.testsCreated.push('Cypress configuration');
   }
 
   async createTestUtilities() {
-    this.log('Creating test utilities...')
-    
+    this.log('Creating test utilities...');
+
     const setupTests = `
 import '@testing-library/jest-dom'
 
@@ -123,23 +131,23 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 }
-`
+`;
 
-    const utilsPath = path.join(process.cwd(), 'src')
+    const utilsPath = path.join(process.cwd(), 'src');
     if (!fs.existsSync(utilsPath)) {
-      fs.mkdirSync(utilsPath, { recursive: true })
+      fs.mkdirSync(utilsPath, { recursive: true });
     }
 
-    fs.writeFileSync(path.join(utilsPath, 'setupTests.ts'), setupTests)
-    this.testsCreated.push('Test setup utilities')
+    fs.writeFileSync(path.join(utilsPath, 'setupTests.ts'), setupTests);
+    this.testsCreated.push('Test setup utilities');
   }
 
   async createComponentTests() {
-    this.log('Creating component tests...')
-    
-    const testDir = path.join(process.cwd(), 'src', '__tests__')
+    this.log('Creating component tests...');
+
+    const testDir = path.join(process.cwd(), 'src', '__tests__');
     if (!fs.existsSync(testDir)) {
-      fs.mkdirSync(testDir, { recursive: true })
+      fs.mkdirSync(testDir, { recursive: true });
     }
 
     // Create ErrorBoundary test
@@ -173,10 +181,13 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Something went wrong.')).toBeInTheDocument()
   })
 })
-`
+`;
 
-    fs.writeFileSync(path.join(testDir, 'ErrorBoundary.test.tsx'), errorBoundaryTest)
-    this.testsCreated.push('ErrorBoundary component test')
+    fs.writeFileSync(
+      path.join(testDir, 'ErrorBoundary.test.tsx'),
+      errorBoundaryTest
+    );
+    this.testsCreated.push('ErrorBoundary component test');
 
     // Create performance monitoring test
     const performanceTest = `
@@ -209,18 +220,21 @@ describe('Performance Monitor', () => {
     consoleSpy.mockRestore()
   })
 })
-`
+`;
 
-    fs.writeFileSync(path.join(testDir, 'performance.test.ts'), performanceTest)
-    this.testsCreated.push('Performance monitoring test')
+    fs.writeFileSync(
+      path.join(testDir, 'performance.test.ts'),
+      performanceTest
+    );
+    this.testsCreated.push('Performance monitoring test');
   }
 
   async createE2ETests() {
-    this.log('Creating E2E tests...')
-    
-    const cypressDir = path.join(process.cwd(), 'cypress', 'e2e')
+    this.log('Creating E2E tests...');
+
+    const cypressDir = path.join(process.cwd(), 'cypress', 'e2e');
     if (!fs.existsSync(cypressDir)) {
-      fs.mkdirSync(cypressDir, { recursive: true })
+      fs.mkdirSync(cypressDir, { recursive: true });
     }
 
     // Create basic E2E test
@@ -249,72 +263,71 @@ describe('Application E2E Tests', () => {
     cy.get('body').should('be.visible')
   })
 })
-`
+`;
 
-    fs.writeFileSync(path.join(cypressDir, 'app.cy.ts'), e2eTest)
-    this.testsCreated.push('E2E test suite')
+    fs.writeFileSync(path.join(cypressDir, 'app.cy.ts'), e2eTest);
+    this.testsCreated.push('E2E test suite');
   }
 
   async createTestScripts() {
-    this.log('Creating test scripts...')
-    
-    const packageJsonPath = path.join(process.cwd(), 'package.json')
-    let packageJson = {}
-    
+    this.log('Creating test scripts...');
+
+    const packageJsonPath = path.join(process.cwd(), 'package.json');
+    let packageJson = {};
+
     if (fs.existsSync(packageJsonPath)) {
-      packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
+      packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
     }
 
     packageJson.scripts = {
       ...packageJson.scripts,
-      'test': 'jest',
+      test: 'jest',
       'test:watch': 'jest --watch',
       'test:coverage': 'jest --coverage',
       'test:e2e': 'cypress run',
       'test:e2e:open': 'cypress open',
-      'test:all': 'npm run test && npm run test:e2e'
-    }
+      'test:all': 'npm run test && npm run test:e2e',
+    };
 
-    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
-    this.testsCreated.push('Test scripts in package.json')
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+    this.testsCreated.push('Test scripts in package.json');
   }
 
   async runTestSetup() {
     try {
-      this.log('Starting test suite setup...')
-      
-      await this.setupJest()
-      await this.setupCypress()
-      await this.createTestUtilities()
-      await this.createComponentTests()
-      await this.createE2ETests()
-      await this.createTestScripts()
-      
-      const endTime = Date.now()
-      const duration = Math.round((endTime - this.startTime) / 1000)
-      
-      console.log('\n🎉 Test Suite Setup Complete!')
-      console.log('=============================')
-      console.log(`Duration: ${duration} seconds`)
-      console.log(`Tests created: ${this.testsCreated.length}`)
-      console.log('\nTest components:')
+      this.log('Starting test suite setup...');
+
+      await this.setupJest();
+      await this.setupCypress();
+      await this.createTestUtilities();
+      await this.createComponentTests();
+      await this.createE2ETests();
+      await this.createTestScripts();
+
+      const endTime = Date.now();
+      const duration = Math.round((endTime - this.startTime) / 1000);
+
+      console.log('\n🎉 Test Suite Setup Complete!');
+      console.log('=============================');
+      console.log(`Duration: ${duration} seconds`);
+      console.log(`Tests created: ${this.testsCreated.length}`);
+      console.log('\nTest components:');
       this.testsCreated.forEach((test, index) => {
-        console.log(`  ${index + 1}. ${test}`)
-      })
-      
-      console.log('\n📋 Available test commands:')
-      console.log('  npm run test          - Run unit tests')
-      console.log('  npm run test:watch    - Run tests in watch mode')
-      console.log('  npm run test:coverage - Run tests with coverage')
-      console.log('  npm run test:e2e      - Run E2E tests')
-      console.log('  npm run test:all      - Run all tests')
-      
+        console.log(`  ${index + 1}. ${test}`);
+      });
+
+      console.log('\n📋 Available test commands:');
+      console.log('  npm run test          - Run unit tests');
+      console.log('  npm run test:watch    - Run tests in watch mode');
+      console.log('  npm run test:coverage - Run tests with coverage');
+      console.log('  npm run test:e2e      - Run E2E tests');
+      console.log('  npm run test:all      - Run all tests');
     } catch (error) {
-      this.log(`Test setup failed: ${error.message}`, 'error')
+      this.log(`Test setup failed: ${error.message}`, 'error');
     }
   }
 }
 
 // Run test setup
-const testSetup = new TestSuiteSetup()
-testSetup.runTestSetup()
+const testSetup = new TestSuiteSetup();
+testSetup.runTestSetup();

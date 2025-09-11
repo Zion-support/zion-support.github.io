@@ -5,47 +5,80 @@ const remainingPages = [
   {
     name: 'ai-seo',
     title: 'AI SEO',
-    description: 'AI-powered search engine optimization with intelligent content analysis.',
+    description:
+      'AI-powered search engine optimization with intelligent content analysis.',
     icon: 'Search',
     color: 'from-green-500 to-emerald-600',
     features: [
-      { title: 'Content Optimization', description: 'AI-driven content analysis and optimization.' },
-      { title: 'Keyword Research', description: 'Intelligent keyword discovery and analysis.' },
-      { title: 'Performance Tracking', description: 'Real-time SEO performance monitoring.' }
-    ]
+      {
+        title: 'Content Optimization',
+        description: 'AI-driven content analysis and optimization.',
+      },
+      {
+        title: 'Keyword Research',
+        description: 'Intelligent keyword discovery and analysis.',
+      },
+      {
+        title: 'Performance Tracking',
+        description: 'Real-time SEO performance monitoring.',
+      },
+    ],
   },
   {
     name: 'interview-assessment',
     title: 'Interview Assessment AI',
-    description: 'AI-powered interview assessment and candidate evaluation platform.',
+    description:
+      'AI-powered interview assessment and candidate evaluation platform.',
     icon: 'Users',
     color: 'from-blue-500 to-indigo-600',
     features: [
-      { title: 'Candidate Evaluation', description: 'Automated candidate assessment and scoring.' },
-      { title: 'Interview Automation', description: 'AI-driven interview process automation.' },
-      { title: 'Talent Analytics', description: 'Comprehensive talent analytics and insights.' }
-    ]
+      {
+        title: 'Candidate Evaluation',
+        description: 'Automated candidate assessment and scoring.',
+      },
+      {
+        title: 'Interview Automation',
+        description: 'AI-driven interview process automation.',
+      },
+      {
+        title: 'Talent Analytics',
+        description: 'Comprehensive talent analytics and insights.',
+      },
+    ],
   },
   {
     name: 'helpdesk',
     title: 'Helpdesk Platform',
-    description: 'AI-powered helpdesk platform with intelligent ticket management.',
+    description:
+      'AI-powered helpdesk platform with intelligent ticket management.',
     icon: 'Headphones',
     color: 'from-purple-500 to-pink-600',
     features: [
-      { title: 'Ticket Management', description: 'Intelligent ticket routing and management.' },
-      { title: 'AI Support', description: 'AI-powered customer support automation.' },
-      { title: 'Analytics Dashboard', description: 'Comprehensive helpdesk analytics.' }
-    ]
-  }
+      {
+        title: 'Ticket Management',
+        description: 'Intelligent ticket routing and management.',
+      },
+      {
+        title: 'AI Support',
+        description: 'AI-powered customer support automation.',
+      },
+      {
+        title: 'Analytics Dashboard',
+        description: 'Comprehensive helpdesk analytics.',
+      },
+    ],
+  },
 ];
 
-const generateServicePage = (service) => {
+const generateServicePage = service => {
   const template = `import React from 'react';
 import { motion } from 'framer-motion';
 import { ${service.icon}, Shield, Zap, CheckCircle, ArrowRight, Clock, Users } from 'lucide-react';
 
-const ${service.name.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}: React.FC = () => {
+const ${service.name
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')}: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -69,7 +102,9 @@ const ${service.name.split('-').map(word => word.charAt(0).toUpperCase() + word.
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-${service.features.map((feature, index) => `
+${service.features
+  .map(
+    (feature, index) => `
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,7 +116,9 @@ ${service.features.map((feature, index) => `
             <p className="text-slate-300">
               ${feature.description}
             </p>
-          </motion.div>`).join('')}
+          </motion.div>`
+  )
+  .join('')}
         </div>
 
         <motion.div
@@ -100,7 +137,10 @@ ${service.features.map((feature, index) => `
   );
 };
 
-export default ${service.name.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')};
+export default ${service.name
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')};
 `;
 
   return template;
@@ -110,7 +150,7 @@ export default ${service.name.split('-').map(word => word.charAt(0).toUpperCase(
 remainingPages.forEach(service => {
   const fileName = `${service.name}.tsx`;
   const filePath = path.join('src/pages/services', fileName);
-  
+
   if (!fs.existsSync(filePath)) {
     const content = generateServicePage(service);
     fs.writeFileSync(filePath, content);

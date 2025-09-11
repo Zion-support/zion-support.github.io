@@ -6,7 +6,7 @@ const FILES_TO_CACHE = [
   '/index.html',
   '/offline.html',
   '/manifest.json',
-  '/vite.svg'
+  '/vite.svg',
 ];
 
 self.addEventListener('install', event => {
@@ -41,15 +41,23 @@ self.addEventListener('fetch', event => {
             if (response.status === 200) {
               try {
                 const requestUrl = new URL(event.request.url); // Use new URL to parse the request's URL
-                if (requestUrl.protocol === 'http:' || requestUrl.protocol === 'https:') {
+                if (
+                  requestUrl.protocol === 'http:' ||
+                  requestUrl.protocol === 'https:'
+                ) {
                   cache.put(event.request, response.clone());
                 } else {
                   // Optionally log that a non-cacheable scheme was skipped
-                  console.log(`Service Worker: Skipped caching request with non-HTTP/S protocol: ${event.request.url}`);
+                  console.log(
+                    `Service Worker: Skipped caching request with non-HTTP/S protocol: ${event.request.url}`
+                  );
                 }
               } catch (e) {
                 // Handle cases where event.request.url might not be a valid URL (though unlikely for a fetch event)
-                console.error(`Service Worker: Could not parse request URL for caching: ${event.request.url}`, e);
+                console.error(
+                  `Service Worker: Could not parse request URL for caching: ${event.request.url}`,
+                  e
+                );
               }
             }
             return response;
@@ -75,7 +83,7 @@ self.addEventListener('push', event => {
   const title = data.title || 'Zion Notification';
   const options = {
     body: data.body,
-    icon: '/vite.svg'
+    icon: '/vite.svg',
   };
   event.waitUntil(self.registration.showNotification(title, options));
 });

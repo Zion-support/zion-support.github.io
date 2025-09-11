@@ -68,17 +68,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const advancedAIServices: AdvancedAIService[] = [
   {
     id: 'ai-cybersecurity-intelligence',
     name: 'AI Cybersecurity Intelligence Platform',
-    tagline: 'Next-generation threat detection and automated incident response powered by AI',
+    tagline:
+      'Next-generation threat detection and automated incident response powered by AI',
     price: '$1,299',
     period: '/month',
-    description: 'Enterprise-grade cybersecurity platform that combines machine learning, behavioral analysis, and automated response to protect against advanced threats. Features real-time threat hunting, vulnerability assessment, compliance monitoring, and intelligent incident orchestration.',
+    description:
+      'Enterprise-grade cybersecurity platform that combines machine learning, behavioral analysis, and automated response to protect against advanced threats. Features real-time threat hunting, vulnerability assessment, compliance monitoring, and intelligent incident orchestration.',
     features: [
       'AI-powered threat detection with 99.9% accuracy',
       'Automated incident response and containment',
@@ -89,7 +91,7 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Advanced SIEM with machine learning',
       'Zero-trust architecture implementation',
       'Automated compliance reporting',
-      '24/7 security operations center (SOC) support'
+      '24/7 security operations center (SOC) support',
     ],
     benefits: [
       'Reduce security incidents by 85%',
@@ -99,7 +101,7 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Protect against zero-day threats proactively',
       'Improve security team productivity by 3x',
       'Real-time visibility across entire infrastructure',
-      'Automated threat hunting and investigation'
+      'Automated threat hunting and investigation',
     ],
     useCases: [
       'Enterprise security operations centers',
@@ -107,11 +109,18 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Financial services and healthcare',
       'Government and defense contractors',
       'E-commerce and retail platforms',
-      'Manufacturing and critical infrastructure'
+      'Manufacturing and critical infrastructure',
     ],
     targetAudience: 'CISOs, Security Teams, Compliance Officers, IT Directors',
-    marketPosition: 'Enterprise-grade alternative to CrowdStrike, Palo Alto Networks, and Splunk with superior AI capabilities',
-    competitors: ['CrowdStrike', 'Palo Alto Networks', 'Splunk', 'IBM Security', 'Microsoft Defender'],
+    marketPosition:
+      'Enterprise-grade alternative to CrowdStrike, Palo Alto Networks, and Splunk with superior AI capabilities',
+    competitors: [
+      'CrowdStrike',
+      'Palo Alto Networks',
+      'Splunk',
+      'IBM Security',
+      'Microsoft Defender',
+    ],
     marketSize: '$150B+ cybersecurity market',
     growthRate: '35% YoY',
     roi: 'Achieve 300% ROI within 12 months through incident reduction and compliance automation',
@@ -123,12 +132,25 @@ export const advancedAIServices: AdvancedAIService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-cybersecurity',
     category: 'AI & Security',
-    technology: ['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Behavioral Analytics', 'Threat Intelligence'],
-    integrations: ['SIEM systems', 'EDR solutions', 'Cloud platforms', 'Identity providers', 'Network security tools'],
+    technology: [
+      'Machine Learning',
+      'Deep Learning',
+      'Natural Language Processing',
+      'Behavioral Analytics',
+      'Threat Intelligence',
+    ],
+    integrations: [
+      'SIEM systems',
+      'EDR solutions',
+      'Cloud platforms',
+      'Identity providers',
+      'Network security tools',
+    ],
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with AI models trained on 10M+ security events, real-time threat feeds, and automated response workflows',
+    implementationDetails:
+      'Multi-tenant SaaS platform with AI models trained on 10M+ security events, real-time threat feeds, and automated response workflows',
     launchDate: '2024-11-15',
     customers: 45,
     rating: 4.9,
@@ -136,57 +158,95 @@ export const advancedAIServices: AdvancedAIService[] = [
     caseStudies: [
       'Fortune 500 bank reduced security incidents by 90%',
       'Healthcare provider achieved HIPAA compliance in 30 days',
-      'Manufacturing company prevented $2M ransomware attack'
+      'Manufacturing company prevented $2M ransomware attack',
     ],
     testimonials: [
       '"The AI threat detection is incredibly accurate. We\'ve stopped attacks before they could cause damage." - CISO, Fortune 500',
-      '"Automated compliance reporting saves us 20 hours per week." - Compliance Officer, Healthcare'
+      '"Automated compliance reporting saves us 20 hours per week." - Compliance Officer, Healthcare',
     ],
     pricingTiers: [
       {
         name: 'Starter',
         price: '$799',
         period: '/month',
-        features: ['Basic threat detection', 'Vulnerability scanning', 'Compliance monitoring'],
+        features: [
+          'Basic threat detection',
+          'Vulnerability scanning',
+          'Compliance monitoring',
+        ],
         limits: ['Up to 100 endpoints', 'Basic reporting', 'Email support'],
-        bestFor: 'Small to medium businesses'
+        bestFor: 'Small to medium businesses',
       },
       {
         name: 'Professional',
         price: '$1,299',
         period: '/month',
-        features: ['Advanced AI detection', 'Automated response', '24/7 SOC support'],
-        limits: ['Up to 1,000 endpoints', 'Advanced analytics', 'Phone support'],
-        bestFor: 'Medium to large enterprises'
+        features: [
+          'Advanced AI detection',
+          'Automated response',
+          '24/7 SOC support',
+        ],
+        limits: [
+          'Up to 1,000 endpoints',
+          'Advanced analytics',
+          'Phone support',
+        ],
+        bestFor: 'Medium to large enterprises',
       },
       {
         name: 'Enterprise',
         price: '$2,499',
         period: '/month',
-        features: ['Custom AI models', 'White-label options', 'Dedicated security engineer'],
-        limits: ['Unlimited endpoints', 'Custom integrations', 'Priority support'],
-        bestFor: 'Large enterprises and MSSPs'
-      }
+        features: [
+          'Custom AI models',
+          'White-label options',
+          'Dedicated security engineer',
+        ],
+        limits: [
+          'Unlimited endpoints',
+          'Custom integrations',
+          'Priority support',
+        ],
+        bestFor: 'Large enterprises and MSSPs',
+      },
     ],
-    industryFocus: ['Financial Services', 'Healthcare', 'Government', 'Manufacturing', 'Technology'],
+    industryFocus: [
+      'Financial Services',
+      'Healthcare',
+      'Government',
+      'Manufacturing',
+      'Technology',
+    ],
     compliance: ['SOC2', 'ISO27001', 'GDPR', 'HIPAA', 'PCI-DSS', 'NIST'],
-    securityFeatures: ['End-to-end encryption', 'Multi-factor authentication', 'Role-based access control', 'Audit logging'],
+    securityFeatures: [
+      'End-to-end encryption',
+      'Multi-factor authentication',
+      'Role-based access control',
+      'Audit logging',
+    ],
     scalability: 'Handles 1M+ endpoints with linear scaling',
     supportLevel: '24/7 dedicated support with 15-minute response time',
     trainingIncluded: true,
-    customizationOptions: ['Custom AI models', 'Branded dashboards', 'API integrations', 'Workflow automation'],
+    customizationOptions: [
+      'Custom AI models',
+      'Branded dashboards',
+      'API integrations',
+      'Workflow automation',
+    ],
     apiAccess: true,
     mobileApp: true,
     whiteLabel: true,
-    partnerProgram: true
+    partnerProgram: true,
   },
   {
     id: 'ai-devops-automation',
     name: 'AI DevOps Automation Platform',
-    tagline: 'Intelligent CI/CD, infrastructure management, and deployment optimization',
+    tagline:
+      'Intelligent CI/CD, infrastructure management, and deployment optimization',
     price: '$899',
     period: '/month',
-    description: 'AI-powered DevOps platform that automates pipeline optimization, infrastructure deployment, code quality analysis, and security scanning. Features intelligent monitoring, predictive analytics, and automated scaling decisions.',
+    description:
+      'AI-powered DevOps platform that automates pipeline optimization, infrastructure deployment, code quality analysis, and security scanning. Features intelligent monitoring, predictive analytics, and automated scaling decisions.',
     features: [
       'AI-powered CI/CD pipeline optimization',
       'Intelligent infrastructure as code management',
@@ -197,7 +257,7 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Real-time performance monitoring and alerting',
       'Multi-cloud and Kubernetes support',
       'Compliance and governance automation',
-      'Advanced analytics and reporting'
+      'Advanced analytics and reporting',
     ],
     benefits: [
       'Reduce deployment failures by 75%',
@@ -207,7 +267,7 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Automate 90% of routine DevOps tasks',
       'Predict and prevent production issues',
       'Optimize resource utilization automatically',
-      'Ensure compliance across all environments'
+      'Ensure compliance across all environments',
     ],
     useCases: [
       'Software development teams',
@@ -215,11 +275,20 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Cloud infrastructure management',
       'Microservices and containerization',
       'Multi-cloud deployments',
-      'Compliance-driven development'
+      'Compliance-driven development',
     ],
-    targetAudience: 'DevOps Engineers, Platform Engineers, SREs, Development Teams',
-    marketPosition: 'Advanced alternative to GitLab, Jenkins, and AWS DevOps with AI-powered optimization',
-    competitors: ['GitLab', 'Jenkins', 'AWS DevOps', 'Azure DevOps', 'CircleCI', 'GitHub Actions'],
+    targetAudience:
+      'DevOps Engineers, Platform Engineers, SREs, Development Teams',
+    marketPosition:
+      'Advanced alternative to GitLab, Jenkins, and AWS DevOps with AI-powered optimization',
+    competitors: [
+      'GitLab',
+      'Jenkins',
+      'AWS DevOps',
+      'Azure DevOps',
+      'CircleCI',
+      'GitHub Actions',
+    ],
     marketSize: '$25B+ DevOps market',
     growthRate: '45% YoY',
     roi: 'Achieve 250% ROI through deployment efficiency and cost optimization',
@@ -231,12 +300,25 @@ export const advancedAIServices: AdvancedAIService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-devops',
     category: 'AI & DevOps',
-    technology: ['Machine Learning', 'Predictive Analytics', 'Infrastructure as Code', 'Container Orchestration', 'Cloud Native'],
-    integrations: ['Git providers', 'Cloud platforms', 'Monitoring tools', 'Security scanners', 'CI/CD tools'],
+    technology: [
+      'Machine Learning',
+      'Predictive Analytics',
+      'Infrastructure as Code',
+      'Container Orchestration',
+      'Cloud Native',
+    ],
+    integrations: [
+      'Git providers',
+      'Cloud platforms',
+      'Monitoring tools',
+      'Security scanners',
+      'CI/CD tools',
+    ],
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with AI models trained on deployment patterns, performance metrics, and failure scenarios',
+    implementationDetails:
+      'Multi-tenant SaaS platform with AI models trained on deployment patterns, performance metrics, and failure scenarios',
     launchDate: '2024-12-01',
     customers: 78,
     rating: 4.8,
@@ -244,57 +326,91 @@ export const advancedAIServices: AdvancedAIService[] = [
     caseStudies: [
       'Tech startup reduced deployment time from 2 hours to 15 minutes',
       'E-commerce company achieved 99.9% deployment success rate',
-      'Financial services firm cut infrastructure costs by 45%'
+      'Financial services firm cut infrastructure costs by 45%',
     ],
     testimonials: [
       '"The AI optimization has transformed our deployment process. We deploy 10x faster with fewer issues." - DevOps Lead',
-      '"Predictive analytics help us prevent problems before they happen." - SRE Manager'
+      '"Predictive analytics help us prevent problems before they happen." - SRE Manager',
     ],
     pricingTiers: [
       {
         name: 'Developer',
         price: '$499',
         period: '/month',
-        features: ['Basic CI/CD automation', 'Code quality analysis', 'Security scanning'],
+        features: [
+          'Basic CI/CD automation',
+          'Code quality analysis',
+          'Security scanning',
+        ],
         limits: ['Up to 5 projects', 'Basic monitoring', 'Community support'],
-        bestFor: 'Small development teams'
+        bestFor: 'Small development teams',
       },
       {
         name: 'Team',
         price: '$899',
         period: '/month',
-        features: ['AI optimization', 'Advanced analytics', 'Multi-cloud support'],
-        limits: ['Up to 25 projects', 'Advanced monitoring', 'Priority support'],
-        bestFor: 'Growing development teams'
+        features: [
+          'AI optimization',
+          'Advanced analytics',
+          'Multi-cloud support',
+        ],
+        limits: [
+          'Up to 25 projects',
+          'Advanced monitoring',
+          'Priority support',
+        ],
+        bestFor: 'Growing development teams',
       },
       {
         name: 'Enterprise',
         price: '$1,799',
         period: '/month',
-        features: ['Custom AI models', 'White-label options', 'Dedicated support'],
+        features: [
+          'Custom AI models',
+          'White-label options',
+          'Dedicated support',
+        ],
         limits: ['Unlimited projects', 'Custom integrations', '24/7 support'],
-        bestFor: 'Large enterprises and agencies'
-      }
+        bestFor: 'Large enterprises and agencies',
+      },
     ],
-    industryFocus: ['Technology', 'Financial Services', 'Healthcare', 'E-commerce', 'Manufacturing'],
+    industryFocus: [
+      'Technology',
+      'Financial Services',
+      'Healthcare',
+      'E-commerce',
+      'Manufacturing',
+    ],
     compliance: ['SOC2', 'ISO27001', 'GDPR', 'HIPAA'],
-    securityFeatures: ['Role-based access control', 'Audit logging', 'Encryption at rest', 'Secure API access'],
+    securityFeatures: [
+      'Role-based access control',
+      'Audit logging',
+      'Encryption at rest',
+      'Secure API access',
+    ],
     scalability: 'Handles 10,000+ deployments per day',
     supportLevel: '24/7 support with 30-minute response time',
     trainingIncluded: true,
-    customizationOptions: ['Custom AI models', 'Branded interfaces', 'API integrations', 'Workflow customization'],
+    customizationOptions: [
+      'Custom AI models',
+      'Branded interfaces',
+      'API integrations',
+      'Workflow customization',
+    ],
     apiAccess: true,
     mobileApp: true,
     whiteLabel: true,
-    partnerProgram: true
+    partnerProgram: true,
   },
   {
     id: 'ai-data-engineering-platform',
     name: 'AI Data Engineering Platform',
-    tagline: 'Intelligent data pipeline management, ETL optimization, and data quality monitoring',
+    tagline:
+      'Intelligent data pipeline management, ETL optimization, and data quality monitoring',
     price: '$1,199',
     period: '/month',
-    description: 'AI-powered data engineering platform that automates data pipeline creation, optimization, and monitoring. Features intelligent ETL design, data quality assessment, cost optimization, and automated data lineage discovery.',
+    description:
+      'AI-powered data engineering platform that automates data pipeline creation, optimization, and monitoring. Features intelligent ETL design, data quality assessment, cost optimization, and automated data lineage discovery.',
     features: [
       'AI-powered data pipeline design and optimization',
       'Automated ETL process generation',
@@ -305,7 +421,7 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Multi-source data integration',
       'Real-time streaming and batch processing',
       'Advanced analytics and reporting',
-      'Automated data quality issue resolution'
+      'Automated data quality issue resolution',
     ],
     benefits: [
       'Reduce data pipeline development time by 70%',
@@ -315,7 +431,7 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Accelerate data-driven decision making',
       'Ensure regulatory compliance automatically',
       'Optimize resource utilization',
-      'Reduce data engineering team workload'
+      'Reduce data engineering team workload',
     ],
     useCases: [
       'Data engineering teams',
@@ -323,11 +439,20 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Machine learning and AI projects',
       'Regulatory compliance and reporting',
       'Customer data platforms',
-      'Real-time analytics and dashboards'
+      'Real-time analytics and dashboards',
     ],
-    targetAudience: 'Data Engineers, Data Scientists, Analytics Teams, BI Developers',
-    marketPosition: 'Advanced alternative to Apache Airflow, AWS Glue, and Databricks with AI-powered automation',
-    competitors: ['Apache Airflow', 'AWS Glue', 'Databricks', 'Informatica', 'Talend', 'Fivetran'],
+    targetAudience:
+      'Data Engineers, Data Scientists, Analytics Teams, BI Developers',
+    marketPosition:
+      'Advanced alternative to Apache Airflow, AWS Glue, and Databricks with AI-powered automation',
+    competitors: [
+      'Apache Airflow',
+      'AWS Glue',
+      'Databricks',
+      'Informatica',
+      'Talend',
+      'Fivetran',
+    ],
     marketSize: '$35B+ data engineering market',
     growthRate: '40% YoY',
     roi: 'Achieve 400% ROI through automation and cost optimization',
@@ -339,12 +464,25 @@ export const advancedAIServices: AdvancedAIService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-data-engineering',
     category: 'AI & Data',
-    technology: ['Machine Learning', 'Natural Language Processing', 'Graph Analytics', 'Stream Processing', 'Data Catalogs'],
-    integrations: ['Cloud data warehouses', 'Streaming platforms', 'BI tools', 'ML platforms', 'Data lakes'],
+    technology: [
+      'Machine Learning',
+      'Natural Language Processing',
+      'Graph Analytics',
+      'Stream Processing',
+      'Data Catalogs',
+    ],
+    integrations: [
+      'Cloud data warehouses',
+      'Streaming platforms',
+      'BI tools',
+      'ML platforms',
+      'Data lakes',
+    ],
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with AI models for pipeline optimization, data quality assessment, and cost management',
+    implementationDetails:
+      'Multi-tenant SaaS platform with AI models for pipeline optimization, data quality assessment, and cost management',
     launchDate: '2024-11-20',
     customers: 62,
     rating: 4.7,
@@ -352,57 +490,91 @@ export const advancedAIServices: AdvancedAIService[] = [
     caseStudies: [
       'Retail company built data platform in 2 weeks instead of 6 months',
       'Healthcare provider improved data quality from 65% to 95%',
-      'Financial services firm reduced data processing costs by 55%'
+      'Financial services firm reduced data processing costs by 55%',
     ],
     testimonials: [
       '"The AI pipeline optimization is incredible. We build data solutions 5x faster." - Data Engineering Lead',
-      '"Automated data quality monitoring saves us hours every day." - Analytics Manager'
+      '"Automated data quality monitoring saves us hours every day." - Analytics Manager',
     ],
     pricingTiers: [
       {
         name: 'Starter',
         price: '$699',
         period: '/month',
-        features: ['Basic pipeline management', 'Data quality monitoring', 'Simple ETL processes'],
+        features: [
+          'Basic pipeline management',
+          'Data quality monitoring',
+          'Simple ETL processes',
+        ],
         limits: ['Up to 10 pipelines', 'Basic reporting', 'Email support'],
-        bestFor: 'Small data teams'
+        bestFor: 'Small data teams',
       },
       {
         name: 'Professional',
         price: '$1,199',
         period: '/month',
-        features: ['AI optimization', 'Advanced monitoring', 'Multi-source integration'],
-        limits: ['Up to 50 pipelines', 'Advanced analytics', 'Priority support'],
-        bestFor: 'Growing data teams'
+        features: [
+          'AI optimization',
+          'Advanced monitoring',
+          'Multi-source integration',
+        ],
+        limits: [
+          'Up to 50 pipelines',
+          'Advanced analytics',
+          'Priority support',
+        ],
+        bestFor: 'Growing data teams',
       },
       {
         name: 'Enterprise',
         price: '$2,199',
         period: '/month',
-        features: ['Custom AI models', 'White-label options', 'Dedicated support'],
+        features: [
+          'Custom AI models',
+          'White-label options',
+          'Dedicated support',
+        ],
         limits: ['Unlimited pipelines', 'Custom integrations', '24/7 support'],
-        bestFor: 'Large enterprises and agencies'
-      }
+        bestFor: 'Large enterprises and agencies',
+      },
     ],
-    industryFocus: ['Financial Services', 'Healthcare', 'Retail', 'Manufacturing', 'Technology'],
+    industryFocus: [
+      'Financial Services',
+      'Healthcare',
+      'Retail',
+      'Manufacturing',
+      'Technology',
+    ],
     compliance: ['SOC2', 'ISO27001', 'GDPR', 'HIPAA', 'SOX'],
-    securityFeatures: ['Data encryption', 'Access controls', 'Audit logging', 'Data masking'],
+    securityFeatures: [
+      'Data encryption',
+      'Access controls',
+      'Audit logging',
+      'Data masking',
+    ],
     scalability: 'Handles 100TB+ data processing per day',
     supportLevel: '24/7 support with 30-minute response time',
     trainingIncluded: true,
-    customizationOptions: ['Custom AI models', 'Branded interfaces', 'API integrations', 'Workflow customization'],
+    customizationOptions: [
+      'Custom AI models',
+      'Branded interfaces',
+      'API integrations',
+      'Workflow customization',
+    ],
     apiAccess: true,
     mobileApp: true,
     whiteLabel: true,
-    partnerProgram: true
+    partnerProgram: true,
   },
   {
     id: 'ai-fintech-intelligence',
     name: 'AI Fintech Intelligence Platform',
-    tagline: 'Intelligent portfolio management, risk assessment, and automated trading insights',
+    tagline:
+      'Intelligent portfolio management, risk assessment, and automated trading insights',
     price: '$1,599',
     period: '/month',
-    description: 'AI-powered fintech platform that provides intelligent portfolio management, risk assessment, compliance monitoring, and automated trading insights. Features market analysis, portfolio optimization, and regulatory compliance automation.',
+    description:
+      'AI-powered fintech platform that provides intelligent portfolio management, risk assessment, compliance monitoring, and automated trading insights. Features market analysis, portfolio optimization, and regulatory compliance automation.',
     features: [
       'AI-powered market analysis and sentiment detection',
       'Intelligent portfolio optimization and rebalancing',
@@ -413,7 +585,7 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Multi-asset class support (stocks, bonds, crypto, forex)',
       'Regulatory compliance automation (SEC, FINRA, etc.)',
       'Advanced analytics and reporting',
-      'Mobile and web applications'
+      'Mobile and web applications',
     ],
     benefits: [
       'Improve portfolio returns by 15-25%',
@@ -423,7 +595,7 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Real-time market insights and alerts',
       'Automated portfolio rebalancing',
       'Advanced risk management',
-      'Regulatory compliance assurance'
+      'Regulatory compliance assurance',
     ],
     useCases: [
       'Investment management firms',
@@ -431,11 +603,19 @@ export const advancedAIServices: AdvancedAIService[] = [
       'Financial advisors and RIAs',
       'Banks and credit unions',
       'Insurance companies',
-      'Corporate treasury departments'
+      'Corporate treasury departments',
     ],
-    targetAudience: 'Portfolio Managers, Financial Advisors, Risk Managers, Compliance Officers',
-    marketPosition: 'Advanced alternative to Bloomberg Terminal, FactSet, and Morningstar with AI-powered insights',
-    competitors: ['Bloomberg Terminal', 'FactSet', 'Morningstar', 'YCharts', 'Portfolio Visualizer'],
+    targetAudience:
+      'Portfolio Managers, Financial Advisors, Risk Managers, Compliance Officers',
+    marketPosition:
+      'Advanced alternative to Bloomberg Terminal, FactSet, and Morningstar with AI-powered insights',
+    competitors: [
+      'Bloomberg Terminal',
+      'FactSet',
+      'Morningstar',
+      'YCharts',
+      'Portfolio Visualizer',
+    ],
     marketSize: '$45B+ fintech market',
     growthRate: '50% YoY',
     roi: 'Achieve 500% ROI through improved returns and operational efficiency',
@@ -447,12 +627,25 @@ export const advancedAIServices: AdvancedAIService[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-fintech',
     category: 'AI & Fintech',
-    technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Risk Modeling', 'Portfolio Optimization'],
-    integrations: ['Brokerage platforms', 'Market data providers', 'Accounting systems', 'CRM platforms', 'Compliance tools'],
+    technology: [
+      'Machine Learning',
+      'Natural Language Processing',
+      'Predictive Analytics',
+      'Risk Modeling',
+      'Portfolio Optimization',
+    ],
+    integrations: [
+      'Brokerage platforms',
+      'Market data providers',
+      'Accounting systems',
+      'CRM platforms',
+      'Compliance tools',
+    ],
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with AI models trained on market data, portfolio performance, and regulatory requirements',
+    implementationDetails:
+      'Multi-tenant SaaS platform with AI models trained on market data, portfolio performance, and regulatory requirements',
     launchDate: '2024-12-10',
     customers: 38,
     rating: 4.9,
@@ -460,50 +653,82 @@ export const advancedAIServices: AdvancedAIService[] = [
     caseStudies: [
       'Investment firm improved portfolio returns by 22%',
       'Financial advisor automated 95% of compliance tasks',
-      'Family office reduced portfolio risk by 35%'
+      'Family office reduced portfolio risk by 35%',
     ],
     testimonials: [
       '"The AI insights have transformed our investment strategy. Returns improved significantly." - Portfolio Manager',
-      '"Automated compliance saves us 20 hours per week." - Compliance Officer'
+      '"Automated compliance saves us 20 hours per week." - Compliance Officer',
     ],
     pricingTiers: [
       {
         name: 'Professional',
         price: '$999',
         period: '/month',
-        features: ['Basic portfolio management', 'Risk assessment', 'Compliance monitoring'],
+        features: [
+          'Basic portfolio management',
+          'Risk assessment',
+          'Compliance monitoring',
+        ],
         limits: ['Up to 100 portfolios', 'Basic reporting', 'Email support'],
-        bestFor: 'Financial advisors and small firms'
+        bestFor: 'Financial advisors and small firms',
       },
       {
         name: 'Institutional',
         price: '$1,599',
         period: '/month',
-        features: ['AI optimization', 'Advanced analytics', 'Multi-asset support'],
-        limits: ['Up to 1,000 portfolios', 'Advanced reporting', 'Priority support'],
-        bestFor: 'Investment management firms'
+        features: [
+          'AI optimization',
+          'Advanced analytics',
+          'Multi-asset support',
+        ],
+        limits: [
+          'Up to 1,000 portfolios',
+          'Advanced reporting',
+          'Priority support',
+        ],
+        bestFor: 'Investment management firms',
       },
       {
         name: 'Enterprise',
         price: '$2,999',
         period: '/month',
-        features: ['Custom AI models', 'White-label options', 'Dedicated support'],
+        features: [
+          'Custom AI models',
+          'White-label options',
+          'Dedicated support',
+        ],
         limits: ['Unlimited portfolios', 'Custom integrations', '24/7 support'],
-        bestFor: 'Large financial institutions'
-      }
+        bestFor: 'Large financial institutions',
+      },
     ],
-    industryFocus: ['Investment Management', 'Financial Services', 'Insurance', 'Banking', 'Wealth Management'],
+    industryFocus: [
+      'Investment Management',
+      'Financial Services',
+      'Insurance',
+      'Banking',
+      'Wealth Management',
+    ],
     compliance: ['SEC', 'FINRA', 'SOX', 'GDPR', 'CCPA'],
-    securityFeatures: ['Bank-level encryption', 'Multi-factor authentication', 'Audit logging', 'SOC2 compliance'],
+    securityFeatures: [
+      'Bank-level encryption',
+      'Multi-factor authentication',
+      'Audit logging',
+      'SOC2 compliance',
+    ],
     scalability: 'Handles 100,000+ portfolios with real-time updates',
     supportLevel: '24/7 support with 15-minute response time',
     trainingIncluded: true,
-    customizationOptions: ['Custom AI models', 'Branded interfaces', 'API integrations', 'Workflow customization'],
+    customizationOptions: [
+      'Custom AI models',
+      'Branded interfaces',
+      'API integrations',
+      'Workflow customization',
+    ],
     apiAccess: true,
     mobileApp: true,
     whiteLabel: true,
-    partnerProgram: true
-  }
+    partnerProgram: true,
+  },
 ];
 
 export default advancedAIServices;

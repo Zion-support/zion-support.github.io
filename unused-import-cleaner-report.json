@@ -3071,9 +3071,7 @@
       "bytesSaved": 52
     }
   ],
-  "errors": [
-    "ESLint error: Command failed: npm run lint -- --fix"
-  ],
+  "errors": ["ESLint error: Command failed: npm run lint -- --fix"],
   "summary": {
     "totalFiles": 511,
     "successfulFixes": 511,

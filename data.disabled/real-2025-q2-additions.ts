@@ -12,6 +12,10 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [
     name: 'Q2 Addition Service 1',
     tagline: 'Second quarter innovation',
     price: '$399',
-    features: ['Advanced features', 'Enhanced performance', 'Better integration']
-  }
+    features: [
+      'Advanced features',
+      'Enhanced performance',
+      'Better integration',
+    ],
+  },
 ];

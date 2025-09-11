@@ -11,6 +11,6 @@ export const realServicesQ22025: RealServiceQ22025[] = [
     name: 'Q2 Service 1',
     tagline: 'Second quarter service offering',
     price: '$299',
-    features: ['Core features', 'Standard performance', 'Basic integration']
-  }
+    features: ['Core features', 'Standard performance', 'Basic integration'],
+  },
 ];

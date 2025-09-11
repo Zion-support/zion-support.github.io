@@ -9,7 +9,9 @@ const ROOT = process.cwd();
 const COMPONENTS_DIR = path.join(ROOT, 'components');
 const REPORT_DIR = path.join(ROOT, 'public', 'reports', 'component-coupling');
 
-function ensureDir(p) { if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true }); }
+function ensureDir(p) {
+  if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
+}
 ensureDir(REPORT_DIR);
 
 function listFiles(dir) {
@@ -37,9 +39,11 @@ function listFiles(dir) {
     while ((m = importRe.exec(content))) {
       let imp = m[1];
       if (!imp.startsWith('.')) continue;
-      const resolved = path.normalize(path.join(path.dirname(rel), imp)).replace(/\\/g, '/');
+      const resolved = path
+        .normalize(path.join(path.dirname(rel), imp))
+        .replace(/\\/g, '/');
       // add extensions heuristically
-      const target = files.find((f) => {
+      const target = files.find(f => {
         const r = path.relative(ROOT, f).replace(/\\/g, '/');
         return r === resolved || r.startsWith(resolved + '.');
       });
@@ -53,11 +57,13 @@ function listFiles(dir) {
   }
   const graph = {
     generatedAt: new Date().toISOString(),
-    nodes: Array.from(nodes).sort().map((id) => ({ id })),
+    nodes: Array.from(nodes)
+      .sort()
+      .map(id => ({ id })),
     edges: Array.from(edges.entries()).map(([k, count]) => {
       const [from, to] = k.split('=>');
       return { from, to, count };
-    })
+    }),
   };
   const outPath = path.join(REPORT_DIR, 'graph.json');
   fs.writeFileSync(outPath, JSON.stringify(graph, null, 2));

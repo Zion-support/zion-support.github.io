@@ -39,7 +39,7 @@ async function listProducts(options = {}) {
   }
 
   const response = await fetch(
-    `/api/marketplace/products?${queryParams.toString()}`,
+    `/api/marketplace/products?${queryParams.toString()}`
   );
 
   if (!response.ok) {
@@ -47,8 +47,7 @@ async function listProducts(options = {}) {
       .json()
       .catch(() => ({ message: 'Failed to list products' }));
     throw new Error(
-      errorData.message ||
-        `Failed to list products. Status: ${response.status}`,
+      errorData.message || `Failed to list products. Status: ${response.status}`
     );
   }
 
@@ -75,14 +74,12 @@ async function getProductDetails(productId) {
   }
 
   if (!response.ok) {
-    const errorData = await response
-      .json()
-      .catch(() => ({
-        message: `Failed to get product details for ID ${productId}`,
-      }));
+    const errorData = await response.json().catch(() => ({
+      message: `Failed to get product details for ID ${productId}`,
+    }));
     throw new Error(
       errorData.message ||
-        `Failed to get product details. Status: ${response.status}`,
+        `Failed to get product details. Status: ${response.status}`
     );
   }
 
@@ -113,7 +110,7 @@ async function submitQuoteRequest(quoteDetails) {
     !quoteDetails.details
   ) {
     throw new Error(
-      'Missing required fields in quoteDetails: name, email, phone, details are required.',
+      'Missing required fields in quoteDetails: name, email, phone, details are required.'
     );
   }
 
@@ -132,7 +129,7 @@ async function submitQuoteRequest(quoteDetails) {
     throw new Error(
       responseData.error ||
         responseData.message ||
-        `Failed to submit quote request. Status: ${response.status}`,
+        `Failed to submit quote request. Status: ${response.status}`
     );
   }
 
@@ -165,7 +162,7 @@ async function getQuoteStatus(quoteId) {
       .catch(() => ({ message: `Failed to get status for quote ${quoteId}` }));
     throw new Error(
       errorData.message ||
-        `Failed to get quote status. Status: ${response.status}`,
+        `Failed to get quote status. Status: ${response.status}`
     );
   }
 
@@ -205,7 +202,7 @@ async function listJobs(options = {}) {
       .json()
       .catch(() => ({ message: 'Failed to list jobs' }));
     throw new Error(
-      errorData.message || `Failed to list jobs. Status: ${response.status}`,
+      errorData.message || `Failed to list jobs. Status: ${response.status}`
     );
   }
 
@@ -236,7 +233,7 @@ async function getJobDetails(jobId) {
       .catch(() => ({ message: `Failed to get job details for ID ${jobId}` }));
     throw new Error(
       errorData.message ||
-        `Failed to get job details. Status: ${response.status}`,
+        `Failed to get job details. Status: ${response.status}`
     );
   }
 
@@ -276,7 +273,7 @@ async function listTalent(options = {}) {
       .json()
       .catch(() => ({ message: 'Failed to list talent' }));
     throw new Error(
-      errorData.message || `Failed to list talent. Status: ${response.status}`,
+      errorData.message || `Failed to list talent. Status: ${response.status}`
     );
   }
 
@@ -302,14 +299,12 @@ async function getTalentDetails(talentId) {
   }
 
   if (!response.ok) {
-    const errorData = await response
-      .json()
-      .catch(() => ({
-        message: `Failed to get talent details for ID ${talentId}`,
-      }));
+    const errorData = await response.json().catch(() => ({
+      message: `Failed to get talent details for ID ${talentId}`,
+    }));
     throw new Error(
       errorData.message ||
-        `Failed to get talent details. Status: ${response.status}`,
+        `Failed to get talent details. Status: ${response.status}`
     );
   }
 

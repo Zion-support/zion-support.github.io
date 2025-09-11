@@ -5,6 +5,7 @@ A comprehensive redundancy and backup system for all PM2, GitHub Actions, and Ne
 ## 🚀 Overview
 
 The Redundancy Automation System ensures that all your automation systems continue to function even if the primary systems fail. It provides:
+
 - **PM2 Process Monitoring**: Continuous monitoring of PM2 processes with automatic restart capabilities
 - **GitHub Actions Health Checks**: Validation of workflow files and local execution capabilities
 - **Netlify Functions Monitoring**: Health checks for serverless functions and deployment status
@@ -28,6 +29,7 @@ automation/
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
+
 - Node.js 20.18.1 or higher
 - Git
 - PM2 (optional, for PM2 redundancy features)
@@ -37,20 +39,23 @@ automation/
 ### Quick Start
 
 1. **Clone the repository** (if not already done):
- ```bash
- git clone <your-repo-url>
- cd <your-repo>
- ```
+
+```bash
+git clone <your-repo-url>
+cd <your-repo>
+```
 
 2. **Install dependencies**:
- ```bash
- npm install
- ```
+
+```bash
+npm install
+```
 
 3. **Start the redundancy system**:
- ```bash
- ./automation/start-redundancy-system.sh start
- ```
+
+```bash
+./automation/start-redundancy-system.sh start
+```
 
 ## 🎯 Features
 
@@ -59,12 +64,14 @@ automation/
 **File**: `pm2-redundancy-monitor.cjs`
 
 Monitors all PM2 processes and provides automatic recovery:
+
 - **Health Checks**: Monitors process status, memory usage, CPU usage
 - **Auto-Restart**: Automatically restarts failed processes
 - **Ecosystem Validation**: Checks PM2 ecosystem file validity
 - **Performance Monitoring**: Tracks restart counts and resource usage
 
 **Usage**:
+
 ```bash
 # Run health check
 node automation/pm2-redundancy-monitor.cjs check
@@ -84,12 +91,14 @@ node automation/pm2-redundancy-monitor.cjs status
 **File**: `github-actions-redundancy.cjs`
 
 Provides backup for GitHub Actions workflows:
+
 - **Workflow Validation**: Checks YAML syntax and cron expressions
 - **Local Execution**: Runs workflows locally as backup
 - **Git Status Monitoring**: Tracks uncommitted changes
 - **Auto-Commit**: Automatically commits and pushes changes
 
 **Usage**:
+
 ```bash
 # Run health check
 node automation/github-actions-redundancy.cjs check
@@ -109,12 +118,14 @@ node automation/github-actions-redundancy.cjs run sync-health.yml
 **File**: `netlify-functions-redundancy.cjs`
 
 Monitors Netlify serverless functions:
+
 - **Function Health**: Validates individual function files
 - **Manifest Management**: Auto-regenerates functions manifest
 - **Deployment Status**: Checks Netlify deployment health
 - **Configuration Validation**: Validates Netlify configuration
 
 **Usage**:
+
 ```bash
 # Run health check
 node automation/netlify-functions-redundancy.cjs check
@@ -134,12 +145,14 @@ node automation/netlify-functions-redundancy.cjs build
 **File**: `redundancy-automation-system.cjs`
 
 Coordinates all redundancy systems:
+
 - **Unified Monitoring**: Single interface for all redundancy systems
 - **Health Reporting**: Comprehensive health reports
 - **Action Orchestration**: Coordinates recovery actions across systems
 - **Metrics Collection**: System-wide performance metrics
 
 **Usage**:
+
 ```bash
 # Run full redundancy check
 node automation/redundancy-automation-system.cjs check
@@ -187,33 +200,34 @@ The system is configured through a JSON configuration file:
 
 ```json
 {
- "pm2": {
- "enabled": true,
- "checkInterval": 30000,
- "maxRestarts": 5,
- "autoRestart": true
- },
- "githubActions": {
- "enabled": true,
- "checkInterval": 60000,
- "autoTrigger": true
- },
- "netlify": {
- "enabled": true,
- "checkInterval": 120000,
- "autoDeploy": true
- },
- "monitoring": {
- "enabled": true,
- "reportInterval": 300000,
- "alertThreshold": 0.8
- }
+  "pm2": {
+    "enabled": true,
+    "checkInterval": 30000,
+    "maxRestarts": 5,
+    "autoRestart": true
+  },
+  "githubActions": {
+    "enabled": true,
+    "checkInterval": 60000,
+    "autoTrigger": true
+  },
+  "netlify": {
+    "enabled": true,
+    "checkInterval": 120000,
+    "autoDeploy": true
+  },
+  "monitoring": {
+    "enabled": true,
+    "reportInterval": 300000,
+    "alertThreshold": 0.8
+  }
 }
 ```
 
 ### Configuration Options
 
 #### PM2 Configuration
+
 - `enabled`: Enable/disable PM2 monitoring
 - `checkInterval`: Health check frequency (milliseconds)
 - `maxRestarts`: Maximum restart attempts before alerting
@@ -221,6 +235,7 @@ The system is configured through a JSON configuration file:
 - `restartDelay`: Delay between restart attempts
 
 #### GitHub Actions Configuration
+
 - `enabled`: Enable/disable GitHub Actions monitoring
 - `checkInterval`: Health check frequency
 - `maxFailures`: Maximum failures before alerting
@@ -228,6 +243,7 @@ The system is configured through a JSON configuration file:
 - `workflows`: List of workflows to monitor
 
 #### Netlify Configuration
+
 - `enabled`: Enable/disable Netlify monitoring
 - `checkInterval`: Health check frequency
 - `autoDeploy`: Automatically trigger deployments
@@ -238,6 +254,7 @@ The system is configured through a JSON configuration file:
 ### Log Files
 
 All redundancy systems generate detailed logs:
+
 - `redundancy-automation.log` - Main system logs
 - `pm2-redundancy.log` - PM2 monitoring logs
 - `github-actions-redundancy.log` - GitHub Actions logs
@@ -247,6 +264,7 @@ All redundancy systems generate detailed logs:
 ### Health Reports
 
 The system generates JSON health reports for each component:
+
 - Process status and health metrics
 - Issues detected and actions taken
 - Performance statistics
@@ -255,6 +273,7 @@ The system generates JSON health reports for each component:
 ### Metrics
 
 Key metrics tracked:
+
 - **Uptime**: System availability percentage
 - **Response Time**: Health check response times
 - **Error Rates**: Failure frequency and types
@@ -266,31 +285,34 @@ Key metrics tracked:
 ### Common Issues
 
 1. **PM2 Not Running**
- ```bash
- # Check PM2 status
- pm2 status
- 
- # Start PM2 services
- npm run pm2:start
- ```
+
+```bash
+# Check PM2 status
+pm2 status
+
+# Start PM2 services
+npm run pm2:start
+```
 
 2. **GitHub Actions Failures**
- ```bash
- # Validate workflows
- node automation/github-actions-redundancy.cjs validate
- 
- # Check git status
- git status
- ```
+
+```bash
+# Validate workflows
+node automation/github-actions-redundancy.cjs validate
+
+# Check git status
+git status
+```
 
 3. **Netlify Functions Issues**
- ```bash
- # Regenerate manifest
- node automation/netlify-functions-redundancy.cjs manifest
- 
- # Check function health
- node automation/netlify-functions-redundancy.cjs check
- ```
+
+```bash
+# Regenerate manifest
+node automation/netlify-functions-redundancy.cjs manifest
+
+# Check function health
+node automation/netlify-functions-redundancy.cjs check
+```
 
 ### Debug Mode
 
@@ -315,6 +337,7 @@ If automatic recovery fails:
 ### PM2 Integration
 
 The redundancy system works alongside existing PM2 processes:
+
 - Monitors existing PM2 ecosystem
 - Provides backup monitoring
 - Auto-restarts failed processes
@@ -323,6 +346,7 @@ The redundancy system works alongside existing PM2 processes:
 ### GitHub Actions Integration
 
 Enhances GitHub Actions reliability:
+
 - Validates workflow syntax
 - Provides local execution backup
 - Monitors workflow health
@@ -331,6 +355,7 @@ Enhances GitHub Actions reliability:
 ### Netlify Integration
 
 Improves Netlify deployment reliability:
+
 - Monitors function health
 - Validates configuration
 - Triggers rebuilds
@@ -339,12 +364,14 @@ Improves Netlify deployment reliability:
 ## 📈 Performance & Scalability
 
 ### Resource Usage
+
 - **Memory**: ~50-100MB per monitoring process
 - **CPU**: Minimal impact (<5% during normal operation)
 - **Disk**: Log files grow ~10-50MB per day
 - **Network**: Minimal external API calls
 
 ### Scaling Considerations
+
 - Monitor multiple repositories
 - Support multiple PM2 ecosystems
 - Handle large numbers of Netlify functions
@@ -353,6 +380,7 @@ Improves Netlify deployment reliability:
 ## 🚨 Alerting & Notifications
 
 ### Built-in Alerts
+
 - Console output with color coding
 - Log file entries
 - Health report generation
@@ -361,6 +389,7 @@ Improves Netlify deployment reliability:
 ### External Notifications
 
 Configure external notification systems:
+
 - Email notifications
 - Slack webhooks
 - Discord webhooks
@@ -369,12 +398,14 @@ Configure external notification systems:
 ## 🔒 Security Considerations
 
 ### Access Control
+
 - Environment variable configuration
 - Secure credential storage
 - Minimal required permissions
 - Audit logging
 
 ### Best Practices
+
 - Run with minimal required privileges
 - Secure configuration files
 - Regular credential rotation
@@ -451,6 +482,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ### Reporting Issues
 
 When reporting issues, include:
+
 - System information (OS, Node.js version)
 - Error messages and logs
 - Steps to reproduce

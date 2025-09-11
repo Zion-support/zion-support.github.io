@@ -31,13 +31,11 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     isConnected,
     address,
     connect,
-    disconnect
+    disconnect,
   };
 
   return (
-    <WalletContext.Provider value={value}>
-      {children}
-    </WalletContext.Provider>
+    <WalletContext.Provider value={value}>{children}</WalletContext.Provider>
   );
 };
 

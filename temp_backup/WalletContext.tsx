@@ -14,7 +14,9 @@ interface WalletContextType {
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
 
-export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [walletState, setWalletState] = useState<WalletState>({
     isConnected: false,
     address: null,
@@ -39,7 +41,9 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   };
 
   return (
-    <WalletContext.Provider value={{ walletState, connectWallet, disconnectWallet }}>
+    <WalletContext.Provider
+      value={{ walletState, connectWallet, disconnectWallet }}
+    >
       {children}
     </WalletContext.Provider>
   );

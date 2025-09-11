@@ -29,10 +29,19 @@ const subscriptionSchema = new mongoose.Schema({
   status: {
     type: String,
     required: true,
-    enum: ['active', 'canceled', 'incomplete', 'incomplete_expired', 'past_due', 'trialing', 'unpaid'],
+    enum: [
+      'active',
+      'canceled',
+      'incomplete',
+      'incomplete_expired',
+      'past_due',
+      'trialing',
+      'unpaid',
+    ],
     default: 'incomplete',
   },
-  currentPeriodStart: { // Added for more complete subscription tracking
+  currentPeriodStart: {
+    // Added for more complete subscription tracking
     type: Date,
     required: true,
   },
@@ -40,14 +49,17 @@ const subscriptionSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
-  cancelAtPeriodEnd: { // Tracks if a subscription is set to cancel at period end
+  cancelAtPeriodEnd: {
+    // Tracks if a subscription is set to cancel at period end
     type: Boolean,
     default: false,
   },
-  canceledAt: { // When the subscription was actually canceled
+  canceledAt: {
+    // When the subscription was actually canceled
     type: Date,
   },
-  endedAt: { // When the subscription ultimately ended
+  endedAt: {
+    // When the subscription ultimately ended
     type: Date,
   },
   trialStart: {
@@ -77,7 +89,8 @@ subscriptionSchema.pre('findOneAndUpdate', function (next) {
   next();
 });
 
-
 subscriptionSchema.index({ userId: 1 });
 
-module.exports = mongoose.models.Subscription || mongoose.model('Subscription', subscriptionSchema);
+module.exports =
+  mongoose.models.Subscription ||
+  mongoose.model('Subscription', subscriptionSchema);

@@ -10,10 +10,10 @@ global.TextDecoder = TextDecoder;
 jest.mock('next/router', () => ({
   useRouter() {
     return {
-      route: "/",
-      pathname: "/",
+      route: '/',
+      pathname: '/',
       query: {},
-      asPath: "/",
+      asPath: '/',
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),

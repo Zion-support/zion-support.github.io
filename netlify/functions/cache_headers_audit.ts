@@ -2,14 +2,21 @@
 // Scheduled in netlify.toml -> [[scheduled]] path = "/.netlify/functions/cache_headers_audit"
 
 export const config = {
-  path: "/.netlify/functions/cache_headers_audit",
+  path: '/.netlify/functions/cache_headers_audit',
 };
 
 import type { Handler } from '@netlify/functions';
 import { commitToRepo } from '../../utils/githubCommit';
 
 const BASE = process.env.PUBLIC_SITE_URL || 'https://ziontechgroup.com';
-const PATHS = ['/', '/blog', '/products', '/services', '/favicon.ico', '/site.webmanifest'];
+const PATHS = [
+  '/',
+  '/blog',
+  '/products',
+  '/services',
+  '/favicon.ico',
+  '/site.webmanifest',
+];
 
 function stamp() {
   const d = new Date();
@@ -23,7 +30,10 @@ export const handler: Handler = async () => {
     for (const p of PATHS) {
       const url = `${BASE}${p}`;
       try {
-        const res = await fetch(url, { method: 'HEAD', headers: { 'User-Agent': 'zion-app-cache-audit' } });
+        const res = await fetch(url, {
+          method: 'HEAD',
+          headers: { 'User-Agent': 'zion-app-cache-audit' },
+        });
         results.push({
           url,
           status: res.status,
@@ -36,9 +46,19 @@ export const handler: Handler = async () => {
         results.push({ url, status: 0 });
       }
     }
-    const content = JSON.stringify({ timestamp: new Date().toISOString(), results }, null, 2) + '\n';
+    const content =
+      JSON.stringify(
+        { timestamp: new Date().toISOString(), results },
+        null,
+        2
+      ) + '\n';
     const dest = `data/reports/cache/cache-headers-${stamp()}.json`;
-    const commit = await commitToRepo({ path: dest, content, message: 'chore(cache): cache headers audit', branch: 'main' });
+    const commit = await commitToRepo({
+      path: dest,
+      content,
+      message: 'chore(cache): cache headers audit',
+      branch: 'main',
+    });
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit }) };
   } catch (e: any) {
     return { statusCode: 500, body: String(e?.message || e) };

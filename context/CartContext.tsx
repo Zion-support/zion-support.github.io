@@ -36,21 +36,20 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     setItems([]);
   };
 
-  const total = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const total = items.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   const value = {
     items,
     addItem,
     removeItem,
     clearCart,
-    total
+    total,
   };
 
-  return (
-    <CartContext.Provider value={value}>
-      {children}
-    </CartContext.Provider>
-  );
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 
 export const useCart = () => {

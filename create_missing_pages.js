@@ -4,7 +4,7 @@ import path from 'path';
 // List of missing pages that need to be created
 const missingPages = [
   'ITServices',
-  'RequestQuote', 
+  'RequestQuote',
   'Dashboard',
   'Login',
   'FAQ',
@@ -29,11 +29,15 @@ const missingPages = [
   'Security',
   'Compliance',
   'OnsiteSupport',
-  'Marketplace'
+  'Marketplace',
 ];
 
 // Template for a basic page component
-const pageTemplate = (pageName, title, description) => `import React from 'react';
+const pageTemplate = (
+  pageName,
+  title,
+  description
+) => `import React from 'react';
 import { SEO } from '../components/SEO';
 
 const ${pageName}: React.FC = () => {
@@ -97,10 +101,10 @@ if (!fs.existsSync(pagesDir)) {
 missingPages.forEach(pageName => {
   const title = pageName.replace(/([A-Z])/g, ' $1').trim();
   const description = `Professional ${title.toLowerCase()} services and solutions for modern businesses.`;
-  
+
   const content = pageTemplate(pageName, title, description);
   const filePath = path.join(pagesDir, `${pageName}.tsx`);
-  
+
   if (!fs.existsSync(filePath)) {
     fs.writeFileSync(filePath, content);
     console.log(`Created ${pageName}.tsx`);

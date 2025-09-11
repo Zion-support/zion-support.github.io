@@ -17,7 +17,12 @@ export const analytics = {
   },
 
   // Track events
-  trackEvent: (action: string, category: string, label?: string, value?: number) => {
+  trackEvent: (
+    action: string,
+    category: string,
+    label?: string,
+    value?: number
+  ) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', action, {
         event_category: category,
@@ -35,5 +40,5 @@ export const analytics = {
   // Track performance
   trackPerformance: (metric: string, value: number) => {
     analytics.trackEvent('performance', 'Web Vitals', metric, value);
-  }
+  },
 };

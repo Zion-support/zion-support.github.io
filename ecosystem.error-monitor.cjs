@@ -9,12 +9,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       error_file: './logs/error-monitor-error.log',
       out_file: './logs/error-monitor-out.log',
       log_file: './logs/error-monitor-combined.log',
-      time: true
+      time: true,
     },
     {
       name: 'lint-fixer',
@@ -26,12 +26,12 @@ module.exports = {
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
         NODE_ENV: 'production',
-        LINT_FIX_ENABLED: 'true'
+        LINT_FIX_ENABLED: 'true',
       },
       error_file: './logs/lint-fixer-error.log',
       out_file: './logs/lint-fixer-out.log',
       log_file: './logs/lint-fixer-combined.log',
-      time: true
+      time: true,
     },
     {
       name: 'type-checker',
@@ -43,12 +43,12 @@ module.exports = {
       cron_restart: '0 */4 * * *', // Restart every 4 hours
       env: {
         NODE_ENV: 'production',
-        TYPE_CHECK_ENABLED: 'true'
+        TYPE_CHECK_ENABLED: 'true',
       },
       error_file: './logs/type-checker-error.log',
       out_file: './logs/type-checker-out.log',
       log_file: './logs/type-checker-combined.log',
-      time: true
+      time: true,
     },
     {
       name: 'build-monitor',
@@ -60,12 +60,12 @@ module.exports = {
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       env: {
         NODE_ENV: 'production',
-        BUILD_MONITOR_ENABLED: 'true'
+        BUILD_MONITOR_ENABLED: 'true',
       },
       error_file: './logs/build-monitor-error.log',
       out_file: './logs/build-monitor-out.log',
       log_file: './logs/build-monitor-combined.log',
-      time: true
-    }
-  ]
+      time: true,
+    },
+  ],
 };

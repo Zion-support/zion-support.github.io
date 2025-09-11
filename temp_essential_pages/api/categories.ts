@@ -5,9 +5,19 @@ const mockCategories = [
   { id: 'services', name: 'Services', slug: 'services', icon: 'Briefcase' },
   { id: 'talents', name: 'Talents', slug: 'talents', icon: 'Users' },
   { id: 'equipment', name: 'Equipment', slug: 'equipment', icon: 'HardDrive' },
-  { id: 'innovation', name: 'Innovation', slug: 'innovation', icon: 'Lightbulb' },
+  {
+    id: 'innovation',
+    name: 'Innovation',
+    slug: 'innovation',
+    icon: 'Lightbulb',
+  },
   { id: 'ai-models', name: 'AI Models', slug: 'ai-models', icon: 'Brain' },
-  { id: 'data-science', name: 'Data Science', slug: 'data-science', icon: 'BarChart' },
+  {
+    id: 'data-science',
+    name: 'Data Science',
+    slug: 'data-science',
+    icon: 'BarChart',
+  },
 ];
 
 interface CategoryType {
@@ -33,10 +43,14 @@ export default async function handler(
 
   try {
     // Return sorted categories alphabetically by name
-    const sortedCategories = mockCategories.sort((a, b) => a.name.localeCompare(b.name));
+    const sortedCategories = mockCategories.sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
     return res.status(200).json(sortedCategories);
   } catch (error) {
     console.error('Failed to fetch categories:', error);
-    return res.status(500).json({ error: 'Internal Server Error: Failed to fetch categories' });
+    return res
+      .status(500)
+      .json({ error: 'Internal Server Error: Failed to fetch categories' });
   }
 }

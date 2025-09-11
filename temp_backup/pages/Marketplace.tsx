@@ -11,7 +11,7 @@ function ProductGrid({ listings, onRequestQuote }: ProductContainerProps) {
           key={listing.id}
           listing={listing}
           onRequestQuote={onRequestQuote}
-          view="grid"
+          view='grid'
         />
       ))}
     </div>
@@ -26,7 +26,7 @@ function ProductList({ listings, onRequestQuote }: ProductContainerProps) {
           key={listing.id}
           listing={listing}
           onRequestQuote={onRequestQuote}
-          view="list"
+          view='list'
         />
       ))}
     </div>
@@ -35,10 +35,14 @@ function ProductList({ listings, onRequestQuote }: ProductContainerProps) {
 
 export default function Marketplace() {
   const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>(
+    []
+  );
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>(
+    []
+  );
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [isLoading, setIsLoading] = useState(false);
@@ -55,41 +59,69 @@ export default function Marketplace() {
   }, []);
 
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
-  const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]);
+  const filterOptions = useMemo(
+    () => generateFilterOptions(listings),
+    [listings]
+  );
 
   useEffect(() => {
     setIsLoading(true);
     setCurrentPage(1);
     const timeout = setTimeout(() => setIsLoading(false), 300);
     return () => clearTimeout(timeout);
-  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
+  }, [
+    searchQuery,
+    selectedProductTypes,
+    selectedLocations,
+    selectedAvailability,
+    selectedRating,
+  ]);
 
   // Filter listings based on selected filters
   const filteredListings = listings.filter(listing => {
     // Search filter
-    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) && 
-        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
+    if (
+      searchQuery &&
+      !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      !listing.tags.some(tag =>
+        tag.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    ) {
       return false;
     }
 
     // Product type filter
-    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+    if (
+      selectedProductTypes.length > 0 &&
+      !selectedProductTypes.includes(listing.category)
+    ) {
       return false;
     }
 
     // Location filter
-    if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
+    if (
+      selectedLocations.length > 0 &&
+      listing.location &&
+      !selectedLocations.includes(listing.location)
+    ) {
       return false;
     }
 
     // Availability filter
-    if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
+    if (
+      selectedAvailability.length > 0 &&
+      listing.availability &&
+      !selectedAvailability.includes(listing.availability)
+    ) {
       return false;
     }
 
     // Rating filter
-    if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
+    if (
+      selectedRating &&
+      (!listing.rating || listing.rating < selectedRating)
+    ) {
       return false;
     }
 
@@ -107,24 +139,30 @@ export default function Marketplace() {
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes(prev =>
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value)
+            ? prev.filter(item => item !== value)
+            : [...prev, value]
         );
         break;
       case 'locations':
         setSelectedLocations(prev =>
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value)
+            ? prev.filter(item => item !== value)
+            : [...prev, value]
         );
         break;
       case 'availability':
         setSelectedAvailability(prev =>
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value)
+            ? prev.filter(item => item !== value)
+            : [...prev, value]
         );
         break;
     }
   };
 
   const clearAllFilters = () => {
-    setSearchQuery("");
+    setSearchQuery('');
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
@@ -137,156 +175,169 @@ export default function Marketplace() {
 
     if (listing) {
       toast({
-        title: "Quote Requested",
-        description: `Your quote request for ${listing.title} has been sent.`
+        title: 'Quote Requested',
+        description: `Your quote request for ${listing.title} has been sent.`,
       });
 
       // Navigate to the quote request page with the listing information
-      navigate("/request-quote", {
-        state: { 
+      navigate('/request-quote', {
+        state: {
           serviceType: listing.category,
           specificItem: {
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0]
-          }
-        }
+            image: listing.images?.[0],
+          },
+        },
       });
     }
   };
 
   return (
-    <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto mb-8">
-          <h1 className="font-bold text-white mb-4 text-[clamp(1.5rem,3vw,1.875rem)]">AI & Tech Marketplace</h1>
-          <p className="text-zion-slate-light text-[clamp(1rem,2.5vw,1.125rem)]">
-            Discover professional services and products for your AI and tech projects.
-            Browse our curated collection of solutions from verified providers.
-          </p>
+    <main className='flex-grow container mx-auto px-4 py-8'>
+      <div className='max-w-4xl mx-auto mb-8'>
+        <h1 className='font-bold text-white mb-4 text-[clamp(1.5rem,3vw,1.875rem)]'>
+          AI & Tech Marketplace
+        </h1>
+        <p className='text-zion-slate-light text-[clamp(1rem,2.5vw,1.125rem)]'>
+          Discover professional services and products for your AI and tech
+          projects. Browse our curated collection of solutions from verified
+          providers.
+        </p>
+      </div>
+
+      {/* Search and filter bar */}
+      <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8'>
+        <div className='flex flex-col md:flex-row gap-4'>
+          <div className='relative flex-1'>
+            <EnhancedSearchInput
+              value={searchQuery}
+              onChange={setSearchQuery}
+              onSelectSuggestion={setSearchQuery}
+              placeholder='Search the marketplace...'
+              searchSuggestions={searchSuggestions}
+            />
+          </div>
+          <div className='flex gap-2'>
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={() => setViewMode('grid')}
+              aria-label='Grid view'
+              aria-pressed={viewMode === 'grid'}
+              className='text-zion-slate-light'
+            >
+              <Grid3X3 className='h-4 w-4' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={() => setViewMode('list')}
+              aria-label='List view'
+              aria-pressed={viewMode === 'list'}
+              className='text-zion-slate-light'
+            >
+              <ListFilter className='h-4 w-4' />
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main layout with sidebar and results */}
+      <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
+        {/* Sidebar Filters */}
+        <div className='lg:col-span-1'>
+          <FilterSidebar
+            filters={{
+              selectedProductTypes,
+              selectedLocations,
+              selectedAvailability,
+              selectedRating,
+            }}
+            filterOptions={filterOptions}
+            onFilterChange={handleFilterChange}
+            onRatingChange={setSelectedRating}
+            onClearFilters={clearAllFilters}
+          />
         </div>
 
-        {/* Search and filter bar */}
-        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="relative flex-1">
-              <EnhancedSearchInput
-                value={searchQuery}
-                onChange={setSearchQuery}
-                onSelectSuggestion={setSearchQuery}
-                placeholder="Search the marketplace..."
-                searchSuggestions={searchSuggestions}
+        {/* Main content */}
+        <div className='lg:col-span-3'>
+          {/* Active filters display */}
+          <ActiveFiltersBar
+            selectedProductTypes={selectedProductTypes}
+            selectedLocations={selectedLocations}
+            selectedAvailability={selectedAvailability}
+            selectedRating={selectedRating}
+            searchQuery={searchQuery}
+            onRemoveFilter={handleFilterChange}
+            onRemoveRating={() => setSelectedRating(null)}
+            onClearSearch={() => setSearchQuery('')}
+          />
+
+          {/* Results count */}
+          <div className='mb-6'>
+            <p className='text-zion-slate-light'>
+              Showing {filteredListings.length} results
+              {searchQuery && ` for "${searchQuery}"`}
+            </p>
+          </div>
+
+          {/* Display actual marketplace listings */}
+          {isLoading ? (
+            <div className='flex justify-center py-20'>
+              <Loader2 className='h-8 w-8 animate-spin text-zion-purple' />
+            </div>
+          ) : filteredListings.length > 0 ? (
+            viewMode === 'grid' ? (
+              <ProductGrid
+                listings={paginatedListings}
+                onRequestQuote={handleRequestQuote}
               />
-            </div>
-            <div className="flex gap-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setViewMode('grid')}
-                aria-label="Grid view"
-                aria-pressed={viewMode === 'grid'}
-                className="text-zion-slate-light"
-              >
-                <Grid3X3 className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setViewMode('list')}
-                aria-label="List view"
-                aria-pressed={viewMode === 'list'}
-                className="text-zion-slate-light"
-              >
-                <ListFilter className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* Sidebar Filters */}
-          <div className="lg:col-span-1">
-            <FilterSidebar
-              filters={{
-                selectedProductTypes,
-                selectedLocations,
-                selectedAvailability,
-                selectedRating
-              }}
-              filterOptions={filterOptions}
-              onFilterChange={handleFilterChange}
-              onRatingChange={setSelectedRating}
-              onClearFilters={clearAllFilters}
-            />
-          </div>
-
-          {/* Main content */}
-          <div className="lg:col-span-3">
-            {/* Active filters display */}
-            <ActiveFiltersBar 
-              selectedProductTypes={selectedProductTypes}
-              selectedLocations={selectedLocations}
-              selectedAvailability={selectedAvailability}
-              selectedRating={selectedRating}
-              searchQuery={searchQuery}
-              onRemoveFilter={handleFilterChange}
-              onRemoveRating={() => setSelectedRating(null)}
-              onClearSearch={() => setSearchQuery("")}
-            />
-
-            {/* Results count */}
-            <div className="mb-6">
-              <p className="text-zion-slate-light">
-                Showing {filteredListings.length} results
-                {searchQuery && ` for "${searchQuery}"`}
-              </p>
-            </div>
-
-            {/* Display actual marketplace listings */}
-            {isLoading ? (
-              <div className="flex justify-center py-20">
-                <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
-              </div>
-            ) : filteredListings.length > 0 ? (
-              viewMode === 'grid' ? (
-                <ProductGrid listings={paginatedListings} onRequestQuote={handleRequestQuote} />
-              ) : (
-                <ProductList listings={paginatedListings} onRequestQuote={handleRequestQuote} />
-              )
             ) : (
-              <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
-                <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
-                <p className="text-zion-slate-light max-w-md mx-auto mb-8">
-                  We couldn't find any listings matching your filters. Try adjusting your search criteria.
-                </p>
-                <Button
-                  onClick={clearAllFilters}
-                  className="bg-zion-purple hover:bg-zion-purple-dark"
-                >
-                  Clear Filters
-                </Button>
-              </div>
-            )}
-            {totalPages > 1 && (
-              <div className="mt-6">
-                <Pagination className="justify-center">
-                  <PaginationContent>
-                    <PaginationItem>
-                      <PaginationPrevious
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.max(1, currentPage - 1));
-                        }}
-                      />
-                    </PaginationItem>
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <ProductList
+                listings={paginatedListings}
+                onRequestQuote={handleRequestQuote}
+              />
+            )
+          ) : (
+            <div className='col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                No Results Found
+              </h2>
+              <p className='text-zion-slate-light max-w-md mx-auto mb-8'>
+                We couldn't find any listings matching your filters. Try
+                adjusting your search criteria.
+              </p>
+              <Button
+                onClick={clearAllFilters}
+                className='bg-zion-purple hover:bg-zion-purple-dark'
+              >
+                Clear Filters
+              </Button>
+            </div>
+          )}
+          {totalPages > 1 && (
+            <div className='mt-6'>
+              <Pagination className='justify-center'>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious
+                      href='#'
+                      onClick={e => {
+                        e.preventDefault();
+                        setCurrentPage(Math.max(1, currentPage - 1));
+                      }}
+                    />
+                  </PaginationItem>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                    page => (
                       <PaginationItem key={page}>
                         <PaginationLink
-                          href="#"
+                          href='#'
                           isActive={page === currentPage}
-                          onClick={(e) => {
+                          onClick={e => {
                             e.preventDefault();
                             setCurrentPage(page);
                           }}
@@ -294,23 +345,24 @@ export default function Marketplace() {
                           {page}
                         </PaginationLink>
                       </PaginationItem>
-                    ))}
-                    <PaginationItem>
-                      <PaginationNext
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.min(totalPages, currentPage + 1));
-                        }}
-                      />
-                    </PaginationItem>
-                  </PaginationContent>
-                </Pagination>
-              </div>
-            )}
-          </div>
+                    )
+                  )}
+                  <PaginationItem>
+                    <PaginationNext
+                      href='#'
+                      onClick={e => {
+                        e.preventDefault();
+                        setCurrentPage(Math.min(totalPages, currentPage + 1));
+                      }}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            </div>
+          )}
         </div>
-      </main>
+      </div>
+    </main>
   );
 }
 import React from 'react';
@@ -321,21 +373,28 @@ const Marketplace: React.FC = () => {
     <>
       <Helmet>
         <title>Marketplace - Zion Tech Group</title>
-        <meta name="description" content="Browse and purchase technology solutions, services, and equipment from Zion Tech Group's comprehensive marketplace." />
+        <meta
+          name='description'
+          content="Browse and purchase technology solutions, services, and equipment from Zion Tech Group's comprehensive marketplace."
+        />
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Marketplace</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse and purchase technology solutions, services, and equipment from our comprehensive marketplace.
+      <div className='min-h-screen bg-gray-50 py-12'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Marketplace
+            </h1>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Browse and purchase technology solutions, services, and equipment
+              from our comprehensive marketplace.
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-center">
-              Marketplace coming soon. We're building a comprehensive technology marketplace.
+          <div className='bg-white rounded-lg shadow-lg p-8'>
+            <p className='text-gray-600 text-center'>
+              Marketplace coming soon. We're building a comprehensive technology
+              marketplace.
             </p>
           </div>
         </div>

@@ -11,7 +11,7 @@ import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 
 function Fallback({ error, resetErrorBoundary }: FallbackProps) {
   return (
-    <div role="alert">
+    <div role='alert'>
       <p>Something went wrong.</p>
       <pre>{error.message}</pre>
       <button onClick={resetErrorBoundary}>Reload</button>
@@ -19,9 +19,16 @@ function Fallback({ error, resetErrorBoundary }: FallbackProps) {
   );
 }
 
-export default function GlobalErrorBoundary({ children }: { children: React.ReactNode }) {
+export default function GlobalErrorBoundary({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <ErrorBoundary FallbackComponent={Fallback} onReset={() => window.location.reload()}>
+    <ErrorBoundary
+      FallbackComponent={Fallback}
+      onReset={() => window.location.reload()}
+    >
       {children}
     </ErrorBoundary>
   );

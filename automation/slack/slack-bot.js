@@ -10,7 +10,7 @@ class OptimizationSlackBot {
       token: process.env.SLACK_BOT_TOKEN,
       signingSecret: process.env.SLACK_SIGNING_SECRET,
       socketMode: false,
-      appToken: process.env.SLACK_APP_TOKEN
+      appToken: process.env.SLACK_APP_TOKEN,
     });
 
     this.setupCommands();
@@ -22,7 +22,7 @@ class OptimizationSlackBot {
     // Main optimization command
     this.app.command('/optimize', async ({ command, ack, respond, client }) => {
       await ack();
-      
+
       const args = command.text.split(' ');
       const target = args[0] || 'all';
       const options = args.slice(1);
@@ -35,20 +35,20 @@ class OptimizationSlackBot {
               type: 'section',
               text: {
                 type: 'mrkdwn',
-                text: `🚀 *Starting optimization for: ${target}*\n\nInitiating Cursor agents...`
-              }
-            }
-          ]
+                text: `🚀 *Starting optimization for: ${target}*\n\nInitiating Cursor agents...`,
+              },
+            },
+          ],
         });
 
         const result = await this.triggerOptimization(target, options);
-        
+
         await this.sendOptimizationResults(client, command.channel_id, result);
       } catch (error) {
         console.error('Optimization command error:', error);
         await respond({
           text: `❌ Optimization failed: ${error.message}`,
-          response_type: 'ephemeral'
+          response_type: 'ephemeral',
         });
       }
     });
@@ -56,16 +56,16 @@ class OptimizationSlackBot {
     // Performance status command
     this.app.command('/status', async ({ command: _command, ack, respond }) => {
       await ack();
-      
+
       try {
         const status = await this.getPerformanceStatus();
         await respond({
-          blocks: this.formatStatusBlocks(status)
+          blocks: this.formatStatusBlocks(status),
         });
       } catch (error) {
         await respond({
           text: `❌ Status check failed: ${error.message}`,
-          response_type: 'ephemeral'
+          response_type: 'ephemeral',
         });
       }
     });
@@ -73,49 +73,52 @@ class OptimizationSlackBot {
     // Performance report command
     this.app.command('/report', async ({ command, ack, respond }) => {
       await ack();
-      
+
       const timeframe = command.text || '24h';
-      
+
       try {
         const report = await this.generatePerformanceReport(timeframe);
         await respond({
-          blocks: this.formatReportBlocks(report)
+          blocks: this.formatReportBlocks(report),
         });
       } catch (error) {
         await respond({
           text: `❌ Report generation failed: ${error.message}`,
-          response_type: 'ephemeral'
+          response_type: 'ephemeral',
         });
       }
     });
 
     // Optimization suggestions command
-    this.app.command('/suggestions', async ({ command: _command, ack, respond }) => {
-      await ack();
-      
-      try {
-        const suggestions = await this.getOptimizationSuggestions();
-        await respond({
-          blocks: this.formatSuggestionsBlocks(suggestions)
-        });
-      } catch (error) {
-        await respond({
-          text: `❌ Failed to get suggestions: ${error.message}`,
-          response_type: 'ephemeral'
-        });
+    this.app.command(
+      '/suggestions',
+      async ({ command: _command, ack, respond }) => {
+        await ack();
+
+        try {
+          const suggestions = await this.getOptimizationSuggestions();
+          await respond({
+            blocks: this.formatSuggestionsBlocks(suggestions),
+          });
+        } catch (error) {
+          await respond({
+            text: `❌ Failed to get suggestions: ${error.message}`,
+            response_type: 'ephemeral',
+          });
+        }
       }
-    });
+    );
 
     // Configuration command
     this.app.command('/configure', async ({ command, ack, respond }) => {
       await ack();
-      
+
       const [setting, value] = command.text.split(' ');
-      
+
       if (!setting || !value) {
         await respond({
           text: '❌ Usage: `/configure <setting> <value>`\nAvailable settings: threshold, interval, alerts',
-          response_type: 'ephemeral'
+          response_type: 'ephemeral',
         });
         return;
       }
@@ -124,12 +127,12 @@ class OptimizationSlackBot {
         await this.updateConfiguration(setting, value);
         await respond({
           text: `✅ Configuration updated: ${setting} = ${value}`,
-          response_type: 'ephemeral'
+          response_type: 'ephemeral',
         });
       } catch (error) {
         await respond({
           text: `❌ Configuration failed: ${error.message}`,
-          response_type: 'ephemeral'
+          response_type: 'ephemeral',
         });
       }
     });
@@ -139,10 +142,10 @@ class OptimizationSlackBot {
     // Handle button interactions
     this.app.action('optimize_action', async ({ ack, body, client }) => {
       await ack();
-      
+
       const action = body.actions[0];
       const target = action.value;
-      
+
       try {
         const result = await this.triggerOptimization(target);
         await this.sendOptimizationResults(client, body.channel.id, result);
@@ -165,22 +168,22 @@ class OptimizationSlackBot {
           type: 'header',
           text: {
             type: 'plain_text',
-            text: '🚨 Performance Alert'
-          }
+            text: '🚨 Performance Alert',
+          },
         },
         {
           type: 'section',
           text: {
             type: 'mrkdwn',
-            text: `*Issue:* ${event.issue}\n*Severity:* ${event.severity}\n*Affected Component:* ${event.component}`
-          }
+            text: `*Issue:* ${event.issue}\n*Severity:* ${event.severity}\n*Affected Component:* ${event.component}`,
+          },
         },
         {
           type: 'section',
           text: {
             type: 'mrkdwn',
-            text: `*Current Value:* ${event.currentValue}\n*Threshold:* ${event.threshold}\n*Time:* ${new Date(event.timestamp).toLocaleString()}`
-          }
+            text: `*Current Value:* ${event.currentValue}\n*Threshold:* ${event.threshold}\n*Time:* ${new Date(event.timestamp).toLocaleString()}`,
+          },
         },
         {
           type: 'actions',
@@ -189,46 +192,46 @@ class OptimizationSlackBot {
               type: 'button',
               text: {
                 type: 'plain_text',
-                text: '🚀 Auto-Optimize'
+                text: '🚀 Auto-Optimize',
               },
               style: 'primary',
               action_id: 'optimize_action',
-              value: event.component
+              value: event.component,
             },
             {
               type: 'button',
               text: {
                 type: 'plain_text',
-                text: '📊 View Details'
+                text: '📊 View Details',
               },
-              url: `${process.env.DASHBOARD_URL}/performance/${event.component}`
-            }
-          ]
-        }
+              url: `${process.env.DASHBOARD_URL}/performance/${event.component}`,
+            },
+          ],
+        },
       ];
 
       await client.chat.postMessage({
         channel: process.env.SLACK_CHANNEL,
-        blocks: alertBlocks
+        blocks: alertBlocks,
       });
     });
   }
 
   async triggerOptimization(target, options = []) {
     console.log(`Triggering optimization for: ${target}`);
-    
+
     // Call Cursor agent API
     const cursorResponse = await this.callCursorAgent(target, options);
-    
+
     // Run existing optimization scripts
     const scriptResult = await this.runOptimizationScript(target);
-    
+
     return {
       target,
       cursorResult: cursorResponse,
       scriptResult,
       timestamp: new Date().toISOString(),
-      options
+      options,
     };
   }
 
@@ -238,17 +241,21 @@ class OptimizationSlackBot {
     }
 
     try {
-      const response = await axios.post(`${process.env.CURSOR_AGENT_ENDPOINT}/optimize`, {
-        project_id: process.env.CURSOR_PROJECT_ID,
-        target,
-        options,
-        rules: await this.getOptimizationRules()
-      }, {
-        headers: {
-          'Authorization': `Bearer ${process.env.CURSOR_API_KEY}`,
-          'Content-Type': 'application/json'
+      const response = await axios.post(
+        `${process.env.CURSOR_AGENT_ENDPOINT}/optimize`,
+        {
+          project_id: process.env.CURSOR_PROJECT_ID,
+          target,
+          options,
+          rules: await this.getOptimizationRules(),
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.CURSOR_API_KEY}`,
+            'Content-Type': 'application/json',
+          },
         }
-      });
+      );
 
       return response.data;
     } catch (error) {
@@ -264,7 +271,7 @@ class OptimizationSlackBot {
 
     try {
       let command = 'npm run optimize';
-      
+
       if (target === 'bundle') {
         command = 'npm run bundle:optimize';
       } else if (target === 'performance') {
@@ -272,16 +279,16 @@ class OptimizationSlackBot {
       }
 
       const { stdout, stderr } = await execAsync(command);
-      
+
       return {
         success: true,
         output: stdout,
-        errors: stderr
+        errors: stderr,
       };
     } catch (error) {
       return {
         success: false,
-        error: error.message
+        error: error.message,
       };
     }
   }
@@ -291,15 +298,15 @@ class OptimizationSlackBot {
       // Read performance metrics
       const metricsPath = path.join(process.cwd(), 'performance-metrics.json');
       const metrics = JSON.parse(await fs.readFile(metricsPath, 'utf8'));
-      
+
       // Get current build info
       const buildInfo = await this.getBuildInfo();
-      
+
       return {
         metrics,
         buildInfo,
         timestamp: new Date().toISOString(),
-        status: this.calculateOverallStatus(metrics)
+        status: this.calculateOverallStatus(metrics),
       };
     } catch (error) {
       throw new Error(`Failed to get performance status: ${error.message}`);
@@ -313,13 +320,13 @@ class OptimizationSlackBot {
       summary: {
         optimizations: 5,
         improvements: '23% faster',
-        issues_resolved: 3
+        issues_resolved: 3,
       },
       details: {
         bundle_size_reduction: '2.1MB',
         load_time_improvement: '1.2s',
-        core_web_vitals: 'Good'
-      }
+        core_web_vitals: 'Good',
+      },
     };
   }
 
@@ -331,23 +338,28 @@ class OptimizationSlackBot {
         impact: 'High',
         effort: 'Medium',
         description: 'Implement lazy loading for heavy components',
-        files: ['src/components/Dashboard.tsx', 'src/components/Analytics.tsx']
+        files: ['src/components/Dashboard.tsx', 'src/components/Analytics.tsx'],
       },
       {
         type: 'Image Optimization',
         impact: 'Medium',
         effort: 'Low',
         description: 'Convert images to WebP format',
-        files: ['public/images/*.png']
-      }
+        files: ['public/images/*.png'],
+      },
     ];
   }
 
   async getOptimizationRules() {
     try {
-      const rulesDir = path.join(process.cwd(), '.cursor', 'rules', 'optimization');
+      const rulesDir = path.join(
+        process.cwd(),
+        '.cursor',
+        'rules',
+        'optimization'
+      );
       const files = await fs.readdir(rulesDir);
-      
+
       const rules = [];
       for (const file of files) {
         if (file.endsWith('.mdc')) {
@@ -355,7 +367,7 @@ class OptimizationSlackBot {
           rules.push(content);
         }
       }
-      
+
       return rules;
     } catch (error) {
       console.error('Error reading optimization rules:', error);
@@ -369,30 +381,30 @@ class OptimizationSlackBot {
         type: 'header',
         text: {
           type: 'plain_text',
-          text: '📊 Performance Status'
-        }
+          text: '📊 Performance Status',
+        },
       },
       {
         type: 'section',
         fields: [
           {
             type: 'mrkdwn',
-            text: `*Overall Status:* ${status.status}`
+            text: `*Overall Status:* ${status.status}`,
           },
           {
             type: 'mrkdwn',
-            text: `*Last Updated:* ${new Date(status.timestamp).toLocaleString()}`
+            text: `*Last Updated:* ${new Date(status.timestamp).toLocaleString()}`,
           },
           {
             type: 'mrkdwn',
-            text: `*Bundle Size:* ${(status.buildInfo.bundleSize / 1024 / 1024).toFixed(2)} MB`
+            text: `*Bundle Size:* ${(status.buildInfo.bundleSize / 1024 / 1024).toFixed(2)} MB`,
           },
           {
             type: 'mrkdwn',
-            text: `*Load Time:* ${status.metrics.loadTime}ms`
-          }
-        ]
-      }
+            text: `*Load Time:* ${status.metrics.loadTime}ms`,
+          },
+        ],
+      },
     ];
   }
 
@@ -402,16 +414,16 @@ class OptimizationSlackBot {
         type: 'header',
         text: {
           type: 'plain_text',
-          text: `📈 Performance Report (${report.timeframe})`
-        }
+          text: `📈 Performance Report (${report.timeframe})`,
+        },
       },
       {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*Summary:*\n• ${report.summary.optimizations} optimizations completed\n• ${report.summary.improvements} performance improvement\n• ${report.summary.issues_resolved} issues resolved`
-        }
-      }
+          text: `*Summary:*\n• ${report.summary.optimizations} optimizations completed\n• ${report.summary.improvements} performance improvement\n• ${report.summary.issues_resolved} issues resolved`,
+        },
+      },
     ];
   }
 
@@ -421,9 +433,9 @@ class OptimizationSlackBot {
         type: 'header',
         text: {
           type: 'plain_text',
-          text: '💡 Optimization Suggestions'
-        }
-      }
+          text: '💡 Optimization Suggestions',
+        },
+      },
     ];
 
     suggestions.forEach(suggestion => {
@@ -431,8 +443,8 @@ class OptimizationSlackBot {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*${suggestion.type}* (${suggestion.impact} impact, ${suggestion.effort} effort)\n${suggestion.description}`
-        }
+          text: `*${suggestion.type}* (${suggestion.impact} impact, ${suggestion.effort} effort)\n${suggestion.description}`,
+        },
       });
     });
 
@@ -445,16 +457,16 @@ class OptimizationSlackBot {
         type: 'header',
         text: {
           type: 'plain_text',
-          text: '✅ Optimization Complete'
-        }
+          text: '✅ Optimization Complete',
+        },
       },
       {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*Target:* ${result.target}\n*Status:* ${result.scriptResult.success ? 'Success' : 'Failed'}\n*Completed:* ${new Date(result.timestamp).toLocaleString()}`
-        }
-      }
+          text: `*Target:* ${result.target}\n*Status:* ${result.scriptResult.success ? 'Success' : 'Failed'}\n*Completed:* ${new Date(result.timestamp).toLocaleString()}`,
+        },
+      },
     ];
 
     if (result.scriptResult.success) {
@@ -462,14 +474,14 @@ class OptimizationSlackBot {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*Results:*\n\`\`\`${result.scriptResult.output.slice(0, 500)}\`\`\``
-        }
+          text: `*Results:*\n\`\`\`${result.scriptResult.output.slice(0, 500)}\`\`\``,
+        },
       });
     }
 
     await client.chat.postMessage({
       channel: channelId,
-      blocks
+      blocks,
     });
   }
 
@@ -487,11 +499,11 @@ class OptimizationSlackBot {
     try {
       const packagePath = path.join(process.cwd(), 'package.json');
       const packageInfo = JSON.parse(await fs.readFile(packagePath, 'utf8'));
-      
+
       return {
         name: packageInfo.name,
         version: packageInfo.version,
-        bundleSize: 0 // Would be calculated from actual build
+        bundleSize: 0, // Would be calculated from actual build
       };
     } catch (error) {
       return { error: error.message };

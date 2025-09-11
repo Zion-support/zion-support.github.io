@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const itInfrastructureServices: ITInfrastructureService[] = [
@@ -55,7 +55,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Distributed quantum computing at the edge',
     price: '$1,599',
     period: '/month',
-    description: 'Revolutionary edge computing platform that brings quantum computing capabilities to distributed locations, enabling real-time quantum processing for IoT, autonomous vehicles, and smart cities.',
+    description:
+      'Revolutionary edge computing platform that brings quantum computing capabilities to distributed locations, enabling real-time quantum processing for IoT, autonomous vehicles, and smart cities.',
     features: [
       'Distributed quantum processing',
       'Edge-to-cloud synchronization',
@@ -64,15 +65,17 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Autonomous vehicle support',
       'Smart city infrastructure',
       'Low-latency processing',
-      'Energy-efficient quantum operations'
+      'Energy-efficient quantum operations',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-edge-computing',
-    marketPosition: 'First-mover in distributed quantum edge computing; complements existing edge computing platforms.',
-    targetAudience: 'IoT companies, autonomous vehicle manufacturers, smart city projects',
+    marketPosition:
+      'First-mover in distributed quantum edge computing; complements existing edge computing platforms.',
+    targetAudience:
+      'IoT companies, autonomous vehicle manufacturers, smart city projects',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Edge Computing & IoT',
@@ -87,11 +90,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum edge node deployment, IoT integration, edge-to-cloud synchronization.',
+    implementationDetails:
+      'Quantum edge node deployment, IoT integration, edge-to-cloud synchronization.',
     launchDate: '2037-10-15',
     customers: 8,
     rating: 4.9,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'ai-powered-cloud-cost-optimizer',
@@ -99,7 +103,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Intelligent cloud spending optimization and automation',
     price: '$299',
     period: '/month',
-    description: 'Advanced cloud cost management platform that uses AI to automatically optimize cloud spending, identify waste, and implement cost-saving measures across multiple cloud providers.',
+    description:
+      'Advanced cloud cost management platform that uses AI to automatically optimize cloud spending, identify waste, and implement cost-saving measures across multiple cloud providers.',
     features: [
       'Multi-cloud cost optimization',
       'AI-driven resource scaling',
@@ -108,14 +113,15 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Budget forecasting',
       'Real-time cost monitoring',
       'Automated rightsizing',
-      'Reserved instance optimization'
+      'Reserved instance optimization',
     ],
     popular: true,
     icon: '💸',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-cloud-cost-optimizer',
-    marketPosition: 'Intelligent cloud cost management; integrates with major cloud providers and FinOps tools.',
+    marketPosition:
+      'Intelligent cloud cost management; integrates with major cloud providers and FinOps tools.',
     targetAudience: 'DevOps teams, FinOps professionals, cloud architects',
     trialDays: 14,
     setupTime: '1 week',
@@ -131,11 +137,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud provider integration, AI model training, cost optimization algorithms.',
+    implementationDetails:
+      'Cloud provider integration, AI model training, cost optimization algorithms.',
     launchDate: '2037-09-20',
     customers: 234,
     rating: 4.8,
-    reviews: 156
+    reviews: 156,
   },
   {
     id: 'quantum-secure-network-infrastructure',
@@ -143,7 +150,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Post-quantum cryptography for enterprise networks',
     price: '$899',
     period: '/month',
-    description: 'Next-generation network security platform implementing post-quantum cryptography to protect enterprise networks against future quantum computing threats.',
+    description:
+      'Next-generation network security platform implementing post-quantum cryptography to protect enterprise networks against future quantum computing threats.',
     features: [
       'Post-quantum cryptography',
       'Quantum-resistant algorithms',
@@ -152,20 +160,24 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Compliance reporting',
       'Performance monitoring',
       'Zero-trust architecture',
-      'Quantum threat assessment'
+      'Quantum threat assessment',
     ],
     popular: false,
     icon: '🔐',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-secure-network',
-    marketPosition: 'Future-proof network security; integrates with existing network infrastructure.',
-    targetAudience: 'Enterprise security teams, government agencies, financial institutions',
+    marketPosition:
+      'Future-proof network security; integrates with existing network infrastructure.',
+    targetAudience:
+      'Enterprise security teams, government agencies, financial institutions',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Network Security',
     realService: true,
-    technology: ['Post-quantum cryptography, Network security, Zero-trust, Encryption'],
+    technology: [
+      'Post-quantum cryptography, Network security, Zero-trust, Encryption',
+    ],
     integrations: ['Cisco, Juniper, Palo Alto Networks, Fortinet'],
     useCases: ['Network security, Compliance, Future-proofing'],
     roi: 'Protect against quantum threats and ensure long-term security compliance.',
@@ -175,11 +187,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Post-quantum algorithm implementation, network integration, compliance setup.',
+    implementationDetails:
+      'Post-quantum algorithm implementation, network integration, compliance setup.',
     launchDate: '2037-08-25',
     customers: 15,
     rating: 4.9,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'autonomous-devops-orchestrator',
@@ -187,7 +200,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Self-managing DevOps pipelines and infrastructure',
     price: '$599',
     period: '/month',
-    description: 'Intelligent DevOps platform that autonomously manages CI/CD pipelines, infrastructure provisioning, and deployment processes using AI and machine learning.',
+    description:
+      'Intelligent DevOps platform that autonomously manages CI/CD pipelines, infrastructure provisioning, and deployment processes using AI and machine learning.',
     features: [
       'Autonomous CI/CD management',
       'Infrastructure auto-scaling',
@@ -196,14 +210,15 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Security scanning',
       'Cost optimization',
       'Incident response',
-      'Predictive maintenance'
+      'Predictive maintenance',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/autonomous-devops',
-    marketPosition: 'Next-generation DevOps automation; integrates with existing DevOps tools and platforms.',
+    marketPosition:
+      'Next-generation DevOps automation; integrates with existing DevOps tools and platforms.',
     targetAudience: 'DevOps engineers, platform teams, SREs',
     trialDays: 21,
     setupTime: '1 week',
@@ -211,7 +226,9 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     realService: true,
     technology: ['AI/ML, DevOps, CI/CD, Infrastructure as Code'],
     integrations: ['Jenkins, GitLab, GitHub Actions, Terraform'],
-    useCases: ['DevOps automation, Infrastructure management, Deployment optimization'],
+    useCases: [
+      'DevOps automation, Infrastructure management, Deployment optimization',
+    ],
     roi: 'Reduce deployment time by 60-80% and improve infrastructure efficiency by 40-60%.',
     competitors: ['GitLab Auto DevOps, Jenkins X, Spinnaker'],
     marketSize: '$18B DevOps market',
@@ -219,11 +236,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'ai-autonomous',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, DevOps tool integration, automation workflow setup.',
+    implementationDetails:
+      'AI model training, DevOps tool integration, automation workflow setup.',
     launchDate: '2037-07-30',
     customers: 89,
     rating: 4.7,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'quantum-data-warehouse-accelerator',
@@ -231,7 +249,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Quantum-powered analytics and data processing',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced data warehouse platform leveraging quantum computing to accelerate complex queries, machine learning workflows, and big data analytics.',
+    description:
+      'Advanced data warehouse platform leveraging quantum computing to accelerate complex queries, machine learning workflows, and big data analytics.',
     features: [
       'Quantum query acceleration',
       'ML workflow optimization',
@@ -240,14 +259,15 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Predictive modeling',
       'Data visualization',
       'Integration capabilities',
-      'Performance monitoring'
+      'Performance monitoring',
     ],
     popular: true,
     icon: '📊',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-data-warehouse',
-    marketPosition: 'Quantum-accelerated data analytics; integrates with existing data warehouses and BI tools.',
+    marketPosition:
+      'Quantum-accelerated data analytics; integrates with existing data warehouses and BI tools.',
     targetAudience: 'Data scientists, analysts, BI teams, data engineers',
     trialDays: 21,
     setupTime: '2 weeks',
@@ -263,11 +283,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, data warehouse connectivity, analytics optimization.',
+    implementationDetails:
+      'Quantum cloud integration, data warehouse connectivity, analytics optimization.',
     launchDate: '2037-06-15',
     customers: 42,
     rating: 4.8,
-    reviews: 31
+    reviews: 31,
   },
   {
     id: 'ai-powered-disaster-recovery-manager',
@@ -275,7 +296,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Intelligent backup and recovery automation',
     price: '$399',
     period: '/month',
-    description: 'Smart disaster recovery platform that automatically manages backup strategies, monitors system health, and orchestrates recovery processes using AI.',
+    description:
+      'Smart disaster recovery platform that automatically manages backup strategies, monitors system health, and orchestrates recovery processes using AI.',
     features: [
       'Automated backup management',
       'Intelligent recovery planning',
@@ -284,14 +306,15 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Multi-cloud backup',
       'Compliance automation',
       'Testing automation',
-      'Performance analytics'
+      'Performance analytics',
     ],
     popular: false,
     icon: '🔄',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-disaster-recovery',
-    marketPosition: 'Intelligent disaster recovery; integrates with existing backup and cloud platforms.',
+    marketPosition:
+      'Intelligent disaster recovery; integrates with existing backup and cloud platforms.',
     targetAudience: 'IT operations, DevOps teams, compliance officers',
     trialDays: 14,
     setupTime: '1 week',
@@ -307,11 +330,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, backup system integration, automation workflow setup.',
+    implementationDetails:
+      'AI model training, backup system integration, automation workflow setup.',
     launchDate: '2037-05-20',
     customers: 67,
     rating: 4.6,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'quantum-container-orchestration-platform',
@@ -319,7 +343,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Quantum-optimized container management and scaling',
     price: '$799',
     period: '/month',
-    description: 'Advanced container orchestration platform using quantum algorithms to optimize resource allocation, scaling decisions, and container placement across distributed systems.',
+    description:
+      'Advanced container orchestration platform using quantum algorithms to optimize resource allocation, scaling decisions, and container placement across distributed systems.',
     features: [
       'Quantum resource optimization',
       'Intelligent scaling',
@@ -328,22 +353,27 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Performance monitoring',
       'Cost optimization',
       'Multi-cluster management',
-      'Security scanning'
+      'Security scanning',
     ],
     popular: true,
     icon: '📦',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-container-orchestration',
-    marketPosition: 'Quantum-optimized container management; integrates with Kubernetes and other container platforms.',
+    marketPosition:
+      'Quantum-optimized container management; integrates with Kubernetes and other container platforms.',
     targetAudience: 'DevOps engineers, platform teams, cloud architects',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Container Management',
     realService: true,
-    technology: ['Quantum computing, Kubernetes, Docker, Container orchestration'],
+    technology: [
+      'Quantum computing, Kubernetes, Docker, Container orchestration',
+    ],
     integrations: ['Kubernetes, Docker, AWS ECS, Azure Container Instances'],
-    useCases: ['Container optimization, Resource management, Scaling automation'],
+    useCases: [
+      'Container optimization, Resource management, Scaling automation',
+    ],
     roi: 'Improve resource utilization by 30-50% and reduce scaling time by 60-80%.',
     competitors: ['Kubernetes, Docker Swarm, AWS ECS'],
     marketSize: '$22B container orchestration market',
@@ -351,11 +381,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, Kubernetes integration, optimization algorithms.',
+    implementationDetails:
+      'Quantum cloud integration, Kubernetes integration, optimization algorithms.',
     launchDate: '2037-04-25',
     customers: 78,
     rating: 4.7,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'ai-powered-api-gateway-manager',
@@ -363,7 +394,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Intelligent API management and optimization',
     price: '$199',
     period: '/month',
-    description: 'Smart API gateway platform that automatically optimizes API performance, manages traffic, and provides intelligent insights using AI and machine learning.',
+    description:
+      'Smart API gateway platform that automatically optimizes API performance, manages traffic, and provides intelligent insights using AI and machine learning.',
     features: [
       'AI-powered traffic management',
       'Performance optimization',
@@ -372,14 +404,15 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Analytics and insights',
       'Documentation generation',
       'Testing automation',
-      'Monitoring and alerting'
+      'Monitoring and alerting',
     ],
     popular: false,
     icon: '🔌',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/ai-api-gateway',
-    marketPosition: 'Intelligent API management; integrates with existing API gateways and development tools.',
+    marketPosition:
+      'Intelligent API management; integrates with existing API gateways and development tools.',
     targetAudience: 'API developers, platform teams, integration specialists',
     trialDays: 14,
     setupTime: '1 week',
@@ -395,11 +428,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, API gateway integration, analytics dashboard setup.',
+    implementationDetails:
+      'AI model training, API gateway integration, analytics dashboard setup.',
     launchDate: '2037-03-30',
     customers: 134,
     rating: 4.6,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'quantum-microservices-architect',
@@ -407,7 +441,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Quantum-optimized microservices design and deployment',
     price: '$1,099',
     period: '/month',
-    description: 'Advanced microservices platform using quantum algorithms to optimize service design, deployment patterns, and inter-service communication for maximum performance and scalability.',
+    description:
+      'Advanced microservices platform using quantum algorithms to optimize service design, deployment patterns, and inter-service communication for maximum performance and scalability.',
     features: [
       'Quantum service optimization',
       'Architecture recommendations',
@@ -416,22 +451,27 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Service mesh optimization',
       'Load balancing',
       'Fault tolerance',
-      'Monitoring and observability'
+      'Monitoring and observability',
     ],
     popular: true,
     icon: '🏗️',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-microservices',
-    marketPosition: 'Quantum-optimized microservices; integrates with existing microservices platforms and tools.',
+    marketPosition:
+      'Quantum-optimized microservices; integrates with existing microservices platforms and tools.',
     targetAudience: 'Software architects, DevOps engineers, platform teams',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Microservices Architecture',
     realService: true,
-    technology: ['Quantum computing, Microservices, Service mesh, Architecture design'],
+    technology: [
+      'Quantum computing, Microservices, Service mesh, Architecture design',
+    ],
     integrations: ['Kubernetes, Istio, Consul, AWS ECS'],
-    useCases: ['Architecture optimization, Performance improvement, Scalability planning'],
+    useCases: [
+      'Architecture optimization, Performance improvement, Scalability planning',
+    ],
     roi: 'Improve service performance by 50-80% and reduce infrastructure costs by 30-50%.',
     competitors: ['Kubernetes, Istio, Consul'],
     marketSize: '$18B microservices market',
@@ -439,11 +479,12 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, microservices platform integration, optimization algorithms.',
+    implementationDetails:
+      'Quantum cloud integration, microservices platform integration, optimization algorithms.',
     launchDate: '2037-02-15',
     customers: 56,
     rating: 4.8,
-    reviews: 42
+    reviews: 42,
   },
   {
     id: 'ai-powered-infrastructure-monitoring',
@@ -451,7 +492,8 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     tagline: 'Intelligent infrastructure monitoring and alerting',
     price: '$149',
     period: '/month',
-    description: 'Smart infrastructure monitoring platform that uses AI to detect anomalies, predict failures, and provide intelligent insights for proactive infrastructure management.',
+    description:
+      'Smart infrastructure monitoring platform that uses AI to detect anomalies, predict failures, and provide intelligent insights for proactive infrastructure management.',
     features: [
       'AI-powered anomaly detection',
       'Predictive failure analysis',
@@ -460,14 +502,15 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
       'Capacity planning',
       'Root cause analysis',
       'Automated remediation',
-      'Comprehensive dashboards'
+      'Comprehensive dashboards',
     ],
     popular: true,
     icon: '📡',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-infrastructure-monitoring',
-    marketPosition: 'Intelligent infrastructure monitoring; integrates with existing monitoring tools and platforms.',
+    marketPosition:
+      'Intelligent infrastructure monitoring; integrates with existing monitoring tools and platforms.',
     targetAudience: 'SREs, DevOps engineers, IT operations teams',
     trialDays: 14,
     setupTime: '1 week',
@@ -475,7 +518,9 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     realService: true,
     technology: ['AI/ML, Monitoring, Observability, Infrastructure management'],
     integrations: ['Prometheus, Grafana, Datadog, New Relic'],
-    useCases: ['Infrastructure monitoring, Performance optimization, Proactive maintenance'],
+    useCases: [
+      'Infrastructure monitoring, Performance optimization, Proactive maintenance',
+    ],
     roi: 'Reduce downtime by 60-80% and improve resource utilization by 30-50%.',
     competitors: ['Datadog, New Relic, Splunk'],
     marketSize: '$20B infrastructure monitoring market',
@@ -483,10 +528,11 @@ export const itInfrastructureServices: ITInfrastructureService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, monitoring tool integration, analytics dashboard setup.',
+    implementationDetails:
+      'AI model training, monitoring tool integration, analytics dashboard setup.',
     launchDate: '2037-01-20',
     customers: 189,
     rating: 4.7,
-    reviews: 134
-  }
+    reviews: 134,
+  },
 ];

@@ -14,11 +14,7 @@ export function Card({ children, className = '' }: CardProps) {
 }
 
 export function CardHeader({ children, className = '' }: CardProps) {
-  return (
-    <div className={`mb-4 ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`mb-4 ${className}`}>{children}</div>;
 }
 
 export function CardTitle({ children, className = '' }: CardProps) {
@@ -30,17 +26,9 @@ export function CardTitle({ children, className = '' }: CardProps) {
 }
 
 export function CardDescription({ children, className = '' }: CardProps) {
-  return (
-    <p className={`text-gray-300 ${className}`}>
-      {children}
-    </p>
-  );
+  return <p className={`text-gray-300 ${className}`}>{children}</p>;
 }
 
 export function CardContent({ children, className = '' }: CardProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`${className}`}>{children}</div>;
 }

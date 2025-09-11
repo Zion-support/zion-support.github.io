@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Absolute Comprehensive Final Ultimate Absolute Ultimate Absolute Ultimate Absolute Ultimate Absolute Ultimate Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Absolute Comprehensive Final Ultimate Absolute Ultimate Absolute Ultimate Absolute Ultimate Absolute Ultimate Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix whitepaper export file
@@ -14,7 +16,9 @@ if (fs.existsSync(whitepaperExportPath)) {
     content += '\n}';
   }
   fs.writeFileSync(whitepaperExportPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/whitepaper/export.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/whitepaper/export.ts'
+  );
 }
 // Fix whitepaper get file
 const whitepaperGetPath = '/workspace/pages/api/whitepaper/get.ts';
@@ -25,7 +29,9 @@ if (fs.existsSync(whitepaperGetPath)) {
     content += '\n}';
   }
   fs.writeFileSync(whitepaperGetPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/whitepaper/get.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/whitepaper/get.ts'
+  );
 }
 // Fix whitepaper share file
 const whitepaperSharePath = '/workspace/pages/api/whitepaper/share.ts';
@@ -33,11 +39,13 @@ if (fs.existsSync(whitepaperSharePath)) {
   let content = fs.readFileSync(whitepaperSharePath, 'utf8');
   // Fix the syntax error
   content = content.replace(
-    '  const url = `${process.env.NEXT_PUBLIC_BASE_URL || \'\'}/whitepaper/preview/${id}`;',
-    '  const url = `${process.env.NEXT_PUBLIC_BASE_URL || \'\'}/whitepaper/preview/${id}`;'
+    "  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;",
+    "  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;"
   );
   fs.writeFileSync(whitepaperSharePath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/whitepaper/share.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/whitepaper/share.ts'
+  );
 }
 // Fix utils db file - rewrite completely
 const utilsDbPath = '/workspace/utils/db.ts';
@@ -81,7 +89,9 @@ if (fs.existsSync(utilsDevAccessPath)) {
   console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed utils/devAccess.ts');
 }
 console.log('');
-console.log('📊 ULTIMATE ABSOLUTE COMPREHENSIVE FINAL ULTIMATE ABSOLUTE ULTIMATE ABSOLUTE ULTIMATE ABSOLUTE ULTIMATE ABSOLUTE ULTIMATE FIX REPORT');
+console.log(
+  '📊 ULTIMATE ABSOLUTE COMPREHENSIVE FINAL ULTIMATE ABSOLUTE ULTIMATE ABSOLUTE ULTIMATE ABSOLUTE ULTIMATE ABSOLUTE ULTIMATE FIX REPORT'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] =');
 console.log('');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
@@ -104,8 +114,13 @@ const report = {
     'pages/api/whitepaper/get.ts',
     'pages/api/whitepaper/share.ts',
     'utils/db.ts',
-    'utils/devAccess.ts'
-  ]
+    'utils/devAccess.ts',
+  ],
 };
-fs.writeFileSync('/workspace/ultimate-absolute-comprehensive-final-ultimate-absolute-ultimate-absolute-ultimate-absolute-ultimate-absolute-ultimate-fix-report.json', JSON.stringify(report, null, 2));
-console.log('📄 Report saved to ultimate-absolute-comprehensive-final-ultimate-absolute-ultimate-absolute-ultimate-absolute-ultimate-absolute-ultimate-fix-report.json');
+fs.writeFileSync(
+  '/workspace/ultimate-absolute-comprehensive-final-ultimate-absolute-ultimate-absolute-ultimate-absolute-ultimate-absolute-ultimate-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
+console.log(
+  '📄 Report saved to ultimate-absolute-comprehensive-final-ultimate-absolute-ultimate-absolute-ultimate-absolute-ultimate-absolute-ultimate-fix-report.json'
+);

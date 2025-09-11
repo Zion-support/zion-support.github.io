@@ -26,11 +26,14 @@ describe('Product Search', () => {
 
     // Check the "Products" tab count
     // This selector targets a button with role="tab" that contains the text "Products"
-    cy.get('button[role="tab"]').contains('Products').invoke('text').then((text) => {
-      // Extracts count from "Products (N)"
-      const count = parseInt(text.match(/\((\d+)\)/)?.[1] || '0');
-      expect(count).to.be.greaterThan(0);
-    });
+    cy.get('button[role="tab"]')
+      .contains('Products')
+      .invoke('text')
+      .then(text => {
+        // Extracts count from "Products (N)"
+        const count = parseInt(text.match(/\((\d+)\)/)?.[1] || '0');
+        expect(count).to.be.greaterThan(0);
+      });
 
     // Also verify the product card itself is rendered and contains the product name
     // This selector targets a div with a class containing "bg-zion-blue-dark" (as per SearchPage.tsx)

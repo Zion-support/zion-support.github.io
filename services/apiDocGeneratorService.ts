@@ -125,10 +125,26 @@ export interface DocumentationConfig {
 }
 export class APIDocGeneratorService {
   private supportedFrameworks = [
-    'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel'
+    'express',
+    'fastify',
+    'koa',
+    'hapi',
+    'django',
+    'flask',
+    'fastapi',
+    'spring',
+    'aspnet',
+    'laravel',
   ];
   private supportedLanguages = [
-    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby'
+    'javascript',
+    'typescript',
+    'python',
+    'java',
+    'csharp',
+    'php',
+    'go',
+    'ruby',
   ];
   async generateDocumentation(
     sourcePath: string,
@@ -148,8 +164,8 @@ export class APIDocGeneratorService {
         totalEndpoints: 0,
         coverage: 0,
         languages: [],
-        frameworks: []
-      }
+        frameworks: [],
+      },
     };
     try {
       // Analyze source code
@@ -161,10 +177,14 @@ export class APIDocGeneratorService {
       documentation.metadata.frameworks = analysis.frameworks;
       // Generate examples if requested
       if (config.includeExamples) {
-        documentation.examples = await this.generateExamples(documentation.endpoints);
+        documentation.examples = await this.generateExamples(
+          documentation.endpoints
+        );
       }
       // Calculate coverage
-      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
+      documentation.metadata.coverage = this.calculateCoverage(
+        documentation.endpoints
+      );
     } catch (error) {
       console.error('Error generating documentation:', error);
       // Fallback to basic documentation
@@ -185,10 +205,10 @@ export class APIDocGeneratorService {
     const frameworks: string[] = [];
     // Simulate code analysis based on file extensions
     const files = await this.scanDirectory(sourcePath);
-    
+
     for (const file of files) {
       const extension = file.split('.').pop()?.toLowerCase();
-      
+
       if (extension === 'js' || extension === 'ts') {
         languages.push('javascript', 'typescript');
         frameworks.push('express', 'fastify');
@@ -210,7 +230,7 @@ export class APIDocGeneratorService {
       endpoints,
       schemas: this.generateSchemas(endpoints),
       languages: uniqueLanguages,
-      frameworks: uniqueFrameworks
+      frameworks: uniqueFrameworks,
     };
   }
   private async scanDirectory(path: string): Promise<string[]> {
@@ -222,12 +242,12 @@ export class APIDocGeneratorService {
       'src/models/User.js',
       'src/models/Product.js',
       'src/middleware/auth.js',
-      'src/config/database.js'
+      'src/config/database.js',
     ];
   }
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-    
+
     // Simulate route analysis
     if (filePath.includes('users')) {
       endpoints.push(
@@ -236,22 +256,28 @@ export class APIDocGeneratorService {
           path: '/api/users',
           method: 'GET',
           summary: 'Get all users',
-          description: 'Retrieve a list of all users with optional filtering and pagination',
+          description:
+            'Retrieve a list of all users with optional filtering and pagination',
           parameters: [
             {
               name: 'page',
               in: 'query',
               required: false,
               schema: { type: 'integer', minimum: 1, default: 1 },
-              description: 'Page number for pagination'
+              description: 'Page number for pagination',
             },
             {
               name: 'limit',
               in: 'query',
               required: false,
-              schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
-              description: 'Number of users per page'
-            }
+              schema: {
+                type: 'integer',
+                minimum: 1,
+                maximum: 100,
+                default: 20,
+              },
+              description: 'Number of users per page',
+            },
           ],
           requestBody: undefined,
           responses: [
@@ -265,28 +291,28 @@ export class APIDocGeneratorService {
                     properties: {
                       users: {
                         type: 'array',
-                        items: { $ref: '#/components/schemas/User' }
+                        items: { $ref: '#/components/schemas/User' },
                       },
                       pagination: {
-                        $ref: '#/components/schemas/Pagination'
-                      }
-                    }
-                  }
-                }
-              }
-            }
+                        $ref: '#/components/schemas/Pagination',
+                      },
+                    },
+                  },
+                },
+              },
+            },
           ],
           tags: ['Users'],
           deprecated: false,
           rateLimit: {
             requests: 100,
-            window: '1m'
+            window: '1m',
           },
           authentication: {
             type: 'bearer',
             description: 'JWT token required',
-            required: true
-          }
+            required: true,
+          },
         },
         {
           id: `endpoint_${Date.now()}_2`,
@@ -300,8 +326,8 @@ export class APIDocGeneratorService {
               in: 'path',
               required: true,
               schema: { type: 'string', format: 'uuid' },
-              description: 'User unique identifier'
-            }
+              description: 'User unique identifier',
+            },
           ],
           requestBody: undefined,
           responses: [
@@ -310,17 +336,17 @@ export class APIDocGeneratorService {
               description: 'User found successfully',
               content: {
                 'application/json': {
-                  schema: { $ref: '#/components/schemas/User' }
-                }
-              }
+                  schema: { $ref: '#/components/schemas/User' },
+                },
+              },
             },
             {
               code: '404',
-              description: 'User not found'
-            }
+              description: 'User not found',
+            },
           ],
           tags: ['Users'],
-          deprecated: false
+          deprecated: false,
         }
       );
     }
@@ -328,7 +354,7 @@ export class APIDocGeneratorService {
   }
   private analyzePythonFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-    
+
     // Simulate FastAPI/Django route analysis
     if (filePath.includes('products')) {
       endpoints.push({
@@ -342,9 +368,9 @@ export class APIDocGeneratorService {
           required: true,
           content: {
             'application/json': {
-              schema: { $ref: '#/components/schemas/Product' }
-            }
-          }
+              schema: { $ref: '#/components/schemas/Product' },
+            },
+          },
         },
         responses: [
           {
@@ -352,24 +378,24 @@ export class APIDocGeneratorService {
             description: 'Product created successfully',
             content: {
               'application/json': {
-                schema: { $ref: '#/components/schemas/Product' }
-              }
-            }
+                schema: { $ref: '#/components/schemas/Product' },
+              },
+            },
           },
           {
             code: '400',
-            description: 'Invalid input data'
-          }
+            description: 'Invalid input data',
+          },
         ],
         tags: ['Products'],
-        deprecated: false
+        deprecated: false,
       });
     }
     return endpoints;
   }
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-    
+
     // Simulate Spring Boot endpoint analysis
     if (filePath.includes('orders')) {
       endpoints.push({
@@ -383,9 +409,12 @@ export class APIDocGeneratorService {
             name: 'status',
             in: 'query',
             required: false,
-            schema: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] },
-            description: 'Filter orders by status'
-          }
+            schema: {
+              type: 'string',
+              enum: ['pending', 'processing', 'completed', 'cancelled'],
+            },
+            description: 'Filter orders by status',
+          },
         ],
         requestBody: undefined,
         responses: [
@@ -396,14 +425,14 @@ export class APIDocGeneratorService {
               'application/json': {
                 schema: {
                   type: 'array',
-                  items: { $ref: '#/components/schemas/Order' }
-                }
-              }
-            }
-          }
+                  items: { $ref: '#/components/schemas/Order' },
+                },
+              },
+            },
+          },
         ],
         tags: ['Orders'],
-        deprecated: false
+        deprecated: false,
       });
     }
     return endpoints;
@@ -417,10 +446,10 @@ export class APIDocGeneratorService {
           email: { type: 'string', format: 'email' },
           name: { type: 'string', minLength: 1, maxLength: 100 },
           createdAt: { type: 'string', format: 'date-time' },
-          updatedAt: { type: 'string', format: 'date-time' }
+          updatedAt: { type: 'string', format: 'date-time' },
         },
         required: ['id', 'email', 'name'],
-        description: 'User entity schema'
+        description: 'User entity schema',
       },
       {
         type: 'object',
@@ -430,10 +459,10 @@ export class APIDocGeneratorService {
           description: { type: 'string', maxLength: 1000 },
           price: { type: 'number', minimum: 0 },
           category: { type: 'string' },
-          inStock: { type: 'boolean' }
+          inStock: { type: 'boolean' },
         },
         required: ['id', 'name', 'price'],
-        description: 'Product entity schema'
+        description: 'Product entity schema',
       },
       {
         type: 'object',
@@ -447,15 +476,18 @@ export class APIDocGeneratorService {
               properties: {
                 productId: { type: 'string', format: 'uuid' },
                 quantity: { type: 'integer', minimum: 1 },
-                price: { type: 'number', minimum: 0 }
-              }
-            }
+                price: { type: 'number', minimum: 0 },
+              },
+            },
           },
           total: { type: 'number', minimum: 0 },
-          status: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] }
+          status: {
+            type: 'string',
+            enum: ['pending', 'processing', 'completed', 'cancelled'],
+          },
         },
         required: ['id', 'userId', 'items', 'total'],
-        description: 'Order entity schema'
+        description: 'Order entity schema',
       },
       {
         type: 'object',
@@ -463,17 +495,20 @@ export class APIDocGeneratorService {
           page: { type: 'integer', minimum: 1 },
           limit: { type: 'integer', minimum: 1 },
           total: { type: 'integer', minimum: 0 },
-          pages: { type: 'integer', minimum: 1 }
+          pages: { type: 'integer', minimum: 1 },
         },
         required: ['page', 'limit', 'total', 'pages'],
-        description: 'Pagination metadata schema'
-      }
+        description: 'Pagination metadata schema',
+      },
     ];
     return schemas;
   }
-  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
+  private async generateExamples(
+    endpoints: APIEndpoint[]
+  ): Promise<APIExample[]> {
     const examples: APIExample[] = [];
-    for (const endpoint of endpoints.slice(0, 3)) { // Limit to first 3 endpoints
+    for (const endpoint of endpoints.slice(0, 3)) {
+      // Limit to first 3 endpoints
       examples.push({
         id: `example_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         name: `${endpoint.method} ${endpoint.path}`,
@@ -484,18 +519,20 @@ export class APIDocGeneratorService {
           url: `https://api.example.com${endpoint.path}`,
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer your-jwt-token'
+            Authorization: 'Bearer your-jwt-token',
           },
-          body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : undefined
+          body: endpoint.requestBody
+            ? this.generateExampleBody(endpoint.requestBody)
+            : undefined,
         },
         response: {
           status: parseInt(endpoint.responses[0]?.code || '200'),
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           },
-          body: this.generateExampleResponse(endpoint.responses[0])
+          body: this.generateExampleResponse(endpoint.responses[0]),
         },
-        tags: endpoint.tags
+        tags: endpoint.tags,
       });
     }
     return examples;
@@ -503,18 +540,18 @@ export class APIDocGeneratorService {
   private generateExampleBody(requestBody: APIRequestBody): any {
     // Generate example request body based on schema
     return {
-      name: "Example Name",
-      email: "user@example.com",
-      description: "This is an example description"
+      name: 'Example Name',
+      email: 'user@example.com',
+      description: 'This is an example description',
     };
   }
   private generateExampleResponse(response: APIResponse): any {
     // Generate example response based on schema
     if (response.content?.['application/json']?.schema) {
       return {
-        id: "123e4567-e89b-12d3-a456-426614174000",
-        name: "Example Item",
-        createdAt: new Date().toISOString()
+        id: '123e4567-e89b-12d3-a456-426614174000',
+        name: 'Example Item',
+        createdAt: new Date().toISOString(),
       };
     }
     return null;
@@ -532,12 +569,12 @@ export class APIDocGeneratorService {
         responses: [
           {
             code: '200',
-            description: 'API is healthy'
-          }
+            description: 'API is healthy',
+          },
         ],
         tags: ['System'],
-        deprecated: false
-      }
+        deprecated: false,
+      },
     ];
   }
   private extractProjectName(sourcePath: string): string {
@@ -560,14 +597,14 @@ export class APIDocGeneratorService {
   private calculateCoverage(endpoints: APIEndpoint[]): number {
     // Calculate documentation coverage based on endpoints
     if (endpoints.length === 0) return 0;
-    
+
     let documentedEndpoints = 0;
     for (const endpoint of endpoints) {
       if (endpoint.description && endpoint.description.length > 10) {
         documentedEndpoints++;
       }
     }
-    
+
     return Math.round((documentedEndpoints / endpoints.length) * 100);
   }
   async exportDocumentation(
@@ -588,8 +625,8 @@ export class APIDocGeneratorService {
       id: documentationId,
       metadata: {
         ...changes.metadata,
-        lastGenerated: new Date()
-      }
+        lastGenerated: new Date(),
+      },
     } as APIDocumentation;
   }
 }

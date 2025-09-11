@@ -92,10 +92,7 @@
       "name": "Dependency Cleanup",
       "status": "success",
       "result": {
-        "heavyDeps": [
-          "axios",
-          "framer-motion"
-        ],
+        "heavyDeps": ["axios", "framer-motion"],
         "potentiallyUnused": [],
         "totalDeps": 72
       }

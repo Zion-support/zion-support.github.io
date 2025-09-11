@@ -7,7 +7,7 @@ class PerformanceMonitor {
     this.metrics = {
       buildTime: 0,
       bundleSize: 0,
-      lastCheck: new Date().toISOString()
+      lastCheck: new Date().toISOString(),
     };
   }
 
@@ -39,8 +39,8 @@ class PerformanceMonitor {
         'Enable gzip compression',
         'Implement code splitting',
         'Optimize images',
-        'Use CDN for static assets'
-      ]
+        'Use CDN for static assets',
+      ],
     };
   }
 }

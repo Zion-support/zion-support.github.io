@@ -4,18 +4,22 @@ const path = require('path');
 // Function to find all .tsx and .jsx files recursively
 function findComponentFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
-  
+
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+
+    if (
+      stat.isDirectory() &&
+      !file.startsWith('.') &&
+      file !== 'node_modules'
+    ) {
       findComponentFiles(filePath, fileList);
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
       fileList.push(filePath);
     }
   });
-  
+
   return fileList;
 }
 
@@ -23,15 +27,15 @@ function findComponentFiles(dir, fileList = []) {
 function hasProblematicImports(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check for problematic patterns
     const problematicPatterns = [
       /import.*Layout.*from.*layout\/Layout/,
       /import.*from.*lucide-react/,
       /import.*motion.*from.*framer-motion/,
-      /import.*AnimatePresence.*from.*framer-motion/
+      /import.*AnimatePresence.*from.*framer-motion/,
     ];
-    
+
     return problematicPatterns.some(pattern => pattern.test(content));
   } catch (error) {
     return false;
@@ -42,7 +46,7 @@ function hasProblematicImports(filePath) {
 function simplifyComponent(filePath) {
   const fileName = path.basename(filePath);
   const componentName = fileName.replace(/\.(tsx|jsx)$/, '');
-  
+
   const simpleContent = `import React from 'react';
 
 const ${componentName}: React.FC = () => {
@@ -74,7 +78,9 @@ console.log('🔍 Checking for problematic components...\n');
 
 const problematicComponents = allComponentFiles.filter(hasProblematicImports);
 
-console.log(`⚠️  Found ${problematicComponents.length} potentially problematic components:\n`);
+console.log(
+  `⚠️  Found ${problematicComponents.length} potentially problematic components:\n`
+);
 
 problematicComponents.forEach(filePath => {
   const fileName = path.basename(filePath);
@@ -94,5 +100,7 @@ problematicComponents.forEach(filePath => {
   }
 });
 
-console.log(`\n🎉 Simplified ${simplifiedCount} out of ${problematicComponents.length} problematic components!`);
+console.log(
+  `\n🎉 Simplified ${simplifiedCount} out of ${problematicComponents.length} problematic components!`
+);
 console.log('Now try building again with: npm run build');

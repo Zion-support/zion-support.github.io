@@ -48,7 +48,8 @@ export const innovativeITExpansions2025: RealMarketService[] = [
     tagline: 'Future-proof cloud security with quantum cryptography',
     price: '$2,999',
     period: '/month',
-    description: 'Next-generation cloud infrastructure that uses quantum cryptography to provide unbreakable security for enterprise applications',
+    description:
+      'Next-generation cloud infrastructure that uses quantum cryptography to provide unbreakable security for enterprise applications',
     features: [
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography',
@@ -58,22 +59,28 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       'Automated security compliance',
       'Real-time threat detection',
       'Quantum-safe encryption',
-      'Global edge network'
+      'Global edge network',
     ],
     popular: true,
     icon: '🔐☁️',
     color: 'from-cyan-500 to-blue-500',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-secure-cloud-infrastructure-2040',
-    marketPosition: 'Quantum-secure cloud infrastructure with unbreakable encryption',
-    targetAudience: 'Financial services, Healthcare, Government, Defense, Enterprise',
+    marketPosition:
+      'Quantum-secure cloud infrastructure with unbreakable encryption',
+    targetAudience:
+      'Financial services, Healthcare, Government, Defense, Enterprise',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Quantum Cryptography, Post-Quantum Algorithms, Zero-Trust Security'],
+    technology: [
+      'Quantum Cryptography, Post-Quantum Algorithms, Zero-Trust Security',
+    ],
     integrations: ['AWS, Azure, GCP, IBM Cloud, Oracle Cloud'],
-    useCases: ['Financial services, Healthcare, Government, Defense, Enterprise'],
+    useCases: [
+      'Financial services, Healthcare, Government, Defense, Enterprise',
+    ],
     roi: 'Eliminate 99.99% of security vulnerabilities and reduce compliance costs by 40%',
     competitors: ['AWS, Azure, GCP, IBM, Oracle'],
     marketSize: '$500B+ cloud infrastructure market',
@@ -83,23 +90,25 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Multi-cloud quantum security platform with global edge network',
+    implementationDetails:
+      'Multi-cloud quantum security platform with global edge network',
     launchDate: '2025-01-25',
     customers: 78,
     rating: 4.8,
-    reviews: 56
+    reviews: 56,
   },
-  
+
   {
     id: 'autonomous-devops-platform-2040',
     name: 'Autonomous DevOps Platform 2040',
     tagline: 'Self-healing infrastructure with AI consciousness',
     price: '$1,799',
     period: '/month',
-    description: 'Revolutionary DevOps platform that autonomously manages, monitors, and optimizes infrastructure with human-like decision-making capabilities',
+    description:
+      'Revolutionary DevOps platform that autonomously manages, monitors, and optimizes infrastructure with human-like decision-making capabilities',
     features: [
       'Autonomous infrastructure management',
       'Self-healing systems',
@@ -109,7 +118,7 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       'Real-time monitoring',
       'Performance optimization',
       'Security automation',
-      'Cost optimization'
+      'Cost optimization',
     ],
     popular: true,
     icon: '🤖⚙️',
@@ -124,7 +133,9 @@ export const innovativeITExpansions2025: RealMarketService[] = [
     realService: true,
     technology: ['AI/ML, Kubernetes, Docker, Terraform, Ansible, Prometheus'],
     integrations: ['GitHub, GitLab, Jenkins, AWS, Azure, GCP, Kubernetes'],
-    useCases: ['CI/CD automation, Infrastructure management, Performance optimization'],
+    useCases: [
+      'CI/CD automation, Infrastructure management, Performance optimization',
+    ],
     roi: 'Reduce deployment time by 80% and infrastructure costs by 35%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'],
     marketSize: '$8B+ DevOps market',
@@ -134,23 +145,25 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with autonomous DevOps engine',
+    implementationDetails:
+      'Multi-tenant SaaS platform with autonomous DevOps engine',
     launchDate: '2025-01-30',
     customers: 203,
     rating: 4.9,
-    reviews: 145
+    reviews: 145,
   },
-  
+
   {
     id: 'edge-computing-orchestration-platform',
     name: 'Edge Computing Orchestration Platform',
     tagline: 'Intelligent edge computing management',
     price: '$1,499',
     period: '/month',
-    description: 'Advanced platform that orchestrates edge computing resources across global networks for optimal performance and cost efficiency',
+    description:
+      'Advanced platform that orchestrates edge computing resources across global networks for optimal performance and cost efficiency',
     features: [
       'Global edge network orchestration',
       'Intelligent resource allocation',
@@ -160,7 +173,7 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       'Edge security management',
       'Performance monitoring',
       'Cost optimization',
-      'Compliance automation'
+      'Compliance automation',
     ],
     popular: true,
     icon: '🌐⚡',
@@ -174,8 +187,12 @@ export const innovativeITExpansions2025: RealMarketService[] = [
     category: 'Edge Computing',
     realService: true,
     technology: ['Kubernetes, Docker, Edge Computing, AI/ML, 5G'],
-    integrations: ['AWS Edge, Azure Edge, GCP Edge, CDN providers, 5G networks'],
-    useCases: ['IoT applications, Real-time analytics, Content delivery, Gaming'],
+    integrations: [
+      'AWS Edge, Azure Edge, GCP Edge, CDN providers, 5G networks',
+    ],
+    useCases: [
+      'IoT applications, Real-time analytics, Content delivery, Gaming',
+    ],
     roi: 'Improve application performance by 60% and reduce latency by 70%',
     competitors: ['AWS Edge, Azure Edge, GCP Edge, Cloudflare, Fastly'],
     marketSize: '$15B+ edge computing market',
@@ -185,23 +202,25 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Global edge orchestration platform with AI-powered optimization',
+    implementationDetails:
+      'Global edge orchestration platform with AI-powered optimization',
     launchDate: '2025-02-05',
     customers: 134,
     rating: 4.7,
-    reviews: 89
+    reviews: 89,
   },
-  
+
   {
     id: 'quantum-internet-security-gateway',
     name: 'Quantum Internet Security Gateway',
     tagline: 'Quantum-safe internet protection',
     price: '$3,499',
     period: '/month',
-    description: 'Revolutionary gateway that provides quantum-safe security for internet communications, protecting against future quantum attacks',
+    description:
+      'Revolutionary gateway that provides quantum-safe security for internet communications, protecting against future quantum attacks',
     features: [
       'Quantum-resistant encryption',
       'Post-quantum cryptography',
@@ -211,7 +230,7 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       'Advanced firewall protection',
       'DDoS mitigation',
       'Compliance automation',
-      'Global threat intelligence'
+      'Global threat intelligence',
     ],
     popular: false,
     icon: '🌐🔒',
@@ -219,14 +238,17 @@ export const innovativeITExpansions2025: RealMarketService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-internet-security-gateway',
     marketPosition: 'Quantum-safe internet security gateway',
-    targetAudience: 'Enterprise security teams, Government networks, Financial institutions',
+    targetAudience:
+      'Enterprise security teams, Government networks, Financial institutions',
     trialDays: 7,
     setupTime: '1 week',
     category: 'Quantum Security',
     realService: true,
     technology: ['Quantum Cryptography, Post-Quantum Algorithms, AI Security'],
     integrations: ['Firewalls, VPNs, IDS/IPS, SIEM systems'],
-    useCases: ['Enterprise security, Government networks, Financial institutions'],
+    useCases: [
+      'Enterprise security, Government networks, Financial institutions',
+    ],
     roi: 'Future-proof security infrastructure and reduce breach risk by 99%',
     competitors: ['Palo Alto, Fortinet, Check Point, Cisco'],
     marketSize: '$25B+ network security market',
@@ -236,23 +258,25 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Hardware-accelerated quantum security gateway with AI threat detection',
+    implementationDetails:
+      'Hardware-accelerated quantum security gateway with AI threat detection',
     launchDate: '2025-02-10',
     customers: 45,
     rating: 4.6,
-    reviews: 28
+    reviews: 28,
   },
-  
+
   {
     id: 'ai-powered-cybersecurity-platform',
     name: 'AI-Powered Cybersecurity Platform',
     tagline: 'Intelligent threat detection and response',
     price: '$2,199',
     period: '/month',
-    description: 'Advanced cybersecurity platform that uses AI to detect, analyze, and respond to threats in real-time with human-like understanding',
+    description:
+      'Advanced cybersecurity platform that uses AI to detect, analyze, and respond to threats in real-time with human-like understanding',
     features: [
       'AI-powered threat detection',
       'Behavioral analysis',
@@ -262,22 +286,27 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       'Compliance monitoring',
       'Security automation',
       'Real-time monitoring',
-      'Predictive analytics'
+      'Predictive analytics',
     ],
     popular: true,
     icon: '🛡️🧠',
     color: 'from-purple-500 to-pink-500',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-cybersecurity-platform',
-    marketPosition: 'AI-powered cybersecurity platform with autonomous response',
+    marketPosition:
+      'AI-powered cybersecurity platform with autonomous response',
     targetAudience: 'Security teams, SOC analysts, CISO teams',
     trialDays: 14,
     setupTime: '3 days',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['AI/ML, Machine Learning, Behavioral Analysis, Threat Intelligence'],
+    technology: [
+      'AI/ML, Machine Learning, Behavioral Analysis, Threat Intelligence',
+    ],
     integrations: ['SIEM systems, Firewalls, IDS/IPS, EDR solutions'],
-    useCases: ['Threat detection, Incident response, Compliance, Risk management'],
+    useCases: [
+      'Threat detection, Incident response, Compliance, Risk management',
+    ],
     roi: 'Reduce security incidents by 85% and response time by 90%',
     competitors: ['CrowdStrike, SentinelOne, Darktrace, Cylance'],
     marketSize: '$200B+ cybersecurity market',
@@ -287,13 +316,14 @@ export const innovativeITExpansions2025: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade AI cybersecurity platform with autonomous response',
+    implementationDetails:
+      'Enterprise-grade AI cybersecurity platform with autonomous response',
     launchDate: '2025-01-15',
     customers: 267,
     rating: 4.9,
-    reviews: 189
-  }
+    reviews: 189,
+  },
 ];

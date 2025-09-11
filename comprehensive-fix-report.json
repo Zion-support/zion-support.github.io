@@ -12,8 +12,6 @@
     "lib/utils.ts",
     "src/App.tsx"
   ],
-  "errors": [
-    "Build failed"
-  ],
+  "errors": ["Build failed"],
   "success": false
 }

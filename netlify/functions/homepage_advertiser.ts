@@ -1,13 +1,14 @@
 import { exec } from 'child_process';
 
 export const handler = async () => {
-  const run = (cmd: string) => new Promise<void>((resolve) => {
-    exec(cmd, { cwd: process.cwd(), env: process.env }, () => resolve());
-  });
+  const run = (cmd: string) =>
+    new Promise<void>(resolve => {
+      exec(cmd, { cwd: process.cwd(), env: process.env }, () => resolve());
+    });
 
   await Promise.all([
     run('node automation/homepage-auto-advertiser.cjs'),
-    run('node automation/front-index-advertiser.cjs')
+    run('node automation/front-index-advertiser.cjs'),
   ]);
 
   await run('node automation/advanced-git-sync.cjs');

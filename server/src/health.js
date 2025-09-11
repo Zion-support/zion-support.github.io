@@ -11,7 +11,7 @@ const getHealthStatus = () => {
     memory: {
       used: Math.round(process.memoryUsage().heapUsed / 1024 / 1024),
       total: Math.round(process.memoryUsage().heapTotal / 1024 / 1024),
-      external: Math.round(process.memoryUsage().external / 1024 / 1024)
+      external: Math.round(process.memoryUsage().external / 1024 / 1024),
     },
     system: {
       platform: os.platform(),
@@ -19,12 +19,13 @@ const getHealthStatus = () => {
       cpus: os.cpus().length,
       totalMemory: Math.round(os.totalmem() / 1024 / 1024 / 1024),
       freeMemory: Math.round(os.freemem() / 1024 / 1024 / 1024),
-      loadAverage: os.loadavg()
-    }
+      loadAverage: os.loadavg(),
+    },
   };
 
   // Check if memory usage is high
-  const memoryUsagePercent = (healthStatus.memory.used / healthStatus.memory.total) * 100;
+  const memoryUsagePercent =
+    (healthStatus.memory.used / healthStatus.memory.total) * 100;
   if (memoryUsagePercent > 80) {
     healthStatus.status = 'warning';
     healthStatus.warnings = ['High memory usage detected'];
@@ -41,15 +42,15 @@ const getHealthStatus = () => {
 
 const healthMiddleware = (req, res) => {
   const health = getHealthStatus();
-  
+
   // Set appropriate status code
-  const statusCode = health.status === 'healthy' ? 200 : 
-                    health.status === 'warning' ? 200 : 503;
-  
+  const statusCode =
+    health.status === 'healthy' ? 200 : health.status === 'warning' ? 200 : 503;
+
   res.status(statusCode).json(health);
 };
 
 module.exports = {
   getHealthStatus,
-  healthMiddleware
+  healthMiddleware,
 };

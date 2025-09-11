@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const businessSolutionServices: BusinessSolutionService[] = [
@@ -55,7 +55,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Intelligent automation for complex business workflows',
     price: '$599',
     period: '/month',
-    description: 'Advanced business process automation platform that uses AI to analyze, optimize, and automate complex business workflows across departments and systems.',
+    description:
+      'Advanced business process automation platform that uses AI to analyze, optimize, and automate complex business workflows across departments and systems.',
     features: [
       'AI workflow analysis',
       'Process optimization',
@@ -64,22 +65,26 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Performance monitoring',
       'Compliance automation',
       'Real-time analytics',
-      'Custom automation builder'
+      'Custom automation builder',
     ],
     popular: true,
     icon: '⚙️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-process-automation',
-    marketPosition: 'Intelligent business process automation; integrates with existing ERP and workflow systems.',
-    targetAudience: 'Operations managers, process improvement teams, business analysts',
+    marketPosition:
+      'Intelligent business process automation; integrates with existing ERP and workflow systems.',
+    targetAudience:
+      'Operations managers, process improvement teams, business analysts',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Business Process Automation',
     realService: true,
     technology: ['AI/ML, RPA, Workflow automation, Integration platforms'],
     integrations: ['Salesforce, SAP, Oracle, Microsoft Dynamics'],
-    useCases: ['Process optimization, Workflow automation, Efficiency improvement'],
+    useCases: [
+      'Process optimization, Workflow automation, Efficiency improvement',
+    ],
     roi: 'Reduce process time by 40-70% and improve efficiency by 50-80%.',
     competitors: ['UiPath, Automation Anywhere, Blue Prism'],
     marketSize: '$25B+ business process automation market',
@@ -87,11 +92,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, system integration, workflow automation setup.',
+    implementationDetails:
+      'AI model training, system integration, workflow automation setup.',
     launchDate: '2037-10-20',
     customers: 156,
     rating: 4.8,
-    reviews: 98
+    reviews: 98,
   },
   {
     id: 'quantum-financial-modeling-platform',
@@ -99,7 +105,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Quantum-powered financial analysis and modeling',
     price: '$1,899',
     period: '/month',
-    description: 'Revolutionary financial modeling platform using quantum computing to solve complex financial problems, optimize portfolios, and provide advanced risk analysis.',
+    description:
+      'Revolutionary financial modeling platform using quantum computing to solve complex financial problems, optimize portfolios, and provide advanced risk analysis.',
     features: [
       'Quantum portfolio optimization',
       'Advanced risk modeling',
@@ -108,20 +115,24 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Regulatory compliance',
       'Performance attribution',
       'Custom model builder',
-      'Multi-asset support'
+      'Multi-asset support',
     ],
     popular: true,
     icon: '📈',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-financial-modeling',
-    marketPosition: 'Quantum-powered financial modeling; integrates with existing financial platforms and data feeds.',
-    targetAudience: 'Investment banks, asset managers, financial analysts, risk managers',
+    marketPosition:
+      'Quantum-powered financial modeling; integrates with existing financial platforms and data feeds.',
+    targetAudience:
+      'Investment banks, asset managers, financial analysts, risk managers',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Financial Technology',
     realService: true,
-    technology: ['Quantum computing, Financial modeling, Risk analytics, Portfolio optimization'],
+    technology: [
+      'Quantum computing, Financial modeling, Risk analytics, Portfolio optimization',
+    ],
     integrations: ['Bloomberg Terminal, Refinitiv, FactSet, Excel'],
     useCases: ['Portfolio optimization, Risk management, Financial analysis'],
     roi: 'Improve portfolio performance by 20-40% and reduce risk by 30-50%.',
@@ -131,11 +142,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'quantum-financial',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, financial data integration, model deployment.',
+    implementationDetails:
+      'Quantum cloud integration, financial data integration, model deployment.',
     launchDate: '2037-09-25',
     customers: 23,
     rating: 4.9,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'ai-powered-customer-experience-optimizer',
@@ -143,7 +155,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Intelligent customer journey optimization',
     price: '$399',
     period: '/month',
-    description: 'Advanced customer experience platform that uses AI to analyze customer behavior, optimize touchpoints, and personalize interactions across all channels.',
+    description:
+      'Advanced customer experience platform that uses AI to analyze customer behavior, optimize touchpoints, and personalize interactions across all channels.',
     features: [
       'Customer journey mapping',
       'Behavioral analysis',
@@ -152,22 +165,27 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Sentiment analysis',
       'A/B testing automation',
       'ROI measurement',
-      'Predictive analytics'
+      'Predictive analytics',
     ],
     popular: true,
     icon: '🎯',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-experience',
-    marketPosition: 'Intelligent customer experience optimization; integrates with existing CX and marketing tools.',
+    marketPosition:
+      'Intelligent customer experience optimization; integrates with existing CX and marketing tools.',
     targetAudience: 'Marketing teams, customer success managers, UX designers',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Customer Experience',
     realService: true,
-    technology: ['AI/ML, Customer analytics, Personalization, Behavioral analysis'],
+    technology: [
+      'AI/ML, Customer analytics, Personalization, Behavioral analysis',
+    ],
     integrations: ['Salesforce, HubSpot, Intercom, Zendesk'],
-    useCases: ['Customer journey optimization, Personalization, Experience improvement'],
+    useCases: [
+      'Customer journey optimization, Personalization, Experience improvement',
+    ],
     roi: 'Improve customer satisfaction by 25-40% and increase conversion rates by 30-50%.',
     competitors: ['Optimizely, VWO, Adobe Target'],
     marketSize: '$18B customer experience market',
@@ -175,11 +193,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, CX tool integration, analytics dashboard setup.',
+    implementationDetails:
+      'AI model training, CX tool integration, analytics dashboard setup.',
     launchDate: '2037-08-30',
     customers: 234,
     rating: 4.7,
-    reviews: 167
+    reviews: 167,
   },
   {
     id: 'quantum-supply-chain-predictor',
@@ -187,7 +206,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Quantum-powered supply chain forecasting and optimization',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced supply chain platform using quantum computing to predict disruptions, optimize inventory, and provide real-time supply chain intelligence.',
+    description:
+      'Advanced supply chain platform using quantum computing to predict disruptions, optimize inventory, and provide real-time supply chain intelligence.',
     features: [
       'Quantum demand forecasting',
       'Disruption prediction',
@@ -196,20 +216,24 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Real-time monitoring',
       'Scenario planning',
       'Cost optimization',
-      'Sustainability tracking'
+      'Sustainability tracking',
     ],
     popular: false,
     icon: '🚚',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-supply-chain-predictor',
-    marketPosition: 'Quantum-powered supply chain intelligence; integrates with existing SCM and ERP systems.',
-    targetAudience: 'Supply chain managers, logistics coordinators, procurement teams',
+    marketPosition:
+      'Quantum-powered supply chain intelligence; integrates with existing SCM and ERP systems.',
+    targetAudience:
+      'Supply chain managers, logistics coordinators, procurement teams',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Supply Chain Management',
     realService: true,
-    technology: ['Quantum computing, Supply chain analytics, Predictive modeling, IoT'],
+    technology: [
+      'Quantum computing, Supply chain analytics, Predictive modeling, IoT',
+    ],
     integrations: ['SAP SCM, Oracle SCM, Blue Yonder, Manhattan Associates'],
     useCases: ['Demand forecasting, Risk mitigation, Cost optimization'],
     roi: 'Reduce supply chain costs by 20-35% and improve forecast accuracy by 40-60%.',
@@ -219,11 +243,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, SCM system integration, predictive model deployment.',
+    implementationDetails:
+      'Quantum cloud integration, SCM system integration, predictive model deployment.',
     launchDate: '2037-07-15',
     customers: 45,
     rating: 4.8,
-    reviews: 32
+    reviews: 32,
   },
   {
     id: 'ai-powered-sales-intelligence-suite',
@@ -231,7 +256,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Intelligent sales optimization and forecasting',
     price: '$299',
     period: '/month',
-    description: 'Advanced sales intelligence platform that uses AI to analyze sales data, predict outcomes, and provide actionable insights for sales teams.',
+    description:
+      'Advanced sales intelligence platform that uses AI to analyze sales data, predict outcomes, and provide actionable insights for sales teams.',
     features: [
       'Sales forecasting',
       'Lead scoring',
@@ -240,22 +266,27 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Pipeline optimization',
       'Customer insights',
       'Competitive intelligence',
-      'ROI measurement'
+      'ROI measurement',
     ],
     popular: true,
     icon: '💼',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence',
-    marketPosition: 'Intelligent sales analytics; integrates with existing CRM and sales tools.',
+    marketPosition:
+      'Intelligent sales analytics; integrates with existing CRM and sales tools.',
     targetAudience: 'Sales teams, sales managers, business development teams',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Sales & Marketing',
     realService: true,
-    technology: ['AI/ML, Sales analytics, Predictive modeling, CRM integration'],
+    technology: [
+      'AI/ML, Sales analytics, Predictive modeling, CRM integration',
+    ],
     integrations: ['Salesforce, HubSpot, Pipedrive, Zoho CRM'],
-    useCases: ['Sales optimization, Lead qualification, Performance improvement'],
+    useCases: [
+      'Sales optimization, Lead qualification, Performance improvement',
+    ],
     roi: 'Increase sales productivity by 30-50% and improve forecast accuracy by 40-60%.',
     competitors: ['Gong, Chorus, SalesLoft'],
     marketSize: '$15B sales intelligence market',
@@ -263,11 +294,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, CRM integration, analytics dashboard setup.',
+    implementationDetails:
+      'AI model training, CRM integration, analytics dashboard setup.',
     launchDate: '2037-06-20',
     customers: 189,
     rating: 4.6,
-    reviews: 134
+    reviews: 134,
   },
   {
     id: 'quantum-project-management-optimizer',
@@ -275,7 +307,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Quantum-powered project planning and optimization',
     price: '$799',
     period: '/month',
-    description: 'Advanced project management platform using quantum computing to optimize resource allocation, scheduling, and risk management for complex projects.',
+    description:
+      'Advanced project management platform using quantum computing to optimize resource allocation, scheduling, and risk management for complex projects.',
     features: [
       'Quantum resource optimization',
       'Advanced scheduling',
@@ -284,20 +317,23 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Team collaboration',
       'Progress tracking',
       'Performance analytics',
-      'Scenario planning'
+      'Scenario planning',
     ],
     popular: false,
     icon: '📋',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-project-management',
-    marketPosition: 'Quantum-optimized project management; integrates with existing PM tools and platforms.',
+    marketPosition:
+      'Quantum-optimized project management; integrates with existing PM tools and platforms.',
     targetAudience: 'Project managers, program managers, PMO teams',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Project Management',
     realService: true,
-    technology: ['Quantum computing, Project management, Resource optimization, Risk management'],
+    technology: [
+      'Quantum computing, Project management, Resource optimization, Risk management',
+    ],
     integrations: ['Microsoft Project, Jira, Asana, Monday.com'],
     useCases: ['Resource optimization, Schedule optimization, Risk mitigation'],
     roi: 'Reduce project duration by 20-40% and improve resource utilization by 30-50%.',
@@ -307,11 +343,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, PM tool integration, optimization algorithms.',
+    implementationDetails:
+      'Quantum cloud integration, PM tool integration, optimization algorithms.',
     launchDate: '2037-05-25',
     customers: 67,
     rating: 4.7,
-    reviews: 48
+    reviews: 48,
   },
   {
     id: 'ai-powered-compliance-automation-platform',
@@ -319,7 +356,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Intelligent compliance management and automation',
     price: '$499',
     period: '/month',
-    description: 'Advanced compliance platform that uses AI to automate compliance monitoring, risk assessment, and regulatory reporting across multiple jurisdictions.',
+    description:
+      'Advanced compliance platform that uses AI to automate compliance monitoring, risk assessment, and regulatory reporting across multiple jurisdictions.',
     features: [
       'Automated compliance monitoring',
       'Risk assessment',
@@ -328,20 +366,23 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Audit automation',
       'Real-time alerts',
       'Compliance analytics',
-      'Multi-jurisdiction support'
+      'Multi-jurisdiction support',
     ],
     popular: true,
     icon: '✅',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-compliance-automation',
-    marketPosition: 'Intelligent compliance automation; integrates with existing GRC and compliance tools.',
+    marketPosition:
+      'Intelligent compliance automation; integrates with existing GRC and compliance tools.',
     targetAudience: 'Compliance officers, risk managers, legal teams',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Compliance & Risk',
     realService: true,
-    technology: ['AI/ML, Compliance automation, Risk management, Regulatory reporting'],
+    technology: [
+      'AI/ML, Compliance automation, Risk management, Regulatory reporting',
+    ],
     integrations: ['ServiceNow GRC, Archer, MetricStream, LogicGate'],
     useCases: ['Compliance automation, Risk management, Regulatory reporting'],
     roi: 'Reduce compliance costs by 40-60% and improve risk detection by 50-70%.',
@@ -351,11 +392,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, compliance tool integration, automation workflow setup.',
+    implementationDetails:
+      'AI model training, compliance tool integration, automation workflow setup.',
     launchDate: '2037-04-30',
     customers: 123,
     rating: 4.8,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'quantum-business-intelligence-accelerator',
@@ -363,7 +405,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Quantum-powered analytics and business intelligence',
     price: '$1,099',
     period: '/month',
-    description: 'Advanced business intelligence platform using quantum computing to accelerate complex analytics, provide real-time insights, and enable advanced data modeling.',
+    description:
+      'Advanced business intelligence platform using quantum computing to accelerate complex analytics, provide real-time insights, and enable advanced data modeling.',
     features: [
       'Quantum analytics acceleration',
       'Real-time insights',
@@ -372,20 +415,24 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Interactive dashboards',
       'Data visualization',
       'Integration capabilities',
-      'Performance optimization'
+      'Performance optimization',
     ],
     popular: true,
     icon: '📊',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-business-intelligence',
-    marketPosition: 'Quantum-accelerated business intelligence; integrates with existing BI and analytics tools.',
-    targetAudience: 'Business analysts, data scientists, executives, decision makers',
+    marketPosition:
+      'Quantum-accelerated business intelligence; integrates with existing BI and analytics tools.',
+    targetAudience:
+      'Business analysts, data scientists, executives, decision makers',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Business Intelligence',
     realService: true,
-    technology: ['Quantum computing, Business intelligence, Analytics, Data visualization'],
+    technology: [
+      'Quantum computing, Business intelligence, Analytics, Data visualization',
+    ],
     integrations: ['Tableau, Power BI, QlikView, Looker'],
     useCases: ['Business analytics, Data insights, Decision support'],
     roi: 'Accelerate analytics by 10-100x and improve decision-making speed by 60-80%.',
@@ -395,11 +442,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, BI tool integration, analytics optimization.',
+    implementationDetails:
+      'Quantum cloud integration, BI tool integration, analytics optimization.',
     launchDate: '2037-03-25',
     customers: 78,
     rating: 4.7,
-    reviews: 56
+    reviews: 56,
   },
   {
     id: 'ai-powered-workforce-optimization-suite',
@@ -407,7 +455,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Intelligent workforce planning and optimization',
     price: '$399',
     period: '/month',
-    description: 'Advanced workforce optimization platform that uses AI to analyze workforce data, optimize scheduling, and improve productivity across organizations.',
+    description:
+      'Advanced workforce optimization platform that uses AI to analyze workforce data, optimize scheduling, and improve productivity across organizations.',
     features: [
       'Workforce analytics',
       'Scheduling optimization',
@@ -416,22 +465,27 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Performance tracking',
       'Resource allocation',
       'Predictive modeling',
-      'ROI measurement'
+      'ROI measurement',
     ],
     popular: false,
     icon: '👥',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-400',
     link: 'https://ziontechgroup.com/ai-workforce-optimization',
-    marketPosition: 'Intelligent workforce optimization; integrates with existing HR and workforce management tools.',
+    marketPosition:
+      'Intelligent workforce optimization; integrates with existing HR and workforce management tools.',
     targetAudience: 'HR managers, operations managers, workforce planners',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Human Resources',
     realService: true,
-    technology: ['AI/ML, Workforce analytics, Scheduling optimization, Performance management'],
+    technology: [
+      'AI/ML, Workforce analytics, Scheduling optimization, Performance management',
+    ],
     integrations: ['Workday, BambooHR, Kronos, ADP'],
-    useCases: ['Workforce optimization, Scheduling improvement, Productivity enhancement'],
+    useCases: [
+      'Workforce optimization, Scheduling improvement, Productivity enhancement',
+    ],
     roi: 'Improve workforce productivity by 25-40% and reduce scheduling conflicts by 50-70%.',
     competitors: ['Workday, Kronos, ADP Workforce Now'],
     marketSize: '$15B workforce management market',
@@ -439,11 +493,12 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model training, HR system integration, analytics dashboard setup.',
+    implementationDetails:
+      'AI model training, HR system integration, analytics dashboard setup.',
     launchDate: '2037-02-28',
     customers: 145,
     rating: 4.6,
-    reviews: 98
+    reviews: 98,
   },
   {
     id: 'quantum-innovation-management-platform',
@@ -451,7 +506,8 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     tagline: 'Quantum-powered innovation strategy and management',
     price: '$1,599',
     period: '/month',
-    description: 'Advanced innovation management platform using quantum computing to analyze market trends, optimize R&D strategies, and accelerate innovation processes.',
+    description:
+      'Advanced innovation management platform using quantum computing to analyze market trends, optimize R&D strategies, and accelerate innovation processes.',
     features: [
       'Quantum trend analysis',
       'Innovation strategy optimization',
@@ -460,20 +516,23 @@ export const businessSolutionServices: BusinessSolutionService[] = [
       'Collaboration tools',
       'Performance tracking',
       'Risk assessment',
-      'ROI measurement'
+      'ROI measurement',
     ],
     popular: true,
     icon: '💡',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-innovation-management',
-    marketPosition: 'Quantum-powered innovation management; integrates with existing innovation and R&D tools.',
+    marketPosition:
+      'Quantum-powered innovation management; integrates with existing innovation and R&D tools.',
     targetAudience: 'Innovation managers, R&D teams, strategic planners',
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'Innovation Management',
     realService: true,
-    technology: ['Quantum computing, Innovation management, R&D analytics, Strategic planning'],
+    technology: [
+      'Quantum computing, Innovation management, R&D analytics, Strategic planning',
+    ],
     integrations: ['IdeaScale, Spigit, Brightidea, Planview'],
     useCases: ['Innovation strategy, R&D optimization, Market analysis'],
     roi: 'Accelerate innovation by 40-60% and improve R&D ROI by 30-50%.',
@@ -483,10 +542,11 @@ export const businessSolutionServices: BusinessSolutionService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum cloud integration, innovation tool integration, analytics optimization.',
+    implementationDetails:
+      'Quantum cloud integration, innovation tool integration, analytics optimization.',
     launchDate: '2037-01-15',
     customers: 34,
     rating: 4.9,
-    reviews: 23
-  }
+    reviews: 23,
+  },
 ];

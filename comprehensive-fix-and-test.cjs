@@ -10,24 +10,28 @@ console.log('🔧 Starting comprehensive fix and test...');
 function runCommand(command, description, options = {}) {
   try {
     console.log(`🔄 ${description}...`);
-    const result = execSync(command, { 
-      cwd: '/workspace', 
+    const result = execSync(command, {
+      cwd: '/workspace',
       stdio: 'pipe',
       maxBuffer: 1024 * 1024 * 10, // 10MB buffer
-      ...options
+      ...options,
     });
     console.log(`✅ ${description} completed`);
     return { success: true, output: result.toString() };
   } catch (error) {
     console.log(`❌ ${description} failed: ${error.message}`);
-    return { success: false, error: error.message, output: error.stdout?.toString() };
+    return {
+      success: false,
+      error: error.message,
+      output: error.stdout?.toString(),
+    };
   }
 }
 
 // Function to fix common syntax issues
 function fixSyntaxIssues() {
   console.log('🔧 Fixing syntax issues...');
-  
+
   // Fix next.config.js
   const nextConfigPath = '/workspace/next.config.js';
   if (fs.existsSync(nextConfigPath)) {
@@ -43,7 +47,7 @@ function fixSyntaxIssues() {
       console.log('⚠️  Could not fix next.config.js:', error.message);
     }
   }
-  
+
   // Fix tsconfig.json
   const tsConfigPath = '/workspace/tsconfig.json';
   if (fs.existsSync(tsConfigPath)) {
@@ -58,7 +62,7 @@ function fixSyntaxIssues() {
       console.log('⚠️  Could not fix tsconfig.json:', error.message);
     }
   }
-  
+
   // Fix eslint config
   const eslintConfigPath = '/workspace/eslint.config.js';
   if (fs.existsSync(eslintConfigPath)) {
@@ -78,7 +82,7 @@ function fixSyntaxIssues() {
 // Function to create a minimal working configuration
 function createMinimalConfigs() {
   console.log('🔧 Creating minimal working configurations...');
-  
+
   // Create minimal next.config.js
   const nextConfig = `/** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -102,7 +106,7 @@ module.exports = nextConfig
 `;
   fs.writeFileSync('/workspace/next.config.js', nextConfig, 'utf8');
   console.log('✅ Created minimal next.config.js');
-  
+
   // Create minimal tsconfig.json
   const tsConfig = `{
   "compilerOptions": {
@@ -135,7 +139,7 @@ module.exports = nextConfig
 }`;
   fs.writeFileSync('/workspace/tsconfig.json', tsConfig, 'utf8');
   console.log('✅ Created minimal tsconfig.json');
-  
+
   // Create minimal jest config
   const jestConfig = `module.exports = {
   testEnvironment: 'jsdom',
@@ -157,7 +161,7 @@ module.exports = nextConfig
 };`;
   fs.writeFileSync('/workspace/jest.config.js', jestConfig, 'utf8');
   console.log('✅ Created minimal jest.config.js');
-  
+
   // Create jest setup file
   const jestSetup = `import '@testing-library/jest-dom';`;
   fs.writeFileSync('/workspace/jest.setup.js', jestSetup, 'utf8');
@@ -167,25 +171,30 @@ module.exports = nextConfig
 // Main execution
 async function runComprehensiveFix() {
   const results = [];
-  
+
   // Fix syntax issues
   fixSyntaxIssues();
-  
+
   // Create minimal configs
   createMinimalConfigs();
-  
+
   // Run linting with minimal config
-  results.push(runCommand('npx eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 1000', 'Linting (minimal)'));
-  
+  results.push(
+    runCommand(
+      'npx eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 1000',
+      'Linting (minimal)'
+    )
+  );
+
   // Run type checking
   results.push(runCommand('npx tsc --noEmit --skipLibCheck', 'Type checking'));
-  
+
   // Run tests
   results.push(runCommand('npx jest --passWithNoTests', 'Tests'));
-  
+
   // Try to build
   results.push(runCommand('npx next build', 'Build'));
-  
+
   // Generate report
   const report = {
     timestamp: new Date().toISOString(),
@@ -193,22 +202,29 @@ async function runComprehensiveFix() {
     summary: {
       total: results.length,
       successful: results.filter(r => r.success).length,
-      failed: results.filter(r => !r.success).length
-    }
+      failed: results.filter(r => !r.success).length,
+    },
   };
-  
-  fs.writeFileSync('/workspace/comprehensive-fix-report.json', JSON.stringify(report, null, 2));
+
+  fs.writeFileSync(
+    '/workspace/comprehensive-fix-report.json',
+    JSON.stringify(report, null, 2)
+  );
   console.log('📄 Report saved to comprehensive-fix-report.json');
-  
-  console.log(`\n📊 Summary: ${report.summary.successful}/${report.summary.total} tasks completed successfully`);
-  
+
+  console.log(
+    `\n📊 Summary: ${report.summary.successful}/${report.summary.total} tasks completed successfully`
+  );
+
   if (report.summary.failed > 0) {
     console.log('\n❌ Failed tasks:');
-    results.filter(r => !r.success).forEach((result, index) => {
-      console.log(`  ${index + 1}. ${result.error}`);
-    });
+    results
+      .filter(r => !r.success)
+      .forEach((result, index) => {
+        console.log(`  ${index + 1}. ${result.error}`);
+      });
   }
-  
+
   return report;
 }
 

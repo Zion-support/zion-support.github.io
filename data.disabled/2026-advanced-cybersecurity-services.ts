@@ -6,4 +6,5 @@ export interface AdvancedCybersecurityService2026 {
   features: string[];
 }
 
-export const advancedCybersecurityServices2026: AdvancedCybersecurityService2026[] = [];
+export const advancedCybersecurityServices2026: AdvancedCybersecurityService2026[] =
+  [];

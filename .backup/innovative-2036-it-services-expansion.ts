@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovativeITServicesExpansion: InnovativeITService[] = [
@@ -55,7 +55,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     tagline: 'Automated zero trust security implementation and management',
     price: '$2,999',
     period: '/month',
-    description: 'Comprehensive zero trust network automation platform that continuously monitors, validates, and secures network access. Features automated policy enforcement, threat detection, and compliance management.',
+    description:
+      'Comprehensive zero trust network automation platform that continuously monitors, validates, and secures network access. Features automated policy enforcement, threat detection, and compliance management.',
     features: [
       'Automated zero trust implementation',
       'Continuous identity verification',
@@ -66,7 +67,7 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
       'Network segmentation automation',
       'Behavioral analytics',
       'Integration with existing security tools',
-      '24/7 automated monitoring'
+      '24/7 automated monitoring',
     ],
     popular: true,
     icon: '🛡️',
@@ -74,12 +75,15 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-network-automation',
     marketPosition: 'Leading zero trust automation platform for enterprises',
-    targetAudience: 'CISOs, Security teams, IT administrators, Compliance officers',
+    targetAudience:
+      'CISOs, Security teams, IT administrators, Compliance officers',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['AI/ML, Zero Trust architecture, Network security, Automation'],
+    technology: [
+      'AI/ML, Zero Trust architecture, Network security, Automation',
+    ],
     integrations: ['Active Directory, Okta, CrowdStrike, Palo Alto Networks'],
     useCases: ['Network security, Compliance requirements, Threat prevention'],
     roi: 'Reduce security incidents by 80% and achieve zero trust compliance',
@@ -89,11 +93,12 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     variant: 'it-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade platform with automated zero trust implementation and monitoring',
+    implementationDetails:
+      'Enterprise-grade platform with automated zero trust implementation and monitoring',
     launchDate: '2025-02-01',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'autonomous-cloud-cost-optimizer',
@@ -101,7 +106,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     tagline: 'AI-powered cloud cost optimization and resource management',
     price: '$1,499',
     period: '/month',
-    description: 'Intelligent cloud cost optimization platform that automatically identifies cost savings opportunities, optimizes resource allocation, and provides predictive cost forecasting.',
+    description:
+      'Intelligent cloud cost optimization platform that automatically identifies cost savings opportunities, optimizes resource allocation, and provides predictive cost forecasting.',
     features: [
       'AI-powered cost analysis',
       'Automated resource optimization',
@@ -112,7 +118,7 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
       'Cost anomaly detection',
       'Resource right-sizing',
       'Automated cost reporting',
-      'ROI tracking and analytics'
+      'ROI tracking and analytics',
     ],
     popular: true,
     icon: '💰',
@@ -120,7 +126,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/autonomous-cloud-cost-optimizer',
     marketPosition: 'Advanced cloud cost optimization with AI automation',
-    targetAudience: 'Cloud architects, DevOps teams, Finance teams, IT managers',
+    targetAudience:
+      'Cloud architects, DevOps teams, Finance teams, IT managers',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Cloud & DevOps',
@@ -135,11 +142,12 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     variant: 'autonomous-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-cloud platform with AI-powered optimization and automated cost management',
+    implementationDetails:
+      'Multi-cloud platform with AI-powered optimization and automated cost management',
     launchDate: '2025-01-15',
     customers: 234,
     rating: 4.7,
-    reviews: 178
+    reviews: 178,
   },
   {
     id: 'intelligent-data-governance-platform',
@@ -147,7 +155,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     tagline: 'AI-powered data governance, quality, and compliance management',
     price: '$2,199',
     period: '/month',
-    description: 'Comprehensive data governance platform that uses AI to automate data quality monitoring, compliance tracking, and governance policy enforcement across all data sources.',
+    description:
+      'Comprehensive data governance platform that uses AI to automate data quality monitoring, compliance tracking, and governance policy enforcement across all data sources.',
     features: [
       'AI-powered data quality monitoring',
       'Automated compliance tracking',
@@ -158,7 +167,7 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
       'Data access governance',
       'Real-time data monitoring',
       'Integration with data platforms',
-      'Audit trail and reporting'
+      'Audit trail and reporting',
     ],
     popular: false,
     icon: '📊',
@@ -166,7 +175,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/intelligent-data-governance-platform',
     marketPosition: 'Leading AI-powered data governance platform',
-    targetAudience: 'Data engineers, Compliance officers, Data scientists, IT managers',
+    targetAudience:
+      'Data engineers, Compliance officers, Data scientists, IT managers',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Data & Analytics',
@@ -181,11 +191,12 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with AI-powered governance and automated compliance',
+    implementationDetails:
+      'Enterprise platform with AI-powered governance and automated compliance',
     launchDate: '2025-01-20',
     customers: 156,
     rating: 4.6,
-    reviews: 98
+    reviews: 98,
   },
   {
     id: 'quantum-resistant-encryption-gateway',
@@ -193,7 +204,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     tagline: 'Future-proof encryption for post-quantum security',
     price: '$3,499',
     period: '/month',
-    description: 'Advanced encryption gateway that implements post-quantum cryptography algorithms to protect against future quantum computing threats. Features quantum-resistant algorithms, key management, and compliance tools.',
+    description:
+      'Advanced encryption gateway that implements post-quantum cryptography algorithms to protect against future quantum computing threats. Features quantum-resistant algorithms, key management, and compliance tools.',
     features: [
       'Post-quantum cryptography algorithms',
       'Quantum-resistant key management',
@@ -204,7 +216,7 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
       'Real-time threat monitoring',
       'Automated key rotation',
       'Audit and compliance reporting',
-      'Multi-algorithm support'
+      'Multi-algorithm support',
     ],
     popular: false,
     icon: '🔒',
@@ -212,7 +224,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-resistant-encryption-gateway',
     marketPosition: 'Leading quantum-resistant encryption solution',
-    targetAudience: 'Security teams, Government agencies, Financial institutions, Healthcare',
+    targetAudience:
+      'Security teams, Government agencies, Financial institutions, Healthcare',
     trialDays: 45,
     setupTime: '3-4 weeks',
     category: 'Quantum & Security',
@@ -227,11 +240,12 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade gateway with quantum-resistant algorithms and compliance',
+    implementationDetails:
+      'Enterprise-grade gateway with quantum-resistant algorithms and compliance',
     launchDate: '2025-03-01',
     customers: 67,
     rating: 4.8,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'autonomous-incident-response-platform',
@@ -239,7 +253,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     tagline: 'AI-powered incident detection, response, and resolution',
     price: '$2,799',
     period: '/month',
-    description: 'Intelligent incident response platform that automatically detects, analyzes, and resolves IT incidents. Features autonomous response actions, predictive incident prevention, and comprehensive reporting.',
+    description:
+      'Intelligent incident response platform that automatically detects, analyzes, and resolves IT incidents. Features autonomous response actions, predictive incident prevention, and comprehensive reporting.',
     features: [
       'AI-powered incident detection',
       'Autonomous response actions',
@@ -250,7 +265,7 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
       'Performance impact assessment',
       'Automated documentation',
       'Integration with ITSM tools',
-      'Comprehensive reporting and analytics'
+      'Comprehensive reporting and analytics',
     ],
     popular: true,
     icon: '🚨',
@@ -258,7 +273,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/autonomous-incident-response-platform',
     marketPosition: 'Leading autonomous incident response platform',
-    targetAudience: 'IT operations teams, SRE teams, DevOps engineers, IT managers',
+    targetAudience:
+      'IT operations teams, SRE teams, DevOps engineers, IT managers',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'IT Operations',
@@ -273,11 +289,12 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     variant: 'autonomous-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with AI-powered incident management and automation',
+    implementationDetails:
+      'Enterprise platform with AI-powered incident management and automation',
     launchDate: '2025-01-25',
     customers: 189,
     rating: 4.7,
-    reviews: 134
+    reviews: 134,
   },
   {
     id: 'intelligent-api-management-suite',
@@ -285,7 +302,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     tagline: 'AI-powered API lifecycle management and optimization',
     price: '$1,899',
     period: '/month',
-    description: 'Comprehensive API management platform with AI-powered monitoring, optimization, and governance. Features intelligent rate limiting, performance optimization, and automated documentation.',
+    description:
+      'Comprehensive API management platform with AI-powered monitoring, optimization, and governance. Features intelligent rate limiting, performance optimization, and automated documentation.',
     features: [
       'AI-powered API monitoring',
       'Intelligent rate limiting',
@@ -296,7 +314,7 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
       'Security and threat protection',
       'Developer portal automation',
       'Integration with CI/CD pipelines',
-      'Comprehensive reporting'
+      'Comprehensive reporting',
     ],
     popular: false,
     icon: '🔌',
@@ -304,14 +322,17 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/intelligent-api-management-suite',
     marketPosition: 'Advanced API management with AI capabilities',
-    targetAudience: 'API developers, Platform engineers, DevOps teams, IT architects',
+    targetAudience:
+      'API developers, Platform engineers, DevOps teams, IT architects',
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'API & Integration',
     realService: true,
     technology: ['AI/ML, API management, Microservices, Node.js, Python'],
     integrations: ['Kong, AWS API Gateway, Azure API Management, Google Cloud'],
-    useCases: ['API management, Microservices architecture, Developer experience'],
+    useCases: [
+      'API management, Microservices architecture, Developer experience',
+    ],
     roi: 'Improve API performance by 40% and reduce development time by 30%',
     competitors: ['Kong, AWS API Gateway, Azure API Management, Apigee'],
     marketSize: '$8B+ API management market',
@@ -319,11 +340,12 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with AI-powered API management and optimization',
+    implementationDetails:
+      'Enterprise platform with AI-powered API management and optimization',
     launchDate: '2025-02-15',
     customers: 145,
     rating: 4.6,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'autonomous-infrastructure-monitoring',
@@ -331,7 +353,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     tagline: 'Self-healing infrastructure monitoring and optimization',
     price: '$1,699',
     period: '/month',
-    description: 'Intelligent infrastructure monitoring platform that automatically detects issues, optimizes performance, and implements self-healing solutions. Features predictive maintenance and autonomous optimization.',
+    description:
+      'Intelligent infrastructure monitoring platform that automatically detects issues, optimizes performance, and implements self-healing solutions. Features predictive maintenance and autonomous optimization.',
     features: [
       'Autonomous issue detection',
       'Self-healing capabilities',
@@ -342,7 +365,7 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
       'Infrastructure mapping',
       'Capacity planning',
       'Cost optimization',
-      'Comprehensive reporting'
+      'Comprehensive reporting',
     ],
     popular: true,
     icon: '📡',
@@ -350,14 +373,17 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/autonomous-infrastructure-monitoring',
     marketPosition: 'Leading autonomous infrastructure monitoring platform',
-    targetAudience: 'Infrastructure engineers, DevOps teams, IT operations, System administrators',
+    targetAudience:
+      'Infrastructure engineers, DevOps teams, IT operations, System administrators',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Infrastructure & Monitoring',
     realService: true,
     technology: ['AI/ML, Infrastructure monitoring, Automation, Python, Go'],
     integrations: ['Prometheus, Grafana, Nagios, Zabbix, Cloud platforms'],
-    useCases: ['Infrastructure monitoring, Performance optimization, Incident prevention'],
+    useCases: [
+      'Infrastructure monitoring, Performance optimization, Incident prevention',
+    ],
     roi: 'Reduce infrastructure issues by 80% and improve performance by 50%',
     competitors: ['Datadog, New Relic, Dynatrace, Splunk'],
     marketSize: '$20B+ infrastructure monitoring market',
@@ -365,11 +391,12 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     variant: 'autonomous-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with autonomous monitoring and self-healing capabilities',
+    implementationDetails:
+      'Enterprise platform with autonomous monitoring and self-healing capabilities',
     launchDate: '2025-01-30',
     customers: 267,
     rating: 4.8,
-    reviews: 198
+    reviews: 198,
   },
   {
     id: 'quantum-secure-cloud-storage',
@@ -377,7 +404,8 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     tagline: 'Future-proof cloud storage with quantum-resistant encryption',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced cloud storage platform with quantum-resistant encryption, automated data protection, and intelligent storage optimization. Features quantum-safe algorithms and compliance tools.',
+    description:
+      'Advanced cloud storage platform with quantum-resistant encryption, automated data protection, and intelligent storage optimization. Features quantum-safe algorithms and compliance tools.',
     features: [
       'Quantum-resistant encryption',
       'Automated data protection',
@@ -388,7 +416,7 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
       'Data deduplication',
       'Performance optimization',
       'Multi-region replication',
-      'Comprehensive security controls'
+      'Comprehensive security controls',
     ],
     popular: false,
     icon: '☁️',
@@ -396,13 +424,16 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/quantum-secure-cloud-storage',
     marketPosition: 'Leading quantum-secure cloud storage solution',
-    targetAudience: 'Data architects, Security teams, Compliance officers, IT managers',
+    targetAudience:
+      'Data architects, Security teams, Compliance officers, IT managers',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Cloud & Storage',
     realService: true,
     technology: ['Quantum-resistant encryption, Cloud storage, AI/ML, Rust'],
-    integrations: ['AWS S3, Azure Blob, Google Cloud Storage, On-premise storage'],
+    integrations: [
+      'AWS S3, Azure Blob, Google Cloud Storage, On-premise storage',
+    ],
     useCases: ['Secure data storage, Compliance requirements, Data protection'],
     roi: 'Protect data against quantum threats while optimizing storage costs',
     competitors: ['AWS S3, Azure Blob, Google Cloud Storage, Backblaze'],
@@ -411,10 +442,11 @@ export const innovativeITServicesExpansion: InnovativeITService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade platform with quantum-resistant encryption and compliance',
+    implementationDetails:
+      'Enterprise-grade platform with quantum-resistant encryption and compliance',
     launchDate: '2025-03-15',
     customers: 89,
     rating: 4.7,
-    reviews: 67
-  }
+    reviews: 67,
+  },
 ];

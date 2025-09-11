@@ -30,5 +30,5 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [];
 export const serviceCategories: string[] = ['All'];
 
 export const getPopularServices = () => {
-	return enhancedRealMicroSaasServices.filter(service => true);
+  return enhancedRealMicroSaasServices.filter(service => true);
 };

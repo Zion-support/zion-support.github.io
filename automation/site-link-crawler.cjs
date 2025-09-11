@@ -11,11 +11,19 @@ function ensureDir(p) {
 }
 
 function readJSONSafe(p, fallback) {
-  try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return fallback; }
+  try {
+    return JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch {
+    return fallback;
+  }
 }
 
 function deriveInternalRoutes(pagesDir) {
-  const files = glob.sync('**/*.{tsx,jsx,ts,js}', { cwd: pagesDir, nodir: true, absolute: false });
+  const files = glob.sync('**/*.{tsx,jsx,ts,js}', {
+    cwd: pagesDir,
+    nodir: true,
+    absolute: false,
+  });
   const ignored = new Set(['_app', '_document', '404', '500']);
   const routes = new Set();
 
@@ -45,11 +53,23 @@ function deriveInternalRoutes(pagesDir) {
 
 async function headOrGet(url, timeoutMs = 8000) {
   try {
-    const res = await axios.head(url, { timeout: timeoutMs, maxRedirects: 3, validateStatus: () => true });
-    if (res.status >= 200 && res.status < 400) return { ok: true, status: res.status };
+    const res = await axios.head(url, {
+      timeout: timeoutMs,
+      maxRedirects: 3,
+      validateStatus: () => true,
+    });
+    if (res.status >= 200 && res.status < 400)
+      return { ok: true, status: res.status };
     // Some servers block HEAD; fallback to GET lightweight
-    const getRes = await axios.get(url, { timeout: timeoutMs, maxRedirects: 3, validateStatus: () => true });
-    return { ok: getRes.status >= 200 && getRes.status < 400, status: getRes.status };
+    const getRes = await axios.get(url, {
+      timeout: timeoutMs,
+      maxRedirects: 3,
+      validateStatus: () => true,
+    });
+    return {
+      ok: getRes.status >= 200 && getRes.status < 400,
+      status: getRes.status,
+    };
   } catch (e) {
     return { ok: false, status: 0, error: String(e.message || e) };
   }
@@ -68,12 +88,19 @@ function loadSitemapUrls(workspaceRoot) {
   const sitemapPath = path.join(workspaceRoot, 'public', 'sitemap.xml');
   if (!fs.existsSync(sitemapPath)) return [];
   const xml = fs.readFileSync(sitemapPath, 'utf8');
-  const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]).filter(Boolean);
+  const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)]
+    .map(m => m[1])
+    .filter(Boolean);
   return urls;
 }
 
 function sameOrigin(href) {
-  try { const u = new URL(href); return false; } catch { return href.startsWith('/'); }
+  try {
+    const u = new URL(href);
+    return false;
+  } catch {
+    return href.startsWith('/');
+  }
 }
 
 async function main() {
@@ -105,11 +132,20 @@ async function main() {
   for (const url of targets) {
     if (count++ >= maxPages) break;
     const { ok, html, error } = await fetchHTML(url);
-    if (!ok) { fetchErrors.push({ url, error }); continue; }
+    if (!ok) {
+      fetchErrors.push({ url, error });
+      continue;
+    }
     const $ = cheerio.load(html);
     $('a[href]').each((_, el) => {
       const href = String($(el).attr('href') || '').trim();
-      if (!href || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return;
+      if (
+        !href ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        href.startsWith('#')
+      )
+        return;
       if (sameOrigin(href)) {
         const clean = href.split('#')[0].split('?')[0] || '/';
         discoveredInternalHrefs.add(clean);
@@ -120,15 +156,21 @@ async function main() {
   }
 
   // Validate internal links against known routes (filesystem-derived)
-  const internalMissingRoutes = [...discoveredInternalHrefs]
-    .filter(h => !internalRoutes.has(h) && !internalRoutes.has(h.replace(/\/$/, '')));
+  const internalMissingRoutes = [...discoveredInternalHrefs].filter(
+    h => !internalRoutes.has(h) && !internalRoutes.has(h.replace(/\/$/, ''))
+  );
 
   // Validate external links with HEAD/GET
   const externalFailures = [];
   const externalList = [...externalLinks].slice(0, 200);
   for (const href of externalList) {
     const res = await headOrGet(href);
-    if (!res.ok) externalFailures.push({ href, status: res.status, error: res.error || '' });
+    if (!res.ok)
+      externalFailures.push({
+        href,
+        status: res.status,
+        error: res.error || '',
+      });
   }
 
   const report = {
@@ -148,11 +190,19 @@ async function main() {
     internalRoutes: [...internalRoutes],
   };
 
-  fs.writeFileSync(path.join(reportDir, 'link-report.json'), JSON.stringify(report, null, 2));
+  fs.writeFileSync(
+    path.join(reportDir, 'link-report.json'),
+    JSON.stringify(report, null, 2)
+  );
   // Convenience JSON for fixer
-  fs.writeFileSync(path.join(reportDir, 'broken-links.json'), JSON.stringify({ internalMissingRoutes }, null, 2));
+  fs.writeFileSync(
+    path.join(reportDir, 'broken-links.json'),
+    JSON.stringify({ internalMissingRoutes }, null, 2)
+  );
 
-  console.log('Link crawl complete. Report saved to public/automation/link-report.json');
+  console.log(
+    'Link crawl complete. Report saved to public/automation/link-report.json'
+  );
 }
 
 main().catch(err => {

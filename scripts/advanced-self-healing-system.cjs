@@ -1,4 +1,3 @@
-
 const winston = require('winston');
 
 const logger = winston.createLogger({
@@ -11,16 +10,17 @@ const logger = winston.createLogger({
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'logs/combined.log' })
-  ]
+    new winston.transports.File({ filename: 'logs/combined.log' }),
+  ],
 });
 
 if (process.env.NODE_ENV !== 'production') {
-  logger.add(new winston.transports.Console({
-    format: winston.format.simple()
-  }));
+  logger.add(
+    new winston.transports.Console({
+      format: winston.format.simple(),
+    })
+  );
 }
-
 
 /**
  * Advanced Self-Healing System
@@ -28,11 +28,11 @@ if (process.env.NODE_ENV !== 'production') {
  * and continuously improves the app with automatic commits and pushes to the main branch
  */
 
-const fs = require('fs')
-const path = require('path')
-const { execSync, spawn } = require('child_process')
-const crypto = require('crypto')
-const https = require('https')
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawn } = require('child_process');
+const crypto = require('crypto');
+const https = require('https');
 const http = require('http');
 
 // Configuration
@@ -163,7 +163,7 @@ const CONFIG = {
     'src/utils/supabase/server.ts',
     'middleware.ts',
   ],
-}
+};
 class AdvancedSelfHealingSystem {
   constructor() {
     this.isRunning = false;
@@ -179,8 +179,8 @@ class AdvancedSelfHealingSystem {
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString()
-const logEntry = `[${timestamp}] [${level}] ${message}`;
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${level}] ${message}`;
 
     logger.info(logEntry);
 
@@ -194,8 +194,8 @@ const logEntry = `[${timestamp}] [${level}] ${message}`;
   }
 
   logCursorChat(message) {
-    const timestamp = new Date().toISOString()
-const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
 
     fs.appendFileSync(CONFIG.cursorChatLogFile, logEntry + '\n');
   }
@@ -417,12 +417,12 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
 
     for (const logFile of logFiles) {
       if (fs.existsSync(logFile)) {
-        const logContent = fs.readFileSync(logFile, 'utf8')
-const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
+        const logContent = fs.readFileSync(logFile, 'utf8');
+        const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
 
         for (const line of recentLines) {
           for (const [pattern, config] of Object.entries(
-            CONFIG.errorPatterns,
+            CONFIG.errorPatterns
           )) {
             if (line.includes(pattern)) {
               issues.push({
@@ -554,8 +554,8 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
         this.log('Applying permission fix...');
         await this.fixPermissions();
       },
-    }
-const fixStrategy = fixStrategies[issue.type];
+    };
+    const fixStrategy = fixStrategies[issue.type];
     if (fixStrategy) {
       await fixStrategy();
     }
@@ -583,7 +583,7 @@ const fixStrategy = fixStrategies[issue.type];
         'npx tailwindcss -i ./src/styles/globals.css -o ./public/styles.css',
         {
           stdio: 'inherit',
-        },
+        }
       );
     } catch (error) {
       this.log(`Tailwind fix failed: ${error.message}`, 'ERROR');
@@ -613,8 +613,8 @@ const fixStrategy = fixStrategies[issue.type];
     this.log('Fixing Supabase issues...');
 
     // Check Supabase configuration
-    const supabaseClientPath = 'src/utils/supabase/client.ts'
-const supabaseServerPath = 'src/utils/supabase/server.ts';
+    const supabaseClientPath = 'src/utils/supabase/client.ts';
+    const supabaseServerPath = 'src/utils/supabase/server.ts';
 
     if (fs.existsSync(supabaseClientPath)) {
       const content = fs.readFileSync(supabaseClientPath, 'utf8');
@@ -656,12 +656,12 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
         if (!packageJson.scripts.build.includes('--max-old-space-size')) {
           packageJson.scripts.build = packageJson.scripts.build.replace(
             'next build',
-            'NODE_OPTIONS="--max-old-space-size=8192" next build',
+            'NODE_OPTIONS="--max-old-space-size=8192" next build'
           );
 
           fs.writeFileSync(
             packageJsonPath,
-            JSON.stringify(packageJson, null, 2),
+            JSON.stringify(packageJson, null, 2)
           );
           this.log('Updated build script with increased memory limit');
         }
@@ -725,7 +725,7 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
       });
 
       this.logCursorChat(
-        `Triggered chat for ${issue.pattern}: ${chatData.message}`,
+        `Triggered chat for ${issue.pattern}: ${chatData.message}`
       );
     } catch (error) {
       this.log(`Failed to trigger Cursor chat: ${error.message}`, 'ERROR');
@@ -755,8 +755,8 @@ Context: This is an automated fix request from the Advanced Self-Healing System.
 
   async sendCursorChat(chatData) {
     return new Promise((resolve, reject) => {
-      const postData = JSON.stringify(chatData)
-const options = {
+      const postData = JSON.stringify(chatData);
+      const options = {
         hostname: new URL(CONFIG.cursorApiUrl).hostname,
         port: 443,
         path: '/api/chat',
@@ -766,11 +766,11 @@ const options = {
           'Content-Length': Buffer.byteLength(postData),
           Authorization: `Bearer ${CONFIG.cursorApiKey}`,
         },
-      }
-const req = https.request(options, (res) => {
+      };
+      const req = https.request(options, res => {
         let data = '';
 
-        res.on('data', (chunk) => {
+        res.on('data', chunk => {
           data += chunk;
         });
 
@@ -783,7 +783,7 @@ const req = https.request(options, (res) => {
         });
       });
 
-      req.on('error', (error) => {
+      req.on('error', error => {
         reject(error);
       });
 
@@ -793,14 +793,14 @@ const req = https.request(options, (res) => {
   }
 
   async performHealthCheck() {
-    this.log('Performing health check...')
-const healthChecks = [
+    this.log('Performing health check...');
+    const healthChecks = [
       this.checkBuildHealth(),
       this.checkLintHealth(),
       this.checkTypeHealth(),
       this.checkRuntimeHealth(),
-    ]
-const results = await Promise.allSettled(healthChecks);
+    ];
+    const results = await Promise.allSettled(healthChecks);
 
     let healthy = true;
     for (const result of results) {
@@ -906,15 +906,15 @@ const results = await Promise.allSettled(healthChecks);
   }
 
   generateCommitMessage() {
-    const timestamp = new Date().toISOString()
-const fixCount = this.fixesApplied.length
-const chatCount = this.cursorChatsTriggered.length;
+    const timestamp = new Date().toISOString();
+    const fixCount = this.fixesApplied.length;
+    const chatCount = this.cursorChatsTriggered.length;
 
     return `🤖 Auto-fix: ${fixCount} issues resolved, ${chatCount} Cursor chats triggered
 
 - Timestamp: ${timestamp}
-- Fixes applied: ${this.fixesApplied.map((f) => f.pattern).join(', ')}
-- Cursor chats: ${this.cursorChatsTriggered.map((c) => c.issue).join(', ')}
+- Fixes applied: ${this.fixesApplied.map(f => f.pattern).join(', ')}
+- Cursor chats: ${this.cursorChatsTriggered.map(c => c.issue).join(', ')}
 
 Automated by Advanced Self-Healing System`;
   }
@@ -940,8 +940,8 @@ Automated by Advanced Self-Healing System`;
       buildHistory: this.buildHistory.slice(-10), // Last 10 builds
       errorHistory: this.errorHistory.slice(-10), // Last 10 errors
       recommendations: this.generateRecommendations(),
-    }
-const reportPath = 'logs/advanced-self-healing-report.json';
+    };
+    const reportPath = 'logs/advanced-self-healing-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     this.log(`Report generated: ${reportPath}`);
@@ -953,13 +953,13 @@ const reportPath = 'logs/advanced-self-healing-report.json';
 
     if (this.fixesApplied.length > 10) {
       recommendations.push(
-        'Consider implementing more robust error prevention strategies',
+        'Consider implementing more robust error prevention strategies'
       );
     }
 
     if (this.cursorChatsTriggered.length > 5) {
       recommendations.push(
-        'Review common issues and implement automated fixes',
+        'Review common issues and implement automated fixes'
       );
     }
 
@@ -973,8 +973,8 @@ const reportPath = 'logs/advanced-self-healing-report.json';
 
 // CLI interface
 if (require.main === module) {
-  const system = new AdvancedSelfHealingSystem()
-const command = process.argv[2];
+  const system = new AdvancedSelfHealingSystem();
+  const command = process.argv[2];
 
   switch (command) {
     case 'start':
@@ -984,13 +984,13 @@ const command = process.argv[2];
       system.stop();
       break;
     case 'status':
-      system.getStatus().then((status) => {
+      system.getStatus().then(status => {
         logger.info(JSON.stringify(status, null, 2));
         process.exit(0);
       });
       break;
     case 'report':
-      system.generateReport().then((report) => {
+      system.generateReport().then(report => {
         logger.info(JSON.stringify(report, null, 2));
         process.exit(0);
       });
@@ -1027,7 +1027,6 @@ Environment Variables:
 
 module.exports = AdvancedSelfHealingSystem;
 
-
 // Graceful shutdown handling
 process.on('SIGINT', () => {
   console.log('\n🛑 Received SIGINT, shutting down gracefully...');
@@ -1040,4 +1039,3 @@ process.on('SIGTERM', () => {
   // Add cleanup logic here
   process.exit(0);
 });
-

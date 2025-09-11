@@ -8,7 +8,10 @@ describe('guest buy now flow', () => {
 
     cy.visit('/equipment/pro-camera-x1000');
     cy.contains('Buy Now').click();
-    cy.url().should('include', '/login?next=%2Fcheckout%3Fsku%3Dpro-camera-x1000');
+    cy.url().should(
+      'include',
+      '/login?next=%2Fcheckout%3Fsku%3Dpro-camera-x1000'
+    );
 
     cy.get('input[name="email"]').type('test@example.com');
     cy.get('input[name="password"]').type('Password123');

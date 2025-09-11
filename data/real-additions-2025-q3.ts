@@ -8,7 +8,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
@@ -18,19 +18,21 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     tagline: 'Schema, auth, WAF and supply‑chain review with actionable plan',
     price: '$3,500',
     period: '/engagement',
-    description: 'Deep assessment of your API estate across OpenAPI specs, auth schemes, rate limits, WAF/CDN posture, dependency risks and secret handling. Includes prioritized remediation plan and guardrail recommendations.',
+    description:
+      'Deep assessment of your API estate across OpenAPI specs, auth schemes, rate limits, WAF/CDN posture, dependency risks and secret handling. Includes prioritized remediation plan and guardrail recommendations.',
     features: [
       'OpenAPI validation and style checks',
       'Auth flow and token scoping review',
       'CDN/WAF rules and bot mitigation audit',
-      'Dependency and SBOM risk screening'
+      'Dependency and SBOM risk screening',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/api-security-posture-assessment',
-    marketPosition: 'Security review with concrete PRs; faster than typical consultancies',
+    marketPosition:
+      'Security review with concrete PRs; faster than typical consultancies',
     targetAudience: 'Platform, security and API owners',
     trialDays: 0,
     setupTime: '1–2 weeks',
@@ -38,7 +40,11 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     realService: true,
     technology: ['OpenAPI', 'OAuth2/OIDC', 'Cloudflare/Fastly', 'SCA/SBOM'],
     integrations: ['Cloudflare', 'Fastly', 'Auth0', 'Okta', 'Postman'],
-    useCases: ['Reduce breach risk', 'Accelerate vendor reviews', 'Improve partner trust'],
+    useCases: [
+      'Reduce breach risk',
+      'Accelerate vendor reviews',
+      'Improve partner trust',
+    ],
     roi: 'Cut API incidents by 30%+ with foundational fixes',
     competitors: ['Salt Security services', '42Crunch services'],
     marketSize: '$4B API security',
@@ -50,7 +56,7 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-07-01',
     customers: 12,
     rating: 4.7,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'llm-guardrails-eval-pack',
@@ -58,19 +64,21 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     tagline: 'Safety policies, tests and cost controls for production LLM apps',
     price: '$1,499',
     period: '/month',
-    description: 'Deploy a practical guardrails layer with red‑teaming prompts, eval datasets, jailbreak detection, output filters, and unit tests integrated in CI/CD. Includes cost dashboards and token budgeting.',
+    description:
+      'Deploy a practical guardrails layer with red‑teaming prompts, eval datasets, jailbreak detection, output filters, and unit tests integrated in CI/CD. Includes cost dashboards and token budgeting.',
     features: [
       'Prompt policies and test suites',
       'Jailbreak/PII/TOU filters',
       'Regression and golden set evals',
-      'Cost dashboards and budgets'
+      'Cost dashboards and budgets',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/llm-guardrails-eval-pack',
-    marketPosition: 'Hands-on implementation with CI integration and dashboards',
+    marketPosition:
+      'Hands-on implementation with CI integration and dashboards',
     targetAudience: 'AI platform teams and product owners',
     trialDays: 0,
     setupTime: '1–2 weeks',
@@ -90,7 +98,7 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-07-05',
     customers: 20,
     rating: 4.8,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'multicloud-finops-accelerator',
@@ -98,12 +106,13 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     tagline: 'Rightsizing, budgets and alerts across AWS, Azure and GCP',
     price: '$2,999',
     period: '/month',
-    description: 'Hands‑on FinOps with continuous cost anomaly detection, budgets, unit economics, and dashboards. Includes savings recommendations and change PRs.',
+    description:
+      'Hands‑on FinOps with continuous cost anomaly detection, budgets, unit economics, and dashboards. Includes savings recommendations and change PRs.',
     features: [
       'Rightsizing and commitment planning',
       'Anomaly detection and budgets',
       'SLOs for cost per request',
-      'Pull requests for savings changes'
+      'Pull requests for savings changes',
     ],
     popular: false,
     icon: '💸',
@@ -130,27 +139,30 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-07-08',
     customers: 18,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'email-deliverability-ops',
     name: 'Email Deliverability Ops',
-    tagline: 'Warmup, authentication, reputation and inbox placement monitoring',
+    tagline:
+      'Warmup, authentication, reputation and inbox placement monitoring',
     price: '$249',
     period: '/month',
-    description: 'Reduce spam folder issues with SPF/DKIM/DMARC tuning, mailbox warmup, bounce/engagement monitoring and content guidance with weekly reports.',
+    description:
+      'Reduce spam folder issues with SPF/DKIM/DMARC tuning, mailbox warmup, bounce/engagement monitoring and content guidance with weekly reports.',
     features: [
       'SPF/DKIM/DMARC alignment',
       'Mailbox warmup and health checks',
       'Reputation and blacklist monitoring',
-      'Weekly deliverability reports'
+      'Weekly deliverability reports',
     ],
     popular: false,
     icon: '📧',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/services/email-deliverability-ops',
-    marketPosition: 'Operational runbooks and weekly actions, not just dashboards',
+    marketPosition:
+      'Operational runbooks and weekly actions, not just dashboards',
     targetAudience: 'Growth and lifecycle marketing teams',
     trialDays: 0,
     setupTime: '3–5 days',
@@ -170,7 +182,7 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-07-10',
     customers: 22,
     rating: 4.5,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'mdm-device-management-starter',
@@ -178,12 +190,13 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     tagline: 'Baseline policies, enrollment and compliance for macOS/Windows',
     price: '$1,200',
     period: '/month',
-    description: 'Implement device baselines, auto‑enrollment, patch policies, disk encryption and conditional access. Includes onboarding SOPs and asset tracking.',
+    description:
+      'Implement device baselines, auto‑enrollment, patch policies, disk encryption and conditional access. Includes onboarding SOPs and asset tracking.',
     features: [
       'Auto‑enrollment and tagging',
       'Patch and encryption baselines',
       'Compliance reporting',
-      'Joiner/Mover/Leaver workflows'
+      'Joiner/Mover/Leaver workflows',
     ],
     popular: false,
     icon: '💻',
@@ -210,7 +223,7 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-07-12',
     customers: 14,
     rating: 4.6,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'observability-slo-starter',
@@ -218,12 +231,13 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     tagline: 'Golden signals, SLOs, error budgets and on‑call automation',
     price: '$1,999',
     period: '/month',
-    description: 'Stand up metrics/logs/traces dashboards, SLOs and error budgets tied to business KPIs. Wire alerts to on‑call with runbooks and incident templates.',
+    description:
+      'Stand up metrics/logs/traces dashboards, SLOs and error budgets tied to business KPIs. Wire alerts to on‑call with runbooks and incident templates.',
     features: [
       'Golden signals and RED/USE dashboards',
       'Service SLOs and error budgets',
       'Incident automation playbooks',
-      'On‑call rotations and paging'
+      'On‑call rotations and paging',
     ],
     popular: true,
     icon: '📈',
@@ -250,7 +264,7 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-07-15',
     customers: 10,
     rating: 4.7,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'pdf-render-api-pro',
@@ -258,19 +272,21 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     tagline: 'Templating, batch rendering and webhooks with SLA',
     price: '$149',
     period: '/month',
-    description: 'Production‑grade PDF rendering flows with HTML/CSS templates, batch jobs, rate limiting, retries and signed webhooks. Includes example code.',
+    description:
+      'Production‑grade PDF rendering flows with HTML/CSS templates, batch jobs, rate limiting, retries and signed webhooks. Includes example code.',
     features: [
       'Template library and versioning',
       'Batch render jobs with retries',
       'Signed webhooks and idempotency',
-      'Usage dashboards and alerts'
+      'Usage dashboards and alerts',
     ],
     popular: false,
     icon: '📄',
     color: 'from-rose-600 to-pink-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/pdf-render-api-pro',
-    marketPosition: 'A balanced middle ground between self-host and premium SaaS',
+    marketPosition:
+      'A balanced middle ground between self-host and premium SaaS',
     targetAudience: 'Product and operations teams needing reliable docs',
     trialDays: 14,
     setupTime: '2–5 days',
@@ -290,9 +306,8 @@ export const realAdditions2025Q3: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-07-18',
     customers: 30,
     rating: 4.5,
-    reviews: 14
-  }
+    reviews: 14,
+  },
 ];
 
 export default realAdditions2025Q3;
-

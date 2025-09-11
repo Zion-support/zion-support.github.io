@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useReducer,
+  useEffect,
+  ReactNode,
+} from 'react';
 
 interface CartItem {
   id: string;
@@ -11,7 +17,7 @@ interface CartState {
   items: CartItem[];
 }
 
-type CartAction = 
+type CartAction =
   | { type: 'ADD_ITEM'; payload: CartItem }
   | { type: 'REMOVE_ITEM'; payload: string }
   | { type: 'CLEAR_CART' }
@@ -85,9 +91,5 @@ export function CartProvider({ children }: { children: ReactNode }) {
     clear,
   };
 
-  return (
-    <CartContext.Provider value={value}>
-      {children}
-    </CartContext.Provider>
-  );
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

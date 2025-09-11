@@ -41,11 +41,7 @@ const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   }
 
   // Regular rendering with optional memoization
-  const content = (
-    <Suspense fallback={fallback}>
-      {children}
-    </Suspense>
-  );
+  const content = <Suspense fallback={fallback}>{children}</Suspense>;
 
   return <div className={className}>{content}</div>;
 };

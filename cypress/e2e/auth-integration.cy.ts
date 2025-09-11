@@ -11,13 +11,19 @@ describe('register and login flow', () => {
     // Ensure environment variables are loaded, or provide defaults for local runs if desired
     // For this refactor, we assume they are set in cypress.env.json
     if (!Cypress.env('CYPRESS_TEST_USER_EMAIL')) {
-      throw new Error('CYPRESS_TEST_USER_EMAIL environment variable is not set.');
+      throw new Error(
+        'CYPRESS_TEST_USER_EMAIL environment variable is not set.'
+      );
     }
     if (!Cypress.env('CYPRESS_TEST_USER_PASSWORD')) {
-      throw new Error('CYPRESS_TEST_USER_PASSWORD environment variable is not set.');
+      throw new Error(
+        'CYPRESS_TEST_USER_PASSWORD environment variable is not set.'
+      );
     }
     if (!Cypress.env('CYPRESS_TEST_USER_DISPLAY_NAME')) {
-      throw new Error('CYPRESS_TEST_USER_DISPLAY_NAME environment variable is not set.');
+      throw new Error(
+        'CYPRESS_TEST_USER_DISPLAY_NAME environment variable is not set.'
+      );
     }
   });
 
@@ -41,7 +47,7 @@ describe('register and login flow', () => {
 
     // Verify user session by calling /api/users/me
     // This request will use the session cookie set by Supabase during setSession
-    cy.request('/api/users/me').then((response) => {
+    cy.request('/api/users/me').then(response => {
       expect(response.status).to.eq(200);
       expect(response.body).to.have.property('id');
       expect(response.body.email).to.eq(uniqueEmail);

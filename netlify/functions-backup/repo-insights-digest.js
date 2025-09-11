@@ -9,17 +9,30 @@ function writeFileEnsuringDir(targetPath, content) {
 
 function getGitInfo() {
   function safe(cmd) {
-    try { return execSync(cmd, { encoding: 'utf8' }).trim(); } catch { return ''; }
+    try {
+      return execSync(cmd, { encoding: 'utf8' }).trim();
+    } catch {
+      return '';
+    }
   }
   const lastCommitHash = safe('git rev-parse HEAD');
   const lastCommitMsg = safe('git log -1 --pretty=%B');
   const lastCommitAuthor = safe('git log -1 --pretty=%an');
   const lastCommitDate = safe('git log -1 --pretty=%aI');
   const branch = safe('git rev-parse --abbrev-ref HEAD');
-  return { lastCommitHash, lastCommitMsg, lastCommitAuthor, lastCommitDate, branch };
+  return {
+    lastCommitHash,
+    lastCommitMsg,
+    lastCommitAuthor,
+    lastCommitDate,
+    branch,
+  };
 }
 
-function walkDir(dir, ignoreDirs = new Set(['.git', 'node_modules', '.next', 'out'])) {
+function walkDir(
+  dir,
+  ignoreDirs = new Set(['.git', 'node_modules', '.next', 'out'])
+) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files = [];
   for (const entry of entries) {
@@ -64,9 +77,12 @@ function toMarkdown(insights) {
   lines.push(`- Size: ${insights.stats.totalMb} MB`);
   lines.push('');
   lines.push('## Files by extension');
-  Object.entries(insights.stats.byExt).sort((a,b)=>b[1]-a[1]).slice(0,25).forEach(([ext,count])=>{
-    lines.push(`- ${ext}: ${count}`);
-  });
+  Object.entries(insights.stats.byExt)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 25)
+    .forEach(([ext, count]) => {
+      lines.push(`- ${ext}: ${count}`);
+    });
   return lines.join('\n');
 }
 
@@ -80,18 +96,42 @@ exports.handler = async function handler() {
     const insights = { generatedAt: new Date().toISOString(), git, stats };
 
     const reportsDir = path.join(root, 'public', 'reports');
-    writeFileEnsuringDir(path.join(reportsDir, 'repo-insights.json'), JSON.stringify(insights, null, 2));
-    writeFileEnsuringDir(path.join(reportsDir, 'repo-insights.md'), toMarkdown(insights));
+    writeFileEnsuringDir(
+      path.join(reportsDir, 'repo-insights.json'),
+      JSON.stringify(insights, null, 2)
+    );
+    writeFileEnsuringDir(
+      path.join(reportsDir, 'repo-insights.md'),
+      toMarkdown(insights)
+    );
 
     try {
-      execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"', { stdio: 'inherit', shell: true });
-      execSync('git add public/reports/repo-insights.*', { stdio: 'inherit', shell: true });
-      execSync('git commit -m "chore(reports): update repo insights [skip ci]" || true', { stdio: 'inherit', shell: true });
-      execSync('git push origin main || true', { stdio: 'inherit', shell: true });
+      execSync(
+        'git config user.name "zion-bot" && git config user.email "bot@zion.app"',
+        { stdio: 'inherit', shell: true }
+      );
+      execSync('git add public/reports/repo-insights.*', {
+        stdio: 'inherit',
+        shell: true,
+      });
+      execSync(
+        'git commit -m "chore(reports): update repo insights [skip ci]" || true',
+        { stdio: 'inherit', shell: true }
+      );
+      execSync('git push origin main || true', {
+        stdio: 'inherit',
+        shell: true,
+      });
     } catch {}
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, report: '/reports/repo-insights.json' }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, report: '/reports/repo-insights.json' }),
+    };
   } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: false, error: String(e) }),
+    };
   }
 };

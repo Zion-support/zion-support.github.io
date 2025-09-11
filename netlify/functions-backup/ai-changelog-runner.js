@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('ai-changelog-runner function triggered');
-    
+
     // AI changelog generation simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'AI changelog runner executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         changelog: {
           status: 'generated',
           entries: 0,
-          lastGenerated: new Date().toISOString()
-        }
-      })
+          lastGenerated: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in ai-changelog-runner:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'ai-changelog-runner'
-      })
+        function: 'ai-changelog-runner',
+      }),
     };
   }
 };

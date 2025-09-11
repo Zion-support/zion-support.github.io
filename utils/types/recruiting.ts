@@ -5,7 +5,11 @@ export type Application = {
   resume_text?: string | null;
   relevance_score?: number | null;
   relevance_summary?: string | null;
-  relevance_suggested_action?: "Shortlist" | "Needs Review" | "Low Match" | null;
+  relevance_suggested_action?:
+    | 'Shortlist'
+    | 'Needs Review'
+    | 'Low Match'
+    | null;
   relevance_breakdown?: any | null;
   resume_embedding?: number[] | null;
   job_embedding?: number[] | null;

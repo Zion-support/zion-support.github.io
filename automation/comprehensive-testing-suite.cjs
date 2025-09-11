@@ -19,20 +19,21 @@ class ComprehensiveTestingSuite {
       smoke: { success: false, duration: 0, errors: [], warnings: [] },
       accessibility: { success: false, duration: 0, errors: [], warnings: [] },
       performance: { success: false, duration: 0, errors: [], warnings: [] },
-      security: { success: false, duration: 0, errors: [], warnings: [] }
+      security: { success: false, duration: 0, errors: [], warnings: [] },
     };
   }
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    const prefix = {
-      info: 'ℹ️',
-      success: '✅',
-      error: '❌',
-      warning: '⚠️',
-      progress: '🔄'
-    }[type] || 'ℹ️';
-    
+    const prefix =
+      {
+        info: 'ℹ️',
+        success: '✅',
+        error: '❌',
+        warning: '⚠️',
+        progress: '🔄',
+      }[type] || 'ℹ️';
+
     console.log(`[${timestamp}] ${prefix} ${message}`);
   }
 
@@ -40,10 +41,10 @@ class ComprehensiveTestingSuite {
     try {
       this.log(`Running: ${description}`, 'progress');
       const startTime = Date.now();
-      const result = execSync(command, { 
-        cwd: this.projectRoot, 
+      const result = execSync(command, {
+        cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       const duration = Date.now() - startTime;
       this.log(`Completed: ${description} (${duration}ms)`, 'success');
@@ -58,21 +59,21 @@ class ComprehensiveTestingSuite {
   async runUnitTests() {
     this.log('Starting unit tests...', 'progress');
     const startTime = Date.now();
-    
+
     try {
       // Create unit test files if they don't exist
       await this.createUnitTestFiles();
-      
+
       // Run unit tests
       const result = await this.runCommand('npm run test:unit', 'Unit tests');
-      
+
       this.testResults.unit = {
         success: result.success,
         duration: Date.now() - startTime,
         errors: result.success ? [] : [result.error],
-        warnings: []
+        warnings: [],
       };
-      
+
       if (result.success) {
         this.log('Unit tests completed successfully', 'success');
       } else {
@@ -83,7 +84,7 @@ class ComprehensiveTestingSuite {
         success: false,
         duration: Date.now() - startTime,
         errors: [error.message],
-        warnings: []
+        warnings: [],
       };
       this.log('Unit tests failed', 'error');
     }
@@ -92,21 +93,24 @@ class ComprehensiveTestingSuite {
   async runIntegrationTests() {
     this.log('Starting integration tests...', 'progress');
     const startTime = Date.now();
-    
+
     try {
       // Create integration test files if they don't exist
       await this.createIntegrationTestFiles();
-      
+
       // Run integration tests
-      const result = await this.runCommand('npm run test:integration', 'Integration tests');
-      
+      const result = await this.runCommand(
+        'npm run test:integration',
+        'Integration tests'
+      );
+
       this.testResults.integration = {
         success: result.success,
         duration: Date.now() - startTime,
         errors: result.success ? [] : [result.error],
-        warnings: []
+        warnings: [],
       };
-      
+
       if (result.success) {
         this.log('Integration tests completed successfully', 'success');
       } else {
@@ -117,7 +121,7 @@ class ComprehensiveTestingSuite {
         success: false,
         duration: Date.now() - startTime,
         errors: [error.message],
-        warnings: []
+        warnings: [],
       };
       this.log('Integration tests failed', 'error');
     }
@@ -126,21 +130,21 @@ class ComprehensiveTestingSuite {
   async runE2ETests() {
     this.log('Starting E2E tests...', 'progress');
     const startTime = Date.now();
-    
+
     try {
       // Create E2E test files if they don't exist
       await this.createE2ETestFiles();
-      
+
       // Run E2E tests
       const result = await this.runCommand('npm run test:e2e', 'E2E tests');
-      
+
       this.testResults.e2e = {
         success: result.success,
         duration: Date.now() - startTime,
         errors: result.success ? [] : [result.error],
-        warnings: []
+        warnings: [],
       };
-      
+
       if (result.success) {
         this.log('E2E tests completed successfully', 'success');
       } else {
@@ -151,7 +155,7 @@ class ComprehensiveTestingSuite {
         success: false,
         duration: Date.now() - startTime,
         errors: [error.message],
-        warnings: []
+        warnings: [],
       };
       this.log('E2E tests failed', 'error');
     }
@@ -160,18 +164,18 @@ class ComprehensiveTestingSuite {
   async runSmokeTests() {
     this.log('Starting smoke tests...', 'progress');
     const startTime = Date.now();
-    
+
     try {
       // Run smoke tests
       const result = await this.runCommand('npm run test:smoke', 'Smoke tests');
-      
+
       this.testResults.smoke = {
         success: result.success,
         duration: Date.now() - startTime,
         errors: result.success ? [] : [result.error],
-        warnings: []
+        warnings: [],
       };
-      
+
       if (result.success) {
         this.log('Smoke tests completed successfully', 'success');
       } else {
@@ -182,7 +186,7 @@ class ComprehensiveTestingSuite {
         success: false,
         duration: Date.now() - startTime,
         errors: [error.message],
-        warnings: []
+        warnings: [],
       };
       this.log('Smoke tests failed', 'error');
     }
@@ -191,21 +195,24 @@ class ComprehensiveTestingSuite {
   async runAccessibilityTests() {
     this.log('Starting accessibility tests...', 'progress');
     const startTime = Date.now();
-    
+
     try {
       // Create accessibility test files if they don't exist
       await this.createAccessibilityTestFiles();
-      
+
       // Run accessibility tests
-      const result = await this.runCommand('npm run test:accessibility', 'Accessibility tests');
-      
+      const result = await this.runCommand(
+        'npm run test:accessibility',
+        'Accessibility tests'
+      );
+
       this.testResults.accessibility = {
         success: result.success,
         duration: Date.now() - startTime,
         errors: result.success ? [] : [result.error],
-        warnings: []
+        warnings: [],
       };
-      
+
       if (result.success) {
         this.log('Accessibility tests completed successfully', 'success');
       } else {
@@ -216,7 +223,7 @@ class ComprehensiveTestingSuite {
         success: false,
         duration: Date.now() - startTime,
         errors: [error.message],
-        warnings: []
+        warnings: [],
       };
       this.log('Accessibility tests failed', 'error');
     }
@@ -225,21 +232,24 @@ class ComprehensiveTestingSuite {
   async runPerformanceTests() {
     this.log('Starting performance tests...', 'progress');
     const startTime = Date.now();
-    
+
     try {
       // Create performance test files if they don't exist
       await this.createPerformanceTestFiles();
-      
+
       // Run performance tests
-      const result = await this.runCommand('npm run test:performance', 'Performance tests');
-      
+      const result = await this.runCommand(
+        'npm run test:performance',
+        'Performance tests'
+      );
+
       this.testResults.performance = {
         success: result.success,
         duration: Date.now() - startTime,
         errors: result.success ? [] : [result.error],
-        warnings: []
+        warnings: [],
       };
-      
+
       if (result.success) {
         this.log('Performance tests completed successfully', 'success');
       } else {
@@ -250,7 +260,7 @@ class ComprehensiveTestingSuite {
         success: false,
         duration: Date.now() - startTime,
         errors: [error.message],
-        warnings: []
+        warnings: [],
       };
       this.log('Performance tests failed', 'error');
     }
@@ -259,18 +269,18 @@ class ComprehensiveTestingSuite {
   async runSecurityTests() {
     this.log('Starting security tests...', 'progress');
     const startTime = Date.now();
-    
+
     try {
       // Run security audit
       const result = await this.runCommand('npm audit', 'Security audit');
-      
+
       this.testResults.security = {
         success: result.success,
         duration: Date.now() - startTime,
         errors: result.success ? [] : [result.error],
-        warnings: []
+        warnings: [],
       };
-      
+
       if (result.success) {
         this.log('Security tests completed successfully', 'success');
       } else {
@@ -281,7 +291,7 @@ class ComprehensiveTestingSuite {
         success: false,
         duration: Date.now() - startTime,
         errors: [error.message],
-        warnings: []
+        warnings: [],
       };
       this.log('Security tests failed', 'error');
     }
@@ -309,7 +319,10 @@ describe('Basic Component Test', () => {
 
   async createIntegrationTestFiles() {
     // Create basic integration test files
-    const integrationTestDir = path.join(this.projectRoot, '__tests__/integration');
+    const integrationTestDir = path.join(
+      this.projectRoot,
+      '__tests__/integration'
+    );
     if (!fs.existsSync(integrationTestDir)) {
       fs.mkdirSync(integrationTestDir, { recursive: true });
     }
@@ -324,7 +337,10 @@ describe('Integration Test', () => {
 });
 `;
 
-    fs.writeFileSync(path.join(integrationTestDir, 'basic.test.tsx'), basicIntegrationTest);
+    fs.writeFileSync(
+      path.join(integrationTestDir, 'basic.test.tsx'),
+      basicIntegrationTest
+    );
   }
 
   async createE2ETestFiles() {
@@ -347,7 +363,10 @@ test('basic e2e test', async ({ page }) => {
 
   async createAccessibilityTestFiles() {
     // Create basic accessibility test files
-    const accessibilityTestDir = path.join(this.projectRoot, '__tests__/accessibility');
+    const accessibilityTestDir = path.join(
+      this.projectRoot,
+      '__tests__/accessibility'
+    );
     if (!fs.existsSync(accessibilityTestDir)) {
       fs.mkdirSync(accessibilityTestDir, { recursive: true });
     }
@@ -362,12 +381,18 @@ describe('Accessibility Test', () => {
 });
 `;
 
-    fs.writeFileSync(path.join(accessibilityTestDir, 'basic.test.tsx'), basicAccessibilityTest);
+    fs.writeFileSync(
+      path.join(accessibilityTestDir, 'basic.test.tsx'),
+      basicAccessibilityTest
+    );
   }
 
   async createPerformanceTestFiles() {
     // Create basic performance test files
-    const performanceTestDir = path.join(this.projectRoot, '__tests__/performance');
+    const performanceTestDir = path.join(
+      this.projectRoot,
+      '__tests__/performance'
+    );
     if (!fs.existsSync(performanceTestDir)) {
       fs.mkdirSync(performanceTestDir, { recursive: true });
     }
@@ -382,24 +407,35 @@ describe('Performance Test', () => {
 });
 `;
 
-    fs.writeFileSync(path.join(performanceTestDir, 'basic.test.tsx'), basicPerformanceTest);
+    fs.writeFileSync(
+      path.join(performanceTestDir, 'basic.test.tsx'),
+      basicPerformanceTest
+    );
   }
 
   async generateReport() {
     const endTime = new Date();
     const totalDuration = endTime - this.startTime;
-    
+
     const report = {
       timestamp: endTime.toISOString(),
       totalDuration,
       testResults: this.testResults,
       summary: {
         totalTests: Object.keys(this.testResults).length,
-        successfulTests: Object.values(this.testResults).filter(r => r.success).length,
-        failedTests: Object.values(this.testResults).filter(r => !r.success).length,
-        totalErrors: Object.values(this.testResults).reduce((sum, r) => sum + r.errors.length, 0),
-        totalWarnings: Object.values(this.testResults).reduce((sum, r) => sum + r.warnings.length, 0)
-      }
+        successfulTests: Object.values(this.testResults).filter(r => r.success)
+          .length,
+        failedTests: Object.values(this.testResults).filter(r => !r.success)
+          .length,
+        totalErrors: Object.values(this.testResults).reduce(
+          (sum, r) => sum + r.errors.length,
+          0
+        ),
+        totalWarnings: Object.values(this.testResults).reduce(
+          (sum, r) => sum + r.warnings.length,
+          0
+        ),
+      },
     };
 
     // Ensure reports directory exists
@@ -409,16 +445,19 @@ describe('Performance Test', () => {
     }
 
     // Save report
-    const reportPath = path.join(reportsDir, 'comprehensive-testing-report.json');
+    const reportPath = path.join(
+      reportsDir,
+      'comprehensive-testing-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
+
     this.log(`Report saved to: ${reportPath}`, 'success');
     return report;
   }
 
   async run() {
     this.log('🧪 Starting Comprehensive Testing Suite...', 'info');
-    
+
     try {
       await this.runUnitTests();
       await this.runIntegrationTests();
@@ -427,17 +466,23 @@ describe('Performance Test', () => {
       await this.runAccessibilityTests();
       await this.runPerformanceTests();
       await this.runSecurityTests();
-      
+
       const report = await this.generateReport();
-      
+
       this.log('🎉 Comprehensive Testing Suite completed!', 'success');
-      this.log(`📊 Summary: ${report.summary.successfulTests}/${report.summary.totalTests} tests successful`, 'info');
+      this.log(
+        `📊 Summary: ${report.summary.successfulTests}/${report.summary.totalTests} tests successful`,
+        'info'
+      );
       this.log(`❌ Errors: ${report.summary.totalErrors}`, 'error');
       this.log(`⚠️ Warnings: ${report.summary.totalWarnings}`, 'warning');
-      
+
       return report;
     } catch (error) {
-      this.log(`💥 Comprehensive Testing Suite failed: ${error.message}`, 'error');
+      this.log(
+        `💥 Comprehensive Testing Suite failed: ${error.message}`,
+        'error'
+      );
       throw error;
     }
   }

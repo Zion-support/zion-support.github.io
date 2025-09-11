@@ -119,7 +119,11 @@ class FinalOptimizer {
     }
     `;
 
-    const scriptFile = path.join(this.distPath, 'assets', 'performance-hints.js');
+    const scriptFile = path.join(
+      this.distPath,
+      'assets',
+      'performance-hints.js'
+    );
     fs.writeFileSync(scriptFile, performanceScript);
     console.log('✅ Performance hints added');
   }

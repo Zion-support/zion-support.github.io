@@ -1,28 +1,35 @@
-export const handler = async (event) => {
+export const handler = async event => {
   try {
     if (event.httpMethod !== 'POST') {
       return {
         statusCode: 405,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ error: 'Method Not Allowed' })
+        body: JSON.stringify({ error: 'Method Not Allowed' }),
       };
     }
 
-    const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.NETLIFY_GITHUB_TOKEN;
+    const token =
+      process.env.GITHUB_TOKEN ||
+      process.env.GH_TOKEN ||
+      process.env.NETLIFY_GITHUB_TOKEN;
     if (!token) {
       return {
         statusCode: 500,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ error: 'Missing GitHub token' })
+        body: JSON.stringify({ error: 'Missing GitHub token' }),
       };
     }
 
-    const { owner, repo, path, content, message } = JSON.parse(event.body || '{}');
+    const { owner, repo, path, content, message } = JSON.parse(
+      event.body || '{}'
+    );
     if (!owner || !repo || !path || typeof content !== 'string') {
       return {
         statusCode: 400,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ error: 'owner, repo, path, and content are required' })
+        body: JSON.stringify({
+          error: 'owner, repo, path, and content are required',
+        }),
       };
     }
 
@@ -34,8 +41,8 @@ export const handler = async (event) => {
       method: 'GET',
       headers: {
         Authorization: `token ${token}`,
-        Accept: 'application/vnd.github+json'
-      }
+        Accept: 'application/vnd.github+json',
+      },
     });
 
     let existingSha = undefined;
@@ -47,14 +54,17 @@ export const handler = async (event) => {
       return {
         statusCode: getResp.status,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ error: 'Failed to read existing file', details: text })
+        body: JSON.stringify({
+          error: 'Failed to read existing file',
+          details: text,
+        }),
       };
     }
 
     const putBody = {
       message: message || `chore: update ${path}`,
       content: Buffer.from(content).toString('base64'),
-      sha: existingSha
+      sha: existingSha,
     };
 
     const putResp = await fetch(fileUrl, {
@@ -62,9 +72,9 @@ export const handler = async (event) => {
       headers: {
         Authorization: `token ${token}`,
         Accept: 'application/vnd.github+json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(putBody)
+      body: JSON.stringify(putBody),
     });
 
     const resultText = await putResp.text();
@@ -72,20 +82,23 @@ export const handler = async (event) => {
       return {
         statusCode: putResp.status,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ error: 'Failed to upsert file', details: resultText })
+        body: JSON.stringify({
+          error: 'Failed to upsert file',
+          details: resultText,
+        }),
       };
     }
 
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-      body: resultText
+      body: resultText,
     };
   } catch (error) {
     return {
       statusCode: 500,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ error: error.message })
+      body: JSON.stringify({ error: error.message }),
     };
   }
 };

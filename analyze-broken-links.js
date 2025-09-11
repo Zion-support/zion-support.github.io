@@ -3,7 +3,9 @@ import path from 'path';
 
 // Get all routes from App.tsx
 const appContent = fs.readFileSync('src/App.tsx', 'utf8');
-const routeMatches = appContent.match(/<Route path="([^"]+)" element={<([^>]+) \/>} \/>/g);
+const routeMatches = appContent.match(
+  /<Route path="([^"]+)" element={<([^>]+) \/>} \/>/g
+);
 
 const routes = [];
 routeMatches.forEach(match => {
@@ -12,7 +14,7 @@ routeMatches.forEach(match => {
   if (pathMatch && elementMatch) {
     routes.push({
       path: pathMatch[1],
-      component: elementMatch[1]
+      component: elementMatch[1],
     });
   }
 });
@@ -21,7 +23,7 @@ routeMatches.forEach(match => {
 const pagesDir = 'src/pages';
 const servicesDir = 'src/pages/services';
 
-const getAllFiles = (dir) => {
+const getAllFiles = dir => {
   const files = [];
   if (fs.existsSync(dir)) {
     const items = fs.readdirSync(dir);
@@ -60,16 +62,24 @@ routes.forEach(route => {
       `${serviceName.charAt(0).toUpperCase() + serviceName.slice(1)}.tsx`,
       `${serviceName.charAt(0).toUpperCase() + serviceName.slice(1)}.jsx`,
       // Add more variations for service files
-      `${serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}.tsx`,
-      `${serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}.jsx`
+      `${serviceName
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join('')}.tsx`,
+      `${serviceName
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join('')}.jsx`,
     ];
-    
-    const exists = expectedFiles.some(file => existingFilesMap.has(file.toLowerCase()));
+
+    const exists = expectedFiles.some(file =>
+      existingFilesMap.has(file.toLowerCase())
+    );
     if (!exists) {
       missingPages.push({
         route: route.path,
         component: route.component,
-        expectedFiles: expectedFiles.map(file => `src/pages/services/${file}`)
+        expectedFiles: expectedFiles.map(file => `src/pages/services/${file}`),
       });
     }
   } else {
@@ -80,16 +90,24 @@ routes.forEach(route => {
       `${pageName.charAt(0).toUpperCase() + pageName.slice(1)}.tsx`,
       `${pageName.charAt(0).toUpperCase() + pageName.slice(1)}.jsx`,
       // Add more variations for page files
-      `${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}.tsx`,
-      `${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}.jsx`
+      `${pageName
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join('')}.tsx`,
+      `${pageName
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join('')}.jsx`,
     ];
-    
-    const exists = expectedFiles.some(file => existingFilesMap.has(file.toLowerCase()));
+
+    const exists = expectedFiles.some(file =>
+      existingFilesMap.has(file.toLowerCase())
+    );
     if (!exists) {
       missingPages.push({
         route: route.path,
         component: route.component,
-        expectedFiles: expectedFiles.map(file => `src/pages/${file}`)
+        expectedFiles: expectedFiles.map(file => `src/pages/${file}`),
       });
     }
   }
@@ -97,7 +115,10 @@ routes.forEach(route => {
 
 // Check navigation links
 const headerContent = fs.readFileSync('src/layout/AppHeader.tsx', 'utf8');
-const footerContent = fs.readFileSync('src/components/EnhancedFuturisticFooter.tsx', 'utf8');
+const footerContent = fs.readFileSync(
+  'src/components/EnhancedFuturisticFooter.tsx',
+  'utf8'
+);
 const sidebarContent = fs.readFileSync('src/components/Sidebar.tsx', 'utf8');
 
 const linkRegex = /href: ['"`]([^'"`]+)['"`]/g;
@@ -106,7 +127,10 @@ const pathRegex = /path: ['"`]([^'"`]+)['"`]/g;
 const navigationLinks = [];
 let match;
 
-while ((match = linkRegex.exec(headerContent + footerContent + sidebarContent)) !== null) {
+while (
+  (match = linkRegex.exec(headerContent + footerContent + sidebarContent)) !==
+  null
+) {
   navigationLinks.push(match[1]);
 }
 
@@ -119,13 +143,17 @@ const uniqueLinks = [...new Set(navigationLinks)];
 
 // Check for broken navigation links
 uniqueLinks.forEach(link => {
-  if (link.startsWith('/') && !link.startsWith('/#') && !link.startsWith('http')) {
+  if (
+    link.startsWith('/') &&
+    !link.startsWith('/#') &&
+    !link.startsWith('http')
+  ) {
     const routeExists = routes.some(route => route.path === link);
     if (!routeExists) {
       brokenLinks.push({
         link,
         source: 'navigation',
-        type: 'missing-route'
+        type: 'missing-route',
       });
     }
   }

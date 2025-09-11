@@ -3,13 +3,22 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useWallet } from '@/context/WalletContext'; // Adjust path
 import { Button } from '@/components/ui/button';
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'; // Adjust path
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'; // Adjust path
 import { Badge } from '@/components/ui/badge'; // Adjust path
 import ConnectWalletButton from '@/components/ConnectWalletButton'; // Assuming this is the correct path
 // import MainLayout from '@/components/layout/MainLayout';
 
 // Types (should ideally be shared)
-interface ProposalSlim { // For nested proposal object
+interface ProposalSlim {
+  // For nested proposal object
   id: number | string;
   title: string;
 }
@@ -47,17 +56,21 @@ const MyVotesPage: React.FC = () => {
         const response = await fetch('/api/governance/my-votes/');
 
         if (response.status === 401 || response.status === 403) {
-            captureException(new Error(`Forbidden - ${response.status}`), {
-              extra: { path: '/api/governance/my-votes/' },
-              user: user ? { id: user.id, email: user.email } : undefined,
-            });
-            setError("Authentication issue: Please ensure you are logged in via the platform's main authentication, or this feature might require wallet-based vote fetching in the future if platform login is separate.");
-            setVotes([]);
-            return;
+          captureException(new Error(`Forbidden - ${response.status}`), {
+            extra: { path: '/api/governance/my-votes/' },
+            user: user ? { id: user.id, email: user.email } : undefined,
+          });
+          setError(
+            "Authentication issue: Please ensure you are logged in via the platform's main authentication, or this feature might require wallet-based vote fetching in the future if platform login is separate."
+          );
+          setVotes([]);
+          return;
         }
         if (!response.ok) {
           const errData = await response.json().catch(() => ({}));
-          throw new Error(errData.detail || `Failed to fetch your votes: ${response.status}`);
+          throw new Error(
+            errData.detail || `Failed to fetch your votes: ${response.status}`
+          );
         }
         const data = await response.json();
         // The API might return votes directly associated with the Django user.
@@ -67,7 +80,7 @@ const MyVotesPage: React.FC = () => {
         // If `connectedWalletAddress` is available, we could also filter client-side as a fallback:
         // const walletFilteredVotes = (data.results || data).filter((vote: UserVote) => vote.voter_wallet_address?.toLowerCase() === connectedWalletAddress?.toLowerCase());
         // setVotes(walletFilteredVotes);
-        setVotes(Array.isArray(data) ? data : (data.results || []));
+        setVotes(Array.isArray(data) ? data : data.results || []);
       } catch (err: any) {
         setError(err.message);
       } finally {
@@ -78,7 +91,9 @@ const MyVotesPage: React.FC = () => {
     fetchMyVotes();
   }, [isConnected, connectedWalletAddress, user]); // Added user
 
-  const getChoiceVariant = (choice: string): "default" | "secondary" | "destructive" | "outline" => {
+  const getChoiceVariant = (
+    choice: string
+  ): 'default' | 'secondary' | 'destructive' | 'outline' => {
     if (choice === 'APPROVE') return 'secondary'; // Green-ish in shadcn (often success-like)
     if (choice === 'REJECT') return 'destructive'; // Red
     return 'outline'; // Grey/Default for ABSTAIN
@@ -87,14 +102,14 @@ const MyVotesPage: React.FC = () => {
   if (!isConnected) {
     return (
       // <MainLayout>
-      <div className="container mx-auto p-4 text-center space-y-4">
-        <h1 className="text-3xl font-bold mb-6">My Voting History</h1>
+      <div className='container mx-auto p-4 text-center space-y-4'>
+        <h1 className='text-3xl font-bold mb-6'>My Voting History</h1>
         <p>Please connect your wallet to see your voting history.</p>
         <ConnectWalletButton />
-        <div className="mt-6">
-            <Link href="/governance">
-              <Button variant="outline">Back to Proposals</Button>
-            </Link>
+        <div className='mt-6'>
+          <Link href='/governance'>
+            <Button variant='outline'>Back to Proposals</Button>
+          </Link>
         </div>
       </div>
       // </MainLayout>
@@ -103,19 +118,23 @@ const MyVotesPage: React.FC = () => {
 
   return (
     // <MainLayout>
-    <div className="container mx-auto p-4 space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-        <h1 className="text-3xl font-bold">My Voting History</h1>
-        <Link href="/governance">
-          <Button variant="outline">Back to Proposals</Button>
+    <div className='container mx-auto p-4 space-y-6'>
+      <div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
+        <h1 className='text-3xl font-bold'>My Voting History</h1>
+        <Link href='/governance'>
+          <Button variant='outline'>Back to Proposals</Button>
         </Link>
       </div>
 
-      {isLoading && <p className="text-center py-5">Loading your votes...</p>}
-      {error && <p className="text-red-500 text-center py-5">Error: {error}</p>}
+      {isLoading && <p className='text-center py-5'>Loading your votes...</p>}
+      {error && <p className='text-red-500 text-center py-5'>Error: {error}</p>}
 
       {!isLoading && !error && votes.length === 0 && (
-        <p className="text-center py-5">You haven't voted on any proposals yet with the connected wallet, or your votes are associated with a platform login that isn't linked to this wallet address on the backend.</p>
+        <p className='text-center py-5'>
+          You haven't voted on any proposals yet with the connected wallet, or
+          your votes are associated with a platform login that isn't linked to
+          this wallet address on the backend.
+        </p>
       )}
 
       {!isLoading && !error && votes.length > 0 && (
@@ -124,22 +143,33 @@ const MyVotesPage: React.FC = () => {
           <TableHeader>
             <TableRow>
               <TableHead>Proposal Title</TableHead>
-              <TableHead className="text-center">Your Vote</TableHead>
-              <TableHead className="text-right">Voting Power Used</TableHead>
-              <TableHead className="text-right">Date Voted</TableHead>
+              <TableHead className='text-center'>Your Vote</TableHead>
+              <TableHead className='text-right'>Voting Power Used</TableHead>
+              <TableHead className='text-right'>Date Voted</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {votes.map((vote) => (
+            {votes.map(vote => (
               <TableRow key={vote.id}>
-                <TableCell className="font-medium">
-                  <Link href={`/governance/${vote.proposal.id}`} className="text-blue-600 hover:underline">
+                <TableCell className='font-medium'>
+                  <Link
+                    href={`/governance/${vote.proposal.id}`}
+                    className='text-blue-600 hover:underline'
+                  >
                     {vote.proposal.title}
                   </Link>
                 </TableCell>
-                <TableCell className="text-center"><Badge variant={getChoiceVariant(vote.choice)}>{vote.choice}</Badge></TableCell>
-                <TableCell className="text-right">{vote.voting_power_at_snapshot} ZION$</TableCell>
-                <TableCell className="text-right">{new Date(vote.voted_at).toLocaleString()}</TableCell>
+                <TableCell className='text-center'>
+                  <Badge variant={getChoiceVariant(vote.choice)}>
+                    {vote.choice}
+                  </Badge>
+                </TableCell>
+                <TableCell className='text-right'>
+                  {vote.voting_power_at_snapshot} ZION$
+                </TableCell>
+                <TableCell className='text-right'>
+                  {new Date(vote.voted_at).toLocaleString()}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

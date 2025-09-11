@@ -1,4 +1,3 @@
-
 import { ReactNode } from 'react';
 
 // Extend FeatureCardProps to include key for mapping
@@ -42,7 +41,7 @@ declare module '@/components/ChatAssistant/ChatMessage' {
 
 // Extend ProductListingCardProps to include key for mapping
 declare module '@/components/ProductListingCard' {
-export interface ProductListingCardProps {
+  export interface ProductListingCardProps {
     listing: any;
     view: any;
     onRequestQuote: (listingId: string) => void;

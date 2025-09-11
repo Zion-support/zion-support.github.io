@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
@@ -53,10 +53,12 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
   {
     id: 'ai-content-intelligence-suite',
     name: 'AI Content Intelligence Suite',
-    tagline: 'Transform content creation with AI-powered insights, optimization, and performance prediction',
+    tagline:
+      'Transform content creation with AI-powered insights, optimization, and performance prediction',
     price: '$199',
     period: '/month',
-    description: 'Advanced AI suite that analyzes content performance, predicts engagement, and provides real-time optimization recommendations across all digital channels.',
+    description:
+      'Advanced AI suite that analyzes content performance, predicts engagement, and provides real-time optimization recommendations across all digital channels.',
     features: [
       'AI-powered content performance prediction',
       'Real-time engagement optimization',
@@ -65,14 +67,15 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Content sentiment and tone analysis',
       'SEO and readability scoring',
       'Competitor content benchmarking',
-      'ROI tracking and attribution'
+      'ROI tracking and attribution',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-content-intelligence',
-    marketPosition: 'Advanced alternative to Grammarly Business, Surfer SEO, and Clearscope with AI prediction capabilities.',
+    marketPosition:
+      'Advanced alternative to Grammarly Business, Surfer SEO, and Clearscope with AI prediction capabilities.',
     targetAudience: 'Content marketers, SEO specialists, digital agencies',
     trialDays: 14,
     setupTime: '2 hours',
@@ -80,7 +83,9 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     realService: true,
     technology: ['OpenAI GPT-4, Claude, LangChain, Next.js, PostgreSQL'],
     integrations: ['WordPress, Shopify, HubSpot, Google Analytics, SEMrush'],
-    useCases: ['Content optimization, Performance prediction, SEO strategy, Content ROI'],
+    useCases: [
+      'Content optimization, Performance prediction, SEO strategy, Content ROI',
+    ],
     roi: 'Increase content engagement by 40-60% and reduce content creation time by 30%.',
     competitors: ['Grammarly Business, Surfer SEO, Clearscope, MarketMuse'],
     marketSize: '$45B+ content marketing and SEO tools',
@@ -88,19 +93,22 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with AI model fine-tuning, real-time analytics, and predictive modeling engine.',
+    implementationDetails:
+      'Multi-tenant SaaS with AI model fine-tuning, real-time analytics, and predictive modeling engine.',
     launchDate: '2025-01-15',
     customers: 156,
     rating: 4.9,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'quantum-cybersecurity-monitor',
     name: 'Quantum Cybersecurity Monitor',
-    tagline: 'Future-proof your security with quantum-resistant encryption and threat detection',
+    tagline:
+      'Future-proof your security with quantum-resistant encryption and threat detection',
     price: '$299',
     period: '/month',
-    description: 'Next-generation cybersecurity platform that implements quantum-resistant algorithms, advanced threat detection, and automated incident response for the post-quantum era.',
+    description:
+      'Next-generation cybersecurity platform that implements quantum-resistant algorithms, advanced threat detection, and automated incident response for the post-quantum era.',
     features: [
       'Quantum-resistant encryption algorithms',
       'AI-powered threat detection',
@@ -109,14 +117,15 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Real-time security monitoring',
       'Compliance automation (SOC2, ISO27001)',
       'Threat intelligence feeds',
-      'Security posture scoring'
+      'Security posture scoring',
     ],
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity',
-    marketPosition: 'Cutting-edge alternative to traditional SIEM solutions with quantum-ready encryption.',
+    marketPosition:
+      'Cutting-edge alternative to traditional SIEM solutions with quantum-ready encryption.',
     targetAudience: 'CISOs, security teams, compliance officers',
     trialDays: 21,
     setupTime: '1 week',
@@ -124,7 +133,9 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     realService: true,
     technology: ['Post-quantum cryptography, AI/ML, Kubernetes, Zero Trust'],
     integrations: ['CrowdStrike, Palo Alto, Splunk, AWS Security Hub'],
-    useCases: ['Quantum threat preparation, Advanced threat detection, Compliance automation'],
+    useCases: [
+      'Quantum threat preparation, Advanced threat detection, Compliance automation',
+    ],
     roi: 'Reduce security incidents by 70% and achieve 99.9% threat detection accuracy.',
     competitors: ['Splunk, IBM QRadar, Microsoft Sentinel, CrowdStrike'],
     marketSize: '$180B+ cybersecurity market',
@@ -132,19 +143,22 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade security platform with quantum-resistant algorithms, AI threat detection, and automated response workflows.',
+    implementationDetails:
+      'Enterprise-grade security platform with quantum-resistant algorithms, AI threat detection, and automated response workflows.',
     launchDate: '2025-02-01',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'autonomous-devops-orchestrator',
     name: 'Autonomous DevOps Orchestrator',
-    tagline: 'Self-healing infrastructure with AI-driven automation and predictive scaling',
+    tagline:
+      'Self-healing infrastructure with AI-driven automation and predictive scaling',
     price: '$399',
     period: '/month',
-    description: 'Intelligent DevOps platform that autonomously manages infrastructure, predicts scaling needs, and automatically resolves issues before they impact users.',
+    description:
+      'Intelligent DevOps platform that autonomously manages infrastructure, predicts scaling needs, and automatically resolves issues before they impact users.',
     features: [
       'AI-powered infrastructure monitoring',
       'Predictive scaling and optimization',
@@ -153,14 +167,15 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Cost optimization recommendations',
       'Multi-cloud management',
       'Performance bottleneck detection',
-      'Automated rollback systems'
+      'Automated rollback systems',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-devops',
-    marketPosition: 'Advanced alternative to GitLab, Jenkins, and CircleCI with autonomous capabilities.',
+    marketPosition:
+      'Advanced alternative to GitLab, Jenkins, and CircleCI with autonomous capabilities.',
     targetAudience: 'DevOps engineers, SREs, platform teams',
     trialDays: 30,
     setupTime: '1 week',
@@ -168,7 +183,9 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     realService: true,
     technology: ['Kubernetes, AI/ML, Terraform, Prometheus, Grafana'],
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Slack'],
-    useCases: ['Automated infrastructure management, Predictive scaling, Incident prevention'],
+    useCases: [
+      'Automated infrastructure management, Predictive scaling, Incident prevention',
+    ],
     roi: 'Reduce DevOps overhead by 60% and improve deployment success rate to 99.9%.',
     competitors: ['GitLab, Jenkins, CircleCI, Harness, ArgoCD'],
     marketSize: '$25B+ DevOps tools market',
@@ -176,21 +193,24 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'devops-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-cloud orchestration platform with AI-driven automation, predictive analytics, and autonomous decision-making capabilities.',
+    implementationDetails:
+      'Multi-cloud orchestration platform with AI-driven automation, predictive analytics, and autonomous decision-making capabilities.',
     launchDate: '2025-01-20',
     customers: 134,
     rating: 4.7,
-    reviews: 92
+    reviews: 92,
   },
 
   // Advanced IT Infrastructure Services
   {
     id: 'edge-computing-optimizer',
     name: 'Edge Computing Optimizer',
-    tagline: 'Optimize edge deployments with intelligent routing and latency optimization',
+    tagline:
+      'Optimize edge deployments with intelligent routing and latency optimization',
     price: '$249',
     period: '/month',
-    description: 'Intelligent edge computing platform that optimizes content delivery, reduces latency, and provides real-time performance analytics across global edge networks.',
+    description:
+      'Intelligent edge computing platform that optimizes content delivery, reduces latency, and provides real-time performance analytics across global edge networks.',
     features: [
       'Global edge network optimization',
       'Intelligent content routing',
@@ -199,22 +219,28 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Edge analytics and insights',
       'Multi-CDN management',
       'Performance benchmarking',
-      'Cost optimization analytics'
+      'Cost optimization analytics',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/edge-computing-optimizer',
-    marketPosition: 'Competitive alternative to Cloudflare, AWS CloudFront, and Fastly with intelligent optimization.',
-    targetAudience: 'DevOps engineers, infrastructure teams, performance engineers',
+    marketPosition:
+      'Competitive alternative to Cloudflare, AWS CloudFront, and Fastly with intelligent optimization.',
+    targetAudience:
+      'DevOps engineers, infrastructure teams, performance engineers',
     trialDays: 14,
     setupTime: '3 days',
     category: 'Infrastructure & Performance',
     realService: true,
-    technology: ['Edge computing, AI routing, CDN optimization, Real-time analytics'],
+    technology: [
+      'Edge computing, AI routing, CDN optimization, Real-time analytics',
+    ],
     integrations: ['AWS CloudFront, Cloudflare, Fastly, Azure CDN'],
-    useCases: ['Content delivery optimization, Latency reduction, Global performance improvement'],
+    useCases: [
+      'Content delivery optimization, Latency reduction, Global performance improvement',
+    ],
     roi: 'Reduce global latency by 40-60% and improve user experience scores by 35%.',
     competitors: ['Cloudflare, AWS CloudFront, Fastly, Azure CDN'],
     marketSize: '$15B+ edge computing market',
@@ -222,19 +248,22 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'it-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Global edge optimization platform with AI-driven routing, real-time analytics, and automated performance tuning.',
+    implementationDetails:
+      'Global edge optimization platform with AI-driven routing, real-time analytics, and automated performance tuning.',
     launchDate: '2025-02-15',
     customers: 78,
     rating: 4.6,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'blockchain-infrastructure-as-a-service',
     name: 'Blockchain Infrastructure as a Service',
-    tagline: 'Deploy and manage blockchain networks with enterprise-grade security and scalability',
+    tagline:
+      'Deploy and manage blockchain networks with enterprise-grade security and scalability',
     price: '$599',
     period: '/month',
-    description: 'Enterprise blockchain platform that simplifies deployment, management, and scaling of blockchain networks with built-in security, monitoring, and compliance features.',
+    description:
+      'Enterprise blockchain platform that simplifies deployment, management, and scaling of blockchain networks with built-in security, monitoring, and compliance features.',
     features: [
       'Multi-blockchain support (Ethereum, Polygon, Solana)',
       'Enterprise-grade security and compliance',
@@ -243,22 +272,26 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Smart contract deployment tools',
       'Regulatory compliance automation',
       'Cross-chain interoperability',
-      'Performance optimization'
+      'Performance optimization',
     ],
     popular: false,
     icon: '⛓️',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/blockchain-infrastructure',
-    marketPosition: 'Enterprise alternative to Alchemy, Infura, and QuickNode with compliance and security focus.',
-    targetAudience: 'Blockchain developers, enterprise architects, compliance teams',
+    marketPosition:
+      'Enterprise alternative to Alchemy, Infura, and QuickNode with compliance and security focus.',
+    targetAudience:
+      'Blockchain developers, enterprise architects, compliance teams',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Blockchain & Web3',
     realService: true,
     technology: ['Ethereum, Polygon, Solana, Kubernetes, Zero Trust'],
     integrations: ['MetaMask, Web3.js, Ethers.js, Hardhat, Truffle'],
-    useCases: ['Enterprise blockchain deployment, DeFi applications, NFT platforms'],
+    useCases: [
+      'Enterprise blockchain deployment, DeFi applications, NFT platforms',
+    ],
     roi: 'Reduce blockchain infrastructure costs by 50% and accelerate time-to-market by 70%.',
     competitors: ['Alchemy, Infura, QuickNode, AWS Managed Blockchain'],
     marketSize: '$20B+ blockchain infrastructure market',
@@ -266,21 +299,24 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'blockchain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise blockchain platform with multi-chain support, compliance automation, and enterprise-grade security features.',
+    implementationDetails:
+      'Enterprise blockchain platform with multi-chain support, compliance automation, and enterprise-grade security features.',
     launchDate: '2025-03-01',
     customers: 45,
     rating: 4.5,
-    reviews: 28
+    reviews: 28,
   },
 
   // AI-Powered Business Intelligence
   {
     id: 'predictive-business-intelligence',
     name: 'Predictive Business Intelligence',
-    tagline: 'Transform data into actionable insights with AI-powered predictive analytics',
+    tagline:
+      'Transform data into actionable insights with AI-powered predictive analytics',
     price: '$349',
     period: '/month',
-    description: 'Advanced BI platform that combines traditional analytics with AI-powered predictive modeling, automated insights, and real-time decision support.',
+    description:
+      'Advanced BI platform that combines traditional analytics with AI-powered predictive modeling, automated insights, and real-time decision support.',
     features: [
       'AI-powered predictive modeling',
       'Automated insight generation',
@@ -289,14 +325,15 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Automated reporting and alerts',
       'Multi-data source integration',
       'Advanced analytics workflows',
-      'Collaborative dashboards'
+      'Collaborative dashboards',
     ],
     popular: true,
     icon: '📊',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/predictive-bi',
-    marketPosition: 'Advanced alternative to Tableau, Power BI, and Looker with AI capabilities.',
+    marketPosition:
+      'Advanced alternative to Tableau, Power BI, and Looker with AI capabilities.',
     targetAudience: 'Data analysts, business intelligence teams, executives',
     trialDays: 21,
     setupTime: '1 week',
@@ -304,7 +341,9 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     realService: true,
     technology: ['AI/ML, Python, R, React, D3.js, PostgreSQL'],
     integrations: ['Salesforce, HubSpot, Google Analytics, AWS, Snowflake'],
-    useCases: ['Predictive analytics, Business forecasting, Data-driven decision making'],
+    useCases: [
+      'Predictive analytics, Business forecasting, Data-driven decision making',
+    ],
     roi: 'Improve decision accuracy by 45% and reduce reporting time by 80%.',
     competitors: ['Tableau, Power BI, Looker, Qlik, Sisense'],
     marketSize: '$30B+ business intelligence market',
@@ -312,19 +351,22 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'business-intelligence-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered BI platform with predictive modeling, automated insights, and real-time analytics capabilities.',
+    implementationDetails:
+      'AI-powered BI platform with predictive modeling, automated insights, and real-time analytics capabilities.',
     launchDate: '2025-01-30',
     customers: 112,
     rating: 4.8,
-    reviews: 76
+    reviews: 76,
   },
   {
     id: 'ai-powered-customer-success-platform',
     name: 'AI-Powered Customer Success Platform',
-    tagline: 'Predict churn, optimize retention, and maximize customer lifetime value',
+    tagline:
+      'Predict churn, optimize retention, and maximize customer lifetime value',
     price: '$199',
     period: '/month',
-    description: 'Intelligent customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate personalized engagement strategies.',
+    description:
+      'Intelligent customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate personalized engagement strategies.',
     features: [
       'AI-powered churn prediction',
       'Automated customer segmentation',
@@ -333,14 +375,15 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Automated onboarding optimization',
       'Customer journey analytics',
       'Predictive upselling recommendations',
-      'Success metric tracking'
+      'Success metric tracking',
     ],
     popular: false,
     icon: '🎯',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-customer-success',
-    marketPosition: 'Advanced alternative to Gainsight, Totango, and ChurnZero with AI capabilities.',
+    marketPosition:
+      'Advanced alternative to Gainsight, Totango, and ChurnZero with AI capabilities.',
     targetAudience: 'Customer success managers, account managers, growth teams',
     trialDays: 14,
     setupTime: '1 week',
@@ -356,21 +399,24 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'customer-service-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered customer success platform with predictive analytics, automated workflows, and personalized engagement strategies.',
+    implementationDetails:
+      'AI-powered customer success platform with predictive analytics, automated workflows, and personalized engagement strategies.',
     launchDate: '2025-02-20',
     customers: 89,
     rating: 4.7,
-    reviews: 54
+    reviews: 54,
   },
 
   // Advanced Micro SAAS Solutions
   {
     id: 'no-code-automation-hub',
     name: 'No-Code Automation Hub',
-    tagline: 'Build complex workflows and automations without writing a single line of code',
+    tagline:
+      'Build complex workflows and automations without writing a single line of code',
     price: '$129',
     period: '/month',
-    description: 'Visual automation platform that enables users to create complex business workflows, integrations, and automations using drag-and-drop interfaces and AI assistance.',
+    description:
+      'Visual automation platform that enables users to create complex business workflows, integrations, and automations using drag-and-drop interfaces and AI assistance.',
     features: [
       'Visual workflow builder',
       'AI-powered automation suggestions',
@@ -379,22 +425,30 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Conditional logic and branching',
       'Real-time workflow monitoring',
       'API integration capabilities',
-      'Custom trigger and action creation'
+      'Custom trigger and action creation',
     ],
     popular: true,
     icon: '🔧',
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/no-code-automation',
-    marketPosition: 'Competitive alternative to Zapier, Make, and n8n with visual workflow building.',
-    targetAudience: 'Business users, operations teams, non-technical professionals',
+    marketPosition:
+      'Competitive alternative to Zapier, Make, and n8n with visual workflow building.',
+    targetAudience:
+      'Business users, operations teams, non-technical professionals',
     trialDays: 14,
     setupTime: '1 day',
     category: 'Automation & Workflows',
     realService: true,
-    technology: ['React, Node.js, Workflow engine, AI assistance, Visual programming'],
-    integrations: ['Slack, Google Workspace, Microsoft 365, Salesforce, HubSpot'],
-    useCases: ['Business process automation, Workflow optimization, Integration automation'],
+    technology: [
+      'React, Node.js, Workflow engine, AI assistance, Visual programming',
+    ],
+    integrations: [
+      'Slack, Google Workspace, Microsoft 365, Salesforce, HubSpot',
+    ],
+    useCases: [
+      'Business process automation, Workflow optimization, Integration automation',
+    ],
     roi: 'Reduce manual tasks by 70% and improve process efficiency by 50%.',
     competitors: ['Zapier, Make, n8n, Automate.io, Integromat'],
     marketSize: '$12B+ workflow automation market',
@@ -402,19 +456,22 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'it-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Visual automation platform with AI-powered suggestions, pre-built templates, and enterprise-grade workflow engine.',
+    implementationDetails:
+      'Visual automation platform with AI-powered suggestions, pre-built templates, and enterprise-grade workflow engine.',
     launchDate: '2025-01-25',
     customers: 203,
     rating: 4.6,
-    reviews: 134
+    reviews: 134,
   },
   {
     id: 'ai-powered-project-management',
     name: 'AI-Powered Project Management',
-    tagline: 'Intelligent project planning, resource optimization, and risk prediction',
+    tagline:
+      'Intelligent project planning, resource optimization, and risk prediction',
     price: '$179',
     period: '/month',
-    description: 'Smart project management platform that uses AI to optimize resource allocation, predict project risks, and automate project planning and execution.',
+    description:
+      'Smart project management platform that uses AI to optimize resource allocation, predict project risks, and automate project planning and execution.',
     features: [
       'AI-powered project planning',
       'Resource optimization algorithms',
@@ -423,14 +480,15 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Real-time progress tracking',
       'Collaborative workspace tools',
       'Advanced reporting and analytics',
-      'Integration with development tools'
+      'Integration with development tools',
     ],
     popular: false,
     icon: '📋',
     color: 'from-amber-600 to-yellow-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/ai-project-management',
-    marketPosition: 'Advanced alternative to Asana, Monday.com, and Jira with AI capabilities.',
+    marketPosition:
+      'Advanced alternative to Asana, Monday.com, and Jira with AI capabilities.',
     targetAudience: 'Project managers, team leads, product managers',
     trialDays: 21,
     setupTime: '1 week',
@@ -446,21 +504,24 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'project-management-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered project management platform with intelligent planning, resource optimization, and risk prediction capabilities.',
+    implementationDetails:
+      'AI-powered project management platform with intelligent planning, resource optimization, and risk prediction capabilities.',
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4.7,
-    reviews: 98
+    reviews: 98,
   },
 
   // Emerging Technology Services
   {
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
-    tagline: 'Build immersive 3D experiences and virtual worlds with enterprise-grade tools',
+    tagline:
+      'Build immersive 3D experiences and virtual worlds with enterprise-grade tools',
     price: '$499',
     period: '/month',
-    description: 'Comprehensive metaverse development platform that provides tools for creating 3D environments, virtual events, and immersive experiences with built-in monetization and analytics.',
+    description:
+      'Comprehensive metaverse development platform that provides tools for creating 3D environments, virtual events, and immersive experiences with built-in monetization and analytics.',
     features: [
       '3D world building tools',
       'Virtual event hosting',
@@ -469,14 +530,15 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Analytics and user tracking',
       'Multi-platform deployment',
       'Collaborative creation tools',
-      'Enterprise security features'
+      'Enterprise security features',
     ],
     popular: false,
     icon: '🌍',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/metaverse-platform',
-    marketPosition: 'Enterprise alternative to Roblox Studio, Unity, and Unreal Engine for metaverse development.',
+    marketPosition:
+      'Enterprise alternative to Roblox Studio, Unity, and Unreal Engine for metaverse development.',
     targetAudience: '3D developers, digital artists, event organizers',
     trialDays: 30,
     setupTime: '2 weeks',
@@ -492,19 +554,22 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
     variant: 'metaverse-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise metaverse platform with 3D development tools, virtual event hosting, and built-in monetization capabilities.',
+    implementationDetails:
+      'Enterprise metaverse platform with 3D development tools, virtual event hosting, and built-in monetization capabilities.',
     launchDate: '2025-03-15',
     customers: 67,
     rating: 4.5,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'quantum-computing-simulator',
     name: 'Quantum Computing Simulator',
-    tagline: 'Develop and test quantum algorithms with high-fidelity simulation',
+    tagline:
+      'Develop and test quantum algorithms with high-fidelity simulation',
     price: '$799',
     period: '/month',
-    description: 'Advanced quantum computing simulator that enables developers to design, test, and optimize quantum algorithms with high-fidelity simulation and real quantum hardware access.',
+    description:
+      'Advanced quantum computing simulator that enables developers to design, test, and optimize quantum algorithms with high-fidelity simulation and real quantum hardware access.',
     features: [
       'High-fidelity quantum simulation',
       'Quantum algorithm development tools',
@@ -513,33 +578,44 @@ export const innovative2025CuttingEdgeServices: Innovative2025Service[] = [
       'Performance benchmarking',
       'Educational resources and tutorials',
       'API access for integration',
-      'Enterprise support and consulting'
+      'Enterprise support and consulting',
     ],
     popular: false,
     icon: '⚛️',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-400',
     link: 'https://ziontechgroup.com/quantum-simulator',
-    marketPosition: 'Advanced alternative to IBM Quantum Experience, Amazon Braket, and Microsoft Azure Quantum.',
-    targetAudience: 'Quantum researchers, algorithm developers, educational institutions',
+    marketPosition:
+      'Advanced alternative to IBM Quantum Experience, Amazon Braket, and Microsoft Azure Quantum.',
+    targetAudience:
+      'Quantum researchers, algorithm developers, educational institutions',
     trialDays: 60,
     setupTime: '1 month',
     category: 'Quantum Computing',
     realService: true,
-    technology: ['Quantum algorithms, Python, Qiskit, Cirq, Quantum simulation'],
-    integrations: ['IBM Quantum, Amazon Braket, Microsoft Azure Quantum, Google Quantum'],
-    useCases: ['Quantum algorithm development, Research and education, Quantum software testing'],
+    technology: [
+      'Quantum algorithms, Python, Qiskit, Cirq, Quantum simulation',
+    ],
+    integrations: [
+      'IBM Quantum, Amazon Braket, Microsoft Azure Quantum, Google Quantum',
+    ],
+    useCases: [
+      'Quantum algorithm development, Research and education, Quantum software testing',
+    ],
     roi: 'Accelerate quantum research by 300% and reduce development costs by 70%.',
-    competitors: ['IBM Quantum Experience, Amazon Braket, Microsoft Azure Quantum'],
+    competitors: [
+      'IBM Quantum Experience, Amazon Braket, Microsoft Azure Quantum',
+    ],
     marketSize: '$10B+ quantum computing market',
     growthRate: '250% YoY',
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise quantum computing platform with high-fidelity simulation, real hardware access, and comprehensive development tools.',
+    implementationDetails:
+      'Enterprise quantum computing platform with high-fidelity simulation, real hardware access, and comprehensive development tools.',
     launchDate: '2025-04-01',
     customers: 23,
     rating: 4.8,
-    reviews: 18
-  }
+    reviews: 18,
+  },
 ];

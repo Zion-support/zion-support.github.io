@@ -6,4 +6,3 @@ This document describes how to run tests and validate the application.
 - Lint: `npm run lint`
 - Build validation: `npm run build:validate`
 - End-to-end smoke (where applicable): see `playwright-smoke-report.md`
-    

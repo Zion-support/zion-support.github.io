@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('docs-index-runner function triggered');
-    
+
     // Documentation index simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Documentation index runner executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         indexing: {
           status: 'active',
           documents: 0,
-          lastIndex: new Date().toISOString()
-        }
-      })
+          lastIndex: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in docs-index-runner:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'docs-index-runner'
-      })
+        function: 'docs-index-runner',
+      }),
     };
   }
 };

@@ -8,9 +8,13 @@ interface MarketplaceSearchProps {
   onSelect?: (item: ProductListing) => void;
 }
 
-export function MarketplaceSearch({ products, onSelect }: MarketplaceSearchProps) {
+export function MarketplaceSearch({
+  products,
+  onSelect,
+}: MarketplaceSearchProps) {
   const [query, setQuery] = useState('');
-  const { suggestions, getSuggestions, clearSuggestions } = useAutocomplete(products);
+  const { suggestions, getSuggestions, clearSuggestions } =
+    useAutocomplete(products);
   const [highlight, setHighlight] = useState(-1);
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,16 +44,16 @@ export function MarketplaceSearch({ products, onSelect }: MarketplaceSearchProps
   };
 
   return (
-    <div className="relative">
+    <div className='relative'>
       <Input
         value={query}
         onChange={handleInput}
         onKeyDown={handleKeyDown}
-        placeholder="Search products..."
-        aria-label="Marketplace search"
+        placeholder='Search products...'
+        aria-label='Marketplace search'
       />
       {suggestions.length > 0 && (
-        <ul className="absolute left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-md z-10 max-h-60 overflow-auto">
+        <ul className='absolute left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-md z-10 max-h-60 overflow-auto'>
           {suggestions.map((s, i) => (
             <li
               key={s.id}

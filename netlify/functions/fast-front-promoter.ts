@@ -1,9 +1,10 @@
 import { exec } from 'child_process';
 
 export const handler = async () => {
-  const run = (cmd: string) => new Promise<void>((resolve) => {
-    exec(cmd, { cwd: process.cwd(), env: process.env }, () => resolve());
-  });
+  const run = (cmd: string) =>
+    new Promise<void>(resolve => {
+      exec(cmd, { cwd: process.cwd(), env: process.env }, () => resolve());
+    });
 
   await run('node automation/homepage-updater.cjs');
   await run('node automation/homepage-auto-advertiser.cjs');

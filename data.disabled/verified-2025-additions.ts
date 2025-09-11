@@ -12,13 +12,13 @@ export const verified2025Additions: Verified2025Addition[] = [
     name: 'Verified AI Service',
     tagline: 'Certified AI solutions',
     price: '$699',
-    category: 'AI & Automation'
+    category: 'AI & Automation',
   },
   {
     id: 'verified-2025-2',
     name: 'Verified Security Platform',
     tagline: 'Certified security solutions',
     price: '$899',
-    category: 'Cybersecurity'
-  }
+    category: 'Cybersecurity',
+  },
 ];

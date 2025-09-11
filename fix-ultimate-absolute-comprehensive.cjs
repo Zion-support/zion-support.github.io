@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Absolute Comprehensive Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Absolute Comprehensive Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix reports changelog file - rewrite completely
@@ -27,7 +29,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(reportsChangelogPath, reportsChangelogContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/reports/changelog.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/reports/changelog.ts'
+);
 // Fix reports deps file - rewrite completely
 const reportsDepsPath = '/workspace/pages/api/reports/deps.ts';
 const reportsDepsContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -85,7 +89,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(reportsLinksPath, reportsLinksContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/reports/links.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/reports/links.ts'
+);
 // Fix reports pagespeed file - rewrite completely
 const reportsPagespeedPath = '/workspace/pages/api/reports/pagespeed.ts';
 const reportsPagespeedContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -114,7 +120,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(reportsPagespeedPath, reportsPagespeedContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/reports/pagespeed.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/reports/pagespeed.ts'
+);
 // Fix reports seo file - rewrite completely
 const reportsSeoPath = '/workspace/pages/api/reports/seo.ts';
 const reportsSeoContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -168,8 +176,13 @@ const report = {
     'pages/api/reports/deps.ts',
     'pages/api/reports/links.ts',
     'pages/api/reports/pagespeed.ts',
-    'pages/api/reports/seo.ts'
-  ]
+    'pages/api/reports/seo.ts',
+  ],
 };
-fs.writeFileSync('/workspace/ultimate-absolute-comprehensive-fix-report.json', JSON.stringify(report, null, 2));
-console.log('📄 Report saved to ultimate-absolute-comprehensive-fix-report.json');
+fs.writeFileSync(
+  '/workspace/ultimate-absolute-comprehensive-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
+console.log(
+  '📄 Report saved to ultimate-absolute-comprehensive-fix-report.json'
+);

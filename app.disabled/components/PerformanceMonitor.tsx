@@ -9,7 +9,9 @@ export default function PerformanceMonitor() {
       // Monitor page load performance
       window.addEventListener('load', () => {
         if ('performance' in window) {
-          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const perfData = performance.getEntriesByType(
+            'navigation'
+          )[0] as PerformanceNavigationTiming;
           // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'); // Disabled for production
         }
       });

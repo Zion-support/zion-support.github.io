@@ -1,17 +1,1 @@
-
-
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { Phone, ShieldCheck, Clock } from 'lucide-react';

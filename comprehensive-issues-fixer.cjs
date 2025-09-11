@@ -28,7 +28,11 @@ class ComprehensiveIssuesFixer {
   async runCommand(command, description) {
     this.log(`🚀 ${description}: ${command}`);
     try {
-      const output = execSync(command, { cwd: this.rootPath, encoding: 'utf8', stdio: 'pipe' });
+      const output = execSync(command, {
+        cwd: this.rootPath,
+        encoding: 'utf8',
+        stdio: 'pipe',
+      });
       this.log(`✅ ${description} successful.`);
       return output;
     } catch (error) {
@@ -44,10 +48,10 @@ class ComprehensiveIssuesFixer {
       const indexPath = path.join(this.rootPath, 'index.html');
       if (fs.existsSync(indexPath)) {
         let content = fs.readFileSync(indexPath, 'utf8');
-        
+
         // Fix the main.tsx reference
         content = content.replace('/src/main.tsx', './src/main.tsx');
-        
+
         fs.writeFileSync(indexPath, content, 'utf8');
         this.log('✅ Fixed index.html main.tsx reference');
         this.fixedFiles.push('index.html');
@@ -57,7 +61,7 @@ class ComprehensiveIssuesFixer {
       const viteConfigPath = path.join(this.rootPath, 'vite.config.js');
       if (fs.existsSync(viteConfigPath)) {
         let content = fs.readFileSync(viteConfigPath, 'utf8');
-        
+
         // Ensure proper configuration
         if (!content.includes('root:') && !content.includes('build:')) {
           content = `import { defineConfig } from 'vite';
@@ -75,7 +79,7 @@ export default defineConfig({
     open: true,
   },
 });`;
-          
+
           fs.writeFileSync(viteConfigPath, content, 'utf8');
           this.log('✅ Fixed vite.config.js');
           this.fixedFiles.push('vite.config.js');
@@ -102,7 +106,7 @@ export default defineConfig({
       const eslintConfigPath = path.join(this.rootPath, 'eslint.config.js');
       if (fs.existsSync(eslintConfigPath)) {
         let content = fs.readFileSync(eslintConfigPath, 'utf8');
-        
+
         // Ensure JSX files are properly handled
         if (!content.includes('jsx: true')) {
           content = content.replace(
@@ -110,7 +114,7 @@ export default defineConfig({
             'languageOptions: {\n        ecmaVersion: 2022,\n        sourceType: "module",\n        parserOptions: {\n          ecmaFeatures: {\n            jsx: true\n          }\n        },'
           );
         }
-        
+
         fs.writeFileSync(eslintConfigPath, content, 'utf8');
         this.log('✅ Fixed eslint.config.js for JSX support');
         this.fixedFiles.push('eslint.config.js');
@@ -129,15 +133,15 @@ export default defineConfig({
       if (fs.existsSync(tsconfigPath)) {
         let content = fs.readFileSync(tsconfigPath, 'utf8');
         let config = JSON.parse(content);
-        
+
         // Add memory optimization settings
         config.compilerOptions = {
           ...config.compilerOptions,
           skipLibCheck: true,
           incremental: true,
-          tsBuildInfoFile: '.tsbuildinfo'
+          tsBuildInfoFile: '.tsbuildinfo',
         };
-        
+
         // Exclude problematic directories
         config.exclude = [
           ...(config.exclude || []),
@@ -148,9 +152,9 @@ export default defineConfig({
           'backup-problematic-files',
           'temp_exclude',
           'src_backup',
-          'recovered-branches'
+          'recovered-branches',
         ];
-        
+
         fs.writeFileSync(tsconfigPath, JSON.stringify(config, null, 2), 'utf8');
         this.log('✅ Fixed tsconfig.json for memory optimization');
         this.fixedFiles.push('tsconfig.json');
@@ -191,7 +195,10 @@ fs.writeFileSync(path.join(__dirname, '..', 'public', 'sitemap.xml'), sitemap);
 console.log('Sitemap generated successfully');
 `;
 
-      fs.writeFileSync(path.join(scriptsDir, 'generate-sitemap.cjs'), sitemapScript);
+      fs.writeFileSync(
+        path.join(scriptsDir, 'generate-sitemap.cjs'),
+        sitemapScript
+      );
       this.log('✅ Created generate-sitemap.cjs');
       this.fixedFiles.push('scripts/generate-sitemap.cjs');
 
@@ -215,7 +222,10 @@ fs.writeFileSync(path.join(__dirname, '..', 'public', 'search-index.json'), JSON
 console.log('Search index generated successfully');
 `;
 
-      fs.writeFileSync(path.join(scriptsDir, 'generate-search-index.cjs'), searchIndexScript);
+      fs.writeFileSync(
+        path.join(scriptsDir, 'generate-search-index.cjs'),
+        searchIndexScript
+      );
       this.log('✅ Created generate-search-index.cjs');
       this.fixedFiles.push('scripts/generate-search-index.cjs');
     } catch (error) {
@@ -310,7 +320,10 @@ export default App;`;
       this.log(`❌ Tests failed: ${error.message}`);
       // Try to run basic tests
       try {
-        await this.runCommand('npx jest --testPathPattern=smoke', 'Basic Tests');
+        await this.runCommand(
+          'npx jest --testPathPattern=smoke',
+          'Basic Tests'
+        );
         this.log('✅ Basic tests passed');
       } catch (error2) {
         this.log(`❌ Basic tests also failed: ${error2.message}`);
@@ -354,13 +367,16 @@ export default App;`;
       this.failedFiles.forEach(file => this.log(`  - ${file}`));
 
       if (this.failedFiles.length > 0) {
-        this.log('⚠️ Some issues could not be resolved automatically. Manual intervention may be required.');
+        this.log(
+          '⚠️ Some issues could not be resolved automatically. Manual intervention may be required.'
+        );
       } else {
         this.log('🎉 All detected issues have been resolved automatically.');
       }
-
     } catch (error) {
-      this.log(`🚨 An error occurred during the fixing process: ${error.message}`);
+      this.log(
+        `🚨 An error occurred during the fixing process: ${error.message}`
+      );
     }
   }
 }

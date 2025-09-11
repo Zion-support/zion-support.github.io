@@ -2,7 +2,7 @@
 // Scheduled in netlify.toml -> [[scheduled]] path = "/.netlify/functions/external_link_audit"
 
 export const config = {
-  path: "/.netlify/functions/external_link_audit",
+  path: '/.netlify/functions/external_link_audit',
 };
 
 import type { Handler } from '@netlify/functions';
@@ -33,25 +33,54 @@ function stamp() {
 
 export const handler: Handler = async () => {
   try {
-    const findings: Array<{ url: string; target: string; status: number; ok: boolean }> = [];
+    const findings: Array<{
+      url: string;
+      target: string;
+      status: number;
+      ok: boolean;
+    }> = [];
     for (const p of PAGES) {
       const pageUrl = `${BASE_URL}${p}`;
-      const res = await fetch(pageUrl, { headers: { 'User-Agent': 'zion-app-extlink-audit' } });
+      const res = await fetch(pageUrl, {
+        headers: { 'User-Agent': 'zion-app-extlink-audit' },
+      });
       const html = await res.text();
       const links = extractLinks(html, pageUrl).slice(0, 200);
       for (const link of links) {
         try {
-          const r = await fetch(link, { method: 'HEAD', redirect: 'follow', headers: { 'User-Agent': 'zion-app-extlink-audit' } });
-          findings.push({ url: pageUrl, target: link, status: r.status, ok: r.ok });
+          const r = await fetch(link, {
+            method: 'HEAD',
+            redirect: 'follow',
+            headers: { 'User-Agent': 'zion-app-extlink-audit' },
+          });
+          findings.push({
+            url: pageUrl,
+            target: link,
+            status: r.status,
+            ok: r.ok,
+          });
         } catch {
           findings.push({ url: pageUrl, target: link, status: 0, ok: false });
         }
       }
     }
-    const content = JSON.stringify({ timestamp: new Date().toISOString(), findings }, null, 2) + '\n';
+    const content =
+      JSON.stringify(
+        { timestamp: new Date().toISOString(), findings },
+        null,
+        2
+      ) + '\n';
     const dest = `data/reports/link-audit/external-links-${stamp()}.json`;
-    const commit = await commitToRepo({ path: dest, content, message: 'chore(link): external link audit', branch: 'main' });
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: findings.length, commit }) };
+    const commit = await commitToRepo({
+      path: dest,
+      content,
+      message: 'chore(link): external link audit',
+      branch: 'main',
+    });
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, count: findings.length, commit }),
+    };
   } catch (e: any) {
     return { statusCode: 500, body: String(e?.message || e) };
   }

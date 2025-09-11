@@ -39,7 +39,8 @@ export class SecurityManager {
     }
 
     if (this.config.enableHSTS) {
-      headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains; preload';
+      headers['Strict-Transport-Security'] =
+        'max-age=31536000; includeSubDomains; preload';
     }
 
     if (this.config.enableXSSProtection) {
@@ -73,7 +74,7 @@ export class SecurityManager {
       "base-uri 'self'",
       "form-action 'self'",
       "frame-ancestors 'none'",
-      "upgrade-insecure-requests",
+      'upgrade-insecure-requests',
     ];
 
     return directives.join('; ');
@@ -142,27 +143,32 @@ export class SecurityManager {
   }
 
   public generateSecureToken(length: number = 32): string {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const chars =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
-    
+
     for (let i = 0; i < length; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
-    
+
     return result;
   }
 
   public hashString(input: string): Promise<string> {
-    if (typeof window !== 'undefined' && window.crypto && window.crypto.subtle) {
+    if (
+      typeof window !== 'undefined' &&
+      window.crypto &&
+      window.crypto.subtle
+    ) {
       const encoder = new TextEncoder();
       const data = encoder.encode(input);
-      
-      return window.crypto.subtle.digest('SHA-256', data).then((hashBuffer) => {
+
+      return window.crypto.subtle.digest('SHA-256', data).then(hashBuffer => {
         const hashArray = Array.from(new Uint8Array(hashBuffer));
         return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
       });
     }
-    
+
     // Fallback for server-side or older browsers
     return Promise.resolve(this.simpleHash(input));
   }
@@ -171,7 +177,7 @@ export class SecurityManager {
     let hash = 0;
     for (let i = 0; i < input.length; i++) {
       const char = input.charCodeAt(i);
-      hash = ((hash << 5) - hash) + char;
+      hash = (hash << 5) - hash + char;
       hash = hash & hash; // Convert to 32-bit integer
     }
     return Math.abs(hash).toString(16);
@@ -198,10 +204,14 @@ export class SecurityManager {
     return sqlPatterns.some(pattern => pattern.test(input));
   }
 
-  public rateLimitCheck(identifier: string, maxRequests: number = 100, windowMs: number = 60000): boolean {
+  public rateLimitCheck(
+    identifier: string,
+    maxRequests: number = 100,
+    windowMs: number = 60000
+  ): boolean {
     const now = Date.now();
     const windowStart = now - windowMs;
-    
+
     // This is a simple in-memory rate limiter
     // In production, you'd want to use Redis or a similar persistent store
     if (!this.rateLimitStore) {
@@ -210,10 +220,12 @@ export class SecurityManager {
 
     const key = `rate_limit_${identifier}`;
     const requests = this.rateLimitStore.get(key) || [];
-    
+
     // Remove old requests outside the window
-    const validRequests = requests.filter((timestamp: number) => timestamp > windowStart);
-    
+    const validRequests = requests.filter(
+      (timestamp: number) => timestamp > windowStart
+    );
+
     if (validRequests.length >= maxRequests) {
       return false; // Rate limit exceeded
     }
@@ -221,7 +233,7 @@ export class SecurityManager {
     // Add current request
     validRequests.push(now);
     this.rateLimitStore.set(key, validRequests);
-    
+
     return true; // Request allowed
   }
 
@@ -234,7 +246,10 @@ export function generateCSRFToken(): string {
   return manager.generateSecureToken(32);
 }
 
-export function validateCSRFToken(token: string, sessionToken: string): boolean {
+export function validateCSRFToken(
+  token: string,
+  sessionToken: string
+): boolean {
   return token === sessionToken && token.length === 32;
 }
 
