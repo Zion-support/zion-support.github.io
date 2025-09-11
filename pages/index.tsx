@@ -88,6 +88,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Latest Reports Section */}
         <section className="py-16">
@@ -195,6 +196,37 @@ export default function Home() {
           </div>
         </section>
       </main>
+=======
+ 
+        {/* AUTO-GENERATED: HOME_UPDATER_START */
+
+<section className="mx-auto max-w-7xl px-6 pb-16">
+  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
+  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation — Live agents & reports</span></a></Link>
+
+            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — Latest autonomous updates</span></a></Link>
+
+            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — Audits & insights</span></a></Link>
+
+            <Link href="/front"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Front — Explore more</span></a></Link>
+
+            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-cloud.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Autonomous Cloud — 15m cadence orchestrations</span></a>
+
+            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/optimize-images.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Image Optimizer — Automatic asset slimming</span></a>
+
+            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/performance-audit.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Performance Audit — Lighthouse & runtime checks</span></a>
+
+            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/rapid-git-sync.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Rapid Git Sync — Fast repo syncing</span></a>
+
+            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/sitemap-auto-commit.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Sitemap Auto‑Update — Fresh URLs daily</span></a>
+
+  </div>
+</section>
+/* AUTO-GENERATED: HOME_UPDATER_END */}
+ </main>
+>>>>>>> origin/chore/futuristic-front-automation
     </div>
   );
 }

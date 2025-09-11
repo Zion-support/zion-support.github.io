@@ -225,6 +225,7 @@
 <<<<<<< HEAD
     "scan:todo": "node automation/todo-scanner.cjs",
     "scan:registry": "node automation/docs-pages-indexer.cjs",
+<<<<<<< HEAD
     "scan:content": "npm run scan:todo && npm run scan:registry"
 >>>>>>> origin/chore/front-automation
 =======
@@ -235,6 +236,12 @@
     "front:continuous": "node automation/continuous-front-runner.cjs",
     "front:continuous:fast": "node -e \"const cp=require('child_process'); const run=()=>cp.exec('node automation/continuous-front-runner.cjs',()=>{}); run(); setInterval(run, 1000*60*5);\""
 >>>>>>> origin/chore/futuristic-automations
+=======
+    "scan:content": "npm run scan:todo && npm run scan:registry",
+    "front:update": "node automation/front-page-updater.cjs",
+    "landing:refresh": "npm run homepage:update && node automation/homepage-auto-advertiser.cjs && npm run front:update",
+    "netlify:run:front-enhancer": "node netlify/functions/front-enhancer.js"
+>>>>>>> origin/chore/futuristic-front-automation
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
