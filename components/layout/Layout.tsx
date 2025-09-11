@@ -1,128 +1,134 @@
-import React, { useState, useEffect } from 'react';
-import UltraFuturisticNavigation2040 from './UltraFuturisticNavigation2040';
-import EnhancedSidebar2025 from './EnhancedSidebar2025';
-import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
-import Analytics from '../Analytics';
 
-import TopContactBar from './TopContactBar';
-import PerformanceMonitor from '../PerformanceMonitor';
-import AccessibilityEnhancer from '../AccessibilityEnhancer';
-import CookieConsentBanner from '../CookieConsentBanner';
 
+import React from 'react';
+import React, { ReactNode } from 'react';
+
+>>>>>>> origin/automation-improvements-final
+import Header from '../Header';
+import Footer from '../Footer';
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+=======
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface LayoutProps {
   children: React.ReactNode;
+interface LayoutProps {;
+  children: React && React.ReactNode;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
 }
 
-export default function Layout({ children }: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate initial loading
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Handle escape key to close sidebar
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && sidebarOpen) {
-        setSidebarOpen(false);
-      }
-    };
-
-    if (sidebarOpen) {
-      document.addEventListener('keydown', handleEscape);
-      // Prevent body scroll when sidebar is open
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
-    };
-  }, [sidebarOpen]);
-
-  // Handle focus trap for sidebar
-  useEffect(() => {
-    if (sidebarOpen) {
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      const firstElement = focusableElements[0] as HTMLElement;
-      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-      const handleTabKey = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              e.preventDefault();
-              lastElement.focus();
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              e.preventDefault();
-              firstElement.focus();
-            }
-          }
-        }
-      };
-
-      document.addEventListener('keydown', handleTabKey);
-      firstElement?.focus();
-
-      return () => {
-        document.removeEventListener('keydown', handleTabKey);
-      };
-    }
-  }, [sidebarOpen]);
-
+=======
+export default function Layout({
+  children
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
+  canonical
+  ogTitle
+  ogDescription
+  ogImage
+  noIndex = false
+}: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* Skip to content link for accessibility */}
-      <a href="#main" className="skip-link">Skip to main content</a>
-      
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2036 theme="consciousness" intensity="high" />
-      
-      {/* Layout Structure */}
-      <div className="relative z-10">
-        {/* Top Contact Bar */}
-        <TopContactBar />
-        
-        {/* Navigation */}
-        <UltraFuturisticNavigation2040 />
-        
-        {/* Sidebar and Main Content */}
-        <div className="flex">
-          <EnhancedSidebar2025 
-            isOpen={sidebarOpen} 
-            onClose={() => setSidebarOpen(false)} 
-          />
-          
-          <main id="main" role="main" className="flex-1 pt-24 lg:pt-28">
-            {children}
-          </main>
-        </div>
-        
-        {/* Cookie Consent Banner */}
-        <CookieConsentBanner />
-        
-        {/* Analytics Dashboard */}
-        <Analytics showUI={true} autoRefresh={true} refreshInterval={60000} />
-      </div>
+    <div className="min-h-screen bg-white">;
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+    <div className="min - h-screen bg - white">;
+      <Header />;
+      <main>;
+        {children}
 
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
+
+  "./Footer"import Footer  from "react./Footer,;
+export default function Layout({ children }: LayoutProps) {;
+  return (;
+
+
+<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
+    </div>;
+  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
+}}
+=======
+type LayoutProps = {children: React && React.ReactNode;
+};
+  children: React && React.ReactNode}
+export: default function Layout() {;
+  return: <div>{children}</div>;
+React from";
+  "react""import Footer from "react";
+    <div className="min-h-screen bg-gray-50">
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      {children  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     </div>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

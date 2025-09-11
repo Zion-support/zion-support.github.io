@@ -1,8 +1,8 @@
 import React from 'react';
-import { _ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';
-import { _Button } from '@/components/ui/button';
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Badge } from '@/components/ui/badge';
+import { _ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES } from '../data/enhancedServices';
+import { _Button } from '../components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { _Badge } from '../components/ui/badge';
 import { _Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin } from 'lucide-react';
 import { _Link } from 'react-router-dom';
 

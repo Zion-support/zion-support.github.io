@@ -18,7 +18,7 @@ import React from &apos;react&apos;,;&apos;,&apos;; &apos;;&apos;;&apos;;&apos;;
 const React from "react",;","; ";";";";";"; import { _Helmet } from "react-helmet-async"; interface SEOProps { title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: "website" | "article" | "product"; structuredData? any";"} export const EnhancedSEOManager: Reac t.FC<SEOProps> = ({ title = "Zion Tech Group - AI-Powered Technology Solutions",description = "Leading provider of AI-powered technology solutions,cybersecurity,cloud services,and digital transformation. Expert consulting and innovative solutions for modern businesses.",keywords = ["AI","technology","cybersecurity","cloud computing","digital transformation","consulting"],image = "https:";"; </SEOProps>;";";'"'"
 import _React from 'react',;'; ';';';';';'; import { _Helmet } from 'react-helmet-async'; interface SEOProps { title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: 'website' | 'article' | 'product'; structuredData? any';'} export const EnhancedSEOManager: Reac t.FC<SEOProps> = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions,description = 'Leading provider of AI-powered technology solutions,cybersecurity,cloud services,and digital transformation. Expert consulting and innovative solutions for modern businesses.',keywords = ['AI','technology','cybersecurity','cloud computing','digital transformation','consulting'],image = 'https:";'; </SEOProps>;';';
 
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Helmet } from 'react-helmet-async';
 const services = [];
 const solutions = [];

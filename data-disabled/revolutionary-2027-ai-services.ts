@@ -12,7 +12,6 @@ export interface Revolutionary2027AiService {
     mobile: string;
     email: string;
 export const revolutionary2027AIServices: Revolutionary2027AiService[] = [;
-<<<<<<< HEAD:data-disabled/revolutionary-2027-ai-services.ts
   {
     id: "2027-revolutionary-ai",;
     name: "2027 Revolutionary AI Platform",;

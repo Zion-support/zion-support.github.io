@@ -2,8 +2,8 @@ import { _configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 import wishlistReducer from './wishlistSlice';
 import authReducer from './authSlice';
-import { _safeLocalStorage } from '@/utils/safeStorage';
-import { _warn } from '@/utils/productionLogger';
+import { _safeLocalStorage } from '../utils/safeStorage';
+import { _warn } from '../utils/productionLogger';
 
 export const _store = configureStore({
   reducer: {

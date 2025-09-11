@@ -9,7 +9,7 @@ const __rest = (this && this.__rest) || function (s, e) {
     return t};
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 const Card = React.forwardRef((_a, ref) => {
     let { className } = _a, props = __rest(_a, ["className"]);
     return (_jsx("div", Object.assign({ ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))});

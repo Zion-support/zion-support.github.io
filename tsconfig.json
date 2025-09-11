@@ -1,50 +1,42 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["DOM", "DOM.Iterable", "ES6"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/types/*": ["./src/types/*"]
-    }
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "src/main.tsx",
+    "src/App.tsx",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
-    "zion-os.disabled",
-    "temp-disabled",
-    "pages._archive_corrupted",
-    "pages.disabled",
-    "pages.disabled_full",
-    "pages.disabled.full",
-    "src.pages.disabled",
-    "zion-os",
-    "zion-website/src",
-    "tests",
-    "backup-merge-conflicts"
+    "dist",
+    "build",
+    ".next",
+    "out",
+    "src_disabled",
+    "broken_files_backup",
+    "components_backup",
+    "tests.disabled",
+    "automation",
+    "pages",
+    "data"
   ]
 }

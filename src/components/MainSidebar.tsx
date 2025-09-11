@@ -1,6 +1,6 @@
 import React from 'react';
 import { _Link, useLocation } from 'react-router-dom';
-import { _cn } from '@/lib/utils';
+import { _cn } from '../lib/utils';
 import { _Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap } from 'lucide-react';
 
 import { Link } from 'react-router-dom';

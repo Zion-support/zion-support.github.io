@@ -20,8 +20,8 @@ const Enterprise: React.FC = () => {
       title: "Digital Transformation",
       description: "End-to-end digital transformation consulting and implementation for modern enterprises.",
       features: ["Process Automation", "Change Management", "Technology Strategy", "ROI Optimization"]
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone, Lock } from 'lucide-react';
 
 export default function Enterprise() {

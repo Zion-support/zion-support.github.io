@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { _cn } from '@/lib/utils';
+import { _cn } from '../../lib/utils';
 import { _motion, AnimatePresence } from 'framer-motion';
 
 import { motion } from 'framer-motion';

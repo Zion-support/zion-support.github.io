@@ -12,7 +12,6 @@ export interface NextGenAi2026Service {
     mobile: string;
     email: string;
 export const nextGenAI2026Services: NextGenAi2026Service[] = [;
-<<<<<<< HEAD:data-disabled/next-gen-ai-2026-services.ts
   {
     id: "2026-next-gen-ai",;
     name: "2026 Next-Gen AI Platform",;

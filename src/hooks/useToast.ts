@@ -1,3 +1,26 @@
- const _useToast = () => { const _successToast = (message: string) => { toast.success(message)}; const _errorToast = (message: string) => { toast.error(message)}; return { successToast, errorToast }})
+import toast from 'react-hot-toast';
 
-}export default ComponentName
+export const useToast = () => {
+  const successToast = (message: string) => {
+    toast.success(message);
+  };
+
+  const errorToast = (message: string) => {
+    toast.error(message);
+  };
+
+  const infoToast = (message: string) => {
+    toast(message);
+  };
+
+  const loadingToast = (message: string) => {
+    return toast.loading(message);
+  };
+
+  return {
+    successToast,
+    errorToast,
+    infoToast,
+    loadingToast
+  };
+};

@@ -4,7 +4,7 @@ import { _Link } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 const features = [];
 const benefits = [];
 const services = [];

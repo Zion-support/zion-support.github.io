@@ -1,74 +1,59 @@
 import React, { useEffect, useState } from 'react';
+
 interface PerformanceMetrics {
   loadTime: number;
+  renderTime: number;
   memoryUsage: number;
-  renderTime: number}
+  isSlow: boolean;
+}
+
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
+    renderTime: 0,
     memoryUsage: 0,
-    renderTime: 0
-  });  useEffect(() => {
-;
-interface PerformanceMetrics {;
-  "loadTime": "number;
-  "memoryUsage": number;
-  "renderTime": number;
-"}
-;
-const "PerformanceMonitor": "React.FC = () => {;
-  const [metrics", setMetrics] = useState<PerformanceMetrics>({;
-    "loadTime": "0",;
-    "memoryUsage": "0",;
-    "renderTime": "0;
-  "});
-;
-  useEffect(() => {;
-    const _startTime = performance.now();
-    ;
-    // Measure page load time;
-    if (window.performance.timing) {;
-      const _loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-      setMetrics(prev => ({ ...prev, loadTime }))}
-      setMetrics(prev => ({ ...prev, loadTime }));
-    }    // Measure memory usage (if available)
-    if ('memory' in performance) {
-      const _memory = (performance as any).memory;
-      setMetrics(prev => ({ 
-        ...prev, 
-        memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
-      }))}
-    // Measure render time
-    const _endTime = performance.now();
-    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);;
-  return (;
-    <div className="bg-gray-100 p-4 rounded-lg">;
-      <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>;
-      <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">;
-        <div className="bg-white p-3 rounded">;
-          <div className="text-sm text-gray-600">Load Time</div>;
-          <div className="text-2xl font-bold text-blue-600">{metrics.loadTime"}ms</div>;
-        </div>;
-        <div className="bg-white p-3 rounded">;
-          <div className="text-sm text-gray-600">Memory Usage</div>;
-          <div className="text-2xl font-bold text-green-600">{metrics.memoryUsage}MB</div>;
-        </div>;
-        <div className="bg-white p-3 rounded">;
-          <div className="text-sm text-gray-600">Render Time</div>;
-          <div className="text-2xl font-bold text-purple-600">{metrics.renderTime}ms</div>;
-        </div>;
-      </div>;
-    </div>;
+    isSlow: false
+  });
+
+  useEffect(() => {
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      
+      const memory = (performance as any).memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
+      
+      const isSlow = loadTime > 3000 || memoryUsage > 50; // 3s or 50MB threshold
+      
+      setMetrics({
+        loadTime: Math.round(loadTime),
+        renderTime: Math.round(performance.now()),
+        memoryUsage: Math.round(memoryUsage * 100) / 100,
+        isSlow
+      });
+    };
+
+    // Measure performance after component mounts
+    const timer = setTimeout(measurePerformance, 1000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Only show in development or if performance is poor
+  if (process.env.NODE_ENV !== 'development' && !metrics.isSlow) {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
+      <div className="flex flex-col space-y-1">
+        <div>Load: {metrics.loadTime}ms</div>
+        <div>Render: {metrics.renderTime}ms</div>
+        <div>Memory: {metrics.memoryUsage}MB</div>
+        {metrics.isSlow && <div className="text-red-400">⚠️ Slow</div>}
+      </div>
+    </div>
   );
 };
-;
+
 export default PerformanceMonitor;
-import { _useEffect } from 'react';
-import { _getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
-import logger from '../utils/logger';
-interface PerformanceMetrics {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;

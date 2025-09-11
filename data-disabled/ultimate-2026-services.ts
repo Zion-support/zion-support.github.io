@@ -12,7 +12,6 @@ export interface Ultimate2026Service {
     mobile: string;
     email: string;
 export const ultimate2026Services: Ultimate2026Service[] = [;
-<<<<<<< HEAD:data-disabled/ultimate-2026-services.ts
   {
     id: "2026-ultimate-service",;
     name: "2026 Ultimate Service Platform",;

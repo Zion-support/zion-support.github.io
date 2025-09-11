@@ -11,7 +11,6 @@ export interface Revolutionary2026MicroSaasService {
     mobile: string;
     email: string;
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [;
-<<<<<<< HEAD:data-disabled/revolutionary-2026-micro-saas-services.ts
   {
     id: "2026-revolutionary-micro-saas",;
     name: "2026 Revolutionary Micro SAAS Platform",;

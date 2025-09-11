@@ -1,69 +1,57 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
-import { Footer } from './components/Footer';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks/useScrollToTop";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import EnhancedSEO from './components/EnhancedSEO';
-import EnhancedAccessibility from './components/EnhancedAccessibility';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import Button from './components/Button';
+import Card from './components/Card';
+import ServiceCard from './components/ServiceCard';
 
-// Basic pages
-const Home = lazy(() => import('./pages/Home'));
-const Services = lazy(() => import('./pages/Services'));
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Pricing = lazy(() => import('./pages/Pricing'));
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 
-const App: React.FC = () => {
-  useScrollToTop();
+// Service pages
+const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity'));
+const CloudMigration = React.lazy(() => import('./pages/CloudMigration'));
+const DevOps = React.lazy(() => import('./pages/DevOps'));
+const MobileDevelopment = React.lazy(() => import('./pages/MobileDevelopment'));
 
+const App = () => {
   return (
-    <EnhancedErrorBoundary>
-      <EnhancedAccessibility />
-      <ThemeProvider>
-        <WhitelabelProvider>
-          <Router>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-              <Header />
-              
-              <main className="flex-1">
-                <Suspense fallback={
-                  <div className="flex items-center justify-center min-h-screen">
-                    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-                  </div>
-                }>
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/pricing" element={<Pricing />} />
-                  </Routes>
-                </Suspense>
-              </main>
-              
-              <Footer />
-              
-              {/* Enhanced SEO */}
-              <EnhancedSEO />
-              
-              {/* Enhanced Accessibility Controls */}
-              <EnhancedAccessibility 
-                position="bottom-right" 
-              />
-              
-              {/* Toast Notifications */}
-              <SonnerToaster />
-            </div>
-          </Router>
-        </WhitelabelProvider>
-      </ThemeProvider>
-    </EnhancedErrorBoundary>
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+          <Header />
+          <div className="flex">
+            <Sidebar />
+            <main className="flex-1">
+              <React.Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/pricing" element={<Pricing />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                  <Route path="/services/cloud-migration" element={<CloudMigration />} />
+                  <Route path="/services/devops" element={<DevOps />} />
+                  <Route path="/services/mobile-development" element={<MobileDevelopment />} />
+                </Routes>
+              </React.Suspense>
+            </main>
+          </div>
+          <Footer />
+          <PerformanceMonitor />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 };
 

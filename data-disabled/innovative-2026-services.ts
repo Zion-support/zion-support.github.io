@@ -350,7 +350,6 @@ export interface Innovative2026Service {;
 ;
 export const innovative2026Services: Innovative2026Service[] = [;
   // AI-Powered Business Intelligence;
-<<<<<<< HEAD:data-disabled/innovative-2026-services.ts
   {
     id: "ai-business-predictor-pro",;
     name: "AI Business Predictor Pro",;

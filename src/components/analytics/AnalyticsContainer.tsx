@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEO";
 import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 export function AnalyticsContainer({ children }) {
     const { isAuthenticated, isLoading, user } = useAuth();
     // Check if user is admin (using either role or userType)

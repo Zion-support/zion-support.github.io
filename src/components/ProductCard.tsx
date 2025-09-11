@@ -1,21 +1,21 @@
 import Link from 'next/link';
 import { _Heart } from 'lucide-react';
-import { _useWishlist } from '@/hooks/useWishlist';
-import { _Button } from '@/components/ui/button';
-import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '@/components/ui/tooltip';
+import { _useWishlist } from '../hooks/useWishlist';
+import { _Button } from '../components/ui/button';
+import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '../components/ui/tooltip';
 import { _useDispatch } from 'react-redux';
-import { _addItem } from '@/store/cartSlice';
+import { _addItem } from '../store/cartSlice';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { _useAuth } from '@/context/auth/AuthProvider';
+import { _useAuth } from '../context/auth/AuthProvider';
 import { _useRouter } from 'next/router';
 import { _useMediaQuery } from 'usehooks-ts';
-import { _useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { _captureException } from '@/utils/sentry';
+import { _useEnqueueSnackbar } from '../context/SnackbarContext';
+import { _captureException } from '../utils/sentry';
 
 import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../hooks/useAuth';
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     const { isAuthenticated } = useAuth();
     const { isWishlisted, toggle } = useWishlist();

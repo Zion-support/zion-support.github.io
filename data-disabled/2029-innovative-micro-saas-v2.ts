@@ -37,7 +37,6 @@ export interface InnovativeMicroSaasService2029V2 {
     email: string;
     website: string;
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [;
-<<<<<<< HEAD:data-disabled/2029-innovative-micro-saas-v2.ts
   {
     id: "ai-emotion-based-marketing-platform",;
     name: "AI Emotion-Based Marketing Platform",;

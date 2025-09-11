@@ -12,7 +12,6 @@ export interface Revolutionary2026Innovation {
     mobile: string;
     email: string;
 export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [;
-<<<<<<< HEAD:data-disabled/revolutionary-2026-innovations.ts
   {
     id: "2026-revolutionary-innovation",;
     name: "2026 Revolutionary Innovation Platform",;

@@ -4,7 +4,7 @@ import { _Badge } from './ui/badge';
 import { _Button } from './ui/button';
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { _Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
-import { _COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
+import { _COMPREHENSIVE_SERVICES, CONTACT_INFO } from '../data/comprehensiveServices';
 
 import { Check } from 'lucide-react';
 import { Icon } from 'lucide-react';

@@ -1,9 +1,6 @@
 import React from "react";
 import { Header } from "@/components/Header";
-<<<<<<< HEAD:backups/src.broken./components-disabled/InstantMessaging.tsx
 
-=======
->>>>>>> origin/clean-error-fixing-automation:src/pages/features/InstantMessaging.tsx
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -21,10 +18,7 @@ export default function InstantMessaging() {
       <SEO title="Instant Messaging" description="Negotiate deals and collaborate instantly with real-time chat." keywords="real-time messaging, Socket.IO chat, project communication" canonical="https://app.ziontechgroup.com/features/instant-messaging"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
-<<<<<<< HEAD:backups/src.broken./components-disabled/InstantMessaging.tsx
 
-=======
->>>>>>> origin/clean-error-fixing-automation:src/pages/features/InstantMessaging.tsx
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
@@ -32,13 +26,9 @@ export default function InstantMessaging() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Communicate with partners and support staff instantly from any device.
           </p>
-<<<<<<< HEAD:backups/src.broken./components-disabled/InstantMessaging.tsx
 
           <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot of chat interface" className="rounded-lg shadow-xl mx-auto mb-12"/>
 
-=======
-          <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot of chat interface" className="rounded-lg shadow-xl mx-auto mb-12"/>
->>>>>>> origin/clean-error-fixing-automation:src/pages/features/InstantMessaging.tsx
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Real-time notifications keep everyone updated.</li>
@@ -63,13 +53,8 @@ export default function InstantMessaging() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD:backups/src.broken./components-disabled/InstantMessaging.tsx
 
       <Footer />
     </>);
 
-=======
-      <Footer />
-    </>);
->>>>>>> origin/clean-error-fixing-automation:src/pages/features/InstantMessaging.tsx
 }

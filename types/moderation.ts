@@ -1,21 +1,33 @@
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-export type AiScores = {;
-  toxicity: number, // 0-1;
-  nsfw: number, // 0-1;
-  scam: number, // 0-1;
-};
-export type FlaggedContent = {;
+
+
+
+export interface ModerationAction {;
+
+
   id: string;
-  contentType: ContentType;
-  contentId: string;
-  userId: string;
-  userEmail: string;
-  reason: string;
+  flagId: string;
+  action: ModerationStatus;
+  adminNotes?: string;
+  adminId: string;
+  reason?: string;
+  createdAt: string;
+export interface ModerationFlag {
+=======
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  id: string;
+  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
+  content: string;
+  reporter_id: string;
+  target_id: string;
+  target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
-  snippet: string, // small preview of content;
-  metadata?: Record<string, any>;
-  aiScores: AiScores;
   createdAt: string;
   updatedAt: string;
-  adminNotes?: string;
-};
+  adminNotes?: string
+ursor/fix-syntax-push-and-merge-to-main-7db5
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -9,7 +9,7 @@ const __rest = (this && this.__rest) || function (s, e) {
     return t};
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 const Badge = React.forwardRef((_a, ref) => {
     let { className, variant = 'default' } = _a, props = __rest(_a, ["className", "variant"]);
     return (_jsx("div", Object.assign({ ref: ref, className: cn('inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2', {

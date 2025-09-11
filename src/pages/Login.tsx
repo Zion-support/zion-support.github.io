@@ -1,45 +1,34 @@
-import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import { SEO } from '../components/SEO';
+
 export default function Login() {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
-
-  useEffect(() => {
-    // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
-    const params = new URLSearchParams(location.search);
-    const token = params.get('token');
-    if (token) {
-      safeStorage.setItem('zion_token', token);
-      // Clear token from URL to prevent re-processing
-      router(location.pathname, { replace: true })}
-  }, [location.search, location.pathname, navigate]);
-
-  useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
-      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
-      router(next, { replace: true })}
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
-
-  // Render LoginContent if not authenticated and auth is not loading
-  if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
-      </ErrorBoundary>
-    )}
-
-  // Optional: Render a loading indicator while isLoading is true
-  if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
-  }
-
-  // If authenticated and isLoading is false, the useEffect above should have navigated.
-  // Return null or a minimal layout if needed, though direct navigation is preferred.
-  return null}
+  return (
+    <>
+      <SEO 
+        title="Login - Zion Tech Group" 
+        description="Login to your account" 
+        keywords="login, account, authentication"
+      />
+      <div className="min-h-screen bg-zion-blue pt-20 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              Login
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Sign in to your account
+            </p>
+            <div className="bg-white rounded-lg p-8 max-w-md mx-auto">
+              <h2 className="text-2xl font-semibold text-zion-slate-dark mb-4">
+                Sign In
+              </h2>
+              <p className="text-zion-slate-light">
+                Login form would go here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

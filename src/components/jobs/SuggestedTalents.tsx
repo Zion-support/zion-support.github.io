@@ -1,7 +1,7 @@
 import { _useEffect, useState, useCallback } from 'react'; // Added useCallback;
-import { _supabase } from '@/integrations/supabase/client';
-import { _toast } from '@/hooks/use-toast';
-import { _Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { _supabase } from '../../integrations/supabase/client';
+import { _toast } from '../../hooks/use-toast';
+import { _Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { _EmptyMatchesCard } from './EmptyMatchesCard';
 import { _JobMatchCard } from './JobMatchCard';
 

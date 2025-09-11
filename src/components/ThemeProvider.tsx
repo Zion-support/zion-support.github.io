@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext({
   theme: "dark",
-  setTheme: () => {},
+  setTheme: () => null,
 });
 
 export const ThemeProvider = ({ children }) => {
@@ -14,12 +14,12 @@ export const ThemeProvider = ({ children }) => {
     root.classList.remove("light", "dark");
     root.classList.add(theme);
   }, [theme]);
-
+  
   const value = {
     theme,
     setTheme,
   };
-
+  
   return (
     <ThemeContext.Provider value={value}>
       {children}

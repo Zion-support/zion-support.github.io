@@ -3,7 +3,7 @@ import { _Link } from "react-router-dom";
 import { _Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, Github, ArrowRight } from "lucide-react";
 
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Cloud } from 'lucide-react';
 import { Code } from 'lucide-react';
 const services = [];

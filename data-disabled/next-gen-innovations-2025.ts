@@ -29,7 +29,6 @@ export interface NextGenInnovation2025 {
   rating: number;
 export const nextGenInnovations2025: NextGenInnovation2025[] = [;
   // Next-Gen AI & Robotics;
-<<<<<<< HEAD:data-disabled/next-gen-innovations-2025.ts
   {
     id: "autonomous-ai-fleet-manager",;
     name: "Autonomous AI Fleet Manager",;

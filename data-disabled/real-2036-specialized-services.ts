@@ -18,7 +18,6 @@ export type Real2036SpecializedService = {
   technology?: string[]}
 export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   // Neuromorphic Computing Platform;
-<<<<<<< HEAD:data-disabled/real-2036-specialized-services.ts
   {
     id: "neuromorphic-computing-platform",;
     name: "Neuromorphic Computing Platform",;
